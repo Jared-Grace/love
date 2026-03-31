@@ -26,7 +26,6 @@ sudo apt install -y curl
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 # Install Node.js
 sudo apt install -y nodejs
-
 # Verify installation
 node -v
 npm -v
@@ -34,8 +33,13 @@ npm -v
 mkdir repos
 cd repos
 git clone https://github.com/Jared-Grace/love
+
 cd love
 npm i
+
+mkdir -p ~/.config/Code/User
+cp ~/repos/love/.vscode/keybindings.json ~/.config/Code/User/keybindings.json
+
 ```
 
 ---
