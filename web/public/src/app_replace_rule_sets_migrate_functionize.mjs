@@ -3,7 +3,6 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
 import { app_replace_rule_sets_name_expression_value } from "../../../love/public/src/app_replace_rule_sets_name_expression_value.mjs";
 import { function_new_declaration_from } from "../../../love/public/src/function_new_declaration_from.mjs";
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { function_new_declaration_to } from "../../../love/public/src/function_new_declaration_to.mjs";
 import { marker_next_declare_single_init_elements } from "../../../love/public/src/marker_next_declare_single_init_elements.mjs";
@@ -21,7 +20,6 @@ export async function app_replace_rule_sets_migrate_functionize() {
       let declaration = function_new_declaration_to(f_name_new);
       let body_block = js_function_declaration_to_block_body(declaration);
       js_statement_return_empty_add_argument_set(body_block, e);
-      log_unparse(declaration);
       await function_new_declaration_from(declaration);
     }
     await each_async(elements, lambda2);
