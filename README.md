@@ -14,6 +14,20 @@ In this repo:
 
 ---
 
+```
+sudo apt update
+sudo apt install git
+
+sudo apt update && sudo apt install -y curl && curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs && node -v && npm -v
+
+mkdir repos
+cd repos
+git clone https://github.com/Jared-Grace/love
+cd love
+```
+
+---
+
 This repo has a convention to use Visual Studio Code.
 
 ---
@@ -147,11 +161,3 @@ Bible searching:
 https://jared-grace.web.app/search.html
 
 ![App screenshot](readme/search.png)
-
----
-
-```
-mkdir repos
-cd repos
-git clone https://github.com/Jared-Grace/love
-git pull
