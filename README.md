@@ -14,6 +14,36 @@ In this repo:
 
 ---
 
+```
+sudo apt update
+sudo apt install git
+
+# Update package list
+sudo apt update
+# Install curl (needed to fetch install script)
+sudo apt install -y curl
+# Add NodeSource repository (LTS version)
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+# Install Node.js
+sudo apt install -y nodejs
+# Verify installation
+node -v
+npm -v
+
+mkdir repos
+cd repos
+git clone https://github.com/Jared-Grace/love
+
+cd love
+npm i
+
+mkdir -p ~/.config/Code/User
+cp ~/repos/love/.vscode/keybindings.json ~/.config/Code/User/keybindings.json
+
+```
+
+---
+
 This repo has a convention to use Visual Studio Code.
 
 ---
@@ -147,11 +177,3 @@ Bible searching:
 https://jared-grace.web.app/search.html
 
 ![App screenshot](readme/search.png)
-
----
-
-```
-mkdir repos
-cd repos
-git clone https://github.com/Jared-Grace/love
-git pull
