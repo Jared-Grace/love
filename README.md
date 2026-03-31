@@ -18,7 +18,18 @@ In this repo:
 sudo apt update
 sudo apt install git
 
-sudo apt update && sudo apt install -y curl && curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs && node -v && npm -v
+# Update package list
+sudo apt update
+# Install curl (needed to fetch install script)
+sudo apt install -y curl
+# Add NodeSource repository (LTS version)
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+# Install Node.js
+sudo apt install -y nodejs
+
+# Verify installation
+node -v
+npm -v
 
 mkdir repos
 cd repos
