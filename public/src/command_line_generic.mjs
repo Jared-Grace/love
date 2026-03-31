@@ -11,7 +11,7 @@ export async function command_line_generic(command, extra) {
   let result = new Promise(function lambda5(resolve, reject) {
     const child = spawn(cmd, args, {
       ...extra,
-      shell: true,
+      shell: false,
     });
     let stdout = "";
     let stderr = "";
