@@ -6,8 +6,13 @@ export async function command_line_generic(command, extra) {
   const r3 = await import("child_process");
   let spawn = property_get(r3, "spawn");
   text_is_assert(command);
-  const args = command.split(" ");
-  const cmd = args.shift();
+  const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+  let cmd = match.shift();
+  function lambda6(s) {
+    let r2 = s.replace(/^"(.*)"$/, "$1");
+    return r2;
+  }
+  let args = match.map(lambda6);
   let result = new Promise(function lambda5(resolve, reject) {
     const child = spawn(cmd, args, {
       ...extra,
