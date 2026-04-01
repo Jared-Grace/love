@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "../../../love/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
@@ -11,6 +12,9 @@ export async function watch() {
   const chokidar = (await import_install("chokidar")).default;
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(identity);
+  log(watch.name, {
+    squashed,
+  });
   const watcher = chokidar.watch(squashed, {
     persistent: true,
     ignoreInitial: true,
