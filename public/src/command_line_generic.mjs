@@ -7,12 +7,9 @@ export async function command_line_generic(command, extra) {
   let spawn = property_get(r3, "spawn");
   text_is_assert(command);
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
-  let cmd = match.shift();
-  function lambda6(s) {
-    let r2 = s.replace(/^"(.*)"$/, "$1");
-    return r2;
-  }
-  let args = match.map(lambda6);
+  let r5 = parseCommand(command);
+  let args = property_get(r5, "args");
+  let cmd = property_get(r5, "cmd");
   let result = new Promise(function lambda5(resolve, reject) {
     const child = spawn(cmd, args, {
       ...extra,
@@ -45,6 +42,26 @@ export async function command_line_generic(command, extra) {
     child.on("close", lambda4);
   });
   return result;
+  function parseCommand(command) {
+    if (typeof command !== "string") {
+      throw new TypeError("command must be a string");
+    }
+    const parts = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+    if (parts.length === 0) {
+      throw new Error("Empty command string");
+    }
+    const cmd = parts.shift();
+    function lambda6(arg) {
+      let r2 = arg.replace(/^"(.*)"$/, "$1");
+      return r2;
+    }
+    const args = parts.map(lambda6);
+    let r4 = {
+      cmd,
+      args,
+    };
+    return r4;
+  }
   return;
   const c = await import("child_process");
   let exec = property_get(c, "exec");
