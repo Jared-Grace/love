@@ -1,3 +1,4 @@
+import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
 import { app_reply_languages } from "../../../love/public/src/app_reply_languages.mjs";
@@ -359,6 +360,10 @@ export function app_reply_choices() {
     {
       text: emoji_pray() + " Thank you",
       response: app_reply_choices_thanks(),
+    },
+    {
+      text: emoji_clock() + " Time",
+      response: emoji_pray() + " Thank the LORD, our God! " + emoji_smile(),
     },
     {
       text: emoji_pray() + " Travel ask",
