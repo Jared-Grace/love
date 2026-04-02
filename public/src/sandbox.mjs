@@ -1,4 +1,1 @@
-import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
-export async function sandbox() {
-  let p = folder_user_docs_path("monothesism_wiki.txt");
-}
+export async function sandbox() {}
