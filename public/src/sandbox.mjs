@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
@@ -12,7 +13,8 @@ export async function sandbox() {
   let list = list_find_indices(split, predicate);
   function lambda(item2) {
     let left = item2 - 2;
-    let sliced = list_slice(list2, index_a, index_b);
+    let sliced = list_slice(list, left, item2);
+    log_json(right);
   }
   let mapped = list_map(list, lambda);
   return list;
