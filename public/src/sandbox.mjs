@@ -1,10 +1,4 @@
-import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
-import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
+import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox() {
-  let project_url = firebase_storage_url_project_jg();
-  let text = await http_local_text(
-    "https://en.wikipedia.org/wiki/Monotheism",
-    project_url,
-  );
-  return text;
+  let p = folder_user_docs_path("monothesism_wiki.txt");
 }
