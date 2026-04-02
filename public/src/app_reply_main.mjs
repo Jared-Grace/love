@@ -152,8 +152,10 @@ export async function app_reply_main(context) {
         typed = text_take_less_1(typed);
       }
     } else {
-      let skips = ["AbortController", "Alt"];
-      let includes = list_includes(list, item3);
+      let skips = ["Controller", "Alt"];
+      let includes = list_includes(skips, key);
+      if (false) {
+      }
       log(app_reply_main.name, {
         key,
       });
