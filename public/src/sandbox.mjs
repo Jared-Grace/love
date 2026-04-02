@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -8,6 +9,8 @@ export async function sandbox() {
   let contents = await file_read(p);
   let split = text_split_space(contents);
   let list = list_find_indices(split, predicate);
+  function lambda(item2) {}
+  let mapped = list_map(list2, lambda);
   return list;
   function predicate(item) {
     let sw2 = text_starts_with(item, "BCE");
