@@ -14,7 +14,8 @@ export async function sandbox() {
   function lambda(item2) {
     let left = item2 - 2;
     let sliced = list_slice(list, left, item2);
-    let joined = list_join_space(list2);
+    let joined = list_join_space(sliced);
+    return joined;
   }
   let mapped = list_map(list, lambda);
   return list;
