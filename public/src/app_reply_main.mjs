@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
@@ -152,6 +153,8 @@ export async function app_reply_main(context) {
       }
     } else {
       let skips = ["AbortController", "Alt"];
+      if (not(b2)) {
+      }
       log(app_reply_main.name, {
         key,
       });
