@@ -179,6 +179,7 @@ export async function app_reply_main(context) {
     responses_buttons,
     buttons,
   );
+  visible_count = buttons_refresh();
   function typed_reset() {
     typed = "";
   }
