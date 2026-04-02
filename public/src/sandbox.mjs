@@ -18,7 +18,7 @@ export async function sandbox() {
     return joined;
   }
   let mapped = list_map(list, lambda);
-  return list;
+  return mapped;
   function predicate(item) {
     let sw2 = text_starts_with(item, "BCE");
     return sw2;
