@@ -341,12 +341,12 @@ export function app_reply_choices() {
         " Jesus gave me the grace to write this song",
     },
     {
-      text: "🚫" + " Sorry",
+      text: emoji_no() + " Sorry",
       response: " Sorry, I will not do that",
     },
     {
-      text: emoji_no() + " Sorry",
-      response: " Sorry, I will not do that",
+      text: "Talk",
+      response: "What do you want to talk about?",
     },
     {
       text: emoji_pray() + " Testimony",
