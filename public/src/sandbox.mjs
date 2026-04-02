@@ -1,3 +1,4 @@
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -9,7 +10,7 @@ export async function sandbox() {
   let split = text_split_space(contents);
   function lambda(la) {
     function lambda2(item, index) {
-      ysw;
+      let sw = text_starts_with(t, prefix);
       if (false) {
       }
     }
