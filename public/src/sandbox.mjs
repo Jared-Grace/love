@@ -1,5 +1,5 @@
+import { list_range } from "../../../love/public/src/list_range.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
@@ -13,7 +13,7 @@ export async function sandbox() {
   let list = list_find_indices(split, predicate);
   function lambda(right) {
     let left = right - 2;
-    let sliced = list_slice(split, left, right);
+    let sliced = list_range(split, left, right);
     let joined = list_join_space(sliced);
     return joined;
   }
