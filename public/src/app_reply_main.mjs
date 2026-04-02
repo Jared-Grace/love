@@ -1,6 +1,5 @@
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { text_alphabet } from "../../../love/public/src/text_alphabet.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
@@ -156,19 +155,12 @@ export async function app_reply_main(context) {
       let alpha = text_alphabet();
       let includes = list_includes(alpha, key);
       if (includes) {
-        log(app_reply_main.name, {
-          key,
-          visible_count,
-        });
         if (visible_count > 0) {
           typed += key;
         }
       }
     }
     visible_count = buttons_refresh();
-    log(app_reply_main.name, {
-      typed,
-    });
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {
