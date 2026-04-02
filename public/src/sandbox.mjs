@@ -10,8 +10,9 @@ export async function sandbox() {
   let split = text_split_space(contents);
   function lambda(la) {
     function lambda2(item, index) {
-      let sw = text_starts_with(t, prefix);
-      if (false) {
+      let sw = text_starts_with(item, "BCE");
+      if (sw) {
+        la(index);
       }
     }
     each_index(split, lambda2);
