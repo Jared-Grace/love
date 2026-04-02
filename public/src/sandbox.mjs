@@ -10,6 +10,7 @@ export async function sandbox() {
   function lambda(la) {
     function lambda2(item, index) {
       if (false) {
+        ssw;
       }
     }
     each_index(split, lambda2);
