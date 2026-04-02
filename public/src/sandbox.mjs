@@ -9,7 +9,9 @@ export async function sandbox() {
   let contents = await file_read(p);
   let split = text_split_space(contents);
   let list = list_find_indices(split, predicate);
-  function lambda(item2) {}
+  function lambda(item2) {
+    let left = item2 - 2;
+  }
   let mapped = list_map(list, lambda);
   return list;
   function predicate(item) {
