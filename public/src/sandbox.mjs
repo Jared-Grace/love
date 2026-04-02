@@ -7,7 +7,7 @@ export async function sandbox() {
   let p = folder_user_docs_path("monothesism_wiki.txt");
   let contents = await file_read(p);
   let split = text_split_space(contents);
-  let list = list_find_indices(predicate, split);
+  let list = list_find_indices(split, predicate);
   return list;
   function predicate(item) {
     let sw2 = text_starts_with(item, "BCE");
