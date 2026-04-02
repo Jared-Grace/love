@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { function_name_folder_to_path } from "../../../love/public/src/function_name_folder_to_path.mjs";
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { functions_path } from "../../../love/public/src/functions_path.mjs";
@@ -11,4 +12,7 @@ export function function_name_to_path(f_name) {
   let folder = functions_path();
   let f_path = function_name_folder_to_path(f_name, folder);
   return f_path;
+  log(function_name_to_path.name, {
+    f_name,
+  });
 }
