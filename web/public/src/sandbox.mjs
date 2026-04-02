@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -13,11 +12,7 @@ export async function sandbox() {
   let split = text_split_space(contents);
   let list = list_find_indices(split, predicate);
   function lambda(right) {
-    let left = right - 10;
-    let v = log(sandbox.name, {
-      left,
-      right,
-    });
+    let left = right - 2;
     let sliced = list_slice(split, left, right);
     let joined = list_join_space(sliced);
     return joined;
