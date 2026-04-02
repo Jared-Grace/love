@@ -1,3 +1,4 @@
+import { emoji_no } from "../../../p_np/public/src/emoji_no.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
@@ -341,6 +342,10 @@ export function app_reply_choices() {
     },
     {
       text: "🚫" + " Sorry",
+      response: " Sorry, I will not do that",
+    },
+    {
+      text: emoji_no() + " Sorry",
       response: " Sorry, I will not do that",
     },
     {
