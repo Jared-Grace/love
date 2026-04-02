@@ -154,8 +154,8 @@ export async function app_reply_main(context) {
       }
     } else {
       let alpha = text_alphabet();
-      let includes = list_includes(list, item3);
-      if (alpha) {
+      let includes = list_includes(alpha, key);
+      if (includes) {
         log(app_reply_main.name, {
           key,
         });
