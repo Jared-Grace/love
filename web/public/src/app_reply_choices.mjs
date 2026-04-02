@@ -259,7 +259,8 @@ export function app_reply_choices() {
     },
     {
       text: emoji_wave() + " Name ministry",
-      response: 'The name of my ministry is: \"JESUS rose to life\"',
+      response:
+        'The name of my ministry is: \"JESUS rose to life\" ' + emoji_cross(),
     },
     {
       text: emoji_ok() + "Okay",
