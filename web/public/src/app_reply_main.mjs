@@ -151,6 +151,7 @@ export async function app_reply_main(context) {
         typed = text_take_less_1(typed);
       }
     } else {
+      let skips = ["AbortController", "Alt"];
       log(app_reply_main.name, {
         key,
       });
