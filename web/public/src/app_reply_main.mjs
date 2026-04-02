@@ -165,6 +165,7 @@ export async function app_reply_main(context) {
       }
     }
     visible_count = buttons_refresh();
+    log(app_reply_main.name, "refreshed");
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {
