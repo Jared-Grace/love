@@ -1,3 +1,4 @@
+import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -6,7 +7,10 @@ export async function sandbox() {
   let p = folder_user_docs_path("monothesism_wiki.txt");
   let contents = await file_read(p);
   let split = text_split_space(contents);
-  function lambda(la) {}
+  function lambda(la) {
+    function lambda2(item, index) {}
+    each_index(list2, lambda2);
+  }
   let list = list_adder(lambda);
   return split;
 }
