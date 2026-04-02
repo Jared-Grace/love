@@ -153,9 +153,9 @@ export async function app_reply_main(context) {
         typed = text_take_less_1(typed);
       }
     } else {
-      let includes = text_alphabet();
-      let includes2 = list_includes(list, item3);
-      if (includes) {
+      let alpha = text_alphabet();
+      let includes = list_includes(list, item3);
+      if (alpha) {
         log(app_reply_main.name, {
           key,
         });
