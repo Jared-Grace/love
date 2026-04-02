@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
@@ -150,6 +151,9 @@ export async function app_reply_main(context) {
         typed = text_take_less_1(typed);
       }
     } else {
+      log(app_reply_main.name, {
+        key,
+      });
       if (visible_count > 0) {
         typed += key;
       }
