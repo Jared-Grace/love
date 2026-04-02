@@ -158,6 +158,7 @@ export async function app_reply_main(context) {
       if (includes) {
         log(app_reply_main.name, {
           key,
+          visible_count,
         });
         if (visible_count > 0) {
           typed += key;
