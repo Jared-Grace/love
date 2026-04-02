@@ -12,7 +12,7 @@ export async function sandbox() {
   let split = text_split_space(contents);
   let list = list_find_indices(split, predicate);
   function lambda(right) {
-    let left = right - 1;
+    let left = right - 2;
     let sliced = list_range(split, left, right);
     let joined = list_join_space(sliced);
     return joined;
