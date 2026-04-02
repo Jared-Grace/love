@@ -18,7 +18,7 @@ export async function sandbox() {
       left,
       right,
     });
-    let sliced = list_slice(list, left, right);
+    let sliced = list_slice(split, left, right);
     let joined = list_join_space(sliced);
     return joined;
   }
