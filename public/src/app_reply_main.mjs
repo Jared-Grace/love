@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { text_alphabet } from "../../../love/public/src/text_alphabet.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
@@ -153,6 +154,7 @@ export async function app_reply_main(context) {
       }
     } else {
       let includes = text_alphabet();
+      let includes2 = list_includes(list, item3);
       if (includes) {
         log(app_reply_main.name, {
           key,
