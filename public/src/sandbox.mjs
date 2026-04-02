@@ -6,4 +6,5 @@ export async function sandbox() {
     "https://en.wikipedia.org/wiki/Monotheism",
     project_url,
   );
+  return text;
 }
