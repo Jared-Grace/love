@@ -1,3 +1,4 @@
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
@@ -11,6 +12,7 @@ export async function sandbox() {
   let list = list_find_indices(split, predicate);
   function lambda(item2) {
     let left = item2 - 2;
+    let sliced = list_slice(list2, index_a, index_b);
   }
   let mapped = list_map(list, lambda);
   return list;
