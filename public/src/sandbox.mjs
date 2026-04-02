@@ -1,7 +1,9 @@
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox() {
   let p = folder_user_docs_path("monothesism_wiki.txt");
   let contents = await file_read(p);
-  return contents;
+  let split = text_split_space(contents);
+  return split;
 }
