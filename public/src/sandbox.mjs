@@ -1,4 +1,4 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
@@ -14,7 +14,7 @@ export async function sandbox() {
   function lambda(item2) {
     let left = item2 - 2;
     let sliced = list_slice(list, left, item2);
-    log_json(right);
+    let joined = list_join_space(list2);
   }
   let mapped = list_map(list, lambda);
   return list;
