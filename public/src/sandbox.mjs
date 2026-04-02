@@ -9,8 +9,8 @@ export async function sandbox() {
   let split = text_split_space(contents);
   function lambda(la) {
     function lambda2(item, index) {
+      ysw;
       if (false) {
-        ssw;
       }
     }
     each_index(split, lambda2);
