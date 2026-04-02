@@ -5,5 +5,5 @@ export function folder_user_docs_path(file_name) {
   let p = folder_user_path();
   let result = path_join([p, "Documents", file_name]);
   let split = text_split_space(result);
-  return result;
+  return split;
 }
