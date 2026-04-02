@@ -363,7 +363,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_clock() + " Time",
-      response: emoji_pray() + " Thank the LORD, our God! " + emoji_smile(),
+      response: emoji_pray() + " I have time to reply to messages",
     },
     {
       text: emoji_pray() + " Travel ask",
