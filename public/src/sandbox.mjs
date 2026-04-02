@@ -18,5 +18,5 @@ export async function sandbox() {
     each_index(split, lambda2);
   }
   let list = list_adder(lambda);
-  return split;
+  return list;
 }
