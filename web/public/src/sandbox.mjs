@@ -8,8 +8,11 @@ export async function sandbox() {
   let contents = await file_read(p);
   let split = text_split_space(contents);
   function lambda(la) {
-    function lambda2(item, index) {}
-    each_index(list2, lambda2);
+    function lambda2(item, index) {
+      if (false) {
+      }
+    }
+    each_index(split, lambda2);
   }
   let list = list_adder(lambda);
   return split;
