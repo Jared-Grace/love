@@ -15,9 +15,8 @@ export async function sandbox() {
   function lambda(right) {
     let left = right - 10;
     let v = log(sandbox.name, {
-      left,
+      left,right
     });
-    (v, right);
     let sliced = list_slice(list, left, right);
     let joined = list_join_space(sliced);
     return joined;
