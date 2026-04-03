@@ -3,5 +3,6 @@ export function messenger_reply_user_data_path() {
   let v =
     folder_user_path() +
     "AppData\\Local\\Google\\Chrome\\User Data\\puppeteer-profile";
+  v = folder_user_path() + "puppeteer-profile";
   return v;
 }
