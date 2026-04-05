@@ -42,8 +42,8 @@ export function app_g_map_generate() {
         let any = list_any(waters, lambda);
         return any;
       }
-      let filtered2 = list_filter(coordinates, lambda7);
-      r = list_random_item(filtered2);
+      let filtered = list_filter(coordinates, lambda7);
+      r = list_random_item(filtered);
     }
     let x = property_get(r, "x");
     let y = property_get(r, "y");
