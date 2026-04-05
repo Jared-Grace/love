@@ -1,3 +1,4 @@
+import { function_rename_replace } from "../../../love/public/src/function_rename_replace.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_karate } from "../../../karate_code/public/src/app_karate.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
@@ -6,7 +7,9 @@ import { function_dependencies_single } from "../../../love/public/src/function_
 export async function sandbox() {
   let r = await function_dependencies_single(app_g_main.name);
   let filtered = list_filter_starts_with(r, app_karate.name);
-  async function lambda(item) {}
+  async function lambda(item) {
+    let v = await function_rename_replace(f_name_before, from, to);
+  }
   await each_async(list, lambda);
   return filtered;
 }
