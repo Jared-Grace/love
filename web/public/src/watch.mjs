@@ -26,6 +26,7 @@ export async function watch() {
       try {
         await command_line_node_g(function_auto_path.name, [path]);
       } finally {
+        property_set(in_progress, path, false);
         if (0) {
           try {
             const args = [path];
