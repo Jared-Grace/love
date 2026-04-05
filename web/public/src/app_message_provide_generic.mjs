@@ -5,7 +5,7 @@ import { app_karate_button_next } from "../../../karate_code/public/src/app_kara
 import { app_shared_flow_next } from "../../../love/public/src/app_shared_flow_next.mjs";
 import { app_message_flow_travel } from "../../../love/public/src/app_message_flow_travel.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
-import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
+import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { emoji_x_purple } from "../../../love/public/src/emoji_x_purple.mjs";
 import { app_shared_button_back } from "../../../love/public/src/app_shared_button_back.mjs";
 export function app_message_provide_generic(category, emoji, context, verse) {
@@ -41,7 +41,7 @@ export function app_message_provide_generic(category, emoji, context, verse) {
         ", then I have no money to pay for my " +
         category +
         ' to you. Please choose "' +
-        app_karate_button_back_text() +
+        app_shared_button_back_text() +
         '"',
     },
     {
