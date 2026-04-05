@@ -19,7 +19,7 @@ import { html_input_type } from "../../../love/public/src/html_input_type.mjs";
 import { html_font_size_1em } from "../../../love/public/src/html_font_size_1em.mjs";
 import { app_shared_style_control } from "../../../love/public/src/app_shared_style_control.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
-import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
+import { app_shared_container_centered } from "../../../love/public/src/app_shared_container_centered.mjs";
 import { app_shared_style_control_font_size } from "../../../love/public/src/app_shared_style_control_font_size.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
@@ -53,7 +53,7 @@ export function html_checkboxes(
   let value_previous = value_previous_get();
   let afters = [];
   function lambda({ title, details, value }) {
-    let container = app_karate_container_centered(container_main);
+    let container = app_shared_container_centered(container_main);
     let label = html_element(container, "label");
     app_shared_style_control(container);
     html_font_size_1em(container);
