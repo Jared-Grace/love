@@ -36,8 +36,8 @@ export function app_g_map_generate() {
       function lambda7(c) {
         function lambda(w) {
           let distance = g_distance(c, w);
-          let v = distance === 1;
-          return v;
+          let n = distance === 1;
+          return n;
         }
         let any = list_any(waters, lambda);
         return any;
