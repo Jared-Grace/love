@@ -12,6 +12,6 @@ export async function sandbox() {
   async function lambda(item) {
     let v = await function_rename_replace(item, "karate", "shared");
   }
-  await each_async(list, lambda);
+  await each_async(list, c);
   return filtered;
 }
