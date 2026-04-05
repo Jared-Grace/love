@@ -9,17 +9,26 @@
     {
       "label": "Server",
       "type": "shell",
-      "command": "cd love && node scripts/r.mjs v"
+      "command": "cd love && node scripts/r.mjs v",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
     },
     {
       "label": "Watcher",
       "type": "shell",
-      "command": "cd love && node scripts/r.mjs w"
+      "command": "cd love && node scripts/r.mjs w",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
     },
     {
       "label": "Terminal",
       "type": "shell",
-      "command": "cd love && bash scripts/p.sh"
+      "command": "cd love && bash scripts/p.sh",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
     }
   ]
 }
