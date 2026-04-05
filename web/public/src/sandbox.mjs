@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_karate } from "../../../karate_code/public/src/app_karate.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -5,5 +6,7 @@ import { function_dependencies_single } from "../../../love/public/src/function_
 export async function sandbox() {
   let r = await function_dependencies_single(app_g_main.name);
   let filtered = list_filter_starts_with(r, app_karate.name);
+  async function lambda(item) {}
+  await each_async(list, lambda);
   return filtered;
 }
