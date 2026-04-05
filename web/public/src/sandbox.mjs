@@ -1,4 +1,4 @@
-import { function_curryify_specify_args_get_curried_right } from "../../../karate_code/public/src/function_curryify_specify_args_get_curried_right.mjs";
+import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
 export async function sandbox() {
-  let r = function_curryify_specify_args_get_curried_right(positions);
+  await function_delete_if_exists(f_name);
 }
