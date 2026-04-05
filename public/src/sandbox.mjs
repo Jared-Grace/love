@@ -8,5 +8,5 @@ export async function sandbox() {
   let filtered = list_filter_starts_with(r, app_karate.name);
   const from = "karate";
   const to = "shared";
-  await function_rename_replace_list(from, to, filtered);
+  await function_rename_replace_list(filtered, from, to);
 }
