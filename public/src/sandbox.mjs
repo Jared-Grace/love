@@ -1,5 +1,4 @@
-import { function_rename_replace_curried_right_2 } from "../../../love/public/src/function_rename_replace_curried_right_2.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { function_rename_replace_list } from "../../../love/public/src/function_rename_replace_list.mjs";
 import { app_karate } from "../../../karate_code/public/src/app_karate.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -9,6 +8,5 @@ export async function sandbox() {
   let filtered = list_filter_starts_with(r, app_karate.name);
   const from = "karate";
   const to = "shared";
-  let c = function_rename_replace_curried_right_2(from, to);
-  await each_async(filtered, c);
+  await function_rename_replace_list(from, to, filtered);
 }
