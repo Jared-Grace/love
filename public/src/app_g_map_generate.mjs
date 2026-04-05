@@ -1,3 +1,4 @@
+import { g_distance_1_any_curried_right } from "../../../karate_code/public/src/g_distance_1_any_curried_right.mjs";
 import { g_distance_1_any } from "../../../karate_code/public/src/g_distance_1_any.mjs";
 import { list_random_item_count_nested } from "../../../karate_code/public/src/list_random_item_count_nested.mjs";
 import { g_tiles_grasses_choices_weighted } from "../../../karate_code/public/src/g_tiles_grasses_choices_weighted.mjs";
@@ -32,6 +33,7 @@ export function app_g_map_generate() {
     if (e) {
       r = list_random_item(coordinates);
     } else {
+      let r2 = g_distance_1_any_curried_right(waters2);
       function lambda7(c) {
         let any = g_distance_1_any(c, waters);
         return any;
