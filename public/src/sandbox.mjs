@@ -1,8 +1,12 @@
+import { list_random_item_invoke_count } from "../../../karate_code/public/src/list_random_item_invoke_count.mjs";
 import { function_curryify_specify } from "../../../karate_code/public/src/function_curryify_specify.mjs";
 import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
 export async function sandbox() {
   await function_delete_if_exists(
     "list_random_item_invoke_count_curried_specify_1_3",
   );
-  let r = await function_curryify_specify(f_name2, positions_comma);
+  let r = await function_curryify_specify(
+    list_random_item_invoke_count.name,
+    "1,3",
+  );
 }
