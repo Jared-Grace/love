@@ -30,7 +30,7 @@ import { html_font_sans_serif } from "../../../love/public/src/html_font_sans_se
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_karate_container } from "../../../karate_code/public/src/app_karate_container.mjs";
+import { app_shared_container } from "../../../love/public/src/app_shared_container.mjs";
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_shared_style_control } from "../../../love/public/src/app_shared_style_control.mjs";
@@ -50,7 +50,7 @@ export async function app_message_main(context) {
   let div_messages = html_div(root);
   let start = app_message_reply_choices();
   await refresh();
-  let div = app_karate_container(root);
+  let div = app_shared_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
@@ -97,7 +97,7 @@ export async function app_message_main(context) {
     await invoke_multiple_unordered_async(nexts);
   }
   function message_display(direction, message) {
-    let div_message = app_karate_container(div_messages);
+    let div_message = app_shared_container(div_messages);
     html_style_assign(div_message, {
       width: "80%",
       ["margin-" + direction]: "auto",
