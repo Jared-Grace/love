@@ -32,7 +32,7 @@ export function app_g_map_generate() {
     if (e) {
       r = list_random_item(coordinates);
     } else {
-      let lambda7 = g_distance_1_any_curried_right(wawatersters2);
+      let lambda7 = g_distance_1_any_curried_right(waters);
       let filtered = list_filter(coordinates, lambda7);
       r = list_random_item(filtered);
     }
