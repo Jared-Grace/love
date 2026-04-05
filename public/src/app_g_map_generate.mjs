@@ -1,3 +1,4 @@
+import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { g_tiles_grasses_choices } from "../../../karate_code/public/src/g_tiles_grasses_choices.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
@@ -23,7 +24,7 @@ export function app_g_map_generate() {
       function lambda4(i3) {
         la(g);
       }
-      each_range(index + 1, lambda4);
+      each_range_1(index, lambda4);
     }
     each_index(taken, lambda3);
   }
