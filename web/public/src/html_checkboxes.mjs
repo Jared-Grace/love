@@ -17,7 +17,7 @@ import { html_checked_set } from "../../../love/public/src/html_checked_set.mjs"
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_input_type } from "../../../love/public/src/html_input_type.mjs";
 import { html_font_size_1em } from "../../../love/public/src/html_font_size_1em.mjs";
-import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
+import { app_shared_style_control } from "../../../love/public/src/app_shared_style_control.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
 import { app_karate_style_control_font_size } from "../../../karate_code/public/src/app_karate_style_control_font_size.mjs";
@@ -55,7 +55,7 @@ export function html_checkboxes(
   function lambda({ title, details, value }) {
     let container = app_karate_container_centered(container_main);
     let label = html_element(container, "label");
-    app_karate_style_control(container);
+    app_shared_style_control(container);
     html_font_size_1em(container);
     let checkbox = html_input_type(label, "checkbox");
     async function on_click() {
