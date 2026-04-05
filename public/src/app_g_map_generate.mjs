@@ -31,7 +31,7 @@ export function app_g_map_generate() {
     if (e) {
       r = list_random_item(coordinates);
     } else {
-      r = g_distance_1_any_random(waters, coordinates, r);
+      r = g_distance_1_any_random(waters, coordinates);
     }
     let x = property_get(r, "x");
     let y = property_get(r, "y");
