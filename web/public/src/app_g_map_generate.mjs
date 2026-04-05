@@ -18,7 +18,7 @@ export function app_g_map_generate() {
   let tiles_choices = g_tiles_grasses_choices_weighted();
   let row_count = 15;
   let column_count = row_count;
-  function lambda10(la2) {
+  function lambda10(la) {
     function lambda6(i) {
       function lambda11(la3) {
         function lambda9(i2) {
@@ -28,7 +28,7 @@ export function app_g_map_generate() {
         each_range(column_count, lambda9);
       }
       let list2 = list_adder(lambda11);
-      la2(list2);
+      la(list2);
     }
     each_range(row_count, lambda6);
   }
