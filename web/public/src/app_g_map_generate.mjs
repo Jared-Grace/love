@@ -1,3 +1,4 @@
+import { list_random_item_count } from "../../../karate_code/public/src/list_random_item_count.mjs";
 import { g_tiles_grasses_choices_weighted } from "../../../karate_code/public/src/g_tiles_grasses_choices_weighted.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
@@ -20,14 +21,7 @@ export function app_g_map_generate() {
   let column_count = row_count;
   function lambda10(la) {
     function lambda6(i) {
-      function lambda11(la3) {
-        function lambda9(i2) {
-          let r = list_random_item(tiles_choices);
-          la3(r);
-        }
-        each_range(column_count, lambda9);
-      }
-      let list2 = list_adder(lambda11);
+      let list2 = list_random_item_count(tiles_choices, column_count);
       la(list2);
     }
     each_range(row_count, lambda6);
