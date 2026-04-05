@@ -31,7 +31,6 @@ export function app_g_map_generate() {
     }
     each_index(taken, lambda3);
   }
-  app_a_water();
   let tiles = list_adder(lambda5);
   let row_count = 15;
   let column_count = row_count;
@@ -75,7 +74,8 @@ export function app_g_map_generate() {
     let x = property_get(r, "x");
     let y = property_get(r, "y");
     let water_row = list_get(rows, y);
-    list_set(water_row, x, w);
+    let value = app_a_water();
+    list_set(water_row, x, value);
     list_remove(coordinates, r);
     list_add(waters, r);
   }
