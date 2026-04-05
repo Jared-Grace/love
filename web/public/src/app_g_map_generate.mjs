@@ -24,8 +24,8 @@ export function app_g_map_generate() {
     column_count,
   );
   let coordinates = g_coordinates(rows);
-  let count = row_count * column_count;
-  let water_count = floor(count * 0.3);
+  let total = row_count * column_count;
+  let water_count = floor(total * 0.3);
   let waters = [];
   function lambda2(i4) {
     let r = null;
