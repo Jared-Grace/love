@@ -20,7 +20,7 @@ import { html_font_size_1em } from "../../../love/public/src/html_font_size_1em.
 import { app_shared_style_control } from "../../../love/public/src/app_shared_style_control.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
-import { app_karate_style_control_font_size } from "../../../karate_code/public/src/app_karate_style_control_font_size.mjs";
+import { app_shared_style_control_font_size } from "../../../love/public/src/app_shared_style_control_font_size.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -43,7 +43,7 @@ export function html_checkboxes(
   let div = html_div_text(container_main, top_text);
   html_centered(div);
   html_style_assign(div, {
-    "font-size": app_karate_style_control_font_size(),
+    "font-size": app_shared_style_control_font_size(),
   });
   html_style_assign(div, {
     padding: "0.6em",
@@ -96,7 +96,7 @@ export function html_checkboxes(
     });
     let s = html_span_text(label, title);
     html_style_assign(s, {
-      "font-size": app_karate_style_control_font_size(),
+      "font-size": app_shared_style_control_font_size(),
     });
     let div = html_div_text(label, details);
     object_merge(checkbox, {
