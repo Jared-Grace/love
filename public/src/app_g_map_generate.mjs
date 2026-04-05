@@ -1,3 +1,4 @@
+import { g_distance_1 } from "../../../karate_code/public/src/g_distance_1.mjs";
 import { list_random_item_count_nested } from "../../../karate_code/public/src/list_random_item_count_nested.mjs";
 import { g_tiles_grasses_choices_weighted } from "../../../karate_code/public/src/g_tiles_grasses_choices_weighted.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -6,7 +7,6 @@ import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
-import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
@@ -35,8 +35,7 @@ export function app_g_map_generate() {
     } else {
       function lambda7(c) {
         function lambda(w) {
-          let distance = g_distance(c, w);
-          let a = distance === 1;
+          let a = g_distance_1(c, w);
           return a;
         }
         let any = list_any(waters, lambda);
