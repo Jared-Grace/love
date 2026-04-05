@@ -8,7 +8,7 @@ export async function sandbox() {
   let r = await function_dependencies_single(app_g_main.name);
   let filtered = list_filter_starts_with(r, app_karate.name);
   async function lambda(item) {
-    let v = await function_rename_replace(f_name_before, from, to);
+    let v = await function_rename_replace(item, "karate", "shared");
   }
   await each_async(list, lambda);
   return filtered;
