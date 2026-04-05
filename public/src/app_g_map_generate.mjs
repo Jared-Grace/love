@@ -28,14 +28,14 @@ export function app_g_map_generate() {
     }
     each_index(taken, lambda3);
   }
-  let tiles = list_adder(lambda5);
+  let tiles_choices = list_adder(lambda5);
   let row_count = 15;
   let column_count = row_count;
   function lambda10(la2) {
     function lambda6(i) {
       function lambda11(la3) {
         function lambda9(i2) {
-          let r = list_random_item(tiles);
+          let r = list_random_item(tiles_choices);
           la3(r);
         }
         each_range(column_count, lambda9);
