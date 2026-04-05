@@ -1,5 +1,4 @@
-import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
-import { g_tiles_grasses_choices } from "../../../karate_code/public/src/g_tiles_grasses_choices.mjs";
+import { g_tiles_grasses_choices_weighted } from "../../../karate_code/public/src/g_tiles_grasses_choices_weighted.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -14,21 +13,9 @@ import { list_set } from "../../../love/public/src/list_set.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 export function app_g_map_generate() {
-  let taken = g_tiles_grasses_choices();
-  ("this code makes some of the tiles appear more times in the list - so that the list represents a weighted probability choice");
-  function lambda5(la) {
-    function lambda3(g, index) {
-      function lambda4(i3) {
-        la(g);
-      }
-      each_range_1(index, lambda4);
-    }
-    each_index(taken, lambda3);
-  }
-  let tiles_choices = list_adder(lambda5);
+  let tiles_choices = g_tiles_grasses_choices_weighted();
   let row_count = 15;
   let column_count = row_count;
   function lambda10(la2) {
