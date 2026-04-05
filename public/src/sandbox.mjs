@@ -8,7 +8,9 @@ import { function_dependencies_single } from "../../../love/public/src/function_
 export async function sandbox() {
   let r = await function_dependencies_single(app_g_main.name);
   let filtered = list_filter_starts_with(r, app_karate.name);
-  let c = function_rename_replace_curried_right_2("karate", "shared");
+  const from = "karate";
+  const to = "shared";
+  let c = function_rename_replace_curried_right_2(from, to);
   async function lambda(item) {
     let v = await function_rename_replace(item, "karate", "shared");
   }
