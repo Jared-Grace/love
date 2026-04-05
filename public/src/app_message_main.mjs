@@ -25,7 +25,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_check_empty_not } from "../../../love/public/src/html_check_empty_not.mjs";
 import { app_karate_screen_input_validate } from "../../../love/public/src/app_karate_screen_input_validate.mjs";
 import { emoji_email } from "../../../love/public/src/emoji_email.mjs";
-import { app_karate_button_green } from "../../../karate_code/public/src/app_karate_button_green.mjs";
+import { app_shared_button_green } from "../../../love/public/src/app_shared_button_green.mjs";
 import { html_font_sans_serif } from "../../../love/public/src/html_font_sans_serif.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
@@ -58,7 +58,7 @@ export async function app_message_main(context) {
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
   let div_checks = html_div(div);
-  let button_send = app_karate_button_green(
+  let button_send = app_shared_button_green(
     div,
     emoji_email() + " Send",
     on_send,
