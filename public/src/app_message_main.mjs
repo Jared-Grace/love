@@ -9,7 +9,7 @@ import { reply_messages_matches } from "../../../love/public/src/reply_messages_
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
-import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
+import { app_shared_button_uncolored_background_color } from "../../../love/public/src/app_shared_button_uncolored_background_color.mjs";
 import { date_now_iso } from "../../../love/public/src/date_now_iso.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
@@ -74,7 +74,7 @@ export async function app_message_main(context) {
       message_display("left", message);
       let right = message_display("right", "(Loading...)");
       html_style_assign(right, {
-        "background-color": app_karate_button_uncolored_background_color(),
+        "background-color": app_shared_button_uncolored_background_color(),
       });
       async function next() {
         let results = await reply_messages_matches([message], start);
