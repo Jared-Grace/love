@@ -1,4 +1,4 @@
-import { list_random_item_count } from "../../../karate_code/public/src/list_random_item_count.mjs";
+import { list_random_item_count_nested } from "../../../karate_code/public/src/list_random_item_count_nested.mjs";
 import { g_tiles_grasses_choices_weighted } from "../../../karate_code/public/src/g_tiles_grasses_choices_weighted.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
@@ -13,20 +13,16 @@ import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { list_set } from "../../../love/public/src/list_set.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 export function app_g_map_generate() {
   let tiles_choices = g_tiles_grasses_choices_weighted();
   let row_count = 15;
   let column_count = row_count;
-  function lambda10(la) {
-    function lambda6(i) {
-      let list2 = list_random_item_count(tiles_choices, column_count);
-      la(list2);
-    }
-    each_range(row_count, lambda6);
-  }
-  let rows = list_adder(lambda10);
+  let rows = list_random_item_count_nested(
+    tiles_choices,
+    column_count,
+    row_count,
+  );
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
   let water_count = floor(count * 0.3);
