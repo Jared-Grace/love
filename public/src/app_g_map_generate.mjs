@@ -17,6 +17,7 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 export function app_g_map_generate() {
   let taken = g_tiles_grasses_choices();
+  ("this code makes some of the tiles appear more times in the list - so that the list represents a weighted probability choice");
   function lambda5(la) {
     function lambda3(g, index) {
       function lambda4(i3) {
