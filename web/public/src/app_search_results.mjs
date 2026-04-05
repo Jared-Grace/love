@@ -25,7 +25,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
-import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
+import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -69,7 +69,7 @@ export async function app_search_results(context, div_results) {
   }
   let dictionary = list_to_dictionary_value(chapter_codes_match, value_get);
   html_clear(div_results);
-  let text = app_karate_button_back_text();
+  let text = app_shared_button_back_text();
   let button_list = null;
   let expand_all_div = html_div(div_results);
   let expand_all = null;
