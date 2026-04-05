@@ -20,8 +20,8 @@ export function app_g_map_generate() {
   let column_count = row_count;
   let rows = list_random_item_count_nested(
     tiles_choices,
-    column_count,
     row_count,
+    column_count,
   );
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
