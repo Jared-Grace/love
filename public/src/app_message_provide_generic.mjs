@@ -7,14 +7,14 @@ import { app_message_flow_travel } from "../../../love/public/src/app_message_fl
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { emoji_x_purple } from "../../../love/public/src/emoji_x_purple.mjs";
-import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
+import { app_shared_button_back } from "../../../love/public/src/app_shared_button_back.mjs";
 export function app_message_provide_generic(category, emoji, context, verse) {
   let button_back = function lambda(context, parent) {
     function lambda5() {
       let screens = app_message_flow_travel();
       app_shared_flow_back(context, screens);
     }
-    let button2 = app_karate_button_back(parent, lambda5);
+    let button2 = app_shared_button_back(parent, lambda5);
     return button2;
   };
   let top_text =
