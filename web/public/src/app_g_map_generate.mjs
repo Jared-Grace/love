@@ -1,4 +1,4 @@
-import { g_tiles_grasses_shuffled } from "../../../karate_code/public/src/g_tiles_grasses_shuffled.mjs";
+import { g_tiles_grasses_choices } from "../../../karate_code/public/src/g_tiles_grasses_choices.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -15,11 +15,8 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
-import { list_take } from "../../../love/public/src/list_take.mjs";
 export function app_g_map_generate() {
-  let grasses = g_tiles_grasses_shuffled();
-  ("choose three different types of grass for visual variety");
-  let taken = list_take(grasses, 3);
+  let taken = g_tiles_grasses_choices();
   function lambda5(la) {
     function lambda3(g, index) {
       function lambda4(i3) {
