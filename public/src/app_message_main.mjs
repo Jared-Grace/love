@@ -33,7 +33,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_karate_container } from "../../../karate_code/public/src/app_karate_container.mjs";
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
-import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
+import { app_shared_style_control } from "../../../love/public/src/app_shared_style_control.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export async function app_message_main(context) {
   const messages_property = "messages";
@@ -54,7 +54,7 @@ export async function app_message_main(context) {
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
-  app_karate_style_control(textarea);
+  app_shared_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
   html_focus(textarea);
   let div_checks = html_div(div);
