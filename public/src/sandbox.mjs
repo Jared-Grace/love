@@ -10,6 +10,5 @@ export async function sandbox() {
   const from = "karate";
   const to = "shared";
   let c = function_rename_replace_curried_right_2(from, to);
-  await each_async(list, c);
-  return filtered;
+  await each_async(filtered, c);
 }
