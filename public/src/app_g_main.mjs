@@ -79,8 +79,8 @@ export async function app_g_main(context) {
   let coordinates = g_coordinates(rows);
   let w = app_a_water();
   let r = equal_not_curried_right(w);
+  const property_name = "item";
   function lambda2(row) {
-    const property_name = "item";
     let r2 = property_equals_not_curried_right_2(property_name, w);
     let filtered = list_filter(row, r2);
     return filtered;
