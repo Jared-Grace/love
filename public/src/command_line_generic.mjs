@@ -11,10 +11,11 @@ export async function command_line_generic(command, extra) {
   let args = property_get(r5, "args");
   let cmd = property_get(r5, "cmd");
   let result = new Promise(function lambda5(resolve, reject) {
-    const child = spawn(cmd, args, {
+    const options = {
       ...extra,
       shell: false,
-    });
+    };
+    const child = spawn(cmd, args, options);
     let stdout = "";
     let stderr = "";
     function lambda(data) {
