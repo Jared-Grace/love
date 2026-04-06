@@ -6,6 +6,6 @@ export async function sandbox() {
   let s = equal_not_curried_right.name;
   let result = await data_identifiers_search(s);
   let properties = properties_get(obj);
-  let s1 = list_size_1(list);
+  let s1 = list_size_1(properties);
   return result;
 }
