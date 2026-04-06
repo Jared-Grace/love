@@ -1,3 +1,4 @@
+import { app_g_player_style } from "../../../love/public/src/app_g_player_style.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
@@ -20,7 +21,6 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 export async function app_g_refresh(div_map_container, rows) {
   let path_prefix = app_g_path_prefix();
@@ -59,7 +59,7 @@ export async function app_g_refresh(div_map_container, rows) {
   50% { transform: translateY(-10px); } /* move up 10px */
 }`;
   html_style_head(style_text);
-  html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
+  app_g_player_style(player_img_c);
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
     let christian = property_get(npc, "christian");
