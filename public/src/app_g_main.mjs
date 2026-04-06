@@ -83,6 +83,7 @@ export async function app_g_main(context) {
     function lambda(column) {
       let item = property_get(column, "item");
       let ne = equal_not(item, w);
+      return ne;
     }
     let filtered = list_filter(row, lambda);
     return filtered;
