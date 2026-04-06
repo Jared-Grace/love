@@ -1,3 +1,4 @@
+import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { app_g_tutorial_study } from "../../../love/public/src/app_g_tutorial_study.mjs";
 import { app_g_tutorial } from "../../../love/public/src/app_g_tutorial.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
@@ -18,6 +19,8 @@ export async function app_g_click_npc(
   game_prefix,
   refresh,
 ) {
+  let g = await app_g_game_save_get();
+  let player = property_get(g, "player");
   let overlay = app_g_overlay(div_map);
   async function overlay_close() {
     await app_g_player_save(player);
