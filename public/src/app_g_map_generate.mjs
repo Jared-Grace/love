@@ -27,8 +27,8 @@ export function app_g_map_generate() {
     let r = app_g_map_generate_waters_next(waters, coordinates);
     let x = property_get(r, "x");
     let y = property_get(r, "y");
-    let water_row = list_get(rows, y);
     let value = app_a_water();
+    let water_row = list_get(rows, y);
     list_set(water_row, x, value);
     list_remove(coordinates, r);
     list_add(waters, r);
