@@ -37,7 +37,7 @@ export async function app_g_click_npc(
     app_g_button_back(overlay, overlay_close);
     let studied = property_get(player, "studied");
     if (not(studied)) {
-      app_g_tutorial_study(div_map);
+      await app_g_tutorial_study(div_map);
     }
   } else {
     let prayer = property_get(player, "prayer");
@@ -61,7 +61,7 @@ export async function app_g_click_npc(
         let text = emoji_pray();
         const player_property = "conversed";
         const tutorial_property = "tutorial_converse";
-        app_g_tutorial(player_property, div_map, tutorial_property, text);
+        await app_g_tutorial(player_property, div_map, tutorial_property, text);
       }
       app_g_button_back(overlay, on_back);
     } else {
