@@ -88,7 +88,7 @@ export async function app_g_main(context) {
     rows,
     filtered: coordinates_land,
   });
-  list_shuffle(coordinates);
+  list_shuffle(coordinates_land);
   let names_women = bible_names_women();
   let female = {
     name: g_gender_female(),
