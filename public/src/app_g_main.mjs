@@ -1,6 +1,5 @@
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
-import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
@@ -35,7 +34,6 @@ import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
@@ -54,7 +52,6 @@ export async function app_g_main(context) {
     height: "100%",
   });
   html_style_overflow_hidden(root);
-  let path_prefix = app_g_path_prefix();
   let div_map_container = html_div(root);
   html_style_assign(div_map_container, {
     position: "relative",
@@ -67,7 +64,6 @@ export async function app_g_main(context) {
     height: "100vh",
   });
   html_scroll_none(div_map_container);
-  const tiles_path = g_folder_tiles(path_prefix);
   let rows = app_g_map_generate();
   let imgs_men_rg = range_1(18);
   let imgs_women_rg = range_1(21);
