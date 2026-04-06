@@ -53,8 +53,10 @@ export async function webpack_build_generic(
       command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
-    let extra = object_merge(env_vars, process.env);
-    let stdout = await command_line_generic(combined2, extra);
+    let env = object_merge(env_vars, process.env);
+    let stdout = await command_line_generic(combined2, {
+      env,
+    });
     return stdout;
   }
   let result = await file_delete_after(f_name_ext, lambda);
