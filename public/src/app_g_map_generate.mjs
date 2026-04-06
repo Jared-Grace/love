@@ -20,7 +20,7 @@ export function app_g_map_generate() {
   let total = row_count * column_count;
   let water_count = floor(total * 0.3);
   let waters = [];
-  function lambda2(i4) {
+  function lambda2(i) {
     let r = app_g_map_generate_waters_next(waters, coordinates);
     let value = app_a_water();
     list_set_nested_y_x(r, value);
