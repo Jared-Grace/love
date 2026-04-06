@@ -66,7 +66,7 @@ export async function app_g_main(context) {
   html_style_assign(div_map_container, {
     height: "100vh",
   });
-  await html_scroll_none(div_map_container);
+  html_scroll_none(div_map_container);
   const tiles_path = g_folder_tiles(path_prefix);
   let rows = app_g_map_generate();
   let imgs_men_rg = range_1(18);
