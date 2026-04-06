@@ -24,6 +24,7 @@ export async function app_g_refresh(
   game_prefix,
   tiles_path,
   rows,
+  map,
 ) {
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
