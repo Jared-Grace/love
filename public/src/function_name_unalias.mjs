@@ -14,7 +14,8 @@ export async function function_name_unalias(f_name) {
   let expandeds = property_get(r, "expandeds");
   let expanded = property_get(r, "expanded");
   let dictionary = await functions_names_to_paths();
-  let expanded_paths = list_map_property_get(expandeds, dictionary);
+    let c = property_get_curried(dictionary);
+  let expanded_paths = list_to_dictionary_value(expandeds, c);
   const unaliased = exists
     ? unaliased_actual
     : expanded !== null
@@ -25,6 +26,4 @@ export async function function_name_unalias(f_name) {
     expandeds: expanded_paths,
   };
   return v;
-  function lambda(item2v) {}
-  let dictionary2 = list_to_dictionary_value(list, lambda);
 }
