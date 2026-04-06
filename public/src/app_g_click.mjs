@@ -33,7 +33,7 @@ export async function app_g_click(
   game_prefix,
   refresh,
 ) {
-  let player = app_g_player_get();
+  let player = await app_g_player_get();
   let coordinates = property_get(map, "coordinates");
   let npcs = property_get(map, "npcs");
   const tile_e = e.target.closest("." + tile_class);
@@ -103,5 +103,5 @@ export async function app_g_click(
       );
     }
   }
-  app_g_player_save(player);
+  await app_g_player_save(player);
 }
