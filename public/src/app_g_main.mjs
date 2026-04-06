@@ -81,6 +81,7 @@ export async function app_g_main(context) {
   function lambda2(row) {
     function lambda(column) {
       let item = property_get(column, "item");
+      en;
     }
     let filtered = list_filter(row, lambda);
     return filtered;
