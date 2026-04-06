@@ -10,6 +10,6 @@ export function app_g_map_generate() {
     row_count,
     column_count,
   );
-  app_g_map_generate_waters(coordinates);
+  app_g_map_generate_waters(rows);
   return rows;
 }
