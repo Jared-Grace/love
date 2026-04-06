@@ -79,7 +79,7 @@ export function app_g_study(player, overlay, close) {
         let sermon_wrong_list = app_g_openai_split(sermon_wrong);
         function correct() {
           let item = list_get(sermon_correct_list, sermon_index);
-          function lambda3() {
+          async function lambda3() {
             sermon_index++;
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
@@ -90,7 +90,7 @@ export function app_g_study(player, overlay, close) {
               } else {
                 list_remove(review, r);
                 property_set(player, "studied", true);
-                app_g_player_save(player);
+                await app_g_player_save(player);
                 close();
               }
             } else {
