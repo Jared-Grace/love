@@ -19,7 +19,6 @@ import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
-import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
@@ -68,18 +67,6 @@ export async function app_g_main(context) {
   }
   const game_prefix = g_folder_img(path_prefix);
   let div_map_container = html_div(root);
-  if (false) {
-    html_style_assign(div_map_container, {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      overflow: "auto",
-      width: "100dvw",
-      height: "100dvh",
-      "z-index": html_z_max(),
-      "pointer-events": "auto",
-    });
-  }
   html_style_assign(div_map_container, {
     position: "relative",
     overflow: "auto",
