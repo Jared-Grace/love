@@ -1,3 +1,4 @@
+import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { function_delete } from "../../../love/public/src/function_delete.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -8,6 +9,7 @@ export async function sandbox() {
   let s = equal_not_curried_right.name;
   let result = await data_identifiers_search(s);
   let properties = properties_get(result);
+  let eq2 = json_equal(left, right);
   let s1 = list_size_1(properties);
   if (s1) {
     await function_delete(s);
