@@ -9,6 +9,7 @@ export function list_permute(list, fns, result, candidate) {
   function lambda(fn) {
     let v = fn(first);
     list_add(candidate, v);
+    list_permute(list, fns, result, candidate);
   }
   each(fns, lambda);
 }
