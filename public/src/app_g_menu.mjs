@@ -19,10 +19,10 @@ export function app_g_menu(overlay, player) {
   function lambda7() {
     app_g_menu_clear_back(overlay, player);
     app_g_container_text(overlay, "What prayer would you like to pray?");
-    function lambda22() {
+    async function lambda22() {
       let prayer = property_get(player, "prayer");
       property_set(prayer, "conversation", true);
-      app_g_player_save(player);
+      await app_g_player_save(player);
       close();
     }
     const text =
