@@ -81,8 +81,8 @@ export async function app_g_main(context) {
   let w = app_a_water();
   let r = equal_not_curried_right(w);
   function lambda2(row) {
-    const property = "item";
-    let r2 = property_equals_not_curried_right_2(property_name, value);
+    const property_name = "item";
+    let r2 = property_equals_not_curried_right_2(property_name, w);
     function lambda(column) {
       let ne = property_equals_not(column, property, w);
       return ne;
