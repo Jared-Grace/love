@@ -7,6 +7,7 @@ export function g_coordinates(rows) {
         la4({
           x,
           y,
+          item,
         });
       }
       each_index(columns, lambda14);
