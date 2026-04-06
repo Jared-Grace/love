@@ -1,11 +1,10 @@
+import { list_remove_add } from "../../../karate_code/public/src/list_remove_add.mjs";
 import { list_set_nested_y_x } from "../../../karate_code/public/src/list_set_nested_y_x.mjs";
 import { app_g_map_generate_waters_next } from "../../../love/public/src/app_g_map_generate_waters_next.mjs";
 import { list_random_item_count_nested } from "../../../love/public/src/list_random_item_count_nested.mjs";
 import { g_tiles_grasses_choices_weighted } from "../../../love/public/src/g_tiles_grasses_choices_weighted.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
-import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 export function app_g_map_generate() {
@@ -25,8 +24,7 @@ export function app_g_map_generate() {
     let r = app_g_map_generate_waters_next(waters, coordinates);
     let value = app_a_water();
     list_set_nested_y_x(r, value);
-    list_remove(coordinates, r);
-    list_add(waters, r);
+    list_remove_add(coordinates, r, waters);
   }
   each_range(water_count, lambda2);
   return rows;
