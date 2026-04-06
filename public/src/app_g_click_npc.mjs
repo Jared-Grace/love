@@ -20,8 +20,8 @@ export async function app_g_click_npc(
   refresh,
 ) {
   let overlay = app_g_overlay(div_map);
-  function overlay_close() {
-    app_g_player_save(player);
+  async function overlay_close() {
+    await app_g_player_save(player);
     html_remove(overlay);
   }
   let review = property_get(player, "review");
