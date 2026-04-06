@@ -54,10 +54,11 @@ export async function webpack_build_generic(
       command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
-    log(webpack_build_generic.name, {
-      command,
-    });
     let extra = object_merge(env_vars, process.env);
+    log(webpack_build_generic.name, {
+      combined2,
+      extra,
+    });
     let stdout = await command_line_generic(combined2, extra);
     return stdout;
   }
