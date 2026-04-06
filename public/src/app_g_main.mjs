@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
@@ -98,6 +99,8 @@ export async function app_g_main(context) {
   let names_men = bible_names_men();
   let right = player_img;
   let coordinates = g_coordinates(rows);
+  function lambda2(item2) {}
+  let mapped = list_map(list, lambda2);
   log(app_g_main.name, {
     rows,
   });
