@@ -1,10 +1,10 @@
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 export function g_coordinates(rows) {
-  function lambda15(la4) {
+  function lambda15(la) {
     function lambda13(columns, y) {
       function lambda14(item, x) {
-        la4({
+        la({
           x,
           y,
           item,
