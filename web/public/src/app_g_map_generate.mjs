@@ -24,7 +24,7 @@ export function app_g_map_generate() {
   function lambda2(i4) {
     let r = app_g_map_generate_waters_next(waters, coordinates);
     let value = app_a_water();
-    list_set_nested_y_x(r, rows, value);
+    list_set_nested_y_x(r, value);
     list_remove(coordinates, r);
     list_add(waters, r);
   }
