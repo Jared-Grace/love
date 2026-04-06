@@ -16,6 +16,6 @@ export async function functions_names_to_paths() {
   }
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(mapper);
-  let dictionary = list_reduce({}, squashed, object_merge);
+  let dictionary = list_reduce(squashed, object_merge, {});
   return dictionary;
 }
