@@ -1,3 +1,4 @@
+import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -11,7 +12,7 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
-export function app_g_conversation(
+export async function app_g_conversation(
   prayer,
   npcs_matched,
   overlay,
@@ -20,6 +21,8 @@ export function app_g_conversation(
   div_map,
   refresh,
 ) {
+  let g = await app_g_game_save_get();
+  let player = property_get(g, "player");
   property_set(player, "conversed", true);
   property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
