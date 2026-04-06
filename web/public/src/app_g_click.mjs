@@ -1,6 +1,6 @@
+import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
-import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
@@ -32,7 +32,8 @@ export async function app_g_click(
   game_prefix,
   refresh,
 ) {
-  let player = await app_g_player_get();
+  let g = await app_g_game_save_get();
+  let player = property_get(g, "player");
   let coordinates = property_get(map, "coordinates");
   let npcs = property_get(map, "npcs");
   const tile_e = e.target.closest("." + tile_class);
