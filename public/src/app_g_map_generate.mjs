@@ -1,6 +1,6 @@
-import { app_g_map_generate_waters_next } from "../../../karate_code/public/src/app_g_map_generate_waters_next.mjs";
-import { list_random_item_count_nested } from "../../../karate_code/public/src/list_random_item_count_nested.mjs";
-import { g_tiles_grasses_choices_weighted } from "../../../karate_code/public/src/g_tiles_grasses_choices_weighted.mjs";
+import { app_g_map_generate_waters_next } from "../../../love/public/src/app_g_map_generate_waters_next.mjs";
+import { list_random_item_count_nested } from "../../../love/public/src/list_random_item_count_nested.mjs";
+import { g_tiles_grasses_choices_weighted } from "../../../love/public/src/g_tiles_grasses_choices_weighted.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
