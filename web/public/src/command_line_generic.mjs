@@ -39,7 +39,11 @@ export async function command_line_generic(command, extra) {
     child.on("error", lambda3);
     function lambda4(code) {
       if (code !== 0) {
-        reject(new Error(`Command exited with code ${code}\n${stderr}`));
+        reject(
+          new Error(
+            `Command exited with code ${code}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`,
+          ),
+        );
       } else {
         resolve({
           stdout,
