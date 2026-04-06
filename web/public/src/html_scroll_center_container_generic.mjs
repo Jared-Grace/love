@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_scroll_generic_wait } from "../../../love/public/src/html_scroll_generic_wait.mjs";
@@ -26,5 +27,6 @@ export async function html_scroll_center_container_generic(
     top: scrollTop,
     behavior,
   };
+  console.log(container_e.scrollHeight, container_e.clientHeight);
   container_e.scrollTo(s);
 }
