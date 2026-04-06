@@ -1,6 +1,6 @@
+import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { webpack_config_folder } from "../../../love/public/src/webpack_config_folder.mjs";
@@ -56,7 +56,7 @@ export async function webpack_build_generic(
     log(webpack_build_generic.name, {
       command,
     });
-    let stdout = await command_line(command);
+    let stdout = await command_line_generic(command);
     return stdout;
   }
   let result = await file_delete_after(f_name_ext, lambda);
