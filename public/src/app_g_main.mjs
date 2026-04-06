@@ -146,5 +146,5 @@ export async function app_g_main(context) {
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
   const game_prefix = g_folder_img(path_prefix);
-  await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
+  await app_g_refresh(div_map_container, game_prefix, tiles_path, rows);
 }
