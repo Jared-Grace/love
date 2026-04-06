@@ -1,3 +1,4 @@
+import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { equal_not_curried_right } from "../../../karate_code/public/src/equal_not_curried_right.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -101,7 +102,8 @@ export async function app_g_main(context) {
   let names_men = bible_names_men();
   let right = player_img;
   let coordinates = g_coordinates(rows);
-  let r = equal_not_curried_right(right2);
+  let value = app_a_water();
+  let r = equal_not_curried_right(value);
   function lambda2(row) {
     function lambda3(item2) {}
     let filtered = list_filter(list, lambda3);
