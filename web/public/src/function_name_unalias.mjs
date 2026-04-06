@@ -10,15 +10,15 @@ export async function function_name_unalias(f_name) {
   var v2 = await function_alias_add_generic(f_name);
   let unaliased_actual = property_get(v2, "unaliased");
   let exists = property_get(v2, "exists");
-  let v3 = await function_acronym_to_name(f_name);
-  let expandeds = property_get(v3, "expandeds");
-  let expanded = property_get(v3, "expanded");
+  let r = await function_acronym_to_name(f_name);
+  let expandeds = property_get(r, "expandeds");
+  let expanded = property_get(r, "expanded");
   let dictionary = await functions_names_to_paths();
-  let expanded_paths = list_map_property_get(expandeds, dictionary);
   log(function_name_unalias.name, {
-    expandeds,
     dictionary,
+    expandeds,
   });
+  let expanded_paths = list_map_property_get(expandeds, dictionary);
   const unaliased = exists
     ? unaliased_actual
     : expanded !== null
