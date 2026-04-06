@@ -1,4 +1,4 @@
-import { app_g_player_style } from "../../../love/public/src/app_g_player_style.mjs";
+import { app_g_player_img } from "../../../love/public/src/app_g_player_img.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
@@ -38,8 +38,7 @@ export async function app_g_refresh(div_map_container, rows) {
   let g = await app_g_game_save_get();
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
-  let player_img_c = g_character_img(game_prefix, div_map, player);
-  app_g_player_style(player_img_c);
+  let player_img_c = app_g_player_img(game_prefix, div_map, player);
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
     let christian = property_get(npc, "christian");
