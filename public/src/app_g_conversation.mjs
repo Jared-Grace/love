@@ -15,7 +15,6 @@ export function app_g_conversation(
   prayer,
   npcs_matched,
   overlay,
-  player,
   game_prefix,
   overlay_close,
   div_map,
