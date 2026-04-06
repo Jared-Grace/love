@@ -78,7 +78,7 @@ export async function app_g_main(context) {
   let w = app_a_water();
   const property_name = "item";
   function lambda2(row) {
-    let filtered = list_filter_property_not(property_name, w, row);
+    let filtered = list_filter_property_not(row, property_name, w);
     return filtered;
   }
   let mapped = list_map(rows, lambda2);
