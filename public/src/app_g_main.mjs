@@ -111,6 +111,7 @@ export async function app_g_main(context) {
   let mapped = list_map(rows, lambda2);
   log(app_g_main.name, {
     rows,
+    mapped,
   });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
