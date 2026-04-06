@@ -7,7 +7,7 @@ import { list_first_remaining } from "../../../love/public/src/list_first_remain
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function list_permute_inner(list, fns, result, candidate, index) {
+export function list_permute_inner(index, list, fns, result, candidate) {
   let size = list_size(list);
   let g = greater_than_or_equal(index, size);
   if (g) {
@@ -22,7 +22,7 @@ export function list_permute_inner(list, fns, result, candidate, index) {
   function lambda(fn) {
     let v = fn(first);
     list_add(candidate, v);
-    list_permute_inner(remaining, fns, result, candidate, index + 1);
+    list_permute_inner(index + 1, remaining, fns, result, candidate);
     list_pop(candidate);
   }
   each(fns, lambda);
