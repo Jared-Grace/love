@@ -69,7 +69,6 @@ export async function app_g_click_npc(
         prayer,
         npcs_matched,
         overlay,
-        player,
         game_prefix,
         overlay_close,
         div_map,
