@@ -10,7 +10,7 @@ export async function sandbox() {
   let properties = properties_get(result);
   let s1 = list_size_1(properties);
   if (s1) {
-    await function_delete(f_name);
+    await function_delete(s);
   } else {
     log_keep(sandbox.name, "Used in multiple places. Not deleting.");
     return properties;
