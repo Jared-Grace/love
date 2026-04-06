@@ -7,5 +7,6 @@ export function app_g_game_save(g) {
   let f_path = file_name_json_folder_gitignore("1");
   let result = path_join(["love", f_path]);
   let joined = folder_previous_join(result);
+  return joined;
   storage_local_set(app_g, "game", joined);
 }
