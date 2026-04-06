@@ -1,5 +1,5 @@
 import { list_permute_inner } from "../../../love/public/src/list_permute_inner.mjs";
-export function list_permute(list, fns) {
+export function list_cartesian_functions(list, fns) {
   let result = [];
   let candidate = [];
   let index = 0;
