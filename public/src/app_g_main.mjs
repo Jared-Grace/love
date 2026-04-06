@@ -121,7 +121,7 @@ export async function app_g_main(context) {
     property_set(npc, "objections", 2);
   }
   each_index(npcs, npc_initialize);
-  let player_list = list_remove_last(coordinates);
+  let player_list = list_remove_last(coordinates_land);
   let player = list_single(player_list);
   let a = object_assign(player, {
     img: player_img,
