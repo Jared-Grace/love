@@ -76,10 +76,14 @@ export async function app_g_main(context) {
   let coordinates = g_coordinates(rows);
   let w = app_a_water();
   const property_name = "item";
-  let filtered = list_filter_property_not(coordinates, property_name, w);
+  let coordinates_land = list_filter_property_not(
+    coordinates,
+    property_name,
+    w,
+  );
   log(app_g_main.name, {
     rows,
-    filtered,
+    filtered: coordinates_land,
   });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
