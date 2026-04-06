@@ -20,7 +20,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
-export async function app_g_refresh(div_map_container, tiles_path, rows) {
+export async function app_g_refresh(div_map_container, rows) {
   const game_prefix = g_game_prefix();
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
@@ -30,7 +30,7 @@ export async function app_g_refresh(div_map_container, tiles_path, rows) {
     display: "grid",
   });
   async function refresh() {
-    await app_g_refresh(div_map_container, tiles_path, rows);
+    await app_g_refresh(div_map_container, rows);
   }
   let g = await app_g_game_save_get();
   let npcs = property_get(g, "npcs");
