@@ -1,5 +1,5 @@
-import { list_filter_property_not } from "../../../karate_code/public/src/list_filter_property_not.mjs";
-import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
+import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
+import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
