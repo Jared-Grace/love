@@ -7,9 +7,10 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function list_permute(list, fns, result, candidate) {
   let e = list_empty_is(list);
-  if (false) {
+  if (e) {
+    let copy = list_copy(candidate);
+    list_add(list2, item);
   }
-  let copy = list_copy(original);
   let r = list_first_remaining(list);
   let first = property_get(r, "first");
   let remaining = property_get(r, "remaining");
