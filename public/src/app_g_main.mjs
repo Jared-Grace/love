@@ -83,7 +83,7 @@ export async function app_g_main(context) {
   );
   log(app_g_main.name, {
     rows,
-    coordinates_land,
+    filtered: coordinates_land,
   });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
@@ -100,7 +100,7 @@ export async function app_g_main(context) {
   let genders = [male, female];
   let gender_count = list_size(genders);
   let npc_count = 30;
-  let npcs = list_remove_end(coordinates_land, npc_count);
+  let npcs = list_remove_end(coordinates, npc_count);
   let map = {
     npcs,
     coordinates,
