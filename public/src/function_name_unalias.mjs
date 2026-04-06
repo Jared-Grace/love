@@ -14,6 +14,7 @@ export async function function_name_unalias(f_name) {
   let expandeds = property_get(v3, "expandeds");
   let expanded = property_get(v3, "expanded");
   let dictionary = await functions_names_to_paths();
+  let expanded_paths = list_map_property_get(expandeds, dictionary);
   log(function_name_unalias.name, {
     expandeds,
     dictionary,
@@ -28,5 +29,4 @@ export async function function_name_unalias(f_name) {
     expandeds,
   };
   return v;
-  let expanded_paths = list_map_property_get(expandeds, dictionary);
 }
