@@ -137,6 +137,7 @@ export async function app_g_main(context) {
   await app_g_game_save({
     player,
     npcs,
+    coordinates,
   });
   function lambda4(t) {
     global_function_property_set(app_g_main, t, null);
