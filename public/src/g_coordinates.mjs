@@ -3,7 +3,7 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 export function g_coordinates(rows) {
   function lambda15(la4) {
     function lambda13(columns, y) {
-      function lambda14(item2, x) {
+      function lambda14(item, x) {
         la4({
           x,
           y,
