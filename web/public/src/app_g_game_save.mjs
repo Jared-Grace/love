@@ -3,5 +3,5 @@ import { app_g } from "../../../love/public/src/app_g.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 export function app_g_game_save(g) {
   let f_path = file_name_json_folder_gitignore("1");
-  storage_local_set(app_g, "game", g);
+  storage_local_set(app_g, "game", f_path);
 }
