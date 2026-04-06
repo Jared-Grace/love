@@ -17,7 +17,7 @@ export function list_permute_inner(list, index, fns, result, candidate) {
   function lambda(fn) {
     let v = fn(item);
     list_add(candidate, v);
-    list_permute_inner(remaining, index + 1, fns, result, candidate);
+    list_permute_inner(list, index + 1, fns, result, candidate);
     list_pop(candidate);
   }
   each(fns, lambda);
