@@ -1,3 +1,4 @@
+import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { g_character_img_url } from "../../../love/public/src/g_character_img_url.mjs";
@@ -17,6 +18,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   html_style_assign(container, {
     "background-color": color_background + "bc",
   });
+  let game_prefix = g_game_prefix();
   const c_src = g_character_img_url(npc, game_prefix);
   let component = html_img(container, c_src);
   let name_npc = property_get(npc, "name");
