@@ -1,7 +1,6 @@
-import { property_equals_not_curried_right_2 } from "../../../karate_code/public/src/property_equals_not_curried_right_2.mjs";
+import { list_filter_property_not } from "../../../karate_code/public/src/list_filter_property_not.mjs";
 import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -79,8 +78,7 @@ export async function app_g_main(context) {
   let w = app_a_water();
   const property_name = "item";
   function lambda2(row) {
-    let r2 = property_equals_not_curried_right_2(property_name, w);
-    let filtered = list_filter(row, r2);
+    let filtered = list_filter_property_not(property_name, w, row);
     return filtered;
   }
   let mapped = list_map(rows, lambda2);
