@@ -81,7 +81,8 @@ export async function app_g_main(context) {
   let r = equal_not_curried_right(w);
   function lambda2(row) {
     function lambda(column) {
-      let item = property_get(column, "item");
+      const property = "item";
+      let item = property_get(column, property);
       let ne = equal_not(item, w);
       return ne;
     }
