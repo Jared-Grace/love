@@ -3,5 +3,8 @@ import { function_curryify_right_count } from "../../../love/public/src/function
 import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
 export async function sandbox() {
   await function_delete_if_exists("property_equals_not_curried_right_2");
-  let output = await function_curryify_right_count(property_equals_not.name, 2);
+  let output = await function_curryify_right_count(
+    property_equals_not.name,
+    "2",
+  );
 }
