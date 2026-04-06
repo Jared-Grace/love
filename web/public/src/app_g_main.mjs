@@ -77,12 +77,12 @@ export async function app_g_main(context) {
   let names_men = bible_names_men();
   let right = player_img;
   let coordinates = g_coordinates(rows);
-  let value = app_a_water();
-  let r = equal_not_curried_right(value);
+  let w = app_a_water();
+  let r = equal_not_curried_right(w);
   function lambda2(row) {
     function lambda(column) {
       let item = property_get(column, "item");
-      let ne = equal_not(left, right2);
+      let ne = equal_not(item, w);
     }
     let filtered = list_filter(row, lambda);
     return filtered;
