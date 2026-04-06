@@ -1,4 +1,3 @@
-import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
@@ -145,6 +144,5 @@ export async function app_g_main(context) {
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
-  const game_prefix = g_game_prefix();
   await app_g_refresh(div_map_container, tiles_path, rows);
 }
