@@ -6,5 +6,4 @@ export async function app_g_game_save(g) {
   storage_local_set(app_g, "game", g);
   let p = app_g_game_save_path();
   await file_overwrite(p, contents);
-  return p;
 }
