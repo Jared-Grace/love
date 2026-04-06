@@ -1,3 +1,4 @@
+import { app_g_player_style_initialize } from "../../../love/public/src/app_g_player_style_initialize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
@@ -52,6 +53,7 @@ export async function app_g_main(context) {
     height: "100%",
   });
   html_style_overflow_hidden(root);
+  app_g_player_style_initialize();
   let div_map_container = html_div(root);
   html_style_assign(div_map_container, {
     position: "relative",
