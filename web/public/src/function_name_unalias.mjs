@@ -1,3 +1,4 @@
+import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
@@ -22,4 +23,5 @@ export async function function_name_unalias(f_name) {
   };
   return v;
   let dictionary = await functions_names_to_paths();
+  let mapped = list_map_property_get(lilst, object);
 }
