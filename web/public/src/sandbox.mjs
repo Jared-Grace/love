@@ -8,15 +8,14 @@ export async function sandbox() {
   let search = await data_identifiers_search(s);
   let properties = properties_get(search);
   let eq2 = json_equal(properties, [s]);
+  let result = null;
   if (eq2) {
-    let result = null;
     result = await function_delete(s);
-    return result;
   } else {
-    let r = {
+    result = {
       message: "Used in multiple places. Not deleting.",
       properties,
     };
-    return r;
   }
+  return result;
 }
