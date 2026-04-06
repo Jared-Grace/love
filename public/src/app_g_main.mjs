@@ -1,3 +1,4 @@
+import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
@@ -40,6 +41,7 @@ import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
+  await app_a_indexeddb_initialize();
   let root = property_get(context, "root");
   let books = await ebible_version_books_browser("engbsb");
   global_function_property_set(app_g_main, "books", books);
