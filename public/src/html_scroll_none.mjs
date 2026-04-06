@@ -7,7 +7,7 @@ export function html_scroll_none(component) {
     scrollbarWidth: "none",
     msOverflowStyle: "none",
   });
-  uuid_browser();
+  let u = uuid_browser();
   html_data_set(component, html_scroll_none.name, u);
   html_style_head(`
   [data-${html_scroll_none.name}="${u}"]::-webkit-scrollbar {
