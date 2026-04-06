@@ -1,3 +1,4 @@
+import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_on_load_wait } from "../../../love/public/src/html_on_load_wait.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
