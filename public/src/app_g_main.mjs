@@ -99,8 +99,11 @@ export async function app_g_main(context) {
   let names_men = bible_names_men();
   let right = player_img;
   let coordinates = g_coordinates(rows);
-  function lambda2(item2) {}
-  let mapped = list_map(list, lambda2);
+  function lambda2(row) {
+    function lambda3(item2) {}
+    let mapped2 = list_map(list, lambda3);
+  }
+  let mapped = list_map(rows, lambda2);
   log(app_g_main.name, {
     rows,
   });
