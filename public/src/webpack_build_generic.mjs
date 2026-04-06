@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
@@ -56,6 +57,7 @@ export async function webpack_build_generic(
     log(webpack_build_generic.name, {
       command,
     });
+    let to2 = object_merge(to, from);
     let stdout = await command_line_generic(command, {
       ...process.env,
       entry_path: "./scripts/temp/app_g_main_run.mjs",
