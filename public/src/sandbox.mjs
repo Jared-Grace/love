@@ -3,7 +3,7 @@ import { function_curryify_specify } from "../../../love/public/src/function_cur
 import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
 export async function sandbox() {
   await function_delete_if_exists(
-    "list_random_item_invoke_count_curried_specify_1_3",
+    "property_equals_not_curried_right_2",
   );
   let r = await function_curryify_specify(
     list_random_item_invoke_count.name,
