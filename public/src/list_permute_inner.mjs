@@ -1,7 +1,6 @@
 import { greater_than_or_equal } from "../../../love/public/src/greater_than_or_equal.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
@@ -9,10 +8,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function list_permute_inner(list, fns, result, candidate, index) {
-  let size = list_size(list2);
-  let g = greater_than_or_equal(left, right);
-  let e = null_is(list);
-  if (e) {
+  let size = list_size(list);
+  let g = greater_than_or_equal(index, size);
+  if (g) {
     let copy = list_copy(candidate);
     list_add(result, copy);
     return;
