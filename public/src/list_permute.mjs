@@ -1,12 +1,12 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function list_permute(list, fns, result, candidate) {
-  let e = list_empty_is(list);
+  let e = null_is(list);
   if (e) {
     let copy = list_copy(candidate);
     list_add(result, copy);
