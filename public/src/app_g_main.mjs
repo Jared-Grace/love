@@ -1,7 +1,6 @@
 import { list_filter_property_not } from "../../../karate_code/public/src/list_filter_property_not.mjs";
 import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
@@ -77,14 +76,10 @@ export async function app_g_main(context) {
   let coordinates = g_coordinates(rows);
   let w = app_a_water();
   const property_name = "item";
-  function lambda2(row) {
-    let filtered = list_filter_property_not(row, property_name, w);
-    return filtered;
-  }
-  let mapped = list_map(rows, lambda2);
+  let filtered = list_filter_property_not(coordinates, property_name, w);
   log(app_g_main.name, {
     rows,
-    mapped,
+    filtered,
   });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
