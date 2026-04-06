@@ -5,7 +5,13 @@ import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-export function list_permute_inner(list, index, fns, result, candidate) {
+export function list_cartesian_functions_inner(
+  list,
+  index,
+  fns,
+  result,
+  candidate,
+) {
   let size = list_size(list);
   let g = greater_than_or_equal(index, size);
   if (g) {
@@ -17,7 +23,7 @@ export function list_permute_inner(list, index, fns, result, candidate) {
   function lambda(fn) {
     let v = fn(item);
     list_add(candidate, v);
-    list_permute_inner(list, index + 1, fns, result, candidate);
+    list_cartesian_functions_inner(list, index + 1, fns, result, candidate);
     list_pop(candidate);
   }
   each(fns, lambda);
