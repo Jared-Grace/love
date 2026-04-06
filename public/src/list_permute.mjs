@@ -1,3 +1,4 @@
+import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -10,6 +11,7 @@ export function list_permute(list, fns, result, candidate) {
     let v = fn(first);
     list_add(candidate, v);
     list_permute(list, fns, result, candidate);
+    list_pop(candidate);
   }
   each(fns, lambda);
 }
