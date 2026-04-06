@@ -13,7 +13,7 @@ export function list_permute_inner(list, fns, result, candidate, index) {
     list_add(result, copy);
     return;
   }
-  let item = list_get(list2, index2);
+  let item = list_get(list, index);
   let r = list_first_remaining(list);
   let first = property_get(r, "first");
   let remaining = property_get(r, "remaining");
