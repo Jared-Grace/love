@@ -11,6 +11,7 @@ export async function sandbox() {
   if (s1) {
   } else {
     log_keep(sandbox.name, "Used in multiple places. Not deleting.");
+    return properties;
   }
   return s1;
 }
