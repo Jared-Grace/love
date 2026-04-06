@@ -16,7 +16,6 @@ export async function app_g_conversation(
   prayer,
   npcs_matched,
   overlay,
-  game_prefix,
   overlay_close,
   div_map,
   refresh,
