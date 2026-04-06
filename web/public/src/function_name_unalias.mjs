@@ -1,3 +1,4 @@
+import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { function_acronym_to_name } from "../../../love/public/src/function_acronym_to_name.mjs";
@@ -20,4 +21,5 @@ export async function function_name_unalias(f_name) {
     expandeds,
   };
   return v;
+  let dictionary = await functions_names_to_paths();
 }
