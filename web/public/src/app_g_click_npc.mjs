@@ -60,7 +60,7 @@ export async function app_g_click_npc(div_map, npcs_matched, refresh) {
       }
       app_g_button_back(overlay, on_back);
     } else {
-      app_g_conversation(
+      await app_g_conversation(
         prayer,
         npcs_matched,
         overlay,
