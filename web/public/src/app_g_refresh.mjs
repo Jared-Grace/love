@@ -33,7 +33,7 @@ export async function app_g_refresh(
     display: "grid",
   });
   async function refresh() {
-    await app_g_refresh();
+    await app_g_refresh(div_map_container, game_prefix, tiles_path, rows);
   }
   let npcs = property_get(map, "npcs");
   let player = await app_g_player_get();
