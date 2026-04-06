@@ -9,7 +9,7 @@ export function list_permute(list, fns, result, candidate) {
   let e = list_empty_is(list);
   if (e) {
     let copy = list_copy(candidate);
-    list_add(list2, item);
+    list_add(result, copy);
   }
   let r = list_first_remaining(list);
   let first = property_get(r, "first");
@@ -17,7 +17,7 @@ export function list_permute(list, fns, result, candidate) {
   function lambda(fn) {
     let v = fn(first);
     list_add(candidate, v);
-    list_permute(list, fns, result, candidate);
+    list_permute(remaining, fns, result, candidate);
     list_pop(candidate);
   }
   each(fns, lambda);
