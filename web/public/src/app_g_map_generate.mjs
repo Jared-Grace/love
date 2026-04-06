@@ -12,6 +12,6 @@ export function app_g_map_generate() {
     column_count,
   );
   let coordinates = g_coordinates(rows);
-  app_g_map_generate_waters(row_count, column_count, coordinates);
+  app_g_map_generate_waters(coordinates);
   return rows;
 }
