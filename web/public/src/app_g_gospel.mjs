@@ -55,7 +55,7 @@ export async function app_g_gospel(
     let v = app_g_wrong(passage, passages, property);
     let passage_wrong = property_get(v, "passage_wrong");
     let ob = property_get(v, "ob");
-    app_g_npc_says(npc, overlay, game_prefix, ob);
+    app_g_npc_says(npc, overlay, ob);
     app_g_container_text(overlay, "What would you like to say?");
     function correct() {
       async function lambda() {
@@ -95,7 +95,7 @@ export async function app_g_gospel(
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     const doxology = app_g_doxology();
-    app_g_npc_says(npc, overlay, game_prefix, doxology);
+    app_g_npc_says(npc, overlay, doxology);
     async function lambda4() {
       overlay_close();
       await refresh();
