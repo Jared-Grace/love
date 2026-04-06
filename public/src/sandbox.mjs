@@ -1,3 +1,4 @@
+import { function_delete } from "../../../love/public/src/function_delete.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -9,6 +10,7 @@ export async function sandbox() {
   let properties = properties_get(result);
   let s1 = list_size_1(properties);
   if (s1) {
+    await function_delete(f_name);
   } else {
     log_keep(sandbox.name, "Used in multiple places. Not deleting.");
     return properties;
