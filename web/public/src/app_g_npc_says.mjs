@@ -6,7 +6,7 @@ import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function app_g_npc_says(npc, overlay, game_prefix, npc_says) {
+export function app_g_npc_says(npc, overlay, npc_says) {
   let gender = property_get(npc, "gender");
   let container = app_g_container(overlay);
   let map = {

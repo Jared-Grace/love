@@ -56,7 +56,7 @@ export async function app_g_conversation(
   }
   let name_player = property_get(player, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
-  app_g_npc_says(npc, overlay, game_prefix, npc_says);
+  app_g_npc_says(npc, overlay, npc_says);
   async function npc_gospel() {
     await app_g_gospel(
       overlay,
