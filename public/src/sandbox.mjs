@@ -5,8 +5,8 @@ import { equal_not_curried_right } from "../../../karate_code/public/src/equal_n
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 export async function sandbox() {
   let s = equal_not_curried_right.name;
-  let result = await data_identifiers_search(s);
-  let properties = properties_get(result);
+  let search = await data_identifiers_search(s);
+  let properties = properties_get(search);
   let eq2 = json_equal(properties, [s]);
   if (eq2) {
     let result = null;
