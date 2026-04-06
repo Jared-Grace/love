@@ -20,7 +20,6 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
@@ -53,16 +52,13 @@ export async function app_g_main(context) {
   html_meta_viewport();
   html_font_sans_serif_set_html();
   html_remix_icon();
-  function lambda(item) {
-    html_style_assign(item, {
-      "font-size": "18px",
-      margin: "0",
-      padding: 0,
-      height: "100%",
-    });
-    html_style_overflow_hidden(item);
-  }
-  each([root], lambda);
+  html_style_assign(root, {
+    "font-size": "18px",
+    margin: "0",
+    padding: 0,
+    height: "100%",
+  });
+  html_style_overflow_hidden(root);
   let path_prefix = "";
   let l = localhost_is();
   const path_part = app_shared_name_latest_text();
