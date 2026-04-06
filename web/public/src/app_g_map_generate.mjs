@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_g_map_generate_waters } from "../../../karate_code/public/src/app_g_map_generate_waters.mjs";
 import { list_random_item_count_nested } from "../../../love/public/src/list_random_item_count_nested.mjs";
 import { g_tiles_grasses_choices_weighted } from "../../../love/public/src/g_tiles_grasses_choices_weighted.mjs";
@@ -11,10 +10,6 @@ export function app_g_map_generate() {
     row_count,
     column_count,
   );
-  log(app_g_map_generate.name, {
-    rows,
-  });
-  return;
   app_g_map_generate_waters(rows);
   return rows;
 }
