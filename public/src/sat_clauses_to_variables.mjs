@@ -5,6 +5,6 @@ import { list_squash } from "../../../love/public/src/list_squash.mjs";
 export function sat_clauses_to_variables(clauses) {
   let squashed = list_squash(clauses);
   let mapped2 = list_map(squashed, abs);
-  let unique = list_unique(mapped2);
-  return unique;
+  let variables = list_unique(mapped2);
+  return variables;
 }
