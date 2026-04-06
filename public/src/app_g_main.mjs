@@ -1,5 +1,4 @@
 import { property_equals_not_curried_right_2 } from "../../../karate_code/public/src/property_equals_not_curried_right_2.mjs";
-import { property_equals_not } from "../../../karate_code/public/src/property_equals_not.mjs";
 import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { equal_not_curried_right } from "../../../karate_code/public/src/equal_not_curried_right.mjs";
@@ -83,11 +82,7 @@ export async function app_g_main(context) {
   function lambda2(row) {
     const property_name = "item";
     let r2 = property_equals_not_curried_right_2(property_name, w);
-    function lambda(column) {
-      let ne = property_equals_not(column, property, w);
-      return ne;
-    }
-    let filtered = list_filter(row, lambda);
+    let filtered = list_filter(row, r2);
     return filtered;
   }
   let mapped = list_map(rows, lambda2);
