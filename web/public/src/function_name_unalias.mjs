@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -14,10 +13,6 @@ export async function function_name_unalias(f_name) {
   let expandeds = property_get(r, "expandeds");
   let expanded = property_get(r, "expanded");
   let dictionary = await functions_names_to_paths();
-  log(function_name_unalias.name, {
-    dictionary,
-    expandeds,
-  });
   let expanded_paths = list_map_property_get(expandeds, dictionary);
   const unaliased = exists
     ? unaliased_actual
@@ -26,7 +21,7 @@ export async function function_name_unalias(f_name) {
       : f_name;
   let v = {
     unaliased,
-    expandeds,
+    expandeds: expanded_paths,
   };
   return v;
 }
