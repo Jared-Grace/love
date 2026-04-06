@@ -20,6 +20,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 export async function app_g_refresh(div_map_container, tiles_path, rows) {
+  const game_prefix = g_game_prefix();
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
   property_set_exists_not(div_map, "container", div_map_container);
