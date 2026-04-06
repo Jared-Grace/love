@@ -60,8 +60,11 @@ export async function app_g_main(context) {
     position: "relative",
     overflow: "auto",
     width: "100%",
-    height: "100vh",
     "pointer-events": "auto",
+  });
+  ("this was needed instead of 100% to allow vertical scrolling");
+  html_style_assign(div_map_container, {
+    height: "100vh",
   });
   await html_scroll_none(div_map_container);
   const tiles_path = g_folder_tiles(path_prefix);
