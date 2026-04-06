@@ -1,14 +1,12 @@
+import { folder_previous_join_multiple } from "../../../love/public/src/folder_previous_join_multiple.mjs";
 import { repo_name_love } from "../../../love/public/src/repo_name_love.mjs";
-import { folder_previous_join } from "../../../love/public/src/folder_previous_join.mjs";
-import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_name_json_folder_gitignore } from "../../../love/public/src/file_name_json_folder_gitignore.mjs";
 import { app_g } from "../../../love/public/src/app_g.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 export function app_g_game_save(g) {
   let f_path = file_name_json_folder_gitignore("1");
   let repo = repo_name_love();
-  let result = path_join([repo, f_path]);
-  let joined = folder_previous_join(result);
+  let joined = folder_previous_join_multiple(repo, f_path);
   return joined;
   storage_local_set(app_g, "game", joined);
 }
