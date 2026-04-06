@@ -25,7 +25,6 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_g_gospel(
   overlay,
   npc,
-  game_prefix,
   overlay_close,
   player,
   div_map,
@@ -63,7 +62,6 @@ export async function app_g_gospel(
         await app_g_gospel(
           overlay,
           npc,
-          game_prefix,
           overlay_close,
           player,
           div_map,
