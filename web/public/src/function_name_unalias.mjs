@@ -12,11 +12,11 @@ export async function function_name_unalias(f_name) {
   let exists = property_get(v2, "exists");
   let v3 = await function_acronym_to_name(f_name);
   let expandeds = property_get(v3, "expandeds");
-  log(function_name_unalias.name, {
-    expandeds,
-  });
   let expanded = property_get(v3, "expanded");
   let dictionary = await functions_names_to_paths();
+  log(function_name_unalias.name, {
+    expandeds,dictionary
+  });
   const unaliased = exists
     ? unaliased_actual
     : expanded !== null
