@@ -34,8 +34,8 @@ export async function app_g_click(
 ) {
   let g = await app_g_game_save_get();
   let player = property_get(g, "player");
-  let coordinates = property_get(map, "coordinates");
-  let npcs = property_get(map, "npcs");
+  let coordinates = property_get(g, "coordinates");
+  let npcs = property_get(g, "npcs");
   const tile_e = e.target.closest("." + tile_class);
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
