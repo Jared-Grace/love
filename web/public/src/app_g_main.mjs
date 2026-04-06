@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -101,7 +102,7 @@ export async function app_g_main(context) {
   let coordinates = g_coordinates(rows);
   function lambda2(row) {
     function lambda3(item2) {}
-    let mapped2 = list_map(list, lambda3);
+    let filtered = list_filter(list, lambda3);
   }
   let mapped = list_map(rows, lambda2);
   log(app_g_main.name, {
