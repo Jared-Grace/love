@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
@@ -12,6 +13,7 @@ export function list_permute_inner(list, fns, result, candidate, index) {
     list_add(result, copy);
     return;
   }
+  let item = list_get(list2, index2);
   let r = list_first_remaining(list);
   let first = property_get(r, "first");
   let remaining = property_get(r, "remaining");
