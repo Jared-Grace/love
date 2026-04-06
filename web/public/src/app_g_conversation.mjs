@@ -58,15 +58,7 @@ export async function app_g_conversation(
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, npc_says);
   async function npc_gospel() {
-    await app_g_gospel(
-      overlay,
-      npc,
-      game_prefix,
-      overlay_close,
-      player,
-      div_map,
-      refresh,
-    );
+    await app_g_gospel(overlay, npc, overlay_close, player, div_map, refresh);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = property_get(npc, "name");
