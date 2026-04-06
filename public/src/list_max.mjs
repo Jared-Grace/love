@@ -4,6 +4,6 @@ export function list_max(list) {
     let v = a > b ? a : b;
     return v;
   }
-  const max = list.list_reduce(lambda, -Infinity);
+  const max = list_reduce(list,lambda, -Infinity);
   return max;
 }
