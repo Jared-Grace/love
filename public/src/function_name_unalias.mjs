@@ -1,5 +1,5 @@
+import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
-import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
@@ -14,8 +14,6 @@ export async function function_name_unalias(f_name) {
   let expandeds = property_get(r, "expandeds");
   let expanded = property_get(r, "expanded");
   let dictionary = await functions_names_to_paths();
-    let c = property_get_curried(dictionary);
-  let expanded_paths = list_to_dictionary_value(expandeds, c);
   const unaliased = exists
     ? unaliased_actual
     : expanded !== null
@@ -23,7 +21,9 @@ export async function function_name_unalias(f_name) {
       : f_name;
   let v = {
     unaliased,
-    expandeds: expanded_paths,
+    expandeds,
   };
   return v;
+  let c = property_get_curried(dictionary);
+  let expanded_paths = list_to_dictionary_value(expandeds, c);
 }
