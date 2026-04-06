@@ -1,3 +1,4 @@
+import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
@@ -36,7 +37,6 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
-import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
@@ -145,7 +145,6 @@ export async function app_g_main(context) {
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
-  let path_prefix2 = app_g_path_prefix();
-  const game_prefix = g_folder_img(path_prefix2);
+  const game_prefix = g_game_prefix();
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows);
 }
