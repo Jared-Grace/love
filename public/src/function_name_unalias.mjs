@@ -12,6 +12,8 @@ export async function function_name_unalias(f_name) {
   let v3 = await function_acronym_to_name(f_name);
   let expandeds = property_get(v3, "expandeds");
   let expanded = property_get(v3, "expanded");
+  let dictionary = await functions_names_to_paths();
+  let expanded_paths = list_map_property_get(expanded, dictionary);
   const unaliased = exists
     ? unaliased_actual
     : expanded !== null
@@ -19,9 +21,7 @@ export async function function_name_unalias(f_name) {
       : f_name;
   let v = {
     unaliased,
-    expandeds,
+    expandeds:expanded_paths,
   };
   return v;
-  let dictionary = await functions_names_to_paths();
-  let expanded_paths = list_map_property_get(expanded, dictionary);
 }
