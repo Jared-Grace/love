@@ -2,7 +2,6 @@ import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_index
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
@@ -86,10 +85,6 @@ export async function app_g_main(context) {
     property_name,
     w,
   );
-  log(app_g_main.name, {
-    rows,
-    filtered: coordinates_land,
-  });
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
   let female = {
@@ -139,7 +134,7 @@ export async function app_g_main(context) {
     studied: false,
     review: [],
   });
-  app_g_game_save({
+  await app_g_game_save({
     player,
     npcs,
   });
