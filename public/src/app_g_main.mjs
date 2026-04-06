@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { equal_not_curried_right } from "../../../karate_code/public/src/equal_not_curried_right.mjs";
@@ -81,7 +82,7 @@ export async function app_g_main(context) {
   function lambda2(row) {
     function lambda(column) {
       let item = property_get(column, "item");
-      en;
+      let ne = equal_not(left, right2);
     }
     let filtered = list_filter(row, lambda);
     return filtered;
