@@ -9,8 +9,9 @@ export async function sandbox() {
   let properties = properties_get(result);
   let eq2 = json_equal(properties, [s]);
   if (eq2) {
-    let r2 = await function_delete(s);
-    return r2;
+    let result = null;
+    result = await function_delete(s);
+    return result;
   } else {
     let r = {
       message: "Used in multiple places. Not deleting.",
