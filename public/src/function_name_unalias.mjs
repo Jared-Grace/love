@@ -15,7 +15,8 @@ export async function function_name_unalias(f_name) {
   let expanded = property_get(v3, "expanded");
   let dictionary = await functions_names_to_paths();
   log(function_name_unalias.name, {
-    expandeds,dictionary
+    expandeds,
+    dictionary,
   });
   const unaliased = exists
     ? unaliased_actual
