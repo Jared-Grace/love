@@ -6,7 +6,6 @@ import { global_function_property_set } from "../../../love/public/src/global_fu
 import { not } from "../../../love/public/src/not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_g_tutorial(
-  player,
   player_property,
   div_map,
   tutorial_property,
