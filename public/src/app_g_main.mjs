@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
@@ -97,6 +98,9 @@ export async function app_g_main(context) {
   let names_men = bible_names_men();
   let right = player_img;
   let coordinates = g_coordinates(rows);
+  log(app_g_main.name, {
+    coordinates,
+  });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
   let female = {
