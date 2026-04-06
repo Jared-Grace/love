@@ -23,5 +23,5 @@ export async function function_name_unalias(f_name) {
   };
   return v;
   let dictionary = await functions_names_to_paths();
-  let mapped = list_map_property_get(lilst, object);
+  let expanded_paths = list_map_property_get(expanded, dictionary);
 }
