@@ -145,6 +145,7 @@ export async function app_g_main(context) {
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
-  const game_prefix = g_folder_img(path_prefix);
+  let path_prefix2 = app_g_path_prefix();
+  const game_prefix = g_folder_img(path_prefix2);
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows);
 }
