@@ -1,4 +1,4 @@
-import { uuid_browser } from "../../../karate_code/public/src/uuid_browser.mjs";
+import { uuid_browser } from "../../../love/public/src/uuid_browser.mjs";
 import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
