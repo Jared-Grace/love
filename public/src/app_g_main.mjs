@@ -60,7 +60,7 @@ export async function app_g_main(context) {
     position: "relative",
     overflow: "auto",
     width: "100%",
-    height: "100%",
+    height: "100vh",
     "pointer-events": "auto",
   });
   await html_scroll_none(div_map_container);
