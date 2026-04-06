@@ -61,13 +61,7 @@ export async function app_g_click_npc(
         let text = emoji_pray();
         const player_property = "conversed";
         const tutorial_property = "tutorial_converse";
-        app_g_tutorial(
-          player,
-          player_property,
-          div_map,
-          tutorial_property,
-          text,
-        );
+        app_g_tutorial(player_property, div_map, tutorial_property, text);
       }
       app_g_button_back(overlay, on_back);
     } else {
