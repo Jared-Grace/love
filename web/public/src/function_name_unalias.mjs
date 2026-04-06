@@ -1,3 +1,4 @@
+import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -24,4 +25,6 @@ export async function function_name_unalias(f_name) {
     expandeds: expanded_paths,
   };
   return v;
+  function lambda(item2v) {}
+  let dictionary2 = list_to_dictionary_value(list, lambda);
 }
