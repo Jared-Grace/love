@@ -35,8 +35,8 @@ export async function app_g_refresh(
   async function refresh() {
     await app_g_refresh(div_map_container, game_prefix, tiles_path, rows);
   }
-  let npcs = property_get(map, "npcs");
   let g = await app_g_game_save_get();
+  let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
   let player_img_c = g_character_img(game_prefix, div_map, player);
   const style_text = `@keyframes pulseGlow {
