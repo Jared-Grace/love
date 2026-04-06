@@ -83,7 +83,7 @@ export async function app_g_main(context) {
   );
   log(app_g_main.name, {
     rows,
-    filtered: coordinates_land,
+    coordinates_land,
   });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
