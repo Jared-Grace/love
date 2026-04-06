@@ -7,8 +7,8 @@ export async function sandbox() {
   let result = await data_identifiers_search(s);
   let s1 = properties_size_1(result);
   if (s1) {
-    log_keep(sandbox.name, message);
   } else {
+    log_keep(sandbox.name, "Used in multiple places. Not deleting.");
   }
   return s1;
 }
