@@ -105,8 +105,8 @@ export async function app_g_main(context) {
   let value = app_a_water();
   let r = equal_not_curried_right(value);
   function lambda2(row) {
-    function lambda3(item2) {}
-    let filtered = list_filter(list, lambda3);
+    let filtered = list_filter(list, r);
+    return filtered;
   }
   let mapped = list_map(rows, lambda2);
   log(app_g_main.name, {
