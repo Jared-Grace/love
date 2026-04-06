@@ -57,7 +57,6 @@ export async function app_g_main(context) {
   });
   html_style_overflow_hidden(root);
   let path_prefix = app_g_path_prefix();
-  const game_prefix = g_folder_img(path_prefix);
   let div_map_container = html_div(root);
   html_style_assign(div_map_container, {
     position: "relative",
@@ -147,5 +146,6 @@ export async function app_g_main(context) {
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
+  const game_prefix = g_folder_img(path_prefix);
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
 }
