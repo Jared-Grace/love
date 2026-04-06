@@ -90,14 +90,7 @@ export async function app_g_refresh(div_map_container, tiles_path, rows) {
   each_index(rows, lambda2);
   html_on_click(div_map, on_click);
   async function on_click(e) {
-    await app_g_click(
-      e,
-      tile_class,
-      div_map,
-      player_img_c,
-      game_prefix,
-      refresh,
-    );
+    await app_g_click(e, tile_class, div_map, player_img_c, refresh);
   }
   await html_on_load_wait();
   let container = property_get(div_map, "container");
