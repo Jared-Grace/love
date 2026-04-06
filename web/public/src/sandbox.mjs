@@ -3,4 +3,5 @@ import { data_identifiers_search } from "../../../love/public/src/data_identifie
 export async function sandbox() {
   let s = equal_not_curried_right.name;
   let result = await data_identifiers_search(s);
+  return result;
 }
