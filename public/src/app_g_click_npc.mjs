@@ -37,7 +37,7 @@ export async function app_g_click_npc(
     app_g_button_back(overlay, overlay_close);
     let studied = property_get(player, "studied");
     if (not(studied)) {
-      app_g_tutorial_study(player, div_map);
+      app_g_tutorial_study(div_map);
     }
   } else {
     let prayer = property_get(player, "prayer");
