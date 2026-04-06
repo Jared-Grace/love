@@ -5,7 +5,7 @@ import { list_first_remaining } from "../../../love/public/src/list_first_remain
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function list_permute(list, fns, result, candidate) {
+export function list_permute_inner(list, fns, result, candidate) {
   let e = null_is(list);
   if (e) {
     let copy = list_copy(candidate);
@@ -18,7 +18,7 @@ export function list_permute(list, fns, result, candidate) {
   function lambda(fn) {
     let v = fn(first);
     list_add(candidate, v);
-    list_permute(remaining, fns, result, candidate);
+    list_permute_inner(remaining, fns, result, candidate);
     list_pop(candidate);
   }
   each(fns, lambda);
