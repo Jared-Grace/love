@@ -8,7 +8,7 @@ export function list_permute(list, fns, result, candidate) {
   let remaining = property_get(r, "remaining");
   function lambda(fn) {
     let v = fn(first);
-    list_add(result, item);
+    list_add(candidate, v);
   }
   each(fns, lambda);
 }
