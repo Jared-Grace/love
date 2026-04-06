@@ -54,7 +54,7 @@ export async function app_g_click_npc(
           " To pray, tap or click on yourself (You glow with white)",
         );
       }
-      async function lambda21() {
+      async function on_back() {
         await overlay_close();
         let text = emoji_pray();
         const player_property = "conversed";
@@ -67,7 +67,7 @@ export async function app_g_click_npc(
           text,
         );
       }
-      app_g_button_back(overlay, lambda21);
+      app_g_button_back(overlay, on_back);
     } else {
       app_g_conversation(
         prayer,
