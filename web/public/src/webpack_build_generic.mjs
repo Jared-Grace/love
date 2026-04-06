@@ -57,13 +57,8 @@ export async function webpack_build_generic(
     log(webpack_build_generic.name, {
       command,
     });
-    let to2 = object_merge(to, from);
-    let stdout = await command_line_generic(command, {
-      ...process.env,
-      entry_path: "./scripts/temp/app_g_main_run.mjs",
-      filename: "g.js",
-      folder: "public/latest",
-    });
+    let extra = object_merge(env_vars, process.env);
+    let stdout = await command_line_generic(command, extra);
     return stdout;
   }
   let result = await file_delete_after(f_name_ext, lambda);
