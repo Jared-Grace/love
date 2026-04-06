@@ -99,7 +99,7 @@ export async function app_g_main(context) {
   let right = player_img;
   let coordinates = g_coordinates(rows);
   log(app_g_main.name, {
-    coordinates,
+    rows,
   });
   list_shuffle(coordinates);
   let names_women = bible_names_women();
