@@ -14,6 +14,8 @@ export async function function_name_unalias(f_name) {
   let expandeds = property_get(r, "expandeds");
   let expanded = property_get(r, "expanded");
   let dictionary = await functions_names_to_paths();
+  let c = property_get_curried(dictionary);
+  let expanded_paths = list_to_dictionary_value(expandeds, c);
   const unaliased = exists
     ? unaliased_actual
     : expanded !== null
@@ -21,9 +23,7 @@ export async function function_name_unalias(f_name) {
       : f_name;
   let v = {
     unaliased,
-    expandeds,
+    expandeds: expanded_paths,
   };
   return v;
-  let c = property_get_curried(dictionary);
-  let expanded_paths = list_to_dictionary_value(expandeds, c);
 }
