@@ -1,6 +1,5 @@
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -55,10 +54,6 @@ export async function webpack_build_generic(
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
     let extra = object_merge(env_vars, process.env);
-    log(webpack_build_generic.name, {
-      combined2,
-      extra,
-    });
     let stdout = await command_line_generic(combined2, extra);
     return stdout;
   }
