@@ -1,10 +1,10 @@
+import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { equal_not_curried_right } from "../../../karate_code/public/src/equal_not_curried_right.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
@@ -20,8 +20,6 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
-import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
-import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
@@ -58,13 +56,7 @@ export async function app_g_main(context) {
     height: "100%",
   });
   html_style_overflow_hidden(root);
-  let path_prefix = "";
-  let l = localhost_is();
-  const path_part = app_shared_name_latest_text();
-  let sw = location_pathname_part_first_starts_with(path_part);
-  if (l || sw) {
-    path_prefix = "..\\";
-  }
+  let path_prefix = app_g_path_prefix();
   const game_prefix = g_folder_img(path_prefix);
   let div_map_container = html_div(root);
   html_style_assign(div_map_container, {
