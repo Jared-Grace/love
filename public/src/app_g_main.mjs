@@ -1,7 +1,6 @@
 import { property_equals_not_curried_right_2 } from "../../../karate_code/public/src/property_equals_not_curried_right_2.mjs";
 import { app_g_path_prefix } from "../../../karate_code/public/src/app_g_path_prefix.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
-import { equal_not_curried_right } from "../../../karate_code/public/src/equal_not_curried_right.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -78,7 +77,6 @@ export async function app_g_main(context) {
   let right = player_img;
   let coordinates = g_coordinates(rows);
   let w = app_a_water();
-  let r = equal_not_curried_right(w);
   const property_name = "item";
   function lambda2(row) {
     let r2 = property_equals_not_curried_right_2(property_name, w);
