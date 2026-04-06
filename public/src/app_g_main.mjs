@@ -79,7 +79,9 @@ export async function app_g_main(context) {
   let value = app_a_water();
   let r = equal_not_curried_right(value);
   function lambda2(row) {
-    function lambda(column) {}
+    function lambda(column) {
+      let item = property_get(column, "item");
+    }
     let filtered = list_filter(row, lambda);
     return filtered;
   }
