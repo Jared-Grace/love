@@ -4,8 +4,8 @@ import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 export async function app_a_indexeddb_initialize() {
   const db_name = app_a.name;
-  const version = 1;
   const store_files = "files";
+  const version = 1;
   const db = await new Promise(function lambda4(resolve, reject) {
     const req = indexedDB.open(db_name, version);
     req.onupgradeneeded = function lambda() {
