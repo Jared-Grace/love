@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -15,6 +16,11 @@ export async function command_line_generic(command, extra) {
       ...extra,
       shell: false,
     };
+    log(command_line_generic.name, {
+      cmd,
+      args,
+      options,
+    });
     const child = spawn(cmd, args, options);
     let stdout = "";
     let stderr = "";
