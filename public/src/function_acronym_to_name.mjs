@@ -5,7 +5,7 @@ import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { function_names_to_acronyms } from "../../../love/public/src/function_names_to_acronyms.mjs";
 export async function function_acronym_to_name(alias) {
   let expanded = null;
-  let expandeds = null;
+  let expandeds = [];
   let acronyms = await function_names_to_acronyms();
   const exists2 = property_exists(acronyms, alias);
   if (exists2) {
