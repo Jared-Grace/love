@@ -98,7 +98,6 @@ export async function app_g_refresh(
       tile_class,
       div_map,
       player_img_c,
-      map,
       game_prefix,
       refresh,
     );
