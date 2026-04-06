@@ -6,7 +6,7 @@ import { function_curryify_right_name } from "../../../love/public/src/function_
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
 export async function function_curryify_right_count(f_name, count) {
   arguments_assert(arguments, 2);
-  let index = integer_to(count);
+  count = integer_to(count);
   function lambda(unaliased) {
     let n = function_curryify_right_name(unaliased);
     let combined = function_name_combine(n, count);
