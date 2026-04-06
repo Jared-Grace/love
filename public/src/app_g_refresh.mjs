@@ -1,3 +1,4 @@
+import { app_g_player_style_initialize } from "../../../love/public/src/app_g_player_style_initialize.mjs";
 import { app_g_player_style } from "../../../love/public/src/app_g_player_style.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
@@ -8,7 +9,6 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
-import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
@@ -40,25 +40,7 @@ export async function app_g_refresh(div_map_container, rows) {
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
   let player_img_c = g_character_img(game_prefix, div_map, player);
-  const style_text = `@keyframes pulseGlow {
-  0%,100% { 
-    filter: 
-      drop-shadow(0 0 1px rgba(255,255,255,0.5))
-      drop-shadow(0 0 3px rgba(255,255,255,0.3))
-      drop-shadow(0 0 12px rgba(255,255,255,0.1)); 
-  }
-  50% { 
-    filter: 
-      drop-shadow(0 0 2px rgba(255,255,255,1))
-      drop-shadow(0 0 12px rgba(255,255,255,0.9))
-      drop-shadow(0 0 24px rgba(255,255,255,0.7)); 
-  }
-}
-  @keyframes upDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); } /* move up 10px */
-}`;
-  html_style_head(style_text);
+  app_g_player_style_initialize();
   app_g_player_style(player_img_c);
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
