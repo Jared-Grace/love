@@ -5,7 +5,7 @@ import { data_identifiers_search } from "../../../love/public/src/data_identifie
 export async function sandbox() {
   let s = equal_not_curried_right.name;
   let result = await data_identifiers_search(s);
-  let properties = properties_get(obj);
+  let properties = properties_get(result);
   let s1 = list_size_1(properties);
   return s1;
 }
