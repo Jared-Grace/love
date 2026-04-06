@@ -10,6 +10,7 @@ export function list_permute(list, fns, result, candidate) {
   if (e) {
     let copy = list_copy(candidate);
     list_add(result, copy);
+    return;
   }
   let r = list_first_remaining(list);
   let first = property_get(r, "first");
