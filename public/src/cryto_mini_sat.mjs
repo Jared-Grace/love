@@ -1,3 +1,4 @@
+import { equal_curried } from "../../../love/public/src/equal_curried.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map_integer } from "../../../love/public/src/list_map_integer.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
@@ -29,6 +30,7 @@ sudo apt install cryptominisat`;
   let n = whitespace_normalize(joined);
   let split = text_split_space(n);
   let mapped = list_map_integer(split);
+  let r2 = equal_curried(left);
   function lambda(item) {}
   let filtered = list_filter(list, lambda);
   return mapped;
