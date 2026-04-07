@@ -4,7 +4,6 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function command_line_generic(command, extra) {
   text_is_assert(command);
   const r3 = await import("child_process");
-  px;
   let spawn = property_get(r3, "spawn");
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
