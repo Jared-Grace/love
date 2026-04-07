@@ -26,9 +26,7 @@ sudo apt install cryptominisat`;
     let value = true;
     let fn = command_line_generic_code_ignore;
     let object = property_set_new_fn(fn, value);
-    let combined = text_combine(left, right);
-    const command =
-      "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54";
+    let command = text_combine("cryptominisat5 ", temp_path);
     let r = await command_line_generic(command, object);
     return r;
   }
