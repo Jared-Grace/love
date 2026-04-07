@@ -236,8 +236,9 @@ export async function integer_factorization_to_sat() {
     return out;
   }
   const N = 6;
-  let v4 = Math.log2(N);
-  const bits = Math.ceil(v4);
+  let v4 = Math.sqrt(N);
+  let v5 = Math.log2(v4);
+  let bits = Math.ceil(v5) + 1;
   log(integer_factorization_to_sat.name, {
     bits,
   });
