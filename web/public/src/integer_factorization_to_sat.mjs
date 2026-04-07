@@ -172,7 +172,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     return result;
   }
-  function factorizationCNF(N, bits = 4) {
+  function factorizationCNF(N, bits) {
     const cnf = new CNF();
     function lambda9() {
       let r9 = cnf.newVar();
