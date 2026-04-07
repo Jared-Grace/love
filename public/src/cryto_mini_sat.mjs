@@ -21,5 +21,5 @@ sudo apt install cryptominisat`;
   let combined = text_combine(letter, " ");
   let found = list_find_starts_with(lines, combined);
   let without = text_prefix_without(found, combined);
-  return found;
+  return without;
 }
