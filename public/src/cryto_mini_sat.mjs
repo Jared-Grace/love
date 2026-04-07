@@ -18,6 +18,6 @@ sudo apt install cryptominisat`;
   let lines = text_split_newline(stdout);
   const letter = "s";
   let combined = text_combine(letter, " ");
-  let filtered = list_find_starts_with(lines, combined);
-  return filtered;
+  let found = list_find_starts_with(lines, combined);
+  return found;
 }
