@@ -15,6 +15,7 @@ export async function cryto_mini_sat(n) {
   `sudo apt update
 sudo apt install cryptominisat`;
   let cnf3 = await integer_factorization_to_sat(n);
+  let bits = property_get(cnf3, "bits");
   let dimacs = property_get(cnf3, "dimacs");
   let stdout = await crypto_mini_sat_dimacs_to_output(dimacs);
   let lines = text_split_newline(stdout);
