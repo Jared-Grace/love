@@ -1,4 +1,4 @@
-import { emoji_no } from "../../../p_np/public/src/emoji_no.mjs";
+import { emoji_no } from "../../../love/public/src/emoji_no.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
