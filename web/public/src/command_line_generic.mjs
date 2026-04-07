@@ -8,8 +8,8 @@ export async function command_line_generic(command, extra) {
   text_is_assert(command);
   const r3 = await import("child_process");
   let code_ignore = property_delete_if_exists_fn(
-    command_line_generic_code_ignore,
     extra,
+    command_line_generic_code_ignore,
   );
   let spawn = property_get(r3, "spawn");
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
