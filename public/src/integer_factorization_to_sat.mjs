@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ceil } from "../../../love/public/src/ceil.mjs";
 export async function integer_factorization_to_sat() {
@@ -243,5 +244,6 @@ export async function integer_factorization_to_sat() {
   });
   const cnf = factorizationCNF(N, bits);
   const cnf3 = to3SAT(cnf);
+  let clauses2 = property_get(cnf3, "clauses");
   return cnf3;
 }
