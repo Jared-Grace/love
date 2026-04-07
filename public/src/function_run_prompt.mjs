@@ -1,4 +1,4 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { chalk_color } from "../../../love/public/src/chalk_color.mjs";
 import { chalk_red } from "../../../love/public/src/chalk_red.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
@@ -30,7 +30,7 @@ export async function function_run_prompt() {
   let includes = list_includes(safe, repo_name);
   let chalk_color = ternary(includes, chalk_green, chalk_red);
   let colored = await chalk_color(repo_name);
-  let combined = text_combine(left, right);
+  let combined = text_combine_multiple(list);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
