@@ -1,4 +1,4 @@
-import { text_alphabet_includes } from "../../../p_np/public/src/text_alphabet_includes.mjs";
+import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
