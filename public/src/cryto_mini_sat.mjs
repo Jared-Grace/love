@@ -38,10 +38,10 @@ sudo apt install cryptominisat`;
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
   let e = list_remove_last_multiple(mapped3, bits);
   let joined2 = list_join_empty(e);
-  let i = integer_base_2_to(integer_text);
+  let i = integer_base_2_to(joined2);
   let e2 = list_remove_last_multiple(mapped3, bits);
   let r = {
-    joined2,
+    i,
     e2,
   };
   return r;
