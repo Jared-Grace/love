@@ -1,3 +1,4 @@
+import { ceil } from "../../../love/public/src/ceil.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export function integer_factorization_to_sat() {
   class CNF {
@@ -204,7 +205,8 @@ export function integer_factorization_to_sat() {
     return out;
   }
   const N = 21;
-  const bits = 5;
+  let v4 = Math.log2(N);
+  const bits = Math.ceil(v4);
   const cnf = factorizationCNF(N, bits);
   const cnf3 = to3SAT(cnf);
   let v3 = cnf3.toDimacs();
