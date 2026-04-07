@@ -4,5 +4,5 @@ import { repo_functions_move_acronym } from "../../../love/public/src/repo_funct
 export async function repo_functions_move_if_starts_with(to, query) {
   let f_names = await user_repo_get_functions_names();
   let filtered = list_filter_starts_with(f_names, query);
-  await repo_functions_move_acronym(to, filtered);
+  await repo_functions_move_acronym(filtered, to);
 }
