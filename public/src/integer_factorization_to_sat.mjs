@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { ceil } from "../../../love/public/src/ceil.mjs";
 export async function integer_factorization_to_sat() {
@@ -237,6 +238,9 @@ export async function integer_factorization_to_sat() {
   const N = 6;
   let v4 = Math.log2(N);
   const bits = Math.ceil(v4);
+  log(integer_factorization_to_sat.name, {
+    bits,
+  });
   const cnf = factorizationCNF(N, bits);
   const cnf3 = to3SAT(cnf);
   let v3 = cnf3.toDimacs();
