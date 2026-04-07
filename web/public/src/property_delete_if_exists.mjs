@@ -4,7 +4,8 @@ import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export function property_delete_if_exists(object, property_name) {
   let exists = property_exists(object, property_name);
   if (exists) {
-    let value = property_get(object, property_name);
+    let value = null;
+    value = property_get(object, property_name);
     property_delete(object, property_name);
   }
   return exists;
