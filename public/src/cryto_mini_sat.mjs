@@ -29,10 +29,11 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs(filtered);
-  let e = list_remove_first_multiple(list, count);
+  let e = list_remove_first_multiple(filtered, bits);
+  let e2 = list_remove_first_multiple(filtered, bits);
   let r = {
-    bits,
-    filtered,
+    e,
+    e2,
   };
   return r;
 }
