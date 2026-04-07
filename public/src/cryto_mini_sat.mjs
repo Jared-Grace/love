@@ -16,10 +16,10 @@ import { property_set_new_fn } from "../../../love/public/src/property_set_new_f
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { command_line_generic_code_ignore } from "../../../love/public/src/command_line_generic_code_ignore.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
-export async function cryto_mini_sat() {
+export async function cryto_mini_sat(n) {
   `sudo apt update
 sudo apt install cryptominisat`;
-  let cnf3 = await integer_factorization_to_sat(6);
+  let cnf3 = await integer_factorization_to_sat(n);
   let dimacs = property_get(cnf3, "dimacs");
   async function lambda(temp_path) {
     await file_write(temp_path, dimacs);
@@ -37,8 +37,8 @@ sudo apt install cryptominisat`;
   equal_assert(without, "SATISFIABLE");
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
   let joined = list_join_space(without2);
-  let n = whitespace_normalize(joined);
-  let split = text_split_space(n);
+  let normalize = whitespace_normalize(joined);
+  let split = text_split_space(normalize);
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs(filtered);
