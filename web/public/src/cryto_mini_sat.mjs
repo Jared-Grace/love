@@ -28,19 +28,19 @@ sudo apt install cryptominisat`;
     const command =
       "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54";
     let r = await command_line_generic(command, object);
-    let stdout = property_get(r, "stdout");
-    let lines = text_split_newline(stdout);
-    let without = list_find_starts_with_prefix_without(lines, "s ");
-    equal_assert(without, "SATISFIABLE");
-    let without2 = list_filter_starts_with_prefix_without(lines, "v ");
-    let joined = list_join_space(without2);
-    let n = whitespace_normalize(joined);
-    let split = text_split_space(n);
-    let mapped = list_map_integer(split);
-    let filtered = list_filter_equal_not(mapped, 0);
-    list_sort_number_abs(filtered);
-    return filtered;
+    return r;
   }
-  let r2 = await file_temp(lambda);
-  return r2;
+  let r = await file_temp(lambda);
+  let stdout = property_get(r, "stdout");
+  let lines = text_split_newline(stdout);
+  let without = list_find_starts_with_prefix_without(lines, "s ");
+  equal_assert(without, "SATISFIABLE");
+  let without2 = list_filter_starts_with_prefix_without(lines, "v ");
+  let joined = list_join_space(without2);
+  let n = whitespace_normalize(joined);
+  let split = text_split_space(n);
+  let mapped = list_map_integer(split);
+  let filtered = list_filter_equal_not(mapped, 0);
+  list_sort_number_abs(filtered);
+  return filtered;
 }
