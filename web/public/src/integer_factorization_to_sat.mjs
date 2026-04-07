@@ -239,5 +239,6 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   const cnf = factorizationCNF(integer_to_factor, bits);
   const cnf3 = to3SAT(cnf);
   cnf3.bits = bits;
+  cnf3.dimacs = cnf3.toDimacs();
   return cnf3;
 }
