@@ -3,11 +3,11 @@ import { text_prefix_without_inner } from "../../../love/public/src/text_prefix_
 import { not } from "../../../love/public/src/not.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { error } from "../../../love/public/src/error.mjs";
-export function text_prefix_without(s, prefix) {
-  let a = text_starts_with(s, prefix);
+export function text_prefix_without(t, prefix) {
+  let a = text_starts_with(t, prefix);
   function lambda() {
     let r = {
-      s,
+      s: t,
       prefix,
     };
     return r;
@@ -16,6 +16,6 @@ export function text_prefix_without(s, prefix) {
   if (not(a)) {
     error();
   }
-  let without = text_prefix_without_inner(s, prefix);
+  let without = text_prefix_without_inner(t, prefix);
   return without;
 }
