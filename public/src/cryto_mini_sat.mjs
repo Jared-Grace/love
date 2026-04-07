@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { property_set_new_fn } from "../../../love/public/src/property_set_new_fn.mjs";
@@ -15,6 +16,7 @@ sudo apt install cryptominisat`;
   let r = await command_line_generic(command, object);
   let stdout = property_get(r, "stdout");
   let lines = text_split_newline(stdout);
+  let combined = text_combine(left, right);
   let filtered = list_find_starts_with(lines, "s ");
   return filtered;
 }
