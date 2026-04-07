@@ -21,6 +21,6 @@ sudo apt install cryptominisat`;
   let without = list_find_starts_with_prefix_without(lines, "s ");
   equal_assert(without, "SATISFIABLE");
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
-  let joined = list_join_space(list);
+  let joined = list_join_space(without2);
   return without2;
 }
