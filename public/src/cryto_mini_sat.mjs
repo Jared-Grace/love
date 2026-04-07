@@ -31,9 +31,6 @@ sudo apt install cryptominisat`;
   list_sort_number_abs_reverse(reversed);
   let a = cryto_mini_sat_to_factor(reversed, bits);
   let b = cryto_mini_sat_to_factor(reversed, bits);
-  let r = {
-    a,
-    b,
-  };
+  let r = [a, b];
   return r;
 }
