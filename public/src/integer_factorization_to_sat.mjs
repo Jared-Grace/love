@@ -209,6 +209,7 @@ export function integer_factorization_to_sat() {
   const bits = Math.ceil(v4);
   const cnf = factorizationCNF(N, bits);
   const cnf3 = to3SAT(cnf);
+  return cnf3;
   let v3 = cnf3.toDimacs();
   console.log(v3);
 }
