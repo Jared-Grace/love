@@ -1,6 +1,5 @@
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { list_map_integer } from "../../../love/public/src/list_map_integer.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
@@ -28,6 +27,6 @@ sudo apt install cryptominisat`;
   let joined = list_join_space(without2);
   let n = whitespace_normalize(joined);
   let split = text_split_space(n);
-  let mapped = list_map(split, integer_to);
+  let mapped = list_map_integer(split);
   return mapped;
 }
