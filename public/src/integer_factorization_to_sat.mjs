@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { ceil } from "../../../love/public/src/ceil.mjs";
 export async function integer_factorization_to_sat() {
   class CNF {
