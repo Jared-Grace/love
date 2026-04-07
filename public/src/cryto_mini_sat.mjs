@@ -1,3 +1,4 @@
+import { list_remove_first_multiple } from "../../../love/public/src/list_remove_first_multiple.mjs";
 import { crypto_mini_sat_dimacs_to_output } from "../../../love/public/src/crypto_mini_sat_dimacs_to_output.mjs";
 import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
 import { list_sort_number_abs } from "../../../love/public/src/list_sort_number_abs.mjs";
@@ -28,6 +29,7 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs(filtered);
+  let e = list_remove_first_multiple(list, count);
   let r = {
     bits,
     filtered,
