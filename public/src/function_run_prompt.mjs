@@ -1,3 +1,4 @@
+import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { log_error } from "../../../love/public/src/log_error.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -19,9 +20,10 @@ export async function function_run_prompt() {
       await log_error(prompt);
     }
   }
+  let repo_name = await user_repo_get();
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
-  let includes = list_includes(list, item);
+  let includes = list_includes(safe, item);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
