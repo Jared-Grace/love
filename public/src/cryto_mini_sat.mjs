@@ -1,3 +1,6 @@
+import { file_write } from "../../../love/public/src/file_write.mjs";
+import { file_temp_keep } from "../../../love/public/src/file_temp_keep.mjs";
+import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
 import { list_sort_number_abs } from "../../../love/public/src/list_sort_number_abs.mjs";
 import { list_filter_equal_not } from "../../../love/public/src/list_filter_equal_not.mjs";
 import { list_map_integer } from "../../../love/public/src/list_map_integer.mjs";
@@ -15,6 +18,10 @@ import { command_line_generic } from "../../../love/public/src/command_line_gene
 export async function cryto_mini_sat() {
   `sudo apt update
 sudo apt install cryptominisat`;
+  let cnf3 = await integer_factorization_to_sat(6);
+  let dimacs = property_get(cnf3, "dimacs");
+  let temp_path = await file_temp_keep();
+  await file_write(temp_path, dimacs);
   let value = true;
   let fn = command_line_generic_code_ignore;
   let object = property_set_new_fn(fn, value);
