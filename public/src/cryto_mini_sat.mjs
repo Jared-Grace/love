@@ -24,9 +24,9 @@ sudo apt install cryptominisat`;
   async function lambda(temp_path) {
     await file_write(temp_path, dimacs);
     let value = true;
+    let command = text_combine("cryptominisat5 ", temp_path);
     let fn = command_line_generic_code_ignore;
     let object = property_set_new_fn(fn, value);
-    let command = text_combine("cryptominisat5 ", temp_path);
     let r = await command_line_generic(command, object);
     return r;
   }
