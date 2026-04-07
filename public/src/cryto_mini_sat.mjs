@@ -1,3 +1,4 @@
+import { abs } from "../../../love/public/src/abs.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { list_filter_equal_not } from "../../../love/public/src/list_filter_equal_not.mjs";
 import { list_map_integer } from "../../../love/public/src/list_map_integer.mjs";
@@ -31,7 +32,6 @@ sudo apt install cryptominisat`;
   let split = text_split_space(n);
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
-  function lambda(item) {}
-  list_sort_number_mapper(list, lambda);
+  list_sort_number_mapper(filtered, abs);
   return filtered;
 }
