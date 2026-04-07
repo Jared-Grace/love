@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { property_delete_if_exists } from "../../../love/public/src/property_delete_if_exists.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -10,7 +11,7 @@ export async function command_line_generic(command, extra) {
     command_line_generic.name,
     "code_ignore",
   );
-  let exists = property_delete_if_exists(extra, combined);
+  let code_ignore = property_delete_if_exists(extra, combined);
   let spawn = property_get(r3, "spawn");
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
@@ -38,7 +39,7 @@ export async function command_line_generic(command, extra) {
     }
     child.on("error", lambda3);
     function lambda4(code) {
-      if (code !== 0) {
+      if (not(code_ignore) && code !== 0) {
         reject(
           new Error(
             `Command exited with code ${code}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`,
