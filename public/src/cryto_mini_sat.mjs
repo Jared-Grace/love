@@ -1,5 +1,5 @@
+import { list_filter_starts_with_prefix_without } from "../../../love/public/src/list_filter_starts_with_prefix_without.mjs";
 import { list_find_starts_with_prefix_without } from "../../../love/public/src/list_find_starts_with_prefix_without.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { property_set_new_fn } from "../../../love/public/src/property_set_new_fn.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -16,8 +16,7 @@ sudo apt install cryptominisat`;
   let r = await command_line_generic(command, object);
   let stdout = property_get(r, "stdout");
   let lines = text_split_newline(stdout);
-  const letter = "s";
-  let combined = text_combine(letter, " ");
-  let without = list_find_starts_with_prefix_without(lines, combined);
-  return without;
+  let without = list_find_starts_with_prefix_without(lines, "s ");
+  let without2 = list_filter_starts_with_prefix_without(lines, "v ");
+  return without2;
 }
