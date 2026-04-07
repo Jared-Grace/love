@@ -1,4 +1,5 @@
 import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
 export function list_remove_first_multiple(list, index, count) {
-  return list_remove_at_count(list, index, count);
+  let e = list_remove_at_count(list, index, count);
+  return e;
 }
