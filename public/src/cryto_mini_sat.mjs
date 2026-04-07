@@ -1,4 +1,4 @@
-import { property_set_new } from "../../../love/public/src/property_set_new.mjs";
+import { property_set_new_fn } from "../../../love/public/src/property_set_new_fn.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { command_line_generic_code_ignore } from "../../../love/public/src/command_line_generic_code_ignore.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
@@ -7,8 +7,7 @@ export async function cryto_mini_sat() {
 sudo apt install cryptominisat`;
   let value = true;
   let fn = command_line_generic_code_ignore;
-  let property_name = fn();
-  let object = property_set_new(property_name, value);
+  let object = property_set_new_fn(fn, value);
   let r = await command_line_generic(
     "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54",
     object,
