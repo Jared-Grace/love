@@ -36,8 +36,8 @@ sudo apt install cryptominisat`;
   let mapped2 = list_map(filtered, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
   let e = list_remove_last_multiple(mapped3, bits);
+  let result = text_remove_while_starts_with(e, "0");
   let e2 = list_remove_last_multiple(mapped3, bits);
-  let result = text_remove_while_starts_with(item, prefix);
   let r = {
     e,
     e2,
