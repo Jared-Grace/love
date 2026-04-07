@@ -29,7 +29,6 @@ sudo apt install cryptominisat`;
   let n = whitespace_normalize(joined);
   let split = text_split_space(n);
   let mapped = list_map_integer(split);
-  const en = 0;
   let filtered = list_filter_equal_not(mapped, 0);
   return filtered;
 }
