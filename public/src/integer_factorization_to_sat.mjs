@@ -1,5 +1,5 @@
 import { ceil } from "../../../love/public/src/ceil.mjs";
-export async function integer_factorization_to_sat() {
+export async function integer_factorization_to_sat(integer_to_factor) {
   class CNF {
     constructor() {
       this.clauses = [];
@@ -233,11 +233,10 @@ export async function integer_factorization_to_sat() {
     }
     return out;
   }
-  const N = 6;
-  let v4 = Math.sqrt(N);
+  let v4 = Math.sqrt(integer_to_factor);
   let v5 = Math.log2(v4);
   let bits = Math.ceil(v5) + 1;
-  const cnf = factorizationCNF(N, bits);
+  const cnf = factorizationCNF(integer_to_factor, bits);
   const cnf3 = to3SAT(cnf);
   let r11 = cnf3.clauses;
   return r11;
