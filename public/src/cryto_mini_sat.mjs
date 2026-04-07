@@ -22,24 +22,24 @@ sudo apt install cryptominisat`;
   let dimacs = property_get(cnf3, "dimacs");
   async function lambda(temp_path) {
     await file_write(temp_path, dimacs);
+    let value = true;
+    let fn = command_line_generic_code_ignore;
+    let object = property_set_new_fn(fn, value);
+    const command =
+      "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54";
+    let r = await command_line_generic(command, object);
+    let stdout = property_get(r, "stdout");
+    let lines = text_split_newline(stdout);
+    let without = list_find_starts_with_prefix_without(lines, "s ");
+    equal_assert(without, "SATISFIABLE");
+    let without2 = list_filter_starts_with_prefix_without(lines, "v ");
+    let joined = list_join_space(without2);
+    let n = whitespace_normalize(joined);
+    let split = text_split_space(n);
+    let mapped = list_map_integer(split);
+    let filtered = list_filter_equal_not(mapped, 0);
+    list_sort_number_abs(filtered);
   }
-  await file_temp(lambda);
-  let value = true;
-  let fn = command_line_generic_code_ignore;
-  let object = property_set_new_fn(fn, value);
-  const command =
-    "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54";
-  let r = await command_line_generic(command, object);
-  let stdout = property_get(r, "stdout");
-  let lines = text_split_newline(stdout);
-  let without = list_find_starts_with_prefix_without(lines, "s ");
-  equal_assert(without, "SATISFIABLE");
-  let without2 = list_filter_starts_with_prefix_without(lines, "v ");
-  let joined = list_join_space(without2);
-  let n = whitespace_normalize(joined);
-  let split = text_split_space(n);
-  let mapped = list_map_integer(split);
-  let filtered = list_filter_equal_not(mapped, 0);
-  list_sort_number_abs(filtered);
-  return filtered;
+  let r2 = await file_temp(lambda);
+  return r2;
 }
