@@ -19,6 +19,7 @@ export async function function_run_prompt() {
     }
   }
   let prompt_colored = await chalk_green("✟ ");
+  let safe = ["***REMOVED***"];
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
