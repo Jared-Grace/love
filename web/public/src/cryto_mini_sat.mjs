@@ -39,7 +39,7 @@ sudo apt install cryptominisat`;
   let joined2 = list_join_empty(e);
   let e2 = list_remove_last_multiple(mapped3, bits);
   let r = {
-    e,
+    joined2,
     e2,
   };
   return r;
