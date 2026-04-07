@@ -9,6 +9,7 @@ import { function_run_line_git } from "../../../love/public/src/function_run_lin
 import { command_line_read } from "../../../love/public/src/command_line_read.mjs";
 import { json_format_to_truncated } from "../../../love/public/src/json_format_to_truncated.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
+import { ternary } from "./ternary.mjs";
 export async function function_run_prompt() {
   if (false) {
     const property_name = "error_attention";
@@ -25,6 +26,7 @@ export async function function_run_prompt() {
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
   let includes = list_includes(safe, repo_name);
+  let result = ternary(condition, on_true, on_false);
   let colored = await chalk_red(repo_name);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
