@@ -1,6 +1,7 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { ceil } from "../../../love/public/src/ceil.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-export function integer_factorization_to_sat() {
+export async function integer_factorization_to_sat() {
   class CNF {
     constructor() {
       this.clauses = [];
@@ -241,4 +242,5 @@ export function integer_factorization_to_sat() {
   const cnf3 = to3SAT(cnf);
   let v3 = cnf3.toDimacs();
   console.log(v3);
+  await clipboard_copy(code);
 }
