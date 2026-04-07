@@ -21,6 +21,8 @@ sudo apt install cryptominisat`;
   let cnf3 = await integer_factorization_to_sat(6);
   let dimacs = property_get(cnf3, "dimacs");
   let temp_path = await file_temp();
+  async function lambda(temp_path2) {}
+  let result = await file_temp(lambda);
   await file_write(temp_path, dimacs);
   let value = true;
   let fn = command_line_generic_code_ignore;
