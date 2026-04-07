@@ -1,3 +1,4 @@
+import { chalk_color } from "../../../love/public/src/chalk_color.mjs";
 import { chalk_red } from "../../../love/public/src/chalk_red.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -26,8 +27,8 @@ export async function function_run_prompt() {
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
   let includes = list_includes(safe, repo_name);
-  let result = ternary(condition, on_true, on_false);
-  let colored = await chalk_red(repo_name);
+  let chalk_color = ternary(includes, chalk_green, chalk_red);
+  let colored = await chalk_color(repo_name);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
