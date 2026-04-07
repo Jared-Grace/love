@@ -6,5 +6,5 @@ export async function repo_functions_move_all(from, to) {
   arguments_assert(arguments, 2);
   let repo_name2 = await user_repo_set(from);
   let filtered = await user_repo_get_functions_names();
-  await repo_functions_move_acronym(to, filtered);
+  await repo_functions_move_acronym(filtered, to);
 }
