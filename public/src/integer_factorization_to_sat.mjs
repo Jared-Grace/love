@@ -204,7 +204,7 @@ export function integer_factorization_to_sat() {
     }
     return out;
   }
-  const N = 21;
+  const N = 4;
   let v4 = Math.log2(N);
   const bits = Math.ceil(v4);
   const cnf = factorizationCNF(N, bits);
