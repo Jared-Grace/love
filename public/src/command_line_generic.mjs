@@ -1,9 +1,11 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "../../../love/public/src/property_delete_if_exists_fn.mjs";
 import { command_line_generic_code_ignore } from "../../../love/public/src/command_line_generic_code_ignore.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function command_line_generic(command, extra) {
+  arguments_assert(arguments, 2);
   text_is_assert(command);
   const r3 = await import("child_process");
   let ci = property_delete_if_exists_fn(
