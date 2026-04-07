@@ -1,4 +1,4 @@
-import { function_copy_replace } from "../../../love/public/src/function_copy_replace.mjs";
+import { chalk_red } from "../../../love/public/src/chalk_red.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { log_error } from "../../../love/public/src/log_error.mjs";
@@ -25,7 +25,7 @@ export async function function_run_prompt() {
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
   let includes = list_includes(safe, repo_name);
-  let v = await function_copy_replace(f_name_old, from, to);
+  let colored = await chalk_red(prompt2);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
