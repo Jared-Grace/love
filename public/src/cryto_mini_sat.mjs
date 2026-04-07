@@ -1,3 +1,4 @@
+import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_remove_first_multiple } from "../../../love/public/src/list_remove_first_multiple.mjs";
 import { crypto_mini_sat_dimacs_to_output } from "../../../love/public/src/crypto_mini_sat_dimacs_to_output.mjs";
@@ -30,8 +31,7 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs(filtered);
-  function lambda(item) {}
-  let mapped2 = list_map(list, lambda);
+  let mapped2 = list_map(list, positive_is);
   let e = list_remove_first_multiple(filtered, bits);
   let e2 = list_remove_first_multiple(filtered, bits);
   let r = {
