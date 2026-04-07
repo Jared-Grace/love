@@ -34,12 +34,12 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs_reverse(filtered);
-  let e = list_remove_last_multiple(mapped3, bits);
+  let e = list_remove_last_multiple(filtered, bits);
   let mapped2 = list_map(filtered, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
   let joined2 = list_join_empty(mapped3);
   let i = integer_base_2_to(joined2);
-  let e2 = list_remove_last_multiple(mapped3, bits);
+  let e2 = list_remove_last_multiple(filtered, bits);
   let r = {
     i,
     e2,
