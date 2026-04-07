@@ -11,6 +11,7 @@ export async function command_line_generic(command, extra) {
     extra,
     command_line_generic_code_ignore,
   );
+  let value = property_get(code_ignore, "value");
   let spawn = property_get(r3, "spawn");
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
