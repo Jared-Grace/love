@@ -3,7 +3,7 @@ export function integer_to_try(input) {
   let i = null;
   i = parseInt(input, base);
   if (Number.isNaN(i)) {
-    return null;
+    i = null;
   }
   return i;
 }
