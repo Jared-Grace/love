@@ -18,5 +18,5 @@ sudo apt install cryptominisat`;
   let lines = text_split_newline(stdout);
   let without = list_find_starts_with_prefix_without(lines, "s ");
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
-  return without2;
+  return without;
 }
