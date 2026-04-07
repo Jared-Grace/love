@@ -9,6 +9,6 @@ sudo apt install cryptominisat`;
   let object = {};
   property_set(object, property_name, value);
   let stdout = await command_line_generic(
-    "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54",
+    "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54",object
   );
 }
