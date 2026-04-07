@@ -1,3 +1,4 @@
+import { boolean_to_binary } from "../../../love/public/src/boolean_to_binary.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_remove_first_multiple } from "../../../love/public/src/list_remove_first_multiple.mjs";
@@ -32,8 +33,7 @@ sudo apt install cryptominisat`;
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs(filtered);
   let mapped2 = list_map(filtered, positive_is);
-  function lambda(item) {}
-  let mapped3 = list_map(list, lambda);
+  let mapped3 = list_map(mapped2, boolean_to_binary);
   let e = list_remove_first_multiple(mapped2, bits);
   let e2 = list_remove_first_multiple(mapped2, bits);
   let r = {
