@@ -23,7 +23,7 @@ export async function function_run_prompt() {
   let repo_name = await user_repo_get();
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
-  let includes = list_includes(safe, item);
+  let includes = list_includes(safe, repo_name);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
