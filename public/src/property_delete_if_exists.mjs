@@ -5,4 +5,5 @@ export function property_delete_if_exists(data, p) {
   if (exists) {
     property_delete(data, p);
   }
+  return exists;
 }
