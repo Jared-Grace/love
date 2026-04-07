@@ -1,9 +1,16 @@
+import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function command_line_generic(command, extra) {
   text_is_assert(command);
   const r3 = await import("child_process");
+  let combined = function_name_combine(
+    command_line_generic.name,
+    "code_ignore",
+  );
+  let exists = property_exists(extra);
   let spawn = property_get(r3, "spawn");
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
