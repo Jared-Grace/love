@@ -30,6 +30,6 @@ sudo apt install cryptominisat`;
   let split = text_split_space(n);
   let mapped = list_map_integer(split);
   const en = 0;
-  let filtered = list_filter_equal_not(en, mapped);
+  let filtered = list_filter_equal_not(mapped, en);
   return filtered;
 }
