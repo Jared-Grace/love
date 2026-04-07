@@ -1,3 +1,4 @@
+import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
@@ -19,5 +20,6 @@ sudo apt install cryptominisat`;
   const letter = "s";
   let combined = text_combine(letter, " ");
   let found = list_find_starts_with(lines, combined);
+  let without = text_prefix_without(s, prefix);
   return found;
 }
