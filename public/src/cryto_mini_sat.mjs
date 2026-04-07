@@ -34,8 +34,8 @@ sudo apt install cryptominisat`;
   list_sort_number_abs(filtered);
   let mapped2 = list_map(filtered, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary);
-  let e = list_remove_first_multiple(mapped2, bits);
-  let e2 = list_remove_first_multiple(mapped2, bits);
+  let e = list_remove_first_multiple(mapped3, bits);
+  let e2 = list_remove_first_multiple(mapped3, bits);
   let r = {
     e,
     e2,
