@@ -1,4 +1,4 @@
-import { integer_base_2_to } from "../../../love/public/src/integer_base_2_to.mjs";
+import { integer_base_2_from } from "../../../love/public/src/integer_base_2_from.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_remove_last_multiple } from "../../../love/public/src/list_remove_last_multiple.mjs";
 import { list_sort_number_abs_reverse } from "../../../love/public/src/list_sort_number_abs_reverse.mjs";
@@ -38,7 +38,7 @@ sudo apt install cryptominisat`;
   let mapped2 = list_map(e, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
   let joined2 = list_join_empty(mapped3);
-  let i = integer_base_2_to(joined2);
+  let i = integer_base_2_from(joined2);
   let e2 = list_remove_last_multiple(filtered, bits);
   let r = {
     i,
