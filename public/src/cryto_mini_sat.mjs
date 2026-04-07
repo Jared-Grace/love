@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { command_line_generic_code_ignore } from "../../../love/public/src/command_line_generic_code_ignore.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
@@ -8,9 +9,10 @@ sudo apt install cryptominisat`;
   let property_name = command_line_generic_code_ignore();
   let object = {};
   property_set(object, property_name, value);
-  let stdout = await command_line_generic(
+  let r = await command_line_generic(
     "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54",
     object,
   );
+  let stdout = property_get(r, "stdout");
   return stdout;
 }
