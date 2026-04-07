@@ -39,6 +39,7 @@ sudo apt install cryptominisat`;
     let mapped = list_map_integer(split);
     let filtered = list_filter_equal_not(mapped, 0);
     list_sort_number_abs(filtered);
+    return filtered;
   }
   let r2 = await file_temp(lambda);
   return r2;
