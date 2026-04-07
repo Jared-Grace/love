@@ -1,9 +1,6 @@
-import { number_nan_is } from "../../../love/public/src/number_nan_is.mjs";
+import { integer_to_base_try } from "../../../love/public/src/integer_to_base_try.mjs";
 export function integer_to_try(input) {
   const base = 10;
-  let i = parseInt(input, base);
-  if (number_nan_is(i)) {
-    i = null;
-  }
+  let i = integer_to_base_try(input, base);
   return i;
 }
