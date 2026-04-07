@@ -1,5 +1,4 @@
-import { equal_not_curried } from "../../../love/public/src/equal_not_curried.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_filter_equal_not } from "../../../love/public/src/list_filter_equal_not.mjs";
 import { list_map_integer } from "../../../love/public/src/list_map_integer.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -31,7 +30,6 @@ sudo apt install cryptominisat`;
   let split = text_split_space(n);
   let mapped = list_map_integer(split);
   const en = 0;
-  let r3 = equal_not_curried(en);
-  let filtered = list_filter(mapped, r3);
+  let filtered = list_filter_equal_not(en, mapped);
   return filtered;
 }
