@@ -1,8 +1,8 @@
+import { list_remove_last_multiple } from "../../../love/public/src/list_remove_last_multiple.mjs";
 import { list_sort_number_abs_reverse } from "../../../love/public/src/list_sort_number_abs_reverse.mjs";
 import { boolean_to_binary_text } from "../../../love/public/src/boolean_to_binary_text.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_remove_first_multiple } from "../../../love/public/src/list_remove_first_multiple.mjs";
 import { crypto_mini_sat_dimacs_to_output } from "../../../love/public/src/crypto_mini_sat_dimacs_to_output.mjs";
 import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
 import { list_filter_equal_not } from "../../../love/public/src/list_filter_equal_not.mjs";
@@ -34,8 +34,8 @@ sudo apt install cryptominisat`;
   list_sort_number_abs_reverse(filtered);
   let mapped2 = list_map(filtered, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
-  let e = list_remove_first_multiple(mapped3, bits);
-  let e2 = list_remove_first_multiple(mapped3, bits);
+  let e = list_remove_last_multiple(mapped3, bits);
+  let e2 = list_remove_last_multiple(mapped3, bits);
   let r = {
     e,
     e2,
