@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
@@ -24,5 +25,7 @@ sudo apt install cryptominisat`;
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
   let joined = list_join_space(without2);
   let split = text_split_space(joined);
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return split;
 }
