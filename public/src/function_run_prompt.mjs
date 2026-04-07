@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { log_error } from "../../../love/public/src/log_error.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { data_property_get_generic } from "../../../love/public/src/data_property_get_generic.mjs";
@@ -20,6 +21,7 @@ export async function function_run_prompt() {
   }
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
+  let includes = list_includes(list, item);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
