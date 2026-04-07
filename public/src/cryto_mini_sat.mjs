@@ -1,5 +1,4 @@
 import { cryto_mini_sat_to_factor } from "../../../love/public/src/cryto_mini_sat_to_factor.mjs";
-import { list_remove_last_multiple } from "../../../love/public/src/list_remove_last_multiple.mjs";
 import { list_sort_number_abs_reverse } from "../../../love/public/src/list_sort_number_abs_reverse.mjs";
 import { crypto_mini_sat_dimacs_to_output } from "../../../love/public/src/crypto_mini_sat_dimacs_to_output.mjs";
 import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
@@ -30,11 +29,11 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let reversed = list_filter_equal_not(mapped, 0);
   list_sort_number_abs_reverse(reversed);
-  let i = cryto_mini_sat_to_factor(reversed, bits);
-  let e2 = list_remove_last_multiple(reversed, bits);
+  let a = cryto_mini_sat_to_factor(reversed, bits);
+  let b = cryto_mini_sat_to_factor(reversed, bits);
   let r = {
-    i,
-    e2,
+    a,
+    b,
   };
   return r;
 }
