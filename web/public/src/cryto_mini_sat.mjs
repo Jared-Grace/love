@@ -1,7 +1,4 @@
-import { command_line_code_ignore } from "../../../love/public/src/command_line_code_ignore.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { file_temp } from "../../../love/public/src/file_temp.mjs";
-import { file_write } from "../../../love/public/src/file_write.mjs";
+import { crypto_mini_sat_dimacs_to_output } from "../../../love/public/src/crypto_mini_sat_dimacs_to_output.mjs";
 import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
 import { list_sort_number_abs } from "../../../love/public/src/list_sort_number_abs.mjs";
 import { list_filter_equal_not } from "../../../love/public/src/list_filter_equal_not.mjs";
@@ -19,14 +16,7 @@ export async function cryto_mini_sat(n) {
 sudo apt install cryptominisat`;
   let cnf3 = await integer_factorization_to_sat(n);
   let dimacs = property_get(cnf3, "dimacs");
-  async function lambda(temp_path) {
-    await file_write(temp_path, dimacs);
-    let command = text_combine("cryptominisat5 ", temp_path);
-    let r = await command_line_code_ignore(command);
-    return r;
-  }
-  let r = await file_temp(lambda);
-  let stdout = property_get(r, "stdout");
+  let stdout = await crypto_mini_sat_dimacs_to_output(dimacs);
   let lines = text_split_newline(stdout);
   let without = list_find_starts_with_prefix_without(lines, "s ");
   equal_assert(without, "SATISFIABLE");
