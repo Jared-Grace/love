@@ -6,6 +6,6 @@ export function boolean_to_binary(b) {
     boolean_to_binary,
     js_boolean_values_false_first,
   );
-  let binary = list_index_of(r, b);
+  let binary = list_index_of(value, b);
   return binary;
 }
