@@ -33,7 +33,7 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let filtered = list_filter_equal_not(mapped, 0);
   list_sort_number_abs(filtered);
-  list_reverse(list);
+  list_reverse(filtered);
   let mapped2 = list_map(filtered, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
   let e = list_remove_first_multiple(mapped3, bits);
