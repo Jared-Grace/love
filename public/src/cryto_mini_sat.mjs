@@ -27,5 +27,5 @@ sudo apt install cryptominisat`;
   let joined = list_join_space(without2);
   let split = text_split_space(joined);
   let mapped = list_map(list, integer_to_try);
-  return split;
+  return mapped;
 }
