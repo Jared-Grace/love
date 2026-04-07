@@ -5,7 +5,7 @@ export async function cryto_mini_sat() {
   `sudo apt update
 sudo apt install cryptominisat`;
   let value = true;
-  let property_name = command_line_generic_code_ignore;
+  let property_name = command_line_generic_code_ignore();
   let object = {};
   property_set(object, property_name, value);
   let stdout = await command_line_generic(
