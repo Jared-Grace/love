@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_filter_starts_with_prefix_without } from "../../../love/public/src/list_filter_starts_with_prefix_without.mjs";
 import { list_find_starts_with_prefix_without } from "../../../love/public/src/list_find_starts_with_prefix_without.mjs";
@@ -20,5 +21,6 @@ sudo apt install cryptominisat`;
   let without = list_find_starts_with_prefix_without(lines, "s ");
   equal_assert(without, "SATISFIABLE");
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
+  log_json(right);
   return without2;
 }
