@@ -25,7 +25,7 @@ export async function function_run_prompt() {
   let prompt_colored = await chalk_green("✟ ");
   let safe = ["p_np"];
   let includes = list_includes(safe, repo_name);
-  let colored = await chalk_red(prompt2);
+  let colored = await chalk_red(repo_name);
   let line = await command_line_read(prompt_colored);
   await function_run_line_git(line);
 }
