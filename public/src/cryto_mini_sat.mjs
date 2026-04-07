@@ -14,5 +14,5 @@ sudo apt install cryptominisat`;
   let r = await command_line_generic(command, object);
   let stdout = property_get(r, "stdout");
   let filtered = list_find_starts_with(list, "s ");
-  return stdout;
+  return filtered;
 }
