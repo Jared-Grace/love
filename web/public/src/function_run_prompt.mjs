@@ -31,6 +31,6 @@ export async function function_run_prompt() {
   let chalk_color = ternary(includes, chalk_green, chalk_red);
   let colored = await chalk_color(repo_name);
   let combined = text_combine_multiple([prompt_colored, colored, " "]);
-  let line = await command_line_read(prompt_colored);
+  let line = await command_line_read(combined);
   await function_run_line_git(line);
 }
