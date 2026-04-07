@@ -32,5 +32,5 @@ sudo apt install cryptominisat`;
   let mapped = list_map_integer(split);
   let r3 = equal_not_curried(0);
   let filtered = list_filter(list, r3);
-  return mapped;
+  return filtered;
 }
