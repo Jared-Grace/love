@@ -26,6 +26,6 @@ sudo apt install cryptominisat`;
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
   let joined = list_join_space(without2);
   let split = text_split_space(joined);
-  let mapped = list_map(list, integer_to_try);
+  let mapped = list_map(split, integer_to_try);
   return mapped;
 }
