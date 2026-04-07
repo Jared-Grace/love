@@ -10,7 +10,7 @@ export async function command_line_generic(command, extra) {
     command_line_generic.name,
     "code_ignore",
   );
-  let exists = property_exists(extra);
+  let exists = property_exists(extra, combined);
   let spawn = property_get(r3, "spawn");
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
