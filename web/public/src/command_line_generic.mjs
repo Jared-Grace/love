@@ -5,7 +5,6 @@ export async function command_line_generic(command, extra) {
   text_is_assert(command);
   const r3 = await import("child_process");
   let spawn = property_get(r3, "spawn");
-  text_is_assert(command);
   const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
   let args = property_get(r5, "args");
