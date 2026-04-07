@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { file_write } from "../../../love/public/src/file_write.mjs";
 import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
@@ -25,6 +26,7 @@ sudo apt install cryptominisat`;
     let value = true;
     let fn = command_line_generic_code_ignore;
     let object = property_set_new_fn(fn, value);
+    let combined = text_combine(left, right);
     const command =
       "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54";
     let r = await command_line_generic(command, object);
