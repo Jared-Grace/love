@@ -6,7 +6,8 @@ export async function cryto_mini_sat() {
   `sudo apt update
 sudo apt install cryptominisat`;
   let value = true;
-  let property_name = command_line_generic_code_ignore();
+  let fn = command_line_generic_code_ignore;
+  let property_name = fn();
   let object = property_set_new(property_name, value);
   let r = await command_line_generic(
     "cryptominisat5 /media/j/JPM/user/temp/3addf5dd-c638-4b30-b164-d47670db6f54",
