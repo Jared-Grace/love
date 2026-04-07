@@ -238,7 +238,6 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   let bits = Math.ceil(v5) + 1;
   const cnf = factorizationCNF(integer_to_factor, bits);
   const cnf3 = to3SAT(cnf);
-  let r11 = cnf3.clauses;
   cnf3.bits = bits;
-  return r11;
+  return cnf3;
 }
