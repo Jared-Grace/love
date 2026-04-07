@@ -1,3 +1,4 @@
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_filter_starts_with_prefix_without } from "../../../love/public/src/list_filter_starts_with_prefix_without.mjs";
@@ -22,5 +23,6 @@ sudo apt install cryptominisat`;
   equal_assert(without, "SATISFIABLE");
   let without2 = list_filter_starts_with_prefix_without(lines, "v ");
   let joined = list_join_space(without2);
+  let split = text_split_space(s);
   return joined;
 }
