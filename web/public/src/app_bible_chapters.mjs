@@ -8,7 +8,6 @@ export async function app_bible_chapters(context) {
   let r = await app_bible_chapters_before(context);
   let root = property_get(r, "root");
   let book_code = property_get(r, "book_code");
-  let e = property_get(r, "e");
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let oc = app_bible_chapter_open_curried(context);
