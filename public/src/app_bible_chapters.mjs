@@ -22,12 +22,12 @@ export async function app_bible_chapters(context) {
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
+  let div = html_div(root);
+  html_centered(div);
   let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
     e,
     book_code,
   );
-  let div = html_div(root);
-  html_centered(div);
   function lambda(chapter_code) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     function lambda3() {
