@@ -19,6 +19,7 @@ export async function sandbox() {
     r,
     r2,
     r4,
+    r32,
   };
   return r3;
 }
