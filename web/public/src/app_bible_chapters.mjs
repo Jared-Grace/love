@@ -28,8 +28,9 @@ export async function app_bible_chapters(context) {
     e,
     book_code,
   );
+  let code_to_button_text = ebible_chapter_code_to_name;
   function lambda(chapter_code) {
-    let chapter_name = ebible_chapter_code_to_name(chapter_code);
+    let chapter_name = code_to_button_text(chapter_code);
     function lambda3() {
       app_bible_chapter_open(context, hash, chapter_code);
     }
