@@ -14,6 +14,9 @@ export async function function_current_selects_add(item_to_add, on_previous) {
     });
     list_add(previous, item_to_add);
     on_previous(previous);
+    log(function_current_selects_add.name, {
+      previous,
+    });
     return previous;
   }
   let d_path = user_data_path();
