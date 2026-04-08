@@ -15,6 +15,7 @@ export function js_statement_first(ast) {
     if (equal(node, first)) {
       result = i;
     }
+    i++;
   }
   js_visit(ast, lambda);
   return code;
