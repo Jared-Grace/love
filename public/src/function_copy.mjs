@@ -1,5 +1,4 @@
 import { function_rename_check } from "../../../love/public/src/function_rename_check.mjs";
-import { function_current_set } from "../../../love/public/src/function_current_set.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
 import { file_copy } from "../../../love/public/src/file_copy.mjs";
@@ -23,7 +22,6 @@ export async function function_copy(f_name_old, f_name_new) {
     js_identifier_rename(ast, unaliased_old, name);
   }
   await function_transform(name, lambda);
-  await function_current_set(name);
   let r3 = {
     f_path_new,
     name,
