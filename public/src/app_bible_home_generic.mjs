@@ -152,6 +152,8 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   let item2 = list_find_property(verses, "verse_number", verse_number_hash);
   await each_verse(item2);
+  html_button_arrow_left(bar, () => {});
+  html_button_arrow_right(bar, () => {});
   list_add(languages_verses, {
     verses,
     books,
