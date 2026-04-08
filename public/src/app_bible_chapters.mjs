@@ -24,10 +24,7 @@ export async function app_bible_chapters(context) {
   html_div_text_centered(root, book_name);
   let div = html_div(root);
   html_centered(div);
-  let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
-    e,
-    book_code,
-  );
+  let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   function lambda(item) {
     let chapter_name = code_to_button_text(item);
@@ -36,5 +33,5 @@ export async function app_bible_chapters(context) {
     }
     let component = html_button(div, chapter_name, lambda3);
   }
-  each(chapter_codes, lambda);
+  each(items, lambda);
 }
