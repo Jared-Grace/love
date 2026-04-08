@@ -1,3 +1,4 @@
+import { js_visit_id_to_node_or_id_curried } from "../../../love/public/src/js_visit_id_to_node_or_id_curried.mjs";
 import { js_visit_id_to_node_or_id } from "../../../love/public/src/js_visit_id_to_node_or_id.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
@@ -33,6 +34,7 @@ export async function function_node_select_inner(
     lambda,
     d_path,
   );
+  let r2 = js_visit_id_to_node_or_id_curried(ast2);
   let selected = list_map(value, js_visit_id_to_node_or_id);
   let f_name_current = await function_current_get();
   let r = {
