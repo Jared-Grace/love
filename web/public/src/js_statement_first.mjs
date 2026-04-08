@@ -10,6 +10,6 @@ export function js_statement_first(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
   }
-  js_visit(ast2, lambda);
+  js_visit(ast, lambda);
   return code;
 }
