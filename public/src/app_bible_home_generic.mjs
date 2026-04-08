@@ -1,4 +1,4 @@
-import { app_shared_screen_set_fn } from "../../../love/public/src/app_shared_screen_set_fn.mjs";
+import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
 import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_button_arrow_right } from "../../../love/public/src/html_button_arrow_right.mjs";
 import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
@@ -76,8 +76,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   let component = html_button(bar, book_name, lambda5);
   let s = app_bible_chapters;
-  let lambda4 = app_shared_screen_set_fn(context, s);
-  let component2 = html_button(bar, chapter_name, lambda4);
+  app_shared_screen_set_button(context, s, bar, chapter_name);
   async function lambda3() {
     await on_arrow(list_next_wrap);
   }
