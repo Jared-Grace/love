@@ -41,6 +41,7 @@ export async function function_node_select_inner(
     f_name_current,
     value,
     selected,
+    selected_code,
   };
   return r;
 }
