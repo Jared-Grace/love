@@ -26,7 +26,7 @@ import { text_split_space } from "../../../love/public/src/text_split_space.mjs"
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
-import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
+import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
@@ -55,7 +55,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_open(context, hash, "JHN01", "1");
+    app_bible_verse_open(context, hash, "JHN01", "1");
     return;
   }
   let verse_number_hash = property_initialize(hash, "v", "1");
@@ -90,7 +90,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
-    app_bible_chapter_open(context, hash, next, "1");
+    app_bible_verse_open(context, hash, next, "1");
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
