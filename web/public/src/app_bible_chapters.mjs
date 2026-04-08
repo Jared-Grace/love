@@ -37,7 +37,7 @@ export async function app_bible_chapters(context) {
   function lambda(chapter_code) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     function lambda3() {
-      app_bible_chapter_open(context, hash, chapter_code);
+      app_bible_chapter_open(context, hash, chapter_code, error());
     }
     let component = html_button(div, chapter_name, lambda3);
   }
