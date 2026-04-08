@@ -1,1 +1,1 @@
-export function js_statement_first() {}
+export function js_statement_first(ast) {}
