@@ -9,7 +9,7 @@ export function js_visit_id(ast, target) {
   function inner(node, i) {
     let code = js_unparse(ast2);
     log(js_visit_id.name, {
-      node,
+      code,
     });
     if (equal(node, target)) {
       id = i;
