@@ -7,10 +7,12 @@ export function js_visit_id(ast, target) {
   let id = null;
   js_visit_property_node_index(ast, inner);
   function inner(node, i) {
-    let code = js_unparse(node);
-    log(js_visit_id.name, {
-      code,
-    });
+    try {
+      let code = js_unparse(node);
+      log(js_visit_id.name, {
+        code,
+      });
+    } catch (E) {}
     if (equal(node, target)) {
       id = i;
     }
