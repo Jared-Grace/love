@@ -1,3 +1,4 @@
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { user_data_set } from "../../../love/public/src/user_data_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { marker_top } from "../../../love/public/src/marker_top.mjs";
@@ -14,6 +15,7 @@ export async function function_current_set(f_name) {
     f_name,
     unaliased,
   });
+  let f_name_current = await function_current_get();
   await user_data_set("function_current", unaliased);
   if (false) {
     ("previously, used markers in vs code text editor however because of browser ide, no longer using markers at this time so disabling adding markers to files");
