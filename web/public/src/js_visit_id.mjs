@@ -4,11 +4,11 @@ import { equal } from "../../../love/public/src/equal.mjs";
 export function js_visit_id(ast, target) {
   let id = null;
   js_visit_property_node_index(ast, inner);
-  integer_is_assert(id);
-  return id;
   function inner(node, i) {
     if (equal(node, target)) {
       id = i;
     }
   }
+  integer_is_assert(id);
+  return id;
 }
