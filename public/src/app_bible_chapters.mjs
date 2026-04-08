@@ -26,6 +26,6 @@ export async function app_bible_chapters(context) {
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let r2 = app_bible_chapter_open_curried_2(context, hash);
-  let mapped = html_button_list(items, code_to_button_text, r2, div);
+  let mapped = html_button_list(div, items, code_to_button_text, r2);
   return mapped;
 }
