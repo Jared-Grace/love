@@ -13,12 +13,12 @@ export async function function_node_select_inner(
   on_previous,
 ) {
   let node = await function_run(select_fn_name, [ast]);
-  let id = js_visit_id_try(ast, node);
-  if (null_is(id)) {
-    id = ast;
+  let item_to_add = js_visit_id_try(ast, node);
+  if (null_is(item_to_add)) {
+    item_to_add = ast;
   }
   async function lambda(previous) {
-    list_add(previous, id);
+    list_add(previous, item_to_add);
     on_previous(previous);
     return previous;
   }
