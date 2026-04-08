@@ -8,6 +8,7 @@ export function js_visit_id(ast, target) {
   let id = null;
   js_visit_property_node_index(ast, inner);
   function inner(node, i) {
+    const eq = equal(node, target);
     try {
       let code = js_unparse(node);
       if (equal(c, code)) {
@@ -16,10 +17,10 @@ export function js_visit_id(ast, target) {
           here: 1,
           node,
           target,
+          eq,
         });
       }
     } catch (E) {}
-    const eq = equal(node, target);
     if (eq) {
       id = i;
     }
