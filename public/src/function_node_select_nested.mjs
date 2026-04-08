@@ -4,9 +4,9 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { user_data_get } from "../../../love/public/src/user_data_get.mjs";
 import { function_node_select_inner } from "../../../love/public/src/function_node_select_inner.mjs";
 export async function function_node_select_nested(select_fn_name) {
-  let selects = await user_data_get("function_current_selects");
-  let selected = js_visit_ids_to_nodes(ast, selects);
-  let first = list_first(selects);
+  let ids = await user_data_get("function_current_selects");
+  let selects = js_visit_ids_to_nodes(ast, ids);
+  let first = list_first(ids);
   function lambda(previous) {
     list_remove(previous, first);
   }
