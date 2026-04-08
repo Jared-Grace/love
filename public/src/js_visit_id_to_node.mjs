@@ -9,6 +9,6 @@ export function js_visit_id_to_node(ast, id) {
   if (s1) {
     node = list_first(selects);
   }
-  null_not_is_assert(a);
+  null_not_is_assert(node);
   return node;
 }
