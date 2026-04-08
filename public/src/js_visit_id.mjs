@@ -18,6 +18,7 @@ export function js_visit_id(ast, target) {
           node,
           target,
           eq,
+          i,
         });
       }
     } catch (E) {}
