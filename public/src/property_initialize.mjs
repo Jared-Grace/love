@@ -9,4 +9,5 @@ export function property_initialize(object, property_name, value_initial) {
   }
   let value = property_get(object, property_name);
   return value;
+  property_set_if_exists_not(object, property_name, value_initial);
 }
