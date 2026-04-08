@@ -1,5 +1,7 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_set_if_exists_not } from "../../../love/public/src/property_set_if_exists_not.mjs";
 export function property_set_if_exists_not_get(a, p, value) {
-  let r = property_set_if_exists_not(a, p, value);
-  return r;
+  property_set_if_exists_not(a, p, value);
+  let verse_number_hash = property_get(hash, p);
+  return verse_number_hash;
 }
