@@ -1,9 +1,11 @@
+import { list_remove_last_multiple } from "../../../love/public/src/list_remove_last_multiple.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { function_name_combine_multiple } from "../../../love/public/src/function_name_combine_multiple.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function function_name_to_part_replace_last(f_name_old, replacement) {
   let parts2 = function_name_to_parts(f_name_old);
+  let e = list_remove_last_multiple(list, count);
   list_pop(parts2);
   let parts = parts2;
   list_add(parts, replacement);
