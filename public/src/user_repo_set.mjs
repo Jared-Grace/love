@@ -5,7 +5,7 @@ import { repo_acronym_to_name } from "../../../love/public/src/repo_acronym_to_n
 export async function user_repo_set(value) {
   let repo_name = await repo_acronym_to_name(value);
   await repo_exists_assert(repo_name);
-  await user_data_set(repo_name, "repo_current");
+  await user_data_set("repo_current", repo_name);
   let repo_name2 = await user_repo_get();
   return repo_name2;
 }

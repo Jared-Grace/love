@@ -1,5 +1,5 @@
 import { user_data_set_fn } from "../../../love/public/src/user_data_set_fn.mjs";
-export async function user_data_set(repo_name, property_name) {
+export async function user_data_set(property_name, repo_name) {
   async function lambda(previous) {
     return repo_name;
   }
