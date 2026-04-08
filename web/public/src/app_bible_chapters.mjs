@@ -29,7 +29,9 @@ export async function app_bible_chapters(context) {
   let r2 = app_bible_chapter_open_curried_2(context, hash);
   function lambda(item) {
     let text = code_to_button_text(item);
-    function lambda2() {}
+    function lambda2() {
+      r2(item);
+    }
     let component = html_button(div, text, lambda2);
     return component;
   }
