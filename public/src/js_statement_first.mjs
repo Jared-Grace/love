@@ -9,7 +9,7 @@ export function js_statement_first(ast) {
   let first = list_first(body_block);
   let code = js_unparse(first);
   let result = null;
-  let i = -1;
+  let i = 0;
   function lambda(v) {
     let node = property_get(v, "node");
     if (equal(node, first)) {
