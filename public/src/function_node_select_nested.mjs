@@ -1,7 +1,7 @@
+import { user_data_get } from "../../../love/public/src/user_data_get.mjs";
 import { function_node_select_inner } from "../../../love/public/src/function_node_select_inner.mjs";
-import { function_current_ast } from "../../../love/public/src/function_current_ast.mjs";
 export async function function_node_select_nested(select_fn_name) {
-  let ast = await function_current_ast();
+  let ast = await user_data_get("function_current_selects");
   let r = await function_node_select_inner(select_fn_name, ast);
   return r;
 }
