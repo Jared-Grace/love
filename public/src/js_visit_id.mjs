@@ -5,12 +5,12 @@ export function js_visit_id(ast, target) {
   let id = null;
   let i = 0;
   js_visit_property_node(ast, inner2);
-  integer_is_assert(id);
-  return id;
   function inner2(node) {
     inner(node, i);
     i++;
   }
+  integer_is_assert(id);
+  return id;
   function inner(node, i) {
     if (equal(node, target)) {
       id = i;
