@@ -7,8 +7,8 @@ import { js_visit_id } from "../../../love/public/src/js_visit_id.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 export async function function_node_select(select_fn_name) {
   let ast = await function_current_ast();
-  let result = await function_run(select_fn_name, [ast]);
-  let id = js_visit_id(ast, result);
+  let node = await function_run(select_fn_name, [ast]);
+  let id = js_visit_id(ast, node);
   async function lambda(previous) {
     list_add(previous, id);
     return previous;
