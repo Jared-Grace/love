@@ -13,5 +13,6 @@ export function js_visit_id(ast, target) {
     i++;
   }
   js_visit(ast, lambda);
-  integer_is_assert(i2);
+  integer_is_assert(result);
+  return result;
 }
