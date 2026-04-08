@@ -13,6 +13,6 @@ export async function function_rename_open_generic(
     f_name_old,
     args,
   ));
-  let r = await function_rename_open(f_name_before, f_name_after);
+  let r = await function_rename_open(f_name_old, f_name_new);
   return r;
 }
