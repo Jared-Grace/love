@@ -20,7 +20,7 @@ export async function function_node_select_inner(
   let item_to_add = js_visit_id_try(ast, n);
   if (null_is(item_to_add)) {
     log(function_node_select_inner.name, {
-      node,
+      n,
     });
     item_to_add = n;
   }
