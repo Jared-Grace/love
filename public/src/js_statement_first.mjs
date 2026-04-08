@@ -6,6 +6,6 @@ export function js_statement_first(ast) {
   let body_block = js_flo_body(ast);
   let first = list_first(body_block);
   let code = js_unparse(first);
-  js_visit_id(ast, first);
-  return code;
+  let r = js_visit_id(ast, first);
+  return r;
 }
