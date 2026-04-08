@@ -10,7 +10,7 @@ export async function function_current_selects_add(item_to_add, on_previous) {
   let ast = await function_current_ast();
   async function lambda(previous) {
     log(function_current_selects_add.name, {
-      previous,
+      previous1: previous,
     });
     list_add(previous, item_to_add);
     on_previous(previous);
