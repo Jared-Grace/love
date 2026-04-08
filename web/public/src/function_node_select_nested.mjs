@@ -1,9 +1,11 @@
+import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { user_data_get } from "../../../love/public/src/user_data_get.mjs";
 import { function_node_select_inner } from "../../../love/public/src/function_node_select_inner.mjs";
 export async function function_node_select_nested(select_fn_name) {
   let selects = await user_data_get("function_current_selects");
+  let selected = js_visit_ids_to_nodes(ast, value);
   let first = list_first(selects);
   function lambda(previous) {
     list_remove(previous, first);
