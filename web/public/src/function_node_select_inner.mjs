@@ -1,10 +1,10 @@
+import { js_visit_id_try } from "../../../love/public/src/js_visit_id_try.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { js_unparse_multiple } from "../../../love/public/src/js_unparse_multiple.mjs";
 import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { js_visit_id } from "../../../love/public/src/js_visit_id.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 export async function function_node_select_inner(
   select_fn_name,
@@ -12,7 +12,7 @@ export async function function_node_select_inner(
   on_previous,
 ) {
   let node = await function_run(select_fn_name, [ast]);
-  let id = js_visit_id(ast, node);
+  let id = js_visit_id_try(ast, node);
   async function lambda(previous) {
     list_add(previous, id);
     on_previous(previous);
