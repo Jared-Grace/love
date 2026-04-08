@@ -58,7 +58,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     return;
   }
   property_set_if_exists_not(hash, "v", "1");
-  let verse_number_hash = property_get(hash, "v");
+  let verse_number_hash = property_set_if_exists_not_get(hash, "v", "1");
   let chapter_code = property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
