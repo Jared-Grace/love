@@ -33,8 +33,6 @@ export async function function_node_select_inner(
   let f_name_current = await function_current_get();
   let r = {
     f_name_current,
-    value,
-    selected,
     selected_code,
   };
   return r;
