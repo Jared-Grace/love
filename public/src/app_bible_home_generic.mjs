@@ -93,64 +93,55 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
-  let item2 = list_find_property(verses, "verse_number", verse_number_hash);
-  async function each_verse(v) {
-    let verse_number = property_get(v, "verse_number");
-    let text = property_get(v, "text");
-    let p_verse = html_p(content);
-    let top = html_div(p_verse);
-    let bottom = html_div(p_verse);
-    html_centered(bottom);
-    let hidden = false;
-    toggle();
-    biblehub_button_open(
-      "interlinear/",
-      "",
-      verse_number,
-      bottom,
-      "Interlinear",
-    );
-    biblehub_button_open("", "", verse_number, bottom, "Parallel");
-    biblehub_button_open("", "#commentary", verse_number, bottom, "Commentary");
-    function lambda8() {}
-    let text4 = html_button_copy_text();
-    let component6 = html_button(bottom, text4, lambda8);
-    let v3 = app_chapter_toggle_update(
-      updates,
-      component6,
-      verse_numbers_chosen,
-      verse_number,
-      chapter_code,
-      languages_verses,
-      p_verse,
-    );
-    let update = property_get(v3, "update");
-    list_add(updates, update);
-    function toggle() {
-      hidden = not(hidden);
-      html_display_none_or_block(hidden, bottom);
-    }
-    let verse_number_v_button = html_button(top, verse_number, toggle);
-    let split = text_split_space(text);
-    function lambda2(item) {
-      html_span_space(top);
-      let item_span = html_span_text(top, item);
-      function lambda9() {
-        let letters_only = text_letters_only(item);
-        window_open("https://www.google.com/search?q=define:" + letters_only);
-      }
-      html_on_click(item_span, lambda9);
-    }
-    each(split, lambda2);
-    let p = html_p(content);
-    await lambda$a({
-      p_verse,
-      p,
-      chapter_code,
-      verse_number,
-    });
+  let v = list_find_property(verses, "verse_number", verse_number_hash);
+  let verse_number = property_get(v, "verse_number");
+  let text = property_get(v, "text");
+  let p_verse = html_p(content);
+  let top = html_div(p_verse);
+  let bottom = html_div(p_verse);
+  html_centered(bottom);
+  let hidden = false;
+  toggle();
+  biblehub_button_open("interlinear/", "", verse_number, bottom, "Interlinear");
+  biblehub_button_open("", "", verse_number, bottom, "Parallel");
+  biblehub_button_open("", "#commentary", verse_number, bottom, "Commentary");
+  function lambda8() {}
+  let text4 = html_button_copy_text();
+  let component6 = html_button(bottom, text4, lambda8);
+  let v3 = app_chapter_toggle_update(
+    updates,
+    component6,
+    verse_numbers_chosen,
+    verse_number,
+    chapter_code,
+    languages_verses,
+    p_verse,
+  );
+  let update = property_get(v3, "update");
+  list_add(updates, update);
+  function toggle() {
+    hidden = not(hidden);
+    html_display_none_or_block(hidden, bottom);
   }
-  await each_verse(item2);
+  let verse_number_v_button = html_button(top, verse_number, toggle);
+  let split = text_split_space(text);
+  function lambda2(item) {
+    html_span_space(top);
+    let item_span = html_span_text(top, item);
+    function lambda9() {
+      let letters_only = text_letters_only(item);
+      window_open("https://www.google.com/search?q=define:" + letters_only);
+    }
+    html_on_click(item_span, lambda9);
+  }
+  each(split, lambda2);
+  let p = html_p(content);
+  await lambda$a({
+    p_verse,
+    p,
+    chapter_code,
+    verse_number,
+  });
   function lambda() {}
   html_button_arrow_left(bar, lambda);
   function lambda7() {}
