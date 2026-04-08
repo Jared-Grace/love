@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -56,7 +57,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_chapter_open(context, hash, "JHN01", "1");
     return;
   }
-  let ne = property_exists_not(object, property_name);
+  let ne = property_exists_not(hash, "cv");
+  property_set(object, property_name, value2);
   let verse_number_hash = property_get(hash, "v");
   let chapter_code = property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
