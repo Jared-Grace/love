@@ -38,6 +38,7 @@ export async function function_node_select_inner(
   let r = {
     f_name_current,
     value,
+    selected,
   };
   return r;
   let selected_code = js_unparse_multiple(selected);
