@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { property_get_name } from "../../../love/public/src/property_get_name.mjs";
@@ -14,6 +15,8 @@ export function js_call_callee_name(expression) {
     return name;
   }
   name = property_get_name(callee);
-  $L$name
   return name;
+  log(js_call_callee_name.name, {
+    name,
+  });
 }
