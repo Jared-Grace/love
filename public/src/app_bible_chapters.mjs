@@ -1,9 +1,8 @@
+import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_button_list } from "../../../love/public/src/html_button_list.mjs";
 import { app_bible_chapter_open_curried_2 } from "../../../love/public/src/app_bible_chapter_open_curried_2.mjs";
 import { ebible_book_code_to_chapter_codes_browser } from "../../../love/public/src/ebible_book_code_to_chapter_codes_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { html_centered } from "../../../love/public/src/html_centered.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
@@ -21,8 +20,7 @@ export async function app_bible_chapters(context) {
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
-  let div = html_div(root);
-  html_centered(div);
+  let div = html_div_centered(root);
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let oc = app_bible_chapter_open_curried_2(context, hash);
