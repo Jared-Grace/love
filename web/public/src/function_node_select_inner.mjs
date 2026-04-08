@@ -1,4 +1,4 @@
-import { js_unparse_try } from "../../../love/public/src/js_unparse_try.mjs";
+import { js_unparse_try_multiple } from "../../../love/public/src/js_unparse_try_multiple.mjs";
 import { js_visit_id_to_node_or_id_curried } from "../../../love/public/src/js_visit_id_to_node_or_id_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
@@ -36,7 +36,7 @@ export async function function_node_select_inner(
   let r2 = js_visit_id_to_node_or_id_curried(ast);
   let selected = list_map(value, r2);
   let f_name_current = await function_current_get();
-  let selected_code = list_map(selected, js_unparse_try);
+  let selected_code = js_unparse_try_multiple(selected);
   let r = {
     f_name_current,
     value,
