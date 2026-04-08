@@ -5,7 +5,6 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
@@ -13,6 +12,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
+import { list_map } from "./list_map.mjs";
 export async function app_bible_chapters(context) {
   let root = html_clear_context(context);
   let e = ebible_folder_english();
@@ -31,5 +31,5 @@ export async function app_bible_chapters(context) {
     let text = code_to_button_text(item);
     html_button(div, text, r2);
   }
-  each(items, lambda);
+  list_map(items, lambda);
 }
