@@ -9,8 +9,8 @@ export function each_previous_generic(
   function lambda_each_previous_generic(item, index) {
     let other = null;
     if (index_valid_is(index)) {
-      let index = index_other_get(index);
-      other = list_get(list, index);
+      let index_other = index_other_get(index);
+      other = list_get(list, index_other);
     }
     lambda$item$other(item, other);
   }
