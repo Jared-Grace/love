@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -11,6 +12,8 @@ export function js_statement_first(ast) {
   let i = -1;
   function lambda(v) {
     let node = property_get(v, "node");
+    if (equal(left, right)) {
+    }
   }
   js_visit(ast, lambda);
   return code;
