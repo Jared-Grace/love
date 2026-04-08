@@ -1,5 +1,4 @@
-import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
+import { function_open } from "../../../love/public/src/function_open.mjs";
 export async function sandbox() {
-  let split = text_split_comma("");
-  return split;
+  await function_open(f_name);
 }
