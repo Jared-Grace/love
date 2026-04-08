@@ -15,8 +15,8 @@ export function js_call_callee_name(expression) {
     return name;
   }
   name = property_get_name(callee);
-  return name;
   log(js_call_callee_name.name, {
     name,
   });
+  return name;
 }
