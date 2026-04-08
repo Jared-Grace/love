@@ -22,7 +22,7 @@ export async function function_node_select_inner(
     log(function_node_select_inner.name, {
       node,
     });
-    item_to_add = node;
+    item_to_add = n;
   }
   async function lambda(previous) {
     list_add(previous, item_to_add);
