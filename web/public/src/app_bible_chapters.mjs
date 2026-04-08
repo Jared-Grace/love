@@ -29,7 +29,7 @@ export async function app_bible_chapters(context) {
   let r2 = app_bible_chapter_open_curried_2(context, hash);
   function lambda(item) {
     let chapter_name = code_to_button_text(item);
-    let component = html_button(div, chapter_name, r2);
+    html_button(div, chapter_name, r2);
   }
   each(items, lambda);
 }
