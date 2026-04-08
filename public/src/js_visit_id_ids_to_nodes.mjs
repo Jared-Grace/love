@@ -3,6 +3,7 @@ import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mj
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_visit_id_ids_to_nodes(ast, ids) {
+  let result = [];
   let id = null;
   let i = 0;
   function lambda(v) {
