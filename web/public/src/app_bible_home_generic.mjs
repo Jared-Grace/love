@@ -32,7 +32,6 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
-import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -71,10 +70,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     await on_arrow(list_previous_wrap);
   }
   html_button_arrow_left(bar, lambda6);
-  function lambda5() {
-    app_shared_screen_set(context, app_bible_books);
-  }
-  let component = html_button(bar, book_name, lambda5);
+  app_shared_screen_set_button(context, app_bible_books, bar, book_name);
   app_shared_screen_set_button(context, app_bible_chapters, bar, chapter_name);
   async function lambda3() {
     await on_arrow(list_next_wrap);
