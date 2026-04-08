@@ -20,10 +20,10 @@ export async function app_bible_chapters(context) {
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
-  let div = html_div_centered(root);
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let oc = app_bible_chapter_open_curried(context);
+  let div = html_div_centered(root);
   let mapped = html_button_list(div, items, code_to_button_text, oc);
   return mapped;
 }
