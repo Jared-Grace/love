@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -34,6 +35,8 @@ export async function function_node_select_inner(
     d_path,
   );
   let selected = js_visit_id_to_nodes(ast, value);
+  function lambda2(item) {}
+  let mapped = list_map(list, lambda2);
   log(function_node_select_inner.name, {
     value,
   });
