@@ -19,6 +19,7 @@ export async function function_current_set(f_name) {
   let f_name_current = await function_current_get();
   if (equal_not(unaliased, f_name_current)) {
     await user_data_set("function_current", unaliased);
+    await user_data_set("function_current_selects", []);
   }
   if (false) {
     ("previously, used markers in vs code text editor however because of browser ide, no longer using markers at this time so disabling adding markers to files");
