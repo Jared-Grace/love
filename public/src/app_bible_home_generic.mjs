@@ -5,7 +5,6 @@ import { text_replace_space_underscore_lower } from "../../../love/public/src/te
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_hash_object_property_set } from "../../../love/public/src/html_hash_object_property_set.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -57,6 +56,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_chapter_open(context, hash, "JHN01", "1");
     return;
   }
+  let verse_number_hash = property_get(hash, "cv");
   let chapter_code = property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
@@ -150,7 +150,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     });
     return;
   }
-  await each_async(verses, each_verse);
+  each_verse();
   list_add(languages_verses, {
     verses,
     books,
