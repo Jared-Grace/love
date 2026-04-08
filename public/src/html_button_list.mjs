@@ -1,6 +1,6 @@
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-export function html_button_list(item_to_text, on_click, parent, items) {
+export function html_button_list(items, item_to_text, on_click, parent) {
   function lambda(item) {
     let text = item_to_text(item);
     function lambda2() {
