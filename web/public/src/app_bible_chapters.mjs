@@ -35,5 +35,5 @@ export async function app_bible_chapters(context) {
     let component = html_button(div, text, lambda2);
     return component;
   }
-  list_map(items, lambda);
+  return list_map(items, lambda);
 }
