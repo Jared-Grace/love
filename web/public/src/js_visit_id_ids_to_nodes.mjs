@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
@@ -10,7 +11,7 @@ export function js_visit_id_ids_to_nodes(ast, ids) {
     let node = property_get(v, "node");
     let includes = list_includes(ids, node);
     if (includes) {
-      id = i;
+      list_add(list, item);
     }
     i++;
   }
