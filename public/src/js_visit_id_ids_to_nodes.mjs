@@ -9,7 +9,7 @@ export function js_visit_id_ids_to_nodes(ast, ids) {
   function lambda(v) {
     let node = property_get(v, "node");
     let includes = list_includes(list, item);
-    if (equal(node, target)) {
+    if (equal(node, includes)) {
       id = i;
     }
     i++;
