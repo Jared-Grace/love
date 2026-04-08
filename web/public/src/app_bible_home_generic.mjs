@@ -57,9 +57,9 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_chapter_open(context, hash, "JHN01", "1");
     return;
   }
-  let ne = property_exists_not(hash, "cv");
+  let ne = property_exists_not(hash, "v");
   if (ne) {
-    property_set(object, property_name, value2);
+    property_set(object, "v", "1");
   }
   let verse_number_hash = property_get(hash, "v");
   let chapter_code = property_get(hash, "c");
