@@ -8,10 +8,10 @@ export async function function_node_select_nested(select_fn_name) {
   let ast = await function_current_ast();
   let ids = await user_data_get("function_current_selects");
   let first_id = list_first(ids);
-  let first = js_visit_id_to_node(ast, first_id);
   function lambda(previous) {
     list_remove(previous, first_id);
   }
+  let first = js_visit_id_to_node(ast, first_id);
   let r = await function_node_select_inner(select_fn_name, first, lambda);
   return r;
 }
