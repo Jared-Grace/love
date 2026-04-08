@@ -6,7 +6,7 @@ export async function function_node_select_nested(select_fn_name) {
   let selects = await user_data_get("function_current_selects");
   let first = list_first(selects);
   function lambda(previous) {
-    list_remove(list, item);
+    list_remove(previous, first);
   }
   let r = await function_node_select_inner(select_fn_name, first, lambda);
   return r;
