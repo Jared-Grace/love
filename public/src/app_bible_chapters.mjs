@@ -3,7 +3,7 @@ import { ebible_book_code_to_chapter_codes_browser } from "../../../love/public/
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
+import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -39,7 +39,7 @@ export async function app_bible_chapters(context) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     function lambda3() {
       let verse_number = error();
-      app_bible_chapter_open(context, hash, chapter_code, verse_number);
+      app_bible_verse_open(context, hash, chapter_code, verse_number);
     }
     let component = html_button(div, chapter_name, lambda3);
   }
