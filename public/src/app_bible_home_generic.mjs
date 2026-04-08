@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -54,7 +55,8 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_open(context, hash, "JHN01", error());
+    let verse_number2 = error();
+    app_bible_chapter_open(context, hash, "JHN01", verse_number2);
     return;
   }
   let chapter_code = property_get(hash, "c");
@@ -88,7 +90,8 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
-    app_bible_chapter_open(context, hash, next, error());
+    let verse_number3 = error();
+    app_bible_chapter_open(context, hash, next, verse_number3);
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
