@@ -8,7 +8,7 @@ export async function function_node_select(select_fn_name) {
   let result = await function_run(select_fn_name, [ast]);
   let id = js_visit_id(ast, result);
   async function lambda(previous) {
-    list_add(list, item);
+    list_add(previous, id);
   }
   let value = await data_transform(
     "function_current_selects",
