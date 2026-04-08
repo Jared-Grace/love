@@ -6,7 +6,11 @@ import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_visit_id } from "../../../love/public/src/js_visit_id.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
-export async function function_node_select_inner(select_fn_name, ast) {
+export async function function_node_select_inner(
+  select_fn_name,
+  ast,
+  on_previous,
+) {
   let node = await function_run(select_fn_name, [ast]);
   let id = js_visit_id(ast, node);
   async function lambda(previous) {
