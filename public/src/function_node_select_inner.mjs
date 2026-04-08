@@ -38,7 +38,7 @@ export async function function_node_select_inner(
     lambda,
     d_path,
   );
-  let selected = js_visit_ids_to_nodes(node, value);
+  let selected = js_visit_ids_to_nodes(ast, value);
   log(function_node_select_inner.name, {
     value,
   });
