@@ -142,10 +142,11 @@ export async function app_bible_home_generic(context, lambda$a) {
     chapter_code,
     verse_number,
   });
+  let verse_pickers = html_div(p_verse);
   function lambda() {}
-  html_button_arrow_left(bar, lambda);
+  html_button_arrow_left(verse_pickers, lambda);
   function lambda7() {}
-  html_button_arrow_right(bar, lambda7);
+  html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
     verses,
     books,
