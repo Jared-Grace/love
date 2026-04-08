@@ -19,13 +19,13 @@ export async function app_bible_chapters(context) {
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
+  let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
   let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
     e,
     book_code,
   );
-  let books = await ebible_version_books_browser(e);
   let div = html_div(root);
   html_centered(div);
   function lambda(chapter_code) {
