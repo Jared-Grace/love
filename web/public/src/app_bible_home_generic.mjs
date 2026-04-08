@@ -75,8 +75,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_shared_screen_set(context, app_bible_books);
   }
   let component = html_button(bar, book_name, lambda5);
-  let s = app_bible_chapters;
-  app_shared_screen_set_button(context, s, bar, chapter_name);
+  app_shared_screen_set_button(context, app_bible_chapters, bar, chapter_name);
   async function lambda3() {
     await on_arrow(list_next_wrap);
   }
