@@ -14,10 +14,13 @@ export function js_visit_id(ast, target) {
         log(js_visit_id.name, {
           code,
           here: 1,
+          node,
+          target,
         });
       }
     } catch (E) {}
-    if (equal(node, target)) {
+    const eq = equal(node, target);
+    if (eq) {
       id = i;
     }
   }
