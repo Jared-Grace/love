@@ -7,6 +7,7 @@ import { function_node_select_inner } from "../../../love/public/src/function_no
 export async function function_node_select_nested(select_fn_name) {
   let ast = await function_current_ast();
   let ids = await user_data_get("function_current_selects");
+  let first_id = list_first(ids);
   let selects = js_visit_ids_to_nodes(ast, ids);
   let first = list_first(selects);
   function lambda(previous) {
