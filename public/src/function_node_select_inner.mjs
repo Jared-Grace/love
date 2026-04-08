@@ -15,7 +15,7 @@ export async function function_node_select_inner(
   let id = js_visit_id(ast, node);
   async function lambda(previous) {
     list_add(previous, id);
-    on_previous;
+    on_previous(previous);
     return previous;
   }
   let d_path = user_data_path();
