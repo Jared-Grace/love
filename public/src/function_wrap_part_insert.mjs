@@ -6,6 +6,6 @@ export async function function_wrap_part_insert(
   part_new,
 ) {
   let index = function_name_part_index(f_name_before, part_insert);
-  let r = await function_wrap_part_insert_at(f_name_before, index_string, part);
+  let r = await function_wrap_part_insert_at(f_name_before, index, part_new);
   return r;
 }
