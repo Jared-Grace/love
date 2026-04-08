@@ -19,9 +19,6 @@ export async function function_node_select_inner(
   let n = await function_run(select_fn_name, [node]);
   let item_to_add = js_visit_id_try(ast, n);
   if (null_is(item_to_add)) {
-    log(function_node_select_inner.name, {
-      n,
-    });
     item_to_add = n;
   }
   async function lambda(previous) {
