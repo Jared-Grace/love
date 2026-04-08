@@ -14,9 +14,6 @@ export async function function_current_set(f_name) {
     f_name,
     unaliased,
   });
-  function lambda(previous) {
-    return unaliased;
-  }
   await user_data_set("function_current", unaliased);
   if (false) {
     ("previously, used markers in vs code text editor however because of brwoser ide, no longer using markers at this time so disabling adding markers to files");
