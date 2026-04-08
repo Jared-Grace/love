@@ -3,7 +3,9 @@ import { js_visit_id_to_nodes } from "../../../love/public/src/js_visit_id_to_no
 import { list_single } from "./list_single.mjs";
 export function js_visit_id_to_node(ast, id) {
   let selects = js_visit_id_to_nodes(ast, id);
-  let s1 = list_size_1(list);
+  let s1 = list_size_1(selects);
+  if (false) {
+  }
   let first = list_single(selects);
   return first;
 }
