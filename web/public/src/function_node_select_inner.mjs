@@ -15,7 +15,8 @@ export async function function_node_select_inner(
 ) {
   let node = await function_run(select_fn_name, [ast]);
   log(function_node_select_inner.name, {
-    node,select_fn_name
+    node,
+    select_fn_name,
   });
   let item_to_add = js_visit_id_try(ast, node);
   if (null_is(item_to_add)) {
