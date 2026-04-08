@@ -1,3 +1,4 @@
+import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_button_arrow_right } from "../../../love/public/src/html_button_arrow_right.mjs";
 import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
@@ -142,7 +143,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     chapter_code,
     verse_number,
   });
-  let verse_pickers = html_div(p_verse);
+  let verse_pickers = html_div_centered(p_verse);
   function lambda() {}
   html_button_arrow_left(verse_pickers, lambda);
   function lambda7() {}
