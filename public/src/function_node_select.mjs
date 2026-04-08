@@ -23,5 +23,8 @@ export async function function_node_select(select_fn_name) {
   );
   let selected = js_visit_ids_to_nodes(ast, value);
   let selected_code = js_unparse_multiple(selected);
-  return selected_code;
+  let r = {
+    selected_code,
+  };
+  return r;
 }
