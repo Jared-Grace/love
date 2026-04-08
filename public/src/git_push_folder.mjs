@@ -5,7 +5,7 @@ import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
 import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 import { date_to } from "../../../love/public/src/date_to.mjs";
 import { data_property_get_generic } from "../../../love/public/src/data_property_get_generic.mjs";
-import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
+import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
 import { git_push } from "../../../love/public/src/git_push.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { date_iso_to } from "../../../love/public/src/date_iso_to.mjs";
@@ -18,7 +18,7 @@ export async function git_push_folder(folder) {
     const now = date_now();
     let now_iso = date_iso_to(now);
     let property_name = function_name_combine(git_push.name, "when");
-    let d_path = user_repo_path();
+    let d_path = user_data_path();
     let joined = path_join([folder, d_path]);
     let before_iso = await data_property_get_generic(joined, property_name);
     let before = date_to(before_iso);
