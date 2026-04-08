@@ -1,3 +1,4 @@
+import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { js_call_single } from "../../../love/public/src/js_call_single.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
@@ -10,9 +11,11 @@ export async function sandbox() {
   await function_open(app_bible_verses.name);
   let r = await function_node_select(js_statement_first.name);
   let r2 = await function_node_select_nested(js_call_single.name);
+  let r4 = await function_node_select_nested(js_call_callee_name.name);
   let r3 = {
     r,
     r2,
+    r4,
   };
   return r3;
 }
