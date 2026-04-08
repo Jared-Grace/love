@@ -11,7 +11,7 @@ export async function function_node_select_nested(select_fn_name) {
   let selects = js_visit_ids_to_nodes(ast, ids);
   let first = list_first(selects);
   function lambda(previous) {
-    list_remove(previous, first);
+    list_remove(previous, first_id);
   }
   let r = await function_node_select_inner(select_fn_name, first, lambda);
   return r;
