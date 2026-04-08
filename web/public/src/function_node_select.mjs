@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
@@ -22,7 +23,6 @@ export async function function_node_select(select_fn_name) {
     d_path,
   );
   let selected = js_visit_ids_to_nodes(ast, value);
-  function lambda2(item) {}
-  let mapped = list_map(list, lambda2);
-  return selected;
+  let selected_code = list_map(selected, js_unparse);
+  return selected_code;
 }
