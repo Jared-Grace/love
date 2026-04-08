@@ -6,5 +6,5 @@ export async function function_node_select(select_fn_name) {
   let f_name_current = await function_current_get();
   let ast = await function_ast(f_name_current);
   let result = await function_run(select_fn_name, [ast]);
-  let r = js_visit_id(ast, result);
+  let id = js_visit_id(ast, result);
 }
