@@ -10,18 +10,19 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 export async function function_node_select_inner(
   select_fn_name,
-  ast,
+  node,
   on_previous,
+  ast,
 ) {
-  let node = await function_run(select_fn_name, [ast]);
+  let n = await function_run(select_fn_name, [node]);
   log(function_node_select_inner.name, {
-    node,
+    node: n,
     select_fn_name,
-    ast,
+    ast: node,
   });
-  let item_to_add = js_visit_id_try(ast, node);
+  let item_to_add = js_visit_id_try(node, n);
   if (null_is(item_to_add)) {
-    item_to_add = ast;
+    item_to_add = node;
   }
   async function lambda(previous) {
     list_add(previous, item_to_add);
@@ -35,7 +36,7 @@ export async function function_node_select_inner(
     lambda,
     d_path,
   );
-  let selected = js_visit_ids_to_nodes(ast, value);
+  let selected = js_visit_ids_to_nodes(node, value);
   log(function_node_select_inner.name, {
     value,
   });
