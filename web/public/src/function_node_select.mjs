@@ -1,5 +1,4 @@
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { js_unparse_multiple } from "../../../love/public/src/js_unparse_multiple.mjs";
 import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -23,6 +22,6 @@ export async function function_node_select(select_fn_name) {
     d_path,
   );
   let selected = js_visit_ids_to_nodes(ast, value);
-  let selected_code = list_map(selected, js_unparse);
+  let selected_code = js_unparse_multiple(selected);
   return selected_code;
 }
