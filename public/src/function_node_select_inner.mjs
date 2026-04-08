@@ -34,7 +34,6 @@ export async function function_node_select_inner(
     d_path,
   );
   let selected = list_map(value, js_visit_id_to_node_or_id);
-  let selected_code = js_unparse_multiple(selected);
   let f_name_current = await function_current_get();
   let r = {
     f_name_current,
