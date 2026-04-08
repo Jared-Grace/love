@@ -1,3 +1,4 @@
+import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { function_curryify_right_count_args_get_curried_right } from "../../../love/public/src/function_curryify_right_count_args_get_curried_right.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -7,7 +8,7 @@ export async function function_curryify_count(f_name, count) {
   arguments_assert(arguments, 2);
   count = integer_to(count);
   function lambda(unaliased) {
-    let n = function_curryify_name(unaliased);
+    let n = function_curryify_generic_name(unaliased);
     let combined = function_name_combine(n, count);
     return combined;
   }
