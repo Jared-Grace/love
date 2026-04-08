@@ -1,4 +1,3 @@
-import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
 import { function_current_ast } from "../../../love/public/src/function_current_ast.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -11,7 +10,6 @@ export async function function_node_select_nested(select_fn_name) {
   function lambda(previous) {
     list_remove(previous, first_id);
   }
-  let first = js_visit_id_to_node(ast, first_id);
-  let r = await function_node_select_inner(select_fn_name, first, lambda);
+  let r = await function_node_select_inner(select_fn_name, first_id, lambda);
   return r;
 }
