@@ -7,12 +7,15 @@ export function js_visit_id(ast, target) {
   let i = 0;
   function lambda(v) {
     let node = property_get(v, "node");
-    if (equal(node, target)) {
-      id = i;
-    }
+    inner(node);
     i++;
   }
   js_visit(ast, lambda);
   integer_is_assert(id);
   return id;
+  function inner(node) {
+    if (equal(node, target)) {
+      id = i;
+    }
+  }
 }
