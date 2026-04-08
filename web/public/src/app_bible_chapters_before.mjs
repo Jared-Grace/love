@@ -16,7 +16,6 @@ export async function app_bible_chapters_before(context) {
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
   let r = {
-    e,
     book_code,
     root,
   };
