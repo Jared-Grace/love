@@ -1,14 +1,7 @@
 import { property_set_if_exists_not } from "../../../love/public/src/property_set_if_exists_not.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export function property_initialize(object, property_name, value_initial) {
-  const exists = property_exists(object, property_name);
-  if (not(exists)) {
-    property_set(object, property_name, value_initial);
-  }
+  property_set_if_exists_not(object, property_name, value_initial);
   let value = property_get(object, property_name);
   return value;
-  property_set_if_exists_not(object, property_name, value_initial);
 }
