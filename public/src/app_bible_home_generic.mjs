@@ -1,3 +1,4 @@
+import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
@@ -30,7 +31,6 @@ import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
-import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
@@ -68,8 +68,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function lambda6() {
     await on_arrow(list_previous_wrap);
   }
-  let text3 = emoji_arrow_left();
-  let component4 = html_button(bar, text3, lambda6);
+  html_button_arrow_left(bar, lambda6);
   function lambda5() {
     app_shared_screen_set(context, app_bible_books);
   }
