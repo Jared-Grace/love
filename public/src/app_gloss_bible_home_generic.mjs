@@ -34,6 +34,7 @@ export async function app_gloss_bible_home_generic(
   let generated = g_sermon_generate_book_generic_property();
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = property_get(v2, "passages");
+  let first2 = list_first(list);
   each_next(passages, on_passage);
   function on_passage(a, next) {
     let verses = property_get(a, "verses");
