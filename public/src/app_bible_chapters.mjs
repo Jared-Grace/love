@@ -28,8 +28,8 @@ export async function app_bible_chapters(context) {
   let code_to_button_text = ebible_chapter_code_to_name;
   let r2 = app_bible_chapter_open_curried_2(context, hash);
   function lambda(item) {
-    let chapter_name = code_to_button_text(item);
-    html_button(div, chapter_name, r2);
+    let text = code_to_button_text(item);
+    html_button(div, text, r2);
   }
   each(items, lambda);
 }
