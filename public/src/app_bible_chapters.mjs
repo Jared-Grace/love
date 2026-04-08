@@ -1,5 +1,4 @@
 import { app_bible_chapter_open_curried_2 } from "../../../love/public/src/app_bible_chapter_open_curried_2.mjs";
-import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { ebible_book_code_to_chapter_codes_browser } from "../../../love/public/src/ebible_book_code_to_chapter_codes_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
@@ -27,13 +26,10 @@ export async function app_bible_chapters(context) {
   html_centered(div);
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
-  let r2 = app_bible_chapter_open_curried_2(hash2, context2);
+  let r2 = app_bible_chapter_open_curried_2(hash, context);
   function lambda(item) {
     let chapter_name = code_to_button_text(item);
-    function lambda3() {
-      app_bible_chapter_open(context, hash, item);
-    }
-    let component = html_button(div, chapter_name, lambda3);
+    let component = html_button(div, chapter_name, r2);
   }
   each(items, lambda);
 }
