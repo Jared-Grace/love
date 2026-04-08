@@ -7,13 +7,13 @@ export function js_visit_id(ast, target) {
   let i = 0;
   function lambda(v) {
     let node = property_get(v, "node");
-    inner(node);
+    inner(node, i);
     i++;
   }
   js_visit(ast, lambda);
   integer_is_assert(id);
   return id;
-  function inner(node) {
+  function inner(node, i) {
     if (equal(node, target)) {
       id = i;
     }
