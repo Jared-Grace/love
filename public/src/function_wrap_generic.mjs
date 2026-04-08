@@ -7,8 +7,8 @@ export async function function_wrap_generic(plugin_fn, f_name_old, args) {
   f_name_old = await function_name_unalias_only(f_name_old);
   let split = text_split_comma(args);
   let args_run = [f_name_old];
-  list_add_multiple(list, items);
-  let f_name_new = await function_run(plugin_fn, [f_name_old, args]);
+  list_add_multiple(args_run, split);
+  let f_name_new = await function_run(plugin_fn, args_run);
   let r = await function_wrap(f_name_old, f_name_new);
   return r;
 }
