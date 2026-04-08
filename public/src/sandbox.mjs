@@ -8,4 +8,8 @@ export async function sandbox() {
   await function_open(app_bible_verses.name);
   let r = await function_node_select(js_statement_first.name);
   let r2 = await function_node_select_nested(js_call_single.name);
+  return {
+    r,
+    r2,
+  };
 }
