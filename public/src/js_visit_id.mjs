@@ -13,6 +13,7 @@ export function js_visit_id(ast, target) {
       if (equal(c, code)) {
         log(js_visit_id.name, {
           code,
+          here: 1,
         });
       }
     } catch (E) {}
