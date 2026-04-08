@@ -1,5 +1,4 @@
-import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
-import { html_button_list } from "../../../love/public/src/html_button_list.mjs";
+import { html_button_list_centered } from "../../../love/public/src/html_button_list_centered.mjs";
 import { app_bible_chapter_open_curried } from "../../../love/public/src/app_bible_chapter_open_curried.mjs";
 import { ebible_book_code_to_chapter_codes_browser } from "../../../love/public/src/ebible_book_code_to_chapter_codes_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -23,7 +22,6 @@ export async function app_bible_chapters(context) {
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let oc = app_bible_chapter_open_curried(context);
-  let div = html_div_centered(root);
-  let mapped = html_button_list(div, items, code_to_button_text, oc);
+  let mapped = html_button_list_centered(root, items, code_to_button_text, oc);
   return mapped;
 }
