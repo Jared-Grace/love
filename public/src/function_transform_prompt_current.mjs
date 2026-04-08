@@ -3,5 +3,6 @@ export async function function_transform_prompt_current(
   transformer_name,
   f_name,
 ) {
-  return await function_transform_prompt(transformer_name, f_name);
+  let r = await function_transform_prompt(transformer_name, f_name);
+  return r;
 }
