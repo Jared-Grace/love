@@ -9,7 +9,7 @@ export async function user_repo_set(value) {
   async function lambda(previous) {
     return repo_name;
   }
-  await user_data_set(lambda, property_name);
+  await user_data_set(property_name, lambda);
   let repo_name2 = await user_repo_get();
   return repo_name2;
 }
