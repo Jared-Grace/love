@@ -58,6 +58,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     return;
   }
   let ne = property_exists_not(hash, "cv");
+  if (false) {
+  }
   property_set(object, property_name, value2);
   let verse_number_hash = property_get(hash, "v");
   let chapter_code = property_get(hash, "c");
