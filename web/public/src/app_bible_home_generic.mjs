@@ -1,3 +1,4 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
@@ -151,6 +152,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     });
     return;
   }
+  let filtered = list_filter_property(list2, property_name, property_value);
   await each_verse(verse_number_hash);
   list_add(languages_verses, {
     verses,
