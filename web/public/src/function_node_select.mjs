@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -9,9 +8,6 @@ import { function_run } from "../../../love/public/src/function_run.mjs";
 export async function function_node_select(select_fn_name) {
   let ast = await function_current_ast();
   let node = await function_run(select_fn_name, [ast]);
-  log(function_node_select.name, {
-    node,
-  });
   let id = js_visit_id(ast, node);
   async function lambda(previous) {
     list_add(previous, id);
