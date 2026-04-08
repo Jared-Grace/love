@@ -7,7 +7,6 @@ export async function function_wrap_generic(plugin_fn, f_name_old) {
   ({ f_name_new, f_name_old } = await function_name_new_get(
     plugin_fn,
     f_name_old,
-    args,
   ));
   let r = await function_wrap(f_name_old, f_name_new);
   return r;
