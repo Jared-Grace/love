@@ -1,3 +1,4 @@
+import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
@@ -19,4 +20,5 @@ export async function function_node_select(select_fn_name) {
     lambda,
     d_path,
   );
+  let result2 = js_visit_ids_to_nodes(ast2, ids);
 }
