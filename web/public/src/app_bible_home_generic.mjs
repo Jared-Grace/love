@@ -1,4 +1,4 @@
-import { property_set_if_exists_not } from "../../../love/public/src/property_set_if_exists_not.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
