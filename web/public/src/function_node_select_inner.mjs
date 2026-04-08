@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_visit_id_try } from "../../../love/public/src/js_visit_id_try.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { js_unparse_multiple } from "../../../love/public/src/js_unparse_multiple.mjs";
@@ -13,6 +14,8 @@ export async function function_node_select_inner(
 ) {
   let node = await function_run(select_fn_name, [ast]);
   let id = js_visit_id_try(ast, node);
+  if (null_is(value2)) {
+  }
   async function lambda(previous) {
     list_add(previous, id);
     on_previous(previous);
