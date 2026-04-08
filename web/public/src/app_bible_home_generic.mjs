@@ -150,7 +150,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     });
     return;
   }
-  each_verse();
+  each_verse(verse_number_hash);
   list_add(languages_verses, {
     verses,
     books,
