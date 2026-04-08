@@ -8,7 +8,7 @@ export async function function_node_select(select_fn_name) {
   let id = js_visit_id(ast, result);
   async function lambda(previous) {}
   let value = await data_transform(
-    property_name,
+    "function_current_selects",
     value_initial,
     lambda,
     d_path,
