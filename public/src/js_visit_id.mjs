@@ -12,18 +12,14 @@ export function js_visit_id(ast, target) {
     try {
       let code = js_unparse(node);
       if (equal(c, code)) {
-        log(js_visit_id.name, {
-          code,
-          here: 1,
-          node,
-          target,
-          eq,
-          i,
-        });
       }
     } catch (E) {}
     if (eq) {
       id = i;
+      log(js_visit_id.name, {
+        id,
+        i,
+      });
     }
   }
   integer_is_assert(id);
