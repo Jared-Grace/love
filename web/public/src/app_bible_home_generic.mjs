@@ -83,7 +83,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   html_button_arrow_right(bar, lambda3);
   function lambda12() {}
-  let component7 = html_button(bar, "Languages", lambda12);
+  let component7 = html_button(bar, verse_number_hash, lambda12);
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
   async function on_arrow(list_next_wrap) {
