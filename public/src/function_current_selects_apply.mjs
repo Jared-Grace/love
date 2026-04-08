@@ -6,6 +6,6 @@ export async function function_current_selects_apply(apply_fn_name) {
   let r = await function_current_selects_first();
   let n = await function_run(apply_fn_name, [r]);
   let r2 = list_remove_curried_right(r);
-  let value = await function_current_selects_add(item_to_add, r2);
+  let value = await function_current_selects_add(n, r2);
   return n;
 }
