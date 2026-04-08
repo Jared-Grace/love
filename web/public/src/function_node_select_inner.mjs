@@ -17,13 +17,11 @@ export async function function_node_select_inner(
 ) {
   let node = js_visit_id_to_node(ast, node_id);
   let n = await function_run(select_fn_name, [node]);
-  log(function_node_select_inner.name, {
-    node: n,
-    select_fn_name,
-    ast: node,
-  });
   let item_to_add = js_visit_id_try(ast, n);
   if (null_is(item_to_add)) {
+    log(function_node_select_inner.name, {
+      node,
+    });
     item_to_add = node;
   }
   async function lambda(previous) {
