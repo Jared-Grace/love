@@ -1,3 +1,4 @@
+import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_visit_id_try } from "../../../love/public/src/js_visit_id_try.mjs";
@@ -10,9 +11,10 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 export async function function_node_select_inner(
   select_fn_name,
-  node,
+  node_id,
   on_previous,
 ) {
+  let node = js_visit_id_to_node(ast, node_id);
   let n = await function_run(select_fn_name, [node]);
   log(function_node_select_inner.name, {
     node: n,
