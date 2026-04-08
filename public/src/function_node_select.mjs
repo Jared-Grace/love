@@ -9,7 +9,7 @@ export async function function_node_select(select_fn_name) {
   async function lambda(previous) {}
   let value = await data_transform(
     "function_current_selects",
-    value_initial,
+    [],
     lambda,
     d_path,
   );
