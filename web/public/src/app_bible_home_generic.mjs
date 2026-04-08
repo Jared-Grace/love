@@ -93,6 +93,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
+  let item2 = list_find_property(verses, "verse_number", verse_number_hash);
   async function each_verse(v) {
     let verse_number = property_get(v, "verse_number");
     let text = property_get(v, "text");
@@ -149,7 +150,6 @@ export async function app_bible_home_generic(context, lambda$a) {
       verse_number,
     });
   }
-  let item2 = list_find_property(verses, "verse_number", verse_number_hash);
   await each_verse(item2);
   function lambda() {}
   html_button_arrow_left(bar, lambda);
