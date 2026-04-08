@@ -1,1 +1,4 @@
-export function js_visit_id_to_node_or_id() {}
+import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
+export function js_visit_id_to_node_or_id(ast, id) {
+  return js_visit_id_to_node(ast, id);
+}
