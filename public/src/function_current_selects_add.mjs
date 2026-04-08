@@ -1,4 +1,3 @@
-import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { function_current_ast } from "../../../love/public/src/function_current_ast.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
@@ -8,7 +7,6 @@ import { data_transform } from "../../../love/public/src/data_transform.mjs";
 import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export async function function_current_selects_add(item_to_add, on_previous) {
-  exit();
   let ast = await function_current_ast();
   async function lambda(previous) {
     log(function_current_selects_add.name, {
