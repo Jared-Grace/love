@@ -12,7 +12,7 @@ export function js_statement_first(ast) {
   let i = -1;
   function lambda(v) {
     let node = property_get(v, "node");
-    if (equal(left, right)) {
+    if (equal(node, first)) {
     }
   }
   js_visit(ast, lambda);
