@@ -56,7 +56,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_open(hash, context, "JHN01");
+    app_bible_chapter_open(hash, "JHN01");
     return;
   }
   let verse_number_hash = property_initialize(hash, "v", "1");
@@ -83,7 +83,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
-    app_bible_chapter_open(hash, context, next);
+    app_bible_chapter_open(hash, next);
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
