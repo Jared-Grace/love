@@ -22,7 +22,7 @@ export async function function_node_select_inner(
     select_fn_name,
     ast: node,
   });
-  let item_to_add = js_visit_id_try(node, n);
+  let item_to_add = js_visit_id_try(ast, n);
   if (null_is(item_to_add)) {
     item_to_add = node;
   }
