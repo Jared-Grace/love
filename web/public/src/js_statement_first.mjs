@@ -13,6 +13,7 @@ export function js_statement_first(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     if (equal(node, first)) {
+      result = i;
     }
   }
   js_visit(ast, lambda);
