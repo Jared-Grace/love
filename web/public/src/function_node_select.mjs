@@ -26,8 +26,8 @@ export async function function_node_select(select_fn_name) {
   let selected_code = js_unparse_multiple(selected);
   let f_name_current = await function_current_get();
   let r = {
-    selected_code,
     f_name_current,
+    selected_code,
   };
   return r;
 }
