@@ -1,3 +1,4 @@
+import { null_not_is_assert } from "../../../love/public/src/null_not_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_visit_id_to_nodes } from "../../../love/public/src/js_visit_id_to_nodes.mjs";
@@ -8,6 +9,6 @@ export function js_visit_id_to_node(ast, id) {
   if (s1) {
     node = list_first(selects);
   }
-  nnia;
+  null_not_is_assert(a);
   return node;
 }
