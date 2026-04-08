@@ -1,5 +1,4 @@
-import { js_unparse_or_self } from "../../../love/public/src/js_unparse_or_self.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { js_unparse_or_self_multiple } from "../../../love/public/src/js_unparse_or_self_multiple.mjs";
 import { js_visit_id_or_node } from "../../../love/public/src/js_visit_id_or_node.mjs";
 import { js_visit_id_to_node_or_id_multiple } from "../../../love/public/src/js_visit_id_to_node_or_id_multiple.mjs";
 import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_node.mjs";
@@ -30,7 +29,7 @@ export async function function_node_select_inner(
     d_path,
   );
   let selected = js_visit_id_to_node_or_id_multiple(value, ast);
-  let selected_code = list_map(selected, js_unparse_or_self);
+  let selected_code = js_unparse_or_self_multiple(selected);
   let f_name_current = await function_current_get();
   let r = {
     f_name_current,
