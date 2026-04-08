@@ -56,7 +56,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_open(hash, "JHN01");
+    app_bible_chapter_open(context, "JHN01");
     return;
   }
   let verse_number_hash = property_initialize(hash, "v", "1");
