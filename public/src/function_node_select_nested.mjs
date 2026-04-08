@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { user_data_get } from "../../../love/public/src/user_data_get.mjs";
 import { function_node_select_inner } from "../../../love/public/src/function_node_select_inner.mjs";
