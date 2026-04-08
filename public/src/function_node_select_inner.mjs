@@ -32,7 +32,7 @@ export async function function_node_select_inner(
     lambda,
     d_path,
   );
-  let selected = js_visit_id_to_node_or_id_multiple(ast, value);
+  let selected = js_visit_id_to_node_or_id_multiple(value, ast);
   let f_name_current = await function_current_get();
   let selected_code = js_unparse_try_multiple(selected);
   let r = {
