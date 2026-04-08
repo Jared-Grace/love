@@ -1,7 +1,7 @@
 import { function_name_new_get_args } from "../../../love/public/src/function_name_new_get_args.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { function_rename_open } from "../../../love/public/src/function_rename_open.mjs";
-export async function function_rename_open_generic(
+export async function function_rename_open_generic_args(
   plugin_fn,
   f_name_old,
   args,
