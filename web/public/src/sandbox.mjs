@@ -14,8 +14,7 @@ export async function sandbox() {
   let r = await function_node_select(js_statement_first.name);
   let r2 = await function_node_select_nested(js_call_single.name);
   let r4 = await function_node_select_nested(js_call_callee_name.name);
-  await function_open(f_name);
-  let r32 = await function_current_selects_apply(apply_fn_name);
+  let r32 = await function_current_selects_apply(function_open.name);
   let r3 = {
     r,
     r2,
