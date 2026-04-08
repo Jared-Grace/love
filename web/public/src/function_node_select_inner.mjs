@@ -11,6 +11,6 @@ export async function function_node_select_inner(
   let node = js_visit_id_to_node(ast, node_id);
   let n = await function_run(select_fn_name, [node]);
   let item_to_add = js_visit_id_or_node(ast, n);
-  let value = await function_current_selects_add(item_to_add, on_previous);
+  let r = await function_current_selects_add(item_to_add, on_previous);
   return r;
 }
