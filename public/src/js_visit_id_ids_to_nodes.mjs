@@ -9,13 +9,13 @@ export function js_visit_id_ids_to_nodes(ast, ids) {
   let i = 0;
   function lambda(v) {
     let node = property_get(v, "node");
-    let includes = list_includes(ids, node);
+    let includes = list_includes(ids, i);
     if (includes) {
-      list_add(list, item);
+      list_add(result, node);
     }
     i++;
   }
   js_visit(ast, lambda);
   integer_is_assert(id);
-  return id;
+  return result;
 }
