@@ -1,8 +1,7 @@
+import { user_data_set } from "../../../love/public/src/user_data_set.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
 import { repo_exists_assert } from "../../../love/public/src/repo_exists_assert.mjs";
 import { repo_acronym_to_name } from "../../../love/public/src/repo_acronym_to_name.mjs";
-import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
-import { data_set } from "../../../love/public/src/data_set.mjs";
 export async function user_repo_set(value) {
   let repo_name = await repo_acronym_to_name(value);
   await repo_exists_assert(repo_name);
@@ -10,8 +9,7 @@ export async function user_repo_set(value) {
   async function lambda(previous) {
     return repo_name;
   }
-  let f_path = user_repo_path();
-  await data_set(lambda, property_name, f_path);
+  await user_data_set(lambda, property_name);
   let repo_name2 = await user_repo_get();
   return repo_name2;
 }
