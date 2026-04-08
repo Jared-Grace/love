@@ -16,7 +16,7 @@ export async function function_current_set(f_name) {
   });
   await user_data_set("function_current", unaliased);
   if (false) {
-    ("previously, used markers in vs code text editor however because of brwoser ide, no longer using markers at this time so disabling adding markers to files");
+    ("previously, used markers in vs code text editor however because of browser ide, no longer using markers at this time so disabling adding markers to files");
     await marker_top();
     let name = marker_first();
     await marker_current_set(name);
