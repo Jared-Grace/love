@@ -1,4 +1,3 @@
-import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_visit_id_to_nodes } from "../../../love/public/src/js_visit_id_to_nodes.mjs";
@@ -9,6 +8,6 @@ export function js_visit_id_to_node(ast, id) {
   if (s1) {
     node = list_first(selects);
   }
-  list_size_1_assert(list);
+  nnia;
   return node;
 }
