@@ -20,5 +20,6 @@ export async function function_node_select(select_fn_name) {
     lambda,
     d_path,
   );
-  let result2 = js_visit_ids_to_nodes(ast2, ids);
+  let result2 = js_visit_ids_to_nodes(ast, value);
+  ($, result2);
 }
