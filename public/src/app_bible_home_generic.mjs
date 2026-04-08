@@ -148,7 +148,6 @@ export async function app_bible_home_generic(context, lambda$a) {
       chapter_code,
       verse_number,
     });
-    return;
   }
   let item2 = list_find_property(verses, "verse_number", verse_number_hash);
   await each_verse(item2);
