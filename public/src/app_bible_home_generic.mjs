@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -89,8 +88,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
-    let verse_number3 = error();
-    app_bible_chapter_open(context, hash, next, verse_number3);
+    app_bible_chapter_open(context, hash, next, "1");
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
