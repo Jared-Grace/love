@@ -1,3 +1,4 @@
+import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { user_data_set } from "../../../love/public/src/user_data_set.mjs";
@@ -19,7 +20,7 @@ export async function function_current_set(f_name) {
   let f_name_current = await function_current_get();
   if (equal_not(unaliased, f_name_current)) {
     await user_data_set("function_current", unaliased);
-    await user_data_set("function_current_selects", []);
+    await function_current_selects_empty();
   }
   if (false) {
     ("previously, used markers in vs code text editor however because of browser ide, no longer using markers at this time so disabling adding markers to files");
