@@ -12,7 +12,6 @@ import { html_div_text_centered } from "../../../love/public/src/html_div_text_c
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
@@ -44,7 +43,4 @@ export async function app_bible_chapters(context) {
     let component = html_button(div, chapter_name, lambda3);
   }
   each(chapter_codes, lambda);
-  log(app_bible_chapters.name, {
-    mapped2: chapter_numbers,
-  });
 }
