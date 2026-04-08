@@ -10,6 +10,11 @@ export async function function_node_select_nested(select_fn_name) {
   function lambda(previous) {
     list_remove(previous, first_id);
   }
-  let r = await function_node_select_inner(select_fn_name, first_id, lambda);
+  let r = await function_node_select_inner(
+    select_fn_name,
+    first_id,
+    lambda,
+    ast,
+  );
   return r;
 }

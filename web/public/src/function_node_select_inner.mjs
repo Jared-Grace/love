@@ -13,6 +13,7 @@ export async function function_node_select_inner(
   select_fn_name,
   node_id,
   on_previous,
+  ast,
 ) {
   let node = js_visit_id_to_node(ast, node_id);
   let n = await function_run(select_fn_name, [node]);
