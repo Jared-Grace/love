@@ -1,1 +1,3 @@
-export function lambda_right(left, right) {}
+export function lambda_right(left, right) {
+  return right;
+}
