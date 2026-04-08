@@ -74,8 +74,9 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_shared_screen_set(context, app_bible_books);
   }
   let component = html_button(bar, book_name, lambda5);
+  let fn = app_bible_chapters;
   let lambda4 = function lambda11() {
-    app_shared_screen_set(context, app_bible_chapters);
+    app_shared_screen_set(context, fn);
   };
   let component2 = html_button(bar, chapter_name, lambda4);
   async function lambda3() {
