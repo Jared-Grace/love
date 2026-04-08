@@ -77,10 +77,10 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_shared_screen_set(context, app_bible_chapters);
   }
   let component2 = html_button(bar, chapter_name, lambda4);
-  let text2 = emoji_arrow_right();
   async function lambda3() {
     await on_arrow(list_next_wrap);
   }
+  let text2 = emoji_arrow_right();
   let component3 = html_button(bar, text2, lambda3);
   function lambda12() {}
   let component7 = html_button(bar, "Languages", lambda12);
