@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -6,7 +7,9 @@ export function js_statement_first(ast) {
   let body_block = js_flo_body(ast);
   let first = list_first(body_block);
   let code = js_unparse(first);
-  function lambda(v) {}
+  function lambda(v) {
+    let node = property_get(v, "node");
+  }
   js_visit(ast2, lambda);
   return code;
 }
