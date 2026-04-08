@@ -143,7 +143,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     chapter_code,
     verse_number,
   });
-  let verse_pickers = html_div_centered(p_verse);
+  let verse_pickers = html_div_centered(content);
   function lambda() {}
   html_button_arrow_left(verse_pickers, lambda);
   function lambda7() {}
