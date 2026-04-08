@@ -1,0 +1,12 @@
+import { html_button_list } from "../../../love/public/src/html_button_list.mjs";
+import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
+export function html_button_list_centered(
+  root,
+  items,
+  code_to_button_text,
+  oc,
+) {
+  let div = html_div_centered(root);
+  let mapped = html_button_list(div, items, code_to_button_text, oc);
+  return mapped;
+}
