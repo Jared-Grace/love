@@ -12,7 +12,6 @@ export async function function_node_select_inner(
   select_fn_name,
   node,
   on_previous,
-  ast,
 ) {
   let n = await function_run(select_fn_name, [node]);
   log(function_node_select_inner.name, {
