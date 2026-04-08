@@ -1,3 +1,4 @@
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { js_unparse_multiple } from "../../../love/public/src/js_unparse_multiple.mjs";
 import { js_visit_ids_to_nodes } from "../../../love/public/src/js_visit_ids_to_nodes.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
@@ -23,8 +24,10 @@ export async function function_node_select(select_fn_name) {
   );
   let selected = js_visit_ids_to_nodes(ast, value);
   let selected_code = js_unparse_multiple(selected);
+  let f_name_current = await function_current_get();
   let r = {
     selected_code,
+    f_name_current,
   };
   return r;
 }
