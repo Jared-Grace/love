@@ -3,8 +3,13 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_bible_chapter_next } from "../../../love/public/src/app_bible_chapter_next.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
-export async function app_bible_verse_next(verses, v, context, chapter_code) {
-  let next2 = list_next_try(verses, v);
+export async function app_bible_verse_next(
+  verses,
+  verse_current,
+  context,
+  chapter_code,
+) {
+  let next2 = list_next_try(verses, verse_current);
   let n2 = null_is(next2);
   if (n2) {
     await app_bible_chapter_next(context, chapter_code);
