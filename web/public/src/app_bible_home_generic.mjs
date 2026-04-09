@@ -1,3 +1,4 @@
+import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
@@ -147,7 +148,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   });
   let verse_pickers = html_div_centered(content);
   async function lambda() {
-    let next2 = list_previous_tr(verses, v);
+    let next2 = list_previous_try(verses, v);
     let n2 = null_is(next2);
     if (n2) {
       await chapter_previous();
