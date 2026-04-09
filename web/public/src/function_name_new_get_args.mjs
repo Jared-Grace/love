@@ -1,5 +1,4 @@
-import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
-import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
+import { dictionary_functions_to_names } from "../../../love/public/src/dictionary_functions_to_names.mjs";
 import { property_exists_if_get } from "../../../love/public/src/property_exists_if_get.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
@@ -13,8 +12,7 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
   let overrides_fns = {
     c: function_name_combine,
   };
-  let r = property_get_curried_right("name");
-  let overrides = object_values_map(overrides_fns, r);
+  let overrides = dictionary_functions_to_names(overrides_fns);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
   let f_name_new = await function_run(plugin_fn, args_run);
   let r2 = {
