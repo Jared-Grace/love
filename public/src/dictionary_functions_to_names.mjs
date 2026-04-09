@@ -4,6 +4,6 @@ import { property_get_curried_right } from "../../../love/public/src/property_ge
 export function dictionary_functions_to_names(overrides_fns) {
   let r = property_get_curried_right("name");
   let overrides = object_values_map(overrides_fns, r);
-  object_values_map_self(r, overrides);
+  object_values_map_self(overrides, r);
   return overrides;
 }
