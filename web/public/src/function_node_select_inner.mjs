@@ -9,12 +9,13 @@ export async function function_node_select_inner(
   node_id,
   on_previous,
   ast,
-  args,
+  args_comma,
 ) {
-  if (null_is(value)) {
+  if (null_is(args_comma)) {
+    let args = [];
   }
   let node = js_visit_id_to_node(ast, node_id);
-  let concated = list_concat_single(node, list);
+  let concated = list_concat_single(node, args);
   let n = await function_run(select_fn_name, concated);
   let item_to_add = js_visit_id_or_node(ast, n);
   let r = await function_current_selects_add(item_to_add, on_previous);
