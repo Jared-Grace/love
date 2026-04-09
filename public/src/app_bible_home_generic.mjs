@@ -1,3 +1,4 @@
+import { app_bible_verse_next } from "../../../love/public/src/app_bible_verse_next.mjs";
 import { app_bible_chapter_previous } from "../../../love/public/src/app_bible_chapter_previous.mjs";
 import { app_bible_chapter_next } from "../../../love/public/src/app_bible_chapter_next.mjs";
 import { html_words_on_click_google_define } from "../../../love/public/src/html_words_on_click_google_define.mjs";
@@ -9,7 +10,6 @@ import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
@@ -154,14 +154,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   html_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
-    let next2 = list_next_try(verses, v);
-    let n2 = null_is(next2);
-    if (n2) {
-      await app_bible_chapter_next(context, chapter_code);
-    } else {
-      let verse_number2 = property_get(next2, "verse_number");
-      app_bible_verse_open(context, verse_number2);
-    }
+    await app_bible_verse_next(verses, v, context, chapter_code);
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
