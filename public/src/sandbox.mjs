@@ -7,26 +7,16 @@ import { function_current_selects_apply } from "../../../love/public/src/functio
 import { function_current_set } from "../../../love/public/src/function_current_set.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
-import { js_call_single } from "../../../love/public/src/js_call_single.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_chapter_set_default.name);
-  return;
   let r5 = await function_transform_current(f_name);
+  return;
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
     "pg",
   );
   let r32 = await function_current_selects_apply(js_statement_duplicate.name);
-  return r;
-  let r2 = await function_node_select_nested(js_call_single.name);
   let r4 = await function_node_select_nested(js_call_callee_name.name);
-  let r3 = {
-    r,
-    r2,
-    r4,
-    r32,
-  };
-  return r3;
 }
