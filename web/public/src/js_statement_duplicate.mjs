@@ -1,4 +1,4 @@
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
@@ -13,5 +13,5 @@ export function js_statement_duplicate(id) {
   let index = property_get(r, "index");
   let body = property_get(r, "body");
   let copy = json_copy(item);
-  let includes = list_includes(list, item2);
+  list_insert(list, index2, value);
 }
