@@ -1,3 +1,4 @@
+import { js_visit_declarators } from "../../../love/public/src/js_visit_declarators.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
@@ -17,6 +18,7 @@ export async function js_statement_duplicate(id) {
     let index = property_get(r, "index");
     let body = property_get(r, "body");
     let copy = json_copy(item);
+    js_visit_declarators(copy, () => {});
     list_insert(body, index, copy);
   }
   let output = await function_transform(f_name_current, lambda);
