@@ -2,7 +2,6 @@ import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { app_bible_verse_set } from "../../../love/public/src/app_bible_verse_set.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -13,7 +12,6 @@ import { app_shared_screen_set_button } from "../../../love/public/src/app_share
 import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_button_arrow_right } from "../../../love/public/src/html_button_arrow_right.mjs";
 import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
-import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
@@ -100,8 +98,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let verses_next = await ebible_verses_browser(e, next);
     let mapped = list_map_property(verses_next, "verse_number");
     let verse_number_next = verse_number_get(mapped);
-    app_bible_verse_set(verse_number_next);
-    app_bible_chapter_open(context, next);
+    app_bible_chapter_verse_open(context, next, verse_number_next);
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
