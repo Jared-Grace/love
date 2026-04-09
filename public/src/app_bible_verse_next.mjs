@@ -10,10 +10,10 @@ export async function app_bible_verse_next(
   let verse_get = list_next_try;
   let chapter_change = app_bible_chapter_next;
   await app_bible_verse_change(
-    verse_get,
+    chapter_code,
     verse_current,
+    verse_get,
     chapter_change,
     context,
-    chapter_code,
   );
 }
