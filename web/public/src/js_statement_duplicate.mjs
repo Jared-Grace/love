@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_visit_declarators } from "../../../love/public/src/js_visit_declarators.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
@@ -18,7 +19,9 @@ export async function js_statement_duplicate(id) {
     let index = property_get(r, "index");
     let body = property_get(r, "body");
     let copy = json_copy(item);
-    function lambda2() {}
+    function lambda2() {
+      let unique = js_identifier_unique_ast(ast2, property_name);
+    }
     js_visit_declarators(copy, lambda2);
     list_insert(body, index, copy);
   }
