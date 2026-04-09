@@ -105,10 +105,10 @@ export async function app_bible_home_generic(context, lambda$a) {
     chapter_name,
   );
   html_button_biblehub_open_parallel(
+    bottom,
     book_name,
     chapter_name,
     verse_number,
-    bottom,
   );
   html_button_biblehub_open_commentary(
     verse_number,
