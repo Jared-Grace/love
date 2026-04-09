@@ -75,10 +75,10 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_button_arrow_left(bar, lambda6);
   app_shared_screen_set_button(context, app_bible_books, bar, book_name);
   app_shared_screen_set_button(context, app_bible_chapters, bar, chapter_name);
-  async function lambda3() {
+  async function chapter_next() {
     await on_arrow(list_next_wrap);
   }
-  html_button_arrow_right(bar, lambda3);
+  html_button_arrow_right(bar, chapter_next);
   app_shared_screen_set_button(
     context,
     app_bible_verses,
