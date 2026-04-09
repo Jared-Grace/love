@@ -118,14 +118,26 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number,
     bottom,
     "Interlinear",
+    book_name,
+    chapter_name,
   );
-  html_button_biblehub_open("", "", verse_number, bottom, "Parallel");
+  html_button_biblehub_open(
+    "",
+    "",
+    verse_number,
+    bottom,
+    "Parallel",
+    book_name,
+    chapter_name,
+  );
   html_button_biblehub_open(
     "",
     "#commentary",
     verse_number,
     bottom,
     "Commentary",
+    book_name,
+    chapter_name,
   );
   function lambda8() {}
   let text4 = html_button_copy_text();
