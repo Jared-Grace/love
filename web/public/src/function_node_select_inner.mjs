@@ -1,3 +1,4 @@
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { text_split_dot_comma } from "../../../love/public/src/text_split_dot_comma.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
@@ -18,6 +19,7 @@ export async function function_node_select_inner(
   } else {
     args = text_split_dot_comma(args_comma);
   }
+  list_add_first(list, item);
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
   let n = await function_run(select_fn_name, concated);
