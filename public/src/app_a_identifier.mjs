@@ -1,5 +1,5 @@
 import { ternary } from "../../../love/public/src/ternary.mjs";
-import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
+import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -28,7 +28,7 @@ export function app_a_identifier(a) {
       color = "#007f00ff";
     } else {
       let ast = property_get(a, "ast");
-      let v_match = js_visit_match_first(ast, node);
+      let v_match = js_node_to_visitor(ast, node);
       let includes3 = js_identifier_defineds_includes(v_match, name);
       if (includes3) {
         let f_names_local = property_get(a, "f_names_local");

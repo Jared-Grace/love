@@ -18,7 +18,7 @@ import { storage_local_get_context } from "../../../love/public/src/storage_loca
 import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
-import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
+import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
@@ -58,7 +58,7 @@ export function app_a_identifier_generic(
   async function choices_get(o3, choices) {
     let node = property_get(a, "node");
     let ast = property_get(a, "ast");
-    let v_match = js_visit_match_first(ast, node);
+    let v_match = js_node_to_visitor(ast, node);
     let stack = property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
     let overlay_close = property_get(o3, "overlay_close");
