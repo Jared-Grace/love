@@ -4,9 +4,9 @@ export function html_button_list_centered(
   root,
   items,
   code_to_button_text,
-  oc,
+  on_click,
 ) {
   let div = html_div_centered(root);
-  let mapped = html_button_list(div, items, code_to_button_text, oc);
+  let mapped = html_button_list(div, items, code_to_button_text, on_click);
   return mapped;
 }
