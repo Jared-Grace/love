@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { property_get_or_null } from "../../../love/public/src/property_get_or_null.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
@@ -12,7 +13,7 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
     c: function_name_combine,
   };
   let v = property_get_or_null(overrides, plugin_fn);
-  nni;
+  let nn = null_not_is(value);
   if (exists) {
   }
   let f_name_new = await function_run(plugin_fn, args_run);
