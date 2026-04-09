@@ -154,7 +154,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     if (n2) {
       await chapter_next();
     } else {
-      app_bible_verse_open(context, verse_number);
+      app_bible_verse_open(context, next2);
     }
   }
   html_button_arrow_right(verse_pickers, lambda7);
