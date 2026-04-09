@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -110,7 +111,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let top = html_div(p_verse);
   let bottom = html_div(p_verse);
   html_centered(bottom);
-  let hidden = false;
+  let hidden = true;
   toggle();
   biblehub_button_open("interlinear/", "", verse_number, bottom, "Interlinear");
   biblehub_button_open("", "", verse_number, bottom, "Parallel");
@@ -133,7 +134,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     hidden = not(hidden);
     html_display_none_or_block(hidden, bottom);
   }
-  let verse_number_v_button = html_button(top, verse_number, toggle);
+  let verse_number_v_button = html_span(top, verse_number);
   let split = text_split_space(text);
   function lambda2(item) {
     html_span_space(top);
