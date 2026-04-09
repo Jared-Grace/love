@@ -8,6 +8,7 @@ export async function function_node_select_inner(
   node_id,
   on_previous,
   ast,
+  args,
 ) {
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, list);
