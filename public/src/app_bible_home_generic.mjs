@@ -146,7 +146,15 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number,
   });
   let verse_pickers = html_div_centered(content);
-  function lambda() {}
+  async function lambda() {
+    let next2 = list_previous_try(verses, v);
+    let n2 = null_is(next2);
+    if (n2) {
+      await chapter_previous();
+    } else {
+      app_bible_verse_open(context, next2);
+    }
+  }
   html_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
     let next2 = list_next_try(verses, v);
