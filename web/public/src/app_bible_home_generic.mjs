@@ -151,6 +151,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let next2 = list_next_try(verses, v);
     let n2 = null_is(next2);
     if (n2) {
+      chapter_next;
     } else {
     }
   }
