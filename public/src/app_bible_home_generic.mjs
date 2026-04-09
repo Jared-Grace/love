@@ -3,7 +3,7 @@ import { app_bible_verse_previous } from "../../../love/public/src/app_bible_ver
 import { app_bible_verse_next } from "../../../love/public/src/app_bible_verse_next.mjs";
 import { app_bible_chapter_previous } from "../../../love/public/src/app_bible_chapter_previous.mjs";
 import { app_bible_chapter_next } from "../../../love/public/src/app_bible_chapter_next.mjs";
-import { html_words_on_click_google_define } from "../../../love/public/src/html_words_on_click_google_define.mjs";
+import { app_bible_on_click_google_define } from "../../../love/public/src/app_bible_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
@@ -135,7 +135,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_display_none_or_block(hidden, bottom);
   }
   html_span(top, verse_number);
-  html_words_on_click_google_define(top, text);
+  app_bible_on_click_google_define(top, text);
   let p = html_p(content);
   await lambda$a({
     p_verse,
