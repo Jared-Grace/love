@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_bible_verse_open_curried } from "../../../love/public/src/app_bible_verse_open_curried.mjs";
 import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
@@ -12,6 +13,9 @@ export async function app_bible_verses(context) {
   let chapter_code = property_get(r, "chapter_code");
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
+  log(app_bible_verses.name, {
+    verses,
+  });
   let items = list_map_property(verses, "verse_number");
   let r2 = property_get_curried_right("verse_number");
   let oc = app_bible_verse_open_curried(context);
