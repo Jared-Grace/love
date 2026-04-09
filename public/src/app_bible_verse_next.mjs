@@ -14,7 +14,7 @@ export async function app_bible_verse_next(
   if (ni) {
     await app_bible_chapter_next(context, chapter_code);
   } else {
-    let verse_number2 = property_get(next, "verse_number");
-    app_bible_verse_open(context, verse_number2);
+    let verse_number = property_get(next, "verse_number");
+    app_bible_verse_open(context, verse_number);
   }
 }
