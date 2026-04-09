@@ -7,8 +7,8 @@ export function dictionary_functions_to_names(overrides_fns) {
   let overrides = object_values_map(overrides_fns, r);
   function lambda(value, property) {
     let value_new = r(value);
-    property_set(object, property, value_new);
+    property_set(overrides, property, value_new);
   }
-  each_object(object, lambda);
+  each_object(overrides, lambda);
   return overrides;
 }
