@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_bible_verse_set } from "../../../love/public/src/app_bible_verse_set.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
@@ -94,6 +95,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
     let verses_next = await ebible_verses_browser(e, next);
+    let mapped = list_map_property(list2, property_name);
     let verse_number_next = verse_number_get(verses_next);
     app_bible_verse_set(verse_number_next);
     app_bible_chapter_open(context, next);
