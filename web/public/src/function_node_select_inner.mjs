@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { text_split_dot_comma } from "../../../love/public/src/text_split_dot_comma.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
