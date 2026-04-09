@@ -6,7 +6,7 @@ export function html_words_on_click_google_define(top, text) {
   let split = text_split_space(text);
   function lambda2(item) {
     html_span_space(top);
-    html_span_on_click_google_define(top, item);
+    html_span_on_click_google_define(top, item, error());
   }
   each(split, lambda2);
 }
