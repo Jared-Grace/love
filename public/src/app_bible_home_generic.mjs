@@ -1,4 +1,4 @@
-import { app_bible_chapter_set } from "../../../love/public/src/app_bible_chapter_set.mjs";
+import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -67,8 +67,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let n = property_exists_not(hash, "c");
   if (n) {
     const chapter = "JHN01";
-    app_bible_chapter_set(chapter);
-    app_bible_verse_open(context, verse_number);
+    app_bible_chapter_verse_open(chapter, context, verse_number);
     return;
   }
   let verse_number_hash = app_bible_hash_v_get(hash);
