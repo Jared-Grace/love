@@ -21,10 +21,6 @@ export async function function_node_select_inner(
   }
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
-  log(function_node_select_inner.name, {
-    concated,
-    args_comma,
-  });
   let n = await function_run(select_fn_name, concated);
   let item_to_add = js_visit_id_or_node(ast, n);
   let r = await function_current_selects_add(item_to_add, on_previous);
