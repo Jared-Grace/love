@@ -1,3 +1,4 @@
+import { window_open_google_define } from "../../../love/public/src/window_open_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
@@ -33,9 +34,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { window_open } from "../../../love/public/src/window_open.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
-import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -156,8 +155,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_span_space(top);
     let item_span = html_span_text(top, item);
     function lambda9() {
-      let letters_only = text_letters_only(item);
-      window_open("https://www.google.com/search?q=define:" + letters_only);
+      window_open_google_define(item);
     }
     html_on_click(item_span, lambda9);
   }
