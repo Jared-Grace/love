@@ -1,4 +1,4 @@
-import { window_open_google_define } from "../../../love/public/src/window_open_google_define.mjs";
+import { window_open_google_define_later } from "../../../love/public/src/window_open_google_define_later.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
@@ -154,9 +154,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda2(item) {
     html_span_space(top);
     let item_span = html_span_text(top, item);
-    let lambda9 = function lambda3() {
-      window_open_google_define(item);
-    };
+    let lambda9 = window_open_google_define_later(item);
     html_on_click(item_span, lambda9);
   }
   each(split, lambda2);
