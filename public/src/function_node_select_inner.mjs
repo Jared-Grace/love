@@ -1,3 +1,4 @@
+import { null_is_if } from "../../../love/public/src/null_is_if.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { function_current_selects_add } from "../../../love/public/src/function_current_selects_add.mjs";
 import { js_visit_id_or_node } from "../../../love/public/src/js_visit_id_or_node.mjs";
@@ -10,7 +11,7 @@ export async function function_node_select_inner(
   ast,
   args,
 ) {
-  nnii;
+  let code2 = null_is_if(code, ast2);
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, list);
   let n = await function_run(select_fn_name, concated);
