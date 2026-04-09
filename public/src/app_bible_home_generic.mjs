@@ -1,3 +1,4 @@
+import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
 import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
@@ -5,7 +6,6 @@ import { html_button_arrow_right } from "../../../love/public/src/html_button_ar
 import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -60,7 +60,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_chapter_open(context, "JHN01");
     return;
   }
-  let verse_number_hash = property_initialize(hash, "v", "1");
+  let verse_number_hash = app_bible_hash_v_get(hash);
   let chapter_code = property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
