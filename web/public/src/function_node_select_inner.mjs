@@ -19,7 +19,7 @@ export async function function_node_select_inner(
   } else {
     args = text_split_dot_comma(args_comma);
   }
-  list_add_first(list, item);
+  list_add_first(args, ast);
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
   let n = await function_run(select_fn_name, concated);
