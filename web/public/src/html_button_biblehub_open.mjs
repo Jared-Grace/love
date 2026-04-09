@@ -6,7 +6,7 @@ export function html_button_biblehub_open(
   folder,
   ending,
   verse_number_v,
-  bottom,
+  parent,
   button_text,
   book_name,
   chapter_name,
@@ -28,6 +28,6 @@ export function html_button_biblehub_open(
         ending,
     );
   }
-  let component5 = html_button(bottom, button_text, lambda10);
+  let component5 = html_button(parent, button_text, lambda10);
   return component5;
 }
