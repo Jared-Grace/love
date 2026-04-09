@@ -19,10 +19,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
-import { property_exists } from "../../../love/public/src/property_exists.mjs";
-import { html_hash_object_property_set } from "../../../love/public/src/html_hash_object_property_set.mjs";
-import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
-import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
@@ -43,7 +39,6 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
-import { html_on_scroll } from "../../../love/public/src/html_on_scroll.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
   html_clear(root);
@@ -156,16 +151,6 @@ export async function app_bible_home_generic(context, lambda$a) {
     verses,
     books,
   });
-  function on_scroll() {
-    let scroll_top = html_scroll_top_get(content);
-    html_hash_object_property_set(scroll_top_key, scroll_top);
-  }
-  html_on_scroll(content, on_scroll);
-  let exists = property_exists(hash, scroll_top_key);
-  if (exists) {
-    let value = property_get(hash, scroll_top_key);
-    html_scroll_top_set(content, value);
-  }
   let v4 = {
     bar,
   };
