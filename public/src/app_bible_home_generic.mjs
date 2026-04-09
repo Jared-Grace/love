@@ -145,7 +145,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_display_none_or_block(hidden, bottom);
   }
   html_span(top, verse_number);
-  html_words_on_click_google_define(text, top);
+  html_words_on_click_google_define(top, text);
   let p = html_p(content);
   await lambda$a({
     p_verse,
