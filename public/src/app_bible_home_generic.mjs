@@ -1,3 +1,4 @@
+import { null_is_if } from "../../../love/public/src/null_is_if.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
@@ -148,6 +149,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_button_arrow_left(verse_pickers, lambda);
   function lambda7() {
     let next2 = list_next_try(verses, v);
+    let value3 = null_is_if(value2, value_if_null);
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
