@@ -5,7 +5,7 @@ import { text_replace_space_underscore_lower } from "../../../love/public/src/te
 export function html_button_biblehub_open(
   folder,
   ending,
-  verse_number_v,
+  verse_number,
   parent,
   button_text,
   book_name,
@@ -23,7 +23,7 @@ export function html_button_biblehub_open(
         "/" +
         chapter_name +
         "-" +
-        verse_number_v +
+        verse_number +
         ".htm" +
         ending,
     );
