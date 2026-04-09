@@ -217,6 +217,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       );
     }
     let component5 = html_button(bottom, button_text, lambda10);
+    return component5;
   }
   function on_scroll() {
     let scroll_top = html_scroll_top_get(content);
