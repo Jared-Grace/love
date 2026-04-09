@@ -99,10 +99,10 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hidden = true;
   toggle();
   html_button_biblehub_open_interlinear(
+    chapter_name,
+    book_name,
     verse_number,
     bottom,
-    book_name,
-    chapter_name,
   );
   html_button_biblehub_open_parallel(
     bottom,
