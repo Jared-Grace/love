@@ -8,4 +8,5 @@ export function list_next_try(list, item) {
   }
   let next = list_get(list, index_next);
   return next;
+  let fn = list_index_of_next;
 }
