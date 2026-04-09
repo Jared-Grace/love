@@ -20,7 +20,7 @@ export async function app_bible_books(context) {
     let text = property_get(item, "text");
     function lambda3() {
       let chapter_code = ebible_chapter_code_pad(book_code, "1");
-      app_bible_chapter_set(hash, chapter_code);
+      app_bible_chapter_set(chapter_code);
       app_shared_screen_set(context, app_bible_chapters);
     }
     let component = html_button(root, text, lambda3);
