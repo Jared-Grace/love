@@ -1,3 +1,4 @@
+import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_bible_verse_previous } from "../../../love/public/src/app_bible_verse_previous.mjs";
 import { app_bible_verse_next } from "../../../love/public/src/app_bible_verse_next.mjs";
@@ -8,7 +9,6 @@ import { html_button_biblehub_open_commentary } from "../../../love/public/src/h
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
-import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
@@ -22,7 +22,6 @@ import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bibl
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
-import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -48,11 +47,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_centered(bar);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
-  let n = property_exists_not(hash, "c");
-  if (n) {
-    app_bible_chapter_verse_open(context, "JHN01", "1");
-    return;
-  }
+  app_bible_chapter_set_default(hash, context);
   let verse_number_hash = app_bible_hash_v_get(hash);
   let chapter_code = property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
