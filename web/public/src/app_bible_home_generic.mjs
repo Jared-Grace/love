@@ -169,6 +169,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     if (n2) {
       await chapter_next();
     } else {
+      let verse_number2 = property_get(next2, "verse_number");
       app_bible_verse_open(context, next2);
     }
   }
