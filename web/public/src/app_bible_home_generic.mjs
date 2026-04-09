@@ -147,11 +147,11 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verse_pickers = html_div_centered(content);
   function lambda() {}
   html_button_arrow_left(verse_pickers, lambda);
-  function lambda7() {
+  async function lambda7() {
     let next2 = list_next_try(verses, v);
     let n2 = null_is(next2);
     if (n2) {
-      chapter_next;
+      await chapter_next();
     } else {
     }
   }
