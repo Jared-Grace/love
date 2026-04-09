@@ -14,8 +14,7 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
     c: function_name_combine,
   };
   let r = property_get_curried_right("name");
-  function lambda(fn, key) {}
-  let result = object_values_map(object, lambda);
+  let result = object_values_map(object, r);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
   let f_name_new = await function_run(plugin_fn, args_run);
   let r2 = {
