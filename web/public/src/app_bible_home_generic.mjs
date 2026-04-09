@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_bible_verse_previous } from "../../../love/public/src/app_bible_verse_previous.mjs";
 import { app_bible_verse_next } from "../../../love/public/src/app_bible_verse_next.mjs";
 import { app_bible_chapter_previous } from "../../../love/public/src/app_bible_chapter_previous.mjs";
@@ -116,9 +117,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     book_name,
     verse_number,
   );
-  function lambda8() {}
   let text4 = html_button_copy_text();
-  let component6 = html_button(bottom, text4, lambda8);
+  let component6 = html_button(bottom, text4, noop);
   let v3 = app_chapter_toggle_update(
     updates,
     component6,
