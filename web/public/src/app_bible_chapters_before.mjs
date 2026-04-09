@@ -12,7 +12,7 @@ export async function app_bible_chapters_before(context) {
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
-  let verse_number_hash = app_bible_hash_v_get(hash);
+  let verse_number = app_bible_hash_v_get(hash);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
