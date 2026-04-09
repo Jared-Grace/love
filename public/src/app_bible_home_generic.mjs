@@ -146,7 +146,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let next2 = list_previous_try(verses, v);
     let n2 = null_is(next2);
     if (n2) {
-      await chapter_previous();
+      await app_bible_chapter_previous(context, chapter_code);
     } else {
       let verse_number2 = property_get(next2, "verse_number");
       app_bible_verse_open(context, verse_number2);
@@ -157,7 +157,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let next2 = list_next_try(verses, v);
     let n2 = null_is(next2);
     if (n2) {
-      await chapter_next();
+      await app_bible_chapter_next(context, chapter_code);
     } else {
       let verse_number2 = property_get(next2, "verse_number");
       app_bible_verse_open(context, verse_number2);
