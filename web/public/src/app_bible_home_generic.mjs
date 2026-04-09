@@ -85,9 +85,13 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
-  let v = list_find_property(verses, "verse_number", verse_number_hash);
-  let verse_number = property_get(v, "verse_number");
-  let text = property_get(v, "text");
+  let verse_current = list_find_property(
+    verses,
+    "verse_number",
+    verse_number_hash,
+  );
+  let verse_number = property_get(verse_current, "verse_number");
+  let text = property_get(verse_current, "text");
   let p_verse = html_p(content);
   let top = html_div(p_verse);
   let bottom = html_div(p_verse);
@@ -141,11 +145,16 @@ export async function app_bible_home_generic(context, lambda$a) {
   });
   let verse_pickers = html_div_centered(content);
   async function lambda() {
-    await app_bible_verse_previous(verses, v, context, chapter_code);
+    await app_bible_verse_previous(
+      verses,
+      verse_current,
+      context,
+      chapter_code,
+    );
   }
   html_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
-    await app_bible_verse_next(verses, v, context, chapter_code);
+    await app_bible_verse_next(verses, verse_current, context, chapter_code);
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
