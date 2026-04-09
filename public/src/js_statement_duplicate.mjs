@@ -13,5 +13,5 @@ export function js_statement_duplicate(id) {
   let index = property_get(r, "index");
   let body = property_get(r, "body");
   let copy = json_copy(item);
-  list_insert(list, index2, value);
+  list_insert(body, index, copy);
 }
