@@ -7,7 +7,7 @@ export async function function_param_move_first_multiple(
 ) {
   let param_names = text_split_dot_comma(param_names_comma);
   async function lambda(param_name) {
-    await function_param_move_first(f_name, param_names);
+    await function_param_move_first(f_name, param_name);
   }
   await each_async(param_names, lambda);
 }
