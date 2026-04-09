@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
@@ -9,6 +10,7 @@ export async function app_bible_chapter_change(
   list_next_wrap,
   verse_number_get,
 ) {
+  let e = ebible_folder_english();
   let list = await ebible_chapter_codes_browser(e);
   let next = list_next_wrap(list, chapter_code);
   let verses_next = await ebible_verses_browser(e, next);
