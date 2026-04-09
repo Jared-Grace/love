@@ -8,6 +8,8 @@ export function html_button_biblehub_open(
   verse_number_v,
   bottom,
   button_text,
+  book_name,
+  chapter_name,
 ) {
   function lambda10() {
     let replaced = text_replace_space_underscore_lower(book_name);
