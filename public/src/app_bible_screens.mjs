@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_bible_languages } from "../../../love/public/src/app_bible_languages.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
@@ -11,5 +12,6 @@ export function app_bible_screens() {
     app_bible_verses,
     app_bible_languages,
   ];
+  let concated = list_concat(a, b);
   return screens;
 }
