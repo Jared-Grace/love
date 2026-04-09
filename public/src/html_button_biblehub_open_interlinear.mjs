@@ -6,11 +6,11 @@ export function html_button_biblehub_open_interlinear(
   chapter_name,
 ) {
   html_button_biblehub_open(
+    verse_number,
+    "Interlinear",
     "interlinear/",
     "",
-    verse_number,
     bottom,
-    "Interlinear",
     book_name,
     chapter_name,
   );
