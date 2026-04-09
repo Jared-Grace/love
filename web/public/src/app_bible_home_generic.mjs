@@ -1,12 +1,11 @@
+import { app_bible_chapter_previous } from "../../../love/public/src/app_bible_chapter_previous.mjs";
 import { app_bible_chapter_next } from "../../../love/public/src/app_bible_chapter_next.mjs";
-import { app_bible_chapter_change } from "../../../love/public/src/app_bible_chapter_change.mjs";
 import { html_words_on_click_google_define } from "../../../love/public/src/html_words_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
-import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -36,7 +35,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
-import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
@@ -69,12 +67,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   async function chapter_previous() {
-    await app_bible_chapter_change(
-      context,
-      chapter_code,
-      list_previous_wrap,
-      list_last,
-    );
+    await app_bible_chapter_previous(context, chapter_code);
   }
   html_button_arrow_left(bar, chapter_previous);
   app_shared_screen_set_button(bar, context, app_bible_books, book_name);
