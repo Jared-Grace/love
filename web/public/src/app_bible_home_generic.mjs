@@ -1,3 +1,4 @@
+import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
@@ -145,7 +146,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verse_pickers = html_div_centered(content);
   function lambda() {}
   html_button_arrow_left(verse_pickers, lambda);
-  function lambda7() {}
+  function lambda7() {
+    let next2 = list_next_try(list2, item2);
+  }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
     verses,
