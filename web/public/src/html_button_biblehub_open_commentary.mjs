@@ -6,12 +6,12 @@ export function html_button_biblehub_open_commentary(
   chapter_name,
 ) {
   html_button_biblehub_open(
+    bottom,
     book_name,
     chapter_name,
     verse_number,
     "Commentary",
     "",
     "#commentary",
-    bottom,
   );
 }
