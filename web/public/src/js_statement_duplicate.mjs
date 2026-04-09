@@ -5,6 +5,9 @@ import { js_visit_id_to_node } from "../../../love/public/src/js_visit_id_to_nod
 export function js_statement_duplicate(id) {
   let node = js_visit_id_to_node(ast, id);
   let v = js_node_to_visitor(ast, node);
-  let stack2 = property_get(v, "stack");
-  let f = js_block_find(stack);
+  let stack = property_get(v, "stack");
+  let r = js_block_find(stack);
+  let item = property_get(r, "item");
+  let index = property_get(r, "index");
+  let body = property_get(r, "body");
 }
