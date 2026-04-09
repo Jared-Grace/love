@@ -73,16 +73,16 @@ export async function app_bible_home_generic(context, lambda$a) {
     await on_arrow(list_previous_wrap, list_last);
   }
   html_button_arrow_left(bar, chapter_previous);
-  app_shared_screen_set_button(context, app_bible_books, bar, book_name);
-  app_shared_screen_set_button(context, app_bible_chapters, bar, chapter_name);
+  app_shared_screen_set_button(bar, context, app_bible_books, book_name);
+  app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
   async function chapter_next() {
     await on_arrow(list_next_wrap, list_first);
   }
   html_button_arrow_right(bar, chapter_next);
   app_shared_screen_set_button(
+    bar,
     context,
     app_bible_verses,
-    bar,
     verse_number_hash,
   );
   const scroll_top_key = app_bible_hash_key_scroll_top();
