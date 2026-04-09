@@ -1,3 +1,4 @@
+import { app_bible_chapter_change } from "../../../love/public/src/app_bible_chapter_change.mjs";
 import { html_words_on_click_google_define } from "../../../love/public/src/html_words_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
@@ -6,7 +7,6 @@ import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -18,7 +18,6 @@ import { html_div_centered } from "../../../love/public/src/html_div_centered.mj
 import { html_button_arrow_right } from "../../../love/public/src/html_button_arrow_right.mjs";
 import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
@@ -89,12 +88,13 @@ export async function app_bible_home_generic(context, lambda$a) {
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
   async function on_arrow(list_next_wrap, verse_number_get) {
-    let list = await ebible_chapter_codes_browser(e);
-    let next = list_next_wrap(list, chapter_code);
-    let verses_next = await ebible_verses_browser(e, next);
-    let mapped = list_map_property(verses_next, "verse_number");
-    let verse_number_next = verse_number_get(mapped);
-    app_bible_chapter_verse_open(context, next, verse_number_next);
+    await app_bible_chapter_change(
+      e,
+      list_next_wrap,
+      chapter_code,
+      verse_number_get,
+      context,
+    );
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
