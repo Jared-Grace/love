@@ -1,4 +1,4 @@
-import { js_statement_return_empty_add_argument_set } from "../../../love/public/src/js_statement_return_empty_add_argument_set.mjs";
+import { js_statement_return_add } from "../../../love/public/src/js_statement_return_add.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
 import { app_replace_rule_sets_name_expression_value } from "../../../love/public/src/app_replace_rule_sets_name_expression_value.mjs";
@@ -19,7 +19,7 @@ export async function app_replace_rule_sets_migrate_functionize() {
       let f_name_new = app_replace_rule_sets_name_expression_value(e);
       let declaration = function_new_declaration_to(f_name_new);
       let body_block = js_function_declaration_to_block_body(declaration);
-      js_statement_return_empty_add_argument_set(body_block, e);
+      js_statement_return_add(body_block, e);
       await function_new_declaration_from(declaration);
     }
     await each_async(elements, lambda2);
