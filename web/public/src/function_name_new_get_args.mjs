@@ -9,7 +9,7 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
   let split = text_split_comma(args);
   let args_run = list_concat_single(f_name_old, split);
   let overrides = {
-    c: function_name_combine.name,
+    c: function_name_combine,
   };
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
   let f_name_new = await function_run(plugin_fn, args_run);
