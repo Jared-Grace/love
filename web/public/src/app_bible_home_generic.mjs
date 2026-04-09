@@ -1,4 +1,4 @@
-import { npm_install } from "../../../love/public/src/npm_install.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
@@ -147,9 +147,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verse_pickers = html_div_centered(content);
   function lambda() {}
   html_button_arrow_left(verse_pickers, lambda);
-  async function lambda7() {
+  function lambda7() {
     let next2 = list_next_try(verses, v);
-    await npm_install(package_name);
+    let n2 = null_is(value2);
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
