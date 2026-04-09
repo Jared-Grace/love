@@ -1,3 +1,4 @@
+import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
@@ -11,7 +12,7 @@ export async function app_bible_chapters_before(context) {
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
-  let verse_number = property_get(hash, "v");
+  let verse_number_hash = app_bible_hash_v_get(hash);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
