@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -12,6 +13,7 @@ export async function app_bible_verses(context) {
   let root = property_get(r, "root");
   let chapter_code = property_get(r, "chapter_code");
   html_div_text_centered(root, chapter_code);
+  let chapter_name = ebible_chapter_code_to_name(chapter_code2);
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, "verse_number");
