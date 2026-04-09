@@ -20,6 +20,7 @@ export async function app_bible_chapters_before(context) {
     book_code,
     root,
     verse_number,
+    chapter_code,
   };
   return r;
 }
