@@ -9,8 +9,9 @@ export async function function_param_move_first_multiple(
   let f_names = text_split_dot_comma(f_names_comma);
   let param_names = text_split_dot_comma(param_names_comma);
   list_reverse(param_names);
-  async function lambda(item) {}
-  await each_async(list, lambda);
-  let r2 = await function_param_move_first_curried(f_name);
-  await each_async(param_names, r2);
+  async function lambda(f_name) {
+    let r2 = await function_param_move_first_curried(f_name);
+    await each_async(param_names, r2);
+  }
+  await each_async(f_names, lambda);
 }
