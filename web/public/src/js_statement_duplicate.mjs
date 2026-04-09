@@ -19,7 +19,8 @@ export async function js_statement_duplicate(id) {
     let index = property_get(r, "index");
     let body = property_get(r, "body");
     let copy = json_copy(item);
-    function lambda2() {
+    function lambda2(v) {
+      let node2 = property_get(v, "node");
       let unique = js_identifier_unique_ast(ast2, property_name);
     }
     js_visit_declarators(copy, lambda2);
