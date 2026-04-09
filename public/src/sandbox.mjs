@@ -10,9 +10,8 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 import { js_statement_first } from "../../../love/public/src/js_statement_first.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
-  await function_current_set(app_bible_chapters_before.name);$a
-  const select_fn_name = js_statement_first.name;
-  let r = await js_statement_find_call_named(select_fn_name, "pg");
+  await function_current_set(app_bible_chapters_before.name);
+  let r = await js_statement_find_call_named(js_statement_first.name, "pg");
   return r;
   let r2 = await function_node_select_nested(js_call_single.name);
   let r4 = await function_node_select_nested(js_call_callee_name.name);
