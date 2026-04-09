@@ -72,9 +72,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function chapter_previous() {
     await on_arrow(list_previous_wrap, list_last);
     await app_bible_chapter_change(
-      list_next_wrap,
+      list_previous_wrap,
       chapter_code,
-      verse_number_get,
+      list_last,
       context,
     );
   }
@@ -86,7 +86,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     await app_bible_chapter_change(
       list_next_wrap,
       chapter_code,
-      verse_number_get,
+      list_first,
       context,
     );
   }
