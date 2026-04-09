@@ -95,6 +95,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
     let verses_next = await ebible_verses_browser(e, next);
+    let verse_number_next = verse_number_get(verses_next);
     app_bible_verse_set("1");
     app_bible_chapter_open(context, next);
     log(app_bible_home_generic.name, {});
