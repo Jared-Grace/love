@@ -6,11 +6,11 @@ export function html_button_biblehub_open_parallel(
   verse_number,
 ) {
   html_button_biblehub_open(
-    "",
-    "",
     verse_number,
-    parent,
     "Parallel",
+    "",
+    "",
+    parent,
     book_name,
     chapter_name,
   );
