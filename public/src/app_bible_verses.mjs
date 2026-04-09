@@ -1,3 +1,5 @@
+import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -9,6 +11,11 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_bible_chapters_before } from "../../../love/public/src/app_bible_chapters_before.mjs";
 import { html_button_list_centered } from "../../../love/public/src/html_button_list_centered.mjs";
 export async function app_bible_verses(context) {
+  let n = property_exists_not(hash, "c");
+  if (n) {
+    app_bible_chapter_verse_open(context, "JHN01", "1");
+    return;
+  }
   let r = await app_bible_chapters_before(context);
   let root = property_get(r, "root");
   let chapter_code = property_get(r, "chapter_code");
