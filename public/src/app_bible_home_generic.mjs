@@ -1,3 +1,5 @@
+import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
+import { app_shared_screen_set_fn } from "../../../love/public/src/app_shared_screen_set_fn.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
 import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_button_arrow_right } from "../../../love/public/src/html_button_arrow_right.mjs";
@@ -76,8 +78,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     await on_arrow(list_next_wrap);
   }
   html_button_arrow_right(bar, lambda3);
-  function lambda12() {}
-  let component7 = html_button(bar, verse_number_hash, lambda12);
+  app_shared_screen_set_fn(bar, verse_number_hash, app_bible_verses);
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
   async function on_arrow(list_next_wrap) {
