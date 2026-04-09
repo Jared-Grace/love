@@ -1,4 +1,3 @@
-import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_bible_verse_previous } from "../../../love/public/src/app_bible_verse_previous.mjs";
 import { app_bible_verse_next } from "../../../love/public/src/app_bible_verse_next.mjs";
@@ -9,6 +8,7 @@ import { html_button_biblehub_open_commentary } from "../../../love/public/src/h
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
+import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
@@ -50,7 +50,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_open(context, "JHN01", "1");
+    app_bible_chapter_verse_open(context, "JHN01", "verse_number");
     return;
   }
   let verse_number_hash = app_bible_hash_v_get(hash);
