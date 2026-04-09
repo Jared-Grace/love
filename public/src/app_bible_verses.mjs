@@ -10,6 +10,7 @@ export async function app_bible_verses(context) {
   let r = await app_bible_chapters_before(context);
   let root = property_get(r, "root");
   let chapter_code = property_get(r, "chapter_code");
+  html_div_text_centered(root, chapter_code);
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, "verse_number");
