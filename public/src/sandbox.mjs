@@ -11,7 +11,7 @@ import { function_node_select } from "../../../love/public/src/function_node_sel
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_chapters_before.name);
-  let r = await function_node_select(js_statement_first.name);
+  let r = await function_node_select(js_statement_first.name, args_comma);
   let r2 = await function_node_select_nested(js_call_single.name);
   let r4 = await function_node_select_nested(js_call_callee_name.name);
   let r32 = await function_current_selects_apply(function_open.name);
