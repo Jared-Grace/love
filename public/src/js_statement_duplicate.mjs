@@ -1,3 +1,4 @@
+import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_visit_declarators } from "../../../love/public/src/js_visit_declarators.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -22,6 +23,8 @@ export async function js_statement_duplicate(id) {
     function lambda2(v) {
       let node2 = property_get(v, "node");
       let id2 = property_get(node2, "id");
+      function lambda4() {}
+      js_identifier_is_if(only, lambda4);
       let unique = js_identifier_unique_ast(ast2, property_name);
     }
     js_visit_declarators(copy, lambda2);
