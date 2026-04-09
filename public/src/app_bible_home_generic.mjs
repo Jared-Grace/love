@@ -134,7 +134,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     hidden = not(hidden);
     html_display_none_or_block(hidden, bottom);
   }
-  let verse_number_v_button = html_span(top, verse_number);
+  html_span(top, verse_number);
   let split = text_split_space(text);
   function lambda2(item) {
     html_span_space(top);
