@@ -3,11 +3,11 @@ import { window_open } from "../../../love/public/src/window_open.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
 export function html_button_biblehub_open(
+  verse_number,
+  button_text,
   folder,
   ending,
-  verse_number,
   parent,
-  button_text,
   book_name,
   chapter_name,
 ) {
