@@ -3,7 +3,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 export async function app_bible_verse_change(
   verse_get,
-  verses,
   verse_current,
   chapter_change,
   context,
