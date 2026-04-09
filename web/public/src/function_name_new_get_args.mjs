@@ -10,11 +10,11 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
   f_name_old = await function_name_unalias_only(f_name_old);
   let split = text_split_comma(args);
   let args_run = list_concat_single(f_name_old, split);
-  let overrides = {
+  let overrides_fns = {
     c: function_name_combine,
   };
   let r = property_get_curried_right("name");
-  let result = object_values_map(object, r);
+  let overrides = object_values_map(overrides_fns, r);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
   let f_name_new = await function_run(plugin_fn, args_run);
   let r2 = {
