@@ -1,4 +1,6 @@
-import { html_button_biblehub_open } from "../../../love/public/src/html_button_biblehub_open.mjs";
+import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
+import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
+import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -112,30 +114,21 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_centered(bottom);
   let hidden = true;
   toggle();
-  html_button_biblehub_open(
-    "interlinear/",
-    "",
+  html_button_biblehub_open_interlinear(
     verse_number,
     bottom,
-    "Interlinear",
     book_name,
     chapter_name,
   );
-  html_button_biblehub_open(
-    "",
-    "",
+  html_button_biblehub_open_parallel(
     verse_number,
     bottom,
-    "Parallel",
     book_name,
     chapter_name,
   );
-  html_button_biblehub_open(
-    "",
-    "#commentary",
+  html_button_biblehub_open_commentary(
     verse_number,
     bottom,
-    "Commentary",
     book_name,
     chapter_name,
   );
