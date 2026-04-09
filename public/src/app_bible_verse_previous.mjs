@@ -1,7 +1,5 @@
-import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
+import { app_bible_verse_change } from "../../../love/public/src/app_bible_verse_change.mjs";
 import { app_bible_chapter_previous } from "../../../love/public/src/app_bible_chapter_previous.mjs";
-import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 export async function app_bible_verse_previous(
   verses,
@@ -9,12 +7,13 @@ export async function app_bible_verse_previous(
   context,
   chapter_code,
 ) {
-  let next2 = list_previous_try(verses, verse_current);
-  let n2 = null_is(next2);
-  if (n2) {
-    await app_bible_chapter_previous(context, chapter_code);
-  } else {
-    let verse_number2 = property_get(next2, "verse_number");
-    app_bible_verse_open(context, verse_number2);
-  }
+  let verse_get = list_previous_try;
+  let chapter_change = app_bible_chapter_previous;
+  await app_bible_verse_change(
+    context,
+    chapter_code,
+    verse_current,
+    verse_get,
+    chapter_change,
+  );
 }
