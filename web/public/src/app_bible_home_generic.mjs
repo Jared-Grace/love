@@ -147,7 +147,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   });
   let verse_pickers = html_div_centered(content);
   async function lambda() {
-    let next2 = list_previous_try(verses, v);
+    let next2 = list_previous_tr(verses, v);
     let n2 = null_is(next2);
     if (n2) {
       await chapter_previous();
