@@ -1,3 +1,4 @@
+import { html_button_biblehub_open } from "../../../love/public/src/html_button_biblehub_open.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -17,7 +18,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_hash_object_property_set } from "../../../love/public/src/html_hash_object_property_set.mjs";
@@ -29,7 +29,6 @@ import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { window_open } from "../../../love/public/src/window_open.mjs";
@@ -192,33 +191,6 @@ export async function app_bible_home_generic(context, lambda$a) {
     verses,
     books,
   });
-  function html_button_biblehub_open(
-    folder,
-    ending,
-    verse_number_v,
-    bottom,
-    button_text,
-  ) {
-    function lambda10() {
-      let replaced = text_replace_space_underscore_lower(book_name);
-      if (equal(replaced, "song")) {
-        replaced = "songs";
-      }
-      window_open(
-        "https://biblehub.com/" +
-          folder +
-          replaced +
-          "/" +
-          chapter_name +
-          "-" +
-          verse_number_v +
-          ".htm" +
-          ending,
-      );
-    }
-    let component5 = html_button(bottom, button_text, lambda10);
-    return component5;
-  }
   function on_scroll() {
     let scroll_top = html_scroll_top_get(content);
     html_hash_object_property_set(scroll_top_key, scroll_top);
