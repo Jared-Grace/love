@@ -12,7 +12,8 @@ export async function function_node_select_inner(
   args_comma,
 ) {
   if (null_is(args_comma)) {
-    let args = [];
+    let args = null;
+    args = [];
   }
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
