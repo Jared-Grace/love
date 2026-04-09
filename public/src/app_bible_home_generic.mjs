@@ -111,9 +111,9 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number,
   );
   html_button_biblehub_open_commentary(
+    book_name,
     verse_number,
     bottom,
-    book_name,
     chapter_name,
   );
   function lambda8() {}
