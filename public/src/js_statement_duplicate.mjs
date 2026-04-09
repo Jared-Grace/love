@@ -1,1 +1,1 @@
-export function js_statement_duplicate(ast) {}
+export function js_statement_duplicate(id) {}
