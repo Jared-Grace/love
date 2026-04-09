@@ -13,10 +13,10 @@ export async function app_bible_verses(context) {
   let chapter_code = property_get(r, "chapter_code");
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
-  log(app_bible_verses.name, {
-    verses,
-  });
   let items = list_map_property(verses, "verse_number");
+  log(app_bible_verses.name, {
+    items,
+  });
   let r2 = property_get_curried_right("verse_number");
   let oc = app_bible_verse_open_curried(context);
   html_button_list_centered(root, items, r2, oc);
