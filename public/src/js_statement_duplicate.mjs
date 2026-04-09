@@ -1,3 +1,4 @@
+import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
@@ -10,4 +11,5 @@ export function js_statement_duplicate(id) {
   let item = property_get(r, "item");
   let index = property_get(r, "index");
   let body = property_get(r, "body");
+  let copy = json_copy(o);
 }
