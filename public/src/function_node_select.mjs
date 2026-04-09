@@ -5,6 +5,6 @@ import { function_current_ast } from "../../../love/public/src/function_current_
 export async function function_node_select(select_fn_name) {
   let ast = await function_current_ast();
   let id = js_visit_id(ast, ast);
-  let r = await function_node_select_inner(select_fn_name, id, noop, ast);
+  let r = await function_node_select_inner(select_fn_name, id, noop, ast, args);
   return r;
 }
