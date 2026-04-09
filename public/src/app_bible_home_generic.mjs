@@ -1,4 +1,4 @@
-import { html_span_on_click_google_define } from "../../../love/public/src/html_span_on_click_google_define.mjs";
+import { html_words_on_click_google_define } from "../../../love/public/src/html_words_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
@@ -34,15 +34,12 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
-import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
@@ -148,12 +145,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_display_none_or_block(hidden, bottom);
   }
   html_span(top, verse_number);
-  let split = text_split_space(text);
-  function lambda2(item) {
-    html_span_space(top);
-    html_span_on_click_google_define(top, item);
-  }
-  each(split, lambda2);
+  html_words_on_click_google_define(text, top);
   let p = html_p(content);
   await lambda$a({
     p_verse,
