@@ -34,7 +34,7 @@ export async function js_statement_duplicate(id) {
       js_identifier_is_if(id2, lambda4);
     }
     js_visit_declarators(copy, lambda2);
-    list_insert(body, index, copy);
+    list_insert(body, index + 1, copy);
   }
   let output = await function_transform(f_name_current, lambda);
 }
