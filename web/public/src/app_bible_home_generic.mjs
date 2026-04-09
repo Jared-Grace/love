@@ -71,10 +71,10 @@ export async function app_bible_home_generic(context, lambda$a) {
   let book_name = ebible_book_code_to_name(books, book_code);
   async function chapter_previous() {
     await app_bible_chapter_change(
-      list_previous_wrap,
-      chapter_code,
-      list_last,
       context,
+      chapter_code,
+      list_previous_wrap,
+      list_last,
     );
   }
   html_button_arrow_left(bar, chapter_previous);
@@ -82,10 +82,10 @@ export async function app_bible_home_generic(context, lambda$a) {
   app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
   async function chapter_next() {
     await app_bible_chapter_change(
-      list_next_wrap,
-      chapter_code,
-      list_first,
       context,
+      chapter_code,
+      list_next_wrap,
+      list_first,
     );
   }
   html_button_arrow_right(bar, chapter_next);
