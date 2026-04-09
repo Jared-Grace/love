@@ -149,7 +149,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   html_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
-    await app_bible_verse_next(verse_current, context, chapter_code);
+    await app_bible_verse_next(context, chapter_code, verse_current);
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
