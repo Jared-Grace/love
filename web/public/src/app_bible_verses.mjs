@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_bible_verse_open_curried } from "../../../love/public/src/app_bible_verse_open_curried.mjs";
 import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
@@ -13,6 +14,7 @@ export async function app_bible_verses(context) {
   let verse_number = property_get(r, "verse_number");
   let e = ebible_folder_english();
   let items = await ebible_verses_browser(e, chapter_code);
+  let mapped = list_map_property(list, property_name);
   let r2 = property_get_curried_right("verse_number");
   let oc = app_bible_verse_open_curried(context);
   html_button_list_centered(root, items, r2, oc);
