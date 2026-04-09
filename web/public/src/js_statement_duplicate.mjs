@@ -25,10 +25,11 @@ export async function js_statement_duplicate(id) {
       let node2 = property_get(v, "node");
       let id2 = property_get(node2, "id");
       function lambda4() {
-        let name = property_get(id2, "name");
         let unique = js_identifier_unique_ast(ast, name);
-        function lambda3(value) {}
-        let value2 = property_change(o, property, lambda3);
+        function lambda3(value) {
+          return unique;
+        }
+        let value2 = property_change(id2, "name", lambda3);
       }
       js_identifier_is_if(id2, lambda4);
     }
