@@ -28,6 +28,6 @@ export function html_button_biblehub_open(
         ending,
     );
   }
-  let component5 = html_button(parent, button_text, lambda10);
-  return component5;
+  let b = html_button(parent, button_text, lambda10);
+  return b;
 }
