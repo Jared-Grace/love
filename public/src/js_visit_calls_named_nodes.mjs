@@ -3,7 +3,8 @@ import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_na
 export function js_visit_calls_named_nodes(ast, f_name, lambda) {
   function lambda2(a) {
     let v = property_get(a, "v");
-    let node = property_get(a, "node");
+    let node = property_get(v, "node");
+    lambda(node);
   }
   let r = js_visit_calls_named(ast, f_name, lambda2);
   return r;
