@@ -89,7 +89,6 @@ export async function app_bible_home_generic(context, lambda$a) {
   let verses = await ebible_verses_browser(e, chapter_code);
   async function on_arrow(list_next_wrap, verse_number_get) {
     await app_bible_chapter_change(
-      e,
       list_next_wrap,
       chapter_code,
       verse_number_get,
