@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_span_on_click_google_define } from "../../../love/public/src/html_span_on_click_google_define.mjs";
@@ -8,6 +9,7 @@ export function html_words_on_click_google_define(top, text) {
   function lambda2(item) {
     html_span_space(top);
     let search_term = error();
+    let combined = text_combine(left, right);
     html_span_on_click_google_define(top, item, search_term);
   }
   each(split, lambda2);
