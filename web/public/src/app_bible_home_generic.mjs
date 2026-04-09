@@ -111,10 +111,10 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number,
   );
   html_button_biblehub_open_commentary(
+    bottom,
     chapter_name,
     book_name,
     verse_number,
-    bottom,
   );
   function lambda8() {}
   let text4 = html_button_copy_text();
