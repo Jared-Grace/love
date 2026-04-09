@@ -23,7 +23,6 @@ import { html_hash_object_property_set } from "../../../love/public/src/html_has
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -34,7 +33,6 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
@@ -116,9 +114,6 @@ export async function app_bible_home_generic(context, lambda$a) {
     book_name,
     chapter_name,
   );
-  function lambda8() {}
-  let text4 = html_button_copy_text();
-  let component6 = html_button(bottom, text4, lambda8);
   let v3 = app_chapter_toggle_update(
     updates,
     component6,
