@@ -147,7 +147,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda() {}
   html_button_arrow_left(verse_pickers, lambda);
   function lambda7() {
-    let next2 = list_next_try(list2, item2);
+    let next2 = list_next_try(verses, v);
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
