@@ -145,7 +145,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   });
   let verse_pickers = html_div_centered(content);
   async function lambda() {
-    await app_bible_verse_previous(verse_current, context, chapter_code);
+    await app_bible_verse_previous(chapter_code, verse_current, context);
   }
   html_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
