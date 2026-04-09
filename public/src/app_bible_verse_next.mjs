@@ -10,6 +10,7 @@ export async function app_bible_verse_next(
   chapter_code,
 ) {
   let fn_next = list_next_try;
+  let chpater_next = app_bible_chapter_next;
   let next = fn_next(verses, verse_current);
   let ni = null_is(next);
   if (ni) {
