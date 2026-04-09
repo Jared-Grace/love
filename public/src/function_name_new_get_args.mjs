@@ -11,7 +11,8 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
   let overrides = {
     c: function_name_combine,
   };
-  let exists = property_get_or_null(overrides, plugin_fn);
+  let v = property_get_or_null(overrides, plugin_fn);
+  nni;
   if (exists) {
   }
   let f_name_new = await function_run(plugin_fn, args_run);
