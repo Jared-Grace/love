@@ -65,7 +65,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let n = property_exists_not(hash, "c");
-  if (n) {
+  if (n) {$a
     const chapter = "JHN01";
     app_bible_chapter_verse_open(chapter, context, verse_number);
     return;
