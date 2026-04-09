@@ -1,3 +1,4 @@
+import { html_hash_property_set } from "../../../love/public/src/html_hash_property_set.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
@@ -153,6 +154,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     if (n2) {
       await chapter_next();
     } else {
+      html_hash_property_set(property_name, chapter_code2);
     }
   }
   html_button_arrow_right(verse_pickers, lambda7);
