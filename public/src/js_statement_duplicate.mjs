@@ -18,7 +18,8 @@ export async function js_statement_duplicate(id) {
     let index = property_get(r, "index");
     let body = property_get(r, "body");
     let copy = json_copy(item);
-    js_visit_declarators(copy, () => {});
+    function lambda2() {}
+    js_visit_declarators(copy, lambda2);
     list_insert(body, index, copy);
   }
   let output = await function_transform(f_name_current, lambda);
