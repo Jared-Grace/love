@@ -6,6 +6,5 @@ export function js_visit_calls_named_nodes(ast, f_name, lambda) {
     let node = property_get(v, "node");
     lambda(node);
   }
-  let r = js_visit_calls_named(ast, f_name, lambda2);
-  return r;
+  js_visit_calls_named(ast, f_name, lambda2);
 }
