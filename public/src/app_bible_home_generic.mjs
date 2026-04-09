@@ -150,6 +150,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda7() {
     let next2 = list_next_try(verses, v);
     let n2 = null_is(value2);
+    if (false) {
+    } else {
+    }
   }
   html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
