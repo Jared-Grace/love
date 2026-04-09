@@ -71,12 +71,24 @@ export async function app_bible_home_generic(context, lambda$a) {
   let book_name = ebible_book_code_to_name(books, book_code);
   async function chapter_previous() {
     await on_arrow(list_previous_wrap, list_last);
+    await app_bible_chapter_change(
+      list_next_wrap,
+      chapter_code,
+      verse_number_get,
+      context,
+    );
   }
   html_button_arrow_left(bar, chapter_previous);
   app_shared_screen_set_button(bar, context, app_bible_books, book_name);
   app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
   async function chapter_next() {
     await on_arrow(list_next_wrap, list_first);
+    await app_bible_chapter_change(
+      list_next_wrap,
+      chapter_code,
+      verse_number_get,
+      context,
+    );
   }
   html_button_arrow_right(bar, chapter_next);
   app_shared_screen_set_button(
@@ -87,14 +99,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   );
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
-  async function on_arrow(list_next_wrap, verse_number_get) {
-    await app_bible_chapter_change(
-      list_next_wrap,
-      chapter_code,
-      verse_number_get,
-      context,
-    );
-  }
+  async function on_arrow(list_next_wrap, verse_number_get) {}
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
