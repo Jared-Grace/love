@@ -1,3 +1,4 @@
+import { function_transform_current } from "../../../love/public/src/function_transform_current.mjs";
 import { js_statement_duplicate } from "../../../love/public/src/js_statement_duplicate.mjs";
 import { function_node_select_args } from "../../../love/public/src/function_node_select_args.mjs";
 import { js_statement_find_call_named } from "../../../love/public/src/js_statement_find_call_named.mjs";
@@ -11,6 +12,7 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_chapters_before.name);
+  let r5 = await function_transform_current(f_name);
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
     "pg",
