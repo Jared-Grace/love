@@ -9,10 +9,10 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
   f_name_old = await function_name_unalias_only(f_name_old);
   let split = text_split_comma(args);
   let args_run = list_concat_single(f_name_old, split);
-  let overrides_fns = {
+  let overrides = {
     c: function_name_combine,
   };
-  dictionary_functions_to_names(overrides_fns);
+  dictionary_functions_to_names(overrides);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
   let f_name_new = await function_run(plugin_fn, args_run);
   let r2 = {
