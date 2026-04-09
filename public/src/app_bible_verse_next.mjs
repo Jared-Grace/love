@@ -9,12 +9,12 @@ export async function app_bible_verse_next(
   context,
   chapter_code,
 ) {
-  let next2 = list_next_try(verses, verse_current);
-  let n2 = null_is(next2);
+  let next = list_next_try(verses, verse_current);
+  let n2 = null_is(next);
   if (n2) {
     await app_bible_chapter_next(context, chapter_code);
   } else {
-    let verse_number2 = property_get(next2, "verse_number");
+    let verse_number2 = property_get(next, "verse_number");
     app_bible_verse_open(context, verse_number2);
   }
 }
