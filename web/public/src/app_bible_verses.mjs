@@ -1,10 +1,10 @@
+import { app_bible_verse_open_curried } from "../../../love/public/src/app_bible_verse_open_curried.mjs";
 import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_bible_chapters_before } from "../../../love/public/src/app_bible_chapters_before.mjs";
 import { html_button_list_centered } from "../../../love/public/src/html_button_list_centered.mjs";
-import { app_bible_chapter_open_curried } from "../../../love/public/src/app_bible_chapter_open_curried.mjs";
 export async function app_bible_verses(context) {
   let r = await app_bible_chapters_before(context);
   let root = property_get(r, "root");
@@ -14,6 +14,6 @@ export async function app_bible_verses(context) {
   let e = ebible_folder_english();
   let items = await ebible_verses_browser(e, chapter_code);
   let r2 = property_get_curried_right("verse_number");
-  let oc = app_bible_chapter_open_curried(context);
+  let oc = app_bible_verse_open_curried(context);
   html_button_list_centered(root, items, r2, oc);
 }
