@@ -1,3 +1,5 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_bible_verse_set } from "../../../love/public/src/app_bible_verse_set.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
@@ -74,13 +76,13 @@ export async function app_bible_home_generic(context, lambda$a) {
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   async function chapter_previous() {
-    await on_arrow(list_previous_wrap);
+    await on_arrow(list_previous_wrap, list_last);
   }
   html_button_arrow_left(bar, chapter_previous);
   app_shared_screen_set_button(context, app_bible_books, bar, book_name);
   app_shared_screen_set_button(context, app_bible_chapters, bar, chapter_name);
   async function chapter_next() {
-    await on_arrow(list_next_wrap);
+    await on_arrow(list_next_wrap, list_first);
   }
   html_button_arrow_right(bar, chapter_next);
   app_shared_screen_set_button(
@@ -91,12 +93,12 @@ export async function app_bible_home_generic(context, lambda$a) {
   );
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
-  async function on_arrow(list_next_wrap) {
+  async function on_arrow(list_next_wrap, verse_number_get) {
     let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
     let verses_next = await ebible_verses_browser(e, next);
     let mapped = list_map_property(verses_next, "verse_number");
-    let verse_number_next = verse_number_get(verses_next);
+    let verse_number_next = verse_number_get(mapped);
     app_bible_verse_set(verse_number_next);
     app_bible_chapter_open(context, next);
   }
