@@ -13,8 +13,7 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
     c: function_name_combine,
   };
   let v = property_get_or_null(overrides, plugin_fn);
-  let nn = null_not_is(value);
-  if (exists) {
+  if (null_not_is(value)) {
   }
   let f_name_new = await function_run(plugin_fn, args_run);
   let r2 = {
