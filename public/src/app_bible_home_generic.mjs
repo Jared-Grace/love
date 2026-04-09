@@ -99,7 +99,6 @@ export async function app_bible_home_generic(context, lambda$a) {
   );
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
-  async function on_arrow(list_next_wrap, verse_number_get) {}
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
