@@ -1,1 +1,5 @@
-export function js_statement_find_call_named(ast) {}
+import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
+export function js_statement_find_call_named(ast) {
+  function lambda2() {}
+  js_visit_calls_named(ast2, f_name, lambda2);
+}
