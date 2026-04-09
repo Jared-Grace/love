@@ -9,12 +9,10 @@ import { html_button_list_centered } from "../../../love/public/src/html_button_
 export async function app_bible_verses(context) {
   let r = await app_bible_chapters_before(context);
   let root = property_get(r, "root");
-  let book_code = property_get(r, "book_code");
   let chapter_code = property_get(r, "chapter_code");
-  let verse_number = property_get(r, "verse_number");
   let e = ebible_folder_english();
-  let items = await ebible_verses_browser(e, chapter_code);
-  let mapped = list_map_property(list, property_name);
+  let verses = await ebible_verses_browser(e, chapter_code);
+  let items = list_map_property(verses, "verse_number");
   let r2 = property_get_curried_right("verse_number");
   let oc = app_bible_verse_open_curried(context);
   html_button_list_centered(root, items, r2, oc);
