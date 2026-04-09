@@ -19,5 +19,5 @@ export async function js_statement_duplicate(id) {
     let copy = json_copy(item);
     list_insert(body, index, copy);
   }
-  let output = await function_transform(f_name_current, lambda);
+  let output = await function_transform_result(f_name_current, lambda);
 }
