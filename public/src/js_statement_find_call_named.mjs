@@ -6,5 +6,6 @@ export function js_statement_find_call_named(ast, f_name) {
     js_visit_calls_named(ast, f_name, la);
   }
   let list = list_adder(lambda);
-  let only = list_single(list2);
+  let only = list_single(list);
+  return only;
 }
