@@ -154,9 +154,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda2(item) {
     html_span_space(top);
     let item_span = html_span_text(top, item);
-    function lambda9() {
+    let lambda9 = function lambda3() {
       window_open_google_define(item);
-    }
+    };
     html_on_click(item_span, lambda9);
   }
   each(split, lambda2);
