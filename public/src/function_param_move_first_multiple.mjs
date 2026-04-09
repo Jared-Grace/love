@@ -6,6 +6,7 @@ export async function function_param_move_first_multiple(
   f_names_comma,
   param_names_comma,
 ) {
+  let f_names = text_split_dot_comma(f_names_comma);
   let param_names = text_split_dot_comma(param_names_comma);
   list_reverse(param_names);
   let r2 = await function_param_move_first_curried(f_name);
