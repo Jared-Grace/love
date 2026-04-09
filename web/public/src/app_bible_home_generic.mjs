@@ -1,3 +1,4 @@
+import { app_bible_chapter_next } from "../../../love/public/src/app_bible_chapter_next.mjs";
 import { app_bible_chapter_change } from "../../../love/public/src/app_bible_chapter_change.mjs";
 import { html_words_on_click_google_define } from "../../../love/public/src/html_words_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
@@ -5,7 +6,6 @@ import { html_button_biblehub_open_parallel } from "../../../love/public/src/htm
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
@@ -37,7 +37,6 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
-import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
@@ -81,12 +80,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   app_shared_screen_set_button(bar, context, app_bible_books, book_name);
   app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
   async function chapter_next() {
-    await app_bible_chapter_change(
-      context,
-      chapter_code,
-      list_next_wrap,
-      list_first,
-    );
+    await app_bible_chapter_next(context, chapter_code);
   }
   html_button_arrow_right(bar, chapter_next);
   app_shared_screen_set_button(
