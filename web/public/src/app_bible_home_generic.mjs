@@ -1,5 +1,4 @@
 import { app_bible_verse_set } from "../../../love/public/src/app_bible_verse_set.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_previous_try } from "../../../love/public/src/list_previous_try.mjs";
 import { app_bible_verse_open } from "../../../love/public/src/app_bible_verse_open.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -96,9 +95,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     let next = list_next_wrap(list, chapter_code);
     let verses_next = await ebible_verses_browser(e, next);
     let verse_number_next = verse_number_get(verses_next);
-    app_bible_verse_set("1");
+    app_bible_verse_set(verse_number_next);
     app_bible_chapter_open(context, next);
-    log(app_bible_home_generic.name, {});
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
