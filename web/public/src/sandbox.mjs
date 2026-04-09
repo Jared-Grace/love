@@ -7,11 +7,11 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { js_call_single } from "../../../love/public/src/js_call_single.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 import { js_statement_first } from "../../../love/public/src/js_statement_first.mjs";
-import { function_node_select } from "../../../love/public/src/function_node_select.mjs";
+import { function_node_select_args } from "../../../love/public/src/function_node_select_args.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_chapters_before.name);
-  let r = await function_node_select(js_statement_first.name, args_comma);
+  let r = await function_node_select_args(js_statement_first.name, args_comma);
   let r2 = await function_node_select_nested(js_call_single.name);
   let r4 = await function_node_select_nested(js_call_callee_name.name);
   let r32 = await function_current_selects_apply(function_open.name);
