@@ -1,4 +1,4 @@
-import { window_open_google_define_later } from "../../../love/public/src/window_open_google_define_later.mjs";
+import { html_span_on_click_google_define } from "../../../love/public/src/html_span_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "../../../love/public/src/html_button_biblehub_open_interlinear.mjs";
@@ -34,10 +34,8 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
@@ -153,9 +151,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let split = text_split_space(text);
   function lambda2(item) {
     html_span_space(top);
-    let item_span = html_span_text(top, item);
-    let lambda9 = window_open_google_define_later(item);
-    html_on_click(item_span, lambda9);
+    html_span_on_click_google_define(top, item);
   }
   each(split, lambda2);
   let p = html_p(content);
