@@ -95,7 +95,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let text = property_get(verse_current, "text");
   let p_verse = html_p(content);
   let top = html_div(p_verse);
-  let bottom = html_div(p_verse);
+  let bottom = html_p(p_verse);
   html_centered(bottom);
   let hidden = true;
   toggle();
