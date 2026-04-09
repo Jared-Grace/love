@@ -11,8 +11,8 @@ export async function function_node_select_inner(
   ast,
   args_comma,
 ) {
+  let args = null;
   if (null_is(args_comma)) {
-    let args = null;
     args = [];
   }
   let node = js_visit_id_to_node(ast, node_id);
