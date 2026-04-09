@@ -3,10 +3,10 @@ import { html_div_centered } from "../../../love/public/src/html_div_centered.mj
 export function html_button_list_centered(
   root,
   items,
-  code_to_button_text,
+  item_to_button_text,
   on_click,
 ) {
   let div = html_div_centered(root);
-  let mapped = html_button_list(div, items, code_to_button_text, on_click);
+  let mapped = html_button_list(div, items, item_to_button_text, on_click);
   return mapped;
 }
