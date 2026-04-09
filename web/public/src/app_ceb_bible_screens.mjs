@@ -1,13 +1,6 @@
+import { app_bible_screens_base } from "../../../love/public/src/app_bible_screens_base.mjs";
 import { app_ceb_bible_home } from "../../../love/public/src/app_ceb_bible_home.mjs";
-import { app_bible_languages } from "../../../love/public/src/app_bible_languages.mjs";
-import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
-import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 export function app_ceb_bible_screens() {
-  let screens = [
-    app_ceb_bible_home,
-    app_bible_books,
-    app_bible_chapters,
-    app_bible_languages,
-  ];
+  let screens = app_bible_screens_base([app_ceb_bible_home]);
   return screens;
 }
