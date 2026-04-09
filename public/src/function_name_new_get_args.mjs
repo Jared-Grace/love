@@ -12,7 +12,7 @@ export async function function_name_new_get_args(plugin_fn, f_name_old, args) {
   let overrides = {
     c: function_name_combine,
   };
-  function lambda(value, key) {}
+  function lambda(fn, key) {}
   let result = object_values_map(object, lambda);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
   let f_name_new = await function_run(plugin_fn, args_run);
