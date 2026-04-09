@@ -11,7 +11,6 @@ export async function app_bible_verse_next(
   let chapter_change = app_bible_chapter_next;
   await app_bible_verse_change(
     verse_get,
-    verses,
     verse_current,
     chapter_change,
     context,
