@@ -41,7 +41,8 @@ export async function js_ternary_replace(ast) {
       js_statement_if_consequent_get,
     ];
     function lambda2(getter) {
-      return getter(node);
+      let r = getter(node);
+      return r;
     }
     let mapped3 = list_map(list, lambda2);
     let bs = list_all(list, js_block_statement_is);
