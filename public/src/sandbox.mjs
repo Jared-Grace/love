@@ -1,3 +1,4 @@
+import { js_statement_delete } from "../../../love/public/src/js_statement_delete.mjs";
 import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { app_gloss_bible_home_generic } from "../../../love/public/src/app_gloss_bible_home_generic.mjs";
 import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
@@ -25,6 +26,7 @@ export async function sandbox() {
     js_function_node_find_named_node.name,
     "lambda3",
   );
+  await function_current_selects_apply(js_statement_delete.name);
   return r;
   return;
   ("below is functionality that has been used in the past");
