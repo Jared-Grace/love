@@ -4,6 +4,5 @@ import { data_identifiers_search } from "../../../love/public/src/data_identifie
 export async function data_identifiers_search_multiple(ids_comma) {
   let ids = text_split_dot_comma(ids_comma);
   let waited = await list_map_unordered_async(ids, data_identifiers_search);
-  let r = await data_identifiers_search(ids_comma);
   return r;
 }
