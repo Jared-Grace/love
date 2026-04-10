@@ -4,5 +4,5 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export function js_statement_if_return_add(ast, selects) {
   let statement_if = list_first(selects);
   let c = js_statement_if_consequent_get(statement_if);
-  let value = js_block_body_get(block);
+  let value = js_block_body_get(c);
 }
