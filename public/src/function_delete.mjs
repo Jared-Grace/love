@@ -1,4 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
@@ -14,7 +14,7 @@ export async function function_delete(f_names_comma) {
     assert(exists);
     await file_delete(f_path);
   }
-  await each_async(f_names, lambda);
+  await list_map_unordered_async(f_names, lambda);
   return;
   await data_files_update();
 }
