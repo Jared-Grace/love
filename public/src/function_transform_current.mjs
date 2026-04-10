@@ -3,7 +3,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { function_import_unalias } from "../../../love/public/src/function_import_unalias.mjs";
-export async function function_transform_current_args(
+export async function function_transform_current(
   f_name_transformer_args_comma,
 ) {
   let fr = list_first_remaining_from_comma_dot(f_name_transformer_args_comma);

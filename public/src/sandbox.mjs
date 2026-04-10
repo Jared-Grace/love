@@ -1,7 +1,7 @@
 import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
 import { js_call_add_first } from "../../../love/public/src/js_call_add_first.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
-import { function_transform_current_args } from "../../../love/public/src/function_transform_current_args.mjs";
+import { function_transform_current } from "../../../love/public/src/function_transform_current.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { function_source_remove } from "../../../love/public/src/function_source_remove.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
@@ -26,20 +26,17 @@ export async function sandbox() {
   );
   return;
   ("below is functionality that has been used in the past");
-  await function_transform_current_args(
+  await function_transform_current(
     js_identifier_rename.name,
     "html_hash_get,html_hash_object_get",
   );
-  await function_transform_current_args(
-    js_call_add_first.name,
-    html_hash_get.name,
-  );
+  await function_transform_current(js_call_add_first.name, html_hash_get.name);
   await function_source_remove(f_name, "2");
   await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
   );
-  await function_transform_current_args(
+  await function_transform_current(
     js_flo_body_add_return_argument_from_code.name,
     "n",
   );
