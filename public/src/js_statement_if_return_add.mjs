@@ -6,5 +6,5 @@ export function js_statement_if_return_add(ast, selects) {
   let statement_if = list_first(selects);
   let c = js_statement_if_consequent_get(statement_if);
   let value = js_block_body_get(c);
-  let r = js_statement_return_empty_add(body_block);
+  let r = js_statement_return_empty_add(value);
 }
