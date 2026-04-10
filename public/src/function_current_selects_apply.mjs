@@ -8,7 +8,7 @@ export async function function_current_selects_apply(apply_fn_name) {
   let f_name_current = await function_current_get();
   let imported_fn = await function_import(apply_fn_name);
   function lambda(ast) {
-    let selected = js_visit_id_to_node_or_id_multiple(list, ast2);
+    selects = js_visit_id_to_node_or_id_multiple(selects, ast);
     imported_fn(ast, selects);
   }
   let output = await function_transform(f_name_current, lambda);
