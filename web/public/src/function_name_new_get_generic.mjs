@@ -11,7 +11,7 @@ export async function function_name_new_get_generic(f_name_old, plugin_fn) {
     c: function_name_combine,
     r: lambda_right,
     d: function_name_parts_delete,
-    l2: function_name_to_part_replace_last_2,
+    2: function_name_to_part_replace_last_2,
   };
   dictionary_functions_to_names(overrides);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
