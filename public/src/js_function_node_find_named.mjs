@@ -1,1 +1,1 @@
-export function js_function_node_find_named(ast) {}
+export function js_function_node_find_named(ast, f_name) {}
