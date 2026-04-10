@@ -7,13 +7,12 @@ import { function_import_unalias } from "../../../love/public/src/function_impor
 export async function function_transform_current_args(
   f_name_transformer_args_comma,
 ) {
+  let split = text_split_comma_dot(t);
   let fr = list_first_remaining(f_name_transformer_args_comma);
   let remaining = property_get(fr, "remaining");
-  let first = property_get(fr, "first");
+  let f_name_transformer = property_get(fr, "first");
   let args = text_split_comma_dot(args_comma);
-  let imported_fn = await function_import_unalias(
-    f_name_transformer_args_comma,
-  );
+  let imported_fn = await function_import_unalias(f_name_transformer);
   let f_name = await function_current_get();
   async function lambda(ast) {
     let result = await imported_fn(ast, ...args);
