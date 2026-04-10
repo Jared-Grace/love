@@ -20,7 +20,7 @@ export async function sandbox() {
   await function_current_set(f_name);
   let from = "2";
   await function_source_remove(f_name, from);
-  return r;
+  return;
   ("below is functionality that has been used in the past");
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
