@@ -5,7 +5,6 @@ import { function_unalias_exists } from "../../../love/public/src/function_unali
 import { data_files_update } from "../../../love/public/src/data_files_update.mjs";
 import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_names_comma) {
-  let split = text_split_dot_comma(t);
   const v = await function_unalias_exists(f_names_comma);
   let exists = property_get(v, "exists");
   let f_path = property_get(v, "f_path");
@@ -13,4 +12,5 @@ export async function function_delete(f_names_comma) {
   await file_delete(f_path);
   return;
   await data_files_update();
+  let split = text_split_dot_comma(t);
 }
