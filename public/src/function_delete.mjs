@@ -17,7 +17,9 @@ export async function function_delete(f_names_comma) {
     let f_path = property_get(u, "f_path");
     await file_delete(f_path);
     let result = await function_aliases_search(f_name);
-    let exists2 = property_exists(object, property_name);
+    let exists2 = property_exists(result, f_name);
+    if (false) {
+    }
     await function_alias_delete(alias_old);
   }
   await list_map_unordered_async(f_names, lambda);
