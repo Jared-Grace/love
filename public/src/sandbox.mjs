@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { function_transform_current_return_add_last } from "../../../love/public/src/function_transform_current_return_add_last.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
@@ -16,6 +17,9 @@ export async function sandbox() {
     js_statement_find_call_named.name,
     app_bible_chapter_set_default.name,
   );
+  log(sandbox.name, {
+    r,
+  });
   return;
   let r32 = await function_current_selects_apply(js_statement_duplicate.name);
   let r4 = await function_node_select_nested(js_call_callee_name.name);
