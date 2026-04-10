@@ -8,9 +8,9 @@ export async function function_transform_current_call_add_first(f_name) {
   let functions = await data_functions_get();
   let visited = [];
   async function lambda(ast) {
-    let expression = js_parse_statement(f_name);
-    js_flo_body_add_first(ast, expression);
-    let visitor = js_node_to_visitor(ast, expression);
+    let statement = js_parse_statement(f_name);
+    js_flo_body_add_first(ast, statement);
+    let visitor = js_node_to_visitor(ast, statement);
     await js_call_fill_inner(ast, visitor, functions, visited);
   }
   let r = await function_transform_current_fn(lambda);
