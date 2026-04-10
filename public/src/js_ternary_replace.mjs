@@ -1,3 +1,4 @@
+import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
@@ -33,7 +34,7 @@ export async function js_ternary_replace(ast) {
   async function lambda(v) {
     let node = property_get(v, "node");
     let alternate = property_get(node, "alternate");
-    let consequent = property_get(node, "consequent");
+    let consequent = js_statement_if_consequent_get(node);
     const list = [alternate, consequent];
     let bs = list_all(list, js_block_statement_is);
     if (not(bs)) {
