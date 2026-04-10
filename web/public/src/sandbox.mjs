@@ -1,5 +1,5 @@
+import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
 import { function_transform_current_args } from "../../../love/public/src/function_transform_current_args.mjs";
-import { function_transform_current_identifier_rename } from "../../../love/public/src/function_transform_current_identifier_rename.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { function_source_remove } from "../../../love/public/src/function_source_remove.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
@@ -26,10 +26,9 @@ export async function sandbox() {
   );
   return;
   ("below is functionality that has been used in the past");
-  let r = await function_transform_current_args(f_name_transformer, args);
-  let r2 = await function_transform_current_identifier_rename(
-    "html_hash_get",
-    "html_hash_object_get",
+  let r = await function_transform_current_args(
+    js_identifier_rename.name,
+    "html_hash_get,html_hash_object_get",
   );
   await function_transform_current_call_add_first(html_hash_get.name);
   await function_source_remove(f_name, "2");
