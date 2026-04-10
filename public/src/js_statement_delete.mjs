@@ -8,5 +8,5 @@ export function js_statement_delete(ast, nodes) {
   let item = property_get(r, "item");
   let index = property_get(r, "index");
   let body = property_get(r, "body");
-  list_remove(list, item2);
+  list_remove(body, item);
 }
