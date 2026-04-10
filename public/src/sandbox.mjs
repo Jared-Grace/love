@@ -1,4 +1,4 @@
-import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
+import { function_source_remove } from "../../../love/public/src/function_source_remove.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { function_transform_current_call_add_first } from "../../../love/public/src/function_transform_current_call_add_first.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
@@ -19,7 +19,7 @@ export async function sandbox() {
   const f_name = app_bible_verses.name;
   await function_current_set(f_name);
   let from = "2";
-  await function_source_replace(f_name, from, "");
+  await function_source_remove(f_name, from);
   return r;
   ("below is functionality that has been used in the past");
   let r = await function_node_select_args(
