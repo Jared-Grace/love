@@ -1,3 +1,4 @@
+import { js_statement_if_test_set } from "../../../love/public/src/js_statement_if_test_set.mjs";
 import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -24,7 +25,7 @@ export async function js_if_else_if_combine(ast) {
         let code_expression = js_code_or("a", "a");
         let expression = js_parse_expression(code_expression);
         js_left_right_set(expression, test2, test);
-        property_set(stack1, "test", expression);
+        js_statement_if_test_set(stack1, expression);
         property_set(stack1, "alternate", null);
       }
     }
