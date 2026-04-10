@@ -10,9 +10,9 @@ export async function function_name_new_get_generic(f_name_old, plugin_fn) {
   f_name_old = await function_name_unalias_only(f_name_old);
   let overrides = {
     c: function_name_combine,
+    d: function_name_parts_delete,
     r: lambda_right,
     t: text_replace,
-    d: function_name_parts_delete,
     2: function_name_to_part_replace_last_2,
   };
   dictionary_functions_to_names(overrides);
