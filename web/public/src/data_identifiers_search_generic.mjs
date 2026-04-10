@@ -5,7 +5,7 @@ import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
 export async function data_identifiers_search_generic(fn, ids_comma) {
-  text_is_assert(value);
+  text_is_assert(ids_comma);
   let identifiers = await fn();
   let ids = text_split_comma_dot(ids_comma);
   let r3 = property_get_curried(identifiers);
