@@ -1,7 +1,7 @@
+import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { js_statement_if_return_add } from "../../../love/public/src/js_statement_if_return_add.mjs";
 import { js_statement_wrap_if } from "../../../love/public/src/js_statement_wrap_if.mjs";
-import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { function_transform_current_return_add_last } from "../../../love/public/src/function_transform_current_return_add_last.mjs";
 import { js_statement_duplicate } from "../../../love/public/src/js_statement_duplicate.mjs";
 import { function_node_select_args } from "../../../love/public/src/function_node_select_args.mjs";
@@ -13,7 +13,7 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
-  await function_current_set(app_bible_home_generic.name);
+  await function_current_set(app_bible_verses.name);
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
     app_bible_chapter_verse_open.name,
