@@ -6,7 +6,6 @@ import { function_transform_current_fn } from "../../../love/public/src/function
 export async function function_transform_current_call_add_first(code_argument) {
   let functions = await data_functions_get();
   let visited = [];
-  async function lambda(v) {}
   async function lambda(ast) {
     let expression = js_parse_expression(code_argument);
     js_flo_body_add_first(ast, expression);
