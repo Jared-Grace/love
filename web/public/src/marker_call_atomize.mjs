@@ -10,7 +10,6 @@ export async function marker_call_atomize(input) {
   async function lambda(a) {
     let ast = property_get(a, "ast");
     let replaced = property_get(a, "replaced");
-    let existing = js_identifiers(ast);
     let v_match = js_visit_match(ast, replaced);
     let variable_name = js_node_atomize_name();
     await js_node_atomize(ast, v_match, variable_name, 0);
