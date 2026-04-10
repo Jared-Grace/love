@@ -3,5 +3,5 @@ import { js_function_node_find_named } from "../../../love/public/src/js_functio
 export function js_function_node_find_named_node(ast, name) {
   let only = js_function_node_find_named(ast, name);
   let node = property_get(only, "node");
-  return only;
+  return node;
 }
