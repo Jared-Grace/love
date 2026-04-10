@@ -1,4 +1,4 @@
-import { function_list_name_to_paths } from "../../../love/public/src/function_list_name_to_paths.mjs";
+import { function_list_names_to_paths } from "../../../love/public/src/function_list_names_to_paths.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
 import { text_split_dot_comma } from "../../../love/public/src/text_split_dot_comma.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -9,6 +9,6 @@ export async function data_identifiers_search_generic(fn, ids_comma) {
   let r3 = property_get_curried(identifiers);
   let mapped = list_map(ids, r3);
   let i = list_intersect_multiple(mapped);
-  let result = await function_list_name_to_paths(i);
+  let result = await function_list_names_to_paths(i);
   return result;
 }
