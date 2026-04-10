@@ -8,5 +8,5 @@ export function js_statement_wrap_if(ast, selects) {
   let expression = js_statement_expression_get(node);
   let statement_if = js_statement_if();
   js_statement_if_test_set(statement_if, expression);
-  object_replace(expression, statement_if);
+  object_replace(node, statement_if);
 }
