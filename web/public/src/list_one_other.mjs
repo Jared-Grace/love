@@ -8,7 +8,7 @@ export function list_one_other(
   property_name_other,
 ) {
   let one = null;
-  let other = null;
+  let other = [];
   if (list_empty_not_is(list)) {
     one = one_get(list);
     if (list_multiple_is(list)) {
