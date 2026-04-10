@@ -1,4 +1,4 @@
-import { text_split_dot_comma } from "../../../love/public/src/text_split_dot_comma.mjs";
+import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { function_current_selects_add } from "../../../love/public/src/function_current_selects_add.mjs";
@@ -16,7 +16,7 @@ export async function function_node_select_inner(
   if (null_is(args_comma)) {
     args = [];
   } else {
-    args = text_split_dot_comma(args_comma);
+    args = text_split_comma_dot(args_comma);
   }
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
