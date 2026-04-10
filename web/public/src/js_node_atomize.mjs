@@ -16,10 +16,10 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
     stack,
     offset,
   );
-  let unique = js_identifier_unique(existing_ids, variable_name);
   ("this is in case there is an await");
   const copied = list_get_end(stack, offset);
   let copy = object_copy(copied);
+  let unique = js_identifier_unique(existing_ids, variable_name);
   let assign = js_declare(unique, copy);
   js_block_insert(stack, assign);
   let v2 = js_parse_expression(unique);
