@@ -1,1 +1,1 @@
-export function js_statement_delete(ast) {}
+export function js_statement_delete(ast, nodes) {}
