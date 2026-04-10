@@ -4,7 +4,6 @@ import { function_current_get } from "../../../love/public/src/function_current_
 import { function_import_unalias } from "../../../love/public/src/function_import_unalias.mjs";
 export async function function_transform_current_args(
   f_name_transformer_args_comma,
-  args_comma,
 ) {
   let args = text_split_comma_dot(args_comma);
   let imported_fn = await function_import_unalias(
