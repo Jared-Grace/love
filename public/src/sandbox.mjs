@@ -1,3 +1,4 @@
+import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { function_transform_current_call_add_first } from "../../../love/public/src/function_transform_current_call_add_first.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
@@ -16,6 +17,7 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_verses.name);
+  await function_source_replace(f_name, from, to);
   await function_transform_current_call_add_first(
     app_bible_chapter_set_default.name,
   );
