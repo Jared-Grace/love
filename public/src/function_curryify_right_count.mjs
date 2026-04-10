@@ -4,7 +4,7 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
-export async function function_curryify_right_count(f_name, count) {
+export async function function_curryify_right_count(count, f_name) {
   arguments_assert(arguments, 2);
   count = integer_to(count);
   function lambda(unaliased) {
