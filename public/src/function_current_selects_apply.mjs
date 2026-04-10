@@ -9,7 +9,7 @@ export async function function_current_selects_apply(apply_fn_name) {
   let f_name_current = await function_current_get();
   let imported_fn = await function_import(apply_fn_name);
   function lambda(ast) {
-    imported_fn;
+    imported_fn(ast);
   }
   let output = await function_transform(f_name_current, lambda);
   let result = await function_run(apply_fn_name, [r]);
