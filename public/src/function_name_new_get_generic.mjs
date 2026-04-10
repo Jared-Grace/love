@@ -1,3 +1,4 @@
+import { function_name_to_part_replace_last_2 } from "../../../love/public/src/function_name_to_part_replace_last_2.mjs";
 import { function_name_parts_delete } from "../../../love/public/src/function_name_parts_delete.mjs";
 import { lambda_right } from "../../../love/public/src/lambda_right.mjs";
 import { property_exists_if_get } from "../../../love/public/src/property_exists_if_get.mjs";
@@ -10,6 +11,7 @@ export async function function_name_new_get_generic(f_name_old, plugin_fn) {
     c: function_name_combine,
     r: lambda_right,
     d: function_name_parts_delete,
+    l2: function_name_to_part_replace_last_2,
   };
   dictionary_functions_to_names(overrides);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
