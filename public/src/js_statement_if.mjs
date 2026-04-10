@@ -5,11 +5,11 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 import { js_keyword_false } from "../../../love/public/src/js_keyword_false.mjs";
 export function js_statement_if() {
   let inside = js_keyword_false();
-  let from = js_parse_statement(
+  let statement_if = js_parse_statement(
     js_keyword_if() +
       " " +
       js_code_wrap_parenthesis(inside) +
       js_code_braces_empty(),
   );
-  return from;
+  return statement_if;
 }
