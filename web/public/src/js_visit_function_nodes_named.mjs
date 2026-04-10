@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -8,6 +9,9 @@ export function js_visit_function_nodes_named(ast, lambda$v, name) {
     let id = property_get(node, "id");
     function lambda3() {
       let actual = property_get(id, "name");
+      log(js_visit_function_nodes_named.name, {
+        actual,
+      });
       let eq2 = equal(actual, name);
       if (eq2) {
         lambda$v(v);
