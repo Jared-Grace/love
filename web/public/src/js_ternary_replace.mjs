@@ -1,3 +1,4 @@
+import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
 import { js_statement_if_alternate_get } from "../../../love/public/src/js_statement_if_alternate_get.mjs";
 import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -38,11 +39,7 @@ export async function js_ternary_replace(ast) {
       js_statement_if_alternate_get,
       js_statement_if_consequent_get,
     ];
-    function lambda2(getter) {
-      let r = getter(node);
-      return r;
-    }
-    let list = list_map(props, lambda2);
+    let list = invoke_multiple_arg(props, node);
     let bs = list_all(list, js_block_statement_is);
     if (not(bs)) {
       return false;
