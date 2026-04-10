@@ -3,6 +3,8 @@ import { js_visit_types_function } from "../../../love/public/src/js_visit_types
 export function js_visit_types_function_named(ast, lambda$v) {
   function lambda(v) {
     let node = property_get(v, "node");
+    if (false) {
+    }
   }
   let r = js_visit_types_function(ast, lambda);
   return r;
