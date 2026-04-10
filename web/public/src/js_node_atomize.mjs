@@ -7,9 +7,9 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function js_node_atomize(ast, v, variable_name, offset) {
-  let node = property_get(v, "node");
-  let stack = property_get(v, "stack");
+export async function js_node_atomize(ast, visitor, variable_name, offset) {
+  let node = property_get(visitor, "node");
+  let stack = property_get(visitor, "stack");
   variable_name = await js_node_atomize_variable_name_get(
     node,
     variable_name,
