@@ -1,3 +1,4 @@
+import { js_statement_if_return_add } from "../../../love/public/src/js_statement_if_return_add.mjs";
 import { js_statement_wrap_if } from "../../../love/public/src/js_statement_wrap_if.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { function_transform_current_return_add_last } from "../../../love/public/src/function_transform_current_return_add_last.mjs";
@@ -17,6 +18,7 @@ export async function sandbox() {
     js_statement_find_call_named.name,
     app_bible_chapter_set_default.name,
   );
+  await function_current_selects_apply(js_statement_if_return_add.name);
   return r;
   ("below is functionality that has been used in the past");
   await function_current_selects_apply(js_statement_wrap_if.name);
