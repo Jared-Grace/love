@@ -20,6 +20,7 @@ export async function sandbox() {
   log(sandbox.name, {
     r,
   });
+  await function_current_selects_apply(js_statement_duplicate.name);
   return;
   ("below is functionality that has been used in the past");
   await function_current_selects_apply(js_statement_duplicate.name);
