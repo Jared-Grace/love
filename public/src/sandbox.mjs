@@ -1,3 +1,4 @@
+import { app_gloss_bible_home_generic } from "../../../love/public/src/app_gloss_bible_home_generic.mjs";
 import { js_function_node_find_named } from "../../../love/public/src/js_function_node_find_named.mjs";
 import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
 import { js_call_add_first } from "../../../love/public/src/js_call_add_first.mjs";
@@ -5,7 +6,6 @@ import { js_identifier_rename } from "../../../love/public/src/js_identifier_ren
 import { function_transform_current } from "../../../love/public/src/function_transform_current.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { function_source_remove } from "../../../love/public/src/function_source_remove.mjs";
-import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { js_statement_if_return_add } from "../../../love/public/src/js_statement_if_return_add.mjs";
 import { js_statement_wrap_if } from "../../../love/public/src/js_statement_wrap_if.mjs";
@@ -19,7 +19,7 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
-  const f_name = app_bible_chapter_set_default.name;
+  const f_name = app_gloss_bible_home_generic.name;
   await function_current_set(f_name);
   let r = await function_node_select_args(
     js_function_node_find_named.name,
