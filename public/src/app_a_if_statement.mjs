@@ -1,3 +1,4 @@
+import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -19,7 +20,7 @@ export function app_a_if_statement(a) {
   }
   app_a_overlay_choices(a, keyword, lambda);
   function lambda19() {
-    let test = property_get(node, "test");
+    let test = js_statement_if_test_get(node);
     app_a_function_node_child(a, test);
   }
   app_a_parenthesis_wrap(parent, lambda19);
