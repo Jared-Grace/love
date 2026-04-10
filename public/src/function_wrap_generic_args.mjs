@@ -8,14 +8,14 @@ export async function function_wrap_generic_args(
   f_name_old_args_comma,
 ) {
   arguments_assert(arguments, 2);
-  let fr = list_first_remaining_from_comma_dot(f_name_transformer_args_comma);
+  let fr = list_first_remaining_from_comma_dot(f_name_old_args_comma);
   let remaining = property_get(fr, "remaining");
-  let f_name_transformer = property_get(fr, "first");
+  let f_name_old = property_get(fr, "first");
   let f_name_new = null;
   ({ f_name_new, f_name_old } = await function_name_new_get_args(
     plugin_fn,
     f_name_old,
-    args,
+    remaining,
   ));
   let r = await function_wrap(f_name_old, f_name_new);
   return r;
