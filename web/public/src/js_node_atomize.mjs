@@ -20,8 +20,8 @@ export async function js_node_atomize(ast, visitor, variable_name, offset) {
   const copied = list_get_end(stack, offset);
   let copy = object_copy(copied);
   let unique = js_identifier_unique_ast(ast, variable_name);
-  let assign = js_declare(unique, copy);
-  js_block_insert(stack, assign);
+  let declare = js_declare(unique, copy);
+  js_block_insert(stack, declare);
   let v2 = js_parse_expression(unique);
   object_replace(copied, v2);
 }
