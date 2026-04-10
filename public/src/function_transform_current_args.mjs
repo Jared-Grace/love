@@ -6,7 +6,7 @@ export async function function_transform_current_args(
   f_name_transformer,
   args_comma,
 ) {
-  let args = text_split_dot_comma(t);
+  let args = text_split_dot_comma(args_comma);
   let imported_fn = await function_import_unalias(f_name_transformer);
   let f_name = await function_current_get();
   async function lambda(ast) {
