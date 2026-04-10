@@ -10,7 +10,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_bible_chapters_before } from "../../../love/public/src/app_bible_chapters_before.mjs";
 import { html_button_list_centered } from "../../../love/public/src/html_button_list_centered.mjs";
 export async function app_bible_verses(context) {
-  let n = property_exists_not(hash, "c");
   if (n) {
     return;
   }
