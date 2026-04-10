@@ -4,6 +4,7 @@ export function list_map(list, lambda$item) {
   let mapped = list.map(lambda$item);
   return mapped;
   (function lambda(item) {
-    return lambda$item(item);
+    let r = lambda$item(item);
+    return r;
   });
 }
