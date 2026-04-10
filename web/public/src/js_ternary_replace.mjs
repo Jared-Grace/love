@@ -34,8 +34,6 @@ export async function js_ternary_replace(ast) {
   let replaced = null;
   async function lambda(v) {
     let node = property_get(v, "node");
-    let alternate = js_statement_if_alternate_get(node);
-    let consequent = js_statement_if_consequent_get(node);
     const list = [
       js_statement_if_alternate_get,
       js_statement_if_consequent_get,
@@ -45,7 +43,7 @@ export async function js_ternary_replace(ast) {
       return r;
     }
     let mapped3 = list_map(list, lambda2);
-    let bs = list_all(list, js_block_statement_is);
+    let bs = list_all(mapped3, js_block_statement_is);
     if (not(bs)) {
       return false;
     }
