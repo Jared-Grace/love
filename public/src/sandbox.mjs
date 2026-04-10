@@ -1,3 +1,4 @@
+import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
 import { js_call_add_first } from "../../../love/public/src/js_call_add_first.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
 import { function_transform_current_args } from "../../../love/public/src/function_transform_current_args.mjs";
@@ -7,7 +8,6 @@ import { app_bible_chapter_set_default } from "../../../love/public/src/app_bibl
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { js_statement_if_return_add } from "../../../love/public/src/js_statement_if_return_add.mjs";
 import { js_statement_wrap_if } from "../../../love/public/src/js_statement_wrap_if.mjs";
-import { function_transform_current_return_add_last } from "../../../love/public/src/function_transform_current_return_add_last.mjs";
 import { js_statement_duplicate } from "../../../love/public/src/js_statement_duplicate.mjs";
 import { function_node_select_args } from "../../../love/public/src/function_node_select_args.mjs";
 import { js_statement_find_call_named } from "../../../love/public/src/js_statement_find_call_named.mjs";
@@ -20,7 +20,6 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
-  
   await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
@@ -48,5 +47,4 @@ export async function sandbox() {
   await function_current_selects_apply(js_statement_wrap_if.name);
   await function_current_selects_apply(js_statement_duplicate.name);
   await function_node_select_nested(js_call_callee_name.name);
-  await function_transform_current_return_add_last("n");
 }
