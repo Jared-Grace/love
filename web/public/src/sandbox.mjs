@@ -2,7 +2,6 @@ import { function_source_remove } from "../../../love/public/src/function_source
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { function_transform_current_call_add_first } from "../../../love/public/src/function_transform_current_call_add_first.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
-import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { js_statement_if_return_add } from "../../../love/public/src/js_statement_if_return_add.mjs";
 import { js_statement_wrap_if } from "../../../love/public/src/js_statement_wrap_if.mjs";
 import { function_transform_current_return_add_last } from "../../../love/public/src/function_transform_current_return_add_last.mjs";
@@ -16,7 +15,7 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
-  const f_name = app_bible_verses.name;
+  const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
   let from = "2";
   await function_source_remove(f_name, from);
