@@ -1,3 +1,4 @@
+import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -9,6 +10,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_bible_chapters_before } from "../../../love/public/src/app_bible_chapters_before.mjs";
 import { html_button_list_centered } from "../../../love/public/src/html_button_list_centered.mjs";
 export async function app_bible_verses(context) {
+  let n2 = app_bible_chapter_set_default(context2);
   if (n) {
     return;
   }
