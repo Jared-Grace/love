@@ -1,3 +1,4 @@
+import { js_statement_wrap_if } from "../../../love/public/src/js_statement_wrap_if.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { function_transform_current_return_add_last } from "../../../love/public/src/function_transform_current_return_add_last.mjs";
@@ -20,7 +21,7 @@ export async function sandbox() {
   log(sandbox.name, {
     r,
   });
-  await function_current_selects_apply(js_statement_duplicate.name);
+  await function_current_selects_apply(js_statement_wrap_if.name);
   return;
   ("below is functionality that has been used in the past");
   await function_current_selects_apply(js_statement_duplicate.name);
