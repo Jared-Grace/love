@@ -5,4 +5,5 @@ export function app_bible_chapter_set_default(context) {
   if (n) {
     app_bible_chapter_verse_open(context, "JHN01", "1");
   }
+  return n;
 }
