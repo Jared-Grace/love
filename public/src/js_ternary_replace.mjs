@@ -1,4 +1,5 @@
-import { function_imports_fix } from "../../../love/public/src/function_imports_fix.mjs";
+import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
@@ -69,7 +70,7 @@ export async function js_ternary_replace(ast) {
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
     let arguments2 = property_get(e, "arguments");
-    let test = property_get(node, "test");
+    let test = js_statement_if_test_get(node);
     list_add(arguments2, test);
     let rights = list_map_property(ess, "right");
     list_add_multiple(arguments2, rights);
@@ -88,6 +89,6 @@ export async function js_ternary_replace(ast) {
   let a = null;
   const test = b === 1;
   const b = 2;
-  c = 1;
+  let c = 1;
   a = ternary(test, b, c);
 }
