@@ -4,8 +4,8 @@ import { function_transform_current_fn } from "../../../love/public/src/function
 export async function function_transform_current_return_add_last(
   code_argument,
 ) {
-  let expression = js_parse_expression(code_expression);
-  let r2 = js_flo_body_add_return_argument_curried_right(e);
+  let expression = js_parse_expression(code_argument);
+  let r2 = js_flo_body_add_return_argument_curried_right(expression);
   let r = await function_transform_current_fn(r2);
   return r;
 }
