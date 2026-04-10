@@ -3,6 +3,6 @@ import { js_block_find_from_node } from "../../../love/public/src/js_block_find_
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function js_statement_delete(ast, nodes) {
   let first = list_first(nodes);
-  let r = js_block_find_from_node(ast, first);
-  js_block_find_remove(rf);
+  let f = js_block_find_from_node(ast, first);
+  js_block_find_remove(f);
 }
