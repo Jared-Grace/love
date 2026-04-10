@@ -1,3 +1,4 @@
+import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_call_named } from "../../../love/public/src/js_call_named.mjs";
@@ -5,6 +6,7 @@ import { function_name_unalias_only } from "../../../love/public/src/function_na
 export async function js_statement_find_call_named(ast, f_name) {
   let unaliased = await function_name_unalias_only(f_name);
   let only = js_call_named(ast, unaliased);
+  let v = js_node_to_visitor(ast2, node_search);
   let r = js_block_find(only);
   let item = property_get(r, "item");
   return item;
