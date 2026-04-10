@@ -7,9 +7,9 @@ import { function_import_unalias } from "../../../love/public/src/function_impor
 export async function function_transform_current_args(
   f_name_transformer_args_comma,
 ) {
-  let r2 = list_first_remaining(f_name_transformer_args_comma);
-  let remaining = property_get(r2, "remaining");
-  let first = property_get(r2, "first");
+  let fr = list_first_remaining(f_name_transformer_args_comma);
+  let remaining = property_get(fr, "remaining");
+  let first = property_get(fr, "first");
   let args = text_split_comma_dot(args_comma);
   let imported_fn = await function_import_unalias(
     f_name_transformer_args_comma,
