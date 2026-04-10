@@ -13,6 +13,6 @@ export async function js_imports_fix(ast) {
   }
   each(unuseds, lambda);
   let v = await js_imports_missing_add(ast);
+  await js_imports_paths_fix(ast);
   return v;
-  await js_imports_paths_fix(ast2);
 }
