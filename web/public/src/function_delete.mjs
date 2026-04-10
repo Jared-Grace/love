@@ -1,9 +1,11 @@
+import { text_split_dot_comma } from "../../../love/public/src/text_split_dot_comma.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 import { data_files_update } from "../../../love/public/src/data_files_update.mjs";
 import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_names_comma) {
+  let split = text_split_dot_comma(t);
   const v = await function_unalias_exists(f_names_comma);
   let exists = property_get(v, "exists");
   let f_path = property_get(v, "f_path");
