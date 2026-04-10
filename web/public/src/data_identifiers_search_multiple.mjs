@@ -12,6 +12,6 @@ export async function data_identifiers_search_multiple(ids_comma) {
   let mapped = list_map(waited, properties_get);
   let i = list_intersect_multiple(mapped);
   let first = list_first(waited);
-  let dictionary = list_to_dictionary_from_object(first, i);
+  let dictionary = list_to_dictionary_from_object(i, first);
   return dictionary;
 }
