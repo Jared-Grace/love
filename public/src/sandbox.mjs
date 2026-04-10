@@ -17,9 +17,9 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
-  await function_source_remove(f_name, "2");
   return;
   ("below is functionality that has been used in the past");
+  await function_source_remove(f_name, "2");
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
