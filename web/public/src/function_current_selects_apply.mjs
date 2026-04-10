@@ -8,7 +8,9 @@ export async function function_current_selects_apply(apply_fn_name) {
   let r = await function_current_selects_first();
   let f_name_current = await function_current_get();
   let imported_fn = await function_import(apply_fn_name);
-  function lambda() {}
+  function lambda(ast) {
+    imported_fn;
+  }
   let output = await function_transform(f_name_current, lambda);
   let result = await function_run(apply_fn_name, [r]);
   let r3 = await function_current_selects_on_previous(r, result);
