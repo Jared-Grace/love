@@ -1,3 +1,4 @@
+import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
 import { js_statement_if_test_set } from "../../../love/public/src/js_statement_if_test_set.mjs";
 import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
@@ -16,8 +17,8 @@ export async function js_if_else_if_combine(ast) {
     let node = property_get(v, "node");
     let stack1 = list_get_end_1(stack);
     async function lambda3() {
-      let consequent2 = property_get(node, "consequent");
-      let consequent = property_get(stack1, "consequent");
+      let consequent2 = js_statement_if_consequent_get(node);
+      let consequent = js_statement_if_consequent_get(stack1);
       let eq = await equal_by_async(consequent, consequent2, js_unparse);
       if (eq) {
         let test = js_statement_if_test_get(node);
