@@ -1,3 +1,4 @@
+import { function_name_to_part_replace_last_3 } from "../../../love/public/src/function_name_to_part_replace_last_3.mjs";
 import { function_name_to_part_replace_last } from "../../../love/public/src/function_name_to_part_replace_last.mjs";
 import { function_name_parts_swap_end } from "../../../love/public/src/function_name_parts_swap_end.mjs";
 import { function_name_to_part_replace_last_2 } from "../../../love/public/src/function_name_to_part_replace_last_2.mjs";
@@ -18,6 +19,7 @@ export async function function_name_new_get_generic(f_name_old, plugin_fn) {
     t: text_replace,
     1: function_name_to_part_replace_last,
     2: function_name_to_part_replace_last_2,
+    2: function_name_to_part_replace_last_3,
   };
   dictionary_functions_to_names(overrides);
   plugin_fn = property_exists_if_get(overrides, plugin_fn);
