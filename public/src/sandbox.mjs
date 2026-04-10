@@ -1,3 +1,4 @@
+import { js_statement_delete } from "../../../love/public/src/js_statement_delete.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_bible_chapter_verse_open } from "../../../love/public/src/app_bible_chapter_verse_open.mjs";
 import { js_statement_if_return_add } from "../../../love/public/src/js_statement_if_return_add.mjs";
@@ -18,6 +19,7 @@ export async function sandbox() {
     js_statement_find_call_named.name,
     app_bible_chapter_verse_open.name,
   );
+  await function_current_selects_apply(js_statement_delete.name);
   return r;
   ("below is functionality that has been used in the past");
   await function_current_selects_apply(js_statement_if_return_add.name);
