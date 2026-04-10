@@ -1,3 +1,4 @@
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { function_aliases_search } from "../../../love/public/src/function_aliases_search.mjs";
 import { function_alias_delete } from "../../../love/public/src/function_alias_delete.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -15,7 +16,8 @@ export async function function_delete(f_names_comma) {
     assert(exists);
     let f_path = property_get(u, "f_path");
     await file_delete(f_path);
-    let result = await function_aliases_search(search);
+    let result = await function_aliases_search(f_name);
+    let exists2 = property_exists(object, property_name);
     await function_alias_delete(alias_old);
   }
   await list_map_unordered_async(f_names, lambda);
