@@ -2,10 +2,10 @@ import { js_flo_body_add_first } from "../../../love/public/src/js_flo_body_add_
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { function_transform_current_fn } from "../../../love/public/src/function_transform_current_fn.mjs";
 export async function function_transform_current_call_add_first(code_argument) {
-  let expression = js_parse_expression(code_argument);
   let r2 = js_flo_body_add_first_curried_right(expression);
   function lambda(ast) {
-    js_flo_body_add_first(ast2, item);
+    let expression = js_parse_expression(code_argument);
+    js_flo_body_add_first(ast, expression);
   }
   let r = await function_transform_current_fn(lambda);
   return r;
