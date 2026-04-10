@@ -23,7 +23,7 @@ export async function sandbox() {
   await function_current_set(f_name);
   await function_node_select_args(
     js_function_node_find_named.name,
-    property_exists_not.name,
+    lambda3.name,
   );
   return;
   ("below is functionality that has been used in the past");
