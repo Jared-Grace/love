@@ -21,6 +21,7 @@ export function js_auto_transforms() {
   let transforms = [
     js_bang_to_not,
     js_await_add,
+    js_dollar,
     js_arrow_blockify,
     js_if_blockify,
     js_arrow_to_function,
@@ -31,7 +32,6 @@ export function js_auto_transforms() {
     js_return_atomize,
     js_call_fill,
     js_atomize_function,
-    js_dollar,
     js_outside_move,
     js_atomize,
     js_assign_combine,
