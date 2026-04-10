@@ -11,7 +11,7 @@ export async function data_identifiers_search_multiple(ids_comma) {
   let waited = await list_map_unordered_async(ids, data_identifiers_search);
   let mapped = list_map(waited, properties_get);
   let i = list_intersect_multiple(mapped);
-  let first = list_first(list2);
+  let first = list_first(waited);
   function lambda(item2v) {}
   let dictionary = list_to_dictionary_value(list, lambda);
   return r;
