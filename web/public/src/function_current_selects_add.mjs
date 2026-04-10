@@ -1,9 +1,4 @@
-import { function_current_ast } from "../../../love/public/src/function_current_ast.mjs";
-import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
-import { js_unparse_or_self_multiple } from "../../../love/public/src/js_unparse_or_self_multiple.mjs";
-import { js_visit_id_to_node_or_id_multiple } from "../../../love/public/src/js_visit_id_to_node_or_id_multiple.mjs";
-import { data_transform } from "../../../love/public/src/data_transform.mjs";
-import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
+import { function_current_selects_on_previous } from "../../../love/public/src/function_current_selects_on_previous.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export async function function_current_selects_add(item_to_add, on_previous) {
   async function lambda(previous) {
@@ -11,20 +6,6 @@ export async function function_current_selects_add(item_to_add, on_previous) {
     on_previous(previous);
     return previous;
   }
-  let ast = await function_current_ast();
-  let d_path = user_data_path();
-  let value = await data_transform(
-    "function_current_selects",
-    [],
-    lambda,
-    d_path,
-  );
-  let selected = js_visit_id_to_node_or_id_multiple(value, ast);
-  let selected_code = js_unparse_or_self_multiple(selected);
-  let f_name_current = await function_current_get();
-  let r = {
-    f_name_current,
-    selected_code,
-  };
+  let r = await function_current_selects_on_previous(lambda);
   return r;
 }
