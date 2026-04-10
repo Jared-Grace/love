@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { function_aliases_search } from "../../../love/public/src/function_aliases_search.mjs";
 import { function_alias_delete } from "../../../love/public/src/function_alias_delete.mjs";
@@ -19,7 +20,9 @@ export async function function_delete(f_names_comma) {
     let result = await function_aliases_search(f_name);
     let exists2 = property_exists(result, f_name);
     if (exists2) {
-      let value = property_get(object, property_name);
+      let value = property_get(result, f_name);
+      async function lambda2(item) {}
+      await each_async(list, lambda2);
       await function_alias_delete(alias_old);
     }
   }
