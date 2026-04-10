@@ -36,7 +36,12 @@ export async function js_ternary_replace(ast) {
     let node = property_get(v, "node");
     let alternate = js_statement_if_alternate_get(node);
     let consequent = js_statement_if_consequent_get(node);
-    const list = [alternate, consequent];
+    const list = [
+      js_statement_if_alternate_get,
+      js_statement_if_consequent_get,
+    ];
+    function lambda2(item) {}
+    let mapped3 = list_map(list2, lambda2);
     let bs = list_all(list, js_block_statement_is);
     if (not(bs)) {
       return false;
