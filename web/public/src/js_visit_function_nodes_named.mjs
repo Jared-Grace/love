@@ -2,7 +2,7 @@ import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_i
 import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_types_function } from "../../../love/public/src/js_visit_types_function.mjs";
-export function js_visit_types_function_named(ast, lambda$v, name) {
+export function js_visit_function_nodes_named(ast, lambda$v, name) {
   function lambda(v) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
