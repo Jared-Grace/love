@@ -2,7 +2,7 @@ import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
-import { js_types_function } from "../../../love/public/src/js_types_function.mjs";
+import { js_types_function_node } from "../../../love/public/src/js_types_function_node.mjs";
 import { js_stack_filtered_multiple_each } from "../../../love/public/src/js_stack_filtered_multiple_each.mjs";
 import { js_stack_filtered_each } from "../../../love/public/src/js_stack_filtered_each.mjs";
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
@@ -63,7 +63,7 @@ export function js_identifier_defineds(v) {
       }
       each(bs_list, lambda2);
     }
-    let types = js_types_function();
+    let types = js_types_function_node();
     function function_type_add(item2, f_type) {
       if (js_node_type_is(item2, f_type)) {
         let id2 = property_get(item2, "id");
