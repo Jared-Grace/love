@@ -7,8 +7,8 @@ import { function_import_unalias } from "../../../love/public/src/function_impor
 export async function function_transform_current_args(
   f_name_transformer_args_comma,
 ) {
-  let split = text_split_comma_dot(t);
-  let fr = list_first_remaining(f_name_transformer_args_comma);
+  let split = text_split_comma_dot(f_name_transformer_args_comma);
+  let fr = list_first_remaining(split);
   let remaining = property_get(fr, "remaining");
   let f_name_transformer = property_get(fr, "first");
   let args = text_split_comma_dot(args_comma);
