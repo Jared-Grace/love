@@ -6,10 +6,8 @@ import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
-import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 export async function js_atomize(ast) {
-  let existing_ids = js_identifiers_names(ast);
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
