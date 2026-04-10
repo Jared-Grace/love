@@ -7,9 +7,10 @@ export function js_visit_types_function_named(ast, lambda$v, name) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
     function lambda3() {
-      let name2 = property_get(id, "name");
-      let eq2 = equal(left, name);
+      let actual = property_get(id, "name");
+      let eq2 = equal(actual, name);
       if (eq2) {
+        lambda$v;
       }
     }
     js_identifier_is_if(id, lambda3);
