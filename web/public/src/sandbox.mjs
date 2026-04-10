@@ -1,3 +1,4 @@
+import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { function_source_remove } from "../../../love/public/src/function_source_remove.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { function_transform_current_call_add_first } from "../../../love/public/src/function_transform_current_call_add_first.mjs";
@@ -17,9 +18,7 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
-  await function_transform_current_call_add_first(
-    app_bible_chapter_set_default.name,
-  );
+  await function_transform_current_call_add_first(html_hash_get.name);
   return;
   ("below is functionality that has been used in the past");
   await function_source_remove(f_name, "2");
