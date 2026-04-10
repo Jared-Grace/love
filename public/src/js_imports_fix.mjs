@@ -1,3 +1,4 @@
+import { js_imports_paths_fix } from "../../../love/public/src/js_imports_paths_fix.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -13,4 +14,5 @@ export async function js_imports_fix(ast) {
   each(unuseds, lambda);
   let v = await js_imports_missing_add(ast);
   return v;
+  await js_imports_paths_fix(ast2);
 }
