@@ -15,7 +15,7 @@ export async function function_name_new_get_generic(f_name_old, plugin_fn) {
   let overrides = {
     c: function_name_combine,
     d: function_name_parts_delete,
-    dl: function_name_part_last_delete,
+    l: function_name_part_last_delete,
     r: lambda_right,
     s: function_name_parts_swap_end,
     t: text_replace,
