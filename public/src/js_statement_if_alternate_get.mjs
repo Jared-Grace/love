@@ -2,6 +2,6 @@ import { js_statement_if_is_assert } from "../../../love/public/src/js_statement
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_statement_if_alternate_get(statement_if) {
   js_statement_if_is_assert(statement_if);
-  let consequent = property_get(statement_if, "consequent");
+  let consequent = property_get(statement_if, "alternate");
   return consequent;
 }
