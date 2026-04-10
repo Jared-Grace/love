@@ -9,6 +9,7 @@ export async function data_identifiers_search_generic(fn, ids_comma) {
   let r = await functions_names_paths();
   let r2 = property_get_curried(r);
   let ids = text_split_dot_comma(ids_comma);
+  let r3 = property_get_curried(object);
   function lambda(id) {
     let list = property_get(identifiers, id);
   }
