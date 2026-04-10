@@ -1,3 +1,4 @@
+import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
@@ -10,15 +11,16 @@ import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 export async function js_if_else_if_combine(ast) {
   async function lambda(v) {
-    let { node, stack } = v;
+    let stack = property_get(v, "stack");
+    let node = property_get(v, "node");
     let stack1 = list_get_end_1(stack);
     async function lambda3() {
       let consequent2 = property_get(node, "consequent");
       let consequent = property_get(stack1, "consequent");
       let eq = await equal_by_async(consequent, consequent2, js_unparse);
       if (eq) {
-        let test = property_get(node, "test");
-        let test2 = property_get(stack1, "test");
+        let test = js_statement_if_test_get(node);
+        let test2 = js_statement_if_test_get(stack1);
         let code_expression = js_code_or("a", "a");
         let expression = js_parse_expression(code_expression);
         js_left_right_set(expression, test2, test);
