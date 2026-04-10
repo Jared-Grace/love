@@ -21,7 +21,11 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
-  await function_node_select_args(js_function_node_find_named.name, "lambda3");
+  let r = await function_node_select_args(
+    js_function_node_find_named.name,
+    "lambda3",
+  );
+  return r;
   return;
   ("below is functionality that has been used in the past");
   await function_transform_current(
