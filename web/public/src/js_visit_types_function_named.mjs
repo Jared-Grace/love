@@ -10,7 +10,7 @@ export function js_visit_types_function_named(ast, lambda$v, name) {
       let actual = property_get(id, "name");
       let eq2 = equal(actual, name);
       if (eq2) {
-        lambda$v;
+        lambda$v(v);
       }
     }
     js_identifier_is_if(id, lambda3);
