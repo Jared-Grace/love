@@ -6,7 +6,7 @@ import { data_identifiers_search } from "../../../love/public/src/data_identifie
 export async function data_identifiers_search_unalias(ids_comma) {
   let split = text_split_comma_dot(ids_comma);
   let mapped = list_map(split, function_name_unalias_only);
-  let result = list_join_comma(list);
-  let r = await data_identifiers_search(ids_comma);
+  let result = list_join_comma(mapped);
+  let r = await data_identifiers_search(result);
   return r;
 }
