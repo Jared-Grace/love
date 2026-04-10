@@ -1,3 +1,4 @@
+import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
 import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -25,7 +26,7 @@ export function app_a_if_statement(a) {
   }
   app_a_parenthesis_wrap(parent, lambda19);
   html_span_space(parent);
-  let consequent = property_get(node, "consequent");
+  let consequent = js_statement_if_consequent_get(node);
   app_a_function_node_child(a, consequent);
   let alternate = property_get(node, "alternate");
   let nn = null_not_is(alternate);
