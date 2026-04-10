@@ -7,7 +7,5 @@ export async function js_statement_find_call_named(ast, f_name) {
   let only = js_call_named(ast, unaliased);
   let r = js_block_find(only);
   let item = property_get(r, "item");
-  let index = property_get(r, "index");
-  let body = property_get(r, "body");
-  return only;
+  return item;
 }
