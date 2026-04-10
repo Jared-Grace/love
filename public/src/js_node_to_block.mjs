@@ -4,6 +4,6 @@ import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.
 export function js_node_to_block(ast, node) {
   let v = js_node_to_visitor(ast, node);
   let stack = property_get(v, "stack");
-  let r = js_block_find(stack);
-  return r;
+  let f = js_block_find(stack);
+  return f;
 }
