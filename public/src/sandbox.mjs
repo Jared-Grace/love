@@ -17,7 +17,8 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_verses.name);
-  await function_source_replace(f_name, from, to);
+  let from = "2";
+  await function_source_replace(app_bible_verses.name, from, "");
   return r;
   ("below is functionality that has been used in the past");
   let r = await function_node_select_args(
