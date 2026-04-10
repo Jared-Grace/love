@@ -1,7 +1,7 @@
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_visit_types_function } from "../../../love/public/src/js_visit_types_function.mjs";
+import { js_visit_function_nodes } from "../../../love/public/src/js_visit_function_nodes.mjs";
 export function js_visit_function_nodes_named(ast, lambda$v, name) {
   function lambda(v) {
     let node = property_get(v, "node");
@@ -15,6 +15,6 @@ export function js_visit_function_nodes_named(ast, lambda$v, name) {
     }
     js_identifier_is_if(id, lambda3);
   }
-  let r = js_visit_types_function(ast, lambda);
+  let r = js_visit_function_nodes(ast, lambda);
   return r;
 }
