@@ -1,3 +1,4 @@
+import { js_function_node_find_named } from "../../../love/public/src/js_function_node_find_named.mjs";
 import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
 import { js_call_add_first } from "../../../love/public/src/js_call_add_first.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
@@ -21,7 +22,7 @@ export async function sandbox() {
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
   await function_node_select_args(
-    js_statement_find_call_named.name,
+    js_function_node_find_named.name,
     property_exists_not.name,
   );
   return;
