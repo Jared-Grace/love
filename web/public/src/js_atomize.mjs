@@ -24,7 +24,7 @@ export async function js_atomize(ast) {
     if (list_is(list_possible)) {
       ("this list could be a block body or an argument list of a fn call or an array");
       let variable_name = js_node_atomize_name();
-      await js_node_atomize(ast, existing_ids, v, variable_name, offset);
+      await js_node_atomize(ast, v, variable_name, offset);
     }
     return;
   }
