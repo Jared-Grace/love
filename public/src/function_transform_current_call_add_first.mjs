@@ -10,7 +10,7 @@ export async function function_transform_current_call_add_first(code_argument) {
   async function lambda(ast) {
     let expression = js_parse_expression(code_argument);
     js_flo_body_add_first(ast, expression);
-    let v = js_node_to_visitor(ast2, node_search);
+    let visitor = js_node_to_visitor(ast, expression);
     await js_call_fill_inner(ast, visitor, functions, visited);
   }
   let r = await function_transform_current_fn(lambda);
