@@ -1,7 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
-import { property_exists } from "../../../love/public/src/property_exists.mjs";
-import { function_aliases_search } from "../../../love/public/src/function_aliases_search.mjs";
-import { function_alias_delete } from "../../../love/public/src/function_alias_delete.mjs";
+import { function_aliases_delete } from "../../../love/public/src/function_aliases_delete.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -17,15 +14,7 @@ export async function function_delete(f_names_comma) {
     assert(exists);
     let f_path = property_get(u, "f_path");
     await file_delete(f_path);
-    let result = await function_aliases_search(f_name);
-    let exists2 = property_exists(result, f_name);
-    if (exists2) {
-      let aliases_old = property_get(result, f_name);
-      async function lambda2(alias_old) {
-        await function_alias_delete(alias_old);
-      }
-      await each_async(aliases_old, lambda2);
-    }
+    await function_aliases_delete(f_name);
   }
   await list_map_unordered_async(f_names, lambda);
   return;
