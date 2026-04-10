@@ -4,13 +4,13 @@ import { js_visit_id_to_node_or_id_multiple } from "../../../love/public/src/js_
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
 import { function_current_ast } from "../../../love/public/src/function_current_ast.mjs";
-export async function function_current_selects_on_previous(lambda) {
+export async function function_current_selects_on_previous(on_previous) {
   let ast = await function_current_ast();
   let d_path = user_data_path();
   let value = await data_transform(
     "function_current_selects",
     [],
-    lambda,
+    on_previous,
     d_path,
   );
   let selected = js_visit_id_to_node_or_id_multiple(value, ast);
