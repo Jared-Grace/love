@@ -13,6 +13,6 @@ export async function marker_call_atomize(input) {
     let existing = js_identifiers(ast);
     let v_match = js_visit_match(ast, replaced);
     let variable_name = js_node_atomize_name();
-    await js_node_atomize(ast, existing, v_match, variable_name, 0);
+    await js_node_atomize(ast, v_match, variable_name, 0);
   }
 }
