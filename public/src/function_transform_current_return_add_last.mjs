@@ -4,6 +4,6 @@ export async function function_transform_current_return_add_last(
   code_argument,
 ) {
   let r2 = js_flo_body_add_return_argument_curried_right(e);
-  let r = await function_transform_current_fn(lambda$ast);
+  let r = await function_transform_current_fn(r2);
   return r;
 }
