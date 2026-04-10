@@ -11,7 +11,7 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_chapter_set_default.name);
-  let r5 = await function_transform_current_return_add_last(f_name);
+  let r5 = await function_transform_current_return_add_last("n");
   return;
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
