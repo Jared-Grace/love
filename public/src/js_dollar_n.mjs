@@ -1,5 +1,5 @@
+import { js_statement_if_test_set } from "../../../love/public/src/js_statement_if_test_set.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_swap } from "../../../love/public/src/property_swap.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -28,7 +28,7 @@ export function js_dollar_n({
     if (equal(name, not.name)) {
       let arguments2 = property_get(test, "arguments");
       let only = list_single(arguments2);
-      property_set(n, "test", only);
+      js_statement_if_test_set(n, only);
       const p1 = "alternate";
       const p2 = "consequent";
       property_swap(n, p1, p2);
