@@ -2,7 +2,7 @@ import { data_prompts_count_display } from "../../../love/public/src/data_prompt
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export async function data_prompts_display() {
   arguments_assert(arguments, 0);
-  let offset = 25;
+  let offset = 50;
   let result = await data_prompts_count_display(offset);
   return result;
 }
