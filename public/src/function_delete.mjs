@@ -8,9 +8,9 @@ import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_names_comma) {
   let f_names = text_split_comma_dot(f_names_comma);
   async function lambda(f_name) {
-    const v = await function_unalias_exists(f_name);
-    let exists = property_get(v, "exists");
-    let f_path = property_get(v, "f_path");
+    const u = await function_unalias_exists(f_name);
+    let exists = property_get(u, "exists");
+    let f_path = property_get(u, "f_path");
     assert(exists);
     await file_delete(f_path);
   }
