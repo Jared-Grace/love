@@ -5,7 +5,7 @@ export async function js_call_fill(ast) {
   let functions = await data_functions_get();
   let visited = [];
   async function lambda(v) {
-    await js_call_fill_inner(v, ast, functions, visited);
+    await js_call_fill_inner(ast, v, functions, visited);
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
