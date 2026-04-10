@@ -20,6 +20,7 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
+  
   await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
@@ -38,6 +39,10 @@ export async function sandbox() {
   await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
+  );
+  await function_transform_current_args(
+    js_flo_body_add_return_argument_from_code.name,
+    "n",
   );
   await function_current_selects_apply(js_statement_if_return_add.name);
   await function_current_selects_apply(js_statement_wrap_if.name);
