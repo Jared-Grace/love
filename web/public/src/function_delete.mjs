@@ -21,9 +21,10 @@ export async function function_delete(f_names_comma) {
     let exists2 = property_exists(result, f_name);
     if (exists2) {
       let value = property_get(result, f_name);
-      async function lambda2(item) {}
+      async function lambda2(item) {
+        await function_alias_delete(alias_old);
+      }
       await each_async(list, lambda2);
-      await function_alias_delete(alias_old);
     }
   }
   await list_map_unordered_async(f_names, lambda);
