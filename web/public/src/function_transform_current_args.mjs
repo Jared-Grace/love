@@ -7,9 +7,9 @@ export async function function_transform_current_args(
 ) {
   let imported_fn = await function_import_unalias(f_name_transformer);
   let f_name = await function_current_get();
-  function lambda(ast) {
-    let r2 = imported_fn(...args);
-    return r2;
+  async function lambda(ast) {
+    let result = await imported_fn(...args);
+    return result;
   }
   await function_transform(f_name, lambda);
   return r;
