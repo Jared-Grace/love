@@ -9,7 +9,7 @@ export function js_visit_types_function_named(ast, lambda$v, name) {
     function lambda3() {
       let name2 = property_get(id, "name");
       let eq2 = equal(left, name);
-      if (ideq2) {
+      if (eq2) {
       }
     }
     js_identifier_is_if(id, lambda3);
