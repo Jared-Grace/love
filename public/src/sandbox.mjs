@@ -27,13 +27,13 @@ export async function sandbox() {
   ("below is functionality that has been used in the past");
   await function_transform_current_call_add_first(html_hash_get.name);
   await function_source_remove(f_name, "2");
-  let r = await function_node_select_args(
+  await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
   );
   await function_current_selects_apply(js_statement_if_return_add.name);
   await function_current_selects_apply(js_statement_wrap_if.name);
   await function_current_selects_apply(js_statement_duplicate.name);
-  let r4 = await function_node_select_nested(js_call_callee_name.name);
-  let r5 = await function_transform_current_return_add_last("n");
+  await function_node_select_nested(js_call_callee_name.name);
+  await function_transform_current_return_add_last("n");
 }
