@@ -17,7 +17,7 @@ export async function sandbox() {
     js_statement_find_call_named.name,
     app_bible_chapter_set_default.name,
   );
-  return;
+  return r;
   ("below is functionality that has been used in the past");
   await function_current_selects_apply(js_statement_wrap_if.name);
   await function_current_selects_apply(js_statement_duplicate.name);
