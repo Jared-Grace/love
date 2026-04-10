@@ -1,3 +1,4 @@
+import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
 import { js_types_function_includes_node } from "../../../love/public/src/js_types_function_includes_node.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
@@ -23,7 +24,7 @@ export async function marker_enter() {
       } else {
         let nt = js_node_type(next);
         if (nt === "IfStatement") {
-          let consequent = property_get(next, "consequent");
+          let consequent = js_statement_if_consequent_get(next);
           body = property_get(consequent, "body");
         }
       }
