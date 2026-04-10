@@ -6,8 +6,8 @@ import { function_name_unalias_only } from "../../../love/public/src/function_na
 export async function js_statement_find_call_named(ast, f_name) {
   let unaliased = await function_name_unalias_only(f_name);
   let only = js_call_named(ast, unaliased);
-  let v = js_node_to_visitor(ast2, node_search);
-  let r = js_block_find(only);
+  let v = js_node_to_visitor(ast, only);
+  let r = js_block_find(v);
   let item = property_get(r, "item");
   return item;
 }
