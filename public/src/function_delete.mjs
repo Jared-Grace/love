@@ -10,8 +10,8 @@ export async function function_delete(f_names_comma) {
   async function lambda(f_name) {
     const u = await function_unalias_exists(f_name);
     let exists = property_get(u, "exists");
-    let f_path = property_get(u, "f_path");
     assert(exists);
+    let f_path = property_get(u, "f_path");
     await file_delete(f_path);
   }
   await list_map_unordered_async(f_names, lambda);
