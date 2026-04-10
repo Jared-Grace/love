@@ -5,9 +5,9 @@ import { functions_names_includes } from "../../../love/public/src/functions_nam
 import { function_name_unalias_only } from "../../../love/public/src/function_name_unalias_only.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function js_call_fill_inner(ast, v, functions, visited) {
-  let stack = property_get(v, "stack");
-  let node = property_get(v, "node");
+export async function js_call_fill_inner(ast, visitor, functions, visited) {
+  let stack = property_get(visitor, "stack");
+  let node = property_get(visitor, "node");
   let expression = property_get(node, "expression");
   if (js_identifier_is(expression)) {
     let name = property_get(expression, "name");
