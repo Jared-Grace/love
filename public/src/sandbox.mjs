@@ -19,7 +19,10 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
-  let r2 = await function_transform_current_identifier_rename("h", "hash");
+  let r2 = await function_transform_current_identifier_rename(
+    "html_hash_get",
+    "html_hash_object_get",
+  );
   return;
   ("below is functionality that has been used in the past");
   await function_transform_current_call_add_first(html_hash_get.name);
