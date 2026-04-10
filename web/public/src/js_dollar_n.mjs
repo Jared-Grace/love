@@ -1,7 +1,7 @@
+import { js_statement_if_swap } from "../../../love/public/src/js_statement_if_swap.mjs";
 import { js_statement_if_test_set } from "../../../love/public/src/js_statement_if_test_set.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { property_swap } from "../../../love/public/src/property_swap.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
@@ -29,9 +29,7 @@ export function js_dollar_n({
       let arguments2 = property_get(test, "arguments");
       let only = list_single(arguments2);
       js_statement_if_test_set(n, only);
-      const p1 = "alternate";
-      const p2 = "consequent";
-      property_swap(n, p1, p2);
+      js_statement_if_swap(n);
       list_remove(stack2, stack1);
     }
   }
