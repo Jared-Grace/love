@@ -1,4 +1,3 @@
-import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
