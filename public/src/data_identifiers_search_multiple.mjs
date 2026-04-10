@@ -8,7 +8,7 @@ export async function data_identifiers_search_multiple(ids_comma) {
   let ids = text_split_dot_comma(ids_comma);
   let waited = await list_map_unordered_async(ids, data_identifiers_search);
   let properties = properties_get(obj);
-  let mapped = list_map(list2, properties_get);
+  let mapped = list_map(properties, properties_get);
   let i = list_intersect_multiple(list);
   return r;
 }
