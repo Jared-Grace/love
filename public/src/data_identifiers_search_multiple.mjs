@@ -13,8 +13,7 @@ export async function data_identifiers_search_multiple(ids_comma) {
   let mapped = list_map(waited, properties_get);
   let i = list_intersect_multiple(mapped);
   let first = list_first(waited);
-  let r2 = property_get_curried(object);
-  function lambda(item2v) {}
-  let dictionary = list_to_dictionary_value(list, lambda);
-  return r;
+  let r2 = property_get_curried(first);
+  let dictionary = list_to_dictionary_value(i, r2);
+  return dictionary;
 }
