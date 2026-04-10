@@ -13,7 +13,6 @@ import { html_button_list_centered } from "../../../love/public/src/html_button_
 export async function app_bible_verses(context) {
   let n = property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_verse_open(context, "JHN01", "1");
     return;
   }
   let r = await app_bible_chapters_before(context);
