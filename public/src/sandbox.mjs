@@ -17,15 +17,15 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
+  await function_transform_current_call_add_first(
+    app_bible_chapter_set_default.name,
+  );
   return;
   ("below is functionality that has been used in the past");
   await function_source_remove(f_name, "2");
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
-  );
-  await function_transform_current_call_add_first(
-    app_bible_chapter_set_default.name,
   );
   await function_current_selects_apply(js_statement_if_return_add.name);
   await function_current_selects_apply(js_statement_wrap_if.name);
