@@ -19,12 +19,16 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_bible_chapter_set_default.name;
   await function_current_set(f_name);
+  await function_node_select_args(
+    js_statement_find_call_named.name,
+    property_exists_not.name,
+  );
+  return;
+  ("below is functionality that has been used in the past");
   let r2 = await function_transform_current_identifier_rename(
     "html_hash_get",
     "html_hash_object_get",
   );
-  return;
-  ("below is functionality that has been used in the past");
   await function_transform_current_call_add_first(html_hash_get.name);
   await function_source_remove(f_name, "2");
   await function_node_select_args(
