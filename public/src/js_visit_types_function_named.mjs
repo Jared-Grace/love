@@ -6,11 +6,13 @@ export function js_visit_types_function_named(ast, lambda$v, name) {
   function lambda(v) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
-    let eq2 = equal(left, name);
-    function lambda3() {}
-    js_identifier_is_if(node2, lambda3);
-    if (ideq2) {
+    function lambda3() {
+      let name2 = property_get(id, "name");
+      let eq2 = equal(left, name);
+      if (ideq2) {
+      }
     }
+    js_identifier_is_if(id, lambda3);
   }
   let r = js_visit_types_function(ast, lambda);
   return r;
