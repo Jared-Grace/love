@@ -16,9 +16,10 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
-  await function_current_set(app_bible_verses.name);
+  const f_name = app_bible_verses.name;
+  await function_current_set(f_name);
   let from = "2";
-  await function_source_replace(app_bible_verses.name, from, "");
+  await function_source_replace(f_name, from, "");
   return r;
   ("below is functionality that has been used in the past");
   let r = await function_node_select_args(
