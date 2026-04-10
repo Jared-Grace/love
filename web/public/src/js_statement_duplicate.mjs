@@ -1,6 +1,5 @@
 import { js_visit_declarators_uniqueify } from "../../../love/public/src/js_visit_declarators_uniqueify.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
