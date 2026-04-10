@@ -15,13 +15,13 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(app_bible_verses.name);
+  await function_current_selects_apply(js_statement_delete.name);
+  return r;
+  ("below is functionality that has been used in the past");
   let r = await function_node_select_args(
     js_statement_find_call_named.name,
     property_exists_not.name,
   );
-  await function_current_selects_apply(js_statement_delete.name);
-  return r;
-  ("below is functionality that has been used in the past");
   await function_current_selects_apply(js_statement_if_return_add.name);
   await function_current_selects_apply(js_statement_wrap_if.name);
   await function_current_selects_apply(js_statement_duplicate.name);
