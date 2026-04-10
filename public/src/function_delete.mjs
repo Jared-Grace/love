@@ -19,6 +19,7 @@ export async function function_delete(f_names_comma) {
     let result = await function_aliases_search(f_name);
     let exists2 = property_exists(result, f_name);
     if (exists2) {
+      let value = property_get(object, property_name);
       await function_alias_delete(alias_old);
     }
   }
