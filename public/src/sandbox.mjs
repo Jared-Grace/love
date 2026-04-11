@@ -17,7 +17,7 @@ import { function_node_select_args } from "../../../love/public/src/function_nod
 import { js_statement_find_call_named } from "../../../love/public/src/js_statement_find_call_named.mjs";
 import { function_current_selects_apply } from "../../../love/public/src/function_current_selects_apply.mjs";
 import { function_current_set } from "../../../love/public/src/function_current_set.mjs";
-import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
+import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
@@ -47,5 +47,5 @@ export async function sandbox() {
     [js_statement_wrap_if.name],
     [js_statement_duplicate.name]);
   await function_source_remove(f_name, "2");
-  await function_node_select_nested(js_call_callee_name.name);
+  await function_node_select_nested(js_call_callee_name_try.name);
 }
