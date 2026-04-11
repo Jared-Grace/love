@@ -1,5 +1,4 @@
 import { set_on_first } from "../../../love/public/src/set_on_first.mjs";
-import { set_add } from "../../../love/public/src/set_add.mjs";
 import { object_properties_equal } from "../../../love/public/src/object_properties_equal.mjs";
 import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -18,7 +17,7 @@ export function js_node_to_visitors(ast, node_search) {
           if (type_is) {
             let eq = object_properties_equal(e1, ["imported", "imported"]);
             if (eq) {
-              set_add(s, node);
+              let first = sa(node);
             }
           }
           la(v);
