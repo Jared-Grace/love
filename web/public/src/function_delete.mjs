@@ -8,6 +8,7 @@ import { data_files_update } from "../../../love/public/src/data_files_update.mj
 import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_names_comma) {
   let f_names = text_split_comma_dot(f_names_comma);
+  await list_map_unordered_async(f_names, lambda);
   async function lambda(f_name) {
     const u = await function_unalias_exists(f_name);
     let exists = property_get(u, "exists");
@@ -16,7 +17,6 @@ export async function function_delete(f_names_comma) {
     await file_delete(f_path);
     await function_aliases_delete(f_name);
   }
-  await list_map_unordered_async(f_names, lambda);
   return;
   await data_files_update();
 }
