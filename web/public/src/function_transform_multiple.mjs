@@ -8,5 +8,4 @@ export async function function_transform_multiple(
     await function_transform_single(f_name_transformer_args_comma, f_name);
   }
   await text_split_comma_dot_map_unordered(f_names_comma, lambda3);
-  return r;
 }
