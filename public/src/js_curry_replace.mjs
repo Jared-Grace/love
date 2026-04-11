@@ -13,8 +13,8 @@ export function js_curry_replace(ast) {
     let body_block = js_function_declaration_to_block_body(node);
     let s1 = list_size_1(body_block);
     if (s1) {
-      let only = list_single(list2);
-      let type_is3 = js_expression_statement_is(item);
+      let only = list_single(body_block);
+      let esi = js_expression_statement_is(only);
     }
     log(js_curry_replace.name, {
       node,
