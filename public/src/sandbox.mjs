@@ -24,14 +24,14 @@ export async function sandbox() {
   await function_current_selects_empty();
   const f_name = app_gloss_bible_home_generic.name;
   await function_current_set(f_name);
-  let r = await function_node_select_args(
-    js_function_node_find_named_node.name,
-    "on_passage",
-  );
   await function_current_selects_apply(js_function_node_unwrap.name);
   return r;
   await function_node_select_args(
     js_statements_with_identifiers_named.name,
+    "on_passage",
+  );
+  let r = await function_node_select_args(
+    js_function_node_find_named_node.name,
     "on_passage",
   );
   await function_current_selects_apply(js_statement_delete.name);
