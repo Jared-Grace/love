@@ -5,7 +5,7 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
+import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
@@ -22,7 +22,7 @@ export function js_dollar_n({
   let n = list_next(stack2, stack1);
   let test = property_get(n, "test");
   function lambda2() {
-    let name = js_call_callee_name(test);
+    let name = js_call_callee_name_try(test);
     log(js_dollar_n.name, {
       name,
     });
