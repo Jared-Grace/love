@@ -36,12 +36,12 @@ export async function sandbox() {
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
     [js_call_add_first.name, html_hash_get.name],
     [js_flo_body_add_return_argument_from_code.name, "n"]);
-  await function_source_remove(f_name, "2");
   (function_current_selects_apply,
     [js_function_node_unwrap.name],
     [js_statement_delete.name],
     [js_statement_if_return_add.name],
     [js_statement_wrap_if.name],
     [js_statement_duplicate.name]);
+  await function_source_remove(f_name, "2");
   await function_node_select_nested(js_call_callee_name.name);
 }
