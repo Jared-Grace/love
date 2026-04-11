@@ -24,11 +24,11 @@ export async function sandbox() {
   await function_current_set(f_name);
   let r = await function_node_select_args(
     js_statements_with_identifiers_named.name,
-    "null_not_is",
+    "on_passage",
   );
+  return r;
   await function_current_selects_apply(js_statement_delete.name);
   return;
-  return r;
   ("below is functionality that has been used in the past");
   await function_transform_current(
     js_identifier_rename.name,
