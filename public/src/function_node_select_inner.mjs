@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_visit_id_or_node_curried } from "../../../love/public/src/js_visit_id_or_node_curried.mjs";
 import { list_ensure } from "../../../love/public/src/list_ensure.mjs";
 import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
@@ -24,7 +25,9 @@ export async function function_node_select_inner(
   let concated = list_concat_single(node, args);
   let n = await function_run(select_fn_name, concated);
   n = list_ensure(n);
-  let r2 = js_visit_id_or_node_curried(ast2);
+  let r2 = js_visit_id_or_node_curried(ast);
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   let item_to_add = js_visit_id_or_node(ast, n);
   let r = await function_current_selects_add(item_to_add, on_previous);
   return r;
