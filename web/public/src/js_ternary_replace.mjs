@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
 import { js_statement_if_alternate_get } from "../../../love/public/src/js_statement_if_alternate_get.mjs";
 import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
@@ -74,7 +75,7 @@ export async function js_ternary_replace(ast) {
     let a = js_assign_default();
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
-    let arguments2 = property_get(e, "arguments");
+    let arguments2 = js_call_arguments_get(e);
     let test = js_statement_if_test_get(node);
     list_add(arguments2, test);
     let rights = list_map_property(ess, "right");
