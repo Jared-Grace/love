@@ -27,8 +27,8 @@ export async function sandbox() {
   await function_current_selects_apply(js_function_node_unwrap.name);
   return r;
   (function_node_select_args,
-    [js_statements_with_identifiers_named.name, "on_passage"],
     [js_function_node_find_named_node.name, "on_passage"],
+    [js_statements_with_identifiers_named.name, "on_passage"],
     [js_statement_find_call_named.name, property_exists_not.name]);
   return;
   ("below is functionality that has been used in the past");
