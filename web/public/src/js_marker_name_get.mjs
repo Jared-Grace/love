@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -29,7 +30,7 @@ export function js_marker_name_get(v) {
   if (name !== marker.name) {
     return null;
   }
-  let arguments2 = property_get(node, "arguments");
+  let arguments2 = js_call_arguments_get(node);
   if (list_empty_is(arguments2)) {
     return null;
   }
