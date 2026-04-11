@@ -10,7 +10,7 @@ export function js_curry_replace(ast) {
     let node = property_get(v, "node");
     let body_block = js_function_declaration_to_block_body(node);
     let s1 = list_size_1(body_block);
-    if (false) {
+    if (s1) {
     }
     log(js_curry_replace.name, {
       node,
