@@ -1,6 +1,5 @@
-import { list_all_equal } from "../../../love/public/src/list_all_equal.mjs";
+import { list_map_all_equal } from "../../../love/public/src/list_map_all_equal.mjs";
 import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -17,8 +16,7 @@ export function js_node_to_visitors(ast, node_search) {
         if (type_is) {
           const properties = ["imported", "imported"];
           let r = property_get_curried(e1);
-          let mapped = list_map(properties, r);
-          let eq = list_all_equal(mapped);
+          let eq = list_map_all_equal(properties, r);
           if (eq) {
           }
         }
