@@ -15,8 +15,9 @@ export function js_node_to_visitors(ast, node_search) {
         let e1 = list_get_end_1(stack);
         let type_is = js_import_specifier_is(e1);
         if (type_is) {
+          const properties = ["imported", "imported"];
           let r = property_get_curried(e1);
-          let mapped = list_map(["imported", "imported"], r);
+          let mapped = list_map(properties, r);
           let eq = list_all_equal(mapped);
           if (eq) {
           }
