@@ -9,5 +9,4 @@ export function promise_not_is_assert(ast) {
     return r;
   }
   assert_json_get(n, lambda2);
-  return n;
 }
