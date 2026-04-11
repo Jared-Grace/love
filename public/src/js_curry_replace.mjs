@@ -1,3 +1,4 @@
+import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -11,6 +12,7 @@ export function js_curry_replace(ast) {
     let body_block = js_function_declaration_to_block_body(node);
     let s1 = list_size_1(body_block);
     if (s1) {
+      let type_is3 = js_expression_statement_is(item);
     }
     log(js_curry_replace.name, {
       node,
