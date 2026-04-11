@@ -29,7 +29,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
@@ -40,7 +39,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
-  html_clear(root);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
