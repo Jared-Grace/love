@@ -6,6 +6,6 @@ export async function function_aliases_to_names(ids_comma) {
     ids_comma,
     function_name_unalias_only,
   );
-  let result = list_join_comma(mapped);
-  return result;
+  let names = list_join_comma(mapped);
+  return names;
 }
