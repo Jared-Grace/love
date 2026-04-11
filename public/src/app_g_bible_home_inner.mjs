@@ -1,4 +1,4 @@
-import { integer_to_try_multiple_max } from "../../../love/public/src/integer_to_try_multiple_max.mjs";
+import { integer_to_try_multiple_max_text_to } from "../../../love/public/src/integer_to_try_multiple_max_text_to.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -6,7 +6,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { text_to } from "../../../love/public/src/text_to.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_g_bible_home_inner(context, download) {
   let downloaded = null;
@@ -22,8 +21,7 @@ export async function app_g_bible_home_inner(context, download) {
       let passages = property_get(downloaded, "passages");
       function lambda2(passage) {
         let verse_numbers = property_get(passage, "verse_numbers");
-        let max = integer_to_try_multiple_max(verse_numbers);
-        let s = text_to(max);
+        let s = integer_to_try_multiple_max_text_to(verse_numbers);
         if (equal(s, verse_number)) {
           let copy = list_copy(verses);
           la({
