@@ -32,10 +32,8 @@ export async function sandbox() {
     [js_statement_find_call_named.name, property_exists_not.name]);
   return;
   ("below is functionality that has been used in the past");
-  await function_transform_current(
-    js_identifier_rename.name,
-    "html_hash_get,html_hash_object_get",
-  );
+  (function_transform_current,
+    [js_identifier_rename.name, "html_hash_get,html_hash_object_get"]);
   await function_transform_current(js_call_add_first.name, html_hash_get.name);
   await function_source_remove(f_name, "2");
   await function_node_select_args(
