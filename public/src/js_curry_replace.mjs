@@ -1,4 +1,4 @@
-import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { js_call_is } from "../../../love/public/src/js_call_is.mjs";
 import { js_identifier_is_multiple } from "../../../love/public/src/js_identifier_is_multiple.mjs";
 import { js_function_declaration_params_get } from "../../../love/public/src/js_function_declaration_params_get.mjs";
 import { js_statement_expression_get } from "../../../love/public/src/js_statement_expression_get.mjs";
@@ -23,7 +23,7 @@ export function js_curry_replace(ast) {
         let params = js_function_declaration_params_get(node);
         let ii = js_identifier_is_multiple(params);
         if (ii) {
-          let type_is = js_node_type_is(node, "CallExpression");
+          let type_is = js_call_is(node);
         }
         let expression = js_statement_expression_get(esi);
       }
