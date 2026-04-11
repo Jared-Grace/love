@@ -18,7 +18,7 @@ export function js_node_to_visitors(ast, node_search) {
         if (type_is) {
           let eq = object_properties_equal(e1, ["imported", "imported"]);
           if (eq) {
-            set_add(found, item);
+            set_add(s, node);
           }
         }
         la(v);
