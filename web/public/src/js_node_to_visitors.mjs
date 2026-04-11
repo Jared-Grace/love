@@ -11,6 +11,8 @@ export function js_node_to_visitors(ast, node_search) {
         let stack = property_get(v, "stack");
         let e1 = list_get_end_1(stack);
         let type_is = js_node_type_is(e1, "ImportSpecifier");
+        if (false) {
+        }
         la(v);
       }
     }
