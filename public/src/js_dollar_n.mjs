@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_statement_if_swap } from "../../../love/public/src/js_statement_if_swap.mjs";
 import { js_statement_if_test_set } from "../../../love/public/src/js_statement_if_test_set.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -26,7 +27,7 @@ export function js_dollar_n({
       name,
     });
     if (equal(name, not.name)) {
-      let arguments2 = property_get(test, "arguments");
+      let arguments2 = js_call_arguments_get(test);
       let only = list_single(arguments2);
       js_statement_if_test_set(n, only);
       js_statement_if_swap(n);
