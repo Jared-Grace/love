@@ -5,6 +5,6 @@ export async function function_current_selects_replace(
   item_to_add,
 ) {
   let r2 = list_remove_curried_right(item_to_remove);
-  let r3 = await function_current_selects_add(item_to_add, r2);
+  let r3 = await function_current_selects_add([item_to_add], r2);
   return r3;
 }
