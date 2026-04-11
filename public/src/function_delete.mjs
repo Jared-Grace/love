@@ -3,7 +3,6 @@ import { function_aliases_delete } from "../../../love/public/src/function_alias
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
-import { data_files_update } from "../../../love/public/src/data_files_update.mjs";
 import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_names_comma) {
   await text_split_comma_dot_map_unordered(f_names_comma, lambda);
@@ -16,5 +15,4 @@ export async function function_delete(f_names_comma) {
     await function_aliases_delete(f_name);
   }
   return;
-  await data_files_update();
 }
