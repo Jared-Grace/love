@@ -41,10 +41,6 @@ export async function app_gloss_bible_home_generic(
     const prop = "p";
     let last = list_last(verses);
     let p = property_get(last, prop);
-    if (null_not_is(next)) {
-      let d = html_div_centered(p);
-      let text3 = emoji_arrow_down();
-    }
     let h = html_hr(p);
     let texts = null;
     if (text_use) {
