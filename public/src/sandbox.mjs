@@ -24,7 +24,7 @@ export async function sandbox() {
   await function_current_set(f_name);
   let r = await function_node_select_args(
     js_statements_with_identifiers_named.name,
-    "lambda3",
+    "null_not_is",
   );
   await function_current_selects_apply(js_statement_delete.name);
   return r;
