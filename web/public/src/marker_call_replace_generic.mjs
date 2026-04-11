@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -22,7 +23,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
       if (expression === null) {
         return;
       }
-      let arguments2 = property_get(expression, "arguments");
+      let arguments2 = js_call_arguments_get(expression);
       let replaced = null;
       if (input === "c") {
         let callee = property_get(expression, "callee");
