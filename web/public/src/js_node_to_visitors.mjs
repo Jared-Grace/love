@@ -18,6 +18,8 @@ export function js_node_to_visitors(ast, node_search) {
           let r = property_get_curried(e1);
           let mapped = list_map(["imported", "imported"], r);
           let eq = list_all_equal(mapped);
+          if (false) {
+          }
         }
         la(v);
       }
