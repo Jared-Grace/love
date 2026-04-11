@@ -1,4 +1,4 @@
-import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
@@ -10,8 +10,8 @@ export function js_node_to_visitors(ast, node_search) {
       if (node === node_search) {
         let stack = property_get(v, "stack");
         let e1 = list_get_end_1(stack);
-        let type_is = js_node_type_is(e1, "ImportSpecifier");
-        if (false) {
+        let type_is = js_import_specifier_is(e1);
+        if (type_is) {
         }
         la(v);
       }
