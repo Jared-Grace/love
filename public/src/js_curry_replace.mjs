@@ -33,10 +33,6 @@ export function js_curry_replace(ast) {
         let expression = js_statement_expression_get(esi);
       }
     }
-    log(js_curry_replace.name, {
-      node,
-      body_block,
-    });
   }
   each(list, lambda);
 }
