@@ -20,12 +20,13 @@ export function js_curry_replace(ast) {
       let only = list_single(body_block);
       let esi = js_expression_statement_is(only);
       if (esi) {
-        log(js_curry_replace.name, {
-          node,
-        });
         let expression = js_statement_expression_get(only);
         let params = js_function_declaration_params_get(node);
         let ii = js_identifier_is_multiple(params);
+        log(js_curry_replace.name, {
+          node,
+          params,
+        });
         if (ii) {
           let type_is = js_call_is(node);
           if (type_is) {
