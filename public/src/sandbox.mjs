@@ -1,5 +1,5 @@
+import { js_statements_with_identifiers_named } from "../../../love/public/src/js_statements_with_identifiers_named.mjs";
 import { js_statement_delete } from "../../../love/public/src/js_statement_delete.mjs";
-import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { app_gloss_bible_home_generic } from "../../../love/public/src/app_gloss_bible_home_generic.mjs";
 import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
 import { js_call_add_first } from "../../../love/public/src/js_call_add_first.mjs";
@@ -23,7 +23,7 @@ export async function sandbox() {
   const f_name = app_gloss_bible_home_generic.name;
   await function_current_set(f_name);
   let r = await function_node_select_args(
-    js_function_node_find_named_node.name,
+    js_statements_with_identifiers_named.name,
     "lambda3",
   );
   await function_current_selects_apply(js_statement_delete.name);
