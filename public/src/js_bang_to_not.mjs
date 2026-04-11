@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
@@ -21,7 +22,7 @@ export function js_bang_to_not(ast) {
       let copy = object_copy(argument);
       let code = js_code_call(not.name);
       let expression = js_parse_expression(code);
-      let arguments2 = property_get(expression, "arguments");
+      let arguments2 = js_call_arguments_get(expression);
       list_add(arguments2, copy);
       object_replace(node, expression);
     }
