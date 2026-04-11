@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { set_on_first } from "../../../love/public/src/set_on_first.mjs";
 import { object_properties_equal } from "../../../love/public/src/object_properties_equal.mjs";
 import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
@@ -19,6 +20,8 @@ export function js_node_to_visitors(ast, node_search) {
             let eq = object_properties_equal(e1, ["imported", "imported"]);
             if (eq) {
               let first = sa(node);
+              if (not(b)) {
+              }
             }
           }
           la(v);
