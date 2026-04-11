@@ -3,5 +3,9 @@ export async function function_transform_multiple(
   f_name_transformer_args_comma,
   f_name,
 ) {
-  return await function_transform_single(f_name_transformer_args_comma, f_name);
+  let r = await function_transform_single(
+    f_name_transformer_args_comma,
+    f_name,
+  );
+  return r;
 }
