@@ -20,7 +20,8 @@ export function js_node_to_visitors(ast, node_search) {
             let eq = object_properties_equal(e1, ["imported", "imported"]);
             if (eq) {
               let first = sa(node);
-              if (not(b)) {
+              if (not(first)) {
+                skip = true;
               }
             }
           }
