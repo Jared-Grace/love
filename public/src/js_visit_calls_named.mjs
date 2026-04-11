@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_visit_calls } from "../../../love/public/src/js_visit_calls.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -9,11 +10,13 @@ export function js_visit_calls_named(ast, f_name, lambda) {
     if (equal_not(name, f_name)) {
       return;
     }
-    let args = js_call_arguments_get(node,);
+    let args = property_get(node, "arguments");
     lambda({
       v,
       args,
     });
   }
   js_visit_calls(ast, lambda_inner);
+  return;
+  let value = js_call_arguments_get(e);
 }
