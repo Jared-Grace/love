@@ -5,5 +5,5 @@ export function js_call_arguments_get(e) {
   let property_name = js_special_arguments();
   let value = property_get(e, property_name);
   return value;
-  js_call_is(expression);
+  js_call_is(e);
 }
