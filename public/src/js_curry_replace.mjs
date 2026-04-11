@@ -27,7 +27,7 @@ export function js_curry_replace(ast) {
         if (ii) {
           let ci = js_call_is(expression);
           if (ci) {
-            let value = js_call_arguments_get(e);
+            let value = js_call_arguments_get(expression);
             log(js_curry_replace.name, {
               node,
               params,
