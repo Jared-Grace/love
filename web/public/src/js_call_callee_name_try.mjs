@@ -2,7 +2,7 @@ import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_i
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { property_get_name } from "../../../love/public/src/property_get_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function js_call_callee_name(expression) {
+export function js_call_callee_name_try(expression) {
   let name = null;
   let jin2 = js_node_type_not_is(expression, "CallExpression");
   if (jin2) {
