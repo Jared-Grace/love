@@ -1,3 +1,4 @@
+import { functions_search_app_prefix } from "../../../love/public/src/functions_search_app_prefix.mjs";
 import { set_new } from "../../../love/public/src/set_new.mjs";
 import { object_properties_equal } from "../../../love/public/src/object_properties_equal.mjs";
 import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
@@ -8,7 +9,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_node_to_visitors(ast, node_search) {
   let s = set_new();
   function lambda2(la) {
-    function lambda(v) {
+    async function lambda(v) {
       let node = property_get(v, "node");
       if (node === node_search) {
         let stack = property_get(v, "stack");
@@ -17,6 +18,7 @@ export function js_node_to_visitors(ast, node_search) {
         if (type_is) {
           let eq = object_properties_equal(e1, ["imported", "imported"]);
           if (eq) {
+            let results = await functions_search_app_prefix(s2);
           }
         }
         la(v);
