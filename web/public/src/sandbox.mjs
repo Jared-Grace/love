@@ -34,17 +34,10 @@ export async function sandbox() {
   ("below is functionality that has been used in the past");
   (function_transform_current,
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
-    [js_call_add_first.name, html_hash_get.name]);
-  await function_transform_current(js_call_add_first.name, html_hash_get.name);
+    [js_call_add_first.name, html_hash_get.name],
+    [js_flo_body_add_return_argument_from_code.name, "n"]);
   await function_source_remove(f_name, "2");
-  await function_node_select_args(
-    js_statement_find_call_named.name,
-    property_exists_not.name,
-  );
-  await function_transform_current(
-    js_flo_body_add_return_argument_from_code.name,
-    "n",
-  );
+  await function_transform_current();
   await function_current_selects_apply(js_statement_delete.name);
   await function_current_selects_apply(js_statement_if_return_add.name);
   await function_current_selects_apply(js_statement_wrap_if.name);
