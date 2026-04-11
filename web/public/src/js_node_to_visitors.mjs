@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -13,6 +14,8 @@ export function js_node_to_visitors(ast, node_search) {
         let type_is = js_import_specifier_is(e1);
         if (type_is) {
           let imported = property_get(e1, "imported");
+          function lambda3(item) {}
+          let mapped = list_map(list, lambda3);
         }
         la(v);
       }
