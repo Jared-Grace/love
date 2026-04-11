@@ -5,7 +5,8 @@ export function set_on_first(sof) {
   let s = set_new();
   function on_first_check(item) {
     let si = set_includes(set, item);
-    let n = not(b);
+    if (not(b)) {
+    }
   }
   sof(on_first_check);
 }
