@@ -8,5 +8,5 @@ export function js_curry_replace(ast) {
       node,
     });
   }
-  let l = js_visit_function_nodes_list(ast, lambda);
+  let l = js_visit_function_nodes_list(ast);
 }
