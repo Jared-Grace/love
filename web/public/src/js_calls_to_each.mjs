@@ -3,7 +3,7 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { js_code_brackets_empty } from "../../../love/public/src/js_code_brackets_empty.mjs";
 import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
+import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { equal_by } from "../../../love/public/src/equal_by.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { js_statement_expression_get } from "../../../love/public/src/js_statement_expression_get.mjs";
@@ -49,7 +49,7 @@ export function js_calls_to_each(ast) {
     } else {
       call2 = expression2;
     }
-    let name = js_call_callee_name(call2);
+    let name = js_call_callee_name_try(call2);
     let n = null_is(name);
     if (n) {
       return;
