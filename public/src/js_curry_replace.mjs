@@ -1,3 +1,4 @@
+import { js_statement_expression_get } from "../../../love/public/src/js_statement_expression_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
@@ -15,6 +16,7 @@ export function js_curry_replace(ast) {
     if (s1) {
       let only = list_single(body_block);
       let esi = js_expression_statement_is(only);
+      let expression = js_statement_expression_get(node2);
     }
     log(js_curry_replace.name, {
       node,
