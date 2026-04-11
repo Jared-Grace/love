@@ -1,5 +1,4 @@
-import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
-import { list_all } from "../../../love/public/src/list_all.mjs";
+import { js_identifier_is_multiple } from "../../../love/public/src/js_identifier_is_multiple.mjs";
 import { js_function_declaration_params_get } from "../../../love/public/src/js_function_declaration_params_get.mjs";
 import { js_statement_expression_get } from "../../../love/public/src/js_statement_expression_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -21,7 +20,7 @@ export function js_curry_replace(ast) {
       let esi = js_expression_statement_is(only);
       if (esi) {
         let params = js_function_declaration_params_get(node);
-        let a = list_all(params, js_identifier_is);
+        let a = js_identifier_is_multiple(params);
         let expression = js_statement_expression_get(esi);
       }
     }
