@@ -18,7 +18,6 @@ import { html_button_arrow_left } from "../../../love/public/src/html_button_arr
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
@@ -71,7 +70,6 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_verses,
     verse_number_hash,
   );
-  const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
   let verse_numbers_chosen = [];
   let languages_verses = [];
