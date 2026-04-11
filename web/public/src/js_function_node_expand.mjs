@@ -10,5 +10,5 @@ export function js_function_node_expand(ast, function_node) {
   let index = property_get(r, "index");
   let body = property_get(r, "body");
   list_remove(body, item);
-  list_insert_at_multiple(list, index2, inserteds);
+  list_insert_at_multiple(body, index, body_block);
 }
