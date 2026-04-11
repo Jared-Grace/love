@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_call_is } from "../../../love/public/src/js_call_is.mjs";
 import { js_identifier_is_multiple } from "../../../love/public/src/js_identifier_is_multiple.mjs";
 import { js_function_declaration_params_get } from "../../../love/public/src/js_function_declaration_params_get.mjs";
@@ -26,6 +27,7 @@ export function js_curry_replace(ast) {
         if (ii) {
           let ci = js_call_is(expression);
           if (ci) {
+            let value = js_call_arguments_get(e);
             log(js_curry_replace.name, {
               node,
               params,
