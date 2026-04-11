@@ -20,6 +20,7 @@ export function js_curry_replace(ast) {
       let only = list_single(body_block);
       let esi = js_expression_statement_is(only);
       if (esi) {
+        let expression = js_statement_expression_get(esi);
         let params = js_function_declaration_params_get(node);
         let ii = js_identifier_is_multiple(params);
         if (ii) {
@@ -30,7 +31,6 @@ export function js_curry_replace(ast) {
             });
           }
         }
-        let expression = js_statement_expression_get(esi);
       }
     }
   }
