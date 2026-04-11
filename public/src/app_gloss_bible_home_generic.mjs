@@ -35,73 +35,67 @@ export async function app_gloss_bible_home_generic(
   let passages = property_get(v2, "passages");
   let first2 = list_first(passages);
   on_passage(first2, null);
-  function on_passage(a, next) {
-    let verses = property_get(a, "verses");
-    let passage = property_get(a, "passage");
-    const prop = "p";
-    let last = list_last(verses);
-    let p = property_get(last, prop);
-    let h = html_hr(p);
-    let texts = null;
-    if (text_use) {
-      let passage_texts = property_get(passage, "texts");
-      let first = list_first(passage_texts);
-      texts = [first];
-    } else {
-      texts = property_get(passage, "originals");
-    }
-    function lambda5(t) {
-      let div = html_div_text(p, t);
-      html_font_color_set_green(div);
-    }
-    each(texts, lambda5);
-    let explains_json = property_get(passage, generated);
-    let explains = json_from_try(explains_json);
-    if (false) {
-      let div3 = html_div(p);
-      function lambda2(e) {
-        let span = html_span_text_nbsp_replace_property_from(
-          div3,
-          e,
-          generated,
-        );
-        html_font_color_set_green(span);
-        html_span_nbsp(div3);
-        let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
-        html_font_color_set_blue(span2);
-        let span4 = html_span_space(div3);
-      }
-      each(explains, lambda2);
-    }
-    let word_property = app_gloss_bible_generate_generic_word();
-    function lambda(e) {
-      let component2 = html_hr(p);
-      let div2 = html_div(p);
-      let word = property_get(e, word_property);
-      let gloss = property_get(e, "gloss");
-      let explain = property_get(e, "explain");
-      let span = html_span_text(div2, word);
-      html_bold_mild(span);
-      html_font_color_set(span, "#e40000ff");
-      let c = html_span_colon_2(div2);
-      html_font_color_set(c, "#aaa");
-      let span2 = html_span_text(div2, gloss);
-      html_font_color_set_blue(span2);
-      let c2 = html_span_colon_2(div2);
-      html_font_color_set(c2, "#aaa");
-      let span3 = html_span_text(div2, explain);
-      html_font_color_set(span3, "#7b3f97ff");
-    }
-    each(explains, lambda);
-    async function lambda6() {
-      await scroll(verses);
-    }
-    let text2 = emoji_arrow_up();
-    let d = html_div_centered(p);
-    let component = html_button(d, text2, lambda6);
-    let component22 = html_hr(p);
-    return;
+  let verses = property_get(a, "verses");
+  let passage = property_get(a, "passage");
+  const prop = "p";
+  let last = list_last(verses);
+  let p = property_get(last, prop);
+  let h = html_hr(p);
+  let texts = null;
+  if (text_use) {
+    let passage_texts = property_get(passage, "texts");
+    let first = list_first(passage_texts);
+    texts = [first];
+  } else {
+    texts = property_get(passage, "originals");
   }
+  function lambda5(t) {
+    let div = html_div_text(p, t);
+    html_font_color_set_green(div);
+  }
+  each(texts, lambda5);
+  let explains_json = property_get(passage, generated);
+  let explains = json_from_try(explains_json);
+  if (false) {
+    let div3 = html_div(p);
+    function lambda2(e) {
+      let span = html_span_text_nbsp_replace_property_from(div3, e, generated);
+      html_font_color_set_green(span);
+      html_span_nbsp(div3);
+      let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
+      html_font_color_set_blue(span2);
+      let span4 = html_span_space(div3);
+    }
+    each(explains, lambda2);
+  }
+  let word_property = app_gloss_bible_generate_generic_word();
+  function lambda(e) {
+    let component2 = html_hr(p);
+    let div2 = html_div(p);
+    let word = property_get(e, word_property);
+    let gloss = property_get(e, "gloss");
+    let explain = property_get(e, "explain");
+    let span = html_span_text(div2, word);
+    html_bold_mild(span);
+    html_font_color_set(span, "#e40000ff");
+    let c = html_span_colon_2(div2);
+    html_font_color_set(c, "#aaa");
+    let span2 = html_span_text(div2, gloss);
+    html_font_color_set_blue(span2);
+    let c2 = html_span_colon_2(div2);
+    html_font_color_set(c2, "#aaa");
+    let span3 = html_span_text(div2, explain);
+    html_font_color_set(span3, "#7b3f97ff");
+  }
+  each(explains, lambda);
+  async function lambda6() {
+    await scroll(verses);
+  }
+  let text2 = emoji_arrow_up();
+  let d = html_div_centered(p);
+  let component = html_button(d, text2, lambda6);
+  let component22 = html_hr(p);
+  return;
   async function scroll(verses) {
     let f = list_first(verses);
     let p = property_get(f, "p_verse");
