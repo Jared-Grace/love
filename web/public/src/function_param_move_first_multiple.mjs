@@ -5,5 +5,5 @@ export async function function_param_move_first_multiple(
   param_names_comma,
 ) {
   let param_names = text_split_comma_dot_reverse(param_names_comma);
-  await function_params_move_first_text(param_names, f_names_comma);
+  await function_params_move_first_text(f_names_comma, param_names);
 }
