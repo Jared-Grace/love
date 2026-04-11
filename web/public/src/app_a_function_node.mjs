@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -139,7 +140,7 @@ export function app_a_function_node(a) {
     ["CallExpression"]: function lambda8() {
       let callee = property_get(node, "callee");
       app_a_function_node_child(a, callee);
-      let arguments2 = property_get(node, "arguments");
+      let arguments2 = js_call_arguments_get(node);
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
         app_a_nodes_list(a, arguments2, parent);
