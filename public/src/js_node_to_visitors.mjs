@@ -12,7 +12,7 @@ export function js_node_to_visitors(ast, node_search) {
       function lambda(v) {
         let node = property_get(v, "node");
         if (node === node_search) {
-          let skip = false;
+          let add_to_list = true;
           let stack = property_get(v, "stack");
           let e1 = list_get_end_1(stack);
           let type_is = js_import_specifier_is(e1);
@@ -21,9 +21,11 @@ export function js_node_to_visitors(ast, node_search) {
             if (eq) {
               let first = sa(node);
               if (not(first)) {
-                skip = true;
+                add_to_list = false;
               }
             }
+          }
+          if (false) {
           }
           la(v);
         }
