@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -8,6 +9,7 @@ export function js_curry_replace(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let body_block = js_function_declaration_to_block_body(node);
+    let s1 = list_size_1(list2);
     log(js_curry_replace.name, {
       node,
       body_block,
