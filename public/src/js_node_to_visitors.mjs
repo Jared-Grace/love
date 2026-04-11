@@ -25,9 +25,9 @@ export function js_node_to_visitors(ast, node_search) {
               }
             }
           }
-          if (false) {
+          if (add_to_list) {
+            la(v);
           }
-          la(v);
         }
       }
       js_visit(ast, lambda);
