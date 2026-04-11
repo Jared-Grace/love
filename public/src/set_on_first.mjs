@@ -1,1 +1,2 @@
-export function set_on_first() {}
+export function set_on_first() {
+  let s = set_new();}
