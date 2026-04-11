@@ -9,7 +9,7 @@ export function js_visit_calls_named(ast, f_name, lambda) {
     if (equal_not(name, f_name)) {
       return;
     }
-    let args = property_get(node, "arguments");
+    let args = js_call_arguments_get(node,);
     lambda({
       v,
       args,
