@@ -7,6 +7,7 @@ export function js_node_to_visitors(ast, node_search) {
     function lambda(v) {
       let node = property_get(v, "node");
       if (node === node_search) {
+        let stack2 = property_get(v, "stack");
         let e1 = list_get_end_1(stack);
         la(v);
       }
