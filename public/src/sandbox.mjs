@@ -30,7 +30,6 @@ export async function sandbox() {
     [js_statements_with_identifiers_named.name, "on_passage"],
     [js_function_node_find_named_node.name, "on_passage"],
     [js_statement_find_call_named.name, property_exists_not.name]);
-  await function_current_selects_apply(js_statement_delete.name);
   return;
   ("below is functionality that has been used in the past");
   await function_transform_current(
@@ -47,6 +46,7 @@ export async function sandbox() {
     js_flo_body_add_return_argument_from_code.name,
     "n",
   );
+  await function_current_selects_apply(js_statement_delete.name);
   await function_current_selects_apply(js_statement_if_return_add.name);
   await function_current_selects_apply(js_statement_wrap_if.name);
   await function_current_selects_apply(js_statement_duplicate.name);
