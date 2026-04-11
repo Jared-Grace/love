@@ -7,7 +7,8 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_node_to_visitors(ast, node_search) {
-  set_on_first(sof);
+  function lambda3(sa) {}
+  set_on_first(lambda3);
   function lambda2(la) {
     function lambda(v) {
       let node = property_get(v, "node");
