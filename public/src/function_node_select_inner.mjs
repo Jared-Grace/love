@@ -1,4 +1,4 @@
-import { list_not_is } from "../../../love/public/src/list_not_is.mjs";
+import { list_ensure } from "../../../love/public/src/list_ensure.mjs";
 import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
@@ -22,10 +22,7 @@ export async function function_node_select_inner(
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
   let n = await function_run(select_fn_name, concated);
-  let nl = list_not_is(n);
-  if (nl) {
-    n = [n];
-  }
+  n = list_ensure(n);
   let item_to_add = js_visit_id_or_node(ast, n);
   let r = await function_current_selects_add(item_to_add, on_previous);
   return r;
