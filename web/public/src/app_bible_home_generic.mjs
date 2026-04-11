@@ -1,9 +1,9 @@
+import { app_bible_button_chapter_next } from "../../../love/public/src/app_bible_button_chapter_next.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_bible_verse_previous } from "../../../love/public/src/app_bible_verse_previous.mjs";
 import { app_bible_verse_next } from "../../../love/public/src/app_bible_verse_next.mjs";
 import { app_bible_chapter_previous } from "../../../love/public/src/app_bible_chapter_previous.mjs";
-import { app_bible_chapter_next } from "../../../love/public/src/app_bible_chapter_next.mjs";
 import { app_bible_on_click_google_define } from "../../../love/public/src/app_bible_on_click_google_define.mjs";
 import { html_button_biblehub_open_commentary } from "../../../love/public/src/html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "../../../love/public/src/html_button_biblehub_open_parallel.mjs";
@@ -60,10 +60,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_button_arrow_left(bar, chapter_previous);
   app_shared_screen_set_button(bar, context, app_bible_books, book_name);
   app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
-  async function chapter_next() {
-    await app_bible_chapter_next(context, chapter_code);
-  }
-  html_button_arrow_right(bar, chapter_next);
+  app_bible_button_chapter_next(context, chapter_code, bar);
   app_shared_screen_set_button(
     bar,
     context,
