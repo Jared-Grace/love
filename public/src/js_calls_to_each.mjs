@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_brackets_empty } from "../../../love/public/src/js_code_brackets_empty.mjs";
 import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
@@ -18,7 +19,8 @@ export function js_calls_to_each(ast) {
   "multiple calls line after line can be changed into each";
   let call_name = null;
   async function lambda(v) {
-    let { node, stack } = v;
+    let stack = property_get(v, "stack");
+    let node = property_get(v, "node");
     let expression = js_statement_expression_get(node);
     let async_is = false;
     let call = expression;
@@ -65,12 +67,13 @@ export function js_calls_to_each(ast) {
     if (not(eq)) {
       return;
     }
-    let { parsed } = await js_call_new(each_async.name, ast);
+    let r = await js_call_new(each_async.name, ast);
+    let parsed = property_get(r, "parsed");
     let expression3 = property_get(parsed, "expression");
     if (async_is) {
       expression3 = property_get(expression3, "argument");
     }
-    let arguments2 = property_get(expression3, "arguments");
+    let arguments2 = js_call_arguments_get(expression3);
     let code2 = js_code_brackets_empty();
     let array_expression = js_parse_expression(code2);
     let elements = property_get(array_expression, "elements");
