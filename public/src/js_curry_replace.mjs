@@ -16,9 +16,9 @@ export function js_curry_replace(ast) {
     if (s1) {
       let only = list_single(body_block);
       let esi = js_expression_statement_is(only);
-      if (false) {
+      if (esi) {
+        let expression = js_statement_expression_get(esi);
       }
-      let expression = js_statement_expression_get(esi);
     }
     log(js_curry_replace.name, {
       node,
