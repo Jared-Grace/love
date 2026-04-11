@@ -33,7 +33,8 @@ export async function sandbox() {
   return;
   ("below is functionality that has been used in the past");
   (function_transform_current,
-    [js_identifier_rename.name, "html_hash_get,html_hash_object_get"]);
+    [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
+    [js_call_add_first.name, html_hash_get.name]);
   await function_transform_current(js_call_add_first.name, html_hash_get.name);
   await function_source_remove(f_name, "2");
   await function_node_select_args(
