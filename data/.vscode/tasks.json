@@ -17,7 +17,7 @@
     {
       "label": "Watcher",
       "type": "shell",
-      "command": "cd love && node scripts/r.mjs w",
+      "command": "cd love && node scripts/r.mjs wh",
       "runOptions": {
         "runOn": "folderOpen"
       },
