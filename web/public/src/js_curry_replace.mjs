@@ -18,7 +18,7 @@ export function js_curry_replace(ast) {
       let only = list_single(body_block);
       let esi = js_expression_statement_is(only);
       if (esi) {
-        let params = js_function_declaration_params_get(declaration);
+        let params = js_function_declaration_params_get(node);
         let expression = js_statement_expression_get(esi);
       }
     }
