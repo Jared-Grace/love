@@ -28,7 +28,7 @@ export function js_curry_replace(ast) {
           if (ci) {
             log(js_curry_replace.name, {
               node,
-              params,
+              params,expression
             });
           }
         }
