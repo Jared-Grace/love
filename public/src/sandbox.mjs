@@ -1,3 +1,4 @@
+import { js_function_node_expand } from "../../../love/public/src/js_function_node_expand.mjs";
 import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { js_statements_with_identifiers_named } from "../../../love/public/src/js_statements_with_identifiers_named.mjs";
 import { js_statement_delete } from "../../../love/public/src/js_statement_delete.mjs";
@@ -27,6 +28,7 @@ export async function sandbox() {
     js_function_node_find_named_node.name,
     "on_passage",
   );
+  await function_current_selects_apply(js_function_node_expand.name);
   return r;
   await function_node_select_args(
     js_statements_with_identifiers_named.name,
