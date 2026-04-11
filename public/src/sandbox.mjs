@@ -42,7 +42,5 @@ export async function sandbox() {
     [js_statement_if_return_add.name],
     [js_statement_wrap_if.name],
     [js_statement_duplicate.name]);
-  await function_current_selects_apply(js_statement_wrap_if.name);
-  await function_current_selects_apply(js_statement_duplicate.name);
   await function_node_select_nested(js_call_callee_name.name);
 }
