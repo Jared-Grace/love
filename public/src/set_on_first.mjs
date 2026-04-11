@@ -7,8 +7,9 @@ export function set_on_first(sof) {
   function on_first_check(item) {
     let si = set_includes(set, item);
     if (not(si)) {
-      set_add(s2, item2);
+      set_add(set, item);
     }
+    return si;
   }
   sof(on_first_check);
 }
