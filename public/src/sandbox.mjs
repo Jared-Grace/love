@@ -26,8 +26,8 @@ export async function sandbox() {
     js_statements_with_identifiers_named.name,
     "lambda3",
   );
-  return r;
   await function_current_selects_apply(js_statement_delete.name);
+  return r;
   return;
   ("below is functionality that has been used in the past");
   await function_transform_current(
