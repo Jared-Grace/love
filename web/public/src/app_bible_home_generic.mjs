@@ -54,10 +54,10 @@ export async function app_bible_home_generic(context, lambda$a) {
   let book_code = property_get(v2, "book_code");
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  app_bible_button_chapter_previous(context, chapter_code, bar);
+  app_bible_button_chapter_previous(bar, context, chapter_code);
   app_shared_screen_set_button(bar, context, app_bible_books, book_name);
   app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
-  app_bible_button_chapter_next(context, chapter_code, bar);
+  app_bible_button_chapter_next(bar, context, chapter_code);
   app_shared_screen_set_button(
     bar,
     context,
