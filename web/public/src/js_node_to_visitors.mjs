@@ -12,6 +12,7 @@ export function js_node_to_visitors(ast, node_search) {
         let e1 = list_get_end_1(stack);
         let type_is = js_import_specifier_is(e1);
         if (type_is) {
+          let imported = property_get(e1, "imported");
         }
         la(v);
       }
