@@ -23,13 +23,13 @@ export function js_curry_replace(ast) {
         let expression = js_statement_expression_get(only);
         let params = js_function_declaration_params_get(node);
         let ii = js_identifier_is_multiple(params);
-        log(js_curry_replace.name, {
-          node,
-          params,
-        });
         if (ii) {
-          let type_is = js_call_is(node);
-          if (type_is) {
+          let ci = js_call_is(expression);
+          if (ci) {
+            log(js_curry_replace.name, {
+              node,
+              params,
+            });
           }
         }
       }
