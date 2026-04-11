@@ -21,7 +21,7 @@ export function js_curry_replace(ast) {
       if (esi) {
         let params = js_function_declaration_params_get(node);
         let ii = js_identifier_is_multiple(params);
-        if (false) {
+        if (ii) {
         }
         let expression = js_statement_expression_get(esi);
       }
