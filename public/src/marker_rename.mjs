@@ -1,3 +1,4 @@
+import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -10,7 +11,7 @@ import { function_current_get } from "../../../love/public/src/function_current_
 export async function marker_rename(from, to) {
   async function lambda(a) {
     let node = property_get(a, "node");
-    let arguments2 = property_get(node, "arguments");
+    let arguments2 = js_call_arguments_get(node);
     let s1 = list_size_1(arguments2);
     if (not(s1)) {
       return;
