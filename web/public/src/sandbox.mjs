@@ -38,6 +38,7 @@ export async function sandbox() {
     [js_flo_body_add_return_argument_from_code.name, "n"]);
   await function_source_remove(f_name, "2");
   (function_current_selects_apply,
+    [js_function_node_unwrap.name],
     [js_statement_delete.name],
     [js_statement_if_return_add.name],
     [js_statement_wrap_if.name],
