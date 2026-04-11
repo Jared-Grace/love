@@ -44,7 +44,6 @@ export async function app_gloss_bible_home_generic(
     if (null_not_is(next)) {
       let d = html_div_centered(p);
       let text3 = emoji_arrow_down();
-      let component = html_button(d, text3, lambda3);
     }
     let h = html_hr(p);
     let texts = null;
