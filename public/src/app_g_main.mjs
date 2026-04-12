@@ -1,23 +1,16 @@
-import { app_g_player_style_initialize } from "../../../love/public/src/app_g_player_style_initialize.mjs";
+import { app_g_html_initialize } from "../../../love/public/src/app_g_html_initialize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
-import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
-import { html_hide_loadable } from "../../../love/public/src/html_hide_loadable.mjs";
-import { g_icon_cross_unpositioned } from "../../../love/public/src/g_icon_cross_unpositioned.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
-import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
-import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
-import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
@@ -35,39 +28,12 @@ import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
   await app_a_indexeddb_initialize();
   let books = await ebible_version_books_browser("engbsb");
   global_function_property_set(app_g_main, "books", books);
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
-  html_meta_viewport();
-  html_font_sans_serif_set_html();
-  html_remix_icon();
-  let root = property_get(context, "root");
-  html_style_assign(root, {
-    "font-size": "18px",
-    margin: "0",
-    padding: 0,
-    height: "100%",
-  });
-  html_style_overflow_hidden(root);
-  app_g_player_style_initialize();
-  let div_map_container = html_div(root);
-  html_style_assign(div_map_container, {
-    position: "relative",
-    overflow: "auto",
-    width: "100%",
-    "pointer-events": "auto",
-  });
-  ("this was needed instead of 100% to allow vertical scrolling");
-  html_style_assign(div_map_container, {
-    height: "100vh",
-  });
-  html_scroll_none(div_map_container);
-  let i = g_icon_cross_unpositioned(root);
-  html_hide_loadable(i);
+  let div_map_container = app_g_html_initialize(context);
   let rows = app_g_map_generate();
   let imgs_men_rg = range_1(18);
   let imgs_women_rg = range_1(21);
