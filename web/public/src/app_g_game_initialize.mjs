@@ -17,11 +17,11 @@ export async function app_g_game_initialize() {
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_get(coordinates);
   const player_img = g_player_img_get();
+  let npcs = g_npcs_initialize(player_img, coordinates_land);
   let player = {};
   object_merge(player, {
     img: player_img,
   });
-  let npcs = g_npcs_initialize(player_img, coordinates_land);
   let player_list = list_remove_last(coordinates_land);
   let player_coordinates = list_single(player_list);
   object_merge(player, player_coordinates);
