@@ -3,7 +3,7 @@ import { function_curryify_right_count_args_get_curried_right } from "../../../l
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
-import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
+import { function_curryify_generic_open } from "../../../love/public/src/function_curryify_generic_open.mjs";
 export async function function_curryify_right_count(count, f_name) {
   arguments_assert(arguments, 2);
   count = integer_to(count);
@@ -13,6 +13,6 @@ export async function function_curryify_right_count(count, f_name) {
     return combined;
   }
   let r2 = function_curryify_right_count_args_get_curried_right(count);
-  let output = await function_curryify_generic(f_name, lambda, r2);
+  let output = await function_curryify_generic_open(f_name, lambda, r2);
   return output;
 }
