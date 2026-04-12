@@ -1,4 +1,4 @@
-import { js_call_args } from "../../../love/public/src/js_call_args.mjs";
+import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
@@ -62,7 +62,7 @@ export async function js_curry_replace(ast) {
                     }
                     let name_function = js_function_declaration_name(node);
                     let arg_name = js_identifier_name(i);
-                    let c = js_call_args(name_curried, [arg_name]);
+                    let c = js_call_arg(name_curried, arg_name);
                     let declare = js_declare(name_function, c);
                   }
                 }
