@@ -40,7 +40,8 @@ export function js_curry_replace(ast) {
               );
               log(js_curry_replace.name, {
                 args,
-                params,difference
+                params,
+                difference,
               });
               let difference_1 = list_size_1(difference);
               if (difference_1) {
