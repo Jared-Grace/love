@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
@@ -35,6 +36,7 @@ export async function js_curry_replace(ast) {
           let ci = js_call_is(expression);
           if (ci) {
             let name = js_call_callee_name_try(expression);
+            let includes = list_includes(list2, item);
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_list_is(args);
             if (ii_expression) {
