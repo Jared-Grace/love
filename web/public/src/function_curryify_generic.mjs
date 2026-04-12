@@ -20,8 +20,6 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
   let declaration_call = property_get(u, "declaration");
   let f_name_curried = name_get(unaliased);
   let output = await function_new_transform(f_name_curried, lambda);
-  await function_open(f_name_curried);
-  return output;
   async function lambda(ast) {
     let arg_names = js_function_declaration_params_names(declaration_call);
     let r3 = args_get(arg_names);
@@ -46,4 +44,6 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     js_function_declaration_asyncify(declaration, declaration_call);
     await js_imports_missing_add(ast);
   }
+  await function_open(f_name_curried);
+  return output;
 }
