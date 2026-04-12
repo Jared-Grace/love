@@ -29,7 +29,6 @@ export async function app_g_game_initialize() {
     img: player_img,
   });
   let genders = g_genders_get(player_img);
-  let names_men = bible_names_men();
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
@@ -52,6 +51,7 @@ export async function app_g_game_initialize() {
   let player_list = list_remove_last(coordinates_land);
   let player_coordinates = list_single(player_list);
   object_merge(player, player_coordinates);
+  let names_men = bible_names_men();
   object_merge(player, {
     img: player_img,
     prayer: {
