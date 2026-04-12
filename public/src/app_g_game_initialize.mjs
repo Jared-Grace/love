@@ -1,4 +1,4 @@
-import { g_men_img_ids } from "../../../love/public/src/g_men_img_ids.mjs";
+import { g_male_img_names } from "../../../love/public/src/g_male_img_names.mjs";
 import { g_coordinates_land_get } from "../../../love/public/src/g_coordinates_land_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -30,8 +30,7 @@ export async function app_g_game_initialize() {
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_get(coordinates);
   let imgs_women_rg = range_1(21);
-  let imgs_men_rg = g_men_img_ids();
-  let imgs_men = list_map_combine_left(imgs_men_rg, "man_");
+  let imgs_men = g_male_img_names();
   const player_img = list_random_item(imgs_men);
   let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
   list_shuffle(coordinates_land);
