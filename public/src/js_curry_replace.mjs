@@ -1,3 +1,4 @@
+import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_difference_mapper } from "../../../love/public/src/list_difference_mapper.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
@@ -44,6 +45,7 @@ export function js_curry_replace(ast) {
               let difference_1 = list_size_1(difference);
               if (difference_1) {
                 let only = list_single(difference);
+                let fi = list_first_is(list2, item);
               }
             }
           }
