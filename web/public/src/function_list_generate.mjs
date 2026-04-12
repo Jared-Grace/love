@@ -6,7 +6,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_flo_body } from "../../../love/public/src/js_flo_body.mjs";
-import { function_new } from "../../../love/public/src/function_new.mjs";
+import { function_new_open } from "../../../love/public/src/function_new_open.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 export async function function_list_generate(f_generate, list) {
@@ -15,7 +15,7 @@ export async function function_list_generate(f_generate, list) {
   let v = await function_unalias_exists(f_name);
   let exists = property_get(v, "exists");
   if (not(exists)) {
-    await function_new(f_name);
+    await function_new_open(f_name);
   }
   async function lambda3(ast) {
     let body_block = js_flo_body(ast);

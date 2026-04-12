@@ -6,7 +6,7 @@ import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_param_new_double } from "../../../love/public/src/function_param_new_double.mjs";
-import { function_new } from "../../../love/public/src/function_new.mjs";
+import { function_new_open } from "../../../love/public/src/function_new_open.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -17,7 +17,7 @@ export async function app_shared_screen_add(a_name, screen_name) {
     let combined_screen = function_name_combine(prefixed, screen_name);
     let value = js_parse_expression(combined_screen);
     list_add(properties, value);
-    await function_new(combined_screen);
+    await function_new_open(combined_screen);
     const v = "context";
     await function_param_new_double(combined_screen, v);
     async function lambda2(ast) {
