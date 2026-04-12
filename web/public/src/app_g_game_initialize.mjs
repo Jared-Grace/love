@@ -69,7 +69,7 @@ export async function app_g_game_initialize() {
   each_index(npcs, npc_initialize);
   let player_list = list_remove_last(coordinates_land);
   let player = list_single(player_list);
-  let a = object_assign(player, {
+  object_assign(player, {
     img: player_img,
     prayer: {
       conversation: false,
