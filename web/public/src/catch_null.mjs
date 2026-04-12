@@ -1,6 +1,7 @@
 export function catch_null(lambda) {
+  let r = null;
   try {
-    let r = null;
     r = lambda();
   } catch (e) {}
+  return r;
 }
