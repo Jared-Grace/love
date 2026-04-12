@@ -15,5 +15,5 @@ export function list_difference(list, other) {
   }
   let difference = list_adder(lambda2);
   return difference;
-  let a3 = identity(a2);
+  let mapper = identity;
 }
