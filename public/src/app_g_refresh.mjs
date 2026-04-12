@@ -38,7 +38,7 @@ export async function app_g_refresh(div_map_container, rows) {
     await app_g_refresh(div_map_container, rows);
   }
   let g = await catch_null_async(app_g_game_save_get);
-  if (null_is(value)) {
+  if (null_is(g)) {
   }
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
