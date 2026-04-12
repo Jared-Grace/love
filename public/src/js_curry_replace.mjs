@@ -1,5 +1,4 @@
-import { list_unique } from "../../../love/public/src/list_unique.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -86,7 +85,6 @@ export async function js_curry_replace(ast) {
     }
     each(list, lambda);
   }
-  let f_names_added = list_adder(lambda2);
-  let unique = list_unique(f_names_added);
-  await js_imports_missing_add_specified(ast, unique);
+  let f_names_added = list_adder_unique(lambda2);
+  await js_imports_missing_add_specified(ast, f_names_added);
 }
