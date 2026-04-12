@@ -11,5 +11,5 @@ export async function app_g_main(context) {
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
   let div_map_container = app_g_html_initialize(context);
   await app_g_game_initialize();
-  await app_g_refresh(context, div_map_container, rows);
+  await app_g_refresh(context, div_map_container);
 }
