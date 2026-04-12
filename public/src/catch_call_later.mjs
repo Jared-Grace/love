@@ -1,4 +1,4 @@
-export function catch_call(lambda$e, lambda) {
+export function catch_call_later(lambda$e, lambda) {
   let i = function inner() {
     let result = null;
     try {
