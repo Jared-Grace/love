@@ -1,3 +1,4 @@
+import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
@@ -57,7 +58,7 @@ export async function js_curry_replace(ast) {
                   let fi = list_first_is(args, only);
                   if (fi) {
                     let combined = function_curryify_generic_name(f_name);
-                    let includes2 = list_includes(f_names, combined);
+                    let includes2 = list_includes_not(f_names, combined);
                     if (includes2) {
                     }
                   }
