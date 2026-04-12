@@ -1,5 +1,5 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
@@ -69,7 +69,7 @@ export async function js_curry_replace(ast) {
                     let arg_name = js_identifier_name(only);
                     let c = js_call_arg(name_curried, arg_name);
                     let declare = js_declare(name_function, c);
-                    log_unparse(declare);
+                    object_replace(to, from);
                   }
                 }
               }
