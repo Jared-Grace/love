@@ -68,7 +68,7 @@ export async function js_curry_replace(ast) {
                       let n = list_includes_not(f_names, name_curried);
                       if (n) {
                         let output = await function_curryify(f_name);
-                        list_add(list2, item);
+                        list_add(f_names, name_curried);
                       }
                       let name_function = js_function_declaration_name(node);
                       let arg_name = js_identifier_name(only);
