@@ -1,108 +1,15 @@
+import { app_g_game_initialize } from "../../../love/public/src/app_g_game_initialize.mjs";
 import { app_g_html_initialize } from "../../../love/public/src/app_g_html_initialize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
-import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
-import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
-import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
-import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
-import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
-import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
-import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
-import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
-import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_get } from "../../../love/public/src/list_get.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { mod } from "../../../love/public/src/mod.mjs";
-import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
-import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
-import { list_without } from "../../../love/public/src/list_without.mjs";
-import { property_set } from "../../../love/public/src/property_set.mjs";
-import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 export async function app_g_main(context) {
   await app_a_indexeddb_initialize();
   let books = await ebible_version_books_browser("engbsb");
   global_function_property_set(app_g_main, "books", books);
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
   let div_map_container = app_g_html_initialize(context);
-  let rows = app_g_map_generate();
-  let imgs_men_rg = range_1(18);
-  let imgs_women_rg = range_1(21);
-  let imgs_men = list_map_combine_left(imgs_men_rg, "man_");
-  let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
-  const player_img = list_random_item(imgs_men);
-  let names_men = bible_names_men();
-  let right = player_img;
-  let coordinates = g_coordinates(rows);
-  let w = app_a_water();
-  const property_name = "item";
-  let coordinates_land = list_filter_property_not(
-    coordinates,
-    property_name,
-    w,
-  );
-  list_shuffle(coordinates_land);
-  let names_women = bible_names_women();
-  let female = {
-    name: g_gender_female(),
-    names: names_women,
-    imgs: list_without(imgs_women, right),
-  };
-  let male = {
-    name: g_gender_male(),
-    names: names_men,
-    imgs: list_without(imgs_men, right),
-  };
-  let genders = [male, female];
-  let gender_count = list_size(genders);
-  let npc_count = 30;
-  let npcs = list_remove_end(coordinates_land, npc_count);
-  function npc_initialize(npc, index) {
-    let r4 = mod(index, gender_count);
-    let gender = list_get(genders, r4);
-    let imgs2 = property_get(gender, "imgs");
-    let r3 = list_random_item(imgs2);
-    property_set(npc, "img", r3);
-    let names2 = property_get(gender, "names");
-    let r5 = list_random_item(names2);
-    property_set(npc, "name", r5);
-    let name2 = property_get(gender, "name");
-    property_set(npc, "gender", name2);
-    property_set(npc, "meet", false);
-    property_set(npc, "christian", false);
-    property_set(npc, "objections", 2);
-  }
-  each_index(npcs, npc_initialize);
-  let player_list = list_remove_last(coordinates_land);
-  let player = list_single(player_list);
-  let a = object_assign(player, {
-    img: player_img,
-    prayer: {
-      conversation: false,
-      study: false,
-    },
-    name: list_random_item(names_men),
-    conversed: false,
-    studied: false,
-    review: [],
-  });
-  await app_g_game_save({
-    player,
-    npcs,
-    coordinates,
-  });
-  function lambda4(t) {
-    global_function_property_set(app_g_main, t, null);
-  }
-  g_tutorials_each(lambda4);
+  let rows = await app_g_game_initialize();
   await app_g_refresh(context, div_map_container, rows);
 }
