@@ -45,7 +45,7 @@ export function js_curry_replace(ast) {
               let difference_1 = list_size_1(difference);
               if (difference_1) {
                 let only = list_single(difference);
-                let fi = list_first_is(list2, item);
+                let fi = list_first_is(difference, only);
               }
             }
           }
