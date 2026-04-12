@@ -24,7 +24,7 @@ import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
-export async function app_g_refresh(div_map_container, rows) {
+export async function app_g_refresh(context, div_map_container, rows) {
   let path_prefix = app_g_path_prefix();
   const tiles_path = g_folder_tiles(path_prefix);
   const game_prefix = g_game_prefix();
@@ -36,7 +36,7 @@ export async function app_g_refresh(div_map_container, rows) {
     display: "grid",
   });
   async function refresh() {
-    await app_g_refresh(div_map_container, rows);
+    await app_g_refresh(error(), div_map_container, rows);
   }
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
