@@ -2,7 +2,7 @@ import { js_call_arguments_get } from "../../../love/public/src/js_call_argument
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { marker_next_get } from "../../../love/public/src/marker_next_get.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
@@ -40,7 +40,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
       );
       await lambda$a(to);
       let ast = property_get(a, "ast");
-      await js_imports_missing_add(ast);
+      await js_imports_missing_add_all(ast);
       let output = await js_unparse(next);
       la(output);
     }
