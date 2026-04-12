@@ -139,6 +139,6 @@ export async function app_g_main(context) {
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
-  let rows2 = error();
-  await app_g_refresh(div_map_container, rows, rows2);
+  let context2 = error();
+  await app_g_refresh(context2, div_map_container, rows);
 }
