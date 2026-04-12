@@ -57,7 +57,9 @@ export async function js_curry_replace(ast) {
                   let fi = list_first_is(args, only);
                   if (fi) {
                     let combined = function_curryify_generic_name(f_name);
-                    let includes2 = list_includes(f_names, f_name);
+                    let includes2 = list_includes(f_names, combined);
+                    if (false) {
+                    }
                   }
                 }
               }
