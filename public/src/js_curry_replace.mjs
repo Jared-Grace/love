@@ -33,16 +33,16 @@ export function js_curry_replace(ast) {
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_is_multiple(args);
             if (ii_expression) {
-              let difference = list_difference_mapper(
-                args,
-                params,
-                js_identifier_name,
-              );
               log(js_curry_replace.name, {
                 args,
                 params,
                 difference,
               });
+              let difference = list_difference_mapper(
+                args,
+                params,
+                js_identifier_name,
+              );
             }
           }
         }
