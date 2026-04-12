@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
@@ -36,7 +37,8 @@ export async function app_g_refresh(context, div_map_container, rows) {
     display: "grid",
   });
   async function refresh() {
-    await app_g_refresh(error(), div_map_container, rows);
+    let rows2 = error();
+    await app_g_refresh(div_map_container, rows, rows2);
   }
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
