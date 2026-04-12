@@ -30,13 +30,13 @@ export async function app_g_game_initialize() {
   let rows = app_g_map_generate();
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_get(coordinates);
-  let imgs_women_rg = range_1(21);
-  let imgs_men = g_male_img_names();
   const player_img = g_player_img_get();
   let player = {};
   object_merge(player, {
     img: player_img,
   });
+  let imgs_women_rg = range_1(21);
+  let imgs_men = g_male_img_names();
   let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
