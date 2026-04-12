@@ -6,7 +6,7 @@ import { functions_combine_name } from "../../../love/public/src/functions_combi
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_flo_body } from "../../../love/public/src/js_flo_body.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
+import { function_new_transform_open } from "../../../love/public/src/function_new_transform_open.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
   let list = list_to(arguments);
@@ -23,5 +23,5 @@ export async function functions_combine(f_names_comma) {
     await each_async(f_names, lambda);
     await js_auto(ast);
   }
-  await function_new_transform(combined, lambda2);
+  await function_new_transform_open(combined, lambda2);
 }
