@@ -32,7 +32,8 @@ export async function app_g_game_initialize() {
   let imgs_men_rg = g_men_img_ids();
   let imgs_women_rg = range_1(21);
   let imgs_men = list_map_combine_left(imgs_men_rg, "man_");
-  const player_img = list_random_item(imgs_men);
+  let imgs_men_rg1 = g_men_img_ids();
+  const player_img = list_random_item(imgs_men1);
   let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
