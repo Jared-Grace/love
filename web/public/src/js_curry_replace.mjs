@@ -55,13 +55,13 @@ export async function js_curry_replace(ast) {
                   let only = list_single(difference);
                   let fi = list_first_is(args, only);
                   if (fi) {
-                    let combined = function_curryify_generic_name(f_name);
-                    let n = list_includes_not(f_names, combined);
+                    let name_curried = function_curryify_generic_name(f_name);
+                    let n = list_includes_not(f_names, name_curried);
                     if (n) {
                       let output = await function_curryify(f_name);
                     }
                     let name_function = js_function_declaration_name(node);
-                    let c = js_call_args(f_name2, args_code);
+                    let c = js_call_args(name_curried, args_code);
                     let declare = js_declare(name_function, c);
                   }
                 }
