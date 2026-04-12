@@ -1,3 +1,4 @@
+import { g_female_img_names } from "../../../love/public/src/g_female_img_names.mjs";
 import { g_player_img_get } from "../../../love/public/src/g_player_img_get.mjs";
 import { g_male_img_names } from "../../../love/public/src/g_male_img_names.mjs";
 import { g_coordinates_land_get } from "../../../love/public/src/g_coordinates_land_get.mjs";
@@ -22,8 +23,6 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function app_g_game_initialize() {
@@ -35,8 +34,7 @@ export async function app_g_game_initialize() {
   object_merge(player, {
     img: player_img,
   });
-  let imgs_women_rg = range_1(21);
-  let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
+  let imgs_women = g_female_img_names();
   let imgs_men = g_male_img_names();
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
