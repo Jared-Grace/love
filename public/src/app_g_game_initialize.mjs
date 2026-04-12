@@ -79,7 +79,7 @@ export async function app_g_game_initialize() {
       conversation: false,
       study: false,
     },
-    name: list_random_item(names_men1),
+    name: list_random_item(names_men),
     conversed: false,
     studied: false,
     review: [],
