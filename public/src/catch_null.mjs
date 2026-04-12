@@ -1,5 +1,5 @@
 export function catch_null(lambda) {
-  try {
+  try {$s
     let r = lambda();
   } catch (e) {}
 }
