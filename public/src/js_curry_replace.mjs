@@ -57,12 +57,12 @@ export async function js_curry_replace(ast) {
                     let n = list_includes_not(f_names, combined);
                     if (n) {
                       let output = await function_curryify(f_name);
+                    }
                       log(js_curry_replace.name, {
                         args,
                         params,
-                        difference,
+                        difference,combined
                       });
-                    }
                   }
                 }
               }
