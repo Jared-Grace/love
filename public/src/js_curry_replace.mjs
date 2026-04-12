@@ -28,52 +28,52 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
 export async function js_curry_replace(ast) {
   let f_names = await functions_names();
-  function lambda2(la) {}
-  let list2 = list_adder(lambda2);
-  let list = js_visit_function_nodes_list(ast);
-  async function lambda(v) {
-    let node = property_get(v, "node");
-    let body_block = js_function_declaration_to_block_body(node);
-    let s1 = list_size_1(body_block);
-    if (s1) {
-      let only = list_single(body_block);
-      let esi = js_expression_statement_is(only);
-      if (esi) {
-        let expression = js_statement_expression_get(only);
-        let params = js_function_declaration_params_get(node);
-        let ii_only = js_identifier_list_is(params);
-        if (ii_only) {
-          let ci = js_call_is(expression);
-          if (ci) {
-            let f_name = js_call_callee_name_try(expression);
-            let includes = list_includes(f_names, f_name);
-            if (includes) {
-              let args = js_call_arguments_get(expression);
-              let ii_expression = js_identifier_list_is(args);
-              if (ii_expression) {
-                let difference = list_difference_mapper(
-                  args,
-                  params,
-                  js_identifier_name,
-                );
-                let difference_1 = list_size_1(difference);
-                if (difference_1) {
-                  let only = list_single(difference);
-                  let fi = list_first_is(args, only);
-                  if (fi) {
-                    let name_curried = function_curryify_generic_name(f_name);
-                    log(js_curry_replace.name, {
-                      name_curried,
-                    });
-                    let n = list_includes_not(f_names, name_curried);
-                    if (n) {
-                      let output = await function_curryify(f_name);
+  function lambda2(la) {
+    let list = js_visit_function_nodes_list(ast);
+    async function lambda(v) {
+      let node = property_get(v, "node");
+      let body_block = js_function_declaration_to_block_body(node);
+      let s1 = list_size_1(body_block);
+      if (s1) {
+        let only = list_single(body_block);
+        let esi = js_expression_statement_is(only);
+        if (esi) {
+          let expression = js_statement_expression_get(only);
+          let params = js_function_declaration_params_get(node);
+          let ii_only = js_identifier_list_is(params);
+          if (ii_only) {
+            let ci = js_call_is(expression);
+            if (ci) {
+              let f_name = js_call_callee_name_try(expression);
+              let includes = list_includes(f_names, f_name);
+              if (includes) {
+                let args = js_call_arguments_get(expression);
+                let ii_expression = js_identifier_list_is(args);
+                if (ii_expression) {
+                  let difference = list_difference_mapper(
+                    args,
+                    params,
+                    js_identifier_name,
+                  );
+                  let difference_1 = list_size_1(difference);
+                  if (difference_1) {
+                    let only = list_single(difference);
+                    let fi = list_first_is(args, only);
+                    if (fi) {
+                      let name_curried = function_curryify_generic_name(f_name);
+                      log(js_curry_replace.name, {
+                        name_curried,
+                      });
+                      let n = list_includes_not(f_names, name_curried);
+                      if (n) {
+                        let output = await function_curryify(f_name);
+                      }
+                      let name_function = js_function_declaration_name(node);
+                      let arg_name = js_identifier_name(only);
+                      let c = js_call_arg(name_curried, arg_name);
+                      let declare = js_declare(name_function, c);
+                      object_replace(node, declare);
                     }
-                    let name_function = js_function_declaration_name(node);
-                    let arg_name = js_identifier_name(only);
-                    let c = js_call_arg(name_curried, arg_name);
-                    let declare = js_declare(name_function, c);
-                    object_replace(node, declare);
                   }
                 }
               }
@@ -82,7 +82,8 @@ export async function js_curry_replace(ast) {
         }
       }
     }
+    each(list, lambda);
   }
-  each(list, lambda);
+  let list2 = list_adder(lambda2);
   await js_imports_missing_add_specified(ast2, f_names2);
 }
