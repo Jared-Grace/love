@@ -36,13 +36,15 @@ export function js_curry_replace(ast) {
               log(js_curry_replace.name, {
                 args,
                 params,
-                difference,
               });
               let difference = list_difference_mapper(
                 args,
                 params,
                 js_identifier_name,
               );
+              log(js_curry_replace.name, {
+                difference,
+              });
             }
           }
         }
