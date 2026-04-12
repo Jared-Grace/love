@@ -1,3 +1,4 @@
+import { list_difference_mapper } from "../../../love/public/src/list_difference_mapper.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_call_is } from "../../../love/public/src/js_call_is.mjs";
 import { js_identifier_is_multiple } from "../../../love/public/src/js_identifier_is_multiple.mjs";
@@ -31,6 +32,11 @@ export function js_curry_replace(ast) {
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_is_multiple(args);
             if (ii_expression) {
+              let difference = list_difference_mapper(
+                list2,
+                list_other,
+                mapper,
+              );
               log(js_curry_replace.name, {
                 node,
                 params,
