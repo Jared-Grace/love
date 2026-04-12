@@ -37,8 +37,8 @@ export async function app_g_refresh(context, div_map_container, rows) {
     display: "grid",
   });
   async function refresh() {
-    let rows2 = error();
-    await app_g_refresh(div_map_container, rows, rows2);
+    let context2 = error();
+    await app_g_refresh(context2, div_map_container, rows);
   }
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
