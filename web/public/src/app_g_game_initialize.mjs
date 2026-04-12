@@ -1,6 +1,5 @@
-import { g_female_img_names } from "../../../love/public/src/g_female_img_names.mjs";
+import { g_genders_get } from "../../../love/public/src/g_genders_get.mjs";
 import { g_player_img_get } from "../../../love/public/src/g_player_img_get.mjs";
-import { g_male_img_names } from "../../../love/public/src/g_male_img_names.mjs";
 import { g_coordinates_land_get } from "../../../love/public/src/g_coordinates_land_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -15,11 +14,6 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
-import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
-import { list_without } from "../../../love/public/src/list_without.mjs";
-import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
-import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -34,22 +28,7 @@ export async function app_g_game_initialize() {
   object_merge(player, {
     img: player_img,
   });
-  let imgs_women = g_female_img_names();
-  let imgs_men = g_male_img_names();
-  list_shuffle(coordinates_land);
-  let names_women = bible_names_women();
-  let female = {
-    name: g_gender_female(),
-    names: names_women,
-    imgs: list_without(imgs_women, player_img),
-  };
-  let names_men1 = bible_names_men();
-  let male = {
-    name: g_gender_male(),
-    names: names_men1,
-    imgs: list_without(imgs_men, player_img),
-  };
-  let genders = [male, female];
+  let genders = g_genders_get(player_img);
   let names_men = bible_names_men();
   let gender_count = list_size(genders);
   let npc_count = 30;
