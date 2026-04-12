@@ -7,13 +7,13 @@ import { js_identifiers_names } from "../../../love/public/src/js_identifiers_na
 import { js_imports } from "../../../love/public/src/js_imports.mjs";
 import { js_flo } from "../../../love/public/src/js_flo.mjs";
 export async function js_imports_missing(ast) {
+  let f_names = await functions_names();
   let name = js_flo_name(ast);
   let declaration = js_flo(ast);
   let imports = js_imports(ast);
   let identifiers = js_identifiers_names(declaration);
   let imports_self = list_concat(imports, [name]);
   let missing = list_difference(identifiers, imports_self);
-  let f_names = await functions_names();
   let imports_missing = list_intersect(missing, f_names);
   return imports_missing;
 }
