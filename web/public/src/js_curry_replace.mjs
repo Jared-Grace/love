@@ -37,27 +37,27 @@ export async function js_curry_replace(ast) {
           if (ci) {
             let name = js_call_callee_name_try(expression);
             let includes = list_includes(f_names, name);
-            if (false) {
-            }
-            let args = js_call_arguments_get(expression);
-            let ii_expression = js_identifier_list_is(args);
-            if (ii_expression) {
-              let difference = list_difference_mapper(
-                args,
-                params,
-                js_identifier_name,
-              );
-              log(js_curry_replace.name, {
-                args,
-                params,
-                difference,
-              });
-              let difference_1 = list_size_1(difference);
-              if (difference_1) {
-                let only = list_single(difference);
-                let fi = list_first_is(args, only);
-                if (fi) {
-                  let combined = function_curryify_generic_name(f_name);
+            if (includes) {
+              let args = js_call_arguments_get(expression);
+              let ii_expression = js_identifier_list_is(args);
+              if (ii_expression) {
+                let difference = list_difference_mapper(
+                  args,
+                  params,
+                  js_identifier_name,
+                );
+                log(js_curry_replace.name, {
+                  args,
+                  params,
+                  difference,
+                });
+                let difference_1 = list_size_1(difference);
+                if (difference_1) {
+                  let only = list_single(difference);
+                  let fi = list_first_is(args, only);
+                  if (fi) {
+                    let combined = function_curryify_generic_name(f_name);
+                  }
                 }
               }
             }
