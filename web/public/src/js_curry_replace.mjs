@@ -69,7 +69,7 @@ export async function js_curry_replace(ast) {
                     let arg_name = js_identifier_name(only);
                     let c = js_call_arg(name_curried, arg_name);
                     let declare = js_declare(name_function, c);
-                    object_replace(to, from);
+                    object_replace(node, declare);
                   }
                 }
               }
