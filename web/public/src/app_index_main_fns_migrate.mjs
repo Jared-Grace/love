@@ -28,9 +28,9 @@ export async function app_index_main_fns_migrate() {
       let v2 = property_get(item2, value);
       let name2 = js_identifier_name(v2);
       let code_string = js_code_string(name2);
-      const f_name = fn_name.name;
+      const callee_code = fn_name.name;
       let r3 = list_single_item(code_string);
-      let parsed = js_call_args(f_name, r3);
+      let parsed = js_call_args(callee_code, r3);
       property_set(item2, value, parsed);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
