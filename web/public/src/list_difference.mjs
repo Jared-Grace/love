@@ -7,7 +7,8 @@ export function list_difference(list, other) {
   let mapper = identity;
   function lambda2(la) {
     function lambda(l) {
-      let a = list_includes(other, l);
+      let list2 = mapper(other);
+      let a = list_includes(list2, l);
       if (not(a)) {
         la(l);
       }
