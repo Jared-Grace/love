@@ -1,3 +1,4 @@
+import { g_player_img_get } from "../../../love/public/src/g_player_img_get.mjs";
 import { g_male_img_names } from "../../../love/public/src/g_male_img_names.mjs";
 import { g_coordinates_land_get } from "../../../love/public/src/g_coordinates_land_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
@@ -31,8 +32,7 @@ export async function app_g_game_initialize() {
   let coordinates_land = g_coordinates_land_get(coordinates);
   let imgs_women_rg = range_1(21);
   let imgs_men = g_male_img_names();
-  let imgs_men1 = g_male_img_names();
-  const player_img = list_random_item(imgs_men1);
+  const player_img = g_player_img_get();
   let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
