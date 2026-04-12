@@ -5,7 +5,6 @@ import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs"
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
-import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -26,6 +25,7 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function app_g_game_initialize() {
   let rows = app_g_map_generate();
   let coordinates = g_coordinates(rows);
@@ -33,6 +33,10 @@ export async function app_g_game_initialize() {
   let imgs_women_rg = range_1(21);
   let imgs_men = g_male_img_names();
   const player_img = g_player_img_get();
+  let player = {};
+  object_merge(player, {
+    img: player_img,
+  });
   let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
@@ -68,8 +72,9 @@ export async function app_g_game_initialize() {
   }
   each_index(npcs, npc_initialize);
   let player_list = list_remove_last(coordinates_land);
-  let player = list_single(player_list);
-  object_assign(player, {
+  let player_coordinates = list_single(player_list);
+  object_merge(player, player_coordinates);
+  object_merge(player, {
     img: player_img,
     prayer: {
       conversation: false,
