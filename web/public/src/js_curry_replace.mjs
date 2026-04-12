@@ -61,7 +61,7 @@ export async function js_curry_replace(ast) {
                     let combined = function_curryify_generic_name(f_name);
                     let n = list_includes_not(f_names, combined);
                     if (n) {
-                      let output = await function_curryify(f_name2);
+                      let output = await function_curryify(f_name);
                     }
                   }
                 }
