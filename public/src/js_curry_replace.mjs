@@ -65,7 +65,7 @@ export async function js_curry_replace(ast) {
                     let arg_name = js_identifier_name(i);
                     let c = js_call_arg(name_curried, arg_name);
                     let declare = js_declare(name_function, c);
-                    log_unparse(node2);
+                    log_unparse(declare);
                   }
                 }
               }
