@@ -2,7 +2,7 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-export function list_difference_mapped(list, list_other, mapper) {
+export function list_difference_mapper(list, list_other, mapper) {
   let list_other_mapped = mapper(list_other);
   function lambda2(la) {
     function lambda(l) {
