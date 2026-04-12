@@ -1,6 +1,6 @@
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -68,5 +68,5 @@ export async function js_destructure_functionize(ast) {
     }
   }
   js_visit_type(ast, "ObjectPattern", lambda);
-  await js_imports_missing_add(ast);
+  await js_imports_missing_add_all(ast);
 }
