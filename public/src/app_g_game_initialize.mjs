@@ -35,7 +35,7 @@ export async function app_g_game_initialize() {
     img: player_img,
   });
   let imgs_women = g_female_img_names();
-  let imgs_men1 = g_male_img_names();
+  let imgs_men = g_male_img_names();
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
   let female = {
@@ -43,14 +43,14 @@ export async function app_g_game_initialize() {
     names: names_women,
     imgs: list_without(imgs_women, player_img),
   };
-  let names_men = bible_names_men();
+  let names_men1 = bible_names_men();
   let male = {
     name: g_gender_male(),
-    names: names_men,
-    imgs: list_without(imgs_men1, player_img),
+    names: names_men1,
+    imgs: list_without(imgs_men, player_img),
   };
   let genders = [male, female];
-  let imgs_men = g_male_img_names();
+  let names_men = bible_names_men();
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
@@ -79,7 +79,7 @@ export async function app_g_game_initialize() {
       conversation: false,
       study: false,
     },
-    name: list_random_item(names_men),
+    name: list_random_item(names_men1),
     conversed: false,
     studied: false,
     review: [],
