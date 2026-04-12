@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { app_g_player_style_initialize } from "../../../love/public/src/app_g_player_style_initialize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
@@ -139,6 +138,5 @@ export async function app_g_main(context) {
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
-  let context2 = error();
-  await app_g_refresh(context2, div_map_container, rows);
+  await app_g_refresh(context, div_map_container, rows);
 }
