@@ -1,3 +1,4 @@
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -26,6 +27,8 @@ import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
 export async function js_curry_replace(ast) {
+  async function lambda2(la) {}
+  let list2 = await list_adder_async(lambda2);
   let f_names = await functions_names();
   let list = js_visit_function_nodes_list(ast);
   async function lambda(v) {
