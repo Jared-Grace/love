@@ -39,13 +39,13 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
   await app_a_indexeddb_initialize();
-  let root = property_get(context, "root");
   let books = await ebible_version_books_browser("engbsb");
   global_function_property_set(app_g_main, "books", books);
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
   html_meta_viewport();
   html_font_sans_serif_set_html();
   html_remix_icon();
+  let root = property_get(context, "root");
   html_style_assign(root, {
     "font-size": "18px",
     margin: "0",
