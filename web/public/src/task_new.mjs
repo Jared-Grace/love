@@ -8,7 +8,7 @@ import { function_name_combine_multiple } from "../../../love/public/src/functio
 import { js_flo_body } from "../../../love/public/src/js_flo_body.mjs";
 import { js_call_statement_insert } from "../../../love/public/src/js_call_statement_insert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { function_new } from "../../../love/public/src/function_new.mjs";
+import { function_new_open } from "../../../love/public/src/function_new_open.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 export async function task_new(task_name) {
@@ -25,7 +25,7 @@ export async function task_new(task_name) {
   ]);
   await data_function_current_restore(lambda2);
   async function lambda2() {
-    await function_new(f_name_task);
+    await function_new_open(f_name_task);
   }
   async function lambda(ast) {
     let body_block = js_flo_body(ast);
