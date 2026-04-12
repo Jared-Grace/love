@@ -32,7 +32,6 @@ export async function app_g_game_initialize() {
   let imgs_women = list_map_combine_left(imgs_women_rg, "woman_");
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
-  let right = player_img;
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_get(coordinates);
   list_shuffle(coordinates_land);
@@ -40,12 +39,12 @@ export async function app_g_game_initialize() {
   let female = {
     name: g_gender_female(),
     names: names_women,
-    imgs: list_without(imgs_women, right),
+    imgs: list_without(imgs_women, player_img),
   };
   let male = {
     name: g_gender_male(),
     names: names_men,
-    imgs: list_without(imgs_men, right),
+    imgs: list_without(imgs_men, player_img),
   };
   let genders = [male, female];
   let gender_count = list_size(genders);
