@@ -29,7 +29,7 @@ export function js_curry_replace(ast) {
           if (ci) {
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_is_multiple(args);
-            if (false) {
+            if (ii_expression) {
             }
             log(js_curry_replace.name, {
               node,
