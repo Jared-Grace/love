@@ -6,7 +6,7 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { js_imports } from "../../../love/public/src/js_imports.mjs";
 import { js_flo } from "../../../love/public/src/js_flo.mjs";
-export async function js_imports_missing(ast) {
+export async function js_imports_missing_all(ast) {
   let f_names = await functions_names();
   let name = js_flo_name(ast);
   let declaration = js_flo(ast);
