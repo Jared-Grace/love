@@ -1,3 +1,4 @@
+import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
@@ -31,6 +32,7 @@ export function js_curry_replace(ast) {
         if (ii_only) {
           let ci = js_call_is(expression);
           if (ci) {
+            let name2 = js_call_callee_name_try(expression2);
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_list_is(args);
             if (ii_expression) {
