@@ -20,7 +20,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
   let declaration_call = property_get(u, "declaration");
   let f_name_curried = name_get(unaliased);
   let output = await function_new_open_transform(f_name_curried, lambda);
-  await function_open(f_name2);
+  await function_open(f_name_curried);
   return output;
   async function lambda(ast) {
     let arg_names = js_function_declaration_params_names(declaration_call);
