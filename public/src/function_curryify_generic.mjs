@@ -1,3 +1,4 @@
+import { function_open } from "../../../love/public/src/function_open.mjs";
 import { js_flo_params_add } from "../../../love/public/src/js_flo_params_add.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { js_function_declaration_asyncify } from "../../../love/public/src/js_function_declaration_asyncify.mjs";
@@ -19,6 +20,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
   let declaration_call = property_get(u, "declaration");
   let f_name_curried = name_get(unaliased);
   let output = await function_new_open_transform(f_name_curried, lambda);
+  await function_open(f_name2);
   return output;
   async function lambda(ast) {
     let arg_names = js_function_declaration_params_names(declaration_call);
