@@ -59,9 +59,10 @@ export async function js_curry_replace(ast) {
                     if (n) {
                       let output = await function_curryify(f_name);
                     }
-                    let name2 = js_function_declaration_name(declaration);
+                    let name2 = js_function_declaration_name(node);
                     log(js_curry_replace.name, {
                       combined,
+                      name2,
                     });
                   }
                 }
