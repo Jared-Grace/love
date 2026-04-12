@@ -1,3 +1,4 @@
+import { g_coordinates_land_get } from "../../../love/public/src/g_coordinates_land_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
@@ -17,8 +18,6 @@ import { list_without } from "../../../love/public/src/list_without.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { list_filter_property_not } from "../../../love/public/src/list_filter_property_not.mjs";
-import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -35,13 +34,7 @@ export async function app_g_game_initialize() {
   let names_men = bible_names_men();
   let right = player_img;
   let coordinates = g_coordinates(rows);
-  let w = app_a_water();
-  const property_name = "item";
-  let coordinates_land = list_filter_property_not(
-    coordinates,
-    property_name,
-    w,
-  );
+  let coordinates_land = g_coordinates_land_get(coordinates);
   list_shuffle(coordinates_land);
   let names_women = bible_names_women();
   let female = {
