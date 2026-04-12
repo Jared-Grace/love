@@ -10,7 +10,7 @@ import { js_function_declaration_asyncify_params_from } from "../../../love/publ
 import { js_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_call_args_await_maybe_declaration_return_add.mjs";
 import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
-import { function_new_transform_open } from "../../../love/public/src/function_new_transform_open.mjs";
+import { function_new_open_transform } from "../../../love/public/src/function_new_open_transform.mjs";
 import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   let args_none = false;
@@ -39,7 +39,7 @@ export async function function_cache(f_name) {
     );
     await js_function_declaration_asyncify_params_from(ast, declaration_call);
   }
-  let v = await function_new_transform_open(f_name_cache, lambda);
+  let v = await function_new_open_transform(f_name_cache, lambda);
   if (args_none) {
     let v2 = await function_run(f_name_cache, []);
     return v2;

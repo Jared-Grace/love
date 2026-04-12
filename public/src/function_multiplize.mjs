@@ -7,7 +7,7 @@ import { js_flo_param_add } from "../../../love/public/src/js_flo_param_add.mjs"
 import { js_call_statement } from "../../../love/public/src/js_call_statement.mjs";
 import { js_flo_body_add } from "../../../love/public/src/js_flo_body_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { function_new_transform_open } from "../../../love/public/src/function_new_transform_open.mjs";
+import { function_new_open_transform } from "../../../love/public/src/function_new_open_transform.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export async function function_multiplize(f_name) {
   let u = await function_parse_declaration_unaliased(f_name);
@@ -22,6 +22,6 @@ export async function function_multiplize(f_name) {
     js_flo_param_add(ast, list);
     await js_imports_missing_add(ast);
   }
-  let output = await function_new_transform_open(combined, lambda);
+  let output = await function_new_open_transform(combined, lambda);
   return combined;
 }

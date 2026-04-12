@@ -9,7 +9,7 @@ import { js_statement_return_argument } from "../../../love/public/src/js_statem
 import { js_function_declaration_params_add } from "../../../love/public/src/js_function_declaration_params_add.mjs";
 import { js_function_declaration } from "../../../love/public/src/js_function_declaration.mjs";
 import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
-import { function_new_transform_open } from "../../../love/public/src/function_new_transform_open.mjs";
+import { function_new_open_transform } from "../../../love/public/src/function_new_open_transform.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -18,7 +18,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
   let f_name_curried = name_get(unaliased);
-  let output = await function_new_transform_open(f_name_curried, lambda);
+  let output = await function_new_open_transform(f_name_curried, lambda);
   return output;
   async function lambda(ast) {
     let arg_names = js_function_declaration_params_names(declaration_call);
