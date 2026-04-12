@@ -3,10 +3,10 @@ import { js_dollar_new_update_list } from "../../../love/public/src/js_dollar_ne
 import { js_flo_body_add_return } from "../../../love/public/src/js_flo_body_add_return.mjs";
 import { js_dollar_new_args_inner } from "../../../love/public/src/js_dollar_new_args_inner.mjs";
 import { js_dollar_new_name } from "../../../love/public/src/js_dollar_new_name.mjs";
-import { function_new } from "../../../love/public/src/function_new.mjs";
+import { function_new_open } from "../../../love/public/src/function_new_open.mjs";
 export async function js_dollar_new(code) {
   let combined = js_dollar_new_name(code);
-  await function_new(combined);
+  await function_new_open(combined);
   async function lambda(ast) {
     js_flo_body_add_return(ast);
     await js_dollar_new_args_inner(ast);
