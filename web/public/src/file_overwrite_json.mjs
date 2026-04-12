@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
@@ -8,6 +9,9 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function file_overwrite_json(file_path, object) {
   if (browser_is()) {
     let json = json_format_to_truncated(object);
+    log(file_overwrite_json.name, {
+      json,
+    });
     await file_overwrite(file_path, json);
     return;
   }
