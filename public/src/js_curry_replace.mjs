@@ -43,6 +43,8 @@ export function js_curry_replace(ast) {
                 js_identifier_name,
               );
               let difference_1 = list_size_1(difference);
+              if (false) {
+              }
             }
           }
         }
