@@ -20,6 +20,9 @@ export function js_curry_replace(ast) {
     let s1 = list_size_1(body_block);
     if (s1) {
       only = list_single(body_block);
+      lambda();
+    }
+    function lambda() {
       let esi = js_expression_statement_is(only);
       if (esi) {
         let expression = js_statement_expression_get(only);
