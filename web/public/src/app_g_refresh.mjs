@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
 import { app_g_player_img } from "../../../love/public/src/app_g_player_img.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
@@ -37,7 +38,8 @@ export async function app_g_refresh(div_map_container, rows) {
     await app_g_refresh(div_map_container, rows);
   }
   let g = await catch_null_async(app_g_game_save_get);
-  $iem;
+  if (null_is(value)) {
+  }
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
   let player_img_c = app_g_player_img(game_prefix, div_map, player);
