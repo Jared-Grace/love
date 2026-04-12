@@ -33,15 +33,15 @@ export function js_curry_replace(ast) {
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_list_is(args);
             if (ii_expression) {
-              log(js_curry_replace.name, {
-                args,
-                params,
-              });
               let difference = list_difference_mapper(
                 args,
                 params,
                 js_identifier_name,
               );
+              log(js_curry_replace.name, {
+                args,
+                params,difference
+              });
               let difference_1 = list_size_1(difference);
               if (difference_1) {
                 let only = list_single(difference);
