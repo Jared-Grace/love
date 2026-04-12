@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -67,6 +68,7 @@ export async function js_curry_replace(ast) {
                       let n = list_includes_not(f_names, name_curried);
                       if (n) {
                         let output = await function_curryify(f_name);
+                        list_add(list2, item);
                       }
                       let name_function = js_function_declaration_name(node);
                       let arg_name = js_identifier_name(only);
