@@ -30,12 +30,12 @@ export function js_curry_replace(ast) {
             let args = js_call_arguments_get(expression);
             let ii_expression = js_identifier_is_multiple(args);
             if (ii_expression) {
+              log(js_curry_replace.name, {
+                node,
+                params,
+                expression,
+              });
             }
-            log(js_curry_replace.name, {
-              node,
-              params,
-              expression,
-            });
           }
         }
       }
