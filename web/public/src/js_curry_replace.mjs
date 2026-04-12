@@ -42,9 +42,7 @@ export function js_curry_replace(ast) {
                 params,
                 js_identifier_name,
               );
-              log(js_curry_replace.name, {
-                difference,
-              });
+              let s12 = list_size_1(list2);
             }
           }
         }
