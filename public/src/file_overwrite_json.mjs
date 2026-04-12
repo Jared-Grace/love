@@ -1,14 +1,14 @@
+import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
-import { json_format_to_truncated } from "../../../love/public/src/json_format_to_truncated.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function file_overwrite_json(file_path, object) {
   if (browser_is()) {
-    let json = json_format_to_truncated(object);
+    let json = json_format_to(object);
     log(file_overwrite_json.name, {
       json,
     });
