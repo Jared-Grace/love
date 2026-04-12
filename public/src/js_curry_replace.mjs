@@ -16,9 +16,9 @@ export function js_curry_replace(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let body_block = js_function_declaration_to_block_body(node);
+    let only = null;
     let s1 = list_size_1(body_block);
     if (s1) {
-      let only = null;
       only = list_single(body_block);
       let esi = js_expression_statement_is(only);
       if (esi) {
