@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
@@ -57,6 +58,9 @@ export async function js_curry_replace(ast) {
                   let fi = list_first_is(args, only);
                   if (fi) {
                     let name_curried = function_curryify_generic_name(f_name);
+                    log(js_curry_replace.name, {
+                      name_curried,
+                    });
                     let n = list_includes_not(f_names, name_curried);
                     if (n) {
                       let output = await function_curryify(f_name);
