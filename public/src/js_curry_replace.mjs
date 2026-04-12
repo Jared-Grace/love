@@ -19,7 +19,6 @@ import { js_expression_statement_is } from "../../../love/public/src/js_expressi
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
 export async function js_curry_replace(ast) {
@@ -61,11 +60,7 @@ export async function js_curry_replace(ast) {
                       let output = await function_curryify(f_name);
                     }
                     let name_function = js_function_declaration_name(node);
-                    let declare = js_declare(name3, init);
-                    log(js_curry_replace.name, {
-                      combined,
-                      name2: name_function,
-                    });
+                    let declare = js_declare(name_function, init);
                   }
                 }
               }
