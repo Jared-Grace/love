@@ -4,7 +4,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function list_difference_mapper(list, list_other, mapper) {
-  let list_other_mapped = mapper(list_other);
+  let list_other_mapped = list_map(list_other, mapper);
   function lambda2(la) {
     function lambda(l) {
       let l_mapped = mapper(l);
@@ -18,5 +18,4 @@ export function list_difference_mapper(list, list_other, mapper) {
   let difference = list_adder(lambda2);
   return difference;
   function lambda3(item) {}
-  let mapped = list_map(list2, lambda3);
 }
