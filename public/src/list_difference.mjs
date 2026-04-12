@@ -9,7 +9,7 @@ export function list_difference(list, list_other) {
   function lambda2(la) {
     function lambda(l) {
       let l_mapped = mapper(l);
-      let a = list_includes(list_other_mapped, l);
+      let a = list_includes(list_other_mapped, l_mapped);
       if (not(a)) {
         la(l);
       }
