@@ -1,3 +1,4 @@
+import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -22,7 +23,7 @@ import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_
 export async function js_curry_replace(ast) {
   let f_names = await functions_names();
   let list = js_visit_function_nodes_list(ast);
-  function lambda(v) {
+  async function lambda(v) {
     let node = property_get(v, "node");
     let body_block = js_function_declaration_to_block_body(node);
     let s1 = list_size_1(body_block);
@@ -60,6 +61,7 @@ export async function js_curry_replace(ast) {
                     let combined = function_curryify_generic_name(f_name);
                     let n = list_includes_not(f_names, combined);
                     if (n) {
+                      let output = await function_curryify(f_name2);
                     }
                   }
                 }
