@@ -47,6 +47,8 @@ export function js_curry_replace(ast) {
               if (difference_1) {
                 let only = list_single(difference);
                 let fi = list_first_is(args, only);
+                if (false) {
+                }
               }
             }
           }
