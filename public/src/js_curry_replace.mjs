@@ -1,3 +1,4 @@
+import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -58,6 +59,7 @@ export async function js_curry_replace(ast) {
                     if (n) {
                       let output = await function_curryify(f_name);
                     }
+                    let name2 = js_function_declaration_name(declaration);
                     log(js_curry_replace.name, {
                       combined,
                     });
