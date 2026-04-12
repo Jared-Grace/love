@@ -66,6 +66,8 @@ export async function app_g_main(context) {
     height: "100vh",
   });
   html_scroll_none(div_map_container);
+  let i = g_icon_cross_unpositioned(root);
+  html_hide_loadable(i);
   let rows = app_g_map_generate();
   let imgs_men_rg = range_1(18);
   let imgs_women_rg = range_1(21);
@@ -136,7 +138,5 @@ export async function app_g_main(context) {
     global_function_property_set(app_g_main, t, null);
   }
   g_tutorials_each(lambda4);
-  let i = g_icon_cross_unpositioned(root);
-  html_hide_loadable(i);
   await app_g_refresh(context, div_map_container, rows);
 }
