@@ -91,10 +91,10 @@ export async function app_g_game_initialize() {
     player,
     npcs,
     coordinates,
+    rows,
   });
   function lambda4(t) {
     global_function_property_set(app_g_main, t, null);
   }
   g_tutorials_each(lambda4);
-  return rows;
 }
