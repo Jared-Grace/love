@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -16,4 +17,6 @@ export function list_difference_mapper(list, list_other, mapper) {
   }
   let difference = list_adder(lambda2);
   return difference;
+  function lambda3(item) {}
+  let mapped = list_map(list2, lambda3);
 }
