@@ -5,7 +5,7 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
-import { catch_call } from "../../../love/public/src/catch_call.mjs";
+import { catch_call_later } from "../../../love/public/src/catch_call_later.mjs";
 import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
@@ -62,7 +62,7 @@ export async function http_generic(url, options) {
       function lambda2(chunk) {
         chunks.push(chunk);
       }
-      let i = catch_call(reject, lambda2);
+      let i = catch_call_later(reject, lambda2);
       res.on("data", i);
       function on_end() {
         let statusCode = property_get(res, "statusCode");
@@ -75,7 +75,7 @@ export async function http_generic(url, options) {
         let v2 = Buffer.concat(chunks);
         resolve(v2);
       }
-      let i2 = catch_call(reject, on_end);
+      let i2 = catch_call_later(reject, on_end);
       res.on("end", i2);
     }
     const a = {
