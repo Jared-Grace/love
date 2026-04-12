@@ -42,7 +42,7 @@ export function js_curry_replace(ast) {
                 params,
                 js_identifier_name,
               );
-              let s12 = list_size_1(list2);
+              let difference_1 = list_size_1(difference);
             }
           }
         }
