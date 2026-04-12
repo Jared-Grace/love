@@ -47,6 +47,7 @@ export async function app_g_refresh(context, div_map_container) {
   }
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
+  let rows = property_get(g, "rows");
   let player_img_c = app_g_player_img(game_prefix, div_map, player);
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
