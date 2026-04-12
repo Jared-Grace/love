@@ -1,5 +1,4 @@
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
