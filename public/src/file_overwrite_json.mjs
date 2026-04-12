@@ -9,9 +9,6 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function file_overwrite_json(file_path, object) {
   if (browser_is()) {
     let json = json_format_to(object);
-    log(file_overwrite_json.name, {
-      json,
-    });
     await file_overwrite(file_path, json);
     return;
   }
