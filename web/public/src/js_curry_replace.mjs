@@ -1,3 +1,4 @@
+import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
@@ -80,4 +81,5 @@ export async function js_curry_replace(ast) {
     }
   }
   each(list, lambda);
+  await js_imports_missing_add_specified(ast2, f_names2);
 }
