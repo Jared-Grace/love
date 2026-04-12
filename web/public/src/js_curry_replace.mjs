@@ -58,11 +58,12 @@ export async function js_curry_replace(ast) {
                     if (n) {
                       let output = await function_curryify(f_name);
                     }
-                      log(js_curry_replace.name, {
-                        args,
-                        params,
-                        difference,combined
-                      });
+                    log(js_curry_replace.name, {
+                      args,
+                      params,
+                      difference,
+                      combined,
+                    });
                   }
                 }
               }
