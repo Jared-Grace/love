@@ -2,7 +2,7 @@ import { js_call_arguments_get } from "../../../love/public/src/js_call_argument
 import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
 import { js_statement_if_alternate_get } from "../../../love/public/src/js_statement_if_alternate_get.mjs";
 import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { js_statement_if_test_get } from "../../../love/public/src/js_statement_if_test_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -89,7 +89,7 @@ export async function js_ternary_replace(ast) {
   }
   js_list_type_each(ast, "IfStatement", lambda);
   if (replaced) {
-    await js_imports_missing_add(ast);
+    await js_imports_missing_add_all(ast);
   }
   return;
   let a = null;
