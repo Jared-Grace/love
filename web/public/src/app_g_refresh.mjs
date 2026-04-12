@@ -37,7 +37,7 @@ export async function app_g_refresh(div_map_container, rows) {
     await app_g_refresh(div_map_container, rows);
   }
   let g = await catch_null_async(app_g_game_save_get);
-  $ini;
+  $iem;
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
   let player_img_c = app_g_player_img(game_prefix, div_map, player);
