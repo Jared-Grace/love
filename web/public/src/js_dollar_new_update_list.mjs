@@ -1,6 +1,6 @@
 import { js_dollar_new_name } from "../../../love/public/src/js_dollar_new_name.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_property_parse_expression_add } from "../../../love/public/src/js_property_parse_expression_add.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
@@ -20,7 +20,7 @@ export async function js_dollar_new_update_list(code) {
     js_property_parse_expression_add("name", code_string, properties);
     js_property_parse_expression_add("fn", combined, properties);
     list_add(elements, oe);
-    await js_imports_missing_add(ast);
+    await js_imports_missing_add_all(ast);
   }
   let code2 = await function_transform(js_dollar_choices.name, lambda);
   return code2;

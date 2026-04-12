@@ -10,7 +10,7 @@ import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 export async function function_new_declaration_from(declaration) {
   let f_name = js_function_declaration_name(declaration);
   log(function_new_declaration_from.name, {
@@ -21,7 +21,7 @@ export async function function_new_declaration_from(declaration) {
   let code_declaration = js_unparse(declaration);
   const contents = js_code_export(code_declaration);
   let ast = js_parse(contents);
-  await js_imports_missing_add(ast);
+  await js_imports_missing_add_all(ast);
   let contents_import = js_unparse(ast);
   let formatted = await js_format(contents_import);
   let repo_name = await user_repo_get();
