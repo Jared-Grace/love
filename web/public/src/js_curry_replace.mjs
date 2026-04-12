@@ -1,3 +1,4 @@
+import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_difference_mapper } from "../../../love/public/src/list_difference_mapper.mjs";
@@ -48,6 +49,7 @@ export function js_curry_replace(ast) {
                 let only = list_single(difference);
                 let fi = list_first_is(args, only);
                 if (fi) {
+                  let combined = function_curryify_generic_name(f_name);
                 }
               }
             }
