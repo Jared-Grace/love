@@ -2,7 +2,7 @@ import { js_identifier_name } from "../../../love/public/src/js_identifier_name.
 import { list_difference_mapper } from "../../../love/public/src/list_difference_mapper.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_call_is } from "../../../love/public/src/js_call_is.mjs";
-import { js_identifier_is_multiple } from "../../../love/public/src/js_identifier_is_multiple.mjs";
+import { js_identifier_list_is } from "../../../love/public/src/js_identifier_list_is.mjs";
 import { js_function_declaration_params_get } from "../../../love/public/src/js_function_declaration_params_get.mjs";
 import { js_statement_expression_get } from "../../../love/public/src/js_statement_expression_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -25,12 +25,12 @@ export function js_curry_replace(ast) {
       if (esi) {
         let expression = js_statement_expression_get(only);
         let params = js_function_declaration_params_get(node);
-        let ii_only = js_identifier_is_multiple(params);
+        let ii_only = js_identifier_list_is(params);
         if (ii_only) {
           let ci = js_call_is(expression);
           if (ci) {
             let args = js_call_arguments_get(expression);
-            let ii_expression = js_identifier_is_multiple(args);
+            let ii_expression = js_identifier_list_is(args);
             if (ii_expression) {
               log(js_curry_replace.name, {
                 args,
