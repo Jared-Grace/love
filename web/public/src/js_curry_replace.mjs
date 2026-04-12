@@ -86,5 +86,5 @@ export async function js_curry_replace(ast) {
     each(list, lambda);
   }
   let list2 = list_adder(lambda2);
-  await js_imports_missing_add_specified(ast2, f_names2);
+  await js_imports_missing_add_specified(ast, f_names);
 }
