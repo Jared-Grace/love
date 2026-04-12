@@ -1,3 +1,4 @@
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
@@ -16,7 +17,8 @@ import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
-export function js_curry_replace(ast) {
+export async function js_curry_replace(ast) {
+  let f_names = await functions_names();
   let list = js_visit_function_nodes_list(ast);
   function lambda(v) {
     let node = property_get(v, "node");
