@@ -1,3 +1,4 @@
+import { identity } from "../../../love/public/src/identity.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -14,4 +15,5 @@ export function list_difference(list, other) {
   }
   let difference = list_adder(lambda2);
   return difference;
+  let a3 = identity(a2);
 }
