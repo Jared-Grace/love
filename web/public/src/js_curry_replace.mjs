@@ -50,17 +50,18 @@ export async function js_curry_replace(ast) {
             if (ci) {
               let f_name = js_call_callee_name_try(expression);
               let includes = list_includes(f_names, f_name);
+              log(js_curry_replace.name, {
+                s1,
+                esi,
+                ii_only,
+                ci,
+                ii_expression,
+                includes,
+              });
               if (includes) {
                 let args = js_call_arguments_get(expression);
                 let ii_expression = js_identifier_list_is(args);
                 if (ii_expression) {
-                  log(js_curry_replace.name, {
-                    s1,
-                    esi,
-                    ii_only,
-                    ci,
-                    ii_expression,
-                  });
                   let difference = js_identifiers_names_difference(
                     args,
                     params,
