@@ -85,7 +85,7 @@ export async function js_curry_replace(ast) {
                       function_curryify_specify_name_get_curried_right(
                         positions_1,
                       );
-                    let r2 =
+                    let curry_generate =
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
                       );
