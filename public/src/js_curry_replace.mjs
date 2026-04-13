@@ -84,10 +84,6 @@ export async function js_curry_replace(ast) {
                   if (li && difference_sz_1) {
                     todo();
                   } else {
-                    let difference2 = js_identifiers_names_difference_try(
-                      args,
-                      difference,
-                    );
                     let positions_1 = list_map_index_of_1(difference, args);
                     let positions_1_comma = list_join_comma(positions_1);
                     let r =
@@ -104,7 +100,7 @@ export async function js_curry_replace(ast) {
                       f_names,
                       r2,
                     );
-                    let parsed = js_call_args_code(callee_code, []);
+                    let call = js_call_args_code(callee_code, []);
                   }
                 }
               }
