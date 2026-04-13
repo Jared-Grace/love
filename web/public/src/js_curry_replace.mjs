@@ -75,6 +75,7 @@ export async function js_curry_replace(ast) {
                       object_replace(node, declare);
                       la(name_curried);
                       handled = true;
+                    } else {
                     }
                   }
                   if (not(handled)) {
