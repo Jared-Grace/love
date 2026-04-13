@@ -1,4 +1,4 @@
-import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
+import { js_call_arg_code } from "../../../love/public/src/js_call_arg_code.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -27,7 +27,7 @@ export async function app_index_main_fns_migrate() {
       let v2 = property_get(item2, value);
       let name2 = js_identifier_name(v2);
       let code_string = js_code_string(name2);
-      let parsed = js_call_arg(fn_name.name, code_string);
+      let parsed = js_call_arg_code(fn_name.name, code_string);
       property_set(item2, value, parsed);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
