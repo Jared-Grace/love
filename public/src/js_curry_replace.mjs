@@ -1,3 +1,4 @@
+import { js_curry_replace_generate } from "../../../love/public/src/js_curry_replace_generate.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { function_curryify_specify_name_get } from "../../../love/public/src/function_curryify_specify_name_get.mjs";
 import { function_curryify_specify } from "../../../love/public/src/function_curryify_specify.mjs";
@@ -69,12 +70,12 @@ export async function js_curry_replace(ast) {
                 if (fi && difference_sz_1) {
                   let name_get = function_curryify_generic_name;
                   let curry_generate = function_curryify;
-                  let name_curried = name_get(f_name);
-                  let n = list_includes_not(f_names, name_curried);
-                  if (n) {
-                    await curry_generate(f_name);
-                    list_add(f_names, name_curried);
-                  }
+                  let name_curried = await js_curry_replace_generate(
+                    name_get,
+                    f_name,
+                    f_names,
+                    curry_generate,
+                  );
                   let name_function = js_function_declaration_name(node);
                   let arg_name = js_identifier_name(first);
                   let c = js_call_arg(name_curried, arg_name);
