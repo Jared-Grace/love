@@ -11,7 +11,7 @@ import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
+import { js_call_arg_code } from "../../../love/public/src/js_call_arg_code.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
@@ -74,7 +74,7 @@ export async function js_curry_replace(ast) {
                   );
                   let name_function = js_function_declaration_name(node);
                   let arg_name = js_identifier_name(first);
-                  let c = js_call_arg(name_curried, arg_name);
+                  let c = js_call_arg_code(name_curried, arg_name);
                   let declare = js_declare(name_function, c);
                   object_replace(node, declare);
                   la(name_curried);
