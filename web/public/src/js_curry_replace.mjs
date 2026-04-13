@@ -31,9 +31,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
 export async function js_curry_replace(ast) {
-                        log(js_curry_replace.name, {
-                          here:1,
-                        });
+  log(js_curry_replace.name, {
+    here: 1,
+  });
   let f_names = await functions_names();
   function lambda2(la) {
     let list = js_visit_function_nodes_list(ast);
