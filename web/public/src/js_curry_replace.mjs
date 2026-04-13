@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
@@ -101,7 +102,8 @@ export async function js_curry_replace(ast) {
                       r2,
                     );
                     let call = js_call_args_code(callee_code, []);
-                    let args2 = js_call_arguments_get(node_call);
+                    let args2 = js_call_arguments_get(call);
+                    list_add_multiple(list2, items);
                   }
                 }
               }
