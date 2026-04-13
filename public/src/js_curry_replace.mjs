@@ -1,3 +1,4 @@
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
@@ -103,6 +104,7 @@ export async function js_curry_replace(ast) {
                     );
                     let call = js_call_args_code(callee_code, []);
                     js_call_arguments_add(call, difference);
+                    log_unparse(node2);
                   }
                 }
               }
