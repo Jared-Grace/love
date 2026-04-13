@@ -2,14 +2,12 @@ import { function_curryify_specify_curried_right } from "../../../love/public/sr
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { js_curry_replace_generate } from "../../../love/public/src/js_curry_replace_generate.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
-import { function_curryify_specify } from "../../../love/public/src/function_curryify_specify.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -17,7 +15,6 @@ import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
-import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
@@ -98,25 +95,14 @@ export async function js_curry_replace(ast) {
                       );
                     let r2 =
                       await function_curryify_specify_curried_right(
-                        positions_comma,
+                        positions_1,
                       );
                     let name_curried = await js_curry_replace_generate(
                       r,
                       f_name,
                       f_names,
-                      function_curryify,
+                      r2,
                     );
-                    let n = list_includes_not(f_names, name_curried);
-                    if (n) {
-                      await function_curryify_specify(
-                        f_name,
-                        positions_1_comma,
-                      );
-                      list_add(f_names, name_curried);
-                    }
-                    log(js_curry_replace.name, {
-                      mapped2: positions_1,
-                    });
                   }
                 }
               }
