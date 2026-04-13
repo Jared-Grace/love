@@ -58,11 +58,11 @@ export async function js_curry_replace(ast) {
                     args,
                     params,
                   );
+                    log(js_curry_replace.name, {
+                      difference,
+                    });
                   let difference_sz_1 = list_size_1(difference);
                   if (difference_sz_1) {
-                    log(js_curry_replace.name, {
-                      here: 1,
-                    });
                     let only = list_single(difference);
                     let fi = list_first_is(args, only);
                     if (fi) {
