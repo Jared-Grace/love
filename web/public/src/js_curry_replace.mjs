@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_identifiers_names_difference } from "../../../love/public/src/js_identifiers_names_difference.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
@@ -84,6 +85,8 @@ export async function js_curry_replace(ast) {
                             args,
                             difference,
                           );
+                          function lambda4(item) {}
+                          let mapped = list_map(list3, lambda4);
                         }
                         let list2 = list_adder(lambda3);
                       }
