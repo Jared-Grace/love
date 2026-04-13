@@ -61,8 +61,8 @@ export async function js_curry_replace(ast) {
                   difference,
                 });
                 let difference_sz_1 = list_size_1(difference);
+                let first = list_first(difference);
                 if (difference_sz_1) {
-                  let first = list_first(difference);
                   let fi = list_first_is(args, first);
                   if (fi) {
                     let name_curried = function_curryify_generic_name(f_name);
