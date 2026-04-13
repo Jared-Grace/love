@@ -1,6 +1,6 @@
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { js_identifiers_names_difference } from "../../../love/public/src/js_identifiers_names_difference.mjs";
+import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -52,7 +52,10 @@ export async function js_curry_replace(ast) {
               let includes = list_includes(f_names, f_name);
               if (includes) {
                 let args = js_call_arguments_get(expression);
-                let difference = js_identifiers_names_difference(args, params);
+                let difference = js_identifiers_names_difference_try(
+                  args,
+                  params,
+                );
                 let difference_sz_1 = list_size_1(difference);
                 if (difference_sz_1) {
                   let only = list_single(difference);
@@ -75,7 +78,7 @@ export async function js_curry_replace(ast) {
                     if (li) {
                       todo();
                     } else {
-                      let difference2 = js_identifiers_names_difference(
+                      let difference2 = js_identifiers_names_difference_try(
                         args,
                         difference,
                       );
