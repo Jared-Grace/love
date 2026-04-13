@@ -102,7 +102,7 @@ export async function js_curry_replace(ast) {
                       f_names,
                       r2,
                     );
-                    let call = js_call_args_code(callee_code, []);
+                    let call = js_call_args_code(name_curried, []);
                     js_call_arguments_add(call, difference);
                     log_unparse(call);
                   }
