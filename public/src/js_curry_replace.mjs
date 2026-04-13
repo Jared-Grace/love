@@ -87,7 +87,7 @@ export async function js_curry_replace(ast) {
                       args,
                       difference,
                     );
-                    let mapped2 = list_map_index_of_1(difference, args);
+                    let positions_1 = list_map_index_of_1(difference, args);
                     let combined = function_curryify_specify_name_get(
                       unaliased,
                       positions_1,
@@ -99,7 +99,7 @@ export async function js_curry_replace(ast) {
                       list_add(f_names, name_curried);
                     }
                     log(js_curry_replace.name, {
-                      mapped2,
+                      mapped2: positions_1,
                     });
                   }
                 }
