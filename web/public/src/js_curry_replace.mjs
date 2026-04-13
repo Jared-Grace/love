@@ -89,7 +89,7 @@ export async function js_curry_replace(ast) {
                         let mapped = list_map(args, r);
                         function lambda3(item) {}
                         let a = add_1(left);
-                        let mapped2 = list_map(list2, lambda3);
+                        let mapped2 = list_map(mapped, add_1);
                       }
                     }
                   } else {
