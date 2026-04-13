@@ -89,7 +89,7 @@ export async function js_curry_replace(ast) {
                     );
                     let positions_1 = list_map_index_of_1(difference, args);
                     let combined = function_curryify_specify_name_get(
-                      unaliased,
+                      f_name,
                       positions_1,
                     );
                     let name_curried = function_curryify_generic_name(f_name);
