@@ -87,9 +87,9 @@ export async function js_curry_replace(ast) {
                             difference,
                           );
                           function lambda4(item) {
-                            let index = list_index_of(list4, item2);
+                            let index = list_index_of(args, item);
                           }
-                          let mapped = list_map(list3, lambda4);
+                          let mapped = list_map(args, lambda4);
                         }
                         let list2 = list_adder(lambda3);
                       }
