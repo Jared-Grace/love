@@ -1,3 +1,4 @@
+import { function_curryify_specify } from "../../../love/public/src/function_curryify_specify.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -86,6 +87,10 @@ export async function js_curry_replace(ast) {
                       difference,
                     );
                     let mapped2 = list_map_index_of_1(difference, args);
+                    let r = await function_curryify_specify(
+                      f_name2,
+                      positions_comma,
+                    );
                     log(js_curry_replace.name, {
                       mapped2,
                     });
