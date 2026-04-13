@@ -77,6 +77,7 @@ export async function js_curry_replace(ast) {
                       let declare = js_declare(name_function, c);
                       object_replace(node, declare);
                       la(name_curried);
+                      handled = true;
                     }
                   }
                 }
