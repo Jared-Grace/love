@@ -13,7 +13,6 @@ import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { js_call_arg_code } from "../../../love/public/src/js_call_arg_code.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
@@ -22,7 +21,6 @@ import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
-import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_call_is } from "../../../love/public/src/js_call_is.mjs";
 import { js_identifier_list_is } from "../../../love/public/src/js_identifier_list_is.mjs";
@@ -76,8 +74,6 @@ export async function js_curry_replace(ast) {
                     f_names,
                     function_curryify,
                   );
-                  let arg_name = js_identifier_name(first);
-                  call = js_call_arg_code(name_curried, arg_name);
                 } else {
                   let li = list_last_is(args, first);
                   if (li && difference_sz_1) {
@@ -85,7 +81,7 @@ export async function js_curry_replace(ast) {
                   } else {
                     let positions_1 = list_map_index_of_1(difference, args);
                     let positions_1_comma = list_join_comma(positions_1);
-                    let r =
+                    let name_get =
                       function_curryify_specify_name_get_curried_right(
                         positions_1,
                       );
