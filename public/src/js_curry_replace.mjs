@@ -94,11 +94,11 @@ export async function js_curry_replace(ast) {
                     let positions_1_comma = list_join_comma(positions_1);
                     let r =
                       function_curryify_specify_name_get_curried_right(
-                        positions_12,
+                        positions_1,
                       );
                     function_curryify_specify_name_get(f_name, positions_1);
                     let name_curried = await js_curry_replace_generate(
-                      function_curryify_generic_name,
+                      r,
                       f_name,
                       f_names,
                       function_curryify,
