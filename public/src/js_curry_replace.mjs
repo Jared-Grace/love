@@ -85,7 +85,7 @@ export async function js_curry_replace(ast) {
                       args,
                       difference,
                     );
-                    let mapped2 = list_map_index_of_1(difference2, args);
+                    let mapped2 = list_map_index_of_1(difference, args);
                     log(js_curry_replace.name, {
                       mapped2,
                     });
