@@ -104,7 +104,7 @@ export async function js_curry_replace(ast) {
                       f_names,
                       r2,
                     );
-                    let parsed = js_call_args_code(callee_code, code_arg);
+                    let parsed = js_call_args_code(callee_code, []);
                   }
                 }
               }
