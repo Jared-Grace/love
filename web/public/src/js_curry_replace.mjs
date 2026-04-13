@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
@@ -79,6 +80,8 @@ export async function js_curry_replace(ast) {
                       la(name_curried);
                       handled = true;
                     }
+                  }
+                  if (not(b)) {
                   }
                 }
               }
