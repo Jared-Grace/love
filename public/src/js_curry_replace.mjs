@@ -1,3 +1,4 @@
+import { function_curryify_specify_name_get } from "../../../love/public/src/function_curryify_specify_name_get.mjs";
 import { function_curryify_specify } from "../../../love/public/src/function_curryify_specify.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
@@ -87,6 +88,10 @@ export async function js_curry_replace(ast) {
                       difference,
                     );
                     let mapped2 = list_map_index_of_1(difference, args);
+                    let combined = function_curryify_specify_name_get(
+                      unaliased,
+                      positions_1,
+                    );
                     let name_curried = function_curryify_generic_name(f_name);
                     let n = list_includes_not(f_names, name_curried);
                     if (n) {
