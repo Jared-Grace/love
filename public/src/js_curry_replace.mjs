@@ -1,3 +1,4 @@
+import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { js_curry_replace_generate } from "../../../love/public/src/js_curry_replace_generate.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { function_curryify_specify_name_get } from "../../../love/public/src/function_curryify_specify_name_get.mjs";
@@ -91,6 +92,10 @@ export async function js_curry_replace(ast) {
                     );
                     let positions_1 = list_map_index_of_1(difference, args);
                     let positions_1_comma = list_join_comma(positions_1);
+                    let r =
+                      function_curryify_specify_name_get_curried_right(
+                        positions_12,
+                      );
                     function_curryify_specify_name_get(f_name, positions_1);
                     let name_curried = await js_curry_replace_generate(
                       function_curryify_generic_name,
