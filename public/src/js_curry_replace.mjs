@@ -1,7 +1,6 @@
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { js_curry_replace_generate } from "../../../love/public/src/js_curry_replace_generate.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
-import { function_curryify_specify_name_get } from "../../../love/public/src/function_curryify_specify_name_get.mjs";
 import { function_curryify_specify } from "../../../love/public/src/function_curryify_specify.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
@@ -96,7 +95,6 @@ export async function js_curry_replace(ast) {
                       function_curryify_specify_name_get_curried_right(
                         positions_1,
                       );
-                    function_curryify_specify_name_get(f_name, positions_1);
                     let name_curried = await js_curry_replace_generate(
                       r,
                       f_name,
