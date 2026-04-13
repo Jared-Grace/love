@@ -68,10 +68,9 @@ export async function js_curry_replace(ast) {
                 let first = list_first(difference);
                 let fi = list_first_is(args, first);
                 if (fi && difference_sz_1) {
-                  let name_get = function_curryify_generic_name;
                   let curry_generate = function_curryify;
                   let name_curried = await js_curry_replace_generate(
-                    name_get,
+                    function_curryify_generic_name,
                     f_name,
                     f_names,
                     curry_generate,
