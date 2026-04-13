@@ -79,7 +79,12 @@ export async function js_curry_replace(ast) {
                       if (li) {
                         todo();
                       } else {
-                        function lambda3(la2) {}
+                        function lambda3(la2) {
+                          let difference = js_identifiers_names_difference(
+                            args,
+                            params,
+                          );
+                        }
                         let list2 = list_adder(lambda3);
                       }
                     }
