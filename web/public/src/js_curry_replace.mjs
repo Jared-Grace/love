@@ -1,3 +1,4 @@
+import { js_identifiers_names_difference } from "../../../love/public/src/js_identifiers_names_difference.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
@@ -16,7 +17,6 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
-import { list_difference_mapper } from "../../../love/public/src/list_difference_mapper.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_call_is } from "../../../love/public/src/js_call_is.mjs";
 import { js_identifier_list_is } from "../../../love/public/src/js_identifier_list_is.mjs";
@@ -53,10 +53,9 @@ export async function js_curry_replace(ast) {
                 let args = js_call_arguments_get(expression);
                 let ii_expression = js_identifier_list_is(args);
                 if (ii_expression) {
-                  let difference = list_difference_mapper(
+                  let difference = js_identifiers_names_difference(
                     args,
                     params,
-                    js_identifier_name,
                   );
                   let difference_sz_1 = list_size_1(difference);
                   if (difference_sz_1) {
