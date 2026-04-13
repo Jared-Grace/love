@@ -1,4 +1,3 @@
-import { js_declare_replace } from "../../../love/public/src/js_declare_replace.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
@@ -14,7 +13,9 @@ import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_call_arg_code } from "../../../love/public/src/js_call_arg_code.mjs";
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_curryify } from "../../../love/public/src/function_curryify.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -77,7 +78,8 @@ export async function js_curry_replace(ast) {
                   let name_function = js_function_declaration_name(node);
                   let arg_name = js_identifier_name(first);
                   let c = js_call_arg_code(name_curried, arg_name);
-                  js_declare_replace(name_function, c, node);
+                  let declare = js_declare(name_function, c);
+                  object_replace(node, declare);
                   la(name_curried);
                 } else {
                   let li = list_last_is(args, first);
