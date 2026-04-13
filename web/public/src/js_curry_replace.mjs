@@ -82,7 +82,7 @@ export async function js_curry_replace(ast) {
                         function lambda3(la2) {
                           let difference = js_identifiers_names_difference(
                             args,
-                            params,
+                            difference,
                           );
                         }
                         let list2 = list_adder(lambda3);
