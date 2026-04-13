@@ -102,8 +102,7 @@ export async function js_curry_replace(ast) {
                       r2,
                     );
                     let call = js_call_args_code(callee_code, []);
-                    let args2 = js_call_arguments_get(call);
-                    list_add_multiple(args2, difference);
+                    js_call_arguments_add(call, difference);
                   }
                 }
               }
@@ -116,4 +115,8 @@ export async function js_curry_replace(ast) {
   }
   let f_names_added = list_adder_unique(lambda2);
   await js_imports_missing_add_specified(ast, f_names_added);
+  function js_call_arguments_add(call, difference) {
+    let args2 = js_call_arguments_get(call);
+    list_add_multiple(args2, difference);
+  }
 }
