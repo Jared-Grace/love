@@ -103,6 +103,7 @@ export async function js_curry_replace(ast) {
                       f_names,
                       r2,
                     );
+                    let parsed = js_call_arg_code(callee_code, code_arg);
                   }
                 }
               }
