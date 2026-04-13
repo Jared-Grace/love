@@ -1,10 +1,10 @@
+import { global_function_property_set_curried_specify_1_3 } from "../../../love/public/src/global_function_property_set_curried_specify_1_3.mjs";
 import { g_player_initialize } from "../../../love/public/src/g_player_initialize.mjs";
 import { g_npcs_initialize } from "../../../love/public/src/g_npcs_initialize.mjs";
 import { g_player_img_get } from "../../../love/public/src/g_player_img_get.mjs";
 import { g_coordinates_land_get } from "../../../love/public/src/g_coordinates_land_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
-import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
