@@ -6,8 +6,8 @@ export async function js_curry_replace_generate(
   curry_generate,
 ) {
   let name_curried = name_get(f_name);
-  let n = list_add_if_not_includes(f_names, name_curried);
-  if (n) {
+  let added = list_add_if_not_includes(f_names, name_curried);
+  if (added) {
     await curry_generate(f_name);
   }
   return name_curried;
