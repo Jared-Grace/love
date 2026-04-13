@@ -71,7 +71,6 @@ export async function js_curry_replace(ast) {
                 let call = null;
                 let name_curried = null;
                 if (fi && difference_sz_1) {
-                  let name_curried = null;
                   name_curried = await js_curry_replace_generate(
                     function_curryify_generic_name,
                     f_name,
