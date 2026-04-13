@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
@@ -61,7 +62,7 @@ export async function js_curry_replace(ast) {
                 });
                 let difference_sz_1 = list_size_1(difference);
                 if (difference_sz_1) {
-                  let only = list_single(difference);
+                  let only = list_first(difference);
                   let fi = list_first_is(args, only);
                   if (fi) {
                     let name_curried = function_curryify_generic_name(f_name);
