@@ -55,7 +55,6 @@ export async function js_curry_replace(ast) {
                 esi,
                 ii_only,
                 ci,
-                ii_expression,
                 includes,
               });
               if (includes) {
