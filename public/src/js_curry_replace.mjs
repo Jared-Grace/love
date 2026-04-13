@@ -1,7 +1,6 @@
 import { list_index_of_curried } from "../../../love/public/src/list_index_of_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_identifiers_names_difference } from "../../../love/public/src/js_identifiers_names_difference.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -81,15 +80,12 @@ export async function js_curry_replace(ast) {
                       if (li) {
                         todo();
                       } else {
-                        function lambda3(la2) {
-                          let difference = js_identifiers_names_difference(
-                            args,
-                            difference,
-                          );
-                          let r = list_index_of_curried(args);
-                          let mapped = list_map(args, r);
-                        }
-                        let list2 = list_adder(lambda3);
+                        let difference = js_identifiers_names_difference(
+                          args,
+                          difference,
+                        );
+                        let r = list_index_of_curried(args);
+                        let mapped = list_map(args, r);
                       }
                     }
                   } else {
