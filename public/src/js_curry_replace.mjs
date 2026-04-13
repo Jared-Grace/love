@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -79,6 +80,8 @@ export async function js_curry_replace(ast) {
                       if (li) {
                         todo();
                       } else {
+                        function lambda3(la2) {}
+                        let list2 = list_adder(lambda3);
                       }
                     }
                   } else {
