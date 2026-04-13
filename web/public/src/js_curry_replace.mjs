@@ -46,7 +46,7 @@ export async function js_curry_replace(ast) {
           let params = js_function_declaration_params_get(node);
           let ii_only = js_identifier_list_is(params);
           if (ii_only) {
-              log(js_curry_replace.name, {});
+            log(js_curry_replace.name, {});
             let ci = js_call_is(expression);
             if (ci) {
               let f_name = js_call_callee_name_try(expression);
