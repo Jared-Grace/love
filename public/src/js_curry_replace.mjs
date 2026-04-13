@@ -1,3 +1,4 @@
+import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { js_curry_replace_generate } from "../../../love/public/src/js_curry_replace_generate.mjs";
@@ -103,7 +104,7 @@ export async function js_curry_replace(ast) {
                       f_names,
                       r2,
                     );
-                    let parsed = js_call_arg_code(callee_code, code_arg);
+                    let parsed = js_call_args_code(callee_code, code_arg);
                   }
                 }
               }
