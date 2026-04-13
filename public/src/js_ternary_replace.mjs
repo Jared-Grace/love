@@ -75,10 +75,10 @@ export async function js_ternary_replace(ast) {
     let a = js_assign_default();
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
+    let rights = list_map_property(ess, "right");
     let arguments2 = js_call_arguments_get(e);
     let test = js_statement_if_test_get(node);
     list_add(arguments2, test);
-    let rights = list_map_property(ess, "right");
     list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
     let c = js_code_statement("a");
