@@ -68,6 +68,7 @@ export async function js_curry_replace(ast) {
                 let difference_sz_1 = list_size_1(difference);
                 let first = list_first(difference);
                 let fi = list_first_is(args, first);
+                let call = null;
                 if (fi && difference_sz_1) {
                   let name_curried = await js_curry_replace_generate(
                     function_curryify_generic_name,
@@ -76,7 +77,7 @@ export async function js_curry_replace(ast) {
                     function_curryify,
                   );
                   let arg_name = js_identifier_name(first);
-                  let c = js_call_arg_code(name_curried, arg_name);
+                  call = js_call_arg_code(name_curried, arg_name);
                 } else {
                   let li = list_last_is(args, first);
                   if (li && difference_sz_1) {
@@ -98,14 +99,13 @@ export async function js_curry_replace(ast) {
                       f_names,
                       r2,
                     );
-                    let call = null;
                     call = js_call_args_code(name_curried, []);
                     js_call_arguments_add(call, difference);
                     log_unparse(call);
                   }
                 }
                 let name_function = js_function_declaration_name(node);
-                let declare = js_declare(name_function, c);
+                let declare = js_declare(name_function, call);
                 object_replace(node, declare);
                 la(name_curried);
               }
