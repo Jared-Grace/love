@@ -1,3 +1,4 @@
+import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -82,6 +83,7 @@ export async function js_curry_replace(ast) {
                       }
                     }
                   } else {
+                    todo(description);
                   }
                   if (not(handled)) {
                   }
