@@ -68,10 +68,11 @@ export async function js_curry_replace(ast) {
                 let fi = list_first_is(args, first);
                 if (fi && difference_sz_1) {
                   let name_get = function_curryify_generic_name;
+                  let curry_generate = function_curryify;
                   let name_curried = name_get(f_name);
                   let n = list_includes_not(f_names, name_curried);
                   if (n) {
-                    await function_curryify(f_name);
+                    await curry_generate(f_name);
                     list_add(f_names, name_curried);
                   }
                   let name_function = js_function_declaration_name(node);
