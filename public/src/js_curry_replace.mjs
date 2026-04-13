@@ -65,15 +65,11 @@ export async function js_curry_replace(ast) {
                 let difference_sz_1 = list_size_1(difference);
                 let first = list_first(difference);
                 let fi = list_first_is(args, first);
-                let call = null;
-                let name_curried = null;
+                let name_get = null;
+                let curry_generate = null;
                 if (fi && difference_sz_1) {
-                  name_curried = await js_curry_replace_generate(
-                    function_curryify_generic_name,
-                    f_name,
-                    f_names,
-                    function_curryify,
-                  );
+                  name_get = function_curryify_generic_name;
+                  curry_generate = function_curryify;
                 } else {
                   let li = list_last_is(args, first);
                   if (li && difference_sz_1) {
@@ -81,25 +77,23 @@ export async function js_curry_replace(ast) {
                   } else {
                     let positions_1 = list_map_index_of_1(difference, args);
                     let positions_1_comma = list_join_comma(positions_1);
-                    let name_get = null;
                     name_get =
                       function_curryify_specify_name_get_curried_right(
                         positions_1,
                       );
-                    let curry_generate = null;
                     curry_generate =
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
                       );
                   }
                 }
-                name_curried = await js_curry_replace_generate(
-                  r,
+                let name_curried = await js_curry_replace_generate(
+                  name_get,
                   f_name,
                   f_names,
-                  r2,
+                  curry_generate,
                 );
-                call = js_call_args_code(name_curried, []);
+                let call = js_call_args_code(name_curried, []);
                 js_call_arguments_add(call, difference);
                 let name_function = js_function_declaration_name(node);
                 let declare = js_declare(name_function, call);
