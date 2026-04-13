@@ -93,7 +93,8 @@ export async function js_curry_replace(ast) {
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
                       );
-                    let name_curried = await js_curry_replace_generate(
+                    let name_curried = null;
+                    name_curried = await js_curry_replace_generate(
                       r,
                       f_name,
                       f_names,
