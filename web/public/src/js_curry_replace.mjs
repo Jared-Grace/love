@@ -92,7 +92,7 @@ export async function js_curry_replace(ast) {
                     let name_curried = function_curryify_generic_name(f_name);
                     let n = list_includes_not(f_names, name_curried);
                     if (n) {
-                      await function_curryify_specify(f_name2, positions_comma);
+                      await function_curryify_specify(f_name, positions_comma);
                       list_add(f_names, name_curried);
                     }
                     log(js_curry_replace.name, {
