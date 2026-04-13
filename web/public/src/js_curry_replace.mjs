@@ -1,3 +1,4 @@
+import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
@@ -76,6 +77,7 @@ export async function js_curry_replace(ast) {
                       la(name_curried);
                       handled = true;
                     } else {
+                      let li = list_last_is(list2, item);
                       if (false) {
                       }
                     }
