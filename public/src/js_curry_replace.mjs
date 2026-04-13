@@ -36,10 +36,10 @@ export async function js_curry_replace(ast) {
     let list = js_visit_function_nodes_list(ast);
     async function lambda(v) {
       let node = property_get(v, "node");
+        log(js_curry_replace.name, {});
       let body_block = js_function_declaration_to_block_body(node);
       let s1 = list_size_1(body_block);
       if (s1) {
-        log(js_curry_replace.name, {});
         let only = list_single(body_block);
         let esi = js_expression_statement_is(only);
         if (esi) {
