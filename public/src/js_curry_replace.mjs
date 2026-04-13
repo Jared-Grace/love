@@ -77,10 +77,11 @@ export async function js_curry_replace(ast) {
                       la(name_curried);
                       handled = true;
                     } else {
-                      let li = list_last_is(list2, item);
-                      if (false) {
+                      let li = list_last_is(args, only);
+                      if (li) {
                       }
                     }
+                  } else {
                   }
                   if (not(handled)) {
                   }
