@@ -93,14 +93,14 @@ export async function js_curry_replace(ast) {
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
                       );
-                    name_curried = await js_curry_replace_generate(
-                      r,
-                      f_name,
-                      f_names,
-                      r2,
-                    );
                   }
                 }
+                name_curried = await js_curry_replace_generate(
+                  r,
+                  f_name,
+                  f_names,
+                  r2,
+                );
                 call = js_call_args_code(name_curried, []);
                 js_call_arguments_add(call, difference);
                 let name_function = js_function_declaration_name(node);
