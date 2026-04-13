@@ -63,37 +63,33 @@ export async function js_curry_replace(ast) {
                 let difference_sz_1 = list_size_1(difference);
                 let first = list_first(difference);
                 let fi = list_first_is(args, first);
-                if (difference_sz_1) {
-                  if (fi && difference_sz_1) {
-                    let name_curried = function_curryify_generic_name(f_name);
-                    let n = list_includes_not(f_names, name_curried);
-                    if (n) {
-                      let output = await function_curryify(f_name);
-                      list_add(f_names, name_curried);
-                    }
-                    let name_function = js_function_declaration_name(node);
-                    let arg_name = js_identifier_name(first);
-                    let c = js_call_arg(name_curried, arg_name);
-                    let declare = js_declare(name_function, c);
-                    object_replace(node, declare);
-                    la(name_curried);
-                  } else {
-                    let li = list_last_is(args, first);
-                    if (li && difference_sz_1) {
-                      todo();
-                    } else {
-                      let difference2 = js_identifiers_names_difference_try(
-                        args,
-                        difference,
-                      );
-                      let mapped2 = list_map_index_of_1(difference2, args);
-                      log(js_curry_replace.name, {
-                        mapped2,
-                      });
-                    }
+                if (fi && difference_sz_1) {
+                  let name_curried = function_curryify_generic_name(f_name);
+                  let n = list_includes_not(f_names, name_curried);
+                  if (n) {
+                    let output = await function_curryify(f_name);
+                    list_add(f_names, name_curried);
                   }
+                  let name_function = js_function_declaration_name(node);
+                  let arg_name = js_identifier_name(first);
+                  let c = js_call_arg(name_curried, arg_name);
+                  let declare = js_declare(name_function, c);
+                  object_replace(node, declare);
+                  la(name_curried);
                 } else {
-                  todo();
+                  let li = list_last_is(args, first);
+                  if (li && difference_sz_1) {
+                    todo();
+                  } else {
+                    let difference2 = js_identifiers_names_difference_try(
+                      args,
+                      difference,
+                    );
+                    let mapped2 = list_map_index_of_1(difference2, args);
+                    log(js_curry_replace.name, {
+                      mapped2,
+                    });
+                  }
                 }
               }
             }
