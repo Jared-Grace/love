@@ -81,11 +81,13 @@ export async function js_curry_replace(ast) {
                   } else {
                     let positions_1 = list_map_index_of_1(difference, args);
                     let positions_1_comma = list_join_comma(positions_1);
-                    let name_get =
+                    let name_get = null;
+                    name_get =
                       function_curryify_specify_name_get_curried_right(
                         positions_1,
                       );
-                    let curry_generate =
+                    let curry_generate = null;
+                    curry_generate =
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
                       );
