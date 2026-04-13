@@ -6,7 +6,6 @@ import { js_curry_replace_generate } from "../../../love/public/src/js_curry_rep
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
@@ -59,9 +58,6 @@ export async function js_curry_replace(ast) {
                   args,
                   params,
                 );
-                log(js_curry_replace.name, {
-                  difference,
-                });
                 let difference_sz_1 = list_size_1(difference);
                 let first = list_first(difference);
                 let fi = list_first_is(args, first);
