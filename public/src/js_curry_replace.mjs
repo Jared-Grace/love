@@ -103,7 +103,7 @@ export async function js_curry_replace(ast) {
                     );
                     let call = js_call_args_code(callee_code, []);
                     let args2 = js_call_arguments_get(call);
-                    list_add_multiple(list2, items);
+                    list_add_multiple(args2, difference);
                   }
                 }
               }
