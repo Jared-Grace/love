@@ -75,12 +75,8 @@ export async function js_curry_replace(ast) {
                     f_names,
                     function_curryify,
                   );
-                  let name_function = js_function_declaration_name(node);
                   let arg_name = js_identifier_name(first);
                   let c = js_call_arg_code(name_curried, arg_name);
-                  let declare = js_declare(name_function, c);
-                  object_replace(node, declare);
-                  la(name_curried);
                 } else {
                   let li = list_last_is(args, first);
                   if (li && difference_sz_1) {
@@ -107,6 +103,10 @@ export async function js_curry_replace(ast) {
                     log_unparse(call);
                   }
                 }
+                let name_function = js_function_declaration_name(node);
+                let declare = js_declare(name_function, c);
+                object_replace(node, declare);
+                la(name_curried);
               }
             }
           }
