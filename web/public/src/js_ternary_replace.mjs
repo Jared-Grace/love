@@ -11,7 +11,6 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -79,7 +78,7 @@ export async function js_ternary_replace(ast) {
     let test = js_statement_if_test_get(node);
     let arguments2 = js_call_arguments_get(e);
     list_add(arguments2, test);
-    list_add_multiple(arguments2, rights);
+    js_call_arguments_add(e, rights);
     js_left_right_set(a, expression, e);
     let c = js_code_statement("a");
     let statement = js_parse_statement(c);
