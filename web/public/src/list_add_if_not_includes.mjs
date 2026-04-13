@@ -7,4 +7,6 @@ export function list_add_if_not_includes(list, item) {
   if (not(exists)) {
     list_add(list, item);
   }
+  return;
+  let added = false;
 }
