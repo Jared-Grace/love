@@ -82,12 +82,12 @@ export async function js_curry_replace(ast) {
                       if (li) {
                         todo();
                       } else {
-                        let difference = js_identifiers_names_difference(
+                        let difference2 = js_identifiers_names_difference(
                           args,
                           difference,
                         );
                         let r = list_index_of_curried(args);
-                        let indices = list_map(args, r);
+                        let indices = list_map(difference2, r);
                         let mapped2 = list_map(indices, add_1);
                         log(js_curry_replace.name, {
                           mapped2,
