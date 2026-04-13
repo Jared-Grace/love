@@ -31,9 +31,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
 export async function js_curry_replace(ast) {
-  log(js_curry_replace.name, {
-    here: 1,
-  });
   let f_names = await functions_names();
   function lambda2(la) {
     let list = js_visit_function_nodes_list(ast);
@@ -63,6 +60,9 @@ export async function js_curry_replace(ast) {
                   );
                   let difference_sz_1 = list_size_1(difference);
                   if (difference_sz_1) {
+  log(js_curry_replace.name, {
+    here: 1,
+  });
                     let only = list_single(difference);
                     let fi = list_first_is(args, only);
                     if (fi) {
