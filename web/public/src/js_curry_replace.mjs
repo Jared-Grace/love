@@ -3,7 +3,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_call_arg } from "../../../love/public/src/js_call_arg.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
@@ -64,9 +63,6 @@ export async function js_curry_replace(ast) {
                     let fi = list_first_is(args, only);
                     if (fi) {
                       let name_curried = function_curryify_generic_name(f_name);
-                      log(js_curry_replace.name, {
-                        name_curried,
-                      });
                       let n = list_includes_not(f_names, name_curried);
                       if (n) {
                         let output = await function_curryify(f_name);
@@ -81,7 +77,7 @@ export async function js_curry_replace(ast) {
                       handled = true;
                     }
                   }
-                  if (not(b)) {
+                  if (not(handled)) {
                   }
                 }
               }
