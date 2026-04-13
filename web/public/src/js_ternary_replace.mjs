@@ -76,8 +76,8 @@ export async function js_ternary_replace(ast) {
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
     let rights = list_map_property(ess, "right");
-    let arguments2 = js_call_arguments_get(e);
     let test = js_statement_if_test_get(node);
+    let arguments2 = js_call_arguments_get(e);
     list_add(arguments2, test);
     list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
