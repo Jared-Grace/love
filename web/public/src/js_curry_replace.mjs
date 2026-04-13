@@ -1,7 +1,6 @@
+import { list_map_add_1 } from "../../../love/public/src/list_map_add_1.mjs";
 import { list_map_index_of } from "../../../love/public/src/list_map_index_of.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { add_1 } from "../../../love/public/src/add_1.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_identifiers_names_difference } from "../../../love/public/src/js_identifiers_names_difference.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
@@ -87,7 +86,7 @@ export async function js_curry_replace(ast) {
                           difference,
                         );
                         let indices = list_map_index_of(difference2, args);
-                        let mapped2 = list_map(indices, add_1);
+                        let mapped2 = list_map_add_1(indices);
                         log(js_curry_replace.name, {
                           mapped2,
                         });
