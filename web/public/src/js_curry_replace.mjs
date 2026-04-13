@@ -1,6 +1,5 @@
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
@@ -58,7 +57,6 @@ export async function js_curry_replace(ast) {
                     params,
                     js_identifier_name,
                   );
-                  let handled = false;
                   let difference_sz_1 = list_size_1(difference);
                   if (difference_sz_1) {
                     let only = list_single(difference);
@@ -76,7 +74,6 @@ export async function js_curry_replace(ast) {
                       let declare = js_declare(name_function, c);
                       object_replace(node, declare);
                       la(name_curried);
-                      handled = true;
                     } else {
                       let li = list_last_is(args, only);
                       if (li) {
@@ -86,8 +83,6 @@ export async function js_curry_replace(ast) {
                     }
                   } else {
                     todo();
-                  }
-                  if (not(handled)) {
                   }
                 }
               }
