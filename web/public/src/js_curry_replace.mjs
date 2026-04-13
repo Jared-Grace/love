@@ -80,10 +80,12 @@ export async function js_curry_replace(ast) {
                     } else {
                       let li = list_last_is(args, only);
                       if (li) {
+                        todo();
+                      } else {
                       }
                     }
                   } else {
-                    todo(description);
+                    todo();
                   }
                   if (not(handled)) {
                   }
