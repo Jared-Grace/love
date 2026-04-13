@@ -1,4 +1,4 @@
-import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
+import { js_call_argument_add } from "../../../love/public/src/js_call_argument_add.mjs";
 import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
 import { js_statement_if_alternate_get } from "../../../love/public/src/js_statement_if_alternate_get.mjs";
 import { js_statement_if_consequent_get } from "../../../love/public/src/js_statement_if_consequent_get.mjs";
@@ -10,7 +10,6 @@ import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mj
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -76,8 +75,7 @@ export async function js_ternary_replace(ast) {
     let e = js_parse_expression(code_expression);
     let rights = list_map_property(ess, "right");
     let test = js_statement_if_test_get(node);
-    let arguments2 = js_call_arguments_get(e);
-    list_add(arguments2, test);
+    js_call_argument_add(e, test);
     js_call_arguments_add(e, rights);
     js_left_right_set(a, expression, e);
     let c = js_code_statement("a");
