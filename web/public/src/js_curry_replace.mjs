@@ -1,5 +1,4 @@
 import { list_index_of_curried } from "../../../love/public/src/list_index_of_curried.mjs";
-import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_identifiers_names_difference } from "../../../love/public/src/js_identifiers_names_difference.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -87,11 +86,8 @@ export async function js_curry_replace(ast) {
                             args,
                             difference,
                           );
-                          let r = list_index_of_curried(list3);
-                          function lambda4(item) {
-                            let index = list_index_of(args, item);
-                          }
-                          let mapped = list_map(args, lambda4);
+                          let r = list_index_of_curried(args);
+                          let mapped = list_map(args, r);
                         }
                         let list2 = list_adder(lambda3);
                       }
