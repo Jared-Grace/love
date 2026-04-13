@@ -86,6 +86,8 @@ export async function js_curry_replace(ast) {
                         );
                         let r = list_index_of_curried(args);
                         let mapped = list_map(args, r);
+                        function lambda3(item) {}
+                        let mapped2 = list_map(list2, lambda3);
                       }
                     }
                   } else {
