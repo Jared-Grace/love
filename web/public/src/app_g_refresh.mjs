@@ -81,10 +81,10 @@ export async function app_g_refresh(context, div_map_container) {
     each_index(columns, lambda);
   }
   each_index(rows, lambda2);
-  html_on_click(div_map, on_click);
   async function on_click(e) {
     await app_g_click(e, tile_class, div_map, player_img_c, refresh);
   }
+  html_on_click(div_map, on_click);
   await html_on_load_wait();
   let container = property_get(div_map, "container");
   await html_scroll_center_container_now(player_img_c, container);
