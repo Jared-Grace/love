@@ -1,6 +1,6 @@
+import { app_g_div_map_tiles_add } from "../../../love/public/src/app_g_div_map_tiles_add.mjs";
 import { app_g_div_map_npcs_add } from "../../../love/public/src/app_g_div_map_npcs_add.mjs";
 import { app_g_div_map_style } from "../../../love/public/src/app_g_div_map_style.mjs";
-import { app_g_tile } from "../../../love/public/src/app_g_tile.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -14,7 +14,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 export async function app_g_refresh(context, div_map_container) {
   html_clear(div_map_container);
@@ -35,13 +34,7 @@ export async function app_g_refresh(context, div_map_container) {
   let player_img_c = app_g_player_img(div_map, player);
   app_g_div_map_npcs_add(div_map, npcs);
   await app_g_div_map_style(div_map);
-  function lambda2(columns, y) {
-    function lambda(r, x) {
-      app_g_tile(div_map, r, x, y);
-    }
-    each_index(columns, lambda);
-  }
-  each_index(rows, lambda2);
+  app_g_div_map_tiles_add(div_map, rows);
   async function on_click(e) {
     await app_g_click(e, div_map, player_img_c, refresh);
   }
