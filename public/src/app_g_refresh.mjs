@@ -4,7 +4,7 @@ import { app_g_div_map_new } from "../../../love/public/src/app_g_div_map_new.mj
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_g_refresh(context, div_map_container) {
-  await app_g_game_save_get_or_refresh(context);
+  let refresh = await app_g_game_save_get_or_refresh(context);
   return;
   html_clear(div_map_container);
   let r = await app_g_div_map_new(context, div_map_container);
