@@ -3,7 +3,7 @@ import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 export function app_g_div_map_on_click(context, div_map, player_img_c) {
-  let div_map_container = app_g_div_map_container_get(div_map2);
+  let div_map_container = app_g_div_map_container_get(div_map);
   async function on_click(e) {
     async function refresh() {
       await app_g_refresh(context, div_map_container);
