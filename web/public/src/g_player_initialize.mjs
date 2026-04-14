@@ -3,7 +3,6 @@ import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 export function g_player_initialize(player_img, coordinates_land) {
   let player = {};
   object_merge(player, {
@@ -13,7 +12,6 @@ export function g_player_initialize(player_img, coordinates_land) {
   let player_coordinates = list_single(player_list);
   object_merge(player, player_coordinates);
   let names_men = bible_names_men();
-  error();
   object_merge(player, {
     prayer: {
       conversation: false,
