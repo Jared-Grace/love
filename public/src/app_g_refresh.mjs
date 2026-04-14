@@ -40,7 +40,7 @@ export async function app_g_refresh(context, div_map_container) {
   let rows = property_get(g, "rows");
   let player_img_c = app_g_player_img(game_prefix, div_map, player);
   function lambda12(npc) {
-    let ci = g_character_img(game_prefix, div_map, npc);
+    let ci = g_character_img(div_map, game_prefix, npc);
     let christian = property_get(npc, "christian");
     if (christian) {
       g_icon_cross(div_map, npc);
