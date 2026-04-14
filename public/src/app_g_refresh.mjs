@@ -45,7 +45,7 @@ export async function app_g_refresh(context, div_map_container) {
     }
   }
   each(npcs, lambda12);
-  await app_g_div_map_style(div_map, rows);
+  await app_g_div_map_style(div_map);
   function lambda2(columns, y) {
     function lambda(r, x) {
       app_g_tile(div_map, r, x, y);
