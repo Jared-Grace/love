@@ -1,9 +1,10 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { app_g_tile } from "../../../love/public/src/app_g_tile.mjs";
 export async function app_g_div_map_tiles_add(div_map) {
   let g = await app_g_game_save_get();
-    let rows = property_get(g, "rows");
+  let rows = property_get(g, "rows");
   function lambda2(columns, y) {
     function lambda(r, x) {
       app_g_tile(div_map, r, x, y);
