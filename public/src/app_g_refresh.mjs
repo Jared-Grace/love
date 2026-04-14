@@ -62,13 +62,13 @@ export async function app_g_refresh(context, div_map_container) {
   html_style_assign(div_map, {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
-  const tile_class = app_g_class_tile();
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
     html_style_assign(div_map, {
       gridTemplateColumns: "repeat(" + columns_size + ", auto)",
     });
     function lambda(r, x) {
+      const tile_class = app_g_class_tile();
       const src = tiles_path + r + ".png";
       let tile = html_img(div_map, src);
       g_img_square_style(tile);
