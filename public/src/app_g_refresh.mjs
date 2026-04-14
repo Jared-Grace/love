@@ -6,7 +6,6 @@ import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
 import { app_g_player_img } from "../../../love/public/src/app_g_player_img.mjs";
-import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_on_load_wait } from "../../../love/public/src/html_on_load_wait.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -18,7 +17,6 @@ import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 export async function app_g_refresh(context, div_map_container) {
-  const game_prefix = g_game_prefix();
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
   property_set_exists_not(div_map, "container", div_map_container);
