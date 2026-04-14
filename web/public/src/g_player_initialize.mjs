@@ -17,7 +17,7 @@ export function g_player_initialize(player_img, coordinates_land) {
   log(g_player_initialize.name, {
     player,
   });
-  error(message);
+  error();
   object_merge(player, {
     img: player_img,
     prayer: {
