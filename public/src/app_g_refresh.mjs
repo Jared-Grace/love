@@ -56,11 +56,12 @@ export async function app_g_refresh(context, div_map_container) {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
   let row_first = list_first(rows);
+  let columns_size = list_size(row_first);
+  html_style_assign(div_map, {
+    gridTemplateColumns: "repeat(" + columns_size + ", auto)",
+  });
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
-    html_style_assign(div_map, {
-      gridTemplateColumns: "repeat(" + columns_size + ", auto)",
-    });
     function lambda(r, x) {
       app_g_tile(div_map, r, x, y);
     }
