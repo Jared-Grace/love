@@ -1,6 +1,6 @@
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { app_g_tile } from "../../../love/public/src/app_g_tile.mjs";
-export function app_g_div_map_tiles_add(div_map, rows) {
+export function app_g_div_map_tiles_add(div_map) {
   function lambda2(columns, y) {
     function lambda(r, x) {
       app_g_tile(div_map, r, x, y);
