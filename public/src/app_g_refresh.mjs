@@ -1,3 +1,4 @@
+import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -61,7 +62,7 @@ export async function app_g_refresh(context, div_map_container) {
   html_style_assign(div_map, {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
-  const tile_class = "tile";
+  const tile_class = app_g_class_tile();
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
     html_style_assign(div_map, {
