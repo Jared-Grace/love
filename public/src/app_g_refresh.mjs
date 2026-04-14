@@ -28,7 +28,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 export async function app_g_refresh(context, div_map_container) {
   let path_prefix = app_g_path_prefix();
-  const tiles_path = g_folder_tiles(path_prefix);
   const game_prefix = g_game_prefix();
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
@@ -68,6 +67,7 @@ export async function app_g_refresh(context, div_map_container) {
       gridTemplateColumns: "repeat(" + columns_size + ", auto)",
     });
     function lambda(r, x) {
+      const tiles_path = g_folder_tiles(path_prefix);
       const tile_class = app_g_class_tile();
       const src = tiles_path + r + ".png";
       let tile = html_img(div_map, src);
