@@ -1,3 +1,4 @@
+import { app_g_div_map_on_click } from "../../../love/public/src/app_g_div_map_on_click.mjs";
 import { app_g_game_save_get_or_refresh } from "../../../love/public/src/app_g_game_save_get_or_refresh.mjs";
 import { app_g_player_scroll_center } from "../../../love/public/src/app_g_player_scroll_center.mjs";
 import { app_g_div_map_new } from "../../../love/public/src/app_g_div_map_new.mjs";
