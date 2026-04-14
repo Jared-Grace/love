@@ -1,4 +1,3 @@
-import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
