@@ -5,9 +5,10 @@ import { app_g_game_save_get_or_refresh } from "../../../love/public/src/app_g_g
 import { app_g_player_scroll_center } from "../../../love/public/src/app_g_player_scroll_center.mjs";
 import { app_g_div_map_new } from "../../../love/public/src/app_g_div_map_new.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
 export async function app_g_refresh(context, div_map_container) {
-  let refresh = await app_g_game_save_get_or_refresh(context);
-  if (refresh) {
+  let g = await app_g_game_save_get_or_refresh(context);
+  if (null_is(g)) {
     return;
   }
   html_clear(div_map_container);
