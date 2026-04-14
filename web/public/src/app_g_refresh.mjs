@@ -14,7 +14,7 @@ export async function app_g_refresh(context, div_map_container) {
   html_clear(div_map_container);
   let div_map = await app_g_div_map_new(div_map_container);
   let player = property_get(g, "player");
-  let player_img_c = app_g_player_img(div_map, player);
+  let player_img_c = app_g_player_img(div_map);
   app_g_div_map_on_click(context, div_map, player_img_c);
   await app_g_player_scroll_center(div_map, player_img_c);
 }
