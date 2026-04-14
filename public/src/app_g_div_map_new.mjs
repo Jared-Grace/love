@@ -9,7 +9,7 @@ import { app_g_div_map_npcs_add } from "../../../love/public/src/app_g_div_map_n
 import { app_g_player_img } from "../../../love/public/src/app_g_player_img.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-export async function app_g_div_map_new(div_map_container, context) {
+export async function app_g_div_map_new(context, div_map_container) {
   let g = await app_g_game_save_get();
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
