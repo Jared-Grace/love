@@ -1,7 +1,6 @@
 import { app_g_div_map_tiles_add } from "../../../love/public/src/app_g_div_map_tiles_add.mjs";
 import { app_g_div_map_npcs_add } from "../../../love/public/src/app_g_div_map_npcs_add.mjs";
 import { app_g_div_map_style } from "../../../love/public/src/app_g_div_map_style.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
@@ -32,8 +31,7 @@ export async function app_g_refresh(context, div_map_container) {
   await app_g_div_map_tiles_add(div_map);
   async function on_click(e) {
     async function refresh() {
-      let context2 = error();
-      await app_g_refresh(context2, div_map_container);
+      await app_g_refresh(context, div_map_container);
     }
     await app_g_click(e, div_map, player_img_c, refresh);
   }
