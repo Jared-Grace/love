@@ -14,9 +14,5 @@ export async function app_g_div_map_new(div_map_container) {
   app_g_div_map_npcs_add(div_map, npcs);
   await app_g_div_map_style(div_map);
   await app_g_div_map_tiles_add(div_map);
-  let r = {
-    div_map,
-    player_img_c,
-  };
-  return r;
+  return div_map;
 }
