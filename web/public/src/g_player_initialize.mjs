@@ -5,14 +5,12 @@ import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs"
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function g_player_initialize(player_img, coordinates_land) {
   let player = {};
-  object_merge(player, {
-    img: player_img,
-  });
   let player_list = list_remove_last(coordinates_land);
   let player_coordinates = list_single(player_list);
   object_merge(player, player_coordinates);
   let names_men = bible_names_men();
   object_merge(player, {
+    img: player_img,
     prayer: {
       conversation: false,
       study: false,
