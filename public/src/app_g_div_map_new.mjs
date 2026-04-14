@@ -1,8 +1,6 @@
+import { app_g_div_map_on_click } from "../../../love/public/src/app_g_div_map_on_click.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
-import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
-import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { app_g_div_map_tiles_add } from "../../../love/public/src/app_g_div_map_tiles_add.mjs";
 import { app_g_div_map_style } from "../../../love/public/src/app_g_div_map_style.mjs";
 import { app_g_div_map_npcs_add } from "../../../love/public/src/app_g_div_map_npcs_add.mjs";
@@ -19,13 +17,7 @@ export async function app_g_div_map_new(context, div_map_container) {
   app_g_div_map_npcs_add(div_map, npcs);
   await app_g_div_map_style(div_map);
   await app_g_div_map_tiles_add(div_map);
-  async function on_click(e) {
-    async function refresh() {
-      await app_g_refresh(context, div_map_container);
-    }
-    await app_g_click(e, div_map, player_img_c, refresh);
-  }
-  html_on_click(div_map, on_click);
+  app_g_div_map_on_click(context, div_map_container, div_map, player_img_c);
   let r = {
     div_map,
     player_img_c,
