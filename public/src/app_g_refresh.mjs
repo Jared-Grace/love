@@ -1,10 +1,9 @@
-import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
+import { app_g_tile } from "../../../love/public/src/app_g_tile.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
 import { app_g_player_img } from "../../../love/public/src/app_g_player_img.mjs";
-import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
@@ -16,10 +15,6 @@ import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
-import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
-import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
-import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
-import { html_img } from "../../../love/public/src/html_img.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
@@ -67,17 +62,7 @@ export async function app_g_refresh(context, div_map_container) {
       gridTemplateColumns: "repeat(" + columns_size + ", auto)",
     });
     function lambda(r, x) {
-      const tiles_path = g_folder_tiles(path_prefix);
-      const tile_class = app_g_class_tile();
-      const src = tiles_path + r + ".png";
-      let tile = html_img(div_map, src);
-      g_img_square_style(tile);
-      html_class_add(tile, tile_class);
-      const coordinates_tile = {
-        x,
-        y,
-      };
-      html_data_set_json(tile, "coordinates", coordinates_tile);
+      app_g_tile(path_prefix, r, div_map, x, y);
     }
     each_index(columns, lambda);
   }
