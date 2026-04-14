@@ -9,4 +9,5 @@ export async function app_g_game_save_get_or_refresh(context) {
     refresh = true;
     await app_g_main(context);
   }
+  return refresh;
 }
