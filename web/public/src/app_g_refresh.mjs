@@ -19,10 +19,6 @@ export async function app_g_refresh(context, div_map_container) {
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
   property_set_exists_not(div_map, "container", div_map_container);
-  async function refresh() {
-    let context2 = error();
-    await app_g_refresh(context2, div_map_container);
-  }
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
     await app_g_main(context);
@@ -35,6 +31,10 @@ export async function app_g_refresh(context, div_map_container) {
   await app_g_div_map_style(div_map);
   await app_g_div_map_tiles_add(div_map);
   async function on_click(e) {
+    async function refresh() {
+      let context2 = error();
+      await app_g_refresh(context2, div_map_container);
+    }
     await app_g_click(e, div_map, player_img_c, refresh);
   }
   html_on_click(div_map, on_click);
