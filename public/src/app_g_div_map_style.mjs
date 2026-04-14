@@ -1,7 +1,9 @@
+import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-export function app_g_div_map_style(div_map, rows) {
+export async function app_g_div_map_style(div_map, rows) {
+  let g = await app_g_game_save_get();
   html_style_assign(div_map, {
     position: "relative",
     display: "grid",
