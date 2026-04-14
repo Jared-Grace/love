@@ -55,7 +55,7 @@ export async function app_g_refresh(context, div_map_container) {
   html_style_assign(div_map, {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
-  let first = list_first(list);
+  let row_first = list_first(rows);
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
     html_style_assign(div_map, {
