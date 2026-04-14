@@ -24,13 +24,7 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
-export async function app_g_click(
-  e,
-  tile_class,
-  div_map,
-  player_img_c,
-  refresh,
-) {
+export async function app_g_click(e, div_map, player_img_c, refresh) {
   let g = await app_g_game_save_get();
   let player = property_get(g, "player");
   let coordinates = property_get(g, "coordinates");
