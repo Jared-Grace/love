@@ -46,6 +46,10 @@ export async function app_g_refresh(context, div_map_container) {
     }
   }
   each(npcs, lambda12);
+  html_style_assign(div_map, {
+    position: "relative",
+    display: "grid",
+  });
   let rows_size = list_size(rows);
   html_style_assign(div_map, {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
