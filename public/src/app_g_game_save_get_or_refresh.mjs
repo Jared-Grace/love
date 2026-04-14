@@ -6,6 +6,7 @@ export async function app_g_game_save_get_or_refresh(context) {
   let refresh = false;
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
+    refresh = true;
     await app_g_main(context);
   }
 }
