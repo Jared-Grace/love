@@ -13,8 +13,6 @@ export async function app_g_refresh(context, div_map_container) {
     await app_g_main(context);
     return;
   }
-  let npcs = property_get(g, "npcs");
-  let player = property_get(g, "player");
   html_clear(div_map_container);
   let r = await app_g_div_map_new(div_map_container, context);
   let player_img_c = property_get(r, "player_img_c");
