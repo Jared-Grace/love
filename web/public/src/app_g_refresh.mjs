@@ -16,9 +16,6 @@ import { html_scroll_center_container_now } from "../../../love/public/src/html_
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 export async function app_g_refresh(context, div_map_container) {
-  html_clear(div_map_container);
-  let div_map = html_div(div_map_container);
-  property_set_exists_not(div_map, "container", div_map_container);
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
     await app_g_main(context);
@@ -26,6 +23,9 @@ export async function app_g_refresh(context, div_map_container) {
   }
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
+  html_clear(div_map_container);
+  let div_map = html_div(div_map_container);
+  property_set_exists_not(div_map, "container", div_map_container);
   let player_img_c = app_g_player_img(div_map, player);
   app_g_div_map_npcs_add(div_map, npcs);
   await app_g_div_map_style(div_map);
