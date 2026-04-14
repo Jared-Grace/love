@@ -4,7 +4,6 @@ import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
 import { app_g_player_img } from "../../../love/public/src/app_g_player_img.mjs";
-import { app_g_path_prefix } from "../../../love/public/src/app_g_path_prefix.mjs";
 import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_on_load_wait } from "../../../love/public/src/html_on_load_wait.mjs";
@@ -22,7 +21,6 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { each } from "../../../love/public/src/each.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 export async function app_g_refresh(context, div_map_container) {
-  let path_prefix = app_g_path_prefix();
   const game_prefix = g_game_prefix();
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
