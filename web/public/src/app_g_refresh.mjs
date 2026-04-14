@@ -25,10 +25,6 @@ export async function app_g_refresh(context, div_map_container) {
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
   property_set_exists_not(div_map, "container", div_map_container);
-  html_style_assign(div_map, {
-    position: "relative",
-    display: "grid",
-  });
   async function refresh() {
     let context2 = error();
     await app_g_refresh(context2, div_map_container);
