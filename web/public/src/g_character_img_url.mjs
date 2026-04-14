@@ -1,3 +1,4 @@
+import { g_game_prefix } from "../../../love/public/src/g_game_prefix.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function g_character_img_url(c) {
   const game_prefix = g_game_prefix();
