@@ -10,8 +10,8 @@ export async function app_g_refresh(context, div_map_container) {
   let g = await catch_null_async(app_g_game_save_get);
   if (null_is(g)) {
     await app_g_main(context);
-    return;
   }
+  return;
   html_clear(div_map_container);
   let r = await app_g_div_map_new(context, div_map_container);
   let player_img_c = property_get(r, "player_img_c");
