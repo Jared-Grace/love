@@ -5,7 +5,9 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_g_refresh(context, div_map_container) {
   let refresh = await app_g_game_save_get_or_refresh(context);
-  return;
+  if (refresh) {
+    return;
+  }
   html_clear(div_map_container);
   let r = await app_g_div_map_new(context, div_map_container);
   let player_img_c = property_get(r, "player_img_c");
