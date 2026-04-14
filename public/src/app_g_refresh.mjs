@@ -62,7 +62,7 @@ export async function app_g_refresh(context, div_map_container) {
       gridTemplateColumns: "repeat(" + columns_size + ", auto)",
     });
     function lambda(r, x) {
-      app_g_tile(path_prefix, r, div_map, x, y);
+      app_g_tile(r, div_map, x, y);
     }
     each_index(columns, lambda);
   }
