@@ -1,3 +1,4 @@
+import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
 import { html_remove_if_not_null } from "../../../love/public/src/html_remove_if_not_null.mjs";
 import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
@@ -83,7 +84,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
         on_transition_begin,
       );
     }
-    let container = property_get(div_map, "container");
+    let container = app_g_div_map_container_get(div_map);
     await html_scroll_center_container(player_img_c, container);
     if (npc_clicked) {
       await app_g_click_npc(div_map, npcs_matched, refresh);
