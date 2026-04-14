@@ -1,3 +1,4 @@
+import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { app_g_game_save_get_or_refresh } from "../../../love/public/src/app_g_game_save_get_or_refresh.mjs";
 import { app_g_player_scroll_center } from "../../../love/public/src/app_g_player_scroll_center.mjs";
 import { app_g_div_map_new } from "../../../love/public/src/app_g_div_map_new.mjs";
@@ -10,6 +11,8 @@ export async function app_g_refresh(context, div_map_container) {
   }
   html_clear(div_map_container);
   let r = await app_g_div_map_new(context, div_map_container);
+  let g = await app_g_game_save_get();
+  let player = property_get(g, "player");
   let player_img_c = property_get(r, "player_img_c");
   let div_map = property_get(r, "div_map");
   await app_g_player_scroll_center(div_map, player_img_c);
