@@ -1,4 +1,3 @@
-import { app_g_div_map_on_click } from "../../../love/public/src/app_g_div_map_on_click.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { app_g_div_map_tiles_add } from "../../../love/public/src/app_g_div_map_tiles_add.mjs";
