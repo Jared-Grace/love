@@ -8,7 +8,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 export async function app_g_div_map_new(div_map_container) {
   let g = await app_g_game_save_get();
   let npcs = property_get(g, "npcs");
-  let player = property_get(g, "player");
   let div_map = html_div(div_map_container);
   property_set_exists_not(div_map, "container", div_map_container);
   app_g_div_map_npcs_add(div_map, npcs);
