@@ -1,3 +1,4 @@
+import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -29,6 +30,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let player = property_get(g, "player");
   let coordinates = property_get(g, "coordinates");
   let npcs = property_get(g, "npcs");
+  const tile_class = app_g_class_tile();
   const tile_e = e.target.closest("." + tile_class);
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
