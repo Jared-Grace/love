@@ -1,3 +1,4 @@
+import { html_remove_if_not_null } from "../../../love/public/src/html_remove_if_not_null.mjs";
 import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
@@ -19,8 +20,6 @@ import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
-import { html_remove } from "../../../love/public/src/html_remove.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
@@ -37,9 +36,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let clicked_coordinates = json_from(json);
   function lambda2(tutorial) {
     let value = global_function_property_get(app_g_main, tutorial);
-    if (equal_not(value, null)) {
-      html_remove(value);
-    }
+    html_remove_if_not_null(value);
   }
   g_tutorials_each(lambda2);
   let distance2 = g_distance(player, clicked_coordinates);
