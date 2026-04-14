@@ -1,4 +1,4 @@
-import { list_first } from "../../../love/public/src/list_first.mjs";
+import { app_g_div_map_style } from "../../../love/public/src/app_g_div_map_style.mjs";
 import { app_g_tile } from "../../../love/public/src/app_g_tile.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -15,10 +15,8 @@ import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 export async function app_g_refresh(context, div_map_container) {
@@ -47,19 +45,7 @@ export async function app_g_refresh(context, div_map_container) {
     }
   }
   each(npcs, lambda12);
-  html_style_assign(div_map, {
-    position: "relative",
-    display: "grid",
-  });
-  let rows_size = list_size(rows);
-  html_style_assign(div_map, {
-    gridTemplateRows: "repeat(" + rows_size + ", auto)",
-  });
-  let row_first = list_first(rows);
-  let columns_size = list_size(row_first);
-  html_style_assign(div_map, {
-    gridTemplateColumns: "repeat(" + columns_size + ", auto)",
-  });
+  app_g_div_map_style(div_map, rows);
   function lambda2(columns, y) {
     function lambda(r, x) {
       app_g_tile(div_map, r, x, y);
