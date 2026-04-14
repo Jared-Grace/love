@@ -6,10 +6,10 @@ import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs"
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 export function app_g_tile(parent, r, x, y) {
   const tiles_path = g_folder_tiles();
-  const tile_class = app_g_class_tile();
   const src = tiles_path + r + ".png";
   let tile = html_img(parent, src);
   g_img_square_style(tile);
+  const tile_class = app_g_class_tile();
   html_class_add(tile, tile_class);
   const coordinates_tile = {
     x,
