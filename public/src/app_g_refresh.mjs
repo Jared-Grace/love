@@ -61,7 +61,6 @@ export async function app_g_refresh(context, div_map_container) {
     gridTemplateColumns: "repeat(" + columns_size + ", auto)",
   });
   function lambda2(columns, y) {
-    let columns_size = list_size(columns);
     function lambda(r, x) {
       app_g_tile(div_map, r, x, y);
     }
