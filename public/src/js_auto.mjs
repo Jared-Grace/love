@@ -5,7 +5,7 @@ import { js_flo_path } from "../../../love/public/src/js_flo_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
-import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
+import { file_read_cached_initialize } from "../../../love/public/src/file_read_cached_initialize.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
@@ -16,10 +16,13 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function js_auto(ast) {
   let d_path = data_path();
-  let exists = global_function_property_exists(file_read_cached, d_path);
+  let exists = global_function_property_exists(
+    file_read_cached_initialize,
+    d_path,
+  );
   if (not(exists)) {
     let data_get = data_generate_get();
-    global_function_property_set(file_read_cached, d_path, data_get);
+    global_function_property_set(file_read_cached_initialize, d_path, data_get);
   }
   let f_path = js_flo_path(ast);
   async function lambda() {
@@ -28,7 +31,10 @@ export async function js_auto(ast) {
     async function lambda(t) {
       performance_next(p, t.name);
       await t(ast);
-      let data = global_function_property_get(file_read_cached, d_path);
+      let data = global_function_property_get(
+        file_read_cached_initialize,
+        d_path,
+      );
       data_file_update_inner(
         {
           ast,
