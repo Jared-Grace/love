@@ -16,7 +16,7 @@ export async function app_g_refresh(context, div_map_container) {
   let npcs = property_get(g, "npcs");
   let player = property_get(g, "player");
   html_clear(div_map_container);
-  let r = await app_g_div_map_new(div_map_container, player, npcs, context);
+  let r = await app_g_div_map_new(div_map_container, npcs, context);
   let player_img_c = property_get(r, "player_img_c");
   let div_map = property_get(r, "div_map");
   await html_on_load_wait();
