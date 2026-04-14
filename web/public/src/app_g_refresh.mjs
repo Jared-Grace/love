@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_g_tile } from "../../../love/public/src/app_g_tile.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -54,6 +55,7 @@ export async function app_g_refresh(context, div_map_container) {
   html_style_assign(div_map, {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
+  let first = list_first(list);
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
     html_style_assign(div_map, {
