@@ -100,6 +100,7 @@ export async function js_curry_replace(ast) {
           }
         }
       }
+      let s2 = list_size_1(body_block);
     }
     each(list, lambda);
   }
