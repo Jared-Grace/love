@@ -77,7 +77,6 @@ export async function js_curry_replace(ast) {
                     todo();
                   } else {
                     let positions_1 = list_map_index_of_1(difference, args);
-                    let positions_1_comma = list_join_comma(positions_1);
                     let e = list_empty_is(params);
                     if (e) {
                       name_get = function_name_combine_curried_right("later");
@@ -87,6 +86,7 @@ export async function js_curry_replace(ast) {
                           positions_1,
                         );
                     }
+                    let positions_1_comma = list_join_comma(positions_1);
                     curry_generate =
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
