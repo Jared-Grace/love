@@ -1,4 +1,4 @@
-import { js_declare_is_if } from "../../../love/public/src/js_declare_is_if.mjs";
+import { js_declare_single_is_if } from "../../../love/public/src/js_declare_single_is_if.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
@@ -119,7 +119,7 @@ export async function js_curry_replace(ast) {
           }
           js_node_type_is_if(second, "ReturnStatement", lambda5);
         }
-        js_declare_is_if(first, lambda4);
+        js_declare_single_is_if(first, lambda4);
       }
     }
     await each_async(list, lambda);
