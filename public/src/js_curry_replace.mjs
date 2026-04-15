@@ -1,4 +1,4 @@
-import { js_call_is_if } from "../../../love/public/src/js_call_is_if.mjs";
+import { js_call_is_if_async } from "../../../love/public/src/js_call_is_if_async.mjs";
 import { js_declare_single_identifier_is_if } from "../../../love/public/src/js_declare_single_identifier_is_if.mjs";
 import { js_return_argument_identifier_is_if } from "../../../love/public/src/js_return_argument_identifier_is_if.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
@@ -54,7 +54,7 @@ export async function js_curry_replace(ast) {
           let params = js_function_declaration_params_get(node);
           let ii_only = js_identifier_list_is(params);
           if (ii_only) {
-            await js_call_is_if(expression, on_call_is);
+            await js_call_is_if_async(expression, on_call_is);
             async function on_call_is() {
               let f_name = js_call_callee_name_try(expression);
               let includes = list_includes(f_names, f_name);
