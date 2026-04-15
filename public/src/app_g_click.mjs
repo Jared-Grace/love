@@ -1,4 +1,4 @@
-import { list_shuffle_sort_number_mapper } from "../../../love/public/src/list_shuffle_sort_number_mapper.mjs";
+import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
 import { g_img_square_style_position_object_later } from "../../../love/public/src/g_img_square_style_position_object_later.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
@@ -12,7 +12,6 @@ import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
@@ -49,8 +48,11 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
         let distance = g_distance(player, item3);
         return distance;
       }
-      list_shuffle_sort_number_mapper(filtered3, lambda19);
-      coordinates_move_to = list_first(filtered3);
+      coordinates_move_to = list_shuffle_sort_number_mapper_first(
+        filtered3,
+        lambda19,
+        coordinates_move_to,
+      );
     } else {
       coordinates_move_to = clicked_coordinates;
     }
