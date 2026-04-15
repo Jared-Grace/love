@@ -1,3 +1,4 @@
+import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
 import { g_img_square_style_position_object_later } from "../../../love/public/src/g_img_square_style_position_object_later.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
@@ -8,7 +9,6 @@ import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -72,9 +72,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     }
     let container = app_g_div_map_container_get(div_map);
     await html_scroll_center_container(player_img_c, container);
-    if (npc_clicked) {
-      await app_g_click_npc(div_map, npcs_matched, refresh);
-    }
+    await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, refresh);
   }
   await app_g_player_save(player);
 }
