@@ -46,11 +46,11 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       }
       let coordinates = property_get(g, "coordinates");
       let filtered3 = list_filter(coordinates, lambda18);
-      list_shuffle(filtered3);
       function lambda19(item3) {
         let distance = g_distance(player, item3);
         return distance;
       }
+      list_shuffle(filtered3);
       list_sort_number_mapper(filtered3, lambda19);
       coordinates_move_to = list_first(filtered3);
     } else {
