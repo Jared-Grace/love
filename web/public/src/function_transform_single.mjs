@@ -13,7 +13,7 @@ export async function function_transform_single(
   let remaining = property_get(fr, "remaining");
   let f_name_transformer = property_get(fr, "first");
   f_name_transformer = override_get(
-    function_name_new_get_generic_overrides,
+    function_transform_single_overrides,
     f_name_transformer,
   );
   log(function_transform_single.name, {
