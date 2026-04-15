@@ -122,5 +122,5 @@ export async function js_curry_replace(ast) {
     let args2 = js_call_arguments_get(call);
     list_add_multiple(args2, difference);
   }
-  let code = js_unparse(ast2);
+  let code = js_unparse(ast);
 }
