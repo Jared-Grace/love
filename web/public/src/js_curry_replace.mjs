@@ -1,3 +1,4 @@
+import { js_call_is_if } from "../../../love/public/src/js_call_is_if.mjs";
 import { js_call_is_if_async } from "../../../love/public/src/js_call_is_if_async.mjs";
 import { js_declare_single_identifier_is_if } from "../../../love/public/src/js_declare_single_identifier_is_if.mjs";
 import { js_return_argument_identifier_is_if } from "../../../love/public/src/js_return_argument_identifier_is_if.mjs";
@@ -113,6 +114,7 @@ export async function js_curry_replace(ast) {
       function lambda4(d) {
         let second = property_get(r, "second");
         function lambda5() {
+          js_call_is_if(expression2, on_call_is2);
           log(js_curry_replace.name, {
             d,
           });
