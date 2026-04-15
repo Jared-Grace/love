@@ -11,8 +11,10 @@ export async function function_transform_single(
   let fr = list_first_remaining_from_comma_dot(f_name_transformer_args_comma);
   let remaining = property_get(fr, "remaining");
   let f_name_transformer = property_get(fr, "first");
-  let overrides = function_name_new_get_generic_overrides();
-  f_name_transformer = override_get(overrides, f_name_transformer);
+  f_name_transformer = override_get(
+    overrides,
+    function_name_new_get_generic_overrides,
+  );
   let imported_fn = await function_import_unalias(f_name_transformer);
   async function lambda(ast) {
     let result = await imported_fn(ast, ...remaining);
