@@ -21,6 +21,7 @@ export async function function_transform_result(f_names, lambda$ast) {
       1: 3,
     });
     let result = await lambda$ast(ast);
+    log_unparse(ast);
     log(function_transform_result.name, {
       1: 4,
     });
@@ -34,5 +35,4 @@ export async function function_transform_result(f_names, lambda$ast) {
   }
   let r3 = await list_map_async(split, lambda_each_function);
   return r3;
-  log_unparse(ast);
 }
