@@ -13,7 +13,7 @@ export async function js_return_atomize(ast) {
   async function lambda(v) {
     let node = property_get(v, "node");
     if (js_node_type_is(node, "ReturnStatement")) {
-      let argument = property_get(node, "argument");
+      let argument = js_return_argument_get(node, );
       if (js_node_type_is(argument, "Identifier")) {
         return;
       }
