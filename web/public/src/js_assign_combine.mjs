@@ -11,6 +11,7 @@ import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 export function js_assign_combine(ast) {
   function lambda(v) {
     let stack = property_get(v, "stack");
@@ -32,7 +33,7 @@ export function js_assign_combine(ast) {
     if (null_is(declaration2)) {
       return;
     }
-    let init2 = property_get(declaration2, "init");
+    let init2 = js_declare_init_get(declaration2);
     let nti = js_node_type_not_is(init2, "Identifier");
     if (nti) {
       return;
