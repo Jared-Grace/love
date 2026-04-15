@@ -43,6 +43,6 @@ export function js_return_above_combine(ast) {
       js_literal_is_if(init, lambda6);
     }
     let previous = list_previous(e1, node);
-    js_declare_single_identifier_is_if(lambda4, previous);
+    js_declare_single_identifier_is_if(previous, lambda4);
   }
 }

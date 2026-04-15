@@ -1,7 +1,7 @@
 import { js_declare_single_is_if } from "../../../love/public/src/js_declare_single_is_if.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function js_declare_single_identifier_is_if(lambda$d, previous) {
+export function js_declare_single_identifier_is_if(previous, lambda$d) {
   function lambda(d) {
     let id = property_get(d, "id");
     function lambda3() {
