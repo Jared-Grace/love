@@ -113,7 +113,7 @@ export async function js_curry_replace(ast) {
           let second = property_get(r, "second");
           function lambda5() {
             log(js_curry_replace.name, {
-              first,
+              d,
             });
           }
           js_return_argument_identifier_is_if(second, lambda5);
