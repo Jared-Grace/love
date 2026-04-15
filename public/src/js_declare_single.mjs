@@ -1,3 +1,4 @@
+import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -16,4 +17,5 @@ export function js_declare_single(vd) {
   }
   declaration = list_single(declarations);
   return declaration;
+  let value = js_declare_declarations_get(node);
 }
