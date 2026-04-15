@@ -1,6 +1,5 @@
-import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
+import { js_return_argument_identifier_is_if } from "../../../love/public/src/js_return_argument_identifier_is_if.mjs";
 import { js_visit_returns } from "../../../love/public/src/js_visit_returns.mjs";
-import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_visit_returns_identifiers(ast, lambda2) {
   function lambda(v) {
@@ -16,9 +15,3 @@ export function js_visit_returns_identifiers(ast, lambda2) {
   }
   js_visit_returns(ast, lambda);
 }
-function js_return_argument_identifier_is_if(node, lambda5) {
-  let argument = js_return_argument_get(node);
-  js_identifier_is_if(argument, lambda5);
-  return argument;
-}
-
