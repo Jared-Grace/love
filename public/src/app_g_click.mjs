@@ -51,7 +51,6 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       coordinates_move_to = list_shuffle_sort_number_mapper_first(
         filtered3,
         lambda19,
-        coordinates_move_to,
       );
     } else {
       coordinates_move_to = clicked_coordinates;
