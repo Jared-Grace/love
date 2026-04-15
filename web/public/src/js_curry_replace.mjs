@@ -110,14 +110,13 @@ export async function js_curry_replace(ast) {
         let second = property_get(r, "second");
         let first = property_get(r, "first");
         function lambda4() {
-          function lambda5() {}
-          js_node_type_is_if(node2, type, lambda5);
-        }
-        js_node_type_is_if(first, "VariableDeclaration", lambda4);
+          function lambda5() {
         log(js_curry_replace.name, {
           first,
-          second,
-        });
+        });}
+          js_node_type_is_if(second, 'ReturnStatement', lambda5);
+        }
+        js_node_type_is_if(first, "VariableDeclaration", lambda4);
       }
     }
     await each_async(list, lambda);
