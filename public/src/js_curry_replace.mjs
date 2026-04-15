@@ -80,10 +80,10 @@ export async function js_curry_replace(ast) {
                     let e = list_empty_is(params);
                     if (e) {
                     } else {
-                    name_get =
-                      function_curryify_specify_name_get_curried_right(
-                        positions_1,
-                      );
+                      name_get =
+                        function_curryify_specify_name_get_curried_right(
+                          positions_1,
+                        );
                     }
                     curry_generate =
                       await function_curryify_specify_curried_right(
