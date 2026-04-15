@@ -86,7 +86,7 @@ export async function js_curry_replace(ast) {
                       );
                   }
                 }
-                let name_curried = name_get(f_name);
+                let name_curried = await name_get(f_name);
                 log(js_curry_replace.name, {
                   params,
                   name_curried2: name_curried,
