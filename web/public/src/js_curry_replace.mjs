@@ -1,3 +1,4 @@
+import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -107,6 +108,7 @@ export async function js_curry_replace(ast) {
         log(js_curry_replace.name, {
           body_block,
         });
+        let result = list_first_second(list2);
       }
     }
     await each_async(list, lambda);
