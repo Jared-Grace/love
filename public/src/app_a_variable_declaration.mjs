@@ -1,3 +1,4 @@
+import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
 import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
@@ -22,7 +23,7 @@ export function app_a_variable_declaration(a) {
     app_a_paste(choices, a, o, list, index, "above");
   }
   app_a_overlay_choices(a, keyword, lambda19);
-  let declarations = property_get(node, "declarations");
+  let declarations = js_declare_declarations_get(node);
   app_a_nodes_list(a, declarations, parent);
   app_a_semicolon(parent);
 }
