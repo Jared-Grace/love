@@ -8,6 +8,7 @@ export function function_curryify_specify_name_get(unaliased, positions_1) {
   let params = js_function_declaration_params_get(declaration2);
   let e = lists_sizes_equal([params, positions_1]);
   if (e) {
+    let ending = "later";
   } else {
   }
   let n = function_curryify_specify_name(unaliased);
