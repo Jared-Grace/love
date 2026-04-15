@@ -167,7 +167,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
       let span = html_span_text(parent, text3);
-      let init = property_get(node, "init");
+      let init = js_declare_init_get(node,);
       app_a_function_node_child(a, init);
     },
     ["ObjectExpression"]: o_props,
