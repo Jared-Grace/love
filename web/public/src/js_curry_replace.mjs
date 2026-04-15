@@ -109,8 +109,11 @@ export async function js_curry_replace(ast) {
         let r = list_first_second(body_block);
         let second = property_get(r, "second");
         let first = property_get(r, "first");
-        function lambda4() {}
-        js_node_type_is_if(node2, type, lambda4);
+        function lambda4() {
+          function lambda5() {}
+          js_node_type_is_if(node2, type, lambda5);
+        }
+        js_node_type_is_if(first, "VariableDeclaration", lambda4);
         log(js_curry_replace.name, {
           first,
           second,
