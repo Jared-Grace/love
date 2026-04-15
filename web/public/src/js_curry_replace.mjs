@@ -103,7 +103,7 @@ export async function js_curry_replace(ast) {
                 object_replace(node, declare);
                 log(js_curry_replace.name, {
                   node,
-                  decalre,
+                  declare,
                 });
                 la(name_curried);
               }
