@@ -6,6 +6,7 @@ import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_n
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
+import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
@@ -79,8 +80,12 @@ export async function js_curry_replace(ast) {
                     let positions_1_comma = list_join_comma(positions_1);
                     let e = list_empty_is(params);
                     if (e) {
-                    } else {
                       name_get = function_name_combine_curried_right("later");
+                    } else {
+                      name_get =
+                        function_curryify_specify_name_get_curried_right(
+                          positions_1,
+                        );
                     }
                     curry_generate =
                       await function_curryify_specify_curried_right(
