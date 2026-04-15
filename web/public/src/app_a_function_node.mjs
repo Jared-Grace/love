@@ -1,3 +1,4 @@
+import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -113,7 +114,7 @@ export function app_a_function_node(a) {
     ["ReturnStatement"]: function lambda7() {
       let k = js_keyword_return();
       app_a_keyword_purple(parent, k);
-      let argument2 = property_get(node, "argument");
+      let argument2 = js_return_argument_get(node);
       let nn2 = null_not_is(argument2);
       if (nn2) {
         html_span_space(parent);
