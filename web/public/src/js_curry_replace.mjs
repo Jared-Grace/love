@@ -56,6 +56,9 @@ export async function js_curry_replace(ast) {
           if (ii_only) {
             let ci = js_call_is(expression);
             if (ci) {
+              await on_call_is(expression, params);
+            }
+            async function on_call_is(expression, params) {
               let f_name = js_call_callee_name_try(expression);
               let includes = list_includes(f_names, f_name);
               if (includes) {
@@ -105,21 +108,21 @@ export async function js_curry_replace(ast) {
           }
         }
       }
-      let s2 = list_size_2(body_block);
-      if (s2) {
-        let r = list_first_second(body_block);
-        let first = property_get(r, "first");
-        function lambda4(d) {
-          let second = property_get(r, "second");
-          function lambda5() {
-            log(js_curry_replace.name, {
-              d,
-            });
-          }
-          js_return_argument_identifier_is_if(second, lambda5);
+    }
+    let s2 = list_size_2(body_block);
+    if (s2) {
+      let r = list_first_second(body_block);
+      let first = property_get(r, "first");
+      function lambda4(d) {
+        let second = property_get(r, "second");
+        function lambda5() {
+          log(js_curry_replace.name, {
+            d,
+          });
         }
-        js_declare_single_identifier_is_if(first, lambda4);
+        js_return_argument_identifier_is_if(second, lambda5);
       }
+      js_declare_single_identifier_is_if(first, lambda4);
     }
     await each_async(list, lambda);
   }
