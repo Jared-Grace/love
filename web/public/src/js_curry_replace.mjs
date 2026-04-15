@@ -101,7 +101,7 @@ export async function js_curry_replace(ast) {
           }
         }
       }
-      let s2 = list_size(body_block) === 1;
+      let s2 = list_size(body_block) === 2;
     }
     each(list, lambda);
   }
