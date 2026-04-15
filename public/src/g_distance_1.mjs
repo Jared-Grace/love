@@ -1,6 +1,6 @@
-import { g_distance } from "../../../love/public/src/g_distance.mjs";
+import { g_distance_equal } from "../../../love/public/src/g_distance_equal.mjs";
 export function g_distance_1(c, w) {
-  let distance = g_distance(c, w);
-  let a = distance === 1;
-  return a;
+  const d = 1;
+  const zi = g_distance_equal(player, coordinates, d);
+  return zi;
 }
