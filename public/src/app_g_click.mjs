@@ -23,7 +23,6 @@ import { g_distance } from "../../../love/public/src/g_distance.mjs";
 export async function app_g_click(e, div_map, player_img_c, refresh) {
   let g = await app_g_game_save_get();
   let player = property_get(g, "player");
-  let coordinates = property_get(g, "coordinates");
   let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
   const clicked_on_player = g_distance_0(player, clicked_coordinates);
@@ -45,6 +44,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
         let d1 = g_distance_1(clicked_coordinates, item);
         return d1;
       }
+      let coordinates = property_get(g, "coordinates");
       let filtered3 = list_filter(coordinates, lambda18);
       list_shuffle(filtered3);
       function lambda19(item3) {
