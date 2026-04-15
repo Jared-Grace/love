@@ -5,6 +5,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 export function js_statement_call_get(node) {
   let call = null;
   let declaration = null;
@@ -27,7 +28,7 @@ export function js_statement_call_get(node) {
       return null;
     }
     declaration = list_single(declarations);
-    call = property_get(declaration, "init");
+    call = js_declare_init_get(declaration);
   }
   if (js_node_type_is(call, "AwaitExpression")) {
     call = property_get(call, "argument");
