@@ -13,7 +13,7 @@ export async function function_curryify_specify_name_get(
   let ending = null;
   let e = lists_sizes_equal([params, positions_1]);
   if (e) {
-    ending = ["later"];
+    ending = [unaliased, "later"];
   } else {
     let n = function_curryify_specify_name(unaliased);
     ending = positions_1;
