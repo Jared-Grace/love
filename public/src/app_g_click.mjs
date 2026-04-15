@@ -40,8 +40,8 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     html_remove_if_not_null(value);
   }
   g_tutorials_each(lambda2);
-  let distance2 = g_distance(player, clicked_coordinates);
-  const clicked_on_player = equal(distance2, 0);
+  let clicked_player_distance = g_distance(player, clicked_coordinates);
+  const clicked_on_player = equal(clicked_player_distance, 0);
   if (clicked_on_player) {
     let overlay = app_g_overlay(div_map);
     app_g_menu(overlay, player);
