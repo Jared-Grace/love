@@ -110,12 +110,12 @@ export async function js_curry_replace(ast) {
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
         function lambda4() {
-          let s12 = list_size_1(list2);
           let second = property_get(r, "second");
           function lambda5() {
             log(js_curry_replace.name, {
               first,
             });
+            let s12 = list_size_1(list2);
           }
           js_node_type_is_if(second, "ReturnStatement", lambda5);
         }
