@@ -46,7 +46,7 @@ export function js_return_above_combine(ast) {
     let previous = list_previous(e1, node);
     function lambda(d) {
       let id = property_get(d, "id");
-      function lambda3() {}
+      function lambda3() {lambda4(d)}
       js_identifier_is_if(id, lambda3);
     }
     js_declare_single_is_if(previous, lambda);
