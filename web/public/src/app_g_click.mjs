@@ -1,3 +1,4 @@
+import { g_distance_1 } from "../../../love/public/src/g_distance_1.mjs";
 import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
 import { html_remove_if_not_null } from "../../../love/public/src/html_remove_if_not_null.mjs";
 import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
@@ -55,9 +56,8 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let coordinates_move_to = null;
     if (npc_clicked) {
       function lambda18(item) {
-        let distance = g_distance(clicked_coordinates, item);
-        let v2 = distance === 1;
-        return v2;
+        let d1 = g_distance_1(clicked_coordinates, item);
+        return d1;
       }
       let filtered3 = list_filter(coordinates, lambda18);
       list_shuffle(filtered3);
