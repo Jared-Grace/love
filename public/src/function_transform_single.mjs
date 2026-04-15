@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { override_get } from "../../../love/public/src/override_get.mjs";
 import { function_name_new_get_generic_overrides } from "../../../love/public/src/function_name_new_get_generic_overrides.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -15,6 +16,9 @@ export async function function_transform_single(
     function_name_new_get_generic_overrides,
     f_name_transformer,
   );
+  log(function_transform_single.name, {
+    f_name_transformer,
+  });
   let imported_fn = await function_import_unalias(f_name_transformer);
   async function lambda(ast) {
     let result = await imported_fn(ast, ...remaining);
