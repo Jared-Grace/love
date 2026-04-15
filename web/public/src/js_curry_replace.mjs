@@ -101,7 +101,7 @@ export async function js_curry_replace(ast) {
                   node,
                   declare,
                 });
-                log_unparse(node2);
+                log_unparse(ast);
                 la(name_curried);
               }
             }
