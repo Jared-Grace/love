@@ -21,11 +21,11 @@ import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 export async function app_g_click(e, div_map, player_img_c, refresh) {
-  let g = await app_g_game_save_get();
-  let player = property_get(g, "player");
   let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
   const clicked_on_player = g_distance_0(player, clicked_coordinates);
+  let g = await app_g_game_save_get();
+  let player = property_get(g, "player");
   if (clicked_on_player) {
     let overlay = app_g_overlay(div_map);
     app_g_menu(overlay, player);
