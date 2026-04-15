@@ -1,3 +1,4 @@
+import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
@@ -12,7 +13,6 @@ import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
-import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
@@ -117,7 +117,7 @@ export async function js_curry_replace(ast) {
     }
     each(list, lambda);
   }
-  let f_names_added = list_adder_unique(lambda2);
+  let f_names_added = await list_adder_unique_async(lambda2);
   await js_imports_missing_add_specified(ast, f_names_added);
   function js_call_arguments_add(call, difference) {
     let args2 = js_call_arguments_get(call);
