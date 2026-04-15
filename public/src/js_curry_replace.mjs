@@ -56,9 +56,9 @@ export async function js_curry_replace(ast) {
           if (ii_only) {
             let ci = js_call_is(expression);
             if (ci) {
-              await on_call_is(expression, params);
+              await on_call_is();
             }
-            async function on_call_is(expression, params) {
+            async function on_call_is() {
               let f_name = js_call_callee_name_try(expression);
               let includes = list_includes(f_names, f_name);
               if (includes) {
