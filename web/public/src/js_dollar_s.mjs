@@ -1,3 +1,4 @@
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -29,7 +30,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     assert(s1);
     function lambda2(declaration) {
       let expression = js_assign_default();
-      let init = property_get(declaration, "init");
+      let init = js_declare_init_get(declaration);
       let id = property_get(declaration, "id");
       let type_is = js_literal_is(init);
       if (type_is) {
