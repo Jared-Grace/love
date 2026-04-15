@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { js_flo_params_get } from "../../../love/public/src/js_flo_params_get.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
 import { lists_sizes_equal } from "../../../love/public/src/lists_sizes_equal.mjs";
@@ -14,9 +15,10 @@ export async function function_curryify_specify_name_get(
   if (e) {
     ending = ["later"];
   } else {
+    let n = function_curryify_specify_name(unaliased);
     ending = positions_1;
+    let concated = list_concat(a, b);
   }
-  let n = function_curryify_specify_name(unaliased);
   const parts = [n];
   let combined = function_name_combine_multiple_concat(parts, ending);
   return combined;
