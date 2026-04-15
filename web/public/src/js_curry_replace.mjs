@@ -81,7 +81,10 @@ export async function js_curry_replace(ast) {
                     if (e) {
                     } else {
                       name_get = function lambda3(unaliased) {
-                        let combined = function_name_combine(left, right);
+                        let combined = function_name_combine(
+                          unaliased,
+                          "later",
+                        );
                       };
                     }
                     curry_generate =
