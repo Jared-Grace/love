@@ -1,3 +1,4 @@
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { js_declare_init_set } from "../../../love/public/src/js_declare_init_set.mjs";
 import { js_visit_declarators } from "../../../love/public/src/js_visit_declarators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -7,7 +8,7 @@ export function js_declare_assign_init_set(ast, lambda) {
   function lambda2(v) {
     let stack = property_get(v, "stack");
     let node = property_get(v, "node");
-    let init = property_get(node, "init");
+    let init = js_declare_init_get(node);
     if (init === null) {
       let stack3 = list_get_end(stack, 3);
       let n = js_node_type_not_is(stack3, "ForOfStatement");
