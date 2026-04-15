@@ -29,29 +29,29 @@ export function js_return_above_combine(ast) {
       return;
     }
     let previous = list_previous(e1, node);
+    function lambda(only) {
+      let id = property_get(only, "id");
+      function lambda4() {
+        const n = js_identifiers_names_equal_not(id, argument);
+        if (n) {
+          return;
+        }
+        let init = property_get(only, "init");
+        function lambda6() {
+          let value = property_get(init, "value");
+          let values = [null, false, true];
+          list_includes_if(values, value, lambda_if);
+          function lambda_if() {
+            js_return_argument_set(node, init);
+            list_remove(e1, previous);
+          }
+        }
+        js_literal_is_if(init, lambda6);
+      }
+      js_identifier_is_if(id, lambda4);
+    }
     function lambda3() {
       let declarations = js_declare_declarations_get(previous);
-      function lambda(only) {
-        let id = property_get(only, "id");
-        function lambda4() {
-          const n = js_identifiers_names_equal_not(id, argument);
-          if (n) {
-            return;
-          }
-          let init = property_get(only, "init");
-          function lambda6() {
-            let value = property_get(init, "value");
-            let values = [null, false, true];
-            list_includes_if(values, value, lambda_if);
-            function lambda_if() {
-              js_return_argument_set(node, init);
-              list_remove(e1, previous);
-            }
-          }
-          js_literal_is_if(init, lambda6);
-        }
-        js_identifier_is_if(id, lambda4);
-      }
       list_single_if(declarations, lambda);
     }
     js_declare_is_if(previous, lambda3);
