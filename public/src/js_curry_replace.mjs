@@ -110,13 +110,14 @@ export async function js_curry_replace(ast) {
       if (s2) {
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
-        function lambda4(d) {
+        function lambda4(init) {
           let second = property_get(r, "second");
           function lambda5() {
             log(js_curry_replace.name, {
               d,
             });
-            js_call_is_if(expression2, on_call_is2);
+            function lambda3() {}
+            js_call_is_if(init, lambda3);
           }
           js_return_argument_identifier_is_if(second, lambda5);
         }
