@@ -1,3 +1,4 @@
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
@@ -167,7 +168,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
       let span = html_span_text(parent, text3);
-      let init = js_declare_init_get(node,);
+      let init = js_declare_init_get(node);
       app_a_function_node_child(a, init);
     },
     ["ObjectExpression"]: o_props,
