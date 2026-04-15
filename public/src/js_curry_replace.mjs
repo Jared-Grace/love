@@ -80,8 +80,7 @@ export async function js_curry_replace(ast) {
                     let e = list_empty_is(params);
                     if (e) {
                     } else {
-                      let r = function_name_combine_curried_right("later");
-                      name_get = r;
+                      name_get = function_name_combine_curried_right("later");
                     }
                     curry_generate =
                       await function_curryify_specify_curried_right(
