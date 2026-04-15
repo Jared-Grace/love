@@ -115,7 +115,6 @@ export async function js_curry_replace(ast) {
             log(js_curry_replace.name, {
               first,
             });
-            let s12 = list_size_1(list2);
           }
           js_node_type_is_if(second, "ReturnStatement", lambda5);
         }
