@@ -5,6 +5,6 @@ export function list_adder_generic(lambda, fn) {
     fn(list, item);
   }
   let result = lambda(list_adder_inner);
+  promise_not_is_assert(result);
   return list;
-  promise_not_is_assert(ast);
 }
