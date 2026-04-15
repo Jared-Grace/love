@@ -1,3 +1,4 @@
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
@@ -32,7 +33,7 @@ export async function js_destructure_functionize(ast) {
       return;
     }
     js_node_type_is_assert(e1, "VariableDeclarator");
-    let init = property_get(e1, "init");
+    let init = js_declare_init_get(e1);
     let ii = js_identifier_is(init);
     let result = null;
     if (ii) {
