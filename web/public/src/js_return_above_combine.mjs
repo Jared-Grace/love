@@ -1,5 +1,5 @@
 import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
-import { js_variable_declaration_is_if } from "../../../love/public/src/js_variable_declaration_is_if.mjs";
+import { js_declare_is_if } from "../../../love/public/src/js_declare_is_if.mjs";
 import { js_identifiers_names_equal_not } from "../../../love/public/src/js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "../../../love/public/src/js_literal_is_if.mjs";
 import { list_includes_if } from "../../../love/public/src/list_includes_if.mjs";
@@ -54,6 +54,6 @@ export function js_return_above_combine(ast) {
       }
       list_single_if(declarations, lambda);
     }
-    js_variable_declaration_is_if(previous, lambda3);
+    js_declare_is_if(previous, lambda3);
   }
 }
