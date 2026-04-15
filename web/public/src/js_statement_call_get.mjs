@@ -21,7 +21,7 @@ export function js_statement_call_get(node) {
       call = expression_next;
     }
   } else if (js_node_type_is(node, "VariableDeclaration")) {
-    let declarations = property_get(node, "declarations");
+    let declarations = js_declare_declarations_get(node, );
     if (list_multiple_is(declarations)) {
       return null;
     }
