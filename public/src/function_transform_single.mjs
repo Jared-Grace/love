@@ -1,6 +1,6 @@
+import { function_transform_single_overrides } from "../../../love/public/src/function_transform_single_overrides.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { override_get } from "../../../love/public/src/override_get.mjs";
-import { function_name_new_get_generic_overrides } from "../../../love/public/src/function_name_new_get_generic_overrides.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_import_unalias } from "../../../love/public/src/function_import_unalias.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
