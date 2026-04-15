@@ -20,6 +20,7 @@ export async function function_transform_result(f_names, lambda$ast) {
       1: 3,
     });
     let result = await lambda$ast(ast);
+                log_unparse(ast);
     log(function_transform_result.name, {
       1: 4,
     });
