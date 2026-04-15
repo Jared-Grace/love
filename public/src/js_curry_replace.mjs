@@ -109,7 +109,8 @@ export async function js_curry_replace(ast) {
         let second = property_get(r, "second");
         let first = property_get(r, "first");
         log(js_curry_replace.name, {
-          r,
+          first,
+          second,
         });
       }
     }
