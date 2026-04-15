@@ -1,5 +1,4 @@
 import { function_transform_single_overrides } from "../../../love/public/src/function_transform_single_overrides.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { override_get } from "../../../love/public/src/override_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_import_unalias } from "../../../love/public/src/function_import_unalias.mjs";
@@ -16,9 +15,6 @@ export async function function_transform_single(
     function_transform_single_overrides,
     f_name_transformer,
   );
-  log(function_transform_single.name, {
-    f_name_transformer,
-  });
   let imported_fn = await function_import_unalias(f_name_transformer);
   async function lambda(ast) {
     let result = await imported_fn(ast, ...remaining);
