@@ -105,7 +105,7 @@ export async function js_curry_replace(ast) {
       let s2 = list_size_2(body_block);
       if (s2) {
         log(js_curry_replace.name, {
-          s2,
+          body_block
         });
       }
     }
