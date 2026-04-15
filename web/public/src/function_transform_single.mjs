@@ -12,8 +12,8 @@ export async function function_transform_single(
   let remaining = property_get(fr, "remaining");
   let f_name_transformer = property_get(fr, "first");
   f_name_transformer = override_get(
-    overrides,
     function_name_new_get_generic_overrides,
+    f_name_transformer,
   );
   let imported_fn = await function_import_unalias(f_name_transformer);
   async function lambda(ast) {
