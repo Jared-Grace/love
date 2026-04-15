@@ -1,9 +1,8 @@
-import { html_event_target_closest_class } from "../../../love/public/src/html_event_target_closest_class.mjs";
+import { app_g_event_target_closest_tile } from "../../../love/public/src/app_g_event_target_closest_tile.mjs";
 import { app_g_tile_coordinates_get } from "../../../love/public/src/app_g_tile_coordinates_get.mjs";
 import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorials_each_remove_try.mjs";
 import { g_distance_1 } from "../../../love/public/src/g_distance_1.mjs";
 import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
-import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -27,8 +26,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let player = property_get(g, "player");
   let coordinates = property_get(g, "coordinates");
   let npcs = property_get(g, "npcs");
-  const tile_class = app_g_class_tile();
-  let tile = html_event_target_closest_class(tile_class, e);
+  let tile = app_g_event_target_closest_tile(e);
   let clicked_coordinates = app_g_tile_coordinates_get(tile);
   g_tutorials_each_remove_try();
   let clicked_player_distance = g_distance(player, clicked_coordinates);
