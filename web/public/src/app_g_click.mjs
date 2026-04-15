@@ -1,3 +1,4 @@
+import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
 import { g_img_square_style_position_object_later } from "../../../love/public/src/g_img_square_style_position_object_later.mjs";
@@ -57,7 +58,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     }
     let distance = g_distance(player, coordinates_move_to);
     object_assign(player, coordinates_move_to);
-    const away = distance >= 1;
+    const away = greater_than_or_equal_1(distance);
     if (away) {
       let properties = ["left", "top"];
       let on_transition_begin = g_img_square_style_position_object_later(
