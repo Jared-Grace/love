@@ -102,7 +102,7 @@ export async function js_curry_replace(ast) {
         }
       }
       let s2 = list_size_2(body_block);
-      if (false) {
+      if (s2) {
       }
     }
     each(list, lambda);
