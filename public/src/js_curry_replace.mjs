@@ -1,3 +1,4 @@
+import { function_name_combine_curried_right } from "../../../love/public/src/function_name_combine_curried_right.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -80,6 +81,7 @@ export async function js_curry_replace(ast) {
                     let e = list_empty_is(params);
                     if (e) {
                     } else {
+                      let r = function_name_combine_curried_right(right);
                       name_get = function lambda3(unaliased) {
                         let combined = function_name_combine(
                           unaliased,
