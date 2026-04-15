@@ -1,4 +1,3 @@
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { undefined_is_if_null } from "../../../love/public/src/undefined_is_if_null.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
@@ -9,27 +8,10 @@ import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 export async function function_transform_result(f_names, lambda$ast) {
   let split = text_split_comma(f_names);
   async function lambda_each_function(f_name) {
-    log(function_transform_result.name, {
-      1: 1,
-    });
     let parsed = await function_parse_unaliased(f_name);
-    log(function_transform_result.name, {
-      1: 2,
-    });
     let ast = property_get(parsed, "ast");
-    log(function_transform_result.name, {
-      1: 3,
-      lambda$ast,
-    });
     let result = await lambda$ast(ast);
-    log_unparse(ast);
-    log(function_transform_result.name, {
-      1: 4,
-    });
     result = undefined_is_if_null(result);
-    log(function_transform_result.name, {
-      1: 5,
-    });
     await file_js_unparse(parsed);
     log(function_transform_result.name, {});
     return result;
