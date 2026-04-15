@@ -106,22 +106,22 @@ export async function js_curry_replace(ast) {
           }
         }
       }
-    }
-    let s2 = list_size_2(body_block);
-    if (s2) {
-      let r = list_first_second(body_block);
-      let first = property_get(r, "first");
-      function lambda4(d) {
-        let second = property_get(r, "second");
-        function lambda5() {
-          js_call_is_if(expression2, on_call_is2);
-          log(js_curry_replace.name, {
-            d,
-          });
+      let s2 = list_size_2(body_block);
+      if (s2) {
+        let r = list_first_second(body_block);
+        let first = property_get(r, "first");
+        function lambda4(d) {
+          let second = property_get(r, "second");
+          function lambda5() {
+            js_call_is_if(expression2, on_call_is2);
+            log(js_curry_replace.name, {
+              d,
+            });
+          }
+          js_return_argument_identifier_is_if(second, lambda5);
         }
-        js_return_argument_identifier_is_if(second, lambda5);
+        js_declare_single_identifier_is_if(first, lambda4);
       }
-      js_declare_single_identifier_is_if(first, lambda4);
     }
     await each_async(list, lambda);
   }
