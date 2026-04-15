@@ -17,7 +17,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
   let u = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
-  let f_name_curried = name_get(unaliased);
+  let f_name_curried = await name_get(unaliased);
   let output = await function_new_transform(f_name_curried, lambda);
   async function lambda(ast) {
     let arg_names = js_function_declaration_params_names(declaration_call);
