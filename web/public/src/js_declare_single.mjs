@@ -16,5 +16,4 @@ export function js_declare_single(vd) {
   }
   declaration = list_single(declarations);
   return declaration;
-  let value = js_declare_declarations_get(node);
 }
