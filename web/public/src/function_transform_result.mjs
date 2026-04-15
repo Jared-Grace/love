@@ -1,3 +1,4 @@
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { undefined_is_if_null } from "../../../love/public/src/undefined_is_if_null.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
@@ -20,7 +21,6 @@ export async function function_transform_result(f_names, lambda$ast) {
       1: 3,
     });
     let result = await lambda$ast(ast);
-                log_unparse(ast);
     log(function_transform_result.name, {
       1: 4,
     });
@@ -34,4 +34,5 @@ export async function function_transform_result(f_names, lambda$ast) {
   }
   let r3 = await list_map_async(split, lambda_each_function);
   return r3;
+  log_unparse(ast);
 }
