@@ -1,3 +1,4 @@
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -8,4 +9,5 @@ export function js_parse_expression_from_assignment(code) {
   let d = js_declare_single(statement);
   let init = property_get(d, "init");
   return init;
+  let r = js_declare_init_get(node);
 }
