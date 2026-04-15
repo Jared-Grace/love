@@ -6,9 +6,9 @@ import { function_curryify_specify_name } from "../../../love/public/src/functio
 export function function_curryify_specify_name_get(unaliased, positions_1) {
   let declaration2 = js_flo(ast);
   let params = js_function_declaration_params_get(declaration2);
+  let ending = null;
   let e = lists_sizes_equal([params, positions_1]);
   if (e) {
-    let ending = null;
     ending = ["later"];
   } else {
   }
