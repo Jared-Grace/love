@@ -6,6 +6,6 @@ export function js_parse_expression_from_assignment(code) {
   let code_assign = js_code_let_assign("a", code);
   let statement = js_parse_statement(code_assign);
   let d = js_declare_single(statement);
-  let init = js_declare_init_get(d, "init");
+  let init = js_declare_init_get(d);
   return init;
 }
