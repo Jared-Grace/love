@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -103,6 +104,7 @@ export async function js_curry_replace(ast) {
       }
       let s2 = list_size_2(body_block);
       if (s2) {
+        log(js_curry_replace.name, {});
       }
     }
     each(list, lambda);
