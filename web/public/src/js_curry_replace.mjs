@@ -75,13 +75,15 @@ export async function js_curry_replace(ast) {
                   if (li && difference_sz_1) {
                     todo();
                   } else {
-                    let e = list_empty_is(list2);
+                    let e = list_empty_is(params);
                     let positions_1 = list_map_index_of_1(difference, args);
                     let positions_1_comma = list_join_comma(positions_1);
                     name_get =
                       function_curryify_specify_name_get_curried_right(
                         positions_1,
                       );
+                    if (false) {
+                    }
                     curry_generate =
                       await function_curryify_specify_curried_right(
                         positions_1_comma,
