@@ -26,27 +26,28 @@ export function js_return_above_combine(ast) {
     if (fi) {
       return;
     }
+    function lambda4(d) {
+      const n = js_identifiers_names_equal_not(id, argument);
+      if (n) {
+        return;
+      }
+      let init = property_get(d, "init");
+      function lambda6() {
+        let value = property_get(init, "value");
+        let values = [null, false, true];
+        list_includes_if(values, value, lambda_if);
+        function lambda_if() {
+          js_return_argument_set(node, init);
+          list_remove(e1, previous);
+        }
+      }
+      js_literal_is_if(init, lambda6);
+    }
     let previous = list_previous(e1, node);
     function lambda(d) {
       let id = property_get(d, "id");
-      function lambda4() {
-        const n = js_identifiers_names_equal_not(id, argument);
-        if (n) {
-          return;
-        }
-        let init = property_get(d, "init");
-        function lambda6() {
-          let value = property_get(init, "value");
-          let values = [null, false, true];
-          list_includes_if(values, value, lambda_if);
-          function lambda_if() {
-            js_return_argument_set(node, init);
-            list_remove(e1, previous);
-          }
-        }
-        js_literal_is_if(init, lambda6);
-      }
-      js_identifier_is_if(id, lambda4);
+      function lambda3() {}
+      js_identifier_is_if(id, lambda3);
     }
     js_declare_single_is_if(previous, lambda);
   }
