@@ -24,7 +24,6 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let g = await app_g_game_save_get();
   let player = property_get(g, "player");
   let coordinates = property_get(g, "coordinates");
-  let npcs = property_get(g, "npcs");
   let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
   const clicked_on_player = g_distance_0(player, clicked_coordinates);
@@ -36,6 +35,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       let e = object_includes(npc, clicked_coordinates);
       return e;
     }
+    let npcs = property_get(g, "npcs");
     let npcs_matched = list_filter(npcs, lambda17);
     let npc_clicked = list_empty_not_is(npcs_matched);
     let coordinates_move_to = null;
