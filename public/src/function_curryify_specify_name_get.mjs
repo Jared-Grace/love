@@ -16,7 +16,7 @@ export async function function_curryify_specify_name_get(
     ending = ["later"];
   } else {
     let n = function_curryify_specify_name(unaliased);
-    ending = list_concat(n, positions_1);
+    ending = list_concat([n], positions_1);
   }
   const parts = [unaliased];
   let combined = function_name_combine_multiple_concat(parts, ending);
