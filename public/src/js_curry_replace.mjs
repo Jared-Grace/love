@@ -97,17 +97,16 @@ export async function js_curry_replace(ast) {
                       );
                   }
                 }
-                let name_curried2 = name_get(f_name);
+                let name_curried = name_get(f_name);
                 log(js_curry_replace.name, {
                   params,
-                  name_curried2,
+                  name_curried2: name_curried,
                   name_get,
                 });
-                let added = list_add_if_not_includes(f_names, name_curried2);
+                let added = list_add_if_not_includes(f_names, name_curried);
                 if (added) {
                   await curry_generate(f_name);
                 }
-                let name_curried = name_curried2;
                 let call = js_call_args_code(name_curried, []);
                 js_call_arguments_add(call, difference);
                 let name_function = js_function_declaration_name(node);
