@@ -5,7 +5,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_visit_returns_identifiers(ast, lambda2) {
   function lambda(v) {
     let node = property_get(v, "node");
-    let argument = js_return_argument_get(node);
     function lambda5() {
       lambda2({
         node,
@@ -13,6 +12,7 @@ export function js_visit_returns_identifiers(ast, lambda2) {
         v,
       });
     }
+    let argument = js_return_argument_get(node);
     js_identifier_is_if(argument, lambda5);
   }
   js_visit_returns(ast, lambda);
