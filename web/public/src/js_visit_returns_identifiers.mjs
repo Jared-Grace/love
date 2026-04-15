@@ -12,8 +12,13 @@ export function js_visit_returns_identifiers(ast, lambda2) {
         v,
       });
     }
-    let argument = js_return_argument_get(node);
-    js_identifier_is_if(argument, lambda5);
+    let argument = js_return_argument_identifier_is_if(node, lambda5);
   }
   js_visit_returns(ast, lambda);
 }
+function js_return_argument_identifier_is_if(node, lambda5) {
+  let argument = js_return_argument_get(node);
+  js_identifier_is_if(argument, lambda5);
+  return argument;
+}
+

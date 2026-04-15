@@ -8,12 +8,13 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
+import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
 export async function js_return_atomize(ast) {
   let rs = js_list_type(ast, "ReturnStatement");
   async function lambda(v) {
     let node = property_get(v, "node");
     if (js_node_type_is(node, "ReturnStatement")) {
-      let argument = js_return_argument_get(node, );
+      let argument = js_return_argument_get(node);
       if (js_node_type_is(argument, "Identifier")) {
         return;
       }
