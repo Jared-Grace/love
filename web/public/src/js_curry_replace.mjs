@@ -1,4 +1,4 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
+import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
@@ -101,7 +101,7 @@ export async function js_curry_replace(ast) {
           }
         }
       }
-      let s2 = list_size(body_block) === 2;
+      let s2 = list_size_2(body_block);
     }
     each(list, lambda);
   }
