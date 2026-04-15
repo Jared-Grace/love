@@ -12,9 +12,21 @@ export async function function_transform_result(f_names, lambda$ast) {
       1: 1,
     });
     let parsed = await function_parse_unaliased(f_name);
+    log(function_transform_result.name, {
+      1: 2,
+    });
     let ast = property_get(parsed, "ast");
+    log(function_transform_result.name, {
+      1: 3,
+    });
     let result = await lambda$ast(ast);
+    log(function_transform_result.name, {
+      1: 4,
+    });
     result = undefined_is_if_null(result);
+    log(function_transform_result.name, {
+      1: 5,
+    });
     await file_js_unparse(parsed);
     log(function_transform_result.name, {});
     return result;
