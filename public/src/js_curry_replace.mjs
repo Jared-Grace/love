@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -108,6 +109,8 @@ export async function js_curry_replace(ast) {
         let r = list_first_second(body_block);
         let second = property_get(r, "second");
         let first = property_get(r, "first");
+        function lambda4() {}
+        js_node_type_is_if(node2, type, lambda4);
         log(js_curry_replace.name, {
           first,
           second,
