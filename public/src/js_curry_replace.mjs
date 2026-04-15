@@ -1,5 +1,3 @@
-import { function_name_combine_curried_right } from "../../../love/public/src/function_name_combine_curried_right.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
@@ -77,19 +75,10 @@ export async function js_curry_replace(ast) {
                     todo();
                   } else {
                     let positions_1 = list_map_index_of_1(difference, args);
-                    let e = list_empty_is(params);
-                    log(js_curry_replace.name, {
-                      params,
-                      e,
-                    });
-                    if (e) {
-                      name_get = function_name_combine_curried_right("later");
-                    } else {
-                      name_get =
-                        function_curryify_specify_name_get_curried_right(
-                          positions_1,
-                        );
-                    }
+                    name_get =
+                      function_curryify_specify_name_get_curried_right(
+                        positions_1,
+                      );
                     let positions_1_comma = list_join_comma(positions_1);
                     curry_generate =
                       await function_curryify_specify_curried_right(
