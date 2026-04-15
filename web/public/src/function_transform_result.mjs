@@ -8,6 +8,9 @@ import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 export async function function_transform_result(f_names, lambda$ast) {
   let split = text_split_comma(f_names);
   async function lambda_each_function(f_name) {
+    log(function_transform_result.name, {
+      1: 1,
+    });
     let parsed = await function_parse_unaliased(f_name);
     let ast = property_get(parsed, "ast");
     let result = await lambda$ast(ast);
