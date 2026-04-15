@@ -1,5 +1,4 @@
-import { app_g_event_target_closest_tile } from "../../../love/public/src/app_g_event_target_closest_tile.mjs";
-import { app_g_tile_coordinates_get } from "../../../love/public/src/app_g_tile_coordinates_get.mjs";
+import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
 import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorials_each_remove_try.mjs";
 import { g_distance_1 } from "../../../love/public/src/g_distance_1.mjs";
 import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
@@ -26,8 +25,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let player = property_get(g, "player");
   let coordinates = property_get(g, "coordinates");
   let npcs = property_get(g, "npcs");
-  let tile = app_g_event_target_closest_tile(e);
-  let clicked_coordinates = app_g_tile_coordinates_get(tile);
+  let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
   let clicked_player_distance = g_distance(player, clicked_coordinates);
   const clicked_on_player = equal(clicked_player_distance, 0);
