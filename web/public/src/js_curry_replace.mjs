@@ -1,8 +1,8 @@
+import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
-import { js_curry_replace_generate } from "../../../love/public/src/js_curry_replace_generate.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
@@ -83,12 +83,12 @@ export async function js_curry_replace(ast) {
                       );
                   }
                 }
-                let name_curried = await js_curry_replace_generate(
-                  name_get,
-                  f_name,
-                  f_names,
-                  curry_generate,
-                );
+                let name_curried2 = name_get(f_name);
+                let added = list_add_if_not_includes(f_names, name_curried2);
+                if (added) {
+                  await curry_generate(f_name);
+                }
+                let name_curried = name_curried2;
                 let call = js_call_args_code(name_curried, []);
                 js_call_arguments_add(call, difference);
                 let name_function = js_function_declaration_name(node);
