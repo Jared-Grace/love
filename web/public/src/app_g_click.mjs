@@ -1,3 +1,4 @@
+import { g_img_square_style_position_object_later } from "../../../love/public/src/g_img_square_style_position_object_later.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
 import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorials_each_remove_try.mjs";
@@ -61,9 +62,10 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     const away = distance >= 1;
     if (away) {
       let properties = ["left", "top"];
-      function on_transition_begin() {
-        g_img_square_style_position_object(player, player_img_c);
-      }
+      let on_transition_begin = g_img_square_style_position_object_later(
+        player,
+        player_img_c,
+      );
       await html_on_transitionend(
         properties,
         player_img_c,
