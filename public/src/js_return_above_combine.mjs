@@ -27,14 +27,14 @@ export function js_return_above_combine(ast) {
       return;
     }
     let previous = list_previous(e1, node);
-    function lambda(only) {
-      let id = property_get(only, "id");
+    function lambda(d) {
+      let id = property_get(d, "id");
       function lambda4() {
         const n = js_identifiers_names_equal_not(id, argument);
         if (n) {
           return;
         }
-        let init = property_get(only, "init");
+        let init = property_get(d, "init");
         function lambda6() {
           let value = property_get(init, "value");
           let values = [null, false, true];
