@@ -1,3 +1,4 @@
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { js_declare_single_identifier_is_if } from "../../../love/public/src/js_declare_single_identifier_is_if.mjs";
 import { js_identifiers_names_equal_not } from "../../../love/public/src/js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "../../../love/public/src/js_literal_is_if.mjs";
@@ -30,7 +31,7 @@ export function js_return_above_combine(ast) {
       if (n) {
         return;
       }
-      let init = property_get(d, "init");
+      let init = js_declare_init_get(d);
       function lambda6() {
         let value = property_get(init, "value");
         let values = [null, false, true];
