@@ -8,7 +8,7 @@ import { function_name_part_last_delete } from "../../../love/public/src/functio
 import { function_name_parts_delete } from "../../../love/public/src/function_name_parts_delete.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export function function_transform_single_overrides() {
-  let r2 = {
+  let overrides = {
     c: function_name_combine,
     d: function_name_parts_delete,
     l: function_name_part_last_delete,
@@ -19,5 +19,5 @@ export function function_transform_single_overrides() {
     2: function_name_to_part_replace_last_2,
     3: function_name_to_part_replace_last_3,
   };
-  return r2;
+  return overrides;
 }
