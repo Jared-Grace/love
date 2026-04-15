@@ -1,10 +1,8 @@
+import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorials_each_remove_try.mjs";
 import { g_distance_1 } from "../../../love/public/src/g_distance_1.mjs";
 import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
-import { html_remove_if_not_null } from "../../../love/public/src/html_remove_if_not_null.mjs";
 import { app_g_class_tile } from "../../../love/public/src/app_g_class_tile.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
-import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
-import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
@@ -22,7 +20,6 @@ import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
-import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
@@ -36,11 +33,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
   let clicked_coordinates = json_from(json);
-  function lambda2(tutorial) {
-    let value = global_function_property_get(app_g_main, tutorial);
-    html_remove_if_not_null(value);
-  }
-  g_tutorials_each(lambda2);
+  g_tutorials_each_remove_try();
   let clicked_player_distance = g_distance(player, clicked_coordinates);
   const clicked_on_player = equal(clicked_player_distance, 0);
   if (clicked_on_player) {
