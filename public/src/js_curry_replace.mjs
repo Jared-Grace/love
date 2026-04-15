@@ -108,6 +108,9 @@ export async function js_curry_replace(ast) {
         let r = list_first_second(body_block);
         let second = property_get(r, "second");
         let first = property_get(r, "first");
+        log(js_curry_replace.name, {
+          r,
+        });
       }
     }
     await each_async(list, lambda);
