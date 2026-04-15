@@ -11,9 +11,10 @@ export function function_curryify_specify_name_get(unaliased, positions_1) {
   if (e) {
     ending = ["later"];
   } else {
+    ending = positions_1;
   }
   let n = function_curryify_specify_name(unaliased);
   const parts = [n];
-  let combined = function_name_combine_multiple_concat(parts, positions_1);
+  let combined = function_name_combine_multiple_concat(parts, ending);
   return combined;
 }
