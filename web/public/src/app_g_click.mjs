@@ -10,7 +10,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
-import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
