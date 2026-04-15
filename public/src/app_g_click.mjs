@@ -55,7 +55,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let npc_clicked = list_empty_not_is(npcs_matched);
     let coordinates_move_to = null;
     if (npc_clicked) {
-      ("find the coordinates next to the npc that is nearest the player");
+      ("find the coordinates next to the npc that is nearest to the player");
       function lambda18(item) {
         let d1 = g_distance_1(clicked_coordinates, item);
         return d1;
