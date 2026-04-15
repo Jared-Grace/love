@@ -1,3 +1,5 @@
+import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
@@ -12,7 +14,6 @@ import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
-import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
@@ -32,7 +33,6 @@ import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
 export async function js_curry_replace(ast) {
@@ -115,9 +115,9 @@ export async function js_curry_replace(ast) {
         });
       }
     }
-    each(list, lambda);
+    await each_async(list, lambda);
   }
-  let f_names_added = list_adder_unique(lambda2);
+  let f_names_added = await list_adder_unique_async(lambda2);
   await js_imports_missing_add_specified(ast, f_names_added);
   function js_call_arguments_add(call, difference) {
     let args2 = js_call_arguments_get(call);
