@@ -1,4 +1,3 @@
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
@@ -101,7 +100,6 @@ export async function js_curry_replace(ast) {
                   node,
                   declare,
                 });
-                log_unparse(ast);
                 la(name_curried);
               }
             }
