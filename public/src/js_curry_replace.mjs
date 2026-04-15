@@ -77,10 +77,11 @@ export async function js_curry_replace(ast) {
                     todo();
                   } else {
                     let positions_1 = list_map_index_of_1(difference, args);
+                    let e = list_empty_is(params);
                     log(js_curry_replace.name, {
                       params,
+                      e,
                     });
-                    let e = list_empty_is(params);
                     if (e) {
                       name_get = function_name_combine_curried_right("later");
                     } else {
