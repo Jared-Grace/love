@@ -28,7 +28,8 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let coordinates = property_get(g, "coordinates");
   let npcs = property_get(g, "npcs");
   const tile_class = app_g_class_tile();
-  const tile_e = e.target.closest("." + tile_class);
+  const c = "." + tile_class;
+  const tile_e = e.target.closest(c);
   let tile = html_component_wrap(tile_e);
   let clicked_coordinates = app_g_tile_coordinates_get(tile);
   g_tutorials_each_remove_try();
