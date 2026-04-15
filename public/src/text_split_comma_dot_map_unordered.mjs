@@ -5,5 +5,6 @@ export async function text_split_comma_dot_map_unordered(
   lambda,
 ) {
   let f_names = text_split_comma_dot(f_names_comma);
-  await list_map_unordered_async(f_names, lambda);
+  let r = await list_map_unordered_async(f_names, lambda);
+  return r;
 }
