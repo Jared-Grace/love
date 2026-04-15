@@ -1,3 +1,4 @@
+import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -21,7 +22,7 @@ export function js_statement_call_get(node) {
       call = expression_next;
     }
   } else if (js_node_type_is(node, "VariableDeclaration")) {
-    let declarations = js_declare_declarations_get(node, );
+    let declarations = js_declare_declarations_get(node);
     if (list_multiple_is(declarations)) {
       return null;
     }
