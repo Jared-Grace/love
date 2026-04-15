@@ -16,9 +16,9 @@ export async function function_transform_single(
     f_name_transformer,
   );
   let imported_fn = await function_import_unalias(f_name_transformer);
-  async function lambda(ast) {
+  async function function_transform_single_lambda(ast) {
     let result = await imported_fn(ast, ...remaining);
     return result;
   }
-  await function_transform(f_name, lambda);
+  await function_transform(f_name, function_transform_single_lambda);
 }
