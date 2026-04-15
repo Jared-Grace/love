@@ -1,0 +1,7 @@
+import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
+import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
+export function js_return_argument_identifier_is_if(node, lambda5) {
+  let argument = js_return_argument_get(node);
+  js_identifier_is_if(argument, lambda5);
+  return argument;
+}
