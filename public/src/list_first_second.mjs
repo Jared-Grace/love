@@ -5,4 +5,8 @@ export function list_first_second(list) {
   let value_get = list_second;
   let result = list_first_second_generic(list, value_get, property_name);
   return result;
+  let copy_paste = {
+    first,
+    second,
+  };
 }
