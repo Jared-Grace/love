@@ -31,6 +31,7 @@ export async function js_destructure_functionize(ast) {
     if (type_is) {
       return;
     }
+    js_node_type_is_assert(e1, "VariableDeclarator");
     let init = property_get(e1, "init");
     let ii = js_identifier_is(init);
     let result = null;
@@ -42,7 +43,6 @@ export async function js_destructure_functionize(ast) {
       result = on_false;
     }
     let name4 = result;
-    js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);
     list_is_assert(block_body);
     let block_body_item = list_get_end(stack, 3);
