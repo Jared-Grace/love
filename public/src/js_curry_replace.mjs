@@ -113,10 +113,10 @@ export async function js_curry_replace(ast) {
         function lambda4(d) {
           let second = property_get(r, "second");
           function lambda5() {
-            js_call_is_if(expression2, on_call_is2);
             log(js_curry_replace.name, {
               d,
             });
+            js_call_is_if(expression2, on_call_is2);
           }
           js_return_argument_identifier_is_if(second, lambda5);
         }
