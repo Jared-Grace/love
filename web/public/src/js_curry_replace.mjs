@@ -111,10 +111,11 @@ export async function js_curry_replace(ast) {
         let first = property_get(r, "first");
         function lambda4() {
           function lambda5() {
-        log(js_curry_replace.name, {
-          first,
-        });}
-          js_node_type_is_if(second, 'ReturnStatement', lambda5);
+            log(js_curry_replace.name, {
+              first,
+            });
+          }
+          js_node_type_is_if(second, "ReturnStatement", lambda5);
         }
         js_node_type_is_if(first, "VariableDeclaration", lambda4);
       }
