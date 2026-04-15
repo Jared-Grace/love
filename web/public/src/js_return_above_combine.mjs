@@ -1,3 +1,4 @@
+import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
 import { js_variable_declaration_is_if } from "../../../love/public/src/js_variable_declaration_is_if.mjs";
 import { js_identifiers_names_equal_not } from "../../../love/public/src/js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "../../../love/public/src/js_literal_is_if.mjs";
@@ -29,7 +30,7 @@ export function js_return_above_combine(ast) {
     }
     let previous = list_previous(e1, node);
     function lambda3() {
-      let declarations = property_get(previous, "declarations");
+      let declarations = js_declare_declarations_get(previous);
       function lambda(only) {
         let id = property_get(only, "id");
         function lambda4() {
