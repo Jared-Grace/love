@@ -18,7 +18,8 @@ export async function function_transform_result(f_names, lambda$ast) {
     });
     let ast = property_get(parsed, "ast");
     log(function_transform_result.name, {
-      1: 3,lambda$ast
+      1: 3,
+      lambda$ast,
     });
     let result = await lambda$ast(ast);
     log_unparse(ast);
