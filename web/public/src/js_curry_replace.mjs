@@ -1,4 +1,4 @@
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
@@ -122,5 +122,5 @@ export async function js_curry_replace(ast) {
     let args2 = js_call_arguments_get(call);
     list_add_multiple(args2, difference);
   }
-  let code = js_unparse(ast);
+  log_unparse(node2);
 }
