@@ -1,10 +1,11 @@
+import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
 import { js_visit_returns } from "../../../love/public/src/js_visit_returns.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_visit_returns_identifiers(ast, lambda2) {
   function lambda(v) {
     let node = property_get(v, "node");
-    let argument = property_get(node, "argument");
+    let argument = js_return_argument_get(node);
     function lambda5() {
       lambda2({
         node,
