@@ -40,6 +40,7 @@ import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function js_curry_replace(ast) {
   log(js_curry_replace.name, {});
   let f_names = await functions_names();
@@ -83,6 +84,7 @@ export async function js_curry_replace(ast) {
       async function on_expression(expression) {
         await js_call_is_if_async(expression, on_call_is);
         async function on_call_is() {
+          await sleep(ms);
           log(js_curry_replace.name, "c");
           let f_name = js_call_callee_name_try(expression);
           let includes = list_includes(f_names, f_name);
