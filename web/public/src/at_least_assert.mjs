@@ -1,6 +1,6 @@
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { at_least } from "../../../love/public/src/at_least.mjs";
-export function greater_than_or_equal_assert(left, right) {
+export function at_least_assert(left, right) {
   let l = at_least(left, right);
   function lambda() {
     let r = {
