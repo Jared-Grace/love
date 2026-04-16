@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { js_call_function_if } from "../../../love/public/src/js_call_function_if.mjs";
 import { js_node_type_not_is_if } from "../../../love/public/src/js_node_type_not_is_if.mjs";
@@ -13,13 +12,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function js_await_add_inner(functions, ast, visited) {
   async function lambda(v) {
     let node = property_get(v, "node");
-    log(js_await_add_inner.name, {
-      node,
-    });
     async function lambda3(name) {
-      log(js_await_add_inner.name, {
-        name,
-      });
       let en = property_exists_not(functions, name);
       if (en) {
         return;
