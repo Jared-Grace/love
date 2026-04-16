@@ -5,8 +5,6 @@ export async function js_return_argument_identifier_is_if_async(node, lambda) {
   function lambda2() {
     lambda(argument);
   }
-  js_identifier_is_if_async(argument, lambda2);
+  await js_identifier_is_if_async(argument, lambda2);
   return argument;
-  async function lambda4() {}
-  js_identifier_is_if_async(node2, lambda4);
 }
