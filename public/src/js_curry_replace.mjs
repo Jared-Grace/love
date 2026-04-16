@@ -110,7 +110,7 @@ export async function js_curry_replace(ast) {
       if (s2) {
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
-        function lambda4(init,id) {
+        function lambda4(init, id) {
           let second = property_get(r, "second");
           function lambda5() {
             function lambda3() {
