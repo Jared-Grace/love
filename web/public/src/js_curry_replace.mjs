@@ -58,51 +58,7 @@ export async function js_curry_replace(ast) {
           if (ii_only) {
             await js_call_is_if_async(expression, on_call_is);
             async function on_call_is() {
-              let f_name = js_call_callee_name_try(expression);
-              let includes = list_includes(f_names, f_name);
-              if (includes) {
-                let args = js_call_arguments_get(expression);
-                let difference = js_identifiers_names_difference_try(
-                  args,
-                  params,
-                );
-                let difference_sz_1 = list_size_1(difference);
-                let first = list_first(difference);
-                let fi = list_first_is(args, first);
-                let name_get = null;
-                let curry_generate = null;
-                if (fi && difference_sz_1) {
-                  name_get = function_curryify_generic_name;
-                  curry_generate = function_curryify;
-                } else {
-                  let li = list_last_is(args, first);
-                  if (li && difference_sz_1) {
-                    todo();
-                  } else {
-                    let positions_1 = list_map_index_of_1(difference, args);
-                    name_get =
-                      function_curryify_specify_name_get_curried_right(
-                        positions_1,
-                      );
-                    let positions_1_comma = list_join_comma(positions_1);
-                    curry_generate =
-                      await function_curryify_specify_curried_right(
-                        positions_1_comma,
-                      );
-                  }
-                }
-                let name_curried = await name_get(f_name);
-                let added = list_add_if_not_includes(f_names, name_curried);
-                if (added) {
-                  await curry_generate(f_name);
-                }
-                let call = js_call_args_code(name_curried, []);
-                js_call_arguments_add(call, difference);
-                let name_function = js_function_declaration_name(node);
-                let declare = js_declare(name_function, call);
-                object_replace(node, declare);
-                la(name_curried);
-              }
+              await on_call(expression);
             }
           }
         }
@@ -127,6 +83,48 @@ export async function js_curry_replace(ast) {
           js_return_argument_identifier_is_if(second, lambda5);
         }
         js_declare_single_identifier_is_if(first, lambda4);
+      }
+      async function on_call(expression) {
+        let f_name = js_call_callee_name_try(expression);
+        let includes = list_includes(f_names, f_name);
+        if (includes) {
+          let args = js_call_arguments_get(expression);
+          let difference = js_identifiers_names_difference_try(args, params);
+          let difference_sz_1 = list_size_1(difference);
+          let first = list_first(difference);
+          let fi = list_first_is(args, first);
+          let name_get = null;
+          let curry_generate = null;
+          if (fi && difference_sz_1) {
+            name_get = function_curryify_generic_name;
+            curry_generate = function_curryify;
+          } else {
+            let li = list_last_is(args, first);
+            if (li && difference_sz_1) {
+              todo();
+            } else {
+              let positions_1 = list_map_index_of_1(difference, args);
+              name_get =
+                function_curryify_specify_name_get_curried_right(positions_1);
+              let positions_1_comma = list_join_comma(positions_1);
+              curry_generate =
+                await function_curryify_specify_curried_right(
+                  positions_1_comma,
+                );
+            }
+          }
+          let name_curried = await name_get(f_name);
+          let added = list_add_if_not_includes(f_names, name_curried);
+          if (added) {
+            await curry_generate(f_name);
+          }
+          let call = js_call_args_code(name_curried, []);
+          js_call_arguments_add(call, difference);
+          let name_function = js_function_declaration_name(node);
+          let declare = js_declare(name_function, call);
+          object_replace(node, declare);
+          la(name_curried);
+        }
       }
     }
     await each_async(list, lambda);
