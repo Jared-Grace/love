@@ -2,11 +2,11 @@ import { property_equals_not } from "../../../love/public/src/property_equals_no
 import { each_object } from "../../../love/public/src/each_object.mjs";
 export function object_includes(object, item) {
   let e = true;
-  function lambda18(value, property) {
+  function lambda(value, property) {
     if (property_equals_not(object, property, value)) {
       e = false;
     }
   }
-  each_object(item, lambda18);
+  each_object(item, lambda);
   return e;
 }
