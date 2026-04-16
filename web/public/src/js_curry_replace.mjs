@@ -1,3 +1,4 @@
+import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
 import { js_declare_single_identifier_is_if_async } from "../../../love/public/src/js_declare_single_identifier_is_if_async.mjs";
 import { js_return_argument_identifier_is_if_async } from "../../../love/public/src/js_return_argument_identifier_is_if_async.mjs";
@@ -94,7 +95,7 @@ export async function js_curry_replace(ast) {
             } else {
               let li = list_last_is(args, first);
               if (li && difference_sz_1) {
-                name_get = function_curryify_generic_name;
+                name_get = function_curryify_right_name;
                 curry_generate = function_curryify_right;
               } else {
                 let positions_1 = list_map_index_of_1(difference, args);
