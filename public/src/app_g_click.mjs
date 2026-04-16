@@ -38,10 +38,10 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       ("find the coordinates next to the npc that is nearest to the player");
       let coordinates = property_get(g, "coordinates");
       let lambda18 = g_distance_1_curried(clicked_coordinates);
-      let filtered3 = list_filter(coordinates, lambda18);
+      let nearby = list_filter(coordinates, lambda18);
       let lambda19 = g_distance_curried(player);
       coordinates_move_to = list_shuffle_sort_number_mapper_first(
-        filtered3,
+        nearby,
         lambda19,
       );
     } else {
