@@ -1,3 +1,4 @@
+import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
 import { js_declare_single_identifier_is_if_async } from "../../../love/public/src/js_declare_single_identifier_is_if_async.mjs";
 import { js_return_argument_identifier_is_if_async } from "../../../love/public/src/js_return_argument_identifier_is_if_async.mjs";
 import { js_identifiers_names_equal } from "../../../love/public/src/js_identifiers_names_equal.mjs";
@@ -16,7 +17,6 @@ import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
-import { todo } from "../../../love/public/src/todo.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -94,7 +94,8 @@ export async function js_curry_replace(ast) {
             } else {
               let li = list_last_is(args, first);
               if (li && difference_sz_1) {
-                todo();
+                name_get = function_curryify_generic_name;
+                curry_generate = function_curryify_right;
               } else {
                 let positions_1 = list_map_index_of_1(difference, args);
                 name_get =
