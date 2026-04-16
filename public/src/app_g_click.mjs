@@ -27,7 +27,6 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let coordinates_move_to = await app_g_players_coordinates_update(
       npc_clicked,
       clicked_coordinates,
-      player,
     );
     await app_g_player_move(coordinates_move_to, player_img_c, div_map);
     await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, refresh);
