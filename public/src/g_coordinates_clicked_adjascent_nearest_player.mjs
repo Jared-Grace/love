@@ -7,6 +7,7 @@ export async function g_coordinates_clicked_adjascent_nearest_player(
   clicked_coordinates,
   coordinates_move_to,
 ) {
+      ("find the coordinates next to the npc that is nearest to the player");
   let g = await app_g_game_save_get();
   let player = property_get(g, "player");
   let nearby = g_coordinates_adjascent(g, clicked_coordinates);
