@@ -6,7 +6,7 @@ import { function_alias_generic } from "../../../love/public/src/function_alias_
 import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
-  let unaliased = await function_name_unalias_only(name);
+  f_name = await function_name_unalias_only(f_name);
   const items = [alias_old, f_name];
   text_is_assert_multiple(items);
   function lambda(a) {
