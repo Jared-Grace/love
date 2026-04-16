@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { js_function_declaration_asyncify } from "../../../love/public/src/js_function_declaration_asyncify.mjs";
 import { js_flo_params_add } from "../../../love/public/src/js_flo_params_add.mjs";
@@ -14,6 +15,7 @@ import { function_new_transform } from "../../../love/public/src/function_new_tr
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 export async function function_curryify_generic(f_name, name_get, args_get) {
+  log(function_curryify_generic.name, {});
   let u = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
