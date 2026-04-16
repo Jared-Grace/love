@@ -1,4 +1,4 @@
-import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -20,8 +20,7 @@ export async function app_g_conversation(
   div_map,
   refresh,
 ) {
-  let g = await app_g_game_save_get();
-  let player = property_get(g, "player");
+  let player = await app_g_player_get();
   property_set(player, "conversed", true);
   property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
