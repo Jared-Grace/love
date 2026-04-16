@@ -1,3 +1,4 @@
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
 import { js_declare_single_identifier_is_if_async } from "../../../love/public/src/js_declare_single_identifier_is_if_async.mjs";
@@ -82,6 +83,7 @@ export async function js_curry_replace(ast) {
           let f_name = js_call_callee_name_try(expression);
           let includes = list_includes(f_names, f_name);
           if (includes) {
+            log_unparse(node2);
             let args = js_call_arguments_get(expression);
             let difference = js_identifiers_names_difference_try(args, params);
             let difference_sz_1 = list_size_1(difference);
