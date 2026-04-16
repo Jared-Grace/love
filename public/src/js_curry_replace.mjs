@@ -1,4 +1,3 @@
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
 import { js_declare_single_identifier_is_if_async } from "../../../love/public/src/js_declare_single_identifier_is_if_async.mjs";
@@ -109,18 +108,15 @@ export async function js_curry_replace(ast) {
             }
             let name_curried = await name_get(f_name);
             let added = list_add_if_not_includes(f_names, name_curried);
-            log(js_curry_replace.name, curry_generate);
             if (added) {
               await curry_generate(f_name);
             }
-            log(js_curry_replace.name, "a");
             la(name_curried);
             let call = js_call_args_code(name_curried, []);
             js_call_arguments_add(call, difference);
             let name_function = js_function_declaration_name(node);
             let declare = js_declare(name_function, call);
             object_replace(node, declare);
-            log_unparse(node);
           }
         }
       }
