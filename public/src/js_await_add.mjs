@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { data_functions_get } from "../../../love/public/src/data_functions_get.mjs";
 import { js_await_add_inner } from "../../../love/public/src/js_await_add_inner.mjs";
 export async function js_await_add(ast) {
@@ -5,4 +6,5 @@ export async function js_await_add(ast) {
   let visited = [];
   let v2 = await js_await_add_inner(functions, ast, visited);
   return v2;
+  log(js_await_add.name, {});
 }
