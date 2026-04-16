@@ -110,13 +110,13 @@ export async function js_curry_replace(ast) {
                   function_curryify_specify_curried_right(positions_1_comma);
               }
             }
-            log(js_curry_replace.name, 'b');
             let name_curried = await name_get(f_name);
-            log(js_curry_replace.name, 'a');
             let added = list_add_if_not_includes(f_names, name_curried);
+            log(js_curry_replace.name, "b");
             if (added) {
               await curry_generate(f_name);
             }
+            log(js_curry_replace.name, "a");
             la(name_curried);
             let call = js_call_args_code(name_curried, []);
             js_call_arguments_add(call, difference);
