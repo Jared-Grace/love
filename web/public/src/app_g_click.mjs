@@ -1,3 +1,4 @@
+import { g_distance_1_curried } from "../../../love/public/src/g_distance_1_curried.mjs";
 import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
@@ -39,10 +40,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let coordinates_move_to = null;
     if (npc_clicked) {
       ("find the coordinates next to the npc that is nearest to the player");
-      function lambda18(item) {
-        let d1 = g_distance_1(clicked_coordinates, item);
-        return d1;
-      }
+      let lambda18 = g_distance_1_curried(clicked_coordinates);
       let coordinates = property_get(g, "coordinates");
       let filtered3 = list_filter(coordinates, lambda18);
       function lambda19(item3) {
