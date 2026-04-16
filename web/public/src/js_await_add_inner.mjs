@@ -14,13 +14,13 @@ export async function js_await_add_inner(functions, ast, visited) {
   async function lambda(v) {
     let node = property_get(v, "node");
     async function lambda3(name) {
+      log(js_await_add_inner.name, {
+        name,
+      });
       let en = property_exists_not(functions, name);
       if (en) {
         return;
       }
-      log(js_await_add_inner.name, {
-        name,
-      });
       let f = property_get(functions, name);
       let async_is = property_get(f, "async");
       let n = not(async_is);
