@@ -1,4 +1,4 @@
-import { greater_than_or_equal } from "../../../love/public/src/greater_than_or_equal.mjs";
+import { at_least } from "../../../love/public/src/at_least.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
@@ -13,7 +13,7 @@ export function list_cartesian_functions_inner(
   candidate,
 ) {
   let size = list_size(list);
-  let g = greater_than_or_equal(index, size);
+  let g = at_least(index, size);
   if (g) {
     let copy = list_copy(candidate);
     list_add(result, copy);
