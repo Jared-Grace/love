@@ -3,6 +3,6 @@ import { js_await_add_inner } from "../../../love/public/src/js_await_add_inner.
 export async function js_await_add(ast) {
   let functions = await data_functions_get();
   let visited = [];
-  let t = await js_await_add_inner(functions, ast, visited);
-  return t;
+  let r = await js_await_add_inner(functions, ast, visited);
+  return r;
 }
