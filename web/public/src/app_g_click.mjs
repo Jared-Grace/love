@@ -15,13 +15,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   if (clicked_on_player) {
     await app_g_menu_new(div_map);
   } else {
-    await app_g_click_map(
-      g,
-      clicked_coordinates,
-      player_img_c,
-      div_map,
-      refresh,
-    );
+    await app_g_click_map(clicked_coordinates, player_img_c, div_map, refresh);
   }
   await app_g_player_save(player);
 }
