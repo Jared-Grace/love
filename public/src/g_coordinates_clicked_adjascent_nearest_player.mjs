@@ -2,7 +2,6 @@ import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/
 import { g_distance_curried } from "../../../love/public/src/g_distance_curried.mjs";
 import { g_coordinates_adjascent } from "../../../love/public/src/g_coordinates_adjascent.mjs";
 export function g_coordinates_clicked_adjascent_nearest_player(
-  g,
   clicked_coordinates,
   coordinates_move_to,
 ) {
