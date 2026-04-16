@@ -120,6 +120,7 @@ export async function js_curry_replace(ast) {
             let name_function = js_function_declaration_name(node);
             let declare = js_declare(name_function, call);
             object_replace(node, declare);
+            log(js_curry_replace.name, {});
             la(name_curried);
           }
         }
