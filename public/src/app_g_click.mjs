@@ -1,9 +1,7 @@
-import { g_coordinates_adjascent } from "../../../love/public/src/g_coordinates_adjascent.mjs";
+import { g_coordinates_clicked_adjascent_nearest_player } from "../../../love/public/src/g_coordinates_clicked_adjascent_nearest_player.mjs";
 import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
-import { g_distance_curried } from "../../../love/public/src/g_distance_curried.mjs";
 import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
-import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
 import { g_img_square_style_position_object_later } from "../../../love/public/src/g_img_square_style_position_object_later.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
@@ -35,11 +33,11 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let coordinates_move_to = null;
     if (npc_clicked) {
       ("find the coordinates next to the npc that is nearest to the player");
-      let nearby = g_coordinates_adjascent(g, clicked_coordinates);
-      let lambda19 = g_distance_curried(player);
-      coordinates_move_to = list_shuffle_sort_number_mapper_first(
-        nearby,
-        lambda19,
+      coordinates_move_to = g_coordinates_clicked_adjascent_nearest_player(
+        g,
+        clicked_coordinates,
+        player,
+        coordinates_move_to,
       );
     } else {
       coordinates_move_to = clicked_coordinates;
