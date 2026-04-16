@@ -1,7 +1,6 @@
 import { js_return_argument_identifier_is_if_async } from "../../../love/public/src/js_return_argument_identifier_is_if_async.mjs";
 import { js_identifiers_names_equal } from "../../../love/public/src/js_identifiers_names_equal.mjs";
 import { js_call_is_if_async } from "../../../love/public/src/js_call_is_if_async.mjs";
-import { js_declare_single_identifier_is_if } from "../../../love/public/src/js_declare_single_identifier_is_if.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -73,7 +72,7 @@ export async function js_curry_replace(ast) {
           }
           await js_return_argument_identifier_is_if_async(second, lambda5);
         }
-        js_declare_single_identifier_is_if(first, lambda4);
+        js_declare_single_identifier_is_if_async(first, lambda4);
       }
       async function on_expression(expression) {
         await js_call_is_if_async(expression, on_call_is);
