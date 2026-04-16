@@ -113,6 +113,7 @@ export async function js_curry_replace(ast) {
             if (added) {
               await curry_generate(f_name);
             }
+            la(name_curried);
             let call = js_call_args_code(name_curried, []);
             js_call_arguments_add(call, difference);
             let name_function = js_function_declaration_name(node);
@@ -121,7 +122,6 @@ export async function js_curry_replace(ast) {
             log(js_curry_replace.name, {
               node,
             });
-            la(name_curried);
           }
         }
       }
