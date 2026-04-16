@@ -1,4 +1,4 @@
-import { app_g_players_coordinates_new_get } from "../../../love/public/src/app_g_players_coordinates_new_get.mjs";
+import { app_g_players_coordinates_update } from "../../../love/public/src/app_g_players_coordinates_update.mjs";
 import { app_g_player_move } from "../../../love/public/src/app_g_player_move.mjs";
 import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
@@ -8,7 +8,6 @@ import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorial
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
-import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
@@ -25,11 +24,11 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let npcs = property_get(g, "npcs");
     let npcs_matched = list_filter_object_includes(npcs, clicked_coordinates);
     let npc_clicked = list_empty_not_is(npcs_matched);
-    let coordinates_move_to = await app_g_players_coordinates_new_get(
+    let coordinates_move_to = await app_g_players_coordinates_update(
       npc_clicked,
       clicked_coordinates,
+      player,
     );
-    object_assign(player, coordinates_move_to);
     await app_g_player_move(coordinates_move_to, player_img_c, div_map);
     await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, refresh);
   }
