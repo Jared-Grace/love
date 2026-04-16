@@ -30,8 +30,8 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let overlay = app_g_overlay(div_map);
     app_g_menu(overlay, player);
   } else {
-    let lambda17 = object_includes_curried_right(clicked_coordinates);
     let npcs = property_get(g, "npcs");
+    let lambda17 = object_includes_curried_right(clicked_coordinates);
     let npcs_matched = list_filter(npcs, lambda17);
     let npc_clicked = list_empty_not_is(npcs_matched);
     let coordinates_move_to = null;
