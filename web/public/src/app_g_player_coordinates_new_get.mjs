@@ -1,5 +1,5 @@
 import { g_coordinates_clicked_adjascent_nearest_player } from "../../../love/public/src/g_coordinates_clicked_adjascent_nearest_player.mjs";
-export async function app_g_players_coordinates_new_get(
+export async function app_g_player_coordinates_new_get(
   npc_clicked,
   clicked_coordinates,
 ) {
