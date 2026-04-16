@@ -5,9 +5,9 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function js_declare_single_identifier_is_if_async(node, lambda$d) {
   async function lambda(d) {
     let id = property_get(d, "id");
-    function lambda3() {
+    async function lambda3() {
       let init = js_declare_init_get(d);
-      lambda$d(init, id);
+      await lambda$d(init, id);
     }
     await js_identifier_is_if_async(id, lambda3);
   }
