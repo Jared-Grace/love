@@ -115,6 +115,8 @@ export async function js_curry_replace(ast) {
           let second = property_get(r, "second");
           function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
+            if (false) {
+            }
             function lambda3() {
               log(js_curry_replace.name, {
                 init,
