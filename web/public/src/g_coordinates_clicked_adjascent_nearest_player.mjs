@@ -11,7 +11,7 @@ export async function g_coordinates_clicked_adjascent_nearest_player(
   let g = await app_g_game_save_get();
   let player = property_get(g, "player");
   let nearby = g_coordinates_adjascent(g, clicked_coordinates);
-  let lambda19 = g_distance_curried(player);
-  coordinates_move_to = list_shuffle_sort_number_mapper_first(nearby, lambda19);
+  let lambda = g_distance_curried(player);
+  coordinates_move_to = list_shuffle_sort_number_mapper_first(nearby, lambda);
   return coordinates_move_to;
 }
