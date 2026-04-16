@@ -32,11 +32,11 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let npc_clicked = list_empty_not_is(npcs_matched);
     let coordinates_move_to = null;
     if (npc_clicked) {
-      ("find the coordinates next to the npc that is nearest to the player");
-      coordinates_move_to = g_coordinates_clicked_adjascent_nearest_player(
-        clicked_coordinates,
-        coordinates_move_to,
-      );
+      coordinates_move_to =
+        await g_coordinates_clicked_adjascent_nearest_player(
+          clicked_coordinates,
+          coordinates_move_to,
+        );
     } else {
       coordinates_move_to = clicked_coordinates;
     }
