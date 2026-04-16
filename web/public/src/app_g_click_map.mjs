@@ -4,7 +4,6 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_g_click_map(
-  g,
   clicked_coordinates,
   player_img_c,
   div_map,
