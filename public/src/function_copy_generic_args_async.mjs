@@ -9,7 +9,11 @@ export async function function_copy_generic_args_async(
 ) {
   arguments_assert(arguments, 2);
   plugin_fn = function_name_combine.name;
-  let combined = text_combine_multiple([f_name_old_args_comma, ",", "async"]);
+  f_name_old_args_comma = text_combine_multiple([
+    f_name_old_args_comma,
+    ",",
+    "async",
+  ]);
   let f_name_new = null;
   let f_name_old = null;
   ({ f_name_new, f_name_old } = await function_name_new_get_args(
