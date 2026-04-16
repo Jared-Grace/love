@@ -1,3 +1,4 @@
+import { app_g_npcs_get } from "../../../love/public/src/app_g_npcs_get.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { app_g_player_coordinates_update_move } from "../../../love/public/src/app_g_player_coordinates_update_move.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -9,6 +10,7 @@ export async function app_g_click_map(
   div_map,
   refresh,
 ) {
+  let npcs2 = await app_g_npcs_get();
   let npcs = property_get(g, "npcs");
   let npcs_matched = list_filter_object_includes(npcs, clicked_coordinates);
   let npc_clicked = list_empty_not_is(npcs_matched);
