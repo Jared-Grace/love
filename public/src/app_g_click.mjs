@@ -2,7 +2,7 @@ import { app_g_player_center } from "../../../love/public/src/app_g_player_cente
 import { app_g_player_move_animate } from "../../../love/public/src/app_g_player_move_animate.mjs";
 import { g_coordinates_clicked_adjascent_nearest_player } from "../../../love/public/src/g_coordinates_clicked_adjascent_nearest_player.mjs";
 import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
-import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
+import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
@@ -40,7 +40,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     }
     object_assign(player, coordinates_move_to);
     let distance = g_distance(player, coordinates_move_to);
-    const away = greater_than_or_equal_1(distance);
+    const away = at_least_1(distance);
     if (away) {
       await app_g_player_move_animate(player, player_img_c);
     }
