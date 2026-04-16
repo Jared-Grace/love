@@ -65,10 +65,10 @@ export async function js_curry_replace(ast) {
         let first = property_get(r, "first");
         async function lambda4(init, id) {
           let second = property_get(r, "second");
-          function lambda5(argument) {
+          async function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
             if (eq) {
-              on_expression(init);
+              await on_expression(init);
             }
           }
           await js_return_argument_identifier_is_if_async(second, lambda5);
