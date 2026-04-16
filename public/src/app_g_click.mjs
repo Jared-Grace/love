@@ -6,7 +6,6 @@ import { g_img_square_style_position_object_later } from "../../../love/public/s
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
 import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorials_each_remove_try.mjs";
-import { g_distance_1 } from "../../../love/public/src/g_distance_1.mjs";
 import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
