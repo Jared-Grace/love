@@ -40,7 +40,6 @@ import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function js_curry_replace(ast) {
   log(js_curry_replace.name, {});
   let f_names = await functions_names();
