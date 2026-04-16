@@ -40,7 +40,6 @@ import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_function_nodes_list } from "../../../love/public/src/js_visit_function_nodes_list.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function js_curry_replace(ast) {
   log(js_curry_replace.name, {});
   let f_names = await functions_names();
@@ -67,8 +66,6 @@ export async function js_curry_replace(ast) {
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
         async function lambda4(init, id) {
-          await sleep(1000);
-          log(js_curry_replace.name, "ceeeeeeeeeeeeeeee");
           let second = property_get(r, "second");
           async function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
