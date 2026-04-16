@@ -63,7 +63,7 @@ export async function js_curry_replace(ast) {
       if (s2) {
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
-        function lambda4(init, id) {
+        async function lambda4(init, id) {
           let second = property_get(r, "second");
           function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
@@ -71,7 +71,7 @@ export async function js_curry_replace(ast) {
               on_expression(init);
             }
           }
-          js_return_argument_identifier_is_if_async(second, lambda5);
+          await js_return_argument_identifier_is_if_async(second, lambda5);
         }
         js_declare_single_identifier_is_if(first, lambda4);
       }
