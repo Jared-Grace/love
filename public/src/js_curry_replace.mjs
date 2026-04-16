@@ -67,8 +67,8 @@ export async function js_curry_replace(ast) {
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
         async function lambda4(init, id) {
-            await sleep(1000);
-            log(js_curry_replace.name, "ceeeeeeeeeeeeeeee");
+          await sleep(1000);
+          log(js_curry_replace.name, "ceeeeeeeeeeeeeeee");
           let second = property_get(r, "second");
           async function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
