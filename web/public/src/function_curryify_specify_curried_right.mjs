@@ -1,5 +1,5 @@
 import { function_curryify_specify } from "../../../love/public/src/function_curryify_specify.mjs";
-export async function function_curryify_specify_curried_right(positions_comma) {
+export function function_curryify_specify_curried_right(positions_comma) {
   let r2 = async function function_curryify_specify_curried_right_result(
     f_name,
   ) {
