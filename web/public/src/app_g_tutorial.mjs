@@ -1,4 +1,4 @@
-import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { g_icon } from "../../../love/public/src/g_icon.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
@@ -12,8 +12,7 @@ export async function app_g_tutorial(
   tutorial_property,
   emoji,
 ) {
-  let g = await app_g_game_save_get();
-  let player = property_get(g, "player");
+  let player = await app_g_player_get();
   let already = property_get(player, player_property);
   if (not(already)) {
     let tutorial = g_icon(div_map, player, emoji);
