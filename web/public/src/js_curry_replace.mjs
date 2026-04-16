@@ -46,6 +46,7 @@ export async function js_curry_replace(ast) {
     let list = js_visit_function_nodes_list(ast);
     async function lambda(v) {
       let node = property_get(v, "node");
+      let params = js_function_declaration_params_get(node);
       let body_block = js_function_declaration_to_block_body(node);
       let s1 = list_size_1(body_block);
       if (s1) {
@@ -53,7 +54,6 @@ export async function js_curry_replace(ast) {
         let esi = js_expression_statement_is(only);
         if (esi) {
           let expression = js_statement_expression_get(only);
-          let params = js_function_declaration_params_get(node);
           let ii_only = js_identifier_list_is(params);
           if (ii_only) {
             await js_call_is_if_async(expression, on_call_is);
