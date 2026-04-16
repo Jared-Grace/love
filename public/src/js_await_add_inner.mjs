@@ -41,6 +41,5 @@ export async function js_await_add_inner(functions, ast, visited) {
   }
   await js_visit_type_each_async(ast, "CallExpression", lambda);
   return;
-      log(js_await_add_inner.name, {
-      });
+  log(js_await_add_inner.name, {});
 }
