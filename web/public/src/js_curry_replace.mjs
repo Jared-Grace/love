@@ -1,5 +1,4 @@
 import { js_identifiers_names_equal } from "../../../love/public/src/js_identifiers_names_equal.mjs";
-import { js_call_is_if } from "../../../love/public/src/js_call_is_if.mjs";
 import { js_call_is_if_async } from "../../../love/public/src/js_call_is_if_async.mjs";
 import { js_declare_single_identifier_is_if } from "../../../love/public/src/js_declare_single_identifier_is_if.mjs";
 import { js_return_argument_identifier_is_if } from "../../../love/public/src/js_return_argument_identifier_is_if.mjs";
@@ -69,12 +68,7 @@ export async function js_curry_replace(ast) {
           function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
             if (eq) {
-              function lambda3() {
-                log(js_curry_replace.name, {
-                  init,
-                });
-              }
-              js_call_is_if(init, lambda3);
+              on_expression(init);
             }
           }
           js_return_argument_identifier_is_if(second, lambda5);
