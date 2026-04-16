@@ -4,7 +4,6 @@ import { g_coordinates_adjascent } from "../../../love/public/src/g_coordinates_
 export function g_coordinates_clicked_adjascent_nearest_player(
   g,
   clicked_coordinates,
-  player,
   coordinates_move_to,
 ) {
   let nearby = g_coordinates_adjascent(g, clicked_coordinates);
