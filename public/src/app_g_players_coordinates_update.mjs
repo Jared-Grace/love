@@ -3,7 +3,6 @@ import { app_g_players_coordinates_new_get } from "../../../love/public/src/app_
 export async function app_g_players_coordinates_update(
   npc_clicked,
   clicked_coordinates,
-  player,
 ) {
   let coordinates_move_to = await app_g_players_coordinates_new_get(
     npc_clicked,
