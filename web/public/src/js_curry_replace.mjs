@@ -69,8 +69,8 @@ export async function js_curry_replace(ast) {
         async function lambda4(init, id) {
           let second = property_get(r, "second");
           async function lambda5(argument) {
-        await sleep(1000);
-        log(js_curry_replace.name, "ceeeeeeeeeeeeeeee");
+            await sleep(1000);
+            log(js_curry_replace.name, "ceeeeeeeeeeeeeeee");
             let eq = js_identifiers_names_equal(id, argument);
             if (eq) {
               await on_expression(init);
