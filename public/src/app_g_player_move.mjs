@@ -2,7 +2,6 @@ import { app_g_player_center } from "../../../love/public/src/app_g_player_cente
 import { app_g_player_move_animate } from "../../../love/public/src/app_g_player_move_animate.mjs";
 import { g_distance_at_least_1 } from "../../../love/public/src/g_distance_at_least_1.mjs";
 export async function app_g_player_move(
-  player,
   coordinates_move_to,
   player_img_c,
   div_map,
