@@ -38,8 +38,8 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     } else {
       coordinates_move_to = clicked_coordinates;
     }
-    let distance = g_distance(player, coordinates_move_to);
     object_assign(player, coordinates_move_to);
+    let distance = g_distance(player, coordinates_move_to);
     const away = greater_than_or_equal_1(distance);
     if (away) {
       await app_g_player_move_animate(player, player_img_c);
