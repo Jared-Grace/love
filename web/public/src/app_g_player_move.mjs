@@ -7,7 +7,7 @@ export async function app_g_player_move(
   player_img_c,
   div_map,
 ) {
-  let player2 = await app_g_player_get();
+  let player = await app_g_player_get();
   const away = g_distance_at_least_1(player, coordinates_move_to);
   if (away) {
     await app_g_player_move_animate(player, player_img_c);
