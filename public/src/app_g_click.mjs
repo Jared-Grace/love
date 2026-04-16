@@ -1,6 +1,3 @@
-import { g_distance_curried } from "../../../love/public/src/g_distance_curried.mjs";
-import { g_distance_1_curried } from "../../../love/public/src/g_distance_1_curried.mjs";
-import { object_includes_curried_right } from "../../../love/public/src/object_includes_curried_right.mjs";
 import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
@@ -8,6 +5,7 @@ import { g_img_square_style_position_object_later } from "../../../love/public/s
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
 import { g_tutorials_each_remove_try } from "../../../love/public/src/g_tutorials_each_remove_try.mjs";
+import { g_distance_1 } from "../../../love/public/src/g_distance_1.mjs";
 import { app_g_div_map_container_get } from "../../../love/public/src/app_g_div_map_container_get.mjs";
 import { app_g_game_save_get } from "../../../love/public/src/app_g_game_save_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
@@ -17,6 +15,7 @@ import { html_on_transitionend } from "../../../love/public/src/html_on_transiti
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -30,16 +29,26 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let overlay = app_g_overlay(div_map);
     app_g_menu(overlay, player);
   } else {
+    function lambda17(npc) {
+      let e = object_includes(npc, clicked_coordinates);
+      return e;
+    }
     let npcs = property_get(g, "npcs");
-    let npcs_matched = list_filter_object_includes(clicked_coordinates, npcs);
+    let npcs_matched = list_filter(npcs, lambda17);
     let npc_clicked = list_empty_not_is(npcs_matched);
     let coordinates_move_to = null;
     if (npc_clicked) {
       ("find the coordinates next to the npc that is nearest to the player");
-      let lambda18 = g_distance_1_curried(clicked_coordinates);
+      function lambda18(item) {
+        let d1 = g_distance_1(clicked_coordinates, item);
+        return d1;
+      }
       let coordinates = property_get(g, "coordinates");
       let filtered3 = list_filter(coordinates, lambda18);
-      let lambda19 = g_distance_curried(player);
+      function lambda19(item3) {
+        let distance = g_distance(player, item3);
+        return distance;
+      }
       coordinates_move_to = list_shuffle_sort_number_mapper_first(
         filtered3,
         lambda19,
@@ -68,9 +77,3 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   }
   await app_g_player_save(player);
 }
-function list_filter_object_includes(clicked_coordinates, npcs) {
-  let lambda17 = object_includes_curried_right(clicked_coordinates);
-  let npcs_matched = list_filter(npcs, lambda17);
-  return npcs_matched;
-}
-
