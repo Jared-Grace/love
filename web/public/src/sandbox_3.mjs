@@ -2,11 +2,7 @@ import { function_delete_if_exists_multiple } from "../../../love/public/src/fun
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { function_transform_multiple } from "../../../love/public/src/function_transform_multiple.mjs";
 export async function sandbox_3() {
-  let fns = [
-    "g_distance_curried",
-    "object_includes_curried_right",
-    "g_distance_1_curried",
-  ];
+  let fns = ["list_filter_object_includes"];
   await function_delete_if_exists_multiple(fns);
   await function_transform_multiple("c", app_g_click.name);
 }
