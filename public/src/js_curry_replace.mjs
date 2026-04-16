@@ -1,3 +1,4 @@
+import { js_identifiers_names_equal } from "../../../love/public/src/js_identifiers_names_equal.mjs";
 import { js_call_is_if } from "../../../love/public/src/js_call_is_if.mjs";
 import { js_call_is_if_async } from "../../../love/public/src/js_call_is_if_async.mjs";
 import { js_declare_single_identifier_is_if } from "../../../love/public/src/js_declare_single_identifier_is_if.mjs";
@@ -112,7 +113,8 @@ export async function js_curry_replace(ast) {
         let first = property_get(r, "first");
         function lambda4(init, id) {
           let second = property_get(r, "second");
-          function lambda5() {
+          function lambda5(argument) {
+            let ne = js_identifiers_names_equal(a, b);
             function lambda3() {
               log(js_curry_replace.name, {
                 init,
