@@ -11,6 +11,8 @@ import { not } from "../../../love/public/src/not.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function js_await_add_inner(functions, ast, visited) {
+      log(js_await_add_inner.name, {
+      });
   async function lambda(v) {
     let node = property_get(v, "node");
     async function lambda3(name) {
