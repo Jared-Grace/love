@@ -7,7 +7,6 @@ export async function sandbox_3() {
     "object_includes_curried_right",
     "g_distance_1_curried",
   ];
-  async function lambda(item) {}
   await function_delete_if_exists_multiple(fns);
   await function_transform_multiple("c", app_g_click.name);
 }
