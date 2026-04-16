@@ -1,3 +1,4 @@
+import { g_distance_curried } from "../../../love/public/src/g_distance_curried.mjs";
 import { g_distance_1_curried } from "../../../love/public/src/g_distance_1_curried.mjs";
 import { object_includes_curried_right } from "../../../love/public/src/object_includes_curried_right.mjs";
 import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
@@ -39,10 +40,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       let lambda18 = g_distance_1_curried(clicked_coordinates);
       let coordinates = property_get(g, "coordinates");
       let filtered3 = list_filter(coordinates, lambda18);
-      function lambda19(item3) {
-        let distance = g_distance(player, item3);
-        return distance;
-      }
+      let lambda19 = g_distance_curried(player);
       coordinates_move_to = list_shuffle_sort_number_mapper_first(
         filtered3,
         lambda19,
