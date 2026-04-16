@@ -36,7 +36,6 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       coordinates_move_to = g_coordinates_clicked_adjascent_nearest_player(
         g,
         clicked_coordinates,
-        player,
         coordinates_move_to,
       );
     } else {
