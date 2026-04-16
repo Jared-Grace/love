@@ -1,5 +1,5 @@
+import { app_g_players_coordinates_new_get } from "../../../love/public/src/app_g_players_coordinates_new_get.mjs";
 import { app_g_player_move } from "../../../love/public/src/app_g_player_move.mjs";
-import { g_coordinates_clicked_adjascent_nearest_player } from "../../../love/public/src/g_coordinates_clicked_adjascent_nearest_player.mjs";
 import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
@@ -25,16 +25,10 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
     let npcs = property_get(g, "npcs");
     let npcs_matched = list_filter_object_includes(npcs, clicked_coordinates);
     let npc_clicked = list_empty_not_is(npcs_matched);
-    let coordinates_move_to = null;
-    if (npc_clicked) {
-      coordinates_move_to =
-        await g_coordinates_clicked_adjascent_nearest_player(
-          clicked_coordinates,
-          coordinates_move_to,
-        );
-    } else {
-      coordinates_move_to = clicked_coordinates;
-    }
+    let coordinates_move_to = await app_g_players_coordinates_new_get(
+      npc_clicked,
+      clicked_coordinates,
+    );
     object_assign(player, coordinates_move_to);
     await app_g_player_move(coordinates_move_to, player_img_c, div_map);
     await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, refresh);
