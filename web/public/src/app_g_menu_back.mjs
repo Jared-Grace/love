@@ -4,5 +4,5 @@ export function app_g_menu_back(overlay, player) {
   function lambda23() {
     app_g_menu(overlay, player);
   }
-  let button2 = app_g_button_back(overlay, lambda23);
+  app_g_button_back(overlay, lambda23);
 }
