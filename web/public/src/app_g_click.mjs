@@ -1,6 +1,6 @@
+import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
 import { g_distance_curried } from "../../../love/public/src/g_distance_curried.mjs";
 import { g_distance_1_curried } from "../../../love/public/src/g_distance_1_curried.mjs";
-import { object_includes_curried_right } from "../../../love/public/src/object_includes_curried_right.mjs";
 import { greater_than_or_equal_1 } from "../../../love/public/src/greater_than_or_equal_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { list_shuffle_sort_number_mapper_first } from "../../../love/public/src/list_shuffle_sort_number_mapper_first.mjs";
@@ -68,9 +68,3 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   }
   await app_g_player_save(player);
 }
-function list_filter_object_includes(clicked_coordinates, npcs) {
-  let lambda17 = object_includes_curried_right(clicked_coordinates);
-  let npcs_matched = list_filter(npcs, lambda17);
-  return npcs_matched;
-}
-
