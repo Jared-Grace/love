@@ -84,7 +84,7 @@ export async function js_curry_replace(ast) {
       async function on_expression(expression) {
         await js_call_is_if_async(expression, on_call_is);
         async function on_call_is() {
-          await sleep(250);
+          await sleep(1000);
           log(js_curry_replace.name, "c");
           let f_name = js_call_callee_name_try(expression);
           let includes = list_includes(f_names, f_name);
