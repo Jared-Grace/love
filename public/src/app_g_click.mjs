@@ -1,8 +1,8 @@
+import { g_distance_at_least_1 } from "../../../love/public/src/g_distance_at_least_1.mjs";
 import { app_g_player_center } from "../../../love/public/src/app_g_player_center.mjs";
 import { app_g_player_move_animate } from "../../../love/public/src/app_g_player_move_animate.mjs";
 import { g_coordinates_clicked_adjascent_nearest_player } from "../../../love/public/src/g_coordinates_clicked_adjascent_nearest_player.mjs";
 import { list_filter_object_includes } from "../../../love/public/src/list_filter_object_includes.mjs";
-import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_g_click_npc_if } from "../../../love/public/src/app_g_click_npc_if.mjs";
 import { g_distance_0 } from "../../../love/public/src/g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "../../../love/public/src/app_g_event_target_closest_tile_coordinates.mjs";
@@ -14,7 +14,6 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
-import { g_distance } from "../../../love/public/src/g_distance.mjs";
 export async function app_g_click(e, div_map, player_img_c, refresh) {
   let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
@@ -39,8 +38,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       coordinates_move_to = clicked_coordinates;
     }
     object_assign(player, coordinates_move_to);
-    let distance = g_distance(player, coordinates_move_to);
-    const away = at_least_1(distance);
+    const away = g_distance_at_least_1(player, coordinates_move_to);
     if (away) {
       await app_g_player_move_animate(player, player_img_c);
     }
