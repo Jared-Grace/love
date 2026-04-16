@@ -36,7 +36,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
       coordinates_move_to = clicked_coordinates;
     }
     object_assign(player, coordinates_move_to);
-    await app_g_player_move(player, coordinates_move_to, player_img_c, div_map);
+    await app_g_player_move(coordinates_move_to, player_img_c, div_map);
     await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, refresh);
   }
   await app_g_player_save(player);
