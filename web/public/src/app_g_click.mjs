@@ -16,7 +16,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let player = property_get(g, "player");
   const clicked_on_player = g_distance_0(player, clicked_coordinates);
   if (clicked_on_player) {
-    app_g_menu_new(div_map, player);
+    app_g_menu_new(div_map);
   } else {
     let npcs = property_get(g, "npcs");
     let npcs_matched = list_filter_object_includes(npcs, clicked_coordinates);
