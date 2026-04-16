@@ -112,7 +112,7 @@ export async function js_curry_replace(ast) {
             }
             let name_curried = await name_get(f_name);
             let added = list_add_if_not_includes(f_names, name_curried);
-            log(js_curry_replace.name, "b");
+            log(js_curry_replace.name, curry_generate);
             if (added) {
               await curry_generate(f_name);
             }
