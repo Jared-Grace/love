@@ -83,7 +83,7 @@ export async function js_curry_replace(ast) {
           let f_name = js_call_callee_name_try(expression);
           let includes = list_includes(f_names, f_name);
           if (includes) {
-            log_unparse(node2);
+            log_unparse(expression);
             let args = js_call_arguments_get(expression);
             let difference = js_identifiers_names_difference_try(args, params);
             let difference_sz_1 = list_size_1(difference);
