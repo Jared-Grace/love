@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { function_import_unalias } from "../../../love/public/src/function_import_unalias.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
@@ -15,4 +16,7 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
+  log(function_import.name, {
+    f_name,
+  });
 }
