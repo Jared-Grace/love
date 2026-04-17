@@ -35,6 +35,9 @@ export async function sermon_translate_urdu(file_name) {
   let json = json_to({
     value,
   });
+  log(sermon_translate_urdu.name, {
+    json,
+  });
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
       language +
