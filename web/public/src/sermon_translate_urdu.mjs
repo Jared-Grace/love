@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
@@ -24,10 +23,6 @@ export async function sermon_translate_urdu(file_name) {
   let r = await file_read_folder_user_split_normalize(path);
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
-  log(sermon_translate_urdu.name, {
-    filtered,
-    separator,
-  });
   let groups = list_split(filtered, separator);
   let m = 2;
   function lambda(item, index) {
