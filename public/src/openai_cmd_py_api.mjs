@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
@@ -18,6 +18,6 @@ export async function openai_cmd_py_api(
   log(openai_cmd_py_api.name, {
     joined,
   });
-  error(message);
+  exit();
   let stdout = await command_line(joined);
 }
