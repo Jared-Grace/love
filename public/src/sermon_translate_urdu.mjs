@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
@@ -40,6 +41,9 @@ export async function sermon_translate_urdu(file_name) {
       ". Do not change any object keys.",
     json,
   );
+  log(sermon_translate_urdu.name, {
+    r3,
+  });
   let v = json_from(r3);
   let value2 = property_get(v, "value");
   function lambda2(item2, index2) {
