@@ -25,8 +25,8 @@ export async function sermon_translate_urdu(file_name) {
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
   let groups = list_split(filtered, separator);
-  let m = 2;
   function lambda(item, index) {
+    let m = 2;
     let r2 = mod(index, m);
     let r4 = r2 === 1;
     return r4;
