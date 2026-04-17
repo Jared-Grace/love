@@ -10,7 +10,6 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
 import { list_split } from "../../../love/public/src/list_split.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
@@ -27,14 +26,6 @@ export async function sermon_translate_urdu(file_name) {
   let groups = list_split(filtered, separator);
   let lambda = integer_odd_is_right();
   let value = list_filter_index(groups, lambda);
-  value = list_get(groups, 0);
-  let json = json_to({
-    value,
-    groups,
-  });
-  log(sermon_translate_urdu.name, {
-    json,
-  });
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
       language +
