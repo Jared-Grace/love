@@ -5,6 +5,9 @@ import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 export async function function_import(f_name) {
   "if you need to unalias use " + function_import_unalias.name;
+  log(function_import.name, {
+    f_name,
+  });
   let v2 = await function_name_to_path_search(f_name);
   let f = property_get(v2, "f_path");
   let f_path = await path_resolve(f);
@@ -16,7 +19,4 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
-  log(function_import.name, {
-    f_name,
-  });
 }
