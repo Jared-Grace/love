@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -14,4 +15,7 @@ export async function openai_cmd_py_api(
   let concated = [v, result, input_file_path, output_file_path];
   let joined = list_join_space(concated);
   let stdout = await command_line(joined);
+  log(openai_cmd_py_api.name, {
+    stdout,
+  });
 }
