@@ -1,3 +1,4 @@
+import { integer_evenness } from "../../../love/public/src/integer_evenness.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
@@ -11,7 +12,6 @@ import { json_from } from "../../../love/public/src/json_from.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
-import { mod } from "../../../love/public/src/mod.mjs";
 import { list_split } from "../../../love/public/src/list_split.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -26,8 +26,7 @@ export async function sermon_translate_urdu(file_name) {
   let filtered = list_filter_empty_not_is(normalized);
   let groups = list_split(filtered, separator);
   function lambda(item, index) {
-    let m = 2;
-    let r2 = mod(index, m);
+    let r2 = integer_evenness(index);
     let r4 = r2 === 1;
     return r4;
   }
