@@ -1,4 +1,4 @@
-import { integer_evenness } from "../../../love/public/src/integer_evenness.mjs";
+import { integer_odd_is } from "../../../love/public/src/integer_odd_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
@@ -26,8 +26,7 @@ export async function sermon_translate_urdu(file_name) {
   let filtered = list_filter_empty_not_is(normalized);
   let groups = list_split(filtered, separator);
   function lambda(item, index) {
-    let r2 = integer_evenness(index);
-    let r4 = r2 === 1;
+    let r4 = integer_odd_is(index);
     return r4;
   }
   let value = list_filter_index(groups, lambda);
