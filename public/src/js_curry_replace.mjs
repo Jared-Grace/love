@@ -1,3 +1,4 @@
+import { list_first_try } from "../../../love/public/src/list_first_try.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
 import { js_declare_single_identifier_is_if_async } from "../../../love/public/src/js_declare_single_identifier_is_if_async.mjs";
@@ -15,7 +16,6 @@ import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mj
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
@@ -89,7 +89,7 @@ export async function js_curry_replace(ast) {
               params,
             });
             let difference_sz_1 = list_size_1(difference);
-            let first = list_first(difference);
+            let first = list_first_try(difference);
             let fi = list_first_is(args, first);
             let name_get = null;
             let curry_generate = null;
