@@ -4,7 +4,8 @@ import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mj
 import { openai_responses } from "../../../love/public/src/openai_responses.mjs";
 export async function openai_responses_cache(system, user) {
   let args = openai_responses_cache_args(system, user);
-  await invoke_cache_file_remove(openai_responses, args);
-  let r = await invoke_cache_file(openai_responses, args);
+  let fn = openai_responses;
+  await invoke_cache_file_remove(fn, args);
+  let r = await invoke_cache_file(fn, args);
   return r;
 }
