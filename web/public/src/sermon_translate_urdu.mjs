@@ -26,6 +26,7 @@ export async function sermon_translate_urdu(file_name) {
   let filtered = list_filter_empty_not_is(normalized);
   log(sermon_translate_urdu.name, {
     filtered,
+    separator,
   });
   let groups = list_split(filtered, separator);
   let m = 2;
