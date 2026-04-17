@@ -1,6 +1,6 @@
 import { mod } from "../../../love/public/src/mod.mjs";
-export function integer_evenness(index) {
+export function integer_evenness(n) {
   let m = 2;
-  let r2 = mod(index, m);
-  return r2;
+  let e = mod(n, m);
+  return e;
 }
