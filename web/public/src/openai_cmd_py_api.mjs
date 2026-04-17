@@ -1,3 +1,4 @@
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { openai_key_folder } from "../../../love/public/src/openai_key_folder.mjs";
@@ -9,6 +10,7 @@ export async function openai_cmd_py_api(
 ) {
   let v = py_script_run_cmd("openai_" + openai_script_name);
   let k = openai_key_folder();
+  let result = path_join(segments);
   let concated = [v, k + "openai.txt", input_file_path, output_file_path];
   let joined = list_join_space(concated);
   let stdout = await command_line(joined);
