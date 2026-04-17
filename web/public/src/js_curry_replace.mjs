@@ -84,6 +84,10 @@ export async function js_curry_replace(ast) {
           if (includes) {
             let args = js_call_arguments_get(expression);
             let difference = js_identifiers_names_difference_try(args, params);
+            log(js_curry_replace.name, {
+              args,
+              params,
+            });
             let difference_sz_1 = list_size_1(difference);
             let first = list_first(difference);
             let fi = list_first_is(args, first);
