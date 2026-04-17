@@ -34,6 +34,7 @@ export async function sermon_translate_urdu(file_name) {
   let value = list_filter_index(groups, lambda);
   let json = json_to({
     value,
+    groups,
   });
   log(sermon_translate_urdu.name, {
     json,
