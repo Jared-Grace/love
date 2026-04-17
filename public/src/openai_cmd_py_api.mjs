@@ -10,7 +10,7 @@ export async function openai_cmd_py_api(
 ) {
   let v = py_script_run_cmd("openai_" + openai_script_name);
   let k = openai_key_folder();
-  let result = path_join([k,"openai.txt"]);
+  let result = path_join([k, "openai.txt"]);
   let concated = [v, result, input_file_path, output_file_path];
   let joined = list_join_space(concated);
   let stdout = await command_line(joined);
