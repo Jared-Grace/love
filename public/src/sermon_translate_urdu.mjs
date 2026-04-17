@@ -1,3 +1,4 @@
+import { integer_odd_is_right } from "../../../love/public/src/integer_odd_is_right.mjs";
 import { integer_odd_is } from "../../../love/public/src/integer_odd_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
@@ -29,6 +30,7 @@ export async function sermon_translate_urdu(file_name) {
     let r4 = integer_odd_is(index);
     return r4;
   }
+  let r2 = integer_odd_is_right();
   let value = list_filter_index(groups, lambda);
   value = list_get(groups, 0);
   let json = json_to({
