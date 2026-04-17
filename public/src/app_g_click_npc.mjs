@@ -13,7 +13,7 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export async function app_g_click_npc(div_map, npcs_matched, refresh) {
-  let player = await app_player_get();
+  let player = await g_();
   let overlay = app_g_overlay(div_map);
   async function overlay_close() {
     await app_g_player_save(player);
