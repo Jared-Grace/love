@@ -1,3 +1,4 @@
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_tutorial_study } from "../../../love/public/src/app_g_tutorial_study.mjs";
 import { app_g_tutorial } from "../../../love/public/src/app_g_tutorial.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
@@ -13,7 +14,7 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export async function app_g_click_npc(div_map, npcs_matched, refresh) {
-  let player = await g_();
+  let player = await app_g_player_get();
   let overlay = app_g_overlay(div_map);
   async function overlay_close() {
     await app_g_player_save(player);
