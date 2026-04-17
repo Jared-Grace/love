@@ -1,4 +1,6 @@
 export function py_exe_name() {
-  let n = "python.exe ";
+  let p = "python.exe";
+  p = "./venv/bin/python";
+  let n = p + " ";
   return n;
 }
