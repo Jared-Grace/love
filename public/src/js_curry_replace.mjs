@@ -1,4 +1,4 @@
-import { list_first_try } from "../../../love/public/src/list_first_try.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
 import { js_declare_single_identifier_is_if_async } from "../../../love/public/src/js_declare_single_identifier_is_if_async.mjs";
@@ -89,7 +89,7 @@ export async function js_curry_replace(ast) {
               params,
             });
             let difference_sz_1 = list_size_1(difference);
-            let first = list_first_try(difference);
+            let first = list_first(difference);
             let fi = list_first_is(args, first);
             let name_get = null;
             let curry_generate = null;
