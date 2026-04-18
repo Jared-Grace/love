@@ -6,8 +6,8 @@ export async function property_initialize_lambda_async(
   property_name,
   lambda,
 ) {
-  const _not = property_exists_not(object, property_name);
-  if (_not) {
+  const exists_not = property_exists_not(object, property_name);
+  if (exists_not) {
     let value_set = lambda();
     property_set(object, property_name, value_set);
   }
