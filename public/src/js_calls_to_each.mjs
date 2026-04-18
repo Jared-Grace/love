@@ -23,7 +23,7 @@ export function js_calls_to_each(ast) {
     let node = property_get(v, "node");
     let expression = js_statement_expression_get(node);
     let r2 = js_await_if_unwrap(expression);
-    let call = property_get(r2, "call");
+    let call = property_get(r2, "argument");
     let async_is = property_get(r2, "async_is");
     let e1 = list_get_end_1(stack);
     let next = list_next_try(e1, node);
