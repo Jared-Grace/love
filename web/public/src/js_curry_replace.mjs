@@ -77,7 +77,7 @@ export async function js_curry_replace(ast) {
       }
       async function on_expression(expression) {
         log(js_curry_replace.name, {
-          a: 3,
+          a: 3,expression
         });
         await js_call_is_if_async(expression, on_call_is);
         async function on_call_is() {
