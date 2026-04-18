@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { global_function_property_lambda_info_async } from "../../../love/public/src/global_function_property_lambda_info_async.mjs";
 import { not_assert } from "../../../love/public/src/not_assert.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
@@ -8,11 +9,13 @@ export async function file_read_cached_initialize(f_path) {
     let contents = await file_read(f_path);
     return contents;
   }
-  let value = await global_function_property_lambda_info_async(
+  let r = await global_function_property_lambda_info_async(
     fn,
     property_name,
     lambda2,
   );
+  let info = property_get(r, "info");
+  let value = property_get(r, "value");
   let exists = global_function_property_exists(
     file_read_cached_initialize,
     f_path,
