@@ -1,4 +1,4 @@
-import { function_name_part_insert_at } from "../../../love/public/src/function_name_part_insert_at.mjs";
+import { function_name_part_insert } from "../../../love/public/src/function_name_part_insert.mjs";
 import { function_name_to_part_replace_last_3 } from "../../../love/public/src/function_name_to_part_replace_last_3.mjs";
 import { function_name_to_part_replace_last_2 } from "../../../love/public/src/function_name_to_part_replace_last_2.mjs";
 import { function_name_to_part_replace_last } from "../../../love/public/src/function_name_to_part_replace_last.mjs";
@@ -12,7 +12,7 @@ export function function_name_new_get_generic_overrides() {
   let r2 = {
     c: function_name_combine,
     d: function_name_parts_delete,
-    i: function_name_part_insert_at,
+    i: function_name_part_insert,
     l: function_name_part_last_delete,
     r: lambda_right,
     s: function_name_parts_swap_end,
