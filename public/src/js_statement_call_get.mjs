@@ -1,4 +1,4 @@
-import { js_await_if_unwrap } from "../../../love/public/src/js_await_if_unwrap.mjs";
+import { js_await_if_unwrap_argument } from "../../../love/public/src/js_await_if_unwrap_argument.mjs";
 import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -31,8 +31,7 @@ export function js_statement_call_get(node) {
     declaration = list_single(declarations);
     call = js_declare_init_get(declaration);
   }
-  let r2 = js_await_if_unwrap(call);
-  call = property_get(r2, "argument");
+  call = js_await_if_unwrap_argument(call);
   let a = js_node_type_is(call, "CallExpression");
   if (not(a)) {
     return null;
