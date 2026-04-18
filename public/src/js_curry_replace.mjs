@@ -61,14 +61,14 @@ export async function js_curry_replace(ast) {
       }
       let s2 = list_size_2(body_block);
       if (s2) {
-        log(js_curry_replace.name, {
-          a: 1,
-        });
         let r = list_first_second(body_block);
         let first = property_get(r, "first");
         async function lambda4(init, id) {
           let second = property_get(r, "second");
           async function lambda5(argument) {
+        log(js_curry_replace.name, {
+          a: 2,
+        });
             let eq = js_identifiers_names_equal(id, argument);
             if (eq) {
               await on_expression(init);
