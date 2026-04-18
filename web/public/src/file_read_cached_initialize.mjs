@@ -4,7 +4,10 @@ import { global_function_property_exists } from "../../../love/public/src/global
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 export async function file_read_cached_initialize(f_path) {
-  async function lambda2() {}
+  async function lambda2() {
+    let contents = await file_read(f_path);
+    return contents;
+  }
   let value = await global_function_property_lambda_info_async(
     fn,
     property_name,
