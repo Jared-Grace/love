@@ -12,12 +12,13 @@ export async function property_initialize_lambda_async(
     let value_set = lambda();
     property_set(object, property_name, value_set);
   }
-  let value = await property_get(object, property_name);
-  return value;
+  let value2 = await property_get(object, property_name);
+  return value2;
   async function lambda3() {}
   let r = await property_initialize_lambda_info_async(
     object2,
     property_name2,
     lambda3,
   );
+  let value = property_get(r, "value");
 }
