@@ -13,5 +13,9 @@ export async function property_initialize_lambda_info_async(
     property_set(object, property_name, value_set);
   }
   let value = await property_get(object, property_name);
-  return value;
+  let r = {
+    value,
+    info,
+  };
+  return r;
 }
