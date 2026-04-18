@@ -1,3 +1,4 @@
+import { js_await_if_unwrap } from "../../../love/public/src/js_await_if_unwrap.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_brackets_empty } from "../../../love/public/src/js_code_brackets_empty.mjs";
@@ -11,7 +12,6 @@ import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -22,13 +22,9 @@ export function js_calls_to_each(ast) {
     let stack = property_get(v, "stack");
     let node = property_get(v, "node");
     let expression = js_statement_expression_get(node);
-    let async_is = false;
-    let call = expression;
-    function lambda3() {
-      async_is = true;
-      call = property_get(expression, "argument");
-    }
-    js_node_type_is_if(expression, "AwaitExpression", lambda3);
+    let r2 = js_await_if_unwrap(expression);
+    let call = property_get(r2, "call");
+    let async_is = property_get(r2, "async_is");
     let e1 = list_get_end_1(stack);
     let next = list_next_try(e1, node);
     if (null_is(next)) {
