@@ -68,9 +68,6 @@ export async function js_curry_replace(ast) {
           async function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
             if (eq) {
-              log(js_curry_replace.name, {
-                a: 2,
-              });
               await on_expression(init);
             }
           }
@@ -81,6 +78,9 @@ export async function js_curry_replace(ast) {
       async function on_expression(expression) {
         await js_call_is_if_async(expression, on_call_is);
         async function on_call_is() {
+              log(js_curry_replace.name, {
+                a: 3,
+              });
           let f_name = js_call_callee_name_try(expression);
           let includes = list_includes(f_names, f_name);
           if (includes) {
