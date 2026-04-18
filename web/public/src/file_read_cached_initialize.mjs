@@ -1,8 +1,15 @@
+import { property_initialize_lambda_info_async } from "../../../love/public/src/property_initialize_lambda_info_async.mjs";
 import { not_assert } from "../../../love/public/src/not_assert.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 export async function file_read_cached_initialize(f_path) {
+  async function lambda2() {}
+  let r = await property_initialize_lambda_info_async(
+    object,
+    property_name,
+    lambda2,
+  );
   let exists = global_function_property_exists(
     file_read_cached_initialize,
     f_path,
