@@ -32,7 +32,7 @@ export function js_statement_call_get(node) {
     call = js_declare_init_get(declaration);
   }
   let r2 = js_await_if_unwrap(call);
-  call = property_get(r2, "call");
+  call = property_get(r2, "argument");
   let a = js_node_type_is(call, "CallExpression");
   if (not(a)) {
     return null;
