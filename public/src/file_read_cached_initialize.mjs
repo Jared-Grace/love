@@ -7,8 +7,8 @@ export async function file_read_cached_initialize(f_path) {
     return contents;
   }
   let r = await global_function_property_lambda_info_async(
-    fn,
-    property_name,
+    file_read_cached_initialize,
+    f_path,
     lambda2,
   );
   let exists = property_get(r, "exists");
