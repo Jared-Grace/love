@@ -14,9 +14,9 @@ export async function file_read_cached_initialize(f_path) {
     property_name,
     lambda2,
   );
-  let info = property_get(r, "info");
+  let exists = property_get(r, "exists");
   let value = property_get(r, "value");
-  let exists = global_function_property_exists(
+  let exists2 = global_function_property_exists(
     file_read_cached_initialize,
     f_path,
   );
