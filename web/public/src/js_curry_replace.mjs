@@ -76,11 +76,11 @@ export async function js_curry_replace(ast) {
         await js_declare_single_identifier_is_if_async(first, lambda4);
       }
       async function on_expression(expression) {
-        await js_call_is_if_async(expression, on_call_is);
-        async function on_call_is() {
           log(js_curry_replace.name, {
             a: 3,
           });
+        await js_call_is_if_async(expression, on_call_is);
+        async function on_call_is() {
           let f_name = js_call_callee_name_try(expression);
           let includes = list_includes(f_names, f_name);
           if (includes) {
