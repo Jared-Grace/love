@@ -2,7 +2,7 @@ import { emoji_no } from "../../../love/public/src/emoji_no.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
-import { app_reply_languages } from "../../../love/public/src/app_reply_languages.mjs";
+import { app_reply_live } from "../../../love/public/src/app_reply_live.mjs";
 import { app_reply_response_live } from "../../../love/public/src/app_reply_response_live.mjs";
 import { app_reply_response_how_day } from "../../../love/public/src/app_reply_response_how_day.mjs";
 import { app_reply_how_day } from "../../../love/public/src/app_reply_how_day.mjs";
@@ -171,7 +171,7 @@ export function app_reply_choices() {
       response: list_join_newline_2([greetings, hru, how_family]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_languages(),
+      text: app_reply_greetings() + " " + app_reply_live(),
       response: list_join_newline_2([greetings, live]),
     },
     {
@@ -243,7 +243,7 @@ export function app_reply_choices() {
         emoji_pray(),
     },
     {
-      text: app_reply_languages(),
+      text: app_reply_live(),
       response: live,
     },
     {
