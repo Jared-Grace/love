@@ -3,7 +3,7 @@ import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
 import { app_reply_languages } from "../../../love/public/src/app_reply_languages.mjs";
-import { app_reply_response_languages } from "../../../love/public/src/app_reply_response_languages.mjs";
+import { app_reply_response_live } from "../../../love/public/src/app_reply_response_live.mjs";
 import { app_reply_response_how_day } from "../../../love/public/src/app_reply_response_how_day.mjs";
 import { app_reply_how_day } from "../../../love/public/src/app_reply_how_day.mjs";
 import { app_reply_response_how_family } from "../../../love/public/src/app_reply_response_how_family.mjs";
@@ -78,7 +78,7 @@ export function app_reply_choices() {
   let hru = app_reply_response_how_r_u();
   let how_family = app_reply_response_how_family();
   const how_day = app_reply_response_how_day();
-  let languages = app_reply_response_languages();
+  let languages = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
   let v = [
