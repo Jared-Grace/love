@@ -15,6 +15,7 @@ export function js_dollar_f({ node, afters, stack1 }) {
   function lambda3() {
     list_add(afters, lambda);
     function lambda() {
+      js_arrow_to_function_node(parsed);
       object_replace(stack1, parsed);
     }
   }
