@@ -9,7 +9,7 @@ export function js_dollar_f({ node, afters, stack1 }) {
   let parsed = js_parse_expression(code);
   js_arrow_to_function_node(parsed);
   function lambda3() {}
-  js_node_type_is_if(node2, type, lambda3);
+  js_node_type_is_if(stack1, "ExpressionStatement", lambda3);
   list_add(afters, lambda);
   function lambda() {
     object_replace(node, parsed);
