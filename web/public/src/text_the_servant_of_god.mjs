@@ -1,4 +1,4 @@
 export function text_the_servant_of_god() {
-  let v2 = "The servant of God";
-  return v2;
+  let t = "the servant of God";
+  return t;
 }
