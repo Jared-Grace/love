@@ -11,4 +11,5 @@ export async function app_g_player_coordinates_update_move(
     clicked_coordinates,
   );
   await app_g_player_move(coordinates_move_to, player_img_c, div_map);
+  object_assign(player, coordinates_move_to);
 }
