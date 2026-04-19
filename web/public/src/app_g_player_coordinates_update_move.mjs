@@ -1,3 +1,4 @@
+import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { app_g_player_move } from "../../../love/public/src/app_g_player_move.mjs";
 import { app_g_player_coordinates_update } from "../../../love/public/src/app_g_player_coordinates_update.mjs";
 export async function app_g_player_coordinates_update_move(
