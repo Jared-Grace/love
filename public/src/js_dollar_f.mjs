@@ -10,6 +10,7 @@ export function js_dollar_f({ node, afters }) {
   js_arrow_to_function_node(parsed);
   log(js_dollar_f.name, {
     parsed,
+    stack1,
   });
   list_add(afters, lambda);
   function lambda() {
