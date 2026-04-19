@@ -8,7 +8,7 @@ export async function js_return_atomize(ast) {
   async function lambda(v) {
     let node = property_get(v, "node");
     let variable_name = js_return_identifier_name();
-    await js_return_atomize_node(node, ast, variable_name);
+    await js_return_atomize_node(ast, node, variable_name);
   }
   await each_async(rs, lambda);
   return;
