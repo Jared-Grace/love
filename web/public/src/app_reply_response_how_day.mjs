@@ -1,8 +1,8 @@
-import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
+import { app_reply_response_how_r_u_skip_before_first_upper } from "../../../love/public/src/app_reply_response_how_r_u_skip_before_first_upper.mjs";
 import { text_first_lower_to } from "../../../love/public/src/text_first_lower_to.mjs";
 import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 export function app_reply_response_how_day() {
-  let s = app_reply_response_how_r_u_skip_before();
+  let s = app_reply_response_how_r_u_skip_before_first_upper();
   let v2 =
     emoji_ok() +
     " The day of the " +
