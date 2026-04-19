@@ -1,3 +1,4 @@
+import { js_await_if_unwrap_argument } from "../../../love/public/src/js_await_if_unwrap_argument.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
@@ -80,6 +81,7 @@ export async function js_curry_replace(ast) {
           a: 3,
           expression,
         });
+        expression = js_await_if_unwrap_argument(expression);
         await js_call_is_if_async(expression, on_call_is);
         async function on_call_is() {
           let f_name = js_call_callee_name_try(expression);
