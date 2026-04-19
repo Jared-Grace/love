@@ -5,6 +5,8 @@ export function g_distance_at_least_1(player, coordinates_move_to) {
   let distance = g_distance(player, coordinates_move_to);
   log(g_distance_at_least_1.name, {
     distance,
+    player,
+    coordinates_move_to,
   });
   const away = at_least_1(distance);
   return away;
