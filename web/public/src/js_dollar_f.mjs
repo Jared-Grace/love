@@ -6,7 +6,7 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 export function js_dollar_f({ node, afters }) {
   const code = js_code_arrow();
   let parsed = js_parse_expression(code);
-  js_arrow_to_function_node(node);
+  js_arrow_to_function_node(parsed);
   list_add(afters, lambda);
   function lambda() {
     object_replace(node, parsed);
