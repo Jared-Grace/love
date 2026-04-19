@@ -1,3 +1,4 @@
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { emoji_no } from "../../../love/public/src/emoji_no.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
@@ -81,6 +82,7 @@ export function app_reply_choices() {
   let live = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
+  let s2 = text_the_servant_of_god();
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -238,7 +240,7 @@ export function app_reply_choices() {
       response:
         emoji_globe_americas() +
         " " +
-        text_the_servant_of_god() +
+        text_first_upper_to(s2) +
         " speaks English. " +
         emoji_pray(),
     },
