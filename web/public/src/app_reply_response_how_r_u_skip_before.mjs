@@ -7,6 +7,6 @@ export function app_reply_response_how_r_u_skip_before() {
     " doing good " +
     emoji_100() +
     " through the grace of God, because ";
-  let v = text_first_upper_to(s);
-  return t;
+  let u = text_first_upper_to(t);
+  return u;
 }
