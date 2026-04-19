@@ -1,5 +1,4 @@
 import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
-import { js_function_declaration_asyncify } from "../../../love/public/src/js_function_declaration_asyncify.mjs";
 import { js_flo_params_add } from "../../../love/public/src/js_flo_params_add.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_call_args_await_maybe_return } from "../../../love/public/src/js_call_args_await_maybe_return.mjs";
@@ -40,7 +39,6 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     );
     list_add(body_block, item);
     let declaration = js_flo_params_add(ast, fn_new_args);
-    js_function_declaration_asyncify(declaration, declaration_call);
     await js_imports_missing_add_all(ast);
   }
   let r = {
