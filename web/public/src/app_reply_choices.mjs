@@ -1,4 +1,4 @@
-import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
+import { text_the_servant_of_god_first_upper } from "../../../love/public/src/text_the_servant_of_god_first_upper.mjs";
 import { emoji_no } from "../../../love/public/src/emoji_no.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
@@ -32,7 +32,6 @@ import { emoji_handshake } from "../../../love/public/src/emoji_handshake.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { emoji_rock } from "../../../love/public/src/emoji_rock.mjs";
 import { emoji_rainbow } from "../../../love/public/src/emoji_rainbow.mjs";
-import { text_the_servant_of_god } from "../../../love/public/src/text_the_servant_of_god.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { emoji_dove } from "../../../love/public/src/emoji_dove.mjs";
 import { app_reply_pray } from "../../../love/public/src/app_reply_pray.mjs";
@@ -82,8 +81,7 @@ export function app_reply_choices() {
   let live = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
-  let s2 = text_the_servant_of_god();
-  const s3 = text_first_upper_to(s2);
+  const s3 = text_the_servant_of_god_first_upper();
   let v = [
     {
       text: emoji_pray() + " Amazing",
