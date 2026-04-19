@@ -78,7 +78,7 @@ export function app_reply_choices() {
   let hru = app_reply_response_how_r_u();
   let how_family = app_reply_response_how_family();
   const how_day = app_reply_response_how_day();
-  let languages = app_reply_response_live();
+  let live = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
   let v = [
@@ -172,7 +172,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_greetings() + " " + app_reply_languages(),
-      response: list_join_newline_2([greetings, languages]),
+      response: list_join_newline_2([greetings, live]),
     },
     {
       text: emoji_hands_raising() + " Hallelujah",
@@ -244,7 +244,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_languages(),
-      response: languages,
+      response: live,
     },
     {
       text: emoji_globe_americas() + " Location",
