@@ -77,7 +77,7 @@ export function app_reply_choices() {
   };
   let greetings = app_reply_response_greetings();
   let hru = app_reply_response_how_r_u();
-  let hru_today = app_reply_response_how_r_u_today();
+  let hru_today = app_reply_response_how_r_u_todayz();
   let how_family = app_reply_response_how_family();
   const how_day = app_reply_response_how_day();
   let live = app_reply_response_live();
