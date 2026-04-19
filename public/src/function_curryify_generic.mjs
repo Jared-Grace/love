@@ -38,7 +38,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
       declaration_call,
     );
     list_add(body_block, item);
-    let declaration = js_flo_params_add(ast, fn_new_args);
+    js_flo_params_add(ast, fn_new_args);
     await js_imports_missing_add_all(ast);
   }
   let r = {
