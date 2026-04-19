@@ -20,7 +20,7 @@ export function js_dollar_f({ node, afters, stack1 }) {
       js_node_type_set(node, "FunctionDeclaration");
       object_replace(stack1, parsed);
     }
-    list_remove(list, item);
+    list_remove(afters, lambda);
   }
   js_expression_statement_is_if(stack1, lambda3);
 }
