@@ -16,7 +16,7 @@ export function js_dollar_f({ node, afters, stack1 }) {
   function lambda3() {
     list_add(afters, lambda);
     function lambda() {
-      property_set(parsed, "type", "FunctionExpression");
+      property_set(parsed, "type", "FunctionDeclaration");
       object_replace(stack1, parsed);
     }
   }
