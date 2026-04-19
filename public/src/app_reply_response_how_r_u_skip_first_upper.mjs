@@ -1,7 +1,7 @@
 import { app_reply_response_how_r_u_skip_before_first_upper } from "../../../love/public/src/app_reply_response_how_r_u_skip_before_first_upper.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
-export function app_reply_response_how_r_u_skip() {
+export function app_reply_response_how_r_u_skip_first_upper() {
   const before = app_reply_response_how_r_u_skip_before_first_upper();
   let t =
     before +

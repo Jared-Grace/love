@@ -19,7 +19,7 @@ import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_c
 import { app_reply_choices_thanks } from "../../../love/public/src/app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
 import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
-import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_reply_response_how_r_u_skip.mjs";
+import { app_reply_response_how_r_u_skip_first_upper } from "../../../love/public/src/app_reply_response_how_r_u_skip_first_upper.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
@@ -69,7 +69,7 @@ export function app_reply_choices() {
   let pray_request = app_reply_choices_will_done_fragment();
   let will = app_reply_pray("Will", pray_request);
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
-  let s = app_reply_response_how_r_u_skip();
+  let s = app_reply_response_how_r_u_skip_first_upper();
   let b = {
     text: emoji_pray() + " Bless",
     response: prayer_blessing_expand(),
