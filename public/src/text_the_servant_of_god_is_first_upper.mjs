@@ -3,5 +3,5 @@ import { text_first_upper_to } from "../../../love/public/src/text_first_upper_t
 export function text_the_servant_of_god_is_first_upper() {
   let t = text_the_servant_of_god_is();
   let u = text_first_upper_to(t);
-  return t;
+  return u;
 }
