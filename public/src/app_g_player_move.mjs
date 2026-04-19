@@ -1,4 +1,3 @@
-import { app_g_player_coordinates_update_move } from "../../../love/public/src/app_g_player_coordinates_update_move.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_player_center } from "../../../love/public/src/app_g_player_center.mjs";
