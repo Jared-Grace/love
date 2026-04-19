@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_node_type_set } from "../../../love/public/src/js_node_type_set.mjs";
 import { js_expression_statement_is_if } from "../../../love/public/src/js_expression_statement_is_if.mjs";
 import { js_arrow_to_function_node } from "../../../love/public/src/js_arrow_to_function_node.mjs";
@@ -19,6 +20,7 @@ export function js_dollar_f({ node, afters, stack1 }) {
       js_node_type_set(node, "FunctionDeclaration");
       object_replace(stack1, parsed);
     }
+    list_remove(list, item);
   }
   js_expression_statement_is_if(stack1, lambda3);
 }
