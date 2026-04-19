@@ -1,4 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_player_center } from "../../../love/public/src/app_g_player_center.mjs";
 import { app_g_player_move_animate } from "../../../love/public/src/app_g_player_move_animate.mjs";
@@ -10,7 +10,7 @@ export async function app_g_player_move(
 ) {
   let player = await app_g_player_get();
   const away = g_distance_at_least_1(player, coordinates_move_to);
-  log(app_g_player_move.name, {
+  log_json({
     away,
   });
   if (away) {
