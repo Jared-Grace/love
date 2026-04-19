@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_g_player_move } from "../../../love/public/src/app_g_player_move.mjs";
 import { app_g_player_coordinates_update } from "../../../love/public/src/app_g_player_coordinates_update.mjs";
 export async function app_g_player_coordinates_update_move(
@@ -7,7 +6,6 @@ export async function app_g_player_coordinates_update_move(
   player_img_c,
   div_map,
 ) {
-  log(app_g_player_coordinates_update_move.name, {});
   let coordinates_move_to = await app_g_player_coordinates_update(
     npc_clicked,
     clicked_coordinates,
