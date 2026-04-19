@@ -40,6 +40,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     );
     list_add(body_block, item);
     js_flo_params_add(ast, fn_new_args);
+    ("this keeps auto from having r and r2 - now it is r and c");
     await js_return_atomize_node(ast, ret, "c");
     await js_imports_missing_add_all(ast);
   }
