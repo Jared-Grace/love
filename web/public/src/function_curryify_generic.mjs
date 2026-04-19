@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_return_atomize_node } from "../../../love/public/src/js_return_atomize_node.mjs";
 import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { js_flo_params_add } from "../../../love/public/src/js_flo_params_add.mjs";
@@ -41,10 +40,6 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     );
     list_add(body_block, item);
     js_flo_params_add(ast, fn_new_args);
-    log(function_curryify_generic.name, {
-      declaration_result,
-      ret,
-    });
     await js_return_atomize_node(ast, ret, "c");
     await js_imports_missing_add_all(ast);
   }
