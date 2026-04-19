@@ -6,7 +6,7 @@ import { js_boolean_values } from "../../../love/public/src/js_boolean_values.mj
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_return_argument_get } from "../../../love/public/src/js_return_argument_get.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
-export async function js_return_atomize_node(node, ast, variable_name) {
+export async function js_return_atomize_node(ast, node, variable_name) {
   if (js_node_type_is(node, "ReturnStatement")) {
     let argument = js_return_argument_get(node);
     if (js_node_type_is(argument, "Identifier")) {
