@@ -224,7 +224,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_r_u_today(),
-      response: hru,
+      response: hru_today,
     },
     {
       text: app_reply_how_r_u() + " " + app_reply_how_family(),
