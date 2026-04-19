@@ -30,15 +30,9 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
       declaration_call,
       name_result,
     );
-    log(function_curryify_generic.name, {
-      declaration_result,
-    });
     js_function_declaration_params_add(declaration_result, fn_new_result_args);
     let ret = js_statement_return_argument(declaration_result);
     js_flo_body_add(ast, ret);
-    log(function_curryify_generic.name, {
-      declaration_result,
-    });
     let body_block = js_function_declaration_to_block_body(declaration_result);
     let item = js_call_args_await_maybe_return(
       unaliased,
@@ -47,6 +41,10 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     );
     list_add(body_block, item);
     js_flo_params_add(ast, fn_new_args);
+    log(function_curryify_generic.name, {
+      declaration_result,
+      ret,
+    });
     await js_return_atomize_node(ast, ret, "c");
     await js_imports_missing_add_all(ast);
   }
