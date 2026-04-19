@@ -1,5 +1,4 @@
 import { file_read_json_curried } from "../../../love/public/src/file_read_json_curried.mjs";
-import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { global_function_property_lambda_info_async } from "../../../love/public/src/global_function_property_lambda_info_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
