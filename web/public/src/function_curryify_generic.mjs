@@ -1,3 +1,4 @@
+import { js_return_atomize_node } from "../../../love/public/src/js_return_atomize_node.mjs";
 import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { js_flo_params_add } from "../../../love/public/src/js_flo_params_add.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -31,6 +32,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     js_function_declaration_params_add(declaration_result, fn_new_result_args);
     let ret = js_statement_return_argument(declaration_result);
     js_flo_body_add(ast, ret);
+    await js_return_atomize_node(ast, ret, "c");
     let body_block = js_function_declaration_to_block_body(declaration_result);
     let item = js_call_args_await_maybe_return(
       unaliased,
