@@ -83,6 +83,7 @@ export function app_reply_choices() {
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
   let s2 = text_the_servant_of_god();
+  const s3 = text_first_upper_to(s2);
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -238,11 +239,7 @@ export function app_reply_choices() {
     {
       text: emoji_globe_americas() + " Language",
       response:
-        emoji_globe_americas() +
-        " " +
-        text_first_upper_to(s2) +
-        " speaks English. " +
-        emoji_pray(),
+        emoji_globe_americas() + " " + s3 + " speaks English. " + emoji_pray(),
     },
     {
       text: app_reply_live(),
