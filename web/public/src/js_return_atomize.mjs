@@ -13,6 +13,7 @@ export async function js_return_atomize(ast) {
   let rs = js_list_type(ast, "ReturnStatement");
   async function lambda(v) {
     let node = property_get(v, "node");
+    let variable_name = js_return_identifier_name();
     if (js_node_type_is(node, "ReturnStatement")) {
       let argument = js_return_argument_get(node);
       if (js_node_type_is(argument, "Identifier")) {
@@ -31,7 +32,6 @@ export async function js_return_atomize(ast) {
         }
       }
       let v = js_visit_match(ast, argument);
-      let variable_name = js_return_identifier_name();
       await js_node_atomize(ast, v, variable_name, 0);
     }
   }
