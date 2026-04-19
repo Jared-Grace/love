@@ -10,5 +10,5 @@ export function app_reply_response_how_r_u_skip_first_upper() {
     " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However, please pray that the servant of God will be perfectly loving and healed" +
     emoji_pray();
   let u = text_first_upper_to(t);
-  return t;
+  return u;
 }
