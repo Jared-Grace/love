@@ -1,7 +1,7 @@
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { text_the_servant_of_god_is_first_upper } from "../../../love/public/src/text_the_servant_of_god_is_first_upper.mjs";
-export function app_reply_response_how_r_u_skip_before() {
+export function app_reply_response_how_r_u_skip_before_first_upper() {
   let t =
     text_the_servant_of_god_is_first_upper() +
     " doing good " +
