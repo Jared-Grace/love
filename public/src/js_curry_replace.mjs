@@ -1,3 +1,4 @@
+import { js_await_if_unwrap_argument } from "../../../love/public/src/js_await_if_unwrap_argument.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
 import { function_curryify_right } from "../../../love/public/src/function_curryify_right.mjs";
@@ -91,6 +92,7 @@ export async function js_curry_replace(ast) {
               args,
               params,
             });
+            let call3 = js_await_if_unwrap_argument(call2);
             let difference_sz_1 = list_size_1(difference);
             let first = list_first(difference);
             let fi = list_first_is(args, first);
