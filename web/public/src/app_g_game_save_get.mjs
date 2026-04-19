@@ -8,7 +8,7 @@ export async function app_g_game_save_get() {
   let p = app_g_game_save_path();
   (function lambda() {
     return;
-  })
+  });
   let r = await global_function_property_lambda_info_async(
     file_read_cached_initialize,
     p,
