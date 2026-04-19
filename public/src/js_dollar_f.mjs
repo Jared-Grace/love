@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_expression_statement_is_if } from "../../../love/public/src/js_expression_statement_is_if.mjs";
 import { js_arrow_to_function_node } from "../../../love/public/src/js_arrow_to_function_node.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -15,7 +16,7 @@ export function js_dollar_f({ node, afters, stack1 }) {
   function lambda3() {
     list_add(afters, lambda);
     function lambda() {
-      js_arrow_to_function_node(parsed);
+      property_set(parsed, "type", "FunctionExpression");
       object_replace(stack1, parsed);
     }
   }
