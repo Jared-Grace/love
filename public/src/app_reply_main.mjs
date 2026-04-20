@@ -142,6 +142,7 @@ export async function app_reply_main(context) {
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
   let gl = app_reply_greetings_live();
+  let shortcuts_languages = [];
   let languages_pk = languages_default_concat([pa, ur]);
   const r_pk_base = {
     name: "PK-",
