@@ -192,7 +192,7 @@ export async function app_reply_main(context) {
     async function lambda5() {
       app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
       await update(count2);
-      list_map_property_invoke(buttons2, property_name_lambda);
+      list_map_property_invoke(buttons_languages, "update");
       function lambda7(r) {
         let b = list_find_property(buttons, "text", r);
         property_get_invoke(b, "click");
