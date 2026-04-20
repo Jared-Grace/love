@@ -1,4 +1,4 @@
-import { ebible_language_lug } from "../../../love/public/src/ebible_language_lug.mjs";
+import { ebible_language_luganda } from "../../../love/public/src/ebible_language_luganda.mjs";
 import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
@@ -13,7 +13,7 @@ export function ebible_languages() {
   let o = ebible_language_original();
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
-  let lug = ebible_language_lug();
+  let lug = ebible_language_luganda();
   let languages = [
     o,
     en,
