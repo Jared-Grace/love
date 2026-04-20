@@ -1,3 +1,4 @@
+import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -125,8 +126,7 @@ export async function app_reply_main(context) {
     let property_value = app_reply_greetings_live();
     let b = list_find_property(buttons, "text", property_value);
     const property_name = "click";
-    let click2 = property_get(b, property_name);
-    click2();
+    property_get_invoke(b, property_name);
   }
   let component2 = html_button(root, "Intro", lambda5);
   html_p_text(root, "4. (Optional) Choose any responses:");
