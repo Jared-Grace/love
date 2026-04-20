@@ -1,3 +1,4 @@
+import { property_get_add } from "../../../love/public/src/property_get_add.mjs";
 import { app_reply_greetings } from "../../../love/public/src/app_reply_greetings.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -138,8 +139,7 @@ export async function app_reply_main(context) {
   let r_92_10_g = json_copy(r_92_10);
   let item3 = app_reply_greetings();
   const property_name = "responses";
-  let responses3 = property_get(r_92_10_g, property_name);
-  list_add(responses3, item3);
+  property_get_add(r_92_10_g, property_name, item3);
   let shortcuts = [
     {
       name: "Intro",
