@@ -10,6 +10,11 @@ export function ebible_languages() {
   let en = ebible_language_en();
   let o = ebible_language_original();
   const ur = ebible_language_urdu();
+  const pa = {
+    name: "Punjabi",
+    bible_folder: "pan",
+    language_code: "pa",
+  };
   let languages = [
     o,
     en,
@@ -99,11 +104,7 @@ export function ebible_languages() {
       bible_folder: "yor",
       language_code: "yor",
     },
-    {
-      name: "Punjabi",
-      bible_folder: "pan",
-      language_code: "pa",
-    },
+    pa,
     {
       name: "Chichewa",
       bible_folder: "nya",
