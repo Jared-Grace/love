@@ -136,7 +136,7 @@ export async function app_reply_main(context) {
       name: "92-10",
       languages: [pa, ur],
       count: 10,
-      responses: [gl],
+      responses: [],
     },
   ];
   function lambda(s) {
