@@ -122,6 +122,7 @@ export async function app_reply_main(context) {
   let buttons = null;
   let shortcuts = [
     {
+      name: "Intro",
       languages: [],
       count: 1,
       responses: [],
