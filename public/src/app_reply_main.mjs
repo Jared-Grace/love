@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
@@ -140,6 +141,7 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let extended = shortcut_extend(r_92_1, "0");
+  property_set(object, property_name, value);
   const r_92_10 = {
     name: "92-10",
     languages: languages_92,
