@@ -14,11 +14,7 @@ export function app_reply_buttons_languages_on_toggle(
     let component = null;
     function on_click() {
       list_toggle(languages_chosen, language);
-      html_style_background_color_set_or_remove_list(
-        component,
-        languages_chosen,
-        language,
-      );
+      update();
       on_toggle();
     }
     component = html_button(root, name, on_click);
@@ -27,6 +23,13 @@ export function app_reply_buttons_languages_on_toggle(
       languages_chosen,
       language,
     );
+    function update() {
+      html_style_background_color_set_or_remove_list(
+        component,
+        languages_chosen,
+        language,
+      );
+    }
   }
   each(languages, lambda);
 }
