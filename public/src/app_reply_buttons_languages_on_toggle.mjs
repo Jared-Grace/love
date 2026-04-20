@@ -1,4 +1,3 @@
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
@@ -28,9 +27,6 @@ export function app_reply_buttons_languages_on_toggle(
       languages_chosen,
       language,
     );
-    let to2 = object_merge(component, {
-      language,
-    });
   }
   each(languages, lambda);
 }
