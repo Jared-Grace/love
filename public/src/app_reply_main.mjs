@@ -134,7 +134,10 @@ export async function app_reply_main(context) {
       visible_count = buttons_refresh();
     }
     b = html_button(root, text, click);
-    let to2 = object_merge(to, from);
+    object_merge(b, choice);
+    object_merge(b, {
+      click,
+    });
     return b;
   }
   let buttons = list_map(choices, lambda9);
