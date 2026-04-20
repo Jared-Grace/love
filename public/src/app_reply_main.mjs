@@ -124,7 +124,7 @@ export async function app_reply_main(context) {
   function lambda9(choice) {
     let b = null;
     let text = property_get(choice, "text");
-    async function lambda11() {
+    async function click() {
       let response = property_get(choice, "response");
       list_add(responses, response);
       list_add(responses_buttons, b);
@@ -132,7 +132,7 @@ export async function app_reply_main(context) {
       typed_reset();
       visible_count = buttons_refresh();
     }
-    b = html_button(root, text, lambda11);
+    b = html_button(root, text, click);
     return b;
   }
   let buttons = list_map(choices, lambda9);
