@@ -127,16 +127,17 @@ export async function app_reply_main(context) {
       responses: [],
     },
   ];
-  async function lambda5() {
-    languages_chosen_reset();
-    await update(1);
-    let property_value = app_reply_greetings_live();
-    let b = list_find_property(buttons, "text", property_value);
-    property_get_invoke(b, "click");
+  function lambda(item3) {
+    async function lambda5() {
+      languages_chosen_reset();
+      await update(1);
+      let property_value = app_reply_greetings_live();
+      let b = list_find_property(buttons, "text", property_value);
+      property_get_invoke(b, "click");
+    }
+    let component2 = html_button(root, "Intro", lambda5);
   }
-  let component2 = html_button(root, "Intro", lambda5);
-  function lambda(item3) {}
-  each(list, lambda);
+  each(shortcuts, lambda);
   html_p_text(root, "4. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
