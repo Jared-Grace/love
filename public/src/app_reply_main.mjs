@@ -142,7 +142,7 @@ export async function app_reply_main(context) {
   };
   const name_extend = "0";
   const count = 10;
-  let r_92_10 = shortcut_extend_count();
+  let r_92_10 = shortcut_extend_count(name_extend, count);
   let g = app_reply_greetings();
   let r_92_10_g = response_add(r_92_10, "g", g);
   let h = app_reply_how_r_u();
@@ -160,7 +160,7 @@ export async function app_reply_main(context) {
     r_92_10_h,
     r_92_10_gh,
   ];
-  function shortcut_extend_count() {
+  function shortcut_extend_count(name_extend, count) {
     let r_92_10 = shortcut_extend(r_92_1, name_extend);
     property_set(r_92_10, "count", count);
     return r_92_10;
