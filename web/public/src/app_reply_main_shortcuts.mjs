@@ -21,7 +21,6 @@ import { app_reply_greetings_live } from "../../../love/public/src/app_reply_gre
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 export function app_reply_main_shortcuts(
   root,
-  languages_chosen_default,
   languages_chosen,
   languages,
   update,
