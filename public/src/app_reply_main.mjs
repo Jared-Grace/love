@@ -150,6 +150,7 @@ export async function app_reply_main(context) {
   ];
   function response_add(base, r) {
     let extended = json_copy(base);
+    let value = property_get(object, property_name);
     property_get_add(extended, "responses", r);
     return extended;
   }
