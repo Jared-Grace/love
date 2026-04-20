@@ -128,6 +128,12 @@ export async function app_reply_main(context) {
       count: 1,
       responses: [gl],
     },
+    {
+      name: "92-10",
+      languages: [],
+      count: 1,
+      responses: [gl],
+    },
   ];
   function lambda(s) {
     let name2 = property_get(s, "name");
