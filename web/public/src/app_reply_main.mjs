@@ -140,7 +140,7 @@ export async function app_reply_main(context) {
       let b = list_find_property(buttons, "text", property_value);
       property_get_invoke(b, "click");
     }
-    let component2 = html_button(root, "Intro", lambda5);
+    let component2 = html_button(root, name2, lambda5);
   }
   each(shortcuts, lambda);
   html_p_text(root, "4. (Optional) Choose any responses:");
