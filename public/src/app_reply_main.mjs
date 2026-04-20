@@ -163,10 +163,14 @@ export async function app_reply_main(context) {
     r_92_10_gh,
   ];
   function response_add(base, name_suffix, r) {
+    let extended = shortcut_extend(base, name_suffix);
+    property_get_add(extended, "responses", r);
+    return extended;
+  }
+  function shortcut_extend(base, name_suffix) {
     let extended = json_copy(base);
     let c2 = text_combine_curried_right(name_suffix);
     let value2 = property_transform(extended, "name", c2);
-    property_get_add(extended, "responses", r);
     return extended;
   }
   function lambda(s) {
