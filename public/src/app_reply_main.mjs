@@ -124,9 +124,8 @@ export async function app_reply_main(context) {
     languages_chosen_reset();
     await update(1);
     let property_value = app_reply_greetings_live();
-    let b = list_find_property(buttons, "text", property_value);$a
-    const property_name = "click";
-    property_get_invoke(b, property_name);
+    let b = list_find_property(buttons, "text", property_value);
+    property_get_invoke(b, "click");
   }
   let component2 = html_button(root, "Intro", lambda5);
   html_p_text(root, "4. (Optional) Choose any responses:");
