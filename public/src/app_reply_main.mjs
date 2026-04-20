@@ -150,10 +150,10 @@ export async function app_reply_main(context) {
     r_92_10,
     r_92_10_g,
   ];
-  function response_add(base, r) {
+  function response_add(base, name_suffix, r) {
     let extended = json_copy(base);
-    let c2 = text_combine_curried_right(right);
-    let value2 = property_transform(o2, property, lambda8);
+    let c2 = text_combine_curried_right(name_suffix);
+    let value2 = property_transform(extended, "name", c2);
     property_get_add(extended, "responses", r);
     return extended;
   }
