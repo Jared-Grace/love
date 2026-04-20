@@ -140,6 +140,7 @@ export async function app_reply_main(context) {
   };
   let g = app_reply_greetings();
   let r_92_10_g = response_add(r_92_10, "g", g);
+  let r_92_10_gh = response_add(r_92_10, "h", g);
   let shortcuts = [
     {
       name: "Intro",
@@ -149,6 +150,7 @@ export async function app_reply_main(context) {
     },
     r_92_10,
     r_92_10_g,
+    r_92_10_gh,
   ];
   function response_add(base, name_suffix, r) {
     let extended = json_copy(base);
