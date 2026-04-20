@@ -126,7 +126,7 @@ export async function app_reply_main(context) {
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
   let gl = app_reply_greetings_live();
-  let concated2 = list_concat(a, b2);
+  let languages_92 = list_concat(languages_chosen_default, [pa, ur]);
   let shortcuts = [
     {
       name: "Intro",
@@ -136,7 +136,7 @@ export async function app_reply_main(context) {
     },
     {
       name: "92-10",
-      languages: [pa, ur],
+      languages: languages_92,
       count: 10,
       responses: [],
     },
