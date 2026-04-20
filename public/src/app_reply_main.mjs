@@ -1,9 +1,8 @@
+import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "../../../love/public/src/app_reply_main_shortcuts.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
-import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
-import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
@@ -36,9 +35,7 @@ export async function app_reply_main(context) {
   let choices = property_get(r, "choices");
   let languages = property_get(r, "languages");
   let english_choices = await ebible_versions_english_choices();
-  let en_l = ebible_language_english();
-  let o = ebible_language_original();
-  let languages_chosen_default = [o, en_l];
+  let languages_chosen_default = app_reply_languages_chosen_default();
   let languages_chosen = [];
   languages_chosen_reset();
   let root = property_get(r, "root");
