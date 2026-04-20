@@ -1,3 +1,4 @@
+import { ebible_language_kenya } from "../../../love/public/src/ebible_language_kenya.mjs";
 import { ebible_language_luganda } from "../../../love/public/src/ebible_language_luganda.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -55,6 +56,7 @@ export async function app_reply_main(context) {
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
+  let ke = ebible_language_kenya();
   let languages_chosen_default = [o, en_l];
   let languages_chosen = [];
   languages_chosen_reset();
