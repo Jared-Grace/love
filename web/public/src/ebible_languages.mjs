@@ -14,12 +14,12 @@ export function ebible_languages() {
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
-  let r = ebible_language_kenya();
+  let ke = ebible_language_kenya();
   let languages = [
     o,
     en,
     ur,
-    r,
+    ke,
     lug,
     {
       name: "Bengali",
