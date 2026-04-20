@@ -130,7 +130,7 @@ export async function app_reply_main(context) {
   let shortcuts = [
     {
       name: "Intro",
-      languages: [],
+      languages: languages_chosen_default,
       count: 1,
       responses: [gl],
     },
