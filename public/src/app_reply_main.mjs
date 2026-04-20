@@ -124,7 +124,8 @@ export async function app_reply_main(context) {
     await update(1);
     let property_value = app_reply_greetings_live();
     let b = list_find_property(buttons, "text", property_value);
-    let click2 = property_get(b, "click");
+    const property_name = "click";
+    let click2 = property_get(b, property_name);
     click2();
   }
   let component2 = html_button(root, "Intro", lambda5);
