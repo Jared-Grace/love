@@ -129,6 +129,10 @@ export async function app_reply_main(context) {
     },
   ];
   function lambda(s) {
+    let name2 = property_get(s, "name");
+    let languages2 = property_get(s, "languages");
+    let count2 = property_get(s, "count");
+    let responses2 = property_get(s, "responses");
     async function lambda5() {
       app_reply_languages_chosen_reset(
         languages_chosen,
