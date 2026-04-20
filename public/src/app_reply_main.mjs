@@ -141,8 +141,8 @@ export async function app_reply_main(context) {
   };
   let g = app_reply_greetings();
   let r_92_10_g = response_add(r_92_10, "g", g);
-  let t = app_reply_how_r_u();
-  let r_92_10_gh = response_add(r_92_10, "h", t);
+  let h = app_reply_how_r_u();
+  let r_92_10_gh = response_add(r_92_10, "h", h);
   let shortcuts = [
     {
       name: "Intro",
