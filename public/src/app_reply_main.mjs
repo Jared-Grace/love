@@ -147,13 +147,6 @@ export async function app_reply_main(context) {
     count: 0,
     responses: [],
   };
-  const r_256_base = {
-    name: "256-",
-    languages: [lug],
-    count: 0,
-    responses: [],
-  };
-  lug;
   let r_92_40 = shortcut_extend_count(r_92_base, "40", 40);
   let r_92_1 = shortcut_extend_count(r_92_base, "1", 1);
   let r_92_10 = shortcut_extend_count(r_92_1, "0", 10);
@@ -163,6 +156,13 @@ export async function app_reply_main(context) {
   let r_92_10_gh = shortcut_extend_response(r_92_10_g, "h", h);
   let v2 = shortcut_extend_count(r_92_1, "0", 10);
   let r_92_10_h = shortcut_extend_response(v2, "h", h);
+  const r_256_base = {
+    name: "256-",
+    languages: [lug],
+    count: 0,
+    responses: [],
+  };
+  let r_256_40 = shortcut_extend_count(r_256_base, "40", 40);
   let shortcuts = [
     {
       name: "Intro",
@@ -176,6 +176,7 @@ export async function app_reply_main(context) {
     r_92_10_h,
     r_92_10_gh,
     r_92_40,
+    r_256_40,
   ];
   function shortcut_extend_count(base, name_extend, count) {
     let extended = shortcut_extend(base, name_extend);
