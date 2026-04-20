@@ -27,9 +27,10 @@ export function app_reply_buttons_languages_on_toggle(
         language,
       );
     }
-    let to2 = object_merge(to, {
+    let to2 = object_merge(component, {
       update,
     });
+    return component;
   }
   each(languages, lambda);
 }
