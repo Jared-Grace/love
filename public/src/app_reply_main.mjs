@@ -149,9 +149,9 @@ export async function app_reply_main(context) {
     count: 0,
     responses: [],
   };
-  let r_pk_40 = shortcut_extend_count(r_pk_base, "40", 40);
-  let r_pk_1 = shortcut_extend_count(r_pk_base, "1", 1);
-  let r_pk_10 = shortcut_extend_count(r_pk_1, "0", 10);
+  let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
+  let r_pk_1 = shortcut_extend_count(r_pk_base, 1);
+  let r_pk_10 = shortcut_extend_count(r_pk_1, 10);
   let g = app_reply_greetings();
   let r_pk_10_g = shortcut_extend_response(r_pk_10, "g", g);
   let h = app_reply_how_r_u();
@@ -164,7 +164,7 @@ export async function app_reply_main(context) {
     count: 0,
     responses: [],
   };
-  let r_ug_40 = shortcut_extend_count(r_ug_base, "40", 40);
+  let r_ug_40 = shortcut_extend_count(r_ug_base, 40);
   let languages_ke = languages_default_concat([ke]);
   const r_ke_base = {
     name: "KE",
@@ -172,8 +172,8 @@ export async function app_reply_main(context) {
     count: 0,
     responses: [],
   };
-  let r_ke_10 = shortcut_extend_count(r_ke_base, "10", 10);
-  let r_ke_40 = shortcut_extend_count(r_ke_10, "40", 40);
+  let r_ke_10 = shortcut_extend_count(r_ke_base, 10);
+  let r_ke_40 = shortcut_extend_count(r_ke_10, 40);
   let shortcuts = [
     {
       name: "Intro",
@@ -195,8 +195,8 @@ export async function app_reply_main(context) {
     let concated2 = list_concat(languages_chosen_default, right);
     return concated2;
   }
-  function shortcut_extend_count(base, name_extend, count) {
-    let extended = shortcut_extend(base, name_extend);
+  function shortcut_extend_count(base, count) {
+    let extended = shortcut_extend(base, count);
     property_set(extended, "count", count);
     return extended;
   }
