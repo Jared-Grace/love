@@ -1,3 +1,4 @@
+import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
@@ -26,6 +27,7 @@ export function app_reply_main_shortcuts(
   update,
   buttons_languages,
 ) {
+  let languages_chosen_default = app_reply_languages_chosen_default();
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons_responses = null;
   let gl = app_reply_greetings_live();
