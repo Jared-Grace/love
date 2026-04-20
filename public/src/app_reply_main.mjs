@@ -1,3 +1,5 @@
+import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
+import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
 import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
@@ -40,6 +42,8 @@ export async function app_reply_main(context) {
   let english_choices = await ebible_versions_english_choices();
   let en_l = ebible_language_english();
   let o = ebible_language_original();
+  const ur = ebible_language_urdu();
+  const pa = ebible_language_punjabi();
   let languages_chosen_default = [o, en_l];
   let languages_chosen = [];
   languages_chosen_reset();
