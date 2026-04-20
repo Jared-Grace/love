@@ -144,7 +144,7 @@ export async function app_reply_main(context) {
   let gl = app_reply_greetings_live();
   let languages_pk = languages_default_concat([pa, ur]);
   const r_pk_base = {
-    name: "PK-",
+    name: "PK",
     languages: languages_pk,
     count: 0,
     responses: [],
@@ -159,7 +159,7 @@ export async function app_reply_main(context) {
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
   let languages_ug = languages_default_concat([lug]);
   const r_ug_base = {
-    name: "UG-",
+    name: "UG",
     languages: languages_ug,
     count: 0,
     responses: [],
@@ -167,7 +167,7 @@ export async function app_reply_main(context) {
   let r_ug_40 = shortcut_extend_count(r_ug_base, "40", 40);
   let languages_ke = languages_default_concat([ke]);
   const r_ke_base = {
-    name: "KE-",
+    name: "KE",
     languages: languages_ke,
     count: 0,
     responses: [],
