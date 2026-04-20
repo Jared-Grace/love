@@ -135,7 +135,8 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let r_92_10_g = json_copy(r_92_10);
-  let responses3 = property_get(r_92_10_g, "responses");la
+  let responses3 = property_get(r_92_10_g, "responses");
+  list_add(list, item3);
   let shortcuts = [
     {
       name: "Intro",
