@@ -53,10 +53,6 @@ export async function app_reply_main(context) {
   let english_choices = await ebible_versions_english_choices();
   let en_l = ebible_language_english();
   let o = ebible_language_original();
-  const ur = ebible_language_urdu();
-  const pa = ebible_language_punjabi();
-  let lug = ebible_language_luganda();
-  let ke = ebible_language_kenya();
   let languages_chosen_default = [o, en_l];
   let languages_chosen = [];
   languages_chosen_reset();
@@ -142,6 +138,10 @@ export async function app_reply_main(context) {
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
   let gl = app_reply_greetings_live();
+  const ur = ebible_language_urdu();
+  const pa = ebible_language_punjabi();
+  let lug = ebible_language_luganda();
+  let ke = ebible_language_kenya();
   let languages_pk = languages_default_concat([pa, ur]);
   const r_pk_base = {
     name: "PK",
