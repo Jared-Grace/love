@@ -32,5 +32,6 @@ export function app_reply_buttons_languages_on_toggle(
     });
     return component;
   }
-  list_map(languages, lambda);
+  let mapped = list_map(languages, lambda);
+  return mapped;
 }
