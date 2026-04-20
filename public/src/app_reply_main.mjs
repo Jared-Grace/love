@@ -137,8 +137,7 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let g = app_reply_greetings();
-  let r_92_10_g = json_copy(r_92_10);
-  property_get_add(r_92_10_g, "responses", g);
+  let r_92_10_g = response_add();
   let shortcuts = [
     {
       name: "Intro",
@@ -149,6 +148,11 @@ export async function app_reply_main(context) {
     r_92_10,
     r_92_10_g,
   ];
+  function response_add(base) {
+    let extended = json_copy(base);
+    property_get_add(extended, "responses", g);
+    return extended;
+  }
   function lambda(s) {
     let name2 = property_get(s, "name");
     let languages2 = property_get(s, "languages");
