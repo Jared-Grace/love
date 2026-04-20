@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
 import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
@@ -125,6 +126,7 @@ export async function app_reply_main(context) {
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
   let gl = app_reply_greetings_live();
+  let concated2 = list_concat(a, b2);
   let shortcuts = [
     {
       name: "Intro",
