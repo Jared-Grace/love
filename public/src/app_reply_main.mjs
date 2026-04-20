@@ -1,6 +1,5 @@
 import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
@@ -136,12 +135,11 @@ export async function app_reply_main(context) {
     async function lambda5() {
       app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
       await update(count2);
-      function lambda7(item3) {
-        let property_value = app_reply_greetings_live();
-        let b = list_find_property(buttons, "text", property_value);
+      function lambda7(r) {
+        let b = list_find_property(buttons, "text", r);
         property_get_invoke(b, "click");
       }
-      each(list, lambda7);
+      each(responses2, lambda7);
     }
     let component2 = html_button(root, name2, lambda5);
   }
