@@ -114,7 +114,7 @@ export async function app_reply_main(context) {
   }
   function lambda12() {}
   let component3 = html_button(root, "Copy", copy_refresh);
-  html_p_text(root, "3. (Optional) Choose any responses:");
+  html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   html_p_text(root, "4. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
