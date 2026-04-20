@@ -4,19 +4,20 @@ import { ebible_language_original } from "../../../love/public/src/ebible_langua
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
-import { fn_name } from "./fn_name.mjs";
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export function ebible_languages() {
   "to add an entry, run: " + fn_name("ebible_languages_add");
   let en = ebible_language_en();
   let o = ebible_language_original();
+  const ur = {
+    name: "Urdu",
+    bible_folder: ebible_folder_urdu(),
+    language_code: "ur",
+  };
   let languages = [
     o,
     en,
-    {
-      name: "Urdu",
-      bible_folder: ebible_folder_urdu(),
-      language_code: "ur",
-    },
+    ur,
     {
       name: "Swahili",
       bible_folder: ebible_folder_swahili(),
