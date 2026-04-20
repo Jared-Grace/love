@@ -1,3 +1,4 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
@@ -120,6 +121,7 @@ export async function app_reply_main(context) {
   async function lambda5() {
     languages_chosen_reset();
     await update(1);
+    let filtered = list_filter_property(list, property_name, property_value);
   }
   let component2 = html_button(root, "Intro", lambda5);
   html_p_text(root, "4. (Optional) Choose any responses:");
