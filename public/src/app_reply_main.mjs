@@ -147,6 +147,7 @@ export async function app_reply_main(context) {
       responses: [gl],
     },
     r_92_10,
+    r_92_10_g,
   ];
   function lambda(s) {
     let name2 = property_get(s, "name");
