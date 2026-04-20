@@ -130,7 +130,7 @@ export async function app_reply_main(context) {
   ];
   function lambda(item3) {
     async function lambda5() {
-      languages_chosen_reset();
+      app_reply_languages_chosen_reset();
       await update(1);
       let property_value = app_reply_greetings_live();
       let b = list_find_property(buttons, "text", property_value);
