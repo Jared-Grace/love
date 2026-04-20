@@ -1,5 +1,6 @@
 import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
+import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
@@ -119,12 +120,13 @@ export async function app_reply_main(context) {
   let component3 = html_button(root, "Copy", copy_refresh);
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
+  let r2 = app_reply_greetings_live();
   let shortcuts = [
     {
       name: "Intro",
       languages: [],
       count: 1,
-      responses: [],
+      responses: [r2],
     },
   ];
   function lambda(s) {
