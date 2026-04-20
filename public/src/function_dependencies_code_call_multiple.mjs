@@ -1,5 +1,5 @@
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
-import { property_change } from "../../../love/public/src/property_change.mjs";
+import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { app_shared_code_run } from "../../../love/public/src/app_shared_code_run.mjs";
 import { function_dependencies_code_multiple } from "../../../love/public/src/function_dependencies_code_multiple.mjs";
 export async function function_dependencies_code_call_multiple(
@@ -13,6 +13,6 @@ export async function function_dependencies_code_call_multiple(
     let code = app_shared_code_run(f_name_call, dependencies, call_code_get);
     return code;
   }
-  let value2 = property_change(r, "code", lambda);
+  let value2 = property_transform(r, "code", lambda);
   return r;
 }
