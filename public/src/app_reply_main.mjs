@@ -164,6 +164,13 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let r_ug_40 = shortcut_extend_count(r_ug_base, "40", 40);
+  const r_ke_base = {
+    name: "KE-",
+    languages: [ke],
+    count: 0,
+    responses: [],
+  };
+  let r_ke_10 = shortcut_extend_count(r_ke_base, "10", 10);
   let shortcuts = [
     {
       name: "Intro",
@@ -177,7 +184,7 @@ export async function app_reply_main(context) {
     r_pk_10_h,
     r_pk_10_gh,
     r_pk_40,
-    r_ug_40,
+    r_ug_40,r_ke_10
   ];
   function shortcut_extend_count(base, name_extend, count) {
     let extended = shortcut_extend(base, name_extend);
