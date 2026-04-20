@@ -18,11 +18,7 @@ export function app_reply_buttons_languages_on_toggle(
       on_toggle();
     }
     component = html_button(root, name, on_click);
-    html_style_background_color_set_or_remove_list(
-      component,
-      languages_chosen,
-      language,
-    );
+    update();
     function update() {
       html_style_background_color_set_or_remove_list(
         component,
