@@ -121,7 +121,7 @@ export async function app_reply_main(context) {
   async function lambda5() {
     languages_chosen_reset();
     await update(1);
-    let filtered = list_filter_property(list, property_name, property_value);
+    let filtered = list_filter_property(buttons, "text", property_value);
   }
   let component2 = html_button(root, "Intro", lambda5);
   html_p_text(root, "4. (Optional) Choose any responses:");
