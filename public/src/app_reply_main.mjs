@@ -83,7 +83,11 @@ export async function app_reply_main(context) {
     languages_chosen = languages_chosen_before;
   }
   let component4 = html_button(root, "❤️", love);
-  app_reply_buttons_languages(languages_chosen, root, languages);
+  let buttons_languages = app_reply_buttons_languages(
+    languages_chosen,
+    root,
+    languages,
+  );
   html_p_text(
     root,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
