@@ -1,3 +1,4 @@
+import { ebible_language_lug } from "../../../love/public/src/ebible_language_lug.mjs";
 import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
@@ -12,6 +13,7 @@ export function ebible_languages() {
   let o = ebible_language_original();
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
+  let r = ebible_language_lug();
   let languages = [
     o,
     en,
@@ -21,11 +23,7 @@ export function ebible_languages() {
       bible_folder: ebible_folder_swahili(),
       language_code: "swh",
     },
-    {
-      name: "Luganda",
-      bible_folder: "lug",
-      language_code: "lug",
-    },
+    r,
     {
       name: "Bengali",
       bible_folder: "benirv",
