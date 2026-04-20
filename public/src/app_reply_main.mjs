@@ -173,6 +173,7 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let r_ke_10 = shortcut_extend_count(r_ke_base, "10", 10);
+  let r_ke_40 = shortcut_extend_count(r_ke_10, "40", 40);
   let shortcuts = [
     {
       name: "Intro",
@@ -188,6 +189,7 @@ export async function app_reply_main(context) {
     r_pk_40,
     r_ug_40,
     r_ke_10,
+    r_ke_40,
   ];
   function languages_default_concat(right) {
     let concated2 = list_concat(languages_chosen_default, right);
