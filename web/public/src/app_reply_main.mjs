@@ -134,7 +134,7 @@ export async function app_reply_main(context) {
     count: 10,
     responses: [],
   };
-  let copy2 = json_copy(o2);
+  let r_92_10_g = json_copy(r_92_10);
   let shortcuts = [
     {
       name: "Intro",
