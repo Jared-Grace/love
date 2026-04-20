@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
@@ -133,6 +134,7 @@ export async function app_reply_main(context) {
       visible_count = buttons_refresh();
     }
     b = html_button(root, text, click);
+    let to2 = object_merge(to, from);
     return b;
   }
   let buttons = list_map(choices, lambda9);
