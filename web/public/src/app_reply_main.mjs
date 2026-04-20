@@ -134,7 +134,7 @@ export async function app_reply_main(context) {
     },
     {
       name: "92-10",
-      languages: [],
+      languages: [pa, ur],
       count: 1,
       responses: [gl],
     },
