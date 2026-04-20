@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { function_name_parts_delete_comma } from "../../../love/public/src/function_name_parts_delete_comma.mjs";
 import { function_name_part_insert } from "../../../love/public/src/function_name_part_insert.mjs";
 import { function_name_to_part_replace_last_3 } from "../../../love/public/src/function_name_to_part_replace_last_3.mjs";
@@ -10,6 +11,7 @@ import { function_name_part_last_delete } from "../../../love/public/src/functio
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export function function_name_new_get_generic_overrides() {
   let r2 = {
+    a: text_combine,
     c: function_name_combine,
     d: function_name_parts_delete_comma,
     i: function_name_part_insert,
