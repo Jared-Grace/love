@@ -127,6 +127,12 @@ export async function app_reply_main(context) {
   let buttons = null;
   let gl = app_reply_greetings_live();
   let languages_92 = list_concat(languages_chosen_default, [pa, ur]);
+  const r_92_10 = {
+    name: "92-10",
+    languages: languages_92,
+    count: 10,
+    responses: [],
+  };
   let shortcuts = [
     {
       name: "Intro",
@@ -134,12 +140,7 @@ export async function app_reply_main(context) {
       count: 1,
       responses: [gl],
     },
-    {
-      name: "92-10",
-      languages: languages_92,
-      count: 10,
-      responses: [],
-    },
+    r_92_10,
   ];
   function lambda(s) {
     let name2 = property_get(s, "name");
