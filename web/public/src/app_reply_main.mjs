@@ -1,3 +1,4 @@
+import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
@@ -133,6 +134,7 @@ export async function app_reply_main(context) {
     count: 10,
     responses: [],
   };
+  let copy2 = json_copy(o2);
   let shortcuts = [
     {
       name: "Intro",
