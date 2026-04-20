@@ -128,6 +128,8 @@ export async function app_reply_main(context) {
     property_get_invoke(b, "click");
   }
   let component2 = html_button(root, "Intro", lambda5);
+  function lambda7() {}
+  let component5 = html_button(parent, text2, lambda7);
   html_p_text(root, "4. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
