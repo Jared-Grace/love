@@ -1,3 +1,4 @@
+import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { property_get_add } from "../../../love/public/src/property_get_add.mjs";
 import { app_reply_greetings } from "../../../love/public/src/app_reply_greetings.mjs";
@@ -151,7 +152,7 @@ export async function app_reply_main(context) {
   ];
   function response_add(base, r) {
     let extended = json_copy(base);
-    function lambda8(value) {}
+    let c2 = text_combine_curried_right(right);
     let value2 = property_transform(o2, property, lambda8);
     property_get_add(extended, "responses", r);
     return extended;
