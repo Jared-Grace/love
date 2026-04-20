@@ -136,7 +136,7 @@ export async function app_reply_main(context) {
   function lambda12() {}
   let component3 = html_button(root, "Copy", copy_refresh);
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
-  let buttons_language = null;
+  let buttons_responses = null;
   let gl = app_reply_greetings_live();
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
@@ -221,7 +221,7 @@ export async function app_reply_main(context) {
       await update(count2);
       list_map_property_invoke(buttons_languages, "update");
       function lambda7(r) {
-        let b = list_find_property(buttons_language, "text", r);
+        let b = list_find_property(buttons_responses, "text", r);
         property_get_invoke(b, "click");
       }
       each(responses2, lambda7);
@@ -248,7 +248,7 @@ export async function app_reply_main(context) {
     });
     return b;
   }
-  buttons_language = list_map(choices, lambda9);
+  buttons_responses = list_map(choices, lambda9);
   async function copy_refresh() {
     let v22 = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
@@ -286,7 +286,7 @@ export async function app_reply_main(context) {
   let buttons_refresh = app_reply_buttons_refresh(
     typed_get,
     responses_buttons,
-    buttons_language,
+    buttons_responses,
   );
   visible_count = buttons_refresh();
   function typed_reset() {
