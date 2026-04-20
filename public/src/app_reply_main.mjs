@@ -54,7 +54,7 @@ export async function app_reply_main(context) {
   let o = ebible_language_original();
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
-  let r2 = ebible_language_luganda();
+  let lug = ebible_language_luganda();
   let languages_chosen_default = [o, en_l];
   let languages_chosen = [];
   languages_chosen_reset();
@@ -147,6 +147,13 @@ export async function app_reply_main(context) {
     count: 0,
     responses: [],
   };
+  const r_256_base = {
+    name: "256-",
+    languages: [lug],
+    count: 0,
+    responses: [],
+  };
+  lug;
   let r_92_40 = shortcut_extend_count(r_92_base, "40", 40);
   let r_92_1 = shortcut_extend_count(r_92_base, "1", 1);
   let r_92_10 = shortcut_extend_count(r_92_1, "0", 10);
