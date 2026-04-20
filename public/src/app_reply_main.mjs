@@ -1,3 +1,4 @@
+import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { property_get_add } from "../../../love/public/src/property_get_add.mjs";
@@ -140,7 +141,8 @@ export async function app_reply_main(context) {
   };
   let g = app_reply_greetings();
   let r_92_10_g = response_add(r_92_10, "g", g);
-  let r_92_10_gh = response_add(r_92_10, "h", g);
+  let t = app_reply_how_r_u();
+  let r_92_10_gh = response_add(r_92_10, "h", t);
   let shortcuts = [
     {
       name: "Intro",
