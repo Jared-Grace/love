@@ -120,6 +120,7 @@ export async function app_reply_main(context) {
     languages_chosen_reset();
     await update(1);
   }
+  let buttons = null;
   let component2 = html_button(root, "Intro", lambda5);
   html_p_text(root, "4. (Optional) Choose any responses:");
   function lambda9(choice) {
@@ -140,7 +141,6 @@ export async function app_reply_main(context) {
     });
     return b;
   }
-  let buttons = null;
   buttons = list_map(choices, lambda9);
   async function copy_refresh() {
     let v22 = prayer_blessing_expand();
