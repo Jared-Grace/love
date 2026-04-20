@@ -149,7 +149,6 @@ export async function app_reply_main(context) {
   let r_92_10_gh = shortcut_extend_response(r_92_10_g, "h", h);
   let v2 = shortcut_extend_count(r_92_1, "0", 10);
   let r_92_10_h = shortcut_extend_response(v2, "h", h);
-  let v3 = shortcut_extend_count(r_92_1, "0", 10);
   let shortcuts = [
     {
       name: "Intro",
@@ -157,7 +156,7 @@ export async function app_reply_main(context) {
       count: 1,
       responses: [gl],
     },
-    v3,
+    r_92_10,
     r_92_10_g,
     r_92_10_h,
     r_92_10_gh,
