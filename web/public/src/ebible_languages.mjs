@@ -1,3 +1,4 @@
+import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
@@ -10,11 +11,7 @@ export function ebible_languages() {
   let en = ebible_language_en();
   let o = ebible_language_original();
   const ur = ebible_language_urdu();
-  const pa = {
-    name: "Punjabi",
-    bible_folder: "pan",
-    language_code: "pa",
-  };
+  const pa = ebible_language_punjabi();
   let languages = [
     o,
     en,
