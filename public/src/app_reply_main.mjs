@@ -140,8 +140,8 @@ export async function app_reply_main(context) {
     count: 10,
     responses: [],
   };
-  let g = app_reply_greetings();
   let v = shortcut_extend_count(r_92_1, "0", 10);
+  let g = app_reply_greetings();
   let r_92_10_g = response_add(v, "g", g);
   let h = app_reply_how_r_u();
   let r_92_10_gh = response_add(r_92_10_g, "h", h);
