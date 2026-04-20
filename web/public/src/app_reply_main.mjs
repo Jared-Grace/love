@@ -119,7 +119,6 @@ export async function app_reply_main(context) {
   let component3 = html_button(root, "Copy", copy_refresh);
   let buttons_responses = app_reply_main_shortcuts(
     root,
-    languages_chosen_default,
     languages_chosen,
     languages,
     update,
