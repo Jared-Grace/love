@@ -1,3 +1,4 @@
+import { ebible_language_kenya } from "../../../love/public/src/ebible_language_kenya.mjs";
 import { ebible_language_luganda } from "../../../love/public/src/ebible_language_luganda.mjs";
 import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "../../../love/public/src/ebible_language_urdu.mjs";
@@ -5,7 +6,6 @@ import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_ce
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
-import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export function ebible_languages() {
   "to add an entry, run: " + fn_name("ebible_languages_add");
@@ -14,15 +14,12 @@ export function ebible_languages() {
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
+  let r = ebible_language_kenya();
   let languages = [
     o,
     en,
     ur,
-    {
-      name: "Swahili",
-      bible_folder: ebible_folder_swahili(),
-      language_code: "swh",
-    },
+    r,
     lug,
     {
       name: "Bengali",
