@@ -120,13 +120,13 @@ export async function app_reply_main(context) {
   let component3 = html_button(root, "Copy", copy_refresh);
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
-  let r2 = app_reply_greetings_live();
+  let gl = app_reply_greetings_live();
   let shortcuts = [
     {
       name: "Intro",
       languages: [],
       count: 1,
-      responses: [r2],
+      responses: [gl],
     },
   ];
   function lambda(s) {
