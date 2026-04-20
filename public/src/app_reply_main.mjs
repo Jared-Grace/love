@@ -1,3 +1,4 @@
+import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
@@ -121,6 +122,7 @@ export async function app_reply_main(context) {
   async function lambda5() {
     languages_chosen_reset();
     await update(1);
+    let property_value = app_reply_greetings_live();
     let filtered = list_filter_property(buttons, "text", property_value);
   }
   let component2 = html_button(root, "Intro", lambda5);
