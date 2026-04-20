@@ -1,4 +1,4 @@
-import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
+import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -20,7 +20,7 @@ export function app_search_home(context) {
   html_clear(root);
   let languages_chosen = property_get(context, "languages_chosen");
   let languages = ebible_languages();
-  let en_l = ebible_language_en();
+  let en_l = ebible_language_english();
   let languages_chosen_default = [en_l];
   list_sort_text_property(languages, "name");
   app_reply_languages_chosen_reset(
