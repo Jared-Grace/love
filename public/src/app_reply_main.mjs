@@ -142,7 +142,7 @@ export async function app_reply_main(context) {
   let gl = app_reply_greetings_live();
   let languages_92 = list_concat(languages_chosen_default, [pa, ur]);
   const r_92_base = {
-    name: "92-",
+    name: "PK-",
     languages: languages_92,
     count: 0,
     responses: [],
