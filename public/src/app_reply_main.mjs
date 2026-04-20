@@ -148,9 +148,9 @@ export async function app_reply_main(context) {
     r_92_10,
     r_92_10_g,
   ];
-  function response_add(base) {
+  function response_add(base, r) {
     let extended = json_copy(base);
-    property_get_add(extended, "responses", g);
+    property_get_add(extended, "responses", r);
     return extended;
   }
   function lambda(s) {
