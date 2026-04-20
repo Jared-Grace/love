@@ -141,7 +141,7 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let extended = shortcut_extend(r_92_1, "0");
-  property_set(object, property_name, value);
+  property_set(extended, "count", 10);
   const r_92_10 = {
     name: "92-10",
     languages: languages_92,
