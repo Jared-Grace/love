@@ -139,7 +139,7 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let g = app_reply_greetings();
-  let r_92_10_g = response_add(r_92_10, g);
+  let r_92_10_g = response_add(r_92_10, "g", g);
   let shortcuts = [
     {
       name: "Intro",
