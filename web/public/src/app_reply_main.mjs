@@ -128,7 +128,7 @@ export async function app_reply_main(context) {
       responses: [],
     },
   ];
-  function lambda(item3) {
+  function lambda(s) {
     async function lambda5() {
       app_reply_languages_chosen_reset(
         languages_chosen,
