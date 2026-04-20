@@ -124,6 +124,7 @@ export async function app_reply_main(context) {
     await update(1);
     let property_value = app_reply_greetings_live();
     let b = list_find_property(buttons, "text", property_value);
+    let value = property_get(object, property_name);
   }
   let component2 = html_button(root, "Intro", lambda5);
   html_p_text(root, "4. (Optional) Choose any responses:");
