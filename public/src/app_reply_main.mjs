@@ -141,28 +141,28 @@ export async function app_reply_main(context) {
   let buttons = null;
   let gl = app_reply_greetings_live();
   let languages_92 = list_concat(languages_chosen_default, [pa, ur]);
-  const r_92_base = {
+  const r_pk_base = {
     name: "PK-",
     languages: languages_92,
     count: 0,
     responses: [],
   };
-  let r_92_40 = shortcut_extend_count(r_92_base, "40", 40);
-  let r_92_1 = shortcut_extend_count(r_92_base, "1", 1);
-  let r_92_10 = shortcut_extend_count(r_92_1, "0", 10);
+  let r_pk_40 = shortcut_extend_count(r_pk_base, "40", 40);
+  let r_pk_1 = shortcut_extend_count(r_pk_base, "1", 1);
+  let r_pk_10 = shortcut_extend_count(r_pk_1, "0", 10);
   let g = app_reply_greetings();
-  let r_92_10_g = shortcut_extend_response(r_92_10, "g", g);
+  let r_pk_10_g = shortcut_extend_response(r_pk_10, "g", g);
   let h = app_reply_how_r_u();
-  let r_92_10_gh = shortcut_extend_response(r_92_10_g, "h", h);
-  let v2 = shortcut_extend_count(r_92_1, "0", 10);
-  let r_92_10_h = shortcut_extend_response(v2, "h", h);
-  const r_256_base = {
+  let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
+  let v2 = shortcut_extend_count(r_pk_1, "0", 10);
+  let r_pk_10_h = shortcut_extend_response(v2, "h", h);
+  const r_ug_base = {
     name: "UG-",
     languages: [lug],
     count: 0,
     responses: [],
   };
-  let r_256_40 = shortcut_extend_count(r_256_base, "40", 40);
+  let r_ug_40 = shortcut_extend_count(r_ug_base, "40", 40);
   let shortcuts = [
     {
       name: "Intro",
@@ -170,13 +170,13 @@ export async function app_reply_main(context) {
       count: 1,
       responses: [gl],
     },
-    r_92_1,
-    r_92_10,
-    r_92_10_g,
-    r_92_10_h,
-    r_92_10_gh,
-    r_92_40,
-    r_256_40,
+    r_pk_1,
+    r_pk_10,
+    r_pk_10_g,
+    r_pk_10_h,
+    r_pk_10_gh,
+    r_pk_40,
+    r_ug_40,
   ];
   function shortcut_extend_count(base, name_extend, count) {
     let extended = shortcut_extend(base, name_extend);
