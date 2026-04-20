@@ -135,7 +135,7 @@ export async function app_reply_main(context) {
     let responses2 = property_get(s, "responses");
     async function lambda5() {
       app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
-      await update(1);
+      await update(count2);
       let property_value = app_reply_greetings_live();
       let b = list_find_property(buttons, "text", property_value);
       property_get_invoke(b, "click");
