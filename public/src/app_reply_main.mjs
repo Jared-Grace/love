@@ -160,7 +160,7 @@ export async function app_reply_main(context) {
   }
   function lambda6(event) {
     let key = property_get(event, "key");
-    let lower = text_lower_to(s);
+    key = text_lower_to(key);
     if (equal(key, "Backspace")) {
       let ne = text_empty_not_is(typed);
       if (ne) {
