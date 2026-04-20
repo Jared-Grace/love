@@ -160,6 +160,7 @@ export async function app_reply_main(context) {
     r_92_10_g,
     r_92_10_h,
     r_92_10_gh,
+    r_92_40,
   ];
   function shortcut_extend_count(base, name_extend, count) {
     let extended = shortcut_extend(base, name_extend);
