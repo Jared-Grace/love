@@ -157,7 +157,7 @@ export async function app_reply_main(context) {
   let v2 = shortcut_extend_count(r_92_1, "0", 10);
   let r_92_10_h = shortcut_extend_response(v2, "h", h);
   const r_256_base = {
-    name: "256-",
+    name: "UG-",
     languages: [lug],
     count: 0,
     responses: [],
