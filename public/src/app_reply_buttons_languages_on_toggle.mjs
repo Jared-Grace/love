@@ -1,5 +1,5 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
@@ -32,5 +32,5 @@ export function app_reply_buttons_languages_on_toggle(
     });
     return component;
   }
-  each(languages, lambda);
+  list_map(languages, lambda);
 }
