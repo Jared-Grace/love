@@ -157,16 +157,18 @@ export async function app_reply_main(context) {
   let h = app_reply_how_r_u();
   let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
+  let languages_ug = languages_default_concat([lug]);
   const r_ug_base = {
     name: "UG-",
-    languages: [lug],
+    languages: languages_ug,
     count: 0,
     responses: [],
   };
   let r_ug_40 = shortcut_extend_count(r_ug_base, "40", 40);
+  let languages_ke = languages_default_concat([ke]);
   const r_ke_base = {
     name: "KE-",
-    languages: [ke],
+    languages: languages_ke,
     count: 0,
     responses: [],
   };
