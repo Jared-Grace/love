@@ -13,7 +13,7 @@ export function ebible_languages() {
   let o = ebible_language_original();
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
-  let r = ebible_language_lug();
+  let lug = ebible_language_lug();
   let languages = [
     o,
     en,
@@ -23,7 +23,7 @@ export function ebible_languages() {
       bible_folder: ebible_folder_swahili(),
       language_code: "swh",
     },
-    r,
+    lug,
     {
       name: "Bengali",
       bible_folder: "benirv",
