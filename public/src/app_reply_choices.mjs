@@ -167,6 +167,10 @@ export function app_reply_choices() {
       response: list_join_newline_2([greetings, hru]),
     },
     {
+      text: app_reply_greetings() + " " + app_reply_how_r_u_today(),
+      response: list_join_newline_2([greetings, hru_today]),
+    },
+    {
       text:
         app_reply_greetings() +
         " " +
