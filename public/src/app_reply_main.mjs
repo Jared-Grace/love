@@ -136,8 +136,9 @@ export async function app_reply_main(context) {
     responses: [],
   };
   let r_92_10_g = json_copy(r_92_10);
-  let responses3 = property_get(r_92_10_g, "responses");
   let item3 = app_reply_greetings();
+  const property_name = "responses";
+  let responses3 = property_get(r_92_10_g, property_name);
   list_add(responses3, item3);
   let shortcuts = [
     {
