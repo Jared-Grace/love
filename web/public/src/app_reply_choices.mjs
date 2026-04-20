@@ -1,3 +1,4 @@
+import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { app_reply_response_how_r_u_today } from "../../../love/public/src/app_reply_response_how_r_u_today.mjs";
 import { app_reply_how_r_u_today } from "../../../love/public/src/app_reply_how_r_u_today.mjs";
 import { text_the_servant_of_god_first_upper } from "../../../love/public/src/text_the_servant_of_god_first_upper.mjs";
@@ -175,7 +176,7 @@ export function app_reply_choices() {
       response: list_join_newline_2([greetings, hru, how_family]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_live(),
+      text: app_reply_greetings_live(),
       response: list_join_newline_2([greetings, live]),
     },
     {
