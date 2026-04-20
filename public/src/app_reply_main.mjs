@@ -142,10 +142,10 @@ export async function app_reply_main(context) {
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let buttons = null;
   let gl = app_reply_greetings_live();
-  let languages_92 = list_concat(languages_chosen_default, [pa, ur]);
+  let languages_pk = languages_default_concat([pa, ur]);
   const r_pk_base = {
     name: "PK-",
-    languages: languages_92,
+    languages: languages_pk,
     count: 0,
     responses: [],
   };
@@ -187,6 +187,10 @@ export async function app_reply_main(context) {
     r_ug_40,
     r_ke_10,
   ];
+  function languages_default_concat(right) {
+    let concated2 = list_concat(languages_chosen_default, right);
+    return concated2;
+  }
   function shortcut_extend_count(base, name_extend, count) {
     let extended = shortcut_extend(base, name_extend);
     property_set(extended, "count", count);
