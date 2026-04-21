@@ -73,12 +73,7 @@ export function app_reply_main_shortcuts(
     count: 1,
     responses: [],
   };
-  const r_intro = {
-    name: "Intro",
-    languages: languages_chosen_default,
-    count: 1,
-    responses: [gl],
-  };
+  let r_intro = shortcut_extend_response(r_default, "Intro", gl);
   let shortcuts = [
     r_intro,
     r_pk_1,
