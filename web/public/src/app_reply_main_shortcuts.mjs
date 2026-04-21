@@ -25,6 +25,7 @@ export function app_reply_main_shortcuts(
   languages,
   update,
   buttons_languages,
+  buttons_responses,
 ) {
   let languages_chosen_default = app_reply_languages_chosen_default();
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
