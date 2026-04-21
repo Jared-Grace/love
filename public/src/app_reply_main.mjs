@@ -1,3 +1,4 @@
+import { list_map_add } from "../../../love/public/src/list_map_add.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "../../../love/public/src/app_reply_main_shortcuts.mjs";
@@ -19,7 +20,6 @@ import { list_concat_multiple } from "../../../love/public/src/list_concat_multi
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -145,8 +145,7 @@ export async function app_reply_main(context) {
     });
     return b;
   }
-  let buttons_responses_result = list_map(choices, lambda9);
-  list_add(buttons_responses, buttons_responses_result);
+  list_map_add(choices, lambda9, buttons_responses);
   async function copy_refresh() {
     let v22 = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
