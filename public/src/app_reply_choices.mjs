@@ -268,6 +268,10 @@ export function app_reply_choices() {
       response: app_reply_choices_name(),
     },
     {
+      text: emoji_wave() + " Name location",
+      response: app_reply_choices_name() + " " + app_reply_choices_location(),
+    },
+    {
       text: emoji_wave() + " Name ministry",
       response:
         'The name of my ministry is: \"JESUS rose to life\" ' + emoji_cross(),
