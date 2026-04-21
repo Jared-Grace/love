@@ -104,7 +104,7 @@ export function app_reply_main_shortcuts(
   }
   function shortcut_extend(base, name_suffix) {
     let extended = json_copy(base);
-    property_combine(name_suffix, extended, "name");
+    property_combine(extended, "name", name_suffix);
     return extended;
   }
   function lambda(s) {
