@@ -51,7 +51,7 @@ export function app_reply_main_shortcuts(
   let h = app_reply_how_r_u();
   let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
-  let v2 = app_reply_called_why();
+  let c = app_reply_called_why();
   let r_pk_10_c = shortcut_extend_response(r_pk_10, "c", v2);
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
@@ -95,6 +95,7 @@ export function app_reply_main_shortcuts(
     r_pk_10_g,
     r_pk_10_h,
     r_pk_10_gh,
+    r_pk_10_c,
     r_pk_20,
     r_pk_40,
     r_ug_40,
