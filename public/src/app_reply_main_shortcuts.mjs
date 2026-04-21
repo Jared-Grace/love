@@ -70,7 +70,7 @@ export function app_reply_main_shortcuts(
   const r_default = {
     name: "",
     languages: languages_chosen_default,
-    count: 0,
+    count: 1,
     responses: [],
   };
   const r_intro = {
