@@ -124,6 +124,7 @@ export async function app_reply_main(context) {
     languages,
     update,
     buttons_languages,
+    buttons_responses,
   );
   html_p_text(root, "4. (Optional) Choose any responses:");
   function lambda9(choice) {
