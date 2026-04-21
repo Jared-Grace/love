@@ -86,6 +86,7 @@ export function app_reply_main_shortcuts(
     r_ug_40,
     r_ke_10,
     r_ke_40,
+    r_yt,
   ];
   function languages_default_concat(right) {
     let concated2 = list_concat(languages_chosen_default, right);
