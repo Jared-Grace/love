@@ -107,7 +107,7 @@ export function app_reply_main_shortcuts(
     property_combine(extended, "name", name_suffix);
     return extended;
   }
-  function lambda(s) {
+  function shortcut_each(s) {
     let name2 = property_get(s, "name");
     let languages2 = property_get(s, "languages");
     let count2 = property_get(s, "count");
@@ -124,6 +124,6 @@ export function app_reply_main_shortcuts(
     }
     let component2 = html_button(root, name2, lambda5);
   }
-  each(shortcuts, lambda);
+  each(shortcuts, shortcut_each);
   return buttons_responses;
 }
