@@ -73,7 +73,7 @@ export function app_reply_main_shortcuts(
     count: 1,
     responses: [],
   };
-  let r_yt = shortcut_extend_count(r_default, 10);
+  let r_yt = shortcut_extend_count(r_default, 2);
   let r_intro = shortcut_extend_response(r_default, "Intro", gl);
   let shortcuts = [
     r_intro,
