@@ -1,3 +1,4 @@
+import { property_combine } from "../../../love/public/src/property_combine.mjs";
 import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -6,8 +7,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { property_transform } from "../../../love/public/src/property_transform.mjs";
-import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { property_get_add } from "../../../love/public/src/property_get_add.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -106,8 +105,7 @@ export function app_reply_main_shortcuts(
   function shortcut_extend(base, name_suffix) {
     let extended = json_copy(base);
     const property_name = "name";
-    let c2 = text_combine_curried_right(name_suffix);
-    let value2 = property_transform(extended, property_name, c2);
+    property_combine(name_suffix, extended, property_name);
     return extended;
   }
   function lambda(s) {
