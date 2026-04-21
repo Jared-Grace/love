@@ -67,13 +67,14 @@ export function app_reply_main_shortcuts(
   };
   let r_ke_10 = shortcut_extend_count(r_ke_base, 10);
   let r_ke_40 = shortcut_extend_count(r_ke_10, 40);
+  const r_intro = {
+    name: "Intro",
+    languages: languages_chosen_default,
+    count: 1,
+    responses: [gl],
+  };
   let shortcuts = [
-    {
-      name: "Intro",
-      languages: languages_chosen_default,
-      count: 1,
-      responses: [gl],
-    },
+    r_intro,
     r_pk_1,
     r_pk_10,
     r_pk_10_g,
