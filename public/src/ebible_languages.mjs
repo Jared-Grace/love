@@ -1,3 +1,4 @@
+import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
 import { ebible_language_kenya } from "../../../love/public/src/ebible_language_kenya.mjs";
 import { ebible_language_luganda } from "../../../love/public/src/ebible_language_luganda.mjs";
 import { ebible_language_punjabi } from "../../../love/public/src/ebible_language_punjabi.mjs";
@@ -15,11 +16,7 @@ export function ebible_languages() {
   const pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
-  const te = {
-    name: "Telugu",
-    bible_folder: "tel2017",
-    language_code: "tel",
-  };
+  const te = ebible_language_telugu();
   let languages = [
     o,
     en,
