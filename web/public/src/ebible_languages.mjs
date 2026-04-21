@@ -15,6 +15,11 @@ export function ebible_languages() {
   const pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
+  const te = {
+    name: "Telugu",
+    bible_folder: "tel2017",
+    language_code: "tel",
+  };
   let languages = [
     o,
     en,
@@ -26,11 +31,7 @@ export function ebible_languages() {
       bible_folder: "benirv",
       language_code: "ben",
     },
-    {
-      name: "Telugu",
-      bible_folder: "tel2017",
-      language_code: "tel",
-    },
+    te,
     {
       name: "Hindi",
       bible_folder: "hin2017",
