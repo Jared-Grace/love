@@ -73,6 +73,12 @@ export function app_reply_main_shortcuts(
     count: 1,
     responses: [],
   };
+  const r_te_base = {
+    name: "TE",
+    languages: languages_default_concat([pa, ur]),
+    count: 0,
+    responses: [],
+  };
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let r_intro = shortcut_extend_response(r_default, "intro", gl);
