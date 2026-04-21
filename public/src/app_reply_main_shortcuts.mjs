@@ -41,7 +41,6 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let r_pk_1 = shortcut_extend_count(r_pk_base, 1);
   let r_pk_10 = shortcut_extend_count(r_pk_base, 10);
   let g = app_reply_greetings();
@@ -49,6 +48,8 @@ export function app_reply_main_shortcuts(
   let h = app_reply_how_r_u();
   let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
+  let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
+  let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat([lug]);
   const r_ug_base = {
     name: "UG",
@@ -82,6 +83,7 @@ export function app_reply_main_shortcuts(
     r_pk_10_g,
     r_pk_10_h,
     r_pk_10_gh,
+    r_pk_20,
     r_pk_40,
     r_ug_40,
     r_ke_10,
