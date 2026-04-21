@@ -66,7 +66,7 @@ export function app_reply_main_shortcuts(
     responses: [],
   };
   let r_ke_10 = shortcut_extend_count(r_ke_base, 10);
-  let r_ke_40 = shortcut_extend_count(r_ke_10, 40);
+  let r_ke_40 = shortcut_extend_count(r_ke_base, 40);
   const r_default = {
     name: "",
     languages: languages_chosen_default,
