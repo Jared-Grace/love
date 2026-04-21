@@ -44,7 +44,7 @@ export function app_reply_main_shortcuts(
   };
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let r_pk_1 = shortcut_extend_count(r_pk_base, 1);
-  let r_pk_10 = shortcut_extend_count(r_pk_1, 10);
+  let r_pk_10 = shortcut_extend_count(r_pk_base, 10);
   let g = app_reply_greetings();
   let r_pk_10_g = shortcut_extend_response(r_pk_10, "g", g);
   let h = app_reply_how_r_u();
