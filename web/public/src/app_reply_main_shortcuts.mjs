@@ -125,5 +125,4 @@ export function app_reply_main_shortcuts(
     let component2 = html_button(root, name2, lambda5);
   }
   each(shortcuts, shortcut_each);
-  return buttons_responses;
 }
