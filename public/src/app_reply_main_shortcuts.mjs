@@ -81,6 +81,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
+  let r_te_10 = shortcut_extend_count(r_te_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let r_intro = shortcut_extend_response(r_default, "intro", gl);
@@ -96,6 +97,7 @@ export function app_reply_main_shortcuts(
     r_ug_40,
     r_ke_10,
     r_ke_40,
+    r_te_10,
     r_yt,
   ];
   function languages_default_concat_single(ke) {
