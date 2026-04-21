@@ -1,3 +1,4 @@
+import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
 import { property_combine } from "../../../love/public/src/property_combine.mjs";
 import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -34,6 +35,7 @@ export function app_reply_main_shortcuts(
   const pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
+  const te = ebible_language_telugu();
   let languages_pk = languages_default_concat([pa, ur]);
   const r_pk_base = {
     name: "PK",
@@ -75,7 +77,7 @@ export function app_reply_main_shortcuts(
   };
   const r_te_base = {
     name: "TE",
-    languages: languages_default_concat([pa, ur]),
+    languages: languages_default_concat([te]),
     count: 0,
     responses: [],
   };
