@@ -60,7 +60,7 @@ export function app_reply_main_shortcuts(
     responses: [],
   };
   let r_ug_40 = shortcut_extend_count(r_ug_base, 40);
-  let languages_ke = languages_default_concat([ke]);
+  let languages_ke = languages_default_concat_single();
   const r_ke_base = {
     name: "KE",
     languages: languages_ke,
@@ -98,6 +98,10 @@ export function app_reply_main_shortcuts(
     r_ke_40,
     r_yt,
   ];
+  function languages_default_concat_single() {
+    let r2 = languages_default_concat([ke]);
+    return r2;
+  }
   function languages_default_concat(right) {
     let concated2 = list_concat(languages_chosen_default, right);
     return concated2;
