@@ -146,7 +146,7 @@ export async function app_reply_main(context) {
     return b;
   }
   let buttons_responses_result = list_map(choices, lambda9);
-  list_add(list, item3);
+  list_add(buttons_responses, buttons_responses_result);
   async function copy_refresh() {
     let v22 = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
