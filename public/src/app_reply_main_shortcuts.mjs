@@ -28,7 +28,6 @@ export function app_reply_main_shortcuts(
 ) {
   let languages_chosen_default = app_reply_languages_chosen_default();
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
-  let buttons_responses = null;
   let gl = app_reply_greetings_live();
   const ur = ebible_language_urdu();
   const pa = ebible_language_punjabi();
