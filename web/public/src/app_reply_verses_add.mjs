@@ -1,6 +1,5 @@
 import { ebible_references_parse_lines_browser } from "../../../love/public/src/ebible_references_parse_lines_browser.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -28,11 +27,6 @@ export async function app_reply_verses_add(
       list_add(bible_texts, reference);
       reference_current = reference;
     }
-    log(app_reply_verses_add.name, {
-      v,
-      reference,
-      languages_chosen,
-    });
     let text = property_get(v, "text");
     list_add(bible_texts, text);
   }
