@@ -1,5 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { list_map_add } from "../../../love/public/src/list_map_add.mjs";
+import { list_map_existing } from "../../../love/public/src/list_map_existing.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "../../../love/public/src/app_reply_main_shortcuts.mjs";
@@ -146,7 +146,7 @@ export async function app_reply_main(context) {
     });
     return b;
   }
-  list_map_add(choices, lambda9, buttons_responses);
+  list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
     let v22 = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
