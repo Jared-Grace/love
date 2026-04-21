@@ -116,7 +116,7 @@ export async function app_reply_main(context) {
     visible_count = buttons_refresh();
     await copy_refresh();
   }
-  let buttons_responses = null;
+  let buttons_responses = [];
   let component3 = html_button(root, "Copy", copy_refresh);
   app_reply_main_shortcuts(
     root,
