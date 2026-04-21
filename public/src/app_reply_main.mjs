@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_map_add } from "../../../love/public/src/list_map_add.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
@@ -181,6 +182,9 @@ export async function app_reply_main(context) {
   let typed_get = function lambda15() {
     return typed;
   };
+  log(app_reply_main.name, {
+    buttons_responses,
+  });
   let buttons_refresh = app_reply_buttons_refresh(
     typed_get,
     responses_buttons,
