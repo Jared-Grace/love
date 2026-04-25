@@ -132,6 +132,9 @@ export async function app_reply_main(context) {
     let b = null;
     let text = property_get(choice, "text");
     async function click() {
+      log(app_reply_main.name, {
+        choice,
+      });
       let response = property_get(choice, "response");
       list_add(responses, response);
       list_add(responses_buttons, b);
