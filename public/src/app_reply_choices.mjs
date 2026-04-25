@@ -270,7 +270,7 @@ export function app_reply_choices() {
     {
       text: emoji_wave() + " Name location",
       response:
-        app_reply_choices_name() + newline_2() + +app_reply_choices_location(),
+        app_reply_choices_name() + newline_2() + app_reply_choices_location(),
     },
     {
       text: emoji_wave() + " Name ministry",
