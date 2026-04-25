@@ -1,3 +1,4 @@
+import { newline_2 } from "../../../love/public/src/newline_2.mjs";
 import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { app_reply_response_how_r_u_today } from "../../../love/public/src/app_reply_response_how_r_u_today.mjs";
 import { app_reply_how_r_u_today } from "../../../love/public/src/app_reply_how_r_u_today.mjs";
@@ -32,7 +33,6 @@ import { app_reply_choices_praise } from "../../../love/public/src/app_reply_cho
 import { app_reply_response_greetings } from "../../../love/public/src/app_reply_response_greetings.mjs";
 import { app_reply_response_how_r_u } from "../../../love/public/src/app_reply_response_how_r_u.mjs";
 import { emoji_handshake } from "../../../love/public/src/emoji_handshake.mjs";
-import { newline } from "../../../love/public/src/newline.mjs";
 import { emoji_rock } from "../../../love/public/src/emoji_rock.mjs";
 import { emoji_rainbow } from "../../../love/public/src/emoji_rainbow.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
@@ -349,8 +349,7 @@ export function app_reply_choices() {
       text: "Song",
       response:
         "https://youtu.be/rNhSoUKPgMQ" +
-        newline() +
-        newline() +
+        newline_2() +
         " Jesus gave me the grace to write this song",
     },
     {
