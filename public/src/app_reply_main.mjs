@@ -1,3 +1,4 @@
+import { ebible_versions_english_choices_browser } from "../../../love/public/src/ebible_versions_english_choices_browser.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_existing } from "../../../love/public/src/list_map_existing.mjs";
@@ -12,7 +13,6 @@ import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
-import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { text_take_less_1 } from "../../../love/public/src/text_take_less_1.mjs";
@@ -37,7 +37,7 @@ export async function app_reply_main(context) {
   let r = await app_reply_initialize(context);
   let choices = property_get(r, "choices");
   let languages = property_get(r, "languages");
-  let english_choices = await ebible_versions_english_choices();
+  let english_choices = await ebible_versions_english_choices_browser();
   let languages_chosen_default = app_reply_languages_chosen_default();
   let languages_chosen = [];
   languages_chosen_reset();
