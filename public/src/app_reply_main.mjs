@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_existing } from "../../../love/public/src/list_map_existing.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
@@ -128,7 +129,9 @@ export async function app_reply_main(context) {
     buttons_responses,
   );
   html_p_text(root, "4. (Optional) Meeting:");
-  function lambda5() {}
+  async function lambda5() {
+    await clipboard_copy(text2);
+  }
   let component2 = html_button(root, "Meeting requested", lambda5);
   html_p_text(root, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
