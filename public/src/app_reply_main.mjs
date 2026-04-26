@@ -131,7 +131,7 @@ export async function app_reply_main(context) {
   html_p_text(root, "4. (Optional) Meeting:");
   async function lambda5() {
     await clipboard_copy(
-      "If God wills, I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
+      "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
     );
   }
   let component2 = html_button(root, "Meeting requested", lambda5);
