@@ -129,7 +129,7 @@ export async function app_reply_main(context) {
   );
   html_p_text(root, "4. (Optional) Meeting:");
   function lambda5() {}
-  let component2 = html_button(parent, text2, lambda5);
+  let component2 = html_button(parent, "Meeting requested", lambda5);
   html_p_text(root, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
