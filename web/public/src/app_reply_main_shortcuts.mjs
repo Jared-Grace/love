@@ -1,3 +1,4 @@
+import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
 import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
 import { property_combine } from "../../../love/public/src/property_combine.mjs";
@@ -87,6 +88,13 @@ export function app_reply_main_shortcuts(
   let r_te_10 = shortcut_extend_count(r_te_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
+  let en_l = ebible_language_english();
+  const en_default = {
+    name: "en",
+    languages: [en_l],
+    count: 10,
+    responses: [],
+  };
   let r_intro = shortcut_extend_response(r_default, "intro", gl);
   let shortcuts = [
     r_intro,
