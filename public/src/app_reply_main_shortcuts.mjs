@@ -89,7 +89,7 @@ export function app_reply_main_shortcuts(
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
-  const en_default = {
+  const r_en_10 = {
     name: "en",
     languages: [en_l],
     count: 10,
@@ -111,6 +111,7 @@ export function app_reply_main_shortcuts(
     r_ke_40,
     r_te_10,
     r_yt,
+    r_en_10,
   ];
   function languages_default_concat_single(ke) {
     let r2 = languages_default_concat([ke]);
