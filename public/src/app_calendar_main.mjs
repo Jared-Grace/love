@@ -1,5 +1,4 @@
 import { app_calendar } from "../../../love/public/src/app_calendar.mjs";
-import { app_prefix_without_fn } from "../../../love/public/src/app_prefix_without_fn.mjs";
 import { folder_secret_join } from "../../../love/public/src/folder_secret_join.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
