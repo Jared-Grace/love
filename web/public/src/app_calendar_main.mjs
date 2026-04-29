@@ -11,8 +11,9 @@ export async function app_calendar_main(context) {
   let r = await app_api_fn({
     fn: app_calendar_download,
   });
-  let v = log(app_calendar_main.name, {});
-  (v, r);
+  log(app_calendar_main.name, {
+    r,
+  });
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
     root,
