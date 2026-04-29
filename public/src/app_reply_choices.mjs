@@ -87,7 +87,7 @@ export function app_reply_choices() {
   let live = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
-  let t = text_combine_today(t2);
+  let how_feel_today = text_combine_today(how_feel);
   const s3 = text_the_servant_of_god_first_upper();
   let v = [
     {
@@ -228,7 +228,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_feel_today(),
-      response: how_feel,
+      response: how_feel_today,
     },
     {
       text: app_reply_how_r_u(),
