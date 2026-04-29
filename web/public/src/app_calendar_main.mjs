@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_input_wide } from "../../../love/public/src/html_input_wide.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
@@ -9,6 +10,7 @@ export function app_calendar_main(context) {
     "Paste Facebook Messages URL or WhatsApp number",
     lambda2,
   );
+  let p = html_p_text(root2, text);
   html_input_wide(root);
   async function lambda2() {
     let paste = await clipboard_paste();
