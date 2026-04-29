@@ -22,5 +22,5 @@ export function app_calendar_main(context) {
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp number");
   let file_name = file_name_json(app_calendar.name);
-  let file_path = folder_secret_join(app_calendar.name);
+  let file_path = folder_secret_join(file_name);
 }
