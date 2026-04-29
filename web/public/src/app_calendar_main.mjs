@@ -1,3 +1,4 @@
+import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { app_calendar } from "../../../love/public/src/app_calendar.mjs";
 import { folder_secret_join } from "../../../love/public/src/folder_secret_join.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
@@ -20,5 +21,6 @@ export function app_calendar_main(context) {
   }
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp number");
+  let file_name = file_name_json(name2);
   let file_path = folder_secret_join(app_calendar.name);
 }
