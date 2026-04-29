@@ -1,3 +1,4 @@
+import { app_reply_how_feel_today } from "../../../love/public/src/app_reply_how_feel_today.mjs";
 import { newline_2 } from "../../../love/public/src/newline_2.mjs";
 import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { app_reply_response_how_r_u_today } from "../../../love/public/src/app_reply_response_how_r_u_today.mjs";
@@ -221,6 +222,10 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_feel(),
+      response: how_feel,
+    },
+    {
+      text: app_reply_how_feel_today(),
       response: how_feel,
     },
     {
