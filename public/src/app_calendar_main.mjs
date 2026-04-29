@@ -1,3 +1,4 @@
+import { app_prefix_without_fn } from "../../../love/public/src/app_prefix_without_fn.mjs";
 import { folder_secret_join } from "../../../love/public/src/folder_secret_join.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -19,5 +20,6 @@ export function app_calendar_main(context) {
   }
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp number");
+  let without = app_prefix_without_fn(app_fn);
   let file_path = folder_secret_join(only);
 }
