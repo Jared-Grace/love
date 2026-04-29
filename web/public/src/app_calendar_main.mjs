@@ -8,5 +8,5 @@ export function app_calendar_main(context) {
   });
   let root = property_get(context, "root");
   let component = html_input(root);
-  html_width_full(component2);
+  html_width_full(component);
 }
