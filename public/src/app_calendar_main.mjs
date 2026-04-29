@@ -16,5 +16,5 @@ export function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_text_set(p, paste);
   }
-  i=html_input_wide(root);
+  let i = html_input_wide(root);
 }
