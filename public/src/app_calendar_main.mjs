@@ -4,6 +4,10 @@ import { html_mobile_default_font_size_context } from "../../../love/public/src/
 export function app_calendar_main(context) {
   let root = html_mobile_default_font_size_context(context);
   function lambda2() {}
-  let component2 = html_button_wide(root2, text, lambda2);
+  let component2 = html_button_wide(
+    root,
+    "Paste Facebook Messages URL or WhatsApp number",
+    lambda2,
+  );
   html_input_wide(root);
 }
