@@ -8,7 +8,7 @@ export async function app_new_html_update(name) {
   let file_path = html_name_to_path(name);
   let n = await file_exists_not(file_path);
   if (n) {
-    await file_overwrite(file_path2, contents);
+    await file_overwrite(file_path, "");
   }
   await html_update_public(name);
   await html_update_dev(name);
