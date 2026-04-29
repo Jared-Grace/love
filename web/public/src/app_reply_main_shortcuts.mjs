@@ -94,9 +94,9 @@ export function app_reply_main_shortcuts(
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
   const r_en_10 = {
-    name: "en",
+    name: "en40",
     languages: [en_l],
-    count: 10,
+    count: 40,
     responses: [],
   };
   let r_intro = shortcut_extend_response(r_default, "intro", gl);
