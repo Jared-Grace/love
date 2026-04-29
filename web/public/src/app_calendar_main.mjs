@@ -9,7 +9,6 @@ import { html_mobile_default_font_size_context } from "../../../love/public/src/
 export async function app_calendar_main(context) {
   let r = await app_api_fn({
     fn: app_calendar_download,
-    args: [],
   });
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
