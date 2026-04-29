@@ -7,6 +7,6 @@ export async function html_update_latest(search) {
   let info = await app_shared_name_search_info(search);
   let name = property_get(info, "a_name");
   let f_name = app_shared_name_latest(name);
-  let f_path_latest = property_get(r, "f_path_latest");
+  let f_path_latest = property_get(info, "f_path_latest");
   await html_update_public_generic(f_name, f_path_latest, name);
 }
