@@ -1,3 +1,4 @@
+import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { text_combine_today } from "../../../love/public/src/text_combine_today.mjs";
 import { app_reply_how_feel_today } from "../../../love/public/src/app_reply_how_feel_today.mjs";
 import { newline_2 } from "../../../love/public/src/newline_2.mjs";
@@ -142,7 +143,7 @@ export function app_reply_choices() {
       response: app_reply_choices_glory(),
     },
     {
-      text: emoji_pray() + " Give",
+      text: app_reply_give(),
       response: app_reply_choices_give(),
     },
     {
