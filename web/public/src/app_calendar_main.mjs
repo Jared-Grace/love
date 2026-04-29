@@ -16,6 +16,5 @@ export function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_text_set(p, paste);
   }
-  let placeholder = "Facebook Messages URL";
-  html_input_placeholder_wide(root, placeholder);
+  html_input_placeholder_wide(root, "Facebook Messages URL");
 }
