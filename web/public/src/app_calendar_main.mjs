@@ -17,4 +17,5 @@ export function app_calendar_main(context) {
     html_text_set(p, paste);
   }
   html_input_placeholder_wide(root, "Facebook Messages URL");
+  html_input_placeholder_wide(root, "WhatsApp number");
 }
