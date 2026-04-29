@@ -1,8 +1,7 @@
-import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
+import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
-import { html_input_wide } from "../../../love/public/src/html_input_wide.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
 export function app_calendar_main(context) {
@@ -18,6 +17,5 @@ export function app_calendar_main(context) {
     html_text_set(p, paste);
   }
   let placeholder = "Facebook Messages URL";
-  let input = html_input_wide(root);
-  html_placeholder(input, placeholder);
+  html_input_placeholder_wide(root, placeholder);
 }
