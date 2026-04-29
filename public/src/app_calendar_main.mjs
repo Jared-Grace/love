@@ -21,6 +21,5 @@ export function app_calendar_main(context) {
   }
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp number");
-  let without = app_prefix_without_fn(app_cal);
   let file_path = folder_secret_join(app_calendar.name);
 }
