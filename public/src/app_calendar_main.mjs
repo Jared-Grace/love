@@ -6,5 +6,5 @@ export function app_calendar_main(context) {
     context,
   });
   let root = property_get(context, "root");
-  let component = html_input(parent);
+  let component = html_input(root);
 }
