@@ -55,7 +55,7 @@ export function app_reply_main_shortcuts(
   let c = app_reply_called_why();
   let r_pk_1_c = shortcut_extend_response(r_pk_1, "c", c);
   let m = app_reply_called_why();
-  let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", c);
+  let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat_single(lug);
