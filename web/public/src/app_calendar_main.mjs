@@ -1,3 +1,4 @@
+import { html_input } from "../../../love/public/src/html_input.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export function app_calendar_main(context) {
@@ -5,4 +6,5 @@ export function app_calendar_main(context) {
     context,
   });
   let root = property_get(context, "root");
+  let component = html_input(parent);
 }
