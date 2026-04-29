@@ -1,7 +1,7 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_today } from "../../../love/public/src/text_combine_today.mjs";
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 export function app_reply_how_r_u_today() {
   let t2 = app_reply_how_r_u();
-  let t = text_combine(t2, " today");
-  return t;
+  let r = text_combine_today(t2);
+  return r;
 }
