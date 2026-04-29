@@ -1,3 +1,5 @@
+import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
+import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { app_calendar } from "../../../love/public/src/app_calendar.mjs";
 import { folder_secret_join } from "../../../love/public/src/folder_secret_join.mjs";
@@ -7,7 +9,11 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
-export function app_calendar_main(context) {
+export async function app_calendar_main(context) {
+  let r = await app_api_fn({
+    fn: app_a_upload,
+    args: [deltas],
+  });
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
     root,
