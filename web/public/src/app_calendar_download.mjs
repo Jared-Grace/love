@@ -8,4 +8,5 @@ export async function app_calendar_download() {
   let file_path = folder_secret_join(file_name);
   await file_exists_ensure_json(file_path);
   let data = await file_read_json(file_path);
+  return data;
 }
