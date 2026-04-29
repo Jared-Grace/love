@@ -1,3 +1,4 @@
+import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
@@ -17,4 +18,5 @@ export function app_calendar_main(context) {
     html_text_set(p, paste);
   }
   let i = html_input_wide(root);
+  html_placeholder(input, placeholder);
 }
