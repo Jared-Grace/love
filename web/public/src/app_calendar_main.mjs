@@ -1,4 +1,4 @@
-import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
+import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -8,8 +8,8 @@ import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs"
 import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
 export async function app_calendar_main(context) {
   let r = await app_api_fn({
-    fn: app_a_upload,
-    args: [deltas],
+    fn: app_calendar_download,
+    args: [],
   });
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
