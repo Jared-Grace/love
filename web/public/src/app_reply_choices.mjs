@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_reply_how_feel_today } from "../../../love/public/src/app_reply_how_feel_today.mjs";
 import { newline_2 } from "../../../love/public/src/newline_2.mjs";
 import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
@@ -86,6 +87,7 @@ export function app_reply_choices() {
   let live = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
   const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
+  let combined = text_combine(left, right);
   const s3 = text_the_servant_of_god_first_upper();
   let v = [
     {
