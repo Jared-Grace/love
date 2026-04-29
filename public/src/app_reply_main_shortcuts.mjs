@@ -1,4 +1,4 @@
-import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
+import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
 import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
@@ -55,7 +55,7 @@ export function app_reply_main_shortcuts(
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
   let c = app_reply_called_why();
   let r_pk_1_c = shortcut_extend_response(r_pk_1, "c", c);
-  let m = app_reply_choices_give();
+  let m = app_reply_give();
   let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
