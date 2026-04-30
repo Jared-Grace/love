@@ -1,3 +1,4 @@
+import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { lists_sizes_equal } from "../../../love/public/src/lists_sizes_equal.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -55,8 +56,10 @@ export async function app_calendar_main(context) {
     let mapped = list_map(contacts, object_values);
     let unique = list_unique(mapped);
     let a = lists_sizes_equal([mapped, unique]);
-    function lambda6() {}
-    assert_json_get(b, lambda6);
+    function lambda6() {
+      let list = list_find_indices(split, predicate);
+    }
+    assert_json_get(a, lambda6);
     let r2 = await app_api_fn({
       fn: app_calendar_upload,
       args: [data],
