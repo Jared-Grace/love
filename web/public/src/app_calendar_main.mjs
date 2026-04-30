@@ -37,7 +37,8 @@ export async function app_calendar_main(context) {
     "WhatsApp number",
   ];
   let c = html_input_placeholder_wide_curried(root);
-  let mapped = list_map(properties, c);
+  function lambda4() {}
+  let mapped = list_map(properties, lambda4);
   function lambda3() {
     function lambda(p) {}
     let dictionary = list_to_dictionary_value(properties, lambda);
