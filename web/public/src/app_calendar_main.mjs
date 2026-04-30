@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -33,7 +34,9 @@ export async function app_calendar_main(context) {
     "Facebook Messages URL",
     "WhatsApp Name",
     "WhatsApp number",
-  ];e
+  ];
+  function lambda(item2) {}
+  each(list, lambda);
   html_input_placeholder_wide(root, "Facebook Name");
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp Name");
