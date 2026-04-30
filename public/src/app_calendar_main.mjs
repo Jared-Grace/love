@@ -1,6 +1,5 @@
 import { equal_curried } from "../../../love/public/src/equal_curried.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { lists_sizes_equal } from "../../../love/public/src/lists_sizes_equal.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -63,7 +62,7 @@ export async function app_calendar_main(context) {
         let r = equal_curried(item);
         let filtered = list_filter(mapped, r);
       }
-      let list = list_find_indices(mapped, lambda4);
+      let list = list_map(mapped, lambda4);
     }
     assert_json_get(a, lambda6);
     let r2 = await app_api_fn({
