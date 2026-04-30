@@ -49,7 +49,7 @@ export async function app_calendar_main(context) {
     list_add(contacts, result);
     let r2 = await app_api_fn({
       fn: app_calendar_upload,
-      args: [],
+      args: [data],
     });
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
