@@ -1,6 +1,6 @@
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
-export function list_find_indices(split, predicate) {
+export function list_find_indices(list, predicate) {
   function lambda(la) {
     function lambda2(item, index) {
       let sw = predicate(item);
@@ -8,8 +8,8 @@ export function list_find_indices(split, predicate) {
         la(index);
       }
     }
-    each_index(split, lambda2);
+    each_index(list, lambda2);
   }
-  let list = list_adder(lambda);
-  return list;
+  let indices = list_adder(lambda);
+  return indices;
 }
