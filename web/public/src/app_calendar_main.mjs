@@ -1,3 +1,4 @@
+import { lists_sizes_equal } from "../../../love/public/src/lists_sizes_equal.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
@@ -52,6 +53,7 @@ export async function app_calendar_main(context) {
     list_add(contacts, result);
     let mapped = list_map(contacts, object_values);
     let unique = list_unique(mapped);
+    let a = lists_sizes_equal(lists);
     let r2 = await app_api_fn({
       fn: app_calendar_upload,
       args: [data],
