@@ -51,5 +51,5 @@ export async function app_calendar_main(context) {
     let result = object_adder(lambda5);
     list_add(contacts, result);
   }
-  let component = html_button_wide(root, text, lambda3);
+  let component = html_button_wide(root, "Add Contact", lambda3);
 }
