@@ -36,9 +36,8 @@ export async function app_calendar_main(context) {
     "WhatsApp Name",
     "WhatsApp number",
   ];
-  let c = html_input_placeholder_wide_curried(root2);
-  function lambda(item2) {}
-  let mapped = list_map(list, lambda);
+  let c = html_input_placeholder_wide_curried(root);
+  let mapped = list_map(list, c);
   html_input_placeholder_wide(root, "Facebook Name");
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp Name");
