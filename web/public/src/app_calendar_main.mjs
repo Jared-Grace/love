@@ -1,3 +1,4 @@
+import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -38,6 +39,8 @@ export async function app_calendar_main(context) {
   let c = html_input_placeholder_wide_curried(root);
   let mapped = list_map(properties, c);
   function lambda3() {
+    function lambda(item2v) {}
+    let dictionary = list_to_dictionary_value(list, lambda);
     list_add(contacts, item);
   }
   let component = html_button_wide(root, text, lambda3);
