@@ -1,7 +1,6 @@
+import { list_unique_is } from "../../../love/public/src/list_unique_is.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
-import { lists_sizes_equal } from "../../../love/public/src/lists_sizes_equal.mjs";
-import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -54,8 +53,7 @@ export async function app_calendar_main(context) {
     let result = object_adder(lambda5);
     list_add(contacts, result);
     let mapped = list_map(contacts, object_values);
-    let unique = list_unique(mapped);
-    let a = lists_sizes_equal([mapped, unique]);
+    let a = list_unique_is(mapped);
     assert(a);
     assert_json_get(a, lambda6);
     let r2 = await app_api_fn({
