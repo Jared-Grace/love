@@ -1,6 +1,5 @@
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
-import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -38,16 +37,14 @@ export async function app_calendar_main(context) {
     "WhatsApp Name",
     "WhatsApp number",
   ];
-  function lambda5(oad) {}
-  let result = object_adder(lambda5);
   let c = html_input_placeholder_wide_curried(root);
   function lambda4(p) {
     let input = html_input_placeholder_wide(root, p);
   }
   let mapped = list_map(properties, lambda4);
   function lambda3() {
-    function lambda(p) {}
-    let dictionary = list_to_dictionary_value(properties, lambda);
+    function lambda5(oad) {}
+    let result = object_adder(lambda5);
     list_add(contacts, item);
   }
   let component = html_button_wide(root, text, lambda3);
