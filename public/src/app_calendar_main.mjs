@@ -1,3 +1,4 @@
+import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -39,7 +40,10 @@ export async function app_calendar_main(context) {
   let c = html_input_placeholder_wide_curried(root);
   let inputs = list_map(properties, c);
   function lambda3() {
-    function lambda5(oad) {}
+    function lambda5(oad) {
+      function lambda(a, b) {}
+      each_pair(list_a, list_b, lambda);
+    }
     let result = object_adder(lambda5);
     list_add(contacts, item);
   }
