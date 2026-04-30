@@ -49,7 +49,7 @@ export async function app_calendar_main(context) {
       each_pair(properties, inputs, lambda);
     }
     let result = object_adder(lambda5);
-    list_add(contacts, item);
+    list_add(contacts, result);
   }
   let component = html_button_wide(root, text, lambda3);
 }
