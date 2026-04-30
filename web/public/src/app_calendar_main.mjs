@@ -28,6 +28,12 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_text_set(p, paste);
   }
+  let properties = [
+    "Facebook Name",
+    "Facebook Messages URL",
+    "WhatsApp Name",
+    "WhatsApp number",
+  ];
   html_input_placeholder_wide(root, "Facebook Name");
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp Name");
