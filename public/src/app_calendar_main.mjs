@@ -42,9 +42,9 @@ export async function app_calendar_main(context) {
   let inputs = list_map(properties, c);
   function lambda3() {
     function lambda5(oad) {
-      function lambda(p, i) {
+      function lambda(p, input) {
         let value = html_value_get(input);
-        oad();
+        oad(p, value);
       }
       each_pair(properties, inputs, lambda);
     }
