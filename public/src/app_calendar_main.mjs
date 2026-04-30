@@ -33,7 +33,7 @@ export async function app_calendar_main(context) {
     "Facebook Messages URL",
     "WhatsApp Name",
     "WhatsApp number",
-  ];
+  ];e
   html_input_placeholder_wide(root, "Facebook Name");
   html_input_placeholder_wide(root, "Facebook Messages URL");
   html_input_placeholder_wide(root, "WhatsApp Name");
