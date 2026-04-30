@@ -38,8 +38,8 @@ export async function app_calendar_main(context) {
     "WhatsApp number",
   ];
   let c = html_input_placeholder_wide_curried(root);
-  function lambda4() {
-    html_input_placeholder_wide(root2, placeholder);
+  function lambda4(p) {
+    html_input_placeholder_wide(root, p);
   }
   let mapped = list_map(properties, lambda4);
   function lambda3() {
