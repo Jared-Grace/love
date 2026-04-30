@@ -48,6 +48,8 @@ export async function app_calendar_main(context) {
     }
     let result = object_adder(lambda5);
     list_add(contacts, result);
+    function lambda4(item) {}
+    let mapped = list_map(list, lambda4);
     let r2 = await app_api_fn({
       fn: app_calendar_upload,
       args: [data],
