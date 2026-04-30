@@ -57,7 +57,8 @@ export async function app_calendar_main(context) {
     let unique = list_unique(mapped);
     let a = lists_sizes_equal([mapped, unique]);
     function lambda6() {
-      let list = list_find_indices(mapped, $f);
+      function lambda4() {}
+      let list = list_find_indices(mapped, lambda4);
     }
     assert_json_get(a, lambda6);
     let r2 = await app_api_fn({
