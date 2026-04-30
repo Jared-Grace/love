@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_find_indices } from "../../../love/public/src/list_find_indices.mjs";
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { lists_sizes_equal } from "../../../love/public/src/lists_sizes_equal.mjs";
@@ -57,7 +58,10 @@ export async function app_calendar_main(context) {
     let unique = list_unique(mapped);
     let a = lists_sizes_equal([mapped, unique]);
     function lambda6() {
-      function lambda4() {}
+      function lambda4(item) {
+        function lambda7(item2) {}
+        let filtered = list_filter(list2, lambda7);
+      }
       let list = list_find_indices(mapped, lambda4);
     }
     assert_json_get(a, lambda6);
