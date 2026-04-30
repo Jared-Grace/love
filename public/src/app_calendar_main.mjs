@@ -38,4 +38,6 @@ export async function app_calendar_main(context) {
   let c = html_input_placeholder_wide_curried(root);
   let mapped = list_map(properties, c);
   list_add(contacts, item);
+  function lambda3() {}
+  let component = html_button_wide(root2, text, lambda3);
 }
