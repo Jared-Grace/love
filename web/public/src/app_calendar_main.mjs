@@ -39,7 +39,7 @@ export async function app_calendar_main(context) {
   ];
   let c = html_input_placeholder_wide_curried(root);
   function lambda4(p) {
-    html_input_placeholder_wide(root, p);
+    let input = html_input_placeholder_wide(root, p);
   }
   let mapped = list_map(properties, lambda4);
   function lambda3() {
