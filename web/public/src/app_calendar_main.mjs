@@ -1,3 +1,4 @@
+import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
@@ -35,6 +36,7 @@ export async function app_calendar_main(context) {
     "WhatsApp Name",
     "WhatsApp number",
   ];
+  let c = html_input_placeholder_wide_curried(root2);
   function lambda(item2) {}
   let mapped = list_map(list, lambda);
   html_input_placeholder_wide(root, "Facebook Name");
