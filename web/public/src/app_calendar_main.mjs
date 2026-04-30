@@ -41,8 +41,10 @@ export async function app_calendar_main(context) {
   let inputs = list_map(properties, c);
   function lambda3() {
     function lambda5(oad) {
-      function lambda(a, b) {}
-      each_pair(list_a, list_b, lambda);
+      function lambda(p, i) {
+        oad();
+      }
+      each_pair(properties, inputs, lambda);
     }
     let result = object_adder(lambda5);
     list_add(contacts, item);
