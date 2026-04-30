@@ -39,8 +39,8 @@ export async function app_calendar_main(context) {
   let c = html_input_placeholder_wide_curried(root);
   let mapped = list_map(properties, c);
   function lambda3() {
-    function lambda(item2v) {}
-    let dictionary = list_to_dictionary_value(list, lambda);
+    function lambda(p) {}
+    let dictionary = list_to_dictionary_value(properties, lambda);
     list_add(contacts, item);
   }
   let component = html_button_wide(root, text, lambda3);
