@@ -51,7 +51,7 @@ export async function app_calendar_main(context) {
     let result = object_adder(lambda5);
     list_add(contacts, result);
     let mapped = list_map(contacts, object_values);
-    let a = list_unique_is_assert(mapped);
+    list_unique_is_assert(mapped);
     let r2 = await app_api_fn({
       fn: app_calendar_upload,
       args: [data],
