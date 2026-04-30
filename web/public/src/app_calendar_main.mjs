@@ -32,6 +32,7 @@ export async function app_calendar_main(context) {
   let properties = [
     "Facebook Name",
     "Facebook Messages URL",
+    "Facebook URL",
     "WhatsApp Name",
     "WhatsApp number",
   ];
