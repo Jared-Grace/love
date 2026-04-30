@@ -9,6 +9,6 @@ export function lists_sizes_equal(lists) {
     let v = size === fs;
     return v;
   }
-  let a = list_all(lists, lambda3);
-  return a;
+  let e = list_all(lists, lambda3);
+  return e;
 }
