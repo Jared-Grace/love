@@ -5,7 +5,6 @@ import { property_initialize } from "../../../love/public/src/property_initializ
 import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
-import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
@@ -38,9 +37,5 @@ export async function app_calendar_main(context) {
   ];
   let c = html_input_placeholder_wide_curried(root);
   let mapped = list_map(properties, c);
-  html_input_placeholder_wide(root, "Facebook Name");
-  html_input_placeholder_wide(root, "Facebook Messages URL");
-  html_input_placeholder_wide(root, "WhatsApp Name");
-  html_input_placeholder_wide(root, "WhatsApp number");
   list_add(contacts, item);
 }
