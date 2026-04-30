@@ -1,3 +1,4 @@
+import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
@@ -37,6 +38,8 @@ export async function app_calendar_main(context) {
     "WhatsApp Name",
     "WhatsApp number",
   ];
+  function lambda5(oad) {}
+  let result = object_adder(lambda5);
   let c = html_input_placeholder_wide_curried(root);
   function lambda4(p) {
     let input = html_input_placeholder_wide(root, p);
