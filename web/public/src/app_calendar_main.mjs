@@ -12,7 +12,7 @@ export async function app_calendar_main(context) {
   let r = await app_api_fn({
     fn: app_calendar_download,
   });
-  let value = property_initialize(object, property_name, value_initial);
+  let contacts = property_initialize(r, "contacts", []);
   log(app_calendar_main.name, {
     r,
   });
