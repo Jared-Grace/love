@@ -1,3 +1,4 @@
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
@@ -42,6 +43,7 @@ export async function app_calendar_main(context) {
   function lambda3() {
     function lambda5(oad) {
       function lambda(p, i) {
+        let value = html_value_get(input);
         oad();
       }
       each_pair(properties, inputs, lambda);
