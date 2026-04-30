@@ -60,8 +60,8 @@ export async function app_calendar_main(context) {
     let a = lists_sizes_equal([mapped, unique]);
     function lambda6() {
       function lambda4(item) {
-        let r = equal_curried(left);
-        let filtered = list_filter(mapped, lambda7);
+        let r = equal_curried(item);
+        let filtered = list_filter(mapped, r);
       }
       let list = list_find_indices(mapped, lambda4);
     }
