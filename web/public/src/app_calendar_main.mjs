@@ -1,3 +1,4 @@
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
@@ -11,6 +12,7 @@ export async function app_calendar_main(context) {
   let r = await app_api_fn({
     fn: app_calendar_download,
   });
+  let value = property_initialize(object, property_name, value_initial);
   log(app_calendar_main.name, {
     r,
   });
