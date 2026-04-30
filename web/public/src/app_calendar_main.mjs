@@ -40,7 +40,7 @@ export async function app_calendar_main(context) {
   ];
   let c = html_input_placeholder_wide_curried(root);
   let inputs = list_map(properties, c);
-  function lambda3() {
+  async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
         let value = html_value_get(input);
@@ -50,6 +50,7 @@ export async function app_calendar_main(context) {
     }
     let result = object_adder(lambda5);
     list_add(contacts, result);
+    let r2 = await app_api_fn(a);
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
 }
