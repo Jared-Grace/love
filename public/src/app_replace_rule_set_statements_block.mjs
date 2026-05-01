@@ -29,7 +29,7 @@ export function app_replace_rule_set_statements_block() {
         end: "{ update ( ) ; return true ; }",
       },
     ],
-    why: "The replacement rules define a grammar for a block of statements in a programming language, supporting empty blocks, sequences of statements, return statements, and simple expressions like 'true' and 'update()', demonstrating how statements and blocks can be recursively composed.",
+    why: "The replacement rules define a grammar for a block of statements in a programming language, supporting empty blocks, sequences of statements, return statements, expression statements, and nested blocks, demonstrating basic block and statement structure typical in imperative languages.",
   };
   return r;
 }
