@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_expressions_function_calls_rules } from "../../../love/public/src/app_replace_rule_set_expressions_function_calls_rules.mjs";
 import { app_replace_rule_set_expressions_function_calls_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_function_calls_abbreviations.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -88,8 +87,5 @@ export function app_replace_rule_set_expressions_function_calls() {
     ],
     why: "The replacement rules define a grammar for parsing function call expressions, member access, and literals (numbers, strings, booleans, null) in a programming language, demonstrating how identifiers, literals, and expressions can be composed into nested function calls and property accesses.",
   };
-  log(app_replace_rule_set_expressions_function_calls.name, {
-    r,
-  });
   return r;
 }
