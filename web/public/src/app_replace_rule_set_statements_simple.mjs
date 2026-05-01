@@ -37,7 +37,7 @@ export function app_replace_rule_set_statements_simple() {
           js_code_semicolon(),
       },
     ],
-    why: "The replacement rules define a simple grammar for statements, allowing for empty statements, return statements, expression statements, and return-expression statements, with expressions limited to 'true' or a 'update()' call; this demonstrates a minimal subset of statement and expression syntax, likely for a programming language.",
+    why: "The replacement rules define a simple grammar for statements that can be empty, a return statement, an expression statement, or a return with an expression, where expressions are limited to the literals 'true' or the function call 'update()'.",
   };
   return r;
 }
