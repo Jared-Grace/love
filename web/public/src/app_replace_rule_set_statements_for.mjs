@@ -37,7 +37,7 @@ export function app_replace_rule_set_statements_for() {
         end: "for ( i = 0 ; i < list . length ; i = i + 1 ) { copy [ i ] = list [ i ] ; log ( i ) ; }",
       },
     ],
-    why: "The replacement rules describe the grammar for JavaScript-like for-loops and related statements, demonstrating how variable declarations, expressions, and block statements are structured within for-loops and other control flow constructs, as shown by the rules for variable declarations, expressions, and the composition of statements inside blocks.",
+    why: "The replacement rules define a context-free grammar for JavaScript-like variable declarations, block statements, and control flow constructs (if, while, for), demonstrating how complex statements and loops are built from simpler expressions and statements.",
   };
   return r;
 }
