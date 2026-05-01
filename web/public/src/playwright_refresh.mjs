@@ -6,5 +6,7 @@ export async function playwright_refresh(page) {
     sessionStorage.clear();
   }
   await page.evaluate(lambda);
-  await page.reload();
+  await page.reload({
+    waitUntil: "domcontentloaded",
+  });
 }
