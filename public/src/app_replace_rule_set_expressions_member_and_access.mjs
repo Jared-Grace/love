@@ -6,12 +6,12 @@ export function app_replace_rule_set_expressions_member_and_access() {
   const rules = [];
   app_replace_rule_set_expressions_member_and_access_rules(rules);
   list_add_multiple(rules, [
-    "id > p r o p",
-    "id > h u m a n",
-    "id > n a m e",
-    "id > l a s t",
-    "id > b i r t h d a t e",
-    "id > y e a r",
+    "id > prop",
+    "id > human",
+    "id > name",
+    "id > last",
+    "id > birthdate",
+    "id > year",
   ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_member_and_access_abbreviations(
@@ -33,7 +33,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "mae",
-        end: "( ex ) . p r o p",
+        end: "( ex ) . prop",
       },
       {
         start: "( ex ) . id",
@@ -41,7 +41,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "( id . id ) . id",
-        end: "( h u m a n . n a m e ) . l a s t",
+        end: "( human . name ) . last",
       },
       {
         start: "mae . id",
@@ -49,7 +49,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "id . id . id",
-        end: "h u m a n . b i r t h d a t e . y e a r",
+        end: "human . birthdate . year",
       },
       {
         start: "mae",
@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "id [ pe ]",
-        end: 'id [ " l u v " ]',
+        end: 'id [ " luv " ]',
       },
       {
         start: "mae",
