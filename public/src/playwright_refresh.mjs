@@ -1,17 +1,13 @@
 export async function playwright_refresh(page) {
   const context = page.context();
   await context.clearCookies();
-  let v = page.url();
-  await page.goto(v, {
+  function lambda() {
+    localStorage.clear();
+    sessionStorage.clear();
+  }
+  await page.evaluate(lambda);
+  await page.reload({
     waitUntil: "domcontentloaded",
     timeout: 15000,
   });
-  function lambda() {
-    try {
-      localStorage.clear();
-      sessionStorage.clear();
-    } catch {}
-  }
-  await page.evaluate(lambda);
-  await page.waitForTimeout(300);
 }
