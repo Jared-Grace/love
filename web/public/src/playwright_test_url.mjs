@@ -9,7 +9,7 @@ export async function playwright_test_url(url, lambda) {
   }
   let awaited = await global_function_async(playwright_test_url, lambda3);
   try {
-    const page = await browser.newPage();
+    const page = await awaited.newPage();
     await page.goto(url);
     await lambda(page);
   } finally {
