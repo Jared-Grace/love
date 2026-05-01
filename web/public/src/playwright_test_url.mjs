@@ -1,5 +1,8 @@
+import { global_function_async } from "../../../love/public/src/global_function_async.mjs";
 import { chromium } from "playwright";
 export async function playwright_test_url(url, lambda) {
+  async function lambda3() {}
+  let awaited = await global_function_async(fn, lambda3);
   const browser = await chromium.launch({
     headless: false,
   });
