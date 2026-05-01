@@ -47,7 +47,7 @@ export function app_replace_rule_set_strings_simple() {
       },
       {
         start: '" ida ida ida "',
-        end: '" luv "',
+        end: '" l u v "',
       },
       {
         start: "st",
