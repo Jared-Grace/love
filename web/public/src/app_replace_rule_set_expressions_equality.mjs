@@ -69,7 +69,7 @@ export function app_replace_rule_set_expressions_equality() {
         end: "( 2 - 1 ) === 1",
       },
     ],
-    why: "The replacement rules define a grammar for parsing and evaluating equality between expressions, particularly focusing on arithmetic, member access, function calls, and literal values, demonstrating how complex expressions can be reduced and compared for equality using '==='.",
+    why: "The replacement rules define a grammar for parsing and evaluating equality expressions in a programming language, demonstrating how complex expressions (including literals, identifiers, arithmetic, member access, and function calls) can be reduced and compared for equality using '==='; this is shown by the stepwise reduction of expressions to their simplest forms in the goals.",
   };
   return r;
 }
