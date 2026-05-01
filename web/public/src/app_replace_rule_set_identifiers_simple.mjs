@@ -31,7 +31,7 @@ export function app_replace_rule_set_identifiers_simple() {
       },
       {
         start: "idf ida ida",
-        end: "l u v",
+        end: "luv",
       },
       {
         start: "id",
