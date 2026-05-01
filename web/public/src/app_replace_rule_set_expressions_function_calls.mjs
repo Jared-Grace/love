@@ -85,7 +85,7 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "love ( all ( ) )",
       },
     ],
-    why: "These replacement rules define a grammar for parsing function calls and member access expressions, including identifiers, literals, numbers, strings, booleans, and nested function calls, demonstrating how complex expressions and function invocations are constructed from simpler components.",
+    why: "The replacement rules define a grammar for parsing function call expressions, member access, and literals (numbers, strings, booleans, null) in a programming language, demonstrating how identifiers, literals, and expressions can be composed into nested function calls and property accesses.",
   };
   return r;
 }
