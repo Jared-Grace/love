@@ -8,5 +8,8 @@ export async function playwright_refresh(page) {
     } catch {}
   }
   await page.evaluate(lambda);
-  await page.reload();
+  await page.reload({
+    waitUntil: "domcontentloaded",
+    timeout: 15000,
+  });
 }
