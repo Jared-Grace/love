@@ -95,7 +95,7 @@ export function app_replace_rule_set_function_declarations() {
           " average ( x , y ) { let sum = add ( x , y ) ; return sum / 2 ; }",
       },
     ],
-    why: "The replacement rules define a context-free grammar for JavaScript-like function declarations, including variable declarations, statements, blocks, control flow, and expressions, demonstrating how to construct valid function definitions and bodies from basic language constructs.",
+    why: "The replacement rules define a context-free grammar for JavaScript-like function declarations, including variable declarations, statements, blocks, control flow, and expressions, demonstrating how to construct valid function definitions and bodies. This is evident from the presence of rules for 'function', parameter lists, variable declarations (let, const, var), statements (return, if, while, for), and arithmetic expressions, as well as the provided example goals that match typical JavaScript function syntax.",
   };
   return r;
 }
