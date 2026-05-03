@@ -6,6 +6,6 @@ export async function app_shared_url_suffix_hash(app_fn, hash) {
   let hash_url = hash_to_url(hash);
   let r = await app_shared_name_search_info_fn(app_fn);
   let a_name = property_get(r, "a_name");
-  let file_name = file_name_html(name);
+  let file_name = file_name_html(a_name);
   return suffix;
 }
