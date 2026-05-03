@@ -15,7 +15,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
     "in > 1",
     "in > 2",
     "li > st",
-    'st > " luv "',
+    'st > "luv"',
     "li > " + js_keyword_null(),
     "li > bo",
   ];
