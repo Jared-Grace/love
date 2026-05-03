@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { server_url } from "../../../love/public/src/server_url.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
 import { app_karate_main_title } from "../../../karate_code/public/src/app_karate_main_title.mjs";
@@ -8,7 +8,7 @@ import { playwright_by_attribute } from "../../../love/public/src/playwright_by_
 import { playwright_by_attribute_type } from "../../../love/public/src/playwright_by_attribute_type.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 export async function karate_tests() {
-  let url_prefix = error();
+  let url_prefix = server_url();
   await playwright_test_app_dev(url_prefix, app_karate, lambda);
   async function lambda(page) {
     const title_actual = await page.title();
