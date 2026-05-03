@@ -45,7 +45,7 @@ export function app_replace_rule_set_expressions_unary() {
         end: "- ( - 1 )",
       },
     ],
-    why: "The replacement rules define a grammar for parsing unary expressions, including identifiers, literals (numbers, strings, booleans, null), member access, function calls, and unary operators like !, -, +, and typeof, demonstrating how complex expressions are built from simpler components.",
+    why: "These replacement rules define a grammar for parsing unary expressions, primary expressions, literals, member access, and function calls, similar to the syntax found in JavaScript or similar languages, demonstrating how identifiers, literals, and unary operators combine to form valid expressions.",
   };
   return r;
 }
