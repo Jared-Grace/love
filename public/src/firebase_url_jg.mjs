@@ -4,6 +4,6 @@ import { firebase_project_name_jg } from "../../../love/public/src/firebase_proj
 export function firebase_url_jg() {
   let project_id = firebase_project_name_jg();
   let r2 = https_prefix();
-  let combined = text_combine_multiple([r2, project_id, "web.app"]);
+  let combined = text_combine_multiple([r2, project_id, ".web.app"]);
   return combined;
 }
