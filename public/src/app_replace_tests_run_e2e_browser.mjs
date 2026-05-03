@@ -7,5 +7,5 @@ export async function app_replace_tests_run_e2e_browser(rule_set, goal, inner) {
     await app_replace_tests_run_e2e_goal(page, goal, rule_set, inner);
   }
   let url_prefix = error();
-  await playwright_test_app_dev(app_replace, lambda, url_prefix);
+  await playwright_test_app_dev(url_prefix, app_replace, lambda);
 }
