@@ -54,7 +54,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
       },
       {
         start: "nu mo ( nu mo nu )",
-        end: "3 . 1 4 / ( 2 * 2 )",
+        end: "3.14 / ( 2 * 2 )",
       },
     ],
     why: "The replacement rules define a context-free grammar for parsing multiplicative expressions (including literals, identifiers, member access, function calls, and unary/multiplicative operators), demonstrating how complex expressions are constructed from simpler components in a programming language-like syntax.",
