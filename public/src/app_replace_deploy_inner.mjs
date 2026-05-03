@@ -9,7 +9,7 @@ export async function app_replace_deploy_inner() {
   "there is a potential rename, so these functions are ran after";
   await app_replace_rule_sets_why_generate();
   let url_prefix = server_url();
-  let url = await app_replace_url_suffix_dev_hash();
+  let url_suffix = await app_replace_url_suffix_dev_hash();
   await app_replace_tests_run(url_prefix);
   await html_update_latest_promote_deploy_app_fn(app_replace);
   await app_replace_tests_run_e2e_deployed();
