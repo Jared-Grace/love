@@ -1,5 +1,4 @@
-import { function_new_if_exists_not } from "../../../love/public/src/function_new_if_exists_not.mjs";
-import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { function_transform_exists_ensure } from "../../../love/public/src/function_transform_exists_ensure.mjs";
 import { js_flo_body_add_return_argument } from "../../../portfolio_qa/public/src/js_flo_body_add_return_argument.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -60,7 +59,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     js_flo_body_add_return_argument(ast, e);
   }
   let f_name2 = fn_name("app_replace_rule_sets_fns_rules_used");
-  await function_new_if_exists_not(f_name2);
-  let output = await function_transform(f_name2, lambda4);
+  await function_transform_exists_ensure(f_name2, lambda4);
   return result;
 }
