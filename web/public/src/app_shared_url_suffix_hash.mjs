@@ -10,6 +10,6 @@ export async function app_shared_url_suffix_hash(app_fn, hash) {
   let a_name = property_get(r, "a_name");
   let file_name = file_name_html(a_name);
   let s = text_slash_forward();
-  let combined = text_combine_multiple([s, file_name, hash_url]);
-  return combined;
+  let url_suffix = text_combine_multiple([s, file_name, hash_url]);
+  return url_suffix;
 }
