@@ -10,7 +10,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
     "pe > ( ex )",
     "li > nu",
     "nu > de",
-    "de > 3 . 1 4",
+    "de > 3.14",
     "nu > in",
     "in > 1",
     "in > 2",
