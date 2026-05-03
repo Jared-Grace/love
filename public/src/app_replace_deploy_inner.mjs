@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { https_prefix } from "../../../love/public/src/https_prefix.mjs";
 import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -13,4 +14,5 @@ export async function app_replace_deploy_inner() {
   await html_update_latest_promote_deploy_app_fn(app_replace);
   let r = firebase_project_name_jg();
   let r2 = https_prefix();
+  let combined = text_combine_multiple(list);
 }
