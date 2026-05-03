@@ -1,5 +1,5 @@
+import { function_param_move_first_curried_right } from "../../../love/public/src/function_param_move_first_curried_right.mjs";
 import { text_split_comma_dot_each_async } from "../../../love/public/src/text_split_comma_dot_each_async.mjs";
-import { function_param_move_first } from "../../../love/public/src/function_param_move_first.mjs";
 import { text_split_comma_size_1_assert } from "../../../love/public/src/text_split_comma_size_1_assert.mjs";
 import { functions_param_new_multiple_error } from "../../../love/public/src/functions_param_new_multiple_error.mjs";
 export async function functions_param_new_multiple_error_first(
@@ -8,7 +8,7 @@ export async function functions_param_new_multiple_error_first(
 ) {
   text_split_comma_size_1_assert(param_name);
   let r = await functions_param_new_multiple_error(f_names_comma, param_name);
-  await function_param_move_first(f_name, param_name);
+  await function_param_move_first_curried_right(param_name);
   await text_split_comma_dot_each_async(f_names_comma, lambda);
   return r;
 }
