@@ -41,7 +41,7 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: '" luv "',
+        end: '"luv"',
       },
       {
         start: "pe",
