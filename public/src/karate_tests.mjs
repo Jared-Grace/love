@@ -1,3 +1,4 @@
+import { app_replace_url_dev } from "../../../love/public/src/app_replace_url_dev.mjs";
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
@@ -9,6 +10,7 @@ import { playwright_by_attribute_type } from "../../../love/public/src/playwrigh
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 export async function karate_tests() {
   let url_prefix = server_url();
+  "TODO: fix url like " + app_replace_url_dev;
   await playwright_test_app_dev(url_prefix, app_karate, lambda);
   async function lambda(page) {
     const title_actual = await page.title();
