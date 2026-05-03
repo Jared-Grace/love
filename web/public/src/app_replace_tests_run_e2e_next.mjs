@@ -1,5 +1,5 @@
+import { playwright_test_url } from "../../../love/public/src/playwright_test_url.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
-import { app_replace_test_e2e } from "../../../love/public/src/app_replace_test_e2e.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
 import { app_replace_tests_run_e2e_goal } from "../../../love/public/src/app_replace_tests_run_e2e_goal.mjs";
@@ -24,5 +24,5 @@ export async function app_replace_tests_run_e2e_next(url_prefix) {
     }
     await each_async(taken, lambda3);
   }
-  await app_replace_test_e2e(url_prefix, on_page);
+  await playwright_test_url(url_prefix, on_page);
 }
