@@ -25,6 +25,5 @@ export async function app_replace_tests_run_e2e_next() {
     }
     await each_async(taken, lambda3);
   }
-  let url_prefix = error();
   await app_replace_test_e2e(url_prefix, on_page);
 }
