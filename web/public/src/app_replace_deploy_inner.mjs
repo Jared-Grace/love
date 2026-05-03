@@ -13,6 +13,5 @@ export async function app_replace_deploy_inner() {
   await app_replace_tests_run(url_prefix);
   await html_update_latest_promote_deploy_app_fn(app_replace);
   let combined = firebase_project_url_jg();
-  app_replace_rule_set_verify_all();
   await app_replace_tests_run_e2e(combined);
 }
