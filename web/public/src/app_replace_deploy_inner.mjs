@@ -1,3 +1,4 @@
+import { https_prefix } from "../../../love/public/src/https_prefix.mjs";
 import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { html_update_latest_promote_deploy_app_fn } from "../../../love/public/src/html_update_latest_promote_deploy_app_fn.mjs";
@@ -11,4 +12,5 @@ export async function app_replace_deploy_inner() {
   await app_replace_tests_run(url_prefix);
   await html_update_latest_promote_deploy_app_fn(app_replace);
   let r = firebase_project_name_jg();
+  let r2 = https_prefix();
 }
