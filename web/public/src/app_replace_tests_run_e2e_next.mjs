@@ -24,5 +24,5 @@ export async function app_replace_tests_run_e2e_next() {
     }
     await each_async(taken, lambda3);
   }
-  await app_replace_test_e2e(on_page);
+  await app_replace_test_e2e(error(), on_page);
 }
