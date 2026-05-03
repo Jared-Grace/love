@@ -7,6 +7,6 @@ export async function app_replace_tests_run_e2e_both() {
     app_replace_tests_run_e2e_normal_fn,
     app_replace_tests_run_e2e_hinted_fn,
   ];
-  let e2e_inner_fns2 = error();
-  await app_replace_tests_run_e2e_all(e2e_inner_fns, e2e_inner_fns2);
+  let url_prefix = error();
+  await app_replace_tests_run_e2e_all(url_prefix, e2e_inner_fns);
 }
