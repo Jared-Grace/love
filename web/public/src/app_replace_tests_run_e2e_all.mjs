@@ -10,7 +10,7 @@ import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { object_merge_multiple } from "../../../love/public/src/object_merge_multiple.mjs";
 import { object_wrap_multiple } from "../../../love/public/src/object_wrap_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
+export async function app_replace_tests_run_e2e_all(e2e_inner_fns, url_prefix) {
   let rule_sets = app_replace_rule_sets();
   let r = app_replace_rule_set_binary_counting();
   function lambda2(rule_set) {
