@@ -1,0 +1,9 @@
+import { function_param_move_first } from "../../../love/public/src/function_param_move_first.mjs";
+export function function_param_move_first_curried_right(param_name) {
+  let c = async function function_param_move_first_curried_right_result(
+    f_name,
+  ) {
+    return await function_param_move_first(f_name, param_name);
+  };
+  return c;
+}
