@@ -78,7 +78,7 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "1 < ( nu + nu )",
-        end: "1 < ( 2 + 3 . 1 4 )",
+        end: "1 < ( 2 + 3.14 )",
       },
     ],
     why: "The replacement rules define a context-free grammar for parsing arithmetic and relational expressions, demonstrating operator precedence, associativity, and the structure of expressions involving literals, identifiers, function calls, member access, and relational operators like < and >.",
