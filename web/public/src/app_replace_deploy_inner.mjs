@@ -1,6 +1,4 @@
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { https_prefix } from "../../../love/public/src/https_prefix.mjs";
-import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
+import { firebase_url_jg } from "../../../love/public/src/firebase_url_jg.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { html_update_latest_promote_deploy_app_fn } from "../../../love/public/src/html_update_latest_promote_deploy_app_fn.mjs";
 import { app_replace_tests_run } from "../../../love/public/src/app_replace_tests_run.mjs";
@@ -12,8 +10,6 @@ export async function app_replace_deploy_inner() {
   let url_prefix = server_url();
   await app_replace_tests_run(url_prefix);
   await html_update_latest_promote_deploy_app_fn(app_replace);
-  let project_id = firebase_project_name_jg();
-  let r2 = https_prefix();
-  let combined = text_combine_multiple([r2, project_id, "web.app"]);
+  let combined = firebase_url_jg();
   await app_replace_tests_run(combined);
 }
