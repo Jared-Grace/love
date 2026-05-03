@@ -26,7 +26,7 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "pi . di di",
-        end: "3 . 1 4",
+        end: "3.14",
       },
       {
         start: "de",
