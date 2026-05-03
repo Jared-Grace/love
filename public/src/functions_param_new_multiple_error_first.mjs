@@ -3,5 +3,6 @@ export async function functions_param_new_multiple_error_first(
   f_names_comma,
   param_names,
 ) {
-  return await functions_param_new_multiple_error(f_names_comma, param_names);
+  let r = await functions_param_new_multiple_error(f_names_comma, param_names);
+  return r;
 }
