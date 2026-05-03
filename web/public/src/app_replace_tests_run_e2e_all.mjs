@@ -43,8 +43,8 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
       }
       await list_empty_not_is_while_async(remaining, while_non_empty);
     }
-    let on_page2 = error();
-    await app_replace_test_e2e(on_page, on_page2);
+    let url_prefix = error();
+    await app_replace_test_e2e(url_prefix, on_page);
   }
   await each_range_unordered_async(parallel_count, lambda);
 }
