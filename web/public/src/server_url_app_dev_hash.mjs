@@ -1,4 +1,3 @@
-import { server_url } from "../../../love/public/src/server_url.mjs";
 import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -12,6 +11,6 @@ export async function server_url_app_dev_hash(app_fn, hash) {
   let f_path_dev = property_get(r, "f_path_dev");
   let previous = folder_previous();
   let together = text_prefix_without(f_path_dev, previous);
-  const url = server_url() + together + "" + url2;
-  return url;
+  const suffix = together + "" + url2;
+  return suffix;
 }
