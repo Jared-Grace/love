@@ -4,5 +4,5 @@ import { app_replace_tests_run_e2e_next } from "../../../love/public/src/app_rep
 export async function app_replace_tests_run_e2e() {
   let url_prefix = error();
   await app_replace_tests_run_e2e_next(url_prefix);
-  await app_replace_tests_run_e2e_both();
+  await app_replace_tests_run_e2e_both(error());
 }
