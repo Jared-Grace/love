@@ -9,7 +9,7 @@ import { playwright_by_attribute_type } from "../../../love/public/src/playwrigh
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 export async function karate_tests() {
   let url_prefix = error();
-  await playwright_test_app_dev(app_karate, lambda, url_prefix);
+  await playwright_test_app_dev(url_prefix, app_karate, lambda);
   async function lambda(page) {
     const title_actual = await page.title();
     const title = app_karate_main_title();
