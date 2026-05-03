@@ -14,5 +14,5 @@ export async function app_replace_deploy_inner() {
   await html_update_latest_promote_deploy_app_fn(app_replace);
   let r = firebase_project_name_jg();
   let r2 = https_prefix();
-  let combined = text_combine_multiple(list);
+  let combined = text_combine_multiple([r2, r, "web.app"]);
 }
