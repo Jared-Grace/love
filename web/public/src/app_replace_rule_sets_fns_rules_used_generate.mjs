@@ -1,3 +1,4 @@
+import { js_flo_body_empty } from "../../../love/public/src/js_flo_body_empty.mjs";
 import { function_transform_exists_ensure } from "../../../love/public/src/function_transform_exists_ensure.mjs";
 import { js_flo_body_add_return_argument } from "../../../portfolio_qa/public/src/js_flo_body_add_return_argument.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
@@ -56,6 +57,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   let result = await object_adder_async(lambda3);
   let e = js_object_to_expression(result);
   function lambda4(ast) {
+    let body_block = js_flo_body_empty(ast2);
     js_flo_body_add_return_argument(ast, e);
   }
   let f_name2 = fn_name("app_replace_rule_sets_fns_rules_used");
