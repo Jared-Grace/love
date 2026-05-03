@@ -1,3 +1,4 @@
+import { https_prefix } from "../../../love/public/src/https_prefix.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -51,7 +52,8 @@ export async function http_generic(url, options) {
   if (sleep) {
     await http_sleep();
   }
-  let swHttps = text_starts_with(url, "https://");
+  let prefix = https_prefix();
+  let swHttps = text_starts_with(url, prefix);
   let h_name = ternary(swHttps, "s", "");
   let h = await import("http" + h_name);
   let buffer = await promise_wrap(lambda);
