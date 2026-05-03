@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_test_e2e } from "../../../love/public/src/app_replace_test_e2e.mjs";
 import { app_replace_rule_set_binary_counting } from "../../../love/public/src/app_replace_rule_set_binary_counting.mjs";
@@ -43,7 +42,6 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
       }
       await list_empty_not_is_while_async(remaining, while_non_empty);
     }
-    let url_prefix = error();
     await app_replace_test_e2e(url_prefix, on_page);
   }
   await each_range_unordered_async(parallel_count, lambda);
