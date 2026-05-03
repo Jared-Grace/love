@@ -30,7 +30,7 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "nu ao nu",
-        end: "3 . 1 4 + 2",
+        end: "3.14 + 2",
       },
       {
         start: "nu ao ce",
