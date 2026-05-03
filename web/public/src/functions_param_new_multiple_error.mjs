@@ -4,9 +4,10 @@ export async function functions_param_new_multiple_error(
   param_names,
   default_value,
 ) {
-  return await functions_param_new_multiple(
+  let r = await functions_param_new_multiple(
     f_names_comma,
     param_names,
     default_value,
   );
+  return r;
 }
