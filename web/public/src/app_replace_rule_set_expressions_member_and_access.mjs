@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "id [ pe ]",
-        end: 'id [ " luv " ]',
+        end: 'id [ "luv" ]',
       },
       {
         start: "mae",
