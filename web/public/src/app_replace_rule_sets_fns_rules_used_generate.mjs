@@ -60,7 +60,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     js_flo_body_add_return_argument(ast, e);
   }
   let f_name2 = fn_name("app_replace_rule_sets_fns_rules_used");
-  await function_new(f_name3);
+  await function_new(f_name2);
   let output = await function_transform(f_name2, lambda4);
   return result;
 }
