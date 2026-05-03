@@ -1,5 +1,5 @@
 export function app_replace_rule_sets_fns_rules_used() {
-  return {
+  let r = {
     "Binary Counting Prepare 1": [
       [
         {
@@ -8143,4 +8143,5 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
     ],
   };
+  return r;
 }
