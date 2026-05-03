@@ -50,7 +50,7 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "nu > nu",
-        end: "1 > 3 . 1 4",
+        end: "1 > 3.14",
       },
       {
         start: "mae < mae",
