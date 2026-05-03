@@ -1,7 +1,5 @@
 import { js_flo_body_empty_return } from "../../../love/public/src/js_flo_body_empty_return.mjs";
-import { js_flo_body_empty } from "../../../love/public/src/js_flo_body_empty.mjs";
 import { function_transform_exists_ensure } from "../../../love/public/src/function_transform_exists_ensure.mjs";
-import { js_flo_body_add_return_argument } from "../../../portfolio_qa/public/src/js_flo_body_add_return_argument.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { functions_asts_list } from "../../../love/public/src/functions_asts_list.mjs";
@@ -58,9 +56,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   let result = await object_adder_async(lambda3);
   let e = js_object_to_expression(result);
   function lambda4(ast) {
-    let body_block = js_flo_body_empty(ast);
-    js_flo_body_empty_return(ast2, expression2);
-    js_flo_body_add_return_argument(ast, e);
+    js_flo_body_empty_return(ast, e);
   }
   let f_name2 = fn_name("app_replace_rule_sets_fns_rules_used");
   await function_transform_exists_ensure(f_name2, lambda4);
