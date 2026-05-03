@@ -8,7 +8,7 @@ export async function functions_param_new_multiple_error_first(
 ) {
   text_split_comma_size_1_assert(param_name);
   let r = await functions_param_new_multiple_error(f_names_comma, param_name);
-  await function_param_move_first_curried_right(param_name);
+  let lambda = function_param_move_first_curried_right(param_name);
   await text_split_comma_dot_each_async(f_names_comma, lambda);
   return r;
 }
