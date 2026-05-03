@@ -1,6 +1,5 @@
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_flo_body_add_return_argument } from "../../../portfolio_qa/public/src/js_flo_body_add_return_argument.mjs";
-import { function_transform_fn } from "../../../love/public/src/function_transform_fn.mjs";
-import { app_replace_rule_sets_fns_rules_used } from "../../../love/public/src/app_replace_rule_sets_fns_rules_used.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { functions_asts_list } from "../../../love/public/src/functions_asts_list.mjs";
@@ -18,6 +17,7 @@ import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_re
 import { function_run_args_none } from "../../../love/public/src/function_run_args_none.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
   async function lambda3(oad) {
     async function lambda(a) {
@@ -58,9 +58,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   function lambda4(ast) {
     js_flo_body_add_return_argument(ast, e);
   }
-  let output = await function_transform_fn(
-    app_replace_rule_sets_fns_rules_used,
-    lambda4,
-  );
+  let f_name2 = fn_name("app_replace_rule_sets_fns_rules_used");
+  let output = await function_transform(f_name2, lambda4);
   return result;
 }
