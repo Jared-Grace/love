@@ -437,7 +437,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Work",
       response:
         emoji_pray() +
-        " Through the grace of God: Recently, I have only been doing ministry work. I have been preaching at different churches. I have also made Bible singing videos. ",
+        " Through the grace of God: Recently, I have only been doing ministry work. I have been preaching at different churches. I have also made Bible singing videos: https://www.youtube.com/@CHRISTrosetolifesinging Also, I have been doing some computer programming.",
     },
   ];
   return v;
