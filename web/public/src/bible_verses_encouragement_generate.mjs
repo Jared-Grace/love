@@ -16,7 +16,8 @@ import { text_split_newline } from "../../../love/public/src/text_split_newline.
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function bible_verses_encouragement_generate() {
-  let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
+  const input = "bible_references.hopenation.org.txt";
+  let file_path = folder_user_docs_path(input);
   let contents = await file_read(file_path);
   let split = text_split_newline(contents);
   let fns = [
