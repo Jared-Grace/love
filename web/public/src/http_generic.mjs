@@ -1,4 +1,4 @@
-import { https_prefix } from "../../../love/public/src/https_prefix.mjs";
+import { text_starts_with_https_prefix } from "../../../love/public/src/text_starts_with_https_prefix.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -8,7 +8,6 @@ import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
 import { catch_call_later } from "../../../love/public/src/catch_call_later.mjs";
 import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
-import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { error } from "../../../love/public/src/error.mjs";
@@ -52,8 +51,7 @@ export async function http_generic(url, options) {
   if (sleep) {
     await http_sleep();
   }
-  let prefix = https_prefix();
-  let swHttps = text_starts_with(url, prefix);
+  let swHttps = text_starts_with_https_prefix(url);
   let h_name = ternary(swHttps, "s", "");
   let h = await import("http" + h_name);
   let buffer = await promise_wrap(lambda);
