@@ -10,6 +10,9 @@ export async function app_calendar_urls() {
     filtered2,
     "https://www.facebook.com/profile.php?id=",
   );
-  let mapped2 = list_map_prefix_without_try(list, prefix);
-  return mapped;
+  let mapped2 = list_map_prefix_without_try(
+    mapped,
+    "https://www.facebook.com/",
+  );
+  return mapped2;
 }
