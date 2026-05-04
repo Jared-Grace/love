@@ -1,4 +1,4 @@
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
+import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -61,5 +61,5 @@ export async function app_calendar_main(context) {
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
   let json = json_format_to(contacts);
-  let p2 = html_p_text(root2, text);
+  let pre = html_pre_text(root2, text);
 }
