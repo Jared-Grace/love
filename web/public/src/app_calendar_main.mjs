@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
@@ -58,4 +59,5 @@ export async function app_calendar_main(context) {
     });
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
+  let json = json_to(object);
 }
