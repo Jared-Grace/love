@@ -5,8 +5,6 @@ import { folder_user_docs_read_lines } from "../../../love/public/src/folder_use
 export async function app_calendar_urls() {
   let split = await folder_user_docs_read_lines("preaching_ask.txt");
   let filtered = list_filter_empty_not_is(split);
-  function lambda(item) {}
-  let filtered2 = list_filter(list, lambda);
-  let p = https_prefix();
-  return filtered;
+  let filtered2 = list_filter(filtered, text_starts_with_https_prefix);
+  return filtered2;
 }
