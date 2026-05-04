@@ -13,9 +13,10 @@ import { whitespace_normalize } from "../../../love/public/src/whitespace_normal
 import { text_starts_with_space } from "../../../love/public/src/text_starts_with_space.mjs";
 import { text_starts_with_dot } from "../../../love/public/src/text_starts_with_dot.mjs";
 import { text_starts_with_digit } from "../../../love/public/src/text_starts_with_digit.mjs";
-export async function bible_verses_encouragement_generate() {$a
-  const file_name = "bible_references.hopenation.org.txt";
-  let split = await folder_user_docs_read_lines(file_name);
+export async function bible_verses_encouragement_generate() {
+  let split = await folder_user_docs_read_lines(
+    "bible_references.hopenation.org.txt",
+  );
   let fns = [
     text_starts_with_digit,
     text_starts_with_dot,
