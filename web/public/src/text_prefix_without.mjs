@@ -5,7 +5,7 @@ export function text_prefix_without(t, prefix) {
   let a = text_starts_with(t, prefix);
   function lambda() {
     let r = {
-      s: t,
+      t,
       prefix,
     };
     return r;
