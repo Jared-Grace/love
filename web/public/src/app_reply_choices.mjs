@@ -433,6 +433,12 @@ export function app_reply_choices() {
         emoji_pray() +
         " Behold, I am an unworthy servant of the LORD. May the word of the LORD come true!",
     },
+    {
+      text: emoji_pray() + " Work",
+      response:
+        emoji_pray() +
+        " Through the grace of God: Recently, I have only been doing ministry work. I have been preaching at different churches. I have also made Bible singing videos. ",
+    },
   ];
   return v;
 }
