@@ -132,6 +132,12 @@ export function app_reply_choices() {
         emoji_pray() + text_lord_bless_your() + "family " + emoji_family(),
     },
     {
+      text: emoji_pray() + " Friends",
+      response:
+        emoji_pray() +
+        'Every friend of Jesus is a friend of mine! Jesus says: "You are My friends if you do what I command you." (John 15:14)',
+    },
+    {
       text: emoji_pray() + " Future",
       response:
         emoji_pray() +
