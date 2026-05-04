@@ -15,8 +15,8 @@ import { text_starts_with_dot } from "../../../love/public/src/text_starts_with_
 import { text_starts_with_digit } from "../../../love/public/src/text_starts_with_digit.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 export async function bible_verses_encouragement_generate() {
-  const input = "bible_references.hopenation.org.txt";
-  let contents = await folder_user_docs_read(input);
+  const file_name = "bible_references.hopenation.org.txt";
+  let contents = await folder_user_docs_read(file_name);
   let split = text_split_newline(contents);
   let fns = [
     text_starts_with_digit,
