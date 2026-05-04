@@ -61,5 +61,5 @@ export async function app_calendar_main(context) {
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
   let json = json_format_to(contacts);
-  let pre = html_pre_text(root2, text);
+  let pre = html_pre_text(root, json);
 }
