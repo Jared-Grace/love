@@ -59,5 +59,6 @@ export async function app_calendar_main(context) {
     });
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
-  let json = json_to(object);
+  jft;
+  let json = json_to(contacts);
 }
