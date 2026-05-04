@@ -1,4 +1,4 @@
-import { folder_user_docs_read } from "../../../love/public/src/folder_user_docs_read.mjs";
+import { folder_user_docs_read_lines } from "../../../love/public/src/folder_user_docs_read_lines.mjs";
 import { function_list_generate } from "../../../love/public/src/function_list_generate.mjs";
 import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -13,11 +13,9 @@ import { whitespace_normalize } from "../../../love/public/src/whitespace_normal
 import { text_starts_with_space } from "../../../love/public/src/text_starts_with_space.mjs";
 import { text_starts_with_dot } from "../../../love/public/src/text_starts_with_dot.mjs";
 import { text_starts_with_digit } from "../../../love/public/src/text_starts_with_digit.mjs";
-import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 export async function bible_verses_encouragement_generate() {
   const file_name = "bible_references.hopenation.org.txt";
-  let contents = await folder_user_docs_read(file_name);
-  let split = text_split_newline(contents);
+  let split = await folder_user_docs_read_lines(file_name);
   let fns = [
     text_starts_with_digit,
     text_starts_with_dot,
