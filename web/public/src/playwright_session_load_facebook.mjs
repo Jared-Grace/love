@@ -22,8 +22,8 @@ export async function playwright_session_load_facebook() {
   let name = path_name(file_path);
   let extension = path_extension(file_path);
   let now_file = date_now_file();
-  let combined = text_combine_multiple(list);
-  let file_path_new = text_combine(left, now_file);
+  let combined = text_combine_multiple([left, "backup", now_file, extension]);
+  let file_path_new = text_combine();
   await file_copy(file_path, file_path_new);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
