@@ -17,7 +17,7 @@ import { playwright_session_save_facebook_name } from "../../../love/public/src/
 export async function playwright_session_load_facebook() {
   let url_ids_all = await app_calendar_url_ids();
   let file_path = folder_user_docs_path("preaching_ask.lookup.json");
-  let name = path_name(file_path2);
+  let name = path_name(file_path);
   let now_file = date_now_file();
   let file_path_new = text_combine(left, now_file);
   await file_copy(file_path, file_path_new);
