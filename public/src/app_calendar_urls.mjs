@@ -14,7 +14,7 @@ export async function app_calendar_urls() {
   function lambda(item) {
     filtered2 = list_map_prefix_without_try(filtered2, item);
   }
-  each(list, lambda);
+  each(prefixes, lambda);
   let mapped3 = list_map_suffix_without_try(mapped2, "#");
   return mapped3;
 }
