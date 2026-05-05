@@ -7,6 +7,6 @@ export function text_suffix_without(t, suffix) {
   if (not(a)) {
     error();
   }
-  const without = text_suffix_without_inner(suffix, t);
+  const without = text_suffix_without_inner(t, suffix);
   return without;
 }
