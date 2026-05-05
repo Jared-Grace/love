@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { file_copy } from "../../../love/public/src/file_copy.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -14,6 +15,7 @@ import { playwright_session_save_facebook_name } from "../../../love/public/src/
 export async function playwright_session_load_facebook() {
   let url_ids_all = await app_calendar_url_ids();
   let file_path = folder_user_docs_path("preaching_ask.lookup.json");
+  let combined = text_combine(left, right);
   await file_copy(file_path, file_path_new);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
