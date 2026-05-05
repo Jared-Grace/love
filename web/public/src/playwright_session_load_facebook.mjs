@@ -3,7 +3,6 @@ import { command_line_read } from "../../../love/public/src/command_line_read.mj
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -28,7 +27,6 @@ export async function playwright_session_load_facebook() {
     let without = text_prefix_without(url, prefix);
     property_set_exists_not(lookup, url_id, without);
     await file_overwrite_json(file_path, lookup);
-    console.log(url);
   }
   await each_async(url_ids, lambda);
   let answer = await command_line_read("Press enter close the browser");
