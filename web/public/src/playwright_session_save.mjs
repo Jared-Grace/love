@@ -1,11 +1,8 @@
-import { playwright_chromium } from "../../../love/public/src/playwright_chromium.mjs";
+import { playwright_chromium_visible } from "../../../love/public/src/playwright_chromium_visible.mjs";
 import { command_line_read } from "../../../love/public/src/command_line_read.mjs";
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
 export async function playwright_session_save(url, session_name) {
-  let chromium = await playwright_chromium();
-  const browser = await chromium.launch({
-    headless: false,
-  });
+  const browser = await playwright_chromium_visible();
   const context = await browser.newContext();
   const page = await context.newPage();
   await page.goto(url);
