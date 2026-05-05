@@ -1,4 +1,4 @@
-import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
+import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { command_line_read } from "../../../love/public/src/command_line_read.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
@@ -29,7 +29,7 @@ export async function playwright_session_load_facebook() {
     property_set_exists_not(lookup, url_id, {
       conversation_id: without,
     });
-    await file_overwrite(file_path2, contents);
+    await file_overwrite_json(file_path, contents);
     console.log(url);
   }
   await each_async(url_ids, lambda);
