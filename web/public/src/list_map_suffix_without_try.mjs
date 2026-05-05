@@ -1,7 +1,8 @@
+import { text_suffix_without_try } from "../../../love/public/src/text_suffix_without_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export function list_map_suffix_without_try(list, prefix) {
   function lambda(item) {
-    let result = text_suffix_without_try1(item, prefix);
+    let result = text_suffix_without_try(item, prefix);
     return result;
   }
   let mapped = list_map(list, lambda);
