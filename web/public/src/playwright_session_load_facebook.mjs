@@ -20,7 +20,7 @@ export async function playwright_session_load_facebook() {
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
     let prefix = "https://www.messenger.com/e2ee/t/";
-    let without = text_prefix_without(t, prefix2);
+    let without = text_prefix_without(url, prefix);
     console.log(url);
   }
   await each_async(url_ids, lambda);
