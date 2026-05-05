@@ -1,4 +1,3 @@
-import { file_backup } from "../../../love/public/src/file_backup.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -14,9 +13,7 @@ import { playwright_session_save_facebook_name } from "../../../love/public/src/
 export async function playwright_session_load_facebook() {
   let url_ids_all = await app_calendar_url_ids();
   const file_name = "preaching_ask.lookup.json";
-  let file_path2 = folder_user_docs_path(file_name);
-  await file_backup(file_path2);
-  let file_path = file_path2;
+  let file_path = folder_user_docs_path(file_name);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
