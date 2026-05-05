@@ -29,7 +29,7 @@ export async function playwright_session_load_facebook() {
     property_set_exists_not(lookup, url_id, {
       conversation_id: without,
     });
-    await file_overwrite_json(file_path, contents);
+    await file_overwrite_json(file_path, lookup);
     console.log(url);
   }
   await each_async(url_ids, lambda);
