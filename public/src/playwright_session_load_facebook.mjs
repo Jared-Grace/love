@@ -1,3 +1,4 @@
+import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { playwright_session_save_prompt } from "../../../love/public/src/playwright_session_save_prompt.mjs";
@@ -12,6 +13,7 @@ export async function playwright_session_load_facebook() {
   let context = property_get(r, "context");
   let page = property_get(r, "page");
   async function lambda(url_id) {
+    await http_sleep();
     await page.goto("https://www.m.me/" + url_id);
   }
   await each_async(url_ids, lambda);
