@@ -3,8 +3,8 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
 export async function playwright_session_save(url, session_name) {
-  const r2 = await import_install("playwright");
-  let chromium = property_get(r2, "chromium");
+  const r = await import_install("playwright");
+  let chromium = property_get(r, "chromium");
   const browser = await chromium.launch({
     headless: false,
   });
