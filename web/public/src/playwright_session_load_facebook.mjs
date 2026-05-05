@@ -12,7 +12,8 @@ export async function playwright_session_load_facebook() {
   let context = property_get(r, "context");
   let page = property_get(r, "page");
   async function lambda(url_id) {
-  await page.goto("https://www.m.me/" + url_id);}
+    await page.goto("https://www.m.me/" + url_id);
+  }
   await each_async(url_ids, lambda);
   return;
   await playwright_session_save_prompt(session_name, context, browser);
