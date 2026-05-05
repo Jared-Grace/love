@@ -1,3 +1,4 @@
+import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
@@ -10,7 +11,7 @@ import { playwright_session_save_facebook_name } from "../../../love/public/src/
 export async function playwright_session_load_facebook() {
   let url_ids = await app_calendar_url_ids();
   let file_path = folder_user_docs_path("preaching_ask.lookup.json");
-  fjr;
+  let data = await file_read_json(file_path2);
   let lookup = {};
   const session_name = playwright_session_save_facebook_name();
   const r = await playwright_session_load(session_name);
