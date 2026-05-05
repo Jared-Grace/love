@@ -13,7 +13,7 @@ export async function playwright_session_save(url, session_name) {
   const context = await browser.newContext();
   const page = await context.newPage();
   await page.goto(url);
-  let answer = await command_line_read(prompt);
+  let answer = await command_line_read("prompt");
   let path = folder_secret_join_json(session_name);
   await context.storageState({
     path,
