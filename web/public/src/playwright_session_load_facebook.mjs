@@ -22,6 +22,7 @@ export async function playwright_session_load_facebook() {
   let p = path_without_extension(file_path);
   let extension = path_extension(file_path);
   let now_file = date_now_file();
+  ljd;
   let combined = text_combine_multiple([left, "backup", now_file, extension]);
   let file_path_new = text_combine();
   await file_copy(file_path, file_path_new);
