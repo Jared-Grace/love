@@ -12,7 +12,8 @@ export async function playwright_session_save() {
     let r = process.stdin.once("data", resolve);
     return r;
   });
-  let path = folder_secret_join_json("fb-session");
+  const session_name = "fb-session";
+  let path = folder_secret_join_json(session_name);
   await context.storageState({
     path,
   });
