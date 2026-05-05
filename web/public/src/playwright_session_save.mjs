@@ -1,3 +1,4 @@
+import { folder_secret_join } from "../../../love/public/src/folder_secret_join.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function playwright_session_save() {
   const browser = await chromium.launch({
@@ -11,6 +12,7 @@ export async function playwright_session_save() {
     let r = process.stdin.once("data", resolve);
     return r;
   });
+  let file_path = folder_secret_join(only);
   await context.storageState({
     path: "fb-session.json",
   });
