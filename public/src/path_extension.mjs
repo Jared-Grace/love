@@ -7,6 +7,6 @@ export function path_extension(path) {
     let r = "";
     return r;
   }
-  let r2 = path.slice(lastDot);
-  return r2;
+  let extension = path.slice(lastDot);
+  return extension;
 }
