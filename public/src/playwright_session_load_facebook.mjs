@@ -11,8 +11,8 @@ export async function playwright_session_load_facebook() {
   let browser = property_get(r, "browser");
   let context = property_get(r, "context");
   let page = property_get(r, "page");
-  async function lambda(item) {}
-  await each_async(list, lambda);
+  async function lambda(url_id) {}
+  await each_async(url_ids, lambda);
   await page.goto("https://www.m.me/" + first);
   return;
   await playwright_session_save_prompt(session_name, context, browser);
