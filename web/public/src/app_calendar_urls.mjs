@@ -10,7 +10,9 @@ export async function app_calendar_urls() {
   let filtered2 = list_filter_starts_with_https_prefix(filtered);
   const p1 = "https://www.facebook.com/profile.php?id=";
   const p2 = "https://www.facebook.com/";
-  function lambda(item) {}
+  function lambda(item) {
+    filtered2 = list_map_prefix_without_try(filtered2, item);
+  }
   each(list, lambda);
   let mapped = list_map_prefix_without_try(filtered2, p1);
   let mapped2 = list_map_prefix_without_try(mapped, p2);
