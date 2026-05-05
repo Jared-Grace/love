@@ -1,3 +1,4 @@
+import { list_map_suffix_without_try } from "../../../love/public/src/list_map_suffix_without_try.mjs";
 import { list_map_prefix_without_try } from "../../../love/public/src/list_map_prefix_without_try.mjs";
 import { list_filter_starts_with_https_prefix } from "../../../love/public/src/list_filter_starts_with_https_prefix.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
@@ -14,5 +15,6 @@ export async function app_calendar_urls() {
     mapped,
     "https://www.facebook.com/",
   );
+  let mapped3 = list_map_suffix_without_try(list, prefix);
   return mapped2;
 }
