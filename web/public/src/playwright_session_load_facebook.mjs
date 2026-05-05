@@ -17,7 +17,7 @@ export async function playwright_session_load_facebook() {
   let url_ids_all = await app_calendar_url_ids();
   let file_path = folder_user_docs_path("preaching_ask.lookup.json");
   let now_file = date_now_file();
-  let combined = text_combine(left, right);
+  let file_path_new = text_combine(left, now_file);
   await file_copy(file_path, file_path_new);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
