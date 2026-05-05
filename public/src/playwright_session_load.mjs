@@ -5,4 +5,5 @@ export async function playwright_session_load() {
     storageState: "fb-session.json",
   });
   const page = await context.newPage();
+  await page.goto("https://www.facebook.com/");
 }
