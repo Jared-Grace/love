@@ -1,7 +1,6 @@
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
-import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -22,9 +21,7 @@ export async function playwright_session_load_facebook() {
     await page.goto("https://www.m.me/" + url_id);
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
-    let prefix = "https://www.messenger.com/e2ee/t/";
-    let without = text_prefix_without(url, prefix);
-    property_set_exists_not(lookup, url_id, without);
+    property_set_exists_not(lookup, url_id, url);
     await file_overwrite_json(file_path, lookup);
   }
   await each_async(url_ids, lambda);
