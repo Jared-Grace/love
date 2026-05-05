@@ -1,6 +1,7 @@
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function playwright_session_save() {
+  const session_name = "fb-session";
   const browser = await chromium.launch({
     headless: false,
   });
@@ -12,7 +13,6 @@ export async function playwright_session_save() {
     let r = process.stdin.once("data", resolve);
     return r;
   });
-  const session_name = "fb-session";
   let path = folder_secret_join_json(session_name);
   await context.storageState({
     path,
