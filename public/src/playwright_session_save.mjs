@@ -2,12 +2,13 @@ import { folder_secret_join_json } from "../../../love/public/src/folder_secret_
 import { log } from "../../../love/public/src/log.mjs";
 export async function playwright_session_save() {
   const session_name = "fb-session";
+  const url = "https://www.facebook.com/login";
   const browser = await chromium.launch({
     headless: false,
   });
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto("https://www.facebook.com/login");
+  await page.goto(url);
   console.log("👉 Log in manually, then press ENTER here...");
   await new Promise(function lambda(resolve) {
     let r = process.stdin.once("data", resolve);
