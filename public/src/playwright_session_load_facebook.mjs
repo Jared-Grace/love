@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -17,6 +18,7 @@ export async function playwright_session_load_facebook() {
     await page.goto("https://www.m.me/" + url_id);
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
+    console.log(url);
   }
   await each_async(url_ids, lambda);
   return;
