@@ -22,9 +22,9 @@ export async function playwright_session_load_facebook() {
   let p = path_without_extension(file_path);
   let extension = path_extension(file_path);
   let now_file = date_now_file();
-  let combined = text_combine(left, right);
-  let joined = list_join_dot([p, "backup", now_file, extension]);
-  await file_copy(file_path, joined);
+  let joined = list_join_dot([p, "backup", now_file]);
+  let combined = text_combine(joined, extension);
+  await file_copy(file_path, combined);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
