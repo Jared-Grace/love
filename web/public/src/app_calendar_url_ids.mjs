@@ -3,7 +3,7 @@ import { list_map_suffix_without_try } from "../../../love/public/src/list_map_s
 import { list_filter_starts_with_https_prefix } from "../../../love/public/src/list_filter_starts_with_https_prefix.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { folder_user_docs_read_lines } from "../../../love/public/src/folder_user_docs_read_lines.mjs";
-export async function app_calendar_urls() {
+export async function app_calendar_url_ids() {
   let split = await folder_user_docs_read_lines("preaching_ask.txt");
   let filtered = list_filter_empty_not_is(split);
   let filtered2 = list_filter_starts_with_https_prefix(filtered);
