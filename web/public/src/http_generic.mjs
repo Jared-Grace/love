@@ -1,6 +1,6 @@
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { text_starts_with_https_prefix } from "../../../love/public/src/text_starts_with_https_prefix.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
