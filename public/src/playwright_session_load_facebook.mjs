@@ -1,5 +1,4 @@
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { command_line_read } from "../../../love/public/src/command_line_read.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
@@ -29,6 +28,5 @@ export async function playwright_session_load_facebook() {
     await file_overwrite_json(file_path, lookup);
   }
   await each_async(url_ids, lambda);
-  let answer = await command_line_read("Press enter close the browser");
   await browser.close();
 }
