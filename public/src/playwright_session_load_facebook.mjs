@@ -1,9 +1,7 @@
-import { list_join } from "../../../love/public/src/list_join.mjs";
+import { list_join_dot } from "../../../love/public/src/list_join_dot.mjs";
 import { path_without_extension } from "../../../love/public/src/path_without_extension.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { path_extension } from "../../../love/public/src/path_extension.mjs";
 import { date_now_file } from "../../../love/public/src/date_now_file.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { file_copy } from "../../../love/public/src/file_copy.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -24,10 +22,8 @@ export async function playwright_session_load_facebook() {
   let extension = path_extension(file_path);
   let now_file = date_now_file();
   let list = [left, "backup", now_file, extension];
-  let joined = list_join(list, ".");
-  let combined = text_combine_multiple();
-  let file_path_new = text_combine();
-  await file_copy(file_path, file_path_new);
+  let joined = list_join_dot(list);
+  await file_copy(file_path, joined);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
