@@ -1,3 +1,4 @@
+import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -15,6 +16,7 @@ export async function playwright_session_load_facebook() {
   async function lambda(url_id) {
     await http_sleep();
     await page.goto("https://www.m.me/" + url_id);
+    await sleep_seconds(seconds);
   }
   await each_async(url_ids, lambda);
   return;
