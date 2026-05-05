@@ -4,8 +4,6 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
 export async function playwright_session_save(url, session_name) {
   const r2 = await import_install("playwright");
-  let webkit = property_get(r2, "webkit");
-  let firefox = property_get(r2, "firefox");
   let chromium = property_get(r2, "chromium");
   const browser = await chromium.launch({
     headless: false,
