@@ -18,6 +18,7 @@ export async function playwright_session_load_facebook() {
     await page.goto("https://www.m.me/" + url_id);
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
+    let prefix = "https://www.messenger.com/e2ee/t/";
     console.log(url);
   }
   await each_async(url_ids, lambda);
