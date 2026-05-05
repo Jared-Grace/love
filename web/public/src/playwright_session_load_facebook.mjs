@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { path_extension } from "../../../love/public/src/path_extension.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { date_now_file } from "../../../love/public/src/date_now_file.mjs";
@@ -21,6 +22,7 @@ export async function playwright_session_load_facebook() {
   let name = path_name(file_path);
   let extension = path_extension(file_path);
   let now_file = date_now_file();
+  let combined = text_combine_multiple(list);
   let file_path_new = text_combine(left, now_file);
   await file_copy(file_path, file_path_new);
   let lookup = await file_read_json_exists_ensure(file_path);
