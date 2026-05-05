@@ -1,9 +1,4 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { list_join_dot } from "../../../love/public/src/list_join_dot.mjs";
-import { path_without_extension } from "../../../love/public/src/path_without_extension.mjs";
-import { path_extension } from "../../../love/public/src/path_extension.mjs";
-import { date_now_file } from "../../../love/public/src/date_now_file.mjs";
-import { file_copy } from "../../../love/public/src/file_copy.mjs";
+import { file_backup } from "../../../love/public/src/file_backup.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { file_read_json_exists_ensure } from "../../../love/public/src/file_read_json_exists_ensure.mjs";
@@ -19,12 +14,7 @@ import { playwright_session_save_facebook_name } from "../../../love/public/src/
 export async function playwright_session_load_facebook() {
   let url_ids_all = await app_calendar_url_ids();
   let file_path = folder_user_docs_path("preaching_ask.lookup.json");
-  let p = path_without_extension(file_path);
-  let extension = path_extension(file_path);
-  let now_file = date_now_file();
-  let joined = list_join_dot([p, "backup", now_file]);
-  let combined = text_combine(joined, extension);
-  await file_copy(file_path, combined);
+  await file_backup(file_path);
   let lookup = await file_read_json_exists_ensure(file_path);
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
