@@ -1,5 +1,4 @@
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 export async function playwright_session_save() {
   const session_name = "fb-session";
   const url = "https://www.facebook.com/login";
@@ -9,7 +8,6 @@ export async function playwright_session_save() {
   const context = await browser.newContext();
   const page = await context.newPage();
   await page.goto(url);
-  console.log("👉 Log in manually, then press ENTER here...");
   await new Promise(function lambda(resolve) {
     let r = process.stdin.once("data", resolve);
     return r;
@@ -18,6 +16,5 @@ export async function playwright_session_save() {
   await context.storageState({
     path,
   });
-  console.log("✅ Session saved to fb-session.json");
   await browser.close();
 }
