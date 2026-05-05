@@ -1,3 +1,4 @@
+import { path_extension } from "../../../love/public/src/path_extension.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { date_now_file } from "../../../love/public/src/date_now_file.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -18,6 +19,7 @@ export async function playwright_session_load_facebook() {
   let url_ids_all = await app_calendar_url_ids();
   let file_path = folder_user_docs_path("preaching_ask.lookup.json");
   let name = path_name(file_path);
+  let r2 = path_extension(path);
   let now_file = date_now_file();
   let file_path_new = text_combine(left, now_file);
   await file_copy(file_path, file_path_new);
