@@ -16,7 +16,7 @@ export async function playwright_session_load_facebook() {
   async function lambda(url_id) {
     await http_sleep();
     await page.goto("https://www.m.me/" + url_id);
-    await sleep_seconds(seconds);
+    await sleep_seconds(10);
   }
   await each_async(url_ids, lambda);
   return;
