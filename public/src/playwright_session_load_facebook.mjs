@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -24,6 +25,7 @@ export async function playwright_session_load_facebook() {
     const url = page.url();
     let prefix = "https://www.messenger.com/e2ee/t/";
     let without = text_prefix_without(url, prefix);
+    property_set(object, property_name, value);
     console.log(url);
   }
   await each_async(url_ids, lambda);
