@@ -1,3 +1,4 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_prefix_without_try_multiple } from "../../../love/public/src/list_map_prefix_without_try_multiple.mjs";
 import { list_map_suffix_without_try } from "../../../love/public/src/list_map_suffix_without_try.mjs";
 import { list_filter_starts_with_https_prefix } from "../../../love/public/src/list_filter_starts_with_https_prefix.mjs";
@@ -12,5 +13,6 @@ export async function app_calendar_url_ids() {
   let prefixes = [p1, p2];
   filtered2 = list_map_prefix_without_try_multiple(filtered2, prefixes);
   let url_ids = list_map_suffix_without_try(filtered2, "#");
+  let unique = list_unique(list);
   return url_ids;
 }
