@@ -20,7 +20,6 @@ export async function playwright_session_load_facebook() {
   const session_name = playwright_session_save_facebook_name();
   const r = await playwright_session_load(session_name);
   let browser = property_get(r, "browser");
-  let context = property_get(r, "context");
   let page = property_get(r, "page");
   async function lambda(url_id) {
     await http_sleep();
