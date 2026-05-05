@@ -25,7 +25,9 @@ export async function playwright_session_load_facebook() {
     const url = page.url();
     let prefix = "https://www.messenger.com/e2ee/t/";
     let without = text_prefix_without(url, prefix);
-    property_set_exists_not(object, property_name, value);
+    property_set_exists_not(lookup, url_id, {
+      conversation_id: without,
+    });
     console.log(url);
   }
   await each_async(url_ids, lambda);
