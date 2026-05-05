@@ -7,5 +7,10 @@ export async function playwright_session_load(session_name) {
     storageState: path,
   });
   const page = await context.newPage();
-  return page;
+  let r = {
+    page,
+    context,
+    browser,
+  };
+  return r;
 }
