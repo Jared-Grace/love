@@ -11,6 +11,6 @@ export async function app_calendar_urls() {
   const p2 = "https://www.facebook.com/";
   let prefixes = [p1, p2];
   filtered2 = list_map_prefix_without_try_multiple(filtered2, prefixes);
-  let mapped3 = list_map_suffix_without_try(filtered2, "#");
-  return mapped3;
+  let usernames = list_map_suffix_without_try(filtered2, "#");
+  return usernames;
 }
