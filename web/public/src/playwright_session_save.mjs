@@ -1,10 +1,8 @@
+import { playwright_chromium } from "../../../love/public/src/playwright_chromium.mjs";
 import { command_line_read } from "../../../love/public/src/command_line_read.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { import_install } from "../../../love/public/src/import_install.mjs";
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
 export async function playwright_session_save(url, session_name) {
-  const r = await import_install("playwright");
-  let chromium = property_get(r, "chromium");
+  let chromium = await playwright_chromium();
   const browser = await chromium.launch({
     headless: false,
   });
