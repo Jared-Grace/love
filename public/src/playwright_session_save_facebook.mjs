@@ -1,7 +1,7 @@
 import { folder_secret_join_json } from "../../../love/public/src/folder_secret_join_json.mjs";
 export async function playwright_session_save_facebook() {
-  const session_name = "fb-session";
   const url = "https://www.facebook.com/login";
+  const session_name = "fb-session";
   const browser = await chromium.launch({
     headless: false,
   });
