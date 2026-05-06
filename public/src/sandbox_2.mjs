@@ -1,4 +1,4 @@
-import { file_json_transform_initialize } from "../../../love/public/src/file_json_transform_initialize.mjs";
+import { file_json_transform_initialize_default } from "../../../love/public/src/file_json_transform_initialize_default.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
@@ -24,5 +24,5 @@ export async function sandbox_2() {
     }
     each_object(lookup, lambda);
   }
-  await file_json_transform_initialize(file_path_calendar, {}, lambda2);
+  await file_json_transform_initialize_default(file_path_calendar, lambda2);
 }
