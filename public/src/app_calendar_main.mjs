@@ -1,3 +1,4 @@
+import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
@@ -9,7 +10,6 @@ import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -21,7 +21,7 @@ export async function app_calendar_main(context) {
   let data = await app_api_fn({
     fn: app_calendar_download,
   });
-  let contacts = property_initialize(data, "contacts", []);
+  let contacts = app_calendar_contacts_initialize(data);
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
     root,
