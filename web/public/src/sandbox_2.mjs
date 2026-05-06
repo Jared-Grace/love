@@ -13,7 +13,8 @@ export async function sandbox_2() {
   let filtered = list_filter_text_includes(v, "/t/");
   function lambda(value, property) {
     let item = "/t/";
-    let index = text_index_of(t, item);
+    let index = text_index_of(value, item);
+    tz;
   }
   each_object(object, lambda);
   json_equal_assert(v, filtered);
