@@ -1,3 +1,4 @@
+import { ebible_language_arabic } from "../../../love/public/src/ebible_language_arabic.mjs";
 import { ebible_language_bengali } from "../../../love/public/src/ebible_language_bengali.mjs";
 import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
 import { ebible_language_kenya } from "../../../love/public/src/ebible_language_kenya.mjs";
@@ -19,6 +20,7 @@ export function ebible_languages() {
   let ke = ebible_language_kenya();
   const te = ebible_language_telugu();
   let bn = ebible_language_bengali();
+  let r = ebible_language_arabic();
   let languages = [
     o,
     en,
@@ -32,11 +34,7 @@ export function ebible_languages() {
       bible_folder: "hin2017",
       language_code: "hin",
     },
-    {
-      name: "Arabic",
-      bible_folder: "arbnav",
-      language_code: "arb",
-    },
+    r,
     {
       name: "Ekegusii",
       bible_folder: "guz",
