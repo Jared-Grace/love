@@ -1,5 +1,4 @@
-import { text_take } from "../../../love/public/src/text_take.mjs";
-import { text_index_of } from "../../../love/public/src/text_index_of.mjs";
+import { text_index_of_take } from "../../../love/public/src/text_index_of_take.mjs";
 import { text_index_of_skip } from "../../../love/public/src/text_index_of_skip.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -18,8 +17,7 @@ export async function sandbox_2() {
     let item_skip = "/t/";
     let skipped = text_index_of_skip(value, item_skip);
     const item = "/";
-    let index = text_index_of(skipped, item);
-    let taken = text_take(skipped, index);
+    let taken = text_index_of_take(skipped, item);
     log(sandbox_2.name, {
       taken,
     });
