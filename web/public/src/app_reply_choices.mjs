@@ -153,6 +153,10 @@ export function app_reply_choices() {
       response: app_reply_choices_give(),
     },
     {
+      text: emoji_pray() + " Fundraiser",
+      response: "Sorry, I cannot create a fundraiser for you",
+    },
+    {
       text: app_reply_greetings(),
       response: greetings,
     },
