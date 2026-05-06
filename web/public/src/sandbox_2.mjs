@@ -17,7 +17,7 @@ export async function sandbox_2() {
     let item = "/t/";
     let index = text_index_of(value, item);
     let size = text_size(item);
-    let sum = add(left, right);
+    let sum = add(index, size);
   }
   each_object(object, lambda);
   json_equal_assert(v, filtered);
