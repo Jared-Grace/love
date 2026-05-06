@@ -25,7 +25,7 @@ export async function sandbox_2() {
       skipped,
     });
   }
-  each_object(object, lambda);
+  each_object(lookup, lambda);
   json_equal_assert(v, filtered);
   return lookup;
 }
