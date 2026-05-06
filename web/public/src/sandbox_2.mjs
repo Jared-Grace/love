@@ -20,9 +20,8 @@ export async function sandbox_2() {
     const right = "/";
     let facebook_conversation_id = text_between(value, left, right);
     log(sandbox_2.name, {
-      taken: facebook_conversation_id,
-      value,
-      property: facebook_url_id,
+      facebook_conversation_id,
+      facebook_url_id,
     });
   }
   each_object(lookup, lambda);
