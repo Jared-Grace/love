@@ -24,5 +24,5 @@ export async function sandbox_2() {
     }
     each_object(lookup, lambda);
   }
-  await file_json_transform_initialize(file_path_calendar, lambda2, {});
+  await file_json_transform_initialize(file_path_calendar, {}, lambda2);
 }
