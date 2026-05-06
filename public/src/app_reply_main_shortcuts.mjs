@@ -1,3 +1,4 @@
+import { ebible_language_bengali } from "../../../love/public/src/ebible_language_bengali.mjs";
 import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
@@ -90,6 +91,7 @@ export function app_reply_main_shortcuts(
     responses: [],
   };
   let r_te_10 = shortcut_extend_count(r_te_base, 10);
+  let r3 = ebible_language_bengali();
   const r_ben_base = {
     name: "BEN",
     languages: languages_default_concat_single(te),
