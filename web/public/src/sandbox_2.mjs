@@ -21,7 +21,7 @@ export async function sandbox_2() {
     let taken = text_between(value, left, right);
     log(sandbox_2.name, {
       taken,
-      value,
+      value,property
     });
   }
   each_object(lookup, lambda);
