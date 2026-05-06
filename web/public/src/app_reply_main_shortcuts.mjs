@@ -91,10 +91,10 @@ export function app_reply_main_shortcuts(
     responses: [],
   };
   let r_te_10 = shortcut_extend_count(r_te_base, 10);
-  let r3 = ebible_language_bengali();
+  let bn = ebible_language_bengali();
   const r_bn_base = {
     name: "BN",
-    languages: languages_default_concat_single(te),
+    languages: languages_default_concat_single(bn),
     count: 0,
     responses: [],
   };
@@ -125,6 +125,7 @@ export function app_reply_main_shortcuts(
     r_ke_10,
     r_ke_40,
     r_te_10,
+    r_bn_10,
     r_en_40,
     r_yt,
   ];
