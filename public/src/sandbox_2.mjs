@@ -18,9 +18,9 @@ export async function sandbox_2() {
   function lambda(value, property) {
     let left = "/t/";
     const right = "/";
-    let taken = text_between(value, left, right);
+    let facebook_conversation_id = text_between(value, left, right);
     log(sandbox_2.name, {
-      taken,
+      taken: facebook_conversation_id,
       value,
       property,
     });
