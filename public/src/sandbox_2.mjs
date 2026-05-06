@@ -18,9 +18,9 @@ export async function sandbox_2() {
     let item = "/t/";
     let skipped = text_index_of_skip(value, item);
     let index = text_index_of(skipped, "/");
-    let taken = text_take(s, count);
+    let taken = text_take(skipped, index);
     log(sandbox_2.name, {
-      skipped,
+      taken,
     });
   }
   each_object(lookup, lambda);
