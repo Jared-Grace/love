@@ -1,3 +1,4 @@
+import { ebible_language_arabic } from "../../../love/public/src/ebible_language_arabic.mjs";
 import { ebible_language_bengali } from "../../../love/public/src/ebible_language_bengali.mjs";
 import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
@@ -99,6 +100,7 @@ export function app_reply_main_shortcuts(
     responses: [],
   };
   let r_bn_10 = shortcut_extend_count(r_bn_base, 10);
+  let ar = ebible_language_arabic();
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
