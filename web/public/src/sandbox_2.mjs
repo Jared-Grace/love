@@ -1,3 +1,4 @@
+import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
 import { text_between } from "../../../love/public/src/text_between.mjs";
@@ -10,7 +11,9 @@ import { file_read_json_exists_ensure } from "../../../love/public/src/file_read
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox_2() {
   let file_path_calendar = app_calendar_secret_path();
-  async function lambda2(data) {}
+  async function lambda2(data) {
+    let contacts = app_calendar_contacts_initialize(data);
+  }
   await file_json_transform(file_path_calendar, lambda2);
   const file_name = "preaching_ask.lookup.json";
   let file_path = folder_user_docs_path(file_name);
