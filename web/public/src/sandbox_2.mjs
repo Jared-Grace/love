@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
@@ -19,7 +20,10 @@ export async function sandbox_2() {
     let index = text_index_of(value, item);
     let size = text_size(item);
     let sum = add(index, size);
-    let skipped = text_skip(s, skip_count);
+    let skipped = text_skip(value, sum);
+    log(sandbox_2.name, {
+      skipped,
+    });
   }
   each_object(object, lambda);
   json_equal_assert(v, filtered);
