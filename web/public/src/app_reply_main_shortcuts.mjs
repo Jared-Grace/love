@@ -92,13 +92,13 @@ export function app_reply_main_shortcuts(
   };
   let r_te_10 = shortcut_extend_count(r_te_base, 10);
   let r3 = ebible_language_bengali();
-  const r_ben_base = {
-    name: "BEN",
+  const r_bn_base = {
+    name: "BN",
     languages: languages_default_concat_single(te),
     count: 0,
     responses: [],
   };
-  let r_be_10 = shortcut_extend_count(r_ben_base, 10);
+  let r_bn_10 = shortcut_extend_count(r_bn_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
