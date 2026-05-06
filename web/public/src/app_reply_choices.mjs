@@ -154,7 +154,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Fundraiser",
-      response: "Sorry, I cannot create a fundraiser for you",
+      response: emoji_pray() + " Sorry, I cannot create a fundraiser for you",
     },
     {
       text: app_reply_greetings(),
