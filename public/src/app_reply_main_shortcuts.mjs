@@ -90,6 +90,13 @@ export function app_reply_main_shortcuts(
     responses: [],
   };
   let r_te_10 = shortcut_extend_count(r_te_base, 10);
+  const r_ben_base = {
+    name: "BEN",
+    languages: languages_default_concat_single(te),
+    count: 0,
+    responses: [],
+  };
+  let r_be_10 = shortcut_extend_count(r_ben_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
