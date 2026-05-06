@@ -1,3 +1,4 @@
+import { ebible_language_bengali } from "../../../love/public/src/ebible_language_bengali.mjs";
 import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
 import { ebible_language_kenya } from "../../../love/public/src/ebible_language_kenya.mjs";
 import { ebible_language_luganda } from "../../../love/public/src/ebible_language_luganda.mjs";
@@ -17,17 +18,14 @@ export function ebible_languages() {
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
   const te = ebible_language_telugu();
+  let r = ebible_language_bengali();
   let languages = [
     o,
     en,
     ur,
     ke,
     lug,
-    {
-      name: "Bengali",
-      bible_folder: "benirv",
-      language_code: "ben",
-    },
+    r,
     te,
     {
       name: "Hindi",
