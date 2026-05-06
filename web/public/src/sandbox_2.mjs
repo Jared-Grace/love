@@ -1,3 +1,4 @@
+import { text_index_of } from "../../../love/public/src/text_index_of.mjs";
 import { text_index_of_skip } from "../../../love/public/src/text_index_of_skip.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -15,6 +16,7 @@ export async function sandbox_2() {
   function lambda(value, property) {
     let item = "/t/";
     let skipped = text_index_of_skip(value, item);
+    let index = text_index_of(t, item2);
     log(sandbox_2.name, {
       skipped,
     });
