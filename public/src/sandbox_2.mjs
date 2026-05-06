@@ -10,6 +10,7 @@ export async function sandbox_2() {
   let lookup = await file_read_json_exists_ensure(file_path);
   let v = object_values(lookup);
   let filtered = list_filter_text_includes(v, "/t/");
+  let item = "/t/";
   let index = text_index_of(t, item);
   json_equal_assert(v, filtered);
   return lookup;
