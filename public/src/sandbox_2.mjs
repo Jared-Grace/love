@@ -4,4 +4,5 @@ export async function sandbox_2() {
   const file_name = "preaching_ask.lookup.json";
   let file_path = folder_user_docs_path(file_name);
   let lookup = await file_read_json_exists_ensure(file_path);
+  return lookup;
 }
