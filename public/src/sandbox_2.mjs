@@ -1,9 +1,6 @@
+import { text_index_of_skip } from "../../../love/public/src/text_index_of_skip.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { text_skip } from "../../../love/public/src/text_skip.mjs";
-import { add } from "../../../love/public/src/add.mjs";
-import { text_size } from "../../../love/public/src/text_size.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
-import { text_index_of } from "../../../love/public/src/text_index_of.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { list_filter_text_includes } from "../../../love/public/src/list_filter_text_includes.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -17,10 +14,7 @@ export async function sandbox_2() {
   let filtered = list_filter_text_includes(v, "/t/");
   function lambda(value, property) {
     let item = "/t/";
-    let index = text_index_of(value, item);
-    let size = text_size(item);
-    let sum = add(index, size);
-    let skipped = text_skip(value, sum);
+    let skipped = text_index_of_skip(value, item);
     log(sandbox_2.name, {
       skipped,
     });
