@@ -101,6 +101,13 @@ export function app_reply_main_shortcuts(
   };
   let r_bn_10 = shortcut_extend_count(r_bn_base, 10);
   let ar = ebible_language_arabic();
+  const r_ar_base = {
+    name: "AR",
+    languages: languages_default_concat_single(ar),
+    count: 0,
+    responses: [],
+  };
+  let r_ar_10 = shortcut_extend_count(r_ar_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
@@ -128,6 +135,7 @@ export function app_reply_main_shortcuts(
     r_ke_40,
     r_te_10,
     r_bn_10,
+    r_ar_10,
     r_en_40,
     r_yt,
   ];
