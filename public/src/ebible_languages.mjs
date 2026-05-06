@@ -20,7 +20,7 @@ export function ebible_languages() {
   let ke = ebible_language_kenya();
   const te = ebible_language_telugu();
   let bn = ebible_language_bengali();
-  let r = ebible_language_arabic();
+  let ar = ebible_language_arabic();
   let languages = [
     o,
     en,
@@ -34,7 +34,7 @@ export function ebible_languages() {
       bible_folder: "hin2017",
       language_code: "hin",
     },
-    r,
+    ar,
     {
       name: "Ekegusii",
       bible_folder: "guz",
