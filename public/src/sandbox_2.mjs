@@ -4,7 +4,6 @@ import { file_json_transform } from "../../../love/public/src/file_json_transfor
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
 import { text_between } from "../../../love/public/src/text_between.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
-import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { list_filter_text_includes } from "../../../love/public/src/list_filter_text_includes.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { file_read_json_exists_ensure } from "../../../love/public/src/file_read_json_exists_ensure.mjs";
@@ -15,21 +14,19 @@ export async function sandbox_2() {
   let lookup = await file_read_json_exists_ensure(file_path);
   let v = object_values(lookup);
   let filtered = list_filter_text_includes(v, "/t/");
-  function lambda(value, facebook_url_id) {
-    let left = "/t/";
-    const right = "/";
-    let facebook_conversation_id = text_between(value, left, right);
-    list_add(list, {
-      facebook_conversation_id,
-      facebook_url_id,
-    });
-  }
-  each_object(lookup, lambda);
-  json_equal_assert(v, filtered);
-  return;
   let file_path_calendar = app_calendar_secret_path();
   async function lambda2(data) {
     let contacts = app_calendar_contacts_initialize(data);
+    function lambda(value, facebook_url_id) {
+      let left = "/t/";
+      const right = "/";
+      let facebook_conversation_id = text_between(value, left, right);
+      list_add(contacts, {
+        facebook_conversation_id,
+        facebook_url_id,
+      });
+    }
+    each_object(lookup, lambda);
   }
   await file_json_transform(file_path_calendar, lambda2);
 }
