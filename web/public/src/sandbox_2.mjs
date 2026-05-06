@@ -16,7 +16,7 @@ export async function sandbox_2() {
   function lambda(value, property) {
     let item = "/t/";
     let skipped = text_index_of_skip(value, item);
-    let index = text_index_of(t, item2);
+    let index = text_index_of(t, "/");
     log(sandbox_2.name, {
       skipped,
     });
