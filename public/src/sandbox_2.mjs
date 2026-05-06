@@ -15,9 +15,10 @@ export async function sandbox_2() {
   let v = object_values(lookup);
   let filtered = list_filter_text_includes(v, "/t/");
   function lambda(value, property) {
-    let item = "/t/";
-    let skipped = text_index_of_skip(value, item);
-    let index = text_index_of(skipped, "/");
+    let item_skip = "/t/";
+    let skipped = text_index_of_skip(value, item_skip);
+    const item = "/";
+    let index = text_index_of(skipped, item);
     let taken = text_take(skipped, index);
     log(sandbox_2.name, {
       taken,
