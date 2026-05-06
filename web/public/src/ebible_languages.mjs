@@ -18,14 +18,14 @@ export function ebible_languages() {
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
   const te = ebible_language_telugu();
-  let r = ebible_language_bengali();
+  let bn = ebible_language_bengali();
   let languages = [
     o,
     en,
     ur,
     ke,
     lug,
-    r,
+    bn,
     te,
     {
       name: "Hindi",
