@@ -1,5 +1,4 @@
-import { text_index_of_take } from "../../../love/public/src/text_index_of_take.mjs";
-import { text_index_of_skip } from "../../../love/public/src/text_index_of_skip.mjs";
+import { text_between } from "../../../love/public/src/text_between.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
@@ -16,8 +15,7 @@ export async function sandbox_2() {
   function lambda(value, property) {
     let left = "/t/";
     const right = "/";
-    let skipped = text_index_of_skip(value, left);
-    let taken = text_index_of_take(skipped, right);
+    let taken = text_between(value, left, right);
     log(sandbox_2.name, {
       taken,
     });
