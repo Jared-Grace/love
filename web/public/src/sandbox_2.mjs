@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
@@ -23,6 +24,7 @@ export async function sandbox_2() {
       facebook_conversation_id,
       facebook_url_id,
     });
+    list_add(list, item);
   }
   each_object(lookup, lambda);
   json_equal_assert(v, filtered);
