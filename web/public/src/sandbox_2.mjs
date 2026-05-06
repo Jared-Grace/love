@@ -15,14 +15,14 @@ export async function sandbox_2() {
   let lookup = await file_read_json_exists_ensure(file_path);
   let v = object_values(lookup);
   let filtered = list_filter_text_includes(v, "/t/");
-  function lambda(value, property) {
+  function lambda(value, facebook_url_id) {
     let left = "/t/";
     const right = "/";
     let facebook_conversation_id = text_between(value, left, right);
     log(sandbox_2.name, {
       taken: facebook_conversation_id,
       value,
-      property,
+      property: facebook_url_id,
     });
   }
   each_object(lookup, lambda);
