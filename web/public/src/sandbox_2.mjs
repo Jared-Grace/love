@@ -3,7 +3,6 @@ import { app_calendar_contacts_initialize } from "../../../love/public/src/app_c
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
 import { text_between } from "../../../love/public/src/text_between.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { list_filter_text_includes } from "../../../love/public/src/list_filter_text_includes.mjs";
@@ -20,11 +19,10 @@ export async function sandbox_2() {
     let left = "/t/";
     const right = "/";
     let facebook_conversation_id = text_between(value, left, right);
-    log(sandbox_2.name, {
+    list_add(list, {
       facebook_conversation_id,
       facebook_url_id,
     });
-    list_add(list, item);
   }
   each_object(lookup, lambda);
   json_equal_assert(v, filtered);
