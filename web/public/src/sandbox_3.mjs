@@ -1,4 +1,4 @@
-import { property_set } from "../../../love/public/src/property_set.mjs";
+import { text_to } from "../../../love/public/src/text_to.mjs";
 import { throws_assert } from "../../../love/public/src/throws_assert.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
@@ -61,6 +61,6 @@ export async function sandbox_3() {
     });
   }
   let e = throws_assert(lambda2);
-  property_set(object, property_name, value);
+  let t = text_to(input);
   return e;
 }
