@@ -21,6 +21,7 @@ export function app_calendar_contact_add(data, item) {
   if (s1) {
     let only = list_single(list);
     object_merge_match(only, item);
+  } else {
   }
   list_add(contacts, {
     facebook_conversation_id,
