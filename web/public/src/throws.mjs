@@ -1,10 +1,11 @@
+import { error } from "../../../love/public/src/error.mjs";
 export function throws(lambda) {
-  let success = null;
+  let result = null;
   try {
     lambda();
-    success = false;
+    error();
   } catch (e) {
-    success = true;
+    result = e;
   }
-  return success;
+  return e;
 }
