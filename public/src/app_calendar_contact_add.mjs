@@ -14,7 +14,6 @@ export function app_calendar_contact_add(data, item) {
         property,
         facebook_conversation_id,
       );
-      
     }
   }
   each(properties, lambda);
