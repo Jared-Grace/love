@@ -10,6 +10,6 @@ export async function sandbox_3() {
     a: 1,
   });
   json_equal_assert(to, {
-    a: 1,
+    a: 1, 
   });
 }
