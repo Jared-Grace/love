@@ -4,6 +4,6 @@ import { object_values_map } from "../../../love/public/src/object_values_map.mj
 export function object_values_map_unique(item, lambda) {
   let mapped = object_values_map(item, lambda);
   let v = object_values(mapped);
-  let unique = list_unique(mapped);
+  let unique = list_unique(v);
   return unique;
 }
