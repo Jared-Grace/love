@@ -1,4 +1,3 @@
-import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { playwright_text_content } from "../../../love/public/src/playwright_text_content.mjs";
 import { playwright_by_tag_name } from "../../../love/public/src/playwright_by_tag_name.mjs";
@@ -22,8 +21,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
   let browser = property_get(r, "browser");
   let page = property_get(r, "page");
   async function lambda(url_id) {
-    let v = property_initialize_empty(lookup, url_id);
-    let exists = property_exists(object, property_name);
+    let v = property_initialize_empty(lookup, url_id);pxn
     const url_goto1 = "https://www.facebook.com/" + url_id;
     await playwright_sleep_goto(page, url_goto1);
     let es = await playwright_by_tag_name(page, "h1");
