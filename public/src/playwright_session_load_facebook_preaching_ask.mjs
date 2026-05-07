@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { property_exists_not_if_async } from "../../../love/public/src/property_exists_not_if_async.mjs";
 import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -47,6 +48,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       await app_calendar_preaching_ask_lookup_overwrite(lookup);
     }
     await property_exists_not_if_async(v2, property, lambda4);
+    exit();
   }
   await each_async(url_ids_all, lambda);
   await browser.close();
