@@ -14,7 +14,7 @@ export async function app_calendar_url_ids() {
   let prefixes = [p1, p2];
   filtered2 = list_map_prefix_without_try_multiple(filtered2, prefixes);
   function lambda(item) {
-    let url_ids_with_duplicates = list_map_suffix_without_try(filtered2);
+    filtered2 = list_map_suffix_without_try(filtered2, item);
   }
   each(["#", "?"], lambda);
   let url_ids = list_unique(url_ids_with_duplicates);
