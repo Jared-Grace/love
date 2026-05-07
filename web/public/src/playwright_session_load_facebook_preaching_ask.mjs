@@ -40,7 +40,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
         name = "[Unavailable]";
       } else {
         let h1 = await playwright_by_tag_name_text_contents(page, "h1");
-        list_remove_if_exists(waited, "Chats");
+        list_remove_if_exists(h1, "Chats");
         name = list_single(waited);
       }
       property_set_exists_not(v, property_name, name);
