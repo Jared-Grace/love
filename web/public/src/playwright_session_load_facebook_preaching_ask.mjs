@@ -39,14 +39,14 @@ export async function playwright_session_load_facebook_preaching_ask() {
       });
     }
     return;
-    async function lambda4() {}
-    await property_exists_not_if_async(v2, property_name2, lambda4);
+    let property = app_calendar_facebook_conversation_url();
+    async function lambda4() {
     const url_goto = "https://www.m.me/" + url_id;
     await playwright_sleep_goto(page, url_goto);
     const url = page.url();
-    let property = app_calendar_facebook_conversation_url();
     property_set_exists_not(v, property, url);
-    await app_calendar_preaching_ask_lookup_overwrite(lookup);
+    await app_calendar_preaching_ask_lookup_overwrite(lookup);}
+    await property_exists_not_if_async(v2, property, lambda4);
   }
   await each_async(url_ids_all, lambda);
   await browser.close();
