@@ -5,7 +5,6 @@ import { property_exists_not_if_async } from "../../../love/public/src/property_
 import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { playwright_sleep_goto } from "../../../love/public/src/playwright_sleep_goto.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { app_calendar_preaching_ask_lookup_overwrite } from "../../../love/public/src/app_calendar_preaching_ask_lookup_overwrite.mjs";
