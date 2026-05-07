@@ -6,8 +6,8 @@ import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 export function object_merge_generic(strict, to, from) {
   function lambda(property_name) {
-    if (strict) {
-      if (property_exists(to, property_name)) {
+    if (property_exists(to, property_name)) {
+      if (strict) {
         error_json({
           to,
           from,
