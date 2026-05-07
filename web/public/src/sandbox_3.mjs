@@ -54,15 +54,12 @@ export async function sandbox_3() {
     b: 2,
     a: 1,
   };
-  function lambda2() {}
+  function lambda2() {
+    object_merge_match(to, {
+      b: 2,
+      a: 2,
+    });
+  }
   let e = throws_assert(lambda2);
-  object_merge_match(to, {
-    b: 2,
-    a: 2,
-  });
-  json_equal_assert(to, {
-    c: 3,
-    b: 2,
-    a: 1,
-  });
+  return e;
 }
