@@ -3,9 +3,10 @@ import { object_values_map_self } from "../../../love/public/src/object_values_m
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 export async function app_calendar_preaching_ask_lookup_migrate() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
+  const property = "facebook_conversation_url";
   function lambda(value) {
     let r = {
-      ["facebook_conversation_url"]: value,
+      [property]: value,
     };
     return r;
   }
