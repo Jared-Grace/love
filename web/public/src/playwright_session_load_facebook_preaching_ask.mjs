@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { playwright_by_tag_name_text_contents } from "../../../love/public/src/playwright_by_tag_name_text_contents.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { property_exists_not_if_async } from "../../../love/public/src/property_exists_not_if_async.mjs";
@@ -30,6 +31,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
       let h2 = await playwright_by_tag_name_text_contents(page, "h2");
+      let includes = list_includes(list, item);
       let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
       let t = list_single(waited);
