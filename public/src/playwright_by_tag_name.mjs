@@ -1,5 +1,5 @@
 import { equal } from "../../../love/public/src/equal.mjs";
-export async function playwright_by_tag_name(page, value) {
+export async function playwright_by_tag_name(page, tag_name) {
   const elements = await page.locator("*").elementHandles();
   const filtered = [];
   for (const el of elements) {
@@ -8,7 +8,7 @@ export async function playwright_by_tag_name(page, value) {
       return r;
     }
     const name = await el.evaluate(lambda);
-    if (equal(name, value)) {
+    if (equal(name, tag_name)) {
       filtered.push(el);
     }
   }
