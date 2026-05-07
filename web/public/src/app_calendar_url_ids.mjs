@@ -5,8 +5,8 @@ import { list_filter_starts_with_https_prefix } from "../../../love/public/src/l
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { folder_user_docs_read_lines } from "../../../love/public/src/folder_user_docs_read_lines.mjs";
 export async function app_calendar_url_ids() {
-  let split = await folder_user_docs_read_lines("preaching_ask.txt");
-  let filtered = list_filter_empty_not_is(split);
+  let lines = await folder_user_docs_read_lines("preaching_ask.txt");
+  let filtered = list_filter_empty_not_is(lines);
   let urls = list_filter_starts_with_https_prefix(filtered);
   const p1 = "https://www.facebook.com/profile.php?id=";
   const p2 = "https://www.facebook.com/";
