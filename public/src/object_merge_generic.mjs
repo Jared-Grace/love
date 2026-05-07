@@ -14,6 +14,13 @@ export function object_merge_generic(mode, to, from) {
           property_name,
         });
       } else {
+        if (mode === "match") {
+          error_json({
+            to,
+            from,
+            property_name,
+          });
+        }
       }
     }
     let value = property_get(from, property_name);
