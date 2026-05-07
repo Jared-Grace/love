@@ -18,6 +18,7 @@ export function search_generic(search, list, value_get, include) {
   list_sort_text(f_names_search);
   log(search_generic.name, {
     f_names_search,
+    t: 1,
   });
   let result = list_to_dictionary_value(f_names_search, value_get);
   return result;
