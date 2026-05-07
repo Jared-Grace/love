@@ -1,3 +1,4 @@
+import { playwright_by_attribute_text } from "../../../portfolio_qa/public/src/playwright_by_attribute_text.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { app_calendar_preaching_ask_lookup_overwrite } from "../../../love/public/src/app_calendar_preaching_ask_lookup_overwrite.mjs";
@@ -27,7 +28,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
     const url = page.url();
     let v = property_initialize_empty(lookup, url_id);
     let property = app_calendar_facebook_conversation_url();
-    property_set_exists_not(v, property, url);playwright_by_attribute_text
+    property_set_exists_not(v, property, url);
+    let actual = await playwright_by_attribute_text(page2, name, value);
     return;
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
