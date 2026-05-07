@@ -27,7 +27,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
     let property_name = app_calendar_facebook_name();
     let ne = property_exists_not(v, property_name);
     if (ne) {
-      await lambda();
+      await lambda2();
     }
     function lambda2() {}
     const url_goto1 = "https://www.facebook.com/" + url_id;
