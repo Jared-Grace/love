@@ -75,5 +75,4 @@ export async function sandbox_3() {
     return r;
   }
   assert_json_get(i, lambda3);
-  return e;
 }
