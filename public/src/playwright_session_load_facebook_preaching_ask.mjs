@@ -1,5 +1,5 @@
+import { property_exists_not_if_async } from "../../../love/public/src/property_exists_not_if_async.mjs";
 import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
-import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { playwright_text_content } from "../../../love/public/src/playwright_text_content.mjs";
 import { playwright_by_tag_name } from "../../../love/public/src/playwright_by_tag_name.mjs";
@@ -25,10 +25,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
   async function lambda(url_id) {
     let v = property_initialize_empty(lookup, url_id);
     let property_name = app_calendar_facebook_name();
-    let ne = property_exists_not(v, property_name);
-    if (ne) {
-      await lambda2();
-    }
+    await property_exists_not_if_async(v, property_name, lambda2);
     function lambda2() {}
     const url_goto1 = "https://www.facebook.com/" + url_id;
     await playwright_sleep_goto(page, url_goto1);
