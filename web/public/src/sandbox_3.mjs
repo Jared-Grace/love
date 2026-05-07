@@ -1,3 +1,4 @@
+import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
 import { throws_assert } from "../../../love/public/src/throws_assert.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
@@ -61,6 +62,7 @@ export async function sandbox_3() {
     });
   }
   let e = throws_assert(lambda2);
-  let t = text_to(input);
+  let t = text_to(e);
+  let i = text_includes(input, part);
   return e;
 }
