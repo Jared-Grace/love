@@ -38,7 +38,6 @@ export async function playwright_session_load_facebook_preaching_ask() {
         t,
       });
     }
-    return;
     let property = app_calendar_facebook_conversation_url();
     async function lambda4() {
       const url_goto = "https://www.m.me/" + url_id;
