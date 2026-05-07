@@ -1,3 +1,4 @@
+import { throws_assert } from "../../../love/public/src/throws_assert.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
 export async function sandbox_3() {
@@ -53,6 +54,8 @@ export async function sandbox_3() {
     b: 2,
     a: 1,
   };
+  function lambda2() {}
+  let e = throws_assert(lambda2);
   object_merge_match(to, {
     b: 2,
     a: 2,
