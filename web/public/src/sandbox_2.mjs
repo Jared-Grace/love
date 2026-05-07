@@ -1,5 +1,5 @@
+import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
 import { file_json_transform_initialize_default } from "../../../love/public/src/file_json_transform_initialize_default.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
 import { text_between } from "../../../love/public/src/text_between.mjs";
@@ -17,10 +17,11 @@ export async function sandbox_2() {
       let left = "/t/";
       const right = "/";
       let facebook_conversation_id = text_between(value, left, right);
-      list_add(contacts, {
+      app_calendar_contact_add(
+        contacts,
         facebook_conversation_id,
         facebook_url_id,
-      });
+      );
     }
     each_object(lookup, lambda);
   }
