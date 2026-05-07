@@ -8,13 +8,13 @@ export function app_calendar_contact_add(data, item) {
   let properties = ["facebook_conversation_id", "facebook_url_id"];
   function lambda(property) {
     let exists = property_exists(item, property);
-    if (false) {
+    if (exists) {
+      let r = list_find_property_or_null(
+        contacts,
+        property,
+        facebook_conversation_id,
+      );
     }
-    let r = list_find_property_or_null(
-      contacts,
-      property,
-      facebook_conversation_id,
-    );
   }
   each(properties, lambda);
   list_add(contacts, {
