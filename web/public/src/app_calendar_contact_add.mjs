@@ -1,3 +1,4 @@
+import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_multiple_not_is_assert } from "../../../love/public/src/list_multiple_not_is_assert.mjs";
 import { object_values_map_unique } from "../../../love/public/src/object_values_map_unique.mjs";
@@ -16,7 +17,8 @@ export function app_calendar_contact_add(data, item) {
   let list = list_filter_null_not_is(unique);
   list_multiple_not_is_assert(list);
   let s1 = list_size_1(list);
-  if (false) {
+  if (s1) {
+    object_merge_match(to, from);
   }
   list_add(contacts, {
     facebook_conversation_id,
