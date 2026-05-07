@@ -9,5 +9,5 @@ export function throws_assert(lambda) {
     result = e;
   }
   assert(success);
-  return result
+  return result;
 }
