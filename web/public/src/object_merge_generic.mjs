@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -17,6 +18,8 @@ export function object_merge_generic(mode, to, from) {
       } else {
         if (mode === "match") {
           let existing = property_get(to, property_name);
+          if (not(b)) {
+          }
           error_json({
             to,
             from,
