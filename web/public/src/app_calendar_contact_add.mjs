@@ -1,4 +1,4 @@
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
+import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { object_values_map_unique } from "../../../love/public/src/object_values_map_unique.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_find_property_or_null_curried } from "../../../love/public/src/list_find_property_or_null_curried.mjs";
@@ -13,7 +13,7 @@ export function app_calendar_contact_add(data, item) {
   }
   let unique = object_values_map_unique(item, lambda);
   let filtered2 = list_filter_null_not_is(unique);
-  let m = list_multiple_is(filtered2);
+  let m = list_multiple_not_is(filtered2);
   list_add(contacts, {
     facebook_conversation_id,
     facebook_url_id,
