@@ -33,6 +33,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       let only = list_single(es);
       let t = await playwright_text_content(only);
       property_set_exists_not(v, property_name, t);
+    await app_calendar_preaching_ask_lookup_overwrite(lookup);
       log(playwright_session_load_facebook_preaching_ask.name, {
         t,
       });
