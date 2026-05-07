@@ -3,9 +3,13 @@ export async function playwright_by_attribute(page, name, value) {
   const filtered = [];
   for (const el of elements) {
     const a = await el.getAttribute(name);
-    if (a === value) {
+    if (compare(a, value)) {
       filtered.push(el);
     }
   }
   return filtered;
+  function compare(a, value) {
+    let r = a === value;
+    return r;
+  }
 }
