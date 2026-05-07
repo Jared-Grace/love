@@ -1,3 +1,4 @@
+import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { app_calendar_preaching_ask_lookup_overwrite } from "../../../love/public/src/app_calendar_preaching_ask_lookup_overwrite.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
@@ -24,8 +25,9 @@ export async function playwright_session_load_facebook_preaching_ask() {
     await page.goto("https://www.m.me/" + url_id);
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
-    let value2 = property_initialize_empty(object, property_name);
-    property_set_exists_not(lookup, url_id, url);
+    let v = property_initialize_empty(lookup, url_id);
+    let property = app_calendar_facebook_conversation_url();
+    property_set_exists_not(v, property, url);
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
   await each_async(url_ids_missing, lambda);
