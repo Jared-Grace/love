@@ -27,7 +27,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
     const url = page.url();
     let v = property_initialize_empty(lookup, url_id);
     let property = app_calendar_facebook_conversation_url();
-    property_set_exists_not(v, property, url);
+    property_set_exists_not(v, property, url);playwright_by_attribute_text
     return;
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
