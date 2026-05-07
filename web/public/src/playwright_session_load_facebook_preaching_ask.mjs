@@ -32,6 +32,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       let es = await playwright_by_tag_name(page, "h1");
       let only = list_single(es);
       let t = await playwright_text_content(only);
+      property_set_exists_not(v, property_name, t);
       log(playwright_session_load_facebook_preaching_ask.name, {
         t,
       });
