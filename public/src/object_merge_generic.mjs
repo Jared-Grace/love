@@ -16,6 +16,7 @@ export function object_merge_generic(mode, to, from) {
         });
       } else {
         if (mode === "match") {
+          let existing = property_get(to, property_name);
           error_json({
             to,
             from,
