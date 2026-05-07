@@ -5,7 +5,7 @@ export async function app_calendar_preaching_ask_lookup_migrate() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
   function lambda(value) {
     let r = {
-      facebook_conversation_url: value,
+      ["facebook_conversation_url"]: value,
     };
     return r;
   }
