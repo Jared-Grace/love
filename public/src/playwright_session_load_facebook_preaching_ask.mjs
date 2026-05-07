@@ -1,6 +1,6 @@
+import { playwright_by_tag_name } from "../../../love/public/src/playwright_by_tag_name.mjs";
 import { playwright_sleep_goto } from "../../../love/public/src/playwright_sleep_goto.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { playwright_by_attribute_starts_with } from "../../../love/public/src/playwright_by_attribute_starts_with.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { app_calendar_preaching_ask_lookup_overwrite } from "../../../love/public/src/app_calendar_preaching_ask_lookup_overwrite.mjs";
@@ -21,7 +21,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
   async function lambda(url_id) {
     const url_goto = "https://www.m.me/" + url_id;
     await playwright_sleep_goto(page, url_goto);
-    let actual = await playwright_by_attribute_starts_with(
+    let actual = await playwright_by_tag_name(
       page,
       "href",
       "https://www.facebook.com/",
