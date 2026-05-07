@@ -1,3 +1,4 @@
+import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { object_merge_generic_message_match } from "../../../love/public/src/object_merge_generic_message_match.mjs";
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
@@ -66,5 +67,7 @@ export async function sandbox_3() {
   let t = text_to(e);
   let part = object_merge_generic_message_match();
   let i = text_includes(t, part);
+  function lambda3() {}
+  assert_json_get(b2, lambda3);
   return e;
 }
