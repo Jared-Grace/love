@@ -1,10 +1,8 @@
+import { playwright_by_tag_name_text_contents } from "../../../love/public/src/playwright_by_tag_name_text_contents.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
-import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { property_exists_not_if_async } from "../../../love/public/src/property_exists_not_if_async.mjs";
 import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { playwright_text_content } from "../../../love/public/src/playwright_text_content.mjs";
-import { playwright_by_tag_name } from "../../../love/public/src/playwright_by_tag_name.mjs";
 import { playwright_sleep_goto } from "../../../love/public/src/playwright_sleep_goto.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
@@ -32,8 +30,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
       const tag_name = "h1";
-      let es = await playwright_by_tag_name(page, tag_name);
-      let waited = await list_map_unordered_async(es, playwright_text_content);
+      let waited = await playwright_by_tag_name_text_contents(page, tag_name);
       list_remove_if_exists(waited, "Chats");
       let t = list_single(waited);
       property_set_exists_not(v, property_name, t);
