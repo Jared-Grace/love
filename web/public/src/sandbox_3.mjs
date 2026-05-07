@@ -56,7 +56,6 @@ export async function sandbox_3() {
   };
   function lambda2() {
     object_merge_match(to, {
-      b: 2,
       a: 2,
     });
   }
