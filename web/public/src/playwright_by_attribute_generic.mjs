@@ -1,8 +1,8 @@
 export async function playwright_by_attribute_generic(
   page,
   name,
-  compare,
   value,
+  compare,
 ) {
   const elements = await page.locator(`[${name}]`).elementHandles();
   const filtered = [];
