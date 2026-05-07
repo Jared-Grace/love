@@ -16,7 +16,9 @@ export function app_calendar_contact_add(data, item) {
   let list = list_filter_null_not_is(unique);
   let n = list_multiple_not_is(list);
   function lambda3() {
-    let r = {};
+    let r = {
+      list,
+    };
     return r;
   }
   assert_json_get(n, lambda3);
