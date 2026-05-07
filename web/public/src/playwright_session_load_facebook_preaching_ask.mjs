@@ -1,4 +1,3 @@
-import { exit } from "../../../love/public/src/exit.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { playwright_by_tag_name_text_contents } from "../../../love/public/src/playwright_by_tag_name_text_contents.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
@@ -32,15 +31,12 @@ export async function playwright_session_load_facebook_preaching_ask() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
       let h2 = await playwright_by_tag_name_text_contents(page, "h2");
-      log(playwright_session_load_facebook_preaching_ask.name, {
-        h2,
-      });
-      exit();
       let includes = list_includes(
         h2,
         "This content isn't available right now",
       );
       if (includes) {
+        property_set_exists_not(v, "blocked", true);
       }
       let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
