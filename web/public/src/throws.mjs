@@ -8,6 +8,6 @@ export function throws(lambda) {
   } catch (e) {
     result = e;
   }
-  assert(b);
+  assert(success);
   return e;
 }
