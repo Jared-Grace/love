@@ -15,7 +15,10 @@ export async function sandbox_2() {
       let left = "/t/";
       const right = "/";
       let facebook_conversation_id = text_between(value, left, right);
-      app_calendar_contact_add(data, facebook_conversation_id, facebook_url_id);
+      app_calendar_contact_add(data, {
+        facebook_conversation_id,
+        facebook_url_id,
+      });
     }
     each_object(lookup, lambda);
   }
