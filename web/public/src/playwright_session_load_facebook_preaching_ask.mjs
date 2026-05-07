@@ -34,10 +34,11 @@ export async function playwright_session_load_facebook_preaching_ask() {
         h2,
         "This content isn't available right now",
       );
+      let name = null;
       if (includes) {
         property_set_exists_not(v, "blocked", true);
+        name = "[Blocked]";
       }
-      let name = null;
       let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
       name = list_single(waited);
