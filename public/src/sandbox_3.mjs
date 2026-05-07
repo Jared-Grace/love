@@ -12,4 +12,14 @@ export async function sandbox_3() {
   json_equal_assert(to, {
     a: 1,
   });
+  to = {
+    b: 2,
+  };
+  object_merge_match(to, {
+    a: 1,
+  });
+  json_equal_assert(to, {
+    b: 2,
+    a: 1,
+  });
 }
