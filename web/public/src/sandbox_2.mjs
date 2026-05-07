@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
@@ -21,10 +20,6 @@ export async function sandbox_2() {
         facebook_conversation_id,
         facebook_url_id,
       };
-      log(sandbox_2.name, {
-        item,
-      });
-      return;
       app_calendar_contact_add(data, item);
     }
     each_object(lookup, lambda);
