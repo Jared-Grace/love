@@ -15,7 +15,6 @@ export async function playwright_session_load_facebook_preaching_ask() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
-  let file_path = app_calendar_preaching_ask_lookup_path();
   const session_name = playwright_session_save_facebook_name();
   const r = await playwright_session_load(session_name);
   let browser = property_get(r, "browser");
@@ -26,6 +25,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
     property_set_exists_not(lookup, url_id, url);
+    let file_path = app_calendar_preaching_ask_lookup_path();
     await file_overwrite_json(file_path, lookup);
   }
   await each_async(url_ids_missing, lambda);
