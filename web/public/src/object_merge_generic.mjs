@@ -20,6 +20,7 @@ export function object_merge_generic(mode, to, from) {
           let existing = property_get(to, property_name);
           if (equal_not(existing, value_new)) {
             error_json({
+              message: "value does not match",
               to,
               from,
               property_name,
