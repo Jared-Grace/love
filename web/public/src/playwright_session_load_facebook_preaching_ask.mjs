@@ -31,9 +31,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
       let es = await playwright_by_tag_name(page, "h1");
-      async function lambda3(item) {}
-      let waited = await list_map_unordered_async(list, lambda3);
-      let only = list_single(es);
+      let waited = await list_map_unordered_async(es, playwright_text_content);
+      let only = list_single(waited);
       let t = await playwright_text_content(only);
       property_set_exists_not(v, property_name, t);
       await app_calendar_preaching_ask_lookup_overwrite(lookup);
