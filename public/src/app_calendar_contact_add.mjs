@@ -12,8 +12,8 @@ export function app_calendar_contact_add(data, item) {
     return existing;
   }
   let mapped = object_values_map(item, lambda);
-  let unique = list_unique(list);
-  let filtered2 = list_filter_null_not_is(mapped2);
+  let unique = list_unique(mapped);
+  let filtered2 = list_filter_null_not_is(unique);
   list_add(contacts, {
     facebook_conversation_id,
     facebook_url_id,
