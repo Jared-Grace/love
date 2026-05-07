@@ -1,5 +1,5 @@
 import { assert } from "../../../love/public/src/assert.mjs";
-export function throws(lambda) {
+export function throws_assert(lambda) {
   let success = true;
   let result = null;
   try {
