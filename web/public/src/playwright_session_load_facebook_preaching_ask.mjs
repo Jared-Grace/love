@@ -29,7 +29,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
     async function lambda2() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
-      let waited = await playwright_by_tag_name_text_contents(page, "h1");
+      let h2 = await playwright_by_tag_name_text_contents(page, "h2");
+      let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
       let t = list_single(waited);
       property_set_exists_not(v, property_name, t);
