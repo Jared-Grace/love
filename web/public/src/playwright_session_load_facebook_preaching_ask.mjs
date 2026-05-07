@@ -29,7 +29,11 @@ export async function playwright_session_load_facebook_preaching_ask() {
     let v = property_initialize_empty(lookup, url_id);
     let property = app_calendar_facebook_conversation_url();
     property_set_exists_not(v, property, url);
-    let actual = await playwright_by_attribute_starts_with(page, name, value);
+    let actual = await playwright_by_attribute_starts_with(
+      page,
+      "href",
+      "https://www.facebook.com/",
+    );
     return;
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
