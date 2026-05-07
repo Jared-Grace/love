@@ -1,10 +1,10 @@
-export async function throws(lambda) {
+export function throws(lambda) {
   let success = null;
   try {
-    await lambda();
-    success = true;
-  } catch (e) {
+    lambda();
     success = false;
+  } catch (e) {
+    success = true;
   }
   return success;
 }
