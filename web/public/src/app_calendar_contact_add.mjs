@@ -13,8 +13,8 @@ export function app_calendar_contact_add(data, item) {
     return existing;
   }
   let unique = object_values_map_unique(item, lambda);
-  let filtered2 = list_filter_null_not_is(unique);
-  let n = list_multiple_not_is(filtered2);
+  let list = list_filter_null_not_is(unique);
+  let n = list_multiple_not_is(list);
   function lambda3() {
     let r = {};
     return r;
