@@ -1,5 +1,5 @@
 import { object_values_map_self } from "../../../love/public/src/object_values_map_self.mjs";
-export function object_map_self_value_to_property(property, lookup) {
+export function object_map_self_value_to_property(lookup, property) {
   function lambda(value) {
     let r = {
       [property]: value,
