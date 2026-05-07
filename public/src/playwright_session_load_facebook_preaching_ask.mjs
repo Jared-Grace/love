@@ -12,8 +12,7 @@ import { playwright_session_load } from "../../../love/public/src/playwright_ses
 import { playwright_session_save_facebook_name } from "../../../love/public/src/playwright_session_save_facebook_name.mjs";
 export async function playwright_session_load_facebook_preaching_ask() {
   let url_ids_all = await app_calendar_url_ids();
-  let r2 = await app_calendar_preaching_ask_lookup_get();
-  let lookup = property_get(r2, "lookup");
+  let lookup = await app_calendar_preaching_ask_lookup_get();
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
   let file_path = app_calendar_preaching_ask_lookup_path();
