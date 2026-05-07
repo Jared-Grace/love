@@ -1,13 +1,7 @@
+import { playwright_by_attribute_generic } from "../../../love/public/src/playwright_by_attribute_generic.mjs";
 export async function playwright_by_attribute(page, name, value) {
-  const elements = await page.locator(`[${name}]`).elementHandles();
-  const filtered = [];
-  for (const el of elements) {
-    const a = await el.getAttribute(name);
-    if (compare(a, value)) {
-      filtered.push(el);
-    }
-  }
-  return filtered;
+  let r2 = await playwright_by_attribute_generic(page, name, compare, value);
+  return r2;
   function compare(a, value) {
     let r = a === value;
     return r;
