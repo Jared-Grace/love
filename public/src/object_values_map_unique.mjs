@@ -1,9 +1,7 @@
-import { object_values } from "../../../love/public/src/object_values.mjs";
+import { object_values_map_list } from "../../../love/public/src/object_values_map_list.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
-import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 export function object_values_map_unique(item, lambda) {
-  let mapped = object_values_map(item, lambda);
-  let v = object_values(mapped);
+  let v = object_values_map_list(item, lambda);
   let unique = list_unique(v);
   return unique;
 }
