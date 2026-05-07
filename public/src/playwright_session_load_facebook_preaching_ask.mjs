@@ -30,7 +30,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
     async function lambda2() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
-      let h2 = await playwright_by_tag_name_text_contents(page, "h2");
+      let h2 = await playwright_by_tag_name_text_contents(page, "h2");$L$h2
+      $x
       let includes = list_includes(
         h2,
         "This content isn't available right now",
