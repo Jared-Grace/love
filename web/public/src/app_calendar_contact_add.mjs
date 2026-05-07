@@ -6,8 +6,12 @@ export function app_calendar_contact_add(
   facebook_conversation_id,
   facebook_url_id,
 ) {
-  let r = list_find_property_or_null(list, property_name, property_value);
   let contacts = app_calendar_contacts_initialize(data);
+  let r = list_find_property_or_null(
+    contacts,
+    "facebook_conversation_id",
+    property_value,
+  );
   list_add(contacts, {
     facebook_conversation_id,
     facebook_url_id,
