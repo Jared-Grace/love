@@ -67,7 +67,13 @@ export async function sandbox_3() {
   let input = text_to(e);
   let part = object_merge_generic_message_match();
   let i = text_includes(input, part);
-  function lambda3() {}
-  assert_json_get(b2, lambda3);
+  function lambda3() {
+    let r = {
+      input,
+      part,
+    };
+    return r;
+  }
+  assert_json_get(i, lambda3);
   return e;
 }
