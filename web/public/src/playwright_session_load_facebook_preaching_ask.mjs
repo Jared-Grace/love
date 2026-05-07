@@ -38,7 +38,9 @@ export async function playwright_session_load_facebook_preaching_ask() {
         t,
       });
     }
-    return;property_exists_not_if_async
+    return;
+    async function lambda4() {}
+    await property_exists_not_if_async(v2, property_name2, lambda4);
     const url_goto = "https://www.m.me/" + url_id;
     await playwright_sleep_goto(page, url_goto);
     const url = page.url();
