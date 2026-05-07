@@ -13,6 +13,7 @@ export function object_merge_generic(mode, to, from) {
           from,
           property_name,
         });
+      } else {
       }
     }
     let value = property_get(from, property_name);
