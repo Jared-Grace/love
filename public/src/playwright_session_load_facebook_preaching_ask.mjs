@@ -39,10 +39,10 @@ export async function playwright_session_load_facebook_preaching_ask() {
         property_set_exists_not(v, "unavailable", true);
         name = "[Unavailable]";
       } else {
+        let h1 = await playwright_by_tag_name_text_contents(page, "h1");
+        list_remove_if_exists(waited, "Chats");
+        name = list_single(waited);
       }
-      let h1 = await playwright_by_tag_name_text_contents(page, "h1");
-      list_remove_if_exists(waited, "Chats");
-      name = list_single(waited);
       property_set_exists_not(v, property_name, name);
       await app_calendar_preaching_ask_lookup_overwrite(lookup);
     }
