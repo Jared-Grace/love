@@ -64,9 +64,9 @@ export async function sandbox_3() {
     });
   }
   let e = throws_assert(lambda2);
-  let t = text_to(e);
+  let input = text_to(e);
   let part = object_merge_generic_message_match();
-  let i = text_includes(t, part);
+  let i = text_includes(input, part);
   function lambda3() {}
   assert_json_get(b2, lambda3);
   return e;
