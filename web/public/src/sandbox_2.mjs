@@ -12,10 +12,10 @@ export async function sandbox_2() {
   async function lambda2(data) {
     function lambda(value, facebook_url_id) {
       let property = app_calendar_facebook_conversation_url();
-      let value2 = property_get(data, property);
+      let value2 = property_get(value, property);
       let left = "/t/";
       const right = "/";
-      let facebook_conversation_id = text_between(value, left, right);
+      let facebook_conversation_id = text_between(value2, left, right);
       const item = {
         facebook_conversation_id,
         facebook_url_id,
