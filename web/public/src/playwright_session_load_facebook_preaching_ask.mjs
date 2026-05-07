@@ -1,4 +1,4 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { property_exists_not_if_async } from "../../../love/public/src/property_exists_not_if_async.mjs";
 import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -31,8 +31,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
       const url_goto1 = "https://www.facebook.com/" + url_id;
       await playwright_sleep_goto(page, url_goto1);
       let es = await playwright_by_tag_name(page, "h1");
-      function lambda3(item) {}
-      let mapped = list_map(list, lambda3);
+      async function lambda3(item) {}
+      let waited = await list_map_unordered_async(list, lambda3);
       let only = list_single(es);
       let t = await playwright_text_content(only);
       property_set_exists_not(v, property_name, t);
