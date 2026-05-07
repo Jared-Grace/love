@@ -1,4 +1,3 @@
-import { equal } from "../../../love/public/src/equal.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_find_property_or_null } from "../../../love/public/src/list_find_property_or_null.mjs";
@@ -9,7 +8,7 @@ export function app_calendar_contact_add(data, item) {
   let properties = ["facebook_conversation_id", "facebook_url_id"];
   function lambda(property) {
     let exists = property_exists(item, property);
-    if (equal(left, right)) {
+    if (false) {
     }
     let r = list_find_property_or_null(
       contacts,
