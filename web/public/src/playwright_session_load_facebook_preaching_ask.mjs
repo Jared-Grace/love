@@ -1,8 +1,7 @@
-import { app_calendar_preaching_ask_lookup_path } from "../../../love/public/src/app_calendar_preaching_ask_lookup_path.mjs";
+import { app_calendar_preaching_ask_lookup_overwrite } from "../../../love/public/src/app_calendar_preaching_ask_lookup_overwrite.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -25,8 +24,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
     property_set_exists_not(lookup, url_id, url);
-    let file_path = app_calendar_preaching_ask_lookup_path();
-    await file_overwrite_json(file_path, lookup);
+    await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
   await each_async(url_ids_missing, lambda);
   await browser.close();
