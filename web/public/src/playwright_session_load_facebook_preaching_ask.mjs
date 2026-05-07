@@ -36,8 +36,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
       );
       let name = null;
       if (includes) {
-        property_set_exists_not(v, "blocked", true);
-        name = "[Blocked]";
+        property_set_exists_not(v, "unavailable", true);
+        name = "[Unavailable]";
       }
       let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
