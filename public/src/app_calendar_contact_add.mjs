@@ -10,7 +10,7 @@ export function app_calendar_contact_add(
   let r = list_find_property_or_null(
     contacts,
     "facebook_conversation_id",
-    property_value,
+    facebook_conversation_id,
   );
   list_add(contacts, {
     facebook_conversation_id,
