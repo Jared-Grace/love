@@ -4,10 +4,10 @@ import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
-export function object_merge_generic(strict, to, from) {
+export function object_merge_generic(mode, to, from) {
   function lambda(property_name) {
     if (property_exists(to, property_name)) {
-      if (strict) {
+      if (mode) {
         error_json({
           to,
           from,
