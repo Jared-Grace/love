@@ -1,5 +1,4 @@
-import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
-import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
+import { list_multiple_not_is_assert } from "../../../love/public/src/list_multiple_not_is_assert.mjs";
 import { object_values_map_unique } from "../../../love/public/src/object_values_map_unique.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_find_property_or_null_curried } from "../../../love/public/src/list_find_property_or_null_curried.mjs";
@@ -14,14 +13,7 @@ export function app_calendar_contact_add(data, item) {
   }
   let unique = object_values_map_unique(item, lambda);
   let list = list_filter_null_not_is(unique);
-  let n = list_multiple_not_is(list);
-  function lambda3() {
-    let r = {
-      list,
-    };
-    return r;
-  }
-  assert_json_get(n, lambda3);
+  list_multiple_not_is_assert(list);
   list_add(contacts, {
     facebook_conversation_id,
     facebook_url_id,
