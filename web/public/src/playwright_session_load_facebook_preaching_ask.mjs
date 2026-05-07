@@ -41,6 +41,6 @@ export async function playwright_session_load_facebook_preaching_ask() {
     property_set_exists_not(v, property, url);
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
-  await each_async(url_ids_missing, lambda);
+  await each_async(url_ids_all, lambda);
   await browser.close();
 }
