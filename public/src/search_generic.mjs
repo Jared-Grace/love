@@ -14,7 +14,7 @@ export function search_generic(search, list, value_get, include) {
     return v2;
   }
   let f_names_search = list_filter(list, filter);
-  list_sort_text(list2);
+  list_sort_text(f_names_search);
   let result = list_to_dictionary_value(f_names_search, value_get);
   return result;
 }
