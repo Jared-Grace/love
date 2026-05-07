@@ -1,3 +1,4 @@
+import { object_merge_generic_message_match } from "../../../love/public/src/object_merge_generic_message_match.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -20,7 +21,7 @@ export function object_merge_generic(mode, to, from) {
           let existing = property_get(to, property_name);
           if (equal_not(existing, value_new)) {
             error_json({
-              message: "value does not match",
+              message: object_merge_generic_message_match(),
               to,
               from,
               property_name,
