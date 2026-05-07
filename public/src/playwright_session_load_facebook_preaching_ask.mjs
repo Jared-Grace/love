@@ -1,7 +1,6 @@
-import { app_calendar_preaching_ask_lookup_path } from "../../../love/public/src/app_calendar_preaching_ask_lookup_path.mjs";
+import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { file_read_json_exists_ensure } from "../../../love/public/src/file_read_json_exists_ensure.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
@@ -12,8 +11,9 @@ import { playwright_session_load } from "../../../love/public/src/playwright_ses
 import { playwright_session_save_facebook_name } from "../../../love/public/src/playwright_session_save_facebook_name.mjs";
 export async function playwright_session_load_facebook_preaching_ask() {
   let url_ids_all = await app_calendar_url_ids();
-  let file_path = app_calendar_preaching_ask_lookup_path();
-  let lookup = await file_read_json_exists_ensure(file_path);
+  let r2 = await app_calendar_preaching_ask_lookup_get();
+  let file_path = property_get(r2, "file_path");
+  let lookup = property_get(r2, "lookup");
   let properties = properties_get(lookup);
   let url_ids_missing = list_difference(url_ids_all, properties);
   const session_name = playwright_session_save_facebook_name();
