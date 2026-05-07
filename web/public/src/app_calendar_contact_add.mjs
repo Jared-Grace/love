@@ -1,3 +1,4 @@
+import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_find_property_or_null } from "../../../love/public/src/list_find_property_or_null.mjs";
@@ -14,7 +15,7 @@ export function app_calendar_contact_add(data, item) {
         property,
         facebook_conversation_id,
       );
-      omm;
+      object_merge_match(to, from);
     }
   }
   each(properties, lambda);
