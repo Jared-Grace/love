@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { playwright_by_attribute_starts_with } from "../../../love/public/src/playwright_by_attribute_starts_with.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
@@ -25,16 +26,19 @@ export async function playwright_session_load_facebook_preaching_ask() {
     await http_sleep();
     await page.goto("https://www.m.me/" + url_id);
     await page.waitForLoadState("domcontentloaded");
-    const url = page.url();
-    let v = property_initialize_empty(lookup, url_id);
-    let property = app_calendar_facebook_conversation_url();
-    property_set_exists_not(v, property, url);
     let actual = await playwright_by_attribute_starts_with(
       page,
       "href",
       "https://www.facebook.com/",
     );
+    log(playwright_session_load_facebook_preaching_ask.name, {
+      actual,
+    });
     return;
+    const url = page.url();
+    let v = property_initialize_empty(lookup, url_id);
+    let property = app_calendar_facebook_conversation_url();
+    property_set_exists_not(v, property, url);
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
   await each_async(url_ids_missing, lambda);
