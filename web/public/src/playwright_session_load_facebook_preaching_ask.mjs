@@ -37,6 +37,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       let name = null;
       if (includes) {
         property_set_exists_not(v, "unavailable", true);
+        await app_calendar_preaching_ask_lookup_overwrite(lookup);
         name = "[Unavailable]";
       } else {
         let h1 = await playwright_by_tag_name_text_contents(page, "h1");
