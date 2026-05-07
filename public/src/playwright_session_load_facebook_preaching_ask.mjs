@@ -26,15 +26,16 @@ export async function playwright_session_load_facebook_preaching_ask() {
     let v = property_initialize_empty(lookup, url_id);
     let property_name = app_calendar_facebook_name();
     await property_exists_not_if_async(v, property_name, lambda2);
-    function lambda2() {}
-    const url_goto1 = "https://www.facebook.com/" + url_id;
-    await playwright_sleep_goto(page, url_goto1);
-    let es = await playwright_by_tag_name(page, "h1");
-    let only = list_single(es);
-    let t = await playwright_text_content(only);
-    log(playwright_session_load_facebook_preaching_ask.name, {
-      t,
-    });
+    async function lambda2() {
+      const url_goto1 = "https://www.facebook.com/" + url_id;
+      await playwright_sleep_goto(page, url_goto1);
+      let es = await playwright_by_tag_name(page, "h1");
+      let only = list_single(es);
+      let t = await playwright_text_content(only);
+      log(playwright_session_load_facebook_preaching_ask.name, {
+        t,
+      });
+    }
     return;
     const url_goto = "https://www.m.me/" + url_id;
     await playwright_sleep_goto(page, url_goto);
