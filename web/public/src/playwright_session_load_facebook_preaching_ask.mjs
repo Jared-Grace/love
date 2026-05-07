@@ -24,6 +24,8 @@ export async function playwright_session_load_facebook_preaching_ask() {
   async function lambda(url_id) {
     let v = property_initialize_empty(lookup, url_id);
     let ne = property_exists_not(v, "facebook_name");
+    if (false) {
+    }
     const url_goto1 = "https://www.facebook.com/" + url_id;
     await playwright_sleep_goto(page, url_goto1);
     let es = await playwright_by_tag_name(page, "h1");
