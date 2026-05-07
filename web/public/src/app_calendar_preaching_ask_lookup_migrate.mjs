@@ -4,6 +4,6 @@ import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/
 export async function app_calendar_preaching_ask_lookup_migrate() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
   const property = "facebook_conversation_url";
-  object_map_self_value_to_property(property, lookup);
+  object_map_self_value_to_property(lookup, property);
   await app_calendar_preaching_ask_lookup_overwrite(lookup);
 }
