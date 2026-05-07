@@ -35,7 +35,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
         h2,
         "This content isn't available right now",
       );
-      if (false) {
+      if (includes) {
       }
       let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
