@@ -5,5 +5,7 @@ export async function sandbox_3() {
   object_merge_match(to, {
     a: 1,
   });
-  json_equal_assert(left, right);
+  json_equal_assert(to, {
+    a: 1,
+  });
 }
