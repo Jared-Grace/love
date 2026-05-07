@@ -1,3 +1,4 @@
+import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { app_calendar_preaching_ask_lookup_overwrite } from "../../../love/public/src/app_calendar_preaching_ask_lookup_overwrite.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -23,6 +24,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
     await page.goto("https://www.m.me/" + url_id);
     await page.waitForLoadState("domcontentloaded");
     const url = page.url();
+    let value2 = property_initialize_empty(object, property_name);
     property_set_exists_not(lookup, url_id, url);
     await app_calendar_preaching_ask_lookup_overwrite(lookup);
   }
