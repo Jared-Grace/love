@@ -14,7 +14,7 @@ export async function file_overwrite_json(file_path, object) {
   await file_parent_exists_ensure(file_path);
   "Using " +
     json_to.name +
-    " did not work on sufficiently large object, whereas this did:";
+    " did not work on sufficiently large object, whereas the following did:";
   let fs = await import("fs");
   const v = await import("stream/promises");
   let pipeline = property_get(v, "pipeline");
