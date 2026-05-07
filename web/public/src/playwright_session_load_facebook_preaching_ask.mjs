@@ -19,8 +19,9 @@ export async function playwright_session_load_facebook_preaching_ask() {
   let browser = property_get(r, "browser");
   let page = property_get(r, "page");
   async function lambda(url_id) {
+    const url_goto = "https://www.m.me/" + url_id;
     await http_sleep();
-    await page.goto("https://www.m.me/" + url_id);
+    await page.goto(url_goto);
     await page.waitForLoadState("domcontentloaded");
     let actual = await playwright_by_attribute_starts_with(
       page,
