@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 export function throws(lambda) {
   let success = true;
   let result = null;
@@ -7,5 +8,6 @@ export function throws(lambda) {
   } catch (e) {
     result = e;
   }
+  assert(b);
   return e;
 }
