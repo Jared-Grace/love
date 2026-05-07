@@ -40,12 +40,9 @@ export async function playwright_session_load_facebook_preaching_ask() {
       }
       let h1 = await playwright_by_tag_name_text_contents(page, "h1");
       list_remove_if_exists(waited, "Chats");
-      let t = list_single(waited);
-      property_set_exists_not(v, property_name, t);
+      let name = list_single(waited);
+      property_set_exists_not(v, property_name, name);
       await app_calendar_preaching_ask_lookup_overwrite(lookup);
-      log(playwright_session_load_facebook_preaching_ask.name, {
-        t,
-      });
     }
     let property = app_calendar_facebook_conversation_url();
     async function lambda4() {
