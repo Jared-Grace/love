@@ -1,3 +1,4 @@
+import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { property_exists_not_if_async } from "../../../love/public/src/property_exists_not_if_async.mjs";
 import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
@@ -32,6 +33,7 @@ export async function playwright_session_load_facebook_preaching_ask() {
       await playwright_sleep_goto(page, url_goto1);
       let es = await playwright_by_tag_name(page, "h1");
       let waited = await list_map_unordered_async(es, playwright_text_content);
+      list_remove_if_exists(list, item);
       let only = list_single(waited);
       let t = await playwright_text_content(only);
       property_set_exists_not(v, property_name, t);
