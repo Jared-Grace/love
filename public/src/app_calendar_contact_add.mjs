@@ -8,7 +8,7 @@ export function app_calendar_contact_add(data, item) {
   let properties = ["facebook_conversation_id", "facebook_url_id"];
   function lambda2(value, property2) {}
   each_object(object, lambda2);
-  function lambda(property) {
+  function lambda(value, key) {
     let existing = list_find_property_or_null(
       contacts,
       property,
