@@ -22,4 +22,16 @@ export async function sandbox_3() {
     b: 2,
     a: 1,
   });
+  to = {
+    b: 2,
+    a: 1,
+  };
+  object_merge_match(to, {
+    b: 2,
+    a: 1,
+  });
+  json_equal_assert(to, {
+    b: 2,
+    a: 1,
+  });
 }
