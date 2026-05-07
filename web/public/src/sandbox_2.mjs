@@ -1,3 +1,4 @@
+import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
@@ -10,7 +11,8 @@ export async function sandbox_2() {
   let file_path_calendar = app_calendar_secret_path();
   async function lambda2(data) {
     function lambda(value, facebook_url_id) {
-      let value2 = property_get(object, property_name);
+      let property = app_calendar_facebook_conversation_url();
+      let value2 = property_get(data, property);
       let left = "/t/";
       const right = "/";
       let facebook_conversation_id = text_between(value, left, right);
