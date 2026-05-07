@@ -1,3 +1,4 @@
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
@@ -13,6 +14,7 @@ export function search_generic(search, list, value_get, include) {
     return v2;
   }
   let f_names_search = list_filter(list, filter);
+  list_sort_text(list2);
   let result = list_to_dictionary_value(f_names_search, value_get);
   return result;
 }
