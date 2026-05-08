@@ -15,8 +15,8 @@ export async function sandbox_3() {
     let columns = text_split_comma(line);
     let indicized = list_to_indices_items(columns);
     let names = ["first", "middle", "last"];
-    let size = list_size(list2);
-    let taken = list_take(columns, 3);
+    let size = list_size(names);
+    let taken = list_take(columns, size);
     let item = list_get(list, index);
     return indicized;
   }
