@@ -1,4 +1,4 @@
-import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
+import { list_to_indices_items } from "../../../love/public/src/list_to_indices_items.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
@@ -10,14 +10,7 @@ export async function sandbox_3() {
   let lines = text_split_newline(contents);
   function lambda(line) {
     let list = text_split_comma(line);
-    function lambda2(item, index) {
-      let r2 = {
-        index,
-        item,
-      };
-      return r2;
-    }
-    let indicized = list_map_index(list, lambda2);
+    let indicized = list_to_indices_items(list);
     return indicized;
   }
   let mapped = list_map(lines, lambda);
