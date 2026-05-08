@@ -1,4 +1,4 @@
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
+import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
@@ -10,7 +10,8 @@ export async function sandbox_3() {
   let lines = text_split_newline(contents);
   function lambda(item) {
     let split = text_split_comma(item);
-    let m = list_multiple_is(list);
+    function lambda2(item2, index) {}
+    let mapped2 = list_map_index(list, lambda2);
     return split;
   }
   let mapped = list_map(lines, lambda);
