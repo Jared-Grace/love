@@ -1,10 +1,10 @@
+import { facebook_conversation_url_to_id } from "../../../love/public/src/facebook_conversation_url_to_id.mjs";
 import { property_get_fn } from "../../../love/public/src/property_get_fn.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
 import { file_json_transform_initialize_default } from "../../../love/public/src/file_json_transform_initialize_default.mjs";
 import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
-import { text_between } from "../../../love/public/src/text_between.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 export async function sandbox_2() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
@@ -16,13 +16,8 @@ export async function sandbox_2() {
         value,
         app_calendar_facebook_conversation_url,
       );
-      let left = "/t/";
-      const right = "/";
-      let facebook_conversation_id = text_between(
-        conversation_url,
-        left,
-        right,
-      );
+      let facebook_conversation_id =
+        facebook_conversation_url_to_id(conversation_url);
       const item = {
         facebook_conversation_id,
         facebook_url_id,
