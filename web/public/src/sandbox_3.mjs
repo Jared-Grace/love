@@ -9,8 +9,8 @@ export async function sandbox_3() {
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
   function lambda(line) {
-    let list = text_split_comma(line);
-    let indicized = list_to_indices_items(list);
+    let split = text_split_comma(line);
+    let indicized = list_to_indices_items(split);
     return indicized;
   }
   let mapped = list_map(lines, lambda);
