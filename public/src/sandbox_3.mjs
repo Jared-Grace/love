@@ -20,8 +20,12 @@ export async function sandbox_3() {
     let taken = list_take(columns, size);
     let name = list_join_space(taken);
     const phone_index = 18;
-    let item = list_get(list, phone_index);
-    return indicized;
+    let phone = list_get(list, phone_index);
+    let r2 = {
+      name,
+      phone,
+    };
+    return r2;
   }
   let mapped = list_map(lines, lambda);
   return mapped;
