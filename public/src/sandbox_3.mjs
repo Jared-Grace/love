@@ -20,7 +20,7 @@ export async function sandbox_3() {
     let taken = list_take(columns, size);
     let name = list_join_space(taken);
     const phone_index = 18;
-    let phone = list_get(list, phone_index);
+    let phone = list_get(columns, phone_index);
     let r2 = {
       name,
       phone,
