@@ -12,6 +12,7 @@ export async function sandbox_3() {
   function lambda(line) {
     let columns = text_split_comma(line);
     let indicized = list_to_indices_items(columns);
+    ltk;
     let item = list_get(list, index);
     return indicized;
   }
