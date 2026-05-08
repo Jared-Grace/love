@@ -8,9 +8,15 @@ export async function sandbox_3() {
   let r = folder_user_downloads_path("contacts.csv");
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
-  function lambda(item) {
-    let split = text_split_comma(item);
-    function lambda2(item2, index) {}
+  function lambda(line) {
+    let split = text_split_comma(line);
+    function lambda2(item, index) {
+      let r2 = {
+        item,
+        index,
+      };
+      return r2;
+    }
     let mapped2 = list_map_index(list, lambda2);
     return split;
   }
