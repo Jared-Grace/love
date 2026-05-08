@@ -18,7 +18,7 @@ export async function sandbox_3() {
     let names = ["first", "middle", "last"];
     let size = list_size(names);
     let taken = list_take(columns, size);
-    let joined = list_join_space(list2);
+    let name = list_join_space(taken);
     let item = list_get(list, index);
     return indicized;
   }
