@@ -8,5 +8,5 @@ export async function sandbox_3() {
   let lines = text_split_newline(contents);
   function lambda(item) {}
   let mapped = list_map(list, lambda);
-  return lines;
+  return mapped;
 }
