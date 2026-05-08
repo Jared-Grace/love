@@ -9,7 +9,7 @@ export async function sandbox_3() {
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
   function lambda(line) {
-    let split = text_split_comma(line);
+    let list = text_split_comma(line);
     function lambda2(item, index) {
       let r2 = {
         index,
