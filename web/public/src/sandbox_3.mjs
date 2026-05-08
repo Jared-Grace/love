@@ -19,7 +19,8 @@ export async function sandbox_3() {
     let size = list_size(names);
     let taken = list_take(columns, size);
     let name = list_join_space(taken);
-    let item = list_get(list, index);
+    const phone_index = 18;
+    let item = list_get(list, phone_index);
     return indicized;
   }
   let mapped = list_map(lines, lambda);
