@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -16,7 +17,8 @@ export async function sandbox_3() {
     let indicized = list_to_indices_items(columns);
     let names = ["first", "middle", "last"];
     let size = list_size(names);
-    let taken = list_take(columns, size);ljsp
+    let taken = list_take(columns, size);
+    let joined = list_join_space(list2);
     let item = list_get(list, index);
     return indicized;
   }
