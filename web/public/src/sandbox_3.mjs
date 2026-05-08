@@ -7,6 +7,6 @@ export async function sandbox_3() {
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
   function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  let mapped = list_map(lines, lambda);
   return mapped;
 }
