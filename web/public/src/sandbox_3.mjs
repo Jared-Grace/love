@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_to_indices_items } from "../../../love/public/src/list_to_indices_items.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
@@ -12,7 +13,7 @@ export async function sandbox_3() {
   function lambda(line) {
     let columns = text_split_comma(line);
     let indicized = list_to_indices_items(columns);
-    ltk;
+    let taken = list_take(list2, count);
     let item = list_get(list, index);
     return indicized;
   }
