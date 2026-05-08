@@ -1,4 +1,3 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -17,8 +16,7 @@ export async function sandbox_3() {
     let indicized = list_to_indices_items(columns);
     let names = ["first", "middle", "last"];
     let size = list_size(names);
-    let taken = list_take(columns, size);
-    log_json(right);
+    let taken = list_take(columns, size);ljsp
     let item = list_get(list, index);
     return indicized;
   }
