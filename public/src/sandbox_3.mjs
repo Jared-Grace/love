@@ -12,8 +12,8 @@ export async function sandbox_3() {
     let split = text_split_comma(line);
     function lambda2(item, index) {
       let r2 = {
-        item,
         index,
+        item,
       };
       return r2;
     }
