@@ -17,8 +17,8 @@ export async function sandbox_3() {
       };
       return r2;
     }
-    let mapped2 = list_map_index(list, lambda2);
-    return split;
+    let indicized = list_map_index(list, lambda2);
+    return indicized;
   }
   let mapped = list_map(lines, lambda);
   return mapped;
