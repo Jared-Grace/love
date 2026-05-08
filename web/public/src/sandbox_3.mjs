@@ -1,7 +1,7 @@
+import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
-import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_to_indices_items } from "../../../love/public/src/list_to_indices_items.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -20,7 +20,7 @@ export async function sandbox_3() {
     let taken = list_take(columns, size);
     let name = list_join_space(taken);
     const phone_index = 18;
-    let phone = list_get(columns, phone_index);
+    let phone = list_get_or_null(columns, phone_index);
     let r2 = {
       name,
       phone,
