@@ -9,6 +9,8 @@ export async function sandbox_3() {
   let lines = text_split_newline(contents);
   function lambda(item) {
     let split = text_split_comma(item);
+    function lambda2(item2) {}
+    let mapped2 = list_map(list, lambda2);
     return split;
   }
   let mapped = list_map(lines, lambda);
