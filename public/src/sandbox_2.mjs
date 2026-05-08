@@ -1,4 +1,5 @@
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
 import { file_json_transform_initialize_default } from "../../../love/public/src/file_json_transform_initialize_default.mjs";
@@ -12,7 +13,7 @@ export async function sandbox_2() {
   async function lambda2(data) {
     function lambda(value, facebook_url_id) {
       let property = app_calendar_facebook_conversation_url();
-      let value2 = property_get_fn(value, property);
+      let value2 = property_get(value, property);
       let left = "/t/";
       const right = "/";
       let facebook_conversation_id = text_between(value2, left, right);
