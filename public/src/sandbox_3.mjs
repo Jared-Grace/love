@@ -8,7 +8,8 @@ export async function sandbox_3() {
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
   function lambda(item) {
-    let split = text_split_comma(t);
+    let split = text_split_comma(item);
+    return split;
   }
   let mapped = list_map(lines, lambda);
   return mapped;
