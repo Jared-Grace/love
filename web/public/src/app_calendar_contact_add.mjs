@@ -14,6 +14,7 @@ export function app_calendar_contact_add(data, item) {
     "facebook_conversation_url",
     "facebook_conversation_id",
     "facebook_url_id",
+    "whatsapp_phone",
   ];
   let picked = object_pick_try(item, properties_unique_across_all);
   let contacts = app_calendar_contacts_initialize(data);
