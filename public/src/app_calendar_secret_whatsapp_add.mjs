@@ -1,3 +1,4 @@
+import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
@@ -16,6 +17,7 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_downloads_path } from "../../../love/public/src/folder_user_downloads_path.mjs";
 export async function app_calendar_secret_whatsapp_add() {
   let filtered = await app_calendar_preaching_ask_entries();
+  let filtered3 = list_filter_starts_with(list, prefix);
   let r = folder_user_downloads_path("contacts.csv");
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
