@@ -66,7 +66,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     return filtered;
   }
   let v4 = {
-    input_set,
+    input_set,filtered_get
   };
   return v4;
 }
