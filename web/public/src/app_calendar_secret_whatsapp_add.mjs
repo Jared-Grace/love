@@ -2,7 +2,6 @@ import { text_and_empty_not_is } from "../../../love/public/src/text_and_empty_n
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -27,11 +26,11 @@ export async function app_calendar_secret_whatsapp_add() {
     let whatsapp_phone = list_get_or_null(columns, phone_index);
     const r = text_and_empty_not_is(whatsapp_phone);
     if (r) {
-    let item = {
-      whatsapp_name,
+      let item = {
+        whatsapp_name,
         whatsapp_phone,
-    };
-    return item;
+      };
+      return item;
     }
     return null;
   }
