@@ -1,3 +1,4 @@
+import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { object_pick } from "../../../love/public/src/object_pick.mjs";
 import { list_find_property_try_or_null_curried } from "../../../love/public/src/list_find_property_try_or_null_curried.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -30,5 +31,6 @@ export function app_calendar_contact_add(data, item) {
     object_merge_match(only, item);
   } else {
     list_add(contacts, item);
+    let skipped = list_skip(list2, skip_count);
   }
 }
