@@ -1,3 +1,4 @@
+import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -36,6 +37,8 @@ export async function app_calendar_main(context) {
     html_value_set(input, paste);
   }
   let contacts_json = list_map(contacts, json_to);
+  function lambda6(item2k) {}
+  let dictionary = list_to_dictionary_key(list, lambda6);
   function lambda4(b) {}
   let r = app_a_list_chooser_generic(
     root,
