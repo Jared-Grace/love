@@ -8,6 +8,6 @@ export async function sandbox_3() {
   let data = await app_calendar_download();
   let list = app_calendar_contacts_initialize(data);
   let fn = app_calendar_whatsapp_phone;
-  let mapped = list_map_property_fn(fn, list);
+  let mapped = list_map_property_fn(list, fn);
   return mapped;
 }
