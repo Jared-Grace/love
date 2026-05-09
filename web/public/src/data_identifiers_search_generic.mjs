@@ -9,7 +9,7 @@ export async function data_identifiers_search_generic(fn, ids_comma) {
   text_is_assert(ids_comma);
   let identifiers = await fn();
   let ids = text_split_comma_dot(ids_comma);
-  log_exit(message);
+  log_exit(ids);
   let r3 = property_get_curried(identifiers);
   let mapped = list_map(ids, r3);
   let i = list_intersect_multiple(mapped);
