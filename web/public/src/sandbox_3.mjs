@@ -8,5 +8,9 @@ export async function sandbox_3() {
   let data = await app_calendar_download();
   let list = app_calendar_contacts_initialize(data);
   let mapped = list_map_property_fn(list, app_calendar_whatsapp_phone);
-  return mapped;
+  let r = {
+    phones,
+    mapped,
+  };
+  return r;
 }
