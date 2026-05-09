@@ -1,4 +1,4 @@
-import { pp_calendar_secret_transform } from "../../../love/public/src/pp_calendar_secret_transform.mjs";
+import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -25,5 +25,5 @@ export async function app_calendar_secret_facebook_add() {
     }
     each_object(lookup, lambda);
   }
-  await pp_calendar_secret_transform(lambda2);
+  await app_calendar_secret_transform(lambda2);
 }
