@@ -30,7 +30,7 @@ export async function sandbox_3() {
     return r2;
   }
   let mapped = list_map(lines, lambda);
-  async function lambda2(data) {
+  async function lambda2(data) {e
     app_calendar_contact_add(data, value);
   }
   await app_calendar_secret_transform(lambda2);
