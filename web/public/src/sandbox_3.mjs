@@ -24,7 +24,7 @@ export async function sandbox_3() {
     let whatsapp_name = list_join_space(taken);
     const phone_index = 18;
     let whatsapp_phone = list_get_or_null(columns, phone_index);
-    let size2 = text_size(s);
+    let size2 = text_size(whatsapp_phone);
     let r2 = {
       whatsapp_name,
       whatsapp_phone,
