@@ -1,5 +1,4 @@
 import { object_pick } from "../../../love/public/src/object_pick.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_find_property_try_or_null_curried } from "../../../love/public/src/list_find_property_try_or_null_curried.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
@@ -22,11 +21,7 @@ export function app_calendar_contact_add(data, item) {
     let existing = c(key, value);
     return existing;
   }
-  let unique = object_values_map_list_unique(item, lambda);
-  log(app_calendar_contact_add.name, {
-    unique,
-    item,
-  });
+  let unique = object_values_map_list_unique(picked, lambda);
   let list = list_filter_null_not_is(unique);
   list_multiple_not_is_assert(list);
   let s1 = list_size_1(list);
