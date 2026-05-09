@@ -9,7 +9,6 @@ import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_
 import { each_object } from "../../../love/public/src/each_object.mjs";
 export async function sandbox_2() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
-  return lookup;
   let file_path_calendar = app_calendar_secret_path();
   async function lambda2(data) {
     function lambda(value, facebook_url_id) {
