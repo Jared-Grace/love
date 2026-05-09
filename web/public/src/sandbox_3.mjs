@@ -8,4 +8,5 @@ export async function sandbox_3() {
   let fn = app_calendar_whatsapp_phone;
   let property_name = fn();
   let mapped = list_map_property(list, property_name);
+  return mapped;
 }
