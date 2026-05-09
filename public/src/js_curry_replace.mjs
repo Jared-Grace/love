@@ -82,10 +82,6 @@ export async function js_curry_replace(ast) {
         await js_declare_single_identifier_is_if_async(first, lambda4);
       }
       async function on_expression(expression) {
-        log(js_curry_replace.name, {
-          a: 3,
-          expression,
-        });
         expression = js_await_if_unwrap_argument(expression);
         await js_call_is_if_async(expression, on_call_is);
         async function on_call_is() {
