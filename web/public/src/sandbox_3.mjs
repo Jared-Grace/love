@@ -1,3 +1,4 @@
+import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -28,5 +29,6 @@ export async function sandbox_3() {
     return r2;
   }
   let mapped = list_map(lines, lambda);
+  await app_calendar_secret_transform(lambda2);
   return mapped;
 }
