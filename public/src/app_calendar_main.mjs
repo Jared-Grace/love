@@ -1,3 +1,4 @@
+import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -37,7 +38,9 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  function lambda6() {}
+  function lambda6() {
+    let picked = object_pick_try(object, property_names);
+  }
   let dictionary = list_to_dictionary_key(contacts, lambda6);
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
