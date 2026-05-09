@@ -1,5 +1,5 @@
 import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { set_add } from "../../../love/public/src/set_add.mjs";
 import { set_includes } from "../../../love/public/src/set_includes.mjs";
@@ -33,7 +33,7 @@ export function graph_search_depth_first(
     let m = mapper(node);
     set_add(visited, m);
     if (equal(m, mt)) {
-      object_merge(q_current, {
+      object_merge_set(q_current, {
         found: true,
       });
       return q_current;

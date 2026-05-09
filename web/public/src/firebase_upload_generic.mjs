@@ -1,12 +1,12 @@
 import { firebase_bucket_file_get } from "../../../love/public/src/firebase_bucket_file_get.mjs";
 import { retry_standard } from "../../../love/public/src/retry_standard.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function firebase_upload_generic(destination, settings, buffer) {
   let bucket = null;
   let file = null;
   ({ bucket, file, destination } = await firebase_bucket_file_get(destination));
-  let merged = object_merge(
+  let merged = object_merge_set(
     {
       metadata: {
         cacheControl: "no-cache",

@@ -1,6 +1,6 @@
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { app_shared_refresh } from "../../../love/public/src/app_shared_refresh.mjs";
 import { app_message } from "../../../love/public/src/app_message.mjs";
 import { app_message_provide_travel } from "../../../love/public/src/app_message_provide_travel.mjs";
@@ -12,7 +12,7 @@ export function app_sandbox_main(context) {
   let p = html_p_text(root, "text");
   return;
   let app_fn = app_message;
-  object_merge(context, {
+  object_merge_set(context, {
     app_fn,
     screens: {
       provide_travel: app_message_provide_travel,

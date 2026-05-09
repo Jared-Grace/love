@@ -1,4 +1,4 @@
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
@@ -53,7 +53,7 @@ export async function webpack_build_generic(
       command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
-    let env = object_merge(env_vars, process.env);
+    let env = object_merge_set(env_vars, process.env);
     let stdout = await command_line_generic(combined2, {
       env,
     });
