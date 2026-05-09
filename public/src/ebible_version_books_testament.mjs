@@ -10,7 +10,9 @@ import { ebible_version_download } from "../../../love/public/src/ebible_version
 export async function ebible_version_books_testament(bible_folder, selector) {
   let file_path = await ebible_version_download(bible_folder);
   let joined = path_join([file_path, "index.htm"]);
-  let { d, root } = await html_parse_read(joined);
+  let r = await html_parse_read(joined);
+  let root = property_get(r, "root");
+  let d = property_get(r, "d");
   let bl = html_parse_find(root, ".bookList");
   let mapped = html_parse_find_list_href_text(bl, selector, d);
   function lambda(item) {
