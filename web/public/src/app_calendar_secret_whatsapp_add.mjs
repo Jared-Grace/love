@@ -1,3 +1,4 @@
+import { text_is } from "../../../love/public/src/text_is.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -28,6 +29,7 @@ export async function app_calendar_secret_whatsapp_add() {
     let item = {
       whatsapp_name,
     };
+    let ti2 = text_is(value);
     let ne = text_empty_not_is(whatsapp_phone);
     if (ne) {
       object_merge(item, {
