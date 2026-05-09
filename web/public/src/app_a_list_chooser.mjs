@@ -20,49 +20,52 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let root = property_get(context, "root");
-  const articled = text_articled(noun);
-  const text = "Choose " + articled + ":";
-  let d = html_div_text_centered(root, text);
-  app_a_control_style(d);
-  html_style_background_color_set(d, "white");
-  let filtered = null;
-  let input = app_a_input(root);
-  let f_names_div = html_div(root);
-  function on_input() {
-    let value = html_value_get(input);
-    filtered = list_filter_text_match_ordered(texts, value);
-    refresh();
-  }
-  html_on_input(input, on_input);
-  filtered = texts;
-  refresh();
-  function refresh() {
-    html_clear(f_names_div);
-    list_sort_text_alpha_size(filtered);
-    function lambda(text) {
-      async function on_click() {
-        await f_name_select(text);
-      }
-      app_a_button_wide(f_names_div, text, on_click);
+  async function app_a_list_chooser(params) {
+    const articled = text_articled(noun);
+    const text = "Choose " + articled + ":";
+    let d = html_div_text_centered(root, text);
+    app_a_control_style(d);
+    html_style_background_color_set(d, "white");
+    let filtered = null;
+    let input = app_a_input(root);
+    let f_names_div = html_div(root);
+    function on_input() {
+      let value = html_value_get(input);
+      filtered = list_filter_text_match_ordered(texts, value);
+      refresh();
     }
-    each(filtered, lambda);
+    html_on_input(input, on_input);
+    filtered = texts;
+    refresh();
+    function refresh() {
+      html_clear(f_names_div);
+      list_sort_text_alpha_size(filtered);
+      function lambda(text) {
+        async function on_click() {
+          await f_name_select(text);
+        }
+        app_a_button_wide(f_names_div, text, on_click);
+      }
+      each(filtered, lambda);
+    }
+    html_focus(input);
+    async function f_name_select(text) {
+      list_remove(on_keydowns, on_keydown);
+      await lambda$text(text);
+    }
+    function input_set(value) {
+      html_value_set(input, value);
+      on_input();
+    }
+    function filtered_get() {
+      return filtered;
+    }
+    let v4 = {
+      input_set,
+      filtered_get,
+    };
   }
-  html_focus(input);
-  async function f_name_select(text) {
-    list_remove(on_keydowns, on_keydown);
-    await lambda$text(text);
-  }
-  function input_set(value) {
-    html_value_set(input, value);
-    on_input();
-  }
-  function filtered_get() {
-    return filtered;
-  }
-  let v4 = {
-    input_set,
-    filtered_get,
-  };
+  let v4 = app_a_list_chooser();
   async function on_enter() {
     let first = list_first();
     await f_name_select(first);
