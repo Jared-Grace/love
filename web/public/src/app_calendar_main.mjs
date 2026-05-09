@@ -1,3 +1,4 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
@@ -28,6 +29,7 @@ export async function app_calendar_main(context) {
     fn: app_calendar_download,
   });
   let contacts = app_calendar_contacts_initialize(data);
+  let filtered = list_filter_property(list, property_name, property_value);
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
     root,
