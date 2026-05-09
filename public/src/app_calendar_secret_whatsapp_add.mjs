@@ -1,7 +1,6 @@
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
-import { text_and_empty_not_is } from "../../../love/public/src/text_and_empty_not_is.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -28,9 +27,8 @@ export async function app_calendar_secret_whatsapp_add() {
     let whatsapp_name = list_join_space(taken);
     const phone_index = 18;
     let whatsapp_phone = list_get_or_null(columns, phone_index);
-    let includes = list_includes(list, item2);
-    const r = text_and_empty_not_is(whatsapp_phone);
-    if (r) {
+    let includes = list_includes(filtered, whatsapp_phone);
+    if (includes) {
       let item = {
         whatsapp_name,
         whatsapp_phone,
