@@ -47,7 +47,7 @@ export async function js_curry_replace(ast) {
     let list = js_visit_function_nodes_list(ast);
     async function lambda(v) {
       let node = property_get(v, "node");
-      log_unparse(node2);
+      log_unparse(node);
       let params = js_function_declaration_params_get(node);
       let body_block = js_function_declaration_to_block_body(node);
       let s1 = list_size_1(body_block);
