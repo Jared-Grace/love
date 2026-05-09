@@ -32,8 +32,8 @@ export function app_calendar_contact_add(data, item) {
   } else {
     list_add(contacts, item);
     log_keep(app_calendar_contact_add.name, {
-      added: true,
       item,
+      added: true,
     });
   }
 }
