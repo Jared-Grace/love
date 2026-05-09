@@ -4,5 +4,6 @@ import { app_calendar_preaching_ask_phones } from "../../../love/public/src/app_
 export async function sandbox_3() {
   let phones = await app_calendar_preaching_ask_phones();
   let data = await app_calendar_download();
+  let property_name = fn();
   let mapped = list_map_property(list, property_name);
 }
