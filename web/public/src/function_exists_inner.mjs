@@ -9,7 +9,7 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { repos_paths_map_unordered_combine } from "../../../love/public/src/repos_paths_map_unordered_combine.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 export async function function_exists_inner(u) {
-  let { f_path } = u;
+  let f_path = property_get(u, "f_path");
   async function lambda(joined) {
     let exists = await file_exists(joined);
     let v = {
