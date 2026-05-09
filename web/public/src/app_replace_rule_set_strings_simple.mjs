@@ -1,5 +1,5 @@
 import { app_replace_rule_set_strings_simple_abbreviation_st } from "../../../love/public/src/app_replace_rule_set_strings_simple_abbreviation_st.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { app_replace_rule_set_identifiers_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_abbreviations.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -7,7 +7,7 @@ import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/pu
 export function app_replace_rule_set_strings_simple() {
   let abbreviations = {};
   app_replace_rule_set_strings_simple_abbreviation_st(abbreviations);
-  object_merge(abbreviations, {
+  object_merge_set(abbreviations, {
     stg: ["", "st", "ring ", "g", "rower"],
   });
   app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);

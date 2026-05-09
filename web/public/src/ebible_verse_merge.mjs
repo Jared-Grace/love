@@ -1,6 +1,6 @@
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export function ebible_verse_merge(bible_folder, chapter_code, v) {
-  let to = object_merge(
+  let to = object_merge_set(
     {
       bible_folder,
       chapter_code,

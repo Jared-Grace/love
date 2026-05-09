@@ -5,7 +5,7 @@ import { list_map_existing } from "../../../love/public/src/list_map_existing.mj
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { app_reply_languages_chosen_default } from "../../../love/public/src/app_reply_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "../../../love/public/src/app_reply_main_shortcuts.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { text_alphabet_includes } from "../../../love/public/src/text_alphabet_includes.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
@@ -151,8 +151,8 @@ export async function app_reply_main(context) {
       visible_count = buttons_refresh();
     }
     b = html_button(root, text, click);
-    object_merge(b, choice);
-    object_merge(b, {
+    object_merge_set(b, choice);
+    object_merge_set(b, {
       click,
     });
     return b;

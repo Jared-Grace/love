@@ -1,13 +1,13 @@
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export function app_bible_main_generic_before(
   context,
   app_fn,
   screens,
   screen_home,
 ) {
-  object_merge(context, {
+  object_merge_set(context, {
     app_fn,
     screens,
     screen_home,
