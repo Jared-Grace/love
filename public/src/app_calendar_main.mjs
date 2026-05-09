@@ -1,5 +1,6 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
+import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_to_dictionary_key_json } from "../../../love/public/src/list_to_dictionary_key_json.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -37,7 +38,7 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  let dictionary = list_to_dictionary_key_json(contacts);
+  let dictionary = list_to_dictionary_key(contacts, json_to);
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
     let value2 = property_get(dictionary, text);
