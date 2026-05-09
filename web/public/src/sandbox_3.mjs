@@ -5,7 +5,8 @@ import { app_calendar_preaching_ask_phones } from "../../../love/public/src/app_
 export async function sandbox_3() {
   let phones = await app_calendar_preaching_ask_phones();
   let list = await app_calendar_download_contacts();
-  let property_name = app_calendar_whatsapp_phone();
+  let fn = app_calendar_whatsapp_phone;
+  let property_name = fn();
   let mapped = list_filter_property_exists_map(list, property_name);
   let r = {
     phones,
