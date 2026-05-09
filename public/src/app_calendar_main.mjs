@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
@@ -33,7 +34,9 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  function lambda4() {}
+  function lambda4() {
+    let json2 = json_to(object);
+  }
   let r = app_a_list_chooser_generic(root, "contact", contacts, lambda4);
   async function lambda3() {
     function lambda5(oad) {
