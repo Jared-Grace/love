@@ -5,12 +5,12 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let root = property_get(context, "root");
-  let v4 = app_a_list_chooser_generic(root, noun, texts, lambda$text);
+  let r = app_a_list_chooser_generic(root, noun, texts, lambda$text);
   async function on_enter() {
     let first = list_first();
     await f_name_select(first);
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  return v4;
+  return r;
 }
