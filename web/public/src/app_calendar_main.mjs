@@ -7,7 +7,6 @@ import { app_calendar_upload } from "../../../love/public/src/app_calendar_uploa
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
-import { html_input_placeholder_wide_curried } from "../../../love/public/src/html_input_placeholder_wide_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
@@ -33,15 +32,6 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_text_set(p, paste);
   }
-  let properties = [
-    "Facebook Name",
-    "Facebook Messages URL",
-    "Facebook URL",
-    "WhatsApp Name",
-    "WhatsApp number",
-  ];
-  let c = html_input_placeholder_wide_curried(root);
-  let inputs = list_map(properties, c);
   async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
