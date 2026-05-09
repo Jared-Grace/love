@@ -71,16 +71,17 @@ export async function js_curry_replace(ast) {
         });
         let first = property_get(r, "first");
         async function lambda4(init, id) {
-          async function lambda6() {}
-          await js_return_is_if_async(node2, lambda6);
           let second = property_get(r, "second");
-          async function lambda5(argument) {
-            let eq = js_identifiers_names_equal(id, argument);
-            if (eq) {
-              await on_expression(init);
+          async function lambda6() {
+            async function lambda5(argument) {
+              let eq = js_identifiers_names_equal(id, argument);
+              if (eq) {
+                await on_expression(init);
+              }
             }
+            await js_return_argument_identifier_is_if_async(second, lambda5);
           }
-          await js_return_argument_identifier_is_if_async(second, lambda5);
+          await js_return_is_if_async(second, lambda6);
         }
         await js_declare_single_identifier_is_if_async(first, lambda4);
       }
