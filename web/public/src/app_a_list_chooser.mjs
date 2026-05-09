@@ -20,7 +20,7 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let root = property_get(context, "root");
-  function app_a_list_chooser(params) {
+  function app_a_list_chooser_generic(root, noun, texts, lambda$text) {
     const articled = text_articled(noun);
     const text = "Choose " + articled + ":";
     let d = html_div_text_centered(root, text);
@@ -65,7 +65,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
       filtered_get,
     };
   }
-  let v4 = app_a_list_chooser();
+  let v4 = app_a_list_chooser_generic(root, noun, texts, lambda$text);
   async function on_enter() {
     let first = list_first();
     await f_name_select(first);
