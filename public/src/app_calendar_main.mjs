@@ -40,8 +40,8 @@ export async function app_calendar_main(context) {
   }
   let dictionary = list_to_dictionary_key_json(contacts);
   let contacts_json = properties_get(dictionary);
-  function lambda4(b) {
-    let value2 = property_get(dictionary, b);
+  function lambda4(b, text) {
+    let value2 = property_get(dictionary, text);
     html_text_set(b, value2);
   }
   let r = app_a_list_chooser_generic(
