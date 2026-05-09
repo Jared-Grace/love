@@ -27,11 +27,12 @@ export async function sandbox_3() {
     let whatsapp_phone = list_get_or_null(columns, phone_index);
     let item = {
       whatsapp_name,
-      whatsapp_phone,
     };
     let ne = text_empty_not_is(whatsapp_phone);
-    if (false) {
-      object_merge(to, from);
+    if (ne) {
+      object_merge(item, {
+        whatsapp_phone,
+      });
     }
     return item;
   }
