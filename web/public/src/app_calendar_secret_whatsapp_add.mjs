@@ -19,7 +19,7 @@ import { folder_user_downloads_path } from "../../../love/public/src/folder_user
 export async function app_calendar_secret_whatsapp_add() {
   let filtered = await app_calendar_preaching_ask_entries();
   let phones = list_filter_starts_with(filtered, "+");
-  let mapped2 = list_map_replace(list, from, to);
+  let mapped2 = list_map_replace(phones, " ", "");
   let r = folder_user_downloads_path("contacts.csv");
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
