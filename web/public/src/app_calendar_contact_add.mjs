@@ -14,7 +14,7 @@ export function app_calendar_contact_add(data, item) {
     "facebook_conversation_id",
     "facebook_url_id",
   ];
-  let picked = object_pick(object, properties_unique_across_all);
+  let picked = object_pick(item, properties_unique_across_all);
   let contacts = app_calendar_contacts_initialize(data);
   let c = list_find_property_try_or_null_curried(contacts);
   function lambda(value, key) {
