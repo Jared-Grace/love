@@ -1,5 +1,5 @@
 import { property_set } from "../../../love/public/src/property_set.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { true_is } from "../../../love/public/src/true_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -27,7 +27,7 @@ export async function function_exists_inner(u) {
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);
   let exists = list_size_1(filtered);
-  let result = object_merge(
+  let result = object_merge_set(
     {
       exists,
       multiple,

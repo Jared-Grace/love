@@ -1,6 +1,6 @@
 import { function_name_separator_trail } from "../../../love/public/src/function_name_separator_trail.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -12,7 +12,7 @@ export async function functions_search_app_prefix(s) {
   const c = function_name_separator_trail(a_name);
   let results_search = await functions_search(c);
   let value = function_name_to_path(a_name);
-  let results = object_merge(
+  let results = object_merge_set(
     {
       [a_name]: value,
     },

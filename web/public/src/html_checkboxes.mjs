@@ -5,7 +5,7 @@ import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -99,7 +99,7 @@ export function html_checkboxes(
       "font-size": app_shared_style_control_font_size(),
     });
     let div = html_div_text(label, details);
-    object_merge(checkbox, {
+    object_merge_set(checkbox, {
       container,
     });
     return checkbox;

@@ -3,7 +3,7 @@ import { property_delete_if_exists_fn } from "../../../love/public/src/property_
 import { command_line_generic_code_ignore } from "../../../love/public/src/command_line_generic_code_ignore.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export async function command_line_generic(command, extra) {
   arguments_assert(arguments, 2);
   text_is_assert(command);
@@ -84,7 +84,7 @@ export async function command_line_generic(command, extra) {
   const options = {
     encoding: "utf8",
   };
-  object_merge(options, extra);
+  object_merge_set(options, extra);
   const stdout = await execAsync(command, options);
   return stdout;
 }

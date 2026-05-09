@@ -6,7 +6,7 @@ import { openai_responses_cache } from "../../../love/public/src/openai_response
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function g_sermon_generate_book_generic(
   bible_folders,
@@ -35,7 +35,7 @@ export async function g_sermon_generate_book_generic(
       let passage_extension = {
         [g_sermon_generate_book_generic_property()]: output,
       };
-      object_merge(passage, passage_extension);
+      object_merge_set(passage, passage_extension);
       log_keep(g_sermon_generate_book_generic.name, output);
     }
     await each_async(passages_with_prompts, lambda3);

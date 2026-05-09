@@ -1,6 +1,6 @@
 import { list_property_exists_not_error } from "../../../love/public/src/list_property_exists_not_error.mjs";
 import { json_compress_object } from "../../../love/public/src/json_compress_object.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { app_a_download_paths } from "../../../love/public/src/app_a_download_paths.mjs";
@@ -12,7 +12,7 @@ export async function app_a_download() {
       versions: [contents],
     };
     let c = await json_compress_object(data);
-    object_merge(c, {
+    object_merge_set(c, {
       key: path,
     });
     return c;

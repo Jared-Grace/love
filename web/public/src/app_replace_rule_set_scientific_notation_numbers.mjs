@@ -1,5 +1,5 @@
 import { app_replace_rule_set_decimals_abbreviations } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviations.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { app_replace_rule_set_decimals_rules } from "../../../love/public/src/app_replace_rule_set_decimals_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_scientific_notation_numbers() {
@@ -21,7 +21,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     se: ["", "s", "cientific notation number ", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
   };
-  object_merge(abbreviations, ad);
+  object_merge_set(abbreviations, ad);
   let r = {
     name: "Scientific Notation Numbers",
     abbreviations,
