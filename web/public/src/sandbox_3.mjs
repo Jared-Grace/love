@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
@@ -29,7 +30,8 @@ export async function sandbox_3() {
       whatsapp_phone,
     };
     let ne = text_empty_not_is(whatsapp_phone);
-    if (false) {om
+    if (false) {
+      object_merge(to, from);
     }
     return item;
   }
