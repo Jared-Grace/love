@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -41,6 +42,7 @@ export async function app_calendar_main(context) {
   const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda6(o) {
     let picked = object_pick_try(o, properties_name);
+    let json2 = json_to(object);
     return picked;
   }
   let dictionary = list_to_dictionary_key(contacts, lambda6);
