@@ -54,8 +54,9 @@ export function app_a_list_chooser_generic(root, noun, texts, lambda$text) {
   function filtered_get() {
     return filtered;
   }
-  let v4 = {
+  let r = {
     input_set,
     filtered_get,
   };
+  return r;
 }
