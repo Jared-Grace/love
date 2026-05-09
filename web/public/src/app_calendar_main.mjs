@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
@@ -33,6 +34,7 @@ export async function app_calendar_main(context) {
   async function lambda2() {
     let paste = await clipboard_paste();
     html_text_set(p, paste);
+    html_value_set(input2, value2);
   }
   async function lambda3() {
     function lambda5(oad) {
