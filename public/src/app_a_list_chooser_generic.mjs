@@ -14,7 +14,13 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { text_articled } from "../../../love/public/src/text_articled.mjs";
-export function app_a_list_chooser_generic(root, noun, texts, lambda$text) {
+export function app_a_list_chooser_generic(
+  root,
+  noun,
+  texts,
+  lambda$text,
+  lambda$button,
+) {
   const articled = text_articled(noun);
   const text = "Choose " + articled + ":";
   let d = html_div_text_centered(root, text);
