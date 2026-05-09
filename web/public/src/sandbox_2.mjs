@@ -1,31 +1,4 @@
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { facebook_conversation_url_to_id } from "../../../love/public/src/facebook_conversation_url_to_id.mjs";
-import { property_get_fn } from "../../../love/public/src/property_get_fn.mjs";
-import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
-import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
-import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
-import { file_json_transform_initialize_default } from "../../../love/public/src/file_json_transform_initialize_default.mjs";
-import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_secret_path.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
+import { app_calendar_secret_facebook_add } from "../../../love/public/src/app_calendar_secret_facebook_add.mjs";
 export async function sandbox_2() {
-  let lookup = await app_calendar_preaching_ask_lookup_get();
-  let file_path_calendar = app_calendar_secret_path();
-  async function lambda2(data) {
-    function lambda(value, facebook_url_id) {
-      let conversation_url = property_get_fn(
-        value,
-        app_calendar_facebook_conversation_url,
-      );
-      let facebook_conversation_id =
-        facebook_conversation_url_to_id(conversation_url);
-      const item = {
-        facebook_conversation_id,
-        facebook_url_id,
-      };
-      object_merge(value, item);
-      app_calendar_contact_add(data, value);
-    }
-    each_object(lookup, lambda);
-  }
-  await file_json_transform_initialize_default(file_path_calendar, lambda2);
+  await app_calendar_secret_facebook_add();
 }
