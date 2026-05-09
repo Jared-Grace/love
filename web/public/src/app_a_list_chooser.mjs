@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
