@@ -1,5 +1,5 @@
+import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
-import { object_pick } from "../../../love/public/src/object_pick.mjs";
 import { list_find_property_try_or_null_curried } from "../../../love/public/src/list_find_property_try_or_null_curried.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
@@ -15,7 +15,7 @@ export function app_calendar_contact_add(data, item) {
     "facebook_conversation_id",
     "facebook_url_id",
   ];
-  let picked = object_pick(item, properties_unique_across_all);
+  let picked = object_pick_try(item, properties_unique_across_all);
   let contacts = app_calendar_contacts_initialize(data);
   let c = list_find_property_try_or_null_curried(contacts);
   function lambda(value, key) {
