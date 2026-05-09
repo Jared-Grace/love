@@ -1,3 +1,4 @@
+import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { app_calendar_preaching_ask_phones } from "../../../love/public/src/app_calendar_preaching_ask_phones.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
@@ -31,7 +32,7 @@ export async function app_calendar_secret_whatsapp_add() {
     if (includes) {
       let item = {
         whatsapp_name,
-        whatsapp_phone,
+        [app_calendar_whatsapp_phone()]: whatsapp_phone,
       };
       return item;
     }
