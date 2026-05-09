@@ -1,3 +1,4 @@
+import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
@@ -23,6 +24,7 @@ export async function sandbox_3() {
     let whatsapp_name = list_join_space(taken);
     const phone_index = 18;
     let whatsapp_phone = list_get_or_null(columns, phone_index);
+    let size2 = text_size(s);
     let r2 = {
       whatsapp_name,
       whatsapp_phone,
