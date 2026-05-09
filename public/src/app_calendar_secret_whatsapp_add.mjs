@@ -29,7 +29,8 @@ export async function app_calendar_secret_whatsapp_add() {
     const phone_index = 18;
     let whatsapp_phone = list_get_or_null(columns, phone_index);
     let v = log(app_calendar_secret_whatsapp_add.name, {
-      filtered,whatsapp_phone
+      filtered,
+      whatsapp_phone,
     });
     let includes = list_includes(filtered, whatsapp_phone);
     if (includes) {
