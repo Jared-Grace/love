@@ -1,5 +1,4 @@
-import { app_calendar_contact_add_curried } from "../../../love/public/src/app_calendar_contact_add_curried.mjs";
-import { each } from "../../../love/public/src/each.mjs";
+import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -32,8 +31,7 @@ export async function sandbox_3() {
   }
   let mapped = list_map(lines, lambda);
   async function lambda2(data) {
-    let lambda3 = app_calendar_contact_add_curried(data);
-    each(mapped, lambda3);
+    app_calendar_contact_add_multiple(data, mapped);
   }
   await app_calendar_secret_transform(lambda2);
   return mapped;
