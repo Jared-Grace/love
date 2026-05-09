@@ -31,6 +31,9 @@ export function app_calendar_contact_add(data, item) {
     object_merge_match(only, item);
   } else {
     list_add(contacts, item);
-    log_keep(app_calendar_contact_add.name, message);
+    log_keep(app_calendar_contact_add.name, {
+      added: true,
+      item,
+    });
   }
 }
