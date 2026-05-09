@@ -25,16 +25,15 @@ export async function app_calendar_secret_whatsapp_add() {
     let whatsapp_name = list_join_space(taken);
     const phone_index = 18;
     let whatsapp_phone = list_get_or_null(columns, phone_index);
-    let item = {
-      whatsapp_name,
-    };
     const r = text_and_empty_not_is(whatsapp_phone);
     if (r) {
-      object_merge(item, {
+    let item = {
+      whatsapp_name,
         whatsapp_phone,
-      });
-    }
+    };
     return item;
+    }
+    return null;
   }
   let mapped = list_map(lines, lambda);
   async function lambda2(data) {
