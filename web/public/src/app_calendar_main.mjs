@@ -33,7 +33,8 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  let r = app_a_list_chooser(context, "function", f_names, lambda$f_name);
+  function lambda4() {}
+  let r = app_a_list_chooser(context, "contact", f_names, lambda4);
   async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
