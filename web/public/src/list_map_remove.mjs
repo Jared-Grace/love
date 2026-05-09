@@ -1,8 +1,8 @@
+import { text_remove } from "../../../love/public/src/text_remove.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { text_replace } from "../../../love/public/src/text_replace.mjs";
-export function list_map_remove(list, from, to) {
+export function list_map_remove(list, from) {
   function lambda(item) {
-    let replaced = text_replace(item, from, to);
+    let replaced = text_remove(item, from);
     return replaced;
   }
   let mapped2 = list_map(list, lambda);
