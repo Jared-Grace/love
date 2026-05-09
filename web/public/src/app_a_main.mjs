@@ -25,5 +25,5 @@ export async function app_a_main(context) {
   html_margin_0(root);
   html_on_keydown(root, lambda);
   html_font_sans_serif_set_html();
-  app_shared_refresh(context);
+  await app_shared_refresh(context);
 }
