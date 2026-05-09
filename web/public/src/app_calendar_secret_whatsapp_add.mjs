@@ -29,9 +29,9 @@ export async function app_calendar_secret_whatsapp_add() {
     let item = {
       whatsapp_name,
     };
-    let ti2 = text_is(value);
+    let ti = text_is(whatsapp_phone);
     let ne = text_empty_not_is(whatsapp_phone);
-    if (ne) {
+    if (ti && ne) {
       object_merge(item, {
         whatsapp_phone,
       });
