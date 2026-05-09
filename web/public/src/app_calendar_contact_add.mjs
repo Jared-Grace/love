@@ -1,3 +1,4 @@
+import { object_pick } from "../../../love/public/src/object_pick.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_find_property_try_or_null_curried } from "../../../love/public/src/list_find_property_try_or_null_curried.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -9,6 +10,7 @@ import { list_filter_null_not_is } from "../../../love/public/src/list_filter_nu
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_calendar_contact_add(data, item) {
+  let picked = object_pick(object, property_names);
   let contacts = app_calendar_contacts_initialize(data);
   let c = list_find_property_try_or_null_curried(contacts);
   function lambda(value, key) {
