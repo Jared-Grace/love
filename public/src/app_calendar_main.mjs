@@ -31,8 +31,7 @@ export async function app_calendar_main(context) {
     lambda2,
   );
   let json2 = json_to(object);
-  function lambda6(item) {}
-  let mapped2 = list_map(list, lambda6);
+  let mapped2 = list_map(list, json_to);
   let input = html_input_placeholder_wide(root, "Search term");
   async function lambda2() {
     let paste = await clipboard_paste();
