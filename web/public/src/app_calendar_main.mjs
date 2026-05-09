@@ -1,3 +1,4 @@
+import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
@@ -27,6 +28,7 @@ export async function app_calendar_main(context) {
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
   );
+  let input2 = html_input_placeholder_wide(root2, placeholder);
   let p = html_p(root);
   async function lambda2() {
     let paste = await clipboard_paste();
