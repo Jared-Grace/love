@@ -11,6 +11,5 @@ export async function sandbox_3() {
     app_calendar_whatsapp_phone,
   );
   let add_to_contacts = list_difference(phones_asked, phones_stored);
-
-  return add_to_contacts
+  return add_to_contacts;
 }
