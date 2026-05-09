@@ -26,12 +26,6 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   app_a_control_style(d);
   html_style_background_color_set(d, "white");
   let filtered = null;
-  async function on_enter() {
-    let first = list_first(filtered);
-    await f_name_select(first);
-  }
-  let on_keydown = html_on_enter_lambda(on_enter);
-  let on_keydowns = app_a_on_keydown_add(context, on_keydown);
   let input = app_a_input(root);
   let f_names_div = html_div(root);
   function on_input() {
@@ -69,5 +63,11 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     input_set,
     filtered_get,
   };
+  async function on_enter() {
+    let first = list_first(filtered);
+    await f_name_select(first);
+  }
+  let on_keydown = html_on_enter_lambda(on_enter);
+  let on_keydowns = app_a_on_keydown_add(context, on_keydown);
   return v4;
 }
