@@ -62,6 +62,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     html_value_set(input, value);
     on_input();
   }
+  function lambda2() {}
   let v4 = {
     input_set,
   };
