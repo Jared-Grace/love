@@ -1,3 +1,4 @@
+import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -30,7 +31,8 @@ export async function sandbox_3() {
   }
   let mapped = list_map(lines, lambda);
   async function lambda2(data) {
-        app_calendar_contact_add(data, value);}
+    app_calendar_contact_add(data, value);
+  }
   await app_calendar_secret_transform(lambda2);
   return mapped;
 }
