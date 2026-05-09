@@ -13,8 +13,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { html_p } from "../../../love/public/src/html_p.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
@@ -30,11 +28,9 @@ export async function app_calendar_main(context) {
     lambda2,
   );
   let input = html_input_placeholder_wide(root, "Search term");
-  let p = html_p(root);
   async function lambda2() {
     let paste = await clipboard_paste();
-    html_text_set(p, paste);
-    html_value_set(input2, value2);
+    html_value_set(input, paste);
   }
   async function lambda3() {
     function lambda5(oad) {
