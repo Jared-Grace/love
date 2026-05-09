@@ -34,7 +34,7 @@ export async function app_calendar_main(context) {
     html_value_set(input, paste);
   }
   function lambda4() {}
-  let r = app_a_list_chooser(context, "contact", contacts, lambda4);
+  let r = app_a_list_chooser(root, "contact", contacts, lambda4);
   async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
