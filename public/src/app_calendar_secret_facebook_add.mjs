@@ -9,7 +9,6 @@ import { app_calendar_secret_path } from "../../../love/public/src/app_calendar_
 import { app_calendar_preaching_ask_lookup_get } from "../../../love/public/src/app_calendar_preaching_ask_lookup_get.mjs";
 export async function app_calendar_secret_facebook_add() {
   let lookup = await app_calendar_preaching_ask_lookup_get();
-  let file_path_calendar = app_calendar_secret_path();
   async function lambda2(data) {
     function lambda(value, facebook_url_id) {
       let conversation_url = property_get_fn(
@@ -27,5 +26,6 @@ export async function app_calendar_secret_facebook_add() {
     }
     each_object(lookup, lambda);
   }
+  let file_path_calendar = app_calendar_secret_path();
   await file_json_transform_initialize_default(file_path_calendar, lambda2);
 }
