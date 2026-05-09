@@ -18,12 +18,12 @@ export async function sandbox_3() {
     let names = ["first", "middle", "last"];
     let size = list_size(names);
     let taken = list_take(columns, size);
-    let name = list_join_space(taken);
+    let whatsapp_name = list_join_space(taken);
     const phone_index = 18;
-    let phone = list_get_or_null(columns, phone_index);
+    let whatsapp_phone = list_get_or_null(columns, phone_index);
     let r2 = {
-      name,
-      phone,
+      whatsapp_name,
+      whatsapp_phone,
     };
     return r2;
   }
