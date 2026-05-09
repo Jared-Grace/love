@@ -7,7 +7,7 @@ export async function sandbox_3() {
   let phones = await app_calendar_preaching_ask_phones();
   let list = await app_calendar_download_contacts();
   let property_name = fn();
-  let filtered = list_filter_property_exists(list2, property_name);
+  let filtered = list_filter_property_exists(list, property_name);
   let mapped = list_map_property_fn(list, app_calendar_whatsapp_phone);
   let r = {
     phones,
