@@ -1,6 +1,6 @@
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 export async function ebible_chapters_codes_to_verses(
   bible_folder,
@@ -9,7 +9,7 @@ export async function ebible_chapters_codes_to_verses(
   async function map_chapter_code(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
     function each_verse(v) {
-      object_merge(v, {
+      object_merge_set(v, {
         chapter_code,
       });
     }

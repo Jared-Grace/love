@@ -1,5 +1,5 @@
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
@@ -58,7 +58,7 @@ export async function ebible_references_parse_lines_generic(
         [verse_number],
       );
       let result = await verse_get(bible_folder, chapter_code, verse_number);
-      object_merge(result, {
+      object_merge_set(result, {
         reference,
       });
       object_assign(result, {

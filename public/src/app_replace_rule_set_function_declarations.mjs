@@ -1,6 +1,6 @@
 import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { app_replace_rule_set_statements_for_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_for_abbreviations.mjs";
 import { app_replace_rule_set_statements_for_rules } from "../../../love/public/src/app_replace_rule_set_statements_for_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -36,7 +36,7 @@ export function app_replace_rule_set_function_declarations() {
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
   app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
-  object_merge(abbreviations, {
+  object_merge_set(abbreviations, {
     fd: ["", "f", "unction ", "d", "eclaration"],
     fdm: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
     fpg: ["", "f", "unction ", "p", "arameter ", "g", "rower"],

@@ -1,6 +1,6 @@
 import { invoke_multiple_unordered_async } from "../../../love/public/src/invoke_multiple_unordered_async.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -41,7 +41,7 @@ export async function app_message_main(context) {
   const user_id_property = "user_id";
   let app_fn = app_message_main;
   let root = property_get(context, "root");
-  object_merge(context, {
+  object_merge_set(context, {
     app_fn,
   });
   storage_local_initialize_context(context, user_id_property, u);
