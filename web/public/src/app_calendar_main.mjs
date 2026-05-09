@@ -43,7 +43,7 @@ export async function app_calendar_main(context) {
   function lambda6(o) {
     let picked = object_pick_try(o, properties_name);
     let json2 = json_to(object);
-    return picked;
+    return json2;
   }
   let dictionary = list_to_dictionary_key(contacts, lambda6);
   let contacts_json = properties_get(dictionary);
