@@ -29,12 +29,14 @@ export async function app_calendar_main(context) {
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
   );
+  function lambda6(item) {}
+  let mapped2 = list_map(list, lambda6);
   let input = html_input_placeholder_wide(root, "Search term");
   async function lambda2() {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  function lambda4() {}
+  function lambda4(b) {}
   let r = app_a_list_chooser_generic(root, "contact", contacts, noop, lambda4);
   async function lambda3() {
     function lambda5(oad) {
