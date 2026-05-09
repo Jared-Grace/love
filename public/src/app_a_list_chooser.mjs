@@ -19,6 +19,12 @@ import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, lambda$text) {
+  let root = property_get(context, "root");
+  const articled = text_articled(noun);
+  const text = "Choose " + articled + ":";
+  let d = html_div_text_centered(root, text);
+  app_a_control_style(d);
+  html_style_background_color_set(d, "white");
   let filtered = null;
   async function on_enter() {
     let first = list_first(filtered);
@@ -26,12 +32,6 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  let root = property_get(context, "root");
-  const articled = text_articled(noun);
-  const text = "Choose " + articled + ":";
-  let d = html_div_text_centered(root, text);
-  app_a_control_style(d);
-  html_style_background_color_set(d, "white");
   let input = app_a_input(root);
   let f_names_div = html_div(root);
   function on_input() {
