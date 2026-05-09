@@ -38,8 +38,8 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  function lambda6() {
-    let picked = object_pick_try(contacts, ["whatsapp_name", "facebook_name"]);
+  function lambda6(o) {
+    let picked = object_pick_try(o, ["whatsapp_name", "facebook_name"]);
   }
   let dictionary = list_to_dictionary_key(contacts, lambda6);
   let contacts_json = properties_get(dictionary);
