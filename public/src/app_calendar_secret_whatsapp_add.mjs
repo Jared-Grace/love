@@ -1,3 +1,4 @@
+import { list_map_replace } from "../../../love/public/src/list_map_replace.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -18,6 +19,7 @@ import { folder_user_downloads_path } from "../../../love/public/src/folder_user
 export async function app_calendar_secret_whatsapp_add() {
   let filtered = await app_calendar_preaching_ask_entries();
   let phones = list_filter_starts_with(filtered, "+");
+  let mapped2 = list_map_replace(list, from, to);
   let r = folder_user_downloads_path("contacts.csv");
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
