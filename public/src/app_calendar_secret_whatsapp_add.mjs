@@ -1,3 +1,4 @@
+import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { text_and_empty_not_is } from "../../../love/public/src/text_and_empty_not_is.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
@@ -34,7 +35,8 @@ export async function app_calendar_secret_whatsapp_add() {
     }
     return null;
   }
-  let mapped = list_map(lines, lambda);list_filter_null_not_is
+  let mapped = list_map(lines, lambda);
+  let filtered2 = list_filter_null_not_is(mapped2);
   async function lambda2(data) {
     app_calendar_contact_add_multiple(data, mapped);
   }
