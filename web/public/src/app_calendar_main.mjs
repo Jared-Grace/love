@@ -37,9 +37,8 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  let contacts_json = list_map(contacts, json_to);
   let dictionary = list_to_dictionary_key(contacts, json_to);
-  let properties2 = properties_get(obj);
+  let contacts_json = properties_get(dictionary);
   function lambda4(b) {}
   let r = app_a_list_chooser_generic(
     root,
