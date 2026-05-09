@@ -8,7 +8,8 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let r = app_a_list_chooser_generic(root, noun, texts, lambda$text);
   let filtered_get = property_get(r, "filtered_get");
   async function on_enter() {
-    let first = list_first();
+    let list = filtered_get();
+    let first = list_first(list);
     await f_name_select(first);
   }
   let on_keydown = html_on_enter_lambda(on_enter);
