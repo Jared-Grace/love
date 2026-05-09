@@ -28,7 +28,7 @@ export async function app_calendar_main(context) {
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
   );
-  let input2 = html_input_placeholder_wide(root2, placeholder);
+  let input2 = html_input_placeholder_wide(root, "Search term");
   let p = html_p(root);
   async function lambda2() {
     let paste = await clipboard_paste();
