@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_to_dictionary_key_json } from "../../../love/public/src/list_to_dictionary_key_json.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -40,7 +41,8 @@ export async function app_calendar_main(context) {
   let dictionary = list_to_dictionary_key_json(contacts);
   let contacts_json = properties_get(dictionary);
   function lambda4(b) {
-    let value2 = property_get(object, property_name);
+    let value2 = property_get(dictionary, b);
+    html_text_set(component3, text);
   }
   let r = app_a_list_chooser_generic(
     root,
