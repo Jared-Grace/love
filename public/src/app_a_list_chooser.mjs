@@ -5,7 +5,7 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let root = property_get(context, "root");
-  let r = app_a_list_chooser_generic(root, noun, texts, lambda$text);
+  let r = app_a_list_chooser_generic(root, noun, texts, lambda$text, noop);
   let filtered_get = property_get(r, "filtered_get");
   async function on_enter() {
     let list = filtered_get();
