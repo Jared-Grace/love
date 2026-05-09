@@ -38,9 +38,9 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  const properties = ["whatsapp_name", "facebook_name"];
+  const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda6(o) {
-    let picked = object_pick_try(o, properties);
+    let picked = object_pick_try(o, properties_name);
     return picked;
   }
   let dictionary = list_to_dictionary_key(contacts, lambda6);
@@ -61,7 +61,7 @@ export async function app_calendar_main(context) {
         let value = html_value_get(input);
         oad(p, value);
       }
-      each_pair(properties, inputs, lambda);
+      each_pair(properties_name, inputs, lambda);
     }
     let result = object_adder(lambda5);
     list_add(contacts, result);
