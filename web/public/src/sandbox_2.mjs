@@ -1,4 +1,4 @@
-import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { facebook_conversation_url_to_id } from "../../../love/public/src/facebook_conversation_url_to_id.mjs";
 import { property_get_fn } from "../../../love/public/src/property_get_fn.mjs";
 import { app_calendar_facebook_conversation_url } from "../../../love/public/src/app_calendar_facebook_conversation_url.mjs";
@@ -23,7 +23,7 @@ export async function sandbox_2() {
         facebook_conversation_id,
         facebook_url_id,
       };
-      object_merge_set(value, item);
+      object_merge(value, item);
       app_calendar_contact_add(data, item);
     }
     each_object(lookup, lambda);
