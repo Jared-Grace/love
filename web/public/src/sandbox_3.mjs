@@ -33,7 +33,8 @@ export async function sandbox_3() {
   let mapped = list_map(lines, lambda);
   async function lambda2(data) {
     function lambda3(value) {
-    app_calendar_contact_add(data, value);}
+      app_calendar_contact_add(data, value);
+    }
     each(mapped, lambda3);
   }
   await app_calendar_secret_transform(lambda2);
