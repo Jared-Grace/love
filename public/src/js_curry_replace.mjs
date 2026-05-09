@@ -1,3 +1,4 @@
+import { js_return_is_if_async } from "../../../love/public/src/js_return_is_if_async.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_await_if_unwrap_argument } from "../../../love/public/src/js_await_if_unwrap_argument.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -70,6 +71,8 @@ export async function js_curry_replace(ast) {
         });
         let first = property_get(r, "first");
         async function lambda4(init, id) {
+          async function lambda6() {}
+          await js_return_is_if_async(node2, lambda6);
           let second = property_get(r, "second");
           async function lambda5(argument) {
             let eq = js_identifiers_names_equal(id, argument);
