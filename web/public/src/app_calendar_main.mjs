@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
@@ -29,6 +30,7 @@ export async function app_calendar_main(context) {
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
   );
+  let json2 = json_to(object);
   function lambda6(item) {}
   let mapped2 = list_map(list, lambda6);
   let input = html_input_placeholder_wide(root, "Search term");
