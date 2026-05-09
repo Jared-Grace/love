@@ -1,8 +1,8 @@
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export function app_replace_rule_set_strings_simple_abbreviation_st(
   abbreviations,
 ) {
-  object_merge(abbreviations, {
+  object_merge_set(abbreviations, {
     st: ["", "st", "ring"],
   });
 }

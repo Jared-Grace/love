@@ -66,7 +66,7 @@ import { range } from "../../../love/public/src/range.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
@@ -81,7 +81,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
+import { property_get_or_null } from "../../../love/public/src/property_get_or_null.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -197,7 +197,7 @@ export async function app_replace_rule_set(context) {
       let lefts = property_get(r2, "lefts");
       let rb = property_get(r2, "b");
       html_disable(rb);
-      object_merge(rb, {
+      object_merge_set(rb, {
         rule,
         lefts,
         rights,
@@ -208,7 +208,7 @@ export async function app_replace_rule_set(context) {
     rbs = list_map_index(rules_used, each_rule);
     function rbs_each(rb, index2) {
       refresh_rb();
-      object_merge(rb, {
+      object_merge_set(rb, {
         refresh_rb,
       });
       function refresh_rb() {
@@ -269,7 +269,7 @@ export async function app_replace_rule_set(context) {
         let valid = app_replace_rule_valid(rule2, index3, start);
       }
       refresh_sb();
-      object_merge(sb, {
+      object_merge_set(sb, {
         refresh_sb,
       });
       let exists = property_exists(symbols_invalid_chosen, index);

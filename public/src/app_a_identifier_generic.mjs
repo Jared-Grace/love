@@ -30,7 +30,7 @@ import { app_a_function_on_change } from "../../../love/public/src/app_a_functio
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -96,7 +96,7 @@ export function app_a_identifier_generic(
         let component = app_a_button_wide(overlay, text2, on_enter);
       },
     };
-    let to2 = object_merge(change, c);
+    let to2 = object_merge_set(change, c);
     list_add_multiple(choices, [
       {
         shortcut: "c",

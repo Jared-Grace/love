@@ -2,14 +2,14 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export function g_player_initialize(player_img, coordinates_land) {
   let player = {};
   let player_list = list_remove_last(coordinates_land);
   let player_coordinates = list_single(player_list);
-  object_merge(player, player_coordinates);
+  object_merge_set(player, player_coordinates);
   let names_men = bible_names_men();
-  object_merge(player, {
+  object_merge_set(player, {
     img: player_img,
     prayer: {
       conversation: false,

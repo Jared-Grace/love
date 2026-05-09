@@ -1,5 +1,5 @@
 import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export function app_replace_rule_set_identifiers_simple_abbreviations(
   abbreviations,
 ) {
@@ -20,6 +20,6 @@ export function app_replace_rule_set_identifiers_simple_abbreviations(
     ],
     di: ["", "di", "git sample: a few choices of digits"],
   };
-  let to2 = object_merge(abbreviations, abbreviations2);
+  let to2 = object_merge_set(abbreviations, abbreviations2);
   app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
 }

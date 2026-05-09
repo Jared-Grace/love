@@ -9,7 +9,7 @@ import { function_transform_marker } from "../../../love/public/src/function_tra
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export async function marker_call_replace_generic(input, lambda$a) {
   let arg_index = integer_to_try(input);
   let f_name = await function_current_get();
@@ -32,7 +32,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
         let arg_index_at = list_get(arguments2, arg_index);
         replaced = arg_index_at;
       }
-      let to = object_merge(
+      let to = object_merge_set(
         {
           replaced,
         },
