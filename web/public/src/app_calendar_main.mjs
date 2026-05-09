@@ -36,7 +36,7 @@ export async function app_calendar_main(context) {
   let filtered = list_filter_property_exclude_if_exists(
     contacts,
     "unavailable",
-    false,
+    true,
   );
   let root = html_mobile_default_font_size_context(context);
   let component2 = html_button_wide(
