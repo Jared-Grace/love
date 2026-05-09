@@ -18,6 +18,7 @@ export function app_calendar_contact_add(data, item) {
   let unique = object_values_map_list_unique(item, lambda);
   log(app_calendar_contact_add.name, {
     unique,
+    item,
   });
   let list = list_filter_null_not_is(unique);
   list_multiple_not_is_assert(list);
