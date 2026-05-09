@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
@@ -29,6 +30,9 @@ export async function app_calendar_main(context) {
     fn: app_calendar_download,
   });
   let contacts = app_calendar_contacts_initialize(data);
+  log(app_calendar_main.name, {
+    contacts,
+  });
   let filtered = list_filter_property_exclude_if_exists(
     contacts,
     "unavailable",
