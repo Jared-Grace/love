@@ -1,6 +1,5 @@
 import { list_map_remove } from "../../../love/public/src/list_map_remove.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
