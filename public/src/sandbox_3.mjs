@@ -1,5 +1,4 @@
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { list_filter_property_exists } from "../../../love/public/src/list_filter_property_exists.mjs";
+import { list_filter_property_exists_map } from "../../../love/public/src/list_filter_property_exists_map.mjs";
 import { app_calendar_download_contacts } from "../../../love/public/src/app_calendar_download_contacts.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { app_calendar_preaching_ask_phones } from "../../../love/public/src/app_calendar_preaching_ask_phones.mjs";
@@ -7,8 +6,7 @@ export async function sandbox_3() {
   let phones = await app_calendar_preaching_ask_phones();
   let list = await app_calendar_download_contacts();
   let property_name = app_calendar_whatsapp_phone();
-  let filtered = list_filter_property_exists(list, property_name);
-  let mapped = list_map_property(filtered, property_name);
+  let mapped = list_filter_property_exists_map(list, property_name);
   let r = {
     phones,
     mapped,
