@@ -39,7 +39,7 @@ export async function app_calendar_main(context) {
     html_value_set(input, paste);
   }
   function lambda6() {
-    let picked = object_pick_try(object, property_names);
+    let picked = object_pick_try(contacts, ["whatsapp_name", "facebook_name"]);
   }
   let dictionary = list_to_dictionary_key(contacts, lambda6);
   let contacts_json = properties_get(dictionary);
