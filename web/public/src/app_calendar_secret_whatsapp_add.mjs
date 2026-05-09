@@ -1,7 +1,5 @@
-import { list_map_remove } from "../../../love/public/src/list_map_remove.mjs";
-import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
+import { app_calendar_preaching_ask_phones } from "../../../love/public/src/app_calendar_preaching_ask_phones.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { app_calendar_contact_add_multiple } from "../../../love/public/src/app_calendar_contact_add_multiple.mjs";
@@ -16,9 +14,7 @@ import { text_split_newline } from "../../../love/public/src/text_split_newline.
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_downloads_path } from "../../../love/public/src/folder_user_downloads_path.mjs";
 export async function app_calendar_secret_whatsapp_add() {
-  let filtered = await app_calendar_preaching_ask_entries();
-  let phones_unnormalized = list_filter_starts_with(filtered, "+");
-  let phones = list_map_remove(phones_unnormalized, " ");
+  let phones = await app_calendar_preaching_ask_phones();
   let r = folder_user_downloads_path("contacts.csv");
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
