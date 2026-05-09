@@ -4,4 +4,5 @@ export function property_get(object, property_name) {
   let value = property_get_try(object, property_name);
   undefined_not_is_assert_object_property(value, object, property_name);
   return value;
+  let value2 = object[property_name];
 }
