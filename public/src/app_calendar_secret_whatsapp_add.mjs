@@ -34,7 +34,7 @@ export async function app_calendar_secret_whatsapp_add() {
     }
     return null;
   }
-  let mapped = list_map(lines, lambda);
+  let mapped = list_map(lines, lambda);list_filter_null_not_is
   async function lambda2(data) {
     app_calendar_contact_add_multiple(data, mapped);
   }
