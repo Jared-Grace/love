@@ -1,6 +1,5 @@
 import { app_calendar_contact_add_curried } from "../../../love/public/src/app_calendar_contact_add_curried.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { list_get_or_null } from "../../../love/public/src/list_get_or_null.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
