@@ -19,6 +19,7 @@ export async function app_calendar_secret_facebook_add() {
       const item = {
         facebook_conversation_id,
         facebook_url_id,
+        meeting: true,
       };
       object_merge(value, item);
       app_calendar_contact_add(data, value);
