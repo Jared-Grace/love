@@ -30,7 +30,6 @@ export async function app_calendar_main(context) {
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
   );
-  let json2 = json_to(object);
   let mapped2 = list_map(list, json_to);
   let input = html_input_placeholder_wide(root, "Search term");
   async function lambda2() {
