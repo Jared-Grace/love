@@ -1,4 +1,3 @@
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
@@ -18,6 +17,7 @@ import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
+import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function app_calendar_main(context) {
   let data = await app_api_fn({
     fn: app_calendar_download,
@@ -34,10 +34,7 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  function lambda4() {
-    let json2 = json_to(object);
-  }
-  let r = app_a_list_chooser_generic(root, "contact", contacts, lambda4);
+  let r = app_a_list_chooser_generic(root, "contact", contacts, json_to);
   async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
