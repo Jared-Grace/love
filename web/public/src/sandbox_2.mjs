@@ -23,7 +23,7 @@ export async function sandbox_2() {
         facebook_conversation_id,
         facebook_url_id,
       };
-      let to2 = object_merge(to, from);
+      object_merge(value, item);
       app_calendar_contact_add(data, item);
     }
     each_object(lookup, lambda);
