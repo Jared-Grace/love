@@ -38,7 +38,7 @@ export function app_a_list_chooser_generic(root, noun, texts, lambda$text) {
       async function on_click() {
         await f_name_select(text);
       }
-      app_a_button_wide(f_names_div, text, on_click);
+      let b = app_a_button_wide(f_names_div, text, on_click);
     }
     each(filtered, lambda);
   }
