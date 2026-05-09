@@ -10,10 +10,7 @@ export async function sandbox_3() {
     list,
     app_calendar_whatsapp_phone,
   );
-  let difference = list_difference(list2, list_other);
-  let r = {
-    phones: phones_asked,
-    mapped: phones_stored,
-  };
-  return r;
+  let add_to_contacts = list_difference(phones_asked, phones_stored);
+
+  return add_to_contacts
 }
