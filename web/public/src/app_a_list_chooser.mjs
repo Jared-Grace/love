@@ -64,7 +64,8 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     filtered_get,
   };
   async function on_enter() {
-    let first = list_first(filtered);
+    let list = filtered_get();
+    let first = list_first(list);
     await f_name_select(first);
   }
   let on_keydown = html_on_enter_lambda(on_enter);
