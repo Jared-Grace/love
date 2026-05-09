@@ -36,7 +36,7 @@ export async function app_calendar_secret_whatsapp_add() {
       filtered,
       whatsapp_phone,
     });
-    let includes = list_includes(filtered, whatsapp_phone);
+    let includes = list_includes(phones, whatsapp_phone);
     if (includes) {
       let item = {
         whatsapp_name,
