@@ -19,7 +19,7 @@ export function app_a_list_chooser_generic(
   noun,
   texts,
   lambda$text,
-  lambda$button,
+  lambda$button$text,
 ) {
   const articled = text_articled(noun);
   const text = "Choose " + articled + ":";
@@ -45,7 +45,7 @@ export function app_a_list_chooser_generic(
         await f_name_select(text);
       }
       let b = app_a_button_wide(f_names_div, text, on_click);
-      lambda$button(b);
+      lambda$button$text(b, text);
     }
     each(filtered, lambda);
   }
