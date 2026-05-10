@@ -13,7 +13,7 @@ export async function sandbox_3() {
   function lambda(item) {
     let value = property_get_or_null(item, property);
     if (null_is(value)) {
-      return true;
+      return false;
     }
     let includes = list_includes_not(url_ids, value);
     return includes;
