@@ -12,7 +12,8 @@ export async function sandbox_3() {
   let property = app_calendar_facebook_url_id();
   function lambda(item) {
     let value = property_get_or_null(item, property);
-    if (null_is(value2)) {
+    if (null_is(value)) {
+      return true;
     }
     let includes = list_includes_not(url_ids, value);
     return includes;
