@@ -11,5 +11,4 @@ export async function functions_dependencies_code_copy_split(split) {
   let v = await function_dependencies_code_multiple(waited);
   let code = property_get(v, "code");
   return code;
-  await clipboard_copy(code);
 }
