@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { property_get_or_null } from "../../../love/public/src/property_get_or_null.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -10,6 +11,7 @@ export async function sandbox_3() {
   function lambda(item) {
     let property = app_calendar_facebook_url_id();
     let value = property_get_or_null(item, property);
+    let includes = list_includes(list2, item2);
   }
   let filtered = list_filter(list, lambda);
   return;
