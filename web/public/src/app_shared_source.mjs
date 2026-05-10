@@ -6,6 +6,7 @@ export async function app_shared_source(search) {
   let a = await app_shared_name_search_info(search);
   let f_name = property_get(a, "f_name");
   let call = js_code_call_app_context_initialize(f_name);
-  let fns = webpack_build_generic_source_fn_names(f_name);fd
+  let fns = webpack_build_generic_source_fn_names(f_name);
+  fd;
   return joined;
 }
