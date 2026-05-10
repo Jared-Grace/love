@@ -1,3 +1,4 @@
+import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_code } from "../../../love/public/src/html_code.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -14,6 +15,7 @@ export async function app_shared_source_copy(search) {
   let fns = webpack_build_generic_source_fn_names(f_name);
   let code = await functions_dependencies_code_split(fns);
   let body = list_join_newline([call, code]);
+  let script = html_code_script_module(middle);
   let contents = html_code(a_name, body);
   await clipboard_copy(contents);
 }
