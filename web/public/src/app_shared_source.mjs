@@ -8,6 +8,6 @@ export async function app_shared_source(search) {
   let f_name = property_get(a, "f_name");
   let call = js_code_call_app_context_initialize(f_name);
   let fns = webpack_build_generic_source_fn_names(f_name);
-  await functions_dependencies_code_split(fns);
+  let code = await functions_dependencies_code_split(fns);
   return joined;
 }
