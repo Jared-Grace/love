@@ -14,7 +14,7 @@ export async function sandbox_3() {
     let includes = list_includes(url_ids, value);
     return includes;
   }
-  let filtered = list_filter(list, lambda);
+  let filtered = list_filter(data, lambda);
   return;
   let joined = await app_calendar_contacts_phones_missing_text();
 }
