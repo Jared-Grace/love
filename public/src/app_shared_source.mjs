@@ -8,8 +8,8 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 export async function app_shared_source(search) {
   let a = await app_shared_name_search_info(search);
-  return a;
   let f_name = property_get(a, "f_name");
+  let a_name = property_get(a, "a_name");
   let call = js_code_call_app_context_initialize(f_name);
   let fns = webpack_build_generic_source_fn_names(f_name);
   let code = await functions_dependencies_code_split(fns);
