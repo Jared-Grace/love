@@ -1,3 +1,4 @@
+import { webpack_build_generic_source } from "../../../love/public/src/webpack_build_generic_source.mjs";
 import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
@@ -9,12 +10,6 @@ import { webpack_config_entry_path } from "../../../love/public/src/webpack_conf
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
-import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
-import { webpack_build_code_import } from "../../../love/public/src/webpack_build_code_import.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { folder_scripts_join_mjs } from "../../../love/public/src/folder_scripts_join_mjs.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -31,11 +26,7 @@ export async function webpack_build_generic(
   let combined = function_name_combine(f_name, "run");
   let path2 = path_join(["temp", combined]);
   let f_name_ext = folder_scripts_join_mjs(path2);
-  let fns = [f_name, app_context_initialize.name];
-  let mapped = list_map(fns, webpack_build_code_import);
-  let call = js_code_call_app_context_initialize(f_name);
-  list_add(mapped, call);
-  let joined = list_join_newline(mapped);
+  let joined = webpack_build_generic_source(f_name);
   let r = file_name_js(a_name);
   async function lambda(entry) {
     await file_overwrite(entry, joined);
