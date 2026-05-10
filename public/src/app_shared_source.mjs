@@ -1,3 +1,4 @@
+import { functions_dependencies_code_copy } from "../../../love/public/src/functions_dependencies_code_copy.mjs";
 import { webpack_build_generic_source_fn_names } from "../../../love/public/src/webpack_build_generic_source_fn_names.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -7,6 +8,6 @@ export async function app_shared_source(search) {
   let f_name = property_get(a, "f_name");
   let call = js_code_call_app_context_initialize(f_name);
   let fns = webpack_build_generic_source_fn_names(f_name);
-  fd;
+  await functions_dependencies_code_copy(f_names);
   return joined;
 }
