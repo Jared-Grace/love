@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_code } from "../../../love/public/src/html_code.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { functions_dependencies_code_split } from "../../../love/public/src/functions_dependencies_code_split.mjs";
@@ -13,5 +14,5 @@ export async function app_shared_source(search) {
   let code = await functions_dependencies_code_split(fns);
   let body = list_join_newline([call, code]);
   let contents = html_code(name, body);
-  return joined;
+  await clipboard_copy(contents);
 }
