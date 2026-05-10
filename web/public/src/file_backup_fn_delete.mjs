@@ -1,0 +1,4 @@
+import { file_backup_fn } from "../../../love/public/src/file_backup_fn.mjs";
+export async function file_backup_fn_delete(f_name) {
+  return await file_backup_fn(f_name);
+}
