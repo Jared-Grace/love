@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { function_dependencies_code_multiple } from "../../../love/public/src/function_dependencies_code_multiple.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
@@ -7,6 +8,8 @@ import { function_name_unalias_only } from "../../../love/public/src/function_na
 export async function function_dependencies_code_copy(f_names) {
   arguments_assert(arguments, 1);
   let split = text_split_comma_dot(f_names);
+  async function lambda(item) {}
+  let waited = await list_map_unordered_async(list, lambda);
   let unaliased = await function_name_unalias_only(f_names);
   let v = await function_dependencies_code_multiple(unaliased);
   let code = property_get(v, "code");
