@@ -1,0 +1,13 @@
+export function html_code(name, body) {
+  let r = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>${name}</title>
+</head>
+<body>
+  ${body}
+</body>
+</html>`;
+  return r;
+}
