@@ -1,3 +1,4 @@
+import { app_calendar_contacts_path } from "../../../love/public/src/app_calendar_contacts_path.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { app_calendar_preaching_ask_phones } from "../../../love/public/src/app_calendar_preaching_ask_phones.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -13,10 +14,9 @@ import { list_to_indices_items } from "../../../love/public/src/list_to_indices_
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
-import { folder_user_downloads_path } from "../../../love/public/src/folder_user_downloads_path.mjs";
 export async function app_calendar_secret_whatsapp_add() {
   let phones = await app_calendar_preaching_ask_phones();
-  let r = folder_user_downloads_path("contacts.csv");
+  let r = app_calendar_contacts_path();
   let contents = await file_read(r);
   let lines = text_split_newline(contents);
   function lambda(line) {
