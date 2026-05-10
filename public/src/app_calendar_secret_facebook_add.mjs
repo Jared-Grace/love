@@ -1,3 +1,4 @@
+import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { app_calendar_secret_transform } from "../../../love/public/src/app_calendar_secret_transform.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { app_calendar_contact_add } from "../../../love/public/src/app_calendar_contact_add.mjs";
@@ -18,7 +19,7 @@ export async function app_calendar_secret_facebook_add() {
         facebook_conversation_url_to_id(conversation_url);
       const item = {
         facebook_conversation_id,
-        ["facebook_url_id"]: facebook_url_id,
+        [app_calendar_facebook_url_id()]: facebook_url_id,
       };
       object_merge(value, item);
       app_calendar_contact_add(data, value);
