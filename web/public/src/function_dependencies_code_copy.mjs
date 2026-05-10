@@ -12,8 +12,7 @@ export async function function_dependencies_code_copy(f_names) {
     split,
     function_name_unalias_only,
   );
-  let unaliased = await function_name_unalias_only(f_names);
-  let v = await function_dependencies_code_multiple(unaliased);
+  let v = await function_dependencies_code_multiple(waited);
   let code = property_get(v, "code");
   await clipboard_copy(code);
 }
