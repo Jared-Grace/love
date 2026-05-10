@@ -1,3 +1,4 @@
+import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -12,10 +13,11 @@ import { app_calendar_contacts_initialize } from "../../../love/public/src/app_c
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_calendar_contact_add(data, item) {
   let r = app_calendar_whatsapp_phone();
+  let r2 = app_calendar_facebook_url_id();
   const properties_unique_across_all = [
     "facebook_conversation_url",
     "facebook_conversation_id",
-    "facebook_url_id",
+    r2,
     r,
   ];
   let picked = object_pick_try(item, properties_unique_across_all);
