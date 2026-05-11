@@ -1,3 +1,4 @@
+import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -50,6 +51,7 @@ export async function app_calendar_main(context) {
   const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda6(o) {
     let value = object_pick_try_single_value(o, properties_name);
+    let picked = object_pick_try(object, property_names);
     return value;
   }
   let dictionary = list_to_dictionary_key(filtered, json_to);
