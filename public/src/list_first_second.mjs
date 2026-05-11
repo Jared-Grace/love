@@ -4,11 +4,11 @@ export function list_first_second(list) {
   const property_name = "second";
   let value_get = list_second;
   let result = list_first_second_generic(list, value_get, property_name);
-  return result;
   if (false) {
+    let copy_paste = {
+      first,
+      second,
+    };
   }
-  let copy_paste = {
-    first,
-    second,
-  };
+  return result;
 }
