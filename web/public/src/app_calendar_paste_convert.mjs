@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
@@ -9,7 +10,9 @@ export async function app_calendar_paste_convert(input) {
   let split = text_split(input, "⋅");
   let r2 = list_first_second(list);
   let second = property_get(r2, "second");
-  let split2 = text_split_comma(t);
+  let split2 = text_split_comma(second);
+  function lambda(item) {}
+  let mapped = list_map(list2, lambda);
   let first = property_get(r2, "first");
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
