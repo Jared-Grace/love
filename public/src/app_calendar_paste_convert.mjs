@@ -25,7 +25,7 @@ export async function app_calendar_paste_convert(input) {
   const zone = "America/New_York";
   const format = "cccc, LLL dd yyyy h:mma";
   const dt = date_time_zone_parse(input_luxon, format, zone);
-  if (date_time_zone_past_is(dt, DateTime, zone)) {
+  if (date_time_zone_past_is(dt, zone)) {
     throw new Error("DateTime is not in the future");
   }
   return dt;
