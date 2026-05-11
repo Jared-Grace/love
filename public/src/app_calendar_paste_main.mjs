@@ -1,1 +1,5 @@
-export function app_calendar_paste_main() {}
+import { html_button } from "../../../love/public/src/html_button.mjs";
+export function app_calendar_paste_main() {
+  function lambda2() {}
+  let component = html_button(parent, text, lambda2);
+}
