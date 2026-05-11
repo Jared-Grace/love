@@ -3,7 +3,6 @@ import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
