@@ -50,7 +50,6 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda6(o) {
     let r22 = app_calendar_facebook_url_id();
     let r3 = app_calendar_facebook_conversation_id();
