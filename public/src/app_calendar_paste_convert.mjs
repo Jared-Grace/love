@@ -1,3 +1,4 @@
+import { date_time_zone_set_zone } from "../../../love/public/src/date_time_zone_set_zone.mjs";
 import { date_time_zone_format_time_to } from "../../../love/public/src/date_time_zone_format_time_to.mjs";
 import { date_time_zone_format_to_standard } from "../../../love/public/src/date_time_zone_format_to_standard.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -42,7 +43,7 @@ export function app_calendar_paste_convert(input) {
     let start = property_get(item, "start");
     let end = property_get(item, "end");
     let zone = property_get(item, "zone");
-    const start_end = start.setZone(zone_output);
+    const start_zoned = date_time_zone_set_zone(start, zone);
     let v2 = date_time_zone_format_to_standard(start);
     let h = date_time_zone_format_time_to(start);
   }
