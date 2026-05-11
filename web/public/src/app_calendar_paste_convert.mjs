@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_calendar_paste_convert_parse } from "../../../love/public/src/app_calendar_paste_convert_parse.mjs";
 import { date_time_zone_future_is_assert } from "../../../love/public/src/date_time_zone_future_is_assert.mjs";
 import { text_split_dash_en } from "../../../love/public/src/text_split_dash_en.mjs";
@@ -20,6 +21,8 @@ export function app_calendar_paste_convert(input) {
   const zone = "America/New_York";
   const start = app_calendar_paste_convert_parse(date, first, zone);
   const end = app_calendar_paste_convert_parse(date, second, zone);
+  function lambda(item) {}
+  each(list, lambda);
   date_time_zone_future_is_assert(dt, zone);
   let r = {
     start,
