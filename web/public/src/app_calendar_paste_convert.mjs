@@ -9,7 +9,7 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
-export async function app_calendar_paste_convert(input) {
+export  function app_calendar_paste_convert(input) {
   input = "Monday, May 11⋅11:00am – 12:00pm";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
@@ -20,7 +20,6 @@ export async function app_calendar_paste_convert(input) {
   let second = property_get(r3, "second");
   let first = property_get(r3, "first");
   let date = property_get(r2, "first");
-  let r = await import_install("luxon");
   let y = date_time_zone_now_year();
   let input_luxon = text_combine_multiple([date, " ", y, " ", first]);
   const zone = "America/New_York";
