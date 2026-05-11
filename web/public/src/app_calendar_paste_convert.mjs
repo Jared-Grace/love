@@ -18,7 +18,8 @@ export function app_calendar_paste_convert(input) {
   let first = property_get(r3, "first");
   let date = property_get(r2, "first");
   const zone = "America/New_York";
-  const dt = app_calendar_paste_convert_parse(date, first, zone);
+  const start = app_calendar_paste_convert_parse(date, first, zone);
+  const end = app_calendar_paste_convert_parse(date, second, zone);
   date_time_zone_future_is_assert(dt, zone);
   return dt;
 }
