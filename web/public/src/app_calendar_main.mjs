@@ -8,8 +8,6 @@ import { list_to_dictionary_key } from "../../../love/public/src/list_to_diction
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -44,10 +42,8 @@ export async function app_calendar_main(context) {
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
   );
-  let input = html_input_placeholder_wide(root, "Search term");
   async function lambda2() {
     let paste = await clipboard_paste();
-    html_value_set(input, paste);
   }
   let r22 = app_calendar_facebook_url_id();
   let r3 = app_calendar_facebook_conversation_id();
