@@ -1,3 +1,5 @@
+import { date_time_zone_format_time } from "../../../love/public/src/date_time_zone_format_time.mjs";
+import { date_time_zone_format_to } from "../../../love/public/src/date_time_zone_format_to.mjs";
 import { date_time_zone_format_to_standard } from "../../../love/public/src/date_time_zone_format_to_standard.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { date_time_zone_future_is_assert_multiple } from "../../../love/public/src/date_time_zone_future_is_assert_multiple.mjs";
@@ -41,8 +43,8 @@ export function app_calendar_paste_convert(input) {
     let start = property_get(item, "start");
     let end = property_get(item, "end");
     let zone = property_get(item, "zone");
-    function lambda2(item2) {}
-    let mapped3 = list_map(list, lambda2);
+    let format = date_time_zone_format_time();
+    let formatted = date_time_zone_format_to(start, format);
   }
   let mapped2 = list_map(formats, lambda);
   let v2 = date_time_zone_format_to_standard(pakistan);
