@@ -48,8 +48,8 @@ export async function app_calendar_main(context) {
   }
   const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda6(o) {
-    let value3 = object_pick_try_single_value(o, properties_name);
-    return value3;
+    let value = object_pick_try_single_value(o, properties_name);
+    return value;
   }
   let dictionary = list_to_dictionary_key(filtered, lambda6);
   let contacts_json = properties_get(dictionary);
