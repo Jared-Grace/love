@@ -56,7 +56,7 @@ export async function app_calendar_main(context) {
     let value3 = object_property_single_value(picked);
     let value2 = i + " " + value3;
     i++;
-    return value3;
+    return value2;
   }
   let dictionary = list_to_dictionary_key(filtered, lambda6);
   let contacts_json = properties_get(dictionary);
