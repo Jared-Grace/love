@@ -49,7 +49,9 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     html_value_set(input, paste);
   }
-  const properties_name = ["whatsapp_name", "facebook_name"];lm
+  const properties_name = ["whatsapp_name", "facebook_name"];
+  function lambda7(item) {}
+  let mapped2 = list_map(list, lambda7);
   function lambda6(o) {
     let picked = object_pick_try(o, properties_name);
     let json2 = json_to(picked);
