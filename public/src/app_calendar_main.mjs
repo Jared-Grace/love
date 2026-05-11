@@ -52,7 +52,7 @@ export async function app_calendar_main(context) {
   }
   const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda7(item) {
-    let picked = object_pick_try(o, properties_name);
+    let picked = object_pick_try(item, properties_name);
     let properties = properties_get(picked);
     let only = list_single(properties);
     let value3 = property_get(picked, only);
