@@ -1,7 +1,6 @@
 import { object_property_single_value } from "../../../love/public/src/object_property_single_value.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -51,16 +50,11 @@ export async function app_calendar_main(context) {
     html_value_set(input, paste);
   }
   const properties_name = ["whatsapp_name", "facebook_name"];
-  function lambda7(item) {
-    let picked = object_pick_try(item, properties_name);
-    let value3 = object_property_single_value(picked);
-    return value3;
-  }
-  let mapped2 = list_map(list, lambda7);
+  function lambda7(item) {}
   function lambda6(o) {
     let picked = object_pick_try(o, properties_name);
-    let json2 = json_to(picked);
-    return json2;
+    let value3 = object_property_single_value(picked);
+    return value3;
   }
   let dictionary = list_to_dictionary_key(filtered, lambda6);
   let contacts_json = properties_get(dictionary);
