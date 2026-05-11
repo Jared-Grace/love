@@ -1,8 +1,8 @@
+import { object_pick_try_values } from "../../../love/public/src/object_pick_try_values.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
-import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
@@ -58,8 +58,7 @@ export async function app_calendar_main(context) {
     let r3 = app_calendar_facebook_conversation_id();
     let r4 = app_calendar_whatsapp_phone();
     const properties = ["whatsapp_name", "facebook_name", r4, r22, r3];
-    let picked = object_pick_try(o, properties);
-    let v = object_values(picked);
+    let v = object_pick_try_values(o, properties);
     let joined = list_join_space(v);
     return joined;
   }
