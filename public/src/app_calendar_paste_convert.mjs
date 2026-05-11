@@ -24,7 +24,7 @@ export async function app_calendar_paste_convert(input) {
   let input_luxon = text_combine_multiple([date, " 2026 ", first]);
   const zone = "America/New_York";
   const format = "cccc, LLL dd yyyy h:mma";
-  const dt = date_time_zone_parse(DateTime, input_luxon, format, zone);
+  const dt = date_time_zone_parse(input_luxon, format, zone);
   if (dt <= DateTime.now().setZone(zone)) {
     throw new Error("DateTime is not in the future");
   }
