@@ -14,6 +14,7 @@ export function app_calendar_paste_convert(input) {
   input = "Tuesday, May 12⋅11:00am – 12:00pm";
   const zone_input = "America/New_York";
   const zone_output = "Asia/Karachi";
+  let country_main = "Pakistan";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
   let time_range = property_get(r2, "second");
@@ -32,6 +33,7 @@ export function app_calendar_paste_convert(input) {
       start,
       end,
       zone: zone_input,
+      country_main,
     },
     {
       start,
@@ -47,7 +49,7 @@ export function app_calendar_paste_convert(input) {
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_standard(start_zoned);
     let to = date_time_zone_format_time_to(end_zoned);
-    let combined = text_combine_multiple(list);
+    let combined = text_combine_multiple(["Pakistan time:"]);
     return r;
   }
   let mapped2 = list_map(formats, lambda);
