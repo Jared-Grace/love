@@ -56,7 +56,7 @@ export function app_calendar_paste_convert(input) {
     let from = date_time_zone_format_to_standard(start_zoned);
     let to = date_time_zone_format_time_to(end_zoned);
     let combined = text_combine_multiple([country, " time: ", from, " - ", to]);
-    if (false) {
+    if (false) {text_wrap_parenthesis
     }
     return combined;
   }
