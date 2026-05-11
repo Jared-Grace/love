@@ -36,7 +36,9 @@ export function app_calendar_paste_convert(input) {
       end,
       zone: zone_output,
     },
-  ];lm
+  ];
+  function lambda(item) {}
+  let mapped2 = list_map(list, lambda);
   const pakistan = start.setZone(zone_output);
   let v2 = date_time_zone_format_to(pakistan);
   console.log(v2);
