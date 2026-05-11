@@ -21,10 +21,11 @@ export function app_calendar_paste_convert(input) {
   const zone = "America/New_York";
   const start = app_calendar_paste_convert_parse(date, first, zone);
   const end = app_calendar_paste_convert_parse(date, second, zone);
+  const dts = [start, end];
   function lambda(dt) {
     date_time_zone_future_is_assert(dt, zone);
   }
-  each([start, end], lambda);
+  each(dts, lambda);
   let r = {
     start,
     end,
