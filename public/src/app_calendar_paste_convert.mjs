@@ -15,6 +15,7 @@ export function app_calendar_paste_convert(input) {
   const zone_input = "America/New_York";
   const zone_output = "Asia/Karachi";
   let country_main = "Pakistan";
+  let country_speaker = "USA";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
   let time_range = property_get(r2, "second");
