@@ -10,7 +10,7 @@ export async function app_calendar_paste_convert(input) {
   let first = property_get(r2, "first");
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
-  const input_luxon = "Monday, May 11 2026 11:00am";
+  const input_luxon = "Monday, May 11 2026 11:00am";tc
   const dt = DateTime.fromFormat(input_luxon, "cccc, LLL dd yyyy h:mma", {
     zone: "America/New_York",
   });
