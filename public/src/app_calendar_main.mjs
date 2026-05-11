@@ -52,7 +52,7 @@ export async function app_calendar_main(context) {
   const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda7(item) {
     let picked = object_pick_try(o, properties_name);
-    let properties = properties_get(obj);
+    let properties = properties_get(picked);lsg
   }
   let mapped2 = list_map(list, lambda7);
   function lambda6(o) {
