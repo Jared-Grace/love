@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
@@ -61,7 +62,8 @@ export async function app_calendar_main(context) {
       r22,
       r3,
     ]);
-    let v = object_values(o2);
+    let v = object_values(picked);
+    log_json(right);
     return value;
   }
   let dictionary = list_to_dictionary_key(filtered, json_to);
