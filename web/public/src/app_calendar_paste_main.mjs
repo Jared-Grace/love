@@ -9,7 +9,10 @@ export function app_calendar_paste_main(context) {
   async function lambda2() {
     function lambda(input) {
       let date_time_zones = app_calendar_paste_convert(input);
-      let joined = list_join_newline_2(list);
+      let joined = list_join_newline_2([
+        date_time_zones,
+        "Do you want a meeting on this day and time?",
+      ]);
     }
     await clipboard_transform(lambda);
   }
