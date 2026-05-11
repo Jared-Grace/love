@@ -29,6 +29,7 @@ export function app_calendar_paste_convert(input) {
     {
       start,
       end,
+      zone: zone_input,
     },
     {
       start,
