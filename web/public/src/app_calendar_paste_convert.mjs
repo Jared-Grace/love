@@ -1,4 +1,3 @@
-import { each } from "../../../love/public/src/each.mjs";
 import { date_time_zone_format_to } from "../../../love/public/src/date_time_zone_format_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { date_time_zone_future_is_assert_multiple } from "../../../love/public/src/date_time_zone_future_is_assert_multiple.mjs";
@@ -37,9 +36,7 @@ export function app_calendar_paste_convert(input) {
       end,
       zone: zone_output,
     },
-  ];
-  function lambda(item) {}
-  each(list, lambda);
+  ];lm
   const pakistan = start.setZone(zone_output);
   let v2 = date_time_zone_format_to(pakistan);
   console.log(v2);
