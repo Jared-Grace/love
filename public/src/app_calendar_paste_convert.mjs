@@ -23,7 +23,8 @@ export function app_calendar_paste_convert(input) {
   const end = app_calendar_paste_convert_parse(date, second, zone);
   const dts = [start, end];
   date_time_zone_future_is_assert_multiple(dts, zone);
-  const pakistan = start.setZone("Asia/Karachi");
+  const zone_output = "Asia/Karachi";
+  const pakistan = start.setZone(zone_output);
   let v2 = pakistan.toFormat("cccc, LLL dd yyyy h:mma");
   console.log(v2);
   let r = {
