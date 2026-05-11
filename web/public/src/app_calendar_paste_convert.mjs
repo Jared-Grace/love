@@ -10,8 +10,8 @@ export async function app_calendar_paste_convert(input) {
   input = "Monday, May 11⋅11:00am – 12:00pm";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(list);
-  let second = property_get(r2, "second");
-  let split2 = text_split_comma(second);
+  let time_range = property_get(r2, "second");
+  let split2 = text_split_comma(time_range);
   let mapped = list_map(split2, text_trim);
   let result = list_first_second_only(mapped);
   let first = property_get(r2, "first");
