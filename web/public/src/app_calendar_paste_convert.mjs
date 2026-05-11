@@ -33,24 +33,26 @@ export function app_calendar_paste_convert(input) {
     {
       start,
       end,
-      zone: zone_input,
-      country_main,
+      zone: zone_output,
+      country: country_main,
     },
     {
       start,
       end,
-      zone: zone_output,
+      zone: zone_input,
+      country: country_speaker,
     },
   ];
   function lambda(item) {
     let start = property_get(item, "start");
     let end = property_get(item, "end");
     let zone = property_get(item, "zone");
+    let country = property_get(item, "country");
     const start_zoned = date_time_zone_set_zone(start, zone);
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_standard(start_zoned);
     let to = date_time_zone_format_time_to(end_zoned);
-    let combined = text_combine_multiple(["Pakistan time:"]);
+    let combined = text_combine_multiple([country, " time: "]);
     return r;
   }
   let mapped2 = list_map(formats, lambda);
