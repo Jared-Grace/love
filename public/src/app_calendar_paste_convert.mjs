@@ -21,5 +21,9 @@ export function app_calendar_paste_convert(input) {
   const start = app_calendar_paste_convert_parse(date, first, zone);
   const end = app_calendar_paste_convert_parse(date, second, zone);
   date_time_zone_future_is_assert(dt, zone);
-  return dt;
+  let r = {
+    start,
+    end,
+  };
+  return r;
 }
