@@ -38,12 +38,13 @@ export function app_calendar_paste_convert(input) {
     },
   ];
   function lambda(item) {
-    let start2 = property_get(item, "start");
-    let end2 = property_get(item, "end");
-    let zone2 = property_get(item, "zone");
+    let start = property_get(item, "start");
+    let end = property_get(item, "end");
+    let zone = property_get(item, "zone");
+    function lambda2(item2) {}
+    let mapped3 = list_map(list, lambda2);
   }
   let mapped2 = list_map(formats, lambda);
-  const pakistan = start.setZone(zone_output);
   let v2 = date_time_zone_format_to(pakistan);
   console.log(v2);
   let r = {
