@@ -21,7 +21,7 @@ export function app_calendar_paste_convert(input) {
   const start = app_calendar_paste_convert_parse(date, first, zone);
   const end = app_calendar_paste_convert_parse(date, second, zone);
   const dts = [start, end];
-  date_time_zone_future_is_assert_multiple(zone, dts);
+  date_time_zone_future_is_assert_multiple(dts, zone);
   let r = {
     start,
     end,
