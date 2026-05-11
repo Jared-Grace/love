@@ -57,13 +57,8 @@ export async function app_calendar_main(context) {
     let r22 = app_calendar_facebook_url_id();
     let r3 = app_calendar_facebook_conversation_id();
     let r4 = app_calendar_whatsapp_phone();
-    let picked = object_pick_try(o, [
-      "whatsapp_name",
-      "facebook_name",
-      r4,
-      r22,
-      r3,
-    ]);
+    const properties = ["whatsapp_name", "facebook_name", r4, r22, r3];
+    let picked = object_pick_try(o, properties);
     let v = object_values(picked);
     let joined = list_join_space(v);
     return joined;
