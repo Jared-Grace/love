@@ -1,3 +1,4 @@
+import { object_pick_try_json_curried_right } from "../../../love/public/src/object_pick_try_json_curried_right.mjs";
 import { object_pick_try_json } from "../../../love/public/src/object_pick_try_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
@@ -49,10 +50,7 @@ export async function app_calendar_main(context) {
     html_value_set(input, paste);
   }
   const properties_name = ["whatsapp_name", "facebook_name"];
-  function lambda6(o) {
-    let json2 = object_pick_try_json(o, properties_name);
-    return json2;
-  }
+  let lambda6 = object_pick_try_json_curried_right(properties_name);
   let dictionary = list_to_dictionary_key(filtered, lambda6);
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
