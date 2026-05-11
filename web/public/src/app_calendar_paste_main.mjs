@@ -5,7 +5,7 @@ export function app_calendar_paste_main() {
   let input = "Monday, May 11⋅11:00am – 12:00pm";
   async function lambda2() {
     let paste = await clipboard_paste();
-    let mapped2 = app_calendar_paste_convert(input2);
+    let mapped2 = app_calendar_paste_convert(paste);
   }
   let component = html_button(
     parent,
