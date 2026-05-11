@@ -1,3 +1,4 @@
+import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -53,7 +54,13 @@ export async function app_calendar_main(context) {
   function lambda6(o) {
     let value = object_pick_try_single_value(o, properties_name);
     let r22 = app_calendar_facebook_url_id();
-    let picked = object_pick_try(o, ["whatsapp_name", "facebook_name", r22]);
+    let r3 = app_calendar_facebook_conversation_id();
+    let picked = object_pick_try(o, [
+      "whatsapp_name",
+      "facebook_name",
+      r22,
+      r3,
+    ]);
     return value;
   }
   let dictionary = list_to_dictionary_key(filtered, json_to);
