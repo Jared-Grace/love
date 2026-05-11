@@ -1,10 +1,8 @@
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { import_install } from "../../../love/public/src/import_install.mjs";
+import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export async function app_calendar_paste_main() {
   let example = "Monday, May 11⋅11:00am – 12:00pm";
-  let r = await import_install("luxon");
-  let DateTime = property_get(r, "DateTime");
+  await app_calendar_paste_convert();
   function lambda2() {}
   let component = html_button(
     parent,
