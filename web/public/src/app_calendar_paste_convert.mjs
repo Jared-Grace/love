@@ -1,3 +1,4 @@
+import { date_time_zone_now } from "../../../love/public/src/date_time_zone_now.mjs";
 import { date_time_zone_future_is_assert } from "../../../love/public/src/date_time_zone_future_is_assert.mjs";
 import { date_time_zone_parse } from "../../../love/public/src/date_time_zone_parse.mjs";
 import { text_split_dash_en } from "../../../love/public/src/text_split_dash_en.mjs";
@@ -20,7 +21,7 @@ export async function app_calendar_paste_convert(input) {
   let first = property_get(r3, "first");
   let date = property_get(r2, "first");
   let r = await import_install("luxon");
-  DateTime.now();
+  date_time_zone_now();
   let input_luxon = text_combine_multiple([date, " 2026 ", first]);
   const zone = "America/New_York";
   const dt = date_time_zone_parse(input_luxon, "cccc, LLL dd yyyy h:mma", zone);
