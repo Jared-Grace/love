@@ -1,11 +1,9 @@
-import { date_time_zone_now_year } from "../../../love/public/src/date_time_zone_now_year.mjs";
+import { app_calendar_paste_convert_parse } from "../../../love/public/src/app_calendar_paste_convert_parse.mjs";
 import { date_time_zone_future_is_assert } from "../../../love/public/src/date_time_zone_future_is_assert.mjs";
-import { date_time_zone_parse } from "../../../love/public/src/date_time_zone_parse.mjs";
 import { text_split_dash_en } from "../../../love/public/src/text_split_dash_en.mjs";
 import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_calendar_paste_convert(input) {
@@ -20,9 +18,7 @@ export function app_calendar_paste_convert(input) {
   let first = property_get(r3, "first");
   let date = property_get(r2, "first");
   const zone = "America/New_York";
-  let y = date_time_zone_now_year();
-  let input_luxon = text_combine_multiple([date, " ", y, " ", first]);
-  const dt = date_time_zone_parse(input_luxon, "cccc, LLL dd yyyy h:mma", zone);
+  const dt = app_calendar_paste_convert_parse(date, first, zone);
   date_time_zone_future_is_assert(dt, zone);
   return dt;
 }
