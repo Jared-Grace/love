@@ -50,7 +50,6 @@ export async function app_calendar_main(context) {
     html_value_set(input, paste);
   }
   const properties_name = ["whatsapp_name", "facebook_name"];
-  function lambda7(item) {}
   function lambda6(o) {
     let picked = object_pick_try(o, properties_name);
     let value3 = object_property_single_value(picked);
