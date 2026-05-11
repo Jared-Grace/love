@@ -1,3 +1,4 @@
+import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
@@ -55,9 +56,11 @@ export async function app_calendar_main(context) {
     let value = object_pick_try_single_value(o, properties_name);
     let r22 = app_calendar_facebook_url_id();
     let r3 = app_calendar_facebook_conversation_id();
+    let r4 = app_calendar_whatsapp_phone();
     let picked = object_pick_try(o, [
       "whatsapp_name",
       "facebook_name",
+      r4,
       r22,
       r3,
     ]);
