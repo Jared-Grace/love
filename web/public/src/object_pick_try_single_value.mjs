@@ -2,6 +2,6 @@ import { object_property_single_value } from "../../../love/public/src/object_pr
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
 export function object_pick_try_single_value(o, properties_name) {
   let picked = object_pick_try(o, properties_name);
-  let value3 = object_property_single_value(picked);
-  return value3;
+  let value = object_property_single_value(picked);
+  return value;
 }
