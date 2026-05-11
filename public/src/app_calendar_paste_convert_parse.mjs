@@ -6,7 +6,10 @@ export function app_calendar_paste_convert_parse(date, hour, zone) {
   let y = date_time_zone_now_year();
   let input_luxon = text_combine_multiple([date, " ", y, " ", hour]);
   const dt = date_time_zone_parse(input_luxon, "cccc, LLL dd yyyy h:mma", zone);
-  function lambda2() {}
+  function lambda2() {
+    let r = [dt.invalidReason, dt.invalidExplanation];
+    return r;
+  }
   assert_json_get(dt.isValid, lambda2);
   return dt;
 }
