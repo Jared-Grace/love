@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
 export function date_time_zone_now() {
-  DateTime.now();
+  let r = DateTime.now();
+  return r;
 }
