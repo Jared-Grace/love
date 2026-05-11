@@ -4,14 +4,13 @@ import { clipboard_transform } from "../../../love/public/src/clipboard_transfor
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main(context) {
-  let root2 = property_get(context, "root");
+  let root = property_get(context, "root");
   async function lambda2() {
     await clipboard_transform(app_calendar_paste_convert);
   }
-  let p = html_p_text(root, text);
-  let component = html_button(
-    parent,
+  let p = html_p_text(
+    root,
     "Click to paste the date/time from Google Calendar to copy for Pakistan",
-    lambda2,
   );
+  let component = html_button(parent, "Request date/time", lambda2);
 }
