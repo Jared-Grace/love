@@ -52,7 +52,7 @@ export function app_calendar_paste_convert(input) {
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_standard(start_zoned);
     let to = date_time_zone_format_time_to(end_zoned);
-    let combined = text_combine_multiple([country, " time: "]);
+    let combined = text_combine_multiple([country, " time: ", from, " - ", to]);
     return r;
   }
   let mapped2 = list_map(formats, lambda);
