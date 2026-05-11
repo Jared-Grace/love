@@ -55,6 +55,7 @@ export async function app_calendar_main(context) {
     let picked = object_pick_try(o, properties_name);
     let properties = properties_get(picked);
     let only = list_single(properties);
+    let value3 = property_get(object, property_name);
   }
   let mapped2 = list_map(list, lambda7);
   function lambda6(o) {
