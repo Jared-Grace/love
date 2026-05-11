@@ -9,8 +9,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_input_placeholder_wide } from "../../../love/public/src/html_input_placeholder_wide.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
-import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
-import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
@@ -85,6 +83,4 @@ export async function app_calendar_main(context) {
     });
   }
   let component = html_button_wide(root, "Add Contact", lambda3);
-  let json = json_format_to(contacts);
-  let pre = html_pre_text(root, json);
 }
