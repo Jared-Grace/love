@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { date_time_zone_future_is } from "../../../love/public/src/date_time_zone_future_is.mjs";
 import { date_time_zone_parse } from "../../../love/public/src/date_time_zone_parse.mjs";
 import { text_split_dash_en } from "../../../love/public/src/text_split_dash_en.mjs";
@@ -25,7 +26,8 @@ export async function app_calendar_paste_convert(input) {
   const zone = "America/New_York";
   const format = "cccc, LLL dd yyyy h:mma";
   const dt = date_time_zone_parse(input_luxon, format, zone);
-  let f = date_time_zone_future_is(dt2, zone2);
+  let f = date_time_zone_future_is(dt, zone);
+  assert(b);
   if ((dt, zone)) {
     throw new Error("DateTime is not in the future");
   }
