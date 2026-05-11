@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
@@ -51,7 +52,7 @@ export async function app_calendar_main(context) {
     let value = object_pick_try_single_value(o, properties_name);
     return value;
   }
-  let dictionary = list_to_dictionary_key(filtered, lambda6);
+  let dictionary = list_to_dictionary_key(filtered, json_to);
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
     let value2 = property_get(dictionary, text);
