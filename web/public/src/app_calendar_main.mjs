@@ -1,6 +1,5 @@
-import { object_pick_try_values } from "../../../love/public/src/object_pick_try_values.mjs";
+import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -55,8 +54,7 @@ export async function app_calendar_main(context) {
     let r3 = app_calendar_facebook_conversation_id();
     let r4 = app_calendar_whatsapp_phone();
     const properties = ["whatsapp_name", "facebook_name", r4, r22, r3];
-    let v = object_pick_try_values(o, properties);
-    let joined = list_join_space(v);
+    let joined = object_pick_try_values_join_space(o, properties);
     return joined;
   }
   let dictionary = list_to_dictionary_key(filtered, lambda6);
