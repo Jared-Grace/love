@@ -26,8 +26,5 @@ export async function app_calendar_paste_convert(input) {
   const format = "cccc, LLL dd yyyy h:mma";
   const dt = date_time_zone_parse(input_luxon, format, zone);
   date_time_zone_future_is_assert(dt, zone);
-  if ((dt, zone)) {
-    throw new Error("DateTime is not in the future");
-  }
   return dt;
 }
