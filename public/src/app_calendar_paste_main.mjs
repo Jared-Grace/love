@@ -6,7 +6,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main(context) {
   let root = property_get(context, "root");
   async function lambda2() {
-    function lambda() {
+    function lambda(input) {
       let date_time_zones = app_calendar_paste_convert(input);
     }
     await clipboard_transform(lambda);
