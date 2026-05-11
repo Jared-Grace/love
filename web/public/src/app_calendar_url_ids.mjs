@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { list_map_suffix_without_try_multiple } from "../../../love/public/src/list_map_suffix_without_try_multiple.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -12,6 +13,7 @@ export async function app_calendar_url_ids() {
   urls = list_map_prefix_without_try_multiple(urls, prefixes);
   const suffixes = ["#", "?"];
   urls = list_map_suffix_without_try_multiple(urls, suffixes);
+  let size = list_size(list);
   let url_ids = list_unique(urls);
   return url_ids;
 }
