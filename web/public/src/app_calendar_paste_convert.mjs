@@ -44,7 +44,7 @@ export function app_calendar_paste_convert(input) {
     let end = property_get(item, "end");
     let zone = property_get(item, "zone");
     let format = date_time_zone_format_time();
-    let formatted = date_time_zone_format_to(start, format);
+    let h = date_time_zone_format_to(start, format);
   }
   let mapped2 = list_map(formats, lambda);
   let v2 = date_time_zone_format_to_standard(pakistan);
