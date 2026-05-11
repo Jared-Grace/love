@@ -8,7 +8,6 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
-import { DateTime } from "luxon";
 export async function app_calendar_paste_convert(input) {
   input = "Monday, May 11⋅11:00am – 12:00pm";
   let split = text_split(input, "⋅");
