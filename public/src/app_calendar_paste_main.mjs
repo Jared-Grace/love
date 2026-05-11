@@ -5,8 +5,9 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main() {
   let input = "Monday, May 11⋅11:00am – 12:00pm";
   async function lambda2() {
+    let fn = app_calendar_paste_convert;
     let paste = await clipboard_paste();
-    let text = app_calendar_paste_convert(paste);
+    let text = await app_calendar_paste_convert(paste);
     await clipboard_copy(text);
   }
   let component = html_button(
