@@ -13,11 +13,14 @@ export async function app_calendar_paste_convert(input) {
   let time_range = property_get(r2, "second");
   let split2 = text_split_comma(time_range);
   let mapped = list_map(split2, text_trim);
-  let result = list_first_second_only(mapped);
-  let first = property_get(r2, "first");
+  let {
+      first,
+      second,
+    } = list_first_second_only(mapped);
+  let date = property_get(r2, "first");
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
-  let input_luxon = text_combine_multiple([first, " 2026 11:00am"]);
+  let input_luxon = text_combine_multiple([date, " 2026 11:00am"]);
   const dt = DateTime.fromFormat(input_luxon, "cccc, LLL dd yyyy h:mma", {
     zone: "America/New_York",
   });
