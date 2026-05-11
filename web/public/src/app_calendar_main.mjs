@@ -53,7 +53,6 @@ export async function app_calendar_main(context) {
   }
   const properties_name = ["whatsapp_name", "facebook_name"];
   function lambda6(o) {
-    let value = object_pick_try_single_value(o, properties_name);
     let r22 = app_calendar_facebook_url_id();
     let r3 = app_calendar_facebook_conversation_id();
     let r4 = app_calendar_whatsapp_phone();
