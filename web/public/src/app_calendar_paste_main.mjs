@@ -5,6 +5,7 @@ export function app_calendar_paste_main() {
   async function lambda2() {
     await clipboard_transform(app_calendar_paste_convert);
   }
+  hps;
   let component = html_button(
     parent,
     "Click to paste the date/time from Google Calendar to copy for Pakistan",
