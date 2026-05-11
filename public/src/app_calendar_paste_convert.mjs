@@ -1,3 +1,4 @@
+import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
