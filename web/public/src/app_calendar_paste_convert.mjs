@@ -42,7 +42,7 @@ export function app_calendar_paste_convert(input) {
     let start = property_get(item, "start");
     let end = property_get(item, "end");
     let zone = property_get(item, "zone");
-    const pk = dt.setZone(zone_output);
+    const start_end = start.setZone(zone_output);
     let v2 = date_time_zone_format_to_standard(start);
     let h = date_time_zone_format_time_to(start);
   }
