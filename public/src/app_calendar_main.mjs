@@ -2,7 +2,6 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { object_pick_try } from "../../../love/public/src/object_pick_try.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
@@ -66,7 +65,7 @@ export async function app_calendar_main(context) {
     let joined = list_join_space(v);
     return joined;
   }
-  let dictionary = list_to_dictionary_key(filtered, json_to);
+  let dictionary = list_to_dictionary_key(filtered, lambda6);
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
     let value2 = property_get(dictionary, text);
