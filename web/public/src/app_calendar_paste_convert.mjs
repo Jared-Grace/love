@@ -20,10 +20,11 @@ export async function app_calendar_paste_convert(input) {
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
   let input_luxon = text_combine_multiple([date, " 2026 ", first]);
+  const zone = "America/New_York";
   const dt = DateTime.fromFormat(input_luxon, "cccc, LLL dd yyyy h:mma", {
-    zone: "America/New_York",
+    zone,
   });
-  if (dt <= DateTime.now().setZone("America/New_York")) {
+  if (dt <= DateTime.now().setZone(zone)) {
     throw new Error("DateTime is not in the future");
   }
   return dt;
