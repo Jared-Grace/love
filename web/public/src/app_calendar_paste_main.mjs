@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -6,6 +7,7 @@ export function app_calendar_paste_main() {
   async function lambda2() {
     let paste = await clipboard_paste();
     let mapped2 = app_calendar_paste_convert(paste);
+    await clipboard_copy(text);
   }
   let component = html_button(
     parent,
