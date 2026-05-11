@@ -26,7 +26,6 @@ export function app_calendar_paste_convert(input) {
   const pakistan = start.setZone("Asia/Karachi");
   let v2 = pakistan.toFormat("cccc, LLL dd yyyy h:mma");
   console.log(v2);
-  console.log(v);
   let r = {
     start,
     end,
