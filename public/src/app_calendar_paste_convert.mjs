@@ -35,12 +35,14 @@ export function app_calendar_paste_convert(input) {
       end,
       zone: zone_output,
       country: country_main,
+      parenthesis: false,
     },
     {
       start,
       end,
       zone: zone_input,
       country: country_speaker,
+      parenthesis: true,
     },
   ];
   function lambda(item) {
