@@ -1,6 +1,5 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { date_time_zone_future_is_assert_multiple } from "../../../love/public/src/date_time_zone_future_is_assert_multiple.mjs";
 import { app_calendar_paste_convert_parse } from "../../../love/public/src/app_calendar_paste_convert_parse.mjs";
-import { date_time_zone_future_is_assert } from "../../../love/public/src/date_time_zone_future_is_assert.mjs";
 import { text_split_dash_en } from "../../../love/public/src/text_split_dash_en.mjs";
 import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
@@ -22,10 +21,7 @@ export function app_calendar_paste_convert(input) {
   const start = app_calendar_paste_convert_parse(date, first, zone);
   const end = app_calendar_paste_convert_parse(date, second, zone);
   const dts = [start, end];
-  function lambda(dt) {
-    date_time_zone_future_is_assert(dt, zone);
-  }
-  each(dts, lambda);
+  date_time_zone_future_is_assert_multiple(zone, dts);
   let r = {
     start,
     end,
