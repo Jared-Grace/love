@@ -23,5 +23,8 @@ export async function app_calendar_paste_convert(input) {
   const dt = DateTime.fromFormat(input_luxon, "cccc, LLL dd yyyy h:mma", {
     zone: "America/New_York",
   });
+  if (dt <= DateTime.now().setZone("America/New_York")) {
+    throw new Error("DateTime is not in the future");
+  }
   return dt;
 }
