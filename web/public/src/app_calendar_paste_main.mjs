@@ -2,7 +2,7 @@ import { app_calendar_paste_convert } from "../../../love/public/src/app_calenda
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main() {
   let input = "Monday, May 11⋅11:00am – 12:00pm";
-  function lambda2() {
+  function lambda2() {clipboard_paste
     let mapped2 = app_calendar_paste_convert(input2);
   }
   let component = html_button(
