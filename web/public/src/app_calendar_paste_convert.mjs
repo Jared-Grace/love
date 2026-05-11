@@ -12,7 +12,8 @@ export async function app_calendar_paste_convert(input) {
   let r2 = list_first_second(list);
   let second = property_get(r2, "second");
   let split2 = text_split_comma(second);
-  let mapped = list_map(list2, text_trim);
+  let mapped = list_map(split2, text_trim);
+  let result = list_first_second(list2);
   let first = property_get(r2, "first");
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
