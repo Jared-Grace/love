@@ -5,7 +5,9 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 export async function app_calendar_paste_convert(input) {
   input = "Monday, May 11⋅11:00am – 12:00pm";
   let split = text_split(input, "⋅");
-  let result = list_first_second(list);
+  let r2 = list_first_second(list);
+  let second = property_get(r2, "second");
+  let first = property_get(r2, "first");
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
   const dt = DateTime.fromFormat(
