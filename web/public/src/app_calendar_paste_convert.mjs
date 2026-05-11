@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { date_time_zone_set_zone } from "../../../love/public/src/date_time_zone_set_zone.mjs";
@@ -63,5 +64,6 @@ export function app_calendar_paste_convert(input) {
     return t;
   }
   let mapped2 = list_map(formats, lambda);
+  let joined = list_join_newline(list);
   return mapped2;
 }
