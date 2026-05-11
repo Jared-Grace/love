@@ -2,7 +2,6 @@ import { clipboard_transform } from "../../../love/public/src/clipboard_transfor
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main() {
-  let input = "Monday, May 11⋅11:00am – 12:00pm";
   async function lambda2() {
     await clipboard_transform(app_calendar_paste_convert);
   }
