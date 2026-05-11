@@ -61,6 +61,7 @@ export async function app_calendar_main(context) {
       r22,
       r3,
     ]);
+    let json = json_to(object);
     return value;
   }
   let dictionary = list_to_dictionary_key(filtered, json_to);
