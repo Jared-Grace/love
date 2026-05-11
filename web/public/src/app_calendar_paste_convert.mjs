@@ -13,7 +13,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_calendar_paste_convert(input) {
-  input = "Tuesday, May 12⋅11:00am – 12:00pm";
   const zone_input = "America/New_York";
   const zone_output = "Asia/Karachi";
   let country_main = "Pakistan";
