@@ -1,7 +1,6 @@
 import { date_time_zone_set_zone } from "../../../love/public/src/date_time_zone_set_zone.mjs";
 import { date_time_zone_format_time_to } from "../../../love/public/src/date_time_zone_format_time_to.mjs";
 import { date_time_zone_format_to_standard } from "../../../love/public/src/date_time_zone_format_to_standard.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { date_time_zone_future_is_assert_multiple } from "../../../love/public/src/date_time_zone_future_is_assert_multiple.mjs";
 import { app_calendar_paste_convert_parse } from "../../../love/public/src/app_calendar_paste_convert_parse.mjs";
 import { text_split_dash_en } from "../../../love/public/src/text_split_dash_en.mjs";
@@ -45,14 +44,14 @@ export function app_calendar_paste_convert(input) {
     let zone = property_get(item, "zone");
     const start_zoned = date_time_zone_set_zone(start, zone);
     const end_zoned = date_time_zone_set_zone(end, zone);
-    let v2 = date_time_zone_format_to_standard(start);
-    let h = date_time_zone_format_time_to(start);
+    let from = date_time_zone_format_to_standard(start_zoned);
+    let to = date_time_zone_format_time_to(end_zoned);
+    let r = {
+      from,
+      to,
+    };
+    return r;
   }
   let mapped2 = list_map(formats, lambda);
-  console.log(v2);
-  let r = {
-    start,
-    end,
-  };
-  return r;
+  return mapped2;
 }
