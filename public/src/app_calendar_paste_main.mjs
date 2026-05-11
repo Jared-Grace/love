@@ -7,7 +7,7 @@ export function app_calendar_paste_main() {
   async function lambda2() {
     let fn = app_calendar_paste_convert;
     let paste = await clipboard_paste();
-    let text = await app_calendar_paste_convert(paste);
+    let text = await fn(paste);
     await clipboard_copy(text);
   }
   let component = html_button(
