@@ -1,3 +1,4 @@
+import { date_time_zone_format } from "../../../love/public/src/date_time_zone_format.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { date_time_zone_future_is_assert_multiple } from "../../../love/public/src/date_time_zone_future_is_assert_multiple.mjs";
 import { app_calendar_paste_convert_parse } from "../../../love/public/src/app_calendar_paste_convert_parse.mjs";
@@ -25,7 +26,8 @@ export function app_calendar_paste_convert(input) {
   date_time_zone_future_is_assert_multiple(dts, zone_input);
   const zone_output = "Asia/Karachi";
   const pakistan = start.setZone(zone_output);
-  let v2 = pakistan.toFormat("cccc, LLL dd yyyy h:mma");
+  let format = date_time_zone_format();
+  let v2 = pakistan.toFormat(format);
   console.log(v2);
   let r = {
     start,
