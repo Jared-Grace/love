@@ -63,7 +63,7 @@ export function app_calendar_paste_convert(input) {
     }
     return t;
   }
-  let mapped2 = list_map(formats, lambda);
+  let list = list_map(formats, lambda);
   let joined = list_join_newline(list);
-  return mapped2;
+  return joined;
 }
