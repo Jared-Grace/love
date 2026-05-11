@@ -63,8 +63,8 @@ export async function app_calendar_main(context) {
       r3,
     ]);
     let v = object_values(picked);
-    let joined = list_join_space(list);
-    return value;
+    let joined = list_join_space(v);
+    return joined;
   }
   let dictionary = list_to_dictionary_key(filtered, json_to);
   let contacts_json = properties_get(dictionary);
