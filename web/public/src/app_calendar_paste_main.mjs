@@ -1,3 +1,4 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -8,6 +9,7 @@ export function app_calendar_paste_main(context) {
   async function lambda2() {
     function lambda(input) {
       let date_time_zones = app_calendar_paste_convert(input);
+      let joined = list_join_newline_2(list);
     }
     await clipboard_transform(lambda);
   }
