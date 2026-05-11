@@ -21,6 +21,7 @@ export async function app_calendar_paste_convert(input) {
   let date = property_get(r2, "first");
   let r = await import_install("luxon");
   let DateTime = property_get(r, "DateTime");
+  DateTime.now();
   let input_luxon = text_combine_multiple([date, " 2026 ", first]);
   const zone = "America/New_York";
   const dt = date_time_zone_parse(input_luxon, "cccc, LLL dd yyyy h:mma", zone);
