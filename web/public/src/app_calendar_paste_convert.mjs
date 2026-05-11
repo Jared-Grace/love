@@ -64,6 +64,6 @@ export function app_calendar_paste_convert(input) {
     return t;
   }
   let list = list_map(formats, lambda);
-  let joined = list_join_newline(list);
-  return joined;
+  let date_time_zones = list_join_newline(list);
+  return date_time_zones;
 }
