@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { date_time_zone_set_zone } from "../../../love/public/src/date_time_zone_set_zone.mjs";
 import { date_time_zone_format_time_to } from "../../../love/public/src/date_time_zone_format_time_to.mjs";
 import { date_time_zone_format_to_standard } from "../../../love/public/src/date_time_zone_format_to_standard.mjs";
@@ -46,10 +47,7 @@ export function app_calendar_paste_convert(input) {
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_standard(start_zoned);
     let to = date_time_zone_format_time_to(end_zoned);
-    let r = {
-      from,
-      to,
-    };
+    let combined = text_combine_multiple(list);
     return r;
   }
   let mapped2 = list_map(formats, lambda);
