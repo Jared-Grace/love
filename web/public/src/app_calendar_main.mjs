@@ -65,6 +65,9 @@ export async function app_calendar_main(context) {
       r3,
     ]);
     let v = object_values(picked);
+    log(app_calendar_main.name, {
+      v,
+    });
     let joined = list_join_space(v);
     return joined;
   }
