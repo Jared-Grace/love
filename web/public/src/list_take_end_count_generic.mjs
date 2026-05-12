@@ -2,6 +2,7 @@ import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mj
 import { negative_not_is_assert } from "../../../love/public/src/negative_not_is_assert.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 export function list_take_end_count_generic(list, count) {
+  let fn = list_size;
   integer_is_assert(count);
   let end = list_size(list);
   let c = end - count;
