@@ -85,7 +85,7 @@ export function app_calendar_paste_convert(input) {
   let r = date_time_zone_format_date_day_first();
   let formatted = date_time_zone_format_to(start, r);
   list_add_first(list, formatted);
-  list_add(list2, item3);
+  list_add(list, item3);
   let date_time_zones = list_join_newline(list);
   return date_time_zones;
 }
