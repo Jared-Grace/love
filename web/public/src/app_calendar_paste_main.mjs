@@ -1,5 +1,4 @@
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
@@ -13,10 +12,10 @@ export function app_calendar_paste_main(context) {
   async function lambda2() {
     function lambda(input) {
       let date_time_zones = app_calendar_paste_convert(input);
-        const lines = [
-            date_time_zones,
-            "Do you want a meeting on this day and time?",
-        ];
+      const lines = [
+        date_time_zones,
+        "Do you want a meeting on this day and time?",
+      ];
       let joined = list_join_newline_2(lines);
       html_div_text_multiple(output, lines);
       return joined;
