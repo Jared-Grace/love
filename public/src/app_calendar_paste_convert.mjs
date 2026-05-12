@@ -1,3 +1,4 @@
+import { text_last } from "../../../love/public/src/text_last.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -25,6 +26,7 @@ export function app_calendar_paste_convert(input) {
   let r3 = list_first_second_only(mapped);
   let second = property_get(r3, "second");
   let first = property_get(r3, "first");
+  let item2 = text_last(s);
   let date = property_get(r2, "first");
   const start = app_calendar_paste_convert_parse(date, first, zone_input);
   const end = app_calendar_paste_convert_parse(date, second, zone_input);
