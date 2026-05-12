@@ -90,8 +90,7 @@ export function app_calendar_paste_convert(input) {
   let formatted = date_time_zone_format_to(start, r);
   list_add_first(list, formatted);
   let minutes_labelled = word_count_pluralize(minutes, "minute");
-  let p2 = word_count_pluralize(hours, "hour");
-  let hours_labelled = text_wrap_parenthesis(p2);
+  let hours_labelled = word_count_pluralize(hours, "hour");
   let result = ternary(hours >= 1, hours_labelled, minutes_labelled);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last for: ",
