@@ -94,7 +94,7 @@ export function app_calendar_paste_convert(input) {
   let hours_labelled = text_wrap_parenthesis(p2);
   let result = ternary(hours >= 1, hours_labelled, minutes_labelled);
   let combined = text_combine_multiple([
-    "Meeting is scheduled to last for ",
+    "Meeting is scheduled to last for: ",
     result,
     " total",
   ]);
