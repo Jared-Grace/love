@@ -89,10 +89,10 @@ export function app_calendar_paste_convert(input) {
   let formatted = date_time_zone_format_to(start, r);
   list_add_first(list, formatted);
   let p = word_count_pluralize(count_total, word);
+  let v2 = text_wrap_parenthesis(inside);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last for ",
-    minutes,
-    "minutes",
+    p,
   ]);
   list_add(list, item3);
   let date_time_zones = list_join_newline(list);
