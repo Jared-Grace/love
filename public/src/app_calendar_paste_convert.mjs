@@ -67,13 +67,13 @@ export function app_calendar_paste_convert(input) {
     let parenthesis = property_get(item, "parenthesis");
     let flag = property_get(item, "flag");
     const start_zoned = date_time_zone_set_zone(start, zone);
-    let from = date_time_zone_format_to_time(start_zoned);
+    let start_formatted = date_time_zone_format_to_time(start_zoned);
     let t = text_combine_multiple([
       flag,
       " ",
       country,
       " Meeting start time: ",
-      from,
+      start_formatted,
     ]);
     if (parenthesis) {
       t = text_wrap_parenthesis(t);
