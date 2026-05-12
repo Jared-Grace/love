@@ -1,3 +1,4 @@
+import { html_p } from "../../../love/public/src/html_p.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -21,5 +22,6 @@ export function app_calendar_paste_main(context) {
     root,
     "Click to paste the date/time from Google Calendar to copy for Pakistan",
   );
-  let component = html_button(root, "Request date/time", lambda2);hp
+  let component = html_button(root, "Request date/time", lambda2);
+  let p2 = html_p(root2);
 }
