@@ -52,6 +52,7 @@ export function app_calendar_paste_convert(input) {
       zone: zone_output,
       country: country_main,
       parenthesis: false,
+      flag: "🇵🇰",
     },
     {
       start,
@@ -59,6 +60,7 @@ export function app_calendar_paste_convert(input) {
       zone: zone_input,
       country: country_speaker,
       parenthesis: true,
+      flag: "🇺🇸",
     },
   ];
   function lambda(item) {
