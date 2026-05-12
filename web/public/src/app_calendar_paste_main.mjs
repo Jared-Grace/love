@@ -27,7 +27,7 @@ export function app_calendar_paste_main(context) {
         lines = ["Invalid input:", input];
         red = true;
       }
-      html_div_text_multiple(output, lines);
+      let ds = html_div_text_multiple(output, lines);
       return joined;
     }
     await clipboard_transform(lambda);
