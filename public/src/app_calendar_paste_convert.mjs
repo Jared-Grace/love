@@ -74,11 +74,11 @@ export function app_calendar_paste_convert(input) {
     const start_zoned = date_time_zone_set_zone(start, zone);
     let start_formatted = date_time_zone_format_to_time(start_zoned);
     let t = text_combine_multiple([
-      flag,
-      " ",
       country,
       " Meeting start time: ",
       start_formatted,
+      " ",
+      flag,
     ]);
     if (parenthesis) {
       t = text_wrap_parenthesis(t);
