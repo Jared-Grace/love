@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { date_time_zone_format_to } from "../../../love/public/src/date_time_zone_format_to.mjs";
 import { date_time_zone_format_date_day_first } from "../../../love/public/src/date_time_zone_format_date_day_first.mjs";
@@ -84,6 +85,7 @@ export function app_calendar_paste_convert(input) {
   let r = date_time_zone_format_date_day_first();
   let formatted = date_time_zone_format_to(start, r);
   list_add_first(list, formatted);
+  list_add(list2, item3);
   let date_time_zones = list_join_newline(list);
   return date_time_zones;
 }
