@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -18,6 +19,7 @@ export function app_calendar_paste_main(context) {
         "Do you want a meeting on this day and time?",
       ]);
       let lines = text_split_newline(joined);
+      html_clear(element);
       html_div_text_multiple(output, lines);
       return joined;
     }
