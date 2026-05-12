@@ -88,14 +88,16 @@ export function app_calendar_paste_convert(input) {
   let r = date_time_zone_format_date_day_first();
   let formatted = date_time_zone_format_to(start, r);
   list_add_first(list, formatted);
-  let p = word_count_pluralize(count_total, "minute");
-  let p2 = word_count_pluralize(count_total2, "hour");
-  let v2 = text_wrap_parenthesis(inside);
+  let minutes_labelled = word_count_pluralize(minutes, "minute");
+  let p2 = word_count_pluralize(hours, "hour");
+  let hours_labelled = text_wrap_parenthesis(p2);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last for ",
-    p,
+    minutes_labelled,
+    " ",
+    hours_labelled,
   ]);
-  list_add(list, item3);
+  list_add(list, combined);
   let date_time_zones = list_join_newline(list);
   return date_time_zones;
 }
