@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { word_count_pluralize } from "../../../love/public/src/word_count_pluralize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -91,6 +92,7 @@ export function app_calendar_paste_convert(input) {
   let minutes_labelled = word_count_pluralize(minutes, "minute");
   let p2 = word_count_pluralize(hours, "hour");
   let hours_labelled = text_wrap_parenthesis(p2);
+  let r5 = mod(n, m);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last for ",
     minutes_labelled,
