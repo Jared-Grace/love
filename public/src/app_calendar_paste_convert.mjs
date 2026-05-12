@@ -1,3 +1,4 @@
+import { text_skip_end_count } from "../../../love/public/src/text_skip_end_count.mjs";
 import { integer_to_try_is } from "../../../love/public/src/integer_to_try_is.mjs";
 import { text_last } from "../../../love/public/src/text_last.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -30,6 +31,7 @@ export function app_calendar_paste_convert(input) {
   let item2 = text_last(s);
   let nn = integer_to_try_is(item2);
   if (nn) {
+    let result = text_skip_end_count(t2, count);
   }
   let date = property_get(r2, "first");
   const start = app_calendar_paste_convert_parse(date, first, zone_input);
