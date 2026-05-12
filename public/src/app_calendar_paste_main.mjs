@@ -34,7 +34,7 @@ export function app_calendar_paste_main(context) {
       if (red) {
         each(ds, html_font_color_set_red);
       }
-      let joined2 = list_join_newline(list);
+      let joined = list_join_newline(list);
       return joined;
     }
     await clipboard_transform(lambda);
