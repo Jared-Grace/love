@@ -34,7 +34,7 @@ export function app_calendar_paste_convert(input) {
   if (nn) {
     const am_pm_size = 2;
     let am_pm = text_skip_end_count(second, am_pm_size);
-    first= text_combine(first, am_pm);
+    first = text_combine(first, am_pm);
   }
   let date = property_get(r2, "first");
   const start = app_calendar_paste_convert_parse(date, first, zone_input);
