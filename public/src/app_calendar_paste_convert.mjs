@@ -1,3 +1,4 @@
+import { date_time_zone_format_day_first } from "../../../love/public/src/date_time_zone_format_day_first.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_skip_end_count } from "../../../love/public/src/text_skip_end_count.mjs";
 import { integer_to_try_is } from "../../../love/public/src/integer_to_try_is.mjs";
@@ -41,6 +42,7 @@ export function app_calendar_paste_convert(input) {
   const end = app_calendar_paste_convert_parse(date, second, zone_input);
   const dts = [start, end];
   date_time_zone_future_is_assert_multiple(dts, zone_input);
+  date_time_zone_format_day_first();
   let formats = [
     {
       start,
