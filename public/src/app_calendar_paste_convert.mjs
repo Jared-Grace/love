@@ -1,3 +1,4 @@
+import { word_count_pluralize } from "../../../love/public/src/word_count_pluralize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { date_time_zone_format_to } from "../../../love/public/src/date_time_zone_format_to.mjs";
@@ -87,6 +88,7 @@ export function app_calendar_paste_convert(input) {
   let r = date_time_zone_format_date_day_first();
   let formatted = date_time_zone_format_to(start, r);
   list_add_first(list, formatted);
+  let p = word_count_pluralize(count_total, word);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last for ",
     minutes,
