@@ -1,3 +1,4 @@
+import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
@@ -16,6 +17,7 @@ export function app_calendar_paste_main(context) {
         date_time_zones,
         "Do you want a meeting on this day and time?",
       ]);
+      let lines = text_split_newline(s);
       html_div_text_multiple(output, [
         date_time_zones,
         "Do you want a meeting on this day and time?",
