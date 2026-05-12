@@ -22,7 +22,7 @@ export function app_calendar_paste_main(context) {
       try {
         let date_time_zones = app_calendar_paste_convert(input);
         let joined = list_join_newline_2([
-          "Do you want a meeting on this day and time?",
+          "Do you want me to share the word of God on this day and time?",
           date_time_zones,
         ]);
         lines = text_split_newline(joined);
