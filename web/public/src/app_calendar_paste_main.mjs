@@ -17,11 +17,8 @@ export function app_calendar_paste_main(context) {
         date_time_zones,
         "Do you want a meeting on this day and time?",
       ]);
-      let lines = text_split_newline(s);
-      html_div_text_multiple(output, [
-        date_time_zones,
-        "Do you want a meeting on this day and time?",
-      ]);
+      let lines = text_split_newline(joined);
+      html_div_text_multiple(output, lines);
       return joined;
     }
     await clipboard_transform(lambda);
