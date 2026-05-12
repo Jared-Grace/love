@@ -96,6 +96,7 @@ export function app_calendar_paste_convert(input) {
     minutes_labelled,
     " ",
     hours_labelled,
+    " total",
   ]);
   list_add(list, combined);
   let date_time_zones = list_join_newline(list);
