@@ -26,7 +26,7 @@ export function app_calendar_paste_main(context) {
         ]);
         lines = text_split_newline(joined);
       } catch (e) {
-        lines = ["Invalid input:", input];
+        lines = ["Invalid input:", input, e];
         red = true;
       }
       let ds = html_div_text_multiple(output, lines);
