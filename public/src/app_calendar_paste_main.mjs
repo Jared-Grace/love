@@ -1,3 +1,4 @@
+import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
@@ -16,6 +17,7 @@ export function app_calendar_paste_main(context) {
         date_time_zones,
         "Do you want a meeting on this day and time?",
       ]);
+      html_div_text_multiple(parent, list);
       html_text_set(output, joined);
       return joined;
     }
