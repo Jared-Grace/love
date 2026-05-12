@@ -1,3 +1,4 @@
+import { app_reply_glory } from "../../../love/public/src/app_reply_glory.mjs";
 import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { text_combine_today } from "../../../love/public/src/text_combine_today.mjs";
 import { app_reply_how_feel_today } from "../../../love/public/src/app_reply_how_feel_today.mjs";
@@ -56,7 +57,6 @@ import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 import { emoji_cross } from "../../../love/public/src/emoji_cross.mjs";
 import { emoji_smile } from "../../../love/public/src/emoji_smile.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
-import { emoji_fire } from "../../../love/public/src/emoji_fire.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
@@ -145,7 +145,7 @@ export function app_reply_choices() {
         emoji_question(),
     },
     {
-      text: emoji_fire() + " Glory",
+      text: app_reply_glory(),
       response: app_reply_choices_glory(),
     },
     {
