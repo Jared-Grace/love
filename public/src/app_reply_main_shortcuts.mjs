@@ -63,7 +63,7 @@ export function app_reply_main_shortcuts(
   let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
   let glory = app_reply_glory();
   let v = emoji_fire();
-  let r_pk_1_glory = shortcut_extend_response(r_pk_1, v, glory);
+  let r_pk_10_glory = shortcut_extend_response(r_pk_1, v, glory);
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat_single(lug);
@@ -128,11 +128,11 @@ export function app_reply_main_shortcuts(
     r_pk_1,
     r_pk_1_c,
     r_pk_1_m,
-    r_pk_1_glory,
     r_pk_10,
     r_pk_10_g,
     r_pk_10_h,
     r_pk_10_gh,
+    r_pk_10_glory,
     r_pk_20,
     r_pk_40,
     r_ug_10,
