@@ -1,5 +1,4 @@
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
+import { integer_to_try_is } from "../../../love/public/src/integer_to_try_is.mjs";
 import { text_last } from "../../../love/public/src/text_last.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
@@ -29,8 +28,7 @@ export function app_calendar_paste_convert(input) {
   let second = property_get(r3, "second");
   let first = property_get(r3, "first");
   let item2 = text_last(s);
-  let i = integer_to_try(item2);
-  let nn = null_not_is(i);
+  let nn = integer_to_try_is(item2);
   if (nn) {
   }
   let date = property_get(r2, "first");
