@@ -1,9 +1,9 @@
+import { text_take } from "../../../love/public/src/text_take.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { take_end_count_generic } from "../../../love/public/src/take_end_count_generic.mjs";
-import { list_take } from "../../../love/public/src/list_take.mjs";
 export function text_take_end_count(list, count) {
   let size_get = text_size;
   let c = take_end_count_generic(list, count, size_get);
-  let result = list_take(list, c);
+  let result = text_take(list, c);
   return result;
 }
