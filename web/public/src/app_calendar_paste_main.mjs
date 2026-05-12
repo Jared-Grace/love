@@ -29,6 +29,8 @@ export function app_calendar_paste_main(context) {
         red = true;
       }
       let ds = html_div_text_multiple(output, lines);
+      if (false) {
+      }
       function lambda3(item) {}
       each(list, lambda3);
       return joined;
