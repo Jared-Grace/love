@@ -1,3 +1,5 @@
+import { date_time_zone_format_to } from "../../../love/public/src/date_time_zone_format_to.mjs";
+import { date_time_zone_format_time } from "../../../love/public/src/date_time_zone_format_time.mjs";
 import { date_time_zone_format_day_first } from "../../../love/public/src/date_time_zone_format_day_first.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_skip_end_count } from "../../../love/public/src/text_skip_end_count.mjs";
@@ -7,7 +9,6 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { date_time_zone_set_zone } from "../../../love/public/src/date_time_zone_set_zone.mjs";
-import { date_time_zone_format_time_to } from "../../../love/public/src/date_time_zone_format_time_to.mjs";
 import { date_time_zone_format_to_standard } from "../../../love/public/src/date_time_zone_format_to_standard.mjs";
 import { date_time_zone_future_is_assert_multiple } from "../../../love/public/src/date_time_zone_future_is_assert_multiple.mjs";
 import { app_calendar_paste_convert_parse } from "../../../love/public/src/app_calendar_paste_convert_parse.mjs";
@@ -68,7 +69,8 @@ export function app_calendar_paste_convert(input) {
     const start_zoned = date_time_zone_set_zone(start, zone);
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_standard(start_zoned);
-    let to = date_time_zone_format_time_to(end_zoned);
+    let format = date_time_zone_format_time();
+    let to = date_time_zone_format_to(end_zoned, format);
     let t = text_combine_multiple([country, " time: ", from, " - ", to]);
     if (parenthesis) {
       t = text_wrap_parenthesis(t);
