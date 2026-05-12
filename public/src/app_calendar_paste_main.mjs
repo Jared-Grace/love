@@ -31,7 +31,7 @@ export function app_calendar_paste_main(context) {
       }
       let ds = html_div_text_multiple(output, lines);
       if (red) {
-        each(list, html_font_color_set_red);
+        each(ds, html_font_color_set_red);
       }
       return joined;
     }
