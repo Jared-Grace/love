@@ -70,7 +70,7 @@ export function app_calendar_paste_convert(input) {
     const start_zoned = date_time_zone_set_zone(start, zone);
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_time(start_zoned);
-    let to = date_time_zone_format_to_time(end_zoned, format);
+    let to = date_time_zone_format_to_time(end_zoned);
     let t = text_combine_multiple([country, " time: ", from, " - ", to]);
     if (parenthesis) {
       t = text_wrap_parenthesis(t);
