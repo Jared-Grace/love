@@ -16,9 +16,9 @@ export function app_calendar_paste_main(context) {
         date_time_zones,
         "Do you want a meeting on this day and time?",
       ]);
+      html_text_set(component2, text);
       return joined;
     }
-    html_text_set(component2, text);
     await clipboard_transform(lambda);
   }
   let p = html_p_text(
