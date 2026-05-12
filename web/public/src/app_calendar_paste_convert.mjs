@@ -69,11 +69,20 @@ export function app_calendar_paste_convert(input) {
     let zone = property_get(item, "zone");
     let country = property_get(item, "country");
     let parenthesis = property_get(item, "parenthesis");
+    let flag = property_get(item, "flag");
     const start_zoned = date_time_zone_set_zone(start, zone);
     const end_zoned = date_time_zone_set_zone(end, zone);
     let from = date_time_zone_format_to_time(start_zoned);
     let to = date_time_zone_format_to_time(end_zoned);
-    let t = text_combine_multiple([country, " time: ", from, " - ", to]);
+    let t = text_combine_multiple([
+      flag,
+      " ",
+      country,
+      " time: ",
+      from,
+      " - ",
+      to,
+    ]);
     if (parenthesis) {
       t = text_wrap_parenthesis(t);
     }
