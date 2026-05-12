@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_font_color_set_red } from "../../../love/public/src/html_font_color_set_red.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -33,6 +34,7 @@ export function app_calendar_paste_main(context) {
       if (red) {
         each(ds, html_font_color_set_red);
       }
+      let joined2 = list_join_newline(list);
       return joined;
     }
     await clipboard_transform(lambda);
