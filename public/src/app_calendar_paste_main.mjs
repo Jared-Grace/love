@@ -14,6 +14,7 @@ export function app_calendar_paste_main(context) {
   async function lambda2() {
     html_clear(output);
     let lines = null;
+    let red = false;
     function lambda(input) {
       try {
         let date_time_zones = app_calendar_paste_convert(input);
@@ -24,6 +25,7 @@ export function app_calendar_paste_main(context) {
         lines = text_split_newline(joined);
       } catch (e) {
         lines = ["Invalid input:", input];
+        red = true;
       }
       html_div_text_multiple(output, lines);
       return joined;
