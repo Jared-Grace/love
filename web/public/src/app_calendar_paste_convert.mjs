@@ -79,8 +79,8 @@ export function app_calendar_paste_convert(input) {
   }
   let list = list_map(formats, lambda);
   let r = date_time_zone_format_date_day_first();
-  let formatted = date_time_zone_format_to(dt, r);
-  list_add_first(list2, item3);
+  let formatted = date_time_zone_format_to(start, r);
+  list_add_first(list, formatted);
   let date_time_zones = list_join_newline(list);
   return date_time_zones;
 }
