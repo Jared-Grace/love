@@ -128,6 +128,7 @@ export function app_reply_main_shortcuts(
     r_pk_1,
     r_pk_1_c,
     r_pk_1_m,
+    r_pk_1_glory,
     r_pk_10,
     r_pk_10_g,
     r_pk_10_h,
