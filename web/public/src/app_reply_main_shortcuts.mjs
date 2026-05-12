@@ -1,3 +1,5 @@
+import { emoji_fire } from "../../../love/public/src/emoji_fire.mjs";
+import { app_reply_glory } from "../../../love/public/src/app_reply_glory.mjs";
 import { ebible_language_arabic } from "../../../love/public/src/ebible_language_arabic.mjs";
 import { ebible_language_bengali } from "../../../love/public/src/ebible_language_bengali.mjs";
 import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
@@ -59,6 +61,9 @@ export function app_reply_main_shortcuts(
   let r_pk_1_c = shortcut_extend_response(r_pk_1, "c", c);
   let m = app_reply_give();
   let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
+  let glory = app_reply_glory();
+  let v = emoji_fire();
+  let r_pk_1_glory = shortcut_extend_response(r_pk_1, v, glory);
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat_single(lug);
