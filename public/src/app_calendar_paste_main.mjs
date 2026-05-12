@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -28,6 +29,8 @@ export function app_calendar_paste_main(context) {
         red = true;
       }
       let ds = html_div_text_multiple(output, lines);
+      function lambda3(item) {}
+      each(list, lambda3);
       return joined;
     }
     await clipboard_transform(lambda);
