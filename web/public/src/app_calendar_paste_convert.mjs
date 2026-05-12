@@ -92,8 +92,8 @@ export function app_calendar_paste_convert(input) {
   let minutes_labelled = word_count_pluralize(minutes, "minute");
   let p2 = word_count_pluralize(hours, "hour");
   let hours_labelled = text_wrap_parenthesis(p2);
-  let minutes_per_hours = 60;
-  let r5 = mod(minutes, m);
+  let minutes_per_hour = 60;
+  let r5 = mod(minutes, minutes_per_hour);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last for ",
     minutes_labelled,
