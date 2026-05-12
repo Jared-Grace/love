@@ -19,7 +19,7 @@ export function app_calendar_paste_main(context) {
         "Do you want a meeting on this day and time?",
       ]);
       let lines = text_split_newline(joined);
-      html_clear(element);
+      html_clear(output);
       html_div_text_multiple(output, lines);
       return joined;
     }
