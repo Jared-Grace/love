@@ -44,7 +44,9 @@ export function app_calendar_paste_convert(input) {
   const end = app_calendar_paste_convert_parse(date, second, zone_input);
   const dts = [start, end];
   date_time_zone_future_is_assert_multiple(dts, zone_input);
-  const d = end.diff(start, ["hours", "minutes"]);
+  const r4 = end.diff(start, ["hours", "minutes"]);
+  let minutes = property_get(r4, "minutes");
+  let hours = property_get(r4, "hours");
   let formats = [
     {
       start,
