@@ -22,8 +22,8 @@ export function app_calendar_paste_main(context) {
       try {
         let date_time_zones = app_calendar_paste_convert(input);
         let joined = list_join_newline_2([
-          date_time_zones,
           "Do you want a meeting on this day and time?",
+          date_time_zones,
         ]);
         lines = text_split_newline(joined);
       } catch (e) {
@@ -34,7 +34,7 @@ export function app_calendar_paste_main(context) {
       if (red) {
         each(ds, html_font_color_set_red);
       }
-      let joined = list_join_newline(list);
+      let joined = list_join_newline(ds);
       return joined;
     }
     await clipboard_transform(lambda);
