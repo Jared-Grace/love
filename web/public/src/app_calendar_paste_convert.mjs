@@ -29,7 +29,7 @@ export function app_calendar_paste_convert(input) {
   let r3 = list_first_second_only(mapped);
   let second = property_get(r3, "second");
   let first = property_get(r3, "first");
-  let item2 = text_last(s);
+  let item2 = text_last(first);
   let nn = integer_to_try_is(item2);
   if (nn) {
     const am_pm_size = 2;
