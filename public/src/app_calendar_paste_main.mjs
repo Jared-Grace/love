@@ -13,6 +13,7 @@ export function app_calendar_paste_main(context) {
   let output = null;
   async function lambda2() {
     html_clear(output);
+    let lines = null;
     function lambda(input) {
       try {
         let date_time_zones = app_calendar_paste_convert(input);
@@ -20,10 +21,9 @@ export function app_calendar_paste_main(context) {
           date_time_zones,
           "Do you want a meeting on this day and time?",
         ]);
-        let lines = null;
         lines = text_split_newline(joined);
-        html_div_text_multiple(output, lines);
       } catch (e) {}
+      html_div_text_multiple(output, lines);
       return joined;
     }
     await clipboard_transform(lambda);
