@@ -30,7 +30,9 @@ export function app_calendar_paste_convert(input) {
   let first = property_get(r3, "first");
   let item2 = text_last(s);
   let i = integer_to_try(item2);
-  let nn = null_not_is(value);
+  let nn = null_not_is(i);
+  if (false) {
+  }
   let date = property_get(r2, "first");
   const start = app_calendar_paste_convert_parse(date, first, zone_input);
   const end = app_calendar_paste_convert_parse(date, second, zone_input);
