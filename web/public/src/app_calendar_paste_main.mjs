@@ -12,15 +12,17 @@ export function app_calendar_paste_main(context) {
   let root = property_get(context, "root");
   let output = null;
   async function lambda2() {
+    html_clear(output);
     function lambda(input) {
-      let date_time_zones = app_calendar_paste_convert(input);
-      let joined = list_join_newline_2([
-        date_time_zones,
-        "Do you want a meeting on this day and time?",
-      ]);
-      let lines = text_split_newline(joined);
-      html_clear(output);
-      html_div_text_multiple(output, lines);
+      try {
+        let date_time_zones = app_calendar_paste_convert(input);
+        let joined = list_join_newline_2([
+          date_time_zones,
+          "Do you want a meeting on this day and time?",
+        ]);
+        let lines = text_split_newline(joined);
+        html_div_text_multiple(output, lines);
+      } catch (e) {}
       return joined;
     }
     await clipboard_transform(lambda);
