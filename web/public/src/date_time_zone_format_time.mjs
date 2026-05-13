@@ -1,4 +1,4 @@
 export function date_time_zone_format_time() {
-  let r = "h:mm a";
+  let r = "h:mma";
   return r;
 }
