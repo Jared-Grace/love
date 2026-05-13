@@ -3,7 +3,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { date_time_zone_format_to } from "../../../love/public/src/date_time_zone_format_to.mjs";
 import { date_time_zone_format_date_day_first } from "../../../love/public/src/date_time_zone_format_date_day_first.mjs";
-import { date_time_zone_format_to_time } from "../../../love/public/src/date_time_zone_format_to_time.mjs";
+import { date_time_zone_format_to_time_space } from "../../../love/public/src/date_time_zone_format_to_time_space.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_skip_end_count } from "../../../love/public/src/text_skip_end_count.mjs";
 import { integer_to_try_is } from "../../../love/public/src/integer_to_try_is.mjs";
@@ -72,7 +72,7 @@ export function app_calendar_paste_convert(input) {
     let parenthesis = property_get(item, "parenthesis");
     let flag = property_get(item, "flag");
     const start_zoned = date_time_zone_set_zone(start, zone);
-    let start_formatted = date_time_zone_format_to_time(start_zoned);
+    let start_formatted = date_time_zone_format_to_time_space(start_zoned);
     let t = text_combine_multiple([
       country,
       " Meeting start time: ",
