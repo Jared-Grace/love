@@ -25,5 +25,9 @@ export async function app_calendar_contact(context) {
   const id_properties = app_calendar_id_properties();
   let id = object_pick_try_single_value(contact, id_properties);
   function lambda3() {}
-  let component2 = app_a_button_wide(root, "Meeting add", lambda3);
+  let component2 = app_a_button_wide(
+    root,
+    "Meeting add Outlook paste",
+    lambda3,
+  );
 }
