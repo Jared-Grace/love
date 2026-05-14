@@ -19,5 +19,5 @@ export async function app_calendar_contact(context) {
   let contact_selected = storage_local_get_context(context, "contact_selected");
   let value = property_get(dictionary, contact_selected);
   let json = json_to(value);
-  let p = html_p_text(root, json);
+  let p = html_p_text(root, json);object_pick_try_single_value
 }
