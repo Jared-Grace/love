@@ -7,13 +7,13 @@ export async function app_shared_name_search(search) {
   text_is_assert(search);
   let mapped = await apps_names();
   let includes = list_includes(mapped, search);
-  let a_name = null;
+  let a_names = null;
   if (includes) {
-    a_name = search;
+    a_names = search;
   } else {
     let app_names = list_filter_text_match_ordered(mapped, search);
     let app_name = list_single(app_names);
-    a_name = app_name;
+    a_names = app_name;
   }
-  return a_name;
+  return a_names;
 }
