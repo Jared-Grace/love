@@ -1,4 +1,3 @@
-import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -52,9 +51,7 @@ export async function app_calendar_home(context) {
   let dictionary = list_to_dictionary_key(filtered, lambda6);
   async function lambda2() {
     let paste = await clipboard_paste();
-    let results = input_set(paste);
-    let only = list_single(results);
-    let value4 = property_get(object, property_name);
+    input_set(paste);
   }
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
