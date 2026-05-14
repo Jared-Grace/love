@@ -43,10 +43,10 @@ export async function app_calendar_main(context) {
     let paste = await clipboard_paste();
     input_set(paste);
   }
-  let r22 = app_calendar_facebook_url_id();
+  let r2 = app_calendar_facebook_url_id();
   let r3 = app_calendar_facebook_conversation_id();
   let r4 = app_calendar_whatsapp_phone();
-  const properties = ["whatsapp_name", "facebook_name", r4, r22, r3];
+  const properties = ["whatsapp_name", "facebook_name", r4, r2, r3];
   function lambda6(o) {
     let joined = object_pick_try_values_join_space(o, properties);
     return joined;
