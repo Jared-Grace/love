@@ -56,7 +56,7 @@ export async function app_calendar_main(context) {
     let value2 = property_get(dictionary, text);
   }
   function lambda7(text) {
-    let value3 = property_get(object, property_name);
+    let value3 = property_get(dictionary, text);
   }
   let r = app_a_list_chooser_generic(
     root,
