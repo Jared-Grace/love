@@ -23,5 +23,5 @@ export async function app_calendar_contact(context) {
   let json = json_to(value);
   let p = html_p_text(root, json);
   const id_properties = app_calendar_id_properties();
-  let value2 = object_pick_try_single_value(o, id_properties);
+  let id = object_pick_try_single_value(o, id_properties);
 }
