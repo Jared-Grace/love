@@ -1,5 +1,5 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
-import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { app_shared_refresh } from "../../../love/public/src/app_shared_refresh.mjs";
