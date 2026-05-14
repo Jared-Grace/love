@@ -1,3 +1,4 @@
+import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { html_margin_0_context_root } from "../../../love/public/src/html_margin_0_context_root.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
@@ -20,6 +21,7 @@ export async function app_a_main(context) {
   }
   html_on_keydown(root, lambda);
   let screens = app_a_screens();
+  html_meta_viewport();
   html_font_sans_serif_set_html();
   object_merge(context, {
     app_fn,
