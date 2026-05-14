@@ -16,16 +16,16 @@ export async function app_a_main(context) {
   object_merge(context, {
     on_keydowns,
   });
-  object_merge(context, {
-    app_fn,
-    screens,
-  });
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
   }
   let root = property_get(context, "root");
   html_margin_0(root);
   html_on_keydown(root, lambda);
+  object_merge(context, {
+    app_fn,
+    screens,
+  });
   html_font_sans_serif_set_html();
   await app_shared_refresh(context);
 }
