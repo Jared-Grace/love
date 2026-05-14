@@ -8,7 +8,6 @@ import { list_filter_property_exclude_if_exists } from "../../../love/public/src
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -56,11 +55,12 @@ export async function app_calendar_main(context) {
   function lambda4(b, text) {
     let value2 = property_get(dictionary, text);
   }
+  function lambda7() {}
   let r = app_a_list_chooser_generic(
     root,
     "contact",
     contacts_json,
-    noop,
+    lambda7,
     lambda4,
   );
   input_set = property_get(r, "input_set");
