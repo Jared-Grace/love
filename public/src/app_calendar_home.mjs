@@ -1,12 +1,10 @@
-import { global_function_self_async } from "../../../love/public/src/global_function_self_async.mjs";
-import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
+import { app_calendar_download_browser_contacts } from "../../../love/public/src/app_calendar_download_browser_contacts.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_calendar_contact } from "../../../love/public/src/app_calendar_contact.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
@@ -14,13 +12,10 @@ import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calen
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_home(context) {
   let root = html_clear_context(context);
-  let dictionary = await app_calendar_download_contacts(lambda6);
+  let dictionary = await app_calendar_download_browser_contacts(lambda6);
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
@@ -54,18 +49,3 @@ export async function app_calendar_home(context) {
   );
   input_set = property_get(r, "input_set");
 }
-async function app_calendar_download_contacts(lambda6) {
-    let data = await global_function_self_async(app_calendar_download_browser);
-    let contacts = app_calendar_contacts_initialize(data);
-    log(app_calendar_home.name, {
-        contacts,
-    });
-    let filtered = list_filter_property_exclude_if_exists(
-        contacts,
-        "unavailable",
-        true
-    );
-    let dictionary = list_to_dictionary_key(filtered, lambda6);
-    return dictionary;
-}
-
