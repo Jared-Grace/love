@@ -1,3 +1,4 @@
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_calendar_contact } from "../../../love/public/src/app_calendar_contact.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
@@ -64,6 +65,7 @@ export async function app_calendar_home(context) {
       value3,
     });
     app_calendar_contact(context);
+    storage_local_set_context(context2, key, value4);
   }
   let r = app_a_list_chooser_generic(
     root,
