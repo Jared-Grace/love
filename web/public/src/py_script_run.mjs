@@ -8,7 +8,7 @@ export async function py_script_run(script_name, concated) {
   let v = py_script_run_cmd(script_name);
   let concated2 = list_concat([v], concated);
   let joined = list_join_space(concated2);
-  log(openai_cmd_py_api.name, {
+  log(py_script_run.name, {
     joined,
   });
   let stdout = await command_line(joined);
