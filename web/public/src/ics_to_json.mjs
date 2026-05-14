@@ -8,5 +8,5 @@ export async function ics_to_json(path_calendar) {
     return data;
   }
   let result = await file_temp(lambda);
-  return r;
+  return result;
 }
