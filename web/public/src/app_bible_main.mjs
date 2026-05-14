@@ -7,5 +7,4 @@ export async function app_bible_main(context) {
   let app_fn = app_bible;
   let screens = app_bible_screens();
   await app_bible_main_generic_before(context, app_fn, screens, app_bible_home);
-  await app_shared_refresh(context);
 }
