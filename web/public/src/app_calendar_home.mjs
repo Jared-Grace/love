@@ -20,7 +20,6 @@ export async function app_calendar_home(context) {
   }
   let contacts_json = properties_get(dictionary);
   async function lambda7(text) {
-    let value3 = property_get(dictionary, text);
     storage_local_set_context(context, "contact_selected", text);
     await app_shared_screen_set(context, app_calendar_contact);
   }
