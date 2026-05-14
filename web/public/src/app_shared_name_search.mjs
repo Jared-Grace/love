@@ -1,5 +1,6 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
+import { list_filter_text_match_ordered } from "../../../love/public/src/list_filter_text_match_ordered.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
-import { list_find_text_match_ordered } from "../../../love/public/src/list_find_text_match_ordered.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 export async function app_shared_name_search(search) {
@@ -10,7 +11,9 @@ export async function app_shared_name_search(search) {
   if (includes) {
     a_name = search;
   } else {
-    a_name = list_find_text_match_ordered(mapped, search);
+    let app_names = list_filter_text_match_ordered(mapped, search);
+    let app_name = list_single(app_names);
+    a_name = app_name;
   }
   return a_name;
 }
