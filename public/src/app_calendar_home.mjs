@@ -62,12 +62,8 @@ export async function app_calendar_home(context) {
   }
   function lambda7(text) {
     let value3 = property_get(dictionary, text);
-    log(app_calendar_home.name, {
-      value3,
-    });
-    app_shared_screen_set(context2, fn2);
     storage_local_set_context(context, "contact_selected", text);
-    app_calendar_contact(context);
+    app_shared_screen_set(context, app_calendar_contact);
   }
   let r = app_a_list_chooser_generic(
     root,
