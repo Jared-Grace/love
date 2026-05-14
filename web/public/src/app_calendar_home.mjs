@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -44,7 +45,8 @@ export async function app_calendar_home(context) {
   async function lambda2() {
     let paste = await clipboard_paste();
     input_set(paste);
-    let results = filtered_get();lsg
+    let results = filtered_get();
+    let only = list_single(list);
   }
   let r2 = app_calendar_facebook_url_id();
   let r3 = app_calendar_facebook_conversation_id();
