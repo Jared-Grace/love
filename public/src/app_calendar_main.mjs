@@ -65,8 +65,9 @@ export async function app_calendar_main(context) {
     contacts_json,
     noop,
     lambda4,
-  );$s
-  let input_set = property_get(r, "input_set");
+  );
+  let input_set = null;
+  input_set = property_get(r, "input_set");
   async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
