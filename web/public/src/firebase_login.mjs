@@ -7,9 +7,9 @@ export async function firebase_login(context, on_logged_in) {
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );`;
   const auth = getAuth(app);
-  function lambda(user) {
+  async function lambda(user) {
     if (user) {
-      on_logged_in({
+      await on_logged_in({
         user,
       });
     } else {
