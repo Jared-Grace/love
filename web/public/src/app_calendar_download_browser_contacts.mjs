@@ -15,6 +15,14 @@ export async function app_calendar_download_browser_contacts(lambda6) {
     "unavailable",
     true,
   );
+    let r2 = app_calendar_facebook_url_id();
+    let r3 = app_calendar_facebook_conversation_id();
+    let r4 = app_calendar_whatsapp_phone();
+    const properties = ["whatsapp_name", "facebook_name", r4, r2, r3];
+    function lambda6(o) {
+      let joined = object_pick_try_values_join_space(o, properties);
+      return joined;
+    }
   let dictionary = list_to_dictionary_key(filtered, lambda6);
   return dictionary;
 }
