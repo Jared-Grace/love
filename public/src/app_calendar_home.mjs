@@ -1,4 +1,4 @@
-import { global_function_async } from "../../../love/public/src/global_function_async.mjs";
+import { global_function_self_async } from "../../../love/public/src/global_function_self_async.mjs";
 import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
@@ -20,7 +20,7 @@ import { app_calendar_contacts_initialize } from "../../../love/public/src/app_c
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_home(context) {
   let root = html_clear_context(context);
-  let awaited = await global_function_async(fn, lambda3);
+  let awaited = await global_function_self_async(app_calendar_download_browser);
   let data = await app_calendar_download_browser();
   let contacts = app_calendar_contacts_initialize(data);
   log(app_calendar_home.name, {
