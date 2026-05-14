@@ -15,7 +15,7 @@ export async function app_a_main(context) {
   });
   let screens = app_a_screens();
   await app_shared_initialize(context, app_fn, screens);
-  html_margin_0_context_root(context);
+  let root = html_margin_0_context_root(context);
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
   }
