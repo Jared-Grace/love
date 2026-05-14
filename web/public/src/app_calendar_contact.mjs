@@ -19,9 +19,9 @@ export async function app_calendar_contact(context) {
   let component = app_a_button_wide(root, text, lambda2);
   let dictionary = await app_calendar_download_browser_contacts();
   let contact_selected = storage_local_get_context(context, "contact_selected");
-  let value = property_get(dictionary, contact_selected);
-  let json = json_to(value);
+  let contact = property_get(dictionary, contact_selected);
+  let json = json_to(contact);
   let p = html_p_text(root, json);
   const id_properties = app_calendar_id_properties();
-  let id = object_pick_try_single_value(o, id_properties);
+  let id = object_pick_try_single_value(contact, id_properties);
 }
