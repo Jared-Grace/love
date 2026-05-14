@@ -1,3 +1,4 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { html_hide_loadable } from "../../../love/public/src/html_hide_loadable.mjs";
 import { g_icon_cross_unpositioned } from "../../../love/public/src/g_icon_cross_unpositioned.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
@@ -6,11 +7,8 @@ import { app_g_player_style_initialize } from "../../../love/public/src/app_g_pl
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
-import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
-import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 export function app_g_html_initialize(context) {
-  html_meta_viewport();
-  html_font_sans_serif_set_html();
+  let root = html_mobile_default(context);
   html_remix_icon();
   html_style_assign(root, {
     "font-size": "18px",
