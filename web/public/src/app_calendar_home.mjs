@@ -20,17 +20,7 @@ import { app_calendar_contacts_initialize } from "../../../love/public/src/app_c
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_home(context) {
   let root = html_clear_context(context);
-  let data = await global_function_self_async(app_calendar_download_browser);
-  let contacts = app_calendar_contacts_initialize(data);
-  log(app_calendar_home.name, {
-    contacts,
-  });
-  let filtered = list_filter_property_exclude_if_exists(
-    contacts,
-    "unavailable",
-    true,
-  );
-  let dictionary = list_to_dictionary_key(filtered, lambda6);
+  let dictionary = await app_calendar_download_contacts(lambda6);
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
@@ -64,3 +54,18 @@ export async function app_calendar_home(context) {
   );
   input_set = property_get(r, "input_set");
 }
+async function app_calendar_download_contacts(lambda6) {
+    let data = await global_function_self_async(app_calendar_download_browser);
+    let contacts = app_calendar_contacts_initialize(data);
+    log(app_calendar_home.name, {
+        contacts,
+    });
+    let filtered = list_filter_property_exclude_if_exists(
+        contacts,
+        "unavailable",
+        true
+    );
+    let dictionary = list_to_dictionary_key(filtered, lambda6);
+    return dictionary;
+}
+
