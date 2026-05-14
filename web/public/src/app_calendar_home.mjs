@@ -63,7 +63,7 @@ export async function app_calendar_home(context) {
     log(app_calendar_home.name, {
       value3,
     });
-    app_calendar_contact(context2);
+    app_calendar_contact(context);
   }
   let r = app_a_list_chooser_generic(
     root,
