@@ -37,6 +37,7 @@ export async function app_calendar_home(context) {
     "unavailable",
     true,
   );
+  let filtered_get = null;
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
@@ -70,7 +71,6 @@ export async function app_calendar_home(context) {
     lambda7,
     lambda4,
   );
-  let filtered_get = null;
   filtered_get = property_get(r, "filtered_get");
   input_set = property_get(r, "input_set");
   async function lambda3() {
