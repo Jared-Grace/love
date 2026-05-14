@@ -1,3 +1,4 @@
+import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -19,5 +20,6 @@ export async function app_calendar_contact(context) {
   let contact_selected = storage_local_get_context(context, "contact_selected");
   let value = property_get(dictionary, contact_selected);
   let json = json_to(value);
-  let p = html_p_text(root, json);object_pick_try_single_value
+  let p = html_p_text(root, json);
+  let value2 = object_pick_try_single_value(o, properties);
 }
