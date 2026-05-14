@@ -41,7 +41,7 @@ export async function app_calendar_main(context) {
   let root = html_mobile_default_font_size_context(context);
   let component2 = app_a_button_wide(
     root,
-    "Paste and Search Facebook Messages URL or WhatsApp number",
+    "Paste and Search",
     lambda2,
   );
   async function lambda2() {
