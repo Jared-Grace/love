@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_calendar_download_browser_contacts } from "../../../love/public/src/app_calendar_download_browser_contacts.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
@@ -21,17 +22,17 @@ export async function app_calendar_home(context) {
   function lambda4(b, text) {
     let value2 = property_get(dictionary, text);
   }
-  function lambda7(text) {
+  async function lambda7(text) {
     let value3 = property_get(dictionary, text);
     storage_local_set_context(context, "contact_selected", text);
-    app_shared_screen_set(context, app_calendar_contact);
+    await app_shared_screen_set(context, app_calendar_contact);
   }
   let r = app_a_list_chooser_generic(
     root,
     "contact",
     contacts_json,
     lambda7,
-    lambda4,
+    noop,
   );
   input_set = property_get(r, "input_set");
 }
