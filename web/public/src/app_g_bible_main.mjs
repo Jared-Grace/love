@@ -9,9 +9,9 @@ export async function app_g_bible_main(context) {
   let screens = app_g_bible_screens();
   app_bible_shared_initialize_before(
     context,
-    app_g_bible_home,
     app_fn,
     screens,
+    app_g_bible_home,
   );
   async function lambda() {
     await app_shared_refresh(context);

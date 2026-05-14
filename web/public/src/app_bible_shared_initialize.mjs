@@ -6,6 +6,6 @@ export async function app_bible_shared_initialize(
   screens,
   screen_home,
 ) {
-  app_bible_shared_initialize_before(context, screen_home, app_fn, screens);
+  app_bible_shared_initialize_before(context, app_fn, screens, screen_home);
   await app_shared_refresh(context);
 }
