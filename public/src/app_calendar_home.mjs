@@ -18,7 +18,6 @@ import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
-import { app_calendar_main } from "../../../love/public/src/app_calendar_main.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
