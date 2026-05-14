@@ -11,7 +11,7 @@ import { html_mobile_default } from "../../../love/public/src/html_mobile_defaul
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_home(context) {
   let root = html_clear_context(context);
-  let dictionary = await app_calendar_download_browser_contacts(lambda6);
+  let dictionary = await app_calendar_download_browser_contacts();
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
