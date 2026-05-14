@@ -1,3 +1,5 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
+import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
@@ -15,7 +17,9 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_calendar_contact_add(data, item) {
   let r = app_calendar_whatsapp_phone();
   let r2 = app_calendar_facebook_url_id();
+  const id_properties = app_calendar_id_properties();
   let r3 = app_calendar_facebook_conversation_id();
+  let concated = list_concat(a, b);
   const properties_unique_across_all = ["facebook_conversation_url", r3, r2, r];
   let picked = object_pick_try(item, properties_unique_across_all);
   let contacts = app_calendar_contacts_initialize(data);
