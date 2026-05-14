@@ -10,7 +10,6 @@ import { app_shared_refresh } from "../../../love/public/src/app_shared_refresh.
 export async function app_a_main(context) {
   await app_a_file_system_initialize();
   let app_fn = app_a;
-  let screens = app_a_screens();
   let on_keydowns = [];
   object_merge(context, {
     on_keydowns,
@@ -20,6 +19,7 @@ export async function app_a_main(context) {
     invoke_multiple_arg(on_keydowns, e);
   }
   html_on_keydown(root, lambda);
+  let screens = app_a_screens();
   html_font_sans_serif_set_html();
   object_merge(context, {
     app_fn,
