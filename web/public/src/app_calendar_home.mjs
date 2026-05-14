@@ -41,11 +41,6 @@ export async function app_calendar_home(context) {
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
-  async function lambda2() {
-    let paste = await clipboard_paste();
-    let results = input_set(paste);
-    let only = list_single(results);
-  }
   let r2 = app_calendar_facebook_url_id();
   let r3 = app_calendar_facebook_conversation_id();
   let r4 = app_calendar_whatsapp_phone();
@@ -55,6 +50,12 @@ export async function app_calendar_home(context) {
     return joined;
   }
   let dictionary = list_to_dictionary_key(filtered, lambda6);
+  async function lambda2() {
+    let paste = await clipboard_paste();
+    let results = input_set(paste);
+    let only = list_single(results);
+    let value4 = property_get(object, property_name);
+  }
   let contacts_json = properties_get(dictionary);
   function lambda4(b, text) {
     let value2 = property_get(dictionary, text);
