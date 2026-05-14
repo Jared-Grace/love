@@ -5,6 +5,7 @@ export async function ics_to_json(path_calendar) {
   async function lambda(temp_path) {
     let r = await py_script_run("ics_to_json.py", [path_calendar, temp_path]);
     let data = await file_read_json(file_path);
+    return data;
   }
   let result = await file_temp(lambda);
   return r;
