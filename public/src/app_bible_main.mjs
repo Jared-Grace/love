@@ -4,5 +4,5 @@ import { app_bible_screens } from "../../../love/public/src/app_bible_screens.mj
 export async function app_bible_main(context) {
   let app_fn = app_bible;
   let screens = app_bible_screens();
-  app_bible_main_generic(context, app_fn, screens);
+  await app_bible_main_generic(context, app_fn, screens);
 }
