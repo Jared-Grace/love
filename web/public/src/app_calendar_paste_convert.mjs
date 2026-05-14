@@ -99,5 +99,8 @@ export function app_calendar_paste_convert(input) {
   ]);
   list_add(list, combined);
   let date_time_zones = list_join_newline(list);
-  return {date_time_zones};
+  let r5 = {
+    date_time_zones,
+  };
+  return r5;
 }
