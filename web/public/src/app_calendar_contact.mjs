@@ -7,8 +7,8 @@ import { app_calendar_download_browser_contacts } from "../../../love/public/src
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_contact(context) {
   let root = html_clear_context(context);
-  function lambda2() {
-    app_shared_screen_set(context, app_calendar_contact);
+  async function lambda2() {
+    await app_shared_screen_set(context, app_calendar_contact);
   }
   let text = app_replace_button_home_text();
   let component = app_a_button_wide(root, text, lambda2);
