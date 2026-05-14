@@ -1,3 +1,4 @@
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_calendar_contact } from "../../../love/public/src/app_calendar_contact.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
@@ -64,6 +65,7 @@ export async function app_calendar_home(context) {
     log(app_calendar_home.name, {
       value3,
     });
+    app_shared_screen_set(context2, fn2);
     storage_local_set_context(context, "contact_selected", text);
     app_calendar_contact(context);
   }
