@@ -10,7 +10,7 @@ export async function app_shared_screens_generate(search) {
   let combined = function_name_combine(app_name, "screens");
   async function lambda(ast) {
     let expression = js_expression_array([]);
-    js_flo_body_empty_return(ast2, expression2);
+    js_flo_body_empty_return(ast, expression);
   }
-  let output = await function_new_open_transform(f_name, lambda);
+  let output = await function_new_open_transform(combined, lambda);
 }
