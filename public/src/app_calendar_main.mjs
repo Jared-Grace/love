@@ -1,3 +1,4 @@
+import { app_shared_initialize_refresh } from "../../../love/public/src/app_shared_initialize_refresh.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
@@ -23,6 +24,7 @@ import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 export async function app_calendar_main(context) {
+  await app_shared_initialize_refresh(context2, app_fn, screens);
   let data = await app_api_fn({
     fn: app_calendar_download,
   });
