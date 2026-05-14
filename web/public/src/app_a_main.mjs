@@ -1,4 +1,4 @@
-import { app_shared_initialize } from "../../../love/public/src/app_shared_initialize.mjs";
+import { app_shared_initialize_refresh } from "../../../love/public/src/app_shared_initialize_refresh.mjs";
 import { html_margin_0_context_root } from "../../../love/public/src/html_margin_0_context_root.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
@@ -19,5 +19,5 @@ export async function app_a_main(context) {
     invoke_multiple_arg(on_keydowns, e);
   }
   html_on_keydown(root, lambda);
-  await app_shared_initialize(context, app_fn, screens);
+  await app_shared_initialize_refresh(context, app_fn, screens);
 }
