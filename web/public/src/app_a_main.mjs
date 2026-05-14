@@ -14,9 +14,11 @@ export async function app_a_main(context) {
   let screens = app_a_screens();
   let on_keydowns = [];
   object_merge(context, {
+    on_keydowns,
+  });
+  object_merge(context, {
     app_fn,
     screens,
-    on_keydowns,
   });
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
