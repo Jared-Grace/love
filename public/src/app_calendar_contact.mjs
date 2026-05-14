@@ -1,3 +1,4 @@
+import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
@@ -27,6 +28,7 @@ export async function app_calendar_contact(context) {
   let id = object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
     let paste = await clipboard_paste();
+    let r5 = app_calendar_paste_convert(input);
   }
   let component2 = app_a_button_wide(
     root,
