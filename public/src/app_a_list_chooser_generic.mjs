@@ -32,6 +32,8 @@ export function app_a_list_chooser_generic(
     let value = html_value_get(input);
     filtered = list_filter_text_match_ordered(texts, value);
     refresh();
+    let r2 = filtered_get();
+    return r2;
   }
   html_on_input(input, on_input);
   filtered = texts;
