@@ -7,7 +7,7 @@ export async function app_shared_initialize(context, app_fn, screens) {
     app_fn,
     screens,
   });
-  let root = html_mobile_default(context);
+  html_mobile_default(context);
   app_replace_font_size_refresh(context);
   await app_shared_refresh(context);
 }
