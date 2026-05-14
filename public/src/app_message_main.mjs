@@ -1,3 +1,4 @@
+import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { invoke_multiple_unordered_async } from "../../../love/public/src/invoke_multiple_unordered_async.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
@@ -26,7 +27,6 @@ import { html_check_empty_not } from "../../../love/public/src/html_check_empty_
 import { app_karate_screen_input_validate } from "../../../love/public/src/app_karate_screen_input_validate.mjs";
 import { emoji_email } from "../../../love/public/src/emoji_email.mjs";
 import { app_shared_button_green } from "../../../love/public/src/app_shared_button_green.mjs";
-import { html_font_sans_serif } from "../../../love/public/src/html_font_sans_serif.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -46,7 +46,7 @@ export async function app_message_main(context) {
   });
   storage_local_initialize_context(context, user_id_property, u);
   app_replace_font_size_refresh(context);
-  html_font_sans_serif(context);
+  html_font_sans_serif_set_html();
   let div_messages = html_div(root);
   let start = app_message_reply_choices();
   await refresh();
