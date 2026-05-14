@@ -8,7 +8,7 @@ import { app_replace } from "../../../love/public/src/app_replace.mjs";
 export async function app_replace_main(context) {
   let app_fn = app_replace;
   let screens = app_replace_screens();
-  object_merge_set(context, {
+  object_merge(context, {
     app_fn,
     screens,
   });
