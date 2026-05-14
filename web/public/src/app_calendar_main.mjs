@@ -39,11 +39,7 @@ export async function app_calendar_main(context) {
   );
   let input_set = null;
   let root = html_mobile_default_font_size_context(context);
-  let component2 = app_a_button_wide(
-    root,
-    "Paste and Search",
-    lambda2,
-  );
+  let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
   async function lambda2() {
     let paste = await clipboard_paste();
     input_set(paste);
