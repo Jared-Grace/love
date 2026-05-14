@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
@@ -31,6 +32,9 @@ export async function app_calendar_contact(context) {
     let r = app_calendar_paste_convert(input);
     let duration = property_get(r, "duration");
     let start = property_get(r, "start");
+    log(app_calendar_contact.name, {
+      r,
+    });
   }
   let component2 = app_a_button_wide(
     root,
