@@ -8,8 +8,8 @@ export async function app_g_bible_main(context) {
   let app_fn = app_g_bible;
   let screens = app_g_bible_screens();
   app_bible_main_generic_before(context, app_fn, screens, app_g_bible_home);
-  function lambda() {
-    app_shared_refresh(context);
+  async function lambda() {
+    await app_shared_refresh(context);
   }
   await firebase_login(context, lambda);
 }
