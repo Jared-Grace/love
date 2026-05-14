@@ -64,8 +64,8 @@ export async function app_calendar_home(context) {
     log(app_calendar_home.name, {
       value3,
     });
+    storage_local_set_context(context, "contact_selected", text);
     app_calendar_contact(context);
-    storage_local_set_context(context2, key, value4);
   }
   let r = app_a_list_chooser_generic(
     root,
