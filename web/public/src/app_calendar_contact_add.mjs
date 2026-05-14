@@ -19,8 +19,10 @@ export function app_calendar_contact_add(data, item) {
   let r2 = app_calendar_facebook_url_id();
   const id_properties = app_calendar_id_properties();
   let r3 = app_calendar_facebook_conversation_id();
-  let concated = list_concat(a, b);
-  const properties_unique_across_all = ["facebook_conversation_url", r3, r2, r];
+  let properties_unique_across_all = list_concat(
+    a[("facebook_conversation_url", r3)],
+    id_properties,
+  );
   let picked = object_pick_try(item, properties_unique_across_all);
   let contacts = app_calendar_contacts_initialize(data);
   let c = list_find_property_try_or_null_curried(contacts);
