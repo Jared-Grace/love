@@ -28,7 +28,9 @@ export async function app_calendar_contact(context) {
   let id = object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
     let paste = await clipboard_paste();
-    let r5 = app_calendar_paste_convert(input);
+    let r = app_calendar_paste_convert(input);
+    let duration = property_get(r, "duration");
+    let start = property_get(r, "start");
   }
   let component2 = app_a_button_wide(
     root,
