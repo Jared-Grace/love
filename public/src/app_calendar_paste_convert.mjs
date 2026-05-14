@@ -101,6 +101,8 @@ export function app_calendar_paste_convert(input) {
   let date_time_zones = list_join_newline(list);
   let r5 = {
     date_time_zones,
+    start,
+    duration,
   };
   return r5;
 }
