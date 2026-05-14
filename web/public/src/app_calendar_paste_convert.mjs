@@ -91,10 +91,10 @@ export function app_calendar_paste_convert(input) {
   list_add_first(list, formatted);
   let minutes_labelled = word_count_pluralize(minutes, "minute");
   let hours_labelled = word_count_pluralize(hours, "hour");
-  let result = ternary(hours >= 1, hours_labelled, minutes_labelled);
+  let duration = ternary(hours >= 1, hours_labelled, minutes_labelled);
   let combined = text_combine_multiple([
     "Meeting is scheduled to last up to: ",
-    result,
+    duration,
     " total",
   ]);
   list_add(list, combined);
