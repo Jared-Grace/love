@@ -23,8 +23,6 @@ import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 export async function app_calendar_main(context) {
-  function lambda9() {}
-  let component = app_a_button_wide(parent, text2, lambda9);
   let data = await app_api_fn({
     fn: app_calendar_download,
   });
