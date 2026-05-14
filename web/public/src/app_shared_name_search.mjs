@@ -13,6 +13,6 @@ export async function app_shared_name_search(search) {
   } else {
     a_names = list_filter_text_match_ordered(mapped, search);
   }
-  let a_name = list_single(app_names);
+  let a_name = list_single(a_names);
   return a_name;
 }
