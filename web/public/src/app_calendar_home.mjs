@@ -1,14 +1,6 @@
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_calendar_contact } from "../../../love/public/src/app_calendar_contact.mjs";
-import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
-import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
-import { object_values } from "../../../love/public/src/object_values.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_adder } from "../../../love/public/src/object_adder.mjs";
-import { each_pair } from "../../../love/public/src/each_pair.mjs";
-import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -40,6 +32,7 @@ export async function app_calendar_home(context) {
     "unavailable",
     true,
   );
+  let dictionary = list_to_dictionary_key(filtered, lambda6);
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
@@ -51,7 +44,6 @@ export async function app_calendar_home(context) {
     let joined = object_pick_try_values_join_space(o, properties);
     return joined;
   }
-  let dictionary = list_to_dictionary_key(filtered, lambda6);
   async function lambda2() {
     let paste = await clipboard_paste();
     input_set(paste);
@@ -73,21 +65,4 @@ export async function app_calendar_home(context) {
     lambda4,
   );
   input_set = property_get(r, "input_set");
-  async function lambda3() {
-    function lambda5(oad) {
-      function lambda(p, input) {
-        let value = html_value_get(input);
-        oad(p, value);
-      }
-      each_pair(properties_name, inputs, lambda);
-    }
-    let result = object_adder(lambda5);
-    list_add(contacts, result);
-    let mapped = list_map(contacts, object_values);
-    list_unique_is_assert(mapped);
-    let r2 = await app_api_fn({
-      fn: app_calendar_upload,
-      args: [data],
-    });
-  }
 }
