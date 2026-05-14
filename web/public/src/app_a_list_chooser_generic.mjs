@@ -51,7 +51,6 @@ export function app_a_list_chooser_generic(
   }
   html_focus(input);
   async function f_name_select(text) {
-    list_remove(on_keydowns, on_keydown);
     await lambda$text(text);
   }
   function input_set(value) {
