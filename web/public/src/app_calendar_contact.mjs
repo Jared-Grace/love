@@ -17,7 +17,7 @@ export async function app_calendar_contact(context) {
   let component = app_a_button_wide(root, text, lambda2);
   let dictionary = await app_calendar_download_browser_contacts();
   let json = json_to(dictionary);
-  let value = property_get(object, property_name);
-  let value2 = storage_local_get_context(context, "contact_selected");
-  let p = html_p_text(root, json);
+  let contact_selected = storage_local_get_context(context, "contact_selected");
+  let value = property_get(object, contact_selected);
+  let p = html_p_text(root, value);
 }
