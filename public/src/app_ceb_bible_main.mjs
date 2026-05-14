@@ -2,9 +2,9 @@ import { app_bible_shared_initialize } from "../../../love/public/src/app_bible_
 import { app_ceb_bible_screens } from "../../../love/public/src/app_ceb_bible_screens.mjs";
 import { app_ceb_bible_home } from "../../../love/public/src/app_ceb_bible_home.mjs";
 import { app_ceb_bible } from "../../../love/public/src/app_ceb_bible.mjs";
-export function app_ceb_bible_main(context) {
+export async function app_ceb_bible_main(context) {
   let app_fn = app_ceb_bible;
   let screens = app_ceb_bible_screens();
   let screen_home = app_ceb_bible_home;
-  app_bible_shared_initialize(context, app_fn, screens, screen_home);
+  await app_bible_shared_initialize(context, app_fn, screens, screen_home);
 }
