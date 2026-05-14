@@ -1,4 +1,6 @@
+import { app_calendar_download_browser_contacts } from "../../../love/public/src/app_calendar_download_browser_contacts.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
-export function app_calendar_contact(context) {
+export async function app_calendar_contact(context) {
   let root = html_clear_context(context);
+  let dictionary = await app_calendar_download_browser_contacts();
 }
