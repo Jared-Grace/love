@@ -41,7 +41,7 @@ export function app_a_list_chooser_generic(
     list_sort_text_alpha_size(filtered);
     function lambda(text) {
       async function on_click() {
-        await f_name_select(text);
+        await lambda$text(text);
       }
       let b = app_a_button_wide(f_names_div, text, on_click);
       lambda$button$text(b, text);
@@ -49,9 +49,6 @@ export function app_a_list_chooser_generic(
     each(filtered, lambda);
   }
   html_focus(input);
-  async function f_name_select(text) {
-    await lambda$text(text);
-  }
   function input_set(value) {
     html_value_set(input, value);
     on_input();
