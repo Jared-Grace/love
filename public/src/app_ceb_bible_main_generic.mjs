@@ -1,4 +1,3 @@
-import { app_shared_refresh } from "../../../love/public/src/app_shared_refresh.mjs";
 import { app_bible_shared_initialize } from "../../../love/public/src/app_bible_shared_initialize.mjs";
 export async function app_ceb_bible_main_generic(
   context,
@@ -7,5 +6,4 @@ export async function app_ceb_bible_main_generic(
   screen_home,
 ) {
   await app_bible_shared_initialize(context, app_fn, screens, screen_home);
-  await app_shared_refresh(context);
 }
