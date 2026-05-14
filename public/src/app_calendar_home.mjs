@@ -1,3 +1,4 @@
+import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_calendar_contact } from "../../../love/public/src/app_calendar_contact.mjs";
@@ -15,14 +16,10 @@ import { html_mobile_default } from "../../../love/public/src/html_mobile_defaul
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
-import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
-import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_home(context) {
   let root = html_clear_context(context);
-  let data = await app_api_fn({
-    fn: app_calendar_download,
-  });
+  let data = await app_calendar_download_browser();
   let contacts = app_calendar_contacts_initialize(data);
   log(app_calendar_home.name, {
     contacts,
