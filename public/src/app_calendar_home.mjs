@@ -1,3 +1,4 @@
+import { app_calendar_contact } from "../../../love/public/src/app_calendar_contact.mjs";
 import { app_calendar_upload } from "../../../love/public/src/app_calendar_upload.mjs";
 import { list_unique_is_assert } from "../../../love/public/src/list_unique_is_assert.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -62,6 +63,7 @@ export async function app_calendar_home(context) {
     log(app_calendar_home.name, {
       value3,
     });
+    app_calendar_contact(context2);
   }
   let r = app_a_list_chooser_generic(
     root,
