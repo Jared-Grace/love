@@ -5,10 +5,6 @@ import { app_calendar_contact } from "../../../love/public/src/app_calendar_cont
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
-import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
-import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
-import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
