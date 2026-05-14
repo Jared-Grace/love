@@ -12,8 +12,8 @@ export async function app_replace_main(context) {
     app_fn,
     screens,
   });
-  await app_shared_refresh(context);
   html_meta_viewport();
   html_font_sans_serif_set_html();
+  await app_shared_refresh(context);
   app_replace_font_size_refresh(context);
 }
