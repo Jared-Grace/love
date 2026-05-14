@@ -1,5 +1,4 @@
-import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
-import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
+import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -23,7 +22,6 @@ export async function app_calendar_contact(context) {
   let value = property_get(dictionary, contact_selected);
   let json = json_to(value);
   let p = html_p_text(root, json);
-  let r = app_calendar_whatsapp_phone();
-  let r2 = app_calendar_facebook_url_id();
-  let value2 = object_pick_try_single_value(o, [r, r2]);
+  const id_properties = app_calendar_id_properties();
+  let value2 = object_pick_try_single_value(o, id_properties);
 }
