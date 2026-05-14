@@ -5,6 +5,7 @@ import { app_calendar_contact } from "../../../love/public/src/app_calendar_cont
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
+import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
 import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
@@ -18,10 +19,6 @@ export async function app_calendar_home(context) {
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
-  let r2 = app_calendar_facebook_url_id();
-  let r3 = app_calendar_facebook_conversation_id();
-  let r4 = app_calendar_whatsapp_phone();
-  const properties = ["whatsapp_name", "facebook_name", r4, r2, r3];
   async function lambda2() {
     let paste = await clipboard_paste();
     input_set(paste);
