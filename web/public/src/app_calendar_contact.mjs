@@ -18,6 +18,6 @@ export async function app_calendar_contact(context) {
   let dictionary = await app_calendar_download_browser_contacts();
   let json = json_to(dictionary);
   let value = property_get(object, property_name);
-  let value2 = storage_local_get_context(context2, key);
+  let value2 = storage_local_get_context(context, "contact_selected");
   let p = html_p_text(root, json);
 }
