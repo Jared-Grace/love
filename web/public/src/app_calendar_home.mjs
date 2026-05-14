@@ -20,7 +20,6 @@ import { app_calendar_contacts_initialize } from "../../../love/public/src/app_c
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export async function app_calendar_home(context) {
   let root = html_clear_context(context);
-  async function lambda3() {}
   let awaited = await global_function_async(fn, lambda3);
   let data = await app_calendar_download_browser();
   let contacts = app_calendar_contacts_initialize(data);
