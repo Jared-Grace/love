@@ -6,6 +6,6 @@ export async function app_ceb_bible_main_generic(
   screens,
   screen_home,
 ) {
-  app_bible_shared_initialize(context, app_fn, screens, screen_home);
+  await app_bible_shared_initialize(context, app_fn, screens, screen_home);
   await app_shared_refresh(context);
 }
