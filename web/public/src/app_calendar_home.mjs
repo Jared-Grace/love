@@ -70,6 +70,7 @@ export async function app_calendar_home(context) {
     lambda7,
     lambda4,
   );
+  let filtered_get = property_get(r, "filtered_get");
   input_set = property_get(r, "input_set");
   async function lambda3() {
     function lambda5(oad) {
