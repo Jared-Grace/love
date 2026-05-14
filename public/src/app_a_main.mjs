@@ -14,16 +14,16 @@ export async function app_a_main(context) {
   object_merge(context, {
     on_keydowns,
   });
-  let root = html_margin_0_context_root(context);
-  function lambda(e) {
-    invoke_multiple_arg(on_keydowns, e);
-  }
-  html_on_keydown(root, lambda);
   let screens = app_a_screens();
-  let root2 = html_mobile_default(context2);
+  let root = html_mobile_default(context);
   object_merge(context, {
     app_fn,
     screens,
   });
   await app_shared_refresh(context);
+  html_margin_0_context_root(context);
+  function lambda(e) {
+    invoke_multiple_arg(on_keydowns, e);
+  }
+  html_on_keydown(root, lambda);
 }
