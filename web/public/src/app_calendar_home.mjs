@@ -38,14 +38,12 @@ export async function app_calendar_home(context) {
     "unavailable",
     true,
   );
-  let filtered_get = null;
   let input_set = null;
   html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
   async function lambda2() {
     let paste = await clipboard_paste();
-    input_set(paste);
-    let results = filtered_get();
+    let results = input_set(paste);
     let only = list_single(results);
   }
   let r2 = app_calendar_facebook_url_id();
@@ -74,7 +72,6 @@ export async function app_calendar_home(context) {
     lambda7,
     lambda4,
   );
-  filtered_get = property_get(r, "filtered_get");
   input_set = property_get(r, "input_set");
   async function lambda3() {
     function lambda5(oad) {
