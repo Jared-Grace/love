@@ -8,9 +8,11 @@ export function app_bible_main_generic_before(
   screen_home,
 ) {
   object_merge(context, {
+    screen_home,
+  });
+  object_merge(context, {
     app_fn,
     screens,
-    screen_home,
   });
   let root = html_mobile_default(context);
   html_margin_0(root);
