@@ -5,6 +5,6 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 export async function app_calendar_contact(context) {
   let root = html_clear_context(context);
   let dictionary = await app_calendar_download_browser_contacts();
-  let json = json_to(object);
-  let p = html_p_text(root2, text);
+  let json = json_to(dictionary);
+  let p = html_p_text(root, json);
 }
