@@ -1,3 +1,4 @@
+import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
@@ -37,7 +38,7 @@ export async function app_calendar_main(context) {
     true,
   );
   let root = html_mobile_default_font_size_context(context);
-  let component2 = html_button_wide(
+  let component2 = app_a_button_wide(
     root,
     "Paste and Search Facebook Messages URL or WhatsApp number",
     lambda2,
