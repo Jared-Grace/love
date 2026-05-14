@@ -46,7 +46,7 @@ export async function app_calendar_home(context) {
     let paste = await clipboard_paste();
     input_set(paste);
     let results = filtered_get();
-    let only = list_single(list);
+    let only = list_single(results);
   }
   let r2 = app_calendar_facebook_url_id();
   let r3 = app_calendar_facebook_conversation_id();
