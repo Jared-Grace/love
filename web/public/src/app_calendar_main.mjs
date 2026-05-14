@@ -66,6 +66,7 @@ export async function app_calendar_main(context) {
     noop,
     lambda4,
   );
+  let input_set = property_get(r, "input_set");
   async function lambda3() {
     function lambda5(oad) {
       function lambda(p, input) {
