@@ -16,9 +16,9 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  function lambda(text) {
+ async function lambda(text) {
     list_remove(on_keydowns, on_keydown);
-    lambda$text(text);
+   await lambda$text(text);
   }
   return r;
 }
