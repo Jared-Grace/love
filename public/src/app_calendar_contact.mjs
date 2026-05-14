@@ -24,4 +24,6 @@ export async function app_calendar_contact(context) {
   let p = html_p_text(root, json);
   const id_properties = app_calendar_id_properties();
   let id = object_pick_try_single_value(contact, id_properties);
+  function lambda3() {}
+  let component2 = app_a_button_wide(parent, text2, lambda3);
 }
