@@ -32,6 +32,7 @@ export async function app_calendar_contact(context) {
     let r = app_calendar_paste_convert(paste);
     let duration = property_get(r, "duration");
     let start = property_get(r, "start");
+    log(app_calendar_contact.name, message);
     log(app_calendar_contact.name, {
       r,
     });
