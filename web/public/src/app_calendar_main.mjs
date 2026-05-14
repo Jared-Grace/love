@@ -1,3 +1,4 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
@@ -20,7 +21,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_calendar_download } from "../../../love/public/src/app_calendar_download.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
-import { html_mobile_default_font_size_context } from "../../../love/public/src/html_mobile_default_font_size_context.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 export async function app_calendar_main(context) {
   let data = await app_api_fn({
@@ -36,7 +36,7 @@ export async function app_calendar_main(context) {
     true,
   );
   let input_set = null;
-  let root = html_mobile_default_font_size_context(context);
+  let root = html_mobile_default(context);
   let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
   async function lambda2() {
     let paste = await clipboard_paste();
