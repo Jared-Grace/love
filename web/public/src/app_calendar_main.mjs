@@ -26,7 +26,7 @@ import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { app_a_list_chooser_generic } from "../../../love/public/src/app_a_list_chooser_generic.mjs";
 export async function app_calendar_main(context) {
-  let r5 = app_calendar_screens();
+  let screens = app_calendar_screens();
   await app_shared_initialize_refresh(context, app_calendar, screens);
   let data = await app_api_fn({
     fn: app_calendar_download,
