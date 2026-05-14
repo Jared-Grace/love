@@ -7,7 +7,7 @@ import { app_g_bible } from "../../../love/public/src/app_g_bible.mjs";
 export async function app_g_bible_main(context) {
   let app_fn = app_g_bible;
   let screens = app_g_bible_screens();
-  app_bible_shared_initialize(context, app_fn, screens, app_g_bible_home);
+  await app_bible_shared_initialize(context, app_fn, screens, app_g_bible_home);
   async function lambda() {
     await app_shared_refresh(context);
   }
