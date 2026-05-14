@@ -14,10 +14,10 @@ export async function app_a_main(context) {
     on_keydowns,
   });
   let screens = app_a_screens();
-  await app_shared_initialize(context, app_fn, screens);
   let root = html_margin_0_context_root(context);
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
   }
   html_on_keydown(root, lambda);
+  await app_shared_initialize(context, app_fn, screens);
 }
