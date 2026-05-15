@@ -1,5 +1,4 @@
-import { property_exists } from "../../../love/public/src/property_exists.mjs";
-import { property_transform } from "../../../love/public/src/property_transform.mjs";
+import { property_transform_if_exists } from "../../../love/public/src/property_transform_if_exists.mjs";
 import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -13,10 +12,7 @@ export async function app_calendar_contacts_names_normalize() {
     function lambda2(c) {
       function lambda3(property_name) {
         function lambda4(value2) {}
-        let exists = property_exists(object, property_name);
-        if (exists) {
-          property_transform(o, property_name, lambda4);
-        }
+        property_transform_if_exists(property_name, lambda4);
       }
       each(name_properties, lambda3);
       let value = object_pick_try_single_value(c, name_properties);
