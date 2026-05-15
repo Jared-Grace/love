@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "../../../love/public/src/property_delete_if_exists_fn.mjs";
@@ -64,21 +65,22 @@ export async function command_line_generic(command, extra) {
     if (typeof command !== "string") {
       throw new TypeError("command must be a string");
     }
-    const parts = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
-    if (parts.length === 0) {
-      throw new Error("Empty command string");
+    if (/[|&;`$()]/.test(command)) {
+      throw new Error(
+        "Shell operators are not allowed in command_line_generic",
+      );
     }
-    const cmd = parts.shift();
-    function lambda6(arg) {
-      let r2 = arg.replace(/^"(.*)"$/, "$1");
-      return r2;
+    const parts = command.trim().split(/\s+/);
+    if (not(parts.length)) {
+      throw new Error("Empty command");
     }
-    const args = parts.map(lambda6);
-    let r4 = {
+    const cmd = parts[0];
+    const args = parts.slice(1);
+    let r2 = {
       cmd,
       args,
     };
-    return r4;
+    return r2;
   }
   return;
   const c = await import("child_process");
