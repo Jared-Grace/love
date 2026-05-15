@@ -13,6 +13,6 @@ export async function list_translate_openai(list, language) {
     json,
   );
   let v = json_from(r3);
-  let value2 = property_get(v, "value");
-  return value2;
+  let translated = property_get(v, "value");
+  return translated;
 }
