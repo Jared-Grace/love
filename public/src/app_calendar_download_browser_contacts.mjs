@@ -21,7 +21,7 @@ export async function app_calendar_download_browser_contacts() {
   );
   let id_properties = app_calendar_id_properties();
   let r4 = app_calendar_whatsapp_phone();
-  let combined = list_concat_multiple([
+  let properties = list_concat_multiple([
     ["whatsapp_name", "facebook_name"],
     [r4],
     id_properties,
