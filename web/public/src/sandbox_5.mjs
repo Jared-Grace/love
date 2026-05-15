@@ -10,8 +10,7 @@ export async function sandbox_5() {
   let translated = await list_translate_openai(filtered, language);
   function lambda2(la) {
     function lambda(a, b) {
-      function lambda3(item) {}
-      each(list2, lambda3);
+      each([a, b], la);
     }
     each_pair(filtered, translated, lambda);
   }
