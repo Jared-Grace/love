@@ -1,3 +1,4 @@
+import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
 import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
@@ -21,6 +22,7 @@ export async function app_calendar_download_browser_contacts() {
   );
   let r3 = app_calendar_facebook_conversation_id();
   let r2 = app_calendar_facebook_url_id();
+  let id_properties = app_calendar_id_properties();
   let r4 = app_calendar_whatsapp_phone();
   const properties = ["whatsapp_name", "facebook_name", r4, r2, r3];
   function lambda6(o) {
