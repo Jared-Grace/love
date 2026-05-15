@@ -1,5 +1,4 @@
-import { app_calendar_whatsapp_name } from "../../../love/public/src/app_calendar_whatsapp_name.mjs";
-import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
+import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
@@ -23,9 +22,8 @@ export async function app_calendar_download_browser_contacts() {
   );
   let id_properties = app_calendar_id_properties();
   let r4 = app_calendar_whatsapp_phone();
-  let r2 = app_calendar_facebook_name();
-  let r = app_calendar_whatsapp_name();
-  let properties = list_concat_multiple([[r, r2], [r4], id_properties]);
+  let r3 = app_calendar_name_properties();
+  let properties = list_concat_multiple([r3, [r4], id_properties]);
   function lambda6(o) {
     let joined = object_pick_try_values_join_space(o, properties);
     return joined;
