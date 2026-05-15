@@ -1,8 +1,8 @@
+import { git_push_folder_now } from "../../../love/public/src/git_push_folder_now.mjs";
 import { date_diff_mins } from "../../../love/public/src/date_diff_mins.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { data_set } from "../../../love/public/src/data_set.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
-import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 import { date_to } from "../../../love/public/src/date_to.mjs";
 import { data_property_get_generic } from "../../../love/public/src/data_property_get_generic.mjs";
 import { user_data_path } from "../../../love/public/src/user_data_path.mjs";
@@ -11,7 +11,6 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { date_iso_to } from "../../../love/public/src/date_iso_to.mjs";
 import { date_now } from "../../../love/public/src/date_now.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
-import { git_push_text } from "../../../love/public/src/git_push_text.mjs";
 export async function git_push_folder(folder) {
   await catch_log_async(lambda);
   async function lambda() {
@@ -26,8 +25,7 @@ export async function git_push_folder(folder) {
     if (mins < 5) {
       return;
     }
-    const command_git = git_push_text();
-    await command_line_git_folder(folder, command_git);
+    await git_push_folder_now(folder);
     let lambda$previous = lambda_get(now_iso);
     await data_set(lambda$previous, property_name, joined);
   }
