@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "../../../love/public/src/property_delete_if_exists_fn.mjs";
 import { command_line_generic_code_ignore } from "../../../love/public/src/command_line_generic_code_ignore.mjs";
@@ -23,6 +24,10 @@ export async function command_line_generic(command, extra) {
       ...extra,
       shell: false,
     };
+    log(command_line_generic.name, {
+      cmd,
+      args,
+    });
     const child = spawn(cmd, args, options);
     let stdout = "";
     let stderr = "";
