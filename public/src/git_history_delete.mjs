@@ -7,7 +7,7 @@ import { git_history_delete_repo_folder_name } from "../../../love/public/src/gi
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
 import { folder_delete } from "../../../love/public/src/folder_delete.mjs";
-import { command_line_git_love } from "../../../love/public/src/command_line_git_love.mjs";
+import { command_line_git_current } from "../../../love/public/src/command_line_git_current.mjs";
 export async function git_history_delete(user, repo, f_path, repo_path) {
   await git_push_folder_now(repo_path);
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
@@ -16,26 +16,26 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   const repo_folder_name = await git_history_delete_repo_folder_name(repo);
   let repo_folder = folder_gitignore_join(repo_folder_name);
   let repo_folder_resolved = await path_resolve(repo_folder);
-  let stdout = await command_line_git_love(
+  let stdout = await command_line_git_current(
     "clone --mirror " + url + " " + repo_folder,
   );
   log(git_history_delete.name, {
     stdout,
   });
   process.chdir(repo_folder);
-  let v = await command_line_git_love("remote -v");
+  let v = await command_line_git_current("remote -v");
   log(git_history_delete.name, {
     v,
   });
   async function lambda2() {
-    await command_line_git_love("remote remove origin");
+    await command_line_git_current("remote remove origin");
   }
   let r = await catch_ignore_async(lambda2);
-  await command_line_git_love("remote add origin " + url);
-  await command_line_git_love(
+  await command_line_git_current("remote add origin " + url);
+  await command_line_git_current(
     "filter-repo --path " + f_path + " --invert-paths --force",
   );
-  await command_line_git_love("push --force --all origin");
-  await command_line_git_love("push --force --tags origin");
+  await command_line_git_current("push --force --all origin");
+  await command_line_git_current("push --force --tags origin");
   await folder_delete(repo_folder_resolved);
 }
