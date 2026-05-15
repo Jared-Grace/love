@@ -1,3 +1,4 @@
+import { file_read_folder_user_txt_split_normalize } from "../../../love/public/src/file_read_folder_user_txt_split_normalize.mjs";
 import { list_translate_openai } from "../../../love/public/src/list_translate_openai.mjs";
 import { integer_odd_is_right } from "../../../love/public/src/integer_odd_is_right.mjs";
 import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
@@ -12,11 +13,8 @@ import { list_filter_index } from "../../../love/public/src/list_filter_index.mj
 import { list_split } from "../../../love/public/src/list_split.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { file_read_folder_user_split_normalize } from "../../../love/public/src/file_read_folder_user_split_normalize.mjs";
-import { file_name_txt } from "../../../love/public/src/file_name_txt.mjs";
 export async function sermon_translate_urdu(file_name) {
-  const path = file_name_txt(file_name);
-  let r = await file_read_folder_user_split_normalize(path);
+  let r = await file_read_folder_user_txt_split_normalize(file_name);
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
