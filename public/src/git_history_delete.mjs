@@ -3,7 +3,6 @@ import { git_push_folder_now } from "../../../love/public/src/git_push_folder_no
 import { git_history_delete_repo_folder_name } from "../../../love/public/src/git_history_delete_repo_folder_name.mjs";
 import { file_name_json_folder_gitignore } from "../../../love/public/src/file_name_json_folder_gitignore.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
-import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
 import { folder_delete } from "../../../love/public/src/folder_delete.mjs";
 import { command_line_git } from "../../../love/public/src/command_line_git.mjs";
