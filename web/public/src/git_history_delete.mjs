@@ -7,7 +7,7 @@ import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
 import { folder_delete } from "../../../love/public/src/folder_delete.mjs";
 import { command_line_git } from "../../../love/public/src/command_line_git.mjs";
 export async function git_history_delete(user, repo, f_path, repo_path) {
-  await git_push_folder(repo_path);
+  await git_push_folder_now(repo_path);
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
   ("make sure this is run from the correct directory");
   const url = git_repo_url(user, repo);
