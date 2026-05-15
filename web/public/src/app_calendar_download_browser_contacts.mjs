@@ -3,8 +3,6 @@ import { app_calendar_id_properties } from "../../../love/public/src/app_calenda
 import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
 import { object_pick_try_values_join_space } from "../../../love/public/src/object_pick_try_values_join_space.mjs";
 import { app_calendar_whatsapp_phone } from "../../../love/public/src/app_calendar_whatsapp_phone.mjs";
-import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
-import { app_calendar_facebook_url_id } from "../../../love/public/src/app_calendar_facebook_url_id.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { list_filter_property_exclude_if_exists } from "../../../love/public/src/list_filter_property_exclude_if_exists.mjs";
 import { log } from "../../../love/public/src/log.mjs";
