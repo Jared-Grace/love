@@ -1,3 +1,4 @@
+import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -9,7 +10,10 @@ export async function app_calendar_contacts_names_normalize() {
   function lambda(data) {
     let contacts = app_calendar_contacts_initialize(data);
     function lambda2(c) {
-      function lambda3(p) {}
+      function lambda3(p) {
+        function lambda4(value2) {}
+        let value3 = property_transform(o, property, lambda4);
+      }
       each(name_properties, lambda3);
       let value = object_pick_try_single_value(c, name_properties);
       log(app_calendar_contacts_names_normalize.name, {
