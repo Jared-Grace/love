@@ -1,3 +1,4 @@
+import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { git_push_folder_now } from "../../../love/public/src/git_push_folder_now.mjs";
@@ -26,7 +27,9 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   log(git_history_delete.name, {
     v,
   });
-  await command_line_git("remote remove origin || true");
+  try {
+    await command_line_generic("git remote remove origin");
+  } catch {}
   await command_line_git("remote add origin " + url);
   await command_line_git(
     "filter-repo --path " + f_path + " --invert-paths --force",
