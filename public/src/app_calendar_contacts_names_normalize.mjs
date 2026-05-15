@@ -12,11 +12,11 @@ export async function app_calendar_contacts_names_normalize() {
     let contacts = app_calendar_contacts_initialize(data);
     function lambda2(c) {
       function lambda3(p) {
-        let exists = property_exists(object, property_name);
-        if (false) {
-        }
         function lambda4(value2) {}
-        let value3 = property_transform(o, property, lambda4);
+        let exists = property_exists(object, property_name);
+        if (exists) {
+          let value3 = property_transform(o, property, lambda4);
+        }
       }
       each(name_properties, lambda3);
       let value = object_pick_try_single_value(c, name_properties);
