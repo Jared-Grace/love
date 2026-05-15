@@ -1,3 +1,4 @@
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
@@ -11,6 +12,7 @@ export async function app_calendar_contacts_names_normalize() {
     let contacts = app_calendar_contacts_initialize(data);
     function lambda2(c) {
       function lambda3(p) {
+        let exists = property_exists(object, property_name);
         function lambda4(value2) {}
         let value3 = property_transform(o, property, lambda4);
       }
