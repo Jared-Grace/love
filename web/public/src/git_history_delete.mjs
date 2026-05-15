@@ -11,8 +11,8 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
   ("make sure this is run from the correct directory");
   const url = git_repo_url(user, repo);
-  const repo_folder = repo + "-clean-" + (await uuid()) + ".git";
-  let f_path2 = file_name_json_folder_gitignore(name);
+  const repo_folder_name = repo + "-clean-" + (await uuid()) + ".git";
+  let repo_folder = file_name_json_folder_gitignore(repo_folder_name);
   let stdout = await command_line_git(
     "clone --mirror " + url + " " + repo_folder,
   );
