@@ -5,5 +5,6 @@ export async function file_read_folder_user_txt_split_normalize(file_name) {
   const path = file_name_txt(file_name);
   let r = await file_read_folder_user_split_normalize(path);
   let normalized = property_get(r, "normalized");
-  return normalized;
+  let filtered = list_filter_empty_not_is(normalized);
+  return filtered;
 }
