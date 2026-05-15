@@ -23,7 +23,6 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   log(git_history_delete.name, {
     stdout,
   });
-  process.chdir(repo_folder);
   let v = await command_line_git_folder(repo_folder, "remote -v");
   log(git_history_delete.name, {
     v,
