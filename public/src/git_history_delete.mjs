@@ -28,7 +28,9 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   process.chdir(repo_folder);
   await command_line_git("remote remove origin || true");
   await command_line_git("remote add origin " + url);
-  await command_line_git("filter-repo --path " + f_path + " --invert-paths");
+  await command_line_git(
+    "filter-repo --path " + f_path + " --invert-paths --force",
+  );
   await command_line_git("push --force --all origin");
   await command_line_git("push --force --tags origin");
   await folder_delete(repo_folder_resolved);
