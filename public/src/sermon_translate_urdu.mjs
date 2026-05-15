@@ -12,7 +12,7 @@ import { floor } from "../../../love/public/src/floor.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
 import { list_split } from "../../../love/public/src/list_split.mjs";
 export async function sermon_translate_urdu(file_name) {
-  let normalized = await file_read_folder_user_txt_split_normalize(file_name);
+  let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let separator = "---";
   let groups = list_split(filtered, separator);
   let lambda = integer_odd_is_right();
