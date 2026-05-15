@@ -8,8 +8,8 @@ export async function app_calendar_contacts_names_normalize() {
     log(app_calendar_contacts_names_normalize.name, {
       contacts,
     });
-    function lambda2(item) {}
-    each(list, lambda2);
+    function lambda2(c) {}
+    each(contacts, lambda2);
   }
   let r = await app_calendar_secret_transform(lambda);
   return r;
