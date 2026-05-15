@@ -1,3 +1,4 @@
+import { git_purge_everyone } from "../../../love/public/src/git_purge_everyone.mjs";
 import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 import { folder_gitignore_join } from "../../../love/public/src/folder_gitignore_join.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
@@ -39,4 +40,5 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   await command_line_git_folder(repo_folder, "push --force --all origin");
   await command_line_git_folder(repo_folder, "push --force --tags origin");
   await folder_delete(repo_folder_resolved);
+  await git_purge_everyone();
 }
