@@ -15,8 +15,8 @@ export async function sandbox_4() {
     "name",
     remove_if_contains,
   );
-  let list2 = await app_calendar_download_contacts();
-  return filtered;
+  let contacts = await app_calendar_download_contacts();
+  return contacts;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
   return date_time_zones;
