@@ -1,3 +1,4 @@
+import { file_name_json_folder_gitignore } from "../../../love/public/src/file_name_json_folder_gitignore.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { git_push_folder } from "../../../love/public/src/git_push_folder.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
@@ -11,6 +12,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   ("make sure this is run from the correct directory");
   const url = git_repo_url(user, repo);
   const repo_folder = repo + "-clean-" + (await uuid()) + ".git";
+  let f_path2 = file_name_json_folder_gitignore(name);
   let stdout = await command_line_git(
     "clone --mirror " + url + " " + repo_folder,
   );
