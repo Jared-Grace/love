@@ -1,3 +1,4 @@
+import { app_calendar_facebook_name } from "../../../love/public/src/app_calendar_facebook_name.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { app_calendar_download_browser } from "../../../love/public/src/app_calendar_download_browser.mjs";
@@ -21,8 +22,9 @@ export async function app_calendar_download_browser_contacts() {
   );
   let id_properties = app_calendar_id_properties();
   let r4 = app_calendar_whatsapp_phone();
+  let r2 = app_calendar_facebook_name();
   let properties = list_concat_multiple([
-    ["whatsapp_name", "facebook_name"],
+    ["whatsapp_name", r2],
     [r4],
     id_properties,
   ]);
