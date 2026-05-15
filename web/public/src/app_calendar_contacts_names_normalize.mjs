@@ -11,8 +11,8 @@ export async function app_calendar_contacts_names_normalize() {
     let contacts = app_calendar_contacts_initialize(data);
     function lambda2(c) {
       function lambda3(property_name) {
-        function lambda4(value2) {
-          return value2;
+        function lambda4(value) {
+          return value;
         }
         property_transform_if_exists(property_name, lambda4);
       }
