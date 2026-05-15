@@ -33,6 +33,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   let r = await catch_ignore_async(lambda2);
   await command_line_git_folder(repo_folder, "remote add origin " + url);
   await command_line_git_folder(
+    repo_folder,
     "filter-repo --path " + f_path + " --invert-paths --force",
   );
   await command_line_git_folder(repo_folder, "push --force --all origin");
