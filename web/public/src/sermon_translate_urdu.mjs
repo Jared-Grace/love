@@ -13,7 +13,7 @@ import { list_filter_index } from "../../../love/public/src/list_filter_index.mj
 import { list_split } from "../../../love/public/src/list_split.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 export async function sermon_translate_urdu(file_name) {
-  let r = await file_read_folder_user_txt_split_normalize(file_name);
+  let normalized = await file_read_folder_user_txt_split_normalize(file_name);
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
   let groups = list_split(filtered, separator);
