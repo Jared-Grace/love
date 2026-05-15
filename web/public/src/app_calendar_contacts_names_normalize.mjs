@@ -13,6 +13,8 @@ export async function app_calendar_contacts_names_normalize() {
     function lambda2(c) {
       function lambda3(p) {
         let exists = property_exists(object, property_name);
+        if (false) {
+        }
         function lambda4(value2) {}
         let value3 = property_transform(o, property, lambda4);
       }
