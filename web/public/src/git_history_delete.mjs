@@ -9,7 +9,7 @@ import { command_line_git } from "../../../love/public/src/command_line_git.mjs"
 export async function git_history_delete(user, repo, f_path, repo_path) {
   await git_push_folder_now(repo_path);
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
-  ("make sure this is run from the correct directory");
+  ("make sure this is ran from the correct directory");
   const url = git_repo_url(user, repo);
   const repo_folder_name = await git_history_delete_repo_folder_name(repo);
   let repo_folder = file_name_json_folder_gitignore(repo_folder_name);
