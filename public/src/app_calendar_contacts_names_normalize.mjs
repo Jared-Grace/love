@@ -8,14 +8,15 @@ export async function app_calendar_contacts_names_normalize() {
   let name_properties = app_calendar_name_properties();
   function lambda(data) {
     let contacts = app_calendar_contacts_initialize(data);
-    log(app_calendar_contacts_names_normalize.name, {
-      contacts,
-    });
     function lambda2(c) {
-      let value = object_pick_try_single_value(o, properties);
+      let value = object_pick_try_single_value(c, name_properties);
+      log(app_calendar_contacts_names_normalize.name, {
+        value,
+      });
     }
     each(contacts, lambda2);
   }
   let r = await app_calendar_secret_transform(lambda);
+  return;
   return r;
 }
