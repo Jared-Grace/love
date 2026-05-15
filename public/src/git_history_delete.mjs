@@ -21,11 +21,11 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   log(git_history_delete.name, {
     stdout,
   });
+  process.chdir(repo_folder);
   let v = await command_line_git("remote -v");
   log(git_history_delete.name, {
     v,
   });
-  process.chdir(repo_folder);
   await command_line_git("remote remove origin || true");
   await command_line_git("remote add origin " + url);
   await command_line_git(
