@@ -13,7 +13,7 @@ export async function app_calendar_contacts_names_normalize() {
     function lambda2(c) {
       function lambda3(property_name) {
         function lambda4(value) {
-          let trimmed = text_trim(message);
+          let trimmed = text_trim(value);
           return value;
         }
         property_transform_if_exists(property_name, lambda4);
