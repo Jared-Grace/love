@@ -1,0 +1,9 @@
+import { each } from "../../../love/public/src/each.mjs";
+import { properties_normalize_if_exists_curried_right } from "../../../love/public/src/properties_normalize_if_exists_curried_right.mjs";
+export function properties_normalize_if_exists_multiple(
+  name_properties,
+  contacts,
+) {
+  let lambda2 = properties_normalize_if_exists_curried_right(name_properties);
+  each(contacts, lambda2);
+}
