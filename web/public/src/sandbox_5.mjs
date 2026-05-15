@@ -3,5 +3,5 @@ import { list_translate_openai } from "../../../love/public/src/list_translate_o
 export async function sandbox_5() {
   let language = "Urdu";
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
-  let translated = await list_translate_openai(list, language);
+  let translated = await list_translate_openai(filtered, language);
 }
