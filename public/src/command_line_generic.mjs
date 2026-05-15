@@ -70,14 +70,29 @@ export async function command_line_generic(command, extra) {
         "Shell operators are not allowed in command_line_generic",
       );
     }
-    const parts = command.trim().split(/\s+/);
-    if (not(parts.length)) {
-      throw new Error("Empty command");
+    const args = [];
+    let current = "";
+    let inQuotes = false;
+    for (let i = 0; i < command.length; i++) {
+      const c = command[i];
+      if (c === '"') {
+        inQuotes = not(inQuotes);
+        continue;
+      }
+      if (c === " " && not(inQuotes)) {
+        if (current.length) {
+          args.push(current);
+          current = "";
+        }
+        continue;
+      }
+      current += c;
     }
-    const cmd = parts[0];
-    const args = parts.slice(1);
+    if (current.length) {
+      args.push(current);
+    }
     let r2 = {
-      cmd,
+      cmd: args.shift(),
       args,
     };
     return r2;
