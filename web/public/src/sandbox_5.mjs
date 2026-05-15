@@ -15,5 +15,5 @@ export async function sandbox_5() {
     each_pair(filtered, translated, lambda);
   }
   let list = list_adder(lambda2);
-  return translated;
+  return list;
 }
