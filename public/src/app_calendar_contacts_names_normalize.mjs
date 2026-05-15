@@ -10,10 +10,7 @@ export async function app_calendar_contacts_names_normalize() {
   function lambda(data) {
     let contacts = app_calendar_contacts_initialize(data);
     function lambda2(c) {
-      function lambda3(property_name) {
-        property_normalize_if_exists(property_name);
-      }
-      each(name_properties, lambda3);
+      each(name_properties, property_normalize_if_exists);
       let value = object_pick_try_single_value(c, name_properties);
       log(app_calendar_contacts_names_normalize.name, {
         value,
