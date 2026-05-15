@@ -7,7 +7,7 @@ if len(sys.argv) != 3:
     sys.exit(1)
 
 ics_path = sys.argv[1]
-output_path = sys.argv[1]
+output_path = sys.argv[2]
 
 with open(ics_path, "r") as f:
     calendar = Calendar(f.read())
