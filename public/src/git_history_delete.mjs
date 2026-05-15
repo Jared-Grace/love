@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { git_push_folder_now } from "../../../love/public/src/git_push_folder_now.mjs";
 import { git_history_delete_repo_folder_name } from "../../../love/public/src/git_history_delete_repo_folder_name.mjs";
@@ -17,6 +18,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   let stdout = await command_line_git(
     "clone --mirror " + url + " " + repo_folder,
   );
+  console.log(stdout);
   process.chdir(repo_folder);
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
