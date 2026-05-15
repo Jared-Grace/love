@@ -10,6 +10,6 @@ export async function sandbox_5() {
   let translated = await list_translate_openai(filtered, language);
   let list = list_pair_weave(filtered, translated);
   let joined = list_join_newline_2(list);
-  await clipboard_copy(text);
+  await clipboard_copy(joined);
   return joined;
 }
