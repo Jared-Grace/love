@@ -13,7 +13,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   const url = git_repo_url(user, repo);
   const repo_folder_name = await git_history_delete_repo_folder_name(repo);
   let repo_folder = file_name_json_folder_gitignore(repo_folder_name);
-  let previous = await path_resolve(".");
+  let repo_folder_resolved = await path_resolve(".");
   let stdout = await command_line_git(
     "clone --mirror " + url + " " + repo_folder,
   );
@@ -21,6 +21,5 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   await command_line_git("filter-repo --path " + f_path + " --invert-paths");
   await command_line_git("push --force --all origin");
   await command_line_git("push --force --tags origin");
-  process.chdir(previous);
   await folder_delete(repo_folder_resolved);
 }
