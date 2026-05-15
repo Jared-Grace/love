@@ -9,7 +9,7 @@ export async function sermon_translate_1CO03_second_half() {
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let translated = await list_translate_openai(filtered, language);
   let list = list_pair_weave(filtered, translated);
-  let joined = list_join_newline_2(list);
+  let joined = list_join_newline_2(translated);
   await clipboard_copy(joined);
   return joined;
 }
