@@ -16,7 +16,6 @@ import { file_read_folder_user_split_normalize } from "../../../love/public/src/
 import { file_name_txt } from "../../../love/public/src/file_name_txt.mjs";
 export async function sermon_translate_urdu(file_name) {
   const path = file_name_txt(file_name);
-  let language = "Urdu";
   let r = await file_read_folder_user_split_normalize(path);
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
@@ -24,6 +23,7 @@ export async function sermon_translate_urdu(file_name) {
   let groups = list_split(filtered, separator);
   let lambda = integer_odd_is_right();
   let value = list_filter_index(groups, lambda);
+  let language = "Urdu";
   let value2 = await list_translate_openai(value, language);
   function lambda2(item2, index2) {
     let change = lambda(item2, index2);
