@@ -7,6 +7,6 @@ export async function sandbox_5() {
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let translated = await list_translate_openai(filtered, language);
   function lambda(a, b) {}
-  each_pair(list_a, list_b, lambda);
+  each_pair(filtered, translated, lambda);
   return translated;
 }
