@@ -1,5 +1,4 @@
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
-import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { git_push_folder_now } from "../../../love/public/src/git_push_folder_now.mjs";
@@ -29,7 +28,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
     v,
   });
   async function lambda2() {
-    await command_line_generic("git remote remove origin");
+    await command_line_git("remote remove origin");
   }
   let r = await catch_ignore_async(lambda2);
   await command_line_git("remote add origin " + url);
