@@ -1,5 +1,4 @@
-import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
-import { property_transform_if_exists } from "../../../love/public/src/property_transform_if_exists.mjs";
+import { property_normalize_if_exists } from "../../../love/public/src/property_normalize_if_exists.mjs";
 import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -12,7 +11,7 @@ export async function app_calendar_contacts_names_normalize() {
     let contacts = app_calendar_contacts_initialize(data);
     function lambda2(c) {
       function lambda3(property_name) {
-        property_transform_if_exists(property_name, whitespace_normalize);
+        property_normalize_if_exists(property_name);
       }
       each(name_properties, lambda3);
       let value = object_pick_try_single_value(c, name_properties);
