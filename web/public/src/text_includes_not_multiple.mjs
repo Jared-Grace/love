@@ -6,4 +6,5 @@ export function text_includes_not_multiple(t, parts) {
     return n;
   }
   let a = list_all(parts, lambda);
+  return a;
 }
