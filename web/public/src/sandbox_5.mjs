@@ -8,6 +8,6 @@ export async function sandbox_5() {
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let translated = await list_translate_openai(filtered, language);
   let list = list_pair_weave(filtered, translated);
-  let joined = list_join_newline_2(list2);
-  return list;
+  let joined = list_join_newline_2(list);
+  return joined;
 }
