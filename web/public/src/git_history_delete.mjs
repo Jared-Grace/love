@@ -1,3 +1,4 @@
+import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 import { folder_gitignore_join } from "../../../love/public/src/folder_gitignore_join.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -23,19 +24,19 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
     stdout,
   });
   process.chdir(repo_folder);
-  let v = await command_line_git_current("remote -v");
+  let v = await command_line_git_folder("remote -v");
   log(git_history_delete.name, {
     v,
   });
   async function lambda2() {
-    await command_line_git_current("remote remove origin");
+    await command_line_git_folder("remote remove origin");
   }
   let r = await catch_ignore_async(lambda2);
-  await command_line_git_current("remote add origin " + url);
-  await command_line_git_current(
+  await command_line_git_folder("remote add origin " + url);
+  await command_line_git_folder(
     "filter-repo --path " + f_path + " --invert-paths --force",
   );
-  await command_line_git_current("push --force --all origin");
-  await command_line_git_current("push --force --tags origin");
+  await command_line_git_folder("push --force --all origin");
+  await command_line_git_folder("push --force --tags origin");
   await folder_delete(repo_folder_resolved);
 }
