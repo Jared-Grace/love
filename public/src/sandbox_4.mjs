@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_pick_try_single_value } from "../../../love/public/src/object_pick_try_single_value.mjs";
 import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { app_calendar_download_contacts } from "../../../love/public/src/app_calendar_download_contacts.mjs";
@@ -21,6 +22,8 @@ export async function sandbox_4() {
   let mapped = list_map_property(filtered, "name");
   let contacts = await app_calendar_download_contacts();
   let name_properties = app_calendar_name_properties();
+  function lambda(item) {}
+  let mapped2 = list_map(list2, lambda);
   let value = object_pick_try_single_value(o, properties2);
   return filtered;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
