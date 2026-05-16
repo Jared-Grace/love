@@ -14,7 +14,7 @@ export async function sandbox_4() {
   property_transform_multiple_trim(list, "name");
   let properties = ["description", "location"];
   properties_delete_multiple(list, properties);
-  let remove_if_contains = ["Extended Stay America"];
+  let remove_if_contains = ["Extended Stay America", unique];
   let filtered = list_filter_property_text_includes_not_multiple(
     list,
     "name",
