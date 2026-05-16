@@ -26,8 +26,8 @@ export async function sandbox_4() {
     let value = object_pick_try_single_value(item, name_properties);
     return value;
   }
-  let mapped2 = list_map(contacts, lambda);
-  return mapped2;
+  let mapped = list_map(contacts, lambda);
+  return mapped;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
   return date_time_zones;
