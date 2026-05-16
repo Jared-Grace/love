@@ -19,7 +19,7 @@ export async function sandbox_4() {
     "name",
     remove_if_contains,
   );
-  let mapped = list_map_property(filtered, "name");
+  let calendar_names = list_map_property(filtered, "name");
   let contacts = await app_calendar_download_contacts();
   let name_properties = app_calendar_name_properties();
   function lambda(item) {
