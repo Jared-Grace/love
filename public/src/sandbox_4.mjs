@@ -24,6 +24,7 @@ export async function sandbox_4() {
   let name_properties = app_calendar_name_properties();
   function lambda(item) {
     let value = object_pick_try_single_value(item, name_properties);
+    return value;
   }
   let mapped2 = list_map(contacts, lambda);
   return filtered;
