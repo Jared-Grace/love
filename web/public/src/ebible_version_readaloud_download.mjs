@@ -8,6 +8,6 @@ export async function ebible_version_readaloud_download(bible_folder) {
   let project_url = firebase_storage_url_project_jg();
   let buffer = await http_local(url, project_url);
   let file_path = ebible_version_readaloud_download_path(bible_folder);
-  await unzip(file_path, buffer);
+  await unzip(buffer, file_path);
   return file_path;
 }
