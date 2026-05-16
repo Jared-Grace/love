@@ -1,4 +1,3 @@
-import { app_calendar_download_contacts } from "../../../love/public/src/app_calendar_download_contacts.mjs";
 import { property_transform_multiple_trim } from "../../../love/public/src/property_transform_multiple_trim.mjs";
 import { list_filter_property_text_includes_not_multiple } from "../../../love/public/src/list_filter_property_text_includes_not_multiple.mjs";
 import { properties_delete_multiple } from "../../../love/public/src/properties_delete_multiple.mjs";
