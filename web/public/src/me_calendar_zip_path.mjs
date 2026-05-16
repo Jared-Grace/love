@@ -3,8 +3,8 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { me_email } from "../../../love/public/src/me_email.mjs";
 export function me_calendar_zip_path() {
   const email_address = me_email();
-  let combined = text_combine(email_address, ".ical.zip");
-  let combined2 = text_combine(left, right);
+  let combined = text_combine(email_address, ".ical");
+  let combined2 = text_combine(left, ".zip");
   let r = folder_user_downloads_path(combined);
   return r;
 }
