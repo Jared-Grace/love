@@ -1,7 +1,7 @@
+import { unzip_self } from "../../../love/public/src/unzip_self.mjs";
 import { me_calendar_zip_path } from "../../../love/public/src/me_calendar_zip_path.mjs";
-import { unzip } from "../../../love/public/src/unzip.mjs";
-export async function me_calendar_google_unzip(file_path, buffer) {
-  let r2 = me_calendar_zip_path();
-  let r = await unzip(file_path, buffer);
+export async function me_calendar_google_unzip() {
+  let file_path = me_calendar_zip_path();
+  let r = await unzip_self(file_path);
   return r;
 }
