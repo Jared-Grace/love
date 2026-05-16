@@ -15,7 +15,7 @@ export async function sandbox_4() {
     "name",
     remove_if_contains,
   );
-  let mapped = list_map_property(list2, property_name);
+  let mapped = list_map_property(filtered, "name");
   return filtered;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
