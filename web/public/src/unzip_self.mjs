@@ -7,6 +7,6 @@ export async function unzip_self(file_path) {
   if (e) {
     return;
   }
-  await unzip(name, file_path);
+  await unzip(file_path, name);
   return name;
 }
