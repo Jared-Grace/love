@@ -1,5 +1,4 @@
-import { properties_normalize_if_exists } from "../../../love/public/src/properties_normalize_if_exists.mjs";
-import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
+import { app_calendar_contact_names_normalize } from "../../../love/public/src/app_calendar_contact_names_normalize.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { app_calendar_id_properties } from "../../../love/public/src/app_calendar_id_properties.mjs";
 import { app_calendar_facebook_conversation_id } from "../../../love/public/src/app_calendar_facebook_conversation_id.mjs";
@@ -15,8 +14,7 @@ import { list_filter_null_not_is } from "../../../love/public/src/list_filter_nu
 import { app_calendar_contacts_initialize } from "../../../love/public/src/app_calendar_contacts_initialize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_calendar_contact_add(data, item) {
-  let name_properties = app_calendar_name_properties();
-  properties_normalize_if_exists(item, name_properties);
+  app_calendar_contact_names_normalize(item);
   const id_properties = app_calendar_id_properties();
   let r3 = app_calendar_facebook_conversation_id();
   let properties_unique_across_all = list_concat(
