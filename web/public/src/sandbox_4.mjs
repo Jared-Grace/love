@@ -21,7 +21,7 @@ export async function sandbox_4() {
   let calendar_names = list_map_property(filtered, "name");
   let contacts = await app_calendar_download_contacts();
   let name_properties = app_calendar_name_properties();
-  let mapped = object_pick_try_single_value_multiple(name_properties, contacts);
+  let mapped = object_pick_try_single_value_multiple(contacts, name_properties);
   return mapped;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
