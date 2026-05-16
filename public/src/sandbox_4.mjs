@@ -22,9 +22,10 @@ export async function sandbox_4() {
   let mapped = list_map_property(filtered, "name");
   let contacts = await app_calendar_download_contacts();
   let name_properties = app_calendar_name_properties();
-  function lambda(item) {}
-  let mapped2 = list_map(list2, lambda);
-  let value = object_pick_try_single_value(o, properties2);
+  function lambda(item) {
+    let value = object_pick_try_single_value(item, name_properties);
+  }
+  let mapped2 = list_map(contacts, lambda);
   return filtered;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
