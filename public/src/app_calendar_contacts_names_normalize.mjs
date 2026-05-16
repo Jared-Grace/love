@@ -9,6 +9,5 @@ export async function app_calendar_contacts_names_normalize() {
     properties_normalize_if_exists_multiple(contacts, name_properties);
   }
   let r = await app_calendar_secret_transform(lambda);
-  return;
   return r;
 }
