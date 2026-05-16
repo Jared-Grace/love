@@ -1,3 +1,4 @@
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { object_pick_try_single_value_multiple } from "../../../love/public/src/object_pick_try_single_value_multiple.mjs";
 import { app_calendar_name_properties } from "../../../love/public/src/app_calendar_name_properties.mjs";
 import { app_calendar_download_contacts } from "../../../love/public/src/app_calendar_download_contacts.mjs";
@@ -22,6 +23,7 @@ export async function sandbox_4() {
   let contacts = await app_calendar_download_contacts();
   let name_properties = app_calendar_name_properties();
   let mapped = object_pick_try_single_value_multiple(contacts, name_properties);
+  let difference = list_difference(list2, list_other);
   return mapped;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
