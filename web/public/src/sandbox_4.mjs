@@ -24,7 +24,7 @@ export async function sandbox_4() {
   let name_properties = app_calendar_name_properties();
   let mapped = object_pick_try_single_value_multiple(contacts, name_properties);
   let difference = list_difference(calendar_names, mapped);
-  return difference;
+  return calendar_names;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
   let date_time_zones = app_calendar_paste_convert(input);
   return date_time_zones;
