@@ -22,9 +22,9 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input) {
-  let country_main = "Pakistan";
+  let pakistan_name = "Pakistan";
   let pakistan = {
-    name: country_main,
+    name: pakistan_name,
   };
   let countries = [pakistan, kenya];
   const zone_input = "America/New_York";
@@ -57,7 +57,7 @@ export function app_calendar_paste_convert(input) {
     {
       start,
       zone: zone_output,
-      country: country_main,
+      country: pakistan_name,
       parenthesis: false,
       flag: "🇵🇰",
     },
