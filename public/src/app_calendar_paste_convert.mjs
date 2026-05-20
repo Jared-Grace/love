@@ -27,6 +27,7 @@ export function app_calendar_paste_convert(input) {
     name: pakistan_name,
   };
   let countries = [pakistan, kenya];
+  let country = pakistan;
   const zone_input = "America/New_York";
   const zone_output = "Asia/Karachi";
   let country_speaker = "USA";
