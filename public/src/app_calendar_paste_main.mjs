@@ -32,6 +32,7 @@ export function app_calendar_paste_main(context) {
   };
   let countries = [pakistan, kenya];
   function lambda3(country) {
+    let name2 = property_get(country, "name");
     let combined = text_combine(left, right);
     let component = html_button(root, "Request date/time for ", lambda2);
   }
