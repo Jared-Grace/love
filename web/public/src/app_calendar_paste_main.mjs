@@ -41,34 +41,34 @@ export function app_calendar_paste_main(context) {
       flag,
     ]);
     let component = html_button(root, combined2, lambda2);
+    async function lambda2() {
+      html_clear(output);
+      let lines = null;
+      let red = false;
+      function lambda(input) {
+        try {
+          let country2 = error();
+          let r = app_calendar_paste_convert(input, country2);
+          let date_time_zones = property_get(r, "date_time_zones");
+          let joined = list_join_newline_2([
+            "Do you want me to share the word of God on this day and time?",
+            date_time_zones,
+          ]);
+          lines = text_split_newline(joined);
+        } catch (e) {
+          lines = ["Invalid input:", input, e];
+          red = true;
+        }
+        let ds = html_div_text_multiple(output, lines);
+        if (red) {
+          each(ds, html_font_color_set_red);
+        }
+        let joined = list_join_newline(lines);
+        return joined;
+      }
+      await clipboard_transform(lambda);
+    }
   }
   each(countries, lambda3);
-  async function lambda2() {
-    html_clear(output);
-    let lines = null;
-    let red = false;
-    function lambda(input) {
-      try {
-        let country2 = error();
-        let r = app_calendar_paste_convert(input, country2);
-        let date_time_zones = property_get(r, "date_time_zones");
-        let joined = list_join_newline_2([
-          "Do you want me to share the word of God on this day and time?",
-          date_time_zones,
-        ]);
-        lines = text_split_newline(joined);
-      } catch (e) {
-        lines = ["Invalid input:", input, e];
-        red = true;
-      }
-      let ds = html_div_text_multiple(output, lines);
-      if (red) {
-        each(ds, html_font_color_set_red);
-      }
-      let joined = list_join_newline(lines);
-      return joined;
-    }
-    await clipboard_transform(lambda);
-  }
   output = html_p(root);
 }
