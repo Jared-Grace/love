@@ -23,13 +23,14 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input) {
   let pakistan_name = "Pakistan";
+  const pakistan_zone = "Asia/Karachi";
   let pakistan = {
     name: pakistan_name,
+    zone: pakistan_zone,
   };
   let countries = [pakistan, kenya];
   let country = pakistan;
   const zone_input = "America/New_York";
-  const zone_output = "Asia/Karachi";
   let country_speaker = "USA";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
@@ -57,7 +58,7 @@ export function app_calendar_paste_convert(input) {
   let formats = [
     {
       start,
-      zone: zone_output,
+      zone: pakistan_zone,
       country: pakistan_name,
       parenthesis: false,
       flag: "🇵🇰",
