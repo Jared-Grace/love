@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
@@ -29,7 +30,8 @@ export async function app_calendar_contact(context) {
   let id = object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
     let paste = await clipboard_paste();
-    let r = app_calendar_paste_convert(paste, error());
+    let country = error();
+    let r = app_calendar_paste_convert(paste, country);
     let duration = property_get(r, "duration");
     let start = property_get(r, "start");
     log(app_calendar_contact.name, typeof start);
