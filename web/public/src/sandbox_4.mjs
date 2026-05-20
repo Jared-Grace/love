@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { object_pick_try_single_value_multiple } from "../../../love/public/src/object_pick_try_single_value_multiple.mjs";
@@ -28,6 +29,7 @@ export async function sandbox_4() {
   let unique = list_unique(difference);
   return unique;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
-  let date_time_zones = app_calendar_paste_convert(input, error());
+  let country = error();
+  let date_time_zones = app_calendar_paste_convert(input, country);
   return date_time_zones;
 }
