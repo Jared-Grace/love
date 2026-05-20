@@ -67,9 +67,9 @@ export function app_calendar_paste_convert(input) {
     converted_info,
     {
       start,
+      parenthesis: true,
       zone: zone_input,
       name: country_speaker,
-      parenthesis: true,
       flag: "🇺🇸",
     },
   ];
