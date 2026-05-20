@@ -28,6 +28,6 @@ export async function sandbox_4() {
   let unique = list_unique(difference);
   return unique;
   let input = "Thursday, May 14⋅10:00 – 11:00am";
-  let date_time_zones = app_calendar_paste_convert(input);
+  let date_time_zones = app_calendar_paste_convert(input, error());
   return date_time_zones;
 }
