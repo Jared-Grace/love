@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -34,6 +35,7 @@ export function app_calendar_paste_main(context) {
   function lambda3(country) {
     let name2 = property_get(country, "name");
     let combined = text_combine(left, right);
+    let combined2 = text_combine_multiple(list);
     let component = html_button(root, "Request date/time for ", lambda2);
   }
   each(countries, lambda3);
