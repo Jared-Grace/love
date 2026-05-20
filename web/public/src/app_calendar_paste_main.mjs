@@ -47,8 +47,7 @@ export function app_calendar_paste_main(context) {
       let red = false;
       function lambda(input) {
         try {
-          let country2 = error();
-          let r = app_calendar_paste_convert(input, country2);
+          let r = app_calendar_paste_convert(input, country);
           let date_time_zones = property_get(r, "date_time_zones");
           let joined = list_join_newline_2([
             "Do you want me to share the word of God on this day and time?",
