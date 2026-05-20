@@ -27,6 +27,7 @@ export function app_calendar_paste_convert(input) {
   let pakistan = {
     name: pakistan_name,
     zone: pakistan_zone,
+    flag: "🇵🇰",
   };
   let countries = [pakistan, kenya];
   let country = pakistan;
