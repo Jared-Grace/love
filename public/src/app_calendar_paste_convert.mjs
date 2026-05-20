@@ -30,7 +30,7 @@ export function app_calendar_paste_convert(input) {
     flag: "🇵🇰",
   };
   let kenya = {
-    name: "Pakistan",
+    name: "Kenya",
     zone: pakistan_zone,
     flag: "🇵🇰",
   };
