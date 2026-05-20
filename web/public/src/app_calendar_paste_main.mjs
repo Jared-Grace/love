@@ -14,6 +14,11 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main(context) {
   let root = property_get(context, "root");
   let output = null;
+  let p = html_p_text(
+    root,
+    "Click to paste the date/time from Google Calendar to copy for Pakistan",
+  );
+  let component = html_button(root, "Request date/time", lambda2);
   async function lambda2() {
     html_clear(output);
     let lines = null;
@@ -40,10 +45,5 @@ export function app_calendar_paste_main(context) {
     }
     await clipboard_transform(lambda);
   }
-  let p = html_p_text(
-    root,
-    "Click to paste the date/time from Google Calendar to copy for Pakistan",
-  );
-  let component = html_button(root, "Request date/time", lambda2);
   output = html_p(root);
 }
