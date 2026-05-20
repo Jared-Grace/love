@@ -29,9 +29,10 @@ export function app_calendar_paste_main(context) {
     flag: "🇰🇪",
   };
   let countries = [pakistan, kenya];
-  function lambda3(country) {}
+  function lambda3(country) {
+    let component = html_button(root, "Request date/time", lambda2);
+  }
   each(countries, lambda3);
-  let component = html_button(root, "Request date/time", lambda2);
   async function lambda2() {
     html_clear(output);
     let lines = null;
