@@ -1,6 +1,5 @@
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { error } from "../../../love/public/src/error.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_font_color_set_red } from "../../../love/public/src/html_font_color_set_red.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -34,9 +33,14 @@ export function app_calendar_paste_main(context) {
   let countries = [pakistan, kenya];
   function lambda3(country) {
     let name2 = property_get(country, "name");
-    let combined = text_combine(left, right);
-    let combined2 = text_combine_multiple(list);
-    let component = html_button(root, "Request date/time for ", lambda2);
+    let flag = property_get(country, "flag");
+    let combined2 = text_combine_multiple([
+      "Request date/time for ",
+      name2,
+      " ",
+      flag,
+    ]);
+    let component = html_button(root, combined2, lambda2);
   }
   each(countries, lambda3);
   async function lambda2() {
