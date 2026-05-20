@@ -34,7 +34,6 @@ export function app_calendar_paste_convert(input) {
     zone: "Africa/Nairobi",
     flag: "🇰🇪",
   };
-  let country = pakistan;
   const zone_input = "America/New_York";
   let country_speaker = "USA";
   let split = text_split(input, "⋅");
