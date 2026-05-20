@@ -18,6 +18,8 @@ export function app_calendar_paste_main(context) {
     root,
     "Click to paste the date/time from Google Calendar to copy for Pakistan",
   );
+  function lambda3(item) {}
+  each(list, lambda3);
   let component = html_button(root, "Request date/time", lambda2);
   async function lambda2() {
     html_clear(output);
