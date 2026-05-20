@@ -22,16 +22,15 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
-export function app_calendar_paste_convert(input) {$a
-  let pakistan_name = "Pakistan";
+export function app_calendar_paste_convert(input) {
   const pakistan_zone = "Asia/Karachi";
   let pakistan = {
-    name: pakistan_name,
+    name: "Pakistan",
     zone: pakistan_zone,
     flag: "🇵🇰",
   };
   let kenya = {
-    name: pakistan_name,
+    name: "Pakistan",
     zone: pakistan_zone,
     flag: "🇵🇰",
   };
