@@ -56,14 +56,15 @@ export function app_calendar_paste_convert(input) {
   const r4 = end.diff(start, ["hours", "minutes"]);
   let minutes = property_get(r4, "minutes");
   let hours = property_get(r4, "hours");
+  const converted_info = {
+    start,
+    zone: pakistan_zone,
+    country: pakistan_name,
+    parenthesis: false,
+    flag: "🇵🇰",
+  };
   let formats = [
-    {
-      start,
-      zone: pakistan_zone,
-      country: pakistan_name,
-      parenthesis: false,
-      flag: "🇵🇰",
-    },
+    converted_info,
     {
       start,
       zone: zone_input,
