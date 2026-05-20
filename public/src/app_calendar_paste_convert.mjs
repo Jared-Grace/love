@@ -58,9 +58,9 @@ export function app_calendar_paste_convert(input) {
   let hours = property_get(r4, "hours");
   const converted_info = {
     start,
-    zone: pakistan_zone,
-    country: pakistan_name,
     parenthesis: false,
+    zone: pakistan_zone,
+    name: pakistan_name,
     flag: "🇵🇰",
   };
   let formats = [
@@ -68,7 +68,7 @@ export function app_calendar_paste_convert(input) {
     {
       start,
       zone: zone_input,
-      country: country_speaker,
+      name: country_speaker,
       parenthesis: true,
       flag: "🇺🇸",
     },
@@ -76,13 +76,13 @@ export function app_calendar_paste_convert(input) {
   function lambda(item) {
     let start = property_get(item, "start");
     let zone = property_get(item, "zone");
-    let country = property_get(item, "country");
+    let name = property_get(item, "name");
     let parenthesis = property_get(item, "parenthesis");
     let flag = property_get(item, "flag");
     const start_zoned = date_time_zone_set_zone(start, zone);
     let start_formatted = date_time_zone_format_to_time_space(start_zoned);
     let t = text_combine_multiple([
-      country,
+      name,
       " Meeting start time: ",
       start_formatted,
       " ",
