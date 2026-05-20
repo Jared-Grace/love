@@ -60,11 +60,8 @@ export function app_calendar_paste_convert(input) {
   const converted_info = {
     start,
     parenthesis: false,
-    zone: pakistan_zone,
-    name: pakistan_name,
-    flag: "🇵🇰",
   };
-  object_merge(to, from);
+  object_merge(converted_info, country);
   let formats = [
     converted_info,
     {
