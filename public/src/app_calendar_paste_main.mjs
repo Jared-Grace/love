@@ -1,5 +1,4 @@
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_font_color_set_red } from "../../../love/public/src/html_font_color_set_red.mjs";
 import { each } from "../../../love/public/src/each.mjs";
