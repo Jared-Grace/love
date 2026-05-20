@@ -1,3 +1,4 @@
+import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_font_color_set_red } from "../../../love/public/src/html_font_color_set_red.mjs";
@@ -9,16 +10,15 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { clipboard_transform } from "../../../love/public/src/clipboard_transform.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_calendar_paste_main(context) {
   let root = property_get(context, "root");
   let output = null;
-  let p = html_p_text(
-    root,
-    "Click to paste the date/time from Google Calendar to copy for Pakistan",
-  );
+  let p = html_p_text_multiple(root, [
+    "Click to paste the date/time from Google Calendar to copy",
+    "Request date/time for: ",
+  ]);
   let pakistan = {
     name: "Pakistan",
     zone: "Asia/Karachi",
@@ -38,12 +38,7 @@ export function app_calendar_paste_main(context) {
   function lambda3(country) {
     let name2 = property_get(country, "name");
     let flag = property_get(country, "flag");
-    let combined2 = text_combine_multiple([
-      "Request date/time for ",
-      name2,
-      " ",
-      flag,
-    ]);
+    let combined2 = text_combine_multiple([name2, " ", flag]);
     let component = html_button(root, combined2, lambda2);
     async function lambda2() {
       html_clear(output);
