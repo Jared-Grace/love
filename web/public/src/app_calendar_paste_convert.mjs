@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { word_count_pluralize } from "../../../love/public/src/word_count_pluralize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -63,6 +64,7 @@ export function app_calendar_paste_convert(input) {
     name: pakistan_name,
     flag: "🇵🇰",
   };
+  object_merge(to, from);
   let formats = [
     converted_info,
     {
