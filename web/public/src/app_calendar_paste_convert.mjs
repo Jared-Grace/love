@@ -22,6 +22,7 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input) {
+  let countries = [pakistan, kenya];
   const zone_input = "America/New_York";
   const zone_output = "Asia/Karachi";
   let country_main = "Pakistan";
