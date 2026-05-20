@@ -23,17 +23,6 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input, country) {
-  const pakistan_zone = "Asia/Karachi";
-  let pakistan = {
-    name: "Pakistan",
-    zone: pakistan_zone,
-    flag: "🇵🇰",
-  };
-  let kenya = {
-    name: "Kenya",
-    zone: "Africa/Nairobi",
-    flag: "🇰🇪",
-  };
   const zone_input = "America/New_York";
   let country_speaker = "USA";
   let split = text_split(input, "⋅");
