@@ -18,6 +18,17 @@ export function app_calendar_paste_main(context) {
     root,
     "Click to paste the date/time from Google Calendar to copy for Pakistan",
   );
+  let pakistan = {
+    name: "Pakistan",
+    zone: pakistan_zone,
+    flag: "🇵🇰",
+  };
+  let kenya = {
+    name: "Kenya",
+    zone: "Africa/Nairobi",
+    flag: "🇰🇪",
+  };
+  let countries = [pakistan, kenya];
   function lambda3(item) {}
   each(list, lambda3);
   let component = html_button(root, "Request date/time", lambda2);
