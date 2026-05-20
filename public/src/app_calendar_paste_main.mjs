@@ -22,7 +22,7 @@ export function app_calendar_paste_main(context) {
   );
   let pakistan = {
     name: "Pakistan",
-    zone: pakistan_zone,
+    zone: "Asia/Karachi",
     flag: "🇵🇰",
   };
   let kenya = {
