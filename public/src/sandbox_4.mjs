@@ -11,6 +11,11 @@ import { properties_delete_multiple } from "../../../love/public/src/properties_
 import { me_calendar } from "../../../love/public/src/me_calendar.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 export async function sandbox_4() {
+  let input = "Tuesday, May 5⋅6:00 – 7:00am";
+  return input;
+  let country = error();
+  let date_time_zones = app_calendar_paste_convert(input, country);
+  return date_time_zones;
   let list = await me_calendar();
   property_transform_multiple_trim(list, "name");
   let properties = ["description", "location"];
@@ -28,8 +33,4 @@ export async function sandbox_4() {
   let difference = list_difference(calendar_names, mapped);
   let unique = list_unique(difference);
   return unique;
-  let input = "Tuesday, May 5⋅6:00 – 7:00am";
-  let country = error();
-  let date_time_zones = app_calendar_paste_convert(input, country);
-  return date_time_zones;
 }
