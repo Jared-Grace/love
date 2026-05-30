@@ -28,7 +28,7 @@ export async function sandbox_4() {
   let difference = list_difference(calendar_names, mapped);
   let unique = list_unique(difference);
   return unique;
-  let input = "Thursday, May 14⋅10:00 – 11:00am";
+  let input = "Tuesday, May 5⋅6:00 – 7:00am";
   let country = error();
   let date_time_zones = app_calendar_paste_convert(input, country);
   return date_time_zones;
