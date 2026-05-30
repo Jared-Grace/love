@@ -34,7 +34,12 @@ export function app_calendar_paste_main(context) {
     zone: "Asia/Dhaka",
     flag: "🇧🇩",
   };
-  let countries = [pakistan, kenya, bangladesh];
+  let india = {
+    name: "India",
+    zone: "Asia/Kolkata",
+    flag: "🇮🇳",
+  };
+  let countries = [pakistan, kenya, bangladesh, india];
   function lambda3(country) {
     let name2 = property_get(country, "name");
     let flag = property_get(country, "flag");
