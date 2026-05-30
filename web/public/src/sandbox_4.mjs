@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { object_pick_try_single_value_multiple } from "../../../love/public/src/object_pick_try_single_value_multiple.mjs";
@@ -12,7 +11,6 @@ import { me_calendar } from "../../../love/public/src/me_calendar.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 export async function sandbox_4() {
   let input = "Tuesday, May 5⋅6:00 – 7:00am";
-  let country = error();
   let date_time_zones = app_calendar_paste_convert(input, country);
   return date_time_zones;
   let list = await me_calendar();
