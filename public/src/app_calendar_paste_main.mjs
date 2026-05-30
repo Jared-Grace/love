@@ -1,3 +1,4 @@
+import { country_pakistan } from "../../../love/public/src/country_pakistan.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -19,11 +20,7 @@ export function app_calendar_paste_main(context) {
     "Click to paste the date/time from Google Calendar to copy",
     "Request date/time for: ",
   ]);
-  let pakistan = {
-    name: "Pakistan",
-    zone: "Asia/Karachi",
-    flag: "🇵🇰",
-  };
+  let pakistan = country_pakistan();
   let kenya = {
     name: "Kenya",
     zone: "Africa/Nairobi",
