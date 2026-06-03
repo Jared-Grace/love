@@ -1,3 +1,4 @@
+import { list_filter_text_includes_not } from "../../../love/public/src/list_filter_text_includes_not.mjs";
 import { ebible_versions_english_choices_browser } from "../../../love/public/src/ebible_versions_english_choices_browser.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -44,6 +45,7 @@ export async function app_reply_main(context) {
   let root = property_get(r, "root");
   let en = property_get(r, "en");
   let encouragement = property_get(r, "encouragement");
+  let filtered = list_filter_text_includes_not(mapped2, part);
   let bible_texts = [];
   let responses = [];
   let responses_buttons = [];
