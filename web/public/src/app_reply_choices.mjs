@@ -1,3 +1,4 @@
+import { app_reply_choices_whatsapp } from "../../../love/public/src/app_reply_choices_whatsapp.mjs";
 import { app_reply_glory } from "../../../love/public/src/app_reply_glory.mjs";
 import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { text_combine_today } from "../../../love/public/src/text_combine_today.mjs";
@@ -428,7 +429,7 @@ export function app_reply_choices() {
       response: emoji_pray() + " What do you mean?",
     },
     {
-      text: emoji_phone() + " WhatsApp",
+      text: app_reply_choices_whatsapp(),
       response: emoji_phone() + " WhatsApp: +1-904-314-4052",
     },
     will,
