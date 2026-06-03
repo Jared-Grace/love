@@ -45,7 +45,7 @@ export async function app_reply_main(context) {
   let root = property_get(r, "root");
   let en = property_get(r, "en");
   let encouragement = property_get(r, "encouragement");
-  let filtered = list_filter_text_includes_not(mapped2, part);
+  let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
   let bible_texts = [];
   let responses = [];
   let responses_buttons = [];
