@@ -181,6 +181,11 @@ export function ebible_languages() {
       bible_folder: "thaKJV",
       language_code: "tha",
     },
+    {
+      name: "Polish",
+      bible_folder: "polubg",
+      language_code: "pol",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
