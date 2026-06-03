@@ -1,3 +1,4 @@
+import { app_reply_choices_whatsapp } from "../../../love/public/src/app_reply_choices_whatsapp.mjs";
 import { emoji_fire } from "../../../love/public/src/emoji_fire.mjs";
 import { app_reply_glory } from "../../../love/public/src/app_reply_glory.mjs";
 import { ebible_language_arabic } from "../../../love/public/src/ebible_language_arabic.mjs";
@@ -61,7 +62,7 @@ export function app_reply_main_shortcuts(
   let r_pk_1_c = shortcut_extend_response(r_pk_1, "c", c);
   let m = app_reply_give();
   let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
-  let w = app_reply_choices_whatsapp()
+  let w = app_reply_choices_whatsapp();
   let r_pk_1_w = shortcut_extend_response(r_pk_1, "w", w);
   let glory = app_reply_glory();
   let v = emoji_fire();
