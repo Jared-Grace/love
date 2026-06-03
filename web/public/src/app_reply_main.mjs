@@ -104,9 +104,11 @@ export async function app_reply_main(context) {
     list_empty(bible_texts);
     list_empty(responses);
     list_empty(responses_buttons);
-    if (false) {
+    let e = encouragement;
+    if (verse_count === 1) {
+      e = encouragement_singles;
     }
-    let taken = list_shuffle_take(encouragement, verse_count);
+    let taken = list_shuffle_take(e, verse_count);
     let reference_current = null;
     async function lambda6(reference) {
       reference_current = await app_reply_verses_add(
