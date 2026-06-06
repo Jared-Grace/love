@@ -8,7 +8,7 @@ export async function sermon_lines_translate_urdu(file_name) {
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let translated = await list_translate_openai(filtered, language);
   let list = list_pair_weave(filtered, translated);
-  if (0) {
+  if (10) {
     list = translated;
   }
   let joined = list_join_newline_2(list);
