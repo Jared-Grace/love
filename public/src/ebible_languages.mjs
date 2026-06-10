@@ -186,6 +186,11 @@ export function ebible_languages() {
       bible_folder: "polubg",
       language_code: "pol",
     },
+    {
+      name: "Malay",
+      bible_folder: "zlmKSZI",
+      language_code: "zlm",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
