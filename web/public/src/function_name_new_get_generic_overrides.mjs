@@ -10,7 +10,7 @@ import { lambda_right } from "../../../love/public/src/lambda_right.mjs";
 import { function_name_part_last_delete } from "../../../love/public/src/function_name_part_last_delete.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export function function_name_new_get_generic_overrides() {
-  let r2 = {
+  let r = {
     a: text_combine,
     c: function_name_combine,
     d: function_name_parts_delete_comma,
@@ -23,5 +23,5 @@ export function function_name_new_get_generic_overrides() {
     2: function_name_to_part_replace_last_2,
     3: function_name_to_part_replace_last_3,
   };
-  return r2;
+  return r;
 }
