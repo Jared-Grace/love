@@ -66,7 +66,7 @@ export async function function_aliases_restore() {
       sei: "string_empty_is",
       lf: "list_first",
       ls: "list_second",
-      or: "object_replace",
+      ["or"]: "object_replace",
       st: "object_property_set",
       ntn: "js_node_type_not_is",
       oc: "object_copy",
