@@ -19,6 +19,9 @@ export async function function_name_new_get_args(
     plugin_fn,
   ));
   let args_run = list_concat_single(f_name_old, split);
+  log(function_name_new_get_args.name, {
+    args_run,
+  });
   let f_name_new = await function_run(plugin_fn, args_run);
   let r2 = {
     f_name_new,
