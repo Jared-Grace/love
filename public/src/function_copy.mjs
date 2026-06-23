@@ -5,7 +5,6 @@ import { js_identifier_rename } from "../../../love/public/src/js_identifier_ren
 import { file_copy } from "../../../love/public/src/file_copy.mjs";
 import { user_repo_path_combine } from "../../../love/public/src/user_repo_path_combine.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 export async function function_copy(f_name_old, f_name_new) {
@@ -17,19 +16,17 @@ export async function function_copy(f_name_old, f_name_new) {
   let unaliased_old = property_get(r, "unaliased");
   let f_path_old = property_get(r, "f_path");
   ("not sure if should be unaliasing the new name - why would an alias already exist for a function that does not exist yet?");
-  let r2 = await function_name_unalias(f_name_new);
-  let name = property_get(r2, "unaliased");
-  await function_rename_check(name);
-  let f_path = function_name_to_path(name);
+  await function_rename_check(f_name_new);
+  let f_path = function_name_to_path(f_name_new);
   let f_path_new = await user_repo_path_combine(f_path);
   await file_copy(f_path_old, f_path_new);
   function lambda(ast) {
-    js_identifier_rename(ast, unaliased_old, name);
+    js_identifier_rename(ast, unaliased_old, f_name_new);
   }
-  await function_transform(name, lambda);
+  await function_transform(f_name_new, lambda);
   let r3 = {
     f_path_new,
-    name,
+    name: f_name_new,
   };
   return r3;
 }
