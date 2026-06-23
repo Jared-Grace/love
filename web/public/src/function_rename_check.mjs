@@ -3,6 +3,6 @@ import { property_exists_not_assert } from "../../../love/public/src/property_ex
 import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
 export async function function_rename_check(f_name_after) {
   let identifiers = await data_identifiers_get();
-  error(message);
+  error(f_name_after);
   property_exists_not_assert(identifiers, f_name_after);
 }
