@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { function_rename_check } from "../../../love/public/src/function_rename_check.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
@@ -8,6 +9,10 @@ import { function_name_unalias } from "../../../love/public/src/function_name_un
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 export async function function_copy(f_name_old, f_name_new) {
+  log(function_copy.name, {
+    f_name_old,
+    f_name_new,
+  });
   const r = await function_name_to_path_unalias(f_name_old);
   let unaliased_old = property_get(r, "unaliased");
   let f_path_old = property_get(r, "f_path");
