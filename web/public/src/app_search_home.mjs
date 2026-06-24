@@ -1,3 +1,4 @@
+import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -38,6 +39,7 @@ export function app_search_home(context) {
   html_focus(input);
   const text = "Search";
   html_button_wide(root, text, search);
+  let h = html_hr(root2);
   let div_results = html_div(root);
   async function search() {
     let query = html_value_get(input);
