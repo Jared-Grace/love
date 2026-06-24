@@ -1,3 +1,4 @@
+import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { html_br_2 } from "../../../p_np/public/src/html_br_2.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -37,6 +38,8 @@ export function app_search_home(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
+  function lambda2() {}
+  html_on_keydown(component, lambda2);
   const text = "Search";
   html_button_wide(root, text, search);
   html_br_2(root);
