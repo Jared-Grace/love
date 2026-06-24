@@ -1,3 +1,4 @@
+import { html_br_2 } from "../../../p_np/public/src/html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -90,6 +91,7 @@ export async function app_search_results(context, div_results) {
     let component = html_button_wide(expand_all_div, c2 + " all", lambda6);
   }
   expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
+  html_br_2(root);
   let results = object_to_list(dictionary);
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
