@@ -110,7 +110,7 @@ export async function app_search_results(context, div_results) {
       html_border_radius(div_verse, "1em");
       html_border(div_verse, "0.2em", "lightgreen");
       html_border_style(div_verse, "solid");
-      html_margin(b2, value);
+      html_margin(div_verse, "0.2em");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
