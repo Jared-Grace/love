@@ -40,7 +40,7 @@ export function app_search_home(context) {
   html_width_full(input);
   html_focus(input);
   let f = html_on_enter_lambda(search);
-  html_on_keydown(component, f);
+  html_on_keydown(input, f);
   const text = "Search";
   html_button_wide(root, text, search);
   html_br_2(root);
