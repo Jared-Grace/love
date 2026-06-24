@@ -1,3 +1,4 @@
+import { html_border_style } from "../../../p_np/public/src/html_border_style.mjs";
 import { html_border } from "../../../love/public/src/html_border.mjs";
 import { html_border_radius } from "../../../love/public/src/html_border_radius.mjs";
 import { html_br_2 } from "../../../p_np/public/src/html_br_2.mjs";
@@ -107,6 +108,7 @@ export async function app_search_results(context, div_results) {
       let div_verse = html_div(div_results);
       html_border_radius(div_verse, "1em");
       html_border(div_verse, "0.5em", "darkgreen");
+      html_border_style(component2, border_style);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
