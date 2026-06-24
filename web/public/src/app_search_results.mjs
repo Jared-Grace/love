@@ -106,7 +106,7 @@ export async function app_search_results(context, div_results) {
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);
       html_border_radius(div_verse, "1em");
-      html_border(component2, border_width, border_color);
+      html_border(div_verse, "0.5em", "darkgreen");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
