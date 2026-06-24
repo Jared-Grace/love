@@ -108,7 +108,7 @@ export async function app_search_results(context, div_results) {
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);
       html_border_radius(div_verse, "1em");
-      html_border(div_verse, "0.2em", "lightgreen");
+      html_border(div_verse, "0.2em", "green");
       html_border_style(div_verse, "solid");
       html_margin(div_verse, "0.2em");
       let reference = ebible_parts_chapter_code_to_reference(
