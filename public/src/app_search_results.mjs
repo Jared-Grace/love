@@ -1,3 +1,4 @@
+import { html_border } from "../../../love/public/src/html_border.mjs";
 import { html_border_radius } from "../../../love/public/src/html_border_radius.mjs";
 import { html_br_2 } from "../../../p_np/public/src/html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
@@ -104,7 +105,8 @@ export async function app_search_results(context, div_results) {
     }
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);
-      html_border_radius(div_verse, "1em");html_border
+      html_border_radius(div_verse, "1em");
+      html_border(component2, border_width, border_color);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
