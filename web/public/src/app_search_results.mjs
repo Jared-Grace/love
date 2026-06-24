@@ -91,7 +91,7 @@ export async function app_search_results(context, div_results) {
     let component = html_button_wide(expand_all_div, c2 + " all", lambda6);
   }
   expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
-  html_br_2(root);
+  html_br_2(div_results);
   let results = object_to_list(dictionary);
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
