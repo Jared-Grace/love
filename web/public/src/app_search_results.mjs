@@ -119,7 +119,8 @@ export async function app_search_results(context, div_results) {
       let b = null;
       async function click() {
         html_remove(b);
-        html_button_copy_width_full(div_verse, copy);
+        let cb = html_button_copy_width_full(div_verse, copy);
+        html_margin(cb, "0.2em");
         function lambda3() {
           let mapped4 = list_map_property(languages_chosen, "language_code");
           list_reverse(mapped4);
