@@ -1,3 +1,4 @@
+import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_margin } from "../../../love/public/src/html_margin.mjs";
 import { html_border_style } from "../../../p_np/public/src/html_border_style.mjs";
 import { html_border } from "../../../love/public/src/html_border.mjs";
@@ -110,7 +111,7 @@ export async function app_search_results(context, div_results) {
       html_border_radius(div_verse, "1em");
       html_border(div_verse, "0.2em", "green");
       html_border_style(div_verse, "solid");
-      html_margin(div_verse, "0.2em");
+      html_style_margin_y(div_verse, "0.2em");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
@@ -120,7 +121,7 @@ export async function app_search_results(context, div_results) {
       async function click() {
         html_remove(b);
         let cb = html_button_copy_width_full(div_verse, copy);
-        html_margin(cb, "0.2em");
+        html_style_margin_y(cb, "0.2em");
         function lambda3() {
           let mapped4 = list_map_property(languages_chosen, "language_code");
           list_reverse(mapped4);
@@ -132,7 +133,7 @@ export async function app_search_results(context, div_results) {
           });
         }
         let oc = html_button_wide(div_verse, "Open chapter", lambda3);
-        html_margin(oc, "0.2em");
+        html_style_margin_y(oc, "0.2em");
         let bible_texts = [];
         await app_reply_verses_add(
           en,
