@@ -130,7 +130,8 @@ export async function app_search_results(context, div_results) {
             l: joined,
           });
         }
-        html_button_wide(div_verse, "Open chapter", lambda3);
+        let oc = html_button_wide(div_verse, "Open chapter", lambda3);
+        html_margin(oc, "0.2em");
         let bible_texts = [];
         await app_reply_verses_add(
           en,
@@ -147,6 +148,7 @@ export async function app_search_results(context, div_results) {
         }
       }
       b = html_button_wide(div_verse, reference, click);
+      html_margin(b, "0.2em");
       property_set_exists_not(b, "click", click);
       return b;
     }
