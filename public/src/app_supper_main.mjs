@@ -1,3 +1,4 @@
+import { ebible_folder_tagalog } from "../../../love/public/src/ebible_folder_tagalog.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
