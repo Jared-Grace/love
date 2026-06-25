@@ -1,3 +1,4 @@
+import { html_div_text_curried } from "../../../love/public/src/html_div_text_curried.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -27,11 +28,7 @@ export async function app_supper_main(context) {
   let folders = invoke_multiple(folder_gets);
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
-  async function lambda3(ebible_folder) {
-    let verses = await app_supper_verses_get(ebible_folder);
-    return verses;
-  }
-  let waited = await list_map_unordered_async(folders, lambda3);
+  let waited = await list_map_unordered_async(folders, app_supper_verses_get);
   let r = list_first_remaining(waited);
   let remaining = property_get(r, "remaining");
   let verses_first = property_get(r, "first");
@@ -54,9 +51,7 @@ export async function app_supper_main(context) {
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
     let texts = list_map_property(list, "text");
-    function lambda4(text) {
-      html_div_text(p, text);
-    }
+    let lambda4 = html_div_text_curried(p);
     each(texts, lambda4);
   }
   each(verses_first, lambda2);
