@@ -53,16 +53,14 @@ export function app_calendar_paste_convert(input, country) {
     parenthesis: false,
   };
   object_merge(converted_info, country);
-  let formats = [
-    converted_info,
-    {
-      start,
-      parenthesis: true,
-      zone: zone_input,
-      name: country_speaker,
-      flag: "🇺🇸",
-    },
-  ];
+  const speaker_info = {
+    start,
+    parenthesis: true,
+    zone: zone_input,
+    name: country_speaker,
+    flag: "🇺🇸",
+  };
+  let formats = [converted_info, speaker_info];
   function lambda(item) {
     let start = property_get(item, "start");
     let zone = property_get(item, "zone");
