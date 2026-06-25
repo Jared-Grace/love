@@ -16,7 +16,7 @@ import { app_supper_verses_get } from "../../../love/public/src/app_supper_verse
 export async function app_supper_main(context) {
   let ebible_folder = ebible_folder_cebuano;
   let folder_gets = [ebible_folder];
-  let mapped = invoke_multiple(list_fns);
+  let mapped = invoke_multiple(folder_gets);
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
   let verses = await app_supper_verses_get(ebible_folder);
