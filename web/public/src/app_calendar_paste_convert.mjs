@@ -1,4 +1,3 @@
-import { country_usa } from "../../../love/public/src/country_usa.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { word_count_pluralize } from "../../../love/public/src/word_count_pluralize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -24,7 +23,11 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input, country) {
-  const speaker_country = country_usa();
+  const speaker_country = {
+    zone: "Asia/Manila",
+    name: "Philippines",
+    flag: "🇵🇭",
+  };
   let zone = property_get(speaker_country, "zone");
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
