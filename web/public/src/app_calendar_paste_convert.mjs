@@ -23,7 +23,7 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input, country) {
-  const zone_input = "America/New_York";
+  const zone = "America/New_York";
   let country_speaker = "USA";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
@@ -41,10 +41,10 @@ export function app_calendar_paste_convert(input, country) {
     first = text_combine(first, am_pm);
   }
   let date = property_get(r2, "first");
-  const start = app_calendar_paste_convert_parse(date, first, zone_input);
-  const end = app_calendar_paste_convert_parse(date, second, zone_input);
+  const start = app_calendar_paste_convert_parse(date, first, zone);
+  const end = app_calendar_paste_convert_parse(date, second, zone);
   const dts = [start, end];
-  date_time_zone_future_is_assert_multiple(dts, zone_input);
+  date_time_zone_future_is_assert_multiple(dts, zone);
   const r4 = end.diff(start, ["hours", "minutes"]);
   let minutes = property_get(r4, "minutes");
   let hours = property_get(r4, "hours");
@@ -56,10 +56,13 @@ export function app_calendar_paste_convert(input, country) {
   const speaker_info = {
     start,
     parenthesis: true,
-    zone: zone_input,
+  };
+  const speaker_country = {
+    zone: zone,
     name: country_speaker,
     flag: "🇺🇸",
   };
+  object_merge(speaker_info, speaker_country);
   let formats = [converted_info, speaker_info];
   function lambda(item) {
     let start = property_get(item, "start");
