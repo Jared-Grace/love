@@ -13,9 +13,11 @@ import { html_mobile_default } from "../../../love/public/src/html_mobile_defaul
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 export async function app_supper_main(context) {
   let ebible_folder = ebible_folder_cebuano;
   let folder_gets = [ebible_folder];
+  folder_gets = [ebible_folder_cebuano, ebible_folder_english];
   let folders = invoke_multiple(folder_gets);
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
