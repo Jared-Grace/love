@@ -5,4 +5,6 @@ export function list_first_remaining(list) {
   let value_get = list_skip_1;
   let r = list_first_second_generic(list, value_get, property_name);
   return r;
+  if (false) {
+  }
 }
