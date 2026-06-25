@@ -22,9 +22,10 @@ export async function app_supper_main(context) {
   let folders = invoke_multiple(folder_gets);
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
-  let verses = await app_supper_verses_get(ebible_folder);
-  async function lambda3(item2) {}
-  let waited = await list_map_unordered_async(list, lambda3);
+  async function lambda3(ebible_folder) {
+    let verses = await app_supper_verses_get(ebible_folder);
+  }
+  let waited = await list_map_unordered_async(folders, lambda3);
   let previous_chapter_code = null;
   function lambda2(v) {
     let n = list_first_not_is(verses, v);
