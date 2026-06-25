@@ -27,6 +27,8 @@ export async function app_supper_main(context) {
     return verses;
   }
   let waited = await list_map_unordered_async(folders, lambda3);
+  function lambda4(item2) {}
+  each(list, lambda4);
   let previous_chapter_code = null;
   function lambda2(v) {
     let n = list_first_not_is(verses, v);
