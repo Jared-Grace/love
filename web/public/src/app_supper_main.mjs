@@ -1,3 +1,4 @@
+import { list_find_property_curried_right_2 } from "../../../love/public/src/list_find_property_curried_right_2.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -44,6 +45,7 @@ export async function app_supper_main(context) {
     previous_chapter_code = chapter_code;
     let text = property_get(v, "text");
     let reference = property_get(v, "reference");
+    let c = list_find_property_curried_right_2(property_name, property_value);
     let item2 = list_find_property(list, "reference", reference);
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
