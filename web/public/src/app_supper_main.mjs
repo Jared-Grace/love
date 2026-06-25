@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
@@ -27,6 +28,7 @@ export async function app_supper_main(context) {
     return verses;
   }
   let waited = await list_map_unordered_async(folders, lambda3);
+  let first = list_first(list);
   function lambda4(verses) {
     let previous_chapter_code = null;
     function lambda2(v) {
