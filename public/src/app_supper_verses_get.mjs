@@ -14,7 +14,7 @@ export async function app_supper_verses_get() {
   let b = browser_is();
   if (b) {
     async function get() {
-      let ebible_folder = error();
+  let ebible_folder = ebible_folder_english();
       let destination = app_supper_verses_get_upload_destination(ebible_folder);
       let project_url = firebase_storage_url_project_jg();
       let v = await firebase_storage_download_json_decompress(
