@@ -23,11 +23,7 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input, country) {
-  const speaker_country = {
-    zone: "America/New_York",
-    name: "USA",
-    flag: "🇺🇸",
-  };
+  const speaker_country = country_usa();
   let zone = property_get(speaker_country, "zone");
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
@@ -104,3 +100,11 @@ export function app_calendar_paste_convert(input, country) {
   };
   return r5;
 }
+function country_usa() {
+  return {
+    zone: "America/New_York",
+    name: "USA",
+    flag: "🇺🇸",
+  };
+}
+
