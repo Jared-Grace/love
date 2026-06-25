@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_first_not_is } from "../../../love/public/src/list_first_not_is.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_hr_2 } from "../../../love/public/src/html_hr_2.mjs";
@@ -14,7 +15,8 @@ import { app_supper_verses_get } from "../../../love/public/src/app_supper_verse
 export async function app_supper_main(context) {
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
-  let verses = await app_supper_verses_get(error());
+  let ebible_folder = error();
+  let verses = await app_supper_verses_get(ebible_folder);
   let previous_chapter_code = null;
   function lambda2(v) {
     let n = list_first_not_is(verses, v);
