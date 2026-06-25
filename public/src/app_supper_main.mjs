@@ -1,7 +1,6 @@
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_property_curried_right_2 } from "../../../love/public/src/list_find_property_curried_right_2.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
@@ -48,7 +47,6 @@ export async function app_supper_main(context) {
     let reference = property_get(v, "reference");
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
-    let item2 = list_find_property(list, "reference", reference);
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");
