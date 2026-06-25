@@ -31,8 +31,8 @@ export async function app_supper_main(context) {
   let verses_first = list_first(waited);
   let previous_chapter_code = null;
   function lambda2(v) {
-    let n = list_first_not_is(verses, v);
     let chapter_code = property_get(v, "chapter_code");
+    let n = list_first_not_is(verses, v);
     if (n) {
       if (equal_not(chapter_code, previous_chapter_code)) {
         html_hr_2(root);
