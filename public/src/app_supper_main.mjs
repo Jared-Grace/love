@@ -29,7 +29,7 @@ export async function app_supper_main(context) {
     return verses;
   }
   let waited = await list_map_unordered_async(folders, lambda3);
-  let verses_first = list_first_remaining(waited);
+  let {first,remaining} = list_first_remaining(waited);
   let previous_chapter_code = null;
   function lambda2(v) {
     let chapter_code = property_get(v, "chapter_code");
