@@ -23,7 +23,8 @@ export async function app_supper_main(context) {
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
   async function lambda3(ebible_folder) {
-    let verses = await app_supper_verses_get(ebible_folder);$r,verses
+    let verses = await app_supper_verses_get(ebible_folder);
+    return verses;
   }
   let waited = await list_map_unordered_async(folders, lambda3);
   let previous_chapter_code = null;
