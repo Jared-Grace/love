@@ -1,3 +1,4 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
@@ -40,8 +41,8 @@ export async function app_supper_main(context) {
     }
     previous_chapter_code = chapter_code;
     let text = property_get(v, "text");
-    lfp;
     let reference = property_get(v, "reference");
+    let item2 = list_find_property(list, property_name, property_value);
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");
