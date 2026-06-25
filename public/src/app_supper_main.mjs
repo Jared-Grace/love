@@ -40,6 +40,7 @@ export async function app_supper_main(context) {
     }
     previous_chapter_code = chapter_code;
     let text = property_get(v, "text");
+    lfp;
     let reference = property_get(v, "reference");
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
