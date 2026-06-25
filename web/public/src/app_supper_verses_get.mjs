@@ -7,7 +7,7 @@ import { firebase_storage_download_json_decompress } from "../../../love/public/
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
-export async function app_supper_verses_get() {
+export async function app_supper_verses_get(ebible_folder) {
   let b = browser_is();
   if (b) {
     async function get() {
