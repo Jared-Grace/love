@@ -53,7 +53,9 @@ export async function app_supper_main(context) {
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
-    let mapped2 = list_map_property(list, property_name);
+    let mapped2 = list_map_property(list, "text");
+    function lambda4(item2) {}
+    each(list2, lambda4);
     html_div_text(p, text);
   }
   each(verses_first, lambda2);
