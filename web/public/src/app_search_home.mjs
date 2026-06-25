@@ -38,7 +38,7 @@ export function app_search_home(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
-  html_on_enter(search, input);
+  html_on_enter(input, search);
   const text = "Search";
   html_button_wide(root, text, search);
   html_br_2(root);
