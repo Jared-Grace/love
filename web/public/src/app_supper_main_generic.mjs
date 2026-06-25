@@ -2,7 +2,6 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { app_supper_main } from "../../../love/public/src/app_supper_main.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
