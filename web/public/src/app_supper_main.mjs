@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -48,6 +49,9 @@ export async function app_supper_main(context) {
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
+    log(app_supper_main.name, {
+      mapped,
+    });
     let texts = list_map_property(mapped, "text");
     html_div_text_multiple(p, texts);
   }
