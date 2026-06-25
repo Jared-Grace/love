@@ -27,26 +27,27 @@ export async function app_supper_main(context) {
     return verses;
   }
   let waited = await list_map_unordered_async(folders, lambda3);
-  function lambda4(item2) {}
-  each(list, lambda4);
-  let previous_chapter_code = null;
-  function lambda2(v) {
-    let n = list_first_not_is(verses, v);
-    let chapter_code = property_get(v, "chapter_code");
-    if (n) {
-      if (equal_not(chapter_code, previous_chapter_code)) {
-        html_hr_2(root);
+  function lambda4(ebible_folder) {
+    let previous_chapter_code = null;
+    function lambda2(v) {
+      let n = list_first_not_is(verses, v);
+      let chapter_code = property_get(v, "chapter_code");
+      if (n) {
+        if (equal_not(chapter_code, previous_chapter_code)) {
+          html_hr_2(root);
+        }
       }
+      previous_chapter_code = chapter_code;
+      let text = property_get(v, "text");
+      let reference = property_get(v, "reference");
+      let p = html_p(root);
+      let d = html_div_text_centered(p, reference);
+      html_font_color_set(d, "#aaa");
+      html_div_text(p, text);
     }
-    previous_chapter_code = chapter_code;
-    let text = property_get(v, "text");
-    let reference = property_get(v, "reference");
-    let p = html_p(root);
-    let d = html_div_text_centered(p, reference);
-    html_font_color_set(d, "#aaa");
-    html_div_text(p, text);
+    each(verses, lambda2);
   }
-  each(verses, lambda2);
+  each(waited, lambda4);
   html_hr_2(root);
   function lambda(item) {
     let p2 = html_p_text(
