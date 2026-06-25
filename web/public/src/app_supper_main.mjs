@@ -31,7 +31,7 @@ export async function app_supper_main(context) {
   let waited = await list_map_unordered_async(folders, lambda3);
   let r = list_first_remaining(waited);
   let remaining = property_get(r, "remaining");
-  let first = property_get(r, "first");
+  let verses_first = property_get(r, "first");
   let previous_chapter_code = null;
   function lambda2(v) {
     let chapter_code = property_get(v, "chapter_code");
@@ -51,7 +51,6 @@ export async function app_supper_main(context) {
     html_div_text(p, text);
   }
   each(verses_first, lambda2);
-  each(waited, lambda4);
   html_hr_2(root);
   function lambda(item) {
     let p2 = html_p_text(
