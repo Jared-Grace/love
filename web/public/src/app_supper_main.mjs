@@ -13,7 +13,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
 export async function app_supper_main(context) {
-  let ebible_folder = ebible_folder_cebuano();
+  let ebible_folder = ebible_folder_cebuano;
   let folders = [ebible_folder];
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
