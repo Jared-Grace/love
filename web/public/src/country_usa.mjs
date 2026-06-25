@@ -1,8 +1,8 @@
 export function country_usa() {
-  let r6 = {
+  let c = {
     zone: "America/New_York",
     name: "USA",
     flag: "🇺🇸",
   };
-  return r6;
+  return c;
 }
