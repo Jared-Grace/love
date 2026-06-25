@@ -1,5 +1,5 @@
+import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -53,7 +53,7 @@ export async function app_supper_main(context) {
       mapped,
     });
     let texts = list_map_property(mapped, "text");
-    html_div_text_multiple(p, texts);
+    html_p_text_multiple(p, texts);
   }
   each(verses_first, lambda2);
   html_hr_2(root);
