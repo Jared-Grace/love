@@ -25,11 +25,10 @@ import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input, country) {
   const speaker_country = {
     zone: "America/New_York",
-    name: country_speaker,
+    name: "USA",
     flag: "🇺🇸",
   };
   let zone = property_get(speaker_country, "zone");
-  let country_speaker = "USA";
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
   let time_range = property_get(r2, "second");
