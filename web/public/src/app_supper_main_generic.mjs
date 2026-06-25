@@ -45,7 +45,7 @@ export async function app_supper_main_generic(folder_gets, context) {
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
-    log(app_supper_main.name, {
+    log(app_supper_main_generic.name, {
       mapped,
     });
     let texts = list_map_property(mapped, "text");
