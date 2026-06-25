@@ -50,6 +50,8 @@ export async function app_supper_main(context) {
     html_font_color_set(d, "#aaa");
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
+    function lambda4(item2) {}
+    let mapped2 = list_map(list, lambda4);
     html_div_text(p, text);
   }
   each(verses_first, lambda2);
