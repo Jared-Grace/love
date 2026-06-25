@@ -1,3 +1,4 @@
+import { country_usa } from "../../../love/public/src/country_usa.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { word_count_pluralize } from "../../../love/public/src/word_count_pluralize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -100,11 +101,3 @@ export function app_calendar_paste_convert(input, country) {
   };
   return r5;
 }
-function country_usa() {
-  return {
-    zone: "America/New_York",
-    name: "USA",
-    flag: "🇺🇸",
-  };
-}
-
