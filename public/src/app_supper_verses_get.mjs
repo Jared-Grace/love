@@ -13,7 +13,7 @@ export async function app_supper_verses_get() {
   let b = browser_is();
   if (b) {
     async function get() {
-      let destination = app_supper_verses_get_upload_destination();
+      let destination = app_supper_verses_get_upload_destination(error());
       let project_url = firebase_storage_url_project_jg();
       let v = await firebase_storage_download_json_decompress(
         project_url,
