@@ -1,3 +1,4 @@
+import { ebible_folder_tagalog } from "../../../love/public/src/ebible_folder_tagalog.mjs";
 import { ebible_language_arabic } from "../../../love/public/src/ebible_language_arabic.mjs";
 import { ebible_language_bengali } from "../../../love/public/src/ebible_language_bengali.mjs";
 import { ebible_language_telugu } from "../../../love/public/src/ebible_language_telugu.mjs";
@@ -47,7 +48,7 @@ export function ebible_languages() {
     },
     {
       name: "Tagalog",
-      bible_folder: "tglulb",
+      bible_folder: ebible_folder_tagalog(),
       language_code: "tgl",
     },
     {
