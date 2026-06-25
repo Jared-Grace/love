@@ -45,11 +45,11 @@ export async function app_supper_main(context) {
     previous_chapter_code = chapter_code;
     let text = property_get(v, "text");
     let reference = property_get(v, "reference");
-    let c = list_find_property_curried_right_2("reference", reference);
-    let mapped = list_map(remaining, c);
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");
+    let c = list_find_property_curried_right_2("reference", reference);
+    let mapped = list_map(remaining, c);
     html_div_text(p, text);
   }
   each(verses_first, lambda2);
