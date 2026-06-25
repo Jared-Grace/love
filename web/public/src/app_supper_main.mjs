@@ -41,7 +41,6 @@ export async function app_supper_main(context) {
       }
     }
     previous_chapter_code = chapter_code;
-    let text = property_get(v, "text");
     let reference = property_get(v, "reference");
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
@@ -49,7 +48,7 @@ export async function app_supper_main(context) {
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
-    let texts = list_map_property(list, "text");
+    let texts = list_map_property(mapped, "text");
     html_div_text_multiple(p, texts);
   }
   each(verses_first, lambda2);
