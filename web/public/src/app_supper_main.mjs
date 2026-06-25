@@ -45,7 +45,7 @@ export async function app_supper_main(context) {
     previous_chapter_code = chapter_code;
     let text = property_get(v, "text");
     let reference = property_get(v, "reference");
-    let c = list_find_property_curried_right_2(property_name, property_value);
+    let c = list_find_property_curried_right_2("reference", reference);
     let item2 = list_find_property(list, "reference", reference);
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
