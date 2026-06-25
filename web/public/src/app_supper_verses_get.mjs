@@ -6,10 +6,8 @@ import { app_supper_verses_get_upload_destination } from "../../../love/public/s
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 export async function app_supper_verses_get() {
-  let ebible_folder = ebible_folder_english();
   let b = browser_is();
   if (b) {
     async function get() {
