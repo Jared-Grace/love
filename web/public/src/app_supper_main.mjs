@@ -1,4 +1,4 @@
-import { html_div_text_curried } from "../../../love/public/src/html_div_text_curried.mjs";
+import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -50,8 +50,7 @@ export async function app_supper_main(context) {
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
     let texts = list_map_property(list, "text");
-    let lambda4 = html_div_text_curried(p);
-    each(texts, lambda4);
+    html_div_text_multiple(p, texts);
   }
   each(verses_first, lambda2);
   html_hr_2(root);
