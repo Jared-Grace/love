@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_property_curried_right_2 } from "../../../love/public/src/list_find_property_curried_right_2.mjs";
@@ -51,7 +52,8 @@ export async function app_supper_main(context) {
     html_font_color_set(d, "#aaa");
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
-    list_add_first(list, item2);
+    list_add_first(mapped, v);
+    let mapped2 = list_map_property(list, property_name);
     html_div_text(p, text);
   }
   each(verses_first, lambda2);
