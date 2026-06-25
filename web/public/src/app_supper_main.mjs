@@ -29,7 +29,9 @@ export async function app_supper_main(context) {
     return verses;
   }
   let waited = await list_map_unordered_async(folders, lambda3);
-  let {first,remaining} = list_first_remaining(waited);
+  let r = list_first_remaining(waited);
+  let remaining = property_get(r, "remaining");
+  let first = property_get(r, "first");
   let previous_chapter_code = null;
   function lambda2(v) {
     let chapter_code = property_get(v, "chapter_code");
