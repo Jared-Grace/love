@@ -12,7 +12,6 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_hr_2 } from "../../../love/public/src/html_hr_2.mjs";
 import { html_bar_content_padding } from "../../../love/public/src/html_bar_content_padding.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
