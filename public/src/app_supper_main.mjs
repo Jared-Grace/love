@@ -24,7 +24,7 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 export async function app_supper_main(context) {
   let ebible_folder = ebible_folder_cebuano;
   let folder_gets = [ebible_folder];
-  folder_gets = [ebible_folder_cebuano, ebible_folder_english];
+  folder_gets = [ebible_folder_tagalog, ebible_folder_english];
   let folders = invoke_multiple(folder_gets);
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
