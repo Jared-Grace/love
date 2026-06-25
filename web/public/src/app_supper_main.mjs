@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { list_first_not_is } from "../../../love/public/src/list_first_not_is.mjs";
@@ -22,6 +23,8 @@ export async function app_supper_main(context) {
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
   let verses = await app_supper_verses_get(ebible_folder);
+  async function lambda3(item2) {}
+  let waited = await list_map_unordered_async(list, lambda3);
   let previous_chapter_code = null;
   function lambda2(v) {
     let n = list_first_not_is(verses, v);
