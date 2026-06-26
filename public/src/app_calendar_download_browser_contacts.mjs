@@ -24,6 +24,9 @@ export async function app_calendar_download_browser_contacts() {
   let r4 = app_calendar_whatsapp_phone();
   let name_properties = app_calendar_name_properties();
   let properties = list_concat_multiple([name_properties, [r4], id_properties]);
+  log(app_calendar_download_browser_contacts.name, {
+    properties,
+  });
   function lambda6(o) {
     let joined = object_pick_try_values_join_space(o, properties);
     return joined;
