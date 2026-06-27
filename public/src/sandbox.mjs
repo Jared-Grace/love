@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { function_new_text } from "../../../p_np/public/src/function_new_text.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { function_current_selects_nodes_ast } from "../../../p_np/public/src/function_current_selects_nodes_ast.mjs";
@@ -32,6 +33,7 @@ export async function sandbox() {
     "p",
   );
   let selects = await function_current_selects_nodes_ast();
+  let node = list_single(selects);
   return selects;
   await function_new_text(text, f_name);
   await function_current_selects_apply(js_statement_delete.name);
