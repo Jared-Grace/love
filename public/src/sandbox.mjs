@@ -1,3 +1,4 @@
+import { js_statements_with_string_starting_with } from "../../../p_np/public/src/js_statements_with_string_starting_with.mjs";
 import { js_function_node_unwrap } from "../../../love/public/src/js_function_node_unwrap.mjs";
 import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { js_statements_with_identifiers_named } from "../../../love/public/src/js_statements_with_identifiers_named.mjs";
@@ -25,8 +26,8 @@ export async function sandbox() {
   const f_name = app_gloss_bible_home_generic.name;
   await function_current_set(f_name);
   await function_node_select_args(
-    js_statements_with_identifiers_named.name,
-    "on_passage",
+    js_statements_with_string_starting_with.name,
+    "p",
   );
   await function_current_selects_apply(js_statement_delete.name);
   return r;
