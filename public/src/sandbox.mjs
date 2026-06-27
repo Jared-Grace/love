@@ -1,10 +1,10 @@
+import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { function_current_selects_nodes_ast } from "../../../p_np/public/src/function_current_selects_nodes_ast.mjs";
 import { js_statements_with_string_starting_with } from "../../../p_np/public/src/js_statements_with_string_starting_with.mjs";
 import { js_function_node_unwrap } from "../../../love/public/src/js_function_node_unwrap.mjs";
 import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { js_statements_with_identifiers_named } from "../../../love/public/src/js_statements_with_identifiers_named.mjs";
 import { js_statement_delete } from "../../../love/public/src/js_statement_delete.mjs";
-import { app_gloss_bible_home_generic } from "../../../love/public/src/app_gloss_bible_home_generic.mjs";
 import { js_flo_body_add_return_argument_from_code } from "../../../love/public/src/js_flo_body_add_return_argument_from_code.mjs";
 import { js_call_add_first } from "../../../love/public/src/js_call_add_first.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
@@ -24,7 +24,7 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   await function_current_selects_empty();
-  const f_name = app_gloss_bible_home_generic.name;
+  const f_name = app_calendar_preaching_ask_entries.name;
   await function_current_set(f_name);
   await function_node_select_args(
     js_statements_with_string_starting_with.name,
