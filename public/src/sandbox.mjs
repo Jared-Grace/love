@@ -32,6 +32,7 @@ export async function sandbox() {
   );
   let selects = await function_current_selects_nodes_ast();
   return selects;
+  await function_new_text(text, f_name);
   await function_current_selects_apply(js_statement_delete.name);
   (function_node_select_args,
     [js_function_node_find_named_node.name, "on_passage"],
