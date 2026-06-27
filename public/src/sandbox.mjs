@@ -1,3 +1,4 @@
+import { function_current_ast } from "../../../love/public/src/function_current_ast.mjs";
 import { function_current_selects_nodes } from "../../../love/public/src/function_current_selects_nodes.mjs";
 import { js_statements_with_string_starting_with } from "../../../p_np/public/src/js_statements_with_string_starting_with.mjs";
 import { js_function_node_unwrap } from "../../../love/public/src/js_function_node_unwrap.mjs";
@@ -30,6 +31,7 @@ export async function sandbox() {
     js_statements_with_string_starting_with.name,
     "p",
   );
+  let ast = await function_current_ast();
   let selects = await function_current_selects_nodes(ast);
   return selects;
   await function_current_selects_apply(js_statement_delete.name);
