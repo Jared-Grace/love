@@ -1,3 +1,5 @@
+import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
+import { text_split_comma_dot } from "../../../love/public/src/text_split_comma_dot.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -5,7 +7,6 @@ import { js_code_call_args_await_maybe_parse } from "../../../love/public/src/js
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_first_remaining_from_comma_dot } from "../../../love/public/src/list_first_remaining_from_comma_dot.mjs";
 import { function_name_new_get_args_list } from "../../../love/public/src/function_name_new_get_args_list.mjs";
 import { function_new_expression } from "../../../love/public/src/function_new_expression.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -15,7 +16,8 @@ export async function js_expression_functionize(ast, selects, args) {
   log(js_expression_functionize.name, {
     args,
   });
-  let fr = list_first_remaining_from_comma_dot(args);
+  let split = text_split_comma_dot(args);
+  let fr = list_first_remaining(split);
   let list = property_get(fr, "remaining");
   let plugin_fn = property_get(fr, "first");
   list_add_first(list, name);
