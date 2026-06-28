@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { list_next_index } from "../../../love/public/src/list_next_index.mjs";
 import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -11,6 +11,6 @@ export async function js_expand_selects(ast, selects) {
   let stack = property_get(v, "stack");
   let stack1 = list_get_end_1(stack);
   let stack2 = list_get_end_2(stack);
-  let index2 = error();
-  let index = await js_expand(stack2, stack1, first, ast, index2);
+  let index = list_next_index(stack2, stack1);
+  await js_expand(stack2, stack1, first, ast, index2);
 }
