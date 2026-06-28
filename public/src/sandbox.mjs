@@ -1,3 +1,4 @@
+import { js_expand_selects } from "../../../love/public/src/js_expand_selects.mjs";
 import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
 import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
@@ -31,7 +32,7 @@ export async function sandbox() {
     js_statement_find_call_named.name,
     "folder_user_docs_read_lines",
   );
-  await function_current_selects_apply(apply_fn_name);
+  await function_current_selects_apply(js_expand_selects.name);
   return r;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
