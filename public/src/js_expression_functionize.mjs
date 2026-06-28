@@ -27,7 +27,6 @@ export async function js_expression_functionize(ast, selects, args) {
   let declaration = property_get(r2, "declaration");
   let parsed = js_code_call_args_await_maybe_parse(f_name_new, [], declaration);
   object_replace(node, parsed);
-  log_unparse(ast);
   log(js_expression_functionize.name, {
     parsed,
     node,
