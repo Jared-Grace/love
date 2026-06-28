@@ -1,1 +1,1 @@
-export function js_expand_selects(ast) {}
+export function js_expand_selects(ast, selects) {}
