@@ -7,7 +7,7 @@ import { list_first_remaining_from_comma_dot } from "../../../love/public/src/li
 import { function_name_new_get_args_list } from "../../../love/public/src/function_name_new_get_args_list.mjs";
 import { function_new_expression } from "../../../love/public/src/function_new_expression.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-export async function js_expression_to_function(ast, selects, args) {
+export async function js_expression_functionize(ast, selects, args) {
   let name = js_flo_name(ast);
   let fr = list_first_remaining_from_comma_dot(args);
   let list = property_get(fr, "remaining");
