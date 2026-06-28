@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
@@ -13,5 +14,9 @@ export async function file_js_unparse(parsed) {
     return;
   }
   await file_overwrite(f_path, code_new);
+  log(file_js_unparse.name, {
+    code,
+    code_new,
+  });
   log_unparse(ast);
 }
