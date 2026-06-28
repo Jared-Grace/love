@@ -12,7 +12,7 @@ export async function function_current_selects_apply(apply_fn_name) {
     log(function_current_selects_apply.name, {
       selects,
     });
-    imported_fn(ast, selects);
+    imported_fn(ast, selects, args);
   }
   let output = await function_transform(f_name_current, lambda);
 }
