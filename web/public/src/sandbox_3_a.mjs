@@ -1,5 +1,5 @@
 import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function sandbox_3_a() {
-  let node = null;
+  let ms = null;
   await sleep(ms);
 }
