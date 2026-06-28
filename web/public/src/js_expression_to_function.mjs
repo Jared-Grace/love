@@ -5,7 +5,7 @@ import { function_name_new_get_args_list } from "../../../love/public/src/functi
 import { function_new_expression } from "../../../love/public/src/function_new_expression.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 export async function js_expression_to_function(ast, selects, args) {
-  let name = js_flo_name(ast2);
+  let name = js_flo_name(ast);
   let fr = list_first_remaining_from_comma_dot(f_name_transformer_args_comma);
   let list = property_get(fr, "remaining");
   let plugin_fn = property_get(fr, "first");
