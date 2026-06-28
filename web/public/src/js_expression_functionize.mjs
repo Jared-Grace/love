@@ -16,8 +16,7 @@ export async function js_expression_functionize(ast, selects, args) {
   log(js_expression_functionize.name, {
     args,
   });
-  let split = text_split_comma_dot(args);
-  let fr = list_first_remaining(split);
+  let fr = list_first_remaining(args);
   let list = property_get(fr, "remaining");
   let plugin_fn = property_get(fr, "first");
   list_add_first(list, name);
