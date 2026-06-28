@@ -15,6 +15,6 @@ export async function js_dollar_x({
   if (l) {
     let index = list_next_index(stack2, stack1);
     let next = list_get(stack2, index);
-    await js_expand(stack2, stack1, next, ast);
+    await js_expand(stack2, stack1, next, ast, error());
   }
 }
