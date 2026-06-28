@@ -35,6 +35,7 @@ export async function sandbox() {
   let selects = await function_current_selects_nodes_ast();
   let node = list_single(selects);
   return selects;
+  ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
   await function_current_selects_apply(js_statement_delete.name);
   (function_node_select_args,
@@ -42,7 +43,6 @@ export async function sandbox() {
     [js_statements_with_identifiers_named.name, "on_passage"],
     [js_statement_find_call_named.name, property_exists_not.name]);
   return;
-  ("below is functionality that has been used in the past");
   (function_transform_current,
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
     [js_call_add_first.name, html_hash_get.name],
