@@ -35,7 +35,7 @@ export async function sandbox() {
   );
   await function_current_selects_apply_args(
     js_expression_functionize.name,
-    args,
+    "1,file_name",
   );
   let selects = await function_current_selects_nodes_ast();
   return selects;
