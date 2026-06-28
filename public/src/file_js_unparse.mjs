@@ -1,5 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -10,11 +8,6 @@ export async function file_js_unparse(parsed) {
   let f_path = property_get(parsed, "f_path");
   let code_unparsed = await js_unparse(ast);
   let code_new = await js_format(code_unparsed);
-  log(file_js_unparse.name, {
-    code,
-    code_new,
-  });
-  log_unparse(ast);
   if (code_new === code) {
     return;
   }
