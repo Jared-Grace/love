@@ -1,4 +1,3 @@
 export function app_calendar_preaching_ask_file_name() {
-  let r = "preaching_ask.txt";
-  return r;
+  return "preaching_ask.txt";
 }
