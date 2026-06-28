@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_next_index } from "../../../love/public/src/list_next_index.mjs";
 import { js_expand } from "../../../love/public/src/js_expand.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -15,6 +16,7 @@ export async function js_dollar_x({
   if (l) {
     let index = list_next_index(stack2, stack1);
     let next = list_get(stack2, index);
-    await js_expand(stack2, stack1, next, ast, error());
+    let index2 = error();
+    await js_expand(stack2, stack1, next, ast, index2);
   }
 }
