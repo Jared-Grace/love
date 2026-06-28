@@ -1,5 +1,4 @@
 import { js_code_call_args_await_maybe_parse_expression } from "../../../love/public/src/js_code_call_args_await_maybe_parse_expression.mjs";
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
@@ -31,9 +30,4 @@ export async function js_expression_functionize(ast, selects, args) {
     declaration,
   );
   object_replace(node, parsed);
-  log_unparse(ast);
-  log(js_expression_functionize.name, {
-    parsed,
-    node,
-  });
 }
