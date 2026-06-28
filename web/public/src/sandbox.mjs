@@ -1,3 +1,4 @@
+import { app_calendar_preaching_ask_file_name } from "../../../love/public/src/app_calendar_preaching_ask_file_name.mjs";
 import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
 import { js_expression_functionize } from "../../../love/public/src/js_expression_functionize.mjs";
 import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
@@ -27,6 +28,7 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
+  let r = app_calendar_preaching_ask_file_name();
   await function_delete_if_exists(f_name2);
   await function_current_selects_empty();
   const f_name = app_calendar_preaching_ask_entries.name;
