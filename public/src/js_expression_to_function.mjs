@@ -1,3 +1,4 @@
+import { js_code_call_args_await_maybe_parse } from "../../../love/public/src/js_code_call_args_await_maybe_parse.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -15,4 +16,9 @@ export async function js_expression_to_function(ast, selects, args) {
   let f_name_new = property_get(r, "f_name_new");
   let node = list_single(selects);
   await function_new_expression(f_name_new, node);
+  let parsed = js_code_call_args_await_maybe_parse(
+    f_name_new,
+    missing,
+    declaration,
+  );
 }
