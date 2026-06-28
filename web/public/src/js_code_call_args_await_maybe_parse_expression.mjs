@@ -1,4 +1,4 @@
-import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 export function js_code_call_args_await_maybe_parse_expression(
   f_name_new,
@@ -10,6 +10,6 @@ export function js_code_call_args_await_maybe_parse_expression(
     args_list_code,
     declaration,
   );
-  let parsed = js_parse_statement(code);
+  let parsed = js_parse_expression(code);
   return parsed;
 }
