@@ -7,12 +7,12 @@ export function js_visit_function_nodes_named(ast, lambda$v, name) {
   function lambda(v) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
+    log(js_visit_function_nodes_named.name, {
+      id,
+    });
     function lambda3() {
       let actual = property_get(id, "name");
       let eq2 = equal(actual, name);
-      log(js_visit_function_nodes_named.name, {
-        actual,
-      });
       if (eq2) {
         lambda$v(v);
       }
