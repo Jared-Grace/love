@@ -1,3 +1,4 @@
+import { js_call_named_find_alias } from "../../../love/public/src/js_call_named_find_alias.mjs";
 import { js_expand_selects } from "../../../love/public/src/js_expand_selects.mjs";
 import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
@@ -29,7 +30,7 @@ export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(f_name);
   let r = await function_node_select_args(
-    js_statement_find_call_named.name,
+    js_call_named_find_alias.name,
     "folder_user_docs_read_lines",
   );
   await function_current_selects_apply(js_expand_selects.name);
