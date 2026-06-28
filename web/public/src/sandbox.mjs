@@ -31,6 +31,7 @@ export async function sandbox() {
     js_statement_find_call_named.name,
     "folder_user_docs_read_lines",
   );
+  await function_current_selects_apply(apply_fn_name);
   return r;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
