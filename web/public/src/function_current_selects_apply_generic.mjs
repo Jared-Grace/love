@@ -3,7 +3,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { function_current_selects_nodes } from "../../../love/public/src/function_current_selects_nodes.mjs";
 import { function_import } from "../../../love/public/src/function_import.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
-import { log_keep } from "./log_keep.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function function_current_selects_apply_generic(
   apply_fn_name,
   args,
@@ -12,7 +12,7 @@ export async function function_current_selects_apply_generic(
   let imported_fn = await function_import(apply_fn_name);
   async function lambda(ast) {
     let selects = await function_current_selects_nodes(ast);
-  log(function_transform.name, {});
+    log(function_current_selects_apply_generic.name, {});
     log_keep(function_current_selects_apply_generic.name, {
       selects,
     });
