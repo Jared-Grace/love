@@ -33,8 +33,8 @@ export async function sandbox() {
     js_call_named_find_alias.name,
     "folder_user_docs_read_lines",
   );
-  await function_current_selects_apply(js_expand_selects.name);
   return r;
+  await function_current_selects_apply(js_expand_selects.name);
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
   (function_node_select_args,
