@@ -28,7 +28,7 @@ export async function sandbox() {
   await function_current_selects_empty();
   await function_current_set(f_name);
   let r = await function_node_select_args(
-    js_function_node_find_named_node.name,
+    js_statement_find_call_named.name,
     "folder_user_docs_read_lines",
   );
   return r;
