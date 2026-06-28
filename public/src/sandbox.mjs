@@ -1,5 +1,4 @@
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
 import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { function_current_selects_nodes_ast } from "../../../love/public/src/function_current_selects_nodes_ast.mjs";
@@ -33,7 +32,6 @@ export async function sandbox() {
     "p",
   );
   let selects = await function_current_selects_nodes_ast();
-  let node = list_single(selects);
   return selects;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
