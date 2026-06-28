@@ -10,5 +10,5 @@ export async function js_expand_selects(ast, selects) {
   let stack = property_get(v, "stack");
   let stack1 = list_get_end_1(stack);
   let stack2 = list_get_end_2(stack);
-  let index = await js_expand(stack2, stack1, first, ast);
+  let index = await js_expand(stack2, stack1, first, ast, error());
 }
