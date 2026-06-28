@@ -15,8 +15,18 @@ export async function js_dollar_x({
   let l = list_is(stack2);
   if (l) {
     let next = list_get(stack2, index);
-    let index = list_next_index(stack2, stack1);
-    let inserted = await js_expand_generic(next, stack2, index, ast);
-    list_remove(stack2, stack1);
+js_expand(stack2, stack1, next, ast)
+  }
+  return;
+  if (l) {
+    let next = list_get(stack2, index);
+    let index = await js_expand(stack2, stack1, next, ast);
   }
 }
+async function js_expand(stack2, stack1, next, ast) {
+  let index = list_next_index(stack2, stack1);
+  let inserted = await js_expand_generic(next, stack2, index, ast);
+  list_remove(stack2, stack1);
+  return index;
+}
+
