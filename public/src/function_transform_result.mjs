@@ -15,7 +15,7 @@ export async function function_transform_result(f_names, lambda$ast) {
     await file_js_unparse(parsed);
     return result;
   }
-  let r3 = await list_map_async(split, lambda_each_function);
-  return r3;
+  let r = await list_map_async(split, lambda_each_function);
+  return r;
   log_unparse(node);
 }
