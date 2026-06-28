@@ -5,7 +5,7 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 export function text_split_multiple(t, delimiters) {
-  text_is_assert(value);
+  text_is_assert(t);
   let v = list_first_remaining(delimiters);
   let remaining = property_get(v, "remaining");
   let first = property_get(v, "first");
