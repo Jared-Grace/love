@@ -1,5 +1,7 @@
-import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function sandbox_3_a() {
-  let ms = null;$x
-  await sleep(ms);
+  let ms = null;
+  await new Promise(function lambda5(resolve) {
+    let v = setTimeout(resolve, ms);
+    return v;
+  });
 }
