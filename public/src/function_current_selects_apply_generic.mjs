@@ -1,5 +1,4 @@
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { function_current_selects_apply } from "../../../love/public/src/function_current_selects_apply.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { function_current_selects_nodes } from "../../../love/public/src/function_current_selects_nodes.mjs";
 import { function_import } from "../../../love/public/src/function_import.mjs";
