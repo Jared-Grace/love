@@ -1,9 +1,8 @@
+import { js_code_call_args_await_maybe_parse } from "../../../love/public/src/js_code_call_args_await_maybe_parse.mjs";
 import { list_min } from "../../../love/public/src/list_min.mjs";
 import { list_slice_from_indices } from "../../../love/public/src/list_slice_from_indices.mjs";
 import { js_outside_move } from "../../../love/public/src/js_outside_move.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
-import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
-import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -76,8 +75,11 @@ export async function js_functionize(
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
   list_remove_multiple(stack2, range);
-  let code = js_code_call_args_await_maybe(f_name_new, missing, declaration);
-  let parsed = js_parse_statement(code);
+  let parsed = js_code_call_args_await_maybe_parse(
+    f_name_new,
+    missing,
+    declaration,
+  );
   let m = list_min(indices);
   list_insert(stack2, m, parsed);
   await js_outside_move(ast);
