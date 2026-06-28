@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
@@ -31,11 +32,14 @@ export function js_strings(ast) {
       js_node_type_is_if(node, "Literal", lambda4);
       let si2 = text_is(value);
       if (si2) {
-        la(value);
+        la({
+          value,
+        });
       }
     }
     js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
   }
   const names = list_adder_unique(lambda2);
   return names;
+  let mapped = list_map_property(list, property_name);
 }
