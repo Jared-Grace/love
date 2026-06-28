@@ -39,7 +39,7 @@ export function js_strings(ast) {
     }
     js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
   }
-  const names = list_adder_unique(lambda2);
-  return names;
-  let mapped = list_map_property(list, property_name);
+  const results = list_adder_unique(lambda2);
+  return results;
+  let mapped = list_map_property(results, property_name);
 }
