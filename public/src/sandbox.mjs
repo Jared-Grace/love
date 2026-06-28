@@ -44,7 +44,8 @@ export async function sandbox() {
   (function_node_select_args,
     [js_function_node_find_named_node.name, "on_passage"],
     [js_statements_with_identifiers_named.name, "on_passage"],
-    [js_statement_find_call_named.name, property_exists_not.name]);
+    [js_statement_find_call_named.name, property_exists_not.name],
+    [js_expressions_with_string_starting_with.name, "p"]);
   return;
   (function_transform_current,
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
@@ -56,8 +57,8 @@ export async function sandbox() {
     [js_statement_if_return_add.name],
     [js_statement_wrap_if.name],
     [js_statement_duplicate.name]);
-  (function_node_select_args,
-    [js_expressions_with_string_starting_with.name, "p"]);
+  (function_current_selects_apply_args,
+    [s_expression_functionize.name, "1,file_name"]);
   await function_source_remove(f_name, "2");
   await function_node_select_nested(js_call_callee_name_try.name);
 }
