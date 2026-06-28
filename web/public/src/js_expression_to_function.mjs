@@ -1,1 +1,1 @@
-export function js_expression_to_function(ast) {}
+export function js_expression_to_function(ast, selects) {}
