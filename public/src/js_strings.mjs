@@ -33,7 +33,7 @@ export function js_strings(ast) {
       let si2 = text_is(value);
       if (si2) {
         la({
-          value,
+          value,node
         });
       }
     }
