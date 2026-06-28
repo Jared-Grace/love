@@ -16,6 +16,6 @@ export async function js_expand_selects(ast, selects) {
   log(js_expand_selects.name, {
     stack2,
   });
-  let index2 = list_index_of(list, item2);
+  let index = list_index_of(stack2, item);
   let inserted = await js_expand_generic(item, stack2, index, ast);
 }
