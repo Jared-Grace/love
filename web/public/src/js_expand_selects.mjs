@@ -11,10 +11,7 @@ export async function js_expand_selects(ast, selects) {
   let first = list_single(selects);
   let block = js_node_to_block(ast, first);
   let item = property_get(block, "item");
-  log(js_expand_selects.name, {
-    item,
-  });
-  let v = js_node_to_visitor(ast, first);
+  let v = js_node_to_visitor(ast, item);
   let stack = property_get(v, "stack");
   let stack1 = list_get_end_1(stack);
   let stack2 = list_get_end_2(stack);
