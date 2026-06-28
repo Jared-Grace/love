@@ -16,9 +16,5 @@ export async function js_expression_to_function(ast, selects, args) {
   let f_name_new = property_get(r, "f_name_new");
   let node = list_single(selects);
   await function_new_expression(f_name_new, node);
-  let parsed = js_code_call_args_await_maybe_parse(
-    f_name_new,
-    missing,
-    declaration,
-  );
+  let parsed = js_code_call_args_await_maybe_parse(f_name_new, [], declaration);
 }
