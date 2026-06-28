@@ -1,3 +1,4 @@
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mjs";
 import { js_node_to_block } from "../../../love/public/src/js_node_to_block.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -15,5 +16,6 @@ export async function js_expand_selects(ast, selects) {
   log(js_expand_selects.name, {
     stack2,
   });
+  let index2 = list_index_of(list, item2);
   let inserted = await js_expand_generic(item, stack2, index, ast);
 }
