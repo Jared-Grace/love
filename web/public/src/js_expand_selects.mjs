@@ -20,5 +20,5 @@ export async function js_expand_selects(ast, selects) {
     stack2,
   });
   let index = list_next_index(stack2, stack1);
-  await js_expand(stack2, stack1, first, ast, index);
+  await js_expand(stack2, stack1, item, ast, index);
 }
