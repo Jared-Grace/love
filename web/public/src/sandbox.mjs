@@ -1,3 +1,4 @@
+import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
 import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
@@ -31,6 +32,7 @@ export async function sandbox() {
     js_expressions_with_string_starting_with.name,
     "p",
   );
+  await function_current_selects_apply_args(apply_fn_name, args);
   let selects = await function_current_selects_nodes_ast();
   return selects;
   ("below is functionality that has been used in the past");
