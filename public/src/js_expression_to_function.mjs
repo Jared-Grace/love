@@ -1,3 +1,4 @@
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_remaining_from_comma_dot } from "../../../love/public/src/list_first_remaining_from_comma_dot.mjs";
@@ -8,6 +9,7 @@ export async function js_expression_to_function(ast, selects, args) {
   let name = js_flo_name(ast);
   let fr = list_first_remaining_from_comma_dot(args);
   let list = property_get(fr, "remaining");
+  list_add_first(list2, item);
   let plugin_fn = property_get(fr, "first");
   let r2 = await function_name_new_get_args_list(plugin_fn, list);
   let node = list_single(selects);
