@@ -5,7 +5,6 @@ import { function_current_selects_apply_args } from "../../../love/public/src/fu
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
 import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
-import { function_current_selects_nodes_ast } from "../../../love/public/src/function_current_selects_nodes_ast.mjs";
 import { js_function_node_unwrap } from "../../../love/public/src/js_function_node_unwrap.mjs";
 import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { js_statements_with_identifiers_named } from "../../../love/public/src/js_statements_with_identifiers_named.mjs";
@@ -40,8 +39,7 @@ export async function sandbox() {
     js_expression_functionize.name,
     "1,file_name",
   );
-  let selects = await function_current_selects_nodes_ast();
-  return selects;
+  return;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
   (function_node_select_args,
