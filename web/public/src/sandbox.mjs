@@ -28,9 +28,9 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
+  const f_name = app_calendar_preaching_ask_entries.name;
   await function_delete_if_exists(app_calendar_preaching_ask_file_name.name);
   await function_current_selects_empty();
-  const f_name = app_calendar_preaching_ask_entries.name;
   await function_current_set(f_name);
   await function_node_select_args(
     js_expressions_with_string_starting_with.name,
