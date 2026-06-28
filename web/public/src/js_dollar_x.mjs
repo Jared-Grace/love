@@ -8,5 +8,5 @@ export async function js_dollar_x({
   ast,
   afters,
 }) {
-  await js_expand(ast, stack2, stack1);
+  await js_expand(ast, stack1, stack2);
 }
