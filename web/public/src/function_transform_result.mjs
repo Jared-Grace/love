@@ -1,4 +1,3 @@
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { undefined_is_if_null } from "../../../love/public/src/undefined_is_if_null.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
