@@ -9,8 +9,8 @@ export async function js_expression_to_function(ast, selects, args) {
   let name = js_flo_name(ast);
   let fr = list_first_remaining_from_comma_dot(args);
   let list = property_get(fr, "remaining");
-  list_add_first(list2, item);
   let plugin_fn = property_get(fr, "first");
+  list_add_first(list, name);
   let r2 = await function_name_new_get_args_list(plugin_fn, list);
   let node = list_single(selects);
   await function_new_expression(f_name, node);
