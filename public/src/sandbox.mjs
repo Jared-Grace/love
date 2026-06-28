@@ -31,7 +31,7 @@ export async function sandbox() {
     js_function_node_find_named_node.name,
     "folder_user_docs_read_lines",
   );
-  return;
+  return r;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
   (function_node_select_args,
