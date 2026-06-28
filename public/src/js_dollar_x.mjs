@@ -13,11 +13,6 @@ export async function js_dollar_x({
   let l = list_is(stack2);
   if (l) {
     let next = list_get(stack2, index);
-    await js_expand(stack2, stack1, next, ast);
-  }
-  return;
-  if (l) {
-    let next = list_get(stack2, index);
-    let index = await js_expand(stack2, stack1, next, ast);
+    js_expand(stack2, stack1, next, ast);
   }
 }
