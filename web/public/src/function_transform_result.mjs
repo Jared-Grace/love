@@ -12,7 +12,6 @@ export async function function_transform_result(f_names, lambda$ast) {
     let ast = property_get(parsed, "ast");
     let result = await lambda$ast(ast);
     result = undefined_is_if_null(result);
-    log_unparse(ast);
     await file_js_unparse(parsed);
     return result;
   }
