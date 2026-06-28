@@ -11,7 +11,8 @@ export async function js_expression_to_function(ast, selects, args) {
   let list = property_get(fr, "remaining");
   let plugin_fn = property_get(fr, "first");
   list_add_first(list, name);
-  let r2 = await function_name_new_get_args_list(plugin_fn, list);
+  let r = await function_name_new_get_args_list(plugin_fn, list);
+  let f_name_new = property_get(r, "f_name_new");
   let node = list_single(selects);
   await function_new_expression(f_name, node);
 }
