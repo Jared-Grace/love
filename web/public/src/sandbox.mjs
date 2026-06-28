@@ -29,7 +29,7 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   let r = app_calendar_preaching_ask_file_name();
-  await function_delete_if_exists(f_name2);
+  await function_delete_if_exists(r);
   await function_current_selects_empty();
   const f_name = app_calendar_preaching_ask_entries.name;
   await function_current_set(f_name);
