@@ -37,7 +37,6 @@ export async function sandbox() {
   return selects;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
-  await function_current_selects_apply(js_statement_delete.name);
   (function_node_select_args,
     [js_function_node_find_named_node.name, "on_passage"],
     [js_statements_with_identifiers_named.name, "on_passage"],
