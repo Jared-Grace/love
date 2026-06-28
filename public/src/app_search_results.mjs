@@ -1,9 +1,9 @@
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_margin } from "../../../love/public/src/html_margin.mjs";
-import { html_border_style } from "../../../p_np/public/src/html_border_style.mjs";
+import { html_border_style } from "../../../love/public/src/html_border_style.mjs";
 import { html_border } from "../../../love/public/src/html_border.mjs";
 import { html_border_radius } from "../../../love/public/src/html_border_radius.mjs";
-import { html_br_2 } from "../../../p_np/public/src/html_br_2.mjs";
+import { html_br_2 } from "../../../love/public/src/html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";

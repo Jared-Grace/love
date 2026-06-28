@@ -1,8 +1,8 @@
-import { js_expressions_with_string_starting_with } from "../../../p_np/public/src/js_expressions_with_string_starting_with.mjs";
+import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { function_new_text } from "../../../p_np/public/src/function_new_text.mjs";
+import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
-import { function_current_selects_nodes_ast } from "../../../p_np/public/src/function_current_selects_nodes_ast.mjs";
+import { function_current_selects_nodes_ast } from "../../../love/public/src/function_current_selects_nodes_ast.mjs";
 import { js_function_node_unwrap } from "../../../love/public/src/js_function_node_unwrap.mjs";
 import { js_function_node_find_named_node } from "../../../love/public/src/js_function_node_find_named_node.mjs";
 import { js_statements_with_identifiers_named } from "../../../love/public/src/js_statements_with_identifiers_named.mjs";
