@@ -1,5 +1,3 @@
-import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
-import { js_expression_functionize } from "../../../love/public/src/js_expression_functionize.mjs";
 import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
 import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
@@ -27,17 +25,8 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   const f_name = app_calendar_preaching_ask_entries.name;
-  await function_delete_if_exists("app_calendar_preaching_ask_file_name");
   await function_current_selects_empty();
   await function_current_set(f_name);
-  await function_node_select_args(
-    js_expressions_with_string_starting_with.name,
-    "p",
-  );
-  await function_current_selects_apply_args(
-    js_expression_functionize.name,
-    "1,file_name",
-  );
   return;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
