@@ -12,7 +12,7 @@ export async function function_current_selects_apply_generic(
   let imported_fn = await function_import(apply_fn_name);
   async function lambda(ast) {
     let selects = await function_current_selects_nodes(ast);
-    log(function_current_selects_apply.name, {
+    log(function_current_selects_apply_generic.name, {
       selects,
     });
     imported_fn(ast, selects, args);
