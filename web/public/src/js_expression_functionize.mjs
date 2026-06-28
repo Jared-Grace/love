@@ -1,3 +1,4 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_code_call_args_await_maybe_parse } from "../../../love/public/src/js_code_call_args_await_maybe_parse.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -8,6 +9,7 @@ import { function_name_new_get_args_list } from "../../../love/public/src/functi
 import { function_new_expression } from "../../../love/public/src/function_new_expression.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 export async function js_expression_functionize(ast, selects, args) {
+  arguments_assert(arguments, 3);
   let name = js_flo_name(ast);
   let fr = list_first_remaining_from_comma_dot(args);
   let list = property_get(fr, "remaining");
