@@ -1,9 +1,11 @@
+import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 export function text_split_multiple(t, delimiters) {
+  text_is_assert(value);
   let v = list_first_remaining(delimiters);
   let remaining = property_get(v, "remaining");
   let first = property_get(v, "first");
