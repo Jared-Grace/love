@@ -3,7 +3,7 @@ import { list_first_remaining } from "../../../love/public/src/list_first_remain
 import { log } from "../../../love/public/src/log.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { js_code_call_args_await_maybe_parse } from "../../../love/public/src/js_code_call_args_await_maybe_parse.mjs";
+import { js_code_call_args_await_maybe_parse_statement } from "../../../love/public/src/js_code_call_args_await_maybe_parse_statement.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -25,7 +25,11 @@ export async function js_expression_functionize(ast, selects, args) {
   let node = list_single(selects);
   let r2 = await function_new_expression(f_name_new, node);
   let declaration = property_get(r2, "declaration");
-  let parsed = js_code_call_args_await_maybe_parse(f_name_new, [], declaration);
+  let parsed = js_code_call_args_await_maybe_parse_statement(
+    f_name_new,
+    [],
+    declaration,
+  );
   object_replace(node, parsed);
   log_unparse(ast);
   log(js_expression_functionize.name, {
