@@ -27,7 +27,10 @@ export async function sandbox() {
   const f_name = app_calendar_preaching_ask_entries.name;
   await function_current_selects_empty();
   await function_current_set(f_name);
-  let r = await function_node_select_args(select_fn_name, args_comma);
+  let r = await function_node_select_args(
+    js_function_node_find_named_node.name,
+    args_comma,
+  );
   return;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
