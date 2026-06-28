@@ -5,6 +5,6 @@ export async function function_name_new_get_args(
   f_name_old_args_comma,
 ) {
   let list = text_split_comma_dot(f_name_old_args_comma);
-  let r = await function_name_new_get_args_list(list, plugin_fn);
+  let r = await function_name_new_get_args_list(plugin_fn, list);
   return r;
 }
