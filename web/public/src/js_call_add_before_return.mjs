@@ -13,7 +13,7 @@ export function js_call_add_before_return(ast, item) {
   let list = list_adder(lambda);
   let only = list_single(list);
   let stack = property_get(only, "stack");
-  let e1 = list_get_end_1(stack2);
+  let e1 = list_get_end_1(stack);
   log(js_call_add_before_return.name, {
     only,
   });
