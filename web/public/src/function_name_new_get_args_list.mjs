@@ -6,6 +6,7 @@ import { list_concat_single } from "../../../love/public/src/list_concat_single.
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 export async function function_name_new_get_args_list(plugin_fn, list) {
+  let name_old_transform = function_name_unalias_only;
   let fr = list_first_remaining(list);
   let split = property_get(fr, "remaining");
   let f_name_old = property_get(fr, "first");
