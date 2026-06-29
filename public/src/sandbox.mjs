@@ -30,9 +30,7 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   const f_name = app_calendar_preaching_ask_entries_previous.name;
   await function_current_set(f_name);
-  let r2 = await function_transform_current(
-    "js_identifier_name_new,c,folder_user_docs_path,previous",
-  );
+  let r2 = await function_transform_current("js_flo_body_empty");
   return r2;
   await function_current_selects_empty();
   let r = await function_node_select_args(
