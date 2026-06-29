@@ -28,10 +28,10 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
-  const f_name = js_call_add_first.name;
+  const f_name = sandbox_3_a.name;
   await function_current_set(f_name);
   let r2 = await function_transform_current(
-    "js_call_add,js_flo_body_add_first",
+    "js_call_add,",
   );
   return r2;
   await function_current_selects_empty();
