@@ -28,7 +28,10 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   const f_name = app_calendar_preaching_ask_entries.name;
   await function_current_set(f_name);
-  let r2 = await function_transform_current(f_name_transformer_args_comma);
+  let r2 = await function_transform_current(
+    "html_hash_get,html_hash_object_get",
+  );
+  return r2;
   await function_current_selects_empty();
   let r = await function_node_select_args(
     js_call_named_find_alias.name,
