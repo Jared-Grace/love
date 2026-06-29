@@ -1,4 +1,3 @@
-import { sandbox_3_a } from "../../../love/public/src/sandbox_3_a.mjs";
 import { js_call_generalize } from "../../../love/public/src/js_call_generalize.mjs";
 import { js_identifier_name_new } from "../../../love/public/src/js_identifier_name_new.mjs";
 import { js_call_named_find_alias } from "../../../love/public/src/js_call_named_find_alias.mjs";
@@ -28,7 +27,7 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
-  const f_name = sandbox_3_a.name;
+  const f_name = js_call_add_first.name;
   await function_current_set(f_name);
   let r2 = await function_transform_current("js_flo_body_empty");
   return r2;
