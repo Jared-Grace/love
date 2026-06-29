@@ -1,6 +1,6 @@
+import { app_calendar_preaching_ask_entries_previous } from "../../../love/public/src/app_calendar_preaching_ask_entries_previous.mjs";
 import { js_call_generalize } from "../../../love/public/src/js_call_generalize.mjs";
 import { js_identifier_name_new } from "../../../love/public/src/js_identifier_name_new.mjs";
-import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { js_call_named_find_alias } from "../../../love/public/src/js_call_named_find_alias.mjs";
 import { js_expand_selects } from "../../../love/public/src/js_expand_selects.mjs";
 import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
@@ -28,10 +28,10 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
-  const f_name = app_calendar_preaching_ask_entries.name;
+  const f_name = app_calendar_preaching_ask_entries_previous.name;
   await function_current_set(f_name);
   let r2 = await function_transform_current(
-    "js_call_generalize,folder_user_docs_path,file_name_to_path",
+    "js_identifier_name_new,c,file_name_to_path",
   );
   return r2;
   await function_current_selects_empty();
