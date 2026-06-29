@@ -1,8 +1,11 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_name_new_get_args_list } from "../../../love/public/src/js_name_new_get_args_list.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
-export async function js_identifier_name_new(ast, name_from, name_to) {
+export async function js_identifier_name_new(ast, plugin_fn, list) {
   let r2 = await js_name_new_get_args_list(plugin_fn, list, identity);
-  let r = js_identifier_rename(ast, name_from, name_to);
+  let name_old = property_get(r2, "name_old");
+  let name_new = property_get(r2, "name_new");
+  let r = js_identifier_rename(ast, name_old, name_new);
   return r;
 }
