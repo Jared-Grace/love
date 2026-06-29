@@ -8,6 +8,9 @@ export function js_visit_calls_named(ast, f_name, lambda) {
   function lambda_inner(v) {
     let node = property_get(v, "node");
     let name = js_call_callee_name_try(node);
+    log(js_visit_calls_named.name, {
+      name,
+    });
     if (equal_not(name, f_name)) {
       return;
     }
@@ -19,7 +22,4 @@ export function js_visit_calls_named(ast, f_name, lambda) {
   }
   js_visit_calls(ast, lambda_inner);
   return;
-  log(js_visit_calls_named.name, {
-    name,
-  });
 }
