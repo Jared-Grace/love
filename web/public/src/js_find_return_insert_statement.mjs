@@ -10,8 +10,8 @@ export function js_find_return_insert_statement(ast, statement) {
   }
   let list = list_adder(lambda);
   let only = list_single(list);
-  let stack = property_get(only, "stack");
   let node = property_get(only, "node");
+  let stack = property_get(only, "stack");
   let e1 = list_get_end_1(stack);
   list_index_of_insert(e1, node, statement);
 }
