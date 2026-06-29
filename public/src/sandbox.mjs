@@ -30,7 +30,7 @@ export async function sandbox() {
   const f_name = app_calendar_preaching_ask_entries.name;
   await function_current_set(f_name);
   let r2 = await function_transform_current(
-    "js_identifier_name_new,l,folder_user_docs_path_previous",
+    "js_call_generalize,l,folder_user_docs_path_previous",
   );
   return r2;
   await function_current_selects_empty();
