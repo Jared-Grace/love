@@ -7,7 +7,7 @@ import { js_identifier_rename } from "../../../love/public/src/js_identifier_ren
 import { identity } from "../../../love/public/src/identity.mjs";
 export async function js_identifier_name_new(ast, plugin_fn) {
   let args = list_to(arguments);
-  let skipped = list_skip(list2, skip_count);
+  let skipped = list_skip(args, 2);
   let list = text_split_comma_dot(args_comma);
   let r2 = await js_name_new_get_args_list(plugin_fn, list, identity);
   let name_old = property_get(r2, "name_old");
