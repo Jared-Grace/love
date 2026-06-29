@@ -29,7 +29,7 @@ export async function sandbox() {
   const f_name = folder_user_docs_path_previous.name;
   await function_current_set(f_name);
   let r2 = await function_transform_current(
-    "js_identifier_name_new,c,folder_user_docs_path,previous",
+    "js_identifier_name_new,c,folder_user_path,previous",
   );
   return r2;
   await function_current_selects_empty();
