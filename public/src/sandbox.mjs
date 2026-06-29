@@ -1,5 +1,5 @@
+import { folder_user_docs_read } from "../../../love/public/src/folder_user_docs_read.mjs";
 import { js_call_named_find_alias } from "../../../love/public/src/js_call_named_find_alias.mjs";
-import { js_expand_selects } from "../../../love/public/src/js_expand_selects.mjs";
 import { function_current_selects_apply_args } from "../../../love/public/src/function_current_selects_apply_args.mjs";
 import { js_expressions_with_string_starting_with } from "../../../love/public/src/js_expressions_with_string_starting_with.mjs";
 import { function_new_text } from "../../../love/public/src/function_new_text.mjs";
@@ -33,7 +33,7 @@ export async function sandbox() {
     js_call_named_find_alias.name,
     "folder_user_docs_read_lines",
   );
-  await function_current_selects_apply(js_expand_selects.name);
+  await function_current_selects_apply(folder_user_docs_read.name);
   return r;
   ("below is functionality that has been used in the past");
   await function_new_text(text, f_name);
