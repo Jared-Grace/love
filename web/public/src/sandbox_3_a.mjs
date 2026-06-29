@@ -1,4 +1,4 @@
-import { list_join_newline_2 } from "../../../love/public/src/list_join_newline.mjs";
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { app_calendar_preaching_ask_entries_previous } from "../../../love/public/src/app_calendar_preaching_ask_entries_previous.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
