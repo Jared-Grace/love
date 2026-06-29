@@ -6,5 +6,5 @@ export function js_find_return_argument_set(ast, code) {
   let only = js_find_return(ast);
   let expression = js_parse_expression(code);
   js_return_argument_set(only, expression);
-  log(js_find_return_argument_set.name, {});
+  log(js_find_return_argument_set.name, {only});
 }
