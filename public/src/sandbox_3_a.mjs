@@ -3,4 +3,5 @@ import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app
 export async function sandbox_3_a() {
   let filtered = await app_calendar_preaching_ask_entries();
   let filtered2 = await app_calendar_preaching_ask_entries_previous();
+  let list = list_adder(function lambda(la) {});
 }
