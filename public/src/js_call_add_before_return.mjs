@@ -17,7 +17,7 @@ export async function js_call_add_before_return(ast, f_name) {
     let node = property_get(only, "node");
     let e1 = list_get_end_1(stack);
     let index = list_index_of(e1, node);
-    list_insert(body_block, index, statement);
+    list_insert(e1, index, statement);
   };
   await js_call_add_generic(ast, f_name, lambda_add);
 }
