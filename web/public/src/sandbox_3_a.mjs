@@ -5,4 +5,5 @@ export async function sandbox_3_a() {
   let filtered = await app_calendar_preaching_ask_entries();
   let filtered2 = await app_calendar_preaching_ask_entries_previous();
   let difference = list_difference(filtered, filtered2);
+  return difference;
 }
