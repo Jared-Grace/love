@@ -1,3 +1,4 @@
+import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -12,6 +13,7 @@ export function js_call_add_before_return(ast, item) {
   let list = list_adder(lambda);
   let only = list_single(list);
   let stack = property_get(only, "stack");
+  let v = emoji_100();
   log(js_call_add_before_return.name, {
     only,
   });
