@@ -15,9 +15,9 @@ export async function js_name_new_get_args_list(
   f_name_old = await name_old_transform(f_name_old);
   plugin_fn = override_get(function_name_new_get_generic_overrides, plugin_fn);
   let args_run = list_concat_single(f_name_old, split);
-  let f_name_new = await function_run(plugin_fn, args_run);
+  let name_new = await function_run(plugin_fn, args_run);
   let r = {
-    f_name_new,
+    f_name_new: name_new,
     f_name_old,
   };
   return r;
