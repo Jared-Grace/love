@@ -1,3 +1,4 @@
+import { js_call_add_before_return } from "../../../love/public/src/js_call_add_before_return.mjs";
 import { js_call_add } from "../../../love/public/src/js_call_add.mjs";
 import { sandbox_3_a } from "../../../love/public/src/sandbox_3_a.mjs";
 import { js_flo_body_empty } from "../../../love/public/src/js_flo_body_empty.mjs";
@@ -56,6 +57,7 @@ export async function sandbox() {
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
     [js_call_add.name, "ldf"],
     [js_call_add_first.name, html_hash_get.name],
+    [js_call_add_before_return.name, "ljn"],
     [js_flo_body_add_return_argument_from_code.name, "n"]);
   (function_current_selects_apply,
     [js_function_node_unwrap.name],
