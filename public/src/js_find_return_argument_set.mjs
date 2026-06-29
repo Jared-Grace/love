@@ -8,7 +8,4 @@ export function js_find_return_argument_set(ast, code) {
   let node = property_get(only, "node");
   let expression = js_parse_expression(code);
   js_return_argument_set(only, expression);
-  log(js_find_return_argument_set.name, {
-    only,
-  });
 }
