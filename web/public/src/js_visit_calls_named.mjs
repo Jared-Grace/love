@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_visit_calls } from "../../../love/public/src/js_visit_calls.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -8,10 +7,6 @@ export function js_visit_calls_named(ast, f_name, lambda) {
   function lambda_inner(v) {
     let node = property_get(v, "node");
     let name = js_call_callee_name_try(node);
-    log(js_visit_calls_named.name, {
-      name,
-      f_name,
-    });
     if (equal_not(name, f_name)) {
       return;
     }
