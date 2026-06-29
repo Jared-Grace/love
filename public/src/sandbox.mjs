@@ -27,8 +27,8 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 export async function sandbox() {
   const f_name = app_calendar_preaching_ask_entries.name;
-  await function_current_selects_empty();
   await function_current_set(f_name);
+  await function_current_selects_empty();
   let r = await function_node_select_args(
     js_call_named_find_alias.name,
     "folder_user_docs_read",
