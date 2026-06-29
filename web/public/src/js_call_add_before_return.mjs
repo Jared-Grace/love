@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_visit_returns } from "../../../love/public/src/js_visit_returns.mjs";
@@ -10,7 +11,7 @@ export function js_call_add_before_return(ast, item) {
   }
   let list = list_adder(lambda);
   let only = list_single(list);
-  let {stack} = only;
+  let stack = property_get(only, "stack");
   log(js_call_add_before_return.name, {
     only,
   });
