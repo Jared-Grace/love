@@ -7,5 +7,5 @@ export async function sandbox_3_a() {
   let filtered2 = await app_calendar_preaching_ask_entries_previous();
   let difference = list_difference(filtered2, filtered);
   let joined = list_join_newline(list);
-  return difference;
+  return joined;
 }
