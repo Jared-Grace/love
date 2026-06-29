@@ -1,9 +1,9 @@
-import { function_run } from "../../../love/public/src/function_run.mjs";
-import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
-import { function_name_new_get_generic_overrides } from "../../../love/public/src/function_name_new_get_generic_overrides.mjs";
-import { override_get } from "../../../love/public/src/override_get.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
+import { function_run } from "./function_run.mjs";
+import { list_concat_single } from "./list_concat_single.mjs";
+import { function_name_new_get_generic_overrides } from "./function_name_new_get_generic_overrides.mjs";
+import { override_get } from "./override_get.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_first_remaining } from "./list_first_remaining.mjs";
 export async function js__name_new_get_args_list(
   list,
   name_old_transform,
