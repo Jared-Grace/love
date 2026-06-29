@@ -1,6 +1,5 @@
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_remove_all_multiple } from "../../../love/public/src/list_remove_all_multiple.mjs";
@@ -30,9 +29,6 @@ import { function_parse_declaration } from "../../../love/public/src/function_pa
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 export async function js_expand_generic(next, stack2, index, ast) {
-  log(js_expand_generic.name, {
-    next,
-  });
   let inserted = null;
   let v = js_statement_call_get(next);
   let call = property_get(v, "call");
