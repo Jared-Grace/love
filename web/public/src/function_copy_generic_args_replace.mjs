@@ -10,7 +10,7 @@ export async function function_copy_generic_args_replace(
   let list = text_split_comma_dot(args_comma);
   let fr = list_first_remaining(list);
   let name_old = property_get(fr, "first");
-  let result = await function_delete(f_names_comma);
+  let result = await function_delete(name_old);
   let r = await function_copy_generic_args(plugin_fn, args_comma);
   return r;
 }
