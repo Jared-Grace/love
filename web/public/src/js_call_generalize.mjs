@@ -7,7 +7,7 @@ export function js_call_generalize(ast, name_identifier, name_generalized) {
   "we do not want to rename the import";
   let declaration = js_flo(ast);
   js_identifier_rename(declaration, name_identifier, name_generalized);
-  let expression = js_parse_expression(code_expression);
-  let declare = js_declare(name, init);
-  js_flo_body_add_first(ast, item);
+  let expression = js_parse_expression(name_identifier);
+  let declare = js_declare(name_generalized, expression);
+  js_flo_body_add_first(ast, declare);
 }
