@@ -8,19 +8,20 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_flo_body } from "../../../love/public/src/js_flo_body.mjs";
 export async function js_call_add_before_return(ast, f_name) {
-  let lambda_add = function lambda2() {};
+  let lambda_add = function lambda2() {
+    function lambda(la) {
+      js_visit_returns(ast, la);
+    }
+    let list = list_adder(lambda);
+    let only = list_single(list);
+    let stack = property_get(only, "stack");
+    let e1 = list_get_end_1(stack);
+    log(js_call_add_before_return.name, {
+      only,
+    });
+    return;
+    let body_block = js_flo_body(ast);
+    list_add(body_block, item);
+  };
   await js_call_add_generic(ast, f_name, lambda_add);
-  function lambda(la) {
-    js_visit_returns(ast, la);
-  }
-  let list = list_adder(lambda);
-  let only = list_single(list);
-  let stack = property_get(only, "stack");
-  let e1 = list_get_end_1(stack);
-  log(js_call_add_before_return.name, {
-    only,
-  });
-  return;
-  let body_block = js_flo_body(ast);
-  list_add(body_block, item);
 }
