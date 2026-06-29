@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_visit_calls } from "../../../love/public/src/js_visit_calls.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -17,4 +18,8 @@ export function js_visit_calls_named(ast, f_name, lambda) {
     });
   }
   js_visit_calls(ast, lambda_inner);
+  return;
+  log(js_visit_calls_named.name, {
+    name,
+  });
 }
