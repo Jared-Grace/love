@@ -35,7 +35,7 @@ export async function sandbox() {
   const f_name = sandbox_3_a.name;
   await function_current_set(f_name);
   let r2 = await function_transform_current(
-    "js_identifier_rename,list,difference",
+    "js_identifier_name_new,c,list_join_newline,2",
   );
   return r2;
   await function_current_selects_empty();
