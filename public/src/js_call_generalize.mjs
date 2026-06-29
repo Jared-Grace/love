@@ -1,1 +1,1 @@
-export function js_call_generalize(ast) {}
+export function js_call_generalize(ast, name) {}
