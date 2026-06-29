@@ -3,5 +3,5 @@ import { js_identifier_rename } from "../../../love/public/src/js_identifier_ren
 export function js_call_generalize(ast, name_identifier, name_generalized) {
   "we do not want to rename the import";
   let declaration = js_flo(ast);
-  js_identifier_rename(ast2, name_from, name_to);
+  js_identifier_rename(declaration, name_identifier, name_generalized);
 }
