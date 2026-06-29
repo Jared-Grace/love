@@ -34,7 +34,9 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   const f_name = sandbox_3_a.name;
   await function_current_set(f_name);
-  let r2 = await function_transform_current("");
+  let r2 = await function_transform_current(
+    "js_identifier_rename,list,difference",
+  );
   return r2;
   await function_current_selects_empty();
   let r = await function_node_select_args(
