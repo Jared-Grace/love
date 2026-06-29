@@ -1,4 +1,4 @@
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_flo_body_add_first } from "../../../love/public/src/js_flo_body_add_first.mjs";
 import { js_flo } from "../../../love/public/src/js_flo.mjs";
@@ -7,7 +7,7 @@ export function js_call_generalize(ast, name_identifier, name_generalized) {
   "we do not want to rename the import";
   let declaration = js_flo(ast);
   js_identifier_rename(declaration, name_identifier, name_generalized);
-  let code = js_unparse(ast2);
+  let expression = js_parse_expression(code_expression);
   let declare = js_declare(name, init);
   js_flo_body_add_first(ast, item);
 }
