@@ -10,7 +10,7 @@ export async function function_name_new_get_args_list(plugin_fn, list) {
   let fr = list_first_remaining(list);
   let split = property_get(fr, "remaining");
   let f_name_old = property_get(fr, "first");
-  f_name_old = await function_name_unalias_only(f_name_old);
+  f_name_old = await name_old_transform(f_name_old);
   plugin_fn = override_get(function_name_new_get_generic_overrides, plugin_fn);
   let args_run = list_concat_single(f_name_old, split);
   let f_name_new = await function_run(plugin_fn, args_run);
