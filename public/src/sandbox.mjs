@@ -30,7 +30,9 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   const f_name = js_call_add_first.name;
   await function_current_set(f_name);
-  let r2 = await function_transform_current("js_flo_body_empty");
+  let r2 = await function_transform_current(
+    "js_call_generalize,js_flo_body_add_first,lambda_add",
+  );
   return r2;
   await function_current_selects_empty();
   let r = await function_node_select_args(
