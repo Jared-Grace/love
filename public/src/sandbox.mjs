@@ -1,3 +1,4 @@
+import { js_identifier_name_new } from "../../../love/public/src/js_identifier_name_new.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 import { js_call_named_find_alias } from "../../../love/public/src/js_call_named_find_alias.mjs";
 import { js_expand_selects } from "../../../love/public/src/js_expand_selects.mjs";
@@ -48,6 +49,7 @@ export async function sandbox() {
     [js_expressions_with_string_starting_with.name, "p"]);
   return;
   (function_transform_current,
+    [js_identifier_name_new.name, "l,folder_user_docs_path_previous"],
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
     [js_call_add_first.name, html_hash_get.name],
     [js_flo_body_add_return_argument_from_code.name, "n"]);
