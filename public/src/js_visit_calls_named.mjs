@@ -10,6 +10,7 @@ export function js_visit_calls_named(ast, f_name, lambda) {
     let name = js_call_callee_name_try(node);
     log(js_visit_calls_named.name, {
       name,
+      f_name,
     });
     if (equal_not(name, f_name)) {
       return;
