@@ -1,5 +1,4 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_find_return } from "../../../love/public/src/js_find_return.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
