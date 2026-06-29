@@ -5,5 +5,5 @@ export function js_call_generalize(ast, name_identifier, name_generalized) {
   "we do not want to rename the import";
   let declaration = js_flo(ast);
   js_identifier_rename(declaration, name_identifier, name_generalized);
-  js_flo_body_add_first(ast2, item);
+  js_flo_body_add_first(ast, item);
 }
