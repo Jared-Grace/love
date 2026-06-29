@@ -5,9 +5,9 @@ import { override_get } from "../../../love/public/src/override_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 export async function js_name_new_get_args_list(
+  plugin_fn,
   list,
   name_old_transform,
-  plugin_fn,
 ) {
   let fr = list_first_remaining(list);
   let split = property_get(fr, "remaining");
