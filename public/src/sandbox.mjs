@@ -1,3 +1,4 @@
+import { js_flo_body_empty } from "../../../love/public/src/js_flo_body_empty.mjs";
 import { js_call_generalize } from "../../../love/public/src/js_call_generalize.mjs";
 import { js_identifier_name_new } from "../../../love/public/src/js_identifier_name_new.mjs";
 import { js_call_named_find_alias } from "../../../love/public/src/js_call_named_find_alias.mjs";
@@ -47,6 +48,7 @@ export async function sandbox() {
     [js_expressions_with_string_starting_with.name, "p"]);
   return;
   (function_transform_current,
+    [js_flo_body_empty.name],
     [js_call_generalize.name, "folder_user_docs_path,file_name_to_path"],
     [js_identifier_name_new.name, "l,folder_user_docs_path_previous"],
     [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
