@@ -1,7 +1,9 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_calendar_preaching_ask_entries_previous } from "../../../love/public/src/app_calendar_preaching_ask_entries_previous.mjs";
 import { app_calendar_preaching_ask_entries } from "../../../love/public/src/app_calendar_preaching_ask_entries.mjs";
 export async function sandbox_3_a() {
   let filtered = await app_calendar_preaching_ask_entries();
   let filtered2 = await app_calendar_preaching_ask_entries_previous();
-  let list = list_adder(function lambda(la) {});
+  function lambda(la) {}
+  let list = list_adder(lambda);
 }
