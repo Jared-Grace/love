@@ -61,9 +61,8 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {
-            let span = html_span_text(parent2, text);
+            let span = html_span_text("Symbols: ");
             let spans = html_span_text_multiple(parent, digits);
-            let combined2 = text_combine("Number of symbols: ", spans);
             return combined2;
           },
           answer: function lambda3(parent_button) {
