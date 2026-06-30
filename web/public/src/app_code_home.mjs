@@ -1,12 +1,9 @@
+import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_symbol_style_box_shadow_value } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
-import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
-import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
-import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -70,11 +67,7 @@ export function app_code_home(context) {
         render: {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
-            let div3 = html_div(parent);
-            html_style_background_color_black(div3);
-            html_style_padding(div3, "0.2em");
-            html_border_radius_em(div3, 0.75);
-            html_border_none(div3);
+            let div3 = app_code_container_dark(parent);
             function lambda4(d) {
               let span2 = app_replace_button_symbol(div3, d);
               app_replace_button_symbol_style(span2);
