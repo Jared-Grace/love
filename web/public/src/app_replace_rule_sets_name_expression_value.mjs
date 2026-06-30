@@ -10,6 +10,6 @@ export function app_replace_rule_sets_name_expression_value(e) {
   if (null_is(name)) {
     return name;
   }
-  let f_name_new = app_shared_name_text_to_idenitifier(prefix, name);
-  return f_name_new;
+  let name_new = app_shared_name_text_to_idenitifier(prefix, name);
+  return name_new;
 }
