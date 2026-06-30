@@ -4,8 +4,9 @@ import { html_style_padding } from "../../../love/public/src/html_style_padding.
 import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function app_code_container_dark(parent) {
+  let color_background_set = html_style_background_color_black;
   let div3 = html_div(parent);
-  html_style_background_color_black(div3);
+  color_background_set(div3);
   html_style_padding(div3, "0.2em");
   html_border_radius_em(div3, 0.75);
   html_border_none(div3);
