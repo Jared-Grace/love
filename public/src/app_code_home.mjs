@@ -16,11 +16,11 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
   let batch = [];
-  let ds = digits();
-  let dps = digits_positive();
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {
+    let ds = digits();
+    let dps = digits_positive();
     function lambda2(item) {
       let first_is = equal_0(item);
       let choices = ternary(first_is, dps, ds);
