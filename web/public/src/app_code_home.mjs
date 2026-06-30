@@ -64,9 +64,9 @@ export function app_code_home(context) {
             let span = html_div_text(parent, "Symbols: ");
             let div3 = app_code_container_dark(parent);
             function lambda4(d) {
-              let span2 = app_code_symbol(div3, d);
+              let digit = app_code_symbol(div3, d);
               let div4 = html_div_text(root2, text);
-              return span2;
+              return digit;
             }
             let spans = list_map(digits, lambda4);
           },
