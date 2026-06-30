@@ -72,7 +72,7 @@ export function app_code_home(context) {
             html_style_background_color_black(div3);
             html_style_padding_x(div3, "0.2em");
             html_style_padding_y(div3, "0.2em");
-            html_border_radius_em(div3, 0.5);
+            html_border_radius_em(div3, 1);
             html_border_none(div3);
             function lambda4(d) {
               let span2 = app_replace_button_symbol(div3, d);
