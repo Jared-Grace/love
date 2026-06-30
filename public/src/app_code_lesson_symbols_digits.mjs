@@ -59,7 +59,7 @@ export function app_code_lesson_symbols_digits() {
             function lambda2(parent) {
               let a = example_above(parent, digits);
               let b = digit_batch();
-              let mapped = list_map_property(list, property_name);
+              let mapped = list_map_property(b, "answer");
             },
           ],
         };
