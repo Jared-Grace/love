@@ -1,8 +1,9 @@
+import { html_style_set_or_remove } from "../../../love/public/src/html_style_set_or_remove.mjs";
+import { app_replace_button_symbol_style_box_shadow_value } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
-import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
@@ -82,7 +83,9 @@ export function app_code_home(context) {
               html_style_background_color_set(span2, "#444");
               html_font_color_set(span2, "white");
               let h = app_replace_rule_set_highlight();
-              app_replace_button_symbol_style_box_shadow(true, span2, h);
+              let style_value =
+                app_replace_button_symbol_style_box_shadow_value(h);
+              html_style_set_or_remove(valid, sb, "box-shadow", style_value);
               return span2;
             }
             let spans = list_map(digits, lambda4);
