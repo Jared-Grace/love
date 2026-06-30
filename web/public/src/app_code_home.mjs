@@ -1,3 +1,4 @@
+import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -9,6 +10,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
   let batch = [];
+  let r62 = integer_random_1(column_count);
   let split = digits();
   function example() {
     let r6 = integer_random(n);
