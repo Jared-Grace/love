@@ -22,7 +22,7 @@ export function app_code_home(context) {
   let above = property_get(lesson, "above");
   let batch = property_get(lesson, "batch");
   above(root);
-  let p = html_div_text(root, "Here is an example:");
+  html_div_text(root, "First, here is an example:");
   let example_div = html_div(root);
   let b = [];
   function example() {
