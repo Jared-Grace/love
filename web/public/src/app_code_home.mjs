@@ -1,3 +1,4 @@
+import { range } from "../../../love/public/src/range.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -52,6 +53,7 @@ export function app_code_home(context) {
       };
       return r2;
     }
+    let r3 = range(count);
     let mapped2 = list_map(digit_counts, lambda);
     return mapped2;
   }
