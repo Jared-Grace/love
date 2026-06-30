@@ -57,7 +57,7 @@ export function app_code_lesson_symbols_digits() {
           quizzes: [
             function lambda2(parent) {
               let a = example_above(parent, digits);
-              let b = digit_batch;
+              let b = digit_batch();
             },
           ],
         };
