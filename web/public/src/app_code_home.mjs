@@ -11,6 +11,7 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
+import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
@@ -22,7 +23,8 @@ export function app_code_home(context) {
   function lambda(digit_count) {
     function lambda2(item) {
       let eq = equal_0(item);
-      if (false) {
+      let result = ternary(condition, on_true, on_false);
+      if (eq) {
       } else {
       }
     }
