@@ -19,6 +19,7 @@ export function app_code_home(context) {
     if (e) {
       batch = digit_batch();
     }
+    list_shuffle(batch);
     let r6 = integer_random(n);
     let r = list_random_item(split);
   }
@@ -40,7 +41,6 @@ export function app_code_home(context) {
   ]);
   function digit_batch() {
     let digit_counts = integer_random_1(5);
-    list_shuffle(digit_counts);
     function lambda(digit_count) {
       let digits = integer_positive_random_digits_text(digit_count);
       let r2 = {
