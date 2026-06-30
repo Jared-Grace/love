@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_span_text_multiple } from "../../../love/public/src/html_span_text_multiple.mjs";
@@ -15,6 +16,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
+  let p = html_p_text(root2, text);
   let example_div = html_div(root);
   let batch = [];
   function example() {
