@@ -1,3 +1,7 @@
+import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
+import { html_p } from "../../../love/public/src/html_p.mjs";
 import { digits_above } from "../../../love/public/src/digits_above.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
@@ -110,5 +114,17 @@ export function app_code_home(context) {
     }
     let mapped2 = list_map(digit_counts, lambda);
     return mapped2;
+  }
+  function digits_above(root) {
+    let p3 = html_p(root);
+    let ds = digits();
+    let joined = list_join_comma_space(ds);
+    let combined2 = text_combine_multiple(["The numbers ", joined, " are "]);
+    html_cycle_bold(p3, [combined2, "digits"]);
+    let p2 = html_p(root);
+    html_cycle_bold(p2, [
+      "In a number, the digits (0, 1, 2, ..., 9) are ",
+      "symbols",
+    ]);
   }
 }
