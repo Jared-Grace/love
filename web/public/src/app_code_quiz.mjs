@@ -13,7 +13,8 @@ export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
-  let quizzes = property_get(lesson, "quizzes");
+  let batch = property_get(lesson, "batch");
+  let quizzes = property_get(batch, "quizzes");
   let item = list_get(quizzes, quiz_index);
   log(app_code_quiz.name, {
     item,
