@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -64,6 +65,7 @@ export function app_code_lesson_symbols_digits() {
               let answers = list_map_property(b, "answer");
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
+              let taken = list_take(list, count);
             },
           ],
         };
