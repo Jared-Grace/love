@@ -43,6 +43,7 @@ export function app_code_lesson_symbols_digits() {
         let digits = integer_positive_random_digits_text(digit_count);
         let r2 = {
           render: {
+            example: function lambda6() {},
             question: function lambda2(parent) {
               let span = html_div_text(parent, "Symbols: ");
               let row = app_code_container_dark(parent);
