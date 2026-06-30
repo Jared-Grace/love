@@ -1,3 +1,4 @@
+import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
 import { app_replace_button_symbol_style_valid_if } from "../../../love/public/src/app_replace_button_symbol_style_valid_if.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
@@ -64,6 +65,7 @@ export function app_code_home(context) {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
             let div3 = html_div(parent);
+            html_style_background_color_black(parent_new);
             function lambda4(d) {
               let span2 = app_replace_button_symbol(div3, d);
               app_replace_button_style(span2);
