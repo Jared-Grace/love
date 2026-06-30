@@ -8,7 +8,7 @@ export function app_replace_rule_sets_name_expression_value(e) {
   let prefix = text_suffix_without(n, "s");
   let name = app_replace_rule_sets_name_expression(e);
   if (null_is(name)) {
-    return name;
+    ("return name");
   }
   let name_new = app_shared_name_text_to_identifier(prefix, name);
   return name_new;
