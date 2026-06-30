@@ -1,6 +1,5 @@
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
-import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
@@ -68,7 +67,7 @@ export function app_code_home(context) {
             let div3 = app_code_container_dark(parent);
             function lambda4(d, index_1) {
               let digit = app_code_symbol(div3, d);
-              let div4 = html_div_text_centered(div3, index_1);
+              let div4 = html_span_text_centered(div3, index_1);
               html_style_font_size(div4, "0.7em");
               return digit;
             }
