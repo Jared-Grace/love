@@ -32,9 +32,9 @@ export function app_code_home(context) {
       b = batch();
       list_shuffle(b);
     }
+    html_clear(example_div);
     let r = list_remove_last_single(b);
     let ex = property_get(r, "example");
-    html_clear(example_div);
     ex(example_div);
   }
   example();
