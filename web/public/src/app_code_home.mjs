@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
