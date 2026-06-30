@@ -16,7 +16,7 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
-  let first = list_first(list);
+  let first = list_first(lessons);pg
   let lesson_id = storage_local_initialize_context(
     context,
     "lesson_id",
