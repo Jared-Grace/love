@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -12,6 +13,8 @@ export function app_code_home(context) {
   let batch = [];
   let digit_count = integer_random_1(5);
   list_shuffle(digit_count);
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   function example() {
     if (false) {
     }
