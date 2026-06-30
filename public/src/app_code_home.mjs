@@ -1,4 +1,22 @@
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
+  let split = digits();
+  function lambda2() {}
+  let b = app_replace_button(root, "Show me another example", lambda2);
+  return;
+  html_p_text_multiple(root, [
+    "In computer programming",
+    "There are symbols",
+    "All 10 of these numbers are different symbols: ",
+  ]);
+  html_p_text_multiple(root, [
+    "In English:",
+    "There are letters",
+    "Letters are inside words",
+    "Words are inside sentences",
+    "Compture programs have a similar structure",
+    "In a computer program, there are symbols",
+    "Symbols are inside ",
+  ]);
 }
