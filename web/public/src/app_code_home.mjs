@@ -38,11 +38,9 @@ export function app_code_home(context) {
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
     html_clear(example_div);
-    let div32 = app_code_container_light(parent2);
-    let div = html_div(example_div);
+    let div = app_code_container_light(example_div);
     question2(div);
-    let div33 = app_code_container_light(parent3);
-    let div2 = html_div(example_div);
+    let div2 = app_code_container_light(example_div);
     answer2(div2);
   }
   let b = app_replace_button(root, "Show me another example", example);
