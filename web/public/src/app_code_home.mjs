@@ -27,8 +27,8 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let p2 = html_p(root);
-  html_cycle_bold(p2, ["Number digits are ", "symbols"]);
-  let p = html_div_text(root, "Example:");
+  html_cycle_bold(p2, ["The digits (0-9) in a number are ", "symbols"]);
+  let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
   let batch = [];
   function example() {
