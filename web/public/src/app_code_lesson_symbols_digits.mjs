@@ -1,5 +1,5 @@
+import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_symbols_digits() {
               let a = example_above(parent, digits);
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
-              list_remove_if_exists(answers, digit_count);
+              list_add_if_not_includes(answers, digit_count);
               list_shuffle(list);
             },
           ],
