@@ -27,11 +27,11 @@ export function app_code_home(context) {
       let choice = list_random_item(choices);
       return choice;
     }
-    let mapped = range_map(digit_count, lambda2);
+    let digits = range_map(digit_count, lambda2);
     let r2 = {
       render,
       answer,
-      mapped,
+      mapped: digits,
     };
     return r2;
   }
