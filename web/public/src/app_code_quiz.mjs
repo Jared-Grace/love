@@ -1,4 +1,3 @@
-import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
@@ -12,6 +11,5 @@ export function app_code_quiz(context) {
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
   html_div_text(root, "Do you want go back and see another example?");
   let combined = app_code_example_text();
-  app_replace_button(root, combined, example);
-  app_replace_button_screen(context, app_code_home, root, "Back");
+  app_replace_button_screen(context, app_code_home, root, combined);
 }
