@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_span_text_multiple } from "../../../love/public/src/html_span_text_multiple.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
@@ -23,6 +24,7 @@ export function app_code_home(context) {
       list_shuffle(batch);
     }
     let r = list_remove_last_single(batch);
+    let render2 = property_get(r, "render");
     log(app_code_home.name, {
       r,
       batch,
