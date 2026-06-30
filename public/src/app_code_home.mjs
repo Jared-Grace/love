@@ -52,9 +52,9 @@ export function app_code_home(context) {
   app_replace_button(root, combined, example);
   example();
   html_hr(root);
-  let combined2 = text_combine("🎓", "right");
   html_div_text(root, "Do you want to be quizzed now?");
-  app_replace_button(root, "Yes, please quiz me", noop);
+  let combined2 = text_combine("🎓", "Yes, please quiz me");
+  app_replace_button(root, combined2, noop);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
