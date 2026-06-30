@@ -54,7 +54,11 @@ export function app_code_lesson_symbols_digits() {
             );
           },
           answer: digit_count,
-          quizzes: [function lambda2(parent) {}],
+          quizzes: [
+            function lambda2(parent) {
+              let a = example_above(parent, digits);
+            },
+          ],
         };
         return r2;
       }
