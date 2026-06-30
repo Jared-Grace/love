@@ -66,7 +66,7 @@ export function app_code_home(context) {
             function lambda4(d) {
               let span2 = app_replace_button_symbol(parent, d);
               app_replace_button_style(span2);
-              app_replace_button_symbol_style_valid_if(sb, valid);
+              app_replace_button_symbol_style_valid_if(span2, true);
               return span2;
             }
             let spans = list_map(digits, lambda4);
