@@ -1,4 +1,4 @@
-import { range } from "../../../love/public/src/range.mjs";
+import { range_map } from "../../../love/public/src/range_map.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -20,8 +20,7 @@ export function app_code_home(context) {
   list_shuffle(digit_counts);
   function lambda(digit_count) {
     function lambda2(item) {}
-    let n_indices = range(digit_count);
-    let mapped = list_map(n_indices, lambda2);
+    let mapped = range_map(digit_count, lambda2);
     let r2 = {
       render,
       answer,
