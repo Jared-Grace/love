@@ -71,9 +71,13 @@ export function app_code_lesson_symbols_digits() {
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
               let taken = list_take(b, answer_count_max);
-              function lambda3(item) {
+              function lambda3(answer) {
                 function lambda8() {}
-                let b2 = app_replace_button_wide(root2, name2, lambda8);
+                let b2 = app_replace_button_wide(
+                  container_answer2,
+                  answer,
+                  lambda8,
+                );
               }
               each(taken, lambda3);
             },
