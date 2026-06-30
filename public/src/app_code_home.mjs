@@ -17,7 +17,8 @@ export function app_code_home(context) {
   function example() {
     let e = list_empty_is(batch);
     if (e) {
-      digit_batch();
+      
+    batch = digit_batch();
     }
     let r6 = integer_random(n);
     let r = list_random_item(split);
