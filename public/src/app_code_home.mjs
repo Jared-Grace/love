@@ -1,3 +1,4 @@
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -28,6 +29,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
+  let value = storage_local_get_context(context, "lesson_index");
   let p3 = html_p(root);
   let ds = digits();
   let joined = list_join_comma_space(ds);
