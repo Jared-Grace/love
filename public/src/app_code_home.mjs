@@ -1,6 +1,5 @@
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -30,12 +29,11 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let combined = text_combine("These numbers are digits", right);
   let p3 = html_p_text(root, text);
   let ds = digits();
   let joined = list_join_comma_space(ds);
-  let combined2 = text_combine_multiple(list);
-  html_cycle_bold(root, ["The numbers 0, 1, 2, 3, ..., 9 are ", "digits"]);
+  let combined2 = text_combine_multiple("The numbers ", joined, " are ");
+  html_cycle_bold(p3, [combined2, "digits"]);
   let p2 = html_p(root);
   html_cycle_bold(p2, [
     "The digits (0, 1, 2, 3, ..., 9) in a number are ",
