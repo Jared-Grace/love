@@ -36,6 +36,7 @@ export function app_code_home(context) {
     answer2(div2);
   }
   let b = app_replace_button(root, "Show me another example", example);
+  example();
   return;
   html_p_text_multiple(root, [
     "In computer programming",
