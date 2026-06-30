@@ -1,3 +1,4 @@
+import { file_temp_json_open } from "../../../love/public/src/file_temp_json_open.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "../../../love/public/src/property_delete_if_exists_fn.mjs";
@@ -40,13 +41,14 @@ export async function command_line_generic(command, extra) {
       return r;
     }
     child.on("error", lambda3);
-    function lambda4(code) {
+    async function lambda4(code) {
       if (code_ignore !== true && code !== 0) {
         reject(
           new Error(
             `Command exited with code ${code}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`,
           ),
         );
+        await file_temp_json_open(result);
       } else {
         resolve({
           stdout,
