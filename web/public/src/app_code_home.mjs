@@ -72,7 +72,7 @@ export function app_code_home(context) {
               gap: "2rem",
             });
             function lambda4(d, index_1) {
-              let div5 = html_div(parent2);
+              let div5 = html_div(parent2);hsa
               let digit = app_code_symbol(row, d);
               let div4 = html_span_text(row, index_1);
               html_style_font_size(div4, "0.7em");
