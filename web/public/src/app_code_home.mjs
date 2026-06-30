@@ -34,8 +34,7 @@ export function app_code_home(context) {
     }
     html_clear(example_div);
     let r = list_remove_last_single(b);
-    let ex = property_get(r, "example");
-    ex(example_div);
+    on_batch_item(r);
   }
   example();
   app_replace_button(root, combined, example);
@@ -58,4 +57,8 @@ export function app_code_home(context) {
     "In a computer program, there are symbols",
     "Symbols are inside ",
   ]);
+  function on_batch_item(r) {
+    let ex = property_get(r, "example");
+    ex(example_div);
+  }
 }
