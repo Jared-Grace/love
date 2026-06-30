@@ -1,4 +1,4 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
@@ -67,7 +67,7 @@ export function app_code_home(context) {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
             let row = app_code_container_dark(parent);
-            html_style_set(b2, style_key, style_value);
+            html_style_assign(b2, s2);
             function lambda4(d, index_1) {
               let digit = app_code_symbol(row, d);
               let div4 = html_span_text(row, index_1);
