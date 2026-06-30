@@ -116,6 +116,9 @@ export function app_code_home(context) {
     }
     let mapped2 = list_map(digit_counts, lambda);
     return mapped2;
+
+
+
     
   }
   function digits_above(root) {
