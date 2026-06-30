@@ -1,5 +1,5 @@
+import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
@@ -20,7 +20,7 @@ export function app_code_home(context) {
       batch = digit_batch();
       list_shuffle(batch);
     }
-    let r = list_remove_last(batch);
+    let r = list_remove_last_single(batch);
     log(app_code_home.name, {
       r,
       batch,
