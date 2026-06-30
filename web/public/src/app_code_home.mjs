@@ -21,10 +21,11 @@ export function app_code_home(context) {
   function lambda(digit_count) {
     let n_indices = range(digit_count);
     function lambda2(item) {}
-    let mapped2 = list_map(list, lambda2);
+    let mapped = list_map(n_indices, lambda2);
     let r2 = {
       render,
       answer,
+      mapped,
     };
     return r2;
   }
