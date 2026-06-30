@@ -3,7 +3,7 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { app_code_container_generic } from "../../../love/public/src/app_code_container_generic.mjs";
 export function app_code_container_light(parent) {
   let container = app_code_container_generic(parent);
-  html_style_background_color_set(container, "#ddd");
+  html_style_background_color_set(container, "#eee");
   app_replace_button_symbol_style_box_shadow_value_set(container, "#bbb");
   return container;
 }
