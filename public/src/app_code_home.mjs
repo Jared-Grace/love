@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -63,6 +64,7 @@ export function app_code_home(context) {
             return spans;
           },
           answer: function lambda3(parent_button) {
+            let combined = text_combine(left, right);
             html_text_set(parent_button, digit_count);
           },
         },
