@@ -1,3 +1,4 @@
+import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
@@ -28,7 +29,8 @@ export function app_code_home(context) {
   let combined = app_code_example_text();
   let refresh = function lambda() {
     let e = list_empty_is(b);
-    if (e) {le
+    if (e) {
+      list_empty(list);
       b = batch();
       list_shuffle(b);
     }
