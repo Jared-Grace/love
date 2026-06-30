@@ -51,8 +51,8 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {
-            let mapped3 = html_span_text_multiple(parent, digits);
-            return mapped3;
+            let spans = html_span_text_multiple(parent, digits);
+            return spans;
           },
           answer: function lambda3(parent_button) {
             html_text_set(parent_button, digit_count);
