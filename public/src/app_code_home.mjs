@@ -6,7 +6,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let split = digits();
-  let r = list_random_item(list);
+  let r = list_random_item(split);
   function lambda2() {}
   let b = app_replace_button(root, "Show me another example", lambda2);
   return;
