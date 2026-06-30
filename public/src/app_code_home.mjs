@@ -21,7 +21,7 @@ export function app_code_home(context) {
   let lesson = list_find_property(lessons, "id", lesson_id);
   let above = property_get(lesson, "above");
   let batch = property_get(lesson, "batch");
-  above(root);
+  above(root);hh
   html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
   let b = [];
