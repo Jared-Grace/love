@@ -83,6 +83,8 @@ export function app_code_home(context) {
           answer: function lambda3(parent_button) {
             let combined = text_combine("Number of symbols: ", digit_count);
             html_text_set(parent_button, combined);
+            let div3 = app_code_container_dark(parent);
+            html_text_set(component, text);
           },
         },
         answer: digit_count,
