@@ -7,8 +7,8 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let split = digits();
   let r = list_random_item(split);
-  function lambda2() {}
-  let b = app_replace_button(root, "Show me another example", lambda2);
+  function example() {}
+  let b = app_replace_button(root, "Show me another example", example);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
