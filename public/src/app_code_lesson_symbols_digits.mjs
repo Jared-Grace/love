@@ -64,7 +64,6 @@ export function app_code_lesson_symbols_digits() {
           answer: digit_count,
           quizzes: [
             function lambda2(parent) {
-              alert("h");
               let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
               let b = digit_batch();
