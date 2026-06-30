@@ -1,3 +1,4 @@
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -5,6 +6,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let split = digits();
+  let r = list_random_item(list);
   function lambda2() {}
   let b = app_replace_button(root, "Show me another example", lambda2);
   return;
