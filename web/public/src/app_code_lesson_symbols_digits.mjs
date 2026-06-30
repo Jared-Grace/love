@@ -65,7 +65,7 @@ export function app_code_lesson_symbols_digits() {
               let answers = list_map_property(b, "answer");
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
-              let taken = list_take(list, count);
+              let taken = list_take(b, 4);
             },
           ],
         };
