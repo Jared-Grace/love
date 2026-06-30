@@ -41,7 +41,8 @@ export function app_code_home(context) {
     let div2 = app_code_container_light(example_div);
     answer2(div2);
   }
-  app_replace_button(root, "Show me another example", example);
+  html_div_text(root, "Second, do you want another example?");
+  app_replace_button(root, "Yes, show me another example", example);
   example();
   return;
   html_p_text_multiple(root, [
