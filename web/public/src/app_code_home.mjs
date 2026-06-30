@@ -1,3 +1,5 @@
+import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
+import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_style_padding_x } from "../../../love/public/src/html_style_padding_x.mjs";
 import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
@@ -70,6 +72,8 @@ export function app_code_home(context) {
             html_style_background_color_black(div3);
             html_style_padding_x(div3, "0.2em");
             html_style_padding_y(div3, "0.2em");
+            html_border_radius_em(div3, 0.5);
+            html_border_none(div3);
             function lambda4(d) {
               let span2 = app_replace_button_symbol(div3, d);
               app_replace_button_style(span2);
