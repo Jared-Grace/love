@@ -23,6 +23,7 @@ import { list_join_comma_space } from "../../../love/public/src/list_join_comma_
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 export function app_code_lesson_symbols_digits() {
+  const answer_count_max = 4;
   let r3 = {
     id: "symbols_digits",
     name: "Symbols (Digits)",
@@ -65,7 +66,7 @@ export function app_code_lesson_symbols_digits() {
               let answers = list_map_property(b, "answer");
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
-              let taken = list_take(b, 4);
+              let taken = list_take(b, answer_count_max);
             },
           ],
         };
