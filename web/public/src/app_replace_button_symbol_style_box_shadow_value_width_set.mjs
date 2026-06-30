@@ -6,8 +6,8 @@ export function app_replace_button_symbol_style_box_shadow_value_width_set(
   width,
 ) {
   let style_value = app_replace_button_symbol_style_box_shadow_value_width(
-    width,
     color_box_shadow,
+    width,
   );
   html_style_set(component, "box-shadow", style_value);
 }
