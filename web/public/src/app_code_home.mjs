@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { app_code_lessons_fns } from "../../../love/public/src/app_code_lessons_fns.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -17,6 +18,9 @@ export function app_code_home(context) {
   let lesson = storage_local_get_context(context, "lesson_id");
   let lessons_fns = app_code_lessons_fns();
   let lessons = invoke_multiple(lessons_fns);
+  log(app_code_home.name, {
+    lessons,
+  });
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
