@@ -55,7 +55,8 @@ export function app_code_home(context) {
               let span = html_span_text(parent, d);
               return span;
             }
-            $rlist_map(digits, lambda4);
+            let mapped3 = list_map(digits, lambda4);
+            return mapped3;
           },
           answer: function lambda3(parent_button) {
             html_text_set(parent_button, digit_count);
