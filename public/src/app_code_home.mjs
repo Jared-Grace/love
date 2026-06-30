@@ -15,7 +15,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let lessons = app_code_lessons();
+  let lessons = app_code_lessons();$a
   let property_name = "id";
   let value = list_first_property(lessons, property_name);
   let lesson_id = storage_local_initialize_context(context, "lesson_id", value);
