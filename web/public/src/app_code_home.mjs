@@ -1,6 +1,5 @@
+import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
-import { app_code_lessons_fns } from "../../../love/public/src/app_code_lessons_fns.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -16,8 +15,7 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = storage_local_get_context(context, "lesson_id");
-  let lessons_fns = app_code_lessons_fns();
-  let lessons = invoke_multiple(lessons_fns);
+  let lessons = app_code_lessons();
   log(app_code_home.name, {
     lessons,
   });
