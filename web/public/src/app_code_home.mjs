@@ -22,7 +22,7 @@ export function app_code_home(context) {
   let above = property_get(lesson, "above");
   let batch = property_get(lesson, "batch");
   above(root);
-  html_div_text(root, "First, here is an example:");
+  html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
   let b = [];
   function example() {
@@ -41,7 +41,7 @@ export function app_code_home(context) {
     let div2 = app_code_container_light(example_div);
     answer2(div2);
   }
-  html_div_text(root, "Second, do you want another example?");
+  html_div_text(root, "Do you want another example?");
   app_replace_button(root, "Yes, show me another example", example);
   example();
   return;
