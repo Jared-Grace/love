@@ -78,7 +78,7 @@ export function app_code_home(context) {
               let div4 = html_div(div3);
               let span2 = app_replace_button_symbol(div4, d);
               app_replace_button_style(span2);
-              let t = true;
+              let t = true;$x
               app_replace_button_symbol_style_valid_if(span2, t);
               return span2;
             }
