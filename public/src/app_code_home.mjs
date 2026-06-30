@@ -1,4 +1,4 @@
-import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
+import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -10,7 +10,7 @@ export function app_code_home(context) {
   html_clear(root);
   let split = digits();
   function example() {
-    let r6 = integer_random_range(n);
+    let r6 = integer_random(n);
     let r = list_random_item(split);
   }
   let b = app_replace_button(root, "Show me another example", example);
