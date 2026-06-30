@@ -47,6 +47,7 @@ export function app_code_home(context) {
   app_replace_button(root, "Yes, show me another example", example);
   example();
   html_hr(root);
+  html_div_text(root, "Do you want to be quizzed now?");
   return;
   html_p_text_multiple(root, [
     "In computer programming",
