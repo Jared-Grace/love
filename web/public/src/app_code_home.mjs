@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -25,6 +26,7 @@ export function app_code_home(context) {
   }
   let batch = list_map(digit_counts, lambda);
   function example() {
+    let e = list_empty_is(list);
     if (false) {
     }
     let r6 = integer_random(n);
