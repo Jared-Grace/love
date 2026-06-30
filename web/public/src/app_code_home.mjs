@@ -1,4 +1,3 @@
-import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
