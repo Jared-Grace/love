@@ -6,8 +6,9 @@
 </head>
 <body>
   <script type="module"> 
-    import {app_code_main} from "./../src/app_code_main.mjs"
-    app_code_main(  );
+    import {app_code_main} from "../../../love/public/src/app_code_main.mjs"
+import {app_context_initialize} from "../../../love/public/src/app_context_initialize.mjs"
+app_context_initialize( app_code_main );
   </script>
 </body>
 </html>
