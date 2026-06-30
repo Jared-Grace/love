@@ -38,7 +38,7 @@ export function app_code_home(context) {
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
     html_clear(example_div);
-    let div = app_code_container_light(example_div);
+    let div = html_div(example_div);
     question2(div);
     let div2 = app_code_container_light(example_div);
     answer2(div2);
