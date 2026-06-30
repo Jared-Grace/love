@@ -1,7 +1,7 @@
+import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
-import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -36,8 +36,7 @@ export function app_code_home(context) {
     ex(example_div);
   }
   html_div_text(root, "Do you want another example?");
-  let left = emoji_repeat_1();
-  let combined = text_combine(left, "Yes, show me another example");
+  let combined = app_code_example_text();
   app_replace_button(root, combined, example);
   example();
   html_hr(root);
