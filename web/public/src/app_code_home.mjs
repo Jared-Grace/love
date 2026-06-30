@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { list_first_property } from "../../../love/public/src/list_first_property.mjs";
@@ -45,7 +46,8 @@ export function app_code_home(context) {
     answer2(div2);
   }
   html_div_text(root, "Do you want another example?");
-  app_replace_button(root, "Yes, show me another example", example);
+  let combined = text_combine(left, right);
+  app_replace_button(root, "🔂", "Yes, show me another example", example);
   example();
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
