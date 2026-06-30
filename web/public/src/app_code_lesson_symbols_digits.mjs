@@ -25,11 +25,15 @@ export function app_code_lesson_symbols_digits() {
       let p3 = html_p(root);
       let ds = digits();
       let joined = list_join_comma_space(ds);
-      let combined2 = text_combine_multiple(["The numbers ", joined, " are "]);
+      let combined2 = text_combine_multiple([
+        "The numbers ",
+        joined,
+        " are called ",
+      ]);
       html_cycle_bold(p3, [combined2, "digits"]);
       let p2 = html_p(root);
       html_cycle_bold(p2, [
-        "In a number, the digits (0, 1, 2, ..., 9) are ",
+        "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
         "symbols",
       ]);
     },
