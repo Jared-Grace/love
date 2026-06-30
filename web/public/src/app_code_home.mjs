@@ -71,7 +71,6 @@ export function app_code_home(context) {
           answer: function lambda3(parent_button) {
             html_text_set(parent_button, "Number of symbols: ");
             let div3 = app_code_container_dark(parent_button);
-            html_text_set(div3, digit_count);
             let span22 = app_code_symbol(div3, digit_count);
           },
         },
