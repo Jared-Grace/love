@@ -19,7 +19,7 @@ export function app_code_home(context) {
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {
-    let r3 = range(count);
+    let n_indices = range(digit_count);
     function lambda2(item) {}
     let mapped2 = list_map(list, lambda2);
     let r2 = {
