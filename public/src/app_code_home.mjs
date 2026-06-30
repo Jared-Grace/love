@@ -1,3 +1,4 @@
+import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
@@ -42,7 +43,7 @@ export function app_code_home(context) {
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
   let combined2 = text_combine("🎓", "Yes, please quiz me");
-  app_replace_button_screen(context, app_code_home, root, combined2);
+  app_replace_button_screen(context, app_code_quiz, root, combined2);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
