@@ -21,7 +21,7 @@ export function app_code_home(context) {
   list_shuffle(digit_counts);
   function lambda(digit_count) {
     function lambda2(item) {
-      let eq2 = equal(left, right);
+      let eq2 = equal(item, 0);
       if (false) {
       } else {
       }
