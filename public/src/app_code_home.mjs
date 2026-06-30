@@ -26,7 +26,7 @@ export function app_code_home(context) {
   let b = [];
   html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
-  function example() {
+  example=function () {
     let e = list_empty_is(b);
     if (e) {
       b = batch();
