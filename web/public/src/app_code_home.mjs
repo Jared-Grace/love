@@ -72,10 +72,14 @@ export function app_code_home(context) {
               gap: "2rem",
             });
             function lambda4(d, index_1) {
-              let div5 = html_div(parent2);
-              html_style_assign(b3, s3);
-              let digit = app_code_symbol(row, d);
-              let div4 = html_span_text(row, index_1);
+              let row_item = html_div(row);
+              html_style_assign(row_item, {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              });
+              let digit = app_code_symbol(row_item, d);
+              let div4 = html_span_text(row_item, index_1);
               html_style_font_size(div4, "0.7em");
               html_style_assign(b2, s2);
               return digit;
