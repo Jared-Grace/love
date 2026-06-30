@@ -1,10 +1,5 @@
+import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
-import { app_replace_button_symbol_style_box_shadow_value } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value.mjs";
-import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
-import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -68,13 +63,7 @@ export function app_code_home(context) {
             let span = html_div_text(parent, "Symbols: ");
             let div3 = app_code_container_dark(parent);
             function lambda4(d) {
-              let span2 = app_replace_button_symbol(div3, d);
-              app_replace_button_symbol_style(span2);
-              html_style_background_color_set(span2, "#444");
-              html_font_color_set(span2, "white");
-              let style_value =
-                app_replace_button_symbol_style_box_shadow_value("#777");
-              html_style_set(span2, "box-shadow", style_value);
+              let span2 = app_code_symbol(div3, d);
               return span2;
             }
             let spans = list_map(digits, lambda4);
