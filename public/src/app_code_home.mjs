@@ -9,6 +9,7 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
@@ -17,6 +18,7 @@ export function app_code_home(context) {
     let e = list_empty_is(batch);
     if (e) {
       batch = digit_batch();
+      list_shuffle(batch);
     }
     let r = list_random_item(batch);
     log(app_code_home.name, {
