@@ -20,7 +20,7 @@ export function app_code_home(context) {
   list_shuffle(digit_counts);
   function lambda(digit_count) {
     function lambda2(i) {}
-    each_range(count, lambda2);
+    each_range(digit_count, lambda2);
   }
   let mapped = list_map(digit_counts, lambda);
   function example() {
