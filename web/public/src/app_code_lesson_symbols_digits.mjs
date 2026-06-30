@@ -76,7 +76,6 @@ export function app_code_lesson_symbols_digits() {
             );
           },
           answer: digit_count,
-          mapped: digits,
         };
         return r2;
       }
