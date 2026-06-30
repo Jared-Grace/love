@@ -48,7 +48,7 @@ export function app_code_home(context) {
       let digits = integer_positive_random_digits_text(digit_count);
       let r2 = {
         render: 0,
-        answer: 0,
+        answer: digit_count,
         mapped: digits,
       };
       return r2;
