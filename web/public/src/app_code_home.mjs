@@ -1,9 +1,9 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_span_text_multiple } from "../../../love/public/src/html_span_text_multiple.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -27,10 +27,7 @@ export function app_code_home(context) {
     let render2 = property_get(r, "render");
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
-    log(app_code_home.name, {
-      r,
-      batch,
-    });
+    let div = html_div(parent2);
   }
   let b = app_replace_button(root, "Show me another example", example);
   return;
