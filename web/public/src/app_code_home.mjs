@@ -1,4 +1,5 @@
-import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
@@ -31,7 +32,6 @@ export function app_code_home(context) {
     let e = list_empty_is(b);
     if (e) {
       list_replace_all(list, items);
-      b = batch();
       list_shuffle(b);
     }
     html_clear(example_div);
