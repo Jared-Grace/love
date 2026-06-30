@@ -4,8 +4,8 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
-export function app_code_symbol(div3, d) {
-  let span2 = app_replace_button_symbol(div3, d);
+export function app_code_symbol(parent, d) {
+  let span2 = app_replace_button_symbol(parent, d);
   app_replace_button_symbol_style(span2);
   html_style_background_color_set(span2, "#444");
   html_font_color_set(span2, "white");
