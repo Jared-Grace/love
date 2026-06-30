@@ -6,8 +6,7 @@ export function app_code_main(context) {
   let root = property_get(context, "root");
   let split = digits();
   function lambda2() {}
-  let b = app_replace_button(parent, text, lambda2);
-  hbt;
+  let b = app_replace_button(root, "Show me another example", lambda2);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
