@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
@@ -63,6 +64,7 @@ export function app_code_lesson_symbols_digits() {
           quizzes: [
             function lambda2(parent) {
               let a = example_above(parent, digits);
+              let container_answer2 = property_get(a, "container_answer");
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
               list_add_if_not_includes(answers, digit_count);
