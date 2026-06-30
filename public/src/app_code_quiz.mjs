@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
@@ -14,6 +15,9 @@ export function app_code_quiz(context) {
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
   let quizzes = property_get(lesson, "quizzes");
   let item = list_get(quizzes, quiz_index);
+  log(app_code_quiz.name, {
+    item,
+  });
   item(root);
   html_div_text(root, "Do you want go back and see another example?");
   let left = emoji_arrow_left();
