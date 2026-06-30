@@ -82,7 +82,7 @@ export function app_code_home(context) {
               html_style_background_color_set(span2, "#444");
               html_font_color_set(span2, "white");
               let style_value =
-                app_replace_button_symbol_style_box_shadow_value("#777");
+                app_replace_button_symbol_style_box_shadow_value("#888");
               html_style_set(span2, "box-shadow", style_value);
               return span2;
             }
