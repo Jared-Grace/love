@@ -51,7 +51,7 @@ export function app_code_home(context) {
         render: {
           question: function lambda2(parent) {},
           answer: function lambda3(parent_button) {
-            html_text_set(component, text);
+            html_text_set(parent_button, digit_count);
           },
         },
         answer: digit_count,
