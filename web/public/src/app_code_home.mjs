@@ -5,7 +5,6 @@ import { app_replace_button_symbol_style } from "../../../love/public/src/app_re
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -81,10 +80,9 @@ export function app_code_home(context) {
             let spans = list_map(digits, lambda4);
           },
           answer: function lambda3(parent_button) {
-            let combined = text_combine("Number of symbols: ", digit_count);
-            html_text_set(parent_button, combined);
+            html_text_set(parent_button, "Number of symbols: ");
             let div3 = app_code_container_dark(parent);
-            html_text_set(component, text);
+            html_text_set(div3, digit_count);
           },
         },
         answer: digit_count,
