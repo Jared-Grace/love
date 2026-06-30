@@ -1,3 +1,4 @@
+import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { function_name_combine_multiple } from "../../../love/public/src/function_name_combine_multiple.mjs";
 import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { function_copy_open } from "../../../love/public/src/function_copy_open.mjs";
