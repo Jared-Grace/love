@@ -1,9 +1,9 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
-import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -20,8 +20,10 @@ export function app_code_home(context) {
       batch = digit_batch();
     }
     list_shuffle(batch);
-    let r6 = integer_random(n);
-    let r = list_random_item(split);
+    let r = list_random_item(batch);
+    log(app_code_home.name, {
+      r,
+    });
   }
   let b = app_replace_button(root, "Show me another example", example);
   return;
