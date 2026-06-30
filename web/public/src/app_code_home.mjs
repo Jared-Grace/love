@@ -65,10 +65,10 @@ export function app_code_home(context) {
         render: {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
-            let div3 = app_code_container_dark(parent);
+            let row = app_code_container_dark(parent);
             function lambda4(d, index_1) {
-              let digit = app_code_symbol(div3, d);
-              let div4 = html_span_text(div3, index_1);
+              let digit = app_code_symbol(row, d);
+              let div4 = html_span_text(row, index_1);
               html_style_font_size(div4, "0.7em");
               return digit;
             }
