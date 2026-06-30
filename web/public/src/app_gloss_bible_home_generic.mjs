@@ -10,7 +10,7 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "../../../love/public/src/html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_nbsp } from "../../../love/public/src/html_span_nbsp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
+import { html_font_color_set_white } from "../../../love/public/src/html_font_color_set_white.mjs";
 import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
@@ -60,7 +60,7 @@ export async function app_gloss_bible_home_generic(
       html_font_color_set_green(span);
       html_span_nbsp(div3);
       let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
-      html_font_color_set_blue(span2);
+      html_font_color_set_white(span2);
       let span4 = html_span_space(div3);
     }
     each(explains, lambda2);
@@ -78,7 +78,7 @@ export async function app_gloss_bible_home_generic(
     let c = html_span_colon_2(div2);
     html_font_color_set(c, "#aaa");
     let span2 = html_span_text(div2, gloss);
-    html_font_color_set_blue(span2);
+    html_font_color_set_white(span2);
     let c2 = html_span_colon_2(div2);
     html_font_color_set(c2, "#aaa");
     let span3 = html_span_text(div2, explain);
