@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
@@ -30,7 +31,8 @@ export function app_code_home(context) {
   let refresh = function lambda() {
     let e = list_empty_is(b);
     if (e) {
-      list_empty(list);
+      list_empty(b);
+      list_add_multiple(list, items);
       b = batch();
       list_shuffle(b);
     }
