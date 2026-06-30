@@ -4,5 +4,5 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
-  let lesson_id = storage_local_initialize_context(context, "quiz_index", 0);
+  let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
 }
