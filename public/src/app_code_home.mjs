@@ -75,6 +75,7 @@ export function app_code_home(context) {
             html_border_radius_em(div3, 1);
             html_border_none(div3);
             function lambda4(d) {
+              let div4 = html_div(parent2);
               let span2 = app_replace_button_symbol(div3, d);
               app_replace_button_style(span2);
               app_replace_button_symbol_style_valid_if(span2, true);
