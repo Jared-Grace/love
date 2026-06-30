@@ -6,6 +6,6 @@ export function html_span_text_multiple(parent, digits) {
     let span = html_span_text(parent, d);
     return span;
   }
-  let mapped3 = list_map(digits, lambda4);
-  return mapped3;
+  let spans = list_map(digits, lambda4);
+  return spans;
 }
