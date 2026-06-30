@@ -1,3 +1,5 @@
+import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
+import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
@@ -11,6 +13,8 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
   let batch = [];
+  let ds = digits();
+  let split2 = digits_positive();
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {}
