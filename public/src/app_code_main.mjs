@@ -6,10 +6,6 @@ export function app_code_main(context) {
     "In computer programming",
     "There are symbols",
     "All 10 of these numbers are different symbols: ",
-    "Words are inside sentences",
-    "Compture programs have a similar structure",
-    "In a computer program, there are symbols",
-    "Symbols are inside ",
   ]);
   html_p_text_multiple(root, [
     "In English:",
