@@ -52,6 +52,7 @@ export function app_code_home(context) {
   app_replace_button(root, combined, example);
   example();
   html_hr(root);
+  let combined2 = text_combine(left2, right);
   html_div_text(root, "Do you want to be quizzed now?");
   app_replace_button(root, "Yes, please quiz me", noop);
   return;
