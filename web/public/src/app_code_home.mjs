@@ -73,7 +73,7 @@ export function app_code_home(context) {
             html_text_set(parent_button, "Number of symbols: ");
             let div3 = app_code_container_dark(parent_button);
             html_text_set(div3, digit_count);
-            html_font_color_set_white(span22);
+            html_font_color_set_white(div3);
           },
         },
         answer: digit_count,
