@@ -23,7 +23,7 @@ export function app_code_home(context) {
   let above = property_get(lesson, "above");
   let batch = property_get(lesson, "batch");
   above(root);
-  let h = html_hr(root2);
+  let h = html_hr(root);
   html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
   let b = [];
@@ -46,6 +46,7 @@ export function app_code_home(context) {
   html_div_text(root, "Do you want another example?");
   app_replace_button(root, "Yes, show me another example", example);
   example();
+  html_hr(root);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
