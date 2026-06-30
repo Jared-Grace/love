@@ -4,7 +4,7 @@ import { ternary } from "../../../love/public/src/ternary.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-export function integer_positive_random_digit_count(digit_count) {
+export function integer_positive_random_digits_text(digit_count) {
   let ds = digits();
   let dps = digits_positive();
   function lambda2(item) {
