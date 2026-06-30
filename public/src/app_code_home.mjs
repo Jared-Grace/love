@@ -1,4 +1,4 @@
-import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_first_property } from "../../../love/public/src/list_first_property.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
@@ -17,8 +17,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
   let property_name = "id";
-  let first = list_first(lessons);
-  let value = property_get(first, property_name);
+  let value = list_first_property(lessons, property_name);
   let lesson_id = storage_local_initialize_context(context, "lesson_id", value);
   let lesson = list_find_property(lessons, "id", lesson_id);
   let above = property_get(lesson, "above");
