@@ -1,5 +1,5 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -16,9 +16,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = storage_local_get_context(context, "lesson_id");
   let lessons = app_code_lessons();
-  log(app_code_home.name, {
-    lessons,
-  });
+  let item = list_find_property(list, property_name, property_value);
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
