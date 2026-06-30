@@ -4,6 +4,6 @@ import { app_code_container_generic } from "../../../love/public/src/app_code_co
 export function app_code_container_light(parent) {
   let container = app_code_container_generic(parent);
   html_style_background_color_set(container, "#ddd");
-  app_replace_button_symbol_style_box_shadow_value_set(s, color_box_shadow);
+  app_replace_button_symbol_style_box_shadow_value_set(container, "#ccc");
   return container;
 }
