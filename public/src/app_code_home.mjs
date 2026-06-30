@@ -21,6 +21,10 @@ export function app_code_home(context) {
   function lambda(digit_count) {
     function lambda2(i) {}
     each_range(digit_count, lambda2);
+    let r2 = {
+      render,
+    };
+    return r2;
   }
   let mapped = list_map(digit_counts, lambda);
   function example() {
