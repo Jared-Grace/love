@@ -3,7 +3,6 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
-import { app_replace_button_symbol_style_background_color_valid } from "../../../love/public/src/app_replace_button_symbol_style_background_color_valid.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
 import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
@@ -80,8 +79,6 @@ export function app_code_home(context) {
               let div4 = html_div(div3);
               let span2 = app_replace_button_symbol(div4, d);
               app_replace_button_style(span2);
-              let color_if =
-                app_replace_button_symbol_style_background_color_valid();
               html_style_background_color_set(span2, "#444");
               html_font_color_set(span2, "white", "rgb(10, 12, 10)");
               let h = app_replace_rule_set_highlight();
