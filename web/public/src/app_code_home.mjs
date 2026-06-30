@@ -1,6 +1,4 @@
-import { equal_0 } from "../../../love/public/src/equal_0.mjs";
-import { range_map } from "../../../love/public/src/range_map.mjs";
-import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
+import { integer_positive_random_digit_count } from "../../../love/public/src/integer_positive_random_digit_count.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
@@ -11,22 +9,13 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {
-    let ds = digits();
-    let dps = digits_positive();
-    function lambda2(item) {
-      let first_is = equal_0(item);
-      let choices = ternary(first_is, dps, ds);
-      let choice = list_random_item(choices);
-      return choice;
-    }
-    let digits = range_map(digit_count, lambda2);
+    let digits = integer_positive_random_digit_count(digit_count);
     let r2 = {
       render,
       answer,
