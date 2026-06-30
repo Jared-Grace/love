@@ -23,6 +23,7 @@ export function app_code_home(context) {
     each_range(digit_count, lambda2);
     let r2 = {
       render,
+      answer,
     };
     return r2;
   }
