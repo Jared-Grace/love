@@ -69,7 +69,7 @@ export function app_code_lesson_symbols_digits() {
               list_shuffle(b);
               let taken = list_take(b, answer_count_max);
               function lambda3(item) {}
-              each(list, lambda3);
+              each(taken, lambda3);
             },
           ],
         };
