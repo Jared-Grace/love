@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
@@ -27,6 +28,7 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let p2 = html_p(root);
+  let p3 = html_p_text(root2, text);
   html_cycle_bold(p2, [
     "The digits (0, 1, 2, 3, ..., 9) in a number are ",
     "symbols",
