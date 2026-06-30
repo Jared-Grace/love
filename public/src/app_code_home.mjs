@@ -17,18 +17,7 @@ export function app_code_home(context) {
   function example() {
     let e = list_empty_is(batch);
     if (e) {
-      let digit_counts = integer_random_1(5);
-      list_shuffle(digit_counts);
-      function lambda(digit_count) {
-        let digits = integer_positive_random_digits_text(digit_count);
-        let r2 = {
-          render,
-          answer,
-          mapped: digits,
-        };
-        return r2;
-      }
-      batch = list_map(digit_counts, lambda);
+      digit_batch();
     }
     let r6 = integer_random(n);
     let r = list_random_item(split);
@@ -49,4 +38,19 @@ export function app_code_home(context) {
     "In a computer program, there are symbols",
     "Symbols are inside ",
   ]);
+  function digit_batch() {
+    let digit_counts = integer_random_1(5);
+    list_shuffle(digit_counts);
+    function lambda(digit_count) {
+      let digits = integer_positive_random_digits_text(digit_count);
+      let r2 = {
+        render,
+        answer,
+        mapped: digits,
+      };
+      return r2;
+    }
+    let mapped2 = list_map(digit_counts, lambda);
+    return mapped2;
+  }
 }
