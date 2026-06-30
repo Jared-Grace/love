@@ -1,4 +1,4 @@
-import { integer_positive_random_digit_count } from "../../../love/public/src/integer_positive_random_digit_count.mjs";
+import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
@@ -15,7 +15,7 @@ export function app_code_home(context) {
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {
-    let digits = integer_positive_random_digit_count(digit_count);
+    let digits = integer_positive_random_digits_text(digit_count);
     let r2 = {
       render,
       answer,
