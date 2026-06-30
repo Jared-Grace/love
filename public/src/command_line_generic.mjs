@@ -49,12 +49,12 @@ export async function command_line_generic(command, extra) {
           ),
         );
         if (false) {
+          await file_temp_json_open({
+            code,
+            stdout,
+            stderr,
+          });
         }
-        await file_temp_json_open({
-          code,
-          stdout,
-          stderr,
-        });
       } else {
         resolve({
           stdout,
