@@ -31,8 +31,6 @@ export function app_code_home(context) {
     }
     let r = list_remove_last_single(b);
     let ex = property_get(r, "example");
-    let question2 = property_get(render2, "question");
-    let answer2 = property_get(render2, "answer");
     html_clear(example_div);
     ex(example_div);
   }
