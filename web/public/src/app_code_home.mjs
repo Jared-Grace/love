@@ -26,7 +26,6 @@ export function app_code_home(context) {
   let b = [];
   html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
-  app_replace_button(root, combined, example);
   function example() {
     let e = list_empty_is(b);
     if (e) {
@@ -39,6 +38,7 @@ export function app_code_home(context) {
     ex(example_div);
   }
   example();
+  app_replace_button(root, combined, example);
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
   let combined2 = text_combine("🎓", "Yes, please quiz me");
