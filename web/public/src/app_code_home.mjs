@@ -1,3 +1,4 @@
+import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
@@ -65,7 +66,7 @@ export function app_code_home(context) {
             let div3 = app_code_container_dark(parent);
             function lambda4(d) {
               let digit = app_code_symbol(div3, d);
-              let div4 = html_div_text(digit, "t");
+              let div4 = html_div_text_centered(digit, "t");
               return digit;
             }
             let spans = list_map(digits, lambda4);
