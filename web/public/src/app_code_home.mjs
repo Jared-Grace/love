@@ -3,7 +3,6 @@ import { app_replace_button_screen } from "../../../love/public/src/app_replace_
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
-import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -31,14 +30,11 @@ export function app_code_home(context) {
       list_shuffle(b);
     }
     let r = list_remove_last_single(b);
-    let render2 = property_get(r, "render");
+    let ex = property_get(r, "example");
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
     html_clear(example_div);
-    let div = app_code_container_light(example_div);
-    question2(div);
-    let div2 = app_code_container_light(example_div);
-    answer2(div2);
+    ex(example_div);
   }
   html_div_text(root, "Do you want another example?");
   let left = emoji_repeat_1();
