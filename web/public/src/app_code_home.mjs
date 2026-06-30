@@ -16,7 +16,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = storage_local_get_context(context, "lesson_id");
   let lessons = app_code_lessons();
-  let item = list_find_property(list, property_name, property_value);
+  let item = list_find_property(lessons, "id", lesson);
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
