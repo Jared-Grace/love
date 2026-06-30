@@ -1,3 +1,4 @@
+import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
@@ -68,6 +69,7 @@ export function app_code_home(context) {
             function lambda4(d, index_1) {
               let digit = app_code_symbol(div3, d);
               let div4 = html_div_text_centered(digit, index_1);
+              html_style_font_size(html, value);
               return digit;
             }
             let spans = list_map_index_1(digits, lambda4);
