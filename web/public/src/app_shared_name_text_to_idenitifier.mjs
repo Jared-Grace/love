@@ -6,6 +6,6 @@ export function app_shared_name_text_to_idenitifier(prefix, name) {
   let p = js_property_value_get(name);
   let l = js_literal_value_get(p);
   let rl = text_replace_space_underscore_lower(l);
-  let f_name_new = function_name_combine(prefix, rl);
-  return f_name_new;
+  let name_new = function_name_combine(prefix, rl);
+  return name_new;
 }
