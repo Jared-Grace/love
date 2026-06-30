@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_valid_if } from "../../../love/public/src/app_replace_button_symbol_style_valid_if.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -65,6 +66,7 @@ export function app_code_home(context) {
             function lambda4(d) {
               let span2 = app_replace_button_symbol(parent, d);
               app_replace_button_style(span2);
+              app_replace_button_symbol_style_valid_if(sb, valid);
               return span2;
             }
             let spans = list_map(digits, lambda4);
