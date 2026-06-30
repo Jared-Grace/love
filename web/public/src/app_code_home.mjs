@@ -1,3 +1,4 @@
+import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -71,7 +72,8 @@ export function app_code_home(context) {
           answer: function lambda3(parent_button) {
             html_text_set(parent_button, "Number of symbols: ");
             let div3 = app_code_container_dark(parent_button);
-            let span22 = app_code_symbol(div3, digit_count);
+            html_text_set(div3, digit_count);
+            html_font_color_set_blue(span22);
           },
         },
         answer: digit_count,
