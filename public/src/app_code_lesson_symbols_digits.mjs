@@ -63,7 +63,7 @@ export function app_code_lesson_symbols_digits() {
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
               list_add_if_not_includes(answers, digit_count);
-              list_shuffle(list);
+              list_shuffle(b);
             },
           ],
         };
