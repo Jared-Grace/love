@@ -4,7 +4,6 @@ import { html_style_padding } from "../../../love/public/src/html_style_padding.
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function app_code_container_generic(parent) {
   let container = html_div(parent);
-  color_background_set(container);
   html_style_padding(container, "0.2em");
   html_border_radius_em(container, 0.75);
   html_border_none(container);
