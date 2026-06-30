@@ -28,7 +28,7 @@ export function app_code_home(context) {
   let combined = app_code_example_text();
   let refresh = function lambda() {
     let e = list_empty_is(b);
-    if (e) {
+    if (e) {le
       b = batch();
       list_shuffle(b);
     }
