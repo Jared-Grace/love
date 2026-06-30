@@ -1,4 +1,4 @@
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
+import { html_span_text_multiple } from "../../../love/public/src/html_span_text_multiple.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -51,11 +51,7 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {
-            function lambda4(d) {
-              let span = html_span_text(parent, d);
-              return span;
-            }
-            let mapped3 = list_map(digits, lambda4);
+            let mapped3 = html_span_text_multiple(parent, digits);
             return mapped3;
           },
           answer: function lambda3(parent_button) {
