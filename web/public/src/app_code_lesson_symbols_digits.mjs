@@ -1,3 +1,4 @@
+import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -70,7 +71,10 @@ export function app_code_lesson_symbols_digits() {
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
               let taken = list_take(b, answer_count_max);
-              function lambda3(item) {}
+              function lambda3(item) {
+                function lambda8() {}
+                let b2 = app_replace_button_wide(root2, name2, lambda8);
+              }
               each(taken, lambda3);
             },
           ],
