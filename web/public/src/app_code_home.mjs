@@ -14,7 +14,7 @@ export function app_code_home(context) {
   html_clear(root);
   let batch = [];
   let ds = digits();
-  let split2 = digits_positive();
+  let dps = digits_positive();
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {}
