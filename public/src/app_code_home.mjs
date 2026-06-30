@@ -1,3 +1,6 @@
+import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
+import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
+import { digits } from "../../../love/public/src/digits.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
