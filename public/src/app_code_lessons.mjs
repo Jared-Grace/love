@@ -20,7 +20,6 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 export function app_code_lessons() {
   let r = [
     {
-      id: "symbols_digits",
       name: "Symbols (Digits)",
       above: function digits_above(root) {
         let p3 = html_p(root);
