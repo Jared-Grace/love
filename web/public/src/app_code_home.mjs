@@ -25,6 +25,7 @@ export function app_code_home(context) {
     }
     let r = list_remove_last_single(batch);
     let render2 = property_get(r, "render");
+    let question2 = property_get(render2, "question");
     log(app_code_home.name, {
       r,
       batch,
