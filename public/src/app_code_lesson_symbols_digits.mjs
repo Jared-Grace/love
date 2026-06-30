@@ -44,14 +44,10 @@ export function app_code_lesson_symbols_digits() {
         let digits = integer_positive_random_digits_text(digit_count);
         let r2 = {
           render: {
-            example: function lambda6() {
-              let div = app_code_container_light(example_div);
-              question2(div);
-              let div2 = app_code_container_light(example_div);
-            },
-            question: function lambda2(parent) {
-              let span = html_div_text(parent, "Symbols: ");
-              let row = app_code_container_dark(parent);
+            example: function lambda6(parent) {
+              let q = app_code_container_light(parent);
+              let span = html_div_text(q, "Symbols: ");
+              let row = app_code_container_dark(q);
               html_style_assign(row, {
                 display: "flex",
               });
@@ -69,10 +65,10 @@ export function app_code_lesson_symbols_digits() {
                 return digit;
               }
               let spans = list_map_index_1(digits, lambda4);
-            },
-            answer: function lambda3(parent_button) {
-              html_text_set(parent_button, "Number of symbols: ");
-              let div3 = app_code_container_dark(parent_button);
+              question2(div);
+              let a = app_code_container_light(parent);
+              html_text_set(a, "Number of symbols: ");
+              let div3 = app_code_container_dark(a);
               let s = app_code_symbol_generic(
                 div3,
                 digit_count,
