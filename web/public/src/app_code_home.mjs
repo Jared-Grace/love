@@ -1,3 +1,4 @@
+import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
@@ -54,7 +55,7 @@ export function app_code_home(context) {
   html_div_text(root, "Do you want to be quizzed now?");
   let combined2 = text_combine("🎓", "Yes, please quiz me");
   function lambda() {}
-  app_replace_button(root, combined2, lambda);
+  app_replace_button_screen(root, combined2, lambda);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
