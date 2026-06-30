@@ -1,3 +1,4 @@
+import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { list_first_property } from "../../../love/public/src/list_first_property.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -21,7 +22,8 @@ export function app_code_home(context) {
   let lesson = list_find_property(lessons, "id", lesson_id);
   let above = property_get(lesson, "above");
   let batch = property_get(lesson, "batch");
-  above(root);hh
+  above(root);
+  let h = html_hr(root2);
   html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
   let b = [];
