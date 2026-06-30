@@ -42,7 +42,7 @@ export function app_code_home(context) {
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
   let combined2 = text_combine("🎓", "Yes, please quiz me");
-  app_replace_button_screen(root, combined2, lambda);
+  app_replace_button_screen(context, app_code_home, root, combined2);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
