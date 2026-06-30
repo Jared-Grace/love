@@ -31,7 +31,7 @@ export function app_code_home(context) {
   let p3 = html_p(root);
   let ds = digits();
   let joined = list_join_comma_space(ds);
-  let combined2 = text_combine_multiple("The numbers ", joined, " are ");
+  let combined2 = text_combine_multiple(["The numbers ", joined, " are "]);
   html_cycle_bold(p3, [combined2, "digits"]);
   let p2 = html_p(root);
   html_cycle_bold(p2, [
