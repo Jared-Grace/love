@@ -1,3 +1,4 @@
+import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_data_set_test_suffix } from "../../../love/public/src/html_data_set_test_suffix.mjs";
@@ -9,8 +10,6 @@ import { app_replace_button_symbol_style_background_color_invalid } from "../../
 import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
-import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
-import { html_style_padding_x } from "../../../love/public/src/html_style_padding_x.mjs";
 import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
@@ -78,8 +77,7 @@ export function app_code_home(context) {
             let span = html_div_text(parent, "Symbols: ");
             let div3 = html_div(parent);
             html_style_background_color_black(div3);
-            html_style_padding_x(div3, "0.2em");
-            html_style_padding_y(div3, "0.2em");
+            html_style_padding(div3, "0.2em");
             html_border_radius_em(div3, 0.75);
             html_border_none(div3);
             function lambda4(d) {
