@@ -48,7 +48,11 @@ export async function command_line_generic(command, extra) {
             `Command exited with code ${code}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`,
           ),
         );
-        await file_temp_json_open(result);
+        await file_temp_json_open({
+          code,
+          stdout,
+          stderr,
+        });
       } else {
         resolve({
           stdout,
