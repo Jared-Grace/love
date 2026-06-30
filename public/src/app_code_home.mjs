@@ -41,6 +41,7 @@ export function app_code_home(context) {
     let div32 = app_code_container_light(parent2);
     let div = html_div(example_div);
     question2(div);
+    let div33 = app_code_container_light(parent3);
     let div2 = html_div(example_div);
     answer2(div2);
   }
