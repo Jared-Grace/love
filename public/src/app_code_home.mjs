@@ -67,11 +67,15 @@ export function app_code_home(context) {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
             let row = app_code_container_dark(parent);
-            html_style_assign(b2, s2);
+            html_style_assign(row, {
+              display: "flex",
+              gap: "2rem",
+            });
             function lambda4(d, index_1) {
               let digit = app_code_symbol(row, d);
               let div4 = html_span_text(row, index_1);
               html_style_font_size(div4, "0.7em");
+              html_style_assign(b2, s2);
               return digit;
             }
             let spans = list_map_index_1(digits, lambda4);
