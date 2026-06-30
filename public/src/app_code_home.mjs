@@ -8,6 +8,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
+  let batch = [];
   let split = digits();
   function example() {
     let r6 = integer_random(n);
