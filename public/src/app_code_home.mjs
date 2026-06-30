@@ -1,3 +1,4 @@
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
@@ -14,6 +15,7 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
+  let mapped = invoke_multiple(list_fns);
   let lesson = storage_local_get_context(context, "lesson_index");
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
