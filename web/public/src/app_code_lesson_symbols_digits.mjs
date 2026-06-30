@@ -88,7 +88,6 @@ export function app_code_lesson_symbols_digits() {
       let mapped2 = list_map(digit_counts, lambda);
       return mapped2;
     },
-    quizzes: [function lambda5(parent) {}],
   };
   return r3;
   function example_above(parent, digits) {
