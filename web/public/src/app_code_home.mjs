@@ -1,6 +1,5 @@
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { list_first_property } from "../../../love/public/src/list_first_property.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
@@ -54,7 +53,8 @@ export function app_code_home(context) {
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
   let combined2 = text_combine("🎓", "Yes, please quiz me");
-  app_replace_button(root, combined2, noop);
+  function lambda() {}
+  app_replace_button(root, combined2, lambda);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
