@@ -4,7 +4,6 @@ import { app_replace_button_symbol_style_box_shadow } from "../../../love/public
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_data_set_test_suffix } from "../../../love/public/src/html_data_set_test_suffix.mjs";
 import { app_replace_button_symbol_style_valid_if_attribute } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_attribute.mjs";
-import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { app_replace_button_symbol_style_background_color_valid } from "../../../love/public/src/app_replace_button_symbol_style_background_color_valid.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
@@ -85,7 +84,7 @@ export function app_code_home(context) {
               let color_if =
                 app_replace_button_symbol_style_background_color_valid();
               html_style_background_color_set(span2, color_if);
-              html_style_font_color_set_if(t, span2, "white", "#b9fcb9ff");
+              html_style_font_color_set(t, span2, "white", "#b9fcb9ff");
               let suffix = app_replace_button_symbol_style_valid_if_attribute();
               html_data_set_test_suffix(span2, suffix, t);
               let h = app_replace_rule_set_highlight();
