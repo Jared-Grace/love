@@ -16,7 +16,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons_fns = app_code_lessons_fns();
   let lessons = invoke_multiple(lessons_fns);
-  let lesson = storage_local_get_context(context, "lesson_index");
+  let lesson = storage_local_get_context(context, "lesson_id");
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
