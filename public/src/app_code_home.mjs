@@ -13,6 +13,8 @@ export function app_code_home(context) {
   let digit_count = integer_random_1(5);
   list_shuffle(digit_count);
   function example() {
+    if (false) {
+    }
     let r6 = integer_random(n);
     let r = list_random_item(split);
   }
