@@ -1,4 +1,4 @@
-import { html_style_set_or_remove } from "../../../love/public/src/html_style_set_or_remove.mjs";
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_symbol_style_box_shadow_value } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
