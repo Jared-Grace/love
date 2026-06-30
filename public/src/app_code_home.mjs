@@ -16,7 +16,7 @@ export function app_code_home(context) {
   let batch = [];
   function example() {
     let e = list_empty_is(batch);
-    if (false) {
+    if (e) {
       let digit_counts = integer_random_1(5);
       list_shuffle(digit_counts);
       function lambda(digit_count) {
@@ -28,7 +28,7 @@ export function app_code_home(context) {
         };
         return r2;
       }
-      let batch = list_map(digit_counts, lambda);
+      batch = list_map(digit_counts, lambda);
     }
     let r6 = integer_random(n);
     let r = list_random_item(split);
