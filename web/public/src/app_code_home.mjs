@@ -1,5 +1,5 @@
+import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -26,8 +26,8 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let p2 = html_p_text(root, "Number digits are symbols");
-  html_cycle_bold(parent2, parts);
+  let p2 = html_p(root);
+  html_cycle_bold(p2, ["Number digits are ", "symbols"]);
   let p = html_div_text(root, "Example:");
   let example_div = html_div(root);
   let batch = [];
