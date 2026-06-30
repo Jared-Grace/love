@@ -1,3 +1,4 @@
+import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -64,12 +65,12 @@ export function app_code_home(context) {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
             let div3 = app_code_container_dark(parent);
-            function lambda4(d) {
+            function lambda4(d, index_1) {
               let digit = app_code_symbol(div3, d);
-              let div4 = html_div_text_centered(digit, "t");
+              let div4 = html_div_text_centered(digit, index_1);
               return digit;
             }
-            let spans = list_map(digits, lambda4);
+            let spans = list_map_index_1(digits, lambda4);
           },
           answer: function lambda3(parent_button) {
             html_text_set(parent_button, "Number of symbols: ");
