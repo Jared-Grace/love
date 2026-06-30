@@ -68,8 +68,8 @@ export function app_code_home(context) {
             let span = html_div_text(parent, "Symbols: ");
             let div3 = html_div(parent);
             html_style_background_color_black(div3);
-            html_style_padding_x(div3, "0.37em");
-            html_style_padding_y(div3, "0.1em");
+            html_style_padding_x(div3, "0.2em");
+            html_style_padding_y(div3, "0.2em");
             function lambda4(d) {
               let span2 = app_replace_button_symbol(div3, d);
               app_replace_button_style(span2);
