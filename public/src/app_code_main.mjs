@@ -4,6 +4,7 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 export function app_code_main(context) {
   let root = property_get(context, "root");
   let split = digits();
+  hbt;
   return;
   html_p_text_multiple(root, [
     "In computer programming",
