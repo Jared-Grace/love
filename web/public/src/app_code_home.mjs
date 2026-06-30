@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -17,7 +18,10 @@ export function app_code_home(context) {
   let dps = digits_positive();
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
-  function lambda(digit_count) {}
+  function lambda(digit_count) {
+    function lambda2(i) {}
+    each_range(count, lambda2);
+  }
   let mapped = list_map(digit_counts, lambda);
   function example() {
     if (false) {
