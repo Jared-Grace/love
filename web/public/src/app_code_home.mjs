@@ -10,7 +10,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
   let batch = [];
-  let r62 = integer_random_1(4);
+  let digit_count = integer_random_1(4);
   let split = digits();
   function example() {
     let r6 = integer_random(n);
