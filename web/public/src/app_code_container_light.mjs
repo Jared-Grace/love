@@ -6,6 +6,6 @@ export function app_code_container_light(parent) {
   let container = app_code_container_generic(parent);
   html_style_background_color_set(container, "#eee");
   app_replace_button_symbol_style_box_shadow_value_set(container, "#ccc");
-  html_style_margin_y(container, 0.1 + "em");
+  html_style_margin_y(container, 0.2 + "em");
   return container;
 }
