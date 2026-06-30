@@ -26,7 +26,7 @@ export function app_code_home(context) {
   let b = [];
   html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
-  let example = function lambda() {
+  let refresh = function lambda() {
     let e = list_empty_is(b);
     if (e) {
       b = batch();
@@ -36,8 +36,8 @@ export function app_code_home(context) {
     let r = list_remove_last_single(b);
     on_batch_item(r);
   };
-  example();
-  app_replace_button(root, combined, example);
+  refresh();
+  app_replace_button(root, combined, refresh);
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
   let combined2 = text_combine("🎓", "Yes, please quiz me");
