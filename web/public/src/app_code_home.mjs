@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { list_first_property } from "../../../love/public/src/list_first_property.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
@@ -48,6 +49,7 @@ export function app_code_home(context) {
   example();
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
+  app_replace_button(root, "Yes, show me another example", noop);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
