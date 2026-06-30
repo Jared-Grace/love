@@ -72,7 +72,7 @@ export function app_code_home(context) {
             html_style_background_color_black(div3);
             html_style_padding_x(div3, "0.2em");
             html_style_padding_y(div3, "0.2em");
-            html_border_radius_em(div3, 1);
+            html_border_radius_em(div3, 0.75);
             html_border_none(div3);
             function lambda4(d) {
               let div4 = html_div(div3);
