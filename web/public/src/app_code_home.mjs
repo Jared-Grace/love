@@ -15,7 +15,7 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
-  let mapped = invoke_multiple(list_fns);
+  let mapped = invoke_multiple(lessons);
   let lesson = storage_local_get_context(context, "lesson_index");
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
