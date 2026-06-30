@@ -29,6 +29,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
+  let rule_sets = app_code_lessons();
   let value = storage_local_get_context(context, "lesson_index");
   let p3 = html_p(root);
   let ds = digits();
