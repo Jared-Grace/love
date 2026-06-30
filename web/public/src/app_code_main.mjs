@@ -7,5 +7,8 @@ export function app_code_main(context) {
     "There are letters",
     "Letters are inside words",
     "Words are inside sentences",
+    "Compture programs have a similar structure",
+    "In a computer program, there are symbols",
+    "Symbols are inside ",
   ]);
 }
