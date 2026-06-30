@@ -13,7 +13,7 @@ export function app_code_quiz(context) {
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
   let quizzes = property_get(lesson, "quizzes");
-  let item = list_get(list, index);
+  let item = list_get(quizzes, quiz_index);
   html_div_text(root, "Do you want go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
