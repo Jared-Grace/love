@@ -1,4 +1,4 @@
-import { app_shared_name_text_to_idenitifier } from "../../../love/public/src/app_shared_name_text_to_idenitifier.mjs";
+import { app_shared_name_text_to_identifier } from "../../../love/public/src/app_shared_name_text_to_identifier.mjs";
 import { text_suffix_without } from "../../../love/public/src/text_suffix_without.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_rule_sets_name_expression } from "../../../love/public/src/app_replace_rule_sets_name_expression.mjs";
@@ -10,6 +10,6 @@ export function app_replace_rule_sets_name_expression_value(e) {
   if (null_is(name)) {
     return name;
   }
-  let name_new = app_shared_name_text_to_idenitifier(prefix, name);
+  let name_new = app_shared_name_text_to_identifier(prefix, name);
   return name_new;
 }
