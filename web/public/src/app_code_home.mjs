@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
@@ -82,7 +83,7 @@ export function app_code_home(context) {
               let color_if =
                 app_replace_button_symbol_style_background_color_valid();
               html_style_background_color_set(span2, color_if);
-              html_style_font_color_set(span2, "white", "#b9fcb9ff");
+              html_font_color_set(span2, "white", "#b9fcb9ff");
               let h = app_replace_rule_set_highlight();
               app_replace_button_symbol_style_box_shadow(t, span2, h);
               return span2;
