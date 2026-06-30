@@ -2,7 +2,6 @@ import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { digits_above } from "../../../love/public/src/digits_above.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -32,7 +31,10 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
   let lesson = storage_local_get_context(context, "lesson_index");
-  lesson={above:digits_above,batch:digit_batch}
+  lesson = {
+    above: digits_above,
+    batch: digit_batch,
+  };
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
@@ -48,7 +50,6 @@ export function app_code_home(context) {
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
     html_clear(example_div);
-    
     let div = app_code_container_light(example_div);
     question2(div);
     let div2 = app_code_container_light(example_div);
@@ -116,10 +117,6 @@ export function app_code_home(context) {
     }
     let mapped2 = list_map(digit_counts, lambda);
     return mapped2;
-
-
-
-    
   }
   function digits_above(root) {
     let p3 = html_p(root);
