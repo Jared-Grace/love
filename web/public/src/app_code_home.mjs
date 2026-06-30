@@ -1,3 +1,4 @@
+import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -30,7 +31,8 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let combined = text_combine("These numbers are digits", right);
   let p3 = html_p_text(root, text);
-  html_cycle_bold(root, ["The numbers 0 - 9 are ", "digits"]);
+  let joined = list_join_comma_space(args);
+  html_cycle_bold(root, ["The numbers 0, 1, 2, 3, ..., 9 are ", "digits"]);
   let p2 = html_p(root);
   html_cycle_bold(p2, [
     "The digits (0, 1, 2, 3, ..., 9) in a number are ",
