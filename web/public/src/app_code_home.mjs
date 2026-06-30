@@ -1,10 +1,9 @@
-import { range } from "../../../love/public/src/range.mjs";
+import { range_map } from "../../../love/public/src/range_map.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -53,8 +52,7 @@ export function app_code_home(context) {
       };
       return r2;
     }
-    let r3 = range(count);
-    let mapped2 = list_map(digit_counts, lambda);
+    let mapped2 = range_map(digit_counts, lambda);
     return mapped2;
   }
 }
