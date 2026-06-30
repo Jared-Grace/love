@@ -61,7 +61,7 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {
-            let span = html_span_text("Symbols: ");
+            let span = html_span_text(parent, "Symbols: ");
             let spans = html_span_text_multiple(parent, digits);
             return combined2;
           },
