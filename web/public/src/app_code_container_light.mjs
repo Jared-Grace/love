@@ -1,6 +1,8 @@
 import { app_code_container_generic } from "../../../love/public/src/app_code_container_generic.mjs";
 export function app_code_container_light(parent) {
-  let color_background_set = function lambda() {html_style_background_color};
+  let color_background_set = function lambda() {
+    html_style_background_color;
+  };
   let container = app_code_container_generic(parent, color_background_set);
   return container;
 }
