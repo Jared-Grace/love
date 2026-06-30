@@ -64,8 +64,8 @@ export function app_code_home(context) {
             return spans;
           },
           answer: function lambda3(parent_button) {
-            let combined = text_combine(left, right);
-            html_text_set(parent_button, digit_count);
+            let combined = text_combine("Number of symbols: ", digit_count);
+            html_text_set(parent_button, combined);
           },
         },
         answer: digit_count,
