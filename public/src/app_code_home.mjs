@@ -1,4 +1,4 @@
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
+import { each } from "../../../love/public/src/each.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -51,7 +51,8 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {
-            let p = html_p_text(root2, text);
+            function lambda4(item) {}
+            each(list, lambda4);
           },
           answer: function lambda3(parent_button) {
             html_text_set(parent_button, digit_count);
