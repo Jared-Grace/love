@@ -23,6 +23,7 @@ export function app_code_home(context) {
     let r = list_remove_last(batch);
     log(app_code_home.name, {
       r,
+      batch,
     });
   }
   let b = app_replace_button(root, "Show me another example", example);
