@@ -4,6 +4,6 @@ export function app_code_container_light(parent) {
   let color_background_set = function lambda(component) {
     html_style_background_color_set(component, "#ddd");
   };
-  let container = app_code_container_generic(parent, color_background_set);
+  let container = app_code_container_generic(parent);
   return container;
 }
