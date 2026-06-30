@@ -46,8 +46,8 @@ export function app_code_home(context) {
     answer2(div2);
   }
   html_div_text(root, "Do you want another example?");
-  let combined = text_combine(left, right);
-  app_replace_button(root, "🔂", "Yes, show me another example", example);
+  let combined = text_combine("🔂", "Yes, show me another example");
+  app_replace_button(root, combined, example);
   example();
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
