@@ -16,13 +16,10 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
+  let property_name = "id";
   let first = list_first(lessons);
-  let value = property_get(object, property_name);
-  let lesson_id = storage_local_initialize_context(
-    context,
-    "lesson_id",
-    "symbols_digits",
-  );
+  let value = property_get(first, property_name);
+  let lesson_id = storage_local_initialize_context(context, "lesson_id", value);
   let lesson = list_find_property(lessons, "id", lesson_id);
   let above = property_get(lesson, "above");
   let batch = property_get(lesson, "batch");
