@@ -75,8 +75,8 @@ export function app_code_home(context) {
             let s = app_code_symbol_generic(
               div3,
               digit_count,
-              "black",
-              "black",
+              "transparent",
+              "transparent",
             );
           },
         },
