@@ -1,3 +1,4 @@
+import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -43,7 +44,11 @@ export function app_code_lesson_symbols_digits() {
         let digits = integer_positive_random_digits_text(digit_count);
         let r2 = {
           render: {
-            example: function lambda6() {},
+            example: function lambda6() {
+              let div = app_code_container_light(example_div);
+              question2(div);
+              let div2 = app_code_container_light(example_div);
+            },
             question: function lambda2(parent) {
               let span = html_div_text(parent, "Symbols: ");
               let row = app_code_container_dark(parent);
