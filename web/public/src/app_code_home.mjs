@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -49,7 +50,9 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {},
-          answer: function lambda3() {},
+          answer: function lambda3(parent_button) {
+            html_text_set(component, text);
+          },
         },
         answer: digit_count,
         mapped: digits,
