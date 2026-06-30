@@ -35,7 +35,7 @@ export function app_code_home(context) {
   html_cycle_bold(p3, [combined2, "digits"]);
   let p2 = html_p(root);
   html_cycle_bold(p2, [
-    "The digits (0, 1, 2, 3, ..., 9) in a number are ",
+    "The digits (0, 1, 2, ..., 9) in a number are ",
     "symbols",
   ]);
   let p = html_div_text(root, "Here is an example:");
