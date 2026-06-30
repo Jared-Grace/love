@@ -54,6 +54,7 @@ export function app_code_home(context) {
           question: function lambda2(parent) {
             function lambda4(d) {
               let span = html_span_text(parent, d);
+              return span;
             }
             each(digits, lambda4);
           },
