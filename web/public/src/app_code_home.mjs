@@ -53,7 +53,7 @@ export function app_code_home(context) {
         render: {
           question: function lambda2(parent) {
             function lambda4(d) {
-              let span = html_span_text(parent2, text);
+              let span = html_span_text(parent, d);
             }
             each(digits, lambda4);
           },
