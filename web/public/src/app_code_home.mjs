@@ -1,3 +1,4 @@
+import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
@@ -46,7 +47,8 @@ export function app_code_home(context) {
     answer2(div2);
   }
   html_div_text(root, "Do you want another example?");
-  let combined = text_combine("🔂", "Yes, show me another example");
+  let left = emoji_repeat_1();
+  let combined = text_combine(left, "Yes, show me another example");
   app_replace_button(root, combined, example);
   example();
   html_hr(root);
