@@ -22,9 +22,9 @@ export function app_code_home(context) {
   list_shuffle(digit_counts);
   function lambda(digit_count) {
     function lambda2(item) {
-      let eq = equal_0(item);
-      let result = ternary(condition, on_true, on_false);
-      if (eq) {
+      let first_is = equal_0(item);
+      let result = ternary(first_is, dps, ds);
+      if (first_is) {
       } else {
       }
     }
