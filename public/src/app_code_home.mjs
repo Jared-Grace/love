@@ -15,7 +15,6 @@ import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
-  let batch = [];
   let digit_counts = integer_random_1(5);
   list_shuffle(digit_counts);
   function lambda(digit_count) {
@@ -35,7 +34,7 @@ export function app_code_home(context) {
     };
     return r2;
   }
-  let mapped = list_map(digit_counts, lambda);
+  let batch = list_map(digit_counts, lambda);
   function example() {
     if (false) {
     }
