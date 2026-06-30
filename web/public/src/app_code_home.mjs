@@ -82,7 +82,7 @@ export function app_code_home(context) {
               app_replace_button_style(span2);
               let color_if =
                 app_replace_button_symbol_style_background_color_valid();
-              html_style_background_color_set(span2, "#999");
+              html_style_background_color_set(span2, "#111");
               html_font_color_set(span2, "white", "#b9fcb9ff");
               let h = app_replace_rule_set_highlight();
               app_replace_button_symbol_style_box_shadow(true, span2, h);
