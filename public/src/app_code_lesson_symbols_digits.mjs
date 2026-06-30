@@ -43,39 +43,37 @@ export function app_code_lesson_symbols_digits() {
       function lambda(digit_count) {
         let digits = integer_positive_random_digits_text(digit_count);
         let r2 = {
-          render: {
-            example: function lambda6(parent) {
-              let q = app_code_container_light(parent);
-              let span = html_div_text(q, "Symbols: ");
-              let row = app_code_container_dark(q);
-              html_style_assign(row, {
+          example: function lambda6(parent) {
+            let q = app_code_container_light(parent);
+            let span = html_div_text(q, "Symbols: ");
+            let row = app_code_container_dark(q);
+            html_style_assign(row, {
+              display: "flex",
+            });
+            function lambda4(d, index_1) {
+              let row_item = html_div(row);
+              html_style_assign(row_item, {
                 display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               });
-              function lambda4(d, index_1) {
-                let row_item = html_div(row);
-                html_style_assign(row_item, {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                });
-                let digit = app_code_symbol(row_item, d);
-                let div4 = html_span_text(row_item, index_1);
-                html_style_font_size(div4, "0.75em");
-                html_font_color_set(div4, "#bbb");
-                return digit;
-              }
-              let spans = list_map_index_1(digits, lambda4);
-              question2(div);
-              let a = app_code_container_light(parent);
-              html_text_set(a, "Number of symbols: ");
-              let div3 = app_code_container_dark(a);
-              let s = app_code_symbol_generic(
-                div3,
-                digit_count,
-                "transparent",
-                "transparent",
-              );
-            },
+              let digit = app_code_symbol(row_item, d);
+              let div4 = html_span_text(row_item, index_1);
+              html_style_font_size(div4, "0.75em");
+              html_font_color_set(div4, "#bbb");
+              return digit;
+            }
+            let spans = list_map_index_1(digits, lambda4);
+            question2(div);
+            let a = app_code_container_light(parent);
+            html_text_set(a, "Number of symbols: ");
+            let div3 = app_code_container_dark(a);
+            let s = app_code_symbol_generic(
+              div3,
+              digit_count,
+              "transparent",
+              "transparent",
+            );
           },
           answer: digit_count,
           mapped: digits,
