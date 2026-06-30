@@ -80,7 +80,7 @@ export function app_code_home(context) {
               });
               let digit = app_code_symbol(row_item, d);
               let div4 = html_span_text(row_item, index_1);
-              html_style_font_size(div4, "0.8em");
+              html_style_font_size(div4, "0.75em");
               html_font_color_set_white(div4);
               return digit;
             }
