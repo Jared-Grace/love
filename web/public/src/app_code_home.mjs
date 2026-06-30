@@ -46,8 +46,8 @@ export function app_code_home(context) {
     function lambda(digit_count) {
       let digits = integer_positive_random_digits_text(digit_count);
       let r2 = {
-        render,
-        answer,
+        render: 0,
+        answer: 0,
         mapped: digits,
       };
       return r2;
