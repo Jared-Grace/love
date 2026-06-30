@@ -24,9 +24,7 @@ export function app_code_home(context) {
     function lambda2(item) {
       let first_is = equal_0(item);
       let result = ternary(first_is, dps, ds);
-      if (first_is) {
-      } else {
-      }
+      let r3 = list_random_item(list);
     }
     let mapped = range_map(digit_count, lambda2);
     let r2 = {
