@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
@@ -58,6 +59,7 @@ export function app_code_lesson_symbols_digits() {
             function lambda2(parent) {
               let a = example_above(parent, digits);
               let b = digit_batch();
+              let mapped = list_map_property(list, property_name);
             },
           ],
         };
