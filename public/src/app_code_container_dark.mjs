@@ -3,5 +3,6 @@ import { html_style_background_color_black } from "../../../love/public/src/html
 export function app_code_container_dark(parent) {
   let color_background_set = html_style_background_color_black;
   let div3 = app_code_container_generic(parent);
+  html_style_background_color_black(parent_new);
   return div3;
 }
