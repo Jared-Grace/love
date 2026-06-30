@@ -63,6 +63,7 @@ export function app_code_home(context) {
         render: {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
+            let div3 = html_div(parent2);
             function lambda4(d) {
               let span2 = app_replace_button_symbol(parent, d);
               app_replace_button_style(span2);
