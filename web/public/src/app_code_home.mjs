@@ -85,7 +85,7 @@ export function app_code_home(context) {
               let h = app_replace_rule_set_highlight();
               let style_value =
                 app_replace_button_symbol_style_box_shadow_value(h);
-              html_style_set_or_remove(valid, sb, "box-shadow", style_value);
+              html_style_set(valid, sb, "box-shadow", style_value);
               return span2;
             }
             let spans = list_map(digits, lambda4);
