@@ -32,6 +32,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
   let lesson = storage_local_get_context(context, "lesson_index");
+  lesson={above:digits_above,batch:digit_batch}
   digits_above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
@@ -47,6 +48,7 @@ export function app_code_home(context) {
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
     html_clear(example_div);
+    
     let div = app_code_container_light(example_div);
     question2(div);
     let div2 = app_code_container_light(example_div);
