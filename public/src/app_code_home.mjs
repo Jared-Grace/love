@@ -1,4 +1,4 @@
-import { equal } from "../../../love/public/src/equal.mjs";
+import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { range_map } from "../../../love/public/src/range_map.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -21,7 +21,7 @@ export function app_code_home(context) {
   list_shuffle(digit_counts);
   function lambda(digit_count) {
     function lambda2(item) {
-      let eq2 = equal(item, 0);
+      let eq2 = equal_0(item);
       if (false) {
       } else {
       }
