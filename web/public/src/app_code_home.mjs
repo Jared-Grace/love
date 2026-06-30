@@ -13,21 +13,22 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   html_clear(root);
-  let digit_counts = integer_random_1(5);
-  list_shuffle(digit_counts);
-  function lambda(digit_count) {
-    let digits = integer_positive_random_digits_text(digit_count);
-    let r2 = {
-      render,
-      answer,
-      mapped: digits,
-    };
-    return r2;
-  }
-  let batch = list_map(digit_counts, lambda);
+  let batch = [];
   function example() {
-    let e = list_empty_is(list);
+    let e = list_empty_is(batch);
     if (false) {
+      let digit_counts = integer_random_1(5);
+      list_shuffle(digit_counts);
+      function lambda(digit_count) {
+        let digits = integer_positive_random_digits_text(digit_count);
+        let r2 = {
+          render,
+          answer,
+          mapped: digits,
+        };
+        return r2;
+      }
+      let batch = list_map(digit_counts, lambda);
     }
     let r6 = integer_random(n);
     let r = list_random_item(split);
