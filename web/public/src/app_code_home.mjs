@@ -30,7 +30,7 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let combined = text_combine("These numbers are digits", right);
   let p3 = html_p_text(root, text);
-  html_cycle_bold(parent2, parts);
+  html_cycle_bold(root, ["The numbers 0 - 9 are ", "digits"]);
   let p2 = html_p(root);
   html_cycle_bold(p2, [
     "The digits (0, 1, 2, 3, ..., 9) in a number are ",
