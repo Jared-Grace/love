@@ -15,7 +15,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let example_div = html_div(parent2);
+  let example_div = html_div(root);
   let batch = [];
   function example() {
     let e = list_empty_is(batch);
@@ -27,10 +27,10 @@ export function app_code_home(context) {
     let render2 = property_get(r, "render");
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
-    html_clear(root);
-    let div = html_div(root);
+    html_clear(example_div);
+    let div = html_div(example_div);
     question2(div);
-    let div2 = html_div(root);
+    let div2 = html_div(example_div);
     answer2(div2);
   }
   let b = app_replace_button(root, "Show me another example", example);
