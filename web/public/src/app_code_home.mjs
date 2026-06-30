@@ -28,8 +28,9 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let combined = text_combine(left, right);
+  let combined = text_combine("These numbers are digits", right);
   let p3 = html_p_text(root, text);
+  html_cycle_bold(parent2, parts);
   let p2 = html_p(root);
   html_cycle_bold(p2, [
     "The digits (0, 1, 2, 3, ..., 9) in a number are ",
