@@ -3,7 +3,7 @@ import { function_name_to_parts } from "../../../love/public/src/function_name_t
 import { function_copy_open } from "../../../love/public/src/function_copy_open.mjs";
 export async function function_copy_remove_last(f_name_before) {
   let parts = function_name_to_parts(f_name_before);
-  llist_remove_last(parts);
+  list_remove_last(parts);
   let f_name_after = function_name_combine_multiple(parts);
   let v = await function_copy_open(f_name_before, f_name_after);
   return v;
