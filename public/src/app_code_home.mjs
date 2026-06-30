@@ -1,3 +1,4 @@
+import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -82,6 +83,7 @@ export function app_code_home(context) {
               let div4 = html_span_text(row_item, index_1);
               html_style_font_size(div4, "0.75em");
               html_font_color_set(div4, "#bbb");
+              html_font_jetbrains_mono(component);
               return digit;
             }
             let spans = list_map_index_1(digits, lambda4);
