@@ -102,8 +102,8 @@ export function app_code_lesson_symbols_digits() {
       return digit;
     }
     let spans = list_map_index_1(digits, lambda4);
-    let container_count = app_code_container_light(parent);
-    html_text_set(container_count, "Number of symbols: ");
-    return container_count;
+    let container_answer = app_code_container_light(parent);
+    html_text_set(container_answer, "Number of symbols: ");
+    return {container_answer};
   }
 }
