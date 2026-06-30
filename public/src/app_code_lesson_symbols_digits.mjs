@@ -83,7 +83,7 @@ export function app_code_lesson_symbols_digits() {
       let mapped2 = list_map(digit_counts, lambda);
       return mapped2;
     },
-    quizzes: [],
+    quizzes: [function lambda5() {}],
   };
   return r3;
 }
