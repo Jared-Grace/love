@@ -30,7 +30,8 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let combined = text_combine("These numbers are digits", right);
-  let p3 = html_p_text(root, text);digits
+  let p3 = html_p_text(root, text);
+  let ds = digits();
   let joined = list_join_comma_space(args);
   html_cycle_bold(root, ["The numbers 0, 1, 2, 3, ..., 9 are ", "digits"]);
   let p2 = html_p(root);
