@@ -15,6 +15,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
+  let div3 = html_div(parent2);
   let batch = [];
   function example() {
     let e = list_empty_is(batch);
