@@ -18,18 +18,18 @@ export function app_code_home(context) {
   let lessons = app_code_lessons();
   let lesson = list_find_property(lessons, "id", lesson_id);
   let above = property_get(lesson, "above");
-  let batch2 = property_get(lesson, "batch");
-  digits_above(root);
+  let batch = property_get(lesson, "batch");
+  above(root);
   let p = html_div_text(root, "Here is an example:");
   let example_div = html_div(root);
-  let batch = [];
+  let b = [];
   function example() {
-    let e = list_empty_is(batch);
+    let e = list_empty_is(b);
     if (e) {
-      batch = digit_batch();
-      list_shuffle(batch);
+      b = digit_batch();
+      list_shuffle(b);
     }
-    let r = list_remove_last_single(batch);
+    let r = list_remove_last_single(b);
     let render2 = property_get(r, "render");
     let question2 = property_get(render2, "question");
     let answer2 = property_get(render2, "answer");
@@ -39,7 +39,7 @@ export function app_code_home(context) {
     let div2 = app_code_container_light(example_div);
     answer2(div2);
   }
-  let b = app_replace_button(root, "Show me another example", example);
+  app_replace_button(root, "Show me another example", example);
   example();
   return;
   html_p_text_multiple(root, [
