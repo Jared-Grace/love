@@ -23,8 +23,9 @@ export function app_code_home(context) {
   function lambda(digit_count) {
     function lambda2(item) {
       let first_is = equal_0(item);
-      let result = ternary(first_is, dps, ds);
-      let r3 = list_random_item(list);
+      let choices = ternary(first_is, dps, ds);
+      let choice = list_random_item(choices);
+      return choice;
     }
     let mapped = range_map(digit_count, lambda2);
     let r2 = {
