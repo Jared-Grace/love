@@ -29,7 +29,7 @@ export function app_code_home(context) {
     html_clear(root);
     let div = html_div(root);
     question2(div);
-    let div2 = html_div(parent2);
+    let div2 = html_div(root);
     answer2(div2);
   }
   let b = app_replace_button(root, "Show me another example", example);
