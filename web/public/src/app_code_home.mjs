@@ -1,8 +1,8 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { html_span_text_multiple } from "../../../love/public/src/html_span_text_multiple.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -61,7 +61,11 @@ export function app_code_home(context) {
         render: {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
-            let spans = html_span_text_multiple(parent, digits);
+            function lambda4(d) {
+              let span2 = html_span_text(parent, d);
+              return span2;
+            }
+            let spans = list_map(digits, lambda4);
           },
           answer: function lambda3(parent_button) {
             let combined = text_combine("Number of symbols: ", digit_count);
