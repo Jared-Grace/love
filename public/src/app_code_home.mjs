@@ -26,7 +26,7 @@ export function app_code_home(context) {
   let b = [];
   html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
-  example=function () {
+  let example = function lambda() {
     let e = list_empty_is(b);
     if (e) {
       b = batch();
@@ -35,7 +35,7 @@ export function app_code_home(context) {
     html_clear(example_div);
     let r = list_remove_last_single(b);
     on_batch_item(r);
-  }
+  };
   example();
   app_replace_button(root, combined, example);
   html_hr(root);
