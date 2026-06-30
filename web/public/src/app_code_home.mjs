@@ -1,4 +1,3 @@
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -61,7 +60,7 @@ export function app_code_home(context) {
       let r2 = {
         render: {
           question: function lambda2(parent) {
-            let span = html_span_text(parent, "Symbols: ");
+            let span = html_div_text(parent, "Symbols: ");
             let spans = html_span_text_multiple(parent, digits);
           },
           answer: function lambda3(parent_button) {
