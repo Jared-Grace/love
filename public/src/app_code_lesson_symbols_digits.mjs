@@ -64,7 +64,6 @@ export function app_code_lesson_symbols_digits() {
               return digit;
             }
             let spans = list_map_index_1(digits, lambda4);
-            question2(div);
             let a = app_code_container_light(parent);
             html_text_set(a, "Number of symbols: ");
             let div3 = app_code_container_dark(a);
