@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -67,6 +68,8 @@ export function app_code_lesson_symbols_digits() {
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
               let taken = list_take(b, answer_count_max);
+              function lambda3(item) {}
+              each(list, lambda3);
             },
           ],
         };
