@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
@@ -6,7 +7,6 @@ import { app_replace_rule_set_highlight } from "../../../love/public/src/app_rep
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
 import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
-import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -78,7 +78,7 @@ export function app_code_home(context) {
             function lambda4(d) {
               let div4 = html_div(div3);
               let span2 = app_replace_button_symbol(div4, d);
-              app_replace_button_style(span2);
+              app_replace_button_symbol_style(span2);
               html_style_background_color_set(span2, "#444");
               html_font_color_set(span2, "white", "rgb(10, 12, 10)");
               let h = app_replace_rule_set_highlight();
