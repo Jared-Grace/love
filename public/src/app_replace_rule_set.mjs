@@ -55,7 +55,7 @@ import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_r
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
-import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
+import { html_font_color_set_if } from "../../../love/public/src/html_font_color_set_if.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_replace_button_symbol_style_valid_if } from "../../../love/public/src/app_replace_button_symbol_style_valid_if.mjs";
@@ -233,7 +233,7 @@ export async function app_replace_rule_set(context) {
         );
         html_style_background_color_set(rb, c);
         let arrow2 = property_get(rb, "arrow");
-        html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
+        html_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
       }
     }
     each_index(rbs, rbs_each);

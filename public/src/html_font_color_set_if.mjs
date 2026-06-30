@@ -1,6 +1,6 @@
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
-export function html_style_font_color_set_if(
+export function html_font_color_set_if(
   condition,
   component,
   color_if,
