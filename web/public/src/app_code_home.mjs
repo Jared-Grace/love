@@ -1,6 +1,6 @@
+import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -14,7 +14,7 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let lesson_id = storage_local_get_context(context, "lesson_id");
+  let lesson_id = storage_local_initialize_context(context, "lesson_id");
   let lessons = app_code_lessons();
   let lesson = list_find_property(lessons, "id", lesson_id);
   let above = property_get(lesson, "above");
