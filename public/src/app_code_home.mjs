@@ -26,7 +26,7 @@ export function app_code_home(context) {
   function example() {
     let e = list_empty_is(b);
     if (e) {
-      b = digit_batch();
+      b = batch();
       list_shuffle(b);
     }
     let r = list_remove_last_single(b);
