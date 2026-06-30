@@ -1,4 +1,4 @@
-import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
+import { app_replace_button_symbol } from "../../../love/public/src/app_replace_button_symbol.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -62,7 +62,7 @@ export function app_code_home(context) {
           question: function lambda2(parent) {
             let span = html_div_text(parent, "Symbols: ");
             function lambda4(d) {
-              let span2 = app_replace_button_symbol_style(parent, d);
+              let span2 = app_replace_button_symbol(parent, d);
               return span2;
             }
             let spans = list_map(digits, lambda4);
