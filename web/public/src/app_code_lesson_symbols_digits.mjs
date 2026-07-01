@@ -55,7 +55,8 @@ export function app_code_lesson_symbols_digits() {
         let r2 = {
           example: function lambda6(parent) {
             let a = example_above(parent, digits);
-            let div3 = app_code_container_dark(a);
+            let container_answer2 = property_get(a, "container_answer");
+            let div3 = app_code_container_dark(container_answer2);
             let s = app_code_symbol_generic(
               div3,
               digit_count,
