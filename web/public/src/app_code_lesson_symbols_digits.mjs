@@ -1,3 +1,4 @@
+import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
 import { html_visibility_hidden_multiple } from "../../../love/public/src/html_visibility_hidden_multiple.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -12,7 +13,6 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -95,7 +95,7 @@ export function app_code_lesson_symbols_digits() {
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
               list_remove_if_exists(answers, digit_count);
-              let taken = list_take(answers, answer_count_max - 1);
+              let taken = list_shuffle_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
               let on_success = html_div(parent);
