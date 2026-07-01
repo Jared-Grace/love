@@ -33,44 +33,21 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-export function app_code_lesson_symbols_digits_generic(name, id, on_symbol) {
+export function app_code_lesson_symbols_digits_generic(
+  name,
+  id,
+  above,
+  on_symbol,
+) {
   const answer_count_max = 4;
   let r3 = {
     name,
     id,
-    above: function digits_above(root) {
-      let c = app_code_container_light_blue(root);
-      html_style_assign(c, {
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.8em",
-      });
-      let p3 = html_div(c);
-      let ds = digits();
-      let joined = list_join_comma_space(ds);
-      let combined2 = text_combine_multiple([
-        "The numbers ",
-        joined,
-        " are called ",
-      ]);
-      html_cycle_bold(p3, [combined2, "digits"]);
-      let p2 = html_div(c);
-      html_cycle_bold(p2, [
-        "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
-        "symbols",
-      ]);
-      let p = html_div_text(
-        c,
-        "When we write computer programs, we use symbols, including numbers",
-      );
-    },
+    above,
     batch: function digit_batch() {
       let digit_counts = range_1(5);
       function lambda(digit_count) {
