@@ -5,6 +5,7 @@ export function app_code_lesson_symbols_digits() {
     "Symbols (Digits)",
     "symbols_digits",
     noop,
+    noop,
   );
   return r5;
 }
