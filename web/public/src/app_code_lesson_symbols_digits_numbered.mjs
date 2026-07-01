@@ -48,6 +48,8 @@ export function app_code_lesson_symbols_digits_numbered() {
     ]);
     let squashed = list_squash(combined);
     html_cycle_mono(p3, [squashed, "digits"]);
+    let span = html_span_text(parent2, text);
+    html_cycle_mono(p3, [squashed, "digits"]);
     let p2 = html_div(c);
     html_cycle_bold(p2, [
       "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
