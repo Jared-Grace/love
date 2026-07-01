@@ -20,7 +20,7 @@ export function app_code_lesson_symbols_digits_numbered() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     let p3 = html_div(c);
-    let ds = digits();
+    let ds = digits();$a
     const after = " are called ";
     html_cycle_mono_list_between_comma_space_before_after(
       ds,
