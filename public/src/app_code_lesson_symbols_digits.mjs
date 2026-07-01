@@ -1,5 +1,3 @@
-import { app_g_button_uncolored_style } from "../../../love/public/src/app_g_button_uncolored_style.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
@@ -95,7 +93,6 @@ export function app_code_lesson_symbols_digits() {
                 function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
-                    each(buttons, app_g_button_uncolored_style);
                     app_shared_button_screen_green_style_assign(b2);
                   } else {
                     app_g_button_wrong(b2);
