@@ -5,7 +5,6 @@ import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -21,11 +20,6 @@ export function app_code_lesson_symbols_digits_numbered() {
   return r5;
   function above(root) {
     let c = app_code_container_light_blue(root);
-    html_style_assign(c, {
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.8em",
-    });
     let p3 = html_div(c);
     let ds = digits();
     let between = ", ";
