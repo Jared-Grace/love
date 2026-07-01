@@ -31,7 +31,7 @@ export function app_code_next(
   async function lambda() {
     await app_shared_screen_set(context, app_code_quiz);
   }
-  let b = app_replace_button_wide(parent, nt, lambda);
+  let b = app_replace_button_wide(parent, nt, on_next);
   let r = {
     container,
   };
