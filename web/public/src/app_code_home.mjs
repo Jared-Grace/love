@@ -48,7 +48,7 @@ export function app_code_home(context) {
     let list = app_code_lessons();
     let item = list_find_property(list, property, value);
     let index_previous = list_index_of_previous(list, item);
-    let item2 = list_get(list2, index);
+    let item2 = list_get(list, index_previous);
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
