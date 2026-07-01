@@ -5,7 +5,6 @@ import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -35,8 +34,11 @@ export function app_code_home(context) {
   ]);
   html_div_text(root, combined3);
   let left = emoji_repeat_1();
-  let combined2 = text_combine(left2, right);
-  let combined = text_combine(left, "Yes, show me another example");
+  let combined = text_combine_multiple([
+    left,
+    "Yes, ",
+    "show me another example",
+  ]);
   app_replace_button(root, combined, refresh);
   html_hr(root);
   app_replace_button_screen(context, app_code_quiz, root, nt);
