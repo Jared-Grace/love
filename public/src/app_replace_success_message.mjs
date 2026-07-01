@@ -21,7 +21,7 @@ import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs"
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
-export function app_replace_success_message(div_below) {
+export function app_replace_success_message(parent) {
   let choices = [
     emoji_trophy,
     emoji_100,
@@ -36,7 +36,7 @@ export function app_replace_success_message(div_below) {
   list_add_first(taken, emoji_check);
   let mapped = invoke_multiple(taken);
   let joined = list_join_empty(mapped);
-  let p = html_p(div_below);
+  let p = html_p(parent);
   let highlight = app_replace_rule_set_highlight();
   html_style_background_color_set(p, highlight);
   app_replace_button_symbol_style_inner(p);
