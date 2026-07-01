@@ -38,7 +38,7 @@ export function app_code_lesson_symbols_letters() {
     ];
     html_cycle(div2, cycles, squashed);
     let div3 = html_div(parent);
-    html_cycle_bold(parent2, parts);
+    html_cycle_bold(div3, ["Those 26 letters are written in ", "lowercase"]);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
