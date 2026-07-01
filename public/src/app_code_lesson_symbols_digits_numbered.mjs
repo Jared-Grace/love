@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -6,7 +7,6 @@ import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     let mapped = list_map(taken, lambda);
     let last = list_last(ds);
     list_add(mapped, last);
-    let joined = list_join_comma_space(ds);
+    let combined = list_concat_multiple(lists);
     let combined2 = text_combine_multiple([
       "The numbers ",
       joined,
