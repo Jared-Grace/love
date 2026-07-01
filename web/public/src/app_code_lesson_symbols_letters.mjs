@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -22,6 +23,9 @@ export function app_code_lesson_symbols_letters() {
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     let squashed = list_between_comma_space(alphabet_lower);
+    log(app_code_lesson_symbols_letters.name, {
+      squashed,
+    });
     let i = incrementer();
     let cycles = [
       function lambda2(span) {
