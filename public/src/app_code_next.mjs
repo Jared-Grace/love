@@ -1,7 +1,6 @@
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
-import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
