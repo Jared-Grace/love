@@ -28,7 +28,7 @@ export function app_code_home(context) {
   let nt = app_karate_button_next_text();
   let padded3 = text_pad_nested_space_quote_double(nt);
   let combined3 = text_combine(
-    "Do you want another example? If not, choose: ",
+    "Do you want to see another example? If not, choose: ",
     padded3,
   );
   html_div_text(root, combined3);
