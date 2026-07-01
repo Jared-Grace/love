@@ -1,7 +1,6 @@
 import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
-import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -37,17 +36,17 @@ export function app_code_home(context) {
     example_another,
   );
   async function previous() {
-    let lesson_id = storage_local_initialize_context(
-      context,
-      "lesson_id",
-      value,
-    );
     function lambda(value) {
       let list = app_code_lessons();
       let value_new = list_property_previous_value(list, "id", value);
       return value_new;
     }
-    storage_local_transform_context(context2, key, value_initial, lambda);
+    storage_local_transform_context(
+      context,
+      "lesson_id",
+      value_initial,
+      lambda,
+    );
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
