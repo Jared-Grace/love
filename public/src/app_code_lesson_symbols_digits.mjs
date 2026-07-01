@@ -1,3 +1,4 @@
+import { list_index_of_next_property } from "../../../love/public/src/list_index_of_next_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
@@ -105,7 +106,12 @@ export function app_code_lesson_symbols_digits() {
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 function lambda7(lesson_id) {
-                  let lessons = app_code_lessons();list_index_of_next_property
+                  let lessons = app_code_lessons();
+                  let index_next = list_index_of_next_property(
+                    list,
+                    property,
+                    value,
+                  );
                   return a2;
                 }
                 storage_local_transform_context(context, "lesson_id", lambda7);
