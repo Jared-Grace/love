@@ -1,5 +1,4 @@
-import { list_get } from "../../../love/public/src/list_get.mjs";
-import { list_index_of_next_property } from "../../../love/public/src/list_index_of_next_property.mjs";
+import { list_property_next } from "../../../love/public/src/list_property_next.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
@@ -109,12 +108,7 @@ export function app_code_lesson_symbols_digits() {
                 function lambda7(value) {
                   let list = app_code_lessons();
                   let property_name = "id";
-                  let index_next = list_index_of_next_property(
-                    list,
-                    property_name,
-                    value,
-                  );
-                  let next = list_get(list, index_next);
+                  let next = list_property_next(list, property_name, value);
                   let value_next = property_get(next, property_name);
                   return value_next;
                 }
