@@ -26,5 +26,5 @@ export function app_code_quiz(context) {
     left,
     "Yes, please go back and show me another example",
   );
-  app_replace_button_screen(context, app_code_home, root, combined);
+  let b = app_replace_button_screen(context, app_code_home, root, combined);
 }
