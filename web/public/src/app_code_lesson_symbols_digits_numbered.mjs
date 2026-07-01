@@ -31,8 +31,9 @@ export function app_code_lesson_symbols_digits_numbered() {
     let p3 = html_div(c);
     let ds = digits();
     let taken = list_take_less_1(ds);
-    function lambda(item) {}
-    let mapped = list_map(list, lambda);
+    let between = ", ";
+    function lambda(d) {}
+    let mapped = list_map(taken, lambda);
     let joined = list_join_comma_space(ds);
     let combined2 = text_combine_multiple([
       "The numbers ",
