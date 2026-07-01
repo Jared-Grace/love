@@ -1,4 +1,4 @@
-import { html_bold } from "../../../love/public/src/html_bold.mjs";
+import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -50,8 +50,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     let squashed = list_squash(combined);
     html_cycle_mono(p3, squashed);
     const text = "digits";
-    let span = html_span_text(p3, text);
-    html_bold(span);
+    html_span_text_bold(p3, text);
     let p2 = html_div(c);
     html_cycle_bold(p2, [
       "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
