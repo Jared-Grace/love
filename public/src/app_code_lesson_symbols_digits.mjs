@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
@@ -103,7 +104,8 @@ export function app_code_lesson_symbols_digits() {
                     html_display_block(success);
                     await sleep(500);
                     html_clear(parent);
-                    refresh();tc
+                    refresh();
+                    let combined = text_combine(left, right);
                     let p4 = html_p_text(
                       parent,
                       "If you want to practice with another quiz, then choose the correct answer above",
