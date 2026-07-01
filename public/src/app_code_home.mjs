@@ -17,7 +17,7 @@ export function app_code_home(context) {
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
     ex(container);
-  }
+  }$a
   const yes_text = "show me another example";
   app_code_next(context, root, "see another example", yes_text, refresh);
   return;
