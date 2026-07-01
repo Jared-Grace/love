@@ -87,9 +87,16 @@ export function app_code_lesson_symbols_digits() {
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
-              let div = html_div(parent2);
-              let success = app_replace_success_message(parent);
-              html_display_none(success);
+              let on_success = html_div(parent2);
+              let success = app_replace_success_message(on_success);
+              app_code_next(
+                context,
+                on_success,
+                "see another example",
+                "please show me another example",
+                refresh,
+              );
+              html_display_none(on_success);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
@@ -101,14 +108,7 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-                    html_display_block(success);
-                    app_code_next(
-                      context,
-                      parent,
-                      "see another example",
-                      "please show me another example",
-                      refresh,
-                    );
+                    html_display_block(on_success);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
