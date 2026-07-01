@@ -9,6 +9,6 @@ export function app_code_container_light_blue(parent) {
   html_border_none(container2);
   let container = container2;
   html_style_background_color_set(container, "rgb(209, 231, 253)");
-  html_border_top(component, border_width, border_color);
+  html_border_top(component, "0.25em", "black");
   return container;
 }
