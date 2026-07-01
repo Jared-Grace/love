@@ -42,7 +42,7 @@ export function app_code_lesson_symbols_digits() {
       html_style_assign(c, {
         display: "flex",
         flexDirection: "column",
-        gap: "1em",
+        gap: "0.7em",
       });
       let p3 = html_div(c);
       let ds = digits();
