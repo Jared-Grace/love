@@ -22,16 +22,16 @@ export function app_code_lesson_symbols_digits_numbered() {
     let ds = digits();
     html_cycle_mono_list_between_comma_space_before_after(
       p3,
-      ds,
       "The numbers ",
+      ds,
       " are called ",
     );
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
     html_cycle_mono_list_between_comma_space_before_after(
       p2,
-      [0, 1, 2],
       "In a number, its digits (",
+      [0, 1, 2],
       [", ..., ", "9", ") are examples of "],
     );
     html_span_text_bold(p2, "symbols");
