@@ -19,8 +19,6 @@ export function app_code_home(context) {
   above(root);
   let h = html_hr(root);
   html_div_text(root, "Here is an example:");
-  let left = emoji_repeat_1();
-  let combined = text_combine(left, "Yes, show me another example");
   let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
@@ -33,6 +31,8 @@ export function app_code_home(context) {
     padded3,
   );
   html_div_text(root, combined3);
+  let left = emoji_repeat_1();
+  let combined = text_combine(left, "Yes, show me another example");
   app_replace_button(root, combined, refresh);
   html_hr(root);
   app_replace_button_screen(context, app_code_quiz, root, nt);
