@@ -42,8 +42,7 @@ export function app_code_home(context) {
       "lesson_id",
       value,
     );
-    let value = null;
-    function lambda(value2) {
+    function lambda(value) {
       let list = app_code_lessons();
       let value_new = list_property_previous_value(list, "id", value);
       return value_new;
