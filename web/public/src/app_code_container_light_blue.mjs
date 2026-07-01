@@ -9,10 +9,9 @@ export function app_code_container_light_blue(parent) {
   html_style_padding(container2, "0.2em");
   html_border_none(container2);
   let container = container2;
-  html_style_background_color_set(container, "rgb(209, 231, 253)");$a
-  const border_width = "0.15em";
+  html_style_background_color_set(container, "rgb(209, 231, 253)");
   const border_color = "black";
-  html_border_y(container, border_width, border_color);
+  html_border_y(container, "0.15em", border_color);
   html_style_margin_y(container, "0.5em");
   return container;
 }
