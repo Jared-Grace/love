@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
@@ -16,6 +17,7 @@ export function app_code_quiz(context) {
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
   let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
+  let div = html_div(parent);
   let success = null;
   function on_batch_item(container, b, refresh) {
     let qs = property_get(b, "quizzes");
