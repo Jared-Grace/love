@@ -35,8 +35,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     html_cycle_mono(p3, squashed);
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
-    html_cycle_mono(
-      p2,
+    html_cycle_mono(p2, [
       "In a number, the digits (",
       "0",
       ", ",
@@ -46,7 +45,7 @@ export function app_code_lesson_symbols_digits_numbered() {
       ", ..., ",
       "9",
       ") are examples of ",
-    );
+    ]);
     html_span_text_bold(p2, "symbols");
     let p = html_div_text(
       c,
