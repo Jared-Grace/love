@@ -5,7 +5,6 @@ import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
@@ -26,9 +25,9 @@ export function app_code_quiz(context) {
   let combined2 = text_combine_multiple(list);
   html_div_text(container3, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
-  let combined = text_combine(
+  let combined = text_combine_multiple([
     left,
     "Yes, please go back and show me another example",
-  );
+  ]);
   app_replace_button_screen_wide(context, app_code_home, container3, combined);
 }
