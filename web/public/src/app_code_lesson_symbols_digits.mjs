@@ -69,11 +69,8 @@ export function app_code_lesson_symbols_digits() {
               let container_answer2 = property_get(a, "container_answer");
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
-              log(app_code_lesson_symbols_digits.name, {
-                answers,
-              });
               list_add_if_not_includes(answers, digit_count);
-              list_shuffle(b);
+              list_shuffle(answers);
               let taken = list_take(answers, answer_count_max);
               function lambda3(answer) {
                 log(app_code_lesson_symbols_digits.name, {
