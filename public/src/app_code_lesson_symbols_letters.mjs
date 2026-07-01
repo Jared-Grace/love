@@ -1,3 +1,4 @@
+import { incrementer } from "../../../love/public/src/incrementer.mjs";
 import { html_span_text_smaller } from "../../../love/public/src/html_span_text_smaller.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { list_between_comma_space_before_after } from "../../../love/public/src/list_between_comma_space_before_after.mjs";
@@ -17,13 +18,12 @@ export function app_code_lesson_symbols_letters() {
       alphabet_lower,
       "",
     );
-    let count = 1;
+    let i = incrementer();
     let cycles = [
       noop,
       function lambda2(span) {
         html_flex_column_center(span);
         html_span_text_smaller(span, count);
-        count++;
       },
     ];
     html_cycle(div, cycles, squashed);
