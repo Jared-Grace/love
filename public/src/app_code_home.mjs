@@ -26,6 +26,7 @@ export function app_code_home(context) {
     ex(container);
   }
   let nt = app_karate_button_next_text();
+  let combined3 = text_combine(left2, right);
   html_div_text(root, "Do you want another example? If not, choose: ");
   app_replace_button(root, combined, refresh);
   html_hr(root);
