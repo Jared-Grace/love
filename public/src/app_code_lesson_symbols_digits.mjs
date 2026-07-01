@@ -1,3 +1,4 @@
+import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
@@ -94,7 +95,7 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-  app_replace_success_message(p);
+                    app_replace_success_message(p);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
