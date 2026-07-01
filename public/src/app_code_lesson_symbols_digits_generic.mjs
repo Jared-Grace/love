@@ -160,8 +160,8 @@ export function app_code_lesson_symbols_digits_generic(
   };
   return r3;
   function example_above(parent, digits) {
-    let q = app_code_container_light(parent);
     let container_above = html_div(parent);
+    let q = app_code_container_light(parent);
     let span = html_div_text(q, "Symbols: ");
     let row = app_code_container_dark(q);
     html_style_assign(row, {
