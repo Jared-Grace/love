@@ -27,7 +27,6 @@ export async function app_replace_rule_set_success(
   sbs,
   duration,
   div_below,
-  highlight,
   goal_index,
   goals,
 ) {
