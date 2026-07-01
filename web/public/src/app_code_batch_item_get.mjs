@@ -7,16 +7,16 @@ import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs"
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export function app_code_batch_item_get(lesson, on_batch_item) {
   let batch = property_get(lesson, "batch");
-  let batches = [];
+  let remaining = [];
   let container = html_div(root);
   let refresh = function lambda() {
-    let e = list_empty_is(batches);
+    let e = list_empty_is(remaining);
     if (e) {
       list_replace_all(list, items);
-      list_shuffle(batches);
+      list_shuffle(remaining);
     }
     html_clear(container);
-    let b = list_remove_last_single(batches);
+    let b = list_remove_last_single(remaining);
     on_batch_item(container, b);
   };
   refresh();
