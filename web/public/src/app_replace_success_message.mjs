@@ -1,3 +1,4 @@
+import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
@@ -36,6 +37,7 @@ export function app_replace_success_message(div_below) {
   let mapped = invoke_multiple(taken);
   let joined = list_join_empty(mapped);
   let p = html_p(div_below);
+  let highlight = app_replace_rule_set_highlight();
   html_style_background_color_set(p, highlight);
   app_replace_button_symbol_style_inner(p);
   const value_em = "0.3";
