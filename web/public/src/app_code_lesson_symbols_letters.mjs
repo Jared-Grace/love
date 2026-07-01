@@ -37,9 +37,13 @@ export function app_code_lesson_symbols_letters() {
       container2,
       "Also, both uppercase and lowercase letters are examples of symbols",
     );
-    let p = html_div_text(
+    html_div_text(
       container2,
       "When we write computer programs, we use symbols, including letters and numbers",
+    );
+    html_div_text(
+      container2,
+      "For a computer, lowercase symbols may be different than uppercase symbols",
     );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
