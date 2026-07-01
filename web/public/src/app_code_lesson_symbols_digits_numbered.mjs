@@ -30,7 +30,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     });
     let p3 = html_div(c);
     let ds = digits();
-    let taken = list_take(list2, count);
+    let taken = list_take(ds, count);
     function lambda(item) {}
     each(list, lambda);
     let joined = list_join_comma_space(ds);
