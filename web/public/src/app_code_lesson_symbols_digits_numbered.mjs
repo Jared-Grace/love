@@ -1,6 +1,5 @@
+import { list_concat_multiple_squash } from "../../../love/public/src/list_concat_multiple_squash.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -42,12 +41,8 @@ export function app_code_lesson_symbols_digits_numbered() {
     let mapped = list_map(taken, lambda);
     let last = list_last(ds);
     list_add(mapped, last);
-    let combined = list_concat_multiple([
-      "The numbers ",
-      mapped,
-      " are called ",
-    ]);
-    let squashed = list_squash(combined);
+    const lists = ["The numbers ", mapped, " are called "];
+    let squashed = list_concat_multiple_squash(lists);
     html_cycle_mono(p3, squashed);
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
