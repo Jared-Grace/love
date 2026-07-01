@@ -11,6 +11,6 @@ export function app_code_container_light_blue(parent) {
   let container = container2;
   html_style_background_color_set(container, "rgb(209, 231, 253)");
   html_border_top(container, "0.25em", "black");
-  html_style_margin_y(component, value);
+  html_style_margin_y(container, "0.5em");
   return container;
 }
