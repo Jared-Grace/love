@@ -36,7 +36,6 @@ export function app_code_home(context) {
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
-    context,
     root,
     "to the previous lesson",
     "take me back to the previous lesson",
