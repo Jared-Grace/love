@@ -4,7 +4,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-export function app_code_batch_item_get(on_batch_item) {
+export function app_code_batch_item_get(lesson, on_batch_item) {
   let batches = [];
   let container = html_div(root);
   let refresh = function lambda() {
