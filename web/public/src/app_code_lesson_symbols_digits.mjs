@@ -103,7 +103,7 @@ export function app_code_lesson_symbols_digits() {
               storage_local_set_context(context, "quiz_index", index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                let lesson_id = storage_local_transform_context(
+                storage_local_transform_context(
                   context,
                   "lesson_id",
                   value,
