@@ -23,11 +23,11 @@ export function app_code_quiz(context) {
   }
   refresh();
   let container3 = app_code_container_light_blue(parent);
-  html_div_text(root, "Do you want to go back and see another example?");
+  html_div_text(container3, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
     left,
     "Yes, please go back and show me another example",
   );
-  app_replace_button_screen_wide(context, app_code_home, root, combined);
+  app_replace_button_screen_wide(context, app_code_home, container3, combined);
 }
