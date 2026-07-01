@@ -1,3 +1,5 @@
+import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
+import { app_g_button_green_style } from "../../../love/public/src/app_g_button_green_style.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -86,7 +88,11 @@ export function app_code_lesson_symbols_digits() {
               function lambda3(answer) {
                 function lambda8() {
                   let eq2 = equal(answer, digit_count);
-                  let result = ternary(condition, on_true, on_false);
+                  let result = ternary(
+                    eq2,
+                    app_g_button_green_style,
+                    app_g_button_wrong,
+                  );
                 }
                 let b2 = app_replace_button_wide(
                   container_answer2,
