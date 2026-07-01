@@ -1,3 +1,4 @@
+import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
@@ -107,9 +108,7 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-                    html_style_assign(on_success, {
-                      visibility: "hidden",
-                    });
+                    html_visibility_visible(on_success);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
