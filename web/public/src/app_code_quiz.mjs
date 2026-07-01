@@ -17,7 +17,7 @@ export function app_code_quiz(context) {
   function on_batch_item(container, b) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
-    q(context, container, refresh);
+    q(container, refresh);
   }
   refresh();
   html_div_text(root, "Do you want to go back and see another example?");
