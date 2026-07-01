@@ -30,6 +30,7 @@ export function app_code_lesson_symbols_letters() {
     let div5 = html_div(container);
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
+    let container2 = app_code_container_light_blue(parent);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
