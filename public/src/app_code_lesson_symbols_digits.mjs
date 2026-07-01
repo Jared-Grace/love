@@ -102,12 +102,13 @@ export function app_code_lesson_symbols_digits() {
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
+                    function lambda5() {}
                     app_code_next(
                       context,
                       root,
                       "see another example",
                       "show me another example",
-                      refresh,
+                      lambda5,
                     );
                   } else {
                     const transparency_alpha_channel_hex = "44";
