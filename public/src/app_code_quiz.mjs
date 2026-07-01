@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -18,9 +17,7 @@ export function app_code_quiz(context) {
   function on_batch_item(container, b) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
-    log(app_code_quiz.name, {
-      q,
-    });
+    html_div_text(root, "Do you want to take the next kind of quiz now?");
     q(container);
   }
   refresh();
