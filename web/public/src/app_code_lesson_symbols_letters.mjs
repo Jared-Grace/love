@@ -28,7 +28,7 @@ export function app_code_lesson_symbols_letters() {
         html_display_set(span, "inline-flex");
         let text = i();
         let s = html_span_text_smaller(span, text);
-        html_font_color_set(s, "rgb(0, 128, 255)");
+        html_font_color_set(s, "rgb(0, 91, 181)");
       },
     ];
     html_cycle(div, cycles, squashed);
