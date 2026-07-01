@@ -36,6 +36,7 @@ export function app_code_home(context) {
     refresh,
     example_another,
   );
+  let value_initial = app_code_lesson_first_id();
   let id = property_get(lesson, "id");
   async function previous() {
     function lambda(value) {
@@ -43,7 +44,6 @@ export function app_code_home(context) {
       let value_new = list_property_previous_value(list, "id", value);
       return value_new;
     }
-    let value_initial = app_code_lesson_first_id();
     storage_local_transform_context(
       context,
       "lesson_id",
