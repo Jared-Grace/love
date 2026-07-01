@@ -14,8 +14,8 @@ export function app_code_lesson_symbols_digits_numbered() {
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Digits, numbered)",
     "symbols_digits_numbered",
-    on_symbol,
     above,
+    on_symbol,
   );
   return r5;
   function above(root) {
