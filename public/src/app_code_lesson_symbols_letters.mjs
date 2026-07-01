@@ -16,7 +16,7 @@ export function app_code_lesson_symbols_letters() {
     );
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
-    html_text_characters_numbered(alphabet_lower, div2);
+    html_text_characters_numbered(div2, alphabet_lower);
     let div3 = html_div(c);
     html_cycle_bold(div3, [
       "Those 26 letters are written in ",
