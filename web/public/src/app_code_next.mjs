@@ -1,7 +1,5 @@
-import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -28,9 +26,6 @@ export function app_code_next(
   let left = emoji_repeat_1();
   let combined = text_combine_multiple([left, "Yes, ", yes_text]);
   app_replace_button_wide(container, combined, refresh);
-  async function lambda() {
-    await app_shared_screen_set(context, app_code_quiz);
-  }
   let b = app_replace_button_wide(parent, nt, on_next);
   let r = {
     container,
