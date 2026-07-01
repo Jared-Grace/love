@@ -40,28 +40,28 @@ export function app_code_home(context) {
   let value_initial = app_code_lesson_first_id();
   let id = property_get(lesson, "id");
   let ne = equal_not(id, value_initial);
-  if (false) {
-  }
-  async function previous() {
-    function lambda(value) {
-      let list = app_code_lessons();
-      let value_new = list_property_previous_value(list, "id", value);
-      return value_new;
+  if (ne) {
+    async function previous() {
+      function lambda(value) {
+        let list = app_code_lessons();
+        let value_new = list_property_previous_value(list, "id", value);
+        return value_new;
+      }
+      storage_local_transform_context(
+        context,
+        "lesson_id",
+        value_initial,
+        lambda,
+      );
+      await app_shared_screen_set(context, app_code_home);
     }
-    storage_local_transform_context(
-      context,
-      "lesson_id",
-      value_initial,
-      lambda,
+    app_code_go_back(
+      root,
+      "to the previous lesson",
+      "take me back to the previous lesson",
+      previous,
     );
-    await app_shared_screen_set(context, app_code_home);
   }
-  app_code_go_back(
-    root,
-    "to the previous lesson",
-    "take me back to the previous lesson",
-    previous,
-  );
   return;
   html_p_text_multiple(root, [
     "In computer programming",
