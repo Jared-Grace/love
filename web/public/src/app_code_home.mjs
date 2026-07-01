@@ -22,7 +22,7 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
-  async function lambda() {
+  async function example_another() {
     await app_shared_screen_set(context, app_code_quiz);
   }
   app_code_next(
@@ -31,9 +31,9 @@ export function app_code_home(context) {
     "see another example",
     "please show me another example",
     refresh,
-    lambda,
+    example_another,
   );
-  async function lambda() {
+  async function previous() {
     let lesson_id = storage_local_initialize_context(
       context,
       "lesson_id",
@@ -45,7 +45,7 @@ export function app_code_home(context) {
     root,
     "to the previous lesson",
     "take me back to the previous lesson",
-    lambda,
+    previous,
   );
   return;
   html_p_text_multiple(root, [
