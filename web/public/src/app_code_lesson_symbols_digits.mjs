@@ -93,7 +93,8 @@ export function app_code_lesson_symbols_digits() {
                 );
                 function on_click() {
                   let eq2 = equal(answer, digit_count);
-                  if (false) {
+                  if (eq2) {
+                    app_shared_button_screen_green_style_assign(component);
                   }
                   let fn = ternary(
                     eq2,
