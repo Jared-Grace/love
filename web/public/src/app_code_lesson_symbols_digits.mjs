@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -55,6 +56,7 @@ export function app_code_lesson_symbols_digits() {
           example: function lambda6(parent) {
             let a = example_above(parent, digits);
             let container_answer2 = property_get(a, "container_answer");
+            html_text_set(container_answer2, "Number of symbols: ");
             let div3 = app_code_container_dark(container_answer2);
             let s = app_code_symbol_generic(
               div3,
@@ -68,6 +70,7 @@ export function app_code_lesson_symbols_digits() {
             function lambda2(parent) {
               let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
+              html_text_set(container_answer2, "Number of symbols: ");
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
               list_remove_if_exists(answers, digit_count);
