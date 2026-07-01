@@ -32,7 +32,10 @@ export function app_code_lesson_symbols_digits_numbered() {
     let ds = digits();
     let between = ", ";
     let taken = list_take_less_1(ds);
-    function lambda(d) {}
+    function lambda(d) {
+      let r = [d, between];
+      return r;
+    }
     let mapped = list_map(taken, lambda);
     let joined = list_join_comma_space(ds);
     let combined2 = text_combine_multiple([
