@@ -1,17 +1,11 @@
-import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
-import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
-import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
+import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
-import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
-import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
-import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -26,20 +20,7 @@ export function app_code_home(context) {
   }
   const do_you_want_to_text = "see another example";
   const yes_text = "show me another example";
-  let nt = app_karate_button_next_text();
-  let padded3 = text_pad_nested_space_quote_double(nt);
-  let combined3 = text_combine_multiple([
-    "Do you want to ",
-    do_you_want_to_text,
-    "? If not, choose: ",
-    padded3,
-  ]);
-  html_div_text(root, combined3);
-  let left = emoji_repeat_1();
-  let combined = text_combine_multiple([left, "Yes, ", yes_text]);
-  app_replace_button(root, combined, refresh);
-  html_hr(root);
-  app_replace_button_screen(context, app_code_quiz, root, nt);
+  app_code_next(do_you_want_to_text, root, yes_text, refresh, context);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
