@@ -1,4 +1,3 @@
-import { newFunction } from "../../../love/public/src/newFunction.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
 import { list_property_next_value } from "../../../love/public/src/list_property_next_value.mjs";
@@ -52,9 +51,9 @@ export function app_code_lesson_symbols_digits_generic(
     above,
     batch: function batch_get() {
       let digit_counts = range_1(5);
-      async function lambda(digit_count) {
+      function lambda(digit_count) {
         let digits = integer_positive_random_digits_text(digit_count);
-        let r5 = await newFunction(
+        let r5 = app_code_lesson_symbols_digits_generic_batch(
           example_above,
           digits,
           batch_get,
@@ -90,7 +89,12 @@ export function app_code_lesson_symbols_digits_generic(
     };
     return r;
   }
-  function newFunction(example_above, digits, batch_get, digit_count) {
+  function app_code_lesson_symbols_digits_generic_batch(
+    example_above,
+    digits,
+    batch_get,
+    digit_count,
+  ) {
     const answer_count_max = 4;
     const quizzes = [
       function on_quiz1(context, parent, refresh) {
