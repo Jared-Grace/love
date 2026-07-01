@@ -1,7 +1,7 @@
+import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
-import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
@@ -19,7 +19,8 @@ export function app_code_home(context) {
   above(root);
   let h = html_hr(root);
   html_div_text(root, "Here is an example:");
-  let combined = app_code_example_text();
+  let left = emoji_repeat_1();
+  let combined = text_combine(left, "Yes, show me another example");
   let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
