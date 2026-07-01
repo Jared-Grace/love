@@ -39,8 +39,8 @@ export function app_code_lesson_symbols_digits_numbered() {
       return r;
     }
     let mapped = list_map(taken, lambda);
-    let last = list_last(list);
-    list_add(mapped, item);
+    let last = list_last(ds);
+    list_add(mapped, last);
     let joined = list_join_comma_space(ds);
     let combined2 = text_combine_multiple([
       "The numbers ",
