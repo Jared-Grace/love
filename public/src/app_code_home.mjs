@@ -1,3 +1,4 @@
+import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -33,6 +34,11 @@ export function app_code_home(context) {
     lambda,
   );
   async function lambda() {
+    let lesson_id = storage_local_initialize_context(
+      context,
+      "lesson_id",
+      value,
+    );
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
