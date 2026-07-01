@@ -41,7 +41,7 @@ export function app_code_home(context) {
       "lesson_id",
       value,
     );
-    let lessons = app_code_lessons();
+    let list = app_code_lessons();
     let index_previous = list_index_of_previous(list, item);
     await app_shared_screen_set(context, app_code_home);
   }
