@@ -1,3 +1,4 @@
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
@@ -39,7 +40,7 @@ export function app_code_lesson_symbols_digits() {
     id: "symbols_digits",
     name: "Symbols (Digits)",
     above: function digits_above(root) {
-      let p3 = html_p(root);
+      let p3 = app_code_container_light_blue(root);
       let ds = digits();
       let joined = list_join_comma_space(ds);
       let combined2 = text_combine_multiple([
