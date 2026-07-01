@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
@@ -47,6 +48,7 @@ export function app_code_lesson_symbols_digits() {
         "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
         "symbols",
       ]);
+      let p = html_p_text(root2, text);
     },
     batch: function digit_batch() {
       let digit_counts = range_1(5);
