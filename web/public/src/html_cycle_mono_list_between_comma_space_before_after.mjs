@@ -6,6 +6,6 @@ export function html_cycle_mono_list_between_comma_space_before_after(
   list,
   after,
 ) {
-  let squashed = list_between_comma_space_before_after(list, before, after);
+  let squashed = list_between_comma_space_before_after(before, list, after);
   html_cycle_mono(parent, squashed);
 }
