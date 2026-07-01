@@ -95,10 +95,10 @@ export function app_code_lesson_symbols_digits() {
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
             async function lambda5() {
-              let size = list_size(list);
+              let size = list_size(quizzes);
               let index = list_index_of(quizzes, on_quiz1);
               let a1 = add_1(index);
-              let index_new = mod(n2, m);
+              let index_new = mod(a1, size);
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 index_new = index;
