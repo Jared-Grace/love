@@ -92,8 +92,8 @@ export function app_code_lesson_symbols_digits() {
               app_code_next(
                 context,
                 on_success,
-                "see another example",
-                "please show me another example",
+                "take another quiz to practice some more?",
+                "please give me another quiz to take",
                 refresh,
               );
               html_display_none(on_success);
