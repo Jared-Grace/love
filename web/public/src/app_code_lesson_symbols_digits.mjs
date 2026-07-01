@@ -10,7 +10,6 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
@@ -119,7 +118,6 @@ export function app_code_lesson_symbols_digits() {
     }
     let spans = list_map_index_1(digits, lambda4);
     let container_answer = app_code_container_light(parent);
-    html_text_set(container_answer, "Number of symbols: ");
     let r = {
       container_answer,
     };
