@@ -16,7 +16,7 @@ export function app_code_home(context) {
   let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
-    ex(container);
+    ex(context,container);
   }
   app_code_next(
     context,
