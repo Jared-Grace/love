@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
@@ -18,13 +19,14 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
+  let on_next = error();
   app_code_next(
     context,
     root,
     "see another example",
     "please show me another example",
     refresh,
-    error(),
+    on_next,
   );
   return;
   html_p_text_multiple(root, [
