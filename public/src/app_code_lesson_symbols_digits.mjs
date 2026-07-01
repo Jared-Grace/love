@@ -1,3 +1,4 @@
+import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -102,6 +103,11 @@ export function app_code_lesson_symbols_digits() {
               storage_local_set_context(context, "quiz_index", index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
+                let lesson_id = storage_local_transform_context(
+                  context,
+                  "lesson_id",
+                  value,
+                );
                 await app_shared_screen_set(context, app_code_home);
               } else {
                 refresh();
