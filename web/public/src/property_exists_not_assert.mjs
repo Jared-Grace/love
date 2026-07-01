@@ -9,8 +9,8 @@ export function property_exists_not_assert(object, property_name) {
     log_keep(property_exists_not_assert.name, property_name);
     error_json({
       value,
-      object,
       property_name,
+      object,
     });
   }
 }
