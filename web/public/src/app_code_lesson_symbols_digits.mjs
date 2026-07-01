@@ -61,43 +61,6 @@ export function app_code_lesson_symbols_digits() {
       let digit_counts = range_1(5);
       function lambda(digit_count) {
         let digits = integer_positive_random_digits_text(digit_count);
-        const quizzes = [
-          function lambda2(parent) {
-            let a = example_above(parent, digits);
-            let container_answer2 = property_get(a, "container_answer");
-            html_text_set(container_answer2, "How many symbols are there? ");
-            let b = digit_batch();
-            let answers = list_map_property(b, "answer");
-            list_remove_if_exists(answers, digit_count);
-            let taken = list_take(answers, answer_count_max - 1);
-            let concated = list_concat(taken, [digit_count]);
-            list_sort_text_to(concated);
-            let success = app_replace_success_message(parent);
-            html_display_none(success);
-            let buttons = list_map(concated, lambda3);
-            function lambda3(answer) {
-              let b2 = app_replace_button_wide(
-                container_answer2,
-                answer,
-                on_click,
-              );
-              function on_click() {
-                let eq2 = equal(answer, digit_count);
-                if (eq2) {
-                  app_shared_button_screen_green_style_assign(b2);
-                  html_display_block(success);
-                } else {
-                  const transparency_alpha_channel_hex = "44";
-                  app_g_button_wrong_generic(
-                    b2,
-                    transparency_alpha_channel_hex,
-                  );
-                }
-              }
-              return b2;
-            }
-          },
-        ];
         let r2 = {
           example: function lambda6(parent) {
             let a = example_above(parent, digits);
@@ -112,7 +75,43 @@ export function app_code_lesson_symbols_digits() {
             );
           },
           answer: digit_count,
-          quizzes,
+          quizzes: [
+            function lambda2(parent) {
+              let a = example_above(parent, digits);
+              let container_answer2 = property_get(a, "container_answer");
+              html_text_set(container_answer2, "How many symbols are there? ");
+              let b = digit_batch();
+              let answers = list_map_property(b, "answer");
+              list_remove_if_exists(answers, digit_count);
+              let taken = list_take(answers, answer_count_max - 1);
+              let concated = list_concat(taken, [digit_count]);
+              list_sort_text_to(concated);
+              let success = app_replace_success_message(parent);
+              html_display_none(success);
+              let buttons = list_map(concated, lambda3);
+              function lambda3(answer) {
+                let b2 = app_replace_button_wide(
+                  container_answer2,
+                  answer,
+                  on_click,
+                );
+                function on_click() {
+                  let eq2 = equal(answer, digit_count);
+                  if (eq2) {
+                    app_shared_button_screen_green_style_assign(b2);
+                    html_display_block(success);
+                  } else {
+                    const transparency_alpha_channel_hex = "44";
+                    app_g_button_wrong_generic(
+                      b2,
+                      transparency_alpha_channel_hex,
+                    );
+                  }
+                }
+                return b2;
+              }
+            },
+          ],
         };
         return r2;
       }
