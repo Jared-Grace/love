@@ -1,3 +1,4 @@
+import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -37,6 +38,7 @@ export function app_code_lesson_symbols_letters() {
     ];
     html_cycle(div2, cycles, squashed);
     let div3 = html_div(parent);
+    html_cycle_bold(parent2, parts);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
