@@ -44,6 +44,7 @@ export function app_code_lesson_symbols_letters() {
       ".",
     ]);
     let container = app_code_container_light_blue(root);
+    let div4 = html_div(parent);
     html_cycle_bold(container, [
       "Below are letters written in ",
       "uppercase",
