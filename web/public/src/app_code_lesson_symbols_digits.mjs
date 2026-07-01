@@ -1,3 +1,4 @@
+import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
@@ -100,6 +101,13 @@ export function app_code_lesson_symbols_digits() {
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
+                    app_code_next(
+                      context,
+                      root,
+                      "see another example",
+                      "please show me another example",
+                      refresh,
+                    );
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
