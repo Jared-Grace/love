@@ -9,5 +9,6 @@ export function app_code_container_light(parent) {
     "#ddd",
     "0.05",
   );
+  html_style_margin_y(container, 0.3 + "em");
   return container;
 }
