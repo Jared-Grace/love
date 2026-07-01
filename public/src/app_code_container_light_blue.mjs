@@ -9,7 +9,7 @@ export function app_code_container_light_blue(parent) {
   html_style_padding(container2, "0.2em");
   html_border_none(container2);
   let container = container2;
-  html_style_background_color_set(container, "rgb(209, 231, 253)");
+  html_style_background_color_set(container, "rgb(209, 231, 253)");$a
   const border_width = "0.15em";
   const border_color = "black";
   html_border_y(container, border_width, border_color);
