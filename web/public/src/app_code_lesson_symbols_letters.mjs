@@ -14,7 +14,7 @@ export function app_code_lesson_symbols_letters() {
     html_cycle_mono_list_between_comma_space_before_after(
       div,
       "In English, there are 26 letters of the alphabet: ",
-      alphabet_lower_unsplit,
+      alphabet_lower,
       "",
     );
   }
