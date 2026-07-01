@@ -24,7 +24,7 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
-  html_div_text(root, "Do you want another example?");
+  html_div_text(root, "Do you want another example? If not, choose: ");
   app_replace_button(root, combined, refresh);
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
