@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -13,7 +14,7 @@ export function app_code_batch_item_get(batches, container2, on_batch_item) {
     }
     html_clear(container);
     let b = list_remove_last_single(batches);
-    on_batch_item(container,b);
+    on_batch_item(container, b);
   };
   refresh();
   return refresh;
