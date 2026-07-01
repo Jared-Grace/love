@@ -20,7 +20,7 @@ export function app_code_quiz(context) {
   function on_batch_item(container, b, refresh) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
-    q(container, refresh);
+    q(container, refresh, success);
   }
   refresh();
   success = app_replace_success_message(root);
