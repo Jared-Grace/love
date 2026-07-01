@@ -32,7 +32,7 @@ export function app_code_lesson_symbols_digits_numbered() {
       p2,
       "In a number, its digits (",
       [0, 1, 2],
-      [", ..., ", "9", ") are examples of "],
+      [", ..., ", 9, ") are examples of "],
     );
     html_span_text_bold(p2, "symbols");
     let p = html_div_text(
