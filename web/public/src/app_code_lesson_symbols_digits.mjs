@@ -1,5 +1,4 @@
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
@@ -34,6 +33,7 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
 export function app_code_lesson_symbols_digits() {
   const answer_count_max = 4;
   let r3 = {
@@ -78,7 +78,7 @@ export function app_code_lesson_symbols_digits() {
           },
           answer: digit_count,
           quizzes: [
-            function lambda2(parent) {
+            function on_quiz(parent, refresh) {
               let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
               html_text_set(container_answer2, "How many symbols are there? ");
@@ -97,22 +97,14 @@ export function app_code_lesson_symbols_digits() {
                   answer,
                   on_click,
                 );
-                function on_click() {
+                async function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
-                    function lambda5() {
-                      html_clear(parent);
-                      lambda2(parent);
-                    }
-                    app_code_next(
-                      context,
-                      root,
-                      "practice more with another quiz",
-                      "take another quiz",
-                      lambda5,
-                    );
+                    await sleep(200);
+                    html_clear(parent);
+                    refresh();
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
