@@ -1,5 +1,4 @@
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -24,10 +23,7 @@ export function app_code_lesson_symbols_letters() {
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     let squashed = list_between_comma_space(alphabet_lower);
-    let squashed2 = list_squash(lists);
-    log(app_code_lesson_symbols_letters.name, {
-      squashed,
-    });
+    let squashed2 = list_squash(squashed);
     let i = incrementer();
     let cycles = [
       function lambda2(span) {
@@ -39,7 +35,7 @@ export function app_code_lesson_symbols_letters() {
       },
       noop,
     ];
-    html_cycle(div2, cycles, squashed);
+    html_cycle(div2, cycles, squashed2);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
