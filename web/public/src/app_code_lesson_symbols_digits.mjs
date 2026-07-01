@@ -98,6 +98,7 @@ export function app_code_lesson_symbols_digits() {
                     app_g_button_wrong(b2);
                   }
                 }
+                return b2;
               }
               each(concated, lambda3);
             },
