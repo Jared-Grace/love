@@ -1,5 +1,5 @@
+import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
-import { app_g_button_green_style } from "../../../love/public/src/app_g_button_green_style.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -95,7 +95,7 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   let fn = ternary(
                     eq2,
-                    app_g_button_green_style,
+                    app_shared_button_screen_green_style_assign,
                     app_g_button_wrong,
                   );
                   fn(b2);
