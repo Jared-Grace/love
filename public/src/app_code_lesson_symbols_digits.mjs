@@ -95,10 +95,11 @@ export function app_code_lesson_symbols_digits() {
               let index = list_index_of(quizzes, on_quiz1);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                await app_shared_screen_set(context, app_code_quiz);
+                let index_new = 0;
               } else {
+                await app_shared_screen_set(context, app_code_quiz);
               }
-              storage_local_set_context(context, "quiz_index", li);
+              storage_local_set_context(context, "quiz_index", index_new);
             }
             let r4 = app_code_next(
               context,
