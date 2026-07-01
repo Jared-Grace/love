@@ -23,7 +23,8 @@ export function app_code_lesson_symbols_letters() {
       noop,
       function lambda2(span) {
         html_flex_column_center(span);
-        html_span_text_smaller(span, count);
+        let text = i();
+        html_span_text_smaller(span, text);
       },
     ];
     html_cycle(div, cycles, squashed);
