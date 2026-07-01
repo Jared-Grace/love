@@ -39,7 +39,9 @@ export function app_code_home(context) {
   );
   let value_initial = app_code_lesson_first_id();
   let id = property_get(lesson, "id");
-  let ne = equal_not(left, right);
+  let ne = equal_not(id, value_initial);
+  if (false) {
+  }
   async function previous() {
     function lambda(value) {
       let list = app_code_lessons();
