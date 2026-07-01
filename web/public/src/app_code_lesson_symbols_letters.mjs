@@ -39,7 +39,7 @@ export function app_code_lesson_symbols_letters() {
     );
     let p = html_div_text(
       container2,
-      "Remember, when we write computer programs, we use symbols, including letters and numbers",
+      "When we write computer programs, we use symbols, including letters and numbers",
     );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
