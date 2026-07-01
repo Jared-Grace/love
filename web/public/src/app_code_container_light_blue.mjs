@@ -1,3 +1,4 @@
+import { html_border_bottom } from "../../../love/public/src/html_border_bottom.mjs";
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_border_top } from "../../../love/public/src/html_border_top.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
@@ -11,6 +12,7 @@ export function app_code_container_light_blue(parent) {
   let container = container2;
   html_style_background_color_set(container, "rgb(209, 231, 253)");
   html_border_top(container, "0.15em", "black");
+  html_border_bottom(component, border_width, border_color);
   html_style_margin_y(container, "0.5em");
   return container;
 }
