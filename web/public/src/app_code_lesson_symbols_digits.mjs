@@ -1,4 +1,3 @@
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
@@ -33,7 +32,6 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
 export function app_code_lesson_symbols_digits() {
   const answer_count_max = 4;
   let r3 = {
@@ -102,9 +100,6 @@ export function app_code_lesson_symbols_digits() {
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
-                    await sleep(200);
-                    html_clear(parent);
-                    refresh();
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
