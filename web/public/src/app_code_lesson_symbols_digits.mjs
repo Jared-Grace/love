@@ -76,6 +76,9 @@ export function app_code_lesson_symbols_digits() {
               list_shuffle(b);
               let taken = list_take(b, answer_count_max);
               function lambda3(answer) {
+                log(app_code_lesson_symbols_digits.name, {
+                  answer,
+                });
                 function lambda8() {}
                 let b2 = app_replace_button_wide(
                   container_answer2,
