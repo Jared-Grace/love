@@ -37,6 +37,7 @@ export function app_code_lesson_symbols_letters() {
       noop,
     ];
     html_cycle(div2, cycles, squashed);
+    let container = app_code_container_light_blue(parent);
     let div3 = html_div(c);
     html_cycle_bold(div3, [
       "Those 26 letters are written in ",
