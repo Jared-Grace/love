@@ -1,8 +1,8 @@
-import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
+import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
+import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
@@ -34,7 +34,6 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
 export function app_code_lesson_symbols_digits() {
   const answer_count_max = 4;
   let r3 = {
@@ -79,7 +78,7 @@ export function app_code_lesson_symbols_digits() {
           },
           answer: digit_count,
           quizzes: [
-            function on_quiz(parent, refresh, success) {
+            function lambda2(context, parent) {
               let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
               html_text_set(container_answer2, "How many symbols are there? ");
@@ -89,6 +88,8 @@ export function app_code_lesson_symbols_digits() {
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
+              let success = app_replace_success_message(parent);
+              html_display_none(success);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
@@ -96,22 +97,22 @@ export function app_code_lesson_symbols_digits() {
                   answer,
                   on_click,
                 );
-                async function on_click() {
+                function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-                    html_clear(success);
-                    app_replace_success_message(success);
                     html_display_block(success);
-                    await sleep(500);
-                    html_clear(parent);
-                    refresh();
-                    let right = emoji_arrow_up();
-                    let combined = text_combine(
-                      "If you want to practice with another quiz, then choose the correct answer above",
-                      right,
+                    function lambda5() {
+                      html_clear(parent);
+                      lambda2(parent);
+                    }
+                    app_code_next(
+                      context,
+                      parent,
+                      "practice more with another quiz",
+                      "take another quiz",
+                      lambda5,
                     );
-                    let p4 = html_p_text(parent, combined);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
