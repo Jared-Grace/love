@@ -1,3 +1,4 @@
+import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
