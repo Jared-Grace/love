@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -31,6 +32,15 @@ export function app_code_lesson_symbols_letters() {
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
     let container2 = app_code_container_light_blue(parent);
+    html_div(container2, "Remember, numbers are examples of symbols");
+    let div6 = html_div(
+      container2,
+      "Also, both uppercase and lowercase letters are examples of symbols",
+    );
+    let p = html_div_text(
+      c,
+      "Remember, when we write computer programs, we use symbols, including numbers",
+    );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
