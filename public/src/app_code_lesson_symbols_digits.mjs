@@ -103,7 +103,7 @@ export function app_code_lesson_symbols_digits() {
                     html_display_block(success);
                     app_code_next(
                       context,
-                      root,
+                      parent,
                       "see another example",
                       "please show me another example",
                       refresh,
