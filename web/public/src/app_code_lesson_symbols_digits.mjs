@@ -1,3 +1,4 @@
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -9,7 +10,6 @@ import { app_replace_button_wide } from "../../../love/public/src/app_replace_bu
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -84,7 +84,7 @@ export function app_code_lesson_symbols_digits() {
               list_remove_if_exists(answers, digit_count);
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
-              list_shuffle(concated);
+              list_sort_text(concated);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
                   container_answer2,
