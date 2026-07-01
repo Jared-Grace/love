@@ -19,8 +19,8 @@ export function app_code_lesson_symbols_letters() {
     let count = 1;
     let cycles = [
       noop,
-      function lambda2() {
-        html_flex_column_center(column);
+      function lambda2(span) {
+        html_flex_column_center(span);
       },
     ];
     html_cycle(div, cycles, squashed);
