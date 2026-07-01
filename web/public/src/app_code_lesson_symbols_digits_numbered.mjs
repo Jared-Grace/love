@@ -36,7 +36,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
     html_cycle_mono(p2, [
-      "In a number, the digits (",
+      "In a number, its digits (",
       "0",
       ", ",
       "1",
