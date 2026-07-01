@@ -1,7 +1,7 @@
+import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
-import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
@@ -96,7 +96,7 @@ export function app_code_lesson_symbols_digits() {
                 "please give me another quiz to take",
                 refresh,
               );
-              html_display_none(on_success);
+              html_visibility_hidden(on_success);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
