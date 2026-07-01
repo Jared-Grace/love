@@ -1,6 +1,5 @@
-import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
-import { list_take } from "../../../love/public/src/list_take.mjs";
-import { each } from "../../../love/public/src/each.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -31,12 +30,9 @@ export function app_code_lesson_symbols_digits_numbered() {
     });
     let p3 = html_div(c);
     let ds = digits();
-    let sz1 = list_size_less_1(ds);
-    let taken = list_take(ds, sz1);
-    function lambda(item) {
-      taken;
-    }
-    each(list, lambda);
+    let taken = list_take_less_1(ds);
+    function lambda(item) {}
+    let mapped = list_map(list, lambda);
     let joined = list_join_comma_space(ds);
     let combined2 = text_combine_multiple([
       "The numbers ",
