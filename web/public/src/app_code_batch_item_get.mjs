@@ -8,7 +8,7 @@ import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export function app_code_batch_item_get(parent, lesson, on_batch_item) {
   let batch = property_get(lesson, "batch");
   let remaining = [];
-  let container = html_div(root);
+  let container = html_div(parent);
   let refresh = function lambda() {
     let e = list_empty_is(remaining);
     if (e) {
