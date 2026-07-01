@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_index_of_next_property } from "../../../love/public/src/list_index_of_next_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
@@ -112,6 +113,7 @@ export function app_code_lesson_symbols_digits() {
                     property,
                     value,
                   );
+                  let next = list_get(list, index_next);
                   return a2;
                 }
                 storage_local_transform_context(context, "lesson_id", lambda7);
