@@ -22,8 +22,8 @@ export function app_code_lesson_symbols_letters() {
     );
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
-    let squashed = list_between_comma_space(alphabet_lower);
-    let squashed2 = list_squash(squashed);
+    let betweened = list_between_comma_space(alphabet_lower);
+    let squashed = list_squash(betweened);
     let i = incrementer();
     let cycles = [
       function lambda2(span) {
@@ -35,7 +35,7 @@ export function app_code_lesson_symbols_letters() {
       },
       noop,
     ];
-    html_cycle(div2, cycles, squashed2);
+    html_cycle(div2, cycles, squashed);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
