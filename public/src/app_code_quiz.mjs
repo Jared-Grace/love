@@ -1,3 +1,4 @@
+import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -14,6 +15,7 @@ export function app_code_quiz(context) {
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
   let batch = property_get(lesson, "batch");
+  let refresh = app_code_batch_item_get(b, on_batch_item);
   let quizzes = property_get(lesson, "quizzes");
   let item = list_get(quizzes, quiz_index);
   log(app_code_quiz.name, {
