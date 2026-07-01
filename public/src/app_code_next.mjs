@@ -24,10 +24,10 @@ export function app_code_next(
     "? If not, choose: ",
     padded3,
   ]);
-  html_div_text(parent, combined3);
+  html_div_text(c, combined3);
   let left = emoji_repeat_1();
   let combined = text_combine_multiple([left, "Yes, ", yes_text]);
-  app_replace_button(parent, combined, refresh);
+  app_replace_button(c, combined, refresh);
   html_hr(parent);
   app_replace_button_screen(context, app_code_quiz, parent, nt);
 }
