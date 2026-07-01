@@ -11,7 +11,7 @@ export function app_code_lesson_symbols_letters() {
     let alphabet_lower = text_alphabet_lower();
     html_cycle_mono_list_between_comma_space_before_after(
       div,
-      "In English, there are 26 letters of the alphabet: A through Z",
+      "In English, there are 26 letters of the alphabet: ",
       alphabet_lower,
       " are called ",
     );
