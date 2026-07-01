@@ -21,8 +21,7 @@ export function app_code_quiz(context) {
     let q = list_get(qs, quiz_index);
     q(container);
   }
-  let quizzes = property_get(lesson, "quizzes");
-  let item = list_get(quizzes, quiz_index);
+  refresh();
   log(app_code_quiz.name, {
     item,
   });
