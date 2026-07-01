@@ -107,8 +107,8 @@ export function app_code_lesson_symbols_digits() {
                 async function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
-                    app_shared_button_screen_green_style_assign(b2);
-                    html_display_block(on_success);
+                    app_shared_button_screen_green_style_assign(b2);$x
+              html_visibility_hidden(on_success);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
