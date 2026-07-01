@@ -10,7 +10,7 @@ export function app_code_container_light_blue(parent) {
   html_border_none(container2);
   let container = container2;
   html_style_background_color_set(container, "rgb(228, 241, 255)");
-  html_border_y(container, "0.1em", "rgb(116, 186, 255)");
+  html_border_y(container, "0.1em", "rgb(152, 203, 255)");
   html_style_margin_y(container, "0.5em");
   return container;
 }
