@@ -22,7 +22,7 @@ export function app_code_quiz(context) {
     q(context, container, refresh);
   }
   refresh();
-  let container3 = app_code_container_light_blue(parent);
+  let container3 = app_code_container_light_blue(root);
   html_div_text(container3, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
