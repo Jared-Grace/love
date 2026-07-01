@@ -15,10 +15,10 @@ export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
-  let div = html_div(parent2);
-  let success = html_div(parent);
+  let quiz = html_div(root);
+  let success = html_div(root);
   html_display_none(success);
-  let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
+  let refresh = app_code_batch_item_get(quiz, lesson, on_batch_item);
   function on_batch_item(container, b, refresh) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
