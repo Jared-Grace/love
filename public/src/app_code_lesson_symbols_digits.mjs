@@ -7,7 +7,7 @@ export function app_code_lesson_symbols_digits() {
     let c = app_code_container_light_blue(root);
     let div = html_div_text(
       c,
-      "This lesson is the same as before, except there are not numbers underneath the symbols",
+      "This lesson is the same as before, except there are not numbers underneath",
     );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
