@@ -30,8 +30,8 @@ export function app_code_lesson_symbols_digits_numbered() {
     });
     let p3 = html_div(c);
     let ds = digits();
-    let taken = list_take_less_1(ds);
     let between = ", ";
+    let taken = list_take_less_1(ds);
     function lambda(d) {}
     let mapped = list_map(taken, lambda);
     let joined = list_join_comma_space(ds);
