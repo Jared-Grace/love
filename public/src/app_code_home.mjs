@@ -44,9 +44,8 @@ export function app_code_home(context) {
     );
     let value = null;
     function lambda(value2) {
-      let property = "id";
       let list = app_code_lessons();
-      let value_new = list_property_previous_value(list, property, value);
+      let value_new = list_property_previous_value(list, "id", value);
       return value_new;
     }
     storage_local_transform_context(context2, key, value_initial, lambda);
