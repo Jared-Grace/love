@@ -12,6 +12,7 @@ export function app_code_batch_item_get(lesson, on_batch_item) {
   let refresh = function lambda() {
     let e = list_empty_is(remaining);
     if (e) {
+      let items = batch();
       list_replace_all(list, items);
       list_shuffle(remaining);
     }
