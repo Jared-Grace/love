@@ -139,7 +139,7 @@ export function app_code_lesson_symbols_digits() {
   return r3;
   function example_above(parent, digits) {
     let q = app_code_container_light(parent);
-    let div = html_div(parent2);
+    let container_above = html_div(parent2);
     let span = html_div_text(q, "Symbols: ");
     let row = app_code_container_dark(q);
     html_style_assign(row, {
