@@ -1,3 +1,4 @@
+import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -33,7 +34,7 @@ export function app_code_lesson_symbols_digits_numbered() {
       joined,
       " are called ",
     ]);
-    html_cycle_bold(p3, [combined2, "digits"]);
+    html_cycle_mono(p3, [combined2, "digits"]);
     let p2 = html_div(c);
     html_cycle_bold(p2, [
       "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
