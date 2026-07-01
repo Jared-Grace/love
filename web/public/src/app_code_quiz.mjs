@@ -24,7 +24,7 @@ export function app_code_quiz(context) {
     q(container);
   }
   refresh();
-  html_div_text(root, "Do you want go back and see another example?");
+  html_div_text(root, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
     left,
