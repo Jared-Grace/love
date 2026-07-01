@@ -112,7 +112,7 @@ export function app_code_lesson_symbols_digits() {
             );
           },
           answer: digit_count,
-          quizzes: quizzes,
+          quizzes,
         };
         return r2;
       }
