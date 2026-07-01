@@ -1,4 +1,4 @@
 export function text_alphabet_lower() {
-  let r = "abcdefghijklmnopqrstuvwxyz";
-  return r;
+  let alphabet_lower = "abcdefghijklmnopqrstuvwxyz";
+  return alphabet_lower;
 }
