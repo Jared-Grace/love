@@ -23,7 +23,9 @@ export function app_code_lesson_symbols_digits_numbered() {
     let p3 = html_div(c);
     let ds = digits();
     let mapped = list_between_comma_space(ds);
-    const lists = ["The numbers ", mapped, " are called "];
+    const before = "The numbers ";
+    const after = " are called ";
+    const lists = [before, mapped, after];
     let squashed = list_concat_multiple_squash(lists);
     html_cycle_mono(p3, squashed);
     html_span_text_bold(p3, "digits");
