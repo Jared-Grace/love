@@ -23,5 +23,5 @@ export function app_code_quiz(context) {
   async function lambda() {
     await app_shared_screen_set(context, app_code_home);
   }
-  app_code_go_back(context, root, question_text, button_text, lambda);
+  app_code_go_back(root, question_text, button_text, lambda);
 }
