@@ -1,4 +1,4 @@
-import { list_between } from "../../../love/public/src/list_between.mjs";
+import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
 import { list_concat_multiple_squash } from "../../../love/public/src/list_concat_multiple_squash.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
@@ -22,8 +22,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     let c = app_code_container_light_blue(root);
     let p3 = html_div(c);
     let ds = digits();
-    let between = ", ";
-    let mapped = list_between(ds, between);
+    let mapped = list_between_comma_space(ds);
     const lists = ["The numbers ", mapped, " are called "];
     let squashed = list_concat_multiple_squash(lists);
     html_cycle_mono(p3, squashed);
