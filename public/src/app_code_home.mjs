@@ -26,19 +26,17 @@ export function app_code_home(context) {
   }
   let nt = app_karate_button_next_text();
   let padded3 = text_pad_nested_space_quote_double(nt);
+  const do_you_want_to_text = "see another example";
   let combined3 = text_combine_multiple([
     "Do you want to ",
-    "see another example",
+    do_you_want_to_text,
     "? If not, choose: ",
     padded3,
   ]);
   html_div_text(root, combined3);
   let left = emoji_repeat_1();
-  let combined = text_combine_multiple([
-    left,
-    "Yes, ",
-    "show me another example",
-  ]);
+  const yes_text = "show me another example";
+  let combined = text_combine_multiple([left, "Yes, ", yes_text]);
   app_replace_button(root, combined, refresh);
   html_hr(root);
   app_replace_button_screen(context, app_code_quiz, root, nt);
