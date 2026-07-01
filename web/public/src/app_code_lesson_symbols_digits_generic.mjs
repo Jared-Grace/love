@@ -40,11 +40,11 @@ import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-export function app_code_lesson_symbols_digits_generic(on_symbol) {
+export function app_code_lesson_symbols_digits_generic(id,name,on_symbol) {
   const answer_count_max = 4;
   let r3 = {
-    id: "symbols_digits",
     name: "Symbols (Digits)",
+    id: "symbols_digits",
     above: function digits_above(root) {
       let c = app_code_container_light_blue(root);
       html_style_assign(c, {
