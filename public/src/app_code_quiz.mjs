@@ -17,7 +17,8 @@ export function app_code_quiz(context) {
   let batch = property_get(lesson, "batch");
   let refresh = app_code_batch_item_get(b, on_batch_item);
   function on_batch_item(container, b) {
-    let ex = property_get(b, "example");
+    let ex = property_get(b, "quizzes");
+    let item2 = list_get(list, index);
     ex(container);
   }
   let quizzes = property_get(lesson, "quizzes");
