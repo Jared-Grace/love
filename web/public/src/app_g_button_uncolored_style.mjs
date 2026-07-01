@@ -4,4 +4,7 @@ export function app_g_button_uncolored_style(component2) {
   html_style_assign(component2, {
     "background-color": app_shared_button_uncolored_background_color() + "dd",
   });
+  html_style_assign(b, {
+    color: "black",
+  });
 }
