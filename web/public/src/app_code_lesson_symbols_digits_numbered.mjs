@@ -31,9 +31,11 @@ export function app_code_lesson_symbols_digits_numbered() {
     });
     let p3 = html_div(c);
     let ds = digits();
-    let sz1 = list_size_less_1(count2);
-    let taken = list_take(ds, count);
-    function lambda(item) {}
+    let sz1 = list_size_less_1(ds);
+    let taken = list_take(ds, sz1);
+    function lambda(item) {
+      taken;
+    }
     each(list, lambda);
     let joined = list_join_comma_space(ds);
     let combined2 = text_combine_multiple([
