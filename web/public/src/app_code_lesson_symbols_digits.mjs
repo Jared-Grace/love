@@ -95,8 +95,8 @@ export function app_code_lesson_symbols_digits() {
                 function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
-                    app_shared_button_screen_green_style_assign(b2);
                     each(buttons, app_g_button_uncolored_style);
+                    app_shared_button_screen_green_style_assign(b2);
                   } else {
                     app_g_button_wrong(b2);
                   }
