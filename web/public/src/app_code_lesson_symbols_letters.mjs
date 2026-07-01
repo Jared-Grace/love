@@ -32,8 +32,8 @@ export function app_code_lesson_symbols_letters() {
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
     let container2 = app_code_container_light_blue(root);
-    html_div(container2, "Remember, numbers are examples of symbols");
-    let div6 = html_div(
+    html_div_text(container2, "Remember, numbers are examples of symbols");
+    let div6 = html_div_text(
       container2,
       "Also, both uppercase and lowercase letters are examples of symbols",
     );
