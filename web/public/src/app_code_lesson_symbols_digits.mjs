@@ -106,7 +106,7 @@ export function app_code_lesson_symbols_digits() {
               storage_local_set_context(context, "quiz_index", index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                function lambda7(lesson_id) {
+                function lambda7(value) {
                   let lessons = app_code_lessons();
                   let property_name = "id";
                   let index_next = list_index_of_next_property(
@@ -115,8 +115,8 @@ export function app_code_lesson_symbols_digits() {
                     value,
                   );
                   let next = list_get(list, index_next);
-                  let value2 = property_get(next, property_name);
-                  return a2;
+                  let value_next = property_get(next, property_name);
+                  return value_next;
                 }
                 storage_local_transform_context(context, "lesson_id", lambda7);
                 await app_shared_screen_set(context, app_code_home);
