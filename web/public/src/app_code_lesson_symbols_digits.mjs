@@ -1,9 +1,9 @@
+import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
-import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_symbols_digits() {
               let container_answer2 = property_get(a, "container_answer");
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
-              list_add_if_not_includes(answers, digit_count);
+              list_remove_if_exists(answers, digit_count);
               list_shuffle(answers);
               let taken = list_take(answers, answer_count_max);
               function lambda3(answer) {
