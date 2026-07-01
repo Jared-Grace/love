@@ -1,4 +1,5 @@
-import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
+import { text_to } from "../../../love/public/src/text_to.mjs";
+import { list_sort_text_mapper } from "../../../love/public/src/list_sort_text_mapper.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -84,7 +85,7 @@ export function app_code_lesson_symbols_digits() {
               list_remove_if_exists(answers, digit_count);
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
-              list_sort_text(concated);
+              list_sort_text_mapper(concated, text_to);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
                   container_answer2,
