@@ -1,3 +1,4 @@
+import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
@@ -12,8 +13,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
-import { each } from "../../../love/public/src/each.mjs";
-import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -83,24 +82,7 @@ export async function app_replace_rule_set_success(
   let p_emojis = html_div(p);
   html_span_text(p_emojis, joined);
   html_style_font_size(p_emojis, "1.5em");
-  let p_encouragement = html_div(p);
-  const encouragements_choices = [
-    "Congratulations",
-    "Success",
-    "Good job",
-    "Great job",
-    "Well done",
-    "Keep it up",
-    "Amazing",
-    "Way to go",
-    "Awesome",
-  ];
-  let encouragements = list_shuffle_take(encouragements_choices, 2);
-  html_bold(p_encouragement);
-  function lambda(encouragement) {
-    html_span_text(p_encouragement, encouragement + "! ");
-  }
-  each(encouragements, lambda);
+  app_replace_success_message(p);
   let p_next = html_p(div_below);
   let goal_index_next = goal_index + 1;
   let ii = list_index_is(goals, goal_index_next);
@@ -118,7 +100,7 @@ export async function app_replace_rule_set_success(
     html_data_set_test(completed, value3);
     return;
   }
-  function lambda2() {
+  async function lambda2() {
     if (ii) {
       storage_local_set_context(context, "goal_index", goal_index_next);
     } else {
@@ -133,7 +115,7 @@ export async function app_replace_rule_set_success(
         next = false;
       }
     }
-    app_shared_screen_set(context, app_replace_rule_set);
+    await app_shared_screen_set(context, app_replace_rule_set);
   }
   let text = app_karate_button_next_text();
   let bn = app_replace_button(p_next, text, lambda2);
