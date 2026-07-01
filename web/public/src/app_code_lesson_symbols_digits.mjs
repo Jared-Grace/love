@@ -101,9 +101,7 @@ export function app_code_lesson_symbols_digits() {
               let index_new = mod(a1, size);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                index_new = index;
               } else {
-                index_new = 0;
                 await app_shared_screen_set(context, app_code_quiz);
               }
               storage_local_set_context(context, "quiz_index", index_new);
