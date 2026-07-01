@@ -79,6 +79,7 @@ export function app_code_lesson_symbols_digits() {
           quizzes: [
             function on_quiz(context, parent, refresh) {
               let a = example_above(parent, digits);
+              let container = app_code_container_light_blue(parent2);
               let container_answer2 = property_get(a, "container_answer");
               html_text_set(container_answer2, "How many symbols are there? ");
               let b = digit_batch();
