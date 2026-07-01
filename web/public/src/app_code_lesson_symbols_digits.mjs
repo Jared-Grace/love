@@ -93,7 +93,7 @@ export function app_code_lesson_symbols_digits() {
               let r4 = app_code_next(
                 context,
                 on_success,
-                "take another quiz to practice some more?",
+                "take another quiz to practice some more",
                 "please give me another quiz to take",
                 refresh,
               );
