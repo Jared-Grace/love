@@ -104,7 +104,7 @@ export function app_code_lesson_symbols_digits() {
                     html_display_block(success);
                     await sleep(200);
                     html_clear(parent);
-                    on_quiz(parent);
+                    on_quiz(context, parent);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
