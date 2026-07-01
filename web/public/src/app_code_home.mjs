@@ -18,9 +18,8 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
-  const do_you_want_to_text = "see another example";
   const yes_text = "show me another example";
-  app_code_next(context, root, do_you_want_to_text, yes_text, refresh);
+  app_code_next(context, root, "see another example", yes_text, refresh);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
