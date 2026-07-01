@@ -39,6 +39,11 @@ export function app_code_lesson_symbols_digits() {
     name: "Symbols (Digits)",
     above: function digits_above(root) {
       let c = app_code_container_light_blue(root);
+      html_style_assign(c, {
+        display: "flex",
+        flexDirection: "column",
+        gap: "16px",
+      });
       let p3 = html_div(c);
       let ds = digits();
       let joined = list_join_comma_space(ds);
