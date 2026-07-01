@@ -158,9 +158,7 @@ export function app_code_lesson_symbols_digits() {
         alignItems: "center",
       });
       let digit = app_code_symbol(row_item, d);
-      let div4 = html_span_text(row_item, index_1);
-      html_style_font_size(div4, "0.75em");
-      html_font_color_set(div4, "#bbb");
+      on_symbol(row_item, index_1);
       return digit;
     }
     let spans = list_map_index_1(digits, lambda4);
@@ -170,5 +168,10 @@ export function app_code_lesson_symbols_digits() {
       container_above,
     };
     return r;
+  }
+  function on_symbol(parent, index_1) {
+    let div4 = html_span_text(parent, index_1);
+    html_style_font_size(div4, "0.75em");
+    html_font_color_set(div4, "#bbb");
   }
 }
