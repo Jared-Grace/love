@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -27,4 +28,5 @@ export function app_code_quiz(context) {
     "Yes, please go back and show me another example",
   );
   let b = app_replace_button_screen(context, app_code_home, root, combined);
+  html_width_full(component);
 }
