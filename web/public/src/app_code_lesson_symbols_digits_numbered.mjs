@@ -1,3 +1,4 @@
+import { html_span_text_smaller } from "../../../love/public/src/html_span_text_smaller.mjs";
 import { html_cycle_mono_list_between_comma_space_before_after } from "../../../love/public/src/html_cycle_mono_list_between_comma_space_before_after.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -6,8 +7,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Digits, numbered)",
@@ -41,8 +40,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     );
   }
   function on_symbol(parent, index_1) {
-    let div4 = html_span_text(parent, index_1);
-    html_style_font_size(div4, "0.75em");
+    let div4 = html_span_text_smaller(parent, index_1);
     html_font_color_set(div4, "#bbb");
   }
 }
