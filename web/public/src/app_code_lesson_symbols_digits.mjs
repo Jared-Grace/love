@@ -90,7 +90,7 @@ export function app_code_lesson_symbols_digits() {
               list_sort_text_to(concated);
               let on_success = html_div(parent);
               let success = app_replace_success_message(on_success);
-              app_code_next(
+              container=app_code_next(
                 context,
                 on_success,
                 "take another quiz to practice some more?",
