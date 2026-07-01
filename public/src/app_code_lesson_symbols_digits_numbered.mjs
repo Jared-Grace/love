@@ -1,4 +1,4 @@
-import { list_between_comma_space_before_after } from "../../../love/public/src/list_between_comma_space_before_after.mjs";
+import { html_cycle_mono_list_between_comma_space_before_after } from "../../../love/public/src/html_cycle_mono_list_between_comma_space_before_after.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -23,8 +23,12 @@ export function app_code_lesson_symbols_digits_numbered() {
     let ds = digits();
     const before = "The numbers ";
     const after = " are called ";
-    let squashed = list_between_comma_space_before_after(ds, before, after);
-    html_cycle_mono(p3, squashed);
+    html_cycle_mono_list_between_comma_space_before_after(
+      ds,
+      before,
+      after,
+      p3,
+    );
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
     html_cycle_mono(p2, [
