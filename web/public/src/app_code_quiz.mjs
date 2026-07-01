@@ -1,12 +1,7 @@
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
+import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -23,18 +18,5 @@ export function app_code_quiz(context) {
   refresh();
   const question_text = "see another example";
   const button_text = "show me another example";
-  let container3 = app_code_container_light_blue(root);
-  let combined2 = text_combine_multiple([
-    "Do you want to go back and ",
-    question_text,
-    "?",
-  ]);
-  html_div_text(container3, combined2);
-  let left = emoji_arrow_left();
-  let combined = text_combine_multiple([
-    left,
-    "Yes, please go back and ",
-    button_text,
-  ]);
-  app_replace_button_screen_wide(context, app_code_home, container3, combined);
+  app_code_go_back(root, question_text, button_text, context);
 }
