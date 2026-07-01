@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -28,6 +29,8 @@ export function app_code_lesson_symbols_digits_numbered() {
     });
     let p3 = html_div(c);
     let ds = digits();
+    function lambda(item) {}
+    each(list, lambda);
     let joined = list_join_comma_space(ds);
     let combined2 = text_combine_multiple([
       "The numbers ",
