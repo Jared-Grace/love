@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_display_set } from "../../../love/public/src/html_display_set.mjs";
 import { incrementer } from "../../../love/public/src/incrementer.mjs";
 import { html_span_text_smaller } from "../../../love/public/src/html_span_text_smaller.mjs";
@@ -25,8 +26,10 @@ export function app_code_lesson_symbols_letters() {
       function lambda2(span) {
         html_flex_column_center(span);
         html_display_set(span, "inline-flex");
+        ("rgb(152, 203, 255)");
         let text = i();
-        html_span_text_smaller(span, text);
+        let s = html_span_text_smaller(span, text);
+        html_font_color_set(component, color);
       },
     ];
     html_cycle(div, cycles, squashed);
