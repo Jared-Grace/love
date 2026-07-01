@@ -1,3 +1,5 @@
+import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -89,17 +91,14 @@ export function app_code_lesson_symbols_digits() {
             list_sort_text_to(concated);
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
-            function lambda5() {
+            async function lambda5() {
               let index = list_index_of(quizzes, on_quiz1);
               let li = list_index_last_is(quizzes, index);
               if (li) {
+                await app_shared_screen_set(context, app_code_quiz);
               } else {
               }
-              let quiz_index = storage_local_set_context(
-                context,
-                "quiz_index",
-                li,
-              );
+              storage_local_set_context(context, "quiz_index", li);
             }
             let r4 = app_code_next(
               context,
