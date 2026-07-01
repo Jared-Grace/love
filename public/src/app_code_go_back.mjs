@@ -1,5 +1,4 @@
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
