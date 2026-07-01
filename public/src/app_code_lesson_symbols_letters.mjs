@@ -27,7 +27,7 @@ export function app_code_lesson_symbols_letters() {
     let div4 = html_div(container);
     html_cycle_bold(div4, ["Below are letters written in ", "uppercase", ":"]);
     let div5 = html_div(container);
-    let alphabet_upper = list_alphabet_upper();
+    let alphabet_upper = list_alphabet_uppe();
     html_text_characters_numbered(div5, alphabet_upper);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
