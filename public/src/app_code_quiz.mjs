@@ -16,7 +16,7 @@ export function app_code_quiz(context) {
     q(context, container, refresh);
   }
   refresh();
-  const question_text = "see another example";
-  const button_text = "show me another example";
+  const question_text = "and see another example";
+  const button_text = "and show me another example";
   app_code_go_back(context, root, question_text, button_text);
 }
