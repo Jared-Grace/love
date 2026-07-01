@@ -90,14 +90,15 @@ export function app_code_lesson_symbols_digits() {
               list_sort_text_to(concated);
               let on_success = html_div(parent);
               let success = app_replace_success_message(on_success);
-              container = app_code_next(
+              let r4 = app_code_next(
                 context,
                 on_success,
                 "take another quiz to practice some more?",
                 "please give me another quiz to take",
                 refresh,
               );
-              html_visibility_hidden(on_success);
+              let container_on_success = property_get(r4, "container");
+              html_visibility_hidden(container_on_success);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
@@ -109,7 +110,7 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-                    html_visibility_visible(on_success);
+                    html_visibility_visible(container_on_success);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
