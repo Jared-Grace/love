@@ -1,3 +1,4 @@
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
@@ -14,6 +15,7 @@ export function app_code_next(
   yes_text,
   refresh,
 ) {
+  let c = app_code_container_light_blue(parent);
   let nt = app_karate_button_next_text();
   let padded3 = text_pad_nested_space_quote_double(nt);
   let combined3 = text_combine_multiple([
