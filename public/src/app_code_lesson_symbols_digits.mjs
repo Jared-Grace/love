@@ -94,8 +94,8 @@ export function app_code_lesson_symbols_digits() {
             async function lambda5() {
               let index = list_index_of(quizzes, on_quiz1);
               let li = list_index_last_is(quizzes, index);
-              if (li) {
-                let index_new = 0;
+              if (li) {$s
+                let index_new = index;
               } else {
                 await app_shared_screen_set(context, app_code_quiz);
               }
