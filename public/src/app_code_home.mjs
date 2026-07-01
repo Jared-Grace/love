@@ -20,7 +20,7 @@ export function app_code_home(context) {
   html_div_text(root, "Here is an example:");
   html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
-  let refresh = app_code_batch_item_get(on_batch_item);
+  let refresh = app_code_batch_item_get(on_batch_item, lesson);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
     ex(container);
