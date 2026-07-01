@@ -1,9 +1,6 @@
+import { list_beetween } from "../../../love/public/src/list_beetween.mjs";
 import { list_concat_multiple_squash } from "../../../love/public/src/list_concat_multiple_squash.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
-import { list_last } from "../../../love/public/src/list_last.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -33,14 +30,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     let p3 = html_div(c);
     let ds = digits();
     let between = ", ";
-    let taken = list_take_less_1(ds);
-    function lambda(d) {
-      let r = [d, between];
-      return r;
-    }
-    let mapped = list_map(taken, lambda);
-    let last = list_last(ds);
-    list_add(mapped, last);
+    let mapped = list_beetween(ds, between);
     const lists = ["The numbers ", mapped, " are called "];
     let squashed = list_concat_multiple_squash(lists);
     html_cycle_mono(p3, squashed);
