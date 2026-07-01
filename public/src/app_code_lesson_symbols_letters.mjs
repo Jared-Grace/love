@@ -24,7 +24,6 @@ export function app_code_lesson_symbols_letters() {
     let squashed = list_between_comma_space(alphabet_lower);
     let i = incrementer();
     let cycles = [
-      noop,
       function lambda2(span) {
         html_flex_column_center(span);
         html_display_set(span, "inline-flex");
@@ -32,6 +31,7 @@ export function app_code_lesson_symbols_letters() {
         let s = html_span_text_smaller(span, text);
         html_font_color_set(s, "rgb(0, 110, 221)");
       },
+      noop,
     ];
     html_cycle(div2, cycles, squashed);
   }
