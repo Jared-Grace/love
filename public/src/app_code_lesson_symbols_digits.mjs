@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -27,7 +28,6 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_code_lesson_symbols_digits() {
   const answer_count_max = 4;
   let r3 = {
@@ -84,7 +84,7 @@ export function app_code_lesson_symbols_digits() {
               list_shuffle(concated);
               function lambda3(answer) {
                 function lambda8() {
-                  let result = ternary(condition, on_true, on_false);
+                  let eq2 = equal(left, right);
                 }
                 let b2 = app_replace_button_wide(
                   container_answer2,
