@@ -51,7 +51,7 @@ export function app_code_home(context) {
       let item = list_find_property(list, property, value);
       let index_previous = list_index_of_previous(list, item);
       let previous = list_get(list, index_previous);
-      let value_new = property_get(previous, previous);
+      let value_new = property_get(previous, property);
       return value_new;
     }
     storage_local_transform_context(context2, key, value_initial, lambda);
