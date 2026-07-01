@@ -1,5 +1,3 @@
-import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -15,14 +13,11 @@ export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
-  let quiz = html_div(root);
-  let success = html_div(root);
-  html_display_none(success);
-  let refresh = app_code_batch_item_get(quiz, lesson, on_batch_item);
+  let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
   function on_batch_item(container, b, refresh) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
-    q(container, refresh, success);
+    q(container, refresh);
   }
   refresh();
   html_div_text(root, "Do you want to go back and see another example?");
