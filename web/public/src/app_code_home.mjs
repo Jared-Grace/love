@@ -35,6 +35,7 @@ export function app_code_home(context) {
   ]);
   html_div_text(root, combined3);
   let left = emoji_repeat_1();
+  let combined2 = text_combine(left2, right);
   let combined = text_combine(left, "Yes, show me another example");
   app_replace_button(root, combined, refresh);
   html_hr(root);
