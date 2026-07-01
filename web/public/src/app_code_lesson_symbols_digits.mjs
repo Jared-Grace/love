@@ -1,7 +1,7 @@
+import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
-import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
@@ -102,7 +102,7 @@ export function app_code_lesson_symbols_digits() {
               storage_local_set_context(context, "quiz_index", index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                await app_shared_screen_set(context, app_code_quiz);
+                await app_shared_screen_set(context, app_code_home);
               } else {
                 refresh();
               }
