@@ -1,5 +1,4 @@
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
@@ -106,13 +105,6 @@ export function app_code_lesson_symbols_digits() {
                     await sleep(200);
                     html_clear(parent);
                     on_quiz(parent);
-                    app_code_next(
-                      context,
-                      parent,
-                      "practice more with another quiz",
-                      "take another quiz",
-                      lambda5,
-                    );
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
