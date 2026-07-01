@@ -1,3 +1,4 @@
+import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     });
     let p3 = html_div(c);
     let ds = digits();
+    let sz1 = list_size_less_1(count2);
     let taken = list_take(ds, count);
     function lambda(item) {}
     each(list, lambda);
