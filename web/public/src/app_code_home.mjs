@@ -14,7 +14,7 @@ export function app_code_home(context) {
   above(root);
   let h = html_hr(root);
   let c = app_code_container_light_blue(root);
-  html_div_text(root, "Here is an example:");
+  html_div_text(c, "Here is an example:");
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
