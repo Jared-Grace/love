@@ -48,7 +48,7 @@ export function app_code_lesson_symbols_digits_numbered() {
       " are called ",
     ]);
     let squashed = list_squash(combined);
-    html_cycle_mono(p3, squashed);
+    html_cycle_mono(p3, squashed);$a
     const text = "digits";
     html_span_text_bold(p3, text);
     let p2 = html_div(c);
