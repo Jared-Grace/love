@@ -1,7 +1,7 @@
+import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
+import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
-import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
-import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -26,6 +26,6 @@ export function app_code_next(
   html_div_text(c, combined3);
   let left = emoji_repeat_1();
   let combined = text_combine_multiple([left, "Yes, ", yes_text]);
-  app_replace_button(c, combined, refresh);
-  app_replace_button_screen(context, app_code_quiz, parent, nt);
+  app_replace_button_wide(c, combined, refresh);
+  app_replace_button_screen_wide(context, app_code_quiz, parent, nt);
 }
