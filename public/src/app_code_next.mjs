@@ -13,6 +13,7 @@ export function app_code_next(
   do_you_want_to_text,
   yes_text,
   refresh,
+  on_next,
 ) {
   let container = app_code_container_light_blue(parent);
   let nt = app_karate_button_next_text();
