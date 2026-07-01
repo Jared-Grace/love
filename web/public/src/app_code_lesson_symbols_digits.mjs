@@ -103,7 +103,7 @@ export function app_code_lesson_symbols_digits() {
                     html_display_block(success);
                     await sleep(500);
                     html_clear(parent);
-                    refresh();
+                    refresh();tc
                     let p4 = html_p_text(
                       parent,
                       "If you want to practice with another quiz, then choose the correct answer above",
