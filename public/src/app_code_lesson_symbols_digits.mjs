@@ -108,13 +108,14 @@ export function app_code_lesson_symbols_digits() {
               if (li) {
                 function lambda7(lesson_id) {
                   let lessons = app_code_lessons();
+                  let property_name = "id";
                   let index_next = list_index_of_next_property(
                     list,
-                    property,
+                    property_name,
                     value,
                   );
                   let next = list_get(list, index_next);
-                  let value2 = property_get(object, property_name);
+                  let value2 = property_get(next, property_name);
                   return a2;
                 }
                 storage_local_transform_context(context, "lesson_id", lambda7);
