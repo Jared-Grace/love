@@ -1,6 +1,6 @@
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
-import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
 import { html_visibility_hidden_multiple } from "../../../love/public/src/html_visibility_hidden_multiple.mjs";
@@ -95,10 +95,10 @@ export function app_code_lesson_symbols_digits() {
               if (li) {
               } else {
               }
-              let quiz_index = storage_local_initialize_context(
+              let quiz_index = storage_local_set_context(
                 context,
                 "quiz_index",
-                0,
+                li,
               );
             }
             let r4 = app_code_next(
