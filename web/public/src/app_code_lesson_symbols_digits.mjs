@@ -85,7 +85,7 @@ export function app_code_lesson_symbols_digits() {
                   lambda8,
                 );
               }
-              each(taken, lambda3);
+              each(concated, lambda3);
             },
           ],
         };
