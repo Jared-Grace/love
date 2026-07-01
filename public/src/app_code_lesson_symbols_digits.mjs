@@ -91,7 +91,10 @@ export function app_code_lesson_symbols_digits() {
             let success = app_replace_success_message(on_success);
             function lambda5() {
               let index = list_index_of(quizzes, on_quiz1);
-              let li = list_index_last_is(list, index2);
+              let li = list_index_last_is(quizzes, index);
+              if (false) {
+              } else {
+              }
               let quiz_index = storage_local_initialize_context(
                 context,
                 "quiz_index",
