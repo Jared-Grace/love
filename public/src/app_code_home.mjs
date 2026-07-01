@@ -42,7 +42,8 @@ export function app_code_home(context) {
       "lesson_id",
       value,
     );
-    let property = null;
+    let value = null;
+    let property = "id";
     let list = app_code_lessons();
     let item = list_find_property(list, property, value);
     let index_previous = list_index_of_previous(list, item);
