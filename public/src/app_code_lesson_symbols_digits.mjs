@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
@@ -78,7 +79,7 @@ export function app_code_lesson_symbols_digits() {
           answer: digit_count,
           quizzes: [
             function lambda2(parent) {
-              let a = example_above(div, digits);
+              let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
               html_text_set(container_answer2, "How many symbols are there? ");
               let b = digit_batch();
@@ -87,7 +88,7 @@ export function app_code_lesson_symbols_digits() {
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
-              let success = app_replace_success_message(div);
+              let success = app_replace_success_message(parent);
               html_display_none(success);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
@@ -101,7 +102,10 @@ export function app_code_lesson_symbols_digits() {
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
-                    function lambda5() {}
+                    function lambda5() {
+                      html_clear(parent);
+                      lambda2(parent);
+                    }
                     app_code_next(
                       context,
                       root,
