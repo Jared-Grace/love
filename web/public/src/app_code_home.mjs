@@ -1,5 +1,5 @@
+import { list_get_property } from "../../../love/public/src/list_get_property.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
-import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { list_index_of_previous } from "../../../love/public/src/list_index_of_previous.mjs";
@@ -50,8 +50,7 @@ export function app_code_home(context) {
       let list = app_code_lessons();
       let item = list_find_property(list, property, value);
       let index_previous = list_index_of_previous(list, item);
-      let previous = list_get(list, index_previous);
-      let value_new = property_get(previous, property);
+      let value_new = list_get_property(list, index_previous, property);
       return value_new;
     }
     storage_local_transform_context(context2, key, value_initial, lambda);
