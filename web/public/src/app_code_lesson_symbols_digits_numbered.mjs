@@ -4,8 +4,8 @@ import { html_style_font_size } from "../../../love/public/src/html_style_font_s
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
   let r5 = app_code_lesson_symbols_digits_generic(
-    "Symbols (Digits)",
-    "symbols_digits",
+    "Symbols (Digits, numbered)",
+    "symbols_digits_numbered",
     on_symbol,
   );
   return r5;
