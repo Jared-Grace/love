@@ -98,16 +98,14 @@ export function app_code_lesson_symbols_digits() {
                   answer,
                   on_click,
                 );
-                function on_click() {
+                async function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
-                    async function lambda5() {
-                      await sleep(200);
-                      html_clear(parent);
-                      on_quiz(parent);
-                    }
+                    await sleep(200);
+                    html_clear(parent);
+                    on_quiz(parent);
                     app_code_next(
                       context,
                       parent,
