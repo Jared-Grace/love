@@ -25,7 +25,7 @@ export function app_code_quiz(context) {
   let combined = text_combine(
     left,
     "Yes, please go back and show me another example",
-  );
+  );$a
   let screen = app_code_home;
   app_replace_button_screen_wide(context, screen, root, combined);
 }
