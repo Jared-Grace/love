@@ -1,3 +1,4 @@
+import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
 import { list_property_next_value } from "../../../love/public/src/list_property_next_value.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
@@ -169,11 +170,7 @@ export function app_code_lesson_symbols_digits_generic(
     });
     function lambda4(d, index_1) {
       let row_item = html_div(row);
-      html_style_assign(row_item, {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      });
+      html_flex_column_center(row_item);
       let digit = app_code_symbol(row_item, d);
       on_symbol(row_item, index_1);
       return digit;
