@@ -36,6 +36,7 @@ export function app_code_lesson_symbols_letters() {
       noop,
     ];
     html_cycle(div2, cycles, squashed);
+    let div3 = html_div(parent);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
