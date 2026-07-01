@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { list_index_of_previous } from "../../../love/public/src/list_index_of_previous.mjs";
@@ -47,6 +48,7 @@ export function app_code_home(context) {
     let list = app_code_lessons();
     let item = list_find_property(list, property, value);
     let index_previous = list_index_of_previous(list, item);
+    let item2 = list_get(list2, index);
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
