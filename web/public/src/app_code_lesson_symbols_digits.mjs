@@ -78,8 +78,8 @@ export function app_code_lesson_symbols_digits() {
           answer: digit_count,
           quizzes: [
             function lambda2(parent) {
-              let div = html_div(parent2);
-              let a = example_above(parent, digits);
+              let div = html_div(parent);
+              let a = example_above(div, digits);
               let container_answer2 = property_get(a, "container_answer");
               html_text_set(container_answer2, "How many symbols are there? ");
               let b = digit_batch();
@@ -88,7 +88,7 @@ export function app_code_lesson_symbols_digits() {
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
-              let success = app_replace_success_message(parent);
+              let success = app_replace_success_message(div);
               html_display_none(success);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
