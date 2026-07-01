@@ -46,7 +46,6 @@ export function app_code_lesson_symbols_digits_generic(
   above,
   on_symbol,
 ) {
-  const answer_count_max = 4;
   let r3 = {
     name,
     id,
@@ -60,7 +59,6 @@ export function app_code_lesson_symbols_digits_generic(
           digits,
           batch_get,
           digit_count,
-          answer_count_max,
         );
         return r5;
       }
@@ -92,13 +90,8 @@ export function app_code_lesson_symbols_digits_generic(
     };
     return r;
   }
-  function newFunction(
-    example_above,
-    digits,
-    batch_get,
-    digit_count,
-    answer_count_max,
-  ) {
+  function newFunction(example_above, digits, batch_get, digit_count) {
+    const answer_count_max = 4;
     const quizzes = [
       function on_quiz1(context, parent, refresh) {
         let container = app_code_container_light_blue(parent);
