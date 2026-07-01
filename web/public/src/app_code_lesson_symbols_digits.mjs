@@ -2,7 +2,6 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -83,9 +82,6 @@ export function app_code_lesson_symbols_digits() {
               let concated = list_concat(taken, [digit_count]);
               list_shuffle(concated);
               function lambda3(answer) {
-                log(app_code_lesson_symbols_digits.name, {
-                  answer,
-                });
                 function lambda8() {}
                 let b2 = app_replace_button_wide(
                   container_answer2,
