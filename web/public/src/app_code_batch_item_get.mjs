@@ -18,7 +18,7 @@ export function app_code_batch_item_get(parent, lesson, on_batch_item) {
     }
     html_clear(container);
     let b = list_remove_last_single(remaining);
-    on_batch_item(container, b);
+    on_batch_item(container, b, refresh);
   };
   refresh();
   return refresh;
