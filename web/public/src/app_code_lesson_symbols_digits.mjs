@@ -1,3 +1,4 @@
+import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
@@ -85,6 +86,7 @@ export function app_code_lesson_symbols_digits() {
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
               let success = app_replace_success_message(parent);
+              html_display_none(element);
               let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
