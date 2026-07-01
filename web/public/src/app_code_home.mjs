@@ -2,7 +2,6 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
-import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -12,7 +11,6 @@ export function app_code_home(context) {
   let lesson = app_code_lesson_current(context);
   let above = property_get(lesson, "above");
   above(root);
-  let h = html_hr(root);
   let c = app_code_container_light_blue(root);
   html_div_text(c, "Here is an example:");
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item);
