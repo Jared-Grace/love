@@ -95,7 +95,6 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-                    app_replace_success_message(parent);
                   } else {
                     const transparency_alpha_channel_hex = "44";
                     app_g_button_wrong_generic(
@@ -106,6 +105,7 @@ export function app_code_lesson_symbols_digits() {
                 }
                 return b2;
               }
+              app_replace_success_message(parent);
             },
           ],
         };
