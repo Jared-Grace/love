@@ -1,6 +1,5 @@
 import { html_cycle_mono_list_between_comma_space_before_after } from "../../../love/public/src/html_cycle_mono_list_between_comma_space_before_after.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
-import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -29,17 +28,12 @@ export function app_code_lesson_symbols_digits_numbered() {
     );
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
-    html_cycle_mono(p2, [
+    html_cycle_mono_list_between_comma_space_before_after(
+      p2,
+      [0, 1, 2],
       "In a number, its digits (",
-      "0",
-      ", ",
-      "1",
-      ", ",
-      "2",
-      ", ..., ",
-      "9",
-      ") are examples of ",
-    ]);
+      [", ..., ", "9", ") are examples of "],
+    );
     html_span_text_bold(p2, "symbols");
     let p = html_div_text(
       c,
