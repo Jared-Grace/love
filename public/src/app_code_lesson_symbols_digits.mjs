@@ -94,6 +94,7 @@ export function app_code_lesson_symbols_digits() {
             async function lambda5() {
               let index_new = null;
               let index = list_index_of(quizzes, on_quiz1);
+              a1
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 index_new = index;
