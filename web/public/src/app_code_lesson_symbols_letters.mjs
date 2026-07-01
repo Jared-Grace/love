@@ -1,10 +1,10 @@
+import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_display_set } from "../../../love/public/src/html_display_set.mjs";
 import { incrementer } from "../../../love/public/src/incrementer.mjs";
 import { html_span_text_smaller } from "../../../love/public/src/html_span_text_smaller.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
-import { list_between_comma_space_before_after } from "../../../love/public/src/list_between_comma_space_before_after.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lower.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -15,13 +15,13 @@ export function app_code_lesson_symbols_letters() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
-    let span2 = html_span_text(parent, text2);
-    let alphabet_lower = list_alphabet_lower();
-    let squashed = list_between_comma_space_before_after(
+    let span2 = html_span_text(
+      div,
       "In English, there are 26 letters of the alphabet: ",
-      alphabet_lower,
-      "",
     );
+    let div2 = html_div(parent);
+    let alphabet_lower = list_alphabet_lower();
+    let squashed = list_between_comma_space(alphabet_lower);
     let i = incrementer();
     let cycles = [
       noop,
