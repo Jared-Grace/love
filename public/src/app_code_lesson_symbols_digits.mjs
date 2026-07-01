@@ -92,7 +92,7 @@ export function app_code_lesson_symbols_digits() {
             function lambda5() {
               let index = list_index_of(quizzes, on_quiz1);
               let li = list_index_last_is(quizzes, index);
-              if (false) {
+              if (li) {
               } else {
               }
               let quiz_index = storage_local_initialize_context(
