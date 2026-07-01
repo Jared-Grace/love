@@ -64,4 +64,5 @@ export function app_replace_success_message(parent) {
     html_span_text(p_encouragement, encouragement + "! ");
   }
   each(encouragements, lambda);
+  return p;
 }
