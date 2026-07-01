@@ -21,5 +21,5 @@ export function html_text_characters_numbered(parent, text) {
     },
     noop,
   ];
-  html_cycle(div2, cycles, squashed);
+  html_cycle(parent, cycles, squashed);
 }
