@@ -74,7 +74,7 @@ export function app_code_lesson_symbols_digits() {
               });
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
-              let taken = list_take(b, answer_count_max);
+              let taken = list_take(answers, answer_count_max);
               function lambda3(answer) {
                 log(app_code_lesson_symbols_digits.name, {
                   answer,
