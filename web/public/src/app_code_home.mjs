@@ -36,6 +36,7 @@ export function app_code_home(context) {
     refresh,
     example_another,
   );
+  let id = property_get(lesson, "id");
   async function previous() {
     function lambda(value) {
       let list = app_code_lessons();
