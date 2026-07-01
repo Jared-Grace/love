@@ -11,14 +11,18 @@ export function app_code_lesson_symbols_letters() {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let alphabet_lower = list_alphabet_lower();
-    html_flex_column_center(column);
     let squashed = list_between_comma_space_before_after(
       "In English, there are 26 letters of the alphabet: ",
       alphabet_lower,
       "",
     );
     let count = 1;
-    let cycles = [noop, function lambda2() {}];
+    let cycles = [
+      noop,
+      function lambda2() {
+        html_flex_column_center(column);
+      },
+    ];
     html_cycle(div, cycles, squashed);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
