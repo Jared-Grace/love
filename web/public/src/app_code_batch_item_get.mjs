@@ -11,8 +11,8 @@ export function app_code_batch_item_get(batches, container, on_batch_item) {
       list_shuffle(batches);
     }
     html_clear(container);
-    let r = list_remove_last_single(batches);
-    on_batch_item(r);
+    let b = list_remove_last_single(batches);
+    on_batch_item(b);
   };
   refresh();
   return refresh;
