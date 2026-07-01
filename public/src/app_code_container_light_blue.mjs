@@ -1,3 +1,4 @@
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_border_y } from "../../../love/public/src/html_border_y.mjs";
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
@@ -12,10 +13,10 @@ export function app_code_container_light_blue(parent) {
   html_style_background_color_set(container, "rgb(228, 241, 255)");
   html_border_y(container, "0.15em", "rgb(152, 203, 255)");
   html_style_margin_y(container, "0.5em");
-      html_style_assign(container, {
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.8em",
-      });
+  html_style_assign(container, {
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.8em",
+  });
   return container;
 }
