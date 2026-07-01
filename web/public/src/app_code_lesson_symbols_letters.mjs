@@ -33,7 +33,7 @@ export function app_code_lesson_symbols_letters() {
         html_font_color_set(s, "rgb(0, 110, 221)");
       },
     ];
-    html_cycle(div, cycles, squashed);
+    html_cycle(div2, cycles, squashed);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
