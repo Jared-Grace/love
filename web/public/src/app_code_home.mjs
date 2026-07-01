@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
 import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
@@ -38,7 +39,7 @@ export function app_code_home(context) {
   );
   let value_initial = app_code_lesson_first_id();
   let id = property_get(lesson, "id");
-  neq;
+  let ne = equal_not(left, right);
   async function previous() {
     function lambda(value) {
       let list = app_code_lessons();
