@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_display_set } from "../../../love/public/src/html_display_set.mjs";
 import { incrementer } from "../../../love/public/src/incrementer.mjs";
@@ -14,6 +15,7 @@ export function app_code_lesson_symbols_letters() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
+    let span2 = html_span_text(parent, text2);
     let alphabet_lower = list_alphabet_lower();
     let squashed = list_between_comma_space_before_after(
       "In English, there are 26 letters of the alphabet: ",
