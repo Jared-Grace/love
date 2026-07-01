@@ -13,7 +13,7 @@ export function app_code_lesson_symbols_letters() {
       div,
       "In English, there are 26 letters of the alphabet: ",
       alphabet_lower,
-      " are called ",
+      "",
     );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
