@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
 import { html_visibility_hidden_multiple } from "../../../love/public/src/html_visibility_hidden_multiple.mjs";
@@ -101,7 +100,6 @@ export function app_code_lesson_symbols_digits() {
               list_sort_text_to(concated);
               let on_success = html_div(parent);
               let success = app_replace_success_message(on_success);
-              let on_next = error();
               let r4 = app_code_next(
                 context,
                 on_success,
