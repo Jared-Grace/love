@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
@@ -94,10 +95,10 @@ export function app_code_lesson_symbols_digits() {
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
             async function lambda5() {
-              let index_new = null;
+              let size = list_size(list);
               let index = list_index_of(quizzes, on_quiz1);
-              let a2 = add_1(n);
-              let r5 = mod(n2, m);
+              let a1 = add_1(index);
+              let index_new = mod(n2, m);
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 index_new = index;
