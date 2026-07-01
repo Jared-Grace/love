@@ -22,7 +22,7 @@ export function app_code_home(context) {
   }
   app_code_next(
     context,
-    root,
+    c,
     "see another example",
     "please show me another example",
     refresh,
