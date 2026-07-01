@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -68,6 +69,9 @@ export function app_code_lesson_symbols_digits() {
               let container_answer2 = property_get(a, "container_answer");
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
+              log(app_code_lesson_symbols_digits.name, {
+                answers,
+              });
               list_add_if_not_includes(answers, digit_count);
               list_shuffle(b);
               let taken = list_take(b, answer_count_max);
