@@ -45,13 +45,15 @@ export function app_code_home(context) {
       value,
     );
     let value = null;
-    let property = "id";
-    let list = app_code_lessons();
-    let item = list_find_property(list, property, value);
-    let index_previous = list_index_of_previous(list, item);
-    let previous = list_get(list, index_previous);
-    let value_new = property_get(previous, previous);
-    function lambda(value2) {}
+    function lambda(value2) {
+      let property = "id";
+      let list = app_code_lessons();
+      let item = list_find_property(list, property, value);
+      let index_previous = list_index_of_previous(list, item);
+      let previous = list_get(list, index_previous);
+      let value_new = property_get(previous, previous);
+      return value_new;
+    }
     storage_local_transform_context(context2, key, value_initial, lambda);
     await app_shared_screen_set(context, app_code_home);
   }
