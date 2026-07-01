@@ -1,6 +1,6 @@
+import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
-import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -95,7 +95,11 @@ export function app_code_lesson_symbols_digits() {
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                   } else {
-                    app_g_button_wrong(b2);
+                    const transparency_alpha_channel_hex = "cd";
+                    app_g_button_wrong_generic(
+                      b2,
+                      transparency_alpha_channel_hex,
+                    );
                   }
                 }
                 return b2;
