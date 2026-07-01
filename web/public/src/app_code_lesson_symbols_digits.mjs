@@ -82,7 +82,7 @@ export function app_code_lesson_symbols_digits() {
           },
           answer: digit_count,
           quizzes: [
-            function on_quiz(context, parent, refresh) {
+            function on_quiz1(context, parent, refresh) {
               let container = app_code_container_light_blue(parent);
               let a = example_above(container, digits);
               let container_above = property_get(a, "container_above");
@@ -133,6 +133,7 @@ export function app_code_lesson_symbols_digits() {
                 return b2;
               }
             },
+            function lambda2() {},
           ],
         };
         return r2;
