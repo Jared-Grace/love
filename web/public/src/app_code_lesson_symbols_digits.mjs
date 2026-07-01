@@ -1,3 +1,4 @@
+import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_display_block } from "../../../love/public/src/html_display_block.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
@@ -76,7 +77,7 @@ export function app_code_lesson_symbols_digits() {
           },
           answer: digit_count,
           quizzes: [
-            function on_quiz(parent, refresh) {
+            function on_quiz(parent, refresh, success) {
               let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
               html_text_set(container_answer2, "How many symbols are there? ");
@@ -97,6 +98,8 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
+                    html_clear(success);
+                    app_replace_success_message(success);
                     html_display_block(success);
                     await sleep(500);
                     html_clear(parent);
