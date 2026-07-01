@@ -1,3 +1,4 @@
+import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
 import { list_property_next_value } from "../../../love/public/src/list_property_next_value.mjs";
@@ -95,7 +96,7 @@ export function app_code_lesson_symbols_digits_generic(
     batch_get,
     digit_count,
   ) {
-    const answer_count_max = 4;
+    const answer_count_max = app_code_answer_count_max();
     const quizzes = [
       function on_quiz1(context, parent, refresh) {
         let container = app_code_container_light_blue(parent);
