@@ -27,9 +27,12 @@ export function app_code_home(context) {
     ex(container);
   }
   let nt = app_karate_button_next_text();
-  let padded3 = text_pad_nested_space_quote_double(item);
-  let combined3 = text_combine(left2, right);
-  html_div_text(root, "Do you want another example? If not, choose: ");
+  let padded3 = text_pad_nested_space_quote_double(nt);
+  let combined3 = text_combine(
+    "Do you want another example? If not, choose: ",
+    padded3,
+  );
+  html_div_text(root, combined3);
   app_replace_button(root, combined, refresh);
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
