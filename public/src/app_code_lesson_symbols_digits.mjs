@@ -71,9 +71,9 @@ export function app_code_lesson_symbols_digits() {
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
               list_remove_if_exists(answers, digit_count);
-              list_shuffle(answers);
               let taken = list_take(answers, answer_count_max - 1);
-              let concated = list_concat(a2, b3);
+              let concated = list_concat(taken, [digit_count]);
+              list_shuffle(concated);
               function lambda3(answer) {
                 log(app_code_lesson_symbols_digits.name, {
                   answer,
