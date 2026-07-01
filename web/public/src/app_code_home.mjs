@@ -1,6 +1,5 @@
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
-import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
@@ -35,10 +34,7 @@ export function app_code_home(context) {
   html_div_text(root, combined3);
   app_replace_button(root, combined, refresh);
   html_hr(root);
-  html_div_text(root, "Do you want to be quizzed now?");
-  let left = emoji_arrow_right();
-  let combined2 = text_combine(left, "Yes, please quiz me");
-  app_replace_button_screen(context, app_code_quiz, root, combined2);
+  app_replace_button_screen(context, app_code_quiz, root, nt);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
