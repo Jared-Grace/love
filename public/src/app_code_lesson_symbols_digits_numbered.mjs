@@ -22,10 +22,10 @@ export function app_code_lesson_symbols_digits_numbered() {
     let p3 = html_div(c);
     let ds = digits();
     html_cycle_mono_list_between_comma_space_before_after(
+      p3,
       ds,
       "The numbers ",
       " are called ",
-      p3,
     );
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
