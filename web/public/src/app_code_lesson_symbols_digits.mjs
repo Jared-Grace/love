@@ -108,8 +108,11 @@ export function app_code_lesson_symbols_digits() {
                 function lambda7(value) {
                   let list = app_code_lessons();
                   let property_name = "id";
-                  let next = list_property_next(list, property_name, value);
-                  let value_next = property_get(next, property_name);
+                  let value_next = list_property_next_value(
+                    list,
+                    property_name,
+                    value,
+                  );
                   return value_next;
                 }
                 storage_local_transform_context(context, "lesson_id", lambda7);
@@ -177,6 +180,11 @@ export function app_code_lesson_symbols_digits() {
     },
   };
   return r3;
+  function list_property_next_value(list, property_name, value) {
+    let next = list_property_next(list, property_name, value);
+    let value_next = property_get(next, property_name);
+    return value_next;
+  }
   function example_above(parent, digits) {
     let q = app_code_container_light(parent);
     let container_above = html_div(parent);
