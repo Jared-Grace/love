@@ -100,13 +100,14 @@ export function app_code_lesson_symbols_digits() {
               list_sort_text_to(concated);
               let on_success = html_div(parent);
               let success = app_replace_success_message(on_success);
+              function lambda5() {}
               let r4 = app_code_next(
                 context,
                 on_success,
                 "take another quiz to practice some more",
                 "please give me another quiz to take",
                 refresh,
-                on_next,
+                lambda5,
               );
               let container_on_success = property_get(r4, "container");
               let hides = [success, container_on_success];
