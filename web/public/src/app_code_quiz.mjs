@@ -1,3 +1,5 @@
+import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -18,5 +20,8 @@ export function app_code_quiz(context) {
   refresh();
   const question_text = "and see another example";
   const button_text = "go back and show me another example";
-  app_code_go_back(context, root, question_text, button_text);
+  async function lambda() {
+    await app_shared_screen_set(context, app_code_home);
+  }
+  app_code_go_back(context, root, question_text, button_text, lambda);
 }
