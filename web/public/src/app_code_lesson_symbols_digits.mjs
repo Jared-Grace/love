@@ -84,7 +84,9 @@ export function app_code_lesson_symbols_digits() {
               list_shuffle(concated);
               function lambda3(answer) {
                 function lambda8() {
-                  let eq2 = equal(left, right);
+                  let eq2 = equal(answer, digit_count);
+                  if (false) {
+                  }
                 }
                 let b2 = app_replace_button_wide(
                   container_answer2,
