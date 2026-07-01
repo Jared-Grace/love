@@ -1,6 +1,4 @@
-import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
@@ -33,8 +31,7 @@ export function app_code_next(
   async function lambda() {
     await app_shared_screen_set(context, app_code_quiz);
   }
-  let b = app_replace_button(parent, nt, lambda);
-  html_width_full(b);
+  let b = app_replace_button_wide(parent, nt, lambda);
   let r = {
     container,
   };
