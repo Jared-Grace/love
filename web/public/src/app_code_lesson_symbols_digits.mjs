@@ -48,7 +48,10 @@ export function app_code_lesson_symbols_digits() {
         "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
         "symbols",
       ]);
-      let p = html_p_text(root, 'When we write computer programs, we use symbols, including numbers');
+      let p = html_p_text(
+        root,
+        "When we write computer programs, we use symbols, including numbers",
+      );
     },
     batch: function digit_batch() {
       let digit_counts = range_1(5);
