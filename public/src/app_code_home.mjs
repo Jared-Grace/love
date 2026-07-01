@@ -1,4 +1,5 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
@@ -19,14 +20,16 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
-  let on_next = error();
+  async function lambda() {
+    await app_shared_screen_set(context, app_code_quiz);
+  }
   app_code_next(
     context,
     root,
     "see another example",
     "please show me another example",
     refresh,
-    on_next,
+    lambda,
   );
   return;
   html_p_text_multiple(root, [
