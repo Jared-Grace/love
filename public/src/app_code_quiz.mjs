@@ -1,4 +1,4 @@
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
+import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -6,7 +6,6 @@ import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs"
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
-import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -28,6 +27,5 @@ export function app_code_quiz(context) {
     "Yes, please go back and show me another example",
   );
   let screen = app_code_home;
-  let b = app_replace_button_screen(context, screen, root, combined);
-  html_width_full(b);
+  app_replace_button_screen_wide(context, screen, root, combined);
 }
