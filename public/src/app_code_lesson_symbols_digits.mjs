@@ -34,6 +34,7 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
 export function app_code_lesson_symbols_digits() {
   const answer_count_max = 4;
   let r3 = {
@@ -102,7 +103,8 @@ export function app_code_lesson_symbols_digits() {
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
                     html_display_block(success);
-                    function lambda5() {
+                    async function lambda5() {
+                      await sleep(200);
                       html_clear(parent);
                       lambda2(parent);
                     }
