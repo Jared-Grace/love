@@ -1,3 +1,4 @@
+import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { app_code_example_text } from "../../../love/public/src/app_code_example_text.mjs";
@@ -24,6 +25,7 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
+  let nt = app_karate_button_next_text();
   html_div_text(root, "Do you want another example? If not, choose: ");
   app_replace_button(root, combined, refresh);
   html_hr(root);
