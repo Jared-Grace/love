@@ -1,3 +1,5 @@
+import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
+import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -20,6 +22,8 @@ export function app_code_quiz(context) {
     q(container, refresh);
   }
   refresh();
+  let success = app_replace_success_message(root);
+  html_display_none(success);
   html_div_text(root, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
