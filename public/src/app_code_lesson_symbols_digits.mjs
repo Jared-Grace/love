@@ -109,8 +109,8 @@ export function app_code_lesson_symbols_digits() {
                     app_code_next(
                       context,
                       root,
-                      "see another example",
-                      "show me another example",
+                      "practice more with another quiz",
+                      "take another quiz",
                       lambda5,
                     );
                   } else {
