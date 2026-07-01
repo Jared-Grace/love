@@ -1,3 +1,4 @@
+import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -31,6 +32,7 @@ export function app_code_home(context) {
     refresh,
     lambda,
   );
+  app_code_go_back(root, "the previous lesson", "test", context);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
