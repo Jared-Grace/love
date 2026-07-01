@@ -7,7 +7,7 @@ export function app_g_button_wrong(b) {
   let v = html_border_invalid_color();
   let t = text_take(v, 7) + "cd";
   html_style_background_color_set(b, t);
-  html_style_assign(component, {
+  html_style_assign(b, {
     color: app_shared_button_font_color(),
   });
 }
