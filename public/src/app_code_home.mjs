@@ -32,7 +32,8 @@ export function app_code_home(context) {
     refresh,
     lambda,
   );
-  app_code_go_back(context, root, "the previous lesson", "test");
+  const text = "to the previous lesson";
+  app_code_go_back(context, root, text, text);
   return;
   html_p_text_multiple(root, [
     "In computer programming",
