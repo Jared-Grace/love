@@ -17,6 +17,7 @@ export function app_code_lesson_symbols_letters() {
       alphabet_lower,
       "",
     );
+    let count = 1;
     let cycles = [noop, function lambda2() {}];
     html_cycle(div, cycles, squashed);
   }
