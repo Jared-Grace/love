@@ -13,7 +13,7 @@ export function app_code_batch_item_get(parent, lesson, on_batch_item) {
     let e = list_empty_is(remaining);
     if (e) {
       let items = batch();
-      list_replace_all(list, items);
+      list_replace_all(remaining, items);
       list_shuffle(remaining);
     }
     html_clear(container);
