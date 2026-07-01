@@ -41,7 +41,11 @@ export function app_code_lesson_symbols_digits_numbered() {
     let mapped = list_map(taken, lambda);
     let last = list_last(ds);
     list_add(mapped, last);
-    let combined = list_concat_multiple(lists);
+    let combined = list_concat_multiple([
+      "The numbers ",
+      mapped,
+      " are called ",
+    ]);
     let combined2 = text_combine_multiple([
       "The numbers ",
       joined,
