@@ -43,7 +43,7 @@ export function app_code_lesson_symbols_letters() {
     );
     html_div_text(
       container2,
-      "For a computer, lowercase symbols may be different than uppercase symbols",
+      "For a computer, lowercase symbols may be considered different symbols than uppercase symbols",
     );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
