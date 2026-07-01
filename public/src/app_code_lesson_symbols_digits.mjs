@@ -106,11 +106,10 @@ export function app_code_lesson_symbols_digits() {
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 function lambda7(value) {
-                  let list = app_code_lessons();$a
-                  let property_name = "id";
+                  let lessons = app_code_lessons();
                   let value_next = list_property_next_value(
-                    list,
-                    property_name,
+                    lessons,
+                    "id",
                     value,
                   );
                   return value_next;
