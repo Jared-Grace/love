@@ -1,4 +1,5 @@
-import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
+import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
+import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { list_between_comma_space_before_after } from "../../../love/public/src/list_between_comma_space_before_after.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lower.mjs";
@@ -17,7 +18,8 @@ export function app_code_lesson_symbols_letters() {
       alphabet_lower,
       "",
     );
-    html_cycle_mono(div, squashed);
+    let cycles = [noop, html_font_jetbrains_mono];
+    html_cycle(div, cycles, squashed);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
