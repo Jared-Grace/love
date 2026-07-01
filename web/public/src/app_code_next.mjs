@@ -28,5 +28,5 @@ export function app_code_next(
   let combined = text_combine_multiple([left, "Yes, ", yes_text]);
   app_replace_button_wide(container, combined, refresh);
   let next = app_replace_button_screen_wide(context, app_code_quiz, parent, nt);
-  return container;
+  return {container};
 }
