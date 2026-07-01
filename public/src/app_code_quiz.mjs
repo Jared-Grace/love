@@ -21,8 +21,9 @@ export function app_code_quiz(context) {
     let q = list_get(qs, quiz_index);
     q(container, refresh);
   }
-  refresh();$s
-  let success = app_replace_success_message(root);
+  refresh();
+  let success = null;
+  success = app_replace_success_message(root);
   html_display_none(success);
   html_div_text(root, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
