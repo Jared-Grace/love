@@ -83,6 +83,7 @@ export function app_code_lesson_symbols_digits() {
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
+              let buttons = list_map(concated, lambda3);
               function lambda3(answer) {
                 let b2 = app_replace_button_wide(
                   container_answer2,
@@ -99,7 +100,6 @@ export function app_code_lesson_symbols_digits() {
                 }
                 return b2;
               }
-              let buttons = list_map(concated, lambda3);
             },
           ],
         };
