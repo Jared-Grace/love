@@ -39,7 +39,7 @@ export async function app_replace_rule_set_success(
   const list = [goal_list_symbols, sbs];
   app_replace_button_symbol_style_valid_multiple_nested(list);
   await html_move_animate_multiple(sbs, goal_list_symbols, duration);
-  app_replace_success_message(div_below, highlight);
+  app_replace_success_message(div_below);
   let p_next = html_p(div_below);
   let goal_index_next = goal_index + 1;
   let ii = list_index_is(goals, goal_index_next);
