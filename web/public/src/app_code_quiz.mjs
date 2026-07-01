@@ -21,11 +21,15 @@ export function app_code_quiz(context) {
     q(context, container, refresh);
   }
   refresh();
-  let container3 = app_code_container_light_blue(root);
-  let combined2 = text_combine_multiple(list);
   const question_text = "see another example";
   const button_text = "show me another example";
-  html_div_text(container3, "Do you want to go back and ", question_text, "?");
+  let container3 = app_code_container_light_blue(root);
+  let combined2 = text_combine_multiple([
+    "Do you want to go back and ",
+    question_text,
+    "?",
+  ]);
+  html_div_text(container3, combined2);
   let left = emoji_arrow_left();
   let combined = text_combine_multiple([
     left,
