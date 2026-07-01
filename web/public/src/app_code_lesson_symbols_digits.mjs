@@ -89,9 +89,9 @@ export function app_code_lesson_symbols_digits() {
                 let b2 = app_replace_button_wide(
                   container_answer2,
                   answer,
-                  lambda8,
+                  on_click,
                 );
-                function lambda8() {
+                function on_click() {
                   let eq2 = equal(answer, digit_count);
                   let fn = ternary(
                     eq2,
