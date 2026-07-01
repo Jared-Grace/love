@@ -23,11 +23,14 @@ export function app_code_quiz(context) {
   refresh();
   let container3 = app_code_container_light_blue(root);
   let combined2 = text_combine_multiple(list);
-  html_div_text(container3, "Do you want to go back and see another example?");
+  const question_text = "see another example";
+  html_div_text(container3, "Do you want to go back and ", question_text, "?");
   let left = emoji_arrow_left();
+  const button_text = "show me another example";
   let combined = text_combine_multiple([
     left,
-    "Yes, please go back and show me another example",
+    "Yes, please go back and ",
+    button_text,
   ]);
   app_replace_button_screen_wide(context, app_code_home, container3, combined);
 }
