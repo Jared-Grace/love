@@ -3,7 +3,8 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-export function app_code_batch_item_get(batches, container, on_batch_item) {
+export function app_code_batch_item_get(batches, container2, on_batch_item) {
+  let container = html_div(root);
   let refresh = function lambda() {
     let e = list_empty_is(batches);
     if (e) {
@@ -12,7 +13,7 @@ export function app_code_batch_item_get(batches, container, on_batch_item) {
     }
     html_clear(container);
     let b = list_remove_last_single(batches);
-    on_batch_item(b);
+    on_batch_item(container,b);
   };
   refresh();
   return refresh;
