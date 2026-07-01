@@ -19,7 +19,7 @@ export function app_code_lesson_symbols_letters() {
       div,
       "In English, there are 26 letters of the alphabet: ",
     );
-    let div2 = html_div(parent);
+    let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     let squashed = list_between_comma_space(alphabet_lower);
     let i = incrementer();
