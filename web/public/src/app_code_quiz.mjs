@@ -20,7 +20,6 @@ export function app_code_quiz(context) {
     q(container);
   }
   refresh();
-  item(root);
   html_div_text(root, "Do you want go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
