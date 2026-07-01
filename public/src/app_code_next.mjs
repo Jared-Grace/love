@@ -14,7 +14,7 @@ export function app_code_next(
   yes_text,
   refresh,
 ) {
-  let c = app_code_container_light_blue(parent);
+  let container = app_code_container_light_blue(parent);
   let nt = app_karate_button_next_text();
   let padded3 = text_pad_nested_space_quote_double(nt);
   let combined3 = text_combine_multiple([
@@ -23,9 +23,9 @@ export function app_code_next(
     "? If not, choose: ",
     padded3,
   ]);
-  html_div_text(c, combined3);
+  html_div_text(container, combined3);
   let left = emoji_repeat_1();
   let combined = text_combine_multiple([left, "Yes, ", yes_text]);
-  app_replace_button_wide(c, combined, refresh);
+  app_replace_button_wide(container, combined, refresh);
   let next = app_replace_button_screen_wide(context, app_code_quiz, parent, nt);
 }
