@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
@@ -22,6 +23,7 @@ export function app_code_quiz(context) {
   }
   refresh();
   let container3 = app_code_container_light_blue(root);
+  let combined2 = text_combine_multiple(list);
   html_div_text(container3, "Do you want to go back and see another example?");
   let left = emoji_arrow_left();
   let combined = text_combine(
