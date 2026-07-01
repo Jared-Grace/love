@@ -8,7 +8,6 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
@@ -100,7 +99,7 @@ export function app_code_lesson_symbols_digits() {
                 }
                 return b2;
               }
-              each(concated, lambda3);
+              let buttons = list_map(concated, lambda3);
             },
           ],
         };
