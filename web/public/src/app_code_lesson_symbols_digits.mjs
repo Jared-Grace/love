@@ -94,8 +94,8 @@ export function app_code_lesson_symbols_digits() {
                 function on_click() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
-                    app_shared_button_screen_green_style_assign(component);
-                  }
+                    app_shared_button_screen_green_style_assign(b2);
+                  }$el
                   let fn = ternary(
                     eq2,
                     app_shared_button_screen_green_style_assign,
