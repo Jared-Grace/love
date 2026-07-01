@@ -300,7 +300,6 @@ export async function app_replace_rule_set(context) {
           sbs,
           duration,
           div_below,
-          highlight,
           goal_index,
           goals,
         );
