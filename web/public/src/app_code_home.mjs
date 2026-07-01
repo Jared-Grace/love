@@ -44,8 +44,8 @@ export function app_code_home(context) {
     "In a computer program, there are symbols",
     "Symbols are inside ",
   ]);
-  function on_batch_item(r) {
-    let ex = property_get(r, "example");
+  function on_batch_item(b) {
+    let ex = property_get(b, "example");
     ex(example_div);
   }
 }
