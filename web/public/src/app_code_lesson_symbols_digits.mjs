@@ -40,7 +40,8 @@ export function app_code_lesson_symbols_digits() {
     id: "symbols_digits",
     name: "Symbols (Digits)",
     above: function digits_above(root) {
-      let p3 = app_code_container_light_blue(root);
+      let c = app_code_container_light_blue(root);
+      let p3 = html_p(c);
       let ds = digits();
       let joined = list_join_comma_space(ds);
       let combined2 = text_combine_multiple([
@@ -49,13 +50,13 @@ export function app_code_lesson_symbols_digits() {
         " are called ",
       ]);
       html_cycle_bold(p3, [combined2, "digits"]);
-      let p2 = html_p(root);
+      let p2 = html_p(c);
       html_cycle_bold(p2, [
         "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
         "symbols",
       ]);
       let p = html_p_text(
-        root,
+        c,
         "When we write computer programs, we use symbols, including numbers",
       );
     },
