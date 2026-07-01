@@ -108,7 +108,7 @@ export function app_code_lesson_symbols_digits() {
                     }
                     app_code_next(
                       context,
-                      root,
+                      parent,
                       "practice more with another quiz",
                       "take another quiz",
                       lambda5,
