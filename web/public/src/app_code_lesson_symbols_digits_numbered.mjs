@@ -1,4 +1,3 @@
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -8,7 +7,6 @@ import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs"
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -43,20 +41,13 @@ export function app_code_lesson_symbols_digits_numbered() {
     let mapped = list_map(taken, lambda);
     let last = list_last(ds);
     list_add(mapped, last);
-    let squashed = list_squash(lists);
     let combined = list_concat_multiple([
       "The numbers ",
       mapped,
       " are called ",
     ]);
-    function lambda2(item) {}
-    let filtered = list_filter(list, lambda2);
-    let combined2 = text_combine_multiple([
-      "The numbers ",
-      joined,
-      " are called ",
-    ]);
-    html_cycle_mono(p3, [combined2, "digits"]);
+    let squashed = list_squash(combined);
+    html_cycle_mono(p3, [squashed, "digits"]);
     let p2 = html_div(c);
     html_cycle_bold(p2, [
       "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
