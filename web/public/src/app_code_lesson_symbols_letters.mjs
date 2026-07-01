@@ -26,10 +26,9 @@ export function app_code_lesson_symbols_letters() {
       function lambda2(span) {
         html_flex_column_center(span);
         html_display_set(span, "inline-flex");
-        ("rgb(152, 203, 255)");
         let text = i();
         let s = html_span_text_smaller(span, text);
-        html_font_color_set(component, color);
+        html_font_color_set(s, "rgb(152, 203, 255)");
       },
     ];
     html_cycle(div, cycles, squashed);
