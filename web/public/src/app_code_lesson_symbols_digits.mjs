@@ -3,7 +3,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 export function app_code_lesson_symbols_digits() {
-  function lambda() {
+  function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div_text(
       c,
