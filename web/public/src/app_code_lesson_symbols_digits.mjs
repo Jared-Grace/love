@@ -87,6 +87,7 @@ export function app_code_lesson_symbols_digits() {
               let taken = list_take(answers, answer_count_max - 1);
               let concated = list_concat(taken, [digit_count]);
               list_sort_text_to(concated);
+              let div = html_div(parent2);
               let success = app_replace_success_message(parent);
               html_display_none(success);
               let buttons = list_map(concated, lambda3);
