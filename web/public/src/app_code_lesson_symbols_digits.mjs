@@ -86,19 +86,20 @@ export function app_code_lesson_symbols_digits() {
               let concated = list_concat(taken, [digit_count]);
               list_shuffle(concated);
               function lambda3(answer) {
-                function lambda8() {
-                  let eq2 = equal(answer, digit_count);
-                  let result = ternary(
-                    eq2,
-                    app_g_button_green_style,
-                    app_g_button_wrong,
-                  );
-                }
                 let b2 = app_replace_button_wide(
                   container_answer2,
                   answer,
                   lambda8,
                 );
+                function lambda8() {
+                  let eq2 = equal(answer, digit_count);
+                  let fn = ternary(
+                    eq2,
+                    app_g_button_green_style,
+                    app_g_button_wrong,
+                  );
+                  fn(b2);
+                }
               }
               each(concated, lambda3);
             },
