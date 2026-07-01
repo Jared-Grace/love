@@ -114,6 +114,7 @@ export function app_code_lesson_symbols_digits() {
                     value,
                   );
                   let next = list_get(list, index_next);
+                  let value2 = property_get(object, property_name);
                   return a2;
                 }
                 storage_local_transform_context(context, "lesson_id", lambda7);
