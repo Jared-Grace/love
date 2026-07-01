@@ -92,10 +92,10 @@ export function app_code_lesson_symbols_digits() {
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
             async function lambda5() {
+              let index_new = null;
               let index = list_index_of(quizzes, on_quiz1);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                let index_new = null;
                 index_new = index;
               } else {
                 await app_shared_screen_set(context, app_code_quiz);
