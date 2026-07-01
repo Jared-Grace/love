@@ -1,3 +1,4 @@
+import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
@@ -49,7 +50,9 @@ export function app_code_home(context) {
     let item = list_find_property(list, property, value);
     let index_previous = list_index_of_previous(list, item);
     let previous = list_get(list, index_previous);
-    let value2 = property_get(object, property_name);
+    let value_new = property_get(previous, previous);
+    function lambda(value2) {}
+    storage_local_transform_context(context2, key, value_initial, lambda);
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
