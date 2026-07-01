@@ -70,7 +70,7 @@ export function app_code_lesson_symbols_digits() {
             function lambda2(parent) {
               let a = example_above(parent, digits);
               let container_answer2 = property_get(a, "container_answer");
-              html_text_set(container_answer2, "Number of symbols: ");
+              html_text_set(container_answer2, "How many symbols are there? ");
               let b = digit_batch();
               let answers = list_map_property(b, "answer");
               list_remove_if_exists(answers, digit_count);
