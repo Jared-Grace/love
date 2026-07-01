@@ -133,7 +133,7 @@ export function app_code_lesson_symbols_digits() {
                 return b2;
               }
             },
-            function lambda2() {},
+            function lambda2(context, parent, refresh) {},
           ],
         };
         return r2;
