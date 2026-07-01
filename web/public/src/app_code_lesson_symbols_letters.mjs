@@ -9,12 +9,12 @@ export function app_code_lesson_symbols_letters() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
-    let alphabet_lower = text_alphabet_lower();
-    let split = text_split_empty(s);
+    let alphabet_lower_unsplit = text_alphabet_lower();
+    let alphabet_lower = text_split_empty(alphabet_lower_unsplit);
     html_cycle_mono_list_between_comma_space_before_after(
       div,
       "In English, there are 26 letters of the alphabet: ",
-      alphabet_lower,
+      alphabet_lower_unsplit,
       "",
     );
   }
