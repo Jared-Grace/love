@@ -1,7 +1,7 @@
+import { list_property_next_value } from "../../../love/public/src/list_property_next_value.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
-import { list_property_next } from "../../../love/public/src/list_property_next.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
@@ -152,11 +152,6 @@ export function app_code_lesson_symbols_digits_generic(
     },
   };
   return r3;
-  function list_property_next_value(list, property_name, value) {
-    let next = list_property_next(list, property_name, value);
-    let value_next = property_get(next, property_name);
-    return value_next;
-  }
   function example_above(parent, digits) {
     let q = app_code_container_light(parent);
     let container_above = html_div(parent);
