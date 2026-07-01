@@ -41,12 +41,7 @@ export function app_code_home(context) {
       let value_new = list_property_previous_value(list, "id", value);
       return value_new;
     }
-    storage_local_transform_context(
-      context,
-      "lesson_id",
-      value_initial,
-      lambda,
-    );
+    storage_local_transform_context(context, "lesson_id", lambda);
     await app_shared_screen_set(context, app_code_home);
   }
   app_code_go_back(
