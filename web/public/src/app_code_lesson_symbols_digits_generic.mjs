@@ -1,3 +1,4 @@
+import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
 import { list_property_next_value } from "../../../love/public/src/list_property_next_value.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -88,7 +89,13 @@ export function app_code_lesson_symbols_digits_generic(
                   );
                   return value_next;
                 }
-                storage_local_transform_context(context, "lesson_id", lambda7);
+                let value_initial = app_code_lesson_first_id();
+                storage_local_transform_context(
+                  context,
+                  "lesson_id",
+                  value_initial,
+                  lambda7,
+                );
                 await app_shared_screen_set(context, app_code_home);
               } else {
                 refresh();
