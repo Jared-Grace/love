@@ -1,5 +1,4 @@
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
@@ -21,9 +20,6 @@ export function app_code_quiz(context) {
     q(container);
   }
   refresh();
-  log(app_code_quiz.name, {
-    item,
-  });
   item(root);
   html_div_text(root, "Do you want go back and see another example?");
   let left = emoji_arrow_left();
