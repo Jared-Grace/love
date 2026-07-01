@@ -1,3 +1,4 @@
+import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lower.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_cycle_mono_list_between_comma_space_before_after } from "../../../love/public/src/html_cycle_mono_list_between_comma_space_before_after.mjs";
@@ -9,6 +10,7 @@ export function app_code_lesson_symbols_letters() {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let alphabet_lower = list_alphabet_lower();
+    html_flex_column_center(column);
     html_cycle_mono_list_between_comma_space_before_after(
       div,
       "In English, there are 26 letters of the alphabet: ",
