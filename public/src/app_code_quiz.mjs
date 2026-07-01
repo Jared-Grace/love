@@ -24,9 +24,9 @@ export function app_code_quiz(context) {
   let container3 = app_code_container_light_blue(root);
   let combined2 = text_combine_multiple(list);
   const question_text = "see another example";
+  const button_text = "show me another example";
   html_div_text(container3, "Do you want to go back and ", question_text, "?");
   let left = emoji_arrow_left();
-  const button_text = "show me another example";
   let combined = text_combine_multiple([
     left,
     "Yes, please go back and ",
