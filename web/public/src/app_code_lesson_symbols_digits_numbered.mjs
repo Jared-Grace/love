@@ -3,7 +3,6 @@ import { list_concat_multiple_squash } from "../../../love/public/src/list_conca
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -36,10 +35,19 @@ export function app_code_lesson_symbols_digits_numbered() {
     html_cycle_mono(p3, squashed);
     html_span_text_bold(p3, "digits");
     let p2 = html_div(c);
-    html_cycle_bold(p2, [
-      "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
-      "symbols",
-    ]);
+    html_cycle_mono(
+      p2,
+      "In a number, the digits (",
+      "0",
+      ", ",
+      "1",
+      ", ",
+      "2",
+      ", ..., ",
+      "9",
+      ") are examples of ",
+    );
+    html_span_text_bold(p2, "symbols");
     let p = html_div_text(
       c,
       "When we write computer programs, we use symbols, including numbers",
