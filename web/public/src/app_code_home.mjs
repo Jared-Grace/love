@@ -12,6 +12,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -26,10 +27,10 @@ export function app_code_home(context) {
   }
   let nt = app_karate_button_next_text();
   let padded3 = text_pad_nested_space_quote_double(nt);
-  let combined3 = text_combine(
+  let combined3 = text_combine_multiple([
     "Do you want to see another example? If not, choose: ",
     padded3,
-  );
+  ]);
   html_div_text(root, combined3);
   let left = emoji_repeat_1();
   let combined = text_combine(left, "Yes, show me another example");
