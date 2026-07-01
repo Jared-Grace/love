@@ -11,8 +11,8 @@ export function app_code_lesson_symbols_letters() {
     );
   }
   let r5 = app_code_lesson_symbols_digits_generic(
-    "Symbols (Digits)",
-    "symbols_digits",
+    "Symbols (Letters)",
+    "symbols_letters",
     lambda,
     noop,
   );
