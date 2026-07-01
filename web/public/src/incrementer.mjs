@@ -1,4 +1,8 @@
 export function incrementer() {
-  let r = function lambda() {};
+  let count = 0;
+  let r = function lambda() {
+    count++;
+    return count;
+  };
   return r;
 }
