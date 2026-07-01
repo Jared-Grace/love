@@ -95,7 +95,7 @@ export function app_code_lesson_symbols_digits_generic(
   function newFunction(
     example_above,
     digits,
-    digit_batch,
+    batch_get,
     digit_count,
     answer_count_max,
   ) {
@@ -110,7 +110,7 @@ export function app_code_lesson_symbols_digits_generic(
         );
         let container_answer2 = property_get(a, "container_answer");
         html_text_set(container_answer2, "How many symbols are there? ");
-        let b = digit_batch();
+        let b = batch_get();
         let answers = list_map_property(b, "answer");
         list_remove_if_exists(answers, digit_count);
         let taken = list_shuffle_take(answers, answer_count_max - 1);
