@@ -1,3 +1,4 @@
+import { html_display_set } from "../../../love/public/src/html_display_set.mjs";
 import { incrementer } from "../../../love/public/src/incrementer.mjs";
 import { html_span_text_smaller } from "../../../love/public/src/html_span_text_smaller.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
@@ -23,6 +24,7 @@ export function app_code_lesson_symbols_letters() {
       noop,
       function lambda2(span) {
         html_flex_column_center(span);
+        html_display_set(span, "inline-flex");
         let text = i();
         html_span_text_smaller(span, text);
       },
