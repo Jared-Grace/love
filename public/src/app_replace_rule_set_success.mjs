@@ -1,4 +1,5 @@
-import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
@@ -82,7 +83,24 @@ export async function app_replace_rule_set_success(
   let p_emojis = html_div(p);
   html_span_text(p_emojis, joined);
   html_style_font_size(p_emojis, "1.5em");
-  app_replace_success_message(p);
+  let p_encouragement = html_div(p);
+  const encouragements_choices = [
+    "Congratulations",
+    "Success",
+    "Good job",
+    "Great job",
+    "Well done",
+    "Keep it up",
+    "Amazing",
+    "Way to go",
+    "Awesome",
+  ];
+  let encouragements = list_shuffle_take(encouragements_choices, 2);
+  html_bold(p_encouragement);
+  function lambda(encouragement) {
+    html_span_text(p_encouragement, encouragement + "! ");
+  }
+  each(encouragements, lambda);
   let p_next = html_p(div_below);
   let goal_index_next = goal_index + 1;
   let ii = list_index_is(goals, goal_index_next);
