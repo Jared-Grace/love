@@ -28,5 +28,5 @@ export function app_code_quiz(context) {
     "Yes, please go back and show me another example",
   );
   let b = app_replace_button_screen(context, app_code_home, root, combined);
-  html_width_full(component);
+  html_width_full(b);
 }
