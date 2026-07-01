@@ -4,8 +4,8 @@ export function html_cycle_mono_list_between_comma_space_before_after(
   ds,
   before,
   after,
-  p3,
+  parent,
 ) {
   let squashed = list_between_comma_space_before_after(ds, before, after);
-  html_cycle_mono(p3, squashed);
+  html_cycle_mono(parent, squashed);
 }
