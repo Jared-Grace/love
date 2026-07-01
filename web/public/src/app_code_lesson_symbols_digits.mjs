@@ -95,7 +95,8 @@ export function app_code_lesson_symbols_digits() {
                   let eq2 = equal(answer, digit_count);
                   if (eq2) {
                     app_shared_button_screen_green_style_assign(b2);
-                  }$el
+                  }
+                  $el;
                   let fn = ternary(
                     eq2,
                     app_shared_button_screen_green_style_assign,
