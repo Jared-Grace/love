@@ -1,7 +1,14 @@
+import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
+import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
+import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { app_code_container_generic } from "../../../love/public/src/app_code_container_generic.mjs";
 export function app_code_container_light_blue(parent) {
-  let container = app_code_container_generic(parent);
+  let container2 = html_div(parent);
+  html_style_padding(container2, "0.2em");
+  html_border_radius_em(container2, 0.75);
+  html_border_none(container2);
+  let container = container2;
   html_style_background_color_set(container, "rgb(209, 231, 253)");
   return container;
 }
