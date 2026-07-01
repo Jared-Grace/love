@@ -24,9 +24,10 @@ export function app_code_home(context) {
     let ex = property_get(b, "example");
     ex(container);
   }
+  const do_you_want_to_text = "see another example";
+  const yes_text = "show me another example";
   let nt = app_karate_button_next_text();
   let padded3 = text_pad_nested_space_quote_double(nt);
-  const do_you_want_to_text = "see another example";
   let combined3 = text_combine_multiple([
     "Do you want to ",
     do_you_want_to_text,
@@ -35,7 +36,6 @@ export function app_code_home(context) {
   ]);
   html_div_text(root, combined3);
   let left = emoji_repeat_1();
-  const yes_text = "show me another example";
   let combined = text_combine_multiple([left, "Yes, ", yes_text]);
   app_replace_button(root, combined, refresh);
   html_hr(root);
