@@ -17,13 +17,13 @@ export function app_code_home(context) {
   above(root);
   let h = html_hr(root);
   html_div_text(root, "Here is an example:");
-  html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
   let refresh = app_code_batch_item_get(root, lesson, on_batch_item);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
     ex(container);
   }
+  html_div_text(root, "Do you want another example?");
   app_replace_button(root, combined, refresh);
   html_hr(root);
   html_div_text(root, "Do you want to be quizzed now?");
