@@ -7,8 +7,8 @@ import { html_flex_column_center } from "../../../love/public/src/html_flex_colu
 import { incrementer } from "../../../love/public/src/incrementer.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
-export function html_text_characters_numbered(div2, alphabet_lower) {
-  let betweened = list_between_comma_space(alphabet_lower);
+export function html_text_characters_numbered(div2, text) {
+  let betweened = list_between_comma_space(text);
   let squashed = list_squash(betweened);
   let i = incrementer();
   let cycles = [
