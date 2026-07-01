@@ -18,7 +18,6 @@ export function app_code_quiz(context) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
     q(container);
-    html_div_text(container, "Do you want to take another quiz now?");
   }
   refresh();
   html_div_text(root, "Do you want to go back and see another example?");
