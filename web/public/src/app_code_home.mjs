@@ -6,7 +6,6 @@ import { app_replace_button_screen } from "../../../love/public/src/app_replace_
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
@@ -19,7 +18,6 @@ export function app_code_home(context) {
   above(root);
   let h = html_hr(root);
   html_div_text(root, "Here is an example:");
-  let example_div = html_div(root);
   let b = [];
   html_div_text(root, "Do you want another example?");
   let combined = app_code_example_text();
