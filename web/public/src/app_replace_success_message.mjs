@@ -20,7 +20,7 @@ import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs"
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
-export function app_replace_success_message(div_below, highlight) {
+export function app_replace_success_message(div_below) {
   let choices = [
     emoji_trophy,
     emoji_100,
