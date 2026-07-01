@@ -24,6 +24,7 @@ export function app_code_home(context) {
     "see another example",
     "please show me another example",
     refresh,
+    error(),
   );
   return;
   html_p_text_multiple(root, [

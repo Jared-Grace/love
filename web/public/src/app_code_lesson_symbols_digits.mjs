@@ -106,6 +106,7 @@ export function app_code_lesson_symbols_digits() {
                 "take another quiz to practice some more",
                 "please give me another quiz to take",
                 refresh,
+                error(),
               );
               let container_on_success = property_get(r4, "container");
               let hides = [success, container_on_success];
