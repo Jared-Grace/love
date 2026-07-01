@@ -68,6 +68,68 @@ export function app_code_lesson_symbols_digits() {
       let digit_counts = range_1(5);
       function lambda(digit_count) {
         let digits = integer_positive_random_digits_text(digit_count);
+        const quizzes = [
+          function on_quiz1(context, parent, refresh) {
+            let container = app_code_container_light_blue(parent);
+            let a = example_above(container, digits);
+            let container_above = property_get(a, "container_above");
+            html_text_set(
+              container_above,
+              "Please answer the following quiz question:",
+            );
+            let container_answer2 = property_get(a, "container_answer");
+            html_text_set(container_answer2, "How many symbols are there? ");
+            let b = digit_batch();
+            let answers = list_map_property(b, "answer");
+            list_remove_if_exists(answers, digit_count);
+            let taken = list_shuffle_take(answers, answer_count_max - 1);
+            let concated = list_concat(taken, [digit_count]);
+            list_sort_text_to(concated);
+            let on_success = html_div(parent);
+            let success = app_replace_success_message(on_success);
+            function lambda5() {
+              let quiz_index = storage_local_initialize_context(
+                context,
+                "quiz_index",
+                0,
+              );
+            }
+            let r4 = app_code_next(
+              context,
+              on_success,
+              "take another quiz to practice some more",
+              "please give me another quiz to take",
+              refresh,
+              lambda5,
+            );
+            let container_on_success = property_get(r4, "container");
+            let hides = [success, container_on_success];
+            html_visibility_hidden_multiple(hides);
+            let buttons = list_map(concated, lambda3);
+            function lambda3(answer) {
+              let b2 = app_replace_button_wide(
+                container_answer2,
+                answer,
+                on_click,
+              );
+              async function on_click() {
+                let eq2 = equal(answer, digit_count);
+                if (eq2) {
+                  app_shared_button_screen_green_style_assign(b2);
+                  html_visibility_visible_multiple(hides);
+                } else {
+                  const transparency_alpha_channel_hex = "44";
+                  app_g_button_wrong_generic(
+                    b2,
+                    transparency_alpha_channel_hex,
+                  );
+                }
+              }
+              return b2;
+            }
+          },
+          function lambda2(context, parent, refresh) {},
+        ];
         let r2 = {
           example: function lambda6(parent) {
             let a = example_above(parent, digits);
@@ -82,68 +144,7 @@ export function app_code_lesson_symbols_digits() {
             );
           },
           answer: digit_count,
-          quizzes: [
-            function on_quiz1(context, parent, refresh) {
-              let container = app_code_container_light_blue(parent);
-              let a = example_above(container, digits);
-              let container_above = property_get(a, "container_above");
-              html_text_set(
-                container_above,
-                "Please answer the following quiz question:",
-              );
-              let container_answer2 = property_get(a, "container_answer");
-              html_text_set(container_answer2, "How many symbols are there? ");
-              let b = digit_batch();
-              let answers = list_map_property(b, "answer");
-              list_remove_if_exists(answers, digit_count);
-              let taken = list_shuffle_take(answers, answer_count_max - 1);
-              let concated = list_concat(taken, [digit_count]);
-              list_sort_text_to(concated);
-              let on_success = html_div(parent);
-              let success = app_replace_success_message(on_success);
-              function lambda5() {
-                let quiz_index = storage_local_initialize_context(
-                  context,
-                  "quiz_index",
-                  0,
-                );
-              }
-              let r4 = app_code_next(
-                context,
-                on_success,
-                "take another quiz to practice some more",
-                "please give me another quiz to take",
-                refresh,
-                lambda5,
-              );
-              let container_on_success = property_get(r4, "container");
-              let hides = [success, container_on_success];
-              html_visibility_hidden_multiple(hides);
-              let buttons = list_map(concated, lambda3);
-              function lambda3(answer) {
-                let b2 = app_replace_button_wide(
-                  container_answer2,
-                  answer,
-                  on_click,
-                );
-                async function on_click() {
-                  let eq2 = equal(answer, digit_count);
-                  if (eq2) {
-                    app_shared_button_screen_green_style_assign(b2);
-                    html_visibility_visible_multiple(hides);
-                  } else {
-                    const transparency_alpha_channel_hex = "44";
-                    app_g_button_wrong_generic(
-                      b2,
-                      transparency_alpha_channel_hex,
-                    );
-                  }
-                }
-                return b2;
-              }
-            },
-            function lambda2(context, parent, refresh) {},
-          ],
+          quizzes: quizzes,
         };
         return r2;
       }
