@@ -7,7 +7,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_go_back(context, root, question_text, button_text) {
   let container3 = app_code_container_light_blue(root);
   let combined2 = text_combine_multiple([
-    "Do you want to go back and ",
+    "Do you want to go back ",
     question_text,
     "?",
   ]);
@@ -15,7 +15,7 @@ export function app_code_go_back(context, root, question_text, button_text) {
   let left = emoji_arrow_left();
   let combined = text_combine_multiple([
     left,
-    "Yes, please go back and ",
+    "Yes, please go back ",
     button_text,
   ]);
   app_replace_button_screen_wide(context, app_code_home, container3, combined);
