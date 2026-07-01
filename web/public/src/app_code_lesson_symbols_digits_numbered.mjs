@@ -1,3 +1,5 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -41,11 +43,14 @@ export function app_code_lesson_symbols_digits_numbered() {
     let mapped = list_map(taken, lambda);
     let last = list_last(ds);
     list_add(mapped, last);
+    let squashed = list_squash(lists);
     let combined = list_concat_multiple([
       "The numbers ",
       mapped,
       " are called ",
     ]);
+    function lambda2(item) {}
+    let filtered = list_filter(list, lambda2);
     let combined2 = text_combine_multiple([
       "The numbers ",
       joined,
