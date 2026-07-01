@@ -7,7 +7,6 @@ import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_butto
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
@@ -33,7 +32,6 @@ import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-import { html_p } from "../../../love/public/src/html_p.mjs";
 export function app_code_lesson_symbols_digits() {
   const answer_count_max = 4;
   let r3 = {
@@ -41,7 +39,7 @@ export function app_code_lesson_symbols_digits() {
     name: "Symbols (Digits)",
     above: function digits_above(root) {
       let c = app_code_container_light_blue(root);
-      let p3 = html_p(c);
+      let p3 = html_div(c);
       let ds = digits();
       let joined = list_join_comma_space(ds);
       let combined2 = text_combine_multiple([
@@ -50,12 +48,12 @@ export function app_code_lesson_symbols_digits() {
         " are called ",
       ]);
       html_cycle_bold(p3, [combined2, "digits"]);
-      let p2 = html_p(c);
+      let p2 = html_div(c);
       html_cycle_bold(p2, [
         "In a number, the digits (0, 1, 2, ..., 9) are examples of ",
         "symbols",
       ]);
-      let p = html_p_text(
+      let p = html_div_text(
         c,
         "When we write computer programs, we use symbols, including numbers",
       );
