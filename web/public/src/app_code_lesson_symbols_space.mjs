@@ -59,8 +59,6 @@ export function app_code_lesson_symbols_space() {
     let split = text_split_space(verse);
     let mappers = [text_letters_only, identity, text_split_empty];
     let mapped = list_map_multiple(split, mappers);
-    function lambda4(item, next) {}
-    each_next(list, lambda4);
     return mapped;
   }
   let batch_symbols = batch_get;
