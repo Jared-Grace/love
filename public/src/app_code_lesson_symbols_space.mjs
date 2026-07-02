@@ -27,8 +27,8 @@ export function app_code_lesson_symbols_space() {
     function lambda3(la) {
       function lambda2(item2, next2) {
         const pair = [item2, next2];
-        let joined = list_join_space(list4);
-        la(pair);
+        let joined = list_join_space(pair);
+        la(joined);
       }
       each_next(list2, lambda2);
     }
