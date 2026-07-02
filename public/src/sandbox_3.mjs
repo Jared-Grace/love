@@ -11,7 +11,7 @@ export async function sandbox_3() {
   let mapped2 = list_map_property(books, "text");
   function lambda(book_name) {
     let prefixes = ["1 ", "2 "];
-    let item3 = list_map_prefix_without_try_multiple(book_name);
+    let item3 = list_map_prefix_without_try_multiple(book_name, prefixes);
     return item3;
   }
   let mapped = list_map(mapped2, lambda);
