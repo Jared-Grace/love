@@ -15,7 +15,7 @@ import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_identifiers_letters_spaces() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    let combined2 = list_to_text_or_list(list);
+    let combined2 = list_to_text_or_list([]);
     let combined = text_combine_multiple([
       "Humans use languages like ",
       "English",
