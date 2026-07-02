@@ -15,6 +15,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
+import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
 export function app_code_lesson_symbols_letters_lower() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
@@ -59,9 +60,9 @@ export function app_code_lesson_symbols_letters_lower() {
   }
   function lambda2(word) {
     function lambda3(c2) {
-      let r2 = boolean_random();
-      let result = ternary(condition, on_true, on_false);
-      return r2;
+      let u = boolean_random();
+      let result = ternary(u, text_upper_to, noop);
+      return result;
     }
     let joined = text_transform(word, lambda3);
   }
