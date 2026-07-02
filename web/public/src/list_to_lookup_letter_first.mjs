@@ -8,8 +8,8 @@ export function list_to_lookup_letter_first(unique) {
     function lambda3(item) {
       let letters = text_letters_only(item);
       let key = text_first(letters);
-      let u = text_upper_to(s);
-      la(key, item);
+      let u = text_upper_to(key);
+      la(u, item);
     }
     each(unique, lambda3);
   }
