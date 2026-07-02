@@ -16,9 +16,9 @@ export function app_code_lesson_symbols_counting(
     above,
     on_symbol,
     batch_symbols,
-    symbols_to_answer,
     example_label,
     quiz_label,
+    symbols_to_answer,
   );
   return r;
 }
