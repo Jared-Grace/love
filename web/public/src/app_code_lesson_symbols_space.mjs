@@ -8,7 +8,6 @@ import { each_next } from "../../../love/public/src/each_next.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
@@ -35,11 +34,12 @@ export function app_code_lesson_symbols_space() {
     let list2 = list_adder(lambda3);
     return list2;
   }
+  function lambda4() {}
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Space)",
     "symbols_space",
     lambda,
-    noop,
+    lambda4,
     batch_get,
   );
   return r5;
