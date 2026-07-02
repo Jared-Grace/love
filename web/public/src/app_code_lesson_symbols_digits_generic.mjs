@@ -63,6 +63,8 @@ export function app_code_lesson_symbols_digits_generic(
         return r5;
       }
       let mapped2 = list_map(digit_counts, lambda);
+      function lambda2(item) {}
+      let mapped = list_map(list, lambda2);
       return mapped2;
     },
   };
