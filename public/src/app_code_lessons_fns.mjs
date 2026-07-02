@@ -1,4 +1,4 @@
-import { app_code_lesson_symbols_space_2 } from "../../../love/public/src/app_code_lesson_symbols_space_2.mjs";
+import { app_code_lesson_identifiers_letters_spaces } from "../../../love/public/src/app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_lesson_symbols_space } from "../../../love/public/src/app_code_lesson_symbols_space.mjs";
 import { app_code_lesson_symbols_letters } from "../../../love/public/src/app_code_lesson_symbols_letters.mjs";
 import { app_code_lesson_symbols_digits } from "../../../love/public/src/app_code_lesson_symbols_digits.mjs";
@@ -9,7 +9,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
     app_code_lesson_symbols_space,
-    app_code_lesson_symbols_space_2,
+    app_code_lesson_identifiers_letters_spaces,
   ];
   return r;
 }
