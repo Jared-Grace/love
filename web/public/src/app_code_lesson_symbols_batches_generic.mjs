@@ -1,3 +1,4 @@
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
@@ -78,6 +79,7 @@ export function app_code_lesson_symbols_batches_generic(
     batch: function batch_get() {
       let mapped2 = batch_symbols();
       function lambda2(symbols) {
+        let split = text_split_empty(s2);
         let answer = symbols_to_answer(symbols);
         function example(parent) {
           html_flex_column_stretch(parent);
