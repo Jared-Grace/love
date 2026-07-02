@@ -140,6 +140,10 @@ export function app_code_lesson_symbols_digits_generic(
         ];
         let r2 = {
           example: function lambda6(parent) {
+            html_flex_column_center(parent);
+            log(app_code_lesson_symbols_digits_generic.name, {
+              parent,
+            });
             let a = example_above(parent, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, "Number of symbols: ");
