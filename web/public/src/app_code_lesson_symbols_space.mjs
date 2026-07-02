@@ -42,6 +42,7 @@ export function app_code_lesson_symbols_space() {
       let mapped3 = list_map_index(item3, lambda2);
       let squashed = list_squash(mapped3);
       let joined = list_join_empty(squashed);
+      lse;
       log(app_code_lesson_symbols_space.name, {
         items,
         item3,
