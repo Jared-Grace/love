@@ -54,6 +54,7 @@ export function app_code_lesson_symbols_digits_generic(
       let digit_counts = range_1(5);
       function lambda(digit_count) {
         let symbols = integer_positive_random_digits_text(digit_count);
+        let answer = digit_count;
         return symbols;
       }
       let mapped2 = list_map(digit_counts, lambda);
