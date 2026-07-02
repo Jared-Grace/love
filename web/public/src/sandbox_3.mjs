@@ -13,7 +13,8 @@ export async function sandbox_3() {
       property,
       ": ",
       joined,
-      " (",
+      " ",
+      "(",
       size,
       ") ",
     ]);
