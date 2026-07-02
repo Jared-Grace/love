@@ -5,7 +5,7 @@ import { text_first } from "../../../love/public/src/text_first.mjs";
 export function list_to_lookup_letter_first(unique) {
   function lambda2(la) {
     function lambda3(book_name) {
-      let letters = text_letters_only(t);
+      let letters = text_letters_only(book_name);
       let key = text_first(letters);
       la(key, book_name);
     }
