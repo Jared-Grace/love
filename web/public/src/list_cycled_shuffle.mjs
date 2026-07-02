@@ -8,8 +8,8 @@ export function list_cycled_shuffle(list, cycle_size) {
   let mods = range(cycle_size);
   let indices = list_to_indices(list);
   function lambda(m) {
-    function lambda2(item) {
-      let m2 = mod(quotient, divisor);
+    function lambda2(index) {
+      let m2 = mod(index, cycle_size);
     }
     let filtered = list_filter(indices, lambda2);
   }
