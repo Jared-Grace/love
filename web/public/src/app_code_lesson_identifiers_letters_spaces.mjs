@@ -46,7 +46,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     html_div_text_multiple(c, [
       "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
       "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
-      "In JavaScript, a sequence of symbols can be an identifier",
+      "In English, as letters are inside words, so in JavaScript, symbols are inside identifiers",
       "Identifiers can have letter symbols",
       "But identifiers cannot have spaces",
     ]);
