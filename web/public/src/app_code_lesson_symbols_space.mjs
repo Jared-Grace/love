@@ -1,3 +1,4 @@
+import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { math_max } from "../../../love/public/src/math_max.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -36,6 +37,7 @@ export function app_code_lesson_symbols_space() {
       let m = math_max(1, max);
       let count = integer_random(1, m);
       let items = list_random_item_count(skipped, count);
+      let taken = list_shuffle_take(list, count2);
       function lambda2(item, index) {
         let includes = list_includes(items, index);
         let result = ternary_text_space_or_empty(includes);
