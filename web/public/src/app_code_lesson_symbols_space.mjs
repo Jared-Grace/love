@@ -22,10 +22,11 @@ export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
-    let span2 = html_span_text(
+    html_span_text(
       div,
-      "In English, there are 26 letters in the alphabet: ",
+      "In English, when writing, we use spaces to separate words",
     );
+    html_span_text(div, "For a computer, a space is considered a symbol");
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     html_text_characters_numbered(div2, alphabet_lower);
