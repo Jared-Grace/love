@@ -48,7 +48,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
       "In English, as letters are inside words and in JavaScript, symbols are inside identifiers",
       "Identifiers can have letter symbols",
-      "But identifiers cannot have spaces",
+      "But identifiers cannot have space symbols",
     ]);
   }
   function batch_get() {
