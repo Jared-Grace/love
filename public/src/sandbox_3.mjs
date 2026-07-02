@@ -1,3 +1,4 @@
+import { lookup_adder } from "../../../love/public/src/lookup_adder.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { text_replace_if_starts_with } from "../../../love/public/src/text_replace_if_starts_with.mjs";
@@ -13,5 +14,7 @@ export async function sandbox_3() {
   }
   let mapped = list_map(mapped2, lambda);
   let unique = list_unique(mapped);
+  function lambda2(la) {}
+  let result = lookup_adder(lambda2);
   return unique;
 }
