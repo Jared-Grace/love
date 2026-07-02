@@ -51,7 +51,6 @@ export function app_code_lesson_symbols_letters() {
       "For a computer, lowercase symbols may be considered different symbols than uppercase",
     );
   }
-  let batch_symbols = error();
   function lambda2() {
     let digit_counts = range_1(5);
     function lambda(digit_count) {
