@@ -61,8 +61,9 @@ export function app_code_lesson_symbols_letters_lower() {
   function lambda2(word) {
     function lambda3(c2) {
       let u = boolean_random();
-      let result = ternary(u, text_upper_to, noop);
-      return result;
+      let mapper = ternary(u, text_upper_to, noop);
+      let r = mapper(c2);
+      return r;
     }
     let joined = text_transform(word, lambda3);
   }
