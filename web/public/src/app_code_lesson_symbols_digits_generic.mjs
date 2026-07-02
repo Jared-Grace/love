@@ -51,19 +51,14 @@ export function app_code_lesson_symbols_digits_generic(
     id,
     above,
     batch: function batch_get() {
-      let digit_counts = range_1(5);
-      function lambda(digit_count) {
-        let digits = integer_positive_random_digits_text(digit_count);
-        return digits;
-      }
-      let mapped2 = list_map(digit_counts, lambda);
-      function lambda2(digits) {
-        let digit_count = list_size(digits);
+      let mapped2 = batch_symbols();
+      function lambda2(symbols) {
+        let symbol_count = list_size(symbols);
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, refresh) {
             let container = app_code_container_light_blue(parent);
-            let a = example_above(container, digits);
+            let a = example_above(container, symbols);
             let container_above = property_get(a, "container_above");
             html_text_set(
               container_above,
@@ -73,9 +68,9 @@ export function app_code_lesson_symbols_digits_generic(
             html_text_set(container_answer2, "How many symbols are there? ");
             let b = batch_get();
             let answers = list_map_property(b, "answer");
-            list_remove_if_exists(answers, digit_count);
+            list_remove_if_exists(answers, symbol_count);
             let taken = list_shuffle_take(answers, answer_count_max - 1);
-            let concated = list_concat(taken, [digit_count]);
+            let concated = list_concat(taken, [symbol_count]);
             list_sort_text_to(concated);
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
@@ -127,7 +122,7 @@ export function app_code_lesson_symbols_digits_generic(
                 on_click,
               );
               async function on_click() {
-                let eq2 = equal(answer, digit_count);
+                let eq2 = equal(answer, symbol_count);
                 if (eq2) {
                   app_shared_button_screen_green_style_assign(b2);
                   html_visibility_visible_multiple(hides);
@@ -145,18 +140,18 @@ export function app_code_lesson_symbols_digits_generic(
         ];
         let r2 = {
           example: function lambda6(parent) {
-            let a = example_above(parent, digits);
+            let a = example_above(parent, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, "Number of symbols: ");
             let div3 = app_code_container_dark(container_answer2);
             let s = app_code_symbol_generic(
               div3,
-              digit_count,
+              symbol_count,
               "transparent",
               "transparent",
             );
           },
-          answer: digit_count,
+          answer: symbol_count,
           quizzes,
         };
         return r2;
@@ -166,6 +161,15 @@ export function app_code_lesson_symbols_digits_generic(
     },
   };
   return r3;
+  function batch_symbols() {
+    let digit_counts = range_1(5);
+    function lambda(digit_count) {
+      let digits = integer_positive_random_digits_text(digit_count);
+      return digits;
+    }
+    let mapped2 = list_map(digit_counts, lambda);
+    return mapped2;
+  }
   function example_above(parent, digits) {
     let container_above = html_div(parent);
     let q = app_code_container_light(parent);
