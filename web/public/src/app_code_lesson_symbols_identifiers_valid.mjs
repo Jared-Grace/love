@@ -16,7 +16,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     let joined = list_join_empty(symbols);
     let expression = js_parse_expression(joined);
     let ii = js_identifier_is(expression);
-    let result = ternary(condition, on_true, on_false);
+    let result = ternary(condition, "valid", "invalid");
   };
   let r = app_code_lesson_symbols_batches_genric(
     name,
