@@ -12,8 +12,8 @@ export async function sandbox_3() {
     let joined = list_join_comma_space(value);
     let size = list_size(value);
     let eq = equal_0(size);
-    let combined2 = text_combine_multiple(list);
-    let extra = ternary(eq, "", " ", "(", size, ") ");
+    let combined2 = text_combine_multiple([" ", "(", size, ") "]);
+    let extra = ternary(eq, "", combined2);
     let combined = text_combine_multiple([property, ": ", joined, extra]);
     log(sandbox_3.name, combined);
   }
