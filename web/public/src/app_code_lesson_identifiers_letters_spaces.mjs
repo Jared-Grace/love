@@ -1,6 +1,5 @@
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
-import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -32,7 +31,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "programming language",
     ];
     html_div_cycle_bold(c, parts);
-    html_cycle_bold(c, [
+    html_div_cycle_bold(c, [
       "The programming language we will learn now is called ",
       "JavaScript",
     ]);
@@ -40,7 +39,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       c,
       "We can give names to people, cities, countries, mountains, rivers, etc.",
     );
-    html_cycle_bold(c, [
+    html_div_cycle_bold(c, [
       "In JavaScript, the name of something is called an ",
       "identifier",
     ]);
