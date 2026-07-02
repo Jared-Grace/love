@@ -1,3 +1,4 @@
+import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -17,7 +18,8 @@ export function list_text_insert_between_spaces_random(item3) {
   let items = list_shuffle_take(skipped, count);
   function lambda2(item, index) {
     let includes = list_includes(items, index);
-    let result = ternary(includes, "\u00A0", "");
+    let on_true = text_space_nb();
+    let result = ternary(includes, on_true, "");
     let r = [result, item];
     return r;
   }
