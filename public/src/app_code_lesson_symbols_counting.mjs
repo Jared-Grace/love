@@ -48,6 +48,7 @@ export function app_code_lesson_symbols_counting(
 ) {
   const example_label = "Number of symbols: ";
   const quiz_label = "How many symbols are there? ";
+  let symbols_to_answer = list_size;
   function example_above(parent, symbols) {
     let q = app_code_container_light(parent);
     let span = html_div_text(q, "Symbols: ");
