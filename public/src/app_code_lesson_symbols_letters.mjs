@@ -1,6 +1,5 @@
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { text_transform } from "../../../love/public/src/text_transform.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
@@ -65,9 +64,6 @@ export function app_code_lesson_symbols_letters() {
       return r;
     }
     let joined = text_transform(word, lambda3);
-    log(app_code_lesson_symbols_letters.name, {
-      joined,
-    });
     return joined;
   }
   function batch_get() {
