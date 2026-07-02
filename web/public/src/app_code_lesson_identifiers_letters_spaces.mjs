@@ -72,7 +72,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     "Identifiers (Letters allowed, spaces not)",
     "identifiers_letters_spaces",
     lambda,
-    lambda4,
+    noop,
     batch_get,
   );
   return r5;
