@@ -8,6 +8,6 @@ export function app_code_lesson_symbols_batch_digits() {
     let digits = integer_positive_random_digits_text(digit_count);
     return digits;
   }
-  let mapped2 = list_map(digit_counts, lambda);
-  return mapped2;
+  let batch_digits = list_map(digit_counts, lambda);
+  return batch_digits;
 }
