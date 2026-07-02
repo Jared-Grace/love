@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { html_span_text_smaller } from "../../../love/public/src/html_span_text_smaller.mjs";
 import { html_cycle_mono_list_between_comma_space_before_after } from "../../../love/public/src/html_cycle_mono_list_between_comma_space_before_after.mjs";
 import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
@@ -8,12 +9,13 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
+  let batch_symbols = error();
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Digits, numbered)",
     "symbols_digits_numbered",
     above,
     on_symbol,
-    error(),
+    batch_symbols,
   );
   return r5;
   function above(root) {
