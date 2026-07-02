@@ -48,7 +48,13 @@ export function app_code_lesson_symbols_letters() {
     );
   }
   let batch_symbols = error();
-  function lambda2() {}
+  function lambda2() {  let digit_counts = range_1(5);
+    function lambda(digit_count) {
+      let digits = integer_positive_random_digits_text(digit_count);
+      return digits;
+    }
+    let batch_digits = list_map(digit_counts, lambda);
+    return batch_digits;}
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
     "symbols_letters",
