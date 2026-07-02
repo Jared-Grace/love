@@ -1,4 +1,3 @@
-import { random } from "../../../love/public/src/random.mjs";
 import { text_transform } from "../../../love/public/src/text_transform.mjs";
 import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -57,9 +56,7 @@ export function app_code_lesson_symbols_letters_lower() {
     );
   }
   function lambda2(word) {
-    function lambda3(c2) {
-      let v = random();
-    }
+    function lambda3(c2) {random}
     let joined = text_transform(word, lambda3);
   }
   function batch_get() {
