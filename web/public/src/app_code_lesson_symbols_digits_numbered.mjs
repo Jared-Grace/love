@@ -9,13 +9,12 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
-  let batch_symbols = error();
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Digits, numbered)",
     "symbols_digits_numbered",
     above,
     on_symbol,
-    batch_symbols,
+    app_code_lesson_symbols_batch_digits,
   );
   return r5;
   function above(root) {
