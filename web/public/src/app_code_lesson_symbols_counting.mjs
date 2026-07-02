@@ -48,6 +48,7 @@ export function app_code_lesson_symbols_counting(
   batch_symbols,
 ) {
   const example_label = "Number of symbols: ";
+  const quiz_label = "How many symbols are there? ";
   let r3 = {
     name,
     id,
@@ -61,7 +62,6 @@ export function app_code_lesson_symbols_counting(
           function on_quiz1(context, parent, container, refresh) {
             let a = example_above(container, symbols);
             let container_answer2 = property_get(a, "container_answer");
-            const quiz_label = "How many symbols are there? ";
             html_text_set(container_answer2, quiz_label);
             let b = batch_get();
             let answers = list_map_property(b, "answer");
