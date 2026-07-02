@@ -47,6 +47,7 @@ export function app_code_lesson_symbols_space() {
         item3,
         count,
         joined,
+        squashed,
       });
       return squashed;
     }
