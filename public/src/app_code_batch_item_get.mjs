@@ -19,7 +19,7 @@ export function app_code_batch_item_get(
     if (e) {
       let items = batch();
       list_add_multiple(remaining, items);
-      list_shuffle(remaining);
+      on_batch(remaining);
     }
     html_clear(container);
     let b = list_remove_last_single(remaining);
