@@ -19,7 +19,7 @@ export function app_code_quiz(context) {
   function on_batch_item(container, b, refresh) {
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
-    q(context, container, refresh);
+    q(context, container, c, refresh);
   }
   refresh();
   const question_text = "and see another example";
