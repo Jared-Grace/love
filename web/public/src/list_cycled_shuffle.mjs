@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_to_indices } from "../../../love/public/src/list_to_indices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -7,8 +8,10 @@ export function list_cycled_shuffle(list, cycle_size) {
   let mods = range(cycle_size);
   let indices = list_to_indices(list);
   function lambda(m) {
-    function lambda2(item) {}
-    let filtered = list_filter(list2, lambda2);
+    function lambda2(item) {
+      let m2 = mod(quotient, divisor);
+    }
+    let filtered = list_filter(indices, lambda2);
   }
   each(mods, lambda);
   let r = list_shuffle(list);
