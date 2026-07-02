@@ -1,4 +1,4 @@
-import { function_type_first } from "../../../love/public/src/function_type_first.mjs";
+import { text_first } from "../../../love/public/src/text_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { lookup_adder } from "../../../love/public/src/lookup_adder.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -17,8 +17,8 @@ export async function sandbox_3() {
   let mapped = list_map(mapped2, lambda);
   let unique = list_unique(mapped);
   function lambda2(la) {
-    async function lambda3(book_name) {
-      let first = await function_type_first(f_name, type);
+    function lambda3(book_name) {
+      let item = text_first(t);
       la(book_name, key);
     }
     each(unique, lambda3);
