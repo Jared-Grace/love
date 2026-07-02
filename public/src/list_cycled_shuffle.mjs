@@ -1,7 +1,10 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function list_cycled_shuffle(list, cycle_size) {
   let mods = range(cycle_size);
+  function lambda(item) {}
+  each(list2, lambda);
   let r = list_shuffle(list);
   return r;
 }
