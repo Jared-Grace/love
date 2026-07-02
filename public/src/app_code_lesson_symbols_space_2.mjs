@@ -47,7 +47,7 @@ export function app_code_lesson_symbols_space_2() {
     }
   }
   let r5 = app_code_lesson_symbols_digits_generic(
-    "Symbols (Space)",
+    "Identifiers (Letters allowed, spaces not)",
     "identifiers_letters_spaces",
     lambda,
     lambda4,
