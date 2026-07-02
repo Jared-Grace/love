@@ -160,12 +160,7 @@ export function app_code_lesson_symbols_digits_generic(
       return mapped;
     },
   };
-  return r3;
-  function batch_symbols() {
-    let r5 = app_code_lesson_symbols_batch_digits();
-    return r5;
-  }
-  function example_above(parent, digits) {
+  return r3;  function example_above(parent, digits) {
     let container_above = html_div(parent);
     let q = app_code_container_light(parent);
     let span = html_div_text(q, "Symbols: ");
