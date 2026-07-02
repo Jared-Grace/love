@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
@@ -57,10 +56,6 @@ export function app_code_lesson_symbols_digits_generic(
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, refresh) {
-            html_flex_column_center(parent);
-            log(app_code_lesson_symbols_digits_generic.name, {
-              parent,
-            });
             let container = app_code_container_light_blue(parent);
             let a = example_above(container, symbols);
             let container_above = property_get(a, "container_above");
