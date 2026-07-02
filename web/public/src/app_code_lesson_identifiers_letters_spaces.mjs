@@ -53,6 +53,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let mapped = list_map(words, text_letters_only);
     const min = 1;
     const max = 2;
+    let choices_count = max - min + 1;
     let list2 = list_slices_size_cycle(mapped, min, max);
     list_cycled_shuffle(list2, 2);
     return list2;
