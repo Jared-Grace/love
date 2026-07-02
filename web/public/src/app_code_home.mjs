@@ -15,6 +15,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -23,7 +24,7 @@ export function app_code_home(context) {
   let c = app_code_container_light_blue(root);
   html_div_text(c, "Here is an example:");
   let on_batch = error();
-  let refresh = app_code_batch_item_get(c, lesson, on_batch_item, on_batch);
+  let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
     ex(container);
