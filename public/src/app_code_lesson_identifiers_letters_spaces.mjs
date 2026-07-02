@@ -44,7 +44,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       " as a name",
     ]);
     html_div_text_multiple(c2, [
-      "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
+      "In English, letters are inside of words, words are inside of sentences and sentences are inside of paragraphs",
       "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
       "In English, letters are inside words and in JavaScript, symbols are inside identifiers",
     ]);
