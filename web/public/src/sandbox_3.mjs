@@ -23,10 +23,11 @@ export async function sandbox_3() {
       let exists = property_exists(result, letter);
       if (exists) {
         let value2 = property_get(result, letter);
-        list_add_multiple(list, items);
+        list_add_multiple(value, value2);
       }
     }
     each([lower, upper], lambda2);
+    return value;
   }
   let dictionary = list_to_dictionary_value(alphabet_upper, lambda);
   return result;
