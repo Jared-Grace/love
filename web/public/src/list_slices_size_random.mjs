@@ -6,7 +6,7 @@ import { at_least } from "../../../love/public/src/at_least.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
-export function list_slices_size_random(min, max, mapped) {
+export function list_slices_size_random(mapped, min, max) {
   function lambda3(la) {
     function lambda2(word, index) {
       let count = integer_random(min, max);
