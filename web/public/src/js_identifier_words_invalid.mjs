@@ -48,6 +48,6 @@ export function js_identifier_words_invalid() {
     "protected",
     "public",
   ];
-  let concated = list_concat(a, b);
-  return r;
+  let invalid = list_concat(["arguments", "eval"], r);
+  return invalid;
 }
