@@ -11,7 +11,9 @@ export async function sandbox_3() {
   let mapped = list_map_prefix_without_try_multiple(mapped2, prefixes);
   let result = list_to_lookup_text_first_unique(mapped);
   let alphabet_upper = list_alphabet_upper();
-  function lambda(item2v) {}
-  let dictionary = list_to_dictionary_value(list, lambda);
+  function lambda(upper) {
+    lower_to;
+  }
+  let dictionary = list_to_dictionary_value(alphabet_upper, lambda);
   return result;
 }
