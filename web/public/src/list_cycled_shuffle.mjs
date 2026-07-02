@@ -9,7 +9,7 @@ export function list_cycled_shuffle(list, cycle_size) {
   let indices = list_to_indices(list);
   function lambda(m) {
     function lambda2(index) {
-      let m2 = mod(index, cycle_size);
+      let m2 = mod(index, cycle_size);eq
     }
     let filtered = list_filter(indices, lambda2);
   }
