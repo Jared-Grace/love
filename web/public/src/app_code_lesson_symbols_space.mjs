@@ -25,7 +25,7 @@ export function app_code_lesson_symbols_space() {
       let split = list_text_insert_between_spaces_random(item3);
       function lambda2(item, next) {
         let pair = [item, next];
-        let joined = list_join_space(list2);
+        let joined = list_join_space(pair);
         return;
       }
       each_next(list, lambda2);
