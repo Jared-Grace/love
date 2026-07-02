@@ -39,10 +39,10 @@ export function app_code_lesson_symbols_space() {
   }
   function lambda4(parent, index_1) {
     let r = mod(index_1, 5);
-    let eq = equal_0(item);
-    if (false) {
+    let eq = equal_0(r);
+    if (eq) {
+      app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
-    app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Space)",
