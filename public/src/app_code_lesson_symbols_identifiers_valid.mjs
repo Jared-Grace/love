@@ -1,5 +1,4 @@
 import { app_code_lesson_symbols_batches_genric } from "../../../love/public/src/app_code_lesson_symbols_batches_genric.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 export function app_code_lesson_symbols_identifiers_valid(
   name,
   id,
@@ -7,9 +6,9 @@ export function app_code_lesson_symbols_identifiers_valid(
   on_symbol,
   batch_symbols,
 ) {
-  const example_label = "Number of symbols: ";
-  const quiz_label = "How many symbols are there? ";
-  let symbols_to_answer = list_size;
+  const example_label = "Is this a valid identifier? ";
+  const quiz_label = example_label;
+  let symbols_to_answer = function lambda() {};
   let r = app_code_lesson_symbols_batches_genric(
     name,
     id,
