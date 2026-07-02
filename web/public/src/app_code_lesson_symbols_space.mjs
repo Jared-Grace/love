@@ -44,7 +44,7 @@ export function app_code_lesson_symbols_space() {
         let joined = list_join_space(pair);
         la(joined);
       }
-      each_next(list2, lambda2);
+      each_next(mapped2, lambda2);
     }
     let list3 = list_adder(lambda3);
     return mapped;
