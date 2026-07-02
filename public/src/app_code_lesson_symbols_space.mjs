@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { list_text_insert_between_spaces_random } from "../../../love/public/src/list_text_insert_between_spaces_random.mjs";
@@ -23,6 +24,8 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
+      function lambda3(la) {}
+      let list2 = list_adder(lambda3);
       function lambda2(item, next) {
         let pair = [item, next];
         let joined = list_join_space(pair);
