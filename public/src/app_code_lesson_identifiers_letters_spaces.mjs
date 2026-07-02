@@ -58,17 +58,6 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let list2 = list_slices_size_random(mapped, 2, 3);
     return list2;
   }
-  function lambda4(parent, index_1, symbols) {
-    let r = mod(index_1, 5);
-    let eq = equal_0(r);
-    if (eq) {
-      let size = list_size(symbols);
-      let ne = equal_not(index_1, size);
-      if (ne) {
-        app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
-      }
-    }
-  }
   let r5 = app_code_lesson_symbols_identifiers_valid(
     "Identifiers (Letters allowed, spaces not)",
     "identifiers_letters_spaces",
