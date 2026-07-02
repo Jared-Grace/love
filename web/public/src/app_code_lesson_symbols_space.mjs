@@ -22,7 +22,9 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
-      function lambda2(item, next) {}
+      function lambda2(item, next) {
+        return;
+      }
       each_next(list, lambda2);
       return split;
     }
