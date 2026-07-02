@@ -1,3 +1,4 @@
+import { text_transform } from "../../../love/public/src/text_transform.mjs";
 import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
@@ -54,7 +55,10 @@ export function app_code_lesson_symbols_letters_lower() {
       "For a computer, lowercase symbols may be considered different than uppercase symbols",
     );
   }
-  function lambda2() {}
+  function lambda2(word) {
+    function lambda3(c2) {}
+    let joined = text_transform(s, lambda3);
+  }
   function batch_get() {
     let verse =
       "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
