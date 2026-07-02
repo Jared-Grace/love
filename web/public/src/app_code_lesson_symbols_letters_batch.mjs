@@ -1,3 +1,8 @@
+import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
+import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
+import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 export function app_code_lesson_symbols_letters_batch() {
   function lambda2() {
     let verse =
@@ -6,4 +11,5 @@ export function app_code_lesson_symbols_letters_batch() {
     let mappers = [text_letters_only, text_lower_to, text_split_empty];
     let mapped = list_map_multiple(split, mappers);
     return mapped;
-  }}
+  }
+}
