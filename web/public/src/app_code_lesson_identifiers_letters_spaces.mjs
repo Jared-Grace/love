@@ -35,6 +35,10 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "The programming language we will learn now is called ",
       "JavaScript",
     ]);
+    html_div_text(
+      c,
+      "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
+    );
   }
   function batch_get() {
     let words = app_code_verse_words();
