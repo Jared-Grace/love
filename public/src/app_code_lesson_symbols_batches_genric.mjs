@@ -40,10 +40,10 @@ import { app_code_container_dark } from "../../../love/public/src/app_code_conta
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 export function app_code_lesson_symbols_batches_genric(
-  on_symbol,
   name,
   id,
   above,
+  on_symbol,
   batch_symbols,
   symbols_to_answer,
   example_label,
