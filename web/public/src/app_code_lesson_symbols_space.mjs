@@ -1,3 +1,4 @@
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { ternary_text_space_or_empty } from "../../../love/public/src/ternary_text_space_or_empty.mjs";
@@ -42,7 +43,7 @@ export function app_code_lesson_symbols_space() {
       let mapped3 = list_map_index(item3, lambda2);
       let squashed = list_squash(mapped3);
       let joined = list_join_empty(squashed);
-      lse;
+      let split = text_split_empty(s);
       log(app_code_lesson_symbols_space.name, {
         items,
         item3,
