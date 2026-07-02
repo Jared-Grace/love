@@ -9,9 +9,7 @@ import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_uppe
 import { list_map_prefix_without_try_multiple } from "../../../love/public/src/list_map_prefix_without_try_multiple.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 export async function sandbox_3() {
-  let mapped2 = await ebible_version_books_names("engbsb");
-  let prefixes = ["1 ", "2 ", "3 "];
-  let mapped = list_map_prefix_without_try_multiple(mapped2, prefixes);
+  let mapped = await ebible_version_books_names("engbsb");
   let result = list_to_lookup_letter_first(mapped);
   let alphabet_upper = list_alphabet_upper();
   function lambda(upper) {
