@@ -1,7 +1,5 @@
-import { list_to_lookup_letter_first_alphabet } from "../../../love/public/src/list_to_lookup_letter_first_alphabet.mjs";
-import { ebible_version_books_names } from "../../../love/public/src/ebible_version_books_names.mjs";
+import { bible_books_by_first_letter } from "../../../love/public/src/bible_books_by_first_letter.mjs";
 export async function sandbox_3() {
-  let mapped = await ebible_version_books_names("engbsb");
-  let dictionary = list_to_lookup_letter_first_alphabet(mapped);
+  let dictionary = await bible_books_by_first_letter();
   return dictionary;
 }
