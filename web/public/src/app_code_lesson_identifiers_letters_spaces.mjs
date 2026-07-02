@@ -36,14 +36,20 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "The programming language we will learn now is called ",
       "JavaScript",
     ]);
-    html_div_text_multiple(c, [
-      "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
-      "In JavaScript, symbols are a basic building block like letters in English",
+    html_div_text(
+      c,
       "We can give names to people, cities, countries, mountains, rivers, etc.",
-    ]);
+    );
     html_cycle_bold(c, [
       "In JavaScript, the name of something is called an ",
       "identifier",
+    ]);
+    html_div_text_multiple(c, [
+      "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
+      "In JavaScript, symbols are a basic building block like letters in English",
+      "In JavaScript, a sequence of symbols can be an identifier",
+      "Identifiers can have letter symbols",
+      "But identifiers cannot have spaces",
     ]);
   }
   function batch_get() {
