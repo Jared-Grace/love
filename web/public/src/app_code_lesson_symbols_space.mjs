@@ -1,16 +1,9 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { at_least } from "../../../love/public/src/at_least.mjs";
-import { integer_random } from "../../../love/public/src/integer_random.mjs";
-import { list_slice } from "../../../love/public/src/list_slice.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
+import { list_slices_size_random } from "../../../love/public/src/list_slices_size_random.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { app_code_lesson_symbols_digits_numbered_on_symbol } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -31,21 +24,7 @@ export function app_code_lesson_symbols_space() {
     let mapped = list_map(words, text_letters_only);
     const min = 2;
     const max = 3;
-    function lambda3(la) {
-      function lambda2(word, index) {
-        let count = integer_random(min, max);
-        let slice = list_slice(mapped, index, index + count);
-        let z = list_size(slice);
-        let al = at_least(z, min);
-        if (al) {
-          let joined = list_join_space_nb(slice);
-          let split = text_split_empty(joined);
-          la(split);
-        }
-      }
-      each_index(mapped, lambda2);
-    }
-    let list2 = list_adder(lambda3);
+    let list2 = list_slices_size_random(min, max, mapped);
     return list2;
   }
   function lambda4(parent, index_1) {
