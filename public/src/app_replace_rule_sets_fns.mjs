@@ -1,3 +1,4 @@
+import { app_code_lesson_symbols_space_2 } from "../../../love/public/src/app_code_lesson_symbols_space_2.mjs";
 import { app_replace_rule_set_function_declarations } from "../../../love/public/src/app_replace_rule_set_function_declarations.mjs";
 import { app_replace_rule_set_statements_for } from "../../../love/public/src/app_replace_rule_set_statements_for.mjs";
 import { app_replace_rule_set_statements_while } from "../../../love/public/src/app_replace_rule_set_statements_while.mjs";
