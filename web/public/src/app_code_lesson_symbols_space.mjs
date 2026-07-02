@@ -46,6 +46,7 @@ export function app_code_lesson_symbols_space() {
         items,
         item3,
         count,
+        joined,
       });
       return item3;
     }
