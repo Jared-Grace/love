@@ -1,8 +1,7 @@
+import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { list_random_item_count } from "../../../love/public/src/list_random_item_count.mjs";
-import { list_to_indices } from "../../../love/public/src/list_to_indices.mjs";
-import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -31,8 +30,7 @@ export function app_code_lesson_symbols_space() {
   function batch_get() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
-      let r = list_to_indices(item3);
-      let skipped = list_skip_1(r);
+      let skipped = list_to_indices_skip_1(item3);
       let max = list_size(skipped);
       let r2 = integer_random(1, max);
       let items = list_random_item_count(skipped, r2);
