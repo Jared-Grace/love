@@ -19,5 +19,5 @@ export async function app_replace_rule_set_add() {
     let elements = js_array_expression_single_elements(ast);
     list_add(elements, expression);
   }
-  let output = await function_transform(app_replace_rule_sets_fns.name, lambda);
+  let output = await function_transform(fns_list.name, lambda);
 }
