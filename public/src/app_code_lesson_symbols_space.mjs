@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_symbols_space() {
       let count = integer_random(1, max);
       let items = list_random_item_count(skipped, count);
       function lambda2(item, index) {
+        let includes = list_includes(list, item2);
         let r = [item];
         return r;
       }
