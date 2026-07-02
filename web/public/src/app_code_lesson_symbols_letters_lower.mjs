@@ -41,8 +41,8 @@ export function app_code_lesson_symbols_letters_lower() {
   let split = text_split_space(verse);
   function lambda2() {
     let mappers = [text_letters_only, text_lower_to, text_split_empty];
-    split = list_map_multiple(split, mappers);
-    return split;
+    let mapped = list_map_multiple(split, mappers);
+    return mapped;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
