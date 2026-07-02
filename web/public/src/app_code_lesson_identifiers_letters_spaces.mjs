@@ -61,10 +61,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
     });
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(list2, list_other);
-    function lambda2(item) {}
-    let mapped2 = list_map(list, lambda2);
-    let split = text_split_empty(difference);
-    return split;
+    let mapped2 = list_map(difference, text_split_empty);
+    return mapped2;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
     "Identifiers (Letters allowed, spaces not)",
