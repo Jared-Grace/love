@@ -11,6 +11,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
+import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
@@ -28,11 +29,11 @@ export function app_code_lesson_symbols_space() {
       let max = list_size(skipped);
       let count = integer_random(1, max);
       let items = list_random_item_count(skipped, count);
-      function lambda2(item) {
+      function lambda2(item, index) {
         let r = [item];
         return r;
       }
-      let mapped3 = list_map(item3, lambda2);
+      let mapped3 = list_map_index(item3, lambda2);
       log(app_code_lesson_symbols_space.name, {
         items,
         item3,
