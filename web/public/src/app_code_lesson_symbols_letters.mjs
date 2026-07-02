@@ -18,7 +18,7 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
-export function app_code_lesson_symbols_letters_lower() {
+export function app_code_lesson_symbols_letters() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
@@ -68,7 +68,7 @@ export function app_code_lesson_symbols_letters_lower() {
       return r;
     }
     let joined = text_transform(word, lambda3);
-    log(app_code_lesson_symbols_letters_lower.name, {
+    log(app_code_lesson_symbols_letters.name, {
       joined,
     });
     return joined;
