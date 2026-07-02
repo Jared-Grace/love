@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slices_size_random } from "../../../love/public/src/list_slices_size_random.mjs";
@@ -13,6 +14,7 @@ import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_symbols_space_2() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
+    let combined = text_combine_multiple(list);
     html_div_text(c, "Humans use languages like English, Chinese or Hindi");
     html_div_text(
       c,
