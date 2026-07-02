@@ -35,7 +35,6 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -162,7 +161,7 @@ export function app_code_lesson_symbols_digits_generic(
     },
   };
   return r3;
-  function example_above(parent, digits) {
+  function example_above(parent, symbols) {
     let container_above = html_div(parent);
     let q = app_code_container_light(parent);
     let span = html_div_text(q, "Symbols: ");
@@ -177,7 +176,7 @@ export function app_code_lesson_symbols_digits_generic(
       on_symbol(row_item, index_1);
       return digit;
     }
-    let spans = list_map_index_1(digits, lambda4);
+    let spans = list_map_index_1(symbols, lambda4);
     let container_answer = app_code_container_light(parent);
     let r = {
       container_answer,
