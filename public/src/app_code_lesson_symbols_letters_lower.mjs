@@ -1,3 +1,4 @@
+import { identity } from "../../../love/public/src/identity.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { text_transform } from "../../../love/public/src/text_transform.mjs";
@@ -62,7 +63,7 @@ export function app_code_lesson_symbols_letters_lower() {
   function lambda2(word) {
     function lambda3(c2) {
       let u = boolean_random();
-      let mapper = ternary(u, text_upper_to, noop);
+      let mapper = ternary(u, text_upper_to, identity);
       let r = mapper(c2);
       return r;
     }
