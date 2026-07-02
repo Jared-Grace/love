@@ -48,7 +48,7 @@ export function app_code_lesson_symbols_space() {
         count,
         joined,
       });
-      return item3;
+      return squashed;
     }
     let mapped2 = list_map(mapped, lambda5);
     return mapped;
