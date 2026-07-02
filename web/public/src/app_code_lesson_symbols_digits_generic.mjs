@@ -1,4 +1,3 @@
-import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
@@ -160,7 +159,8 @@ export function app_code_lesson_symbols_digits_generic(
       return mapped;
     },
   };
-  return r3;  function example_above(parent, digits) {
+  return r3;
+  function example_above(parent, digits) {
     let container_above = html_div(parent);
     let q = app_code_container_light(parent);
     let span = html_div_text(q, "Symbols: ");
