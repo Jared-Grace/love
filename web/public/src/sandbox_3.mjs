@@ -13,7 +13,7 @@ export async function sandbox_3() {
   let result = list_to_lookup_text_first_unique(mapped);
   let alphabet_upper = list_alphabet_upper();
   function lambda(upper) {
-    let lower = text_lower_to(s);
+    let lower = text_lower_to(upper);
   }
   let dictionary = list_to_dictionary_value(alphabet_upper, lambda);
   return result;
