@@ -6,11 +6,11 @@ import { at_least } from "../../../love/public/src/at_least.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
-export function list_slices_size_random(mapped, min, max) {
+export function list_slices_size_random(list, min, max) {
   function lambda3(la) {
     function lambda2(word, index) {
       let count = integer_random(min, max);
-      let slice = list_slice(mapped, index, index + count);
+      let slice = list_slice(list, index, index + count);
       let z = list_size(slice);
       let al = at_least(z, min);
       if (al) {
@@ -19,7 +19,7 @@ export function list_slices_size_random(mapped, min, max) {
         la(split);
       }
     }
-    each_index(mapped, lambda2);
+    each_index(list, lambda2);
   }
   let list2 = list_adder(lambda3);
   return list2;
