@@ -25,7 +25,8 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda3(la) {
       function lambda2(item2, next2) {
-        la([item2, next2]);
+        const pair = [item2, next2];ljs
+        la(pair);
       }
       each_next(list2, lambda2);
     }
