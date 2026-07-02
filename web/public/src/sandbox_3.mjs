@@ -14,6 +14,7 @@ export async function sandbox_3() {
   let result = list_to_lookup_text_first_unique(mapped);
   let alphabet_upper = list_alphabet_upper();
   function lambda(upper) {
+    let value = [];
     let lower = text_lower_to(upper);
     function lambda2(letter) {
       if (false) {
