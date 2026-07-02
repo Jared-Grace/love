@@ -1,3 +1,4 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { text_replace_if_starts_with } from "../../../love/public/src/text_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -11,5 +12,6 @@ export async function sandbox_3() {
     return item4;
   }
   let mapped = list_map(mapped2, lambda);
+  let unique = list_unique(list);
   return mapped;
 }
