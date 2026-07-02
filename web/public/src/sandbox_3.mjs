@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { list_to_lookup_text_first_unique } from "../../../love/public/src/list_to_lookup_text_first_unique.mjs";
@@ -14,6 +15,8 @@ export async function sandbox_3() {
   let alphabet_upper = list_alphabet_upper();
   function lambda(upper) {
     let lower = text_lower_to(upper);
+    function lambda2(item) {}
+    each(list, lambda2);
   }
   let dictionary = list_to_dictionary_value(alphabet_upper, lambda);
   return result;
