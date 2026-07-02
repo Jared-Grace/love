@@ -1,3 +1,4 @@
+import { math_min } from "../../../love/public/src/math_min.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -32,7 +33,7 @@ export function app_code_lesson_symbols_space() {
     function lambda5(item3) {
       let skipped = list_to_indices_skip_1(item3);
       let max = list_size_less_1(skipped);
-      min;
+      let m = math_min(list);
       let count = integer_random(1, max);
       let items = list_random_item_count(skipped, count);
       function lambda2(item, index) {
