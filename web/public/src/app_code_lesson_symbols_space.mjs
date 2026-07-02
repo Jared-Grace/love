@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { ternary_text_space_or_empty } from "../../../love/public/src/ternary_text_space_or_empty.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -38,6 +39,7 @@ export function app_code_lesson_symbols_space() {
         return r;
       }
       let mapped3 = list_map_index(item3, lambda2);
+      let squashed = list_squash(lists);
       log(app_code_lesson_symbols_space.name, {
         items,
         item3,
