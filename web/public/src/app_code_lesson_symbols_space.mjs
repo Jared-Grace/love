@@ -3,11 +3,7 @@ import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { list_random_item_count } from "../../../love/public/src/list_random_item_count.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
-import { each_next } from "../../../love/public/src/each_next.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -37,16 +33,6 @@ export function app_code_lesson_symbols_space() {
       });
       return item3;
     }
-    let mapped2 = list_map(mapped, lambda5);
-    function lambda3(la) {
-      function lambda2(item2, next2) {
-        const pair = [item2, next2];
-        let joined = list_join_space(pair);
-        la(joined);
-      }
-      each_next(mapped2, lambda2);
-    }
-    let list3 = list_adder(lambda3);
     return mapped;
   }
   let batch_symbols = batch_get;
