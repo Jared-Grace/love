@@ -78,8 +78,8 @@ export function app_code_lesson_symbols_batches_generic(
     above,
     batch: function batch_get() {
       let mapped2 = batch_symbols();
-      function lambda2(symbols) {
-        let split = text_split_empty(s2);
+      function lambda2(symbols_text) {
+        let symbols = text_split_empty(symbols_text);
         let answer = symbols_to_answer(symbols);
         function example(parent) {
           html_flex_column_stretch(parent);
