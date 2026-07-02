@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -21,7 +22,8 @@ export async function sandbox_3() {
     function lambda2(letter) {
       let exists = property_exists(result, letter);
       if (exists) {
-        let value2 = property_get(object, property_name);
+        let value2 = property_get(result, letter);
+        list_add_multiple(list, items);
       }
     }
     each([lower, upper], lambda2);
