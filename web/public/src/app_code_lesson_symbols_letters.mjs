@@ -1,3 +1,4 @@
+import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
@@ -5,7 +6,6 @@ import { text_transform } from "../../../love/public/src/text_transform.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
-import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lower.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -25,15 +25,13 @@ export function app_code_lesson_symbols_letters() {
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
     html_text_characters_numbered(div2, alphabet_lower);
-    let div3 = html_div(c);
-    html_cycle_bold(div3, [
+    html_div_cycle_bold(c, [
       "Those 26 letters are written in ",
       "lowercase",
       ".",
     ]);
     let container = app_code_container_light_blue(root);
-    let div4 = html_div(container);
-    html_cycle_bold(div4, [
+    html_div_cycle_bold(container, [
       "Here are the 26 English letters written in ",
       "uppercase",
       ":",
