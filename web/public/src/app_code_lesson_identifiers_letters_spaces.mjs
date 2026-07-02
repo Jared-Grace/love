@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
@@ -51,6 +52,9 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list2 = list_slices_size_cycles_shuffled(mapped, 1, 2);
+    log(app_code_lesson_identifiers_letters_spaces.name, {
+      list2,
+    });
     return list2;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
