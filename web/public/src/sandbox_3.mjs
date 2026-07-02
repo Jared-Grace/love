@@ -11,5 +11,4 @@ export async function sandbox_3() {
     log(sandbox_3.name, combined);
   }
   each_object(dictionary, lambda);
-  return dictionary;
 }
