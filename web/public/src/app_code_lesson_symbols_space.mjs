@@ -1,9 +1,9 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { math_max } from "../../../love/public/src/math_max.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { ternary_text_space_or_empty } from "../../../love/public/src/ternary_text_space_or_empty.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -38,7 +38,7 @@ export function app_code_lesson_symbols_space() {
       let items = list_shuffle_take(skipped, count);
       function lambda2(item, index) {
         let includes = list_includes(items, index);
-        let result = ternary_text_space_or_empty(includes);
+        let result = ternary(includes, " ", "");
         let r = [result, item];
         return r;
       }
