@@ -1,3 +1,4 @@
+import { each_next } from "../../../love/public/src/each_next.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
@@ -42,6 +43,8 @@ export function app_code_lesson_symbols_space() {
     let split = text_split_space(verse);
     let mappers = [text_letters_only, lambda2, text_split_empty];
     let mapped = list_map_multiple(split, mappers);
+    function lambda4(item, next) {}
+    each_next(list, lambda4);
     return mapped;
   }
   let batch_symbols = batch_get;
