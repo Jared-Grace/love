@@ -54,16 +54,18 @@ export function app_code_lesson_symbols_digits_generic(
       let digit_counts = range_1(5);
       function lambda(digit_count) {
         let digits = integer_positive_random_digits_text(digit_count);
+        return digits;
+      }
+      let mapped2 = list_map(digit_counts, lambda);
+      function lambda2(item) {
         let r5 = app_code_lesson_symbols_digits_generic_batch(
           example_above,
           digits,
           batch_get,
-          digit_count,
+          item,
         );
         return r5;
       }
-      let mapped2 = list_map(digit_counts, lambda);
-      function lambda2(item) {}
       let mapped = list_map(mapped2, lambda2);
       return mapped;
     },
