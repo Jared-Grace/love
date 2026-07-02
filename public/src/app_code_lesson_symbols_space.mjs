@@ -20,6 +20,7 @@ export function app_code_lesson_symbols_space() {
     html_div_text(div, "For a computer, a space is considered a symbol");
   }
   function batch_get() {
+    let choices = [2, 3];
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
