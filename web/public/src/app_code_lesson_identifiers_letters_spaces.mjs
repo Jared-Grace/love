@@ -49,7 +49,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
   }
   function batch_get() {
     let words = app_code_verse_words();
-    let mapped = list_map(words, text_letters_only);
+    let mapped = list_map(words, text_letters_only);$a
     const min = 1;
     const max = 2;
     let list2 = list_slices_size_cycles_shuffled(mapped, min, max);
