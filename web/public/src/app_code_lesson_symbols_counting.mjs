@@ -40,7 +40,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-export function app_code_lesson_symbols_digits_generic(
+export function app_code_lesson_symbols_counting(
   name,
   id,
   above,
@@ -138,7 +138,7 @@ export function app_code_lesson_symbols_digits_generic(
           example: function lambda6(parent) {
             html_flex_column_stretch(parent);
             app_code_flex_gap(parent);
-            log(app_code_lesson_symbols_digits_generic.name, {
+            log(app_code_lesson_symbols_counting.name, {
               parent,
             });
             let a = example_above(parent, symbols);
