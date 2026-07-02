@@ -10,7 +10,10 @@ export async function sandbox_3() {
   let books = await ebible_version_books("engbsb");
   let mapped2 = list_map_property(books, "text");
   function lambda(book_name) {
-    let item3 = list_map_prefix_without_try_multiple(book_name, ["1 ", "2 "]);
+    let prefixes = ["1 ", "2 "];
+    function lambda4(item) {}
+    each(list, lambda4);
+    let item3 = list_map_prefix_without_try_multiple(book_name);
     return item3;
   }
   let mapped = list_map(mapped2, lambda);
