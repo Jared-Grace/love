@@ -1,9 +1,6 @@
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
-import { digits } from "../../../love/public/src/digits.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
@@ -53,16 +50,10 @@ export function app_code_lesson_symbols_letters() {
     );
   }
   let verse =
-    "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
+    "For God so loved the world that He gave His one and only Son that everyone who believes in Him shall not perish but have eternal life";
   let split = text_split_space(verse);
   function lambda2() {
-    let digit_counts = range_1(5);
-    function lambda(digit_count) {
-      let digits = integer_positive_random_digits_text(digit_count);
-      return digits;
-    }
-    let split2 = text_split_empty(s);
-    let batch_digits = list_map(split, lambda);
+    let batch_digits = list_map(split, text_split_empty);
     return batch_digits;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
