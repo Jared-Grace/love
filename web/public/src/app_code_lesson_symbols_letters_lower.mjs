@@ -1,5 +1,8 @@
+import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
+import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
-import { app_code_lesson_symbols_letters_batch } from "../../../love/public/src/app_code_lesson_symbols_letters_batch.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -51,8 +54,16 @@ export function app_code_lesson_symbols_letters_lower() {
       "For a computer, lowercase symbols may be considered different than uppercase symbols",
     );
   }
-  function lambda2() {}$x
-  let batch_symbols = app_code_lesson_symbols_letters_batch(lambda2);
+  function lambda2() {}
+  function batch_get() {
+    let verse =
+      "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
+    let split = text_split_space(verse);
+    let mappers = [text_letters_only, lambda2, text_split_empty];
+    let mapped = list_map_multiple(split, mappers);
+    return mapped;
+  }
+  let batch_symbols = batch_get;
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
     "symbols_letters",
