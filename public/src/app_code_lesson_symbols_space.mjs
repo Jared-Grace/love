@@ -1,3 +1,4 @@
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -23,6 +24,7 @@ export function app_code_lesson_symbols_space() {
       function lambda2(word, next) {
         let pair = [word, next];
         let joined = list_join_space(pair);
+        let split = text_split_empty(s);
         la(joined);
       }
       each_next(words, lambda2);
