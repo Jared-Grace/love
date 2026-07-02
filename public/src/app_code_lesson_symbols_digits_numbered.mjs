@@ -13,6 +13,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     "symbols_digits_numbered",
     above,
     on_symbol,
+    error(),
   );
   return r5;
   function above(root) {
