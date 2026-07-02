@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -9,5 +10,6 @@ export function app_code_lesson_symbols_batch_digits() {
     return digits;
   }
   let batch_digits = list_map(digit_counts, lambda);
+  list_shuffle(list);
   return batch_digits;
 }
