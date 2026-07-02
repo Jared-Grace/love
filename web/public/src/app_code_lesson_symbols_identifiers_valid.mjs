@@ -14,8 +14,8 @@ export function app_code_lesson_symbols_identifiers_valid(
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
     let joined = list_join_empty(symbols);
+    let expression = null;
     try {
-      let expression = null;
       expression = js_parse_expression_from_assignment(joined);
     } catch (e) {}
     let ii = js_identifier_is(expression);
