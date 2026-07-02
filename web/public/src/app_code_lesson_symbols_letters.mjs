@@ -51,6 +51,7 @@ export function app_code_lesson_symbols_letters() {
     "symbols_letters",
     lambda,
     noop,
+    error(),
   );
   return r5;
 }

@@ -45,6 +45,7 @@ export function app_code_lesson_symbols_digits_generic(
   id,
   above,
   on_symbol,
+  batch_symbols,
 ) {
   let r3 = {
     name,
