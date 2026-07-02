@@ -6,6 +6,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export function app_code_batch_item_get(parent, lesson, on_batch_item) {
+  let on_batch = list_shuffle;
   let batch = property_get(lesson, "batch");
   let remaining = [];
   let container = html_div(parent);
