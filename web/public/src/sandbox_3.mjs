@@ -14,7 +14,9 @@ export async function sandbox_3() {
   }
   let mapped = list_map(mapped2, lambda);
   let unique = list_unique(mapped);
-  function lambda2(la) {}
+  function lambda2(la) {
+    la(result, key);
+  }
   let result = lookup_adder(lambda2);
   return unique;
 }
