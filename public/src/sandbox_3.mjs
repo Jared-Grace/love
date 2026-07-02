@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
@@ -18,8 +19,9 @@ export async function sandbox_3() {
     let value = [];
     let lower = text_lower_to(upper);
     function lambda2(letter) {
-      let exists = property_exists(object, property_name);
-      if (false) {
+      let exists = property_exists(result, letter);
+      if (exists) {
+        let value2 = property_get(object, property_name);
       }
     }
     each([lower, upper], lambda2);
