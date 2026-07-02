@@ -23,6 +23,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "Chinese",
       " or ",
       "Hindi",
+      "to communicate",
     ]);
     html_div_text(c, combined);
     html_div_text(
