@@ -12,6 +12,6 @@ export async function sandbox_3() {
     return item4;
   }
   let mapped = list_map(mapped2, lambda);
-  let unique = list_unique(list);
-  return mapped;
+  let unique = list_unique(mapped);
+  return unique;
 }
