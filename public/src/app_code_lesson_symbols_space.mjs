@@ -24,8 +24,8 @@ export function app_code_lesson_symbols_space() {
       function lambda2(word, next) {
         let pair = [word, next];
         let joined = list_join_space(pair);
-        let split = text_split_empty(s);
-        la(joined);
+        let split = text_split_empty(joined);
+        la(split);
       }
       each_next(words, lambda2);
     }
