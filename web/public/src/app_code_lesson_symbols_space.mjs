@@ -1,6 +1,6 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { at_least } from "../../../love/public/src/at_least.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -35,9 +35,9 @@ export function app_code_lesson_symbols_space() {
       function lambda2(word, index) {
         let count = integer_random(min, max);
         let slice = list_slice(mapped, index, index + count);
-        let m = list_multiple_is(slice);
-        let g = at_least(left, right);
-        if (m) {
+        let z = list_size(slice);
+        let al = at_least(z, min);
+        if (al) {
           let joined = list_join_space_nb(slice);
           let split = text_split_empty(joined);
           la(split);
