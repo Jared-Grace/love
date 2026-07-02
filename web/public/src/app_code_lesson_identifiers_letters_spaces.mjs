@@ -51,7 +51,9 @@ export function app_code_lesson_identifiers_letters_spaces() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list2 = list_slices_size_cycle(mapped, 1, 2);
+    const min = 1;
+    const max = 2;
+    let list2 = list_slices_size_cycle(mapped, min, max);
     list_cycled_shuffle(list2, 2);
     return list2;
   }
