@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -22,6 +23,7 @@ export function app_code_lesson_symbols_space() {
   }
   function batch_get() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
+    let ne = equal_not(left, right);
     return mapped;
   }
   function batch_get() {
