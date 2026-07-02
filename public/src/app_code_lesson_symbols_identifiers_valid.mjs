@@ -1,3 +1,4 @@
+import { catch_ignore } from "../../../love/public/src/catch_ignore.mjs";
 import { js_parse_expression_from_assignment } from "../../../love/public/src/js_parse_expression_from_assignment.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -15,6 +16,8 @@ export function app_code_lesson_symbols_identifiers_valid(
   let symbols_to_answer = function lambda(symbols) {
     let joined = list_join_empty(symbols);
     let expression = null;
+    function lambda3() {}
+    catch_ignore(lambda3);
     try {
       expression = js_parse_expression_from_assignment(joined);
     } catch (e) {}
