@@ -15,7 +15,7 @@ export function app_code_lesson_symbols_letters_lower() {
     let div = html_div(c);
     let span2 = html_span_text(
       div,
-      "In English, there are 26 letters of the alphabet: ",
+      "In English, there are 26 letters in the alphabet: ",
     );
     let div2 = html_div(c);
     let alphabet_lower = list_alphabet_lower();
