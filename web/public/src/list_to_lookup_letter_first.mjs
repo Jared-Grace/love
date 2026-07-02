@@ -6,7 +6,7 @@ export function list_to_lookup_letter_first(unique) {
   function lambda2(la) {
     function lambda3(book_name) {
       let letters = text_letters_only(t);
-      let key = text_first(book_name);
+      let key = text_first(letters);
       la(key, book_name);
     }
     each(unique, lambda3);
