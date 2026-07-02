@@ -1,3 +1,4 @@
+import { list_slices_size_cycle } from "../../../love/public/src/list_slices_size_cycle.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -5,7 +6,6 @@ import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bol
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { list_slices_size_random } from "../../../love/public/src/list_slices_size_random.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list2 = list_slices_size_random(mapped, 1, 2);
+    let list2 = list_slices_size_cycle(mapped, 1, 2);
     return list2;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
