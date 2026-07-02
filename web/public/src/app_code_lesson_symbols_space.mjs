@@ -28,8 +28,11 @@ export function app_code_lesson_symbols_space() {
       let max = list_size(skipped);
       let count = integer_random(1, max);
       let items = list_random_item_count(skipped, count);
-      function lambda2(item) {}
-      let mapped3 = list_map(list, lambda2);
+      function lambda2(item) {
+        let r = [item3];
+        return r;
+      }
+      let mapped3 = list_map(item3, lambda2);
       log(app_code_lesson_symbols_space.name, {
         items,
         item3,
