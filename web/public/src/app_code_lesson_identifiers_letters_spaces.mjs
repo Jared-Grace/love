@@ -1,3 +1,4 @@
+import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -24,9 +25,15 @@ export function app_code_lesson_identifiers_letters_spaces() {
       " to speak to each other",
     ]);
     html_div_text(c, combined);
-    html_div_text(
+    html_cycle_bold(
       c,
-      "For a human to talk to a computer, the human can use a programming language",
+      "For a human to talk to a computer, the human can use a ",
+      "programming language",
+    );
+    html_cycle_bold(
+      c,
+      "The programming language we will learn now is called ",
+      "JavaScript",
     );
   }
   function batch_get() {
