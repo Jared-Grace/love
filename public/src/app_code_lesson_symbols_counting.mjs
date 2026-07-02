@@ -143,7 +143,8 @@ export function app_code_lesson_symbols_counting(
             });
             let a = example_above(parent, symbols);
             let container_answer2 = property_get(a, "container_answer");
-            html_text_set(container_answer2, "Number of symbols: ");
+            const example_label = "Number of symbols: ";
+            html_text_set(container_answer2, example_label);
             let div3 = app_code_container_dark(container_answer2);
             let s = app_code_symbol_generic(
               div3,
