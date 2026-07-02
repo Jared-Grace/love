@@ -1,4 +1,4 @@
 export function languages_popular() {
-  let r = ["English", "Chinese", "Hindi"];
-  return r;
+  let lp = ["English", "Chinese", "Hindi"];
+  return lp;
 }
