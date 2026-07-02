@@ -28,7 +28,7 @@ export function app_code_lesson_symbols_space() {
       each_next(words, lambda2);
     }
     let list2 = list_adder(lambda3);
-    return mapped2;
+    return list2;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Space)",
