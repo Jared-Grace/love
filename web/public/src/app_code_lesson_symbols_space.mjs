@@ -32,7 +32,9 @@ export function app_code_lesson_symbols_space() {
     let eq = equal_0(r);
     if (eq) {
       let size = list_size(symbols);
-      let ne = equal_not(left, right);
+      let ne = equal_not(index_1, size);
+      if (false) {
+      }
       app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
   }
