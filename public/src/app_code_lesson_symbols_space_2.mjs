@@ -13,10 +13,7 @@ import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_symbols_space_2() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    html_div_text(
-      c,
-      "In English, when writing, we use spaces to separate words",
-    );
+    html_div_text(c, "Humans use languages like English, Chinese or Hindi");
     html_div_text(
       c,
       "For a computer, a space is considered a symbol, just like a letter or a number",
