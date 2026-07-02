@@ -12,7 +12,11 @@ export function app_code_lesson_symbols_letters_upper() {
   function lambda(root) {
     let container = app_code_container_light_blue(root);
     let div4 = html_div(container);
-    html_cycle_bold(div4, ["Here are letters written in ", "uppercase", ":"]);
+    html_cycle_bold(div4, [
+      "Here are the 26 English letters written in ",
+      "uppercase",
+      ":",
+    ]);
     let div5 = html_div(container);
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
