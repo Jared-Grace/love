@@ -4,10 +4,10 @@ import { each } from "../../../love/public/src/each.mjs";
 import { text_first } from "../../../love/public/src/text_first.mjs";
 export function list_to_lookup_letter_first(unique) {
   function lambda2(la) {
-    function lambda3(book_name) {
-      let letters = text_letters_only(book_name);
+    function lambda3(item) {
+      let letters = text_letters_only(item);
       let key = text_first(letters);
-      la(key, book_name);
+      la(key, item);
     }
     each(unique, lambda3);
   }
