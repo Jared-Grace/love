@@ -59,6 +59,8 @@ export function app_code_lesson_symbols_letters_lower() {
   function lambda2(word) {
     function lambda3(c2) {
       let r = random();
+      let r2 = r > 1 / 2;
+      return r2;
     }
     let joined = text_transform(word, lambda3);
   }
