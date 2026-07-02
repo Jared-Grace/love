@@ -7,7 +7,7 @@ import { text_unique } from "../../../love/public/src/text_unique.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function app_replace_rule_set_add_generic(base, fns_list) {
   let f_names = await functions_names();
-  const f = base.name;
+  const f = base;
   let unique = text_unique(f_names, f, "_");
   await function_copy_open(f, unique);
   let expression = js_parse_expression(unique);
