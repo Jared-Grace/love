@@ -13,10 +13,10 @@ export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
-  let c = app_code_container_light_blue(root);
-  html_div_text(c, "Please answer the following quiz question:");
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item);
   function on_batch_item(container, b, refresh) {
+    let c = app_code_container_light_blue(container);
+    html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
     q(context, container, c, refresh);
