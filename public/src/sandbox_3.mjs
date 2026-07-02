@@ -1,3 +1,4 @@
+import { text_prefix_without_try } from "../../../love/public/src/text_prefix_without_try.mjs";
 import { list_map_prefix_without_try_multiple } from "../../../love/public/src/list_map_prefix_without_try_multiple.mjs";
 import { text_first } from "../../../love/public/src/text_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -11,8 +12,10 @@ export async function sandbox_3() {
   let mapped2 = list_map_property(books, "text");
   function lambda(book_name) {
     let prefixes = ["1 ", "2 "];
-    function lambda4(item) {}
-    each(list, lambda4);
+    function lambda4(prefix) {
+      let without = text_prefix_without_try(t, prefix2);
+    }
+    each(prefixes, lambda4);
     let item3 = list_map_prefix_without_try_multiple(book_name);
     return item3;
   }
