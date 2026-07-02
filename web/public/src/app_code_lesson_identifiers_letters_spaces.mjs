@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
@@ -25,6 +26,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       " to speak to each other",
     ]);
     html_div_text(c, combined);
+    let div = html_div(parent2);
     html_cycle_bold(c, [
       "For a human to talk to a computer, the human can use a ",
       "programming language",
