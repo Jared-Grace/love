@@ -1,3 +1,4 @@
+import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
@@ -18,6 +19,10 @@ export function app_code_lesson_symbols_space() {
       "In English, when writing, we use spaces to separate words",
     );
     html_span_text(div, "For a computer, a space is considered a symbol");
+  }
+  function batch_get() {
+    let mapped = app_code_lesson_symbols_letters_batch_get(identity);
+    return mapped;
   }
   function batch_get() {
     let verse =
