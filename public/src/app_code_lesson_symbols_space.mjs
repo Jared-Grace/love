@@ -1,3 +1,4 @@
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_symbols_space() {
       function lambda2(word, index) {
         let count = 3;
         let slice = list_slice(mapped, index, index + count);
+        let m = list_multiple_is(list);
         let joined = list_join_space_nb(slice);
         let split = text_split_empty(joined);
         la(split);
