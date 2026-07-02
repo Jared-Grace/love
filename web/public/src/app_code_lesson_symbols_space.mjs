@@ -29,7 +29,7 @@ export function app_code_lesson_symbols_space() {
       let count = integer_random(1, max);
       let items = list_random_item_count(skipped, count);
       function lambda2(item) {
-        let r = [item3];
+        let r = [item];
         return r;
       }
       let mapped3 = list_map(item3, lambda2);
