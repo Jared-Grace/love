@@ -33,15 +33,17 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "The programming language we will learn now is called ",
       "JavaScript",
     ]);
+    let c2 = app_code_container_light_blue(root);
     html_div_text(
-      c,
+      c2,
       "We can give names to people, cities, countries, mountains, rivers, etc.",
     );
-    html_div_cycle_bold(c, [
-      "In JavaScript, the name of something is called an ",
+    html_div_cycle_bold(c2, [
+      "In JavaScript, we can use an ",
       "identifier",
+      " as a name",
     ]);
-    html_div_text_multiple(c, [
+    html_div_text_multiple(c2, [
       "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
       "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
       "In English, letters are inside words and in JavaScript, symbols are inside identifiers",
