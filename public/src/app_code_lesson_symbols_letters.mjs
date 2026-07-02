@@ -55,9 +55,10 @@ export function app_code_lesson_symbols_letters() {
   let split = text_split_space(verse);
   function lambda2() {
     let mappers = [text_split_empty];
-    function lambda3(item) {}
-    each(list, lambda3);
-    split = list_map(split, text_split_empty);
+    function lambda3(mapper) {
+      split = list_map(split, mapper);
+    }
+    each(mappers, lambda3);
     return split;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
