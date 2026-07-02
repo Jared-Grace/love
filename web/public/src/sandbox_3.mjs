@@ -19,7 +19,7 @@ export async function sandbox_3() {
   function lambda2(la) {
     function lambda3(book_name) {
       let key = text_first(book_name);
-      la(key,book_name);
+      la(key, book_name);
     }
     each(unique, lambda3);
   }
