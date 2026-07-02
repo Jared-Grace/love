@@ -17,7 +17,10 @@ export function app_code_lesson_symbols_space() {
       c,
       "In English, when writing, we use spaces to separate words",
     );
-    html_div_text(c, "For a computer, a space is considered a symbol");
+    html_div_text(
+      c,
+      "For a computer, a space is considered a symbol, just like a letter or a number",
+    );
   }
   function batch_get() {
     let words = app_code_verse_words();
