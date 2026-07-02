@@ -1,6 +1,5 @@
 import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
 import { app_code_lesson_symbols_letters_batch } from "../../../love/public/src/app_code_lesson_symbols_letters_batch.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 export function app_code_lesson_symbols_letters_upper() {
