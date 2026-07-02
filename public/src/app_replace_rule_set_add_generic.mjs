@@ -5,9 +5,9 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { function_copy_open } from "../../../love/public/src/function_copy_open.mjs";
 import { text_unique } from "../../../love/public/src/text_unique.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
-export async function app_replace_rule_set_add_generic(base, fns_list) {
+export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
   let f_names = await functions_names();
-  const f = base;
+  const f = fn_base_name;
   let unique = text_unique(f_names, f, "_");
   await function_copy_open(f, unique);
   let expression = js_parse_expression(unique);
