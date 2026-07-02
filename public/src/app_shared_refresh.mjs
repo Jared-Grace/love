@@ -19,5 +19,5 @@ export async function app_shared_refresh(context) {
   );
   let screen = list_find_property(screens, "name", screen_name);
   await screen(context);
-  await html_scroll_top_now(component);
+  await html_scroll_top_now(body);
 }
