@@ -1,7 +1,7 @@
+import { js_parse_expression_from_assignment } from "../../../love/public/src/js_parse_expression_from_assignment.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { app_code_lesson_symbols_batches_genric } from "../../../love/public/src/app_code_lesson_symbols_batches_genric.mjs";
 export function app_code_lesson_symbols_identifiers_valid(
   name,
@@ -15,8 +15,8 @@ export function app_code_lesson_symbols_identifiers_valid(
   let symbols_to_answer = function lambda(symbols) {
     let joined = list_join_empty(symbols);
     try {
+      let expression = js_parse_expression_from_assignment(joined);
     } catch (e) {}
-    let expression = js_parse_expression(joined);
     let ii = js_identifier_is(expression);
     let result = boolean_to_text_validity(ii);
     return result;
