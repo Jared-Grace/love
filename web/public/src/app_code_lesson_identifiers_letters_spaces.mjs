@@ -1,5 +1,3 @@
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
