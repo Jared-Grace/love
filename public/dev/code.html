@@ -5,7 +5,14 @@
   <title>code</title>
 </head>
 <body>
-  <script type="module"> 
+  <script type="importmap"> 
+    {
+ "imports": {
+  "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
+ }
+}
+  </script>
+<script type="module"> 
     import {app_code_main} from "../../../love/public/src/app_code_main.mjs"
 import {app_context_initialize} from "../../../love/public/src/app_context_initialize.mjs"
 app_context_initialize( app_code_main );
