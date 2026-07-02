@@ -8,7 +8,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
+import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
@@ -39,7 +39,7 @@ export function app_code_lesson_symbols_space() {
       }
     }
   }
-  let r5 = app_code_lesson_symbols_digits_generic(
+  let r5 = app_code_lesson_symbols_counting(
     "Symbols (Space)",
     "symbols_space",
     lambda,
