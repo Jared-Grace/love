@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slices_size_random } from "../../../love/public/src/list_slices_size_random.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -30,7 +31,8 @@ export function app_code_lesson_symbols_space() {
     let r = mod(index_1, 5);
     let eq = equal_0(r);
     if (eq) {
-      let size = list_size(list);
+      let size = list_size(symbols);
+      let ne = equal_not(left, right);
       app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
   }
