@@ -1,8 +1,10 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { text_replace_if_starts_with } from "../../../love/public/src/text_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 export async function sandbox_3() {
   let books = await ebible_version_books("engbsb");
+  let mapped2 = list_map_property(list, property_name);
   function lambda(book_name) {
     let item3 = text_replace_if_starts_with(book_name, "1 ", "");
     let item4 = text_replace_if_starts_with(item3, "2 ", "");
