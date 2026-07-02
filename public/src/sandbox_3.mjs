@@ -4,12 +4,12 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 export async function sandbox_3() {
   let books = await ebible_version_books("engbsb");
-  let mapped2 = list_map_property(list, property_name);
+  let mapped2 = list_map_property(books, 'text');
   function lambda(book_name) {
     let item3 = text_replace_if_starts_with(book_name, "1 ", "");
     let item4 = text_replace_if_starts_with(item3, "2 ", "");
     return item4;
   }
-  let mapped = list_map(books, lambda);
+  let mapped = list_map(mapped2, lambda);
   return mapped;
 }
