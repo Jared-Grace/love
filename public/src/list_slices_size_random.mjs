@@ -7,9 +7,10 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 export function list_slices_size_random(list, min, max) {
+  let count_get = integer_random;
   function lambda3(la) {
     function lambda2(word, index) {
-      let count = integer_random(min, max);
+      let count = count_get(min, max);
       let slice = list_slice(list, index, index + count);
       let z = list_size(slice);
       let al = at_least(z, min);
