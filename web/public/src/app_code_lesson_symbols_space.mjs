@@ -26,7 +26,7 @@ export function app_code_lesson_symbols_space() {
       function lambda2(item, next) {
         let pair = [item, next];
         let joined = list_join_space(pair);
-        return;
+        return joined;
       }
       each_next(list, lambda2);
       return split;
