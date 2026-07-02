@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -10,12 +11,13 @@ export function app_code_lesson_symbols_digits() {
       "This lesson is the same as the previous lesson, except there are not numbers underneath",
     );
   }
+  let batch_symbols = error();
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Digits)",
     "symbols_digits",
     lambda,
     noop,
-    error(),
+    batch_symbols,
   );
   return r5;
 }
