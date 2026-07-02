@@ -23,6 +23,7 @@ export function app_code_lesson_symbols_space() {
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
       function lambda2(item, next) {
+        let pair = [item, next];
         return;
       }
       each_next(list, lambda2);
