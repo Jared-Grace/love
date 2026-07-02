@@ -11,6 +11,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
+import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
@@ -38,6 +39,7 @@ export function app_code_lesson_symbols_space() {
   }
   function lambda4(parent, index_1) {
     let r = mod(index_1, 5);
+    let eq = equal_0(item);
     if (false) {
     }
     app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
