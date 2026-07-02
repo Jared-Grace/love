@@ -21,7 +21,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let combined = text_combine_multiple([
       "Humans use languages like ",
       combined2,
-      "to communicate",
+      " to speak to each other",
     ]);
     html_div_text(c, combined);
     html_div_text(
