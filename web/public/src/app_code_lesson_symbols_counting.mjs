@@ -78,7 +78,7 @@ export function app_code_lesson_symbols_counting(
     batch: function batch_get() {
       let mapped2 = batch_symbols();
       function lambda2(symbols) {
-        let answer = list_size(symbols);
+        let answer = symbols_to_answer(symbols);
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
