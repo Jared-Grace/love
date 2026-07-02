@@ -57,8 +57,8 @@ export function app_code_lesson_symbols_digits_generic(
         let symbol_count = list_size(symbols);
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
-          function on_quiz1(context, parent, refresh) {
-            let a = example_above(parent, symbols);
+          function on_quiz1(context, container, parent, refresh) {
+            let a = example_above(container, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, "How many symbols are there? ");
             let b = batch_get();
