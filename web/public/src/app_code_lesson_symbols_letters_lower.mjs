@@ -49,7 +49,7 @@ export function app_code_lesson_symbols_letters_lower() {
     );
     html_div_text(
       container2,
-      "For a computer, lowercase symbols may be considered different symbols than uppercase",
+      "For a computer, lowercase symbols may be considered different than uppercase symbols",
     );
   }
   let batch_symbols = app_code_lesson_symbols_letters_batch(text_lower_to);
