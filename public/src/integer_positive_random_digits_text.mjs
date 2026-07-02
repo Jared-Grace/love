@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { range_map } from "../../../love/public/src/range_map.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
@@ -14,5 +15,6 @@ export function integer_positive_random_digits_text(digit_count) {
     return choice;
   }
   let ds = range_map(digit_count, lambda2);
+  let joined = list_join_empty(list);
   return ds;
 }
