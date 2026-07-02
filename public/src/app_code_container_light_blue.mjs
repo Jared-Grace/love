@@ -16,6 +16,8 @@ export function app_code_container_light_blue(parent) {
   html_style_assign(container, {
     display: "flex",
     flexDirection: "column",
+  });
+  html_style_assign(container, {
     gap: "0.8em",
   });
   return container;
