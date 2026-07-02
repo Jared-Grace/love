@@ -15,6 +15,6 @@ export function integer_positive_random_digits_text(digit_count) {
     return choice;
   }
   let ds = range_map(digit_count, lambda2);
-  let joined = list_join_empty(list);
-  return ds;
+  let joined = list_join_empty(ds);
+  return joined;
 }
