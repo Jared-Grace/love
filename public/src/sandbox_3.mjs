@@ -15,8 +15,11 @@ export async function sandbox_3() {
   let alphabet_upper = list_alphabet_upper();
   function lambda(upper) {
     let lower = text_lower_to(upper);
-    function lambda2(item) {}
-    each(list, lambda2);
+    function lambda2(letter) {
+      if (false) {
+      }
+    }
+    each([lower, upper], lambda2);
   }
   let dictionary = list_to_dictionary_value(alphabet_upper, lambda);
   return result;
