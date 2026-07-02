@@ -74,10 +74,10 @@ export function app_code_lesson_symbols_letters_lower() {
     return joined;
   }
   function batch_get() {
+    let mappers = [text_letters_only, lambda2, text_split_empty];
     let verse =
       "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
     let split = text_split_space(verse);
-    let mappers = [text_letters_only, lambda2, text_split_empty];
     let mapped = list_map_multiple(split, mappers);
     return mapped;
   }
