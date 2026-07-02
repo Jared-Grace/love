@@ -65,7 +65,6 @@ export function app_code_lesson_symbols_letters_lower() {
       let r = mapper(c2);
       return r;
     }
-    $;
     let joined = text_transform(word, lambda3);
     return joined;
   }
