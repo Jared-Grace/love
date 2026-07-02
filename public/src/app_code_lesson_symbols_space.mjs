@@ -31,8 +31,8 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let r = list_to_indices(item3);
-      let r2 = integer_random(min, max);
       let skipped = list_skip_1(r);
+      let r2 = integer_random(1, max);
       let items = list_random_item_count(skipped, count);
     }
     let mapped2 = list_map(mapped, lambda5);
