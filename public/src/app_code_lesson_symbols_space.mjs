@@ -1,3 +1,4 @@
+import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
@@ -23,7 +24,8 @@ export function app_code_lesson_symbols_space() {
     function lambda3(la) {
       function lambda2(word, next) {
         let pair = [word, next];
-        let joined = list_join(pair, " ");
+        let separator = text_space_nb();
+        let joined = list_join(pair, separator);
         let split = text_split_empty(joined);
         la(split);
       }
