@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slices_size_random } from "../../../love/public/src/list_slices_size_random.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { app_code_lesson_symbols_digits_numbered_on_symbol } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
@@ -25,10 +26,11 @@ export function app_code_lesson_symbols_space() {
     let list2 = list_slices_size_random(mapped, 2, 3);
     return list2;
   }
-  function lambda4(parent, index_1,symbols) {
+  function lambda4(parent, index_1, symbols) {
     let r = mod(index_1, 5);
     let eq = equal_0(r);
-    if (eq) {lz
+    if (eq) {
+      let size = list_size(list);
       app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
   }
