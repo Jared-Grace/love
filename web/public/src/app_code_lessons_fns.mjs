@@ -1,3 +1,4 @@
+import { app_code_lesson_symbols_space_2 } from "../../../love/public/src/app_code_lesson_symbols_space_2.mjs";
 import { app_code_lesson_symbols_space } from "../../../love/public/src/app_code_lesson_symbols_space.mjs";
 import { app_code_lesson_symbols_letters } from "../../../love/public/src/app_code_lesson_symbols_letters.mjs";
 import { app_code_lesson_symbols_digits } from "../../../love/public/src/app_code_lesson_symbols_digits.mjs";
