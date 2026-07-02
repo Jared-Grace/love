@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { app_code_lesson_symbols_digits_numbered_on_symbol } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -35,7 +36,8 @@ export function app_code_lesson_symbols_space() {
     let list2 = list_adder(lambda3);
     return list2;
   }
-  function lambda4() {
+  function lambda4(parent, index_1) {
+    let r = mod(n, m);
     app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
