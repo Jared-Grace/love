@@ -7,6 +7,7 @@ export function list_slices_size_cycle(list, min, max) {
   let count_get = function lambda() {
     let item = list_get_wrap(mapped, i);
     i++;
+    return item;
   };
   let slices = list_slices_size_generic(count_get, min, max, list);
   return slices;
