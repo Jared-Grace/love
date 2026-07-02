@@ -26,8 +26,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
       " to speak to each other",
     ]);
     html_div_text(c, combined);
-    let div = html_div(parent2);
-    html_cycle_bold(c, [
+    let div = html_div(c);
+    html_cycle_bold(div, [
       "For a human to talk to a computer, the human can use a ",
       "programming language",
     ]);
