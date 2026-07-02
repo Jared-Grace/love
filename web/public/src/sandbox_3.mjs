@@ -30,5 +30,5 @@ export async function sandbox_3() {
     return value;
   }
   let dictionary = list_to_dictionary_value(alphabet_upper, lambda);
-  return result;
+  return dictionary;
 }
