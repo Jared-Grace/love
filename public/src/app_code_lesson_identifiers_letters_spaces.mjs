@@ -50,7 +50,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list2 = list_slices_size_random(mapped, 2, 3);
+    let list2 = list_slices_size_random(mapped, 1, 2);
     return list2;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
