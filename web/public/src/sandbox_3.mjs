@@ -18,11 +18,11 @@ export async function sandbox_3() {
   let unique = list_unique(mapped);
   function lambda2(la) {
     function lambda3(book_name) {
-      let item = text_first(t);
+      let key = text_first(book_name);
       la(book_name, key);
     }
     each(unique, lambda3);
   }
   let result = lookup_adder(lambda2);
-  return unique;
+  return result;
 }
