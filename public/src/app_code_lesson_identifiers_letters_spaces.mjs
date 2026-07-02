@@ -43,7 +43,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "identifier",
       " as a name",
     ]);
-    html_div_text_multiple(c2, [
+    let c4 = app_code_container_light_blue(root);
+    html_div_text_multiple(c4, [
       "In English, letters are inside of words, words are inside of sentences and sentences are inside of paragraphs",
       "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
       "In English, letters are inside of words and in JavaScript, symbols (like letters) are inside of identifiers",
