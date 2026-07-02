@@ -34,9 +34,6 @@ export function app_code_lesson_symbols_space() {
       let skipped = list_to_indices_skip_1(item3);
       let max = list_size_less_1(skipped);
       let m = math_max(1, max);
-      log(app_code_lesson_symbols_space.name, {
-        m,
-      });
       let count = integer_random(1, m);
       let items = list_random_item_count(skipped, count);
       function lambda2(item, index) {
@@ -55,6 +52,7 @@ export function app_code_lesson_symbols_space() {
         count,
         joined,
         split,
+        m,
       });
       return split;
     }
