@@ -34,7 +34,7 @@ export function app_code_lesson_symbols_space() {
       });
       return item3;
     }
-    let mapped2 = list_map(list, lambda5);
+    let mapped2 = list_map(mapped, lambda5);
     return mapped;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
