@@ -25,10 +25,10 @@ export function app_code_lesson_symbols_space() {
     let list2 = list_slices_size_random(mapped, 2, 3);
     return list2;
   }
-  function lambda4(parent, index_1) {
+  function lambda4(parent, index_1,symbols) {
     let r = mod(index_1, 5);
     let eq = equal_0(r);
-    if (eq) {
+    if (eq) {lz
       app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
   }
