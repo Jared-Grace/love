@@ -12,10 +12,10 @@ export async function sandbox_3() {
     let combined = text_combine_multiple([
       property,
       ": ",
-      "(",
+      joined,
+      " (",
       size,
       ") ",
-      joined,
     ]);
     log(sandbox_3.name, combined);
   }
