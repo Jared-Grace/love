@@ -56,7 +56,7 @@ export function app_code_lesson_symbols_digits_generic(
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, refresh) {
-            html_flex_column_center(column);
+            html_flex_column_center(parent);
             let container = app_code_container_light_blue(parent);
             let a = example_above(container, symbols);
             let container_above = property_get(a, "container_above");
