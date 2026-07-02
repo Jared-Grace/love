@@ -29,9 +29,8 @@ export function app_code_lesson_symbols_space() {
     function lambda3(la) {
       function lambda2(word, index) {
         let count = 3;
-        let sliced = list_slice(list, index, index + count);
-        let pair = [word, next];
-        let joined = list_join_space_nb(pair);
+        let slice = list_slice(list, index, index + count);
+        let joined = list_join_space_nb(slice);
         let split = text_split_empty(joined);
         la(split);
       }
