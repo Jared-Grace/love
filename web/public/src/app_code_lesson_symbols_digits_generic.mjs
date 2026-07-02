@@ -1,3 +1,4 @@
+import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
@@ -141,7 +142,7 @@ export function app_code_lesson_symbols_digits_generic(
         ];
         let r2 = {
           example: function lambda6(parent) {
-            html_flex_column_center(parent);
+            html_flex_column_stretch(parent);
             log(app_code_lesson_symbols_digits_generic.name, {
               parent,
             });
