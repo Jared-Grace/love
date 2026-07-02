@@ -1,3 +1,4 @@
+import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -13,6 +14,7 @@ export function html_text_characters_numbered(parent, text) {
   let i = incrementer();
   let cycles = [
     function lambda2(span) {
+      html_font_jetbrains_mono(component);
       html_flex_column_center(span);
       html_display_set(span, "inline-flex");
       let text = i();
