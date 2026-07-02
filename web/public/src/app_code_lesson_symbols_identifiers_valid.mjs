@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { app_code_lesson_symbols_batches_genric } from "../../../love/public/src/app_code_lesson_symbols_batches_genric.mjs";
 export function app_code_lesson_symbols_identifiers_valid(
   name,
@@ -8,7 +9,9 @@ export function app_code_lesson_symbols_identifiers_valid(
 ) {
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda(symbols) {};
+  let symbols_to_answer = function lambda(symbols) {
+    let expression = js_parse_expression(code_expression);
+  };
   let r = app_code_lesson_symbols_batches_genric(
     name,
     id,
