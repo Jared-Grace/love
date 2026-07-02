@@ -1,3 +1,4 @@
+import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -28,6 +29,7 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let size = list_size(item3);
+      let skipped = list_skip_1(list4);
     }
     let mapped2 = list_map(mapped, lambda5);
     function lambda3(la) {
