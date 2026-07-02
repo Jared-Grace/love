@@ -26,11 +26,12 @@ export function app_code_lesson_symbols_space() {
     function lambda5(item3) {
       let skipped = list_to_indices_skip_1(item3);
       let max = list_size(skipped);
-      let r2 = integer_random(1, max);
-      let items = list_random_item_count(skipped, r2);
+      let count = integer_random(1, max);
+      let items = list_random_item_count(skipped, count);
       log(app_code_lesson_symbols_space.name, {
         items,
         item3,
+        count,
       });
       return item3;
     }
