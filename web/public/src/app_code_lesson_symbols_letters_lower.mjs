@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { text_transform } from "../../../love/public/src/text_transform.mjs";
 import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
@@ -66,6 +67,9 @@ export function app_code_lesson_symbols_letters_lower() {
       return r;
     }
     let joined = text_transform(word, lambda3);
+    log(app_code_lesson_symbols_letters_lower.name, {
+      joined,
+    });
     return joined;
   }
   function batch_get() {
