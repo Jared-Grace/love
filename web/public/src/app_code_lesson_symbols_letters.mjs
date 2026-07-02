@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
@@ -46,12 +47,13 @@ export function app_code_lesson_symbols_letters() {
       "For a computer, lowercase symbols may be considered different symbols than uppercase",
     );
   }
+  let batch_symbols = error();
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
     "symbols_letters",
     lambda,
     noop,
-    error(),
+    batch_symbols,
   );
   return r5;
 }
