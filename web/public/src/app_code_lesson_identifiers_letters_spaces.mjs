@@ -14,16 +14,15 @@ import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_identifiers_letters_spaces() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    let combined = text_combine_multiple(list);
-    html_div_text(
-      c,
+    let combined = text_combine_multiple([
       "Humans use languages like ",
       "English",
       ", ",
       "Chinese",
       " or ",
       "Hindi",
-    );
+    ]);
+    html_div_text(c, combined);
     html_div_text(
       c,
       "For a computer, a space is considered a symbol, just like a letter or a number",
