@@ -1,6 +1,5 @@
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
