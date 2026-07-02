@@ -22,6 +22,6 @@ export function list_slices_size_random(list, min, max) {
     }
     each_index(list, lambda2);
   }
-  let list2 = list_adder(lambda3);
-  return list2;
+  let slices = list_adder(lambda3);
+  return slices;
 }
