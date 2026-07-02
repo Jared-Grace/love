@@ -23,10 +23,11 @@ export function app_code_lesson_symbols_space() {
   }
   function batch_get() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
-    function lambda3(la) {}
+    function lambda3(la) {
+      function lambda2(item2, next2) {}
+      each_next(list2, lambda2);
+    }
     let list3 = list_adder(lambda3);
-    function lambda2(item2, next2) {}
-    each_next(list2, lambda2);
     return mapped;
   }
   function batch_get() {
