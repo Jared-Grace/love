@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
@@ -57,6 +58,8 @@ export function app_code_lesson_symbols_digits_generic(
         return digits;
       }
       let mapped2 = list_map(digit_counts, lambda);
+      let v = log(app_code_lesson_symbols_digits_generic.name, {});
+      (v, mapped2);
       function lambda2(item) {
         let r5 = app_code_lesson_symbols_digits_generic_batch(
           example_above,
