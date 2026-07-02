@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { lookup_adder } from "../../../love/public/src/lookup_adder.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -14,7 +15,9 @@ export async function sandbox_3() {
   }
   let mapped = list_map(mapped2, lambda);
   let unique = list_unique(mapped);
-  function lambda2(la) {e
+  function lambda2(la) {
+    function lambda3(item) {}
+    each(list, lambda3);
     la(result, key);
   }
   let result = lookup_adder(lambda2);
