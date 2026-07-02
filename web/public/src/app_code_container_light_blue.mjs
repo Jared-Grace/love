@@ -1,3 +1,4 @@
+import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_border_y } from "../../../love/public/src/html_border_y.mjs";
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
@@ -17,8 +18,6 @@ export function app_code_container_light_blue(parent) {
     display: "flex",
     flexDirection: "column",
   });
-  html_style_assign(container, {
-    gap: "0.8em",
-  });
+  app_code_flex_gap(container);
   return container;
 }
