@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -54,6 +55,8 @@ export function app_code_lesson_symbols_letters() {
   let split = text_split_space(verse);
   function lambda2() {
     let mappers = [text_split_empty];
+    function lambda3(item) {}
+    each(list, lambda3);
     split = list_map(split, text_split_empty);
     return split;
   }
