@@ -11,7 +11,7 @@ export async function sandbox_3() {
   function lambda(value, property) {
     let joined = list_join_comma_space(value);
     let size = list_size(value);
-    let eq = equal_0(item);
+    let eq = equal_0(size);
     let extra = ternary(eq, " ", "");
     let combined = text_combine_multiple([
       property,
