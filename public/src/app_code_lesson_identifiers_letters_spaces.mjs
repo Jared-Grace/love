@@ -39,9 +39,9 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "We can give names to people, cities, countries, mountains, rivers, etc.",
     );
     html_div_cycle_bold(c2, [
-      "In JavaScript, we can use an ",
-      "identifier",
-      " as a name",
+      "In JavaScript, ",
+      "identifiers",
+      " are used as names",
     ]);
     let c4 = app_code_container_light_blue(root);
     html_div_text_multiple(c4, [
