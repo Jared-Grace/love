@@ -1,3 +1,4 @@
+import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -54,7 +55,7 @@ export function app_code_lesson_symbols_letters() {
     "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
   let split = text_split_space(verse);
   function lambda2() {
-    let mappers = [text_split_empty];
+    let mappers = [text_split_empty, text_letters_only];
     function lambda3(mapper) {
       split = list_map(split, mapper);
     }
