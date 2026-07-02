@@ -18,5 +18,4 @@ export function list_cycled_shuffle(list, cycle_size) {
     list_shuffle_indices(list, filtered);
   }
   each(mods, lambda);
-  return r;
 }
