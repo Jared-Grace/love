@@ -57,6 +57,23 @@ export function app_code_lesson_symbols_counting(
       let mapped2 = batch_symbols();
       function lambda2(symbols) {
         let symbol_count = list_size(symbols);
+        function example(parent) {
+          html_flex_column_stretch(parent);
+          app_code_flex_gap(parent);
+          log(app_code_lesson_symbols_counting.name, {
+            parent,
+          });
+          let a = example_above(parent, symbols);
+          let container_answer2 = property_get(a, "container_answer");
+          html_text_set(container_answer2, example_label);
+          let div3 = app_code_container_dark(container_answer2);
+          let s = app_code_symbol_generic(
+            div3,
+            symbol_count,
+            "transparent",
+            "transparent",
+          );
+        }
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, container, refresh) {
@@ -137,23 +154,7 @@ export function app_code_lesson_symbols_counting(
           },
         ];
         let r2 = {
-          example: function lambda6(parent) {
-            html_flex_column_stretch(parent);
-            app_code_flex_gap(parent);
-            log(app_code_lesson_symbols_counting.name, {
-              parent,
-            });
-            let a = example_above(parent, symbols);
-            let container_answer2 = property_get(a, "container_answer");
-            html_text_set(container_answer2, example_label);
-            let div3 = app_code_container_dark(container_answer2);
-            let s = app_code_symbol_generic(
-              div3,
-              symbol_count,
-              "transparent",
-              "transparent",
-            );
-          },
+          example,
           answer: symbol_count,
           quizzes,
         };
