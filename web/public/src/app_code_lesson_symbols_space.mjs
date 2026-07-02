@@ -1,3 +1,5 @@
+import { each_index } from "../../../love/public/src/each_index.mjs";
+import { list_slice_include } from "../../../love/public/src/list_slice_include.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { app_code_lesson_symbols_digits_numbered_on_symbol } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
@@ -6,7 +8,6 @@ import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { each_next } from "../../../love/public/src/each_next.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -26,13 +27,15 @@ export function app_code_lesson_symbols_space() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     function lambda3(la) {
-      function lambda2(word, next) {
+      function lambda2(word, index) {
+        let count = 3;
+        let sliced = list_slice_include(list, a, b);
         let pair = [word, next];
         let joined = list_join_space_nb(pair);
         let split = text_split_empty(joined);
         la(split);
       }
-      each_next(mapped, lambda2);
+      each_index(mapped, lambda2);
     }
     let list2 = list_adder(lambda3);
     return list2;
