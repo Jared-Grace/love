@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
@@ -33,6 +34,8 @@ export function app_code_lesson_symbols_space() {
       });
       return item3;
     }
+    function lambda2(item) {}
+    let mapped2 = list_map(list, lambda2);
     return mapped;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
