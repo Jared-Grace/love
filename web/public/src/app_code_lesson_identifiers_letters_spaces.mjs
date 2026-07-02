@@ -25,16 +25,14 @@ export function app_code_lesson_identifiers_letters_spaces() {
       " to speak to each other",
     ]);
     html_div_text(c, combined);
-    html_cycle_bold(
-      c,
+    html_cycle_bold(c, [
       "For a human to talk to a computer, the human can use a ",
       "programming language",
-    );
-    html_cycle_bold(
-      c,
+    ]);
+    html_cycle_bold(c, [
       "The programming language we will learn now is called ",
       "JavaScript",
-    );
+    ]);
   }
   function batch_get() {
     let words = app_code_verse_words();
