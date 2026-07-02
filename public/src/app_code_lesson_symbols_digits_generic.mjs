@@ -68,9 +68,9 @@ export function app_code_lesson_symbols_digits_generic(
             html_text_set(container_answer2, "How many symbols are there? ");
             let b = batch_get();
             let answers = list_map_property(b, "answer");
-            let unique = list_unique(list);
-            list_remove_if_exists(answers, symbol_count);
-            let taken = list_shuffle_take(answers, answer_count_max - 1);
+            let answers_unique = list_unique(answers);
+            list_remove_if_exists(answers_unique, symbol_count);
+            let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
             let concated = list_concat(taken, [symbol_count]);
             list_sort_text_to(concated);
             let on_success = html_div(parent);
