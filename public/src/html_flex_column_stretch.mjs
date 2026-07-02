@@ -3,6 +3,6 @@ export function html_flex_column_stretch(column) {
   html_style_assign(column, {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "stretch",
   });
 }
