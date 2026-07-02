@@ -1,5 +1,4 @@
 import { noop } from "../../../love/public/src/noop.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
 import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
@@ -23,7 +22,6 @@ export function app_code_home(context) {
   above(root);
   let c = app_code_container_light_blue(root);
   html_div_text(c, "Here is an example:");
-  let on_batch = error();
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop);
   function on_batch_item(container, b) {
     let ex = property_get(b, "example");
