@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function js_identifier_words_invalid() {
   let r = [
     "await",
@@ -47,5 +48,6 @@ export function js_identifier_words_invalid() {
     "protected",
     "public",
   ];
+  let concated = list_concat(a, b);
   return r;
 }
