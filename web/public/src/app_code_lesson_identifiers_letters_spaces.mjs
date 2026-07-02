@@ -1,5 +1,4 @@
-import { list_cycled_shuffle } from "../../../love/public/src/list_cycled_shuffle.mjs";
-import { list_slices_size_cycle } from "../../../love/public/src/list_slices_size_cycle.mjs";
+import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -53,9 +52,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let mapped = list_map(words, text_letters_only);
     const min = 1;
     const max = 2;
-    let choices_count = max - min + 1;
-    let list2 = list_slices_size_cycle(mapped, min, max);
-    list_cycled_shuffle(list2, choices_count);
+    let list2 = list_slices_size_cycles_shuffled(max, min, mapped);
     return list2;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
