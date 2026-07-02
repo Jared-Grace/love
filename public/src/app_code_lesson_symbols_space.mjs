@@ -1,3 +1,4 @@
+import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -21,8 +22,7 @@ export function app_code_lesson_symbols_space() {
   }
   function batch_get() {
     let words = app_code_verse_words();
-    function lambda4(item) {}
-    let mapped = list_map(list, lambda4);
+    let mapped = list_map(words, text_letters_only);
     function lambda3(la) {
       function lambda2(word, next) {
         let pair = [word, next];
@@ -30,7 +30,7 @@ export function app_code_lesson_symbols_space() {
         let split = text_split_empty(joined);
         la(split);
       }
-      each_next(words, lambda2);
+      each_next(mapped, lambda2);
     }
     let list2 = list_adder(lambda3);
     return list2;
