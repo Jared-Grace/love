@@ -58,8 +58,9 @@ export function app_code_lesson_symbols_digits_generic(
         return digits;
       }
       let mapped2 = list_map(digit_counts, lambda);
-      let v = log(app_code_lesson_symbols_digits_generic.name, {});
-      (v, mapped2);
+      let v = log(app_code_lesson_symbols_digits_generic.name, {
+        mapped2,
+      });
       function lambda2(item) {
         let r5 = app_code_lesson_symbols_digits_generic_batch(
           example_above,
