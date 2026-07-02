@@ -1,3 +1,4 @@
+import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
@@ -33,8 +34,6 @@ import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_e
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -163,13 +162,8 @@ export function app_code_lesson_symbols_digits_generic(
   };
   return r3;
   function batch_symbols() {
-    let digit_counts = range_1(5);
-    function lambda(digit_count) {
-      let digits = integer_positive_random_digits_text(digit_count);
-      return digits;
-    }
-    let mapped2 = list_map(digit_counts, lambda);
-    return mapped2;
+    let r5 = app_code_lesson_symbols_batch_digits();
+    return r5;
   }
   function example_above(parent, digits) {
     let container_above = html_div(parent);
