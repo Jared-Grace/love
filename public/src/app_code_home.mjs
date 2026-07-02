@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
@@ -15,7 +16,6 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
