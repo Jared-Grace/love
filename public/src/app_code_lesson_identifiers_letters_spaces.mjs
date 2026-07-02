@@ -1,3 +1,4 @@
+import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
@@ -35,18 +36,11 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "The programming language we will learn now is called ",
       "JavaScript",
     ]);
-    html_div_text(
-      c,
+    html_div_text_multiple(c, [
       "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
-    );
-    html_div_text(
-      c,
       "In JavaScript, symbols are a basic building block like letters in English",
-    );
-    html_div_text(
-      c,
       "We can give names to people, cities, countries, mountains, rivers, etc.",
-    );
+    ]);
     html_cycle_bold(c, [
       "In JavaScript, the name of something is called an ",
       "identifier",
