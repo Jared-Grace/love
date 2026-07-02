@@ -8,6 +8,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
     app_code_lesson_symbols_space,
+    app_code_lesson_symbols_space_2,
   ];
   return r;
 }
