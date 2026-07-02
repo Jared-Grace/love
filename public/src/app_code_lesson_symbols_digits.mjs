@@ -15,6 +15,7 @@ export function app_code_lesson_symbols_digits() {
     "symbols_digits",
     lambda,
     noop,
+    error(),
   );
   return r5;
 }
