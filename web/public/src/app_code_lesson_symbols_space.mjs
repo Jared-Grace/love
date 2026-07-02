@@ -1,3 +1,4 @@
+import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -29,7 +30,7 @@ export function app_code_lesson_symbols_space() {
     let mapped = list_map(words, text_letters_only);
     function lambda3(la) {
       function lambda2(word, index) {
-        let count = 3;
+        let count = integer_random(2, 3);
         let slice = list_slice(mapped, index, index + count);
         let m = list_multiple_is(slice);
         if (m) {
