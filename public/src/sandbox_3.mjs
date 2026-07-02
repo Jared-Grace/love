@@ -8,8 +8,15 @@ export async function sandbox_3() {
   let dictionary = await bible_books_by_first_letter();
   function lambda(value, property) {
     let joined = list_join_comma_space(value);
-    let size = list_size(list);
-    let combined = text_combine_multiple([property, ": ", joined]);
+    let size = list_size(value);
+    let combined = text_combine_multiple([
+      property,
+      ": ",
+      "(",
+      size,
+      ") ",
+      joined,
+    ]);
     log(sandbox_3.name, combined);
   }
   each_object(dictionary, lambda);
