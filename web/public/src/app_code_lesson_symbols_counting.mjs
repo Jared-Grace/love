@@ -11,10 +11,10 @@ export function app_code_lesson_symbols_counting(
   const quiz_label = "How many symbols are there? ";
   let symbols_to_answer = list_size;
   let r = app_code_lesson_symbols_batches_genric(
-    on_symbol,
     name,
     id,
     above,
+    on_symbol,
     batch_symbols,
     symbols_to_answer,
     example_label,
