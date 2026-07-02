@@ -12,4 +12,5 @@ export function app_code_lesson_symbols_letters_batch() {
     let mapped = list_map_multiple(split, mappers);
     return mapped;
   }
+  return batch_get;
 }
