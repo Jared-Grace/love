@@ -10,7 +10,7 @@ export async function sandbox_3() {
   let prefixes = ["1 ", "2 ", "3 "];
   let mapped = list_map_prefix_without_try_multiple(mapped2, prefixes);
   let result = list_to_lookup_text_first_unique(mapped);
-  let alphabet_lower = list_alphabet_upper();
+  let alphabet_upper = list_alphabet_upper();
   function lambda(item2v) {}
   let dictionary = list_to_dictionary_value(list, lambda);
   return result;
