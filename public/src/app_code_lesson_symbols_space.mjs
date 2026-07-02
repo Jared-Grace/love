@@ -1,5 +1,5 @@
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
-import { list_slice_include } from "../../../love/public/src/list_slice_include.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { app_code_lesson_symbols_digits_numbered_on_symbol } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
@@ -29,7 +29,7 @@ export function app_code_lesson_symbols_space() {
     function lambda3(la) {
       function lambda2(word, index) {
         let count = 3;
-        let sliced = list_slice_include(list, a, b);
+        let sliced = list_slice(list, index, index + count);
         let pair = [word, next];
         let joined = list_join_space_nb(pair);
         let split = text_split_empty(joined);
