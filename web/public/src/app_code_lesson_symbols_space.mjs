@@ -33,9 +33,9 @@ export function app_code_lesson_symbols_space() {
     if (eq) {
       let size = list_size(symbols);
       let ne = equal_not(index_1, size);
-      if (false) {
+      if (ne) {
+        app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
       }
-      app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
     }
   }
   let r5 = app_code_lesson_symbols_digits_generic(
