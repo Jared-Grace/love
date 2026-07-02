@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
@@ -14,8 +14,12 @@ export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
   let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
-  let on_batch = error();
-  let refresh = app_code_batch_item_get(root, lesson, on_batch_item, on_batch);
+  let refresh = app_code_batch_item_get(
+    root,
+    lesson,
+    on_batch_item,
+    list_shuffle,
+  );
   function on_batch_item(container, b, refresh) {
     let c = app_code_container_light_blue(container);
     html_div_text(c, "Please answer the following quiz question:");
