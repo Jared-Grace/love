@@ -5,7 +5,6 @@ import { list_text_insert_between_spaces_random } from "../../../love/public/src
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
-import { identity } from "../../../love/public/src/identity.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -21,7 +20,6 @@ export function app_code_lesson_symbols_space() {
     html_div_text(div, "For a computer, a space is considered a symbol");
   }
   function batch_get() {
-    let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
       function lambda3(la) {}
@@ -34,6 +32,7 @@ export function app_code_lesson_symbols_space() {
       each_next(list, lambda2);
       return split;
     }
+    let mapped = app_code_lesson_symbols_letters_batch_get(lambda5);
     let mapped2 = list_map(mapped, lambda5);
     return mapped2;
   }
