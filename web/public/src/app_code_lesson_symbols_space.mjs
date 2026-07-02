@@ -29,7 +29,7 @@ export function app_code_lesson_symbols_space() {
     function lambda3(la) {
       function lambda2(word, index) {
         let count = 3;
-        let slice = list_slice(list, index, index + count);
+        let slice = list_slice(mapped, index, index + count);
         let joined = list_join_space_nb(slice);
         let split = text_split_empty(joined);
         la(split);
