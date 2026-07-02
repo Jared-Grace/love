@@ -1,4 +1,4 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { list_text_insert_between_spaces_random } from "../../../love/public/src/list_text_insert_between_spaces_random.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -20,13 +20,12 @@ export function app_code_lesson_symbols_space() {
     html_div_text(div, "For a computer, a space is considered a symbol");
   }
   function batch_get() {
-    let choices = [2, 3];
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
       function lambda2(item, next) {
         let pair = [item, next];
-        log_json(object);
+        let joined = list_join_space(list2);
         return;
       }
       each_next(list, lambda2);
