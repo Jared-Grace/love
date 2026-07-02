@@ -33,7 +33,7 @@ export function app_code_lesson_symbols_space() {
       let r = list_to_indices(item3);
       let skipped = list_skip_1(r);
       let r2 = integer_random(1, max);
-      let items = list_random_item_count(skipped, count);
+      let items = list_random_item_count(skipped, r2);
     }
     let mapped2 = list_map(mapped, lambda5);
     function lambda3(la) {
