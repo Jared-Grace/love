@@ -30,8 +30,8 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
       let size = list_size(item3);
-      let r = range(count);
-      let skipped = list_skip_1(list4);
+      let r = range(size);
+      let skipped = list_skip_1(r);
     }
     let mapped2 = list_map(mapped, lambda5);
     function lambda3(la) {
