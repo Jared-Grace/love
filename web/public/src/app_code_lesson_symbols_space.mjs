@@ -32,11 +32,11 @@ export function app_code_lesson_symbols_space() {
         let count = 3;
         let slice = list_slice(mapped, index, index + count);
         let m = list_multiple_is(slice);
-        if (false) {
+        if (m) {
+          let joined = list_join_space_nb(slice);
+          let split = text_split_empty(joined);
+          la(split);
         }
-        let joined = list_join_space_nb(slice);
-        let split = text_split_empty(joined);
-        la(split);
       }
       each_index(mapped, lambda2);
     }
