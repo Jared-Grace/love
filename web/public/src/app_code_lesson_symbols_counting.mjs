@@ -77,7 +77,7 @@ export function app_code_lesson_symbols_counting(
     batch: function batch_get() {
       let mapped2 = batch_symbols();
       function lambda2(symbols) {
-        let symbol_count = list_size(symbols);
+        let answer = list_size(symbols);
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
@@ -87,7 +87,7 @@ export function app_code_lesson_symbols_counting(
           let div3 = app_code_container_dark(container_answer2);
           let s = app_code_symbol_generic(
             div3,
-            symbol_count,
+            answer,
             "transparent",
             "transparent",
           );
@@ -101,9 +101,9 @@ export function app_code_lesson_symbols_counting(
             let b = batch_get();
             let answers = list_map_property(b, "answer");
             let answers_unique = list_unique(answers);
-            list_remove_if_exists(answers_unique, symbol_count);
+            list_remove_if_exists(answers_unique, answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
-            let concated = list_concat(taken, [symbol_count]);
+            let concated = list_concat(taken, [answer]);
             list_sort_text_to(concated);
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
@@ -148,14 +148,14 @@ export function app_code_lesson_symbols_counting(
             let hides = [success, container_on_success];
             html_visibility_hidden_multiple(hides);
             let buttons = list_map(concated, lambda3);
-            function lambda3(answer) {
+            function lambda3(quiz_answer) {
               let b2 = app_replace_button_wide(
                 container_answer2,
-                answer,
+                quiz_answer,
                 on_click,
               );
               async function on_click() {
-                let eq2 = equal(answer, symbol_count);
+                let eq2 = equal(quiz_answer, answer);
                 if (eq2) {
                   app_shared_button_screen_green_style_assign(b2);
                   html_visibility_visible_multiple(hides);
@@ -173,7 +173,7 @@ export function app_code_lesson_symbols_counting(
         ];
         let r2 = {
           example,
-          answer: symbol_count,
+          answer: answer,
           quizzes,
         };
         return r2;
