@@ -7,4 +7,5 @@ export function list_to_text_or_list(list) {
   let last = list_last(list);
   let joined = list_join_comma_space(taken);
   let combined = text_combine_multiple([joined, " or ", last]);
+  return combined;
 }
