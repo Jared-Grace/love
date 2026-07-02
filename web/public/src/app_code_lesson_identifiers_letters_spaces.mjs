@@ -1,3 +1,4 @@
+import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -15,7 +16,8 @@ import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_identifiers_letters_spaces() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    let combined2 = list_to_text_or_list([]);
+    let list = languages_popular();
+    let combined2 = list_to_text_or_list(list);
     let combined = text_combine_multiple([
       "Humans use languages like ",
       "English",
