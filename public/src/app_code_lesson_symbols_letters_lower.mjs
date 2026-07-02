@@ -4,6 +4,7 @@ import { text_letters_only } from "../../../love/public/src/text_letters_only.mj
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
+import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -29,6 +30,12 @@ export function app_code_lesson_symbols_letters_lower() {
       "lowercase",
       ".",
     ]);
+    let container = app_code_container_light_blue(root);
+    let div4 = html_div(container);
+    html_cycle_bold(div4, ["Below are letters written in ", "uppercase", ":"]);
+    let div5 = html_div(container);
+    let alphabet_upper = list_alphabet_upper();
+    html_text_characters_numbered(div5, alphabet_upper);
     let container2 = app_code_container_light_blue(root);
     html_div_text(container2, "Remember, numbers are examples of symbols");
     let div6 = html_div_text(
