@@ -1,3 +1,4 @@
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
@@ -53,14 +54,15 @@ export function app_code_lesson_symbols_letters() {
   }
   let verse =
     "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
-  let split = text_split_space(s);
+  let split = text_split_space(verse);
   function lambda2() {
     let digit_counts = range_1(5);
     function lambda(digit_count) {
       let digits = integer_positive_random_digits_text(digit_count);
       return digits;
     }
-    let batch_digits = list_map(digit_counts, lambda);
+    let split2 = text_split_empty(s);
+    let batch_digits = list_map(split, lambda);
     return batch_digits;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
