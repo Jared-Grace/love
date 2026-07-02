@@ -65,8 +65,8 @@ export function app_code_lesson_symbols_space() {
   }
   let batch_symbols = batch_get;
   let r5 = app_code_lesson_symbols_digits_generic(
-    "Symbols (Letters)",
-    "symbols_letters",
+    "Symbols (Space)",
+    "symbols_space",
     lambda,
     noop,
     batch_symbols,
