@@ -38,11 +38,11 @@ export function app_code_lesson_symbols_letters_lower() {
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
     let container2 = app_code_container_light_blue(root);
+    html_div_text(container2, "Remember, numbers are examples of symbols");
     html_div_text(
       container2,
-      "Remember, lowercase letters and numbers are examples of symbols",
+      "Lowercase and uppercase letters are also examples of symbols",
     );
-    html_div_text(container2, "Uppercase letters are also examples of symbols");
   }
   let batch_symbols = app_code_lesson_symbols_letters_batch(text_lower_to);
   let r5 = app_code_lesson_symbols_digits_generic(
