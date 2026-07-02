@@ -1,4 +1,7 @@
-import { js_parse_expression_from_assignment } from "../../../love/public/src/js_parse_expression_from_assignment.mjs";
+import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
+import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
+import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
+import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -15,7 +18,10 @@ export function app_code_lesson_symbols_identifiers_valid(
   let symbols_to_answer = function lambda(symbols) {
     let joined = list_join_empty(symbols);
     try {
-      let expression = js_parse_expression_from_assignment(joined);
+      let code_assign = js_code_let_assign("a", joined);
+      let statement = js_parse_statement(code_assign);
+      let d = js_declare_single(statement);
+      let expression = js_declare_init_get(d);
     } catch (e) {}
     let ii = js_identifier_is(expression);
     let result = boolean_to_text_validity(ii);
