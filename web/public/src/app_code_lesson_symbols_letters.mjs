@@ -50,7 +50,7 @@ export function app_code_lesson_symbols_letters() {
     );
   }
   let verse =
-    "For God so loved the world that He gave His one and only Son that everyone who believes in Him shall not perish but have eternal life";
+    "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
   let split = text_split_space(verse);
   function lambda2() {
     split = list_map(split, text_split_empty);
