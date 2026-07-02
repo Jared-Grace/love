@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
@@ -34,6 +35,11 @@ export function app_code_lesson_symbols_space() {
       let max = list_size(skipped);
       let r2 = integer_random(1, max);
       let items = list_random_item_count(skipped, r2);
+      log(app_code_lesson_symbols_space.name, {
+        items,
+        item3,
+      });
+      return item3;
     }
     let mapped2 = list_map(mapped, lambda5);
     function lambda3(la) {
