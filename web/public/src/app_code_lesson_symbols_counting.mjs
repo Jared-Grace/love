@@ -60,9 +60,6 @@ export function app_code_lesson_symbols_counting(
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
-          log(app_code_lesson_symbols_counting.name, {
-            parent,
-          });
           let a = example_above(parent, symbols);
           let container_answer2 = property_get(a, "container_answer");
           html_text_set(container_answer2, example_label);
