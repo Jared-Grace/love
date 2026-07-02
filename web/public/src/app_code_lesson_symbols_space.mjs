@@ -1,11 +1,10 @@
+import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { list_text_insert_between_spaces_random } from "../../../love/public/src/list_text_insert_between_spaces_random.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
-import { identity } from "../../../love/public/src/identity.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -21,7 +20,7 @@ export function app_code_lesson_symbols_space() {
     html_div_text(div, "For a computer, a space is considered a symbol");
   }
   function batch_get() {
-    let mapped = app_code_lesson_symbols_letters_batch_get(identity);
+    let mapped = app_code_verse_words();
     function lambda5(item3) {
       let split = list_text_insert_between_spaces_random(item3);
       function lambda3(la) {
