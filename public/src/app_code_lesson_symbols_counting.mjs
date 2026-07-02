@@ -48,6 +48,28 @@ export function app_code_lesson_symbols_counting(
 ) {
   const example_label = "Number of symbols: ";
   const quiz_label = "How many symbols are there? ";
+  function example_above(parent, symbols) {
+    let q = app_code_container_light(parent);
+    let span = html_div_text(q, "Symbols: ");
+    let row = app_code_container_dark(q);
+    html_style_assign(row, {
+      display: "flex",
+      "flex-wrap": "wrap",
+    });
+    function lambda4(d, index_1) {
+      let row_item = html_div(row);
+      html_flex_column_center(row_item);
+      let digit = app_code_symbol(row_item, d);
+      on_symbol(row_item, index_1, symbols);
+      return digit;
+    }
+    let spans = list_map_index_1(symbols, lambda4);
+    let container_answer = app_code_container_light(parent);
+    let r = {
+      container_answer,
+    };
+    return r;
+  }
   let r3 = {
     name,
     id,
@@ -161,26 +183,4 @@ export function app_code_lesson_symbols_counting(
     },
   };
   return r3;
-  function example_above(parent, symbols) {
-    let q = app_code_container_light(parent);
-    let span = html_div_text(q, "Symbols: ");
-    let row = app_code_container_dark(q);
-    html_style_assign(row, {
-      display: "flex",
-      "flex-wrap": "wrap",
-    });
-    function lambda4(d, index_1) {
-      let row_item = html_div(row);
-      html_flex_column_center(row_item);
-      let digit = app_code_symbol(row_item, d);
-      on_symbol(row_item, index_1, symbols);
-      return digit;
-    }
-    let spans = list_map_index_1(symbols, lambda4);
-    let container_answer = app_code_container_light(parent);
-    let r = {
-      container_answer,
-    };
-    return r;
-  }
 }
