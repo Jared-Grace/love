@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
@@ -25,7 +26,8 @@ export function app_code_lesson_symbols_space() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda3(la) {
       function lambda2(item2, next2) {
-        const pair = [item2, next2];ljs
+        const pair = [item2, next2];
+        log_json(object);
         la(pair);
       }
       each_next(list2, lambda2);
