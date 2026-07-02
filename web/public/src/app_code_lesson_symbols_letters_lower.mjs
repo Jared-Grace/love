@@ -51,7 +51,7 @@ export function app_code_lesson_symbols_letters_lower() {
       "For a computer, lowercase symbols may be considered different than uppercase symbols",
     );
   }
-  function lambda2() {}
+  function lambda2() {}$x
   let batch_symbols = app_code_lesson_symbols_letters_batch(lambda2);
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
