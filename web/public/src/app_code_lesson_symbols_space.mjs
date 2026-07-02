@@ -21,7 +21,7 @@ export function app_code_lesson_symbols_space() {
   }
   function batch_get() {
     let words = app_code_verse_words();
-    let mapped = list_map(words, text_letters_only);
+    let mapped = list_map(words, text_letters_only);$a
     const max = 3;
     let list2 = list_slices_size_random(mapped, 2, max);
     return list2;
