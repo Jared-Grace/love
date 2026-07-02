@@ -10,7 +10,6 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
-import { list_random_item_count } from "../../../love/public/src/list_random_item_count.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -36,8 +35,7 @@ export function app_code_lesson_symbols_space() {
       let max = list_size_less_1(skipped);
       let m = math_max(1, max);
       let count = integer_random(1, m);
-      let items = list_random_item_count(skipped, count);
-      let taken = list_shuffle_take(list, count2);
+      let items = list_shuffle_take(skipped, count);
       function lambda2(item, index) {
         let includes = list_includes(items, index);
         let result = ternary_text_space_or_empty(includes);
