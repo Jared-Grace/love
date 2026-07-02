@@ -10,6 +10,6 @@ export function app_code_lesson_symbols_batch_digits() {
     return digits;
   }
   let batch_digits = list_map(digit_counts, lambda);
-  list_shuffle(list);
+  list_shuffle(batch_digits);
   return batch_digits;
 }
