@@ -1,3 +1,4 @@
+import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { app_code_lesson_symbols_batches_genric } from "../../../love/public/src/app_code_lesson_symbols_batches_genric.mjs";
@@ -13,7 +14,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   let symbols_to_answer = function lambda(symbols) {
     let joined = list_join_empty(symbols);
     let expression = js_parse_expression(joined);
-    jii;
+    let ii = js_identifier_is(node);
   };
   let r = app_code_lesson_symbols_batches_genric(
     name,
