@@ -57,7 +57,8 @@ export function app_code_lesson_symbols_digits_generic(
         return digits;
       }
       let mapped2 = list_map(digit_counts, lambda);
-      function lambda2(item) {
+      function lambda2(digits) {
+        let size2 = list_size(list);
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, refresh) {
