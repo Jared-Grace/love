@@ -51,7 +51,7 @@ export function app_code_lesson_symbols_space() {
       return squashed;
     }
     let mapped2 = list_map(mapped, lambda5);
-    return mapped;
+    return mapped2;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Space)",
