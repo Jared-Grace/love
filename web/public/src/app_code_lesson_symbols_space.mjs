@@ -38,7 +38,7 @@ export function app_code_lesson_symbols_space() {
       let items = list_shuffle_take(skipped, count);
       function lambda2(item, index) {
         let includes = list_includes(items, index);
-        let result = ternary(includes, " ", "");
+        let result = ternary(includes, "\u00A0", "");
         let r = [result, item];
         return r;
       }
