@@ -1,5 +1,4 @@
-import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
-import { list_join } from "../../../love/public/src/list_join.mjs";
+import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -41,9 +40,4 @@ export function app_code_lesson_symbols_space() {
     batch_get,
   );
   return r5;
-  function list_join_space_nb(pair) {
-    let separator = text_space_nb();
-    let joined = list_join(pair, separator);
-    return joined;
-  }
 }
