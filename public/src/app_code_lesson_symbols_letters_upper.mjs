@@ -38,8 +38,8 @@ export function app_code_lesson_symbols_letters_upper() {
   }
   let batch_symbols = app_code_lesson_symbols_letters_batch(text_upper_to);
   let r5 = app_code_lesson_symbols_digits_generic(
-    "Symbols (Letters)",
-    "symbols_letters",
+    "Symbols (Letters, Uppercase)",
+    "symbols_letters_upper",
     lambda,
     noop,
     batch_symbols,
