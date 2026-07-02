@@ -56,6 +56,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let list2 = list_slices_size_cycles_shuffled(mapped, 1, 2);
     log(app_code_lesson_identifiers_letters_spaces.name, {
       list2,
+      mapped,
     });
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(list2, list_other);
