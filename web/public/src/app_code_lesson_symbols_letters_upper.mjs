@@ -23,7 +23,7 @@ export function app_code_lesson_symbols_letters_upper() {
     let container2 = app_code_container_light_blue(root);
     html_div_text(
       container2,
-      "Remember, numbers and lowercase letters are examples of symbols",
+      "Remember, lowercase letters and numbers are examples of symbols",
     );
     html_div_text(container2, "Uppercase letters are also examples of symbols");
     return;
