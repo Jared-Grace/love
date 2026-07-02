@@ -1,3 +1,5 @@
+import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
+import { app_code_lesson_symbols_letters_batch } from "../../../love/public/src/app_code_lesson_symbols_letters_batch.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -31,12 +33,13 @@ export function app_code_lesson_symbols_letters_lower() {
       "Lowercase letters are also examples of symbols",
     );
   }
+  let batch_symbols = app_code_lesson_symbols_letters_batch(text_lower_to);
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
     "symbols_letters",
     lambda,
     noop,
-    lambda2,
+    batch_symbols,
   );
   return r5;
 }
