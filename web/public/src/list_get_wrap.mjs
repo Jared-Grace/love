@@ -1,9 +1,7 @@
+import { list_get_wrap_index } from "../../../love/public/src/list_get_wrap_index.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { mod } from "../../../love/public/src/mod.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 export function list_get_wrap(cycles, index) {
-  let size = list_size(cycles);
-  let r = mod(index, size);
+  let r = list_get_wrap_index(cycles, index);
   let item = list_get(cycles, r);
   return item;
 }
