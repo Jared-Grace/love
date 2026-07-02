@@ -12,7 +12,7 @@ export async function sandbox_3() {
     let joined = list_join_comma_space(value);
     let size = list_size(value);
     let eq = equal_0(item);
-    let result = ternary(size, on_true, on_false);
+    let result = ternary(size, " ", "");
     let combined = text_combine_multiple([
       property,
       ": ",
