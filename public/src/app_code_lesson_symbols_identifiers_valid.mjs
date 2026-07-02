@@ -11,8 +11,9 @@ export function app_code_lesson_symbols_identifiers_valid(
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
-    let joined = list_join_empty(list);
-    let expression = js_parse_expression(code_expression);
+    let joined = list_join_empty(symbols);
+    let expression = js_parse_expression(joined);
+    jii;
   };
   let r = app_code_lesson_symbols_batches_genric(
     name,
