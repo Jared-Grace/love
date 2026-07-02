@@ -1,4 +1,4 @@
-export function math_min(list) {
-  let m = Math.min(list);
+export function math_min(a, b) {
+  let m = Math.min(a, b);
   return m;
 }
