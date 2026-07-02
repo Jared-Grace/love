@@ -2,7 +2,7 @@ import { js_parse_expression_try } from "../../../love/public/src/js_parse_expre
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { app_code_lesson_symbols_batches_genric } from "../../../love/public/src/app_code_lesson_symbols_batches_genric.mjs";
+import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 export function app_code_lesson_symbols_identifiers_valid(
   name,
   id,
@@ -19,7 +19,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     let result = boolean_to_text_validity(ii);
     return result;
   };
-  let r = app_code_lesson_symbols_batches_genric(
+  let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
