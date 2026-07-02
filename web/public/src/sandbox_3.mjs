@@ -10,6 +10,6 @@ export async function sandbox_3() {
     let combined = text_combine_multiple([property, ": ", joined]);
     log(sandbox_3.name, combined);
   }
-  each_object(object, lambda);
+  each_object(dictionary, lambda);
   return dictionary;
 }
