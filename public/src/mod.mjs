@@ -1,4 +1,4 @@
-export function mod(n, m) {
-  const r = n % m;
-  return r;
+export function mod(quotient, divisor) {
+  const m = quotient % divisor;
+  return m;
 }
