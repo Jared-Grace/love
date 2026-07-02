@@ -39,6 +39,14 @@ export function app_code_lesson_identifiers_letters_spaces() {
       c,
       "In English, letters are inside words, words are inside sentences and sentences are inside paragraphs",
     );
+    html_div_text(
+      c,
+      "In programming, symbols are a basic building block like letters in English",
+    );
+    html_div_text(
+      c,
+      "In programming, symbols are a basic building block like letters in English",
+    );
   }
   function batch_get() {
     let words = app_code_verse_words();
