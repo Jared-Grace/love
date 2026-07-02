@@ -168,6 +168,7 @@ export function app_code_lesson_symbols_digits_generic(
     let row = app_code_container_dark(q);
     html_style_assign(row, {
       display: "flex",
+      "flex-wrap": wrap,
     });
     function lambda4(d, index_1) {
       let row_item = html_div(row);
