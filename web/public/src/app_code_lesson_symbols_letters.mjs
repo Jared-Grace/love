@@ -48,12 +48,13 @@ export function app_code_lesson_symbols_letters() {
     );
   }
   let batch_symbols = error();
+  function lambda2() {}
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
     "symbols_letters",
     lambda,
     noop,
-    batch_symbols,
+    lambda2,
   );
   return r5;
 }
