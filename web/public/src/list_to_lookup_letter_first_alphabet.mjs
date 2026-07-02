@@ -6,8 +6,8 @@ import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { list_to_lookup_letter_first } from "../../../love/public/src/list_to_lookup_letter_first.mjs";
-export function list_to_lookup_letter_first_alphabet(mapped) {
-  let result = list_to_lookup_letter_first(mapped);
+export function list_to_lookup_letter_first_alphabet(list) {
+  let result = list_to_lookup_letter_first(list);
   let alphabet_upper = list_alphabet_upper();
   function lambda(upper) {
     let value = [];
