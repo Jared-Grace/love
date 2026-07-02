@@ -26,7 +26,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     html_div_text(c, combined);
     html_div_text(
       c,
-      "For a computer, a space is considered a symbol, just like a letter or a number",
+      "For a human to talk to a computer, the human can use a programming language",
     );
   }
   function batch_get() {
