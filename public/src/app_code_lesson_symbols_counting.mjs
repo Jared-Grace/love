@@ -61,7 +61,8 @@ export function app_code_lesson_symbols_counting(
           function on_quiz1(context, parent, container, refresh) {
             let a = example_above(container, symbols);
             let container_answer2 = property_get(a, "container_answer");
-            html_text_set(container_answer2, "How many symbols are there? ");
+            const quiz_label = "How many symbols are there? ";
+            html_text_set(container_answer2, quiz_label);
             let b = batch_get();
             let answers = list_map_property(b, "answer");
             let answers_unique = list_unique(answers);
