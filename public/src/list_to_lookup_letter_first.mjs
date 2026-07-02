@@ -2,11 +2,13 @@ import { text_letters_only } from "../../../love/public/src/text_letters_only.mj
 import { lookup_adder } from "../../../love/public/src/lookup_adder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_first } from "../../../love/public/src/text_first.mjs";
+import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
 export function list_to_lookup_letter_first(unique) {
   function lambda2(la) {
     function lambda3(item) {
       let letters = text_letters_only(item);
       let key = text_first(letters);
+      let u = text_upper_to(s);
       la(key, item);
     }
     each(unique, lambda3);
