@@ -1,8 +1,11 @@
+import { text_replace_if_starts_with } from "../../../love/public/src/text_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 export async function sandbox_3() {
   let books = await ebible_version_books("engbsb");
-  function lambda(item) {}
+  function lambda(item) {
+    let item3 = text_replace_if_starts_with(item2, prefix, replacement);
+  }
   let mapped = list_map(list, lambda);
   return books;
 }
