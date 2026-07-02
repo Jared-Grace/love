@@ -53,8 +53,8 @@ export function app_code_lesson_symbols_letters() {
     "For God so loved the world that He gave His one and only Son that everyone who believes in Him shall not perish but have eternal life";
   let split = text_split_space(verse);
   function lambda2() {
-    let batch_digits = list_map(split, text_split_empty);
-    return batch_digits;
+    split = list_map(split, text_split_empty);
+    return split;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Letters)",
