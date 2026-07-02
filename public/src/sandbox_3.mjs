@@ -13,7 +13,7 @@ export async function sandbox_3() {
   function lambda(book_name) {
     let prefixes = ["1 ", "2 "];
     function lambda4(prefix) {
-      let without = text_prefix_without_try(t, prefix2);
+      book_name = text_prefix_without_try(book_name, prefix);
     }
     each(prefixes, lambda4);
     let item3 = list_map_prefix_without_try_multiple(book_name);
