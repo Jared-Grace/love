@@ -33,8 +33,8 @@ export function app_code_lesson_symbols_space() {
     function lambda5(item3) {
       let skipped = list_to_indices_skip_1(item3);
       let max = list_size_less_1(skipped);
-      let m = math_min(list);
-      let count = integer_random(1, max);
+      let m = math_min(1, max);
+      let count = integer_random(1, m);
       let items = list_random_item_count(skipped, count);
       function lambda2(item, index) {
         let includes = list_includes(items, index);
