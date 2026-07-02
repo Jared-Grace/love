@@ -1,9 +1,9 @@
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-export function list_map_multiple(split, mappers) {
+export function list_map_multiple(list, mappers) {
   function lambda3(mapper) {
-    split = list_map(split, mapper);
+    list = list_map(list, mapper);
   }
   each(mappers, lambda3);
-  return split;
+  return list;
 }
