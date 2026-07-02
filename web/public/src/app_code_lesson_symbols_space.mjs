@@ -24,7 +24,7 @@ export function app_code_lesson_symbols_space() {
     let mapped = list_map(words, text_letters_only);
     const min = 2;
     const max = 3;
-    let list2 = list_slices_size_random(min, max, mapped);
+    let list2 = list_slices_size_random(mapped, min, max);
     return list2;
   }
   function lambda4(parent, index_1) {
