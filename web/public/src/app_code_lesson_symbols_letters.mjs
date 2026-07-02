@@ -1,3 +1,4 @@
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { integer_positive_random_digits_text } from "../../../love/public/src/integer_positive_random_digits_text.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -50,7 +51,8 @@ export function app_code_lesson_symbols_letters() {
       "For a computer, lowercase symbols may be considered different symbols than uppercase",
     );
   }
-  ("For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life.");
+  ("For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life");
+  let split = text_split_space(s);
   function lambda2() {
     let digit_counts = range_1(5);
     function lambda(digit_count) {
