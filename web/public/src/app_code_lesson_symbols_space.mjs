@@ -9,10 +9,6 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
-import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
-import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
-import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -51,14 +47,6 @@ export function app_code_lesson_symbols_space() {
       each_next(list2, lambda2);
     }
     let list3 = list_adder(lambda3);
-    return mapped;
-  }
-  function batch_get() {
-    let verse =
-      "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life";
-    let split = text_split_space(verse);
-    let mappers = [text_letters_only, identity, text_split_empty];
-    let mapped = list_map_multiple(split, mappers);
     return mapped;
   }
   let batch_symbols = batch_get;
