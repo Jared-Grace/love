@@ -40,7 +40,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_symbols_digits_generic(
   name,
   id,
@@ -59,13 +58,7 @@ export function app_code_lesson_symbols_digits_generic(
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, refresh) {
-            let container = app_code_container_light_blue(parent);
-            let a = example_above(container, symbols);
-            let container_above = property_get(a, "container_above");
-            html_text_set(
-              container_above,
-              "Please answer the following quiz question:",
-            );
+            let a = example_above(parent, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, "How many symbols are there? ");
             let b = batch_get();
@@ -170,7 +163,6 @@ export function app_code_lesson_symbols_digits_generic(
   };
   return r3;
   function example_above(parent, symbols) {
-    let container_above = html_div(parent);
     let q = app_code_container_light(parent);
     let span = html_div_text(q, "Symbols: ");
     let row = app_code_container_dark(q);
@@ -188,7 +180,6 @@ export function app_code_lesson_symbols_digits_generic(
     let container_answer = app_code_container_light(parent);
     let r = {
       container_answer,
-      container_above,
     };
     return r;
   }
