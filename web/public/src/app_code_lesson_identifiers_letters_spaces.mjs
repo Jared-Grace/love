@@ -1,4 +1,4 @@
-import { html_div } from "../../../love/public/src/html_div.mjs";
+import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
@@ -30,8 +30,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
       "For a human to talk to a computer, the human can use a ",
       "programming language",
     ];
-    let div = html_div(c);
-    html_cycle_bold(div, parts);
+    html_div_cycle_bold(c, parts);
     html_cycle_bold(c, [
       "The programming language we will learn now is called ",
       "JavaScript",
