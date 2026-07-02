@@ -1,3 +1,4 @@
+import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { app_code_lesson_symbols_letters_batch } from "../../../love/public/src/app_code_lesson_symbols_letters_batch.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -26,12 +27,22 @@ export function app_code_lesson_symbols_letters_lower() {
       "lowercase",
       ".",
     ]);
+    let container = app_code_container_light_blue(root);
+    let div4 = html_div(container);
+    html_cycle_bold(div4, [
+      "Here are the 26 English letters written in ",
+      "uppercase",
+      ":",
+    ]);
+    let div5 = html_div(container);
+    let alphabet_upper = list_alphabet_upper();
+    html_text_characters_numbered(div5, alphabet_upper);
     let container2 = app_code_container_light_blue(root);
-    html_div_text(container2, "Remember, numbers are examples of symbols");
-    let div6 = html_div_text(
+    html_div_text(
       container2,
-      "Lowercase letters are also examples of symbols",
+      "Remember, lowercase letters and numbers are examples of symbols",
     );
+    html_div_text(container2, "Uppercase letters are also examples of symbols");
   }
   let batch_symbols = app_code_lesson_symbols_letters_batch(text_lower_to);
   let r5 = app_code_lesson_symbols_digits_generic(
