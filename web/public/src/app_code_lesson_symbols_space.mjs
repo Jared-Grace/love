@@ -2,13 +2,11 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
@@ -20,21 +18,16 @@ export function app_code_lesson_symbols_space() {
     html_div_text(div, "For a computer, a space is considered a symbol");
   }
   function batch_get() {
-    let mapped = app_code_verse_words();
-    function lambda5(item3) {
-      let split = text_split_empty(item3);
-      function lambda3(la) {
-        function lambda2(item, next) {
-          let pair = [item, next];
-          let joined = list_join_space(pair);
-          la(joined);
-        }
-        each_next(split, lambda2);
+    let words = app_code_verse_words();
+    function lambda3(la) {
+      function lambda2(word, next) {
+        let pair = [word, next];
+        let joined = list_join_space(pair);
+        la(joined);
       }
-      let list2 = list_adder(lambda3);
-      return list2;
+      each_next(words, lambda2);
     }
-    let mapped2 = list_map(mapped, lambda5);
+    let list2 = list_adder(lambda3);
     return mapped2;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
