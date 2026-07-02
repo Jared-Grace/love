@@ -1,8 +1,7 @@
+import { ebible_version_books_names } from "../../../love/public/src/ebible_version_books_names.mjs";
 import { folder_user_docs_read_lines } from "../../../love/public/src/folder_user_docs_read_lines.mjs";
 import { function_list_generate } from "../../../love/public/src/function_list_generate.mjs";
 import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_ends_with_space } from "../../../love/public/src/text_ends_with_space.mjs";
@@ -33,8 +32,7 @@ export async function bible_verses_encouragement_generate() {
   }
   let mapped = list_map(split, lambda2);
   let bible_folder = ebible_folder_english();
-  let books = await ebible_version_books(bible_folder);
-  let mapped2 = list_map_property(books, "text");
+  let mapped2 = await ebible_version_books_names(bible_folder);
   let verse_references = list_filter_starts_with_any(mapped, mapped2);
   await function_list_generate(
     bible_verses_encouragement_generate,
