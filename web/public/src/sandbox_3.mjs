@@ -1,3 +1,4 @@
+import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -10,7 +11,8 @@ export async function sandbox_3() {
   function lambda(value, property) {
     let joined = list_join_comma_space(value);
     let size = list_size(value);
-    let result = ternary(condition, on_true, on_false);
+    let eq = equal_0(item);
+    let result = ternary(size, on_true, on_false);
     let combined = text_combine_multiple([
       property,
       ": ",
