@@ -7,7 +7,6 @@ import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
@@ -46,14 +45,6 @@ export function app_code_lesson_symbols_space() {
       let squashed = list_squash(mapped3);
       let joined = list_join_empty(squashed);
       let split = text_split_empty(joined);
-      log(app_code_lesson_symbols_space.name, {
-        items,
-        item3,
-        count,
-        joined,
-        split,
-        m,
-      });
       return split;
     }
     let mapped2 = list_map(mapped, lambda5);
