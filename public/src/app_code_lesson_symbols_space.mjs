@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { list_text_insert_between_spaces_random } from "../../../love/public/src/list_text_insert_between_spaces_random.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -24,6 +25,7 @@ export function app_code_lesson_symbols_space() {
       let split = list_text_insert_between_spaces_random(item3);
       function lambda2(item, next) {
         let pair = [item, next];
+        log_json(object);
         return;
       }
       each_next(list, lambda2);
