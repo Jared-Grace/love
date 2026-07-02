@@ -174,7 +174,7 @@ export function app_code_lesson_symbols_digits_generic(
       let row_item = html_div(row);
       html_flex_column_center(row_item);
       let digit = app_code_symbol(row_item, d);
-      on_symbol(row_item, index_1);
+      on_symbol(row_item, index_1, symbols);
       return digit;
     }
     let spans = list_map_index_1(symbols, lambda4);
