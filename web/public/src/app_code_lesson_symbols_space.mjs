@@ -37,7 +37,9 @@ export function app_code_lesson_symbols_space() {
     return list2;
   }
   function lambda4(parent, index_1) {
-    let r = mod(n, m);
+    let r = mod(index_1, 5);
+    if (false) {
+    }
     app_code_lesson_symbols_digits_numbered_on_symbol(parent, index_1);
   }
   let r5 = app_code_lesson_symbols_digits_generic(
