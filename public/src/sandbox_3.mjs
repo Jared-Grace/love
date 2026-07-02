@@ -8,6 +8,6 @@ export async function sandbox_3() {
     let item4 = text_replace_if_starts_with(item3, "2 ", "");
     return item4;
   }
-  let mapped = list_map(list, lambda);
+  let mapped = list_map(books, lambda);
   return mapped;
 }
