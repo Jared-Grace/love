@@ -1,22 +1,12 @@
-import { ternary } from "../../../love/public/src/ternary.mjs";
-import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
-import { math_max } from "../../../love/public/src/math_max.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
-import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
+import { list_text_insert_between_spaces_random } from "../../../love/public/src/list_text_insert_between_spaces_random.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
-import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
-import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
-import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
@@ -30,21 +20,7 @@ export function app_code_lesson_symbols_space() {
   function batch_get() {
     let mapped = app_code_lesson_symbols_letters_batch_get(identity);
     function lambda5(item3) {
-      let skipped = list_to_indices_skip_1(item3);
-      let max = list_size_less_1(skipped);
-      let m = math_max(1, max);
-      let count = integer_random(1, m);
-      let items = list_shuffle_take(skipped, count);
-      function lambda2(item, index) {
-        let includes = list_includes(items, index);
-        let result = ternary(includes, "\u00A0", "");
-        let r = [result, item];
-        return r;
-      }
-      let mapped3 = list_map_index(item3, lambda2);
-      let squashed = list_squash(mapped3);
-      let joined = list_join_empty(squashed);
-      let split = text_split_empty(joined);
+      let split = list_text_insert_between_spaces_random(item3);
       return split;
     }
     let mapped2 = list_map(mapped, lambda5);
