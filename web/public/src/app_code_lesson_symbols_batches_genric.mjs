@@ -66,12 +66,12 @@ export function app_code_lesson_symbols_batches_genric(
     }
     let spans = list_map_index_1(symbols, lambda4);
     let container_answer = app_code_container_light(parent);
-    let r = {
+    let r4 = {
       container_answer,
     };
-    return r;
+    return r4;
   }
-  let r3 = {
+  let r = {
     name,
     id,
     above,
@@ -183,5 +183,5 @@ export function app_code_lesson_symbols_batches_genric(
       return mapped;
     },
   };
-  return r3;
+  return r;
 }
