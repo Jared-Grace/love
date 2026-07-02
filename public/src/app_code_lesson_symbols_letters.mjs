@@ -1,9 +1,8 @@
+import { list_map_multiple } from "../../../love/public/src/list_map_multiple.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_alphabet_upper } from "../../../love/public/src/list_alphabet_upper.mjs";
 import { html_text_characters_numbered } from "../../../love/public/src/html_text_characters_numbered.mjs";
@@ -57,10 +56,7 @@ export function app_code_lesson_symbols_letters() {
   let split = text_split_space(verse);
   function lambda2() {
     let mappers = [text_split_empty, text_letters_only, text_lower_to];
-    function lambda3(mapper) {
-      split = list_map(split, mapper);
-    }
-    each(mappers, lambda3);
+    split = list_map_multiple(split, mappers);
     return split;
   }
   let r5 = app_code_lesson_symbols_digits_generic(
