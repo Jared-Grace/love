@@ -11,7 +11,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_digits_generic } from "../../../love/public/src/app_code_lesson_symbols_digits_generic.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
-export function app_code_lesson_symbols_space_2() {
+export function app_code_lesson_identifiers_letters_spaces() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_multiple(list);
