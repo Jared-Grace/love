@@ -34,7 +34,7 @@ export function app_code_lesson_symbols_space() {
     let list2 = list_adder(lambda3);
     return list2;
   }
-  function lambda4() {}
+  function lambda4() {app_code_lesson_symbols_digits_numbered_on_symbol}
   let r5 = app_code_lesson_symbols_digits_generic(
     "Symbols (Space)",
     "symbols_space",
