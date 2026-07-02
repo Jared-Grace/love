@@ -45,9 +45,9 @@ export function app_code_lesson_symbols_batches_genric(
   above,
   on_symbol,
   batch_symbols,
-  symbols_to_answer,
   example_label,
   quiz_label,
+  symbols_to_answer,
 ) {
   function example_above(parent, symbols) {
     let q = app_code_container_light(parent);
