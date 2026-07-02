@@ -53,8 +53,8 @@ export function app_code_lesson_symbols_digits_generic(
     batch: function batch_get() {
       let digit_counts = range_1(5);
       function lambda(digit_count) {
-        let digits = integer_positive_random_digits_text(digit_count);
-        return digits;
+        let symbols = integer_positive_random_digits_text(digit_count);
+        return symbols;
       }
       let mapped2 = list_map(digit_counts, lambda);
       function lambda2(item) {
