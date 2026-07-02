@@ -11,7 +11,8 @@ export function list_cycled_shuffle(list, cycle_size) {
   function lambda(m) {
     function lambda2(index) {
       let m2 = mod(index, cycle_size);
-      let eq2 = equal(left, right);
+      let eq2 = equal(m2, m);
+      return eq2;
     }
     let filtered = list_filter(indices, lambda2);
   }
