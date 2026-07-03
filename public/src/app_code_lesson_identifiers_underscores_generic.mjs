@@ -1,3 +1,4 @@
+import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -90,7 +91,9 @@ export function app_code_lesson_identifiers_underscores_generic(
         }
       }
       let multiplied = list_multiply(separators, 3);
-      function lambda(value) {}
+      function lambda(value) {
+        let multiplied2 = text_multiply(value3, times);
+      }
       let value2 = property_transform(multiplied, property, lambda);
       let joined = list_join_cycled(item, multiplied);
       let r = boolean_random();
