@@ -8,9 +8,10 @@ export function list_join_cycled(list, list_separators) {
   function lambda(la) {
     function lambda2(item, index) {
       let li = list_index_last_is(list, index);
-      if (not(b)) {
+      if (not(li)) {
+        let separator = list_get_wrap(list_separators, index);
+        la(separator);
       }
-      let item2 = list_get_wrap(cycles, index);
     }
     each_index(list, lambda2);
   }
