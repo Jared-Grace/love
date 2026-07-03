@@ -8,12 +8,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_div_cycle_mono_multiple } from "../../../love/public/src/html_div_cycle_mono_multiple.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_identifiers_underscores() {
-  if (false) {
-    html_div_cycle_mono_multiple(c, [
-      ["Identifiers can also have a ", "$", " (dollar sign)"],
-      ["But identifiers cannot have a ", ".", " (period) symbol"],
-    ]);
-  }
+
   const separator_valid = "_";
   let separator_valid_name = "underscore";
   const separator_invalid = "-";
