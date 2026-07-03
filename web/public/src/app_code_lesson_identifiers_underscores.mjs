@@ -53,9 +53,8 @@ export function app_code_lesson_identifiers_underscores() {
     html_style_assign(c4, {
       display: "grid",
       "grid-template-columns": "auto 1fr",
-      gap: "0.5em 0.75em",
     });
-    app_code_flex_gap(container);
+    app_code_flex_gap(c4);
     let d = html_span_text_code_dark(c4, separator_valid);
     html_style_assign(d, {
       "align-self": "center",
