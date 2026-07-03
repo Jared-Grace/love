@@ -1,3 +1,4 @@
+import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -43,7 +44,8 @@ export function app_code_lesson_identifiers_underscores_generic(
     let c2 = app_code_container_light_blue(root);
     html_div_text(
       c2,
-      "Remember, identifiers can have different kinds of symbols including letter symbols",
+      "Remember, identifiers can have different kinds of symbols including " +
+        list_to_text_and_list(["letter symbols"]),
     );
     let div = html_div(c2);
     html_cycle_code(div, [
