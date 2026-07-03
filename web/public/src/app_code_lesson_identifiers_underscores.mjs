@@ -47,8 +47,8 @@ export function app_code_lesson_identifiers_underscores() {
         if (eq2) {
           separators = [separator_invalid];
         } else {
+          separators = [separator_valid, separator_invalid];
         }
-        separators = [separator_valid, separator_invalid];
       }
       let joined = list_join_cycled(item, separators);
     }
