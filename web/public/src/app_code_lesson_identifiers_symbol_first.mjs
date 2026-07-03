@@ -62,7 +62,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
-    let separators_invalid_next = list_cycler([
+    let separators_valid_next = list_cycler([
       ["$"],
       ["_"],
       ["$", "_"],
@@ -79,7 +79,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         if (eq2) {
           separators = [separator_invalid];
         } else {
-          separators = separators_invalid_next();
+          separators = separators_valid_next();
         }
       }
       let multiplied = list_multiply(separators, 3);
