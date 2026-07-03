@@ -25,7 +25,9 @@ export function app_code_lesson_symbols_space() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list2 = list_slices_size_random(mapped, 2, 3);lm
+    let list2 = list_slices_size_random(mapped, 2, 3);
+    function lambda2(item) {}
+    let mapped2 = list_map(list, lambda2);
     return list2;
   }
   function lambda4(parent, index_1, symbols) {
