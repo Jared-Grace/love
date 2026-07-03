@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slices_size_random } from "../../../love/public/src/list_slices_size_random.mjs";
@@ -26,9 +27,8 @@ export function app_code_lesson_symbols_space() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list2 = list_slices_size_random(mapped, 2, 3);
-    function lambda2(item) {}
-    let mapped2 = list_map(list, lambda2);
-    return list2;
+    let mapped2 = list_map(list2, list_join_empty);
+    return mapped2;
   }
   function lambda4(parent, index_1, symbols) {
     let r = mod(index_1, 5);
