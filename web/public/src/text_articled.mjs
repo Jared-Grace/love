@@ -7,8 +7,8 @@ export function text_articled(noun) {
   let article = "a";
   let vowels_lower = list_to("aeiou");
   let vowels_upper = list_map(list, text_upper_to);
-  let concated = list_concat(a, b);
-  let any = list_any_starts_with(noun, vowels_lower);
+  let vowels = list_concat(vowels_lower, vowels_upper);
+  let any = list_any_starts_with(noun, vowels);
   if (any) {
     article += "n";
   }
