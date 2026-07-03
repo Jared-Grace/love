@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -73,6 +74,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
+      let size = list_size(list3);
       let list2 = digits_randomly_coupled();
       log(app_code_lesson_identifiers_symbol_first.name, {
         list2,
