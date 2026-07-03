@@ -1,3 +1,4 @@
+import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -29,5 +30,6 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     ": ",
     separator_valid,
   ]);
+  html_cycle_code(parent, parts);
   let div = html_div_text(c, combined);
 }
