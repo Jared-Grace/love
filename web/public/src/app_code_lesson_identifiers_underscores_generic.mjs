@@ -88,11 +88,11 @@ export function app_code_lesson_identifiers_underscores_generic(
           separators = separators_invalid_next();
         }
       }
-      let joined2 = list_multiply(separators, 3);
-      let joined = list_join_cycled(item, separators);
+      let multiplied = list_multiply(separators, 3);
+      let joined = list_join_cycled(item, multiplied);
       let r = boolean_random();
       if (r) {
-        let right = list_random_item(separators);
+        let right = list_random_item(multiplied);
         joined = text_combine(joined, right);
       }
       return joined;
