@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -29,4 +30,5 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     separator_valid,
     combined,
   ]);
+  let div = html_div_text(root, text);
 }
