@@ -18,15 +18,7 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
     let combined = list_to_text_or_list([""]);
-    let combined2 = list_concat_multiple(lists);
-    html_cycle_mono(c, [
-      [
-        "Identifiers can also have a ",
-        "$",
-        "(dollar sign) or an ",
-        "_",
-        " (underscore) symbol",
-      ],
+    let combined2 = list_concat_multiple([
       [
         "But identifiers cannot have a ",
         combined,
@@ -35,6 +27,16 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
         " or a ",
         "+",
       ],
+    ]);
+    html_cycle_mono(c, [
+      [
+        "Identifiers can also have a ",
+        "$",
+        "(dollar sign) or an ",
+        "_",
+        " (underscore) symbol",
+      ],
+      combined2,
     ]);
   }
   function batch_get() {
