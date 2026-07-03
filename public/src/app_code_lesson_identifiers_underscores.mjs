@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
@@ -20,7 +21,6 @@ import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
-import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
@@ -61,9 +61,10 @@ export function app_code_lesson_identifiers_underscores() {
       gap: "0.5rem 1rem",
     });
     html_span_text_code_dark(c2, separator_valid);
-    html_div_text_multiple(c2, [
+    html_div_text(
+      c2,
       "Remember, identifiers can have different kinds of symbols including letter symbols",
-    ]);
+    );
     let div = html_div(c2);
     html_cycle_code(div, [
       "Identifiers can also have" +
