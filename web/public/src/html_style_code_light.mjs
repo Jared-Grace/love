@@ -6,7 +6,7 @@ export function html_style_code_light(component) {
   html_style_code_generic(
     component,
     color_background,
-    color_box_shadow,
+    "transparent",
     color_font,
   );
 }
