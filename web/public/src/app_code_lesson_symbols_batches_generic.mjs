@@ -79,8 +79,8 @@ export function app_code_lesson_symbols_batches_generic(
     batch: function batch() {
       let mapped2 = batch_get();
       function lambda2(symbols_text) {
+        let answer = symbols_to_answer(symbols_text);
         let symbols = text_split_empty(symbols_text);
-        let answer = symbols_to_answer(symbols);
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
