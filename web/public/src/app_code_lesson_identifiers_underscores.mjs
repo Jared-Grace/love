@@ -43,8 +43,8 @@ export function app_code_lesson_identifiers_underscores() {
     return difference;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
-    "Identifiers (Letters allowed, spaces not)",
-    "identifiers_letters_spaces",
+    "Identifiers (Underscores allowed, hyphens not)",
+    "identifiers_underscores",
     lambda,
     noop,
     batch_get,
