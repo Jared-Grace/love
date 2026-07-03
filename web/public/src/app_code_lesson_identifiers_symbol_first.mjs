@@ -28,7 +28,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   const separator_valid = "$";
-  let separator_valid_name = "dollar sign";
   const separator_invalid = ".";
   function above(root) {
     let c2 = app_code_container_light_blue(root);
