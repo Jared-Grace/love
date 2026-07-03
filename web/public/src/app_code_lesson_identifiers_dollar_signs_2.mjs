@@ -123,13 +123,7 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
     let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
-  let name = list_join_empty([
-    "Identifiers (",
-    separator_valid_name,
-    "s allowed, ",
-    separator_invalid_name,
-    "s not)",
-  ]);
+  let name = list_join_empty(["Identifiers (first symbol)"]);
   let id = list_join_empty(["identifiers_symbol_first"]);
   let r = app_code_lesson_symbols_identifiers_valid(
     name,
