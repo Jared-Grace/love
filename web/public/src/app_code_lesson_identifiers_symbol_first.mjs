@@ -13,7 +13,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
-import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -64,12 +63,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
     let next_get = list_iterator_refillable(digits_randomly_coupled, noop);
-    let separators_valid_next = list_cycler([
-      ["$"],
-      ["_"],
-      ["$", "_"],
-      ["_", "$"],
-    ]);
     function lambda2(batch_item, batch_item_index) {
       let joined = list_join_invoker(batch_item, next_get);
       let r2 = boolean_random();
