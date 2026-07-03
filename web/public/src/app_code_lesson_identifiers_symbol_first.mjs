@@ -63,9 +63,10 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
     let next_get = list_iterator_refillable(digits_randomly_coupled, noop);
+    let mapper = list_join_empty;
     let lambda = function lambda3() {
       let list2 = next_get();
-      let r = list_join_empty(list2);
+      let r = mapper(list2);
       return r;
     };
     function lambda2(batch_item, batch_item_index) {
