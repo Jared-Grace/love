@@ -4,6 +4,6 @@ import { list_slices_size_generic } from "../../../love/public/src/list_slices_s
 export function list_slices_size_cycle(list, min, max) {
   let mapped = range_from(min, max);
   let count_get = list_cycler(mapped);
-  let slices = list_slices_size_generic(count_get, min, max, list);
+  let slices = list_slices_size_generic(count_get, min, list);
   return slices;
 }
