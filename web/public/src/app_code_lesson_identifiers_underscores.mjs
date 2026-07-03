@@ -52,6 +52,7 @@ export function app_code_lesson_identifiers_underscores() {
         text_articled_pad_space(separator_invalid_name) +
         "is shorter and is near the middle vertically, not the bottom or the top)",
     );
+    let container = app_code_container_light_blue(parent);
     let c2 = app_code_container_light_blue(root);
     html_div_text_multiple(c2, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
