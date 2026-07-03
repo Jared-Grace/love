@@ -10,5 +10,7 @@ export function html_style_code(component) {
   app_replace_button_symbol_style_box_shadow_value_set(component, "black");
   html_border_radius_em(component, 0.5);
   html_border_none(component);
-  html_style_assign(b, s);
+  html_style_assign(component, {
+    "min-width": "1ch",
+  });
 }
