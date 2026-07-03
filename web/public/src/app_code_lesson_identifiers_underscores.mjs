@@ -15,6 +15,12 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_identifiers_underscores() {
   function lambda(root) {
+    if (false) {
+      html_div_cycle_mono_multiple(c, [
+        ["Identifiers can also have a ", "$", " (dollar sign)"],
+        ["But identifiers cannot have a ", ".", " (period) symbol"],
+      ]);
+    }
     const separator_valid = "_";
     let separator_valid_name = "underscore";
     const separator_invalid = "-";
@@ -38,12 +44,6 @@ export function app_code_lesson_identifiers_underscores() {
         separator_invalid_name,
         ") symbol",
       ],
-    ]);
-    if (false) {
-    }
-    html_div_cycle_mono_multiple(c, [
-      ["Identifiers can also have a ", "$", " (dollar sign)"],
-      ["But identifiers cannot have a ", ".", " (period) symbol"],
     ]);
   }
   function batch_get() {
