@@ -41,6 +41,7 @@ export function app_code_lesson_identifiers_underscores() {
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
       separator_valid_name,
+      separator_valid,
     );
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
