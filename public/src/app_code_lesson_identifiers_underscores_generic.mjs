@@ -1,3 +1,4 @@
+import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
 import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
@@ -76,13 +77,13 @@ export function app_code_lesson_identifiers_underscores_generic(
       [separator_valid, separator_invalid],
       [separator_invalid, separator_valid],
     ]);
-    function lambda2(item, index) {
+    function lambda2(batch_item, batch_item_index) {
       let separators = null;
-      let valid = integer_even_is(index);
+      let valid = integer_even_is(batch_item_index);
       if (valid) {
         separators = [separator_valid];
       } else {
-        let size = list_size(item);
+        let size = list_size(batch_item);
         let eq2 = equal_2(size);
         if (eq2) {
           separators = [separator_invalid];
@@ -95,8 +96,9 @@ export function app_code_lesson_identifiers_underscores_generic(
         let multiplied2 = text_multiply(value, 2);
         return multiplied2;
       }
-      let value2 = property_transform(multiplied, property, lambda);
-      let joined = list_join_cycled(item, multiplied);
+      let multiplied_index = list_random_index(multiplied);
+      property_transform(multiplied, batch_item_index, lambda);
+      let joined = list_join_cycled(batch_item, multiplied);
       let r = boolean_random();
       if (r) {
         let right = list_random_item(multiplied);
