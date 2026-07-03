@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -97,6 +98,7 @@ export function app_code_lesson_identifiers_underscores() {
           let r2 = list_random_item(separators);
           fn_list_add(item, r2);
         }
+        let combined = text_combine(left, right);
       }
       each(fns, lambda3);
       let joined = list_join_cycled(item, separators);
