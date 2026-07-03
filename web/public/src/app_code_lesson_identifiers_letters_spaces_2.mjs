@@ -34,14 +34,18 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       "JavaScript",
     ]);
     let c2 = app_code_container_light_blue(root);
-    html_div_text(
-      c2,
-      "We can give names to people, cities, countries, mountains, rivers, etc.",
-    );
+    html_div_text_multiple(c3, [
+      "Remember, identifiers can have different kinds of symbols including letter symbols",
+    ]);
     html_div_cycle_bold(c2, [
-      "In JavaScript, ",
-      "identifiers",
-      " are used as names",
+      "Also, identifiers can have a ",
+      "$",
+      "(dollar sign) or an ",
+      "_",
+      " (underscore) symbol",
+      "But identifiers cannot a ",
+      "-",
+      " (hyphen) symbol",
     ]);
     let c4 = app_code_container_light_blue(root);
     html_div_text_multiple(c4, [
