@@ -33,7 +33,7 @@ export function app_code_lesson_identifiers_underscores() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
     function lambda2(item, index) {
-      let valid = integer_even_is(n);
+      let valid = integer_even_is(index);
       let joined = list_join_cycled(list2, ["_", "-"]);
     }
     let mapped3 = list_map_index(list, lambda2);
