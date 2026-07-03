@@ -26,16 +26,7 @@ export function app_code_lesson_symbols_space() {
       ["In English, when writing, we use ", " spaces ", " to separate words"],
       nb,
     );
-    html_cycle(
-      div,
-      [
-        noop,
-        function lambda2(component) {
-          app_code_lesson_symbols_space_style(component);
-        },
-      ],
-      parts,
-    );
+    html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
     html_div_text(
       c,
       "For a computer, a space is considered a symbol, just like a letter or a number",
