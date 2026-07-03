@@ -8,7 +8,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   id,
   above,
   on_symbol,
-  batch_symbols,
+  batch_get,
 ) {
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
@@ -24,7 +24,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     id,
     above,
     on_symbol,
-    batch_symbols,
+    batch_get,
     example_label,
     quiz_label,
     symbols_to_answer,
