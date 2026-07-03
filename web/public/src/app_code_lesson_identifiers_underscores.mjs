@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
@@ -38,6 +39,7 @@ export function app_code_lesson_identifiers_underscores() {
       if (valid) {
         separators = ["_"];
       } else {
+        let size = list_size(list2);
         separators = ["_", "-"];
       }
       let joined = list_join_cycled(item, separators);
