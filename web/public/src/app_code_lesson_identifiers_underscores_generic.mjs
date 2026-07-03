@@ -1,10 +1,7 @@
+import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
-import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
-import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
-import { property_transform } from "../../../love/public/src/property_transform.mjs";
-import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -103,13 +100,7 @@ export function app_code_lesson_identifiers_underscores_generic(
           separators = separators_invalid_next();
         }
       }
-      let multiplied = list_multiply(separators, 3);
-      function lambda(value) {
-        let multiplied2 = text_multiply(value, 2);
-        return multiplied2;
-      }
-      let multiplied_index = list_random_index(multiplied);
-      property_transform(multiplied, multiplied_index, lambda);
+      let multiplied = list_multiply_3_random_doubled(separators);
       let joined = list_join_cycled(batch_item, multiplied);
       let r = boolean_random();
       if (r) {
