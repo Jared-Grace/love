@@ -18,7 +18,6 @@ import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
-import { app_code_lesson_identifiers_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_identifiers_underscores_define_symbol.mjs";
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -52,13 +51,6 @@ export function app_code_lesson_identifiers_symbol_first() {
       "However identifiers cannot have a number as their first symbol (Identifiers cannot begin with a number)",
       "After the first symbol an identifier can always be a number",
     ]);
-    function define_valid() {
-      app_code_lesson_identifiers_underscores_define_symbol(
-        c,
-        separator_valid_name,
-        separator_valid,
-      );
-    }
   }
   function batch_get() {
     let words = app_code_verse_words();
