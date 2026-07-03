@@ -101,7 +101,8 @@ export function app_code_lesson_symbols_batches_generic(
             let a = example_above(container, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, quiz_label);
-            let answers = batch_get();
+            let b = batch_get();
+            let answers = list_map(b, symbols_to_answer);
             let answers_unique = list_unique(answers);
             list_remove_if_exists(answers_unique, answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
