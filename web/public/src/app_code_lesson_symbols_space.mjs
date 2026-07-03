@@ -27,7 +27,8 @@ export function app_code_lesson_symbols_space() {
       nb + "spaces" + nb,
       nb + "to separate words",
     ];
-    let parts = list_between(list, nb);
+    let nb1 = text_space_nb();
+    let parts = list_between(list, nb1);
     html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
     html_div_text(
       c,
