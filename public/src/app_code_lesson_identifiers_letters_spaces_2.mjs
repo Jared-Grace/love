@@ -16,17 +16,14 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
     html_cycle_mono(c, [
-      "Also, identifiers can have a ",
-      "$",
-      "(dollar sign) or an ",
-      "_",
-      " (underscore) symbol",
-    ]);
-    html_cycle_mono(c, [
-      "But identifiers cannot a ",
-      "-",
-      " (hyphen) symbol",
-      "-",
+      [
+        "Also, identifiers can have a ",
+        "$",
+        "(dollar sign) or an ",
+        "_",
+        " (underscore) symbol",
+      ],
+      ["But identifiers cannot a ", "-", " (hyphen) symbol", "-"],
     ]);
   }
   function batch_get() {
