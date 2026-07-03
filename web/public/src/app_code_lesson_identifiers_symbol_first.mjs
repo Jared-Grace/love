@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_join_invoker } from "../../../love/public/src/list_join_invoker.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
@@ -72,6 +73,9 @@ export function app_code_lesson_identifiers_symbol_first() {
       let rb = boolean_random_3();
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
+      log(app_code_lesson_identifiers_symbol_first.name, {
+        valid,
+      });
       if (valid) {
         const valid_prefixes = ["$", "_"];
         prefix = list_random_item(valid_prefixes);
