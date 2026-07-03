@@ -7,6 +7,6 @@ export function object_multiply(value, times) {
     }
     each_range(times, lambda4);
   }
-  let list = list_adder(lambda);
-  return list;
+  let multiplied = list_adder(lambda);
+  return multiplied;
 }
