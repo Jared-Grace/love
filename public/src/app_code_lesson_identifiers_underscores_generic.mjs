@@ -39,7 +39,7 @@ export function app_code_lesson_identifiers_underscores_generic(
   function above(root) {
     let c = app_code_container_light_blue(root);
     let defines = [define_valid, define_invalid];
-    let mapped2 = invoke_multiple(list_fns);
+    invoke_multiple(defines);
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letters"];
