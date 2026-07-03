@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
 import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -53,6 +54,7 @@ export function app_code_lesson_identifiers_underscores() {
         "is shorter and is near the middle vertically, not the bottom or the top)",
     );
     let container = app_code_container_light_blue(root);
+    let div3 = html_div_text(root2, text);
     let c2 = app_code_container_light_blue(root);
     html_div_text_multiple(c2, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
