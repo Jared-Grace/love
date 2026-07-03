@@ -1,4 +1,4 @@
-import { range_map } from "../../../love/public/src/range_map.mjs";
+import { list_join_invoker } from "../../../love/public/src/list_join_invoker.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
 import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
@@ -12,7 +12,6 @@ import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
-import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
@@ -27,7 +26,6 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
-import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
     let c2 = app_code_container_light_blue(root);
@@ -73,9 +71,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
-      let size = list_size_less_1(batch_item);
-      let mapped2 = range_map(size, next_get);
-      let joined = list_join_cycled(batch_item, mapped2);
+      let joined = list_join_invoker(batch_item, next_get);
       let r2 = boolean_random();
       if (r2) {
         let right = next_get();
