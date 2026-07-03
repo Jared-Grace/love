@@ -10,7 +10,6 @@ import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
 import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
@@ -71,9 +70,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     function lambda2(batch_item, batch_item_index) {
       let separators = separators_valid_next();
       let multiplied = list_multiply(separators, 3);
-      log(app_code_lesson_identifiers_symbol_first.name, {
-        multiplied,
-      });
       function lambda(value) {
         let multiplied2 = text_multiply(value, 2);
         return multiplied2;
