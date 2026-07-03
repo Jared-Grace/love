@@ -214,7 +214,7 @@ export async function app_a_function(context) {
     let f = async function screen_choose_inner() {
       list_remove(on_keydowns, app_a_function_on_keydown);
       await sleep_0();
-      app_shared_screen_set(context, screen);
+      await app_shared_screen_set(context, screen);
     };
     return f;
   }
