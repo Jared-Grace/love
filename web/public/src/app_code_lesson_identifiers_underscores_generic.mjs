@@ -56,7 +56,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     );
     let div = html_div(c2);
     html_cycle_code(div, [
-      "Identifiers can also have" + word_plural(separator_valid_name) + " ",
+      "Identifiers can also have " + word_plural(separator_valid_name) + " ",
       separator_valid,
     ]);
     let div2 = html_div(c2);
