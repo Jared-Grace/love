@@ -1,3 +1,4 @@
+import { list_between } from "../../../love/public/src/list_between.mjs";
 import { app_code_container_light_blue_border_color } from "../../../love/public/src/app_code_container_light_blue_border_color.mjs";
 import { app_replace_button_symbol_style_box_shadow_value_width } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value_width.mjs";
 import { html_box_shadow_set } from "../../../love/public/src/html_box_shadow_set.mjs";
@@ -24,6 +25,10 @@ export function app_code_lesson_symbols_space() {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let nb = text_space_nb();
+    let parts = list_between(
+      ["In English, when writing, we use ", " spaces ", " to separate words"],
+      nb,
+    );
     html_cycle(
       div,
       [
@@ -46,13 +51,7 @@ export function app_code_lesson_symbols_space() {
           html_box_shadow_set(component, style_value);
         },
       ],
-      [
-        "In English, when writing, we use ",
-        nb,
-        " spaces ",
-        nb,
-        " to separate words",
-      ],
+      parts,
     );
     html_div_text(
       c,
