@@ -16,6 +16,10 @@ export function app_code_lesson_identifiers_underscores() {
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
     html_cycle_mono(c, [
+      ["Identifiers can also have an ", "_", " (underscore) symbol"],
+      ["But identifiers cannot have a ", "-", " (hyphen) symbol, a "],
+    ]);
+    html_cycle_mono(c, [
       [
         "Identifiers can also have a ",
         "$",
