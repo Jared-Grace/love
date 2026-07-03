@@ -49,10 +49,10 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
       separator_valid,
     ]);
     let div2 = html_div(c2);
-    html_cycle_code(div2, [
-      "However identifiers cannot have a number as their first symbol",
-      separator_invalid,
-    ]);
+    html_div_text(
+      c2,
+      "However identifiers cannot have a number as their first symbol '(Identifiers cannot begin with a number)",
+    );
     function define_valid() {
       app_code_lesson_identifiers_underscores_define_symbol(
         c,
