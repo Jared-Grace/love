@@ -1,3 +1,4 @@
+import { app_code_lesson_identifiers_dollar_signs_2 } from "../../../love/public/src/app_code_lesson_identifiers_dollar_signs_2.mjs";
 import { app_code_lesson_identifiers_dollar_signs } from "../../../love/public/src/app_code_lesson_identifiers_dollar_signs.mjs";
 import { app_code_lesson_identifiers_underscores } from "../../../love/public/src/app_code_lesson_identifiers_underscores.mjs";
 import { app_code_lesson_identifiers_letters_spaces } from "../../../love/public/src/app_code_lesson_identifiers_letters_spaces.mjs";
