@@ -37,12 +37,11 @@ export function app_code_lesson_identifiers_underscores() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
-    let separators_invalid = [
+    let separators_invalid_next = list_cycler([
       [separator_invalid],
       [separator_valid, separator_invalid],
       [separator_invalid, separator_valid],
-    ];
-    let next = list_cycler(list2);
+    ]);
     function lambda2(item, index) {
       let separators = [separator_valid, separator_invalid];
       let valid = integer_even_is(index);
@@ -54,7 +53,7 @@ export function app_code_lesson_identifiers_underscores() {
         if (eq2) {
           separators = [separator_invalid];
         } else {
-          separators = [separator_valid, separator_invalid];
+          separators = separators_invalid_next();
         }
       }
       let joined = list_join_cycled(item, separators);
