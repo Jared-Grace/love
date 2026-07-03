@@ -20,8 +20,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
   let split = text_split_space(s);
-  list_size_2_assert(split);
-  let r = list_first_second(split);
+  let r = list_first_second_only(split);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
   html_cycle(div3, cycles, [
@@ -32,3 +31,9 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     combined,
   ]);
 }
+function list_first_second_only(split) {
+  list_size_2_assert(split);
+  let r = list_first_second(split);
+  return r;
+}
+
