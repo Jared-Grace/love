@@ -55,7 +55,7 @@ export function app_code_lesson_identifiers_underscores() {
       gap: "0.5rem 1rem",
     });
     let d = html_span_text_code_dark(c4, separator_valid);
-    html_style_assign(b, {
+    html_style_assign(d, {
       "align-self": "center",
     });
     html_div_text(
@@ -64,7 +64,10 @@ export function app_code_lesson_identifiers_underscores() {
         text_articled_pad_space(separator_valid_name) +
         "is longer and is near the bottom)",
     );
-    html_span_text_code_dark(c4, separator_invalid);
+    let d2 = html_span_text_code_dark(c4, separator_invalid);
+    html_style_assign(d2, {
+      "align-self": "center",
+    });
     html_div_text(
       c4,
       "(The line of" +
