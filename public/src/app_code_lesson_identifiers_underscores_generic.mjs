@@ -88,7 +88,7 @@ export function app_code_lesson_identifiers_underscores_generic(
           separators = separators_invalid_next();
         }
       }
-      let joined2 = list_multiply(value, times);
+      let joined2 = list_multiply(separators, 3);
       let joined = list_join_cycled(item, separators);
       let r = boolean_random();
       if (r) {
