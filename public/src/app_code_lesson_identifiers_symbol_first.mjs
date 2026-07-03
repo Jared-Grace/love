@@ -80,14 +80,14 @@ export function app_code_lesson_identifiers_symbol_first() {
       }
       let valid = integer_even_is(batch_item_index);
       if (valid) {
-      } else {
-        let digit = digit_random();
+      } else {$s
+        let prefix = digit_random();
         let rb = boolean_random_n(3);
         if (rb) {
-          digit = text_double(digit);
+          prefix = text_double(prefix);
         }
-        joined = text_combine(doubled, joined);
       }
+      joined = text_combine(prefix, joined);
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
