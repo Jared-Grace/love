@@ -21,6 +21,8 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       "(dollar sign) or an ",
       "_",
       " (underscore) symbol",
+    ]);
+    html_cycle_mono(c, [
       "But identifiers cannot a ",
       "-",
       " (hyphen) symbol",
