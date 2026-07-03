@@ -1,4 +1,3 @@
-import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -8,13 +7,14 @@ import { html_flex_column_center } from "../../../love/public/src/html_flex_colu
 import { incrementer } from "../../../love/public/src/incrementer.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_between_comma_space } from "../../../love/public/src/list_between_comma_space.mjs";
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 export function html_text_characters_numbered(parent, text) {
   let betweened = list_between_comma_space(text);
   let squashed = list_squash(betweened);
   let i = incrementer();
   let cycles = [
     function lambda2(span) {
-      html_font_jetbrains_mono(span);
+      html_style_code_dark(span);
       html_flex_column_center(span);
       html_display_set(span, "inline-flex");
       let text = i();
