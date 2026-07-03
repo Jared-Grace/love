@@ -77,7 +77,7 @@ export function app_code_lesson_identifiers_underscores() {
     "Identifiers (",
     separator_valid_name,
     "s allowed, ",
-    "hyphen",
+    separator_invalid_name,
     "s not)",
     "identifiers_underscores",
     lambda,
