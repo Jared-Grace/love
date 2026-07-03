@@ -1,1 +1,3 @@
-export function list_cycler() {}
+export function list_cycler(list) {
+  let i = 0;
+}
