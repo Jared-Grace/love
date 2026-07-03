@@ -34,6 +34,7 @@ export function app_code_lesson_identifiers_underscores() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
+    let separators_invalid = [];
     function lambda2(item, index) {
       const separator_valid = "_";
       const separator_invalid = "-";
