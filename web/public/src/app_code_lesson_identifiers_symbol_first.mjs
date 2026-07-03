@@ -62,10 +62,10 @@ export function app_code_lesson_identifiers_symbol_first() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
-    let next_get = list_iterator_refillable(digits_randomly_coupled, noop);
+    let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let mapper = list_join_empty;
-    let lambda = function lambda3() {
-      let list2 = next_get();
+    let next_get = function lambda3() {
+      let list2 = next_get_list();
       let r = mapper(list2);
       return r;
     };
