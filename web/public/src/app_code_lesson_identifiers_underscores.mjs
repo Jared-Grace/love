@@ -60,9 +60,9 @@ export function app_code_lesson_identifiers_underscores() {
     });
     html_div_text(
       c4,
-      "(The line of" +
+      "The line of" +
         text_articled_pad_space(separator_valid_name) +
-        "is longer and is near the bottom)",
+        "is longer and is near the bottom",
     );
     let d2 = html_span_text_code_dark(c4, separator_invalid);
     html_style_assign(d2, {
@@ -70,9 +70,9 @@ export function app_code_lesson_identifiers_underscores() {
     });
     html_div_text(
       c4,
-      "(The line of" +
+      "The line of" +
         text_articled_pad_space(separator_invalid_name) +
-        "is shorter and is near the middle vertically, not the bottom or the top)",
+        "is shorter and is near the middle vertically, not the bottom or the top",
     );
     let c2 = app_code_container_light_blue(root);
     html_div_text(
