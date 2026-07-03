@@ -29,7 +29,6 @@ import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_identifiers_underscores_generic } from "../../../love/public/src/app_code_lesson_identifiers_underscores_generic.mjs";
 export function app_code_lesson_identifiers_dollar_signs_2() {
   const separator_valid = "$";
   let separator_valid_name = "dollar sign";
