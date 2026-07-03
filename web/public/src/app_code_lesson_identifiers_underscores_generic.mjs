@@ -42,7 +42,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     let c = app_code_container_light_blue(root);
     let defines = [define_valid, define_invalid];
     list_swap_beginning(defines);
-    if (false) {
+    if (defines_invert) {
     }
     invoke_multiple(defines);
     defines_after(root);
