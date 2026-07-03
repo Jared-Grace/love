@@ -1,5 +1,4 @@
 import { each_object } from "../../../love/public/src/each_object.mjs";
-import { sandbox_3 } from "../../../love/public/src/sandbox_3.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
