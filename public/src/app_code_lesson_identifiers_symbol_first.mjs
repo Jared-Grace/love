@@ -43,7 +43,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     );
     let div = html_div(c2);
     html_cycle_code(div, [
-      "Identifiers can also have " + word_plural("numbers") + " ",
+      "Identifiers can also have " + word_plural("number") + " ",
       separator_valid,
     ]);
     html_div_text_multiple(c2, [
