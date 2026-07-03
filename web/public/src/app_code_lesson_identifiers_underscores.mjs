@@ -1,4 +1,4 @@
-import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { html_div_cycle_mono_multiple } from "../../../love/public/src/html_div_cycle_mono_multiple.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
@@ -76,14 +76,14 @@ export function app_code_lesson_identifiers_underscores() {
     let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
-  let name = list_concat_multiple([
+  let name = list_join_empty([
     "Identifiers (",
     separator_valid_name,
     "s allowed, ",
     separator_invalid_name,
     "s not)",
   ]);
-  let id = list_concat_multiple(["identifiers_", separator_valid_name, "s"]);
+  let id = list_join_empty(["identifiers_", separator_valid_name, "s"]);
   let r5 = app_code_lesson_symbols_identifiers_valid(
     name,
     id,
