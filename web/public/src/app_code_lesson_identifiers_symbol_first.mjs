@@ -76,6 +76,8 @@ export function app_code_lesson_identifiers_symbol_first() {
         let chunks = list_chunk(ds, 2);
         function lambda3(c) {
           let rb2 = boolean_random();
+          if (false) {
+          }
         }
         each(chunks, lambda3);
       }
