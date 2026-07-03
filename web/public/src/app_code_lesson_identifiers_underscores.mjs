@@ -1,3 +1,5 @@
+import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
+import { html_div_cycle_mono } from "../../../love/public/src/html_div_cycle_mono.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
@@ -31,15 +33,14 @@ export function app_code_lesson_identifiers_underscores() {
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
-    let div = html_div(parent);
-    html_div_cycle_mono_multiple(c, [
-      [
-        "Identifiers can also have an ",
-        separator_valid,
-        " (",
-        separator_valid_name,
-        ") symbol",
-      ],
+    let div = html_div(c);
+    html_div_cycle_mono(div, [
+      "Identifiers can also have an ",
+      separator_valid,
+    ]);
+    html_div_cycle_bold(
+      div,
+      [" (", separator_valid_name, ") symbol"],
       [
         "But identifiers cannot have a ",
         separator_invalid,
@@ -47,7 +48,7 @@ export function app_code_lesson_identifiers_underscores() {
         separator_invalid_name,
         ") symbol",
       ],
-    ]);
+    );
   }
   function batch_get() {
     let words = app_code_verse_words();
