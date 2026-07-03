@@ -18,12 +18,12 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let cycles = [noop, html_bold, noop, html_style_code_dark];
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
-  let split = text_split_space(s);
+  let split = text_split_space(articled);
   let r = list_first_second_only(split);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
   html_cycle(div3, cycles, [
-    " This is " + first + " ",
+    " This is "+first+' ',
     second,
     ": ",
     separator_valid,
