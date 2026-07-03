@@ -1,9 +1,7 @@
+import { text_articled_split } from "../../../love/public/src/text_articled_split.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
-import { text_articled } from "../../../love/public/src/text_articled.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
@@ -18,9 +16,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
 ) {
   let div3 = html_div(c);
   let combined = text_combine(" ", text_after);
-  let articled = text_articled(separator_valid_name);
-  let split = text_split_space(articled);
-  let r = list_first_second_only(split);
+  let r = text_articled_split(separator_valid_name);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
   let cycles = [noop, html_bold, noop, html_style_code_dark];
