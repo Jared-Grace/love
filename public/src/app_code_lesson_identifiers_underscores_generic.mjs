@@ -43,6 +43,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     let defines = [define_valid, define_invalid];
     list_swap_beginning(defines);
     if (defines_invert) {
+      list_swap_beginning(list2);
     }
     invoke_multiple(defines);
     defines_after(root);
