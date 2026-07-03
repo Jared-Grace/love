@@ -46,6 +46,7 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       "But identifiers cannot a ",
       "-",
       " (hyphen) symbol",
+      "-",
     ]);
     let c4 = app_code_container_light_blue(root);
     html_div_text_multiple(c4, [
