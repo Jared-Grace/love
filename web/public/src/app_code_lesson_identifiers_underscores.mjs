@@ -16,7 +16,9 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_identifiers_underscores() {
   function lambda(root) {
     const separator_valid = "_";
+    let separator_valid_name = "underscore";
     const separator_invalid = "-";
+    let separator_invalid_name = "hyphen";
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
