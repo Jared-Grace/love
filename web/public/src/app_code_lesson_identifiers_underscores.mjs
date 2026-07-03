@@ -54,9 +54,9 @@ export function app_code_lesson_identifiers_underscores() {
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
-      "But identifiers cannot have a " + separator_invalid + " (",
-      separator_invalid_name,
-      ") symbol",
+      "But identifiers cannot have a ",
+      separator_invalid,
+      " (" + separator_invalid_name + ") symbol",
     ]);
   }
   function batch_get() {
