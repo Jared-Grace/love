@@ -41,8 +41,8 @@ export function app_code_lesson_identifiers_underscores() {
         separators = ["_"];
       } else {
         let size = list_size(item);
-        let eq2 = equal(left, right);
-        if (size) {
+        let eq2 = equal(size, 2);
+        if (eq2) {
         }
         separators = ["_", "-"];
       }
