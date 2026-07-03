@@ -1,3 +1,4 @@
+import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -132,7 +133,8 @@ export function app_code_lesson_identifiers_underscores_generic(
     separator_invalid_name,
     "s not)",
   ]);
-  let id = list_join_empty(["identifiers_", separator_valid_name, "s"]);
+  let p = word_plural(separator_valid_name);
+  let id = list_join_empty(["identifiers_", p]);
   let r5 = app_code_lesson_symbols_identifiers_valid(
     name,
     id,
