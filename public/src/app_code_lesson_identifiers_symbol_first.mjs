@@ -70,11 +70,11 @@ export function app_code_lesson_identifiers_symbol_first() {
     function lambda2(batch_item, batch_item_index) {
       let separators = separators_valid_next();
       let multiplied = list_multiply(separators, 3);
+      let multiplied_index = list_random_index(multiplied);
       function lambda(value) {
         let multiplied2 = text_multiply(value, 2);
         return multiplied2;
       }
-      let multiplied_index = list_random_index(multiplied);
       list_transform_at(multiplied, multiplied_index, lambda);
       let joined = list_join_cycled(batch_item, multiplied);
       let r2 = boolean_random();
