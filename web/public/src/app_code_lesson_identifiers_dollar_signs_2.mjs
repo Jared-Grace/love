@@ -26,6 +26,7 @@ import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
+import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 export function app_code_lesson_identifiers_dollar_signs_2() {
   const separator_valid = "$";
   let separator_valid_name = "dollar sign";
@@ -48,14 +49,10 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
       "Identifiers can also have " + word_plural("numbers") + " ",
       separator_valid,
     ]);
-    html_div_text(
-      c2,
+    html_div_text_multiple(c2, [
       "However identifiers cannot have a number as their first symbol (Identifiers cannot begin with a number)",
-    );
-    html_div_text(
-      c2,
       "After the first symbol an identifier can always be a number",
-    );
+    ]);
     function define_valid() {
       app_code_lesson_identifiers_underscores_define_symbol(
         c,
