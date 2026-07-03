@@ -94,7 +94,7 @@ export function app_code_lesson_identifiers_underscores() {
       function lambda3(fn_list_add) {
         let r = boolean_random();
         if (r) {
-          let r2 = list_random_item(separators);
+          let r2 = list_random_item(item, separators);
           fn_list_add(r2);
         }
       }
