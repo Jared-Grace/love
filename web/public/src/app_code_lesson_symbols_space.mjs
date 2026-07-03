@@ -1,10 +1,4 @@
-import { html_style_padding_x } from "../../../love/public/src/html_style_padding_x.mjs";
-import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
-import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
-import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { app_replace_button_symbol_style_box_shadow_value_set } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value_set.mjs";
-import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
+import { html_style_code_generic_unshadowed } from "../../../love/public/src/html_style_code_generic_unshadowed.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
@@ -32,19 +26,13 @@ export function app_code_lesson_symbols_space() {
       [
         noop,
         function lambda2(component) {
-          const color_box_shadow = "transparent";
           const color_background = "white";
           const color_font = "black";
-          html_font_jetbrains_mono(component);
-          html_style_background_color_set(component, color_background);
-          app_replace_button_symbol_style_box_shadow_value_set(
+          html_style_code_generic_unshadowed(
             component,
-            color_box_shadow,
+            color_background,
+            color_font,
           );
-          html_font_color_set(component, color_font);
-          html_border_radius_em(component, 0.5);
-          html_border_none(component);
-          html_style_padding_x(component, "0.37em");
         },
       ],
       [
