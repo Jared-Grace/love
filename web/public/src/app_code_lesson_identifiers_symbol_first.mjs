@@ -62,7 +62,12 @@ export function app_code_lesson_identifiers_symbol_first() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
-    let separators_invalid_next = list_cycler([["$"], ["_"]]);
+    let separators_invalid_next = list_cycler([
+      ["$"],
+      ["_"],
+      ["$", "_"],
+      ["_", "$"],
+    ]);
     function lambda2(batch_item, batch_item_index) {
       let separators = null;
       let valid = integer_even_is(batch_item_index);
