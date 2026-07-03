@@ -91,7 +91,7 @@ export function app_code_lesson_identifiers_underscores_generic(
       }
       let multiplied = list_multiply(separators, 3);
       function lambda(value) {}
-      let value2 = property_transform(o, property, lambda);
+      let value2 = property_transform(multiplied, property, lambda);
       let joined = list_join_cycled(item, multiplied);
       let r = boolean_random();
       if (r) {
