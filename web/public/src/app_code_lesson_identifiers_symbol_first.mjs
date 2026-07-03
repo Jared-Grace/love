@@ -65,7 +65,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
-    let next_get = list_iterator_refillable(refill_get, on_refill);
+    let next_get = list_iterator_refillable(refill_get, noop);
     let separators_valid_next = list_cycler([
       ["$"],
       ["_"],
