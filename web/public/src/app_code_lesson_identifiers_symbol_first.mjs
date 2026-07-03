@@ -81,6 +81,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
+        let r3 = list_random_item(list2);
       } else {
         prefix = digit_random();
         let rb = boolean_random_n(3);
