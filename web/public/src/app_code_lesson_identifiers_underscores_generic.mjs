@@ -43,12 +43,12 @@ export function app_code_lesson_identifiers_underscores_generic(
     );
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
-    const identifier_symbols_types = ["letter symbols"];
-    let combineds = list_map_combine(list2, right2);
+    const identifier_symbols_types = ["letter"];
+    let combineds = list_map_combine(identifier_symbols_types, " symbols");
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including " +
-        list_to_text_and_list(identifier_symbols_types),
+        list_to_text_and_list(combineds),
     );
     let div = html_div(c2);
     html_cycle_code(div, [
