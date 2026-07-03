@@ -1,4 +1,3 @@
-import { text_double } from "../../../love/public/src/text_double.mjs";
 import { boolean_random_n } from "../../../love/public/src/boolean_random_n.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
@@ -82,9 +81,11 @@ export function app_code_lesson_identifiers_symbol_first() {
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
-        prefix = list_random_item(["$", "_"]);
+        const valid_prefixes = ["$", "_"];
+        prefix = list_random_item(valid_prefixes);
         if (rb) {
-          prefix = text_double(prefix);
+          let right3 = list_random_item(valid_prefixes);
+          prefix = text_combine(prefix, right3);
         }
       } else {
         prefix = digit_random();
