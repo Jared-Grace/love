@@ -72,7 +72,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       let separators = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
-        separators = [separator_valid];
+        separators = separators_valid_next();
       } else {
         let size = list_size(batch_item);
         let eq2 = equal_2(size);
