@@ -24,7 +24,7 @@ export function app_code_lesson_identifiers_underscores() {
       ["But identifiers cannot have a ", "-", " (hyphen) symbol, a "],
     ]);
     html_div_cycle_mono_multiple(c, [
-      ["Identifiers can also have a ", "$", "(dollar sign)"],
+      ["Identifiers can also have a ", "$", " (dollar sign)"],
       ["But identifiers cannot have a ", ".", " (period) symbol"],
     ]);
   }
