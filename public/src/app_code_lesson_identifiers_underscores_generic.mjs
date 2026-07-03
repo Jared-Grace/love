@@ -42,10 +42,11 @@ export function app_code_lesson_identifiers_underscores_generic(
     );
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
+    const identifier_symbols_types = ["letter symbols"];
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including " +
-        list_to_text_and_list(["letter symbols"]),
+        list_to_text_and_list(identifier_symbols_types),
     );
     let div = html_div(c2);
     html_cycle_code(div, [
