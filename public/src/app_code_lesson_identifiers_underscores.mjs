@@ -39,11 +39,12 @@ export function app_code_lesson_identifiers_underscores() {
       separator_valid,
     ]);
     html_div_cycle_bold(div, [" (", separator_valid_name, ") symbol"]);
-    html_div_cycle_mono(div, [
+    let div2 = html_div(c);
+    html_div_cycle_mono(div2, [
       "But identifiers cannot have a ",
       separator_invalid,
     ]);
-    html_div_cycle_bold([" (", separator_invalid_name, ") symbol"]);
+    html_div_cycle_bold(div2, [" (", separator_invalid_name, ") symbol"]);
   }
   function batch_get() {
     let words = app_code_verse_words();
