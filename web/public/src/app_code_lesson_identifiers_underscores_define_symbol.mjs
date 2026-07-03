@@ -1,3 +1,4 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { text_articled_split } from "../../../love/public/src/text_articled_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
@@ -9,7 +10,8 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   c,
   separator_valid_name,
   separator_valid,
-) {$aa
+) {
+  arguments_assert(arguments, 3);
   let div3 = html_div(c);
   let r = text_articled_split(separator_valid_name);
   let second = property_get(r, "second");
