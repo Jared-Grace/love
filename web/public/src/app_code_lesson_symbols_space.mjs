@@ -1,3 +1,5 @@
+import { html_box_shadow_set } from "../../../love/public/src/html_box_shadow_set.mjs";
+import { app_replace_button_symbol_style_box_shadow_value } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value.mjs";
 import { html_style_code_generic_unshadowed } from "../../../love/public/src/html_style_code_generic_unshadowed.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
@@ -33,6 +35,9 @@ export function app_code_lesson_symbols_space() {
             color_background,
             color_font,
           );
+          let style_value =
+            app_replace_button_symbol_style_box_shadow_value(color_box_shadow);
+          html_box_shadow_set(component, style_value);
         },
       ],
       [
