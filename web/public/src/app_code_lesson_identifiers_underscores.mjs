@@ -29,11 +29,9 @@ export function app_code_lesson_identifiers_underscores() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list2 = list_slices_size_cycles_shuffled(mapped, 1, 2);
-    let joined = list_join_space_nb(slice);
-    function lambda2(item) {}
-    let mapped2 = list_map(list, lambda2);
+    let mapped2 = list_map(list2, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
-    let difference = list_difference(list2, list_other);
+    let difference = list_difference(mapped2, list_other);
     return difference;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
