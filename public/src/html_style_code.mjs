@@ -7,7 +7,7 @@ import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jet
 export function html_style_code(component) {
   html_font_jetbrains_mono(component);
   html_style_background_color_set(component, "white");
-  app_replace_button_symbol_style_box_shadow_value_set(component, "#eee");
+  app_replace_button_symbol_style_box_shadow_value_set(component, "#ccc");
   html_border_radius_em(component, 0.5);
   html_border_none(component);
   html_style_padding_x(component, "0.37em");
