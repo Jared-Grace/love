@@ -41,7 +41,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     let div = html_div(c2);
     html_cycle_code(div, [
       "Identifiers can also have " + word_plural("digit") + ": ",
-      ,
     ]);
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
