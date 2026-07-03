@@ -1,3 +1,4 @@
+import { text_articled } from "../../../love/public/src/text_articled.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
@@ -13,9 +14,10 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let div3 = html_div(c);
   let cycles = [noop, html_bold, noop, html_style_code_dark];
   let combined = text_combine(" ", text_after);
+  let articled = text_articled(separator_valid_name);
   html_cycle(div3, cycles, [
-    " This is an ",
-    separator_valid_name,
+    " This is ",
+    articled,
     ": ",
     separator_valid,
     combined,
