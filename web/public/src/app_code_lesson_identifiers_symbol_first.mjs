@@ -77,13 +77,13 @@ export function app_code_lesson_identifiers_symbol_first() {
     function lambda2(batch_item, batch_item_index) {
       let size = list_size_less_1(batch_item);
       let mapped2 = range_map(size, next_get);
+      let joined = list_join_cycled(batch_item, mapped2);
       let list2 = digits_randomly_coupled();
       log(app_code_lesson_identifiers_symbol_first.name, {
         list2,
       });
       let separators = separators_valid_next();
       let multiplied = list_multiply_3_random_doubled(separators);
-      let joined = list_join_cycled(batch_item, multiplied);
       let r2 = boolean_random();
       if (r2) {
         let right = list_random_item(multiplied);
