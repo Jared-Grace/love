@@ -37,16 +37,8 @@ export function app_code_lesson_identifiers_underscores_generic(
 ) {
   function above(root) {
     let c = app_code_container_light_blue(root);
-    app_code_lesson_identifiers_underscores_define_symbol(
-      c,
-      separator_invalid_name,
-      separator_invalid,
-    );
-    app_code_lesson_identifiers_underscores_define_symbol(
-      c,
-      separator_valid_name,
-      separator_valid,
-    );
+    define_invalid();
+    define_valid();
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letters"];
@@ -68,6 +60,20 @@ export function app_code_lesson_identifiers_underscores_generic(
         text_articled_pad_space(separator_invalid_name),
       separator_invalid,
     ]);
+    function define_valid() {
+      app_code_lesson_identifiers_underscores_define_symbol(
+        c,
+        separator_valid_name,
+        separator_valid,
+      );
+    }
+    function define_invalid() {
+      app_code_lesson_identifiers_underscores_define_symbol(
+        c,
+        separator_invalid_name,
+        separator_invalid,
+      );
+    }
   }
   function batch_get() {
     let words = app_code_verse_words();
