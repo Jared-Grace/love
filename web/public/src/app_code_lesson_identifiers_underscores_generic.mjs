@@ -36,6 +36,7 @@ export function app_code_lesson_identifiers_underscores_generic(
   separator_valid,
   defines_after,
   identifier_symbols_types_adds,
+  defines_invert,
 ) {
   function above(root) {
     let c = app_code_container_light_blue(root);
