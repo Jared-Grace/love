@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
@@ -16,7 +17,8 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
-    let combined = list_to_text_or_list();
+    let combined = list_to_text_or_list([""]);
+    let combined2 = list_concat_multiple(lists);
     html_cycle_mono(c, [
       [
         "Identifiers can also have a ",
