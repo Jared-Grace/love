@@ -78,7 +78,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         let r2 = boolean_random();
         if (r2) {
           let digit = digit_random();
-          let joined = text_combine(digit, joined);
+          joined = text_combine(digit, joined);
         }
       }
       return joined;
