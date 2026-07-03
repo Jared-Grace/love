@@ -12,6 +12,6 @@ export function app_code_go_back(root, question_text, button_text, on_click) {
   ]);
   html_div_text(container3, combined2);
   let left = emoji_arrow_left();
-  let combined = text_combine_multiple([left, "Yes, please ", button_text]);
+  let combined = text_combine_multiple([left, " Yes, please ", button_text]);
   let b = app_replace_button_wide(container3, combined, on_click);
 }
