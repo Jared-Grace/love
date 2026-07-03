@@ -8,7 +8,9 @@ export function list_to_text_or_list_generic(list, word_relationship) {
   let last = list_last(list);
   let joined = list_join_comma_space(taken);
   let prefix = "";
-  let ne = list_empty_not_is(taken);$i
+  let ne = list_empty_not_is(taken);
+  if (false) {
+  }
   let combined = text_combine_multiple([
     joined,
     " ",
