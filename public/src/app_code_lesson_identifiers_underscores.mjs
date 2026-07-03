@@ -1,3 +1,4 @@
+import { text_articled } from "../../../love/public/src/text_articled.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { app_code_lesson_identifiers_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_identifiers_underscores_define_symbol.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -48,15 +49,15 @@ export function app_code_lesson_identifiers_underscores() {
     ]);
     let div = html_div(c2);
     html_cycle_code(div, [
-      "Identifiers can also have an ",
+      "But identifiers cannot have " + text_articled(separator_valid_name),
       separator_valid,
-      " (" + separator_valid_name + ") symbol",
+      " symbol",
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
-      "But identifiers cannot have a ",
+      "But identifiers cannot have " + text_articled(separator_invalid_name),
       separator_invalid,
-      " (" + separator_invalid_name + ") symbol",
+      " symbol",
     ]);
   }
   function batch_get() {
