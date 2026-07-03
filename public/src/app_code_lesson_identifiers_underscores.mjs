@@ -41,13 +41,13 @@ export function app_code_lesson_identifiers_underscores() {
     let c = app_code_container_light_blue(root);
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
-      separator_valid_name,
-      separator_valid,
+      separator_invalid_name,
+      separator_invalid,
     );
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
-      separator_invalid_name,
-      separator_invalid,
+      separator_valid_name,
+      separator_valid,
     );
     let c4 = app_code_container_light_blue(root);
     html_style_assign(c4, {
