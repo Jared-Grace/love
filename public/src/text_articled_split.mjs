@@ -9,6 +9,6 @@ export function text_articled_split(separator_valid_name) {
   let r2 = list_first_remaining(split);
   let remaining = property_get(r2, "remaining");
   let article = property_get(r2, "first");
-  let joined = list_join_space(list);
+  let joined = list_join_space(remaining);
   return r;
 }
