@@ -37,7 +37,6 @@ export function app_code_lesson_identifiers_underscores_generic(
 ) {
   function above(root) {
     let c = app_code_container_light_blue(root);
-    
     define_valid();
     define_invalid();
     defines_after(root);
