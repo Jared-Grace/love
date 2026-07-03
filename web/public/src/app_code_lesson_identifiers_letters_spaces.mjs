@@ -1,3 +1,4 @@
+import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
@@ -59,8 +60,9 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list2 = list_slices_size_cycles_shuffled(mapped, 1, 2);
+    let mapped2 = list_map(list2, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
-    let difference = list_difference(list2, list_other);
+    let difference = list_difference(mapped2, list_other);
     return difference;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
