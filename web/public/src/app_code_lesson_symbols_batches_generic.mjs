@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
@@ -182,6 +183,9 @@ export function app_code_lesson_symbols_batches_generic(
         return r2;
       }
       let mapped = list_map(mapped2, lambda2);
+      log(app_code_lesson_symbols_batches_generic.name, {
+        mapped,
+      });
       return mapped;
     },
   };
