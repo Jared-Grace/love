@@ -52,6 +52,10 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
       c2,
       "However identifiers cannot have a number as their first symbol (Identifiers cannot begin with a number)",
     );
+    html_div_text(
+      c2,
+      "After the first symbol an identifier can always be a number",
+    );
     function define_valid() {
       app_code_lesson_identifiers_underscores_define_symbol(
         c,
