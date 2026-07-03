@@ -3,7 +3,7 @@ import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { equal_2 } from "../../../love/public/src/equal_2.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
-import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
+import { integer_evenness } from "../../../love/public/src/integer_evenness.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_identifiers_underscores() {
     ]);
     function lambda2(item, index) {
       let separators = null;
-      let valid = integer_even_is(index);
+      let valid = integer_evenness(index);
       if (valid) {
         separators = [separator_valid];
       } else {
