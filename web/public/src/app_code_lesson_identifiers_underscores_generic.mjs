@@ -97,7 +97,7 @@ export function app_code_lesson_identifiers_underscores_generic(
         return multiplied2;
       }
       let multiplied_index = list_random_index(multiplied);
-      property_transform(multiplied, batch_item_index, lambda);
+      property_transform(multiplied, multiplied_index, lambda);
       let joined = list_join_cycled(batch_item, multiplied);
       let r = boolean_random();
       if (r) {
