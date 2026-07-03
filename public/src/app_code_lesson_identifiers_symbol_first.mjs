@@ -79,11 +79,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       }
       let valid = integer_even_is(batch_item_index);
       if (not(valid)) {
-        let r2 = boolean_random();
-        if (r2) {
-          let digit = digit_random();
-          joined = text_combine(digit, joined);
-        }
+        let digit = digit_random();
+        joined = text_combine(digit, joined);
       }
       return joined;
     }
