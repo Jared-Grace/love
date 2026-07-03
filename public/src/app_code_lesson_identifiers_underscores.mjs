@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { html_div_cycle_mono_multiple } from "../../../love/public/src/html_div_cycle_mono_multiple.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_identifiers_underscores() {
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
+    let div = html_div(parent);
     html_div_cycle_mono_multiple(c, [
       [
         "Identifiers can also have an ",
