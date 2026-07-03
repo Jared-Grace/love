@@ -18,7 +18,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     html_font_jetbrains_mono,
     html_style_code_dark,
   ];
-  let combined = text_combine(" ", "(The line is near the bottom)");
+  let combined = text_combine(" ", text_after);
   html_cycle(div3, cycles, [
     " This is an ",
     separator_valid_name,
