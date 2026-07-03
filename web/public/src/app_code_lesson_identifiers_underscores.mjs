@@ -27,12 +27,16 @@ export function app_code_lesson_identifiers_underscores() {
       [
         "Identifiers can also have an ",
         separator_valid,
-        " (underscore) symbol",
+        " (",
+        separator_valid_name,
+        ") symbol",
       ],
       [
         "But identifiers cannot have a ",
         separator_invalid,
-        " (hyphen) symbol, a ",
+        " (",
+        separator_invalid_name,
+        ") symbol",
       ],
     ]);
     html_div_cycle_mono_multiple(c, [
