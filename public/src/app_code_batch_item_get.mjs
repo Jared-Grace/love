@@ -1,7 +1,7 @@
+import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { list_remove_last_single } from "../../../love/public/src/list_remove_last_single.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export function app_code_batch_item_get(
@@ -21,7 +21,7 @@ export function app_code_batch_item_get(
       on_batch(remaining);
     }
     html_clear(container);
-    let b = list_remove_last_single(remaining);
+    let b = list_remove_first(remaining);
     on_batch_item(container, b, refresh);
   };
   refresh();
