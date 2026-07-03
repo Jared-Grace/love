@@ -1,3 +1,4 @@
+import { list_size_2_assert } from "../../../love/public/src/list_size_2_assert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -19,6 +20,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
   let split = text_split_space(s);
+  list_size_2_assert(result);
   let r = list_first_second(split);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
