@@ -11,15 +11,15 @@ export function app_code_container_light_blue(parent) {
   let container2 = html_div(parent);
   html_style_padding(container2, "0.2em");
   html_border_none(container2);
-  let container = container2;
-  html_style_background_color_set(container, "rgb(228, 241, 255)");
+  let c = container2;
+  html_style_background_color_set(c, "rgb(228, 241, 255)");
   let border_color = app_code_container_light_blue_border_color();
-  html_border_y(container, "0.15em", border_color);
-  html_style_margin_y(container, "0.5em");
-  html_style_assign(container, {
+  html_border_y(c, "0.15em", border_color);
+  html_style_margin_y(c, "0.5em");
+  html_style_assign(c, {
     display: "flex",
     flexDirection: "column",
   });
-  app_code_flex_gap(container);
-  return container;
+  app_code_flex_gap(c);
+  return c;
 }
