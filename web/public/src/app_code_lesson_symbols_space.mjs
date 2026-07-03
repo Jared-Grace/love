@@ -1,5 +1,5 @@
+import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { app_code_lesson_symbols_space_style } from "../../../love/public/src/app_code_lesson_symbols_space_style.mjs";
-import { list_between } from "../../../love/public/src/list_between.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
@@ -27,8 +27,7 @@ export function app_code_lesson_symbols_space() {
       nb + "spaces" + nb,
       nb + "to separate words",
     ];
-    let nb1 = text_space_nb();
-    let parts = list_between(list, nb1);
+    let parts = list_between_space_nb(list);
     html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
     html_div_text(
       c,
