@@ -57,6 +57,7 @@ export function app_code_lesson_identifiers_underscores() {
         }
       }
       let joined = list_join_cycled(item, separators);
+      return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
     let mapped2 = list_map(list, list_join_space_nb);
