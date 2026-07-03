@@ -12,7 +12,7 @@ export function app_code_lesson_identifiers_dollar_signs() {
     separator_valid,
     noop,
     ["underscores"],
-    true,
+    false,
   );
   return r;
 }
