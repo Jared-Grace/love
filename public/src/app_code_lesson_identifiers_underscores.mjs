@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { equal_2 } from "../../../love/public/src/equal_2.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -19,6 +20,7 @@ export function app_code_lesson_identifiers_underscores() {
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
+    let div = html_div(parent);
     html_cycle_mono_multiple(c, [
       ["Identifiers can also have an ", "_", " (underscore) symbol"],
       ["But identifiers cannot have a ", "-", " (hyphen) symbol, a "],
