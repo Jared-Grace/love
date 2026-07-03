@@ -35,13 +35,13 @@ export function app_code_lesson_identifiers_underscores() {
       c,
       separator_valid_name,
       separator_valid,
-      text_after,
+      "(The line is longer and is near the bottom)",
     );
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
       separator_invalid_name,
       separator_invalid,
-      text_after,
+      "(The line is shorter and is near the middle, not the bottom or the top)",
     );
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
