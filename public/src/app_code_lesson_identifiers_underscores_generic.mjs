@@ -1,3 +1,4 @@
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
 import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
@@ -37,8 +38,8 @@ export function app_code_lesson_identifiers_underscores_generic(
 ) {
   function above(root) {
     let c = app_code_container_light_blue(root);
-    define_valid();
-    define_invalid();
+    let defines = [define_valid, define_invalid];
+    let mapped2 = invoke_multiple(list_fns);
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letters"];
