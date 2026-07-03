@@ -23,8 +23,6 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
-  const separator_valid = "$";
-  const separator_invalid = ".";
   function above(root) {
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter", "underscore", "dollar sign"];
