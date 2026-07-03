@@ -48,7 +48,7 @@ export function app_code_lesson_identifiers_underscores() {
       separator_invalid_name,
       separator_invalid,
     );
-    let c4 = app_code_container_light_blue(parent);
+    let c4 = app_code_container_light_blue(root);
     html_style_assign(c4, {
       display: "grid",
       "grid-template-columns": "auto 1fr",
