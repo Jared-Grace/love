@@ -1,7 +1,7 @@
+import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { boolean_random_n } from "../../../love/public/src/boolean_random_n.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -75,8 +75,10 @@ export function app_code_lesson_identifiers_symbol_first() {
       function lambda(la) {
         let chunks = list_chunk(ds, 2);
         function lambda3(c) {
-          let rb2 = boolean_random();
-          if (false) {
+          let rb2 = boolean_random_3();
+          if (rb2) {
+            la(c);
+          } else {
           }
         }
         each(chunks, lambda3);
@@ -90,7 +92,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         let right = list_random_item(multiplied);
         joined = text_combine(joined, right);
       }
-      let rb = boolean_random_n(3);
+      let rb = boolean_random_3();
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
