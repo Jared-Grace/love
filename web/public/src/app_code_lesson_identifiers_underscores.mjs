@@ -68,30 +68,6 @@ export function app_code_lesson_identifiers_underscores() {
       " symbol",
     ]);
   }
-  function defines_after(root) {
-    let c4 = app_code_container_light_blue(root);
-    html_div_text(c4, "How they look different:");
-    let div3 = html_div(c4);
-    html_style_assign(div3, {
-      display: "grid",
-      "grid-template-columns": "auto 1fr",
-    });
-    app_code_flex_gap(div3);
-    html_span_text_code_dark_centered(div3, separator_invalid);
-    html_div_text(
-      div3,
-      "The line of" +
-        text_articled_pad_space(separator_invalid_name) +
-        "is shorter and is near the middle vertically, not the bottom or the top",
-    );
-    let d = html_span_text_code_dark_centered(div3, separator_valid);
-    html_div_text(
-      div3,
-      "The line of" +
-        text_articled_pad_space(separator_valid_name) +
-        "is longer and is near the bottom",
-    );
-  }
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
@@ -141,5 +117,29 @@ export function app_code_lesson_identifiers_underscores() {
     noop,
     batch_get,
   );
+  function defines_after(root) {
+    let c4 = app_code_container_light_blue(root);
+    html_div_text(c4, "How they look different:");
+    let div3 = html_div(c4);
+    html_style_assign(div3, {
+      display: "grid",
+      "grid-template-columns": "auto 1fr",
+    });
+    app_code_flex_gap(div3);
+    html_span_text_code_dark_centered(div3, separator_invalid);
+    html_div_text(
+      div3,
+      "The line of" +
+        text_articled_pad_space(separator_invalid_name) +
+        "is shorter and is near the middle vertically, not the bottom or the top",
+    );
+    let d = html_span_text_code_dark_centered(div3, separator_valid);
+    html_div_text(
+      div3,
+      "The line of" +
+        text_articled_pad_space(separator_valid_name) +
+        "is longer and is near the bottom",
+    );
+  }
   return r5;
 }
