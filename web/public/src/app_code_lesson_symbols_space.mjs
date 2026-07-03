@@ -1,4 +1,4 @@
-import { html_box_shadow_set } from "../../../love/public/src/html_box_shadow_set.mjs";
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_symbol_style_box_shadow_value } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value.mjs";
 import { html_style_code_generic_unshadowed } from "../../../love/public/src/html_style_code_generic_unshadowed.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -29,7 +29,8 @@ export function app_code_lesson_symbols_space() {
         noop,
         function lambda2(component) {
           const color_background = "white";
-          const color_font = "black";
+          const color_font = "transparent";
+          let color_box_shadow = "black";
           html_style_code_generic_unshadowed(
             component,
             color_background,
@@ -37,7 +38,7 @@ export function app_code_lesson_symbols_space() {
           );
           let style_value =
             app_replace_button_symbol_style_box_shadow_value(color_box_shadow);
-          html_box_shadow_set(component, style_value);
+          html_style_set(component, "box-shadow", style_value);
         },
       ],
       [
