@@ -54,14 +54,15 @@ export function app_code_lesson_identifiers_underscores() {
         text_articled_pad_space(separator_invalid_name) +
         "is shorter and is near the middle vertically, not the bottom or the top)",
     );
-    let c2 = app_code_container_light_blue(root);
-    html_style_assign(c2, {
+    let c4 = app_code_container_light_blue(parent);
+    html_style_assign(c4, {
       display: "grid",
       "grid-template-columns": "auto 1fr",
       gap: "0.5rem 1rem",
     });
-    html_span_text_code_dark(c2, separator_valid);
-    let c4 = app_code_container_light_blue(parent);
+    html_span_text_code_dark(c4, separator_valid);
+    let div3 = html_div_text(root2, text);
+    let c2 = app_code_container_light_blue(root);
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including letter symbols",
