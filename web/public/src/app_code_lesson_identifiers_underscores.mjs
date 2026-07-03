@@ -35,7 +35,7 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_valid_name = "underscore";
   const separator_invalid = "-";
   let separator_invalid_name = "hyphen";
-  function lambda(root) {
+  function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
@@ -113,7 +113,7 @@ export function app_code_lesson_identifiers_underscores() {
   let r5 = app_code_lesson_symbols_identifiers_valid(
     name,
     id,
-    lambda,
+    above,
     noop,
     batch_get,
   );
