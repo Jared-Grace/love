@@ -55,6 +55,7 @@ export function app_code_lesson_identifiers_underscores() {
       gap: "0.5rem 1rem",
     });
     html_span_text_code_dark(c4, separator_valid);
+    html_style_assign(b, s);
     html_div_text(
       c4,
       "(The line of" +
