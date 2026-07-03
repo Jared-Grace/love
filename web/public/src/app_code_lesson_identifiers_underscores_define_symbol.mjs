@@ -15,10 +15,10 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let div3 = html_div(c);
   let r = text_articled_split(separator_valid_name);
   let second = property_get(r, "second");
-  let first = property_get(r, "first");
+  let article = property_get(r, "article");
   let cycles = [noop, html_bold, noop, html_style_code_dark];
   html_cycle(div3, cycles, [
-    " This is " + first + " ",
+    " This is " + article + " ",
     second,
     ": ",
     separator_valid,
