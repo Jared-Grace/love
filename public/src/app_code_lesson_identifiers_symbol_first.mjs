@@ -69,6 +69,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
+      let ds2 = digits();
       let separators = separators_valid_next();
       let multiplied = list_multiply_3_random_doubled(separators);
       let joined = list_join_cycled(batch_item, multiplied);
