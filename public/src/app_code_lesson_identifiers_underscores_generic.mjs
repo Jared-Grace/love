@@ -46,7 +46,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter"];
-    list_add_multiple(list2, items);
+    list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
     let combineds = list_map_combine(identifier_symbols_types, " symbols");
     html_div_text(
       c2,
