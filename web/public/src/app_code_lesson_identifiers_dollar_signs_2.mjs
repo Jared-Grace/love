@@ -24,7 +24,6 @@ import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -45,13 +44,14 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
     noop(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter", "underscore", "dollar sign"];
-    function lambda3(item) {}
-    let mapped2 = list_map(list2, lambda3);
-    list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
+    let identifier_symbols_types_plural = list_map(
+      identifier_symbols_types,
+      word_plural,
+    );
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including " +
-        list_to_text_and_list(identifier_symbols_types),
+        list_to_text_and_list(identifier_symbols_types_plural),
     );
     let div = html_div(c2);
     html_cycle_code(div, [
