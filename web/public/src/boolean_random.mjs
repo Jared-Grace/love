@@ -1,6 +1,5 @@
-import { random } from "../../../love/public/src/random.mjs";
+import { boolean_random_n } from "../../../love/public/src/boolean_random_n.mjs";
 export function boolean_random() {
-  let r = random();
-  let rb = r > 1 / 2;
+  let rb = boolean_random_n(2);
   return rb;
 }
