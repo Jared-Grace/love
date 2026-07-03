@@ -73,9 +73,6 @@ export function app_code_lesson_identifiers_symbol_first() {
       let rb = boolean_random_3();
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
-      log(app_code_lesson_identifiers_symbol_first.name, {
-        valid,
-      });
       if (valid) {
         const valid_prefixes = ["$", "_"];
         prefix = list_random_item(valid_prefixes);
@@ -87,6 +84,10 @@ export function app_code_lesson_identifiers_symbol_first() {
         prefix = next_get();
       }
       joined = text_combine(prefix, joined);
+      log(app_code_lesson_identifiers_symbol_first.name, {
+        valid,
+        joined,
+      });
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
