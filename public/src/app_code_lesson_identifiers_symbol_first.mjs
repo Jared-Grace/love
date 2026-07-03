@@ -74,7 +74,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
-      let size = list_size_less_1(batch_item);
+      let size = list_size_less_1(batch_item);range_map
       let list2 = digits_randomly_coupled();
       log(app_code_lesson_identifiers_symbol_first.name, {
         list2,
