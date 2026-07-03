@@ -48,6 +48,11 @@ export function app_code_lesson_identifiers_underscores() {
       separator_valid,
     );
     let c4 = app_code_container_light_blue(root);
+    html_div_text(
+      c2,
+      "Remember, identifiers can have different kinds of symbols including letter symbols",
+    );
+    let div3 = html_div(parent);
     html_style_assign(c4, {
       display: "grid",
       "grid-template-columns": "auto 1fr",
