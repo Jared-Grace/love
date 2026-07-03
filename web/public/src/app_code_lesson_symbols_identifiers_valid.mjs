@@ -1,3 +1,4 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -10,6 +11,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   on_symbol,
   batch_get,
 ) {
+  arguments_assert(arguments, 5);
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
