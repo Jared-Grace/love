@@ -35,6 +35,9 @@ export function app_code_lesson_identifiers_underscores() {
     function lambda2(item, index) {
       const separator = ["_", "-"];
       let valid = integer_even_is(index);
+      if (false) {
+      } else {
+      }
       let joined = list_join_cycled(item, separator);
     }
     let mapped3 = list_map_index(list, lambda2);
