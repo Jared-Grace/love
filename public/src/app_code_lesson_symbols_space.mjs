@@ -15,7 +15,7 @@ import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    let div = html_div(parent2);
+    let div = html_div(c);
     html_div_text(
       c,
       "In English, when writing, we use spaces to separate words",
