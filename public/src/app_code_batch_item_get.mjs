@@ -1,3 +1,4 @@
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -14,6 +15,7 @@ export function app_code_batch_item_get(
   let remaining = [];
   let container = html_div(parent);
   let refresh = function lambda() {
+    let refresh2 = list_iterator_refillable(refill_get, on_refill);
     let e = list_empty_is(remaining);
     if (e) {
       let items = batch();
