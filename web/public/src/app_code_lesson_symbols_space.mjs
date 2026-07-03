@@ -1,3 +1,4 @@
+import { html_style_code_light_unshadowed } from "../../../love/public/src/html_style_code_light_unshadowed.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
@@ -22,7 +23,12 @@ export function app_code_lesson_symbols_space() {
     let nb = text_space_nb();
     html_cycle(
       div,
-      [noop, function lambda2() {}],
+      [
+        noop,
+        function lambda2() {
+          html_style_code_light_unshadowed(component);
+        },
+      ],
       [
         "In English, when writing, we use ",
         nb,
