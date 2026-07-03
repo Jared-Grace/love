@@ -61,6 +61,7 @@ export function app_code_lesson_identifiers_underscores() {
       gap: "0.5rem 1rem",
     });
     html_span_text_code_dark(c2, separator_valid);
+    let c4 = app_code_container_light_blue(parent);
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including letter symbols",
