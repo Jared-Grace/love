@@ -12,6 +12,6 @@ export function list_between(list, item_between) {
   let mapped = list_map(taken, lambda);
   let last = list_last(list);
   list_add(mapped, [last]);
-  let combined = list_concat_multiple(lists);
-  return mapped;
+  let combined = list_concat_multiple(mapped);
+  return combined;
 }
