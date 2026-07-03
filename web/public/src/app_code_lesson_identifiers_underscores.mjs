@@ -38,17 +38,14 @@ export function app_code_lesson_identifiers_underscores() {
       "Identifiers can also have an ",
       separator_valid,
     ]);
-    html_div_cycle_bold(
-      div,
-      [" (", separator_valid_name, ") symbol"],
-      [
-        "But identifiers cannot have a ",
-        separator_invalid,
-        " (",
-        separator_invalid_name,
-        ") symbol",
-      ],
-    );
+    html_div_cycle_bold(div, [" (", separator_valid_name, ") symbol"]);
+    html_div_cycle_bold([
+      "But identifiers cannot have a ",
+      separator_invalid,
+      " (",
+      separator_invalid_name,
+      ") symbol",
+    ]);
   }
   function batch_get() {
     let words = app_code_verse_words();
