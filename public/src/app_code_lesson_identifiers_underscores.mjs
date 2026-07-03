@@ -41,7 +41,7 @@ export function app_code_lesson_identifiers_underscores() {
       c,
       separator_invalid_name,
       separator_invalid,
-      "(The line is shorter and is near the middle, not the bottom or the top)",
+      "(The line is shorter and is near the middle vertically, not the bottom or the top)",
     );
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
