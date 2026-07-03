@@ -1,3 +1,4 @@
+import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { boolean_random_n } from "../../../love/public/src/boolean_random_n.mjs";
@@ -72,6 +73,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     ]);
     function lambda2(batch_item, batch_item_index) {
       let ds2 = digits();
+      let chunks = list_chunk(list3, chunk_size);
       function lambda(la) {
         function lambda3(d) {}
         each(ds, lambda3);
