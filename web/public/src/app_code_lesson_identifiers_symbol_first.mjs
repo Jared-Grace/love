@@ -83,8 +83,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       if (not(valid)) {
         let digit = digit_random();
         let rb = boolean_random_n(3);
-        let doubled = text_double(rb);
-        joined = text_combine(digit, joined);
+        let doubled = text_double(digit);
+        joined = text_combine(doubled, joined);
       }
       return joined;
     }
