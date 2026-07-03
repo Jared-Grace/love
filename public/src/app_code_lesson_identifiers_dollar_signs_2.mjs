@@ -48,7 +48,6 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
       "Identifiers can also have " + word_plural("numbers") + " ",
       separator_valid,
     ]);
-    let div2 = html_div(c2);
     html_div_text(
       c2,
       "However identifiers cannot have a number as their first symbol '(Identifiers cannot begin with a number)",
