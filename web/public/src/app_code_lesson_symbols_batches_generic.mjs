@@ -77,7 +77,7 @@ export function app_code_lesson_symbols_batches_generic(
     id,
     above,
     batch: function batch() {
-      let mapped2 = batch_get();
+      let b = batch_get();
       function lambda2(symbols_text) {
         let answer = symbols_to_answer(symbols_text);
         let symbols = text_split_empty(symbols_text);
@@ -101,8 +101,8 @@ export function app_code_lesson_symbols_batches_generic(
             let a = example_above(container, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, quiz_label);
-            let b = batch_get();
-            let answers = list_map(b, symbols_to_answer);
+            let bq = batch_get();
+            let answers = list_map(bq, symbols_to_answer);
             let answers_unique = list_unique(answers);
             list_remove_if_exists(answers_unique, answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
@@ -181,7 +181,7 @@ export function app_code_lesson_symbols_batches_generic(
         };
         return r2;
       }
-      let mapped = list_map(mapped2, lambda2);
+      let mapped = list_map(b, lambda2);
       log(app_code_lesson_symbols_batches_generic.name, {
         mapped,
       });
