@@ -1,3 +1,4 @@
+import { list_between } from "../../../love/public/src/list_between.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -40,6 +41,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         identifiers_valid_anywhere,
     );
     let ds = digits();
+    let combined = list_between(list2, item_between);
     let div = html_div(c2);
     html_cycle_code(div, [
       "Identifiers can also have " + word_plural("digit") + ": ",
