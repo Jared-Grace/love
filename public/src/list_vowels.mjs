@@ -6,7 +6,7 @@ import { text_vowels_lower } from "../../../love/public/src/text_vowels_lower.mj
 export function list_vowels() {
   let a = text_vowels_lower();
   let vowels_lower = list_to(a);
-  let vowels_upper = list_map(list, text_upper_to);
+  let vowels_upper = list_map(vowels_lower, text_upper_to);
   let vowels = list_concat(vowels_lower, vowels_upper);
   return vowels;
 }
