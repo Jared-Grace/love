@@ -2,7 +2,6 @@ import { html_span_text_code_dark_centered } from "../../../love/public/src/html
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
@@ -63,10 +62,7 @@ export function app_code_lesson_identifiers_underscores() {
         text_articled_pad_space(separator_invalid_name) +
         "is shorter and is near the middle vertically, not the bottom or the top",
     );
-    let d = html_span_text_code_dark(div3, separator_valid);
-    html_style_assign(d, {
-      "align-self": "center",
-    });
+    let d = html_span_text_code_dark_centered(div3, separator_valid);
     html_div_text(
       div3,
       "The line of" +
