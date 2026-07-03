@@ -23,7 +23,13 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
         "_",
         " (underscore) symbol",
       ],
-      ["But identifiers cannot a ", "-", " (hyphen) symbol", "-"],
+      [
+        "But identifiers cannot have a ",
+        "-",
+        " (hyphen) symbol",
+        " or a ",
+        "+",
+      ],
     ]);
   }
   function batch_get() {
