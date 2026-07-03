@@ -17,10 +17,9 @@ export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
-    html_cycle(
-      div,
-      "In English, when writing, we use spaces to separate words",
-    );
+    html_cycle(div, [
+      "In English, when writing, we use   spaces   to separate words",
+    ]);
     html_div_text(
       c,
       "For a computer, a space is considered a symbol, just like a letter or a number",
