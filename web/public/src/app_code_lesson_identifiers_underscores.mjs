@@ -90,10 +90,12 @@ export function app_code_lesson_identifiers_underscores() {
         }
       }
       let fns = [list_add_first, list_add];
-      function lambda3(item2) {
-        let r2 = boolean_random();
+      function lambda3(fn_list_add) {
+        let r = boolean_random();
+        if (false) {
+        }
       }
-      each(list2, lambda3);
+      each(fns, lambda3);
       let joined = list_join_cycled(item, separators);
       return joined;
     }
