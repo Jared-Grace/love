@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -45,6 +46,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter"];
+    list_add_multiple(list2, items);
     let combineds = list_map_combine(identifier_symbols_types, " symbols");
     html_div_text(
       c2,
