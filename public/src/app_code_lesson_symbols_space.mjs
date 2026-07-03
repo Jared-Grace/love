@@ -47,9 +47,7 @@ export function app_code_lesson_symbols_space() {
         },
       ],
       [
-        "In English, when writing, we ",
-        nb,
-        " use ",
+        "In English, when writing, we use ",
         nb,
         " spaces ",
         nb,
