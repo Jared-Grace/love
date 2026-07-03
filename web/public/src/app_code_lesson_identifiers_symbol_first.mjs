@@ -1,5 +1,5 @@
+import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
-import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         identifiers_valid_anywhere,
     );
     let ds = digits();
-    let combined = list_between_space(ds);
+    let combined = list_between_space_nb(ds);
     let div = html_div(c2);
     let parts = list_concat_single(
       "Identifiers can also have " + word_plural("digit") + ": ",
