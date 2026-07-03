@@ -12,6 +12,7 @@ export function list_join_cycled(list, list_separators) {
         let separator = list_get_wrap(list_separators, index);
         la(separator);
       }
+      la(item);
     }
     each_index(list, lambda2);
   }
