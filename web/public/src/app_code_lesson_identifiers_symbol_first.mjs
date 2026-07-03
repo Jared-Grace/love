@@ -84,18 +84,14 @@ export function app_code_lesson_identifiers_symbol_first() {
         }
       } else {
         prefix = next_get();
-        log(app_code_lesson_identifiers_symbol_first.name, {
-          prefix,
-        });
       }
       joined = text_combine(prefix, joined);
-      log(app_code_lesson_identifiers_symbol_first.name, {
-        valid,
-        joined,
-      });
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
+    log(app_code_lesson_identifiers_symbol_first.name, {
+      mapped3,
+    });
     return mapped3;
   }
   let name = list_join_empty(["Identifiers (first symbol)"]);
