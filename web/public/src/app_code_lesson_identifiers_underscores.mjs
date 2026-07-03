@@ -1,3 +1,4 @@
+import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
@@ -33,6 +34,7 @@ export function app_code_lesson_identifiers_underscores() {
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
     function lambda2(item, index) {
       let valid = integer_even_is(n);
+      let joined = list_join_cycled(list2, list_separators);
     }
     let mapped3 = list_map_index(list, lambda2);
     let mapped2 = list_map(list, list_join_space_nb);
