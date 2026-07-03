@@ -1,3 +1,4 @@
+import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
@@ -43,6 +44,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter symbols"];
+    let combineds = list_map_combine(list2, right2);
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including " +
