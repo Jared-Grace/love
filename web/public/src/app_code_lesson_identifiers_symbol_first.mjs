@@ -1,12 +1,10 @@
 import { range_map } from "../../../love/public/src/range_map.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -78,15 +76,9 @@ export function app_code_lesson_identifiers_symbol_first() {
       let size = list_size_less_1(batch_item);
       let mapped2 = range_map(size, next_get);
       let joined = list_join_cycled(batch_item, mapped2);
-      let list2 = digits_randomly_coupled();
-      log(app_code_lesson_identifiers_symbol_first.name, {
-        list2,
-      });
-      let separators = separators_valid_next();
-      let multiplied = list_multiply_3_random_doubled(separators);
       let r2 = boolean_random();
       if (r2) {
-        let right = list_random_item(multiplied);
+        let right = next_get();
         joined = text_combine(joined, right);
       }
       let rb = boolean_random_3();
