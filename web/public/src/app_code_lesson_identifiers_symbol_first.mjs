@@ -72,11 +72,12 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
-      let ds2 = digits();
-      let chunks = list_chunk(list3, chunk_size);
       function lambda(la) {
-        function lambda3(d) {}
-        each(ds, lambda3);
+        let chunks = list_chunk(ds, 2);
+        function lambda3(c) {
+          let rb2 = boolean_random();
+        }
+        each(chunks, lambda3);
       }
       let list2 = list_adder(lambda);
       let separators = separators_valid_next();
