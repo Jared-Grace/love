@@ -18,7 +18,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
   let split = text_split_space(s);
-  let result = list_first_second(list);
+  let result = list_first_second(split);
   html_cycle(div3, cycles, [
     " This is ",
     articled,
