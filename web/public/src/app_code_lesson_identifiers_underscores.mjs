@@ -18,7 +18,7 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_valid_name = "underscore";
   const separator_invalid = "-";
   let separator_invalid_name = "hyphen";
-  let r5 = app_code_lesson_identifiers_underscores_generic(
+  let r = app_code_lesson_identifiers_underscores_generic(
     separator_invalid_name,
     separator_invalid,
     separator_valid_name,
@@ -49,5 +49,5 @@ export function app_code_lesson_identifiers_underscores() {
         "is longer and is near the bottom",
     );
   }
-  return r5;
+  return r;
 }
