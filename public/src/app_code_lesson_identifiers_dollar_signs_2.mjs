@@ -60,13 +60,6 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
         separator_valid,
       );
     }
-    function define_invalid() {
-      app_code_lesson_identifiers_underscores_define_symbol(
-        c,
-        separator_invalid_name,
-        separator_invalid,
-      );
-    }
   }
   function batch_get() {
     let words = app_code_verse_words();
