@@ -13,6 +13,5 @@ export function list_iterator_refillable(refill_get, on_refill) {
     let b = list_remove_first(remaining);
     return b;
   };
-  next_get();
   return next_get;
 }
