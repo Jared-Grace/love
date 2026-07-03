@@ -1,3 +1,4 @@
+import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { text_articled } from "../../../love/public/src/text_articled.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -17,6 +18,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
   let split = text_split_space(s);
+  let fl = list_first_last(list);
   html_cycle(div3, cycles, [
     " This is ",
     articled,
