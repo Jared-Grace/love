@@ -45,7 +45,7 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
     );
     let div = html_div(c2);
     html_cycle_code(div, [
-      "Identifiers can also have " + word_plural(separator_valid_name) + " ",
+      "Identifiers can also have " + word_plural("numbers") + " ",
       separator_valid,
     ]);
     let div2 = html_div(c2);
