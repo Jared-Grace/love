@@ -10,9 +10,9 @@ export function html_style_code(component) {
   html_style_background_color_set(component, "white");
   app_replace_button_symbol_style_box_shadow_value_set(
     component,
-    "rgb(210, 232, 255)",
+    "rgb(0, 42, 86)",
   );
-  html_font_color_set(s, "white");
+  html_font_color_set(component, "white");
   html_border_radius_em(component, 0.5);
   html_border_none(component);
   html_style_padding_x(component, "0.37em");
