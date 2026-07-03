@@ -22,10 +22,12 @@ export function app_code_lesson_symbols_space() {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let nb = text_space_nb();
-    let parts = list_between(
-      ["In English, when writing, we use ", " spaces ", " to separate words"],
-      nb,
-    );
+    let list = list_between([
+      "In English, when writing, we use ",
+      " spaces ",
+      " to separate words",
+    ]);
+    let parts = list_between(list, nb);
     html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
     html_div_text(
       c,
