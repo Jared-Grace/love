@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -88,6 +89,9 @@ export function app_code_lesson_identifiers_symbol_first() {
         each(chunks, lambda3);
       }
       let list2 = list_adder(lambda);
+      log(app_code_lesson_identifiers_symbol_first.name, {
+        list2,
+      });
       let separators = separators_valid_next();
       let multiplied = list_multiply_3_random_doubled(separators);
       let joined = list_join_cycled(batch_item, multiplied);
