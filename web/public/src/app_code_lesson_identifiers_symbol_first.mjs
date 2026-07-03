@@ -5,7 +5,6 @@ import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs"
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
@@ -81,11 +80,7 @@ export function app_code_lesson_identifiers_symbol_first() {
           prefix = text_combine(prefix, right3);
         }
       } else {
-        prefix = digit_random();
-        if (rb) {
-          let right2 = digit_random();
-          prefix = text_combine(prefix, right2);
-        }
+        prefix = next_get();
       }
       joined = text_combine(prefix, joined);
       return joined;
