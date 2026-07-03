@@ -64,8 +64,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
-    let mapper = list_join_empty;
-    let next_get = invoke_map(next_get_list, mapper);
+    let next_get = invoke_map(next_get_list, list_join_empty);
     function lambda2(batch_item, batch_item_index) {
       let joined = list_join_invoker(batch_item, next_get);
       let r2 = boolean_random();
