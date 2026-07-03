@@ -76,16 +76,17 @@ export function app_code_lesson_identifiers_underscores() {
     let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
-  let combined = list_concat_multiple(lists);
-  let r5 = app_code_lesson_symbols_identifiers_valid(
+  let name = list_concat_multiple([
     "Identifiers (",
     separator_valid_name,
     "s allowed, ",
     separator_invalid_name,
     "s not)",
-    "identifiers_",
-    separator_valid_name,
-    "s",
+  ]);
+  let id = list_concat_multiple(["identifiers_", separator_valid_name, "s"]);
+  let r5 = app_code_lesson_symbols_identifiers_valid(
+    name,
+    id,
     lambda,
     noop,
     batch_get,
