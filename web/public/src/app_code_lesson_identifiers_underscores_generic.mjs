@@ -41,8 +41,8 @@ export function app_code_lesson_identifiers_underscores_generic(
   function above(root) {
     let c = app_code_container_light_blue(root);
     let defines = [define_valid, define_invalid];
+    list_swap_beginning(defines);$i
     invoke_multiple(defines);
-    list_swap_beginning(list2);
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letters"];
