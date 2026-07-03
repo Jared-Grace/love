@@ -1,5 +1,4 @@
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
+import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -75,7 +74,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       if (not(valid)) {
         let r2 = boolean_random();
         if (r2) {
-          let digit = integer_random_range(10);
+          let digit = digit_random();
           let joined = text_combine(joined, right);
         }
       }
@@ -95,7 +94,6 @@ export function app_code_lesson_identifiers_symbol_first() {
         let right = list_random_item(multiplied);
         joined = text_combine(joined, right);
       }
-      let combined = text_combine_multiple(list2);
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
