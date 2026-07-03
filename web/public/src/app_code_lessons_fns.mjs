@@ -14,6 +14,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_identifiers_letters_spaces,
     app_code_lesson_identifiers_underscores,
     app_code_lesson_identifiers_dollar_signs,
+    app_code_lesson_identifiers_dollar_signs_2,
   ];
   return r;
 }
