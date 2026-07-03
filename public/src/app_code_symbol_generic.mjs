@@ -12,8 +12,8 @@ export function app_code_symbol_generic(
 ) {
   let s = app_replace_button_symbol(parent, d);
   app_replace_button_symbol_style(s);
-  html_style_background_color_set(s, color_background);
   html_font_color_set(s, "white");
+  html_style_background_color_set(s, color_background);
   app_replace_button_symbol_style_box_shadow_value_set(s, color_box_shadow);
   html_font_jetbrains_mono(s);
   return s;
