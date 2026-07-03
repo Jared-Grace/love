@@ -15,7 +15,6 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   text_after,
 ) {
   let div3 = html_div(c);
-  let combined = text_combine(" ", text_after);
   let r = text_articled_split(separator_valid_name);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
@@ -27,5 +26,6 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     separator_valid,
   ]);
   html_cycle_code(parent, parts);
+  let combined = text_combine(" ", text_after);
   let div = html_div_text(c, combined);
 }
