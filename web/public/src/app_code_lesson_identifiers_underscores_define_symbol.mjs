@@ -16,13 +16,13 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   text_after,
 ) {
   let div3 = html_div(c);
-  let cycles = [noop, html_bold, noop, html_style_code_dark];
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
   let split = text_split_space(articled);
   let r = list_first_second_only(split);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
+  let cycles = [noop, html_bold, noop, html_style_code_dark];
   html_cycle(div3, cycles, [
     " This is " + first + " ",
     second,
