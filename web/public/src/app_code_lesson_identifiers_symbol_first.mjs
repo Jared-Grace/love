@@ -87,6 +87,7 @@ export function app_code_lesson_identifiers_symbol_first() {
           digit = text_double(digit);
         }
         joined = text_combine(doubled, joined);
+      } else {
       }
       return joined;
     }
