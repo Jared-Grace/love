@@ -1,6 +1,6 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
 import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -61,7 +61,7 @@ export function app_code_lesson_identifiers_underscores() {
       "grid-template-columns": "auto 1fr",
       gap: "0.5rem 1rem",
     });
-    let div3 = html_div_text(root2, text);
+    let span = html_span_text(parent, text);
     html_style_code_dark(component);
     html_div_text_multiple(c2, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
