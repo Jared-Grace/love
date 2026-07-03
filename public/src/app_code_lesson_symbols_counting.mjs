@@ -1,5 +1,5 @@
+import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 export function app_code_lesson_symbols_counting(
   name,
   id,
@@ -9,7 +9,7 @@ export function app_code_lesson_symbols_counting(
 ) {
   const example_label = "Number of symbols: ";
   const quiz_label = "How many symbols are there? ";
-  let symbols_to_answer = list_size;
+  let symbols_to_answer = text_size;
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
