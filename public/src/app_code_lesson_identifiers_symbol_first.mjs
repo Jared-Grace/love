@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { boolean_random_n } from "../../../love/public/src/boolean_random_n.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
@@ -69,7 +70,9 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
-      let ds2 = digits();ld
+      let ds2 = digits();
+      function lambda(la) {}
+      let list2 = list_adder(lambda);
       let separators = separators_valid_next();
       let multiplied = list_multiply_3_random_doubled(separators);
       let joined = list_join_cycled(batch_item, multiplied);
