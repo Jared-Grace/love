@@ -1,3 +1,6 @@
+import { each } from "../../../love/public/src/each.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { app_code_lesson_identifiers_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_identifiers_underscores_define_symbol.mjs";
@@ -85,6 +88,9 @@ export function app_code_lesson_identifiers_underscores() {
           separators = separators_invalid_next();
         }
       }
+      let fns = [list_add_first, list_add];
+      function lambda3(item2) {}
+      each(list2, lambda3);
       let joined = list_join_cycled(item, separators);
       return joined;
     }
