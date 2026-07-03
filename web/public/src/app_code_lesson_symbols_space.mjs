@@ -22,7 +22,7 @@ export function app_code_lesson_symbols_space() {
     let nb = text_space_nb();
     html_cycle(
       div,
-      [noop],
+      [noop, function lambda2() {}],
       [
         "In English, when writing, we use ",
         nb,
