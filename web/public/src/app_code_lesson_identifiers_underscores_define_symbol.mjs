@@ -21,5 +21,6 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     separator_valid_name,
     ": ",
     separator_valid,
+    " (The line is near the bottom)",
   ]);
 }
