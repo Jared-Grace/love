@@ -65,7 +65,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     let separators_invalid_next = list_cycler([
       ["$"],
       ["_"],
-      [separator_valid],
     ]);
     function lambda2(batch_item, batch_item_index) {
       let separators = null;
