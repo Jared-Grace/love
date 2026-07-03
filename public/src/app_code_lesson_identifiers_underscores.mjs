@@ -14,17 +14,17 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_identifiers_underscores() {
+  if (false) {
+    html_div_cycle_mono_multiple(c, [
+      ["Identifiers can also have a ", "$", " (dollar sign)"],
+      ["But identifiers cannot have a ", ".", " (period) symbol"],
+    ]);
+  }
+  const separator_valid = "_";
+  let separator_valid_name = "underscore";
+  const separator_invalid = "-";
+  let separator_invalid_name = "hyphen";
   function lambda(root) {
-    if (false) {
-      html_div_cycle_mono_multiple(c, [
-        ["Identifiers can also have a ", "$", " (dollar sign)"],
-        ["But identifiers cannot have a ", ".", " (period) symbol"],
-      ]);
-    }
-    const separator_valid = "_";
-    let separator_valid_name = "underscore";
-    const separator_invalid = "-";
-    let separator_invalid_name = "hyphen";
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
