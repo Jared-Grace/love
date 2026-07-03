@@ -8,10 +8,9 @@ import { html_style_padding } from "../../../love/public/src/html_style_padding.
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 export function app_code_container_light_blue(parent) {
-  let container2 = html_div(parent);
-  html_style_padding(container2, "0.2em");
-  html_border_none(container2);
-  let c = container2;
+  let c = html_div(parent);
+  html_style_padding(c, "0.2em");
+  html_border_none(c);
   html_style_background_color_set(c, "rgb(228, 241, 255)");
   let border_color = app_code_container_light_blue_border_color();
   html_border_y(c, "0.15em", border_color);
