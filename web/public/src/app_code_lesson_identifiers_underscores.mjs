@@ -20,22 +20,8 @@ export function app_code_lesson_identifiers_underscores() {
       ["But identifiers cannot have a ", "-", " (hyphen) symbol, a "],
     ]);
     html_cycle_mono(c, [
-      [
-        "Identifiers can also have a ",
-        "$",
-        "(dollar sign) or an ",
-        "_",
-        " (underscore) symbol",
-      ],
-      [
-        "But identifiers cannot have a ",
-        "-",
-        " (hyphen) symbol, a ",
-        ".",
-        " (period) symbol or a ",
-        "+",
-        "(puls) symbol",
-      ],
+      ["Identifiers can also have a ", "$", "(dollar sign)"],
+      ["But identifiers cannot have a ", ".", " (period) symbol"],
     ]);
   }
   function batch_get() {
