@@ -36,7 +36,7 @@ export function app_code_lesson_symbols_space() {
             color_background,
             color_font,
           );
-          const width = "0.1";
+          const width = "0.05";
           let style_value =
             app_replace_button_symbol_style_box_shadow_value_width(
               color_box_shadow,
