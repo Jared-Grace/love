@@ -36,6 +36,11 @@ export function app_code_lesson_identifiers_underscores() {
       separator_valid_name,
       separator_valid,
     );
+    app_code_lesson_identifiers_underscores_define_symbol(
+      c,
+      separator_invalid_name,
+      separator_invalid,
+    );
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
