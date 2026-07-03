@@ -34,6 +34,7 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_invalid_name = "hyphen";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
+    let div3 = html_div(parent);
     let cycles = [noop, html_bold, html_font_jetbrains_mono, html_style_code];
     html_cycle(c, cycles, [
       " This is an ",
