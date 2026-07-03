@@ -1,3 +1,4 @@
+import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -89,7 +90,9 @@ export function app_code_lesson_identifiers_underscores() {
         }
       }
       let fns = [list_add_first, list_add];
-      function lambda3(item2) {}
+      function lambda3(item2) {
+        let r2 = boolean_random();
+      }
       each(list2, lambda3);
       let joined = list_join_cycled(item, separators);
       return joined;
