@@ -1,3 +1,4 @@
+import { invoke_map } from "../../../love/public/src/invoke_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_join_invoker } from "../../../love/public/src/list_join_invoker.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
@@ -64,11 +65,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let mapper = list_join_empty;
-    let next_get = function lambda3() {
-      let result = next_get_list();
-      let r = mapper(result);
-      return r;
-    };
+    let next_get = invoke_map(next_get_list, mapper);
     function lambda2(batch_item, batch_item_index) {
       let joined = list_join_invoker(batch_item, next_get);
       let r2 = boolean_random();
