@@ -45,7 +45,7 @@ export function app_code_lesson_symbols_batches_generic(
   id,
   above,
   on_symbol,
-  batch_symbols,
+  batch_get,
   example_label,
   quiz_label,
   symbols_to_answer,
@@ -77,7 +77,7 @@ export function app_code_lesson_symbols_batches_generic(
     id,
     above,
     batch: function batch_get() {
-      let mapped2 = batch_symbols();
+      let mapped2 = batch_get();
       function lambda2(symbols_text) {
         let symbols = text_split_empty(symbols_text);
         let answer = symbols_to_answer(symbols);
