@@ -1,3 +1,4 @@
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
@@ -64,6 +65,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
+    let next_get = list_iterator_refillable(refill_get, on_refill);
     let separators_valid_next = list_cycler([
       ["$"],
       ["_"],
