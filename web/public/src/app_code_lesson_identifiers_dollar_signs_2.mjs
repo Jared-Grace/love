@@ -24,8 +24,6 @@ import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
-import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 export function app_code_lesson_identifiers_dollar_signs_2() {
@@ -33,15 +31,7 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
   let separator_valid_name = "dollar sign";
   const separator_invalid = ".";
   let separator_invalid_name = "period";
-  const defines_invert = false;
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    let defines = [define_valid, define_invalid];
-    if (defines_invert) {
-      list_swap_beginning(defines);
-    }
-    invoke_multiple(defines);
-    noop(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter", "underscore", "dollar sign"];
     let identifier_symbols_types_plural = list_map(
