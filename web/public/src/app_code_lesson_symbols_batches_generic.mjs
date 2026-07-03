@@ -76,7 +76,7 @@ export function app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
-    batch: function batch_get() {
+    batch: function batch() {
       let mapped2 = batch_get();
       function lambda2(symbols_text) {
         let symbols = text_split_empty(symbols_text);
