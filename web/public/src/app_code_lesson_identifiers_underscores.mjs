@@ -33,12 +33,14 @@ export function app_code_lesson_identifiers_underscores() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
     function lambda2(item, index) {
-      const separator = ["_", "-"];
+      let separators = ["_", "-"];
       let valid = integer_even_is(index);
       if (valid) {
+        separators = ["_", "-"];
       } else {
+        separators = ["_", "-"];
       }
-      let joined = list_join_cycled(item, separator);
+      let joined = list_join_cycled(item, separators);
     }
     let mapped3 = list_map_index(list, lambda2);
     let mapped2 = list_map(list, list_join_space_nb);
