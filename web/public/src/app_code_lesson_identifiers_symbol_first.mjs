@@ -27,7 +27,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
-export function app_code_lesson_identifiers_dollar_signs_2() {
+export function app_code_lesson_identifiers_symbol_first() {
   const separator_valid = "$";
   let separator_valid_name = "dollar sign";
   const separator_invalid = ".";
@@ -85,7 +85,7 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
         }
       }
       let multiplied = list_multiply(separators, 3);
-      log(app_code_lesson_identifiers_dollar_signs_2.name, {
+      log(app_code_lesson_identifiers_symbol_first.name, {
         multiplied,
       });
       function lambda(value) {
