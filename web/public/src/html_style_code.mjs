@@ -7,10 +7,10 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 export function html_style_code(component) {
   html_font_jetbrains_mono(component);
-  html_style_background_color_set(component, "white");
+  html_style_background_color_set(component, "rgb(0, 42, 86)");
   app_replace_button_symbol_style_box_shadow_value_set(
     component,
-    "rgb(0, 42, 86)",
+    "rgb(210, 232, 255)",
   );
   html_font_color_set(component, "white");
   html_border_radius_em(component, 0.5);
