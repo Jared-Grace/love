@@ -1,4 +1,4 @@
-import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
+import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
@@ -8,9 +8,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
-import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
-import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
-import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
@@ -69,13 +66,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     ]);
     function lambda2(batch_item, batch_item_index) {
       let separators = separators_valid_next();
-      let multiplied = list_multiply(separators, 3);
-      let multiplied_index = list_random_index(multiplied);
-      function lambda(value) {
-        let multiplied2 = text_multiply(value, 2);
-        return multiplied2;
-      }
-      list_transform_at(multiplied, multiplied_index, lambda);
+      let multiplied = list_multiply_3_random_doubled(separators);
       let joined = list_join_cycled(batch_item, multiplied);
       let r2 = boolean_random();
       if (r2) {
