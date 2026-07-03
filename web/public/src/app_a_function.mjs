@@ -2,7 +2,7 @@ import { app_a_function_name_selected_key } from "../../../love/public/src/app_a
 import { app_a_history } from "../../../love/public/src/app_a_history.mjs";
 import { emoji_hourglass } from "../../../love/public/src/emoji_hourglass.mjs";
 import { function_delete } from "../../../love/public/src/function_delete.mjs";
-import { emoji_delete } from "../../../love/public/src/emoji_delete.mjs";
+import { emoji_x_red } from "../../../love/public/src/emoji_x_red.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
@@ -203,7 +203,7 @@ export async function app_a_function(context) {
   }
   list_add(choices, {
     shortcut: "d",
-    text: emoji_delete(),
+    text: emoji_x_red(),
     fn: async function lambda4() {
       await function_delete(f_name);
       await screen_choose_open();
