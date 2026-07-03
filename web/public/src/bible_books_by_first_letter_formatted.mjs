@@ -16,7 +16,7 @@ export async function bible_books_by_first_letter_formatted() {
     let combined2 = text_combine_multiple([" ", "(", size, ") "]);
     let extra = ternary(eq, "", combined2);
     let combined = text_combine_multiple([property, ": ", joined, extra]);
-    log(sandbox_3.name, combined);
+    log(bible_books_by_first_letter_formatted.name, combined);
   }
   each_object(dictionary, lambda);
 }
