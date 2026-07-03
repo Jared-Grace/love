@@ -43,13 +43,14 @@ export function app_code_lesson_identifiers_underscores() {
       separator_invalid,
       "(The line is shorter and is near the middle vertically, not the bottom or the top)",
     );
-    html_div_text_multiple(c, [
+    let c2 = app_code_container_light_blue(root);
+    html_div_text_multiple(c2, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
-    let div = html_div(c);
+    let div = html_div(c2);
     html_cycle_mono(div, ["Identifiers can also have an ", separator_valid]);
     html_cycle_bold(div, [" (", separator_valid_name, ") symbol"]);
-    let div2 = html_div(c);
+    let div2 = html_div(c2);
     html_cycle_mono(div2, [
       "But identifiers cannot have a ",
       separator_invalid,
