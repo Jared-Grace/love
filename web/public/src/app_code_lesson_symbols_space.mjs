@@ -22,7 +22,9 @@ export function app_code_lesson_symbols_space() {
     html_cycle(div, [
       "In English, when writing, we use ",
       nb,
-      " spaces   to separate words",
+      " spaces ",
+      nb,
+      " to separate words",
     ]);
     html_div_text(
       c,
