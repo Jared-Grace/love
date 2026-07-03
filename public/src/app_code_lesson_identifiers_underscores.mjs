@@ -1,3 +1,4 @@
+import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { html_cycle_mono_multiple } from "../../../love/public/src/html_cycle_mono_multiple.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -28,6 +29,9 @@ export function app_code_lesson_identifiers_underscores() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list2 = list_slices_size_cycles_shuffled(mapped, 1, 2);
+    let joined = list_join_space_nb(slice);
+    function lambda2(item) {}
+    let mapped2 = list_map(list, lambda2);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(list2, list_other);
     return difference;
