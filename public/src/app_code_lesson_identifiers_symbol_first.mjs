@@ -1,3 +1,5 @@
+import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
@@ -10,8 +12,6 @@ import { list_random_index } from "../../../love/public/src/list_random_index.mj
 import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
-import { equal_2 } from "../../../love/public/src/equal_2.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
@@ -69,17 +69,13 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
-      let separators = null;
+      let separators = separators_valid_next();
       let valid = integer_even_is(batch_item_index);
-      if (valid) {
-        separators = separators_valid_next();
-      } else {
-        let size = list_size(batch_item);
-        let eq2 = equal_2(size);
-        if (eq2) {
-          separators = [separator_invalid];
-        } else {
-          separators = separators_valid_next();
+      if (not(valid)) {
+        let r2 = boolean_random();
+        if (r2) {
+          let digit = integer_random_range(10);
+          let joined = text_combine(joined, right);
         }
       }
       let multiplied = list_multiply(separators, 3);
