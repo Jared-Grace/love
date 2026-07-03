@@ -41,18 +41,11 @@ export function app_code_lesson_identifiers_underscores() {
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
       separator_valid_name,
-      separator_valid,
-      "(The line of" +
-        text_articled_pad_space(separator_valid_name) +
-        "is longer and is near the bottom)",
     );
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
       separator_invalid_name,
       separator_invalid,
-      "(The line of" +
-        text_articled_pad_space(separator_invalid_name) +
-        "is shorter and is near the middle vertically, not the bottom or the top)",
     );
     let c4 = app_code_container_light_blue(parent);
     html_style_assign(c4, {
@@ -61,7 +54,19 @@ export function app_code_lesson_identifiers_underscores() {
       gap: "0.5rem 1rem",
     });
     html_span_text_code_dark(c4, separator_valid);
-    let div3 = html_div_text(root2, text);
+    html_div_text(
+      c4,
+      "(The line of" +
+        text_articled_pad_space(separator_valid_name) +
+        "is longer and is near the bottom)",
+    );
+    html_span_text_code_dark(c4, separator_invalid);
+    html_div_text(
+      c4,
+      "(The line of" +
+        text_articled_pad_space(separator_invalid_name) +
+        "is shorter and is near the middle vertically, not the bottom or the top)",
+    );
     let c2 = app_code_container_light_blue(root);
     html_div_text(
       c2,
