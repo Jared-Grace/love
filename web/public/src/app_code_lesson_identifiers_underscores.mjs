@@ -92,7 +92,7 @@ export function app_code_lesson_identifiers_underscores() {
       let fns = [list_add_first, list_add];
       function lambda3(fn_list_add) {
         let r = boolean_random();
-        if (r) {
+        if (r) {lri
           fn_list_add(item);
         }
       }
