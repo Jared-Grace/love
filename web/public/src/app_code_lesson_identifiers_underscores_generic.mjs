@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
 import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
@@ -92,6 +93,9 @@ export function app_code_lesson_identifiers_underscores_generic(
         }
       }
       let multiplied = list_multiply(separators, 3);
+      log(app_code_lesson_identifiers_underscores_generic.name, {
+        multiplied,
+      });
       function lambda(value) {
         let multiplied2 = text_multiply(value, 2);
         return multiplied2;
