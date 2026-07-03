@@ -1,4 +1,4 @@
-import { app_code_lesson_identifiers_letters_spaces_2 } from "../../../love/public/src/app_code_lesson_identifiers_letters_spaces_2.mjs";
+import { app_code_lesson_identifiers_underscores_dollars } from "../../../love/public/src/app_code_lesson_identifiers_underscores_dollars.mjs";
 import { app_code_lesson_identifiers_letters_spaces } from "../../../love/public/src/app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_lesson_symbols_space } from "../../../love/public/src/app_code_lesson_symbols_space.mjs";
 import { app_code_lesson_symbols_letters } from "../../../love/public/src/app_code_lesson_symbols_letters.mjs";
@@ -11,7 +11,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_symbols_letters,
     app_code_lesson_symbols_space,
     app_code_lesson_identifiers_letters_spaces,
-    app_code_lesson_identifiers_letters_spaces_2,
+    app_code_lesson_identifiers_underscores_dollars,
   ];
   return r;
 }
