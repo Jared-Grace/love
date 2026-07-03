@@ -1,4 +1,4 @@
-import { html_style_code_light_unshadowed } from "../../../love/public/src/html_style_code_light_unshadowed.mjs";
+import { html_style_code_light_generic } from "../../../love/public/src/html_style_code_light_generic.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
@@ -25,8 +25,9 @@ export function app_code_lesson_symbols_space() {
       div,
       [
         noop,
-        function lambda2() {
-          html_style_code_light_unshadowed(component);
+        function lambda2(component) {
+          const color_box_shadow = "transparent";
+          html_style_code_light_generic(component, color_box_shadow);
         },
       ],
       [
