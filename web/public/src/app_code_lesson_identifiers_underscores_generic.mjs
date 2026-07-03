@@ -1,3 +1,4 @@
+import { list_multiply } from "../../../love/public/src/list_multiply.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -87,6 +88,7 @@ export function app_code_lesson_identifiers_underscores_generic(
           separators = separators_invalid_next();
         }
       }
+      let joined2 = list_multiply(value, times);
       let joined = list_join_cycled(item, separators);
       let r = boolean_random();
       if (r) {
