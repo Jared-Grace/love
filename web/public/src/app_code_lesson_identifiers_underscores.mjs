@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_curried_right } from "../../../love/public/src/text_combine_curried_right.mjs";
@@ -54,10 +55,14 @@ export function app_code_lesson_identifiers_underscores() {
         text_articled_pad_space(separator_invalid_name) +
         "is shorter and is near the middle vertically, not the bottom or the top)",
     );
-    let container = app_code_container_light_blue(root);
-    let div3 = html_div_text(root2, text);
     let c2 = app_code_container_light_blue(root);
-    html_style_assign(b, s);
+    html_style_assign(c2, {
+      display: "grid",
+      "grid-template-columns": "auto 1fr",
+      gap: "0.5rem 1rem",
+    });
+    let div3 = html_div_text(root2, text);
+    html_style_code_dark(component);
     html_div_text_multiple(c2, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
