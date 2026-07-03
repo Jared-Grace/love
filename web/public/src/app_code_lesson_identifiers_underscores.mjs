@@ -35,7 +35,9 @@ export function app_code_lesson_identifiers_underscores() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
     function lambda2(item, index) {
-      let separators = ["_", "-"];
+      const separator_valid = "_";
+      const separator_invalid = "-";
+      let separators = [separator_valid, separator_invalid];
       let valid = integer_even_is(index);
       if (valid) {
         separators = ["_"];
