@@ -24,7 +24,7 @@ export function app_code_next(
   ]);
   html_div_text(container, combined3);
   let left = emoji_repeat_1();
-  let combined = text_combine_multiple([left, "Yes, ", yes_text]);
+  let combined = text_combine_multiple([left, " Yes, ", yes_text]);
   app_replace_button_wide(container, combined, refresh);
   let b = app_replace_button_wide(parent, nt, on_next);
   let r = {
