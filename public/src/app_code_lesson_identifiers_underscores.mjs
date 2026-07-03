@@ -40,14 +40,15 @@ export function app_code_lesson_identifiers_underscores() {
       let separators = [separator_valid, separator_invalid];
       let valid = integer_even_is(index);
       if (valid) {
-        separators = ["_"];
+        separators = [separator_valid];
       } else {
         let size = list_size(item);
         let eq2 = equal_2(size);
         if (eq2) {
-          separators = ["-"];
+          separators = [separator_invalid];
+        } else {
         }
-        separators = ["_", "-"];
+        separators = [separator_valid, separator_invalid];
       }
       let joined = list_join_cycled(item, separators);
     }
