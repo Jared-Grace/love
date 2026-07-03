@@ -41,9 +41,6 @@ export function app_code_lesson_identifiers_underscores() {
       [separator_invalid, separator_valid],
     ]);
     function lambda2(item, index) {
-      log(app_code_lesson_identifiers_underscores.name, {
-        index,
-      });
       let separators = null;
       let valid = integer_even_is(index);
       if (valid) {
@@ -58,6 +55,9 @@ export function app_code_lesson_identifiers_underscores() {
         }
       }
       let joined = list_join_cycled(item, separators);
+      log(app_code_lesson_identifiers_underscores.name, {
+        joined,
+      });
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
