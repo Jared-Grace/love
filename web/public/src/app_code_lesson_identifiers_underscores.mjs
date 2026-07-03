@@ -47,6 +47,28 @@ export function app_code_lesson_identifiers_underscores() {
       separator_valid_name,
       separator_valid,
     );
+    defines_after(root);
+    let c2 = app_code_container_light_blue(root);
+    html_div_text(
+      c2,
+      "Remember, identifiers can have different kinds of symbols including letter symbols",
+    );
+    let div = html_div(c2);
+    html_cycle_code(div, [
+      "Identifiers can also have" +
+        text_articled_pad_space(separator_valid_name),
+      separator_valid,
+      " symbol",
+    ]);
+    let div2 = html_div(c2);
+    html_cycle_code(div2, [
+      "However identifiers cannot have" +
+        text_articled_pad_space(separator_invalid_name),
+      separator_invalid,
+      " symbol",
+    ]);
+  }
+  function defines_after(root) {
     let c4 = app_code_container_light_blue(root);
     html_div_text(c4, "How they look different:");
     let div3 = html_div(c4);
@@ -69,25 +91,6 @@ export function app_code_lesson_identifiers_underscores() {
         text_articled_pad_space(separator_valid_name) +
         "is longer and is near the bottom",
     );
-    let c2 = app_code_container_light_blue(root);
-    html_div_text(
-      c2,
-      "Remember, identifiers can have different kinds of symbols including letter symbols",
-    );
-    let div = html_div(c2);
-    html_cycle_code(div, [
-      "Identifiers can also have" +
-        text_articled_pad_space(separator_valid_name),
-      separator_valid,
-      " symbol",
-    ]);
-    let div2 = html_div(c2);
-    html_cycle_code(div2, [
-      "However identifiers cannot have" +
-        text_articled_pad_space(separator_invalid_name),
-      separator_invalid,
-      " symbol",
-    ]);
   }
   function batch_get() {
     let words = app_code_verse_words();
