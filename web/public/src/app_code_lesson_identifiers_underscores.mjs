@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
@@ -40,7 +41,8 @@ export function app_code_lesson_identifiers_underscores() {
         separators = ["_"];
       } else {
         let size = list_size(item);
-        if (false) {
+        let eq2 = equal(left, right);
+        if (size) {
         }
         separators = ["_", "-"];
       }
