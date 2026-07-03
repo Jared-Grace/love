@@ -1,3 +1,4 @@
+import { integer_evenness } from "../../../love/public/src/integer_evenness.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { html_cycle_mono_multiple } from "../../../love/public/src/html_cycle_mono_multiple.mjs";
@@ -30,7 +31,9 @@ export function app_code_lesson_identifiers_underscores() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
-    function lambda2(item, index) {}
+    function lambda2(item, index) {
+      let e = integer_evenness(n);
+    }
     let mapped3 = list_map_index(list, lambda2);
     let mapped2 = list_map(list, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
