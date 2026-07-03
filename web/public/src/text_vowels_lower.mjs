@@ -1,4 +1,4 @@
 export function text_vowels_lower() {
-  let r = "aeiou";
-  return r;
+  let vowels_lower = "aeiou";
+  return vowels_lower;
 }
