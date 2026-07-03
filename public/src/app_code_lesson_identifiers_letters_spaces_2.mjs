@@ -1,5 +1,5 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { html_cycle_mono_multiple } from "../../../love/public/src/html_cycle_mono_multiple.mjs";
-import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -18,16 +18,11 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
     let combined = list_to_text_or_list([""]);
-    let combined2 = list_concat_multiple([
-      [
-        "But identifiers cannot have a ",
-        combined,
-        "-",
-        " (hyphen) symbol",
-        " or a ",
-        "+",
-      ],
-    ]);
+    let combined2 = list_concat(
+      ["But identifiers cannot have a "],
+      [combined],
+      ["-", " (hyphen) symbol", " or a ", "+"],
+    );
     html_cycle_mono_multiple(c, [
       [
         "Identifiers can also have a ",
