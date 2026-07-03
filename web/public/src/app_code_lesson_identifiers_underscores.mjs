@@ -54,7 +54,7 @@ export function app_code_lesson_identifiers_underscores() {
     ]);
     let div = html_div(c2);
     html_cycle_code(div, [
-      "But identifiers cannot have" +
+      "Identifiers can also have" +
         text_articled_pad_space(separator_valid_name),
       separator_valid,
       " symbol",
