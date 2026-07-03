@@ -46,7 +46,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       "Identifiers can also have " + word_plural("number") + " ",
       separator_valid,
     ]);
-    html_div_text_multiple(c2, [
+    let c = app_code_container_light_blue(root);
+    html_div_text_multiple(c, [
       "However identifiers cannot have a number as their first symbol (Identifiers cannot begin with a number)",
       "After the first symbol an identifier can always be a number",
     ]);
