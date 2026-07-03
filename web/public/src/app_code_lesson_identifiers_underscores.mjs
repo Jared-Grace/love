@@ -79,7 +79,7 @@ export function app_code_lesson_identifiers_underscores() {
     "s allowed, ",
     separator_invalid_name,
     "s not)",
-    "identifiers_underscore",
+    "identifiers_",
     separator_valid_name,
     "s",
     lambda,
