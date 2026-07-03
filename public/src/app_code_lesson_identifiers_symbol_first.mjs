@@ -84,10 +84,10 @@ export function app_code_lesson_identifiers_symbol_first() {
         prefix = list_random_item(["$", "_"]);
       } else {
         prefix = digit_random();
-        let rb = boolean_random_n(3);
-        if (rb) {
-          prefix = text_double(prefix);
-        }
+      }
+      let rb = boolean_random_n(3);
+      if (rb) {
+        prefix = text_double(prefix);
       }
       joined = text_combine(prefix, joined);
       return joined;
