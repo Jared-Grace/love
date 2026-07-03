@@ -35,15 +35,15 @@ export function app_code_lesson_identifiers_underscores() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
-    log(app_code_lesson_identifiers_underscores.name, {
-      list,
-    });
     let separators_invalid_next = list_cycler([
       [separator_invalid],
       [separator_valid, separator_invalid],
       [separator_invalid, separator_valid],
     ]);
     function lambda2(item, index) {
+      log(app_code_lesson_identifiers_underscores.name, {
+        index,
+      });
       let separators = null;
       let valid = integer_even_is(index);
       if (valid) {
