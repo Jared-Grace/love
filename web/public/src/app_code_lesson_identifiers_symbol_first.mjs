@@ -1,3 +1,4 @@
+import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
@@ -43,9 +44,11 @@ export function app_code_lesson_identifiers_symbol_first() {
     let ds = digits();
     let combined = list_between_space(ds);
     let div = html_div(c2);
-    html_cycle_code(div, [
+    let parts = list_concat_single(
       "Identifiers can also have " + word_plural("digit") + ": ",
-    ]);
+      combined,
+    );
+    html_cycle_code(div, parts);
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
       "However identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)",
