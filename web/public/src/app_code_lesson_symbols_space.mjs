@@ -1,3 +1,4 @@
+import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
@@ -17,8 +18,11 @@ export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
+    let nb = text_space_nb();
     html_cycle(div, [
-      "In English, when writing, we use   spaces   to separate words",
+      "In English, when writing, we use ",
+      nb,
+      " spaces   to separate words",
     ]);
     html_div_text(
       c,
