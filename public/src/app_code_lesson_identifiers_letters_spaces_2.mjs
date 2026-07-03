@@ -17,7 +17,7 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
     ]);
     html_cycle_mono(c, [
       [
-        "Also, identifiers can have a ",
+        "Identifiers can also have a ",
         "$",
         "(dollar sign) or an ",
         "_",
