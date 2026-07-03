@@ -48,32 +48,29 @@ export function app_code_lesson_identifiers_underscores() {
       separator_valid,
     );
     let c4 = app_code_container_light_blue(root);
-    html_div_text(
-      c2,
-      "Remember, identifiers can have different kinds of symbols including letter symbols",
-    );
-    let div3 = html_div(parent);
-    html_style_assign(c4, {
+    html_div_text(c4, "How are they different?");
+    let div3 = html_div(c4);
+    html_style_assign(div3, {
       display: "grid",
       "grid-template-columns": "auto 1fr",
     });
-    app_code_flex_gap(c4);
-    let d2 = html_span_text_code_dark(c4, separator_invalid);
+    app_code_flex_gap(div3);
+    let d2 = html_span_text_code_dark(div3, separator_invalid);
     html_style_assign(d2, {
       "align-self": "center",
     });
     html_div_text(
-      c4,
+      div3,
       "The line of" +
         text_articled_pad_space(separator_invalid_name) +
         "is shorter and is near the middle vertically, not the bottom or the top",
     );
-    let d = html_span_text_code_dark(c4, separator_valid);
+    let d = html_span_text_code_dark(div3, separator_valid);
     html_style_assign(d, {
       "align-self": "center",
     });
     html_div_text(
-      c4,
+      div3,
       "The line of" +
         text_articled_pad_space(separator_valid_name) +
         "is longer and is near the bottom",
