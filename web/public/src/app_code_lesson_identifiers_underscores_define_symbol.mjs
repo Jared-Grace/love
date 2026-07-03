@@ -28,7 +28,6 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     second,
     ": ",
     separator_valid,
-    combined,
   ]);
-  let div = html_div_text(root, text);
+  let div = html_div_text(c, combined);
 }
