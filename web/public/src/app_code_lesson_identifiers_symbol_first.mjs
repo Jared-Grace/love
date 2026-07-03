@@ -70,14 +70,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     ]);
     function lambda2(batch_item, batch_item_index) {
       let separators = separators_valid_next();
-      let valid = integer_even_is(batch_item_index);
-      if (not(valid)) {
-        let r2 = boolean_random();
-        if (r2) {
-          let digit = digit_random();
-          let joined = text_combine(joined, right);
-        }
-      }
       let multiplied = list_multiply(separators, 3);
       log(app_code_lesson_identifiers_symbol_first.name, {
         multiplied,
@@ -97,6 +89,14 @@ export function app_code_lesson_identifiers_symbol_first() {
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
+    let valid = integer_even_is(batch_item_index);
+    if (not(valid)) {
+      let r2 = boolean_random();
+      if (r2) {
+        let digit = digit_random();
+        let joined = text_combine(digit, joined);
+      }
+    }
     return mapped3;
   }
   let name = list_join_empty(["Identifiers (first symbol)"]);
