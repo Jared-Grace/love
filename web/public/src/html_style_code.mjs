@@ -6,10 +6,16 @@ import { app_replace_button_symbol_style_box_shadow_value_set } from "../../../l
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 export function html_style_code(component) {
+  const color_background = "black";
+  const color_box_shadow = "black";
+  const color_font = "white";
   html_font_jetbrains_mono(component);
-  html_style_background_color_set(component, "black");
-  app_replace_button_symbol_style_box_shadow_value_set(component, "black");
-  html_font_color_set(component, "white");
+  html_style_background_color_set(component, color_background);
+  app_replace_button_symbol_style_box_shadow_value_set(
+    component,
+    color_box_shadow,
+  );
+  html_font_color_set(component, color_font);
   html_border_radius_em(component, 0.5);
   html_border_none(component);
   html_style_padding_x(component, "0.37em");
