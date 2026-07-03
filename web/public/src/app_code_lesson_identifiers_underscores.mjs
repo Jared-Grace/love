@@ -43,7 +43,7 @@ export function app_code_lesson_identifiers_underscores() {
       [separator_invalid, separator_valid],
     ]);
     function lambda2(item, index) {
-      let separators = [separator_valid, separator_invalid];
+      let separators = null;
       let valid = integer_even_is(index);
       if (valid) {
         separators = [separator_valid];
