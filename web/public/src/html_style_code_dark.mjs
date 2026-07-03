@@ -1,5 +1,5 @@
 import { html_style_code_generic } from "../../../love/public/src/html_style_code_generic.mjs";
-export function html_style_code(component) {
+export function html_style_code_dark(component) {
   const color_background = "black";
   const color_box_shadow = "black";
   const color_font = "white";
