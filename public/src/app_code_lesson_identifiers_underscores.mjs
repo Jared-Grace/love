@@ -1,3 +1,4 @@
+import { html_span_text_code_dark_centered } from "../../../love/public/src/html_span_text_code_dark_centered.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -55,10 +56,7 @@ export function app_code_lesson_identifiers_underscores() {
       "grid-template-columns": "auto 1fr",
     });
     app_code_flex_gap(div3);
-    let d2 = html_span_text_code_dark(div3, separator_invalid);
-    html_style_assign(d2, {
-      "align-self": "center",
-    });
+    html_span_text_code_dark_centered(div3, separator_invalid);
     html_div_text(
       div3,
       "The line of" +
