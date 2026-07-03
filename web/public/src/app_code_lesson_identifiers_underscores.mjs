@@ -1,3 +1,4 @@
+import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -54,6 +55,7 @@ export function app_code_lesson_identifiers_underscores() {
       "grid-template-columns": "auto 1fr",
       gap: "0.5em 0.75em",
     });
+    app_code_flex_gap(container);
     let d = html_span_text_code_dark(c4, separator_valid);
     html_style_assign(d, {
       "align-self": "center",
