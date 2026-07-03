@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_identifiers_underscores_generic } from "../../../love/public/src/app_code_lesson_identifiers_underscores_generic.mjs";
 import { html_div_cycle_mono_multiple } from "../../../love/public/src/html_div_cycle_mono_multiple.mjs";
 export function app_code_lesson_identifiers_underscores_2() {
@@ -16,7 +17,7 @@ export function app_code_lesson_identifiers_underscores_2() {
     separator_invalid,
     separator_valid_name,
     separator_valid,
-    defines_after,
+    noop,
   );
   return r;
 }
