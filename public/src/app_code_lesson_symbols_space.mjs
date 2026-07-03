@@ -1,5 +1,3 @@
-import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { html_style_code_light } from "../../../love/public/src/html_style_code_light.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
@@ -23,15 +21,16 @@ export function app_code_lesson_symbols_space() {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let nb = text_space_nb();
-    let e = emoji_arrow_right();
-    let combined = text_combine_multiple([
-      "In English, when writing, we use ",
-      e,
-    ]);
     html_cycle(
       div,
       [noop, html_style_code_light],
-      [combined, nb, " spaces ", nb, " to separate words"],
+      [
+        "In English, when writing, we use ",
+        nb,
+        " spaces ",
+        nb,
+        " to separate words",
+      ],
     );
     html_div_text(
       c,
