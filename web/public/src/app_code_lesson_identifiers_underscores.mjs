@@ -48,7 +48,7 @@ export function app_code_lesson_identifiers_underscores() {
       separator_valid,
     );
     let c4 = app_code_container_light_blue(root);
-    html_div_text(c4, "How are they different?");
+    html_div_text(c4, "Differences:");
     let div3 = html_div(c4);
     html_style_assign(div3, {
       display: "grid",
