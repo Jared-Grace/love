@@ -50,15 +50,11 @@ export function app_code_lesson_identifiers_underscores() {
     html_cycle_code(div, [
       "Identifiers can also have an ",
       separator_valid,
-      " (",
-      separator_valid_name,
-      ") symbol",
+      " (" + separator_valid_name + ") symbol",
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
-      "But identifiers cannot have a ",
-      separator_invalid,
-      " (",
+      "But identifiers cannot have a " + separator_invalid + " (",
       separator_invalid_name,
       ") symbol",
     ]);
