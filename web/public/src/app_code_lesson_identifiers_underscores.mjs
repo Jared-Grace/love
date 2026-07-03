@@ -1,4 +1,4 @@
-import { html_style_code } from "../../../love/public/src/html_style_code.mjs";
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
@@ -35,7 +35,12 @@ export function app_code_lesson_identifiers_underscores() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div3 = html_div(c);
-    let cycles = [noop, html_bold, html_font_jetbrains_mono, html_style_code];
+    let cycles = [
+      noop,
+      html_bold,
+      html_font_jetbrains_mono,
+      html_style_code_dark,
+    ];
     html_cycle(div3, cycles, [
       " This is an ",
       separator_valid_name,
