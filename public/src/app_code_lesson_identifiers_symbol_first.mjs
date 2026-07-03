@@ -65,8 +65,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let mapper = list_join_empty;
     let next_get = function lambda3() {
-      let list2 = next_get_list();
-      let r = mapper(list2);
+      let result = next_get_list();
+      let r = mapper(result);
       return r;
     };
     function lambda2(batch_item, batch_item_index) {
