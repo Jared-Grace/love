@@ -26,7 +26,6 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -102,7 +101,7 @@ export function app_code_lesson_symbols_batches_generic(
             let a = example_above(container, symbols);
             let container_answer2 = property_get(a, "container_answer");
             html_text_set(container_answer2, quiz_label);
-            let answers = list_map_property(b, "answer");
+            let answers = batch_get();
             let answers_unique = list_unique(answers);
             list_remove_if_exists(answers_unique, answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
