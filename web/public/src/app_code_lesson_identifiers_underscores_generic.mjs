@@ -24,7 +24,6 @@ import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
-import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -57,14 +56,14 @@ export function app_code_lesson_identifiers_underscores_generic(
     );
     let div = html_div(c2);
     html_cycle_code(div, [
-      "Identifiers can also have" +
-        text_articled_pad_space(separator_valid_name),
+      "Identifiers can also have" + word_plural(separator_valid_name) + " ",
       separator_valid,
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
       "However identifiers cannot have" +
-        text_articled_pad_space(separator_invalid_name),
+        word_plural(separator_invalid_name) +
+        " ",
       separator_invalid,
     ]);
     function define_valid() {
