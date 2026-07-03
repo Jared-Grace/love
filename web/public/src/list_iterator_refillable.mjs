@@ -1,18 +1,8 @@
 import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-export function list_iterator_refillable(
-  parent,
-  lesson,
-  on_batch_item,
-  on_batch,
-) {
-  let batch = property_get(lesson, "batch");
+export function list_iterator_refillable(on_batch_item, on_batch) {
   let remaining = [];
-  let container = html_div(parent);
   let refresh = function lambda() {
     let e = list_empty_is(remaining);
     if (e) {
@@ -20,9 +10,8 @@ export function list_iterator_refillable(
       list_add_multiple(remaining, items);
       on_batch(remaining);
     }
-    html_clear(container);
     let b = list_remove_first(remaining);
-    on_batch_item(container, b, refresh);
+    return b;
   };
   refresh();
   return refresh;
