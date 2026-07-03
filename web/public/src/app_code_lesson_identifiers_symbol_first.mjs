@@ -82,6 +82,9 @@ export function app_code_lesson_identifiers_symbol_first() {
         }
       } else {
         prefix = next_get();
+        log(app_code_lesson_identifiers_symbol_first.name, {
+          prefix,
+        });
       }
       joined = text_combine(prefix, joined);
       log(app_code_lesson_identifiers_symbol_first.name, {
