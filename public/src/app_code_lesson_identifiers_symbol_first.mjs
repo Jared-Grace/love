@@ -36,10 +36,13 @@ export function app_code_lesson_identifiers_symbol_first() {
       identifier_symbols_types,
       word_plural,
     );
+    const identifiers_valid_anywhere = list_to_text_and_list(
+      identifier_symbols_types_plural,
+    );
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including " +
-        list_to_text_and_list(identifier_symbols_types_plural),
+        identifiers_valid_anywhere,
     );
     let div = html_div(c2);
     html_cycle_code(div, [
@@ -50,6 +53,9 @@ export function app_code_lesson_identifiers_symbol_first() {
     html_div_text_multiple(c, [
       "However identifiers cannot have a number as their first symbol (Identifiers cannot begin with a number)",
       "After the first symbol an identifier can always be a number",
+      "And " +
+        identifiers_valid_anywhere +
+        " may be used anywhere in an identifier, even as the first symbol",
     ]);
   }
   function batch_get() {
