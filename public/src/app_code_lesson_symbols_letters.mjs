@@ -51,7 +51,7 @@ export function app_code_lesson_symbols_letters() {
     );
     html_div_text(
       container2,
-      "For a computer, lowercase symbols may be considered different than uppercase symbols",
+      "For a computer, lowercase letters may be considered different than uppercase letters",
     );
   }
   function lambda2(word) {
