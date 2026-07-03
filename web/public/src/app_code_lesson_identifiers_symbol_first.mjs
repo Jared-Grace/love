@@ -73,8 +73,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     function lambda2(batch_item, batch_item_index) {
       let ds2 = digits();
       function lambda(la) {
-        function lambda3(item) {}
-        each(list3, lambda3);
+        function lambda3(d) {}
+        each(ds, lambda3);
       }
       let list2 = list_adder(lambda);
       let separators = separators_valid_next();
