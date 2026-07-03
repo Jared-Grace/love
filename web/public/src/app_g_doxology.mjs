@@ -54,7 +54,7 @@ export function app_g_doxology() {
   let r = integer_random(1, 3);
   let taken = list_take(choices, r);
   let combined = list_concat_multiple([[believe], taken, [blessing]]);
-  const mapped = list_map_combine("!", combined);
+  const mapped = list_map_combine(combined, "!");
   const doxology = list_join_space(mapped);
   return doxology;
 }
