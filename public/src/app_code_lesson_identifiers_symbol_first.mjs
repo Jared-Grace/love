@@ -5,7 +5,6 @@ import { list_between_space } from "../../../love/public/src/list_between_space.
 import { digits } from "../../../love/public/src/digits.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
@@ -79,15 +78,15 @@ export function app_code_lesson_identifiers_symbol_first() {
         let right = list_random_item(multiplied);
         joined = text_combine(joined, right);
       }
-      let valid = integer_even_is(batch_item_index);$n
-      if (not(valid)) {
+      let valid = integer_even_is(batch_item_index);
+      if (valid) {
+      } else {
         let digit = digit_random();
         let rb = boolean_random_n(3);
         if (rb) {
           digit = text_double(digit);
         }
         joined = text_combine(doubled, joined);
-      } else {
       }
       return joined;
     }
