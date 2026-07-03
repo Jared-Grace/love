@@ -1,3 +1,4 @@
+import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
@@ -7,7 +8,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
-import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
 import { text_multiply } from "../../../love/public/src/text_multiply.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -79,7 +79,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         return multiplied2;
       }
       let multiplied_index = list_random_index(multiplied);
-      property_transform(multiplied, multiplied_index, lambda);
+      list_transform_at(multiplied, multiplied_index, lambda);
       let joined = list_join_cycled(batch_item, multiplied);
       let r2 = boolean_random();
       if (r2) {
