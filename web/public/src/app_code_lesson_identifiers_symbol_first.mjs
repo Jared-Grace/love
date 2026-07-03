@@ -12,7 +12,6 @@ import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
@@ -67,11 +66,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     let next_get = invoke_map(next_get_list, list_join_empty);
     function lambda2(batch_item, batch_item_index) {
       let joined = list_join_cycled_invoker(batch_item, next_get);
-      let r2 = boolean_random();
-      if (r2) {
-        let right = next_get();
-        joined = text_combine(joined, right);
-      }
+      let right = next_get();
+      joined = text_combine(joined, right);
       let rb = boolean_random_3();
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
