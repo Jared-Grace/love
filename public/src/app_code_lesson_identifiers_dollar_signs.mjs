@@ -1,6 +1,6 @@
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_identifiers_underscores_generic } from "../../../love/public/src/app_code_lesson_identifiers_underscores_generic.mjs";
-export function app_code_lesson_identifiers_underscores_2() {
+export function app_code_lesson_identifiers_dollar_signs() {
   const separator_valid = "$";
   let separator_valid_name = "dollar sign";
   const separator_invalid = ".";
