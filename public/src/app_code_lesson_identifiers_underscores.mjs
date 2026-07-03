@@ -74,8 +74,8 @@ export function app_code_lesson_identifiers_underscores() {
     return mapped3;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
-    "Identifiers ",
-    "(underscore",
+    "Identifiers (",
+    separator_valid_name,
     "s allowed, ",
     "hyphen",
     "s not)",
