@@ -41,7 +41,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         identifiers_valid_anywhere,
     );
     let ds = digits();
-    let combined = list_between(list2, item_between);
+    let combined = list_between(ds, ' ');
     let div = html_div(c2);
     html_cycle_code(div, [
       "Identifiers can also have " + word_plural("digit") + ": ",
