@@ -1,5 +1,4 @@
 import { text_articled_split } from "../../../love/public/src/text_articled_split.mjs";
-import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -25,7 +24,6 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     ": ",
     separator_valid,
   ]);
-  html_cycle_code(parent, parts);
   let combined = text_combine(" ", text_after);
   let div = html_div_text(c, combined);
 }
