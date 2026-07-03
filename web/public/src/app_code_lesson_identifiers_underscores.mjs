@@ -9,7 +9,7 @@ import { text_letters_only } from "../../../love/public/src/text_letters_only.mj
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-export function app_code_lesson_identifiers_underscores_dollars() {
+export function app_code_lesson_identifiers_underscores() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
