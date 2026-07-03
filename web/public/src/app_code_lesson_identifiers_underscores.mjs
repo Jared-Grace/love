@@ -4,10 +4,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
-import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { html_cycle_mono_multiple } from "../../../love/public/src/html_cycle_mono_multiple.mjs";
-import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
-import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
@@ -60,10 +57,7 @@ export function app_code_lesson_identifiers_underscores() {
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
-    let mapped2 = list_map(list, list_join_space_nb);
-    let list_other = js_identifier_words_invalid();
-    let difference = list_difference(mapped2, list_other);
-    return difference;
+    return mapped3;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
     "Identifiers (Underscores allowed, hyphens not)",
