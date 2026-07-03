@@ -1,3 +1,4 @@
+import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -15,6 +16,7 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
+    let combined = list_to_text_or_list();
     html_cycle_mono(c, [
       [
         "Identifiers can also have a ",
@@ -25,6 +27,7 @@ export function app_code_lesson_identifiers_letters_spaces_2() {
       ],
       [
         "But identifiers cannot have a ",
+        combined,
         "-",
         " (hyphen) symbol",
         " or a ",
