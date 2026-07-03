@@ -78,16 +78,20 @@ export function app_code_lesson_identifiers_symbol_first() {
         let right = list_random_item(multiplied);
         joined = text_combine(joined, right);
       }
+      let rb = boolean_random_n(3);
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
         prefix = list_random_item(["$", "_"]);
+        if (rb) {
+          prefix = text_double(prefix);
+        }
       } else {
         prefix = digit_random();
-      }
-      let rb = boolean_random_n(3);
-      if (rb) {
-        prefix = text_double(prefix);
+        if (rb) {
+          let right2 = digit_random();
+          prefix = text_combine(prefix, right2);
+        }
       }
       joined = text_combine(prefix, joined);
       return joined;
