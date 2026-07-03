@@ -39,7 +39,9 @@ export function app_code_lesson_identifiers_underscores() {
       if (valid) {
         separators = ["_"];
       } else {
-        let size = list_size(list2);
+        let size = list_size(item);
+        if (false) {
+        }
         separators = ["_", "-"];
       }
       let joined = list_join_cycled(item, separators);
