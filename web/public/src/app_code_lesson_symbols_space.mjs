@@ -1,4 +1,3 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_style_code_light } from "../../../love/public/src/html_style_code_light.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
@@ -21,8 +20,7 @@ export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
-    let nb = text_space_nb();
-    let combined = text_combine(left, right);
+    let nb = text_space_nb();tcm
     html_cycle(
       div,
       [noop, html_style_code_light],
