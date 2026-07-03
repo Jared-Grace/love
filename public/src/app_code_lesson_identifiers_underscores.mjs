@@ -49,13 +49,17 @@ export function app_code_lesson_identifiers_underscores() {
     ]);
     let div = html_div(c2);
     html_cycle_code(div, [
-      "But identifiers cannot have " + text_articled(separator_valid_name),
+      "But identifiers cannot have " +
+        text_articled(separator_valid_name) +
+        " ",
       separator_valid,
       " symbol",
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
-      "But identifiers cannot have " + text_articled(separator_invalid_name),
+      "But identifiers cannot have " +
+        text_articled(separator_invalid_name) +
+        " ",
       separator_invalid,
       " symbol",
     ]);
