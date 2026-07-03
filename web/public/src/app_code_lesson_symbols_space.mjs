@@ -30,7 +30,7 @@ export function app_code_lesson_symbols_space() {
         function lambda2(component) {
           const color_background = "white";
           const color_font = "transparent";
-          let color_box_shadow = "rgb(228, 241, 255)";
+          let color_box_shadow = "rgb(0, 123, 255)";
           html_style_code_generic_unshadowed(
             component,
             color_background,
