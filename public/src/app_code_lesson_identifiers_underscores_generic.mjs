@@ -28,6 +28,7 @@ export function app_code_lesson_identifiers_underscores_generic(
   separator_valid_name,
   separator_valid,
   defines_after,
+  identifier_symbols_types_adds,
 ) {
   function above(root) {
     let c = app_code_container_light_blue(root);
