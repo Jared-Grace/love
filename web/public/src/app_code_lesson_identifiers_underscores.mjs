@@ -1,11 +1,10 @@
-import { html_div } from "../../../love/public/src/html_div.mjs";
+import { html_div_cycle_mono_multiple } from "../../../love/public/src/html_div_cycle_mono_multiple.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { equal_2 } from "../../../love/public/src/equal_2.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
-import { html_cycle_mono_multiple } from "../../../love/public/src/html_cycle_mono_multiple.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
@@ -20,12 +19,11 @@ export function app_code_lesson_identifiers_underscores() {
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
-    let div = html_div(parent);
-    html_cycle_mono_multiple(c, [
+    html_div_cycle_mono_multiple(c, [
       ["Identifiers can also have an ", "_", " (underscore) symbol"],
       ["But identifiers cannot have a ", "-", " (hyphen) symbol, a "],
     ]);
-    html_cycle_mono_multiple(c, [
+    html_div_cycle_mono_multiple(c, [
       ["Identifiers can also have a ", "$", "(dollar sign)"],
       ["But identifiers cannot have a ", ".", " (period) symbol"],
     ]);
