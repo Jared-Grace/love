@@ -5,7 +5,7 @@ import { list_to_indices } from "../../../love/public/src/list_to_indices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { list_shuffle_indices } from "../../../love/public/src/list_shuffle_indices.mjs";
-export function list_cycled_shuffle(list, cycle_size) {
+export function list_shuffle_cycled(list, cycle_size) {
   let mods = range(cycle_size);
   let indices = list_to_indices(list);
   function lambda(m) {
