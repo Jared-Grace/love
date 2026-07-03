@@ -83,7 +83,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       }
       return joined;
     }
-      let mapped3 = list_map_index(list, lambda2);
+    let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
   let name = list_join_empty(["Identifiers (first symbol)"]);
