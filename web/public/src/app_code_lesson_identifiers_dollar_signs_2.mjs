@@ -44,7 +44,9 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
     invoke_multiple(defines);
     noop(root);
     let c2 = app_code_container_light_blue(root);
-    const identifier_symbols_types = ["letter", "underscore", "dollar sign"];lm
+    const identifier_symbols_types = ["letter", "underscore", "dollar sign"];
+    function lambda3(item) {}
+    let mapped2 = list_map(list2, lambda3);
     list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
     html_div_text(
       c2,
