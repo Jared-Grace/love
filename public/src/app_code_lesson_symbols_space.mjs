@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -21,7 +22,7 @@ export function app_code_lesson_symbols_space() {
     let nb = text_space_nb();
     html_cycle(
       div,
-      [],
+      [noop],
       [
         "In English, when writing, we use ",
         nb,
