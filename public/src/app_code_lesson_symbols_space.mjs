@@ -26,7 +26,7 @@ export function app_code_lesson_symbols_space() {
       [
         noop,
         function lambda2(component) {
-          const color_box_shadow = "transparent";
+          const color_box_shadow = "transparent";$x
           html_style_code_light_generic(component, color_box_shadow);
         },
       ],
