@@ -57,7 +57,7 @@ export function app_code_lesson_identifiers_symbol_first() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
+    let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
     let separators_valid_next = list_cycler([
       ["$"],
       ["_"],
