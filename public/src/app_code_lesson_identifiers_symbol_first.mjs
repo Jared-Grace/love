@@ -80,8 +80,9 @@ export function app_code_lesson_identifiers_symbol_first() {
       }
       let valid = integer_even_is(batch_item_index);
       if (valid) {
-      } else {$s
-        let prefix = digit_random();
+      } else {
+        let prefix = null;
+        prefix = digit_random();
         let rb = boolean_random_n(3);
         if (rb) {
           prefix = text_double(prefix);
