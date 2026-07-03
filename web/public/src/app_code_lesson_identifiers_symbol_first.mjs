@@ -79,8 +79,10 @@ export function app_code_lesson_identifiers_symbol_first() {
           if (rb2) {
             la(c);
           } else {
-            function lambda4(item) {}
-            each(list3, lambda4);
+            function lambda4(d) {
+              la([d]);
+            }
+            each(c, lambda4);
           }
         }
         each(chunks, lambda3);
