@@ -92,7 +92,8 @@ export function app_code_lesson_identifiers_underscores_generic(
       }
       let multiplied = list_multiply(separators, 3);
       function lambda(value) {
-        let multiplied2 = text_multiply(value3, times);
+        let multiplied2 = text_multiply(value, 2);
+        return multiplied2;
       }
       let value2 = property_transform(multiplied, property, lambda);
       let joined = list_join_cycled(item, multiplied);
