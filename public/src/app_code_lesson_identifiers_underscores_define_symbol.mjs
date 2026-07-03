@@ -23,7 +23,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let second = property_get(r, "second");
   let first = property_get(r, "first");
   html_cycle(div3, cycles, [
-    " This is "+first+' ',
+    " This is " + first + " ",
     second,
     ": ",
     separator_valid,
