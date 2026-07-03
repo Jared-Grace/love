@@ -50,9 +50,7 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
-      "However identifiers cannot have " +
-        word_plural(separator_invalid_name) +
-        " ",
+      "However identifiers cannot have a number as their first symbol",
       separator_invalid,
     ]);
     function define_valid() {
