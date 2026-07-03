@@ -19,13 +19,17 @@ export function app_code_lesson_symbols_space() {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let nb = text_space_nb();
-    html_cycle(div, [
-      "In English, when writing, we use ",
-      nb,
-      " spaces ",
-      nb,
-      " to separate words",
-    ]);
+    html_cycle(
+      div,
+      [],
+      [
+        "In English, when writing, we use ",
+        nb,
+        " spaces ",
+        nb,
+        " to separate words",
+      ],
+    );
     html_div_text(
       c,
       "For a computer, a space is considered a symbol, just like a letter or a number",
