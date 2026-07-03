@@ -1,10 +1,7 @@
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
-import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export function app_code_batch_item_get(
   parent,
   lesson,
@@ -12,18 +9,11 @@ export function app_code_batch_item_get(
   on_batch,
 ) {
   let batch = property_get(lesson, "batch");
-  let remaining = [];
   let container = html_div(parent);
+  let next_get = list_iterator_refillable(batch, on_batch);
   let refresh = function lambda() {
-    let refresh2 = list_iterator_refillable(refill_get, on_refill);
-    let e = list_empty_is(remaining);
-    if (e) {
-      let items = batch();
-      list_add_multiple(remaining, items);
-      on_batch(remaining);
-    }
     html_clear(container);
-    let b = list_remove_first(remaining);
+    let b = next_get();
     on_batch_item(container, b, refresh);
   };
   refresh();
