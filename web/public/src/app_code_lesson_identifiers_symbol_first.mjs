@@ -63,9 +63,9 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
     let separators_invalid_next = list_cycler([
-      [separator_invalid],
-      [separator_valid, separator_invalid],
-      [separator_invalid, separator_valid],
+      ["$"],
+      ["_"],
+      [separator_valid],
     ]);
     function lambda2(batch_item, batch_item_index) {
       let separators = null;
