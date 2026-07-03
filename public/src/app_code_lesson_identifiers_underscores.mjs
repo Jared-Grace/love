@@ -33,7 +33,7 @@ export function app_code_lesson_identifiers_underscores() {
     const separator_invalid = "-";
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list = list_slices_size_cycles_shuffled(mapped, 2, 3);
+    let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
     let separators_invalid_next = list_cycler([
       [separator_invalid],
       [separator_valid, separator_invalid],
