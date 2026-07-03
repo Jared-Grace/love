@@ -3,7 +3,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export function list_iterator_refillable(refill_get, on_refill) {
   let remaining = [];
-  let refresh = function lambda() {
+  let next_get = function lambda() {
     let e = list_empty_is(remaining);
     if (e) {
       let items = refill_get();
@@ -13,6 +13,6 @@ export function list_iterator_refillable(refill_get, on_refill) {
     let b = list_remove_first(remaining);
     return b;
   };
-  refresh();
-  return refresh;
+  next_get();
+  return next_get;
 }
