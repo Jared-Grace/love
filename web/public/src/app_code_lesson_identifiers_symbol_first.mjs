@@ -1,4 +1,3 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -29,6 +28,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
+import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
     let c2 = app_code_container_light_blue(root);
@@ -74,7 +74,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       ["_", "$"],
     ]);
     function lambda2(batch_item, batch_item_index) {
-      let size = list_size(batch_item);
+      let size = list_size_less_1(batch_item);
       let list2 = digits_randomly_coupled();
       log(app_code_lesson_identifiers_symbol_first.name, {
         list2,
