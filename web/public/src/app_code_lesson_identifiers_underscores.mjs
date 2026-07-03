@@ -17,6 +17,7 @@ export function app_code_lesson_identifiers_underscores() {
     separator_valid_name,
     separator_valid,
     defines_after,
+    [],
   );
   function defines_after(root) {
     let c4 = app_code_container_light_blue(root);
