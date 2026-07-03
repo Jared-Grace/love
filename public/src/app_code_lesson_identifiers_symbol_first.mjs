@@ -73,16 +73,16 @@ export function app_code_lesson_identifiers_symbol_first() {
         let right = list_random_item(multiplied);
         joined = text_combine(joined, right);
       }
-      return joined;
-    }
-    let mapped3 = list_map_index(list, lambda2);
-    let valid = integer_even_is(batch_item_index);
-    if (not(valid)) {
-      let r2 = boolean_random();
-      if (r2) {
-        let digit = digit_random();
-        let joined = text_combine(digit, joined);
+      let mapped3 = list_map_index(list, lambda2);
+      let valid = integer_even_is(batch_item_index);
+      if (not(valid)) {
+        let r2 = boolean_random();
+        if (r2) {
+          let digit = digit_random();
+          let joined = text_combine(digit, joined);
+        }
       }
+      return joined;
     }
     return mapped3;
   }
