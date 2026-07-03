@@ -61,7 +61,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     ]);
     let div2 = html_div(c2);
     html_cycle_code(div2, [
-      "However identifiers cannot have" +
+      "However identifiers cannot have " +
         word_plural(separator_invalid_name) +
         " ",
       separator_invalid,
