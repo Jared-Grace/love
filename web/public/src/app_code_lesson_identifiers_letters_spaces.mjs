@@ -59,8 +59,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list2 = list_slices_size_cycles_shuffled(mapped, 1, 2);
-    let mapped2 = list_map(list2, list_join_space_nb);
+    let list = list_slices_size_cycles_shuffled(mapped, 1, 2);
+    let mapped2 = list_map(list, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(mapped2, list_other);
     return difference;
