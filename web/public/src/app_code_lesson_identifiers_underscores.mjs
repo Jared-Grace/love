@@ -1,3 +1,4 @@
+import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { equal_2 } from "../../../love/public/src/equal_2.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
@@ -41,6 +42,7 @@ export function app_code_lesson_identifiers_underscores() {
       [separator_valid, separator_invalid],
       [separator_invalid, separator_valid],
     ];
+    let next = list_cycler(list2);
     function lambda2(item, index) {
       let separators = [separator_valid, separator_invalid];
       let valid = integer_even_is(index);
