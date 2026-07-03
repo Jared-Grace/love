@@ -15,6 +15,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let cycles = [
     noop,
     html_bold,
+    noop,
     html_font_jetbrains_mono,
     html_style_code_dark,
   ];
