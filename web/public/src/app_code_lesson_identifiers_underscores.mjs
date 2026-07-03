@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_div_cycle_mono_multiple } from "../../../love/public/src/html_div_cycle_mono_multiple.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
 import { equal_2 } from "../../../love/public/src/equal_2.mjs";
@@ -57,6 +58,9 @@ export function app_code_lesson_identifiers_underscores() {
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
+    log(app_code_lesson_identifiers_underscores.name, {
+      mapped3,
+    });
     return mapped3;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
