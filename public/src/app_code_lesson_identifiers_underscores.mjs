@@ -1,3 +1,4 @@
+import { html_style_code } from "../../../love/public/src/html_style_code.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
@@ -33,7 +34,7 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_invalid_name = "hyphen";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    let cycles = [noop, html_bold, html_font_jetbrains_mono];
+    let cycles = [noop, html_bold, html_font_jetbrains_mono, html_style_code];
     html_cycle(div, cycles, [" This is an ", separator_valid_name, ": "]);
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
