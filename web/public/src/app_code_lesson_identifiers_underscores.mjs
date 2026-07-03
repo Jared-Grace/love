@@ -36,7 +36,7 @@ export function app_code_lesson_identifiers_underscores() {
       let separators = ["_", "-"];
       let valid = integer_even_is(index);
       if (valid) {
-        separators = ["_", "-"];
+        separators = ["_"];
       } else {
         separators = ["_", "-"];
       }
