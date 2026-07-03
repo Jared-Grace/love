@@ -31,7 +31,7 @@ export function app_code_lesson_identifiers_underscores() {
     let mapped = list_map(words, text_letters_only);
     let list2 = list_slices_size_cycles_shuffled(mapped, 2, 3);
     function lambda2(item, index) {}
-    let mapped3 = list_map_index(list, lambda2);
+    let mapped3 = list_map_index(list2, lambda2);
     let mapped2 = list_map(list2, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(mapped2, list_other);
