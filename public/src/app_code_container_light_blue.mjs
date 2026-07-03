@@ -1,3 +1,4 @@
+import { app_code_container_light_blue_border_color } from "../../../love/public/src/app_code_container_light_blue_border_color.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_border_y } from "../../../love/public/src/html_border_y.mjs";
@@ -12,7 +13,8 @@ export function app_code_container_light_blue(parent) {
   html_border_none(container2);
   let container = container2;
   html_style_background_color_set(container, "rgb(228, 241, 255)");
-  html_border_y(container, "0.15em", "rgb(152, 203, 255)");
+  let border_color = app_code_container_light_blue_border_color();
+  html_border_y(container, "0.15em", border_color);
   html_style_margin_y(container, "0.5em");
   html_style_assign(container, {
     display: "flex",
