@@ -130,8 +130,7 @@ export function app_code_lesson_identifiers_dollar_signs_2() {
     separator_invalid_name,
     "s not)",
   ]);
-  let p = word_plural(separator_valid_name);
-  let id = list_join_empty(["identifiers_", p]);
+  let id = list_join_empty(["identifiers_symbol_first"]);
   let r = app_code_lesson_symbols_identifiers_valid(
     name,
     id,
