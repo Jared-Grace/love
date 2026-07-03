@@ -31,7 +31,6 @@ export function app_code_lesson_identifiers_symbol_first() {
   const separator_valid = "$";
   let separator_valid_name = "dollar sign";
   const separator_invalid = ".";
-  let separator_invalid_name = "period";
   function above(root) {
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letter", "underscore", "dollar sign"];
