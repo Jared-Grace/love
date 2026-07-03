@@ -52,8 +52,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
     ]);
     let c3 = app_code_container_light_blue(root);
     html_div_text_multiple(c3, [
-      "Identifiers can have different kinds of symbols including letter symbols",
-      "But identifiers cannot have space symbols",
+      "Identifiers can have different kinds of symbols including letters",
+      "But identifiers cannot have spaces",
     ]);
   }
   function batch_get() {
