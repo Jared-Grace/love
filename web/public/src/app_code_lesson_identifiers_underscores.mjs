@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
@@ -119,7 +120,7 @@ export function app_code_lesson_identifiers_underscores() {
       let r = boolean_random();
       if (r) {
         let right = list_random_item(separators);
-        joined = text_combine_(joined, right);
+        joined = text_combine(joined, right);
       }
       return joined;
     }
