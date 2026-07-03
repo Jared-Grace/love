@@ -35,7 +35,12 @@ export function app_code_lesson_identifiers_underscores() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let cycles = [noop, html_bold, html_font_jetbrains_mono, html_style_code];
-    html_cycle(c, cycles, [" This is an ", separator_valid_name, ": "]);
+    html_cycle(c, cycles, [
+      " This is an ",
+      separator_valid_name,
+      ": ",
+      separator_valid,
+    ]);
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
