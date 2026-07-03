@@ -15,13 +15,23 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_identifiers_underscores() {
   function lambda(root) {
+    const separator_valid = "_";
+    const separator_invalid = "-";
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
     html_div_cycle_mono_multiple(c, [
-      ["Identifiers can also have an ", "_", " (underscore) symbol"],
-      ["But identifiers cannot have a ", "-", " (hyphen) symbol, a "],
+      [
+        "Identifiers can also have an ",
+        separator_valid,
+        " (underscore) symbol",
+      ],
+      [
+        "But identifiers cannot have a ",
+        separator_invalid,
+        " (hyphen) symbol, a ",
+      ],
     ]);
     html_div_cycle_mono_multiple(c, [
       ["Identifiers can also have a ", "$", " (dollar sign)"],
@@ -29,8 +39,6 @@ export function app_code_lesson_identifiers_underscores() {
     ]);
   }
   function batch_get() {
-    const separator_valid = "_";
-    const separator_invalid = "-";
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     let list = list_slices_size_cycles_shuffled(mapped, 2, 4);
