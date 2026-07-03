@@ -1,3 +1,4 @@
+import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_random_index } from "../../../love/public/src/list_random_index.mjs";
@@ -40,6 +41,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     let c = app_code_container_light_blue(root);
     let defines = [define_valid, define_invalid];
     invoke_multiple(defines);
+    list_swap_beginning(list2);
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = ["letters"];
