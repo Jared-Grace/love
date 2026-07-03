@@ -1,7 +1,4 @@
-import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
-import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
-import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
-import { html_bold } from "../../../love/public/src/html_bold.mjs";
+import { app_code_lesson_identifiers_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_identifiers_underscores_define_symbol.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { html_cycle_mono } from "../../../love/public/src/html_cycle_mono.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -34,19 +31,11 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_invalid_name = "hyphen";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    let div3 = html_div(c);
-    let cycles = [
-      noop,
-      html_bold,
-      html_font_jetbrains_mono,
-      html_style_code_dark,
-    ];
-    html_cycle(div3, cycles, [
-      " This is an ",
+    app_code_lesson_identifiers_underscores_define_symbol(
+      c,
       separator_valid_name,
-      ": ",
       separator_valid,
-    ]);
+    );
     html_div_text_multiple(c, [
       "Remember, identifiers can have different kinds of symbols including letter symbols",
     ]);
