@@ -61,9 +61,6 @@ export function app_code_lesson_identifiers_underscores() {
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
-    log(app_code_lesson_identifiers_underscores.name, {
-      mapped3,
-    });
     return mapped3;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
