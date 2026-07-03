@@ -40,13 +40,15 @@ export function app_code_lesson_identifiers_underscores() {
       c,
       separator_valid_name,
       separator_valid,
-      "(The line is longer and is near the bottom)",
+      "The line of" +
+        text_articled_pad_space(separator_valid_name) +
+        "is longer and is near the bottom",
     );
     app_code_lesson_identifiers_underscores_define_symbol(
       c,
       separator_invalid_name,
       separator_invalid,
-      "(The line is shorter and is near the middle vertically, not the bottom or the top)",
+      "The line is shorter and is near the middle vertically, not the bottom or the top",
     );
     let c2 = app_code_container_light_blue(root);
     html_div_text_multiple(c2, [
