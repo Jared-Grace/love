@@ -7,12 +7,12 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_join_cycled(list, list_separators) {
   function lambda(la) {
     function lambda2(item, index) {
+      la(item);
       let li = list_index_last_is(list, index);
       if (not(li)) {
         let separator = list_get_wrap(list_separators, index);
         la(separator);
       }
-      la(item);
     }
     each_index(list, lambda2);
   }
