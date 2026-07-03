@@ -3,6 +3,6 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_join_cycled(list, list_separators) {
   function lambda(la) {}
   let list2 = list_adder(lambda);
-  let joined2 = list_join_empty(list3);
+  let joined = list_join_empty(list2);
   return joined;
 }
