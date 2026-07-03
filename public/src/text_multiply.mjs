@@ -9,6 +9,6 @@ export function text_multiply(value, times) {
     each_range(times, lambda4);
   }
   let list = list_adder(lambda);
-  let joined = list_join_empty(list2);
-  return result;
+  let joined = list_join_empty(list);
+  return joined;
 }
