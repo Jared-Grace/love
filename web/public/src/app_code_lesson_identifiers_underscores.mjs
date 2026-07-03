@@ -39,6 +39,8 @@ export function app_code_lesson_identifiers_underscores() {
         ") symbol",
       ],
     ]);
+    if (false) {
+    }
     html_div_cycle_mono_multiple(c, [
       ["Identifiers can also have a ", "$", " (dollar sign)"],
       ["But identifiers cannot have a ", ".", " (period) symbol"],
