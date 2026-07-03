@@ -1,3 +1,4 @@
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -92,7 +93,8 @@ export function app_code_lesson_identifiers_underscores() {
       let fns = [list_add_first, list_add];
       function lambda3(fn_list_add) {
         let r = boolean_random();
-        if (r) {lri
+        if (r) {
+          let r2 = list_random_item(list2);
           fn_list_add(item);
         }
       }
