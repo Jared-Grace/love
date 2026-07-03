@@ -23,9 +23,9 @@ export function app_code_lesson_symbols_space() {
     let div = html_div(c);
     let nb = text_space_nb();
     let list = list_between([
-      "In English, when writing, we use ",
-      " spaces ",
-      " to separate words",
+      "In English, when writing, we use" + nb,
+      nb + "spaces" + nb,
+      nb + "to separate words",
     ]);
     let parts = list_between(list, nb);
     html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
