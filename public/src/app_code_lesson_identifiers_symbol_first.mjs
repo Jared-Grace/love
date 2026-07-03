@@ -1,3 +1,4 @@
+import { boolean_random_n } from "../../../love/public/src/boolean_random_n.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -80,7 +81,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       let valid = integer_even_is(batch_item_index);
       if (not(valid)) {
         let digit = digit_random();
-        let rb = boolean_random();
+        let rb = boolean_random_n(3);
         joined = text_combine(digit, joined);
       }
       return joined;
