@@ -1,6 +1,5 @@
-import { list_size_2_assert } from "../../../love/public/src/list_size_2_assert.mjs";
+import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { text_articled } from "../../../love/public/src/text_articled.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -31,9 +30,3 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
     combined,
   ]);
 }
-function list_first_second_only(split) {
-  list_size_2_assert(split);
-  let r = list_first_second(split);
-  return r;
-}
-
