@@ -20,7 +20,7 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   let combined = text_combine(" ", text_after);
   let articled = text_articled(separator_valid_name);
   let split = text_split_space(s);
-  list_size_2_assert(result);
+  list_size_2_assert(split);
   let r = list_first_second(split);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
