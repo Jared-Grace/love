@@ -8,4 +8,5 @@ export function list_cycler(list) {
     i++;
     return item;
   };
+  return next;
 }
