@@ -83,9 +83,9 @@ export function app_code_lesson_identifiers_symbol_first() {
       if (not(valid)) {
         let digit = digit_random();
         let rb = boolean_random_n(3);
-        if (false) {
+        if (rb) {
+          digit = text_double(digit);
         }
-        let doubled = text_double(digit);
         joined = text_combine(doubled, joined);
       }
       return joined;
