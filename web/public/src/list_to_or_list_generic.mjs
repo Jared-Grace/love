@@ -19,7 +19,7 @@ export function list_to_or_list_generic(list, word_relationship) {
     let prefix = text_combine_multiple([" ", word_relationship, " "]);
     list_add_first(last, prefix);
   }
-  log(list_to_text_or_list_generic.name, {
+  log(list_to_or_list_generic.name, {
     betweened,
     last,
   });
