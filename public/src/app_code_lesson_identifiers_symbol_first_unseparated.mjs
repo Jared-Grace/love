@@ -27,8 +27,9 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
-    let span = html_span_text(div, text2);tpsp
-    html_span_text(div, );
+    let span = html_span_text(div, text2);
+    tpsp;
+    html_span_text(div);
     let span2 = html_span_text(div, text2);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
