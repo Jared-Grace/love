@@ -1,4 +1,4 @@
-import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
+import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_operators_generic(
     function lambda4(la) {
       function lambda3(left, right) {
         let transformed = left_transform(left, right);
-        let list3 = text_between_space([transformed, operator_js, right]);
+        let list3 = list_between_space([transformed, operator_js, right]);
         let combined = text_combine_multiple(list3);
         la(combined);
       }
