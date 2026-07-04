@@ -1,4 +1,3 @@
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
