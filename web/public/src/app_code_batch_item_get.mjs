@@ -15,10 +15,8 @@ export function app_code_batch_item_get(
   let next_get = list_iterator_refillable(batch, on_batch);
   let refresh = function lambda() {
     html_clear(container);
-    let b = next_get();
-    function lambda2(item) {}
-    let mapped = range_map(digit_count, lambda2);
-    on_batch_item(container, b, refresh);
+    let bs = range_map(example_count, next_get);
+    on_batch_item(container, bs, refresh);
   };
   refresh();
   return refresh;
