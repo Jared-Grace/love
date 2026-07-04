@@ -1,4 +1,3 @@
-import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
@@ -79,8 +78,7 @@ export function app_code_lesson_symbols_batches_generic(
     example_count,
     batch: function batch() {
       let b = batch_get();
-      function lambda2(symbols_texts) {
-        let symbols_text = list_single(symbols_texts);
+      function lambda2(symbols_text) {
         let answer = symbols_to_answer(symbols_text);
         let symbols = text_split_empty(symbols_text);
         function example(parent) {
