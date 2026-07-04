@@ -1,3 +1,4 @@
+import { each_index } from "../../../love/public/src/each_index.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -35,6 +36,8 @@ export async function js_expand_generic(next, stack2, index, ast) {
   if (call !== null) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
+    function lambda5(item2, index2) {}
+    each_index(list, lambda5);
     const a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
