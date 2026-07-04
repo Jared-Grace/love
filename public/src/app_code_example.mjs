@@ -1,6 +1,27 @@
+import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
+import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
+import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
+import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
+import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
+import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
+import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
+import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { noop } from "../../../love/public/src/noop.mjs";
+import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { app_code_lesson_text_example_another } from "../../../love/public/src/app_code_lesson_text_example_another.mjs";
+import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export function app_code_example(context) {
-  let root = html_clear_context(context);let lesson = app_code_lesson_current(context);
+  let root = html_clear_context(context);
+  let lesson = app_code_lesson_current(context);
   let above = property_get(lesson, "above");
   above(root);
   let c = app_code_container_light_blue(root);
