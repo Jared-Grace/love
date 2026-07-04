@@ -73,7 +73,8 @@ export function app_code_lesson_operators_generic(
       ]);
     }
     let t = text_first_upper_to("in JavaScript, the ");
-    if (not(ne)) {
+    if (!ne) {
+      tc
     }
     html_div_cycle_code(c, [
       t,
