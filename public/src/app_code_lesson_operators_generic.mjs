@@ -46,6 +46,7 @@ export function app_code_lesson_operators_generic(
     ]);
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
+      c = app_code_container_light_blue(root);
       app_code_lesson_underscores_define_symbol(
         c,
         operator_name_js,
