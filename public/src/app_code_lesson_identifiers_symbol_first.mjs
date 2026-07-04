@@ -1,3 +1,4 @@
+import { text_combine_space } from "../../../love/public/src/text_combine_space.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -85,7 +86,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     function lambda3(t) {
       let plural = property_get(t, "plural");
       let examples2 = property_get(t, "examples");
-      let combined2 = text_combine(left, right2);
+      let combined2 = text_combine_space(plural);
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(list3, word_relationship);
