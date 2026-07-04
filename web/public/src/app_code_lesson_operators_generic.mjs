@@ -1,4 +1,3 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
@@ -75,11 +74,12 @@ export function app_code_lesson_operators_generic(
     }
     let t = null;
     if (ne) {
-      t = "In JavaScript"
-    } else {t="Instead"
+      t = "In JavaScript";
+    } else {
+      t = "Instead";
     }
     html_div_cycle_code(c, [
-     t  + ", the ",
+      t + ", the ",
       operator_js,
       " operator can be used to " + verb + " two numbers",
     ]);
