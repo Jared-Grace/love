@@ -1,3 +1,4 @@
+import { app_code_example } from "../../../love/public/src/app_code_example.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -9,7 +10,6 @@ import { app_replace_button_wide } from "../../../love/public/src/app_replace_bu
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_visibility_hidden_multiple } from "../../../love/public/src/html_visibility_hidden_multiple.mjs";
 import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
-import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
@@ -136,7 +136,7 @@ export function app_code_lesson_symbols_batches_generic(
                   value_initial,
                   lambda7,
                 );
-                await app_shared_screen_set(context, app_code_home);
+                await app_shared_screen_set(context, app_code_example);
               } else {
                 refresh();
               }
