@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_code_container_generic_style } from "../../../love/public/src/app_code_container_generic_style.mjs";
 import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
 import { app_code_symbol_separated_curried } from "../../../love/public/src/app_code_symbol_separated_curried.mjs";
@@ -36,7 +37,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let first = list_first(b);
     let question = property_get(first, "question");
     let split = text_split_empty(question);
-    let container3 = html_div(parent);
+    let container3 = html_span(parent);
     app_code_container_generic_style(container3);
     let container2 = container3;
     html_style_background_color_black(container2);
