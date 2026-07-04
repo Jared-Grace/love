@@ -3,7 +3,7 @@ import { app_code_lesson_operators_generic } from "../../../love/public/src/app_
 export function app_code_lesson_operators_multiplication() {
   const operator = "+";
   const operator_name = "plus";
-  let math_name = "addition";
+  let math_name = "multiplication";
   let verb = "add";
   let r = app_code_lesson_operators_generic(
     operator_name,
