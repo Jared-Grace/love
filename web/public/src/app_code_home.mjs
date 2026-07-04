@@ -11,7 +11,7 @@ export function app_code_home(context) {
     let name = property_get(item, "name");
     let id = property_get(item, "id");
     function lambda3() {
-      storage_local_set_context(context, "lesson_id", value_initial, lambda);
+      storage_local_set_context(context, "lesson_id", id);
     }
     let b = app_replace_button_wide(root, name, lambda3);
   }
