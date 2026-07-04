@@ -138,6 +138,7 @@ export function app_code_lesson_identifiers_symbol_first() {
             let right3 = list_random_item(valid_prefixes);
             prefix = text_combine(prefix, right3);
           }
+        } else {
         }
       } else {
         prefix = next_get();
