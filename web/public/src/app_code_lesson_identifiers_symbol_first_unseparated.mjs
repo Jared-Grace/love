@@ -1,3 +1,4 @@
+import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -29,7 +30,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let first = list_first(b);
     let question = property_get(first, "question");
     let span = html_span_text(div, question);
-    let padded = text_pad_space(emoji_arrow_right());
+    let s = emoji_arrow_right();
+    let padded = text_pad_space(s);
     html_span_text(padded);
     let span2 = html_span_text(div, question);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
