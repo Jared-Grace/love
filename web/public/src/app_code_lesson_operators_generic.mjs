@@ -70,7 +70,7 @@ export function app_code_lesson_operators_generic(
       html_div_cycle_bold(c, [
         "In JavaScript, an ",
         "operator",
-        " is one or more symbols that perform an action (operation) on one or more values",
+        " is one or more symbols that perform an action (operation) using one or more values",
       ]);
     }
     let t = "in JavaScript, the ";
