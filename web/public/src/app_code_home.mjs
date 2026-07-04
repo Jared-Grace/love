@@ -1,3 +1,4 @@
+import { app_code_lesson_text_example_another } from "../../../love/public/src/app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -24,20 +25,15 @@ export function app_code_home(context) {
   above(root);
   let c = app_code_container_light_blue(root);
   app_code_example_answer_gap(c);
+  let another = app_code_lesson_text_example_another(lesson);
   let example_count = property_get(lesson, "example_count");
   const plural = example_count >= 2;
   const root_word = "example";
   let is_a = null;
-  let another = null;
   if (plural) {
     is_a = "are some " + root_word + "s:";
   } else {
     is_a = "is an " + root_word + ":";
-  }
-  if (plural) {
-    another = "some more " + root_word + "s:";
-  } else {
-    another = "another " + root_word + ":";
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
