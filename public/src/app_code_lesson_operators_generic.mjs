@@ -59,7 +59,7 @@ export function app_code_lesson_operators_generic(
   const quiz_label = "What is the value of this code? ";
   let max = 7;
   let symbols_to_answer = eval;
-  function lambda2() {
+  function batch() {
     let lefts = range_1(max);
     let rights = range_1(max);
     function lambda4(la) {
@@ -83,7 +83,7 @@ export function app_code_lesson_operators_generic(
     id,
     above,
     noop,
-    lambda2,
+    batch,
     example_label,
     quiz_label,
     symbols_to_answer,
