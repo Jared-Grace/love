@@ -75,8 +75,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       }
       each_range(count, lambda3);
     }
-    let list3 = list_adder_each(counts, lambda);
-    let list2 = list_slices_size_cycler(mapped, counts, min);
+    let doubled = list_adder_each(counts, lambda);
+    let list2 = list_slices_size_cycler(mapped, doubled, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
