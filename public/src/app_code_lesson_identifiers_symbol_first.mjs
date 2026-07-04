@@ -1,4 +1,4 @@
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
@@ -28,7 +28,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
-import { list_adder_each } from "./list_adder_each.mjs";
+import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
     let c2 = app_code_container_light_blue(root);
@@ -68,8 +68,11 @@ export function app_code_lesson_identifiers_symbol_first() {
     const min = 1;
     const max = 3;
     let counts = range_from(min, max);
-    function lambda(la,item) {erg}
-    let list3 = list_adder_each(counts,lambda);
+    function lambda(la, item) {
+      function lambda3(i) {}
+      each_range(count, lambda3);
+    }
+    let list3 = list_adder_each(counts, lambda);
     let list2 = list_slices_size_cycler(mapped, counts, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
