@@ -1,4 +1,3 @@
-import { app_code_flex_gap_value } from "../../../love/public/src/app_code_flex_gap_value.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
@@ -101,8 +100,7 @@ export function app_code_lesson_symbols_batches_generic(
             let a = example_above(container, symbols);
             let a_container = property_get(a, "container");
             let d = html_div_text(a_container, quiz_label);
-            let value2 = app_code_flex_gap_value();
-            html_style_margin_top(d, value2);
+            html_style_margin_top(d, "0.4em");
             let bq = batch_get();
             let answers = list_map(bq, symbols_to_answer);
             let answers_unique = list_unique(answers);
