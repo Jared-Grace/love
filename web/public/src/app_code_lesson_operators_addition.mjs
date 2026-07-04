@@ -17,8 +17,10 @@ export function app_code_lesson_operators_addition() {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
     let div = html_div_text_multiple(c, [
-      "In math, we use " + "plus sign" + "s to add numbers together",
-      "In JavaScript, a " + "plus sign" + " can add two numbers together",
+      "In math, we use " + operator_name_sign + "s to add numbers together",
+      "In JavaScript, a " +
+        operator_name_sign +
+        " can add two numbers together",
     ]);
   }
   const example_label = "Value of code: ";
