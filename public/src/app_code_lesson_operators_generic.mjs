@@ -60,7 +60,9 @@ export function app_code_lesson_operators_generic(
         operator_math,
         " to " + verb + " numbers",
       ]);
-    }$i
+    }
+    if (false) {
+    }
     html_div_cycle_bold(c, [
       'In JavaScript, an ","operator"," is one or more symbols that tell JavaScript to perform an operation (or action) on one or more values',
     ]);
