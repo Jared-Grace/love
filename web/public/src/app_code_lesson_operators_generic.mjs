@@ -53,12 +53,11 @@ export function app_code_lesson_operators_generic(
         operator_js,
       );
     }
+    let padded = text_articled_pad_space(operator_name_js);
     html_div_cycle_code(c, [
-      "In JavaScript, the " +
-        text_articled_pad_space(operator_name_js) +
-        " operator can be used to " +
-        verb +
-        " two numbers",
+      "In JavaScript, the ",
+      padded,
+      " operator can be used to " + verb + " two numbers",
     ]);
   }
   const example_label = "Value of code: ";
