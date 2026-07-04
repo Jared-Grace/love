@@ -52,8 +52,8 @@ export function app_code_home(context) {
   app_code_next(
     context,
     root,
-    "see another example",
-    "please show me another example",
+    "see " + another,
+    "please show me " + another,
     refresh,
     example_another,
   );
