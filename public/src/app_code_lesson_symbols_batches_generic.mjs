@@ -1,3 +1,4 @@
+import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
@@ -117,7 +118,7 @@ export function app_code_lesson_symbols_batches_generic(
               let index = list_index_of(quizzes, on_quiz1);
               let a1 = add_1(index);
               let index_new = mod(a1, size);
-              storage_local_set_context(context, "quiz_index", index_new);
+              app_code_quiz_index_set(context, index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 storage_local_set_context(context, "quiz_index", 0);
