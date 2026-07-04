@@ -9,13 +9,13 @@ export function app_code_lesson_operators_subtraction() {
   let operator_name_js = error();
   let operator_js = error();
   let r = app_code_lesson_operators_generic(
+    operator_js,
+    operator,
     operator_name_js,
     operator_name,
-    operator,
     verb,
     math_name,
     add,
-    operator_js,
   );
   return r;
 }
