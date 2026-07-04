@@ -61,11 +61,11 @@ export function app_code_lesson_operators_generic(
         " to " + verb + " numbers",
       ]);
     }
-    if (false) {
-    }
+    if (operator_define) {
     html_div_cycle_bold(c, [
       'In JavaScript, an ","operator"," is one or more symbols that tell JavaScript to perform an operation (or action) on one or more values',
     ]);
+    }
     html_div_cycle_code(c, [
       "In JavaScript, the ",
       operator_js,
