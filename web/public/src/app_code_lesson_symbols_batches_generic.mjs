@@ -71,7 +71,7 @@ export function app_code_lesson_symbols_batches_generic(
     };
     return r4;
   }
-  let r = {
+  let lesson = {
     name,
     id,
     above,
@@ -184,5 +184,5 @@ export function app_code_lesson_symbols_batches_generic(
       return mapped;
     },
   };
-  return r;
+  return lesson;
 }
