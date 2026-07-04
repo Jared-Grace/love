@@ -42,8 +42,8 @@ export async function js_expand_generic(next, stack2, index, ast) {
     async function lambda5(arg, arg_index) {
       let jin = js_identifier_not_is(arg);
       if (jin) {
-        let v3 = js_node_to_visitor(ast, arg);
-        await js_node_atomize(ast, visitor, variable_name, offset);
+        let arg_v = js_node_to_visitor(ast, arg);
+        await js_node_atomize(ast, arg_v, variable_name, offset);
       }
     }
     await each_index_async(arguments2, lambda5);
