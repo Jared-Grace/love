@@ -1,3 +1,4 @@
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
@@ -34,6 +35,7 @@ export function app_code_lesson_operators_generic(
     );
     let list2 = batch();
     let first = list_first(list2);
+    let replaced = text_replace(t, from, to);
     let div = html_div(c);
     html_cycle_code(div, [
       "In math, we use " +
