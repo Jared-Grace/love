@@ -65,7 +65,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     const min = 1;
     const max = 3;
     let list2 = list_slices_size_cycle(mapped, min, max);
-    list_shuffle_cycled_range(max, min, list2);
+    list_shuffle_cycled_range(list2, min, max);
     let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let next_get = invoke_map(next_get_list, list_join_empty);
