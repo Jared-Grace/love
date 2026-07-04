@@ -33,8 +33,8 @@ export function app_code_lesson_operators_generic(
       operator_math,
     );
     let list2 = batch();
-    let first = list_first(c);
-    let div = html_div(parent);
+    let first = list_first(list2);
+    let div = html_div(c);
     html_cycle_code(div, [
       "In math, we use " +
         operator_name_sign_math +
