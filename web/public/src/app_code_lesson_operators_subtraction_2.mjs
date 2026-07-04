@@ -13,7 +13,6 @@ export function app_code_lesson_operators_subtraction_2() {
     verb,
     math_name,
     add,
-    false,
   );
   return r;
 }

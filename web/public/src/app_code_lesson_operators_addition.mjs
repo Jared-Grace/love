@@ -13,7 +13,6 @@ export function app_code_lesson_operators_addition() {
     verb,
     math_name,
     identity,
-    true,
   );
   return r;
 }
