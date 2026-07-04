@@ -8,6 +8,7 @@ export function app_code_batch_item_get(
   lesson,
   on_batch_item,
   on_batch,
+  example_count_1,
 ) {
   let batch = property_get(lesson, "batch");
   let example_count = property_get(lesson, "example_count");
