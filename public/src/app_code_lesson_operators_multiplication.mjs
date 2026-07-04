@@ -11,6 +11,7 @@ export function app_code_lesson_operators_multiplication() {
     verb,
     math_name,
     identity,
+    error(),
   );
   return r;
 }
