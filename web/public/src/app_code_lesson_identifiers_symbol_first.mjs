@@ -82,8 +82,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       "However identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)",
       "After the first symbol an identifier can always be a digit",
     ]);
-    let div2 = html_div(c);
     let concated = list_to_or_list_generic(list3, word_relationship);
+    let div2 = html_div(c);
     html_cycle_code(div2, [
       "And " +
         identifiers_valid_anywhere +
