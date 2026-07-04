@@ -1,3 +1,4 @@
+import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -24,7 +25,9 @@ export function app_code_lesson_operators_addition() {
   function lambda2() {
     let lefts = range_1(max);
     let rights = range_1(max);
-    let combined = text_combine_multiple(list);
+    function lambda3(item) {}
+    each_nested(list, lambda3);
+    let combined = text_combine_multiple([operator]);
   }
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
