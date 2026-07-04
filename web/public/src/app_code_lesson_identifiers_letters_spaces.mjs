@@ -71,6 +71,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     lambda,
     noop,
     batch_get,
+    app_code_symbol,
   );
   return r5;
 }

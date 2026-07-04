@@ -10,6 +10,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   above,
   on_symbol,
   batch_get,
+  symbol_create,
 ) {
   arguments_assert(arguments, 5);
   const example_label = "Is this a valid identifier? ";
