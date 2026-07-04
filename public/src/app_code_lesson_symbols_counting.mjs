@@ -1,3 +1,4 @@
+import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 export function app_code_lesson_symbols_counting(
