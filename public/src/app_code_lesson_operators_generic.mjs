@@ -39,7 +39,7 @@ export function app_code_lesson_operators_generic(
     html_div_cycle_code(c, [
       "In math, we use ",
       operator_math,
-      "s to " + verb + " numbers: ",
+      " to " + verb + " numbers: ",
       replaced,
     ]);
     let ne = equal_not(operator_js, operator_math);
