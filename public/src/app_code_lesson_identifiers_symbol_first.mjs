@@ -72,7 +72,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       doubled,
     });
     let list2 = list_slices_size_cycler(mapped, doubled, min);
-    let choices_count = max - min + 1;
+lz
     list_shuffle_cycled(list2, choices_count);
     let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
