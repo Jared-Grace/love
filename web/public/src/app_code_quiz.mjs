@@ -34,9 +34,9 @@ export function app_code_quiz(context) {
     q(context, container, c, refresh);
   }
   refresh();
-  app_code_lesson_text_example_another(lesson);
-  const question_text = "and see another example";
-  const button_text = "go back and show me another example";
+  let another = app_code_lesson_text_example_another(lesson);
+  const question_text = "and see " + another;
+  const button_text = "go back and show me " + another;
   async function lambda() {
     await app_shared_screen_set(context, app_code_home);
   }
