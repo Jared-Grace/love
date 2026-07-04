@@ -26,14 +26,15 @@ export function app_code_home(context) {
   app_code_example_answer_gap(c);
   let example_count = property_get(lesson, "example_count");
   const plural = example_count >= 2;
+  const root_word = "example";
   let is_a = null;
   let another = null;
   if (plural) {
-    is_a = "are some " + "example" + "s:";
-    another = "some more " + "example" + "s:";
+    is_a = "are some " + root_word + "s:";
+    another = "some more " + root_word + "s:";
   } else {
-    is_a = "is an " + "example" + ":";
-    another = "another " + "example" + ":";
+    is_a = "is an " + root_word + ":";
+    another = "another " + root_word + ":";
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
