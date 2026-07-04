@@ -1,3 +1,4 @@
+import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
@@ -41,7 +42,8 @@ export async function js_expand_generic(next, stack2, index, ast) {
     async function lambda5(item2, index2) {
       let jin = js_identifier_not_is(item2);
       if (jin) {
-        await js_node_atomize(ast2, visitor, variable_name, offset);
+        let v3 = js_node_to_visitor(ast2, node_search);
+        await js_node_atomize(ast, visitor, variable_name, offset);
       }
     }
     await each_index_async(arguments2, lambda5);
