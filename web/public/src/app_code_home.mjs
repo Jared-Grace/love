@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -22,6 +23,7 @@ export function app_code_home(context) {
   above(root);
   let c = app_code_container_light_blue(root);
   let example_count = property_get(lesson, "example_count");
+  let combined = text_combine(left, right);
   html_div_text(c, "Here is an example:");
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
   function on_batch_item(container, bs) {
