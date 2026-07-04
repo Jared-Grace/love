@@ -154,8 +154,8 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
-  let name = list_join_empty(["Identifiers (first symbol)"]);
-  let id = list_join_empty(["identifiers_symbol_first"]);
+  let name = "Identifiers (first symbol)";
+  let id = "identifiers_symbol_first";
   let r = app_code_lesson_symbols_identifiers_valid(
     name,
     id,
