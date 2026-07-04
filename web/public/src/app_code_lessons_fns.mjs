@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_addition_2 } from "../../../love/public/src/app_code_lesson_operators_addition_2.mjs";
 import { app_code_lesson_operators_addition } from "../../../love/public/src/app_code_lesson_operators_addition.mjs";
 import { app_code_lesson_identifiers_symbol_first_unseparated } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_unseparated.mjs";
 import { app_code_lesson_identifiers_symbol_first } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first.mjs";
