@@ -34,7 +34,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let first = list_first(b);
     let question = property_get(first, "question");
     let split = text_split_empty(question);
-    each(split, app_code_symbol_separated);
+    each(split, app_code_symbol_separated_curried(div));
     let span = html_span_text(div, question);
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
