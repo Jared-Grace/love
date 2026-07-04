@@ -1,4 +1,4 @@
-import { add } from "../../../love/public/src/add.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 import { app_code_lesson_operators_generic } from "../../../love/public/src/app_code_lesson_operators_generic.mjs";
 export function app_code_lesson_operators_subtraction_2() {
   const operator = "/";
@@ -12,7 +12,7 @@ export function app_code_lesson_operators_subtraction_2() {
     operator_name,
     verb,
     math_name,
-    add,
+    multiply,
   );
   return r;
 }
