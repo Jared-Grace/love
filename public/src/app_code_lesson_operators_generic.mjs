@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -36,6 +37,7 @@ export function app_code_lesson_operators_generic(
         verb +
         " numbers",
     );
+    let ne = equal_not(left2, right2);
     html_div_text(
       c,
       "In JavaScript, a " +
