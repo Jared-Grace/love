@@ -24,7 +24,7 @@ export function app_code_lesson_operators_addition() {
   let symbols_to_answer = js_parse_expression;
   function lambda2() {
     let lefts = range_1(max);
-    let rights = range_1(max);
+    let rights = range_1(max);ld
     function lambda3(left, right) {
       let combined = text_combine_multiple([operator]);
     }
