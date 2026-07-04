@@ -5,6 +5,7 @@ export function app_code_lesson_operators_multiplication() {
   const operator_name_js = "asterisk";
   const operator_math = "×";
   let math_name = "multiplication";
+  let operator_name_math = math_name + " sign";
   let verb = "multiply";
   let r = app_code_lesson_operators_generic(
     operator_js,
