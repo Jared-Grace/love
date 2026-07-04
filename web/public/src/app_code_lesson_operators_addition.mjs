@@ -10,7 +10,6 @@ export function app_code_lesson_operators_addition() {
     operator_name,
     operator,
     verb,
-    ending,
     math_name,
     identity,
   );
