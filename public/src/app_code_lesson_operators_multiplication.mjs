@@ -11,7 +11,7 @@ export function app_code_lesson_operators_multiplication() {
     operator_js,
     operator_math,
     operator_name_js,
-    math_name,
+    operator_name_math,
     verb,
     math_name,
     identity,
