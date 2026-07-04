@@ -1,3 +1,4 @@
+import { app_code_quiz_index_reset } from "../../../love/public/src/app_code_quiz_index_reset.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
@@ -41,6 +42,7 @@ export function app_code_quiz(context) {
   const question_text = "and see " + another;
   const button_text = "go back and show me " + another;
   async function lambda() {
+    app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_examples);
   }
   app_code_go_back(root, question_text, button_text, lambda);
