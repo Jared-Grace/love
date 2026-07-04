@@ -58,7 +58,7 @@ export function app_code_lesson_operators_generic(
     html_div_text(
       c,
       "In JavaScript, a " +
-        operator_name_sign_math +
+        operator_name_js +
         " can be used " +
         verb +
         " two numbers",
