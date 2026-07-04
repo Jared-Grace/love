@@ -106,7 +106,6 @@ export function app_code_lesson_identifiers_symbol_first() {
       div2,
       " may be used anywhere in an identifier, even as the first symbol",
     );
-    html_cycle_code(div2, squashed);
   }
   function batch_get() {
     let words = app_code_verse_words();
