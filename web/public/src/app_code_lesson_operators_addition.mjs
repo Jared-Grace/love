@@ -29,7 +29,7 @@ export function app_code_lesson_operators_addition() {
     let rights = range_1(max);
     function lambda4(la) {
       function lambda3(left, right) {
-        let combined = text_combine_multiple([operator]);
+        let combined = text_combine_multiple([left, operator, right]);
         la(combined);
       }
       each_nested_distinct(lefts, rights, lambda3);
