@@ -1,5 +1,5 @@
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
-export function app_code_symbol(parent, d) {
+export function app_code_symbol_separated(parent, d) {
   const color_background = "#444";
   const color_box_shadow = "#777";
   let s = app_code_symbol_generic(
