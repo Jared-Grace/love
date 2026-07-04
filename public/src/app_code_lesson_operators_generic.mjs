@@ -35,7 +35,7 @@ export function app_code_lesson_operators_generic(
         operator_name_sign_math +
         "s to " +
         verb +
-        " numbers",
+        " numbers: ",
     );
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
