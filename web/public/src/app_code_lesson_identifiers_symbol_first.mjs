@@ -132,7 +132,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       let valid = integer_even_is(batch_item_index);
       if (valid) {
         let m = mod(batch_item_index, 4);
-        let eq = equal_0(item2);
+        let eq = equal_0(m);
         if (eq) {
           const valid_prefixes = ["$", "_"];
           prefix = list_random_item(valid_prefixes);
