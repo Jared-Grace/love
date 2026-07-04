@@ -9,7 +9,6 @@ import { list_items_double } from "../../../love/public/src/list_items_double.mj
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 import { invoke_map } from "../../../love/public/src/invoke_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_join_cycled_invoker } from "../../../love/public/src/list_join_cycled_invoker.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
