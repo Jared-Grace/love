@@ -17,7 +17,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let text = app_code_lesson_same_message("the symbols are not separated");
     app_code_container_light_blue_text(root, text);
     let batch = property_get(r, "batch");
-    batch();
+    let b = batch();
   }
   return r;
 }
