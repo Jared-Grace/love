@@ -37,8 +37,9 @@ export function app_code_lesson_operators_generic(
     let first = list_first(list2);
     let to = text_pad_space_nb(operator_math);
     let replaced = text_replace(first, operator_js, to);
-    const operator_name_math_articled =
-      text_articled_pad_space(operator_name_math);
+    const operator_name_math_articled = text_articled_pad_space(
+      operator_name_sign_math,
+    );
     html_div_cycle_code(c, [
       "In math, we use" + operator_name_math_articled,
       operator_math,
