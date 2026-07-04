@@ -39,10 +39,10 @@ export async function js_expand_generic(next, stack2, index, ast) {
   if (call !== null) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
-    async function lambda5(item2, index2) {
-      let jin = js_identifier_not_is(item2);
+    async function lambda5(arg, arg_index) {
+      let jin = js_identifier_not_is(arg);
       if (jin) {
-        let v3 = js_node_to_visitor(ast2, node_search);
+        let v3 = js_node_to_visitor(ast, arg);
         await js_node_atomize(ast, visitor, variable_name, offset);
       }
     }
