@@ -19,7 +19,7 @@ export function app_code_lesson_operators_generic(
   left_transform,
 ) {
   const operator_name_sign = operator_name + " sign";
-  function lambda(root) {
+  function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
     html_div_text_multiple(c, [
@@ -57,7 +57,7 @@ export function app_code_lesson_operators_generic(
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
     id,
-    lambda,
+    above,
     noop,
     lambda2,
     example_label,
