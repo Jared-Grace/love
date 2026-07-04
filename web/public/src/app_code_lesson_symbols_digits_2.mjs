@@ -8,7 +8,10 @@ export function app_code_lesson_symbols_digits_2() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, "plus sign", "+");
-    let div = html_div_text(parent, text);
+    let div = html_div_text(
+      c,
+      "In math, we use plus signs to add numbers together",
+    );
   }
   let r5 = app_code_lesson_symbols_counting(
     "Operators (Addition)",
