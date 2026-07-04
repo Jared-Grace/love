@@ -23,8 +23,8 @@ export function app_code_home(context) {
   above(root);
   let c = app_code_container_light_blue(root);
   let example_count = property_get(lesson, "example_count");
-  let combined = text_combine(left, right);
-  html_div_text(c, "Here is an example:");
+  let combined = text_combine("Here ", "is an example:");
+  html_div_text(c, combined);
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
   function on_batch_item(container, bs) {
     function lambda2(b) {
