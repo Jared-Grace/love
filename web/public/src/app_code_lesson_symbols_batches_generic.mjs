@@ -58,6 +58,9 @@ export function app_code_lesson_symbols_batches_generic(
       display: "flex",
       "flex-wrap": "wrap",
     });
+    html_style_assign(container, {
+      gap: "0.4em",
+    });
     function lambda4(d, index_1) {
       let row_item = html_div(row);
       html_flex_column_center(row_item);
