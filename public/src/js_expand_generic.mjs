@@ -40,9 +40,9 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let arguments2 = js_call_arguments_get(call);
     async function lambda5(item2, index2) {
       let jin = js_identifier_not_is(item2);
-      if (false) {
+      if (jin) {
+        await js_node_atomize(ast2, visitor, variable_name, offset);
       }
-      await js_node_atomize(ast2, visitor, variable_name, offset);
     }
     await each_index_async(arguments2, lambda5);
     const a_names = js_identifiers_to_names(arguments2);
