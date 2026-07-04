@@ -12,10 +12,10 @@ export function app_code_lesson_identifiers_underscores_define_symbol(
   symbol,
 ) {
   arguments_assert(arguments, 3);
-  let div3 = html_div(c);
+  let row = html_div(c);
   let r = text_articled_split(symbol_name);
   let text = property_get(r, "text");
   let article = property_get(r, "article");
   let cycles = [noop, html_bold, noop, html_style_code_dark];
-  html_cycle(div3, cycles, [" This is " + article + " ", text, ": ", symbol]);
+  html_cycle(row, cycles, [" This is " + article + " ", text, ": ", symbol]);
 }
