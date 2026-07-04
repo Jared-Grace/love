@@ -39,6 +39,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
+import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
     const identifier_symbols_types = [
@@ -97,7 +98,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
     function lambda4(item) {
-      let l = list_is(value);
+      let l = list_is(item);
+      let result = ternary(condition, on_true, on_false);
     }
     each(list3, lambda4);
     let squashed = list_squash(concated);
