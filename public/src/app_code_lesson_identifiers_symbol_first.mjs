@@ -95,16 +95,17 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
     let squashed = list_squash(concated);
-    list_add_first(list3, item);
+    list_add_first(
+      squashed,
+      "And " +
+        identifiers_valid_anywhere +
+        " may be used anywhere in an identifier, even as the first symbol",
+    );
     log(app_code_lesson_identifiers_symbol_first.name, {
       squashed,
     });
     let div2 = html_div(c);
-    html_cycle_code(div2, [
-      "And " +
-        identifiers_valid_anywhere +
-        " may be used anywhere in an identifier, even as the first symbol",
-    ]);
+    html_cycle_code(div2, squashed);
   }
   function batch_get() {
     let words = app_code_verse_words();
