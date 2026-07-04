@@ -66,7 +66,6 @@ export function app_code_lesson_symbols_batches_generic(
     }
     let spans = list_map_index_1(symbols, lambda4);
     let r4 = {
-      container_answer,
       container,
     };
     return r4;
