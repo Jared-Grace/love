@@ -58,9 +58,9 @@ export function app_code_lesson_operators_generic(
     }
     html_div_text(
       c,
-      "In JavaScript, the" +
+      "In JavaScript, the " +
         text_articled_pad_space(operator_name_js) +
-        "can be used to " +
+        "operator can be used to " +
         verb +
         " two numbers",
     );
