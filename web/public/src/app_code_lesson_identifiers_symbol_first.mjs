@@ -1,3 +1,24 @@
+import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
+import { ternary } from "../../../love/public/src/ternary.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
+import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
+import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
+import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
+import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
+import { html_div } from "../../../love/public/src/html_div.mjs";
+import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
+import { digits } from "../../../love/public/src/digits.mjs";
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
+import { word_plural } from "../../../love/public/src/word_plural.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_generic.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
