@@ -22,10 +22,10 @@ export function app_code_home(context) {
   let above = property_get(lesson, "above");
   above(root);
   let c = app_code_container_light_blue(root);
+  let right = null;
   let example_count = property_get(lesson, "example_count");
   if (example_count >= 2) {
   }
-  let right = null;
   right = "is an example:";
   let combined = text_combine("Here ", right);
   html_div_text(c, combined);
