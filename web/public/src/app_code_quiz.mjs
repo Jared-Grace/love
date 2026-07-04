@@ -19,7 +19,7 @@ export function app_code_quiz(context) {
     lesson,
     on_batch_item,
     list_shuffle,
-    false,
+    true,
   );
   function on_batch_item(container, b, refresh) {
     let c = app_code_container_light_blue(container);
