@@ -84,6 +84,7 @@ export function app_code_lesson_identifiers_symbol_first() {
         identifiers_valid_anywhere +
         " may be used anywhere in an identifier, even as the first symbol",
     ]);
+    html_cycle_code(parent, parts2);
   }
   function batch_get() {
     let words = app_code_verse_words();
