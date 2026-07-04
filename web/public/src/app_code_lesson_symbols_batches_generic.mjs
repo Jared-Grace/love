@@ -97,7 +97,8 @@ export function app_code_lesson_symbols_batches_generic(
         const quizzes = [
           function on_quiz1(context, parent, container, refresh) {
             let a = example_above(container, symbols);
-            let container_answer2 = app_code_container_light(parent);
+            let a_container = property_get(a, "container");
+            let container_answer2 = app_code_container_light(a_container);
             html_text_set(container_answer2, quiz_label);
             let bq = batch_get();
             let answers = list_map(bq, symbols_to_answer);
