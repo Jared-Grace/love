@@ -74,9 +74,9 @@ export function app_code_lesson_operators_generic(
     }
     let t = null;
     if (ne) {
-      t = "In JavaScript";
-    } else {
       t = "Instead";
+    } else {
+      t = "In JavaScript";
     }
     html_div_cycle_code(c, [
       t + ", the ",
