@@ -12,12 +12,12 @@ import { html_div_text_multiple } from "../../../love/public/src/html_div_text_m
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_generic(
+  operator_name_js,
   operator_name_math,
   operator,
   verb,
   math_name,
   left_transform,
-  operator_name_js,
 ) {
   const operator_name_sign_math = operator_name_math + " sign";
   function above(root) {
