@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { list_items_double } from "../../../love/public/src/list_items_double.mjs";
@@ -32,7 +33,18 @@ import { html_div_text_multiple } from "../../../love/public/src/html_div_text_m
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
     let c2 = app_code_container_light_blue(root);
-    const identifier_symbols_types = ["letter", "underscore", "dollar sign"];
+    const identifier_symbols_types = [
+      {
+        name: "letter",
+      },
+      {
+        name: "underscore",
+      },
+      {
+        name: "dollar sign",
+      },
+    ];
+    let mapped2 = list_map_property(list3, property_name);
     let identifier_symbols_types_plural = list_map(
       identifier_symbols_types,
       word_plural,
