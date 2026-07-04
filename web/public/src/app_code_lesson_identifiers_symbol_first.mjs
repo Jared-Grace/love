@@ -1,3 +1,4 @@
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -51,7 +52,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     ];
     function lambda(t) {
       function lambda3(value) {
-        sex;
+        property_set_exists_not(object, property_name, value2);
       }
       let transformed = property_transform(t, "name", lambda3);
     }
