@@ -1,3 +1,4 @@
+import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
@@ -101,6 +102,8 @@ export function app_code_lesson_identifiers_symbol_first() {
         identifiers_valid_anywhere +
         " may be used anywhere in an identifier, even as the first symbol",
     );
+    function lambda5() {}
+    list_transform_at(list3, index, lambda5);
     log(app_code_lesson_identifiers_symbol_first.name, {
       squashed,
     });
