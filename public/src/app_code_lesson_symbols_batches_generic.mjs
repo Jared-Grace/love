@@ -80,7 +80,7 @@ export function app_code_lesson_symbols_batches_generic(
     batch: function batch() {
       let b = batch_get();
       function lambda2(symbols_texts) {
-        let only = list_single(list);
+        let symbols_text = list_single(symbols_texts);
         let answer = symbols_to_answer(symbols_text);
         let symbols = text_split_empty(symbols_text);
         function example(parent) {
