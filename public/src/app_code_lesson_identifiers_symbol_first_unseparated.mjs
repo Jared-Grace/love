@@ -35,13 +35,14 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let first = list_first(b);
     let question = property_get(first, "question");
     let split = text_split_empty(question);
-    app_code_container_dark_inline();
-    let lambda$item2 = app_code_symbol_separated_curried(div);
+    let before = app_code_container_dark_inline(div);
+    let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
     html_span_text(div, padded);
-    let lambda$item = app_code_symbol_curried(div);
+    let after = app_code_container_dark_inline(div);
+    let lambda$item = app_code_symbol_curried(after);
     each(split, lambda$item);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
