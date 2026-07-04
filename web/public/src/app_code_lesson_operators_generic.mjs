@@ -25,20 +25,18 @@ export function app_code_lesson_operators_generic(
   math_name,
   left_transform,
 ) {
-  const operator_name_sign_math = operator_name_math + " sign";
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(
       c,
-      operator_name_sign_math,
+      operator_name_math,
       operator_math,
     );
     let list2 = batch();
     let first = list_first(list2);
     let replaced = text_replace(first, operator_js, operator_math);
-    const operator_name_math_articled = text_articled_pad_space(
-      operator_name_sign_math,
-    );
+    const operator_name_math_articled =
+      text_articled_pad_space(operator_name_math);
     html_div_cycle_code(c, [
       "In math, we use" + operator_name_math_articled,
       operator_math,
