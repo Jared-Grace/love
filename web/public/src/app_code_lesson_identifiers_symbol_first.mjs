@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { list_items_double } from "../../../love/public/src/list_items_double.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
@@ -72,7 +73,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       doubled,
     });
     let list2 = list_slices_size_cycler(mapped, doubled, min);
-lz
+    let size = list_size(list3);
     list_shuffle_cycled(list2, choices_count);
     let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
