@@ -7,8 +7,8 @@ export function app_code_lesson_symbols_digits_2() {
     app_code_lesson_underscores_define_symbol(c, "plus sign", "+");
   }
   let r5 = app_code_lesson_symbols_counting(
-    "Symbols (Digits)",
-    "symbols_digits",
+    "Operators (Addition)",
+    "operators_addition",
     lambda,
     noop,
     app_code_lesson_symbols_batch_digits,
