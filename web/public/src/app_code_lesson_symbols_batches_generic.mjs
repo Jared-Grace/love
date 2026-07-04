@@ -59,7 +59,7 @@ export function app_code_lesson_symbols_batches_generic(
       "flex-wrap": "wrap",
     });
     html_style_assign(parent, {
-      gap: "0.4em",
+      gap: "0.2em",
     });
     function lambda4(d, index_1) {
       let row_item = html_div(row);
