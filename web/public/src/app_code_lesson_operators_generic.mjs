@@ -1,3 +1,4 @@
+import { text_pad_space_nb } from "../../../love/public/src/text_pad_space_nb.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -35,7 +36,8 @@ export function app_code_lesson_operators_generic(
     );
     let list2 = batch();
     let first = list_first(list2);
-    let replaced = text_replace(t, from, to);
+    let to = text_pad_space_nb(operator_math);
+    let replaced = text_replace(first, operator_js, to);
     let div = html_div(c);
     html_cycle_code(div, [
       "In math, we use " +
@@ -43,7 +45,7 @@ export function app_code_lesson_operators_generic(
         "s to " +
         verb +
         " numbers: ",
-      first,
+      replaced,
     ]);
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
