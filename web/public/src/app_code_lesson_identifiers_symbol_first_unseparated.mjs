@@ -1,3 +1,4 @@
+import { app_code_symbol_curried } from "../../../love/public/src/app_code_symbol_curried.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -38,7 +39,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
     html_span_text(div, padded);
-    each(split, app_code_symbol_curried(div));
+    let lambda$item = app_code_symbol_curried(div);
+    each(split, lambda$item);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
     });
