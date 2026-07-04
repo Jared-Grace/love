@@ -12,6 +12,7 @@ import { html_div_text_multiple } from "../../../love/public/src/html_div_text_m
 export function app_code_lesson_operators_addition() {
   const operator = "+";
   const operator_name = "plus";
+  let math_name = "addition";
   const operator_name_sign = operator_name + " sign";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
@@ -42,7 +43,7 @@ export function app_code_lesson_operators_addition() {
     return list;
   }
   let name = "Operators (Addition)";
-  let id = "operators_addition";
+  let id = "operators_" + math_name;
   let question_label = "Code: ";
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
