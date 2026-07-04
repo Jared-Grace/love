@@ -24,10 +24,11 @@ export function app_code_home(context) {
   html_div_text(c, "Here is an example:");
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
   function on_batch_item(container, bs) {
-    function lambda2(item) {}
-    each(list2, lambda2);
-    let ex = property_get(b, "example");
-    ex(container);
+    function lambda2(b) {
+      let ex = property_get(b, "example");
+      ex(container);
+    }
+    each(bs, lambda2);
   }
   async function example_another() {
     await app_shared_screen_set(context, app_code_quiz);
