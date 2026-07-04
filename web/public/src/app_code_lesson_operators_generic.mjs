@@ -26,7 +26,7 @@ export function app_code_lesson_operators_generic(
       "In math, we use " + operator_name_sign + "s to " + verb + " numbers",
       "In JavaScript, a " +
         operator_name_sign +
-        " can " +
+        " can be used " +
         verb +
         " two numbers",
     ]);
