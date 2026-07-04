@@ -51,8 +51,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     ];
     function lambda(t) {
       let before = property_get(t, "name");
-      let p = word_plural(root_word);
-      property_set_exists_not(t, "plural", value);
+      let p = word_plural(before);
+      property_set_exists_not(t, "plural", p);
     }
     each(identifier_symbols_types, lambda);
     let mapped2 = list_map_property(identifier_symbols_types, "name");
