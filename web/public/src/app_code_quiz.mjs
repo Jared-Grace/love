@@ -1,3 +1,4 @@
+import { app_code_lesson_text_example_another } from "../../../love/public/src/app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -33,15 +34,7 @@ export function app_code_quiz(context) {
     q(context, container, c, refresh);
   }
   refresh();
-  let example_count = property_get(lesson, "example_count");
-  const plural = example_count >= 2;
-  const root_word = "example";
-  let another = null;
-  if (plural) {
-    another = "some more " + root_word + "s:";
-  } else {
-    another = "another " + root_word + ":";
-  }
+  app_code_lesson_text_example_another(lesson);
   const question_text = "and see another example";
   const button_text = "go back and show me another example";
   async function lambda() {
