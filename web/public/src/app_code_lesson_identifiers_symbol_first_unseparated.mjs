@@ -1,3 +1,4 @@
+import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
 import { app_code_symbol_separated_curried } from "../../../love/public/src/app_code_symbol_separated_curried.mjs";
 import { app_code_symbol_curried } from "../../../love/public/src/app_code_symbol_curried.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -33,7 +34,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
-    let split = text_split_empty(question);app_code_container_dark
+    let split = text_split_empty(question);
+    let container = app_code_container_dark(parent);
     let lambda$item2 = app_code_symbol_separated_curried(div);
     each(split, lambda$item2);
     let s = emoji_arrow_right();
