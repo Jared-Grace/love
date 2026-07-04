@@ -1,6 +1,6 @@
+import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { text_pad_space_nb } from "../../../love/public/src/text_pad_space_nb.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -35,8 +35,7 @@ export function app_code_lesson_operators_generic(
     );
     let list2 = batch();
     let first = list_first(list2);
-    let to = text_pad_space_nb(operator_math);
-    let replaced = text_replace(first, operator_js, to);
+    let replaced = text_replace(first, operator_js, operator_math);
     const operator_name_math_articled = text_articled_pad_space(
       operator_name_sign_math,
     );
@@ -76,7 +75,8 @@ export function app_code_lesson_operators_generic(
     function lambda4(la) {
       function lambda3(left, right) {
         let transformed = left_transform(left, right);
-        let combined = text_combine_multiple([transformed, operator_js, right]);
+        let list3 = text_between_space([transformed, operator_js, right]);
+        let combined = text_combine_multiple(list3);
         la(combined);
       }
       each_nested_distinct(lefts, rights, lambda3);
