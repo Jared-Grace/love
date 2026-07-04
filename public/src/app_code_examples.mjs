@@ -1,3 +1,4 @@
+import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
@@ -81,5 +82,6 @@ export function app_code_examples(context) {
       previous,
     );
   }
+  app_replace_button_home(root2, context2);
   return;
 }
