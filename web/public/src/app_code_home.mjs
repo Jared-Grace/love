@@ -10,7 +10,7 @@ export function app_code_home(context) {
     let name = property_get(item, "name");
     let id = property_get(item, "id");
     function lambda3() {}
-    let b = app_replace_button_wide(parent, text, lambda3);
+    let b = app_replace_button_wide(parent, name, lambda3);
   }
   each(lessons, lambda);
 }
