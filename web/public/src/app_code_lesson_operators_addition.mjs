@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -34,7 +35,7 @@ export function app_code_lesson_operators_addition() {
       each_nested_distinct(lefts, rights, lambda3);
     }
     let list = list_adder(lambda4);
-    ByteLengthQueuingStrategy;
+    list_shuffle(list2);
     return list;
   }
   let r5 = app_code_lesson_symbols_batches_generic(
