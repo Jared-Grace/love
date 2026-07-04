@@ -42,6 +42,7 @@ import { html_div_text_multiple } from "../../../love/public/src/html_div_text_m
 import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
+  let symbol_create = app_code_symbol;
   function above(root) {
     const identifier_symbols_types = [
       {
