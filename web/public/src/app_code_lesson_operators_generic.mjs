@@ -35,12 +35,12 @@ export function app_code_lesson_operators_generic(
     let first = list_first(list2);
     html_cycle_code(
       c,
-      "In math, we use " +
+      ["In math, we use " +
         operator_name_sign_math +
         "s to " +
         verb +
         " numbers: ",
-      first,
+      first],
     );
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
