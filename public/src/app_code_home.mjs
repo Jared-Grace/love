@@ -31,9 +31,12 @@ export function app_code_home(context) {
   let another = null;
   if (plural) {
     is_a = "are some " + root_word + "s:";
-    another = "some more " + root_word + "s:";
   } else {
     is_a = "is an " + root_word + ":";
+  }
+  if (plural) {
+    another = "some more " + root_word + "s:";
+  } else {
     another = "another " + root_word + ":";
   }
   let combined = text_combine("Here ", is_a);
