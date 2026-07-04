@@ -75,6 +75,7 @@ export function app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
+    example_count,
     batch: function batch() {
       let b = batch_get();
       function lambda2(symbols_text) {
