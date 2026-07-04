@@ -60,7 +60,7 @@ export function app_code_lesson_operators_generic(
       c,
       "In JavaScript," +
         text_articled_pad_space(operator_name_js) +
-        "can be used " +
+        "can be used to " +
         verb +
         " two numbers",
     );
