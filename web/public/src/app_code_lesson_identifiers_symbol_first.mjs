@@ -55,8 +55,10 @@ export function app_code_lesson_identifiers_symbol_first() {
       property_set_exists_not(t, "plural", p);
     }
     each(identifier_symbols_types, lambda);
-    let mapped2 = list_map_property(identifier_symbols_types, "name");
-    let identifier_symbols_types_plural = list_map(mapped2, word_plural);
+    let identifier_symbols_types_plural = list_map_property(
+      identifier_symbols_types,
+      "plural",
+    );
     const identifiers_valid_anywhere = list_to_text_and_list(
       identifier_symbols_types_plural,
     );
