@@ -1,5 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { text_combine_space } from "../../../love/public/src/text_combine_space.mjs";
+import { text_combine_space_between } from "../../../love/public/src/text_combine_space_between.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     function lambda3(t) {
       let plural = property_get(t, "plural");
       let examples2 = property_get(t, "examples");
-      let combined2 = text_combine_space(plural);
+      let combined2 = text_combine_space_between(plural);
       let concated2 = list_concat_single(combined2, examples2);
       return concated2;
     }
