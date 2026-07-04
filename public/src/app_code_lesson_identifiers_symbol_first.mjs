@@ -87,7 +87,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       let plural = property_get(t, "plural");
       let examples2 = property_get(t, "examples");
       let combined2 = text_combine_space(plural);
-      let concated2 = list_concat_single(single, list4);
+      let concated2 = list_concat_single(combined2, examples2);
+      return concated2;
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(list3, word_relationship);
