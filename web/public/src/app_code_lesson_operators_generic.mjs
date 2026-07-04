@@ -73,12 +73,13 @@ export function app_code_lesson_operators_generic(
         " is one or more symbols that tell JavaScript to perform an operation (or action) on one or more values",
       ]);
     }
-    let t = text_first_upper_to("in JavaScript, the ");
+    let t = "in JavaScript, the ";
     if (not(ne)) {
-      let combined2 = text_combine(left2, right2);
+      t = text_combine("Instead, ", t);
     }
+    let t2 = text_first_upper_to(t);
     html_div_cycle_code(c, [
-      t,
+      t2,
       operator_js,
       " operator can be used to " + verb + " two numbers",
     ]);
