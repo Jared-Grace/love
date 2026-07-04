@@ -18,7 +18,6 @@ export function app_code_lesson_operators_generic(
   math_name,
   left_transform,
 ) {
-  const operator_name_sign = operator_name + " sign";
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
@@ -31,6 +30,19 @@ export function app_code_lesson_operators_generic(
         " two numbers",
     ]);
   }
+  function above(root) {
+    let c = app_code_container_light_blue(root);
+    app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
+    html_div_text_multiple(c, [
+      "In math, we use " + operator_name_sign + "s to " + verb + " numbers",
+      "In JavaScript, a " +
+        operator_name_sign +
+        " can be used " +
+        verb +
+        " two numbers",
+    ]);
+  }
+  const operator_name_sign = operator_name + " sign";
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
   let max = 7;
