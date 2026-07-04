@@ -1,3 +1,4 @@
+import { app_code_lesson_same_message } from "../../../love/public/src/app_code_lesson_same_message.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -8,11 +9,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
   let id = "identifiers_symbol_first_unseparated";
   function above(root) {
     let c2 = app_code_container_light_blue(root);
-    let div = html_div_text(
-      c,
-      "This lesson is the same as the previous lesson, except ",
-      "there are not numbers underneath",
-    );
+    let text = app_code_lesson_same_message();
+    let div = html_div_text(c, text);
   }
   let r = app_code_lesson_identifiers_symbol_first_generic(
     symbol_create,
