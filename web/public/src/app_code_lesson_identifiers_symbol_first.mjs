@@ -1,4 +1,4 @@
-import { list_items_multiply } from "../../../love/public/src/list_items_multiply.mjs";
+import { list_items_double } from "../../../love/public/src/list_items_double.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
@@ -67,8 +67,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     const min = 1;
     const max = 3;
     let counts = range_from(min, max);
-    let count = 2;
-    let doubled = list_items_multiply(counts, count);
+    let doubled = list_items_double(counts);
     let list2 = list_slices_size_cycler(mapped, doubled, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
