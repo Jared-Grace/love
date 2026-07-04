@@ -1,3 +1,4 @@
+import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
@@ -58,9 +59,7 @@ export function app_code_lesson_symbols_batches_generic(
       display: "flex",
       "flex-wrap": "wrap",
     });
-    html_style_assign(parent, {
-      gap: "0.2em",
-    });
+    app_code_example_answer_gap(parent);
     function lambda4(d, index_1) {
       let row_item = html_div(row);
       html_flex_column_center(row_item);
