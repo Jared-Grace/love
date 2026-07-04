@@ -3,8 +3,8 @@ import { app_code_lesson_operators_generic } from "../../../love/public/src/app_
 export function app_code_lesson_operators_subtraction_2() {
   const operator = "/";
   const operator_name = "forward slash";
-  let math_name = "subtraction";
-  let verb = "subtract";
+  let math_name = "division";
+  let verb = "divide";
   let r = app_code_lesson_operators_generic(
     operator,
     operator,
