@@ -10,7 +10,7 @@ export function app_code_lesson_operators_multiplication() {
     operator_js,
     operator_math,
     operator_name_js,
-    "asterisk",
+    math_name,
     verb,
     math_name,
     identity,
