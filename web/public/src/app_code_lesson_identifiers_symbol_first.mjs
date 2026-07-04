@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
@@ -47,6 +48,8 @@ export function app_code_lesson_identifiers_symbol_first() {
         examples: ["$"],
       },
     ];
+    function lambda(item) {}
+    each(list3, lambda);
     let mapped2 = list_map_property(identifier_symbols_types, "name");
     let identifier_symbols_types_plural = list_map(mapped2, word_plural);
     const identifiers_valid_anywhere = list_to_text_and_list(
