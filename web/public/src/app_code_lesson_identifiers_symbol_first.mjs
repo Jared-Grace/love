@@ -92,6 +92,9 @@ export function app_code_lesson_identifiers_symbol_first() {
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(list3, word_relationship);
+    log(app_code_lesson_identifiers_symbol_first.name, {
+      concated,
+    });
     let div2 = html_div(c);
     html_cycle_code(div2, [
       "And " +
