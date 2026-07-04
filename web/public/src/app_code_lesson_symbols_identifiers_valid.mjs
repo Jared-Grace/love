@@ -1,3 +1,4 @@
+import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
@@ -20,6 +21,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     let result = boolean_to_text_validity(ii);
     return result;
   };
+  let question_label = app_code_label_symbols();
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -31,7 +33,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     symbols_to_answer,
     2,
     symbol_create,
-    app_code_label_symbols(),
+    question_label,
   );
   return r;
 }
