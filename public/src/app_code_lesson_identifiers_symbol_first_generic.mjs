@@ -159,8 +159,8 @@ export function app_code_lesson_identifiers_symbol_first_generic(
   let name1 = "Identifiers (first symbol)";
   let id2 = "identifiers_symbol_first";
   let r = app_code_lesson_symbols_identifiers_valid(
-    name1,
-    id2,
+    name,
+    id,
     above,
     noop,
     batch_get,
