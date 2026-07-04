@@ -29,11 +29,11 @@ export function app_code_home(context) {
   let is_a = null;
   let another = null;
   if (plural) {
-    is_a = "are some examples:";
-    another = "some more examples:";
+    is_a = "are some " + "example" + "s:";
+    another = "some more " + "example" + "s:";
   } else {
-    is_a = "is an example:";
-    another = "another example:";
+    is_a = "is an " + "example" + ":";
+    another = "another " + "example" + ":";
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
