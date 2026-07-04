@@ -68,8 +68,11 @@ export function app_code_lesson_identifiers_symbol_first() {
     const min = 1;
     const max = 3;
     let counts = range_from(min, max);
+    let count = 2;
     function lambda(la, item) {
-      function lambda3(i) {}
+      function lambda3(i) {
+        la(item);
+      }
       each_range(count, lambda3);
     }
     let list3 = list_adder_each(counts, lambda);
