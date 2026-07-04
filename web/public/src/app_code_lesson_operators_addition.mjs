@@ -11,9 +11,9 @@ import { app_code_lesson_underscores_define_symbol } from "../../../love/public/
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 export function app_code_lesson_operators_addition() {
+  const operator = "+";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    const operator = "+";
     app_code_lesson_underscores_define_symbol(c, "plus sign", operator);
     let div = html_div_text_multiple(c, [
       "In math, we use plus signs to add numbers together",
