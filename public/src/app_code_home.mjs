@@ -33,7 +33,7 @@ export function app_code_home(context) {
   }
   if (example_count >= 2) {
     right = "some more examples:";
-  } else {
+  } else {$s
     let another = "another example:";
   }
   let combined = text_combine("Here ", right);
