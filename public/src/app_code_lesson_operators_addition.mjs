@@ -1,3 +1,4 @@
+import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
@@ -39,6 +40,7 @@ export function app_code_lesson_operators_addition() {
   }
   let name = "Operators (Addition)";
   let id = "operators_addition";
+  let question_label = app_code_label_symbols();
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -50,7 +52,7 @@ export function app_code_lesson_operators_addition() {
     symbols_to_answer,
     1,
     app_code_symbol_separated,
-    app_code_label_symbols(),
+    question_label,
   );
   return r5;
 }
