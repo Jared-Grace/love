@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
@@ -129,6 +130,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
+        let m = mod(quotient, divisor);
         const valid_prefixes = ["$", "_"];
         prefix = list_random_item(valid_prefixes);
         if (rb) {
