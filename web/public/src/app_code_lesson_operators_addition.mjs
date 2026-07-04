@@ -38,6 +38,8 @@ export function app_code_lesson_operators_addition() {
     list_shuffle(list2);
     return list;
   }
+  let name = "Operators (Addition)";
+  let id = "operators_addition";
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -50,7 +52,5 @@ export function app_code_lesson_operators_addition() {
     1,
     app_code_symbol_separated,
   );
-  let name = "Operators (Addition)";
-  let id = "operators_addition";
   return r5;
 }
