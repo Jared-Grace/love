@@ -1,3 +1,5 @@
+import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
+import { list_slices_size_cycle } from "../../../love/public/src/list_slices_size_cycle.mjs";
 import { invoke_map } from "../../../love/public/src/invoke_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_join_cycled_invoker } from "../../../love/public/src/list_join_cycled_invoker.mjs";
@@ -13,7 +15,6 @@ import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
-import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
@@ -63,7 +64,9 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     const min = 1;
     const max = 3;
-    let list = list_slices_size_cycles_shuffled(mapped, min, max);
+    let list2 = list_slices_size_cycle(mapped, min, max);
+    list_shuffle_cycled_range(max, min, list2);
+    let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let next_get = invoke_map(next_get_list, list_join_empty);
     function lambda2(batch_item, batch_item_index) {
