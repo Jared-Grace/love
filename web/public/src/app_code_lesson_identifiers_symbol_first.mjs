@@ -98,9 +98,11 @@ export function app_code_lesson_identifiers_symbol_first() {
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
+    let div2 = html_div(c);
     function lambda4(item) {
       let l = list_is(item);
       let result = ternary(l, html_cycle_code, html_span_text);
+      result(div2, item);
     }
     each(list3, lambda4);
     let squashed = list_squash(concated);
@@ -113,7 +115,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     log(app_code_lesson_identifiers_symbol_first.name, {
       squashed,
     });
-    let div2 = html_div(c);
     html_cycle_code(div2, squashed);
   }
   function batch_get() {
