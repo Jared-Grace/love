@@ -25,6 +25,12 @@ export function app_code_lesson_identifiers_symbol_first() {
   let name = "Identifiers (first symbol)";
   let id = "identifiers_symbol_first";
   let symbol_create = app_code_symbol;
+  let r = app_code_lesson_identifiers_symbol_first_generic(
+    symbol_create,
+    name,
+    id,
+    above,
+  );
   function above(root) {
     const identifier_symbols_types = [
       {
@@ -94,11 +100,5 @@ export function app_code_lesson_identifiers_symbol_first() {
       " may be used anywhere in an identifier, even as the first symbol",
     );
   }
-  let r = app_code_lesson_identifiers_symbol_first_generic(
-    symbol_create,
-    name,
-    id,
-    above,
-  );
   return r;
 }
