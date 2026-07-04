@@ -67,11 +67,11 @@ export function app_code_lesson_identifiers_symbol_first() {
     );
     let ds = digits();
     let combined = list_between_space(ds);
-    let div = html_div(c2);
     let parts = list_concat_single(
       "Identifiers can also have " + word_plural("digit") + ": ",
       combined,
     );
+    let div = html_div(c2);
     html_cycle_code(div, parts);
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
