@@ -1,10 +1,10 @@
+import { app_code_example } from "../../../love/public/src/app_code_example.mjs";
 import { app_code_lesson_text_example_another } from "../../../love/public/src/app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch_item_get.mjs";
