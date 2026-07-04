@@ -14,6 +14,7 @@ export function app_code_lesson_operators_subtraction() {
     verb,
     math_name,
     add,
+    error(),
   );
   return r;
 }
