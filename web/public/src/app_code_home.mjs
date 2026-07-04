@@ -25,9 +25,10 @@ export function app_code_home(context) {
   let right = null;
   let example_count = property_get(lesson, "example_count");
   if (example_count >= 2) {
+    right = "";
   } else {
+    right = "is an example:";
   }
-  right = "is an example:";
   let combined = text_combine("Here ", right);
   html_div_text(c, combined);
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
