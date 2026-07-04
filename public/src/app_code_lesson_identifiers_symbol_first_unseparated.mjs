@@ -35,7 +35,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let first = list_first(b);
     let question = property_get(first, "question");
     let split = text_split_empty(question);
-    let container = app_code_container_dark(parent);
+    let container = app_code_container_dark(parent);html_display_inline
     let lambda$item2 = app_code_symbol_separated_curried(div);
     each(split, lambda$item2);
     let s = emoji_arrow_right();
