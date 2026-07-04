@@ -1,4 +1,4 @@
-import { list_join } from "../../../love/public/src/list_join.mjs";
+import { list_between } from "../../../love/public/src/list_between.mjs";
 import { text_comma_space } from "../../../love/public/src/text_comma_space.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -9,7 +9,7 @@ export function list_to_text_or_list_generic(list, word_relationship) {
   let taken = list_take_less_1(list);
   let last = list_last(list);
   let separator = text_comma_space();
-  let joined = list_join(taken, separator);
+  let joined = list_between(taken, separator);
   let prefix = "";
   let ne = list_empty_not_is(taken);
   if (ne) {
