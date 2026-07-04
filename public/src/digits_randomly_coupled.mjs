@@ -20,6 +20,6 @@ export function digits_randomly_coupled() {
     }
     each(chunks, lambda3);
   }
-  let list2 = list_adder(lambda);
-  return list2;
+  let list = list_adder(lambda);
+  return list;
 }
