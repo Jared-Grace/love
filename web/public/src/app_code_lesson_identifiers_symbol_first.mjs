@@ -33,6 +33,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
+import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
     const identifier_symbols_types = [
@@ -82,6 +83,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       "After the first symbol an identifier can always be a digit",
     ]);
     let div2 = html_div(c);
+    let concated = list_to_or_list_generic(list3, word_relationship);
     html_cycle_code(div2, [
       "And " +
         identifiers_valid_anywhere +
