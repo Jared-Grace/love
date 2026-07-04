@@ -24,7 +24,7 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_code_lesson_identifiers_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_identifiers_underscores_define_symbol.mjs";
+import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_identifiers_underscores_generic(
   separator_invalid_name,
@@ -64,14 +64,14 @@ export function app_code_lesson_identifiers_underscores_generic(
       separator_invalid,
     ]);
     function define_valid() {
-      app_code_lesson_identifiers_underscores_define_symbol(
+      app_code_lesson_underscores_define_symbol(
         c,
         separator_valid_name,
         separator_valid,
       );
     }
     function define_invalid() {
-      app_code_lesson_identifiers_underscores_define_symbol(
+      app_code_lesson_underscores_define_symbol(
         c,
         separator_invalid_name,
         separator_invalid,
