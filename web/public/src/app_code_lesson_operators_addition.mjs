@@ -5,7 +5,6 @@ export function app_code_lesson_operators_addition() {
   const operator_name = "plus";
   let math_name = "addition";
   let verb = "add";
-  let ending = "together";
   let r = app_code_lesson_operators_generic(
     operator_name,
     operator,
