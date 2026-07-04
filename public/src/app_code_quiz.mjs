@@ -1,5 +1,4 @@
-import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
+import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
@@ -47,8 +46,8 @@ export function app_code_quiz(context) {
   app_code_go_back(root, question_text, button_text, lambda);
   let text = app_replace_button_home_text();
   async function lambda2() {
+    app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_home);
   }
-  let b3 = app_replace_button(root, text, lambda2);
-  html_width_full(b3);
+  let b3 = app_replace_button_wide(root, text, lambda2);
 }
