@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -19,6 +20,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     app_code_container_light_blue_text(root, text);
     let batch = property_get(r, "batch");
     let b = batch();
+    let first = list_first(list);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       b,
     });
