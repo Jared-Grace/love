@@ -5,5 +5,5 @@ export function app_code_home(context) {
   let root = html_clear_context(context);
   let lessons = app_code_lessons();
   function lambda(item) {}
-  each(list, lambda);
+  each(lessons, lambda);
 }
