@@ -80,9 +80,9 @@ export function app_code_lesson_symbols_batches_generic(
     example_count,
     batch: function batch() {
       let b = batch_get();
-      function lambda2(symbols_text) {
-        let answer = symbols_to_answer(symbols_text);
-        let symbols = text_split_empty(symbols_text);
+      function lambda2(question) {
+        let answer = symbols_to_answer(question);
+        let symbols = text_split_empty(question);
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
