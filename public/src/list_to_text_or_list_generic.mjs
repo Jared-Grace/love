@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_between } from "../../../love/public/src/list_between.mjs";
 import { text_comma_space } from "../../../love/public/src/text_comma_space.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -11,12 +12,12 @@ export function list_to_text_or_list_generic(list, word_relationship) {
   let last = list_last(list);
   let separator = text_comma_space();
   let joined = list_between(taken, separator);
-  let prefix = "";
   let ne = list_empty_not_is(taken);
   if (ne) {
-    prefix = text_combine_multiple([joined, " ", word_relationship, " "]);
-    list_add_first(list2, item);
+    let prefix = text_combine_multiple([joined, " ", word_relationship, " "]);
+    list_add_first(last, prefix);
   }
+  let concated = list_concat(a, b);
   let combined = text_combine(prefix, last);
   return combined;
 }
