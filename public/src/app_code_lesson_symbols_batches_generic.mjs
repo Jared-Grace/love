@@ -1,4 +1,4 @@
-import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
+import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
@@ -98,8 +98,7 @@ export function app_code_lesson_symbols_batches_generic(
           function on_quiz1(context, parent, container, refresh) {
             let a = example_above(container, symbols);
             let a_container = property_get(a, "container");
-            let d = html_div_text(a_container, quiz_label);
-            html_style_margin_top(d, "0.4em");
+            app_code_example_answer_label(a_container, quiz_label);
             let bq = batch_get();
             let answers = list_map(bq, symbols_to_answer);
             let answers_unique = list_unique(answers);
