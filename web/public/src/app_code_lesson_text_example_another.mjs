@@ -5,9 +5,9 @@ export function app_code_lesson_text_example_another(lesson) {
   const root_word = "example";
   let another = null;
   if (plural) {
-    another = "some more " + root_word + "s:";
+    another = "some more " + root_word + "s";
   } else {
-    another = "another " + root_word + ":";
+    another = "another " + root_word;
   }
   return another;
 }
