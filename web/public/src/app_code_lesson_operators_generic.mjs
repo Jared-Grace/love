@@ -37,7 +37,9 @@ export function app_code_lesson_operators_generic(
         verb +
         " numbers",
     );
-    let ne = equal_not(left2, right2);
+    let ne = equal_not(operator_js, operator_math);
+    if (false) {
+    }
     html_div_text(
       c,
       "In JavaScript, a " +
