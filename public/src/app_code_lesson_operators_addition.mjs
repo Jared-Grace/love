@@ -12,13 +12,10 @@ import { html_div_text_multiple } from "../../../love/public/src/html_div_text_m
 export function app_code_lesson_operators_addition() {
   const operator = "+";
   const operator_name = "plus";
+  const operator_name_sign = operator_name + " sign";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
-    app_code_lesson_underscores_define_symbol(
-      c,
-      operator_name + " sign",
-      operator,
-    );
+    app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
     let div = html_div_text_multiple(c, [
       "In math, we use plus signs to add numbers together",
       "In JavaScript, a plus sign can add two numbers together",
