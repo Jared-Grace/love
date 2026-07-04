@@ -1,10 +1,6 @@
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
-import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
-import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -99,22 +95,17 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
     let div2 = html_div(c);
+    html_span_text(div2, "And ");
     function lambda4(item) {
       let l = list_is(item);
       let result = ternary(l, html_cycle_code, html_span_text);
       result(div2, item);
     }
-    each(list3, lambda4);
-    let squashed = list_squash(concated);
-    let c3 = text_combine_curried(
-      "And " +
-        identifiers_valid_anywhere +
-        " may be used anywhere in an identifier, even as the first symbol",
+    each(concated, lambda4);
+    html_span_text(
+      div2,
+      " may be used anywhere in an identifier, even as the first symbol",
     );
-    list_transform_at(squashed, 0, c3);
-    log(app_code_lesson_identifiers_symbol_first.name, {
-      squashed,
-    });
     html_cycle_code(div2, squashed);
   }
   function batch_get() {
