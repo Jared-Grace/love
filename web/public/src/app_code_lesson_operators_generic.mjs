@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -8,7 +9,6 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_generic(
@@ -28,18 +28,22 @@ export function app_code_lesson_operators_generic(
       operator_name_sign_math,
       operator_math,
     );
-    html_div_text_multiple(c, [
+    html_div_text(
+      c,
       "In math, we use " +
         operator_name_sign_math +
         "s to " +
         verb +
         " numbers",
+    );
+    html_div_text(
+      c,
       "In JavaScript, a " +
         operator_name_sign_math +
         " can be used " +
         verb +
         " two numbers",
-    ]);
+    );
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
