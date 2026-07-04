@@ -17,6 +17,7 @@ export function app_code_lesson_operators_generic(
   verb,
   ending,
   math_name,
+  left_transform,
 ) {
   const operator_name_sign = operator_name + " sign";
   function lambda(root) {
