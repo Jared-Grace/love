@@ -1,3 +1,4 @@
+import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_pad_space_nb } from "../../../love/public/src/text_pad_space_nb.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -57,9 +58,9 @@ export function app_code_lesson_operators_generic(
     }
     html_div_text(
       c,
-      "In JavaScript, a " +
-        operator_name_js +
-        " can be used " +
+      "In JavaScript," +
+        text_articled_pad_space(operator_name_js) +
+        "can be used " +
         verb +
         " two numbers",
     );
