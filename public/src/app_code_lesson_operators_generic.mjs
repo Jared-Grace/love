@@ -15,7 +15,6 @@ export function app_code_lesson_operators_generic(
   operator_name,
   operator,
   verb,
-  ending,
   math_name,
   left_transform,
 ) {
