@@ -9,4 +9,5 @@ export function app_code_lesson_text_example_another(lesson) {
   } else {
     another = "another " + root_word + ":";
   }
+  return another;
 }
