@@ -1,3 +1,4 @@
+import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
@@ -43,6 +44,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       let jin = js_identifier_not_is(arg);
       if (jin) {
         let arg_v = js_node_to_visitor(ast, arg);
+        let variable_name = js_node_atomize_name();
         await js_node_atomize(ast, arg_v, variable_name, offset);
       }
     }
