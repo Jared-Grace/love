@@ -132,12 +132,12 @@ export function app_code_lesson_identifiers_symbol_first() {
       if (valid) {
         let m = mod(batch_item_index, 4);
         if (m) {
-        const valid_prefixes = ["$", "_"];
-        prefix = list_random_item(valid_prefixes);
-        if (rb) {
-          let right3 = list_random_item(valid_prefixes);
-          prefix = text_combine(prefix, right3);
-        }
+          const valid_prefixes = ["$", "_"];
+          prefix = list_random_item(valid_prefixes);
+          if (rb) {
+            let right3 = list_random_item(valid_prefixes);
+            prefix = text_combine(prefix, right3);
+          }
         }
       } else {
         prefix = next_get();
