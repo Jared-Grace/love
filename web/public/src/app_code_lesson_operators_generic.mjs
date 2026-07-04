@@ -11,7 +11,6 @@ import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { identity } from "../../../love/public/src/identity.mjs";
 export function app_code_lesson_operators_generic(
   operator_name,
   operator,
@@ -19,7 +18,6 @@ export function app_code_lesson_operators_generic(
   ending,
   math_name,
 ) {
-  let left_transform = identity;
   const operator_name_sign = operator_name + " sign";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
