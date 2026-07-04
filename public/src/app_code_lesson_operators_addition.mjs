@@ -6,7 +6,7 @@ import { app_code_lesson_underscores_define_symbol } from "../../../love/public/
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
-export function app_code_lesson_symbols_digits_2() {
+export function app_code_lesson_operators_addition() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, "plus sign", "+");
