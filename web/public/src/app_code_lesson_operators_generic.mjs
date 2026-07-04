@@ -14,7 +14,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_operators_generic(
   operator_name_js,
   operator_name_math,
-  operator,
+  operator_math,
   verb,
   math_name,
   left_transform,
@@ -26,7 +26,7 @@ export function app_code_lesson_operators_generic(
     app_code_lesson_underscores_define_symbol(
       c,
       operator_name_sign_math,
-      operator,
+      operator_math,
     );
     html_div_text_multiple(c, [
       "In math, we use " +
@@ -51,7 +51,7 @@ export function app_code_lesson_operators_generic(
     function lambda4(la) {
       function lambda3(left, right) {
         let transformed = left_transform(left, right);
-        let combined = text_combine_multiple([transformed, operator, right]);
+        let combined = text_combine_multiple([transformed, operator_math, right]);
         la(combined);
       }
       each_nested_distinct(lefts, rights, lambda3);
