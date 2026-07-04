@@ -3,7 +3,6 @@ import { text_articled_pad_space } from "../../../love/public/src/text_articled_
 import { text_pad_space_nb } from "../../../love/public/src/text_pad_space_nb.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -54,7 +53,7 @@ export function app_code_lesson_operators_generic(
         operator_js,
       );
     }
-    html_cycle_code(
+    html_div_cycle_code(
       c,
       "In JavaScript, the " +
         text_articled_pad_space(operator_name_js) +
