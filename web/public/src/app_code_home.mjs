@@ -24,18 +24,15 @@ export function app_code_home(context) {
   above(root);
   let c = app_code_container_light_blue(root);
   app_code_example_answer_gap(c);
-  let is_a = null;
   let example_count = property_get(lesson, "example_count");
   const plural = example_count >= 2;
+  let is_a = null;
+  let another = null;
   if (plural) {
     is_a = "are some examples:";
-  } else {
-    is_a = "is an example:";
-  }
-  let another = null;
-  if (example_count >= 2) {
     another = "some more examples:";
   } else {
+    is_a = "is an example:";
     another = "another example:";
   }
   let combined = text_combine("Here ", is_a);
