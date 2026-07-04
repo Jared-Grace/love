@@ -120,7 +120,7 @@ export function app_code_lesson_symbols_batches_generic(
               app_code_quiz_index_set(context, index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
-                app_code_quiz_index_set(context, 0);
+                app_code_quiz_index_reset(context);
                 function lambda7(value) {
                   let lessons = app_code_lessons();
                   let value_next = list_property_next_value(
@@ -191,6 +191,10 @@ export function app_code_lesson_symbols_batches_generic(
   };
   return lesson;
 }
+function app_code_quiz_index_reset(context) {
+  app_code_quiz_index_set(context, 0);
+}
+
 function app_code_quiz_index_set(context, index_new) {
   storage_local_set_context(context, "quiz_index", index_new);
 }
