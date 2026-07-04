@@ -44,7 +44,8 @@ export function app_code_lesson_operators_generic(
     let rights = range_1(max);
     function lambda4(la) {
       function lambda3(left, right) {
-        let combined = text_combine_multiple([left, operator, right]);
+        let v = left_transform(left, right);
+        let combined = text_combine_multiple([v, operator, right]);
         la(combined);
       }
       each_nested_distinct(lefts, rights, lambda3);
