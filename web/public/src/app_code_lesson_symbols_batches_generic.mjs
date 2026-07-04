@@ -177,8 +177,9 @@ export function app_code_lesson_symbols_batches_generic(
           },
         ];
         let r2 = {
-          example,
+          question,
           answer,
+          example,
           quizzes,
         };
         return r2;
