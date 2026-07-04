@@ -20,7 +20,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     app_code_container_light_blue_text(root, text);
     let batch = property_get(r, "batch");
     let b = batch();
-    let first = list_first(list);
+    let first = list_first(b);
     let question = property_get(first, "question");
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
