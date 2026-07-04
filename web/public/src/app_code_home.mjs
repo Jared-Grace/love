@@ -26,7 +26,8 @@ export function app_code_home(context) {
   app_code_example_answer_gap(c);
   let is_a = null;
   let example_count = property_get(lesson, "example_count");
-  if (example_count >= 2) {
+  const plural = example_count >= 2;
+  if (plural) {
     is_a = "are some examples:";
   } else {
     is_a = "is an example:";
