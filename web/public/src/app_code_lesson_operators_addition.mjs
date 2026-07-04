@@ -16,8 +16,8 @@ export function app_code_lesson_operators_addition() {
   const operator_name = "plus";
   let math_name = "addition";
   let verb = "add";
-  const operator_name_sign = operator_name + " sign";
   let ending = "together";
+  const operator_name_sign = operator_name + " sign";
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
