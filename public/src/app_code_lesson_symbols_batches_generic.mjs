@@ -1,3 +1,5 @@
+import { app_code_quiz_index_reset } from "../../../love/public/src/app_code_quiz_index_reset.mjs";
+import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
@@ -16,7 +18,6 @@ import { app_code_lesson_first_id } from "../../../love/public/src/app_code_less
 import { list_property_next_value } from "../../../love/public/src/list_property_next_value.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
-import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -191,11 +192,3 @@ export function app_code_lesson_symbols_batches_generic(
   };
   return lesson;
 }
-function app_code_quiz_index_reset(context) {
-  app_code_quiz_index_set(context, 0);
-}
-
-function app_code_quiz_index_set(context, index_new) {
-  storage_local_set_context(context, "quiz_index", index_new);
-}
-
