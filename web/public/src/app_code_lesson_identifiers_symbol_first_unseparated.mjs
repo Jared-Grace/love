@@ -4,12 +4,12 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
   let symbol_create = html_span_text;
   let name = "Identifiers (first symbol, unseparated)";
   let id = "identifiers_symbol_first_unseparated";
-  function lambda() {}
+  function above() {}
   let r = app_code_lesson_identifiers_symbol_first_generic(
     symbol_create,
     name,
     id,
-    lambda,
+    above,
   );
   return r;
 }
