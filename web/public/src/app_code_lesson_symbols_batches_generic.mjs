@@ -51,7 +51,7 @@ export function app_code_lesson_symbols_batches_generic(
   symbols_to_answer,
   example_count,
 ) {
-  let symbol_create = app_code_symbol;
+  let symbol_create1 = app_code_symbol;
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
     let span = html_div_text(container, "Symbols: ");
