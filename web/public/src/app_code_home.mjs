@@ -25,6 +25,7 @@ export function app_code_home(context) {
   let right = null;
   let example_count = property_get(lesson, "example_count");
   if (example_count >= 2) {
+  } else {
   }
   right = "is an example:";
   let combined = text_combine("Here ", right);
