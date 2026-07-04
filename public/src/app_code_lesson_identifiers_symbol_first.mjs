@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { text_combine_space } from "../../../love/public/src/text_combine_space.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
@@ -91,6 +92,10 @@ export function app_code_lesson_identifiers_symbol_first() {
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
+    log(app_code_lesson_identifiers_symbol_first.name, {
+      concated,
+      mapped2,
+    });
     let div2 = html_div(c);
     html_cycle_code(div2, [
       "And " +
