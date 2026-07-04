@@ -31,7 +31,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     quiz_label,
     symbols_to_answer,
     2,
-    app_code_symbol,
+    symbol_create,
   );
   return r;
 }
