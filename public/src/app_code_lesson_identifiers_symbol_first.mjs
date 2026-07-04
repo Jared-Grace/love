@@ -98,7 +98,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     html_span_text(div2, "And ");
     function lambda4(item) {
       let l = list_is(item);
-      let result = ternary(l, html_cycle_code, html_span_text);
+      function lambda5() {}
+      let result = ternary(l, html_cycle_code, lambda5);
       result(div2, item);
     }
     each(concated, lambda4);
