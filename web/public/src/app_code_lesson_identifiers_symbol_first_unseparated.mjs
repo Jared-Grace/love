@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -29,6 +30,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
+    function lambda(item) {}
+    each(list, lambda);
     let span = html_span_text(div, question);
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
