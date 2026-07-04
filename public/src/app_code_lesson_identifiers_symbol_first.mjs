@@ -52,7 +52,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     ];
     function lambda(t) {
       function lambda3(value) {
-        property_set_exists_not(object, property_name, value2);
+        property_set_exists_not(object, property_name, value);
       }
       let transformed = property_transform(t, "name", lambda3);
     }
