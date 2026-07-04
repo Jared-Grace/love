@@ -11,13 +11,18 @@ export function list_to_text_or_list_generic(list, word_relationship) {
   let taken = list_take_less_1(list);
   let last = list_last(list);
   let separator = text_comma_space();
-  let joined = list_between(taken, separator);
+  let betweened = list_between(taken, separator);
   let ne = list_empty_not_is(taken);
   if (ne) {
-    let prefix = text_combine_multiple([joined, " ", word_relationship, " "]);
+    let prefix = text_combine_multiple([
+      betweened,
+      " ",
+      word_relationship,
+      " ",
+    ]);
     list_add_first(last, prefix);
   }
-  let concated = list_concat(joined, taken);
-  let joined2 = list_join_empty(concated);
-  return joined2;
+  let concated = list_concat(betweened, taken);
+  let joined = list_join_empty(concated);
+  return joined;
 }
