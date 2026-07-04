@@ -12,6 +12,7 @@ import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { app_code_lesson_same_message } from "../../../love/public/src/app_code_lesson_same_message.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_generic.mjs";
+import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 export function app_code_lesson_identifiers_symbol_first_unseparated() {
   let symbol_create = app_code_symbol;
   let name = "Identifiers (first symbol, unseparated)";
@@ -31,14 +32,13 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
-    let split = text_split_empty(s2);
-    function lambda(item) {}
-    each(list, app_code_symbol);
+    let split = text_split_empty(question);
+    each(split, app_code_symbol_separated);
     let span = html_span_text(div, question);
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
     html_span_text(div, padded);
-    let span2 = html_span_text(div, question);
+    each(split, app_code_symbol);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
     });
