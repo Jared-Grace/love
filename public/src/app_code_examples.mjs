@@ -1,5 +1,5 @@
-import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
-import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
+import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
+import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
 import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
@@ -85,6 +85,6 @@ export function app_code_examples(context) {
     );
   }
   let text = app_replace_button_home_text();
-  let b2 = app_replace_button_screen(context, app_replace_home, root, text);
+  let b2 = app_replace_button_screen_wide(context, app_code_home, root, text);
   return;
 }
