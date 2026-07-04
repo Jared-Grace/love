@@ -101,7 +101,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       "And " +
         identifiers_valid_anywhere +
         " may be used anywhere in an identifier, even as the first symbol",
-    );
+    );tcc
     function lambda5() {}
     list_transform_at(list3, index, lambda5);
     log(app_code_lesson_identifiers_symbol_first.name, {
