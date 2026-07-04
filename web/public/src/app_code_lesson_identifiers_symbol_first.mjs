@@ -61,7 +61,9 @@ export function app_code_lesson_identifiers_symbol_first() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
+    const min = 1;
+    const max = 3;
+    let list = list_slices_size_cycles_shuffled(mapped, min, max);
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let next_get = invoke_map(next_get_list, list_join_empty);
     function lambda2(batch_item, batch_item_index) {
