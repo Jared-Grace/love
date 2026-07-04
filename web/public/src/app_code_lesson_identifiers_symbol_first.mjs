@@ -50,8 +50,10 @@ export function app_code_lesson_identifiers_symbol_first() {
       },
     ];
     function lambda(t) {
-      function lambda3(value) {}
-      let transformed = property_transform(o, property, lambda3);
+      function lambda3(value) {
+        sex;
+      }
+      let transformed = property_transform(t, "name", lambda3);
     }
     each(identifier_symbols_types, lambda);
     let mapped2 = list_map_property(identifier_symbols_types, "name");
