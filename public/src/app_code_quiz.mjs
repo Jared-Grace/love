@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -22,6 +23,7 @@ export function app_code_quiz(context) {
     true,
   );
   function on_batch_item(container, b, refresh) {
+    let only = list_single(list);
     let c = app_code_container_light_blue(container);
     html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");
