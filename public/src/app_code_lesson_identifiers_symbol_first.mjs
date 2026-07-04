@@ -133,7 +133,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       if (valid) {
         let m = mod(batch_item_index, 4);
         let eq = equal_0(item2);
-        if (m) {
+        if (eq) {
           const valid_prefixes = ["$", "_"];
           prefix = list_random_item(valid_prefixes);
           if (rb) {
@@ -141,6 +141,7 @@ export function app_code_lesson_identifiers_symbol_first() {
             prefix = text_combine(prefix, right3);
           }
         } else {
+          prefix = "";
         }
       } else {
         prefix = next_get();
