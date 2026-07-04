@@ -1,4 +1,4 @@
-import { html_scroll_top_now } from "../../../love/public/src/html_scroll_top_now.mjs";
+import { html_scroll_top_window } from "../../../love/public/src/html_scroll_top_window.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -19,5 +19,5 @@ export async function app_shared_refresh(context) {
   );
   let screen = list_find_property(screens, "name", screen_name);
   await screen(context);
-  await html_scroll_top_now(body);
+  html_scroll_top_window();
 }
