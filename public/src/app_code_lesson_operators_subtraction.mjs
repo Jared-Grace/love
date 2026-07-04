@@ -7,6 +7,7 @@ export function app_code_lesson_operators_subtraction() {
   let math_name = "subtraction";
   let verb = "subtract";
   let operator_name_js = error();
+  let operator_js = error();
   let r = app_code_lesson_operators_generic(
     operator_name_js,
     operator_name,
@@ -14,7 +15,7 @@ export function app_code_lesson_operators_subtraction() {
     verb,
     math_name,
     add,
-    error(),
+    operator_js,
   );
   return r;
 }
