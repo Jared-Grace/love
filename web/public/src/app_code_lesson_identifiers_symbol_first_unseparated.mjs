@@ -8,10 +8,10 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
   let id = "identifiers_symbol_first_unseparated";
   function above(root) {
     let c2 = app_code_container_light_blue(root);
-    html_div_text(
-      c2,
-      "Remember, identifiers can have different kinds of symbols including " +
-        identifiers_valid_anywhere,
+    let div = html_div_text(
+      c,
+      "This lesson is the same as the previous lesson, except ",
+      "there are not numbers underneath",
     );
   }
   let r = app_code_lesson_identifiers_symbol_first_generic(
