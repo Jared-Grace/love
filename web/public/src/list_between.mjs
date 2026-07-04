@@ -5,7 +5,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 export function list_between(list, item_between) {
-  let e = list_empty_is(list2);
+  let e = list_empty_is(list);
   if (e) {
     return list;
   }
