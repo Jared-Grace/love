@@ -43,7 +43,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     const identifier_symbols_types = [
       {
         name: "letter",
-        examples: ["a", "-", "z", " ", "A", "-", "Z"],
+        examples: ["a", " - ", "z", " ", "A", " - ", "Z"],
       },
       {
         name: "underscore",
