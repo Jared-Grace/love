@@ -1,5 +1,4 @@
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
-import { list_to_text_or_list_generic } from "../../../love/public/src/list_to_text_or_list_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
