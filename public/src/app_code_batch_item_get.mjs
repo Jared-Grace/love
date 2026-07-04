@@ -1,3 +1,4 @@
+import { range_map } from "../../../love/public/src/range_map.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -15,6 +16,8 @@ export function app_code_batch_item_get(
   let refresh = function lambda() {
     html_clear(container);
     let b = next_get();
+    function lambda2(item) {}
+    let mapped = range_map(digit_count, lambda2);
     on_batch_item(container, b, refresh);
   };
   refresh();
