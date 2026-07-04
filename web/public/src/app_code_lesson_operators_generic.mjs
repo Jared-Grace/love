@@ -51,7 +51,11 @@ export function app_code_lesson_operators_generic(
     function lambda4(la) {
       function lambda3(left, right) {
         let transformed = left_transform(left, right);
-        let combined = text_combine_multiple([transformed, operator_math, right]);
+        let combined = text_combine_multiple([
+          transformed,
+          operator_math,
+          right,
+        ]);
         la(combined);
       }
       each_nested_distinct(lefts, rights, lambda3);
