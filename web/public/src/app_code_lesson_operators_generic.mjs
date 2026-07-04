@@ -1,6 +1,5 @@
-import { html_div } from "../../../love/public/src/html_div.mjs";
+import { html_div_cycle_mono } from "../../../love/public/src/html_div_cycle_mono.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -34,8 +33,7 @@ export function app_code_lesson_operators_generic(
     );
     let list2 = batch();
     let first = list_first(list2);
-    let div = html_div(c);
-    html_cycle_code(div, [
+    html_div_cycle_mono(c, [
       "In math, we use " +
         operator_name_sign_math +
         "s to " +
