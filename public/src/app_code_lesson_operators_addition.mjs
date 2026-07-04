@@ -25,9 +25,10 @@ export function app_code_lesson_operators_addition() {
   function lambda2() {
     let lefts = range_1(max);
     let rights = range_1(max);
-    function lambda3(item) {}
-    each_nested_distinct(list, lambda3);
-    let combined = text_combine_multiple([operator]);
+    function lambda3(left, right) {
+      let combined = text_combine_multiple([operator]);
+    }
+    each_nested_distinct(lefts, rights, lambda3);
   }
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
