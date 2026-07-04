@@ -127,6 +127,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     above,
     noop,
     batch_get,
+    app_code_symbol,
   );
   return r5;
 }

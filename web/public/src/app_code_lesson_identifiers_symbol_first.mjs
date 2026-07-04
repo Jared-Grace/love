@@ -160,6 +160,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     above,
     noop,
     batch_get,
+    app_code_symbol,
   );
   return r;
 }
