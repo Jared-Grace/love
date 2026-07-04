@@ -24,7 +24,11 @@ export function app_code_lesson_operators_generic(
     app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
     html_div_text_multiple(c, [
       "In math, we use " + operator_name_sign + "s to " + verb + " numbers",
-      "In JavaScript, a " + operator_name_sign + " can add two numbers",
+      "In JavaScript, a " +
+        operator_name_sign +
+        " can " +
+        verb +
+        " two numbers",
     ]);
   }
   const example_label = "Value of code: ";
