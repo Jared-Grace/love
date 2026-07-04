@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
@@ -65,7 +66,9 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     const min = 1;
     const max = 3;
-    let counts = range_from(min, max);ld
+    let counts = range_from(min, max);
+    function lambda(la) {}
+    let list3 = list_adder(lambda);
     let list2 = list_slices_size_cycler(mapped, counts, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
