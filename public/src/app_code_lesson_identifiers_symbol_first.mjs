@@ -1,3 +1,4 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
@@ -71,8 +72,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       "Identifiers can also have " + word_plural("digit") + ": ",
       combined,
     );
-    let div = html_div(c2);
-    html_cycle_code(div, parts);
+    html_div_cycle_code(c2, parts);
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [
       "However identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)",
