@@ -11,6 +11,7 @@ export function app_code_lesson_operators_subtraction() {
     verb,
     ending,
     math_name,
+    identity,
   );
   return r;
 }
