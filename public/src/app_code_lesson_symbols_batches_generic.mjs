@@ -151,7 +151,7 @@ export function app_code_lesson_symbols_batches_generic(
             let buttons = list_map(concated, lambda3);
             function lambda3(quiz_answer) {
               let b2 = app_replace_button_wide(
-                container_answer,
+                a_container,
                 quiz_answer,
                 on_click,
               );
