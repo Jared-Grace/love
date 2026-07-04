@@ -1,3 +1,6 @@
+import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
+import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
+import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_code_lesson_text_example_another } from "../../../love/public/src/app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
@@ -41,4 +44,6 @@ export function app_code_quiz(context) {
     await app_shared_screen_set(context, app_code_examples);
   }
   app_code_go_back(root, question_text, button_text, lambda);
+  let text = app_replace_button_home_text();
+  let b2 = app_replace_button_screen_wide(context, app_code_home, root, text);
 }
