@@ -99,9 +99,7 @@ export function app_code_lesson_symbols_batches_generic(
           function on_quiz1(context, parent, container, refresh) {
             let a = example_above(container, symbols);
             let a_container = property_get(a, "container");
-            let div = html_div(a_container);
-            html_text_set(div, quiz_label);
-            let d = div;
+            let d = html_div_text(a_container, quiz_label);
             html_style_margin_top(d, "0.4em");
             let bq = batch_get();
             let answers = list_map(bq, symbols_to_answer);
