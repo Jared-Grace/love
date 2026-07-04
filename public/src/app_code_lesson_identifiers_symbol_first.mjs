@@ -1,5 +1,6 @@
+import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
+import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
-import { list_slices_size_cycle } from "../../../love/public/src/list_slices_size_cycle.mjs";
 import { invoke_map } from "../../../love/public/src/invoke_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_join_cycled_invoker } from "../../../love/public/src/list_join_cycled_invoker.mjs";
@@ -64,7 +65,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped = list_map(words, text_letters_only);
     const min = 1;
     const max = 3;
-    let list2 = list_slices_size_cycle(mapped, min, max);
+    let counts = range_from(min, max);
+    let list2 = list_slices_size_cycler(mapped, counts, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
