@@ -82,6 +82,6 @@ export function app_code_examples(context) {
       previous,
     );
   }
-  app_replace_button_home(root2, context2);
+  app_replace_button_home(root, context);
   return;
 }
