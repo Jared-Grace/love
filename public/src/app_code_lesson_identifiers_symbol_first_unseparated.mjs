@@ -1,3 +1,4 @@
+import { function_transform_prompt_self } from "../../../love/public/src/function_transform_prompt_self.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -18,7 +19,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     id,
     above,
   );
-  function above(root) {
+  async function above(root) {
     let text = app_code_lesson_same_message("the symbols are not separated");
     app_code_container_light_blue_text(root, text);
     let c = app_code_container_light_blue(root);
@@ -27,7 +28,10 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
-    let span = html_span_text(parent, text2);
+    let span = html_span_text(div, text2);
+    let v = await function_transform_prompt_self(f_name);
+    html_span_text(div);
+    let span2 = html_span_text(div, text2);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
     });
