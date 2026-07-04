@@ -18,6 +18,7 @@ export function app_code_lesson_operators_generic(
   math_name,
   left_transform,
 ) {
+  const operator_name_sign_math = operator_name + " sign";
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(
@@ -38,7 +39,6 @@ export function app_code_lesson_operators_generic(
         " two numbers",
     ]);
   }
-  const operator_name_sign_math = operator_name + " sign";
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
   let max = 7;
