@@ -42,7 +42,7 @@ export function app_code_lesson_operators_addition() {
     list_shuffle(list);
     return list;
   }
-  let name = "Operators (Addition)";
+  let name = "Operators (" + math_name + ")";
   let id = "operators_" + math_name;
   let question_label = "Code: ";
   let r5 = app_code_lesson_symbols_batches_generic(
