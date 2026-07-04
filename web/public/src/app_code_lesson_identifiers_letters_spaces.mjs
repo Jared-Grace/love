@@ -1,3 +1,4 @@
+import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
