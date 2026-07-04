@@ -1,5 +1,4 @@
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
-import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
@@ -73,7 +72,7 @@ export function app_code_example(context) {
         value_initial,
         lambda,
       );
-      await app_shared_screen_set(context, app_code_home);
+      await app_shared_screen_set(context, app_code_example);
     }
     app_code_go_back(
       root,
