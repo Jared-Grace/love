@@ -35,7 +35,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   function above(root) {
-    let c2 = app_code_container_light_blue(root);
     const identifier_symbols_types = [
       {
         name: "letter",
@@ -61,6 +60,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     const identifiers_valid_anywhere = list_to_text_and_list(
       identifier_symbols_types_plural,
     );
+    let c2 = app_code_container_light_blue(root);
     html_div_text(
       c2,
       "Remember, identifiers can have different kinds of symbols including " +
