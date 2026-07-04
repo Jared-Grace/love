@@ -76,6 +76,7 @@ export function app_code_lesson_operators_generic(
     let t = "in JavaScript, the ";
     if (ne) {
       t = text_combine("Instead, ", t);
+    } else {
     }
     let t2 = text_first_upper_to(t);
     html_div_cycle_code(c, [
