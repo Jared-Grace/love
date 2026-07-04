@@ -68,6 +68,9 @@ export function app_code_lesson_identifiers_symbol_first() {
     const max = 3;
     let counts = range_from(min, max);
     let doubled = list_items_double(counts);
+    log(app_code_lesson_identifiers_symbol_first.name, {
+      doubled,
+    });
     let list2 = list_slices_size_cycler(mapped, doubled, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
