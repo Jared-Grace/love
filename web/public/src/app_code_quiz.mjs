@@ -22,8 +22,8 @@ export function app_code_quiz(context) {
     list_shuffle,
     true,
   );
-  function on_batch_item(container, b, refresh) {
-    let only = list_single(list);
+  function on_batch_item(container, bs, refresh) {
+    let b = list_single(bs);
     let c = app_code_container_light_blue(container);
     html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");
