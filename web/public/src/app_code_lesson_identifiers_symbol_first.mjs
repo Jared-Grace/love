@@ -80,12 +80,13 @@ export function app_code_lesson_identifiers_symbol_first() {
     html_div_text_multiple(c, [
       "However identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)",
       "After the first symbol an identifier can always be a digit",
+    ]);
+    let div2 = html_div(c);
+    html_cycle_code(div2, [
       "And " +
         identifiers_valid_anywhere +
         " may be used anywhere in an identifier, even as the first symbol",
     ]);
-    let div2 = html_div(parent2);
-    html_cycle_code(parent, parts2);
   }
   function batch_get() {
     let words = app_code_verse_words();
