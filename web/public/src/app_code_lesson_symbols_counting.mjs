@@ -1,4 +1,4 @@
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
+import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 export function app_code_lesson_symbols_counting(
@@ -21,7 +21,7 @@ export function app_code_lesson_symbols_counting(
     quiz_label,
     symbols_to_answer,
     1,
-    app_code_symbol,
+    app_code_symbol_separated,
   );
   return r;
 }
