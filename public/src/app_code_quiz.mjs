@@ -38,7 +38,7 @@ export function app_code_quiz(context) {
   const question_text = "and see " + another;
   const button_text = "go back and show me " + another;
   async function lambda() {
-    await app_shared_screen_set(context, app_code_home);
+    await app_shared_screen_set(context, app_code_example);
   }
   app_code_go_back(root, question_text, button_text, lambda);
 }
