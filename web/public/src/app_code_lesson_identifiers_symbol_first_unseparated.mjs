@@ -21,6 +21,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let batch = property_get(r, "batch");
     let b = batch();
     let first = list_first(list);
+    let question = property_get(first, "question");
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       b,
     });
