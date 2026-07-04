@@ -65,7 +65,6 @@ export function app_code_lesson_symbols_batches_generic(
       return digit;
     }
     let spans = list_map_index_1(symbols, lambda4);
-    let container_answer = app_code_container_light(parent);
     let r4 = {
       container_answer,
       container,
@@ -85,9 +84,9 @@ export function app_code_lesson_symbols_batches_generic(
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
           let a = example_above(parent, symbols);
-          let container_answer2 = property_get(a, "container_answer");
-          html_text_set(container_answer2, example_label);
-          let div3 = app_code_container_dark(container_answer2);
+          let container = property_get(a, "container");
+          html_text_set(container, example_label);
+          let div3 = app_code_container_dark(container);
           let s = app_code_symbol_generic(
             div3,
             answer,
@@ -99,7 +98,7 @@ export function app_code_lesson_symbols_batches_generic(
         const quizzes = [
           function on_quiz1(context, parent, container, refresh) {
             let a = example_above(container, symbols);
-            let container_answer2 = property_get(a, "container_answer");
+            let container_answer2 = app_code_container_light(parent);
             html_text_set(container_answer2, quiz_label);
             let bq = batch_get();
             let answers = list_map(bq, symbols_to_answer);
