@@ -29,8 +29,6 @@ import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
-import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
@@ -85,8 +83,6 @@ export function app_code_lesson_symbols_batches_generic(
         let answer = symbols_to_answer(symbols_text);
         let symbols = text_split_empty(symbols_text);
         function example(parent) {
-          html_flex_column_stretch(parent);
-          app_code_flex_gap(parent);
           let a = example_above(parent, symbols);
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
