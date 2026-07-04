@@ -1,3 +1,4 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
@@ -21,8 +22,6 @@ import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
-import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -51,13 +50,11 @@ export function app_code_lesson_identifiers_underscores_generic(
       "Remember, identifiers can have different kinds of symbols including " +
         list_to_text_and_list(identifier_symbols_types),
     );
-    let div = html_div(c2);
-    html_cycle_code(div, [
+    html_div_cycle_code(c2, [
       "Identifiers can also have " + word_plural(separator_valid_name) + " ",
       separator_valid,
     ]);
-    let div2 = html_div(c2);
-    html_cycle_code(div2, [
+    html_div_cycle_code(c2, [
       "However identifiers cannot have " +
         word_plural(separator_invalid_name) +
         " ",
