@@ -1,3 +1,4 @@
+import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
@@ -37,8 +38,9 @@ export async function js_expand_generic(next, stack2, index, ast) {
   if (call !== null) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
-    function lambda5(item2, index2) {
+    async function lambda5(item2, index2) {
       let jin = js_identifier_not_is(item2);
+      await js_node_atomize(ast2, visitor, variable_name, offset);
     }
     each_index(arguments2, lambda5);
     const a_names = js_identifiers_to_names(arguments2);
