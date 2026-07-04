@@ -6,7 +6,6 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 export function list_to_text_or_list_generic(list, word_relationship) {
   let taken = list_take_less_1(list);
@@ -19,7 +18,6 @@ export function list_to_text_or_list_generic(list, word_relationship) {
     list_add_first(last, prefix);
   }
   let concated = list_concat(joined, taken);
-  let joined2 = list_join_empty(list2);
-  let combined = text_combine(prefix, last);
-  return combined;
+  let joined2 = list_join_empty(concated);
+  return joined2;
 }
