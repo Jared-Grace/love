@@ -66,7 +66,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
     const min = 1;
-    const max = 3;
+    const max = 2;
     let counts = range_from(min, max);
     let doubled = list_items_double(counts);
     log(app_code_lesson_identifiers_symbol_first.name, {
