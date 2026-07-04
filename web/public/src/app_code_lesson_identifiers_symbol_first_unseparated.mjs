@@ -31,8 +31,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let question = property_get(first, "question");
     let span = html_span_text(div, question);
     let s = emoji_arrow_right();
-    let padded = text_pad_space(s2);
-    html_span_text(div, "➡");
+    let padded = text_pad_space("➡");
+    html_span_text(div, padded);
     let span2 = html_span_text(div, question);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
       question,
