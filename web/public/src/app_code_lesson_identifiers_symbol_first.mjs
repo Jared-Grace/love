@@ -1,6 +1,5 @@
 import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
 import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
-import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -97,7 +96,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
     let squashed = list_squash(concated);
-    list_add_first(squashed);
     let c3 = text_combine_curried(
       "And " +
         identifiers_valid_anywhere +
