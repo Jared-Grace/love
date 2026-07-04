@@ -1,3 +1,4 @@
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -17,7 +18,9 @@ export function app_code_lesson_operators_addition() {
   const example_label = "Code: ";
   const quiz_label = "What is the value of this code? ";
   let symbols_to_answer = js_parse_expression;
-  function lambda2() {}
+  function lambda2() {
+    let r = range_1(count);
+  }
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
     id,
