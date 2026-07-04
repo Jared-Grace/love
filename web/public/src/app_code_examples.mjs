@@ -1,4 +1,6 @@
-import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
+import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
+import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
+import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { list_property_previous_value } from "../../../love/public/src/list_property_previous_value.mjs";
@@ -82,6 +84,7 @@ export function app_code_examples(context) {
       previous,
     );
   }
-  app_replace_button_home(root, context);
+  let text = app_replace_button_home_text();
+  let b2 = app_replace_button_screen(context, app_replace_home, root, text);
   return;
 }
