@@ -33,7 +33,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
