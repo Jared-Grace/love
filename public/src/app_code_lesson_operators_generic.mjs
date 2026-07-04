@@ -38,9 +38,9 @@ export function app_code_lesson_operators_generic(
     const operator_name_math_articled =
       text_articled_pad_space(operator_name_math);
     html_div_cycle_code(c, [
-      "In math, we use" + operator_name_math_articled,
+      "In math, " + operator_name_math_articled,
       operator_math,
-      " to " + verb + " numbers: ",
+      " can be used to " + verb + " numbers: ",
       replaced,
     ]);
     let ne = equal_not(operator_js, operator_math);
