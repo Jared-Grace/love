@@ -1,3 +1,4 @@
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -42,7 +43,7 @@ export function app_code_lesson_operators_addition() {
     list_shuffle(list);
     return list;
   }
-  let name = "Operators (" + math_name + ")";
+  let name = "Operators (" + text_first_upper_to(math_name) + ")";
   let id = "operators_" + math_name;
   let question_label = "Code: ";
   let r5 = app_code_lesson_symbols_batches_generic(
