@@ -31,10 +31,10 @@ export function app_code_home(context) {
   } else {
     right = "is an example:";
   }
+  let another = null;
   if (example_count >= 2) {
-    right = "some more examples:";
+    another = "some more examples:";
   } else {
-    let another = null;
     another = "another example:";
   }
   let combined = text_combine("Here ", right);
