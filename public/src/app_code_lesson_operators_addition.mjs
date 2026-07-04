@@ -26,12 +26,16 @@ export function app_code_lesson_operators_addition() {
   function lambda2() {
     let lefts = range_1(max);
     let rights = range_1(max);
-    function lambda4(la) {}
-    let list = list_adder(lambda4);
-    function lambda3(left, right) {
-      let combined = text_combine_multiple([operator]);
+    function lambda4(la) {
+      function lambda3(left, right) {
+        let combined = text_combine_multiple([operator]);
+        la(combined);
+      }
+      each_nested_distinct(lefts, rights, lambda3);
     }
-    each_nested_distinct(lefts, rights, lambda3);
+    let list = list_adder(lambda4);
+    ByteLengthQueuingStrategy;
+    return list;
   }
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
