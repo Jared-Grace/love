@@ -6,7 +6,7 @@ import { html_style_code_dark } from "../../../love/public/src/html_style_code_d
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-export function app_code_lesson_identifiers_underscores_define_symbol(
+export function app_code_lesson_underscores_define_symbol(
   c,
   symbol_name,
   symbol,
