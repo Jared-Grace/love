@@ -34,7 +34,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
-    let split = text_split_empty(question);
+    let split = text_split_empty(question);$x
     let container = app_code_container_dark(parent);
     let lambda$item2 = app_code_symbol_separated_curried(div);
     each(split, lambda$item2);
