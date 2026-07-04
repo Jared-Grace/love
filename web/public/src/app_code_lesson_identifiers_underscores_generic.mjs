@@ -1,3 +1,4 @@
+import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { list_swap_beginning } from "../../../love/public/src/list_swap_beginning.mjs";
