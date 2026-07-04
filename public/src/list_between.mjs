@@ -6,7 +6,8 @@ import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs"
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 export function list_between(list, item_between) {
   let e = list_empty_is(list2);
-  if (false) {
+  if (e) {
+    return list;
   }
   let taken = list_take_less_1(list);
   function lambda(t) {
