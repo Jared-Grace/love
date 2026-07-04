@@ -1,3 +1,4 @@
+import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
 import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -101,7 +102,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       "And " +
         identifiers_valid_anywhere +
         " may be used anywhere in an identifier, even as the first symbol",
-    );tcc
+    );
+    let c3 = text_combine_curried(left);
     function lambda5() {}
     list_transform_at(list3, index, lambda5);
     log(app_code_lesson_identifiers_symbol_first.name, {
