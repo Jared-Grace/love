@@ -31,14 +31,14 @@ export function app_code_lesson_operators_generic(
       operator_name_sign_math,
       operator_math,
     );
-    let first = list_first(list2);
+    let first = list_first(batch());
     html_cycle_code(
       c,
       "In math, we use " +
         operator_name_sign_math +
         "s to " +
         verb +
-        " numbers: ",
+        " numbers: ",first
     );
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
