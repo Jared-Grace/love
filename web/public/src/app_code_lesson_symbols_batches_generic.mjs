@@ -1,3 +1,4 @@
+import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
@@ -99,7 +100,8 @@ export function app_code_lesson_symbols_batches_generic(
             let a = example_above(container, symbols);
             let a_container = property_get(a, "container");
             app_code_flex_gap(a_container);
-            html_div_text(a_container, quiz_label);
+            let d = html_div_text(a_container, quiz_label);
+            html_style_margin_top(component, value2);
             let bq = batch_get();
             let answers = list_map(bq, symbols_to_answer);
             let answers_unique = list_unique(answers);
