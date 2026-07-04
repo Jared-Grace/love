@@ -1,11 +1,10 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_pad_space_nb } from "../../../love/public/src/text_pad_space_nb.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -39,8 +38,7 @@ export function app_code_lesson_operators_generic(
     let first = list_first(list2);
     let to = text_pad_space_nb(operator_math);
     let replaced = text_replace(first, operator_js, to);
-    let div = html_div(c);
-    html_cycle_code(div, [
+    html_div_cycle_code(c, [
       "In math, we use " +
         operator_name_sign_math +
         "s to " +
@@ -56,11 +54,11 @@ export function app_code_lesson_operators_generic(
         operator_js,
       );
     }
-    html_div_text(
+    html_cycle_code(
       c,
       "In JavaScript, the " +
         text_articled_pad_space(operator_name_js) +
-        "operator can be used to " +
+        " operator can be used to " +
         verb +
         " two numbers",
     );
