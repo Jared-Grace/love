@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
@@ -22,7 +23,9 @@ export function app_code_home(context) {
   let c = app_code_container_light_blue(root);
   html_div_text(c, "Here is an example:");
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
-  function on_batch_item(container, b) {
+  function on_batch_item(container, bs) {
+    function lambda2(item) {}
+    each(list2, lambda2);
     let ex = property_get(b, "example");
     ex(container);
   }
