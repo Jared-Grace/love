@@ -22,13 +22,9 @@ export function app_code_lesson_operators_generic(
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name_sign, operator);
-    let div = html_div_text_multiple(c, [
-      "In math, we use " +
-        operator_name_sign +
-        "s to " +
-        verb +
-        " numbers" +
-        "In JavaScript, a " +
+    html_div_text_multiple(c, [
+      "In math, we use " + operator_name_sign + "s to " + verb + " numbers",
+      "In JavaScript, a " +
         operator_name_sign +
         " can add two numbers together",
     ]);
