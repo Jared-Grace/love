@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { app_code_lesson_same_message } from "../../../love/public/src/app_code_lesson_same_message.mjs";
@@ -15,6 +16,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
   function above(root) {
     let text = app_code_lesson_same_message("the symbols are not separated");
     app_code_container_light_blue_text(root, text);
+    let batch = property_get(r, "batch");
   }
   return r;
 }
