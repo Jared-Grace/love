@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
@@ -7,6 +8,7 @@ export function app_code_lesson_symbols_digits_2() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, "plus sign", "+");
+    let div = html_div_text(parent, text);
   }
   let r5 = app_code_lesson_symbols_counting(
     "Operators (Addition)",
