@@ -20,6 +20,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_identifiers_symbol_first,
     app_code_lesson_identifiers_symbol_first_unseparated,
     app_code_lesson_operators_addition,
+    app_code_lesson_operators_addition_2,
   ];
   return r;
 }
