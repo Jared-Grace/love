@@ -120,6 +120,7 @@ export function app_code_lesson_symbols_batches_generic(
               storage_local_set_context(context, "quiz_index", index_new);
               let li = list_index_last_is(quizzes, index);
               if (li) {
+                storage_local_set_context(context, "quiz_index", 0);
                 function lambda7(value) {
                   let lessons = app_code_lessons();
                   let value_next = list_property_next_value(
