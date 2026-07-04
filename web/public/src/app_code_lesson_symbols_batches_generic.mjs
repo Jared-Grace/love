@@ -1,4 +1,3 @@
-import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { app_code_quiz_index_reset } from "../../../love/public/src/app_code_quiz_index_reset.mjs";
 import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
@@ -56,8 +55,7 @@ export function app_code_lesson_symbols_batches_generic(
 ) {
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
-    let text = app_code_label_symbols();
-    let span = html_div_text(container, text);
+    let span = html_div_text(container, question_label);
     let row = app_code_container_dark(container);
     html_style_assign(row, {
       display: "flex",
