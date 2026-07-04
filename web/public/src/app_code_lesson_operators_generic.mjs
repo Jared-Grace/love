@@ -37,7 +37,7 @@ export function app_code_lesson_operators_generic(
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
-  let max = 10;
+  let max = 7;
   let symbols_to_answer = eval;
   function lambda2() {
     let lefts = range_1(max);
