@@ -38,7 +38,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
     function lambda5(item2, index2) {
-      let jin = js_identifier_not_is(id);
+      let jin = js_identifier_not_is(item2);
     }
     each_index(arguments2, lambda5);
     const a_names = js_identifiers_to_names(arguments2);
