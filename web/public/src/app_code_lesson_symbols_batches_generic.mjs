@@ -50,9 +50,9 @@ export function app_code_lesson_symbols_batches_generic(
   symbols_to_answer,
 ) {
   function example_above(parent, symbols) {
-    let q = app_code_container_light(parent);
-    let span = html_div_text(q, "Symbols: ");
-    let row = app_code_container_dark(q);
+    let container = app_code_container_light(parent);
+    let span = html_div_text(container, "Symbols: ");
+    let row = app_code_container_dark(container);
     html_style_assign(row, {
       display: "flex",
       "flex-wrap": "wrap",
@@ -68,6 +68,7 @@ export function app_code_lesson_symbols_batches_generic(
     let container_answer = app_code_container_light(parent);
     let r4 = {
       container_answer,
+      container,
     };
     return r4;
   }
