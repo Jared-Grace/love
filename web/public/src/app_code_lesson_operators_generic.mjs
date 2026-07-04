@@ -37,11 +37,9 @@ export function app_code_lesson_operators_generic(
     let to = text_pad_space_nb(operator_math);
     let replaced = text_replace(first, operator_js, to);
     html_div_cycle_code(c, [
-      "In math, we use " +
-        operator_name_sign_math +
-        "s to " +
-        verb +
-        " numbers: ",
+      "In math, we use ",
+      operator_math,
+      "s to " + verb + " numbers: ",
       replaced,
     ]);
     let ne = equal_not(operator_js, operator_math);
@@ -52,6 +50,11 @@ export function app_code_lesson_operators_generic(
         operator_name_js,
         operator_js,
       );
+      html_div_cycle_code(c, [
+        "In JavaScript, we do not use ",
+        operator_math,
+        " to " + verb + " numbers",
+      ]);
     }
     html_div_cycle_code(c, [
       "In JavaScript, the ",
