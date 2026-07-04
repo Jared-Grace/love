@@ -1,5 +1,3 @@
-import { not } from "../../../love/public/src/not.mjs";
-import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -61,16 +59,6 @@ export function app_code_lesson_operators_generic(
         " to " + verb + " numbers",
       ]);
     }
-    if (operator_define) {
-      if (not(ne)) {
-        c = app_code_container_light_blue(root);
-      }
-      html_div_cycle_bold(c, [
-        "In JavaScript, an ",
-        "operator",
-        " is one or more symbols that perform an action (operation) using one or more values",
-      ]);
-    }
     let t = null;
     if (ne) {
       t = "Instead";
@@ -80,7 +68,7 @@ export function app_code_lesson_operators_generic(
     html_div_cycle_code(c, [
       t + ", the ",
       operator_js,
-      " operator can be used to " + verb + " two numbers",
+      " symbol can be used to " + verb + " two numbers",
     ]);
   }
   const example_label = "Value of code: ";
