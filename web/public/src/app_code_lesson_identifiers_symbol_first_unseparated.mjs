@@ -1,3 +1,5 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -18,6 +20,8 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
   function above(root) {
     let text = app_code_lesson_same_message("the symbols are not separated");
     app_code_container_light_blue_text(root, text);
+    let c = app_code_container_light_blue(root);
+    let div = html_div(c);
     let batch = property_get(r, "batch");
     let b = batch();
     let first = list_first(b);
