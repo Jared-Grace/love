@@ -9,7 +9,8 @@ import { list_take_less_1 } from "../../../love/public/src/list_take_less_1.mjs"
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 export function list_to_text_or_list_generic(list, word_relationship) {
   let taken = list_take_less_1(list);
-  let last = list_last(list);
+  let last2 = list_last(list);
+  let last = [last2];
   let separator = text_comma_space();
   let betweened = list_between(taken, separator);
   let ne = list_empty_not_is(taken);
