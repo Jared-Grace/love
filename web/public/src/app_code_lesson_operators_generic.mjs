@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
@@ -62,14 +63,20 @@ export function app_code_lesson_operators_generic(
       ]);
     }
     if (operator_define) {
+      if (not(ne)) {
+        c = app_code_container_light_blue(root);
+      }
       html_div_cycle_bold(c, [
         "In JavaScript, an ",
         "operator",
         " is one or more symbols that tell JavaScript to perform an operation (or action) on one or more values",
       ]);
     }
+    if (false) {
+    }
+    let t = text_first_upper_to("in JavaScript, the ");
     html_div_cycle_code(c, [
-      "In JavaScript, the ",
+      t,
       operator_js,
       " operator can be used to " + verb + " two numbers",
     ]);
