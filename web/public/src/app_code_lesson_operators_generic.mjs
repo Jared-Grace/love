@@ -28,9 +28,8 @@ export function app_code_lesson_operators_generic(
         operator_name_sign +
         "s to " +
         verb +
-        " numbers " +
-        ending,
-      "In JavaScript, a " +
+        " numbers" +
+        "In JavaScript, a " +
         operator_name_sign +
         " can add two numbers together",
     ]);
