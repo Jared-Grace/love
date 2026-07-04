@@ -31,6 +31,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     symbols_to_answer,
     2,
     symbol_create,
+    app_code_label_symbols(),
   );
   return r;
 }
