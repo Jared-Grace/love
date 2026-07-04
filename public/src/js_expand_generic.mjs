@@ -1,6 +1,6 @@
+import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -44,7 +44,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       }
       await js_node_atomize(ast2, visitor, variable_name, offset);
     }
-    each_index_async(arguments2, lambda5);
+    await each_index_async(arguments2, lambda5);
     const a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
