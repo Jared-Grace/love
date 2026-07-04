@@ -33,6 +33,21 @@ export function app_code_quiz(context) {
     q(context, container, c, refresh);
   }
   refresh();
+  let example_count = property_get(lesson, "example_count");
+  const plural = example_count >= 2;
+  const root_word = "example";
+  let is_a = null;
+  let another = null;
+  if (plural) {
+    is_a = "are some " + root_word + "s:";
+  } else {
+    is_a = "is an " + root_word + ":";
+  }
+  if (plural) {
+    another = "some more " + root_word + "s:";
+  } else {
+    another = "another " + root_word + ":";
+  }
   const question_text = "and see another example";
   const button_text = "go back and show me another example";
   async function lambda() {
