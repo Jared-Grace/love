@@ -44,11 +44,8 @@ export function app_code_lesson_identifiers_symbol_first() {
         name: "dollar sign",
       },
     ];
-    let mapped2 = list_map_property(list3, property_name);
-    let identifier_symbols_types_plural = list_map(
-      identifier_symbols_types,
-      word_plural,
-    );
+    let mapped2 = list_map_property(identifier_symbols_types, "name");
+    let identifier_symbols_types_plural = list_map(mapped2, word_plural);
     const identifiers_valid_anywhere = list_to_text_and_list(
       identifier_symbols_types_plural,
     );
