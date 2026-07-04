@@ -1,6 +1,6 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
-import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_operators_addition() {
   }
   const example_label = "Code: ";
   const quiz_label = "What is the value of this code? ";
-  let symbols_to_answer = text_size;
+  let symbols_to_answer = js_parse_expression;
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
     id,
