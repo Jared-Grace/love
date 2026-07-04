@@ -1,3 +1,4 @@
+import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -59,6 +60,7 @@ export function app_code_lesson_operators_generic(
         " to " + verb + " numbers",
       ]);
     }
+    html_div_cycle_bold(c2, parts);
     html_div_cycle_code(c, [
       "In JavaScript, the ",
       operator_js,
