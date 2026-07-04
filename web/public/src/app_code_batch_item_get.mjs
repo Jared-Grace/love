@@ -12,6 +12,8 @@ export function app_code_batch_item_get(
 ) {
   let batch = property_get(lesson, "batch");
   let example_count = property_get(lesson, "example_count");
+  if (false) {
+  }
   let container = html_div(parent);
   let next_get = list_iterator_refillable(batch, on_batch);
   let refresh = function lambda() {
