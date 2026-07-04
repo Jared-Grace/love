@@ -73,8 +73,8 @@ export function app_code_lesson_identifiers_symbol_first() {
       doubled,
     });
     let list2 = list_slices_size_cycler(mapped, doubled, min);
-    let size = list_size(list3);
-    list_shuffle_cycled(list2, choices_count);
+    let size = list_size(doubled);
+    list_shuffle_cycled(list2, size);
     let list = list2;
     let next_get_list = list_iterator_refillable(digits_randomly_coupled, noop);
     let next_get = invoke_map(next_get_list, list_join_empty);
