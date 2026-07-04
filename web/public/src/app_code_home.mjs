@@ -13,7 +13,6 @@ import { app_code_batch_item_get } from "../../../love/public/src/app_code_batch
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
@@ -64,18 +63,4 @@ export function app_code_home(context) {
     );
   }
   return;
-  html_p_text_multiple(root, [
-    "In computer programming",
-    "There are symbols",
-    "All 10 of these numbers are different symbols: ",
-  ]);
-  html_p_text_multiple(root, [
-    "In English:",
-    "There are letters",
-    "Letters are inside words",
-    "Words are inside sentences",
-    "Compture programs have a similar structure",
-    "In a computer program, there are symbols",
-    "Symbols are inside ",
-  ]);
 }
