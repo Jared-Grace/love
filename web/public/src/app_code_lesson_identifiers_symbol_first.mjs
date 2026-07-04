@@ -1,3 +1,4 @@
+import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
@@ -98,8 +99,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     html_span_text(div2, "And ");
     function lambda4(item) {
       let l = list_is(item);
-      function lambda5() {}
-      let result = ternary(l, html_cycle_code, lambda5);
+      let result = ternary(l, html_cycle_code, html_span_text_padded_space);
       result(div2, item);
     }
     each(concated, lambda4);
