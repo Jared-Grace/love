@@ -17,7 +17,7 @@ export function app_code_lesson_operators_addition() {
   }
   const example_label = "Code: ";
   const quiz_label = "What is the value of this code? ";
-  let max = 10;
+  let max = 14;
   let symbols_to_answer = js_parse_expression;
   function lambda2() {
     let lefts = range_1(max);
