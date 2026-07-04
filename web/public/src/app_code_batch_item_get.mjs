@@ -8,7 +8,7 @@ export function app_code_batch_item_get(
   on_batch_item,
   on_batch,
 ) {
-  let batch = property_get(lesson, "batch");
+  let batch = property_get(lesson, "batch");$g$lesson$example_count
   let container = html_div(parent);
   let next_get = list_iterator_refillable(batch, on_batch);
   let refresh = function lambda() {
