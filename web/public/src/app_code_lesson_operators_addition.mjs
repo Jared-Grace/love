@@ -50,6 +50,7 @@ export function app_code_lesson_operators_addition() {
     symbols_to_answer,
     1,
     app_code_symbol_separated,
+    app_code_label_symbols(),
   );
   return r5;
 }
