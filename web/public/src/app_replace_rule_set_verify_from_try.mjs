@@ -27,7 +27,7 @@ export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
   function neighbors_get(start) {
     let indices = list_size_range(start);
     function lambda(la) {
-      each_nested_distinct(lambda3, rules_parsed, indices);
+      each_nested_distinct(rules_parsed, indices, lambda3);
       function lambda3(rule, index) {
         let eq = app_replace_rule_valid(rule, index, start);
         if (eq) {

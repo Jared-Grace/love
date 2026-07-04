@@ -1,5 +1,5 @@
 import { each } from "../../../love/public/src/each.mjs";
-export function each_nested_distinct(lambda$a$b, list_a, list_b) {
+export function each_nested_distinct(list_a, list_b, lambda$a$b) {
   'not sure if this function is doing the "distinct" part - maybe this is coded wrong?';
   function lambda_a(a) {
     function lambda_b(b) {
