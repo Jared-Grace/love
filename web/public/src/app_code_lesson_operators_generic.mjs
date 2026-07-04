@@ -72,9 +72,9 @@ export function app_code_lesson_operators_generic(
         " is one or more symbols that tell JavaScript to perform an operation (or action) on one or more values",
       ]);
     }
-    if (false) {
-    }
     let t = text_first_upper_to("in JavaScript, the ");
+    if (not(ne)) {
+    }
     html_div_cycle_code(c, [
       t,
       operator_js,
