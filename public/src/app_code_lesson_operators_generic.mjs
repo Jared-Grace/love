@@ -1,3 +1,4 @@
+import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -29,7 +30,7 @@ export function app_code_lesson_operators_generic(
       operator_name_sign_math,
       operator_math,
     );
-    html_div_text(
+    html_cycle_code(
       c,
       "In math, we use " +
         operator_name_sign_math +
