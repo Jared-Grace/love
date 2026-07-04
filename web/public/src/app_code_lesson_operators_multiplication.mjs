@@ -6,12 +6,10 @@ export function app_code_lesson_operators_multiplication() {
   const operator_name = "multiplication";
   let math_name = operator_name;
   let verb = "multiply";
-  let operator_name_js = error();
-  let operator_js = error();
   let r = app_code_lesson_operators_generic(
-    operator_js,
     operator,
-    operator_name_js,
+    operator,
+    operator_name,
     operator_name,
     verb,
     math_name,
