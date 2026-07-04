@@ -1,4 +1,4 @@
-import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -11,12 +11,7 @@ export function app_code_home(context) {
     let name = property_get(item, "name");
     let id = property_get(item, "id");
     function lambda3() {
-      storage_local_transform_context(
-        context,
-        "lesson_id",
-        value_initial,
-        lambda,
-      );
+      storage_local_set_context(context, "lesson_id", value_initial, lambda);
     }
     let b = app_replace_button_wide(root, name, lambda3);
   }
