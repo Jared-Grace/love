@@ -14,12 +14,7 @@ export function list_to_text_or_list_generic(list, word_relationship) {
   let betweened = list_between(taken, separator);
   let ne = list_empty_not_is(taken);
   if (ne) {
-    let prefix = text_combine_multiple([
-      betweened,
-      " ",
-      word_relationship,
-      " ",
-    ]);
+    let prefix = text_combine_multiple([" ", word_relationship, " "]);
     list_add_first(last, prefix);
   }
   let concated = list_concat(betweened, taken);
