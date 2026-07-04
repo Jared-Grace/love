@@ -34,7 +34,7 @@ export function app_code_home(context) {
   if (example_count >= 2) {
     right = "some more examples:";
   } else {
-    right = "another example:";
+    let another = "another example:";
   }
   let combined = text_combine("Here ", right);
   html_div_text(c, combined);
