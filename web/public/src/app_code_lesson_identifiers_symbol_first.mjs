@@ -95,6 +95,8 @@ export function app_code_lesson_identifiers_symbol_first() {
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
+    function lambda4(item) {}
+    each(list3, lambda4);
     let squashed = list_squash(concated);
     let c3 = text_combine_curried(
       "And " +
