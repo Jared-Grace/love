@@ -12,7 +12,7 @@ export function app_code_lesson_symbols_digits_2() {
       "In math, we use plus signs to add numbers together",
       "In JavaScript, a plus sign can add two numbers together",
     ]);
-  }
+  }$x
   let r5 = app_code_lesson_symbols_counting(
     "Operators (Addition)",
     "operators_addition",
