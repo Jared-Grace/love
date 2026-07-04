@@ -23,7 +23,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let first = list_first(list);
     let question = property_get(first, "question");
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
-      b,
+      question,
     });
   }
   return r;
