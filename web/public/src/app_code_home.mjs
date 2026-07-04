@@ -24,12 +24,12 @@ export function app_code_home(context) {
   above(root);
   let c = app_code_container_light_blue(root);
   app_code_example_answer_gap(c);
-  let right = null;
+  let is_a = null;
   let example_count = property_get(lesson, "example_count");
   if (example_count >= 2) {
-    right = "are some examples:";
+    is_a = "are some examples:";
   } else {
-    right = "is an example:";
+    is_a = "is an example:";
   }
   let another = null;
   if (example_count >= 2) {
@@ -37,7 +37,7 @@ export function app_code_home(context) {
   } else {
     another = "another example:";
   }
-  let combined = text_combine("Here ", right);
+  let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
   function on_batch_item(container, bs) {
