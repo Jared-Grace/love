@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
@@ -23,6 +24,7 @@ export function app_code_lesson_operators_addition() {
   function lambda2() {
     let lefts = range_1(max);
     let rights = range_1(max);
+    let combined = text_combine_multiple(list);
   }
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
