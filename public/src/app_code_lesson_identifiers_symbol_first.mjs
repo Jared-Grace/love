@@ -1,5 +1,5 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
-import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -51,10 +51,9 @@ export function app_code_lesson_identifiers_symbol_first() {
       },
     ];
     function lambda(t) {
-      function lambda3(value) {
-        property_set_exists_not(object, property_name, value);
-      }
-      let transformed = property_transform(t, "name", lambda3);
+      let before = property_get(t, "name");
+      let p = word_plural(root_word);
+      property_set_exists_not(t, "plural", value);
     }
     each(identifier_symbols_types, lambda);
     let mapped2 = list_map_property(identifier_symbols_types, "name");
