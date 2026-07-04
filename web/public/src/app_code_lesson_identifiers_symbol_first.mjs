@@ -92,10 +92,6 @@ export function app_code_lesson_identifiers_symbol_first() {
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
-    log(app_code_lesson_identifiers_symbol_first.name, {
-      concated,
-      mapped2,
-    });
     let div2 = html_div(c);
     html_cycle_code(div2, [
       "And " +
@@ -137,9 +133,6 @@ export function app_code_lesson_identifiers_symbol_first() {
       return joined;
     }
     let mapped3 = list_map_index(list, lambda2);
-    log(app_code_lesson_identifiers_symbol_first.name, {
-      mapped3,
-    });
     return mapped3;
   }
   let name = list_join_empty(["Identifiers (first symbol)"]);
