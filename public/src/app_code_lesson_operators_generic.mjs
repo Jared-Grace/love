@@ -74,7 +74,7 @@ export function app_code_lesson_operators_generic(
       ]);
     }
     let t = "in JavaScript, the ";
-    if (not(ne)) {
+    if (ne) {
       t = text_combine("Instead, ", t);
     }
     let t2 = text_first_upper_to(t);
