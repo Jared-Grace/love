@@ -84,7 +84,7 @@ export function app_code_lesson_symbols_batches_generic(
           app_code_flex_gap(parent);
           let a = example_above(parent, symbols);
           let container = property_get(a, "container");
-          html_div_text(container, example_label);
+          app_code_example_answer_label(container, example_label);
           let div3 = app_code_container_dark(container);
           let s = app_code_symbol_generic(
             div3,
