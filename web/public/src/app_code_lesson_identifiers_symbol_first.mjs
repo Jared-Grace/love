@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
 import { list_transform_at } from "../../../love/public/src/list_transform_at.mjs";
@@ -99,7 +100,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     let concated = list_to_or_list_generic(mapped2, "and");
     function lambda4(item) {
       let l = list_is(item);
-      let result = ternary(condition, on_true, on_false);
+      let result = ternary(l, html_cycle_code, html_span_text);
     }
     each(list3, lambda4);
     let squashed = list_squash(concated);
