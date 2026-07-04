@@ -35,7 +35,7 @@ export function app_code_lesson_operators_addition() {
       each_nested_distinct(lefts, rights, lambda3);
     }
     let list = list_adder(lambda4);
-    list_shuffle(list2);
+    list_shuffle(list);
     return list;
   }
   let name = "Operators (Addition)";
