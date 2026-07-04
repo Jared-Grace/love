@@ -1,4 +1,4 @@
-import { app_code_example } from "../../../love/public/src/app_code_example.mjs";
+import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_code_lesson_text_example_another } from "../../../love/public/src/app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -38,7 +38,7 @@ export function app_code_quiz(context) {
   const question_text = "and see " + another;
   const button_text = "go back and show me " + another;
   async function lambda() {
-    await app_shared_screen_set(context, app_code_example);
+    await app_shared_screen_set(context, app_code_examples);
   }
   app_code_go_back(root, question_text, button_text, lambda);
 }

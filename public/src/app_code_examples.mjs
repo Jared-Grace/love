@@ -18,7 +18,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
-export function app_code_example(context) {
+export function app_code_examples(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
   let above = property_get(lesson, "above");
@@ -72,7 +72,7 @@ export function app_code_example(context) {
         value_initial,
         lambda,
       );
-      await app_shared_screen_set(context, app_code_example);
+      await app_shared_screen_set(context, app_code_examples);
     }
     app_code_go_back(
       root,

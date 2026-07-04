@@ -1,4 +1,4 @@
-import { app_code_example } from "../../../love/public/src/app_code_example.mjs";
+import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -136,7 +136,7 @@ export function app_code_lesson_symbols_batches_generic(
                   value_initial,
                   lambda7,
                 );
-                await app_shared_screen_set(context, app_code_example);
+                await app_shared_screen_set(context, app_code_examples);
               } else {
                 refresh();
               }
