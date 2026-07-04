@@ -42,6 +42,8 @@ import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_identifiers_symbol_first_generic(
   symbol_create,
+  name,
+  id,
 ) {
   function above(root) {
     const identifier_symbols_types = [
