@@ -15,8 +15,8 @@ export function app_code_lesson_operators_addition() {
       "In JavaScript, a plus sign can add two numbers together",
     ]);
   }
-  const example_label = "Number of symbols: ";
-  const quiz_label = "How many symbols are there? ";
+  const example_label = "Code: ";
+  const quiz_label = "What is the value of this code? ";
   let symbols_to_answer = text_size;
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
