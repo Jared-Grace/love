@@ -1,9 +1,9 @@
+import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
@@ -50,7 +50,7 @@ export function app_code_lesson_operators_addition() {
     quiz_label,
     symbols_to_answer,
     1,
-    app_code_symbol_separated,
+    app_code_symbol,
     question_label,
   );
   return r5;
