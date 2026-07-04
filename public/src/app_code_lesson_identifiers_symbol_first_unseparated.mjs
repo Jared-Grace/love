@@ -9,7 +9,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
   let id = "identifiers_symbol_first_unseparated";
   function above(root) {
     let c2 = app_code_container_light_blue(root);
-    let text = app_code_lesson_same_message();
+    let text = app_code_lesson_same_message("there are not numbers underneath");
     let div = html_div_text(c, text);
   }
   let r = app_code_lesson_identifiers_symbol_first_generic(
