@@ -7,7 +7,7 @@ export function app_code_lesson_operators_multiplication() {
   let verb = "multiply";
   let r = app_code_lesson_operators_generic(
     operator,
-    operator,
+    "×",
     operator_name,
     operator_name,
     verb,
