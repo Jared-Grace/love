@@ -28,7 +28,6 @@ import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_e
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
@@ -85,7 +84,7 @@ export function app_code_lesson_symbols_batches_generic(
           app_code_flex_gap(parent);
           let a = example_above(parent, symbols);
           let container = property_get(a, "container");
-          html_text_set(container, example_label);
+          html_div_text(container, example_label);
           let div3 = app_code_container_dark(container);
           let s = app_code_symbol_generic(
             div3,
