@@ -36,15 +36,15 @@ export function app_code_lesson_identifiers_symbol_first() {
     const identifier_symbols_types = [
       {
         name: "letter",
-        examples: [],
+        examples: ["A", "-", "Z"],
       },
       {
         name: "underscore",
-        examples: [],
+        examples: ["_"],
       },
       {
         name: "dollar sign",
-        examples: [],
+        examples: ["$"],
       },
     ];
     let mapped2 = list_map_property(identifier_symbols_types, "name");
