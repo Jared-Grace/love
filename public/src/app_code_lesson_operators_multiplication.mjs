@@ -7,6 +7,7 @@ export function app_code_lesson_operators_multiplication() {
   let math_name = operator_name;
   let verb = "multiply";
   let operator_name_js = error();
+  let operator_js = error();
   let r = app_code_lesson_operators_generic(
     operator_name_js,
     operator_name,
@@ -14,7 +15,7 @@ export function app_code_lesson_operators_multiplication() {
     verb,
     math_name,
     identity,
-    error(),
+    operator_js,
   );
   return r;
 }
