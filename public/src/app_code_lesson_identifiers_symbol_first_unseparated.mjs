@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_dark_inline } from "../../../love/public/src/app_code_container_dark_inline.mjs";
 import { app_code_symbol_separated_curried } from "../../../love/public/src/app_code_symbol_separated_curried.mjs";
 import { app_code_symbol_curried } from "../../../love/public/src/app_code_symbol_curried.mjs";
@@ -29,22 +30,22 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let text = app_code_lesson_same_message("the symbols are not separated");
     app_code_container_light_blue_text(root, text);
     let c = app_code_container_light_blue(root);
-    let div = html_div(c);
     let batch = property_get(r, "batch");
     let b = batch();
     let first = list_first(b);
     let question = property_get(first, "question");
     let split = text_split_empty(question);
-    let span = html_span_text(div, "For example, instead of: ");
-    let before = app_code_container_dark_inline(div);
+    html_div_text(c, "For example, instead of: ");
+    let div3 = html_div(c);
+    let before = app_code_container_dark_inline(div3);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
-    html_span_text(div, " , ");
-    let div2 = html_div(c);
+    html_span_text(div3, " , ");
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
-    html_span_text(div2, "You will now see: ");
-    let after = app_code_container_dark_inline(div2);
+    html_div_text(c, "You will now see: ");
+    let div4 = html_div(c);
+    let after = app_code_container_dark_inline(div4);
     let lambda$item = app_code_symbol_curried(after);
     each(split, lambda$item);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
