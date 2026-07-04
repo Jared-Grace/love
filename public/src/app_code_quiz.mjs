@@ -1,3 +1,4 @@
+import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -25,6 +26,7 @@ export function app_code_quiz(context) {
   function on_batch_item(container, bs, refresh) {
     let b = list_single(bs);
     let c = app_code_container_light_blue(container);
+    app_code_example_answer_gap(c);
     html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");
     let q = list_get(qs, quiz_index);
