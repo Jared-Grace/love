@@ -91,7 +91,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       return concated2;
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
-    let concated = list_to_or_list_generic(list3, word_relationship);
+    let concated = list_to_or_list_generic(mapped2, "and");
     log(app_code_lesson_identifiers_symbol_first.name, {
       concated,
     });
