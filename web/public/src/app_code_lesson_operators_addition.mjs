@@ -20,7 +20,8 @@ export function app_code_lesson_operators_addition() {
   let max = 10;
   let symbols_to_answer = js_parse_expression;
   function lambda2() {
-    let r = range_1(count);
+    let lefts = range_1(max);
+    let rights = range_1(max);
   }
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
