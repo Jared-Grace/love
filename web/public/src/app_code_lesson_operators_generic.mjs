@@ -38,7 +38,12 @@ export function app_code_lesson_operators_generic(
         " numbers",
     );
     let ne = equal_not(operator_js, operator_math);
-    if (false) {
+    if (ne) {
+      app_code_lesson_underscores_define_symbol(
+        c,
+        operator_name_js,
+        operator_js,
+      );
     }
     html_div_text(
       c,
