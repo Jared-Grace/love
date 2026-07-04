@@ -1,3 +1,4 @@
+import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_pad_space_nb } from "../../../love/public/src/text_pad_space_nb.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
@@ -51,7 +52,8 @@ export function app_code_lesson_operators_generic(
         operator_js,
       );
       html_div_cycle_code(c, [
-        "In JavaScript, we do not use ",
+        "In JavaScript, we do not use " +
+          text_articled_pad_space(operator_name_math),
         operator_math,
         " to " + verb + " numbers",
       ]);
