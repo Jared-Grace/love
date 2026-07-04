@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_operators_generic(
       operator_name_sign_math,
       operator_math,
     );
+    let first = list_first(list2);
     html_cycle_code(
       c,
       "In math, we use " +
