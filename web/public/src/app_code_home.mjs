@@ -31,6 +31,11 @@ export function app_code_home(context) {
   } else {
     right = "is an example:";
   }
+  if (example_count >= 2) {
+    right = "some more examples:";
+  } else {
+    right = "another example:";
+  }
   let combined = text_combine("Here ", right);
   html_div_text(c, combined);
   let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
