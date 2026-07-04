@@ -97,15 +97,13 @@ export function app_code_lesson_identifiers_symbol_first() {
     let mapped2 = list_map(identifier_symbols_types, lambda3);
     let concated = list_to_or_list_generic(mapped2, "and");
     let squashed = list_squash(concated);
-    list_add_first(
-      squashed,
+    list_add_first(squashed);
+    let c3 = text_combine_curried(
       "And " +
         identifiers_valid_anywhere +
         " may be used anywhere in an identifier, even as the first symbol",
     );
-    let c3 = text_combine_curried(left);
-    function lambda5() {}
-    list_transform_at(list3, index, lambda5);
+    list_transform_at(squashed, 0, c3);
     log(app_code_lesson_identifiers_symbol_first.name, {
       squashed,
     });
