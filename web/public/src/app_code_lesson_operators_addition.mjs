@@ -19,7 +19,7 @@ export function app_code_lesson_operators_addition() {
       "In JavaScript, a plus sign can add two numbers together",
     ]);
   }
-  const example_label = "Code: ";
+  const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
   let max = 10;
   let symbols_to_answer = eval;
