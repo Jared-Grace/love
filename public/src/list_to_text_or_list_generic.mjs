@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_between } from "../../../love/public/src/list_between.mjs";
 import { text_comma_space } from "../../../love/public/src/text_comma_space.mjs";
@@ -17,7 +18,8 @@ export function list_to_text_or_list_generic(list, word_relationship) {
     let prefix = text_combine_multiple([joined, " ", word_relationship, " "]);
     list_add_first(last, prefix);
   }
-  let concated = list_concat(a, b);
+  let concated = list_concat(joined, taken);
+  let joined2 = list_join_empty(list2);
   let combined = text_combine(prefix, last);
   return combined;
 }
