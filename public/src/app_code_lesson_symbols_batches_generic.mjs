@@ -52,6 +52,7 @@ export function app_code_lesson_symbols_batches_generic(
   symbols_to_answer,
   example_count,
   symbol_create,
+  question_label,
 ) {
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
