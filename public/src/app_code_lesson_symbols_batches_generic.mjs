@@ -165,7 +165,7 @@ export function app_code_lesson_symbols_batches_generic(
                 quiz_answer,
                 on_click,
               );
-              html_style_margin_top(component, value2);
+              html_style_margin_top(b2, '0.1em');
               async function on_click() {
                 let eq2 = equal(quiz_answer, answer);
                 if (eq2) {
