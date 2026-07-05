@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
@@ -21,6 +22,8 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       let transformed = left_transform(left, right);
       let combined3 = js_code_binary_spaced_nb(transformed, operator_js, right);
       let combined4 = text_combine(left, operator_js);
+      function lambda(item) {}
+      each(list2, lambda);
     }
   };
   return r;
