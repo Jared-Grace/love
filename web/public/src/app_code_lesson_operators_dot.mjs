@@ -2,7 +2,6 @@ import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
-import { list_to_and_list_word } from "../../../love/public/src/list_to_and_list_word.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
@@ -72,7 +71,6 @@ export function app_code_lesson_operators_dot() {
     });
     let div2 = html_div(c);
     function lambda4(item) {
-      const word_relationship = list_to_and_list_word();
       let condition = text_is(item);
       let result = ternary(
         condition,
