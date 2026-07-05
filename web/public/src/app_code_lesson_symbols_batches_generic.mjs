@@ -174,7 +174,7 @@ export function app_code_lesson_symbols_batches_generic(
                   html_visibility_visible_multiple(hides);
                 } else {
                   let v = "rgb(225, 79, 79)";
-                  html_style_background_color_set(b2, t);
+                  html_style_background_color_set(b2, v);
                 }
               }
               return b2;
