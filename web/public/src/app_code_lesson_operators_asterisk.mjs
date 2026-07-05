@@ -50,7 +50,11 @@ export function app_code_lesson_operators_asterisk() {
     html_div_cycle_code(c3, ["However we cannot do this for ", operator]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
-      ["Therefore, ", operator, " must have a value on the right side"],
+      [
+        "Therefore, ",
+        operator,
+        " must have values both on the left side and the right side",
+      ],
       [
         "And if ",
         operator,
