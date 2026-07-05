@@ -62,7 +62,7 @@ export function app_code_lesson_operators_dot() {
     function lambda4(item) {
       let condition = text_is(item);
       let result = ternary(
-        condition,
+        condition, 
         html_span_text_padded_space, 
         html_span_text_code_dark,
       );
