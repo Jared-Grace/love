@@ -42,7 +42,7 @@ export function app_code_lesson_operators_dot() {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(operator, digit_positive_random);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
-    d=html_div_text(
+    let d = html_div_text(
       c,
       "In JavaScript, " + operator_name_math_articled + " is a symbol like ",
     );
