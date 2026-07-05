@@ -23,7 +23,7 @@ export function app_code_lesson_operators_addition_2() {
     let combined = digit_random_operator(operator);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
-      "In math, " +
+      "In math and JavaScript, " +
         operator_name_math_articled +
         "can be used to make a number negative: ",
       combined,
@@ -45,11 +45,6 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " :",
       combined2,
-    ]);
-    html_div_cycle_code(c, [
-      "In JavaScript, the ",
-      operator,
-      " symbol can be used to " + verb + " two numbers",
     ]);
   }
   const example_label = "Value of code: ";
