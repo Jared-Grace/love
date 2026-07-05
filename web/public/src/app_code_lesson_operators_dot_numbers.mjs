@@ -1,3 +1,4 @@
+import { app_code_symbols_eval } from "../../../love/public/src/app_code_symbols_eval.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -14,8 +15,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
-import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
@@ -90,11 +89,7 @@ export function app_code_lesson_operators_dot_numbers() {
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
-    function lambda2() {
-      eval(symbols);
-    }
-    let valid = throws_not(lambda2);
-    let result = boolean_to_text_validity(valid);
+    let result = app_code_symbols_eval(symbols);
     return result;
   };
   let inside = text_first_upper_to(math_name);
