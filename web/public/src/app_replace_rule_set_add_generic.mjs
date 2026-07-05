@@ -16,4 +16,5 @@ export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
     list_add(elements, expression);
   }
   let output = await function_transform(fns_list.name, lambda);
+  return unique;
 }
