@@ -4,12 +4,12 @@ export function each_nested_args_both_range_1_list_adder(
   max,
   lambda$left$right$la,
 ) {
-  function lambda4(la) {
+  function lambda(la) {
     each_nested_args_both_range_1(max, lambda$left$right);
     function lambda$left$right(left, right) {
       lambda$left$right$la(left, right, la);
     }
   }
-  let list = list_adder(lambda4);
+  let list = list_adder(lambda);
   return list;
 }
