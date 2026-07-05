@@ -65,7 +65,7 @@ export function app_code_lesson_operators_asterisk() {
       ],
       ["", combined],
       [
-        "And if ",
+        "And, likewise, if ",
         operator,
         " does not have anything on its left side, then that is also invalid code: ",
       ],
