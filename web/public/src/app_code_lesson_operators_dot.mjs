@@ -1,3 +1,4 @@
+import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -45,7 +46,7 @@ export function app_code_lesson_operators_dot() {
       "In JavaScript, " +
         operator_name_math_articled +
         " is a symbol like " +
-        sign +
+        list_to_text_or_list([]) +
         ": ",
       combined,
     ]);
