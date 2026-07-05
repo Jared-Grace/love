@@ -1,6 +1,7 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { each_nested_args_both_range_1 } from "../../../love/public/src/each_nested_args_both_range_1.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
@@ -30,11 +31,14 @@ export function app_code_lesson_operators_dot_numbers() {
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
   let max = app_code_lesson_operators_generic_batch_get_max();
-  let batch = function batch_get() {$x
-    let list = each_nested_args_both_range_1_list_adder(
-      max,
-      lambda$left$right$la,
-    );
+  let batch = function batch_get() {
+    function lambda(la2) {
+      each_nested_args_both_range_1(max, lambda$left$right);
+      function lambda$left$right(left3, right3) {
+        lambda$left$right$la(left3, right3, la2);
+      }
+    }
+    let list = list_adder(lambda);
     function lambda$left$right$la(left2, right2, la) {
       let combined = js_code_binary(left2, operator, right2);
       let combined2 = js_code_binary(left2, operator);
