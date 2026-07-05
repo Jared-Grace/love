@@ -1,5 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
-import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
+import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { digit_positive_random_operator } from "../../../love/public/src/digit_positive_random_operator.mjs";
 import { add } from "../../../love/public/src/add.mjs";
@@ -41,10 +40,7 @@ export function app_code_lesson_operators_addition_2() {
       " : ",
     ]);
     const codes = [first, combined3];
-    function lambda(code) {
-      html_div_code(c2, code);
-    }
-    each(codes, lambda);
+    html_div_code_multiple(c2, codes);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
