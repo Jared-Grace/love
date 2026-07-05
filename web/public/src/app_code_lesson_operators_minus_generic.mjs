@@ -106,7 +106,7 @@ export function app_code_lesson_operators_minus_generic(
     example_label,
     quiz_label,
     symbols_to_answer,
-    1,
+    2,
     app_code_symbol,
     question_label,
   );
