@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -77,6 +78,8 @@ export function app_code_lesson_operators_dot() {
         html_span_text_padded_space,
         html_span_text_code_dark,
       );
+      if (not(b)) {
+      }
       result(div2, item);
     }
     each(concated, lambda4);
