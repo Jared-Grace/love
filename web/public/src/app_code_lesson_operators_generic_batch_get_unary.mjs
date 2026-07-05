@@ -19,9 +19,12 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       let combined2 = text_combine(operator_js, right);
       la(combined2);
       let combined3 = text_combine(right, operator_js);
+      la(combined3);
       let transformed = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
       la(combined);
+      let combined4 = text_combine(left, operator_js);
+      la(combined4);
     }
   };
   return r;
