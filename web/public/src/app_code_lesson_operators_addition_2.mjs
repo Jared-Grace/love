@@ -55,9 +55,9 @@ export function app_code_lesson_operators_addition_2() {
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code(c4, [
-      "Therefore, if " +
-        operator +
-        " only has a number on the left side, that is invalid: ",
+      "Therefore, if ",
+      operator,
+      " only has a number on the left side, that is invalid: ",
     ]);
     let combined5 = text_combine("invalid", operator);
     html_div_code(c4, combined5);
