@@ -1,6 +1,5 @@
 import { app_code_lesson_operators_asterisk } from "../../../love/public/src/app_code_lesson_operators_asterisk.mjs";
 import { app_code_lessons_fns_invalid } from "../../../love/public/src/app_code_lessons_fns_invalid.mjs";
-import { app_code_lesson_operators_dot } from "../../../love/public/src/app_code_lesson_operators_dot.mjs";
 import { app_code_lesson_operators_minus } from "../../../love/public/src/app_code_lesson_operators_minus.mjs";
 import { app_code_lesson_operators_division } from "../../../love/public/src/app_code_lesson_operators_division.mjs";
 import { app_code_lesson_operators_multiplication } from "../../../love/public/src/app_code_lesson_operators_multiplication.mjs";
@@ -34,8 +33,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_minus,
     app_code_lesson_operators_asterisk,
   ];
-  {
-    let r2 = app_code_lesson_operators_dot();
-  }
+  ("app_code_lesson_operators_dot");
   return r;
 }
