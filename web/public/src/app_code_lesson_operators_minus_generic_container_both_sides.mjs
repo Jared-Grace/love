@@ -12,11 +12,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   example_get,
 ) {
   let c = app_code_container_light_blue(root);
-  let u = text_first_upper_to(
-    "when " +
-      text_when +
-      " there is" +
-      text_articled_pad_space(noun) +
+  let u = text_first_upper_to(text_when
+ +
       "on both the left and right sides of the ",
   );
   html_div_cycle_code(c, [u, operator, " : "]);
