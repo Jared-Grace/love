@@ -60,7 +60,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code_multiple(c2, ["person.name", "book.chapter_count"]);
-    let combined = js_code_binary("person", operator, "age");
+    let combined = js_code_binary("shirt", operator, "size");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
