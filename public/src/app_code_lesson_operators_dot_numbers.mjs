@@ -66,7 +66,7 @@ export function app_code_lesson_operators_dot_numbers() {
       operator,
       " with numbers",
     ]);
-    html_div_text(c2, "We cannot have a number on the right:");
+    html_div_text(c3, "We cannot have a number on the right:");
     return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     app_code_lesson_operators_asterisk_generic_invalid(root, operator);
