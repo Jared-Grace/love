@@ -1,3 +1,4 @@
+import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -12,7 +13,11 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
   app_code_lesson_operators_minus_generic_container_both_sides(
     root,
     operator,
-    word_add_ing(verb) + " two numbers",
+    "when " +
+      word_add_ing(verb) +
+      " two numbers" +
+      " there is" +
+      text_articled_pad_space(noun),
     "number",
     js_code_binary_spaced_nb,
     example_get,
