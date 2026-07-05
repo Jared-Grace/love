@@ -34,14 +34,14 @@ export function app_code_lesson_operators_addition_2() {
         verb +
         "ing two numbers, there is a number on both sides of the ",
       operator,
-      " :",
+      " : ",
       first,
     ]);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
-      " :",
+      " : ",
       combined2,
     ]);
   }
