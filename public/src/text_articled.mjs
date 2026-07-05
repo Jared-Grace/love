@@ -3,8 +3,9 @@ import { list_vowels } from "../../../love/public/src/list_vowels.mjs";
 import { list_any_starts_with } from "../../../love/public/src/list_any_starts_with.mjs";
 export function text_articled(noun) {
   let exceptions = ["something"];
-  let includes = list_includes(list, item);
-  if (false) {
+  let includes = list_includes(exceptions, noun);
+  if (includes) {
+    return noun;
   }
   let article = "a";
   let vowels = list_vowels();
