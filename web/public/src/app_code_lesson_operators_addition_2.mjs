@@ -1,3 +1,4 @@
+import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
@@ -9,8 +10,6 @@ import { text_first_upper_to } from "../../../love/public/src/text_first_upper_t
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
-import { text_replace } from "../../../love/public/src/text_replace.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_addition_2() {
@@ -22,16 +21,14 @@ export function app_code_lesson_operators_addition_2() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name, operator);
-    let list2 = batch();
-    let first = list_first(list2);
-    let replaced = text_replace(first, operator, operator);
-    let combined = text_combine(left, right);
+    let right = digit_random();
+    let combined = text_combine(operator, right);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math, " +
         operator_name_math_articled +
         "can be used to make a number negative: ",
-      replaced,
+      combined,
     ]);
     let ne = equal_not(operator, operator);
     if (ne) {
