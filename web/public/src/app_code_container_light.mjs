@@ -1,3 +1,4 @@
+import { html_font_color_set_white } from "../../../love/public/src/html_font_color_set_white.mjs";
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { app_replace_button_symbol_style_box_shadow_value_width_set } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow_value_width_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
@@ -5,6 +6,7 @@ import { app_code_container_generic } from "../../../love/public/src/app_code_co
 export function app_code_container_light(parent) {
   let container = app_code_container_generic(parent);
   html_style_background_color_set(container, "hsl(211, 53%, 39%)");
+  html_font_color_set_white(container);
   html_style_margin_y(container, 0.3 + "em");
   app_replace_button_symbol_style_box_shadow_value_width_set(
     container,
