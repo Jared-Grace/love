@@ -40,12 +40,13 @@ export function app_code_lesson_operators_minus_generic(
         ": ",
       combined,
     ]);
+    function lambda3() {}
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
       verb,
       left_transform,
-      batch,
+      lambda3,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
