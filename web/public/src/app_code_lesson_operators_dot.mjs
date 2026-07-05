@@ -56,7 +56,7 @@ export function app_code_lesson_operators_dot() {
       operator,
       left_transform,
       "using the dot",
-      "value, such as an identifier,",
+      "something",
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
