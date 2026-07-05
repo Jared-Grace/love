@@ -21,7 +21,10 @@ export function app_code_lesson_operators_addition_2() {
   const operator_name = "minus sign";
   let math_name = "negation";
   let verb = "subtract";
-  let batch = app_code_lesson_operators_generic_batch_get(operator, add);
+  let batch_subtraction = app_code_lesson_operators_generic_batch_get(
+    operator,
+    add,
+  );
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = digit_positive_random_operator(operator);
@@ -32,7 +35,7 @@ export function app_code_lesson_operators_addition_2() {
         "can be used to make a number negative: ",
       combined,
     ]);
-    let list2 = batch();
+    let list2 = batch_subtraction();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
     const right = "right";
@@ -85,7 +88,7 @@ export function app_code_lesson_operators_addition_2() {
     id,
     above,
     noop,
-    batch,
+    batch_subtraction,
     example_label,
     quiz_label,
     symbols_to_answer,
