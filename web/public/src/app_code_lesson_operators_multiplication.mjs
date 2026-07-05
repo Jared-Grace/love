@@ -1,11 +1,11 @@
-import { js_operator_multiplication_name } from "../../../love/public/src/js_operator_multiplication_name.mjs";
+import { js_operator_asterisk_name } from "../../../love/public/src/js_operator_asterisk_name.mjs";
 import { js_operator_multiplication_verb } from "../../../love/public/src/js_operator_multiplication_verb.mjs";
 import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_operators_generic } from "../../../love/public/src/app_code_lesson_operators_generic.mjs";
 export function app_code_lesson_operators_multiplication() {
   const operator_js = js_operator_multiplication();
-  const operator_name_js = js_operator_multiplication_name();
+  const operator_name_js = js_operator_asterisk_name();
   const operator_math = "×";
   let math_name = "multiplication";
   let operator_name_math = math_name + " sign";
