@@ -4,7 +4,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
-import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
+import { each_nested_args_both } from "../../../love/public/src/each_nested_args_both.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
@@ -27,7 +27,7 @@ export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
   function neighbors_get(start) {
     let indices = list_size_range(start);
     function lambda(la) {
-      each_nested_distinct(rules_parsed, indices, lambda3);
+      each_nested_args_both(rules_parsed, indices, lambda3);
       function lambda3(rule, index) {
         let eq = app_replace_rule_valid(rule, index, start);
         if (eq) {
