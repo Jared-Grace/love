@@ -45,8 +45,8 @@ export function app_code_lesson_operators_addition_2() {
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
       " : ",
-      combined2,
     ]);
+    html_div_code_multiple(c2, [combined2]);
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
