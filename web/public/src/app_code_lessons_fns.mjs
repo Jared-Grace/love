@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_dot } from "../../../love/public/src/app_code_lesson_operators_dot.mjs";
 import { app_code_lesson_operators_slash_forward } from "../../../love/public/src/app_code_lesson_operators_slash_forward.mjs";
 import { app_code_lesson_operators_asterisk } from "../../../love/public/src/app_code_lesson_operators_asterisk.mjs";
 import { app_code_lessons_fns_invalid } from "../../../love/public/src/app_code_lessons_fns_invalid.mjs";
@@ -34,7 +35,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_minus,
     app_code_lesson_operators_asterisk,
     app_code_lesson_operators_slash_forward,
+    app_code_lesson_operators_dot,
   ];
-  ("app_code_lesson_operators_dot");
   return r;
 }
