@@ -8,7 +8,7 @@ export function app_code_container_light(parent) {
   html_style_margin_y(container, 0.3 + "em");
   app_replace_button_symbol_style_box_shadow_value_width_set(
     container,
-    "hsl(210, 64%, 74%)",
+    "hsl(210, 59%, 67%)",
     "0.05",
   );
   return container;
