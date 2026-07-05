@@ -1,3 +1,4 @@
+import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { digit_positive_random_operator } from "../../../love/public/src/digit_positive_random_operator.mjs";
 import { add } from "../../../love/public/src/add.mjs";
@@ -38,7 +39,7 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " : ",
     ]);
-    html_div_cycle_code(c2, [first]);
+    html_div_code(c2, first);
     html_div_cycle_code(c2, [combined3]);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
