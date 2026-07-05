@@ -51,7 +51,12 @@ export function app_code_lesson_operators_dot_numbers() {
     ]);
     html_div_code(c2, "person.name");
     let c4 = app_code_container_light_blue(parent);
-    let div = html_div_cycle_code(parent2, parts);
+    let div = html_div_cycle_code(c4, [
+      "We can also use ",
+      operator,
+      " as a decimal point:",
+    ]);
+    html_div_code(c3, "3.14159");
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
