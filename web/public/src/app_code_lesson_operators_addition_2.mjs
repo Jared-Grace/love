@@ -1,5 +1,4 @@
-import { digit_random } from "../../../love/public/src/digit_random.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { digit_random_operator } from "../../../love/public/src/digit_random_operator.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -7,7 +6,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -22,8 +20,7 @@ export function app_code_lesson_operators_addition_2() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name, operator);
-    let right = digit_random();
-    let combined = text_combine(operator, right);
+    let combined = digit_random_operator(operator);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math, " +
@@ -33,22 +30,22 @@ export function app_code_lesson_operators_addition_2() {
     ]);
     let list2 = batch();
     let first = list_first(list2);
-    let ne = equal_not(operator, operator);
-    if (ne) {
-      c = app_code_container_light_blue(root);
-      app_code_lesson_underscores_define_symbol(c, operator_name, operator);
-      html_div_cycle_code(c, [
-        "In JavaScript, we do not use" + operator_name_math_articled,
-        operator,
-        " to " + verb + " numbers",
-      ]);
-    }
+    html_div_cycle_code(c, [
+      "When " +
+        verb +
+        "ing two numbers, there is a number on both sides of the ",
+      operator,
+      " :",
+      first,
+    ]);
+    html_div_cycle_code(c, [
+      "However, when making a number negative, there is only a number on right sides of the ",
+      operator,
+      " :",
+      first,
+    ]);
     let t = null;
-    if (ne) {
-      t = "Instead";
-    } else {
-      t = "In JavaScript";
-    }
+    t = "In JavaScript";
     html_div_cycle_code(c, [
       t + ", the ",
       operator,
