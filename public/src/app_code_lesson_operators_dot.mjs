@@ -31,7 +31,7 @@ import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_n
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
+import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
 import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
@@ -54,7 +54,7 @@ export function app_code_lesson_operators_dot() {
     ]);
     let p = js_operator_plus();
     let r2 = js_operator_minus();
-    let r22 = js_operator_multiplication();
+    let r22 = js_operator_asterisk();
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
     let mapped = list_map_property_to(operators_text, "operator");
