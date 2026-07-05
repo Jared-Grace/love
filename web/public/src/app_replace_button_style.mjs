@@ -7,7 +7,7 @@ export function app_replace_button_style(b) {
   let c = app_replace_button_rule_background_color();
   html_style_background_color_set(b, c);
   app_replace_button_symbol_style_box_shadow_value_width_set(
-    container,
+    b,
     "#9a9a9a",
     "0.05",
   );
