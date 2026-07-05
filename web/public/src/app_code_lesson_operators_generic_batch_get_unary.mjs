@@ -1,3 +1,4 @@
+import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { text_random_or_empty } from "../../../love/public/src/text_random_or_empty.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -20,7 +21,8 @@ export function app_code_lesson_operators_generic_batch_get_unary(
     return list;
     function lambda$left$right$la(left, right, la) {
       let combined = text_combine(operator_js, right);
-      let r2 = text_random_or_empty(text_space_nb());
+      let t = text_space_nb();
+      let r2 = text_random_or_empty(t);
       let combined2 = text_combine_multiple([right, r2, operator_js]);
       let transformed = left_transform(left, right);
       let combined3 = js_code_binary_spaced_nb(transformed, operator_js, right);
