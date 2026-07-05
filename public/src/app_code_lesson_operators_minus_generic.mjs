@@ -1,4 +1,4 @@
-import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
+import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
@@ -60,7 +60,7 @@ export function app_code_lesson_operators_minus_generic(
     batch,
     example_label,
     quiz_label,
-    app_code_lesson_symbols_identifiers_valid,
+    app_code_symbols_eval_valid_expression,
     2,
     app_code_symbol,
     question_label,
