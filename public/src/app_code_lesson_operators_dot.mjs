@@ -57,7 +57,7 @@ export function app_code_lesson_operators_dot() {
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     let d = html_div_text(
       c,
-      "In JavaScript, " + operator_name_math_articled + " is a symbol like ",
+      "In JavaScript, " + operator_name_math_articled + " is a symbol like: ",
     );
     let p = js_operator_plus();
     let r2 = js_operator_minus();
