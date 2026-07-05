@@ -18,6 +18,7 @@ export function app_code_lesson_operators_generic_batch_get_unary(
     function lambda$left$right$la(left, right, la) {
       let combined2 = text_combine(operator_js, right);
       la(combined2);
+      let combined3 = text_combine(left2, right2);
       let transformed = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
       la(combined);
