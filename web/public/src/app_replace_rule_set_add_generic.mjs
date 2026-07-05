@@ -8,13 +8,13 @@ import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
   let f_names = await functions_names();
   const f = fn_base_name;
-  let unique = text_unique(f_names, f, "_");
-  await function_copy(f, unique);
-  let expression = js_parse_expression(unique);
+  let name_new = text_unique(f_names, f, "_");
+  await function_copy(f, name_new);
+  let expression = js_parse_expression(name_new);
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     list_add(elements, expression);
   }
   let output = await function_transform(fns_list.name, lambda);
-  return unique;
+  return name_new;
 }
