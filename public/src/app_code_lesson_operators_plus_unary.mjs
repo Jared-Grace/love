@@ -9,12 +9,6 @@ import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parent
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
-import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
-import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
-import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
@@ -52,45 +46,6 @@ export function app_code_lesson_operators_plus_unary() {
         ": ",
       combined,
     ]);
-    let list2 = batch_binary();
-    let first = list_first(list2);
-    let c2 = app_code_container_light_blue(root);
-    const right = "right";
-    let left = "left";
-    let combined3 = js_code_binary_spaced_nb(left, operator, right);
-    html_div_cycle_code(c2, [
-      "When " +
-        verb +
-        "ing two numbers, there is a number on both the left and right sides of the ",
-      operator,
-      " : ",
-    ]);
-    html_div_code_multiple(c2, [first, combined3]);
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
-      "However, when making a number " +
-        sign +
-        ", there is only a number on right side of the ",
-      operator,
-      " : ",
-    ]);
-    let combined2 = text_combine_right_fn(
-      operator,
-      digit_negative_random_parenthesis_wrapped,
-    );
-    let combined4 = text_combine(operator, right);
-    html_div_code_multiple(c3, [combined2, combined4]);
-    let c4 = app_code_container_light_blue(root);
-    html_div_cycle_code_multiple(c4, [
-      ["Therefore, ", operator, " must have a value on the right side"],
-      [
-        "And if ",
-        operator,
-        " does not have anything on its right side, then that is invalid code: ",
-      ],
-    ]);
-    let combined5 = text_combine("invalid", operator);
-    html_div_code(c4, combined5);
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
