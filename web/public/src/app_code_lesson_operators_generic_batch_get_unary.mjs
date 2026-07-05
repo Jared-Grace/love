@@ -28,7 +28,7 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       let combined4 = text_left_right_middle_random_space_nb(left, operator_js);
       each([combined, combined2, combined3, combined4], la);
     }
-    ("hence cycle of 2: (valid, invaid)");
+    ("hence cycle of 2: (valid, invalid)");
     list_shuffle_cycled(list, 2);
     return list;
   };
