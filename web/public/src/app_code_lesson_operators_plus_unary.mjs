@@ -1,3 +1,4 @@
+import { js_code_negation } from "../../../love/public/src/js_code_negation.mjs";
 import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
@@ -26,7 +27,8 @@ export function app_code_lesson_operators_plus_unary() {
     let list = list_adder_each(max, on_each);
     function on_each(item, la) {
       let combined5 = text_combine(operator, item);
-      let wrapped = js_code_wrap_parenthesis(item);
+      let inside2 = js_code_negation(item);
+      let wrapped = js_code_wrap_parenthesis(inside2);
       let combined2 = text_combine(operator, item);
       each([combined5, combined2], la);
     }
