@@ -11,18 +11,17 @@ export function app_code_lesson_operators_generic_batch_get(
     function lambda4(la) {
       each_nested_args_both_range_1(max, lambda$left$right);
       function lambda$left$right(left, right) {
-        let transformed = left_transform(left, right);
-        let combined = js_code_binary_spaced_nb(
-          transformed,
-          operator_js,
-          right,
-        );
-        la(combined);
+        lambda$left$right$la(left, right, la);
       }
     }
     let list = list_adder(lambda4);
     list_shuffle(list);
     return list;
+    function lambda$left$right$la(left, right, la) {
+      let transformed = left_transform(left, right);
+      let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
+      la(combined);
+    }
   };
   return r;
 }
