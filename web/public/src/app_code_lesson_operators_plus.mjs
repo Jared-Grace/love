@@ -3,7 +3,7 @@ import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mj
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus() {
   const operator = js_operator_minus();
-  const operator_name = "minus sign";
+  const operator_name = "plus sign";
   let math_name = "negation";
   let verb = "subtract";
   let sign = "negative";
