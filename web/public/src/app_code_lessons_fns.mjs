@@ -30,6 +30,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_division,
     app_code_lesson_operators_minus,
     app_code_lesson_operators_plus,
+    app_code_lesson_operators_minus_2,
   ];
   return r;
 }
