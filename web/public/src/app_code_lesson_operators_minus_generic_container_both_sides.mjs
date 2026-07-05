@@ -11,7 +11,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   example_get,
 ) {
   let first = example_get();
-  let c2 = app_code_container_light_blue(root);
+  let c = app_code_container_light_blue(root);
   const right = "right";
   let left = "left";
   let combined3 = code_to(left, operator, right);
@@ -22,6 +22,6 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
       noun +
       " on both the left and right sides of the ",
   );
-  html_div_cycle_code(c2, [u, operator, " : "]);
-  html_div_code_multiple(c2, [first, combined3]);
+  html_div_cycle_code(c, [u, operator, " : "]);
+  html_div_code_multiple(c, [first, combined3]);
 }
