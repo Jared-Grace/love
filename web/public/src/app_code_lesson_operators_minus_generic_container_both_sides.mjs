@@ -8,6 +8,10 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   operator,
   verb,
 ) {
+  let batch_binary = app_code_lesson_operators_generic_batch_get(
+    operator,
+    left_transform,
+  );
   let list2 = batch_binary();
   let first = list_first(list2);
   let c2 = app_code_container_light_blue(root);
