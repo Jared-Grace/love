@@ -95,7 +95,7 @@ export function app_code_lesson_operators_minus() {
     id,
     above,
     noop,
-    batch_subtraction,
+    batch,
     example_label,
     quiz_label,
     symbols_to_answer,
