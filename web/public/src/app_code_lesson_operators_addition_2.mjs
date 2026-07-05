@@ -55,11 +55,7 @@ export function app_code_lesson_operators_addition_2() {
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
-      [
-        "Therefore, if ",
-        operator,
-        " only has a number on the left side, that is invalid: ",
-      ],
+      ["Therefore, a ", operator, " must have a value on the right side"],
       [
         "Therefore, if ",
         operator,
