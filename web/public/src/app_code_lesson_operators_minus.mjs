@@ -61,7 +61,6 @@ export function app_code_lesson_operators_minus() {
     ]);
     html_div_code_multiple(c2, [first, combined3]);
     let c3 = app_code_container_light_blue(root);
-    let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c3, [
       "However, when making a number ",
       sign,
@@ -69,6 +68,7 @@ export function app_code_lesson_operators_minus() {
       operator,
       " : ",
     ]);
+    let combined2 = digit_positive_random_operator(operator);
     let combined4 = text_combine(operator, right);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
