@@ -13,8 +13,8 @@ export function app_code_lesson_operators_generic_batch_get(
     let lefts = range_1(max);
     let rights = range_1(max);
     function lambda4(la) {
-      async function lambda3(left, right) {
-        await newFunction(left, right, la);
+      function lambda3(left, right) {
+        newFunction(left, right, la);
       }
       each_nested_distinct(lefts, rights, lambda3);
     }
