@@ -50,6 +50,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
+    let c4 = app_code_container_light_blue(parent);
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
