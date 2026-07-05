@@ -35,10 +35,9 @@ export function app_code_lesson_operators_minus_generic(
     function lambda$left$right$la(left, right, la) {
       let transformed = left_transform(left, right);
       let combined6 = js_code_binary_spaced_nb(transformed, operator, right);
-      let combined22 = text_left_right_middle_random_space_nb(operator, right);
-      let transformed2 = left_transform(left, right);
-      let combined3 = js_code_binary_spaced_nb(transformed2, operator, right);
-      let combined42 = text_left_right_middle_random_space_nb(left, operator);
+      let combined22 = text_left_right_middle_random_space_nb(left, operator);
+      let combined3 = text_combine(operator, right);
+      let combined42 = text_left_right_middle_random_space_nb(right, operator);
       each([combined6, combined22, combined3, combined42], la);
     }
     list_shuffle_cycled(list, 4);
