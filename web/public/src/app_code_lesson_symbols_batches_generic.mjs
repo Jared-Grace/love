@@ -173,7 +173,7 @@ export function app_code_lesson_symbols_batches_generic(
                   app_shared_button_screen_green_style_assign(b2);
                   html_visibility_visible_multiple(hides);
                 } else {
-                  let v = "#d90000ff";
+                  let v = "rgb(225, 79, 79)";
                   html_style_background_color_set(b2, t);
                 }
               }
