@@ -3,7 +3,7 @@ import { app_code_lesson_identifiers_underscores_generic } from "../../../love/p
 export function app_code_lesson_identifiers_dollar_signs() {
   const separator_valid = "$";
   let separator_valid_name = "dollar sign";
-  const separator_invalid = ".";
+  const separator_invalid = js_operator_dot();
   let separator_invalid_name = "period";
   let r = app_code_lesson_identifiers_underscores_generic(
     separator_invalid_name,
@@ -16,3 +16,7 @@ export function app_code_lesson_identifiers_dollar_signs() {
   );
   return r;
 }
+function js_operator_dot() {
+  return ".";
+}
+
