@@ -59,7 +59,6 @@ export function app_code_lesson_operators_addition_2() {
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
-  let max = 7;
   let symbols_to_answer = eval;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
