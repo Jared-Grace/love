@@ -1,3 +1,4 @@
+import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
