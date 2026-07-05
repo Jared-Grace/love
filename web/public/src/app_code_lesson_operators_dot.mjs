@@ -76,6 +76,7 @@ export function app_code_lesson_operators_dot() {
       root,
       operator,
       verb,
+      left_transform,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
