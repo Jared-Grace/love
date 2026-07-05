@@ -1,3 +1,4 @@
+import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_multiplication_verb } from "../../../love/public/src/js_operator_multiplication_verb.mjs";
 import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
@@ -12,6 +13,7 @@ import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
@@ -34,6 +36,13 @@ export function app_code_lesson_operators_asterisk() {
       verb,
       left_transform,
     );
+    let c3 = app_code_container_light_blue(root);
+    let r2 = js_operator_minus();
+    html_div_cycle_code(c3, [
+      "For ",
+      r2,
+      " it's possible to only have a number on the right: ",
+    ]);
     let combined2 = text_combine_right_fn(operator, digit_positive_random);
     const right2 = "right";
     let combined4 = text_combine(operator, right2);
