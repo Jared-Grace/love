@@ -1,4 +1,4 @@
-import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
+import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
@@ -9,11 +9,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_generic(
@@ -75,22 +70,11 @@ export function app_code_lesson_operators_generic(
   const quiz_label = "What is the value of this code? ";
   let max = 7;
   let symbols_to_answer = eval;
-  let batch = function lambda() {
-    let lefts = range_1(max);
-    let rights = range_1(max);
-    function lambda4(la) {
-      function lambda3(left, right) {
-        let transformed = left_transform(left, right);
-        let list3 = list_between_space_nb([transformed, operator_js, right]);
-        let combined = text_combine_multiple(list3);
-        la(combined);
-      }
-      each_nested_distinct(lefts, rights, lambda3);
-    }
-    let list = list_adder(lambda4);
-    list_shuffle(list);
-    return list;
-  };
+  let batch = app_code_lesson_operators_generic_batch_get(
+    max,
+    left_transform,
+    operator_js,
+  );
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
