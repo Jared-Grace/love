@@ -30,7 +30,7 @@ export function app_code_lesson_operators_addition_2() {
     let list2 = batch();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
-    let combined3 = js_code_binary_spaced_nb();
+    let combined3 = js_code_binary_spaced_nb("left", operator, "right");
     html_div_cycle_code(c2, [
       "When " +
         verb +
