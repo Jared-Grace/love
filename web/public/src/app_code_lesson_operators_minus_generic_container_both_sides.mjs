@@ -1,4 +1,4 @@
-import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { word_add_ing } from "../../../love/public/src/word_add_ing.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   const right = "right";
   let left = "left";
   let combined3 = js_code_binary_spaced_nb(left, operator, right);
-  let u = text_upper_to(
+  let u = text_first_upper_to(
     word_first +
       "when " +
       word_add_ing(verb) +
