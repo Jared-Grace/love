@@ -88,10 +88,6 @@ export function app_code_lesson_operators_dot_numbers() {
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda(symbols) {
-    let result = app_code_symbols_eval(symbols);
-    return result;
-  };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
@@ -104,7 +100,7 @@ export function app_code_lesson_operators_dot_numbers() {
     batch,
     example_label,
     quiz_label,
-    symbols_to_answer,
+    app_code_symbols_eval,
     2,
     app_code_symbol,
     question_label,
