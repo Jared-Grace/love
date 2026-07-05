@@ -47,7 +47,7 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " : ",
     ]);
-    let combined4 = text_combine(left, right);
+    let combined4 = text_combine(operator, "right");
     html_div_code_multiple(c2, [combined2]);
   }
   const example_label = "Value of code: ";
