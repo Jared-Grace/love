@@ -1,4 +1,4 @@
-import { each_nested_args_both } from "../../../love/public/src/each_nested_args_both.mjs";
+import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_operators_dot_numbers() {
       function lambda2(left5, right5) {
         lambda$left$right(left5, right5);
       }
-      each_nested_args_both(lefts, rights, lambda2);
+      each_nested_args(lefts, rights, lambda2);
       function lambda$left$right(left3, right3) {
         lambda$left$right$la(left3, right3, la2);
       }
