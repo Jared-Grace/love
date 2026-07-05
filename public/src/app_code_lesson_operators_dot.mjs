@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
@@ -78,7 +79,8 @@ export function app_code_lesson_operators_dot() {
         html_span_text_padded_space,
         html_span_text_code_dark,
       );
-      if (not(b)) {
+      if (not(condition)) {
+        let operator2 = property_get(item, "operator");
       }
       result(div2, item);
     }
