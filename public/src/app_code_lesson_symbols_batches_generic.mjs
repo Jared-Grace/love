@@ -1,3 +1,4 @@
+import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
 import { app_code_quiz_index_reset } from "../../../love/public/src/app_code_quiz_index_reset.mjs";
 import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
@@ -53,6 +54,7 @@ export function app_code_lesson_symbols_batches_generic(
   symbol_create,
   question_label,
 ) {
+  let replaced = text_replace_space_underscore(name_old);
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
     let span = html_div_text(container, question_label);
