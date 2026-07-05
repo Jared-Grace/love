@@ -26,7 +26,7 @@ export function app_code_lesson_operators_asterisk_generic(
       root,
       operator,
       left_transform,
-      "using the dot operator",
+      "using the dot",
       "noun",
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
