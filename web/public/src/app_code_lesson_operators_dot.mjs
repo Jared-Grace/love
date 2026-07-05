@@ -2,7 +2,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -68,9 +67,6 @@ export function app_code_lesson_operators_dot() {
     const operators_text = [p, r2, r22, r23];
     let mapped = list_map_property_to(operators_text, "operator");
     let concated = list_to_and_list(mapped);
-    log(app_code_lesson_operators_dot.name, {
-      concated,
-    });
     let div2 = html_div(c);
     function lambda4(item) {
       let condition = text_is(item);
