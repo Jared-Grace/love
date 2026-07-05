@@ -1,9 +1,9 @@
+import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_lesson_operators_generic_batch_get_unary(
   operator_js,
   left_transform,
@@ -14,7 +14,7 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       max,
       lambda$left$right$la,
     );
-    list_shuffle(list);
+    list_shuffle_cycled(list, 2);
     return list;
     function lambda$left$right$la(left, right, la) {
       let combined = text_combine(operator_js, right);
