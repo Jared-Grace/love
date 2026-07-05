@@ -9,6 +9,6 @@ export function app_replace_button_style(b) {
   app_replace_button_symbol_style_box_shadow_value_width_set(
     container,
     "#9a9a9a",
-    "0.08",
+    "0.05",
   );
 }
