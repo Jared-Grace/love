@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_asterisk_2 } from "../../../love/public/src/app_code_lesson_operators_asterisk_2.mjs";
 import { app_code_lesson_operators_asterisk } from "../../../love/public/src/app_code_lesson_operators_asterisk.mjs";
 import { app_code_lessons_fns_invalid } from "../../../love/public/src/app_code_lessons_fns_invalid.mjs";
 import { app_code_lesson_operators_minus } from "../../../love/public/src/app_code_lesson_operators_minus.mjs";
