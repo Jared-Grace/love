@@ -39,7 +39,7 @@ export function app_code_lesson_operators_addition_2() {
       first,
     ]);
     html_div_cycle_code(c, [
-      "However, when making a number negative, there is only a number on right sides of the ",
+      "However, when making a number negative, there is only a number on right side of the ",
       operator,
       " :",
       first,
