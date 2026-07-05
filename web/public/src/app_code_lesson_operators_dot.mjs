@@ -58,7 +58,7 @@ export function app_code_lesson_operators_dot() {
       left_transform,
       "using the dot",
       "something",
-      js_code_binary_spaced_nb,
+      js_code_binary,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
