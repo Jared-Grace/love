@@ -175,7 +175,7 @@ export function app_code_lesson_symbols_batches_generic(
                   html_visibility_visible_multiple(hides);
                 } else {
                   const transparency_alpha_channel_hex = "44";
-                  app_g_button_wrong_generic(b2, "00");
+                  app_g_button_wrong_generic(b2, "ff");
                 }
               }
               return b2;
