@@ -10,8 +10,8 @@ export async function app_code_lesson_named(
   args_comma,
 ) {
   arguments_assert(arguments, 3);
-  let name_new = await app_code_lesson_add(fn_base_name);
-  let combined = text_combine_middle_comma(name_new, args_comma);
+  await app_code_lesson_add(fn_base_name);
+  let combined = text_combine_middle_comma(fn_base_name, args_comma);
   log(app_code_lesson_named.name, {
     combined,
   });
