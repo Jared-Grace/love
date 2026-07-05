@@ -18,8 +18,8 @@ export function app_code_lesson_operators_generic_batch_get_binary(
       let transformed = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
       let combined2 = text_left_right_middle_random_space_nb(
-        right,
         operator_js,
+        right,
       );
       let transformed2 = left_transform(left, right);
       let combined3 = js_code_binary_spaced_nb(
