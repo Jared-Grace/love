@@ -28,9 +28,7 @@ export function app_code_lesson_operators_addition_2() {
     html_div_cycle_code(c, [
       "In math, " +
         operator_name_math_articled +
-        "can be used to make a number negative: " +
-        verb +
-        " numbers: ",
+        "can be used to make a number negative: ",
       replaced,
     ]);
     let ne = equal_not(operator, operator);
