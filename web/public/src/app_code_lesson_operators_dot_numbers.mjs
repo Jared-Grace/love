@@ -41,9 +41,11 @@ export function app_code_lesson_operators_dot_numbers() {
     let list = list_adder(lambda);
     function lambda$left$right$la(left2, right2, la) {
       let combined = js_code_binary(left2, operator, right2);
-      let combined2 = js_code_binary(left2, operator);
+      let right4 = digit_random();
+      let combined2 = js_code_binary(left2, operator, right4);
       let combined3 = js_code_binary(right2, operator, left2);
-      let combined4 = js_code_binary(operator, right2);
+      let left4 = digit_random();
+      let combined4 = js_code_binary(left4, operator, right2);
       each([combined, combined2, combined3, combined4], la);
     }
     list_shuffle_cycled(list, 4);
