@@ -66,8 +66,8 @@ export function app_code_lesson_operators_addition_2() {
     let combined5 = text_combine("invalid", operator);
     html_div_code(c4, combined5);
   }
-  const example_label = "Value of code: ";
-  const quiz_label = "What is the value of this code? ";
+  const example_label = "Is this a valid code? ";
+  const quiz_label = example_label;
   let symbols_to_answer = eval;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
