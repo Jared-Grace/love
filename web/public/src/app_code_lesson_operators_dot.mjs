@@ -4,7 +4,6 @@ import { html_span_text_padded_space } from "../../../love/public/src/html_span_
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
@@ -64,7 +63,6 @@ export function app_code_lesson_operators_dot() {
     let r23 = js_operator_division();
     let concated = list_to_and_list([p, r2, r22, r23]);
     let div2 = html_div(c);
-    html_span_text(div2, "And ");
     function lambda4(item) {
       let l = list_is(item);
       let result = ternary(l, html_cycle_code, html_span_text_padded_space);
