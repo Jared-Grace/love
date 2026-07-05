@@ -1,6 +1,6 @@
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-export function text_combine_right_fn(operator, right_random_get) {
-  let right2 = right_random_get();
-  let combined = text_combine(operator, right2);
+export function text_combine_right_fn(left, lambda) {
+  let right = lambda();
+  let combined = text_combine(left, right);
   return combined;
 }
