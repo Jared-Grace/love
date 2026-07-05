@@ -1,3 +1,4 @@
+import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
 import { js_code_negation } from "../../../love/public/src/js_code_negation.mjs";
 import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
@@ -6,7 +7,7 @@ import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mj
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus() {
   const operator = js_operator_minus();
-  const operator_name = "plus sign";
+  const operator_name = js_operator_plus_name();
   let math_name = operator_name;
   let verb = "subtract";
   let sign = "negative";
