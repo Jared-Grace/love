@@ -1,3 +1,4 @@
+import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { list_to_and_list_word } from "../../../love/public/src/list_to_and_list_word.mjs";
@@ -64,6 +65,7 @@ export function app_code_lesson_operators_dot() {
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
     let concated = list_to_and_list(operators_text);
+    let mapped = list_map_property_to(list, name2);
     log(app_code_lesson_operators_dot.name, {
       concated,
     });
