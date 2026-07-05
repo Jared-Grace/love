@@ -1,3 +1,5 @@
+import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
+import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -19,12 +21,10 @@ import { text_combine_right_fn } from "../../../love/public/src/text_combine_rig
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
-import { js_operator_minus_name } from "../../../love/public/src/js_operator_minus_name.mjs";
-import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus_unary() {
-  const operator = js_operator_minus();
-  const operator_name = js_operator_minus_name();
+  const operator = js_operator_plus();
+  const operator_name = js_operator_plus_name();
   let math_name = "Plus sign unary";
   let verb = js_operator_plus_verb();
   let sign = "positive";
