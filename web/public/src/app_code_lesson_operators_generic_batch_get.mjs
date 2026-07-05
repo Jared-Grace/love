@@ -8,6 +8,7 @@ export function app_code_lesson_operators_generic_batch_get(
   left_transform,
   operator_js,
 ) {
+  let max = 7;
   let r = function lambda() {
     let lefts = range_1(max);
     let rights = range_1(max);
