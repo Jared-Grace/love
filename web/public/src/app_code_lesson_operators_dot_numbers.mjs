@@ -68,10 +68,12 @@ export function app_code_lesson_operators_dot_numbers() {
       " with numbers",
     ]);
     html_div_text(c3, "We cannot have a number on the right:");
-    let first = js_code_binary("invalid", operator, digit_random);
+    let right = digit_random();
+    let first = js_code_binary("invalid", operator, right);
     html_div_code(c3, first);
     html_div_text(c3, "And we cannot have a number on the left:");
-    let first2 = js_code_binary(digit_random, operator, "invalid");
+    let left = digit_random();
+    let first2 = js_code_binary(left, operator, "invalid");
     html_div_code(c3, first2);
     return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
