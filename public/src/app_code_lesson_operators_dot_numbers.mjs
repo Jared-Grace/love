@@ -25,7 +25,7 @@ import { identity } from "../../../love/public/src/identity.mjs";
 export function app_code_lesson_operators_dot_numbers() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
-  let math_name = "property access";
+  let math_name = "property access, numbers";
   let left_transform = identity;
   let batch = app_code_lesson_operators_generic_batch_get_binary(
     operator,
