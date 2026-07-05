@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
@@ -25,6 +26,10 @@ export function app_code_lesson_operators_minus() {
   let batch_subtraction = app_code_lesson_operators_generic_batch_get(
     operator,
     add,
+  );
+  let r2 = app_code_lesson_operators_generic_batch_get_unary(
+    operator_js,
+    left_transform,
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
