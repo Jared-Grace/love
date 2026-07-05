@@ -70,6 +70,9 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_text(c3, "We cannot have a number on the right:");
     let first = js_code_binary("invalid", operator, digit_random);
     html_div_code(c3, first);
+    html_div_text(c3, "And we cannot have a number on the left:");
+    let first2 = js_code_binary(digit_random, operator, "invalid");
+    html_div_code(c3, first2);
     return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     app_code_lesson_operators_asterisk_generic_invalid(root, operator);
