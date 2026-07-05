@@ -1,3 +1,4 @@
+import { text_articled } from "../../../love/public/src/text_articled.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
@@ -17,7 +18,6 @@ import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_te
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_operators_dot_numbers() {
     left_transform,
   );
   function above(root) {
-    const operator_name_math_articled = text_articled_pad_space(operator_name);
+    const operator_name_math_articled = text_articled(operator_name);
     let c4 = app_code_container_light_blue(root);
     let t = text_first_upper_to(operator_name_math_articled + " ");
     let div = html_div_cycle_code(c4, [t, operator, " as a decimal point:"]);
