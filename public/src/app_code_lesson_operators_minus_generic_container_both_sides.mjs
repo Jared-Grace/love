@@ -1,6 +1,6 @@
+import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
@@ -17,8 +17,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let c = app_code_container_light_blue(root);
   let t = text_first_upper_to("when ");
   let start = [t];
-  let first = list_first(text_when);
-  list_add(list, item);
+  let first = list_remove_first(text_when);
+  list_add(start, first);
   let end = [
     " there is" +
       text_articled_pad_space(noun) +
