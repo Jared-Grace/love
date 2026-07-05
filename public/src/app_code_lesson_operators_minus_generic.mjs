@@ -37,7 +37,7 @@ export function app_code_lesson_operators_minus_generic(
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let right2 = digit_positive_random();
+    let right2 = right_random_get();
     let combined = text_combine(operator, right2);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
