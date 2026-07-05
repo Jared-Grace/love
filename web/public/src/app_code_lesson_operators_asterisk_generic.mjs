@@ -27,7 +27,6 @@ export function app_code_lesson_operators_asterisk_generic(
       operator,
       verb,
       left_transform,
-      "",
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     let c4 = app_code_container_light_blue(root);
