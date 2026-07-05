@@ -12,7 +12,8 @@ export function app_code_lesson_operators_plus() {
   let left_transform = add;
   function lambda() {
     let d = digit_positive_random();
-    let wrapped = js_code_wrap_parenthesis(d);$r,wrapped
+    let wrapped = js_code_wrap_parenthesis(d);
+    return wrapped;
   }
   let r = app_code_lesson_operators_minus_generic(
     operator,
