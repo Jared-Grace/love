@@ -14,18 +14,22 @@ export function app_code_lesson_operators_generic_batch_get(
     let rights = range_1(max);
     function lambda4(la) {
       function lambda3(left, right) {
-        newFunction(left, right, la);
+        newFunction(left, right);
       }
       each_nested_distinct(lefts, rights, lambda3);
+      function newFunction(left, right) {
+        let transformed = left_transform(left, right);
+        let combined = js_code_binary_spaced_nb(
+          transformed,
+          operator_js,
+          right,
+        );
+        la(combined);
+      }
     }
     let list = list_adder(lambda4);
     list_shuffle(list);
     return list;
-    function newFunction(left, right, la) {
-      let transformed = left_transform(left, right);
-      let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
-      la(combined);
-    }
   };
   return r;
 }
