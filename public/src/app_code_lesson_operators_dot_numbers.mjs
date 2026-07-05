@@ -71,11 +71,9 @@ export function app_code_lesson_operators_dot_numbers() {
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
-      "However, if we're not using ",
+      "However, we cannot directly use ",
       operator,
-      " as a decimal point, then we cannot directly use ",
-      operator,
-      " with numbers",
+      " with both an identifier and a number",
     ]);
     html_div_text(c3, "We cannot have a number on the right:");
     let right = digit_random();
