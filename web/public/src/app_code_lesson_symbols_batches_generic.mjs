@@ -166,7 +166,7 @@ export function app_code_lesson_symbols_batches_generic(
                 quiz_answer,
                 on_click,
               );
-              html_style_background_color_set(b2, "#d7d7d7");
+              html_style_background_color_set(b2, "#e7e7e7");
               html_style_margin_top(b2, "0.2em");
               async function on_click() {
                 let eq2 = equal(quiz_answer, answer);
