@@ -27,6 +27,10 @@ export function app_code_lesson_operators_generic(
       operator_name_math,
       operator_math,
     );
+    let batch = app_code_lesson_operators_generic_batch_get(
+      left_transform,
+      operator_js,
+    );
     let list2 = batch();
     let first = list_first(list2);
     let replaced = text_replace(first, operator_js, operator_math);
@@ -69,10 +73,6 @@ export function app_code_lesson_operators_generic(
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
   let symbols_to_answer = eval;
-  let batch = app_code_lesson_operators_generic_batch_get(
-    left_transform,
-    operator_js,
-  );
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
