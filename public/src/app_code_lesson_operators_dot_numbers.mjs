@@ -55,6 +55,7 @@ export function app_code_lesson_operators_dot_numbers() {
       operator,
       " with numbers",
     ]);
+    html_div_text(c2, "We cannot have a number on the right:");
     return;
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
