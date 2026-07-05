@@ -1,3 +1,4 @@
+import { word_add_ing } from "../../../love/public/src/word_add_ing.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
