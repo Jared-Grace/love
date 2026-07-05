@@ -24,7 +24,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let left = "left";
   let combined3 = js_code_binary_spaced_nb(left, operator, right);
   let u = text_upper_to(
-    "When " +
+    word_first +
+      "when " +
       word_add_ing(verb) +
       " two numbers, there is a number on both the left and right sides of the ",
     operator,
