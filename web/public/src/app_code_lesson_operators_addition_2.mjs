@@ -48,7 +48,7 @@ export function app_code_lesson_operators_addition_2() {
       " : ",
     ]);
     let combined4 = text_combine(operator, "right");
-    html_div_code_multiple(c2, [combined2.combined4]);
+    html_div_code_multiple(c2, [combined2, combined4]);
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
