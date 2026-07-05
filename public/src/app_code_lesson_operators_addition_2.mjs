@@ -72,7 +72,9 @@ export function app_code_lesson_operators_addition_2() {
   const example_label = "Is this a valid code? ";
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
-    function lambda2() {}
+    function lambda2() {
+      eval(symbols);
+    }
     let r2 = lambda_throws(lambda2);
     let throws = property_get(r2, "throws");
     let valid = not(throws);
