@@ -77,7 +77,7 @@ export function app_code_lesson_operators_minus_generic(
       [
         "And if ",
         operator,
-        " does not have anything on its right side, that is invalid: ",
+        " does not have anything on its right side, then that is invalid code: ",
       ],
     ]);
     let combined5 = text_combine("invalid", operator);
