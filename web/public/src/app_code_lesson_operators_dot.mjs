@@ -1,3 +1,4 @@
+import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
@@ -7,7 +8,6 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
-import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
