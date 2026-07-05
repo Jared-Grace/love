@@ -75,7 +75,7 @@ export function app_code_lesson_operators_generic(
   const quiz_label = "What is the value of this code? ";
   let max = 7;
   let symbols_to_answer = eval;
-  function batch() {
+  let batch = function lambda() {
     let lefts = range_1(max);
     let rights = range_1(max);
     function lambda4(la) {
@@ -90,7 +90,7 @@ export function app_code_lesson_operators_generic(
     let list = list_adder(lambda4);
     list_shuffle(list);
     return list;
-  }
+  };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
