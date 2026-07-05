@@ -1,5 +1,5 @@
+import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_operators_minus_generic(
       let first = list_first(b);
       return first;
     }
-    app_code_lesson_operators_minus_generic_container_both_sides(
+    app_code_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       verb,
