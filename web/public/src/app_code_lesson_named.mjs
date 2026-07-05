@@ -16,10 +16,7 @@ export async function app_code_lesson_named(
     combined,
   });
   let f_name_new = null;
-  ({ f_name_new } = await function_name_new_get_args(
-    plugin_fn,
-    combined,
-  ));
+  ({ f_name_new } = await function_name_new_get_args(plugin_fn, combined));
   let r = await function_rename_open(name_new, f_name_new);
   return r;
 }
