@@ -1,10 +1,10 @@
+import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
 import { app_code_lesson_operators_asterisk_generic } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic.mjs";
 import { js_operator_multiplication_verb } from "../../../love/public/src/js_operator_multiplication_verb.mjs";
-import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_slash_forward() {
-  const operator = js_operator_multiplication();
-  let lesson_name = "asterisk";
+  const operator = js_operator_division();
+  let lesson_name = "slash_forward";
   let verb = js_operator_multiplication_verb();
   let left_transform = add;
   let r = app_code_lesson_operators_asterisk_generic(
