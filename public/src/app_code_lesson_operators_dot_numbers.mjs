@@ -30,7 +30,7 @@ export function app_code_lesson_operators_dot_numbers() {
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
   let max = app_code_lesson_operators_generic_batch_get_max();
-  let batch = function batch_get() {
+  let batch = function batch_get() {$x
     let list = each_nested_args_both_range_1_list_adder(
       max,
       lambda$left$right$la,
