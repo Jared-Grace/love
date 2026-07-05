@@ -1,5 +1,4 @@
 import { function_copy } from "../../../love/public/src/function_copy.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
@@ -10,9 +9,6 @@ export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
   let f_names = await functions_names();
   const f = fn_base_name;
   let unique = text_unique(f_names, f, "_");
-  log(app_replace_rule_set_add_generic.name, {
-    unique,
-  });
   await function_copy(f, unique);
   let expression = js_parse_expression(unique);
   async function lambda(ast) {
