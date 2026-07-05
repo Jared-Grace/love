@@ -1,4 +1,3 @@
-import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
