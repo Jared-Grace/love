@@ -15,8 +15,6 @@ export function app_code_lesson_operators_generic_batch_get_binary(
       lambda$left$right$la,
     );
     function lambda$left$right$la(left, right, la) {
-      "there are 4 added at once";
-      "valid, invalid, valid, invalid";
       let transformed = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
       let combined2 = text_left_right_middle_random_space_nb(
@@ -32,8 +30,7 @@ export function app_code_lesson_operators_generic_batch_get_binary(
       let combined4 = text_left_right_middle_random_space_nb(left, operator_js);
       each([combined, combined2, combined3, combined4], la);
     }
-    ("hence cycle of 2: (valid, invalid)");
-    list_shuffle_cycled(list, 2);
+    list_shuffle_cycled(list, 4);
     return list;
   };
   return r;
