@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -23,7 +24,8 @@ export function app_code_lesson_operators_addition_2() {
     app_code_lesson_underscores_define_symbol(c, operator_name, operator);
     let list2 = batch();
     let first = list_first(list2);
-    let replaced = text_replace(first, operator, operator);tc
+    let replaced = text_replace(first, operator, operator);
+    let combined = text_combine(left, right);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math, " +
