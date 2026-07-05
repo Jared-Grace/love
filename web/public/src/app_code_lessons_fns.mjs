@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_dot } from "../../../love/public/src/app_code_lesson_operators_dot.mjs";
 import { app_code_lesson_operators_plus_unary } from "../../../love/public/src/app_code_lesson_operators_plus_unary.mjs";
 import { app_code_lesson_operators_minus } from "../../../love/public/src/app_code_lesson_operators_minus.mjs";
 import { app_code_lesson_operators_division } from "../../../love/public/src/app_code_lesson_operators_division.mjs";
