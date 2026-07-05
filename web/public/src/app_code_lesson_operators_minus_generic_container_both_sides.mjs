@@ -28,9 +28,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
       "when " +
       word_add_ing(verb) +
       " two numbers, there is a number on both the left and right sides of the ",
-    operator,
-    " : ",
   );
-  html_div_cycle_code(c2, [u]);
+  html_div_cycle_code(c2, [u, operator, " : "]);
   html_div_code_multiple(c2, [first, combined3]);
 }
