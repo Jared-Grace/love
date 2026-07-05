@@ -15,6 +15,7 @@ export function app_code_lesson_operators_minus() {
     sign,
     verb,
     math_name,
+    digit_positive_random,
   );
   return r;
 }
