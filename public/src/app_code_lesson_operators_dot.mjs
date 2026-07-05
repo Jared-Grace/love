@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { list_to_and_list_word } from "../../../love/public/src/list_to_and_list_word.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
@@ -62,6 +63,9 @@ export function app_code_lesson_operators_dot() {
     let r22 = js_operator_multiplication();
     let r23 = js_operator_division();
     let concated = list_to_and_list([p, r2, r22, r23]);
+    log(app_code_lesson_operators_dot.name, {
+      concated,
+    });
     let div2 = html_div(c);
     function lambda4(item) {
       const word_relationship = list_to_and_list_word();
