@@ -1,3 +1,4 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
@@ -55,6 +56,7 @@ export function app_code_lesson_symbols_batches_generic(
   symbol_create,
   question_label,
 ) {
+  arguments_assert(arguments, 11);
   id = text_replace_space_underscore(id);
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
