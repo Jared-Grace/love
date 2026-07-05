@@ -31,7 +31,7 @@ export function app_code_lesson_operators_addition_2() {
     let list2 = batch();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(parent);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(c2, [
       "When " +
         verb +
         "ing two numbers, there is a number on both sides of the ",
@@ -40,18 +40,11 @@ export function app_code_lesson_operators_addition_2() {
       first,
     ]);
     let combined2 = digit_random_operator(operator);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
       " :",
       combined2,
-    ]);
-    let t = null;
-    t = "In JavaScript";
-    html_div_cycle_code(c, [
-      t + ", the ",
-      operator,
-      " symbol can be used to " + verb + " two numbers",
     ]);
   }
   const example_label = "Value of code: ";
