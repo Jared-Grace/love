@@ -25,7 +25,6 @@ export function app_code_lesson_operators_asterisk_generic(
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
-      verb,
       left_transform,
       text_when,
     );

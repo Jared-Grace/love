@@ -8,7 +8,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_code_lesson_operators_minus_generic_container_both_sides(
   root,
   operator,
-  verb,
   left_transform,
   text_when,
 ) {
