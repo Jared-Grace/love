@@ -1,8 +1,6 @@
+import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
-import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
-import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
-import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 export function app_code_lesson_symbols_identifiers_valid(
   name,
@@ -16,9 +14,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
-    let expression = js_parse_expression_try(symbols);
-    let ii = js_identifier_is(expression);
-    let validity = boolean_to_text_validity(ii);
+    let validity = app_code_symbols_eval_valid_expression(symbols);
     return validity;
   };
   let question_label = app_code_label_symbols();
