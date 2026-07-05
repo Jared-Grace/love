@@ -46,6 +46,11 @@ export function app_code_lesson_operators_addition_2() {
       " :",
       combined2,
     ]);
+    html_div_cycle_code(c, [
+      "In JavaScript, the ",
+      operator,
+      " symbol can be used to " + verb + " two numbers",
+    ]);
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
