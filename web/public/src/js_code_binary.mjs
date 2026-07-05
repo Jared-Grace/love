@@ -1,7 +1,7 @@
 import { js_code_binary_spaced_nb_generic } from "../../../love/public/src/js_code_binary_spaced_nb_generic.mjs";
-import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
+import { identity } from "../../../love/public/src/identity.mjs";
 export function js_code_binary(left, operator, right) {
-  let mapper = list_between_space_nb;
+  let mapper = identity;
   let combined = js_code_binary_spaced_nb_generic(
     mapper,
     left,
