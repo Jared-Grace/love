@@ -22,7 +22,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let c2 = app_code_container_light_blue(root);
   const right = "right";
   let left = "left";
-  let combined3 = js_code_binary_spaced_nb(left, operator, right);
+  let combined3 = code_to(left, operator, right);
   let u = text_first_upper_to(
     "when " +
       text_when +
