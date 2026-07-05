@@ -47,7 +47,7 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_cycle_code(c2, [
       "And we can use ",
       operator,
-      " by putting an identifiers:",
+      " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
     let combined = js_code_binary("person", operator, "age");
