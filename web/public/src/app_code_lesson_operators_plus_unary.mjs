@@ -21,7 +21,6 @@ export function app_code_lesson_operators_plus_unary() {
   const operator_name = js_operator_plus_name();
   let math_name = "Plus sign unary";
   let sign = "positive";
-  let left_transform = add;
   let max = app_code_lesson_operators_generic_batch_get_max();
   let batch = function batch_get() {
     let list = list_adder_each(max, on_each);
