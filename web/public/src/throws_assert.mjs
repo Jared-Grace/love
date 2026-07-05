@@ -1,13 +1,13 @@
 import { assert } from "../../../love/public/src/assert.mjs";
 export function throws_assert(lambda) {
-  let success = true;
+  let throws = true;
   let result = null;
   try {
     lambda();
-    success = false;
+    throws = false;
   } catch (e) {
     result = e;
   }
-  assert(success);
+  assert(throws);
   return result;
 }
