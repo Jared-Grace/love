@@ -15,7 +15,6 @@ import { text_combine_right_fn } from "../../../love/public/src/text_combine_rig
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
-import { js_operator_minus_name } from "../../../love/public/src/js_operator_minus_name.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { add } from "../../../love/public/src/add.mjs";
