@@ -47,7 +47,11 @@ export function app_code_lesson_operators_dot() {
     let d2 = html_div_text(c2, "We can use ");
     app_code_operators_arithmetic(d2);
     html_span_text(d2, " with numbers");
-    let div = html_div_cycle_code(parent, parts);
+    let div = html_div_cycle_code(c2, [
+      "And we can use ",
+      operator,
+      " with identifiers :",
+    ]);
     let verb = js_operator_asterisk_verb();
     let operator2 = js_operator_asterisk();
     app_code_lesson_operators_minus_generic_container_both_sides(
