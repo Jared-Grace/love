@@ -25,10 +25,6 @@ export function app_code_lesson_operators_minus_generic(
   math_name,
   right_random_get,
 ) {
-  let batch_binary = app_code_lesson_operators_generic_batch_get(
-    operator,
-    left_transform,
-  );
   let batch = app_code_lesson_operators_generic_batch_get_unary(
     operator,
     left_transform,
