@@ -23,12 +23,13 @@ export function app_code_lesson_operators_minus() {
   const operator_name = "minus sign";
   let math_name = "negation";
   let verb = "subtract";
+  let left_transform = add;
   let batch_subtraction = app_code_lesson_operators_generic_batch_get(
     operator,
     add,
   );
-  let r2 = app_code_lesson_operators_generic_batch_get_unary(
-    operator_js,
+  let batch = app_code_lesson_operators_generic_batch_get_unary(
+    operator,
     left_transform,
   );
   function above(root) {
