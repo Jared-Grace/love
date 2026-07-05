@@ -11,8 +11,8 @@ export function app_code_lesson_operators_plus() {
   let sign = "negative";
   let left_transform = add;
   function lambda() {
-    let r2 = digit_positive_random();
-    let wrapped = js_code_wrap_parenthesis(inside);
+    let d = digit_positive_random();
+    let wrapped = js_code_wrap_parenthesis(d);
   }
   let r = app_code_lesson_operators_minus_generic(
     operator,
