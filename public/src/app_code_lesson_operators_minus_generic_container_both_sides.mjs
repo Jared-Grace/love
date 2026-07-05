@@ -5,7 +5,6 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_operators_minus_generic_container_both_sides(
   root,
   operator,
-  left_transform,
   text_when,
   noun,
   code_to,
