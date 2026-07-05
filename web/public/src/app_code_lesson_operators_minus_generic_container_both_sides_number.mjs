@@ -1,3 +1,5 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { word_add_ing } from "../../../love/public/src/word_add_ing.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
@@ -15,7 +17,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     "number",
     js_code_binary_spaced_nb,
     example_get,
-  );  function example_get() {
+  );
+  function example_get() {
     let batch_binary = app_code_lesson_operators_generic_batch_get(
       operator,
       left_transform,
