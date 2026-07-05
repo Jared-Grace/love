@@ -10,6 +10,7 @@ import { text_first_upper_to } from "../../../love/public/src/text_first_upper_t
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_addition_2() {
@@ -25,11 +26,13 @@ export function app_code_lesson_operators_addition_2() {
     let combined = text_combine(operator, right);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
-      "In math," +
+      "In math, " +
         operator_name_math_articled +
         "can be used to make a number negative: ",
       combined,
     ]);
+    let list2 = batch();
+    let first = list_first(list2);
     let ne = equal_not(operator, operator);
     if (ne) {
       c = app_code_container_light_blue(root);
