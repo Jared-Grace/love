@@ -1,3 +1,4 @@
+import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -19,7 +20,6 @@ import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
 import { js_operator_minus_name } from "../../../love/public/src/js_operator_minus_name.mjs";
-import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus_unary() {
@@ -39,7 +39,10 @@ export function app_code_lesson_operators_plus_unary() {
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let combined = text_combine_right_fn(operator, digit_positive_random);
+    let combined = text_combine_right_fn(
+      operator,
+      digit_negative_random_parenthesis_wrapped,
+    );
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
@@ -71,7 +74,10 @@ export function app_code_lesson_operators_plus_unary() {
       operator,
       " : ",
     ]);
-    let combined2 = text_combine_right_fn(operator, digit_positive_random);
+    let combined2 = text_combine_right_fn(
+      operator,
+      digit_negative_random_parenthesis_wrapped,
+    );
     let combined4 = text_combine(operator, right);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
