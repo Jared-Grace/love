@@ -20,16 +20,16 @@ export function app_code_lesson_operators_generic(
   math_name,
   left_transform,
 ) {
+  let batch = app_code_lesson_operators_generic_batch_get(
+    left_transform,
+    operator_js,
+  );
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(
       c,
       operator_name_math,
       operator_math,
-    );
-    let batch = app_code_lesson_operators_generic_batch_get(
-      left_transform,
-      operator_js,
     );
     let list2 = batch();
     let first = list_first(list2);
