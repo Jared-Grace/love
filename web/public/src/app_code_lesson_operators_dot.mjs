@@ -1,4 +1,3 @@
-import { list_to_text_or_list } from "../../../love/public/src/list_to_text_or_list.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -23,6 +22,7 @@ import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { add } from "../../../love/public/src/add.mjs";
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
@@ -42,14 +42,10 @@ export function app_code_lesson_operators_dot() {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(operator, digit_positive_random);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
-    html_div_cycle_code(c, [
-      "In JavaScript, " +
-        operator_name_math_articled +
-        " is a symbol like " +
-        list_to_text_or_list([]) +
-        ": ",
-      combined,
-    ]);
+    html_div_text(
+      c,
+      "In JavaScript, " + operator_name_math_articled + " is a symbol like ",
+    );
     let list2 = batch_binary();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
