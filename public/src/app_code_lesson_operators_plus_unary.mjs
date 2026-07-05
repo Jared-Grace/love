@@ -7,8 +7,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
-import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
@@ -49,14 +47,7 @@ export function app_code_lesson_operators_plus_unary() {
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda(symbols) {
-    function lambda2() {
-      eval(symbols);
-    }
-    let valid = throws_not(lambda2);
-    let result = boolean_to_text_validity(valid);
-    return result;
-  };
+  let symbols_to_answer = eval;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
