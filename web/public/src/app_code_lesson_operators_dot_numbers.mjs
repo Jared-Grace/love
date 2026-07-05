@@ -103,7 +103,7 @@ export function app_code_lesson_operators_dot_numbers() {
     let right = digit_random();
     let first = js_code_binary("invalid", operator, right);
     html_div_code(c3, first);
-    html_div_text(c3, "And we cannot have a number on the left:");
+    html_div_text(c3, "And we cannot have a number directly on the left:");
     let left = digit_random();
     let first2 = js_code_binary(left, operator, "invalid");
     html_div_code(c3, first2);
