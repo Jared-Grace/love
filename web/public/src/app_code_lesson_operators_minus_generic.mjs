@@ -1,5 +1,4 @@
-import { word_add_ing } from "../../../love/public/src/word_add_ing.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
+import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -41,12 +40,11 @@ export function app_code_lesson_operators_minus_generic(
         ": ",
       combined,
     ]);
-    app_code_lesson_operators_minus_generic_container_both_sides(
+    app_code_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       left_transform,
-      word_add_ing(verb) + " two numbers",
-      "number",
+      verb,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
