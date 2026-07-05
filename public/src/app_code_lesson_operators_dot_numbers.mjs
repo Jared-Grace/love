@@ -1,3 +1,9 @@
+import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { text_left_right_middle_random_space_nb } from "../../../love/public/src/text_left_right_middle_random_space_nb.mjs";
+import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
+import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
+import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -18,7 +24,6 @@ import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -28,10 +33,24 @@ export function app_code_lesson_operators_dot_numbers() {
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
   let left_transform = identity;
-  let batch = app_code_lesson_operators_generic_batch_get_binary(
-    operator,
-    left_transform,
-  );
+  let max = app_code_lesson_operators_generic_batch_get_max();
+  let batch = function batch_get() {
+    let list = each_nested_args_both_range_1_list_adder(
+      max,
+      lambda$left$right$la,
+    );
+    function lambda$left$right$la(left2, right2, la) {
+      let transformed = left_transform(left2, right2);
+      let combined5 = js_code_binary_spaced_nb(transformed, operator, right2);
+      let combined2 = text_left_right_middle_random_space_nb(operator, right2);
+      let transformed2 = left_transform(left2, right2);
+      let combined3 = js_code_binary_spaced_nb(transformed2, operator, right2);
+      let combined4 = text_left_right_middle_random_space_nb(left2, operator);
+      each([combined5, combined2, combined3, combined4], la);
+    }
+    list_shuffle_cycled(list, 4);
+    return list;
+  };
   function above(root) {
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     let c4 = app_code_container_light_blue(root);
