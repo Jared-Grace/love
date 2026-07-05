@@ -1,3 +1,4 @@
+import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -32,7 +33,9 @@ export function app_code_lesson_operators_addition_2() {
     let list2 = batch();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
-    let combined3 = js_code_binary_spaced_nb("left", operator, "right");
+    const right = js_code_wrap_parenthesis("right");
+    let left = js_code_wrap_parenthesis("left");
+    let combined3 = js_code_binary_spaced_nb(left, operator, right);
     html_div_cycle_code(c2, [
       "When " +
         verb +
@@ -41,13 +44,14 @@ export function app_code_lesson_operators_addition_2() {
       " : ",
     ]);
     html_div_code_multiple(c2, [first, combined3]);
+    let c3 = app_code_container_light_blue(parent);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
       " : ",
     ]);
-    let combined4 = text_combine(operator, "right");
+    let combined4 = text_combine(operator, right);
     html_div_code_multiple(c2, [combined2, combined4]);
   }
   const example_label = "Value of code: ";
