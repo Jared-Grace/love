@@ -37,6 +37,23 @@ export function app_code_lesson_operators_addition_2() {
         "ing two numbers, there is a number on both the left and right sides of the ",
       operator,
       " : ",
+    ]);
+    html_div_cycle_code(c2, [
+      "When " +
+        verb +
+        "ing two numbers, there is a number on both the left and right sides of the ",
+      operator,
+      " : ",
+      first,
+      " ",
+      combined3,
+    ]);
+    html_div_cycle_code(c2, [
+      "When " +
+        verb +
+        "ing two numbers, there is a number on both the left and right sides of the ",
+      operator,
+      " : ",
       first,
       " ",
       combined3,
