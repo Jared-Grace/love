@@ -11,6 +11,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   left_transform,
   text_when,
   noun,
+  code_to,
 ) {
   let batch_binary = app_code_lesson_operators_generic_batch_get(
     operator,

@@ -12,5 +12,6 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     left_transform,
     word_add_ing(verb) + " two numbers",
     "number",
+    js_code_binary_spaced_nb,
   );
 }
