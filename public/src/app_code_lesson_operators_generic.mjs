@@ -1,3 +1,4 @@
+import { app_code_label_code } from "../../../love/public/src/app_code_label_code.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -76,7 +77,7 @@ export function app_code_lesson_operators_generic(
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
-  let question_label = "Code: ";
+  let question_label = app_code_label_code();
   let r5 = app_code_lesson_symbols_batches_generic(
     name,
     id,
