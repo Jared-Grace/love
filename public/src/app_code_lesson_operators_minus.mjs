@@ -1,3 +1,4 @@
+import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
@@ -84,7 +85,8 @@ export function app_code_lesson_operators_minus() {
       eval(symbols);
     }
     let valid = throws_not(lambda2);
-    return valid;
+    let result = boolean_to_text_validity(valid);
+    return result;
   };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
