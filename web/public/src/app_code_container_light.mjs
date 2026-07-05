@@ -9,7 +9,7 @@ export function app_code_container_light(parent) {
   app_replace_button_symbol_style_box_shadow_value_width_set(
     container,
     "hsl(210, 59%, 67%)",
-    "0.05",
+    "0.07",
   );
   return container;
 }
