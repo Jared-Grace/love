@@ -31,15 +31,15 @@ import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_n
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
+import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
 import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
+import { identity } from "./identity.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access";
-  let verb = js_operator_asterisk_verb();
   let sign = "negative";
-  let left_transform = add;
+  let left_transform = identity;
   let batch = app_code_lesson_operators_generic_batch_get_binary(
     operator,
     left_transform,
@@ -54,7 +54,7 @@ export function app_code_lesson_operators_dot() {
     ]);
     let p = js_operator_plus();
     let r2 = js_operator_minus();
-    let r22 = js_operator_asterisk();
+    let r22 = js_operator_multiplication();
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
     let mapped = list_map_property_to(operators_text, "operator");
@@ -72,11 +72,12 @@ export function app_code_lesson_operators_dot() {
       result(d, item);
     }
     each(concated, lambda4);
+  let verb = js_operator_asterisk_verb();
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
-      operator,
+      js_operator_asterisk(),
       verb,
-      left_transform,
+      identity,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
