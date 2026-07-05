@@ -46,7 +46,6 @@ export function app_code_lesson_operators_minus_generic(
       combined,
     ]);
     app_code_lesson_operators_minus_generic_container_both_sides(
-      batch_binary,
       root,
       operator,
       verb,
