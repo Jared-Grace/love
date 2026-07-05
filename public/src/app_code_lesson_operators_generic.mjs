@@ -1,3 +1,5 @@
+import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
+import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
 import { app_code_label_code } from "../../../love/public/src/app_code_label_code.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
@@ -71,8 +73,8 @@ export function app_code_lesson_operators_generic(
       " symbol can be used to " + verb + " two numbers",
     ]);
   }
-  const example_label = "Value of code: ";
-  const quiz_label = "What is the value of this code? ";
+  const example_label = app_code_label_code_answer_example();
+  const quiz_label = app_code_label_code_answer_quiz();
   let symbols_to_answer = eval;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
