@@ -71,6 +71,7 @@ export function app_code_lesson_operators_dot() {
       result(d, item);
     }
     each(concated, lambda4);
+    let c2 = app_code_container_light_blue(parent);
     let verb = js_operator_asterisk_verb();
     let operator2 = js_operator_asterisk();
     app_code_lesson_operators_minus_generic_container_both_sides(
