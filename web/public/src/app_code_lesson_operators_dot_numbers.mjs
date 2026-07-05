@@ -49,6 +49,12 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
+    let c3 = app_code_container_light_blue(root);
+    html_div_cycle_code(c3, [
+      "However, we cannot directly use ",
+      operator,
+      " with numbers",
+    ]);
     return;
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
