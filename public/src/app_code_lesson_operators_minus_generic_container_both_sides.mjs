@@ -6,7 +6,6 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   root,
   operator,
   text_when,
-  noun,
   code_to,
   example_get,
 ) {

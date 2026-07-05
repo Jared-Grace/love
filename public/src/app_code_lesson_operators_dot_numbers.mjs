@@ -56,7 +56,6 @@ export function app_code_lesson_operators_dot_numbers() {
       root,
       operator,
       "using the dot",
-      "something",
       js_code_binary,
       example_get,
     );
