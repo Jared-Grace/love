@@ -21,7 +21,7 @@ import { app_code_lesson_operators_generic_batch_get_binary } from "../../../lov
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
-export function app_code_lesson_operators_dot() {
+export function app_code_lesson_operators_dot_numbers() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access";
