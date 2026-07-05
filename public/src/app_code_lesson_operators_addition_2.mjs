@@ -1,3 +1,4 @@
+import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { digit_positive_random_operator } from "../../../love/public/src/digit_positive_random_operator.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
@@ -15,7 +16,7 @@ export function app_code_lesson_operators_addition_2() {
   const operator_name = "minus sign";
   let math_name = "negation";
   let verb = "subtract";
-  let batch = app_code_lesson_operators_generic_batch_get(operator, add);
+  let batch = app_code_lesson_operators_generic_batch_get(add, operator);
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = digit_positive_random_operator(operator);
@@ -29,6 +30,7 @@ export function app_code_lesson_operators_addition_2() {
     let list2 = batch();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
+    let combined3 = js_code_binary_spaced_nb();
     html_div_cycle_code(c2, [
       "When " +
         verb +
@@ -36,6 +38,8 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " : ",
       first,
+      " ",
+      combined3,
     ]);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
