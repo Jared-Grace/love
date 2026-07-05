@@ -71,7 +71,6 @@ export function app_code_lesson_operators_generic(
   let max = 7;
   let symbols_to_answer = eval;
   let batch = app_code_lesson_operators_generic_batch_get(
-    max,
     left_transform,
     operator_js,
   );
