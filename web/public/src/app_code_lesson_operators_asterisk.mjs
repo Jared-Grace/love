@@ -1,3 +1,4 @@
+import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -16,11 +17,10 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
-import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_asterisk() {
-  const operator = js_operator_minus();
-  let math_name = "asterisk";
+  const operator = js_operator_multiplication();
+  let lesson_name = "asterisk";
   let verb = js_operator_minus_verb();
   let sign = "negative";
   let left_transform = add;
@@ -69,9 +69,9 @@ export function app_code_lesson_operators_asterisk() {
     let result = boolean_to_text_validity(valid);
     return result;
   };
-  let inside = text_first_upper_to(math_name);
+  let inside = text_first_upper_to(lesson_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
-  let id = "operators_" + math_name;
+  let id = "operators_" + lesson_name;
   let question_label = "Code: ";
   let r = app_code_lesson_symbols_batches_generic(
     name,
