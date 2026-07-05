@@ -15,7 +15,7 @@ import { html_div_code_multiple } from "../../../love/public/src/html_div_code_m
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
+import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_asterisk() {
@@ -23,7 +23,7 @@ export function app_code_lesson_operators_asterisk() {
   let lesson_name = "asterisk";
   let verb = js_operator_multiplication_verb();
   let left_transform = add;
-  let batch = app_code_lesson_operators_generic_batch_get_unary(
+  let batch = app_code_lesson_operators_generic_batch_get_binary(
     operator,
     left_transform,
   );
