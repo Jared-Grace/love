@@ -9,7 +9,6 @@ import { text_first_upper_to } from "../../../love/public/src/text_first_upper_t
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_addition_2() {
   const operator = "-";
@@ -19,7 +18,6 @@ export function app_code_lesson_operators_addition_2() {
   let batch = app_code_lesson_operators_generic_batch_get(add, operator);
   function above(root) {
     let c = app_code_container_light_blue(root);
-    app_code_lesson_underscores_define_symbol(c, operator_name, operator);
     let combined = digit_random_operator(operator);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
