@@ -25,6 +25,7 @@ export function app_code_lesson_operators_minus_generic(
   sign,
   verb,
   math_name,
+  right_random_get,
 ) {
   let batch_subtraction = app_code_lesson_operators_generic_batch_get(
     operator,
