@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -40,7 +41,10 @@ export function app_code_lesson_operators_minus_generic(
         ": ",
       combined,
     ]);
-    function lambda3() {}
+    function lambda3() {
+      let b = batch();
+      let first = list_first(list);
+    }
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
