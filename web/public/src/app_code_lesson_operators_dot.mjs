@@ -53,7 +53,7 @@ export function app_code_lesson_operators_dot() {
     ]);
     let p = js_operator_plus();
     let r2 = js_operator_minus();
-    let r22 = js_operator_asterisk_verb();
+    let r22 = js_operator_asterisk();
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
     let mapped = list_map_property_to(operators_text, "operator");
