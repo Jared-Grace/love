@@ -16,7 +16,7 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-export function app_code_lesson_operators_addition_2() {
+export function app_code_lesson_operators_minus() {
   const operator = "-";
   const operator_name = "minus sign";
   let math_name = "negation";
