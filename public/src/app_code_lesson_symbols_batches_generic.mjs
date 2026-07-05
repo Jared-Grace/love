@@ -40,7 +40,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
 export function app_code_lesson_symbols_batches_generic(
   name,
   id,
@@ -56,7 +55,7 @@ export function app_code_lesson_symbols_batches_generic(
 ) {
   id = text_replace_space_underscore(id);
   function example_above(parent, symbols) {
-    let container = app_code_container_light(parent);
+    let container = app_code_container_code_dark(parent);
     let span = html_div_text(container, question_label);
     let row = app_code_container_dark(container);
     html_style_assign(row, {
