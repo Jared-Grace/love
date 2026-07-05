@@ -1,6 +1,4 @@
-import { not } from "../../../love/public/src/not.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { lambda_throws } from "../../../love/public/src/lambda_throws.mjs";
+import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -75,9 +73,7 @@ export function app_code_lesson_operators_addition_2() {
     function lambda2() {
       eval(symbols);
     }
-    let r2 = lambda_throws(lambda2);
-    let throws = property_get(r2, "throws");
-    let valid = not(throws);
+    let valid = throws_not(lambda2);
     return valid;
   };
   let inside = text_first_upper_to(math_name);
