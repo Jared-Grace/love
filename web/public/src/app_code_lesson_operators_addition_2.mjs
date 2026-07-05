@@ -38,11 +38,12 @@ export function app_code_lesson_operators_addition_2() {
       " :",
       first,
     ]);
+    let combined2 = digit_random_operator(operator);
     html_div_cycle_code(c, [
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
       " :",
-      first,
+      combined2,
     ]);
     let t = null;
     t = "In JavaScript";
