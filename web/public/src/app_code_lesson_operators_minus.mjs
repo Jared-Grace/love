@@ -24,6 +24,7 @@ export function app_code_lesson_operators_minus() {
   const operator_name = "minus sign";
   let math_name = "negation";
   let verb = "subtract";
+  let sign = "negative";
   let left_transform = add;
   let batch_subtraction = app_code_lesson_operators_generic_batch_get(
     operator,
@@ -40,7 +41,9 @@ export function app_code_lesson_operators_minus() {
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
         operator_name_math_articled +
-        "can be used to make a number negative: ",
+        "can be used to make a number ",
+      sign,
+      ": ",
       combined,
     ]);
     let list2 = batch_subtraction();
@@ -60,7 +63,9 @@ export function app_code_lesson_operators_minus() {
     let c3 = app_code_container_light_blue(root);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c3, [
-      "However, when making a number negative, there is only a number on right side of the ",
+      "However, when making a number ",
+      sign,
+      ", there is only a number on right side of the ",
       operator,
       " : ",
     ]);
