@@ -1,4 +1,4 @@
-import { app_code_symbols_eval } from "../../../love/public/src/app_code_symbols_eval.mjs";
+import { app_code_symbols_eval_valid } from "../../../love/public/src/app_code_symbols_eval_valid.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -100,7 +100,7 @@ export function app_code_lesson_operators_dot_numbers() {
     batch,
     example_label,
     quiz_label,
-    app_code_symbols_eval,
+    app_code_symbols_eval_valid,
     2,
     app_code_symbol,
     question_label,
