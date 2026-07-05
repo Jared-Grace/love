@@ -6,7 +6,7 @@ export function app_code_lesson_operators_generic_batch_get(
   left_transform,
 ) {
   let max = 7;
-  let r = function lambda2() {
+  let r = function batch_get() {
     let list = each_nested_args_both_range_1_list_adder(
       max,
       lambda$left$right$la,
