@@ -80,7 +80,7 @@ export function app_code_lesson_operators_dot() {
         html_span_text_code_dark,
       );
       if (not(condition)) {
-        let operator2 = property_get(item, "operator");
+        item = property_get(item, "operator");
       }
       result(div2, item);
     }
