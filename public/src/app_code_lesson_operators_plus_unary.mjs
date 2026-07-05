@@ -22,7 +22,7 @@ import { js_operator_minus_name } from "../../../love/public/src/js_operator_min
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-export function app_code_lesson_operators_negation() {
+export function app_code_lesson_operators_plus_unary() {
   const operator = js_operator_minus();
   const operator_name = js_operator_minus_name();
   let math_name = "negation";
