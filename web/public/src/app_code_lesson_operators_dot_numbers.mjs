@@ -51,7 +51,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
-    let c4 = app_code_container_light_blue(parent);
+    let c4 = app_code_container_light_blue(root);
     let div = html_div_cycle_code(c4, [
       "We can also use ",
       operator,
