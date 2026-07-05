@@ -44,9 +44,9 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_code(c4, first3);
     let c = app_code_container_light_blue(root);
     let d = html_div_cycle_code(c, [
-      "In JavaScript, " + operator_name_math_articled + " ",
+      "Besides decimal points, ",
       operator,
-      " is a symbol like: ",
+      " is a symbol that can be used like: ",
     ]);
     app_code_operators_arithmetic(d);
     let c2 = app_code_container_light_blue(root);
