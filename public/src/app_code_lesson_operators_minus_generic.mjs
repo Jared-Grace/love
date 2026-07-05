@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -46,14 +47,7 @@ export function app_code_lesson_operators_minus_generic(
       left_transform,
       verb,
     );
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
-      "However, when making a number " +
-        sign +
-        ", there is only a number on right side of the ",
-      operator,
-      " : ",
-    ]);
+    app_code_lesson_operators_asterisk_generic_minus(root, operator);
     let combined2 = text_combine_right_fn(operator, right_random_get);
     const right2 = "right";
     let combined4 = text_combine(operator, right2);
