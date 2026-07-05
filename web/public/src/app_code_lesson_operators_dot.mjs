@@ -1,3 +1,4 @@
+import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
@@ -5,7 +6,7 @@ import { app_code_lesson_operators_minus_generic } from "../../../love/public/sr
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
-  const operator_name = "period";
+  const operator_name = js_operator_dot_name();
   let math_name = "property access";
   let verb = js_operator_minus_verb();
   let sign = "negative";
