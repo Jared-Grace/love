@@ -50,7 +50,7 @@ export function app_code_lesson_operators_dot() {
     html_div_cycle_code(c2, [
       "And we can use ",
       operator,
-      " with identifiers :",
+      " with identifiers:",
     ]);
     html_div_code(c2, "id_left.id_right");
     let verb = js_operator_asterisk_verb();
