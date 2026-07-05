@@ -13,7 +13,6 @@ export function app_code_lesson_symbols_identifiers_valid(
   arguments_assert(arguments, 6);
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
-
   let question_label = app_code_label_symbols();
   let r = app_code_lesson_symbols_batches_generic(
     name,
