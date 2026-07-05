@@ -49,14 +49,6 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
-      "However, we cannot directly use ",
-      operator,
-      " with numbers",
-    ]);
-    html_div_text(c2, "We cannot have a number on the right:");
-    return;
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
@@ -68,6 +60,14 @@ export function app_code_lesson_operators_dot_numbers() {
       js_code_binary,
       example_get,
     );
+    let c3 = app_code_container_light_blue(root);
+    html_div_cycle_code(c3, [
+      "However, we cannot directly use ",
+      operator,
+      " with numbers",
+    ]);
+    html_div_text(c2, "We cannot have a number on the right:");
+    return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     app_code_lesson_operators_asterisk_generic_invalid(root, operator);
   }
