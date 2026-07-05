@@ -23,7 +23,7 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       let combined3 = js_code_binary_spaced_nb(transformed, operator_js, right);
       let combined4 = text_combine(left, operator_js);
       function lambda(item) {}
-      each(list2, lambda);
+      each([combined, combined2, combined3, combined4], lambda);
     }
   };
   return r;
