@@ -46,6 +46,7 @@ export function app_code_lesson_operators_minus_generic(
       operator,
       left_transform,
       word_add_ing(verb) + " two numbers",
+      noun,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
