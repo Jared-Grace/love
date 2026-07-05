@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
@@ -8,10 +9,6 @@ import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parent
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
-import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
-import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -48,21 +45,7 @@ export function app_code_lesson_operators_minus_generic(
       verb,
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
-    let combined2 = text_combine_right_fn(operator, right_random_get);
-    const right2 = "right";
-    let combined4 = text_combine(operator, right2);
-    html_div_code_multiple(c3, [combined2, combined4]);
-    let c4 = app_code_container_light_blue(root);
-    html_div_cycle_code_multiple(c4, [
-      ["Therefore, ", operator, " must have a value on the right side"],
-      [
-        "And if ",
-        operator,
-        " does not have anything on its right side, then that is invalid code: ",
-      ],
-    ]);
-    let combined5 = text_combine("invalid", operator);
-    html_div_code(c4, combined5);
+    app_code_lesson_operators_asterisk_generic_invalid(root, operator);
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
