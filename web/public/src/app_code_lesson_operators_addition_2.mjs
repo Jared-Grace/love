@@ -40,10 +40,11 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " : ",
     ]);
-    function lambda(item) {}
-    each(list, lambda);
-    html_div_code(c2, first);
-    html_div_code(c2, combined3);
+    const codes = [first, combined3];
+    function lambda(code) {
+      html_div_code(c2, code);
+    }
+    each(codes, lambda);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
