@@ -55,11 +55,11 @@ export function app_code_lesson_operators_addition_2() {
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
-      ["Therefore, a ", operator, " must have a value on the right side"],
+      ["Therefore, ", operator, " must have a value on the right side"],
       [
-        "Therefore, if ",
+        "And if ",
         operator,
-        " only has a number on the left side, that is invalid: ",
+        " does not have anything on its right side, that is invalid: ",
       ],
     ]);
     let combined5 = text_combine("invalid", operator);
