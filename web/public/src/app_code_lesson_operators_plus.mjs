@@ -10,7 +10,7 @@ export function app_code_lesson_operators_plus() {
   const operator_name = js_operator_plus_name();
   let math_name = operator_name;
   let verb = js_operator_plus_verb();
-  let sign = "negative";
+  let sign = "positive";
   let left_transform = add;
   function lambda() {
     let combined = digit_negative_random();
