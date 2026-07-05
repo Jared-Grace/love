@@ -9,7 +9,6 @@ import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parent
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
-import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
@@ -49,6 +48,8 @@ export function app_code_lesson_operators_asterisk() {
     html_div_code_multiple(c3, [combined2, combined4]);
     html_div_cycle_code(c3, ["However we cannot do this for ", operator]);
     let c4 = app_code_container_light_blue(root);
+    let combined = text_combine("invalid", operator);
+    let combined3 = text_combine(operator, "invalid");
     html_div_cycle_code_multiple(c4, [
       [
         "Therefore, ",
@@ -60,14 +61,14 @@ export function app_code_lesson_operators_asterisk() {
         operator,
         " does not have anything on its right side, then that is invalid code: ",
       ],
+      ["", combined],
       [
         "And if ",
         operator,
         " does not have anything on its left side, then that is invalid code: ",
       ],
+      ["", combined3],
     ]);
-    let combined5 = text_combine("invalid", operator);
-    html_div_code(c4, combined5);
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
