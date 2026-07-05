@@ -1,9 +1,6 @@
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_operators_arithmetic } from "../../../love/public/src/app_code_operators_arithmetic.mjs";
-import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
-import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -53,14 +50,6 @@ export function app_code_lesson_operators_dot() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
-    let verb = js_operator_asterisk_verb();
-    let operator2 = js_operator_asterisk();
-    app_code_lesson_operators_minus_generic_container_both_sides(
-      root,
-      operator2,
-      verb,
-      identity,
-    );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
       "However, when making a number " +
