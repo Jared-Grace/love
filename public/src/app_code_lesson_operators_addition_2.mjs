@@ -1,3 +1,4 @@
+import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -53,6 +54,12 @@ export function app_code_lesson_operators_addition_2() {
     let combined4 = text_combine(operator, right);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
+    html_div_cycle_code(c2, [
+      "Therefore, if " +
+        operator +
+        " only has a number on the left side, that is invalid: ",
+    ]);
+    html_div_code();
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
