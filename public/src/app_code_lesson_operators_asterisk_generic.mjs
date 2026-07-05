@@ -1,3 +1,4 @@
+import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
@@ -6,8 +7,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
-import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 export function app_code_lesson_operators_asterisk_generic(
   operator,
@@ -31,14 +30,6 @@ export function app_code_lesson_operators_asterisk_generic(
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda(symbols) {
-    function lambda2() {
-      eval(symbols);
-    }
-    let valid = throws_not(lambda2);
-    let result = boolean_to_text_validity(valid);
-    return result;
-  };
   let inside = text_first_upper_to(lesson_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + lesson_name;
@@ -51,7 +42,7 @@ export function app_code_lesson_operators_asterisk_generic(
     batch,
     example_label,
     quiz_label,
-    symbols_to_answer,
+    app_code_symbols_eval_valid_expression,
     2,
     app_code_symbol,
     question_label,
