@@ -27,7 +27,7 @@ export function app_code_lesson_operators_plus_unary() {
   const operator_name = js_operator_minus_name();
   let math_name = "Plus sign unary";
   let verb = js_operator_minus_verb();
-  let sign = "negative";
+  let sign = "positive";
   let left_transform = add;
   let batch_binary = app_code_lesson_operators_generic_batch_get(
     operator,
