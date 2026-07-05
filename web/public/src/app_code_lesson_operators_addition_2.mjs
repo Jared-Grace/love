@@ -75,7 +75,7 @@ export function app_code_lesson_operators_addition_2() {
     function lambda2() {}
     let r2 = lambda_throws(lambda2);
     let throws = property_get(r2, "throws");
-    let valid = not(throws);
+    let valid = not(throws);$r,valid
   };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
