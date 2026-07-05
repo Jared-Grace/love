@@ -1,4 +1,4 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { js_code_negation } from "../../../love/public/src/js_code_negation.mjs";
 import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { app_code_lesson_operators_minus_generic } from "../../../love/public/src/app_code_lesson_operators_minus_generic.mjs";
@@ -13,8 +13,8 @@ export function app_code_lesson_operators_plus() {
   let left_transform = add;
   function lambda() {
     let d = digit_positive_random();
-    let combined = text_combine(left, right);
-    let wrapped = js_code_wrap_parenthesis(d);
+    let combined = js_code_negation(d);
+    let wrapped = js_code_wrap_parenthesis(combined);
     return wrapped;
   }
   let r = app_code_lesson_operators_minus_generic(
