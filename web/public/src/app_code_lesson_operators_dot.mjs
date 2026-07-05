@@ -63,7 +63,7 @@ export function app_code_lesson_operators_dot() {
       let condition = text_is(item);
       let result = ternary(
         condition,
-        html_span_text_padded_space,
+        html_span_text_padded_space, 
         html_span_text_code_dark,
       );
       if (not(condition)) {
