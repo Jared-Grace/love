@@ -43,7 +43,8 @@ export function app_code_lesson_operators_minus_generic(
     ]);
     function lambda3() {
       let b = batch();
-      let first = list_first(list);
+      let first = list_first(b);
+      return first;
     }
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
