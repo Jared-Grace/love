@@ -44,7 +44,7 @@ export function app_code_lesson_operators_addition_2() {
       " : ",
     ]);
     html_div_code_multiple(c2, [first, combined3]);
-    let c3 = app_code_container_light_blue(parent);
+    let c3 = app_code_container_light_blue(root);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c3, [
       "However, when making a number negative, there is only a number on right side of the ",
