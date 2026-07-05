@@ -11,7 +11,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
 ) {
   let c = app_code_container_light_blue(root);
   let u = text_first_upper_to(
-    text_before + "on both the left and right sides of the ",
+    text_before + " on both the left and right sides of the ",
   );
   html_div_cycle_code(c, [u, operator, " : "]);
   const right = "right";
