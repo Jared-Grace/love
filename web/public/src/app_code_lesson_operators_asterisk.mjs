@@ -37,15 +37,15 @@ export function app_code_lesson_operators_asterisk() {
       left_transform,
     );
     let c3 = app_code_container_light_blue(root);
-    let r2 = js_operator_minus();
+    let minus = js_operator_minus();
     html_div_cycle_code(c3, [
-      "For ",
-      r2,
+      "Remember, for ",
+      minus,
       " it's possible to only have a number on the right: ",
     ]);
-    let combined2 = text_combine_right_fn(operator, digit_positive_random);
+    let combined2 = text_combine_right_fn(minus, digit_positive_random);
     const right2 = "right";
-    let combined4 = text_combine(operator, right2);
+    let combined4 = text_combine(minus, right2);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
