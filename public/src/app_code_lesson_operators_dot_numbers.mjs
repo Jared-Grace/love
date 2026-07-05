@@ -71,7 +71,9 @@ export function app_code_lesson_operators_dot_numbers() {
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
-      "However, we cannot directly use ",
+      "However, if we're not using ",
+      operator,
+      " as a decimal point we cannot directly use ",
       operator,
       " with numbers",
     ]);
