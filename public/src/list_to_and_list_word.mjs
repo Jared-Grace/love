@@ -1,4 +1,4 @@
 export function list_to_and_list_word() {
-  let r = "and";
-  return r;
+  let w = "and";
+  return w;
 }
