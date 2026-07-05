@@ -8,7 +8,7 @@ export function app_code_lesson_operators_plus() {
   let verb = "subtract";
   let sign = "negative";
   let left_transform = add;
-  function lambda() {}
+  function lambda() {digit_positive_random}
   let r = app_code_lesson_operators_minus_generic(
     operator,
     left_transform,
