@@ -1,4 +1,4 @@
 export function text_dot() {
-  let v = ".";
-  return v;
+  let t = ".";
+  return t;
 }
