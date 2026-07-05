@@ -61,9 +61,9 @@ export function app_code_lesson_operators_minus_generic(
     html_div_code_multiple(c2, [first, combined3]);
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
-      "However, when making a number ",
-      sign,
-      ", there is only a number on right side of the ",
+      "However, when making a number " +
+        sign +
+        ", there is only a number on right side of the ",
       operator,
       " : ",
     ]);
