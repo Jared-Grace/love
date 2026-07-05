@@ -15,5 +15,13 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     "number",
     js_code_binary_spaced_nb,
     example_get,
-  );
+  );  function example_get() {
+    let batch_binary = app_code_lesson_operators_generic_batch_get(
+      operator,
+      left_transform,
+    );
+    let list2 = batch_binary();
+    let first = list_first(list2);
+    return first;
+  }
 }
