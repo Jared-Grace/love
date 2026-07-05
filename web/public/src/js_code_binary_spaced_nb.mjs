@@ -1,5 +1,7 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 export function js_code_binary_spaced_nb(transformed, operator_js, right) {
   let parts = list_between_space_nb([transformed, operator_js, right]);
+  let combined = text_combine_multiple(list3);
   return parts;
 }
