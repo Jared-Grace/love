@@ -1,4 +1,4 @@
-import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
+import { app_code_symbols_eval_valid_identifier } from "../../../love/public/src/app_code_symbols_eval_valid_identifier.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -22,7 +22,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     batch_get,
     example_label,
     quiz_label,
-    app_code_symbols_eval_valid_expression,
+    app_code_symbols_eval_valid_identifier,
     2,
     symbol_create,
     question_label,
