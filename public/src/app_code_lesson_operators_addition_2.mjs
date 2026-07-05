@@ -16,13 +16,13 @@ export function app_code_lesson_operators_addition_2() {
   const operator_name = "minus sign";
   let math_name = "subtraction";
   let verb = "subtract";
+  let batch = app_code_lesson_operators_generic_batch_get(
+    left_transform,
+    operator_js,
+  );
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name, operator);
-    let batch = app_code_lesson_operators_generic_batch_get(
-      left_transform,
-      operator_js,
-    );
     let list2 = batch();
     let first = list_first(list2);
     let replaced = text_replace(first, operator, operator);
