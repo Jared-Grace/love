@@ -9,9 +9,9 @@ export function undefined_not_is_assert_object_property(
   function object_get() {
     let properties = properties_get(object);
     let v = {
-      object,
-      properties,
       property_name,
+      properties,
+      object,
     };
     return v;
   }
