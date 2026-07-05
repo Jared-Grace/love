@@ -5,7 +5,7 @@ export async function app_code_lesson_named(
   plugin_fn,
   args_comma,
 ) {
-  let r = await app_code_lesson_add(fn_base_name);
-  let r2 = await function_rename_open_generic_args(plugin_fn, args_comma);
+  await app_code_lesson_add(fn_base_name);
+  let r = await function_rename_open_generic_args(plugin_fn, args_comma);
   return r;
 }
