@@ -44,7 +44,7 @@ export function app_code_lesson_operators_dot() {
     html_div_cycle_code(c, [
       "In JavaScript, " +
         operator_name_math_articled +
-        "can be used to make a number " +
+        " is a symbol like " +
         sign +
         ": ",
       combined,
