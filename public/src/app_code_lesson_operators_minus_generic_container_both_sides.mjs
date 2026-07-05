@@ -1,3 +1,4 @@
+import { word_ing } from "../../../love/public/src/word_ing.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -22,8 +23,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let combined3 = js_code_binary_spaced_nb(left, operator, right);
   html_div_cycle_code(c2, [
     "When " +
-      verb +
-      "ing" +
+      word_ing(verb) +
       " two numbers, there is a number on both the left and right sides of the ",
     operator,
     " : ",
