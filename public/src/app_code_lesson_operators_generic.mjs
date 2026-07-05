@@ -21,8 +21,8 @@ export function app_code_lesson_operators_generic(
   left_transform,
 ) {
   let batch = app_code_lesson_operators_generic_batch_get(
-    left_transform,
     operator_js,
+    left_transform,
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
