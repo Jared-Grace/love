@@ -1,3 +1,4 @@
+import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
@@ -64,17 +65,16 @@ export function app_code_lesson_operators_dot() {
     let r22 = js_operator_multiplication();
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
-    let concated = list_to_and_list(operators_text);
     let mapped = list_map_property_to(operators_text, "operator");
+    let concated = list_to_and_list(mapped);
     log(app_code_lesson_operators_dot.name, {
       concated,
     });
     let div2 = html_div(c);
     function lambda4(item) {
       const word_relationship = list_to_and_list_word();
-      let l = item === word_relationship;
       let result = ternary(
-        l,
+        text_is,
         html_span_text_padded_space,
         html_span_text_code_dark,
       );
