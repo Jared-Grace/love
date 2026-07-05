@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -15,6 +16,8 @@ export function app_code_lesson_operators_generic_batch_get_unary(
     list_shuffle(list);
     return list;
     function lambda$left$right$la(left, right, la) {
+      let combined2 = text_combine(left2, right2);
+      la(combined);
       let transformed = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
       la(combined);
