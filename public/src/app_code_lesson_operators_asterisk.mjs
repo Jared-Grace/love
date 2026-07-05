@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -9,14 +10,11 @@ import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
-import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
-import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
 import { js_operator_minus_name } from "../../../love/public/src/js_operator_minus_name.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
@@ -29,10 +27,6 @@ export function app_code_lesson_operators_asterisk() {
   let verb = js_operator_minus_verb();
   let sign = "negative";
   let left_transform = add;
-  let batch_binary = app_code_lesson_operators_generic_batch_get(
-    operator,
-    left_transform,
-  );
   let batch = app_code_lesson_operators_generic_batch_get_unary(
     operator,
     left_transform,
@@ -49,20 +43,11 @@ export function app_code_lesson_operators_asterisk() {
         ": ",
       combined,
     ]);
-    let list2 = batch_binary();
-    let first = list_first(list2);
-    let c2 = app_code_container_light_blue(root);
-    const right = "right";
-    let left = "left";
-    let combined3 = js_code_binary_spaced_nb(left, operator, right);
-    html_div_cycle_code(c2, [
-      "When " +
-        verb +
-        "ing two numbers, there is a number on both the left and right sides of the ",
+    app_code_lesson_operators_minus_generic_container_both_sides(
+      root,
       operator,
-      " : ",
-    ]);
-    html_div_code_multiple(c2, [first, combined3]);
+      verb,
+    );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
       "However, when making a number " +
