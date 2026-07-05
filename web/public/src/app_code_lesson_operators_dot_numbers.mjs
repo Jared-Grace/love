@@ -1,3 +1,4 @@
+import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
@@ -67,7 +68,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " with numbers",
     ]);
     html_div_text(c3, "We cannot have a number on the right:");
-    html_div_code(c3, "invalid.name");
+    html_div_code(c3, "invalid." + digit_random());
     return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     app_code_lesson_operators_asterisk_generic_invalid(root, operator);
