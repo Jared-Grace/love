@@ -22,7 +22,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   html_div_cycle_code(c, [u, operator, " : "]);
   const right = "right";
   let left = "left";
-  let combined3 = code_to(left, operator, right);
+  let code = code_to(left, operator, right);
   let first = example_get();
-  html_div_code_multiple(c, [first, combined3]);
+  html_div_code_multiple(c, [first, code]);
 }
