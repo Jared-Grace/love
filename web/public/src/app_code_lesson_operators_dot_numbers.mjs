@@ -55,7 +55,6 @@ export function app_code_lesson_operators_dot_numbers() {
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
-      left_transform,
       "using the dot",
       "something",
       js_code_binary,
