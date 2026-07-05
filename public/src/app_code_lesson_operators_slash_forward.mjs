@@ -5,7 +5,7 @@ import { js_operator_multiplication_verb } from "../../../love/public/src/js_ope
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_slash_forward() {
   const operator = js_operator_division();
-  const operator_name = js_operator_division_name();
+  const lesson_name = js_operator_division_name();
   let verb = js_operator_multiplication_verb();
   let left_transform = add;
   let r = app_code_lesson_operators_asterisk_generic(
