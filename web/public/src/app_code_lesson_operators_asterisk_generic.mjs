@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -9,7 +10,6 @@ import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 export function app_code_lesson_operators_asterisk_generic(
   operator,
@@ -22,12 +22,11 @@ export function app_code_lesson_operators_asterisk_generic(
     left_transform,
   );
   function above(root) {
-    app_code_lesson_operators_minus_generic_container_both_sides(
+    app_code_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       left_transform,
-      "using the dot",
-      "value, such as an identifier,",
+      verb,
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     let c4 = app_code_container_light_blue(root);
