@@ -1,3 +1,4 @@
+import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -35,7 +36,8 @@ export function app_code_lesson_operators_minus_generic(
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let combined = digit_positive_random_operator(operator);
+    let right2 = digit_positive_random();
+    let combined = text_combine(operator, right2);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
