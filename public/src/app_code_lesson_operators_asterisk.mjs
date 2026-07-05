@@ -47,6 +47,7 @@ export function app_code_lesson_operators_asterisk() {
     const right2 = "right";
     let combined4 = text_combine(minus, right2);
     html_div_code_multiple(c3, [combined2, combined4]);
+    html_div_cycle_code(c3, ["However we cannot do this for ", operator]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
       ["Therefore, ", operator, " must have a value on the right side"],
