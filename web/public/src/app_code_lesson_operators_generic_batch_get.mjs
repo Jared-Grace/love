@@ -1,5 +1,5 @@
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
-import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
+import { each_nested_args_range_1_list_adder } from "../../../love/public/src/each_nested_args_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 export function app_code_lesson_operators_generic_batch_get(
@@ -8,10 +8,7 @@ export function app_code_lesson_operators_generic_batch_get(
 ) {
   let max = app_code_lesson_operators_generic_batch_get_max();
   let r = function batch_get() {
-    let list = each_nested_args_both_range_1_list_adder(
-      max,
-      lambda$left$right$la,
-    );
+    let list = each_nested_args_range_1_list_adder(max, lambda$left$right$la);
     list_shuffle(list);
     return list;
     function lambda$left$right$la(left, right, la) {
