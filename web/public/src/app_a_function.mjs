@@ -29,7 +29,6 @@ import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { properties_from_empty } from "../../../love/public/src/properties_from_empty.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
-import { json_format_to_truncated } from "../../../love/public/src/json_format_to_truncated.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
@@ -64,6 +63,7 @@ import { app_shared_screen_set } from "../../../love/public/src/app_shared_scree
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
+import { json_format_to } from "./json_format_to.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
   let key = app_a_function_name_selected_key();
@@ -161,7 +161,7 @@ export async function app_a_function(context) {
           let div = app_a_overlay_container(overlay);
           let fn = await app_a_function_import(f_name);
           let r = await fn();
-          let j = json_format_to_truncated(r);
+          let j = json_format_to(r);
           let pre = html_pre_text(div, j);
           app_a_buttons_shortcuts(overlay, choices);
         }

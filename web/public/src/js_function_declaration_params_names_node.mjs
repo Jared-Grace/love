@@ -3,7 +3,7 @@ import { error } from "../../../love/public/src/error.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
-import { json_format_to_truncated } from "../../../love/public/src/json_format_to_truncated.mjs";
+import { json_format_to } from "./json_format_to.mjs";
 export function js_function_declaration_params_names_node(node) {
   let names = null;
   let ii = js_identifier_is(node);
@@ -24,7 +24,7 @@ export function js_function_declaration_params_names_node(node) {
         let value = property_get(node, "value");
         names = js_function_declaration_params_names_node(value);
       } else {
-        let message = json_format_to_truncated(node);
+        let message = json_format_to(node);
         error(message);
       }
     }
