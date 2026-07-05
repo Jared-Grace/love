@@ -7,7 +7,6 @@ import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs"
 import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -67,7 +66,6 @@ export function app_code_lesson_operators_dot() {
     const operators_text = [p, r2, r22, r23];
     let mapped = list_map_property_to(operators_text, "operator");
     let concated = list_to_and_list(mapped);
-    let div2 = html_div(c);
     function lambda4(item) {
       let condition = text_is(item);
       let result = ternary(
@@ -78,7 +76,7 @@ export function app_code_lesson_operators_dot() {
       if (not(condition)) {
         item = property_get(item, "operator");
       }
-      result(div2, item);
+      result(d, item);
     }
     each(concated, lambda4);
     let list2 = batch_binary();
