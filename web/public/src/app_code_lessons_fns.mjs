@@ -1,5 +1,3 @@
-import { app_code_lesson_operators_plus_unary } from "../../../love/public/src/app_code_lesson_operators_plus_unary.mjs";
-import { app_code_lesson_operators_plus } from "../../../love/public/src/app_code_lesson_operators_plus.mjs";
 import { app_code_lesson_operators_minus } from "../../../love/public/src/app_code_lesson_operators_minus.mjs";
 import { app_code_lesson_operators_division } from "../../../love/public/src/app_code_lesson_operators_division.mjs";
 import { app_code_lesson_operators_multiplication } from "../../../love/public/src/app_code_lesson_operators_multiplication.mjs";
@@ -30,8 +28,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_multiplication,
     app_code_lesson_operators_division,
     app_code_lesson_operators_minus,
-    app_code_lesson_operators_plus_unary,
-    app_code_lesson_operators_plus,
   ];
   return r;
 }
