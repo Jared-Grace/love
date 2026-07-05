@@ -1,4 +1,4 @@
-import { app_code_label_code } from "../../../love/public/src/app_code_label_code.mjs";
+import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { js_code_negation_parenthesis_wrapped } from "../../../love/public/src/js_code_negation_parenthesis_wrapped.mjs";
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
@@ -58,7 +58,7 @@ export function app_code_lesson_operators_plus_unary() {
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
-  let question_label = app_code_label_code();
+  let question_label = app_code_label_code_question();
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
