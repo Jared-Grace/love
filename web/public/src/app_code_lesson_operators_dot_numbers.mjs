@@ -73,7 +73,7 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_cycle_code(c3, [
       "However, if we're not using ",
       operator,
-      " as a decimal point we cannot directly use ",
+      " as a decimal point, then we cannot directly use ",
       operator,
       " with numbers",
     ]);
