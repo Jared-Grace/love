@@ -15,7 +15,7 @@ export function app_code_lesson_operators_addition_2() {
   const operator_name = "minus sign";
   let math_name = "negation";
   let verb = "subtract";
-  let batch = app_code_lesson_operators_generic_batch_get(add, operator);
+  let batch = app_code_lesson_operators_generic_batch_get(operator, add);
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = digit_positive_random_operator(operator);
