@@ -5,7 +5,7 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
-export function app_code_lesson_operators_generic_batch_get_unary(
+export function app_code_lesson_operators_generic_batch_get_binary(
   operator_js,
   left_transform,
 ) {

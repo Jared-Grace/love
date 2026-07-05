@@ -25,7 +25,7 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
+import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_operators_dot() {
   let verb = js_operator_minus_verb();
   let sign = "negative";
   let left_transform = add;
-  let batch = app_code_lesson_operators_generic_batch_get_unary(
+  let batch = app_code_lesson_operators_generic_batch_get_binary(
     operator,
     left_transform,
   );
