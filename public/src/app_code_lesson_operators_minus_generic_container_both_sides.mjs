@@ -1,5 +1,4 @@
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { word_add_ing } from "../../../love/public/src/word_add_ing.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -24,7 +23,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let left = "left";
   let combined3 = js_code_binary_spaced_nb(left, operator, right);
   let u = text_first_upper_to(
-    "when " + (word_add_ing(verb) + " two numbers"),
+    "when " + text_when,
     " there is a ",
     "number",
     " on both the left and right sides of the ",
