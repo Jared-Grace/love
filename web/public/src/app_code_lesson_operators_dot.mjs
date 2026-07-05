@@ -1,3 +1,5 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_operators_arithmetic } from "../../../love/public/src/app_code_operators_arithmetic.mjs";
 import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
 import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
@@ -42,6 +44,9 @@ export function app_code_lesson_operators_dot() {
     ]);
     app_code_operators_arithmetic(d);
     let c2 = app_code_container_light_blue(root);
+    let d2 = html_div_text(c2, "We can use ");
+    app_code_operators_arithmetic(d2);
+    html_span_text(d2, " with numbers");
     let verb = js_operator_asterisk_verb();
     let operator2 = js_operator_asterisk();
     app_code_lesson_operators_minus_generic_container_both_sides(
