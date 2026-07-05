@@ -10,6 +10,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   operator,
   left_transform,
   text_when,
+  noun,
 ) {
   let batch_binary = app_code_lesson_operators_generic_batch_get(
     operator,
