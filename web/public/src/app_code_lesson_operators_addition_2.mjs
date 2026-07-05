@@ -1,3 +1,4 @@
+import { add } from "../../../love/public/src/add.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -16,10 +17,7 @@ export function app_code_lesson_operators_addition_2() {
   const operator_name = "minus sign";
   let math_name = "subtraction";
   let verb = "subtract";
-  let batch = app_code_lesson_operators_generic_batch_get(
-    left_transform,
-    operator,
-  );
+  let batch = app_code_lesson_operators_generic_batch_get(add, operator);
   function above(root) {
     let c = app_code_container_light_blue(root);
     app_code_lesson_underscores_define_symbol(c, operator_name, operator);
