@@ -5,8 +5,8 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 export function app_code_lesson_operators_generic_batch_get(
-  left_transform,
   operator_js,
+  left_transform,
 ) {
   let max = 7;
   let r = function lambda() {
