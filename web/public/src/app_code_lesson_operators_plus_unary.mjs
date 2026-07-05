@@ -5,7 +5,6 @@ import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
@@ -23,7 +22,6 @@ export function app_code_lesson_operators_plus_unary() {
   const operator_name = js_operator_plus_name();
   let math_name = "Plus sign unary";
   let sign = "positive";
-  let max = app_code_lesson_operators_generic_batch_get_max();
   let batch = function batch_get() {
     let dps = digits_positive();
     let list = list_adder_each(dps, on_each);
