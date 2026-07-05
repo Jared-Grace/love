@@ -26,7 +26,7 @@ export function app_code_lesson_operators_minus_generic(
   math_name,
   right_random_get,
 ) {
-  let batch_subtraction = app_code_lesson_operators_generic_batch_get(
+  let batch_binary = app_code_lesson_operators_generic_batch_get(
     operator,
     left_transform,
   );
@@ -46,7 +46,7 @@ export function app_code_lesson_operators_minus_generic(
         ": ",
       combined,
     ]);
-    let list2 = batch_subtraction();
+    let list2 = batch_binary();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
     const right = "right";
