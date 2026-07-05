@@ -1,4 +1,4 @@
-import { digit_random_operator } from "../../../love/public/src/digit_random_operator.mjs";
+import { digit_positive_random_operator } from "../../../love/public/src/digit_positive_random_operator.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_operators_addition_2() {
   let batch = app_code_lesson_operators_generic_batch_get(add, operator);
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let combined = digit_random_operator(operator);
+    let combined = digit_positive_random_operator(operator);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
@@ -37,7 +37,7 @@ export function app_code_lesson_operators_addition_2() {
       " :",
       first,
     ]);
-    let combined2 = digit_random_operator(operator);
+    let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
