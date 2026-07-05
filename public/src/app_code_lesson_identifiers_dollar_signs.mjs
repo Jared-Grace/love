@@ -1,3 +1,4 @@
+import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_identifiers_underscores_generic } from "../../../love/public/src/app_code_lesson_identifiers_underscores_generic.mjs";
 export function app_code_lesson_identifiers_dollar_signs() {
@@ -16,7 +17,3 @@ export function app_code_lesson_identifiers_dollar_signs() {
   );
   return r;
 }
-function js_operator_dot() {
-  return ".";
-}
-
