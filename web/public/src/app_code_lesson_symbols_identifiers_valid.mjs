@@ -13,10 +13,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   arguments_assert(arguments, 6);
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda(symbols) {
-    let validity = app_code_symbols_eval_valid_expression(symbols);
-    return validity;
-  };
+
   let question_label = app_code_label_symbols();
   let r = app_code_lesson_symbols_batches_generic(
     name,
@@ -26,7 +23,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     batch_get,
     example_label,
     quiz_label,
-    symbols_to_answer,
+    app_code_symbols_eval_valid_expression,
     2,
     symbol_create,
     question_label,
