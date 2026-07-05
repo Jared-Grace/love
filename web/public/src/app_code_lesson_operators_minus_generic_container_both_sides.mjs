@@ -4,7 +4,6 @@ import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binar
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_code_lesson_operators_minus_generic_container_both_sides(
-  batch_binary,
   root,
   operator,
   verb,
