@@ -23,8 +23,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let left = "left";
   let combined3 = js_code_binary_spaced_nb(left, operator, right);
   let u = text_first_upper_to(
-    word_first +
-      "when " +
+    "when " +
       word_add_ing(verb) +
       " two numbers, there is a number on both the left and right sides of the ",
   );
