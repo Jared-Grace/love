@@ -52,7 +52,7 @@ export function app_code_lesson_operators_dot() {
       operator,
       " with identifiers :",
     ]);
-    html_div_code(c2, "a.b.c");
+    html_div_code(c2, "a.b");
     let verb = js_operator_asterisk_verb();
     let operator2 = js_operator_asterisk();
     app_code_lesson_operators_minus_generic_container_both_sides(
