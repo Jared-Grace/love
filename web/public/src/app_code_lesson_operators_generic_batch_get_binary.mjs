@@ -23,7 +23,7 @@ export function app_code_lesson_operators_generic_batch_get_binary(
         right,
         operator_js,
       );
-      let transformed2 = left_transform(right, left);
+      let transformed2 = left_transform(left, right);
       let combined3 = js_code_binary_spaced_nb(
         transformed2,
         operator_js,
