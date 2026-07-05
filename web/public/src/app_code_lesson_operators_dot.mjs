@@ -1,4 +1,4 @@
-import { js_operator_multiplication_verb } from "../../../love/public/src/js_operator_multiplication_verb.mjs";
+import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -37,7 +37,7 @@ export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access";
-  let verb = js_operator_multiplication_verb();
+  let verb = js_operator_asterisk_verb();
   let sign = "negative";
   let left_transform = add;
   let batch = app_code_lesson_operators_generic_batch_get_binary(
