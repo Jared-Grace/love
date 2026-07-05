@@ -1,3 +1,5 @@
+import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
+import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { js_code_negation_parenthesis_wrapped } from "../../../love/public/src/js_code_negation_parenthesis_wrapped.mjs";
@@ -5,7 +7,6 @@ import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
@@ -51,8 +52,8 @@ export function app_code_lesson_operators_plus_unary() {
       combined,
     ]);
   }
-    const example_label = app_code_label_code_answer_example();
-    const quiz_label = app_code_label_code_answer_quiz();
+  const example_label = app_code_label_code_answer_example();
+  const quiz_label = app_code_label_code_answer_quiz();
   let symbols_to_answer = eval;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
