@@ -1,3 +1,5 @@
+import { text_take } from "../../../love/public/src/text_take.mjs";
+import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
@@ -7,7 +9,6 @@ import { app_code_examples } from "../../../love/public/src/app_code_examples.mj
 import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
-import { app_g_button_wrong_generic } from "../../../love/public/src/app_g_button_wrong_generic.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -174,7 +175,10 @@ export function app_code_lesson_symbols_batches_generic(
                   app_shared_button_screen_green_style_assign(b2);
                   html_visibility_visible_multiple(hides);
                 } else {
-                  app_g_button_wrong_generic(b2, "ff");
+                  let v = html_border_invalid_color();
+                  let t = text_take(v, 7) + alpha_channel;
+                  html_style_background_color_set(b2, t);
+                  let alpha_channel = "ff";
                 }
               }
               return b2;
