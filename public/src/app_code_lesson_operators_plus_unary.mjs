@@ -20,6 +20,7 @@ import { text_articled_pad_space } from "../../../love/public/src/text_articled_
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_plus_unary() {
+  "TODO: if teach unary + operator, then correct this";
   const operator = js_operator_plus();
   const operator_name = js_operator_plus_name();
   let math_name = "Plus sign unary";
