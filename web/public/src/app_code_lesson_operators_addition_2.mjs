@@ -14,7 +14,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_operators_addition_2() {
   const operator = "-";
   const operator_name = "minus sign";
-  let math_name = "subtraction";
+  let math_name = "negation";
   let verb = "subtract";
   let batch = app_code_lesson_operators_generic_batch_get(add, operator);
   function above(root) {
