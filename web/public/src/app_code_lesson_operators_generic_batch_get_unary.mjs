@@ -16,10 +16,10 @@ export function app_code_lesson_operators_generic_batch_get_unary(
     list_shuffle(list);
     return list;
     function lambda$left$right$la(left, right, la) {
-      let combined2 = text_combine(operator_js, right);
-      let combined3 = text_combine(right, operator_js);
+      let combined = text_combine(operator_js, right);
+      let combined2 = text_combine(right, operator_js);
       let transformed = left_transform(left, right);
-      let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
+      let combined3 = js_code_binary_spaced_nb(transformed, operator_js, right);
       let combined4 = text_combine(left, operator_js);
     }
   };
