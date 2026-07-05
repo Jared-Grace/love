@@ -8,6 +8,6 @@ export async function app_code_lesson_named(
 ) {
   let name_new = await app_code_lesson_add(fn_base_name);
   let combined = text_combine_multiple([name_new, ",", args_comma]);
-  let r = await function_rename_open_generic_args(plugin_fn, args_comma);
+  let r = await function_rename_open_generic_args(plugin_fn, combined);
   return r;
 }
