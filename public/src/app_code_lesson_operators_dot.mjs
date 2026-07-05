@@ -1,9 +1,9 @@
+import { list_to_and_list_word } from "../../../love/public/src/list_to_and_list_word.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
-import { list_is } from "../../../love/public/src/list_is.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
@@ -64,7 +64,8 @@ export function app_code_lesson_operators_dot() {
     let concated = list_to_and_list([p, r2, r22, r23]);
     let div2 = html_div(c);
     function lambda4(item) {
-      let l = list_is(item);
+      const word_relationship = list_to_and_list_word();
+      let l = item === word_relationship;
       let result = ternary(l, html_cycle_code, html_span_text_padded_space);
       result(div2, item);
     }
