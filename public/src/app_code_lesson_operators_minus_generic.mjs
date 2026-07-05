@@ -49,9 +49,8 @@ export function app_code_lesson_operators_minus_generic(
     app_code_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
-      verb,
       left_transform,
-      lambda3,
+      verb,
     );
     let c3 = app_code_container_light_blue(root);
     html_div_cycle_code(c3, [
