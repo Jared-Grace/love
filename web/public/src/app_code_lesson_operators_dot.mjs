@@ -1,3 +1,4 @@
+import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -53,7 +54,7 @@ export function app_code_lesson_operators_dot() {
     ]);
     html_div_code(c2, "person.name");
     let combined = js_code_binary("person", "age");
-    let example_get = value_get(combined);
+    let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
