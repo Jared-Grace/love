@@ -46,13 +46,13 @@ export function app_code_lesson_operators_addition_2() {
     html_div_code_multiple(c2, [first, combined3]);
     let c3 = app_code_container_light_blue(parent);
     let combined2 = digit_positive_random_operator(operator);
-    html_div_cycle_code(c2, [
+    html_div_cycle_code(c3, [
       "However, when making a number negative, there is only a number on right side of the ",
       operator,
       " : ",
     ]);
     let combined4 = text_combine(operator, right);
-    html_div_code_multiple(c2, [combined2, combined4]);
+    html_div_code_multiple(c3, [combined2, combined4]);
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
