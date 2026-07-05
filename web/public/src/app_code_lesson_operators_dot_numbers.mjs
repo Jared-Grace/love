@@ -68,7 +68,8 @@ export function app_code_lesson_operators_dot_numbers() {
       " with numbers",
     ]);
     html_div_text(c3, "We cannot have a number on the right:");
-    html_div_code(c3, "invalid." + digit_random());
+    let first = js_code_binary("invalid", operator, digit_random);
+    html_div_code(c3, first);
     return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     app_code_lesson_operators_asterisk_generic_invalid(root, operator);
