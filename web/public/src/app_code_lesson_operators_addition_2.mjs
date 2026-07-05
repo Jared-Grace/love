@@ -39,8 +39,7 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " : ",
     ]);
-    const codes = [first, combined3];
-    html_div_code_multiple(c2, codes);
+    html_div_code_multiple(c2, [first, combined3]);
     let combined2 = digit_positive_random_operator(operator);
     html_div_cycle_code(c2, [
       "However, when making a number negative, there is only a number on right side of the ",
