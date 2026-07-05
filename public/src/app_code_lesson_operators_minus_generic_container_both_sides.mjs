@@ -13,9 +13,6 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
 ) {
   let first = example_get();
   let c = app_code_container_light_blue(root);
-  const right = "right";
-  let left = "left";
-  let combined3 = code_to(left, operator, right);
   let u = text_first_upper_to(
     "when " +
       text_when +
@@ -24,5 +21,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
       "on both the left and right sides of the ",
   );
   html_div_cycle_code(c, [u, operator, " : "]);
+  const right = "right";
+  let left = "left";
+  let combined3 = code_to(left, operator, right);
   html_div_code_multiple(c, [first, combined3]);
 }
