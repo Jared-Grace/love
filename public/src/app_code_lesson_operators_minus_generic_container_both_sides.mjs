@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -26,6 +27,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
       text_articled_pad_space(noun) +
       "on both the left and right sides of the ",
   ];
+  function lambda(item) {}
+  each(list, lambda);
   list_add_first(last, end);
   html_div_cycle_code(c, [u, operator, " : "]);
   const right = "right";
