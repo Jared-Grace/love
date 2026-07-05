@@ -68,7 +68,6 @@ export function app_code_lesson_operators_generic(
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
-  let max = 7;
   let symbols_to_answer = eval;
   let batch = app_code_lesson_operators_generic_batch_get(
     left_transform,
