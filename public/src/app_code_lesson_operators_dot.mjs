@@ -1,3 +1,13 @@
+import { each } from "../../../love/public/src/each.mjs";
+import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
+import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
+import { ternary } from "../../../love/public/src/ternary.mjs";
+import { list_is } from "../../../love/public/src/list_is.mjs";
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
+import { html_div } from "../../../love/public/src/html_div.mjs";
+import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
+import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
+import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -23,6 +33,8 @@ import { js_operator_minus_verb } from "../../../love/public/src/js_operator_min
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
+import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
+import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
@@ -46,6 +58,19 @@ export function app_code_lesson_operators_dot() {
       c,
       "In JavaScript, " + operator_name_math_articled + " is a symbol like ",
     );
+    let p = js_operator_plus();
+    let r2 = js_operator_minus();
+    let r22 = js_operator_multiplication();
+    let r23 = js_operator_division();
+    let concated = list_to_or_list_generic([p, r2, r22, r23], "and");
+    let div2 = html_div(c);
+    html_span_text(div2, "And ");
+    function lambda4(item) {
+      let l = list_is(item);
+      let result = ternary(l, html_cycle_code, html_span_text_padded_space);
+      result(div2, item);
+    }
+    each(concated, lambda4);
     let list2 = batch_binary();
     let first = list_first(list2);
     let c2 = app_code_container_light_blue(root);
