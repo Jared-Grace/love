@@ -26,8 +26,8 @@ export function app_code_lesson_operators_asterisk_generic(
       root,
       operator,
       left_transform,
-      text_when,
-      noun,
+      "using the dot operator",
+      "noun",
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     let c4 = app_code_container_light_blue(root);
