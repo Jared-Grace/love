@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { lambda_throws } from "../../../love/public/src/lambda_throws.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
@@ -73,8 +74,8 @@ export function app_code_lesson_operators_addition_2() {
   let symbols_to_answer = function lambda(symbols) {
     function lambda2() {}
     let r2 = lambda_throws(lambda2);
-    let result = property_get(r2, "result");
     let throws = property_get(r2, "throws");
+    let valid = not(throws);
   };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
