@@ -1,9 +1,9 @@
+import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { list_to_or_list_generic } from "../../../love/public/src/list_to_or_list_generic.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
@@ -86,7 +86,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       return concated2;
     }
     let mapped2 = list_map(identifier_symbols_types, lambda3);
-    let concated = list_to_or_list_generic(mapped2, "and");
+    let concated = list_to_and_list(mapped2);
     let div2 = html_div(c);
     html_span_text(div2, "And ");
     function lambda4(item) {
