@@ -33,8 +33,13 @@ export function app_code_lesson_operators_dot_numbers() {
     left_transform,
   );
   function above(root) {
-    let c = app_code_container_light_blue(root);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
+    let c4 = app_code_container_light_blue(root);
+    let t = text_first_upper_to(operator_name_math_articled + " ");
+    let div = html_div_cycle_code(c4, [t, operator, " as a decimal point:"]);
+    let first3 = number_pi_truncated_text();
+    html_div_code(c4, first3);
+    let c = app_code_container_light_blue(root);
     let d = html_div_cycle_code(c, [
       "In JavaScript, " + operator_name_math_articled + " ",
       operator,
@@ -51,14 +56,6 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
-    let c4 = app_code_container_light_blue(root);
-    let div = html_div_cycle_code(c4, [
-      "We can also use ",
-      operator,
-      " as a decimal point:",
-    ]);
-    let first3 = number_pi_truncated_text();
-    html_div_code(c4, first3);
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
