@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { list_to_and_list_word } from "../../../love/public/src/list_to_and_list_word.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -65,7 +66,11 @@ export function app_code_lesson_operators_dot() {
     function lambda4(item) {
       const word_relationship = list_to_and_list_word();
       let l = item === word_relationship;
-      let result = ternary(l, html_span_text_padded_space, html_style_code);
+      let result = ternary(
+        l,
+        html_span_text_padded_space,
+        html_style_code_dark,
+      );
       result(div2, item);
     }
     each(concated, lambda4);
