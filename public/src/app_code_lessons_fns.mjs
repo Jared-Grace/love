@@ -14,7 +14,7 @@ import { app_code_lesson_symbols_letters } from "../../../love/public/src/app_co
 import { app_code_lesson_symbols_digits } from "../../../love/public/src/app_code_lesson_symbols_digits.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered.mjs";
 export function app_code_lessons_fns() {
-  let invalid = [app_code_lesson_operators_plus_unary];
+  let invalid = app_code_lesson_operators_plus_unary;
   let r = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digits,
