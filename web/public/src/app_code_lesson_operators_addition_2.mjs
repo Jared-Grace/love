@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { digit_positive_random_operator } from "../../../love/public/src/digit_positive_random_operator.mjs";
@@ -46,6 +47,7 @@ export function app_code_lesson_operators_addition_2() {
       operator,
       " : ",
     ]);
+    let combined4 = text_combine(left, right);
     html_div_code_multiple(c2, [combined2]);
   }
   const example_label = "Value of code: ";
