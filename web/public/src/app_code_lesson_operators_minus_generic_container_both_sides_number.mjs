@@ -17,7 +17,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
       word_add_ing(verb) +
       " two numbers" +
       " there is " +
-      text_articled_pad_space(noun),
+      text_articled_pad_space("number"),
     js_code_binary_spaced_nb,
     example_get,
   );
