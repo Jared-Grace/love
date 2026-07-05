@@ -1,5 +1,6 @@
+import { each_nested_args_both } from "../../../love/public/src/each_nested_args_both.mjs";
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { each_nested_args_both_range_1 } from "../../../love/public/src/each_nested_args_both_range_1.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
@@ -33,7 +34,12 @@ export function app_code_lesson_operators_dot_numbers() {
   let max = app_code_lesson_operators_generic_batch_get_max();
   let batch = function batch_get() {
     function lambda(la2) {
-      each_nested_args_both_range_1(max, lambda$left$right);
+      let lefts = range_1(max);
+      let rights = range_1(max);
+      function lambda2(left5, right5) {
+        lambda$left$right(left5, right5);
+      }
+      each_nested_args_both(lefts, rights, lambda2);
       function lambda$left$right(left3, right3) {
         lambda$left$right$la(left3, right3, la2);
       }
