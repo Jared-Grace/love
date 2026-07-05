@@ -10,9 +10,9 @@ export function app_code_lesson_operators_generic_batch_get(
 ) {
   let max = 7;
   let r = function lambda2() {
-    let lefts = range_1(max);
-    let rights = range_1(max);
     function lambda4(la) {
+      let lefts = range_1(max);
+      let rights = range_1(max);
       function lambda3(left, right) {
         newFunction(left, right);
       }
