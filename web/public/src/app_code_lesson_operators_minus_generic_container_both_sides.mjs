@@ -11,6 +11,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   text_when,
   noun,
   code_to,
+  example_get,
 ) {
   let first = example_get1();
   let c2 = app_code_container_light_blue(root);
