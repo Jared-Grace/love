@@ -58,7 +58,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " as a decimal point:",
     ]);
     let first3 = number_pi_truncated_text();
-    html_div_code(c3, first3);
+    html_div_code(c4, first3);
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
