@@ -1,3 +1,4 @@
+import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
 import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -30,10 +31,8 @@ import { app_code_lesson_operators_generic_batch_get_binary } from "../../../lov
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
-import { add } from "../../../love/public/src/add.mjs";
-import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
 import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
-import { identity } from "./identity.mjs";
+import { identity } from "../../../love/public/src/identity.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
@@ -54,7 +53,7 @@ export function app_code_lesson_operators_dot() {
     ]);
     let p = js_operator_plus();
     let r2 = js_operator_minus();
-    let r22 = js_operator_multiplication();
+    let r22 = js_operator_asterisk_verb();
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
     let mapped = list_map_property_to(operators_text, "operator");
@@ -62,8 +61,8 @@ export function app_code_lesson_operators_dot() {
     function lambda4(item) {
       let condition = text_is(item);
       let result = ternary(
-        condition, 
-        html_span_text_padded_space, 
+        condition,
+        html_span_text_padded_space,
         html_span_text_code_dark,
       );
       if (not(condition)) {
@@ -72,10 +71,11 @@ export function app_code_lesson_operators_dot() {
       result(d, item);
     }
     each(concated, lambda4);
-  let verb = js_operator_asterisk_verb();
+    let verb = js_operator_asterisk_verb();
+    let operator2 = js_operator_asterisk();
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
-      js_operator_asterisk(),
+      operator2,
       verb,
       identity,
     );
