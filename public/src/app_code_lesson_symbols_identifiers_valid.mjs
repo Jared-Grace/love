@@ -18,8 +18,8 @@ export function app_code_lesson_symbols_identifiers_valid(
   let symbols_to_answer = function lambda(symbols) {
     let expression = js_parse_expression_try(symbols);
     let ii = js_identifier_is(expression);
-    let result = boolean_to_text_validity(ii);
-    return result;
+    let validity = boolean_to_text_validity(ii);
+    return validity;
   };
   let question_label = app_code_label_symbols();
   let r = app_code_lesson_symbols_batches_generic(
