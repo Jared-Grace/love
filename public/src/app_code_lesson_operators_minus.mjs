@@ -78,7 +78,7 @@ export function app_code_lesson_operators_minus() {
     let combined5 = text_combine("invalid", operator);
     html_div_code(c4, combined5);
   }
-  const example_label = "Is this valid code? ";
+  const example_label = "Is this code valid? ";
   const quiz_label = example_label;
   let symbols_to_answer = function lambda(symbols) {
     function lambda2() {
