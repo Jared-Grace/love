@@ -28,7 +28,7 @@ export function app_code_lesson_operators_minus() {
   let left_transform = add;
   let batch_subtraction = app_code_lesson_operators_generic_batch_get(
     operator,
-    add,
+    left_transform,
   );
   let batch = app_code_lesson_operators_generic_batch_get_unary(
     operator,
