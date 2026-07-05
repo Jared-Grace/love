@@ -42,7 +42,7 @@ export function app_code_lesson_operators_dot() {
     let combined = text_combine_right_fn(operator, digit_positive_random);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
-      "In math and JavaScript, " +
+      "In JavaScript, " +
         operator_name_math_articled +
         "can be used to make a number " +
         sign +
