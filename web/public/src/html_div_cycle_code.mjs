@@ -1,6 +1,6 @@
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-export function html_div_cycle_code(c2, parts) {
-  let div = html_div(c2);
+export function html_div_cycle_code(parent, parts) {
+  let div = html_div(parent);
   html_cycle_code(div, parts);
 }
