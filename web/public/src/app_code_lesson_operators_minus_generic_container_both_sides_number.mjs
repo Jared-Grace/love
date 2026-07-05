@@ -16,7 +16,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     "when " +
       word_add_ing(verb) +
       " two numbers" +
-      " there is" +
+      " there is " +
       text_articled_pad_space(noun),
     js_code_binary_spaced_nb,
     example_get,
