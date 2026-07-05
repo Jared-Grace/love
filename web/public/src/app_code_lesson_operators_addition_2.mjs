@@ -23,7 +23,7 @@ export function app_code_lesson_operators_addition_2() {
     app_code_lesson_underscores_define_symbol(c, operator_name, operator);
     let list2 = batch();
     let first = list_first(list2);
-    let replaced = text_replace(first, operator, operator);
+    let replaced = text_replace(first, operator, operator);tc
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math, " +
