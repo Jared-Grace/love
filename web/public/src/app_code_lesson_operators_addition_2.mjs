@@ -54,12 +54,13 @@ export function app_code_lesson_operators_addition_2() {
     let combined4 = text_combine(operator, right);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
-    html_div_cycle_code(c2, [
+    html_div_cycle_code(c4, [
       "Therefore, if " +
         operator +
         " only has a number on the left side, that is invalid: ",
     ]);
-    html_div_code();
+    let combined5 = text_combine("invalid", operator);
+    html_div_code(c4, combined5);
   }
   const example_label = "Value of code: ";
   const quiz_label = "What is the value of this code? ";
