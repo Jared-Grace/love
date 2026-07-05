@@ -15,9 +15,9 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       max,
       lambda$left$right$la,
     );
-    list_shuffle_cycled(list, 2);
-    return list;
     function lambda$left$right$la(left, right, la) {
+      "there are 4 added at once";
+      "valid, invalid, valid, invalid";
       let combined = text_combine(operator_js, right);
       let combined2 = text_left_right_middle_random_space_nb(
         right,
@@ -28,6 +28,9 @@ export function app_code_lesson_operators_generic_batch_get_unary(
       let combined4 = text_left_right_middle_random_space_nb(left, operator_js);
       each([combined, combined2, combined3, combined4], la);
     }
+    ("hence cycle of 2: (valid, invaid)");
+    list_shuffle_cycled(list, 2);
+    return list;
   };
   return r;
 }
