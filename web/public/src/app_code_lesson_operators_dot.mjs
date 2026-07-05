@@ -62,7 +62,8 @@ export function app_code_lesson_operators_dot() {
     let r2 = js_operator_minus();
     let r22 = js_operator_multiplication();
     let r23 = js_operator_division();
-    let concated = list_to_and_list([p, r2, r22, r23]);
+    const operators_text = [p, r2, r22, r23];
+    let concated = list_to_and_list(operators_text);
     log(app_code_lesson_operators_dot.name, {
       concated,
     });
