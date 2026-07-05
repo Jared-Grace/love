@@ -1,3 +1,4 @@
+import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -13,6 +14,7 @@ import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binar
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
+import { digit_positive_random_operator } from "../../../love/public/src/digit_positive_random_operator.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
@@ -35,8 +37,7 @@ export function app_code_lesson_operators_minus_generic(
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let right2 = right_random_get();
-    let combined = text_combine(operator, right2);
+    let combined = text_combine_right_fn(right_random_get, operator);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
@@ -68,7 +69,7 @@ export function app_code_lesson_operators_minus_generic(
       operator,
       " : ",
     ]);
-    let combined2 = right_random_get();
+    let combined2 = digit_positive_random_operator(operator);
     let combined4 = text_combine(operator, right);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
