@@ -65,7 +65,7 @@ export function app_code_lesson_operators_dot() {
     let r23 = js_operator_division();
     const operators_text = [p, r2, r22, r23];
     let concated = list_to_and_list(operators_text);
-    let mapped = list_map_property_to(operators_text, 'operator');
+    let mapped = list_map_property_to(operators_text, "operator");
     log(app_code_lesson_operators_dot.name, {
       concated,
     });
