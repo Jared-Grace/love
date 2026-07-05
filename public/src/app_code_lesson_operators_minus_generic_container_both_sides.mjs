@@ -24,7 +24,9 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let combined3 = js_code_binary_spaced_nb(left, operator, right);
   let u = text_first_upper_to(
     "when " + word_add_ing(verb) + " two numbers",
-    " there is a number on both the left and right sides of the ",
+    " there is a ",
+    "number",
+    " on both the left and right sides of the ",
   );
   html_div_cycle_code(c2, [u, operator, " : "]);
   html_div_code_multiple(c2, [first, combined3]);
