@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -7,9 +8,6 @@ import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parent
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
-import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
 export function app_code_lesson_operators_asterisk_generic(
   operator,
@@ -29,28 +27,7 @@ export function app_code_lesson_operators_asterisk_generic(
       verb,
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
-    let c4 = app_code_container_light_blue(root);
-    let combined = text_combine("invalid ", operator);
-    let combined3 = text_combine(operator, " invalid");
-    html_div_cycle_code_multiple(c4, [
-      [
-        "Therefore, ",
-        operator,
-        " must have values both on the left side and the right side",
-      ],
-      [
-        "So if ",
-        operator,
-        " does not have anything on its right side, then that is invalid code: ",
-      ],
-      ["", combined],
-      [
-        "And, likewise, if ",
-        operator,
-        " does not have anything on its left side, then that is also invalid code: ",
-      ],
-      ["", combined3],
-    ]);
+    app_code_lesson_operators_asterisk_generic_invalid(root, operator);
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
