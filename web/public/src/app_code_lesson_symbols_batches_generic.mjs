@@ -55,7 +55,7 @@ export function app_code_lesson_symbols_batches_generic(
 ) {
   id = text_replace_space_underscore(id);
   function example_above(parent, symbols) {
-    let container = app_code_container_code_dark(parent);
+    let container = app_code_container_dark(parent);
     let span = html_div_text(container, question_label);
     let row = app_code_container_dark(container);
     html_style_assign(row, {
