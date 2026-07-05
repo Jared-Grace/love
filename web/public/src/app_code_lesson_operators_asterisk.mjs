@@ -11,7 +11,6 @@ import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
@@ -32,17 +31,6 @@ export function app_code_lesson_operators_asterisk() {
     left_transform,
   );
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    let combined = text_combine_right_fn(operator, digit_positive_random);
-    const operator_name_math_articled = text_articled_pad_space(operator_name);
-    html_div_cycle_code(c, [
-      "In math and JavaScript, " +
-        operator_name_math_articled +
-        "can be used to make a number " +
-        sign +
-        ": ",
-      combined,
-    ]);
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
