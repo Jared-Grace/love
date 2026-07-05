@@ -1,4 +1,3 @@
-import { js_operator_minus_name_root } from "../../../love/public/src/js_operator_minus_name_root.mjs";
 import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
 import { js_operator_minus_name } from "../../../love/public/src/js_operator_minus_name.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
@@ -8,7 +7,7 @@ import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_asterisk() {
   const operator = js_operator_minus();
   const operator_name = js_operator_minus_name();
-  let math_name = js_operator_minus_name_root();
+  let math_name = "asterisk";
   let verb = js_operator_minus_verb();
   let sign = "negative";
   let left_transform = add;
