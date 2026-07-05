@@ -3,4 +3,5 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_div_cycle_code(parent, parts) {
   let div = html_div(parent);
   html_cycle_code(div, parts);
+  return div;
 }
