@@ -56,9 +56,14 @@ export function app_code_lesson_operators_asterisk() {
         " must have values both on the left side and the right side",
       ],
       [
-        "And if ",
+        "So if ",
         operator,
         " does not have anything on its right side, then that is invalid code: ",
+      ],
+      [
+        "And if ",
+        operator,
+        " does not have anything on its left side, then that is invalid code: ",
       ],
     ]);
     let combined5 = text_combine("invalid", operator);
