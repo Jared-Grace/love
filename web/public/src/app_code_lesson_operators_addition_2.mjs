@@ -1,3 +1,5 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { lambda_throws } from "../../../love/public/src/lambda_throws.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -68,7 +70,12 @@ export function app_code_lesson_operators_addition_2() {
   }
   const example_label = "Is this a valid code? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda() {};
+  let symbols_to_answer = function lambda(symbols) {
+    function lambda2() {}
+    let r2 = lambda_throws(lambda2);
+    let result = property_get(r2, "result");
+    let throws = property_get(r2, "throws");
+  };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
