@@ -22,7 +22,6 @@ export function app_code_lesson_operators_asterisk() {
   const operator = js_operator_multiplication();
   let lesson_name = "asterisk";
   let verb = js_operator_multiplication_verb();
-  let sign = "negative";
   let left_transform = add;
   let batch = app_code_lesson_operators_generic_batch_get_unary(
     operator,
