@@ -41,7 +41,7 @@ export function app_code_lesson_operators_asterisk() {
     html_div_cycle_code(c3, [
       "Remember, for ",
       minus,
-      " it's possible to have a number only on the righ and not on the left: ",
+      " it's possible to have a number only on the right and not on the left: ",
     ]);
     let combined2 = text_combine_right_fn(minus, digit_positive_random);
     const right2 = "right";
