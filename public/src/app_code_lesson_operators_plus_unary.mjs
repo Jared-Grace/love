@@ -1,3 +1,10 @@
+import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
+import { text_left_right_middle_random_space_nb } from "../../../love/public/src/text_left_right_middle_random_space_nb.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
+import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
@@ -10,7 +17,6 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus_unary() {
   const operator = js_operator_plus();
@@ -18,10 +24,26 @@ export function app_code_lesson_operators_plus_unary() {
   let math_name = "Plus sign unary";
   let sign = "positive";
   let left_transform = add;
-  let batch = app_code_lesson_operators_generic_batch_get_unary(
-    operator,
-    left_transform,
-  );
+  let max = app_code_lesson_operators_generic_batch_get_max();
+  let batch = function batch_get() {
+    let list = each_nested_args_both_range_1_list_adder(
+      max,
+      lambda$left$right$la,
+    );
+    function lambda$left$right$la(left, right, la) {
+      "there are 4 added at once";
+      "valid, invalid, valid, invalid";
+      let combined5 = text_combine(operator, right);
+      let combined2 = text_left_right_middle_random_space_nb(right, operator);
+      let transformed = left_transform(left, right);
+      let combined3 = js_code_binary_spaced_nb(transformed, operator, right);
+      let combined4 = text_left_right_middle_random_space_nb(left, operator);
+      each([combined5, combined2, combined3, combined4], la);
+    }
+    ("hence cycle of 2: (valid, invalid)");
+    list_shuffle_cycled(list, 2);
+    return list;
+  };
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(
