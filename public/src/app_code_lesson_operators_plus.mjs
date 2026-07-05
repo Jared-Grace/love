@@ -4,7 +4,7 @@ import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus() {
   const operator = js_operator_minus();
   const operator_name = "plus sign";
-  let math_name = "negation";
+  let math_name = operator_name;
   let verb = "subtract";
   let sign = "negative";
   let left_transform = add;
