@@ -1,5 +1,5 @@
-import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
+import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
 export function digit_random() {
-  let r3 = integer_random_range(10);
-  return r3;
+  let r = integer_random_0(9);
+  return r;
 }
