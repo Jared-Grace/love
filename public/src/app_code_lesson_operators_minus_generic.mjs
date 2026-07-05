@@ -40,9 +40,9 @@ export function app_code_lesson_operators_minus_generic(
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
         operator_name_math_articled +
-        "can be used to make a number ",
-      sign,
-      ": ",
+        "can be used to make a number " +
+        sign +
+        ": ",
       combined,
     ]);
     let list2 = batch_subtraction();
