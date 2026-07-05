@@ -1,5 +1,4 @@
 import { each_nested_args_both_range_1 } from "../../../love/public/src/each_nested_args_both_range_1.mjs";
-import { newFunction } from "../../../love/public/src/newFunction.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -10,8 +9,8 @@ export function app_code_lesson_operators_generic_batch_get(
   let max = 7;
   let r = function lambda2() {
     function lambda4(la) {
-      each_nested_args_both_range_1(max, newFunction);
-      function newFunction(left, right) {
+      each_nested_args_both_range_1(max, lambda$left$right);
+      function lambda$left$right(left, right) {
         let transformed = left_transform(left, right);
         let combined = js_code_binary_spaced_nb(
           transformed,
