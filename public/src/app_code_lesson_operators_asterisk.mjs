@@ -1,3 +1,4 @@
+import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_multiplication_verb } from "../../../love/public/src/js_operator_multiplication_verb.mjs";
 import { js_operator_multiplication } from "../../../love/public/src/js_operator_multiplication.mjs";
@@ -48,8 +49,8 @@ export function app_code_lesson_operators_asterisk() {
     html_div_code_multiple(c3, [combined2, combined4]);
     html_div_cycle_code(c3, ["However we cannot do this for ", operator]);
     let c4 = app_code_container_light_blue(root);
-    let combined = text_combine("invalid", operator);
-    let combined3 = text_combine(operator, "invalid");
+    let combined = js_code_binary_spaced_nb("invalid", operator, "");
+    let combined3 = js_code_binary_spaced_nb("", operator, "invalid");
     html_div_cycle_code_multiple(c4, [
       [
         "Therefore, ",
