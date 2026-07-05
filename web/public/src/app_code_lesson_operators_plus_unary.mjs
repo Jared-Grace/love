@@ -25,7 +25,7 @@ import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_plus_unary() {
   const operator = js_operator_minus();
   const operator_name = js_operator_minus_name();
-  let math_name = "negation";
+  let math_name = "Plus sign unary";
   let verb = js_operator_minus_verb();
   let sign = "negative";
   let left_transform = add;
