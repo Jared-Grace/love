@@ -26,7 +26,7 @@ export function app_code_lesson_operators_plus_unary() {
   let batch = function batch_get() {
     let dps = digits_positive();
     let list = list_adder_each(dps, on_each);
-    function on_each(item, la) {
+    function on_each(la, item) {
       let combined5 = text_combine(operator, item);
       let wrapped = js_code_negation_parenthesis_wrapped(item);
       let combined2 = text_combine(operator, wrapped);
