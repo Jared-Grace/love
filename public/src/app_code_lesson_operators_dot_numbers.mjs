@@ -1,3 +1,4 @@
+import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lower.mjs";
 import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -26,7 +27,6 @@ import { text_articled_pad_space } from "../../../love/public/src/text_articled_
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
-import { app_code_symbols_eval_valid_identifier } from "../../../love/public/src/app_code_symbols_eval_valid_identifier.mjs";
 export function app_code_lesson_operators_dot_numbers() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
