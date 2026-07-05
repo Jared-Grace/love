@@ -23,6 +23,6 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   const right = "right";
   let left = "left";
   let code = code_to(left, operator, right);
-  let first = example_get();
-  html_div_code_multiple(c, [first, code]);
+  let example = example_get();
+  html_div_code_multiple(c, [example, code]);
 }
