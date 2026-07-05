@@ -13,7 +13,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   code_to,
   example_get,
 ) {
-  let first = example_get1();
+  let first = example_get();
   let c2 = app_code_container_light_blue(root);
   const right = "right";
   let left = "left";
@@ -27,7 +27,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   );
   html_div_cycle_code(c2, [u, operator, " : "]);
   html_div_code_multiple(c2, [first, combined3]);
-  function example_get1() {
+  function example_get() {
     let batch_binary = app_code_lesson_operators_generic_batch_get(
       operator,
       left_transform,
