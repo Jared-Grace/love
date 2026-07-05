@@ -53,7 +53,7 @@ export function app_code_lesson_operators_dot() {
       " with identifiers:",
     ]);
     html_div_code(c2, "person.name");
-    let combined = js_code_binary("person", "age");
+    let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
