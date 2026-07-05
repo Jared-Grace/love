@@ -1,5 +1,5 @@
+import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
-import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lower.mjs";
 import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
@@ -34,7 +34,7 @@ export function app_code_lesson_operators_dot_numbers() {
   let max = app_code_lesson_operators_generic_batch_get_max();
   let batch = function batch_get() {
     function lambda(la2) {
-      let lefts = list_alphabet_lower();
+      let lefts = list_alphabet_cases_both();
       let rights = lefts;
       function lambda2(left5, right5) {
         lambda$left$right(left5, right5);
