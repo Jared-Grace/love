@@ -1,5 +1,4 @@
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -18,10 +17,6 @@ export function list_to_or_list_generic(list, word_relationship) {
     let prefix = text_combine_multiple([" ", word_relationship, " "]);
     list_add_first(last, prefix);
   }
-  log(list_to_or_list_generic.name, {
-    betweened,
-    last,
-  });
   let concated = list_concat(betweened, last);
   return concated;
 }
