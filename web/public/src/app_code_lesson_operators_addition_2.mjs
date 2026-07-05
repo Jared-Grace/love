@@ -24,7 +24,6 @@ export function app_code_lesson_operators_addition_2() {
   let verb = "add";
   function above(root) {
     let c = app_code_container_light_blue(root);
-    app_code_lesson_underscores_define_symbol(c, operator_name, operator);
     let list2 = batch();
     let first = list_first(list2);
     let replaced = text_replace(first, operator, operator);
