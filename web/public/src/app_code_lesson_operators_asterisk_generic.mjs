@@ -31,6 +31,7 @@ export function app_code_lesson_operators_asterisk_generic(
       operator,
       verb,
       left_transform,
+      "",
     );
     let c3 = app_code_container_light_blue(root);
     let minus = js_operator_minus();
