@@ -1,3 +1,4 @@
+import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
@@ -56,7 +57,8 @@ export function app_code_lesson_operators_dot_numbers() {
       operator,
       " as a decimal point:",
     ]);
-    html_div_code(c3, "3.14159");
+    let first3 = number_pi_truncated_text();
+    html_div_code(c3, first3);
     let combined = js_code_binary("person", operator, "age");
     let example_get = lambda_value(combined);
     app_code_lesson_operators_minus_generic_container_both_sides(
