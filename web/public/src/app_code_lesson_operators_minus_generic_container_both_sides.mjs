@@ -25,7 +25,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
   let u = text_first_upper_to(
     "when " + text_when,
     " there is a ",
-    "number",
+    noun,
     " on both the left and right sides of the ",
   );
   html_div_cycle_code(c2, [u, operator, " : "]);
