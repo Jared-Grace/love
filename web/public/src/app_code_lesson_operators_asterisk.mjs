@@ -12,7 +12,6 @@ import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
-import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_operators_generic_batch_get_unary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_unary.mjs";
@@ -35,14 +34,6 @@ export function app_code_lesson_operators_asterisk() {
       verb,
       left_transform,
     );
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
-      "However, when making a number " +
-        sign +
-        ", there is only a number on right side of the ",
-      operator,
-      " : ",
-    ]);
     let combined2 = text_combine_right_fn(operator, digit_positive_random);
     const right2 = "right";
     let combined4 = text_combine(operator, right2);
