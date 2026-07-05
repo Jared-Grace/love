@@ -1,4 +1,4 @@
-import { each_nested_args_both } from "../../../love/public/src/each_nested_args_both.mjs";
+import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 export function each_nested_args_range_1(max, lambda$left$right) {
   let lefts = range_1(max);
@@ -6,5 +6,5 @@ export function each_nested_args_range_1(max, lambda$left$right) {
   function lambda(left, right) {
     lambda$left$right(left, right);
   }
-  each_nested_args_both(lefts, rights, lambda);
+  each_nested_args(lefts, rights, lambda);
 }
