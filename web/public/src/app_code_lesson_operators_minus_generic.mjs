@@ -37,7 +37,7 @@ export function app_code_lesson_operators_minus_generic(
   );
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let combined = text_combine_right_fn(right_random_get, operator);
+    let combined = text_combine_right_fn(operator, right_random_get);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
       "In math and JavaScript, " +
