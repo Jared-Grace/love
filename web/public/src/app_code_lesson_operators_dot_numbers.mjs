@@ -1,4 +1,3 @@
-import { app_code_symbols_eval_valid } from "../../../love/public/src/app_code_symbols_eval_valid.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -23,6 +22,7 @@ import { app_code_lesson_operators_generic_batch_get_binary } from "../../../lov
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
+import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 export function app_code_lesson_operators_dot_numbers() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
@@ -100,7 +100,7 @@ export function app_code_lesson_operators_dot_numbers() {
     batch,
     example_label,
     quiz_label,
-    app_code_symbols_eval_valid,
+    app_code_symbols_eval_valid_expression,
     2,
     app_code_symbol,
     question_label,
