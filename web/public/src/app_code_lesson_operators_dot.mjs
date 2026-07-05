@@ -74,7 +74,7 @@ export function app_code_lesson_operators_dot() {
     function lambda4(item) {
       const word_relationship = list_to_and_list_word();
       let result = ternary(
-        text_is,
+        text_is(item),
         html_span_text_padded_space,
         html_span_text_code_dark,
       );
