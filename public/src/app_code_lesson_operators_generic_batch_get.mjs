@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { each_nested_args_both_range_1_list_adder } from "../../../love/public/src/each_nested_args_both_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -5,7 +6,7 @@ export function app_code_lesson_operators_generic_batch_get(
   operator_js,
   left_transform,
 ) {
-  let max = 7;
+  let max = app_code_lesson_operators_generic_batch_get_max();
   let r = function batch_get() {
     let list = each_nested_args_both_range_1_list_adder(
       max,
