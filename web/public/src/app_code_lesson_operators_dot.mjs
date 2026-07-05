@@ -1,17 +1,7 @@
+import { app_code_operators_arithmetic } from "../../../love/public/src/app_code_operators_arithmetic.mjs";
 import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
 import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { text_is } from "../../../love/public/src/text_is.mjs";
-import { list_map_property_to } from "../../../love/public/src/list_map_property_to.mjs";
-import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
-import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
-import { each } from "../../../love/public/src/each.mjs";
-import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
-import { ternary } from "../../../love/public/src/ternary.mjs";
-import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
-import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -31,7 +21,6 @@ import { app_code_lesson_operators_generic_batch_get_binary } from "../../../lov
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
-import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 export function app_code_lesson_operators_dot() {
   const operator = js_operator_dot();
@@ -51,27 +40,8 @@ export function app_code_lesson_operators_dot() {
       operator,
       " is a symbol like: ",
     ]);
-    let p = js_operator_plus();
-    let r2 = js_operator_minus();
-    let r22 = js_operator_asterisk();
-    let r23 = js_operator_division();
-    const operators_text = [p, r2, r22, r23];
-    let mapped = list_map_property_to(operators_text, "operator");
-    let concated = list_to_and_list(mapped);
-    function lambda4(item) {
-      let condition = text_is(item);
-      let result = ternary(
-        condition,
-        html_span_text_padded_space,
-        html_span_text_code_dark,
-      );
-      if (not(condition)) {
-        item = property_get(item, "operator");
-      }
-      result(d, item);
-    }
-    each(concated, lambda4);
-    let c2 = app_code_container_light_blue(parent);
+    app_code_operators_arithmetic(d);
+    let c2 = app_code_container_light_blue(root);
     let verb = js_operator_asterisk_verb();
     let operator2 = js_operator_asterisk();
     app_code_lesson_operators_minus_generic_container_both_sides(
