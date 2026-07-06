@@ -164,11 +164,11 @@ export function app_code_lesson_symbols_batches_generic(
           let quiz_batch_items = batch_get();
           let choices = ["question", "answer"];
           list_remove(choices, answer_property);
-          let only = list_single(list);
+          let question_property = list_single(choices);
           function lambda2(quiz_batch_item) {
-            let question2 = property_get(quiz_batch_item, "question");
-            let answer2 = property_get(quiz_batch_item, "answer");
-            let eq3 = equal(quiz_batch_item, right);
+            let question2 = property_get(quiz_batch_item, question_property);
+            let answer2 = property_get(quiz_batch_item, answer_property);
+            let eq3 = equal(answer, answer2);
             let eq4 = equal(quiz_batch_item, right2);
           }
           list_filter_remove(quiz_batch_items, lambda2);
