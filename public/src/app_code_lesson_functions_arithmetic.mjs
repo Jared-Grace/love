@@ -20,6 +20,7 @@ export function app_code_lesson_functions_arithmetic() {
   const quiz_label = "How many symbols are there? ";
   let symbols_to_answer = text_size;
   let question_label = app_code_label_symbols();
+  function lambda2() {}
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -28,7 +29,7 @@ export function app_code_lesson_functions_arithmetic() {
     app_code_lesson_symbols_batch_digits,
     example_label,
     quiz_label,
-    symbols_to_answer,
+    lambda2,
     1,
     app_code_symbol_separated,
     question_label,
