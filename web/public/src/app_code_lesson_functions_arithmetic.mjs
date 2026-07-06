@@ -32,8 +32,10 @@ export function app_code_lesson_functions_arithmetic() {
     return mapped;
   }
   function symbols_to_answer(symbols) {
-    function lambda3(item) {}
-    let found = list_find(list, lambda3);
+    function lambda3(o) {
+      let operator = property_get(o, "operator");
+    }
+    let found = list_find(operators, lambda3);
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
