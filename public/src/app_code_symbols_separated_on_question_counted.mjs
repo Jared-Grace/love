@@ -2,7 +2,6 @@ import { app_code_symbols_separated_on_question_generic } from "../../../love/pu
 export function app_code_symbols_separated_on_question_counted(
   parent,
   symbols,
-  on_symbol,
 ) {
   let r = app_code_symbols_separated_on_question_generic(
     parent,
