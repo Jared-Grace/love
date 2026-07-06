@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
@@ -10,7 +11,6 @@ import { number_pi_truncated_text } from "../../../love/public/src/number_pi_tru
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
-import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -83,8 +83,7 @@ export function app_code_lesson_operators_dot_numbers() {
       " with identifiers:",
     ]);
     html_div_code_multiple(c2, ["person.name", "book.chapters"]);
-    let combined = js_code_binary("shirt", operator, "size");
-    let example_get = lambda_value(combined);
+    let example_get = app_code_lesson_operators_dot_numbers_example(operator);
     let text_before = app_code_lesson_operators_dot_numbers_both_sides_text();
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
