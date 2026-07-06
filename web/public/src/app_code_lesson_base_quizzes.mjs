@@ -1,5 +1,4 @@
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
