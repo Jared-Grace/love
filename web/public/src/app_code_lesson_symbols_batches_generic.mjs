@@ -200,12 +200,12 @@ export function app_code_lesson_symbols_batches_generic(
           html_visibility_hidden_multiple(hides);
           let buttons = list_map(concated, each_button);
           let answered = false;
-          function each_button(quiz_answer) {
-            let b = app_replace_button_wide(a_container, quiz_answer, on_click);
+          function each_button(quiz_choice) {
+            let b = app_replace_button_wide(a_container, quiz_choice, on_click);
             html_style_background_color_set(b, "#ececec");
             html_style_margin_top(b, "0.2em");
             async function on_click() {
-              let eq2 = equal(quiz_answer, answer);
+              let eq2 = equal(quiz_choice, quiz_answer);
               if (eq2) {
                 answered = true;
                 app_shared_button_screen_green_style_assign(b);
