@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -31,6 +32,7 @@ export function app_code_lesson_functions_arithmetic() {
   return r5;
   function above(root) {
     let dps = digits_positive();
+    list_shuffle(list);
     let next_get_list = list_iterator_refillable(refill_get);
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["Instead of "]);
