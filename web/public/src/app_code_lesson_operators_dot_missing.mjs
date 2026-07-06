@@ -19,7 +19,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
   const operator = js_operator_dot();
