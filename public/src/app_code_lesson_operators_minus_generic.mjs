@@ -1,3 +1,4 @@
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_left_right_middle_random_space_nb } from "../../../love/public/src/text_left_right_middle_random_space_nb.mjs";
@@ -30,7 +31,7 @@ export function app_code_lesson_operators_minus_generic(
   right_random_get,
 ) {
   let max = app_code_lesson_operators_generic_batch_get_max();
-  let batch = function batch_get() {
+  function batch_get() {
     let list = each_nested_args_range_1_list_adder(max, lambda$left$right$la);
     function lambda$left$right$la(left, right, la) {
       let transformed = left_transform(left, right);
@@ -42,7 +43,8 @@ export function app_code_lesson_operators_minus_generic(
     }
     list_shuffle_cycled(list, 4);
     return list;
-  };
+  }
+  let batch = app_code_batch_question_answer_fns(batch_get);
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(operator, right_random_get);
