@@ -52,6 +52,7 @@ export function app_code_lesson_quiz(
   on_question,
   question_label,
   batch_get,
+  answer_count_override,
 ) {
   let answer_count_max = app_code_answer_count_max();
   let a = app_code_lesson_above(
