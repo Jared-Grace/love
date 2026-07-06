@@ -38,7 +38,7 @@ export function app_code_lesson_operators_generic(
     let list2 = batch();
     let first = list_first(list2);
     let question = property_get(first, "question");
-    let replaced = text_replace(first, operator_js, operator_math);
+    let replaced = text_replace(question, operator_js, operator_math);
     const operator_name_math_articled =
       text_articled_pad_space(operator_name_math);
     html_div_cycle_code(c, [
