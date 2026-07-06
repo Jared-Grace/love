@@ -25,6 +25,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
   name,
   id,
   above,
+  on_question,
 ) {
   function batch_get() {
     let words = app_code_verse_words();
