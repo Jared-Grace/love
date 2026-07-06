@@ -1,3 +1,4 @@
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
@@ -5,9 +6,10 @@ import { html_span } from "../../../love/public/src/html_span.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export function app_code_symbols_separated_on_question_generic(
   parent,
-  symbols,
+  question,
   on_symbol,
 ) {
+  let split = text_split_empty(s);
   html_style_assign(parent, {
     display: "flex",
     "flex-wrap": "wrap",
