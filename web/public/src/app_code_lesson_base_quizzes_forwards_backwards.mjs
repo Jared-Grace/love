@@ -10,7 +10,8 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
   quiz_backwards_answer_count_override,
 ) {
   let quizzes_get = function lambda(question, answer) {
-    const quizzes = [
+    let quizzes = null;
+    quizzes = [
       function quiz_forwards(context, parent, container, refresh) {
         app_code_lesson_quiz(
           container,
