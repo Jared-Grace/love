@@ -1,4 +1,5 @@
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
@@ -27,7 +28,9 @@ export function app_code_lesson_functions_arithmetic() {
     });
   }
   function batch_get() {
-    let mapped = list_map_property(operators, "operator");
+    let r2 = property_get_curried_right(property_name);
+    let mapped = list_map(operators, r2);
+    let property_name = "operator";
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
