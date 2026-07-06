@@ -28,7 +28,6 @@ export function app_code_lesson_symbols_counting(
     example_label,
     quiz_label,
     1,
-    app_code_symbol_separated,
     question_label,
     noop,
     on_question,
