@@ -103,6 +103,7 @@ export function app_code_lesson_operators_dot_numbers() {
     2,
     app_code_symbol,
     question_label,
+    noop,
   );
   return r;
 }

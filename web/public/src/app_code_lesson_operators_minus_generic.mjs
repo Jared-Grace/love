@@ -112,6 +112,7 @@ export function app_code_lesson_operators_minus_generic(
     2,
     app_code_symbol,
     question_label,
+    noop,
   );
   return r;
 }
