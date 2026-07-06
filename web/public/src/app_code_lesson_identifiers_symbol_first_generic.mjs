@@ -73,7 +73,6 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     id,
     above,
     batch_get,
-    symbol_create,
     on_question,
   );
   return r;
