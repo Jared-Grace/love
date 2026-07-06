@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
@@ -161,6 +162,7 @@ export function app_code_lesson_symbols_batches_generic(
                 } else {
                   let v = "rgb(255 168 168)";
                   html_style_background_color_set(b, v);
+                  html_font_color_set(b, "rgb(167, 51, 51)");
                   on_answer_wrong(b);
                 }
               }
