@@ -1,3 +1,4 @@
+import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
@@ -34,6 +35,7 @@ export function app_code_lesson_functions_arithmetic() {
   function symbols_to_answer(symbols) {
     function lambda3(o) {
       let operator = property_get(o, "operator");
+      let i = text_includes(input, part);
     }
     let found = list_find(operators, lambda3);
   }
