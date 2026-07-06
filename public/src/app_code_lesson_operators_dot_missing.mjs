@@ -87,7 +87,7 @@ export function app_code_lesson_operators_dot_missing() {
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
-      "There must be something",
+      app_code_lesson_operators_dot_numbers_both_sides_text(),
       js_code_binary,
       example_get,
     );
