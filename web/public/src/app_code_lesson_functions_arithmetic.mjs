@@ -61,9 +61,9 @@ export function app_code_lesson_functions_arithmetic() {
       let expression = property_get(r2, "expression");
       let right = property_get(r2, "right");
       let left = property_get(r2, "left");
-      let c = app_code_container_light_blue(root);
       let verb = property_get(o, "verb");
       let code = js_code_call_args(verb, [left, right]);
+      let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
         expression,
