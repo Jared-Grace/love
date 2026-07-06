@@ -1,3 +1,4 @@
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
@@ -81,12 +82,16 @@ export function app_code_lesson_operators_dot_missing() {
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = "Code: ";
+  let batch_get2 = app_code_batch_question_answer_fns(
+    batch,
+    app_code_symbols_eval_valid_expression,
+  );
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
     noop,
-    batch,
+    batch_get2,
     example_label,
     quiz_label,
     app_code_symbols_eval_valid_expression,
