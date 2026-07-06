@@ -29,6 +29,7 @@ export function app_code_lesson_symbols_counting(
     question_label,
     noop,
     on_question,
+    noop,
   );
   return r;
 }
