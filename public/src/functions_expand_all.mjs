@@ -10,7 +10,7 @@ import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mj
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function functions_expand_all(f_name_expand) {
   let f_names = await data_identifiers_search_names(f_name_expand);
-  list_remove(list2, item2);
+  list_remove(f_names, f_name_expand);
   log(functions_expand_all.name, {
     f_names,
   });
