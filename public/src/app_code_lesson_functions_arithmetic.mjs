@@ -1,15 +1,8 @@
-import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
-import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
-import { js_operator_division_verb } from "../../../love/public/src/js_operator_division_verb.mjs";
-import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
-import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
-import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
-import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
+import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
-import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digits_positive_shuffled_next } from "../../../love/public/src/digits_positive_shuffled_next.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -61,24 +54,3 @@ export function app_code_lesson_functions_arithmetic() {
     each(operators, lambda);
   }
 }
-function js_operators() {
-  return [
-    {
-      verb: js_operator_plus(),
-      operator: js_operator_plus_verb(),
-    },
-    {
-      verb: js_operator_minus(),
-      operator: js_operator_minus_verb(),
-    },
-    {
-      verb: js_operator_division(),
-      operator: js_operator_division_verb(),
-    },
-    {
-      verb: js_operator_asterisk(),
-      operator: js_operator_asterisk_verb(),
-    },
-  ];
-}
-
