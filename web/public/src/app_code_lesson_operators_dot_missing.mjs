@@ -68,7 +68,7 @@ export function app_code_lesson_operators_dot_missing() {
     html_text_set,
     quiz_backwards_label,
     html_style_code_dark,
-    null,
+    2,
   );
   return r;
 }
