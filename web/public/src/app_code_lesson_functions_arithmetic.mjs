@@ -11,6 +11,8 @@ import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
+  let name = "Functions (Arithmetic)";
+  let id = "functions_arithmetic";
   const example_label = "Number of symbols: ";
   const quiz_label = "How many symbols are there? ";
   let symbols_to_answer = text_size;
@@ -28,8 +30,6 @@ export function app_code_lesson_functions_arithmetic() {
     app_code_symbol_separated,
     question_label,
   );
-  let name = "Functions (Arithmetic)";
-  let id = "functions_arithmetic";
   return r;
   function above(root) {
     let next = digits_positive_shuffled_next();
