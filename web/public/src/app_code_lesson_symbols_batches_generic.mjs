@@ -56,7 +56,7 @@ export function app_code_lesson_symbols_batches_generic(
   symbol_create,
   question_label,
 ) {
-  arguments_assert(arguments, 11);
+  arguments_assert(arguments, 10);
   id = text_replace_space_underscore(id);
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
