@@ -1,5 +1,6 @@
+import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
+import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
-import { list_slices_size_cycle } from "../../../love/public/src/list_slices_size_cycle.mjs";
 import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
@@ -62,7 +63,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let mapped = list_map(words, text_letters_only);
     let min = 1;
     let max = 3;
-    let list2 = list_slices_size_cycle(mapped, min, max);
+    let counts = range_from(min, max);
+    let list2 = list_slices_size_cycler(mapped, counts, min);
     list_shuffle_cycled_range(list2, min, max);
     let list = list2;
     let mapped2 = list_map(list, list_join_space_nb);
