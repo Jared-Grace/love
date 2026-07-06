@@ -6,10 +6,11 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function functions_expand_all(f_name) {
   let result = await data_identifiers_search(f_name);
   async function lambda(ast) {
-    function lambda2(la) {}
+    function lambda2(la) {
+      js_visit_calls_named(ast, f_name, la);
+    }
     let list = list_adder(lambda2);
     function lambda3() {}
-    let result2 = js_visit_calls_named(ast, f_name, lambda3);
     let inserted = await js_expand_generic(next, stack2, index, ast);
   }
   let output = await function_transform(f_name, lambda);
