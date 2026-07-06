@@ -66,7 +66,7 @@ export function app_code_lesson_symbols_batches_generic(
 ) {
   arguments_assert(arguments, 13);
   id = text_replace_space_underscore(id);
-  function example_above(parent, question) {
+  function example_above(parent, question, label) {
     app_code_example_answer_gap(parent);
     let container = app_code_container_medium_blue(parent);
     html_div_text(container, question_label);
