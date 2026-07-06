@@ -15,12 +15,12 @@ export function app_code_next(
 ) {
   let container = app_code_container_light_blue(parent);
   let nt = app_karate_button_next_text();
-  let padded3 = text_pad_space_quote_double(nt);
+  let padded = text_pad_space_quote_double(nt);
   let combined3 = text_combine_multiple([
     "Do you want to ",
     do_you_want_to_text,
     "? If not, choose: ",
-    padded3,
+    padded,
   ]);
   html_div_text(container, combined3);
   let left = emoji_repeat_1();
