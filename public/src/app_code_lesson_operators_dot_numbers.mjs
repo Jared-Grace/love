@@ -87,7 +87,7 @@ export function app_code_lesson_operators_dot_numbers() {
       text_combine_middle_space,
     );
   }
-  const example_label = "Is this code valid? ";
+  const example_label = app_code_label_code_example();
   const quiz_label = example_label;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
