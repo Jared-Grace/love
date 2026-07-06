@@ -56,7 +56,7 @@ export function app_code_lesson_symbols_batches_generic(
   question_label,
   on_quiz_answer_button,
   on_question,
-  quiz_backwards_includes,
+  quiz_backwards_label,
 ) {
   arguments_assert(arguments, 11);
   id = text_replace_space_underscore(id);
@@ -110,7 +110,7 @@ export function app_code_lesson_symbols_batches_generic(
             );
           },
         ];
-        if (quiz_backwards_includes) {
+        if (quiz_backwards_label) {
           function quiz_backwards(context, parent, container, refresh) {
             log(app_code_lesson_symbols_batches_generic.name, "quiz_backwards");
             let quiz_question = answer;
