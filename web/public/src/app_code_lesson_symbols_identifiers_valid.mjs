@@ -32,6 +32,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     symbol_create,
     question_label,
     noop,
+    html_text_set,
   );
   return r;
 }
