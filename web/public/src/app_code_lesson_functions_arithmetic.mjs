@@ -1,7 +1,5 @@
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
-import { text_includes } from "../../../love/public/src/text_includes.mjs";
-import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
