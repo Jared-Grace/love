@@ -34,11 +34,11 @@ export function app_code_lesson_functions_arithmetic() {
   );
   return r;
   function above(root) {
+    let next = digits_positive_shuffled_next();
     let operators = js_operators();
     function lambda(o) {
       let operator = property_get(o, "operator");
       let verb = property_get(o, "verb");
-      let next = digits_positive_shuffled_next();
       let left = next();
       let right = next();
       let combined = js_code_binary_spaced_nb(left, operator, right);
