@@ -161,6 +161,7 @@ export function app_code_lesson_symbols_batches_generic(
                 } else {
                   let v = "rgb(255 168 168)";
                   html_style_background_color_set(b2, v);
+                  on_answer_wrong(b2);
                 }
               }
               on_quiz_answer_button(b2);
