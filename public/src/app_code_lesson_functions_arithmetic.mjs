@@ -18,6 +18,7 @@ export function app_code_lesson_functions_arithmetic() {
   const example_label = "What is: ";
   const quiz_label = "How many symbols are there? ";
   let question_label = app_code_label_symbols();
+  let operators = js_operators();
   function lambda2(symbols) {
     log(app_code_lesson_functions_arithmetic.name, {
       symbols,
@@ -41,7 +42,6 @@ export function app_code_lesson_functions_arithmetic() {
   function above(root) {
     let m = app_code_lesson_operators_generic_batch_get_max();
     let next = range_1_next(m);
-    let operators = js_operators();
     function lambda(o) {
       let operator = property_get(o, "operator");
       let verb = property_get(o, "verb");
