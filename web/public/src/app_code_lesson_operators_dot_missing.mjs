@@ -67,7 +67,7 @@ export function app_code_lesson_operators_dot_missing() {
       js_code_binary,
       example_get,
     );
-    app_code_lesson_operators_asterisk_generic_minus(root, operator);
+    app_code_lesson_operators_asterisk_generic_minus(root, operator, "");
     app_code_lesson_operators_asterisk_generic_invalid(
       root,
       operator,

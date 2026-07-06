@@ -9,6 +9,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_operators_asterisk_generic_minus(
   root,
   operator,
+  text_before,
 ) {
   let c = app_code_container_light_blue(root);
   let minus = js_operator_minus();
