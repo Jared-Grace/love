@@ -95,86 +95,16 @@ export function app_code_lesson_symbols_batches_generic(
             let quiz_question = question;
             let quiz_answer = answer;
             const answer_property = "answer";
-            let a = example_above(container, quiz_question);
-            let a_container = property_get(a, "container");
-            app_code_example_answer_label(a_container, quiz_label);
-            let bq = batch_get();
-            let answers = list_map_property(bq, answer_property);
-            let answers_unique = list_unique(answers);
-            list_remove_if_exists(answers_unique, quiz_answer);
-            let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
-            let concated = list_concat(taken, [quiz_answer]);
-            list_sort_text_to(concated);
-            let on_success = html_div(parent);
-            let success = app_replace_success_message(on_success);
-            async function on_next() {
-              let size = list_size(quizzes);
-              let index = list_index_of(quizzes, on_quiz1);
-              let a1 = add_1(index);
-              let index_new = mod(a1, size);
-              app_code_quiz_index_set(context, index_new);
-              let li = list_index_last_is(quizzes, index);
-              if (li) {
-                app_code_quiz_index_reset(context);
-                function lesson_id_transform(value) {
-                  let lessons = app_code_lessons();
-                  let value_next = list_property_next_value(
-                    lessons,
-                    "id",
-                    value,
-                  );
-                  return value_next;
-                }
-                let value_initial = app_code_lesson_first_id();
-                storage_local_transform_context(
-                  context,
-                  "lesson_id",
-                  value_initial,
-                  lesson_id_transform,
-                );
-                await app_shared_screen_set(context, app_code_examples);
-              } else {
-                refresh();
-              }
-            }
-            let r4 = app_code_next(
+            quiz_generic(
+              container,
+              quiz_question,
+              answer_property,
+              quiz_answer,
+              parent,
+              on_quiz1,
               context,
-              on_success,
-              "take another quiz to practice some more",
-              "please give me another quiz to take",
               refresh,
-              on_next,
             );
-            let container_on_success = property_get(r4, "container");
-            let hides = [success, container_on_success];
-            html_visibility_hidden_multiple(hides);
-            let buttons = list_map(concated, each_button);
-            let answered = false;
-            function each_button(quiz_answer) {
-              let b = app_replace_button_wide(
-                a_container,
-                quiz_answer,
-                on_click,
-              );
-              html_style_background_color_set(b, "#ececec");
-              html_style_margin_top(b, "0.2em");
-              async function on_click() {
-                let eq2 = equal(quiz_answer, answer);
-                if (eq2) {
-                  answered = true;
-                  app_shared_button_screen_green_style_assign(b);
-                  html_visibility_visible_multiple(hides);
-                } else {
-                  if (not(answered)) {
-                    let color_bg = "rgb(255 168 168)";
-                    html_style_background_color_set(b, color_bg);
-                    html_font_color_set(b, "rgb(167, 51, 51)");
-                  }
-                }
-              }
-              on_quiz_answer_button(b);
-              return b;
-            }
           },
         ];
         let mapped = {
@@ -184,6 +114,89 @@ export function app_code_lesson_symbols_batches_generic(
           quizzes,
         };
         return mapped;
+        function quiz_generic(
+          container,
+          quiz_question,
+          answer_property,
+          quiz_answer,
+          parent,
+          on_quiz1,
+          context,
+          refresh,
+        ) {
+          let a = example_above(container, quiz_question);
+          let a_container = property_get(a, "container");
+          app_code_example_answer_label(a_container, quiz_label);
+          let bq = batch_get();
+          let answers = list_map_property(bq, answer_property);
+          let answers_unique = list_unique(answers);
+          list_remove_if_exists(answers_unique, quiz_answer);
+          let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
+          let concated = list_concat(taken, [quiz_answer]);
+          list_sort_text_to(concated);
+          let on_success = html_div(parent);
+          let success = app_replace_success_message(on_success);
+          async function on_next() {
+            let size = list_size(quizzes);
+            let index = list_index_of(quizzes, on_quiz1);
+            let a1 = add_1(index);
+            let index_new = mod(a1, size);
+            app_code_quiz_index_set(context, index_new);
+            let li = list_index_last_is(quizzes, index);
+            if (li) {
+              app_code_quiz_index_reset(context);
+              function lesson_id_transform(value) {
+                let lessons = app_code_lessons();
+                let value_next = list_property_next_value(lessons, "id", value);
+                return value_next;
+              }
+              let value_initial = app_code_lesson_first_id();
+              storage_local_transform_context(
+                context,
+                "lesson_id",
+                value_initial,
+                lesson_id_transform,
+              );
+              await app_shared_screen_set(context, app_code_examples);
+            } else {
+              refresh();
+            }
+          }
+          let r4 = app_code_next(
+            context,
+            on_success,
+            "take another quiz to practice some more",
+            "please give me another quiz to take",
+            refresh,
+            on_next,
+          );
+          let container_on_success = property_get(r4, "container");
+          let hides = [success, container_on_success];
+          html_visibility_hidden_multiple(hides);
+          let buttons = list_map(concated, each_button);
+          let answered = false;
+          function each_button(quiz_answer) {
+            let b = app_replace_button_wide(a_container, quiz_answer, on_click);
+            html_style_background_color_set(b, "#ececec");
+            html_style_margin_top(b, "0.2em");
+            async function on_click() {
+              let eq2 = equal(quiz_answer, answer);
+              if (eq2) {
+                answered = true;
+                app_shared_button_screen_green_style_assign(b);
+                html_visibility_visible_multiple(hides);
+              } else {
+                if (not(answered)) {
+                  let color_bg = "rgb(255 168 168)";
+                  html_style_background_color_set(b, color_bg);
+                  html_font_color_set(b, "rgb(167, 51, 51)");
+                }
+              }
+            }
+            on_quiz_answer_button(b);
+            return b;
+          }
+        }
       }
       let mapped_items = list_map(batch_items, each_batch_item);
       return mapped_items;
