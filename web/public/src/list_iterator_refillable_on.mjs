@@ -1,7 +1,7 @@
 import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-export function list_iterator_refillable(refill_get, on_refill) {
+export function list_iterator_refillable_on(refill_get, on_refill) {
   let remaining = [];
   let next_get = function lambda() {
     let e = list_empty_is(remaining);

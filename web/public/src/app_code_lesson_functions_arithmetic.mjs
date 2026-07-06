@@ -1,4 +1,4 @@
-import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
+import { list_iterator_refillable_on } from "../../../love/public/src/list_iterator_refillable_on.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -31,7 +31,7 @@ export function app_code_lesson_functions_arithmetic() {
   return r5;
   function above(root) {
     let list = digits_randomly_coupled();
-    let next_get = list_iterator_refillable(refill_get, on_refill);
+    let next_get = list_iterator_refillable_on(refill_get, on_refill);
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["Instead of "]);
   }
