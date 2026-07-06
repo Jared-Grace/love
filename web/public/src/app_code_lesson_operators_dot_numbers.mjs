@@ -1,5 +1,5 @@
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { app_code_lesson_base_quizzes } from "../../../love/public/src/app_code_lesson_base_quizzes.mjs";
+import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
@@ -98,7 +98,7 @@ export function app_code_lesson_operators_dot_numbers() {
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  const quizzes_get = app_code_lesson_base_quizzes(
+  const quizzes_get = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     noop,
     html_text_set,
