@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -66,7 +67,7 @@ export function app_code_lesson_operators_dot_missing() {
     noop,
     html_text_set,
     quiz_backwards_label,
-    null,
+    html_style_code_dark,
     null,
   );
   return r;
