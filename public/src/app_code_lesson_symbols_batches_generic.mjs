@@ -73,7 +73,7 @@ export function app_code_lesson_symbols_batches_generic(
     example_count,
     batch: function batch() {
       let b = batch_get();
-      function lambda2(bi) {
+      function each_batch_item(bi) {
         let question = property_get(bi, "question");
         let answer = property_get(bi, "answer");
         let symbols = text_split_empty(question);
@@ -179,7 +179,7 @@ export function app_code_lesson_symbols_batches_generic(
         };
         return r2;
       }
-      let mapped = list_map(b, lambda2);
+      let mapped = list_map(b, each_batch_item);
       return mapped;
     },
   };
