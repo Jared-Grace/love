@@ -18,20 +18,31 @@ export function app_code_lesson_symbols_counting(
     batch_symbols,
     symbols_to_answer,
   );
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch_get,
-    example_label,
+  let example_count = 1;
+  let quiz_backwards_label_answer = null;
+  let on_quiz_answer_button_backwards = null;
+  let quiz_backwards_answer_count_override = null;
+  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
-    1,
-    question_label,
     noop,
     on_question,
-    null,
-    null,
-    null,
+    question_label,
+    batch_get,
+    quiz_backwards_label_answer,
+    on_quiz_answer_button_backwards,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch_get,
+    on_question,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
   return r;
 }

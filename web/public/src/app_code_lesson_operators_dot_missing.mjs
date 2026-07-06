@@ -55,20 +55,29 @@ export function app_code_lesson_operators_dot_missing() {
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch,
-    example_label,
+  let example_count = 2;
+  let quiz_backwards_answer_count_override = 2;
+  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
-    2,
-    question_label,
     noop,
     html_text_set,
+    question_label,
+    batch,
     quiz_backwards_label,
     html_style_code_dark,
-    2,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch,
+    html_text_set,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
   return r;
 }
