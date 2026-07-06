@@ -169,7 +169,7 @@ export function app_code_lesson_symbols_batches_generic(
             let answer2 = property_get(quiz_batch_item, answer_property);
             let eq3 = equal(answer2, answer);
             let eq4 = equal(question2, question);
-            let ored = or(left, right);
+            let ored = or(eq3, eq4);
             return ored;
           }
           list_filter_remove(quiz_batch_items, lambda2);
