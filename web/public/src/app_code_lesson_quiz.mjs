@@ -47,6 +47,7 @@ export function app_code_lesson_quiz(
   refresh,
   label_answer,
   on_quiz_answer_button,
+  on_question,
 ) {
   let a = example_above(container, quiz_question, question_label);
   let a_container = property_get(a, "container");
