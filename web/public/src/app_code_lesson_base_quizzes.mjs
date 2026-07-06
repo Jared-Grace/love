@@ -32,7 +32,7 @@ export function app_code_lesson_base_quizzes(
           on_question,
           question_label,
           batch_get,
-          answer_count_override,
+          null,
         );
       },
     ];
