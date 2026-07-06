@@ -13,7 +13,6 @@ import { app_code_lesson_operators_minus_generic_container_both_sides } from "..
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_operators_arithmetic } from "../../../love/public/src/app_code_operators_arithmetic.mjs";
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
