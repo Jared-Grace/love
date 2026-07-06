@@ -1,3 +1,4 @@
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { each_nested_args_range_1_list_adder } from "../../../love/public/src/each_nested_args_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -7,7 +8,7 @@ export function app_code_lesson_operators_generic_batch_get(
   left_transform,
 ) {
   let max = app_code_lesson_operators_generic_batch_get_max();
-  let r = function batch_get() {
+  function batch_get() {
     let list = each_nested_args_range_1_list_adder(max, lambda$left$right$la);
     list_shuffle(list);
     return list;
@@ -16,6 +17,7 @@ export function app_code_lesson_operators_generic_batch_get(
       let combined = js_code_binary_spaced_nb(transformed, operator_js, right);
       la(combined);
     }
-  };
-  return r;
+  }
+  let b = app_code_batch_question_answer_fns(batch_get);
+  return b;
 }
