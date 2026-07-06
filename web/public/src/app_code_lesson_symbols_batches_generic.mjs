@@ -61,6 +61,7 @@ export function app_code_lesson_symbols_batches_generic(
   arguments_assert(arguments, 11);
   id = text_replace_space_underscore(id);
   function example_above(parent, symbols) {
+    app_code_example_answer_gap(parent);
     let container = app_code_container_medium_blue(parent);
     html_div_text(container, question_label);
     let row = html_div_code_dark(container);
@@ -68,7 +69,6 @@ export function app_code_lesson_symbols_batches_generic(
       display: "flex",
       "flex-wrap": "wrap",
     });
-    app_code_example_answer_gap(parent);
     function lambda4(d, index_1) {
       let row_item = html_span(row);
       html_flex_column_center(row_item);
