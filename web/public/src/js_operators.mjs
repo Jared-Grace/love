@@ -7,23 +7,23 @@ import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mj
 import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 export function js_operators() {
-  let r2 = [
+  let r = [
     {
-      verb: js_operator_plus(),
-      operator: js_operator_plus_verb(),
+      operator: js_operator_plus(),
+      verb: js_operator_plus_verb(),
     },
     {
-      verb: js_operator_minus(),
-      operator: js_operator_minus_verb(),
+      operator: js_operator_minus(),
+      verb: js_operator_minus_verb(),
     },
     {
-      verb: js_operator_asterisk(),
-      operator: js_operator_asterisk_verb(),
+      operator: js_operator_asterisk(),
+      verb: js_operator_asterisk_verb(),
     },
     {
-      verb: js_operator_division(),
-      operator: js_operator_division_verb(),
+      operator: js_operator_division(),
+      verb: js_operator_division_verb(),
     },
   ];
-  return r2;
+  return r;
 }
