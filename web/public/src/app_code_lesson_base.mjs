@@ -33,7 +33,12 @@ export function app_code_lesson_base(
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
-          let a = app_code_lesson_above(parent, label, question, on_question);
+          let a = app_code_lesson_above(
+            parent,
+            example_label,
+            question,
+            on_question,
+          );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
           let div3 = html_div_code_dark(container);
