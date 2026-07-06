@@ -27,7 +27,7 @@ import { text_articled_pad_space } from "../../../love/public/src/text_articled_
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
-export function app_code_lesson_operators_dot_numbers_2() {
+export function app_code_lesson_operators_dot_missing() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";

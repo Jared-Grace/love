@@ -1,4 +1,4 @@
-import { app_code_lesson_operators_dot_numbers_2 } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_2.mjs";
+import { app_code_lesson_operators_dot_missing } from "../../../love/public/src/app_code_lesson_operators_dot_missing.mjs";
 import { app_code_lesson_operators_dot_numbers } from "../../../love/public/src/app_code_lesson_operators_dot_numbers.mjs";
 import { app_code_lesson_operators_slash_forward } from "../../../love/public/src/app_code_lesson_operators_slash_forward.mjs";
 import { app_code_lesson_operators_asterisk } from "../../../love/public/src/app_code_lesson_operators_asterisk.mjs";
@@ -37,7 +37,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_asterisk,
     app_code_lesson_operators_slash_forward,
     app_code_lesson_operators_dot_numbers,
-    app_code_lesson_operators_dot_numbers_2,
+    app_code_lesson_operators_dot_missing,
   ];
   return r;
 }
