@@ -50,8 +50,7 @@ export function app_code_lesson_functions_arithmetic() {
     html_style_code_dark,
     quiz_backwards_answer_count_override,
   );
-  let lesson = null;
-  lesson = app_code_lesson_base(
+  let lesson = app_code_lesson_base(
     id,
     name,
     above,
@@ -61,8 +60,7 @@ export function app_code_lesson_functions_arithmetic() {
     example_label,
     quizzes,
   );
-  let r = lesson;
-  return r;
+  return lesson;
   function above(root) {
     let next = range_1_next(m);
     function lambda(o) {
