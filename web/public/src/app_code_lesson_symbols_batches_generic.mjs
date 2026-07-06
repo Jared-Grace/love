@@ -91,7 +91,7 @@ export function app_code_lesson_symbols_batches_generic(
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
-          let a = example_above(parent, question);
+          let a = example_above(parent, question, question_label);
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
           let div3 = html_div_code_dark(container);
@@ -159,7 +159,7 @@ export function app_code_lesson_symbols_batches_generic(
           label_answer,
           on_quiz_answer_button,
         ) {
-          let a = example_above(container, quiz_question);
+          let a = example_above(container, quiz_question, question_label);
           let a_container = property_get(a, "container");
           app_code_example_answer_label(a_container, label_answer);
           let quiz_batch_items = batch_get();
