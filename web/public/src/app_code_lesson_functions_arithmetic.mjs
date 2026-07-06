@@ -1,4 +1,3 @@
-import { html_font_color_set_curried_right } from "../../../love/public/src/html_font_color_set_curried_right.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -36,7 +35,6 @@ export function app_code_lesson_functions_arithmetic() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
-  let c2 = html_font_color_set_curried_right("rgb(167, 51, 51)");
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
