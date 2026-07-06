@@ -11,7 +11,6 @@ import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
@@ -45,6 +44,7 @@ export function app_code_lesson_functions_arithmetic() {
     example_label,
     quiz_label,
     1,
+    app_code_symbol,
     question_label,
     html_style_code_dark,
     html_text_set,
