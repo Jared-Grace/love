@@ -40,9 +40,9 @@ export function app_code_lesson_symbols_space() {
   }
   function lambda4(parent, index_1, symbols) {
     app_code_lesson_symbols_digits_numbered_fifth_on_symbol(
+      parent,
       index_1,
       symbols,
-      parent,
     );
   }
   let r5 = app_code_lesson_symbols_counting(
