@@ -2,7 +2,6 @@ import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
@@ -44,7 +43,6 @@ export function app_code_lesson_functions_arithmetic() {
     example_label,
     quiz_label,
     1,
-    app_code_symbol,
     question_label,
     html_style_code_dark,
     html_text_set,
