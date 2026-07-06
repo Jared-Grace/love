@@ -4,6 +4,7 @@ import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 export function html_cycle_code(parent, parts) {
   arguments_assert(arguments, 2);
+  ("this is likely interweaving text and code, so code should not wrap");
   let cycles = [noop, html_style_code_dark_nowrap];
   html_cycle(parent, cycles, parts);
 }
