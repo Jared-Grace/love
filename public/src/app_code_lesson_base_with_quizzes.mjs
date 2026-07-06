@@ -1,5 +1,5 @@
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { app_code_lesson_base_quizzes } from "../../../love/public/src/app_code_lesson_base_quizzes.mjs";
+import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 export function app_code_lesson_base_with_quizzes(
   name,
   id,
@@ -15,7 +15,7 @@ export function app_code_lesson_base_with_quizzes(
   on_quiz_answer_button_backwards,
   quiz_backwards_answer_count_override,
 ) {
-  const quizzes = app_code_lesson_base_quizzes(
+  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     on_quiz_answer_button_forwards,
     on_question,
