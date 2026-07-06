@@ -1,3 +1,4 @@
+import { html_margin } from "../../../love/public/src/html_margin.mjs";
 import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 export function app_code_symbol_separated(parent, d) {
   const color_background = "#444";
@@ -8,5 +9,6 @@ export function app_code_symbol_separated(parent, d) {
     color_background,
     color_box_shadow,
   );
+  html_margin(b, value);
   return s;
 }
