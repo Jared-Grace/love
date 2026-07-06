@@ -78,9 +78,9 @@ export function app_code_lesson_quiz(
   let answers = list_map_property(quiz_batch_items, answer_property);
   let answers_unique = list_unique(answers);
   list_remove_if_exists(answers_unique, quiz_answer);
-  let nn2 = null_not_is(quiz_backwards_answer_count_override);
+  let nn2 = null_not_is(answer_count_override);
   if (nn2) {
-    let answer_count_max = quiz_backwards_answer_count_override;
+    let answer_count_max = answer_count_override;
   }
   let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
   let concated = list_concat(taken, [quiz_answer]);
