@@ -169,7 +169,7 @@ export function app_code_lesson_symbols_batches_generic(
                 quiz_answer,
                 on_click,
               );
-              html_font_jetbrains_mono(component);
+              html_font_jetbrains_mono(b2);
               html_style_background_color_set(b2, "#ececec");
               html_style_margin_top(b2, "0.2em");
               async function on_click() {
