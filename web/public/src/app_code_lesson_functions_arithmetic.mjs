@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -46,7 +47,7 @@ export function app_code_lesson_functions_arithmetic() {
     1,
     app_code_symbol,
     question_label,
-    noop,
+    html_style_code_dark,
   );
   return r;
   function above(root) {
