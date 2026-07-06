@@ -1,5 +1,4 @@
 import { html_display_inline_block } from "../../../love/public/src/html_display_inline_block.mjs";
-import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
 import { html_span_code_dark } from "../../../love/public/src/html_span_code_dark.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -38,7 +37,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let split = text_split_empty(question);
     html_div_text(c, "For example, instead of: ");
     let div3 = html_div(c);
-    let before = html_div_code_dark(div3);
+    let before = html_span_code_dark(div3);
     html_display_inline_block(before);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
