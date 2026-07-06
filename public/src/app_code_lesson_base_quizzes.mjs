@@ -9,7 +9,13 @@ export function app_code_lesson_base_quizzes(
   on_quiz_answer_button_backwards,
   quiz_backwards_answer_count_override,
 ) {
-  quiz_infos == [{}, {}];
+  quiz_infos ==
+    [
+      {
+        answer_label: quiz_label,
+      },
+      {},
+    ];
   let quizzes_get = function lambda(question, answer) {
     const quizzes = [
       function quiz_forwards(context, parent, container, refresh) {
