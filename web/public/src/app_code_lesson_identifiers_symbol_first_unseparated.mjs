@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol_separated_curried } from "../../../love/public/src/app_code_symbol_separated_curried.mjs";
@@ -25,7 +26,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     name,
     id,
     above,
-    on_question,
+    html_text_set,
   );
   function above(root) {
     let text = app_code_lesson_same_message("the symbols are not separated");
