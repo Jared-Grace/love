@@ -1,3 +1,4 @@
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
@@ -39,11 +40,12 @@ export function app_code_lesson_functions_arithmetic() {
     let combined = js_code_binary_spaced_nb(left, operator, right);
     let verb = js_operator_plus_verb();
     let c = app_code_container_light_blue(root);
+    let code = js_code_call_args();
     html_div_cycle_code(c, [
       "Instead of ",
       combined,
       " we could write: ",
-      verb,
+      code,
     ]);
   }
 }
