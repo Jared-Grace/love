@@ -53,7 +53,7 @@ export async function js_expand_generic(next, stack2, ast) {
       }
     }
     await each_index_async(arguments2, lambda5);
-    index = list_index_of(stack2, next);
+    let index = list_index_of(stack2, next);
     const a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
