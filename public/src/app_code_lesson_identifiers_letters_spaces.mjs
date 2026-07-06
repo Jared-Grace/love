@@ -73,6 +73,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     noop,
     batch_get,
     app_code_symbol_separated,
+    on_question,
   );
   return r5;
 }
