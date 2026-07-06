@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
 import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -36,6 +37,7 @@ export function app_code_lesson_operators_generic(
     );
     let list2 = batch();
     let first = list_first(list2);
+    let question = property_get(first, "question");
     let replaced = text_replace(first, operator_js, operator_math);
     const operator_name_math_articled =
       text_articled_pad_space(operator_name_math);
