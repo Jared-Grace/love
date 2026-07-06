@@ -30,6 +30,6 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     let list2 = batch_binary();
     let first = list_first(list2);
     let question = property_get(first, "question");
-    return first;
+    return question;
   }
 }
