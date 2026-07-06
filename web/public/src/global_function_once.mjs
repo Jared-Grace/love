@@ -1,5 +1,5 @@
 import { global_function_initialize_lambda } from "../../../love/public/src/global_function_initialize_lambda.mjs";
-export function global_function_once(lambda, fn) {
+export function global_function_once(fn, lambda) {
   function value_get() {
     lambda();
     return true;
