@@ -13,7 +13,7 @@ import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_operators_plus_unary() {
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
-  let r = app_code_lesson_symbols_batches_generic(
+  let r = app_code_lesson_base(
     name,
     id,
     above,
