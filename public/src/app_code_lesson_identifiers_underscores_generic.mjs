@@ -1,3 +1,4 @@
+import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { list_multiply_3_random_doubled } from "../../../love/public/src/list_multiply_3_random_doubled.mjs";
@@ -126,7 +127,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     noop,
     batch_get,
     app_code_symbol_separated,
-    on_question,
+    app_code_symbols_separated_on_question,
   );
   return r5;
 }
