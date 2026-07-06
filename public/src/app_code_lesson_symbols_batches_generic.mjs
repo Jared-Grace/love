@@ -115,6 +115,7 @@ export function app_code_lesson_symbols_batches_generic(
               refresh,
               quiz_label,
               on_quiz_answer_button_forwards,
+              quiz_question_label,
             );
           },
         ];
@@ -136,6 +137,7 @@ export function app_code_lesson_symbols_batches_generic(
               refresh,
               quiz_backwards_label_answer,
               on_quiz_answer_button_backwards,
+              quiz_question_label,
             );
           }
           list_add(quizzes, quiz_backwards);
@@ -158,8 +160,9 @@ export function app_code_lesson_symbols_batches_generic(
           refresh,
           label_answer,
           on_quiz_answer_button,
+          quiz_question_label,
         ) {
-          let a = example_above(container, quiz_question, question_label);
+          let a = example_above(container, quiz_question, quiz_question_label);
           let a_container = property_get(a, "container");
           app_code_example_answer_label(a_container, label_answer);
           let quiz_batch_items = batch_get();
