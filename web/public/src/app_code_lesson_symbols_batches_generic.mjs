@@ -108,6 +108,7 @@ export function app_code_lesson_symbols_batches_generic(
               quiz_forwards,
               context,
               refresh,
+              quiz_label,
             );
           },
         ];
@@ -127,6 +128,7 @@ export function app_code_lesson_symbols_batches_generic(
               quiz_backwards,
               context,
               refresh,
+              quiz_backwards_label,
             );
           }
           list_add(quizzes, quiz_backwards);
@@ -147,10 +149,11 @@ export function app_code_lesson_symbols_batches_generic(
           quiz_fn,
           context,
           refresh,
+          label,
         ) {
           let a = example_above(container, quiz_question);
           let a_container = property_get(a, "container");
-          app_code_example_answer_label(a_container, quiz_label);
+          app_code_example_answer_label(a_container, label);
           let bq = batch_get();
           let answers = list_map_property(bq, answer_property);
           let answers_unique = list_unique(answers);
