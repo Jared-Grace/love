@@ -22,12 +22,12 @@ export async function functions_expand_all(f_name_expand) {
           f_name,
         });
         let inserted = await js_expand_generic(item, body, ast);
-        exit();
-        return;
       }
       await each_async(list, lambda4);
     }
     let output = await function_transform(f_name, lambda);
+    exit();
+    return;
   }
   await each_async(f_names, lambda2);
 }
