@@ -28,6 +28,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           question_label,
           batch_get,
           null,
+          quizzes,
         );
       },
       function quiz_backwards(context, parent, container, refresh) {
@@ -46,6 +47,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           question_label,
           batch_get,
           quiz_backwards_answer_count_override,
+          quizzes,
         );
       },
     ];
