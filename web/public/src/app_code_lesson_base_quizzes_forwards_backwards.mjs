@@ -12,8 +12,6 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
   let quizzes_get = function lambda(question, answer) {
     const quizzes = [
       function quiz_forwards(context, parent, container, refresh) {
-        let quiz_question = question;
-        let question = answer;
         app_code_lesson_quiz(
           container,
           question,
