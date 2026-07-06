@@ -73,7 +73,6 @@ export function app_code_lesson_symbols_letters() {
     "Symbols (Letters)",
     "symbols_letters",
     lambda,
-    noop,
     batch_get,
     app_code_symbols_separated_on_question,
   );
