@@ -9,7 +9,6 @@ export async function marker_expand() {
   return v;
   async function lambda2(a) {
     let r = marker_next_get(a);
-    let index = property_get(r, "index");
     let next = property_get(r, "next");
     let ast = property_get(a, "ast");
     let stack2 = property_get(a, "stack2");
