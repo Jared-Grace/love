@@ -14,6 +14,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     above,
     app_code_lesson_symbols_digits_numbered_on_symbol,
     app_code_lesson_symbols_batch_digits,
+    app_code_symbols_separated_on_question,
   );
   return r;
   function above(root) {
