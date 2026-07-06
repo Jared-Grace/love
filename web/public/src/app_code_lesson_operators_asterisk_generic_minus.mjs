@@ -10,10 +10,10 @@ export function app_code_lesson_operators_asterisk_generic_minus(
   root,
   operator,
 ) {
-  let c3 = app_code_container_light_blue(root);
+  let c = app_code_container_light_blue(root);
   let minus = js_operator_minus();
   let t = text_first_upper_to("emember, for ");
-  html_div_cycle_code(c3, [
+  html_div_cycle_code(c, [
     t,
     minus,
     " it's possible to have a number only on the right and not on the left: ",
@@ -21,8 +21,8 @@ export function app_code_lesson_operators_asterisk_generic_minus(
   let combined2 = text_combine_right_fn(minus, digit_positive_random);
   const right2 = "right";
   let combined4 = text_combine(minus, right2);
-  html_div_code_multiple(c3, [combined2, combined4]);
-  html_div_cycle_code(c3, [
+  html_div_code_multiple(c, [combined2, combined4]);
+  html_div_cycle_code(c, [
     "However JavaScript does not have something like this for ",
     operator,
   ]);
