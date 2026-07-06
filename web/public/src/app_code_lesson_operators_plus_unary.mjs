@@ -67,7 +67,6 @@ export function app_code_lesson_operators_plus_unary() {
     name,
     id,
     above,
-    noop,
     batch,
     example_label,
     quiz_label,
