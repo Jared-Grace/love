@@ -113,7 +113,7 @@ export function app_code_lesson_symbols_batches_generic(
           function quiz_backwards(context, parent, container, refresh) {
             let quiz_question = answer;
             let quiz_answer = question;
-            const answer_property = "answer";
+            const answer_property = "question";
             quiz_generic(
               container,
               quiz_question,
