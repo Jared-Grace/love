@@ -1,3 +1,4 @@
+import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -9,7 +10,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -46,7 +46,7 @@ export function app_code_lesson_functions_arithmetic() {
     quiz_label,
     symbols_to_answer,
     1,
-    app_code_symbol_separated,
+    app_code_symbol,
     question_label,
   );
   return r;
