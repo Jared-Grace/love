@@ -1,4 +1,4 @@
-import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
+import { app_code_symbols_separated_on_question_numbered } from "../../../love/public/src/app_code_symbols_separated_on_question_numbered.mjs";
 import { app_code_lesson_symbols_digits_numbered_on_symbol } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_on_symbol.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { html_cycle_mono_list_between_comma_space_before_after } from "../../../love/public/src/html_cycle_mono_list_between_comma_space_before_after.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_symbols_digits_numbered() {
     above,
     app_code_lesson_symbols_digits_numbered_on_symbol,
     app_code_lesson_symbols_batch_digits,
-    app_code_symbols_separated_on_question,
+    app_code_symbols_separated_on_question_numbered,
   );
   return r;
   function above(root) {
