@@ -1,3 +1,4 @@
+import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -5,7 +6,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
-import { app_code_example_answer_gap } from "../../../love/public/src/app_code_example_answer_gap.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -14,8 +14,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
 import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_code_container_medium_blue } from "../../../love/public/src/app_code_container_medium_blue.mjs";
 export function app_code_lesson_base(
   name,
   id,
@@ -34,14 +32,7 @@ export function app_code_lesson_base(
   arguments_assert(arguments, 13);
   id = text_replace_space_underscore(id);
   function example_above(parent, question, label) {
-    app_code_example_answer_gap(parent);
-    let container = app_code_container_medium_blue(parent);
-    html_div_text(container, label);
-    let row = html_div_code_dark(container);
-    on_question(row, question);
-    let r4 = {
-      container,
-    };
+    let r4 = app_code_lesson_above(parent, label, on_question, question);
     return r4;
   }
   let lesson = {
