@@ -39,7 +39,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     html_div_text(c, "For example, instead of: ");
     let div3 = html_div(c);
     let before = html_div_code_dark(div3);
-    html_display_inline(item);
+    html_display_inline(before);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
     html_span_text(div3, " , ");
