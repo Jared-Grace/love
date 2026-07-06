@@ -12,6 +12,8 @@ export function app_code_lesson_base_quizzes(
   on_quiz_answer_button_backwards,
   quiz_backwards_answer_count_override,
 ) {
+  let r = function lambda() {};
+  return r;
   const quizzes = [
     function quiz_forwards(context, parent, container, refresh) {
       let quiz_question = question;
