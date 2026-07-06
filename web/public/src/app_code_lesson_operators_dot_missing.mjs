@@ -31,7 +31,6 @@ export function app_code_lesson_operators_dot_missing() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
-  let max = app_code_lesson_operators_generic_batch_get_max();
   let batch = function batch_get() {
     function lambda(la2) {
       let lefts = list_alphabet_cases_both();
