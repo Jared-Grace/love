@@ -17,7 +17,7 @@ export async function functions_expand_all(f_name_expand) {
         let f = js_block_find(stack);
         log(functions_expand_all.name, {
           f,
-        });
+        });x
         return;
         let inserted = await js_expand_generic(next, stack2, ast);
       }
