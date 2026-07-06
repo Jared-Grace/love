@@ -106,7 +106,7 @@ export function app_code_lesson_symbols_batches_generic(
             list_sort_text_to(concated);
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
-            async function lambda5() {
+            async function on_next() {
               let size = list_size(quizzes);
               let index = list_index_of(quizzes, on_quiz1);
               let a1 = add_1(index);
@@ -142,7 +142,7 @@ export function app_code_lesson_symbols_batches_generic(
               "take another quiz to practice some more",
               "please give me another quiz to take",
               refresh,
-              lambda5,
+              on_next,
             );
             let container_on_success = property_get(r4, "container");
             let hides = [success, container_on_success];
