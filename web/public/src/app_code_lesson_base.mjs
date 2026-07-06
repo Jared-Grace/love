@@ -1,7 +1,6 @@
 import { app_code_lesson_base_quizzes } from "../../../love/public/src/app_code_lesson_base_quizzes.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -25,7 +24,18 @@ export function app_code_lesson_base(
   on_quiz_answer_button_backwards,
   quiz_backwards_answer_count_override,
 ) {
-  arguments_assert(arguments, 13);
+  const quizzes = app_code_lesson_base_quizzes(
+    question,
+    answer,
+    quiz_label,
+    on_quiz_answer_button_forwards,
+    on_question,
+    question_label,
+    batch_get,
+    quiz_backwards_label_answer,
+    on_quiz_answer_button_backwards,
+    quiz_backwards_answer_count_override,
+  );
   id = text_replace_space_underscore(id);
   let lesson = {
     name,
@@ -48,18 +58,6 @@ export function app_code_lesson_base(
           ["app_code_symbol_generic", "transparent", "transparent"];
           html_text_set(div3, answer);
         }
-        const quizzes = app_code_lesson_base_quizzes(
-          question,
-          answer,
-          quiz_label,
-          on_quiz_answer_button_forwards,
-          on_question,
-          question_label,
-          batch_get,
-          quiz_backwards_label_answer,
-          on_quiz_answer_button_backwards,
-          quiz_backwards_answer_count_override,
-        );
         let mapped = {
           question,
           answer,
