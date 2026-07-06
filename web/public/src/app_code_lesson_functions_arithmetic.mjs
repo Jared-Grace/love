@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
@@ -18,7 +19,11 @@ export function app_code_lesson_functions_arithmetic() {
   const example_label = "What is: ";
   const quiz_label = "How many symbols are there? ";
   let question_label = app_code_label_symbols();
-  function lambda2() {}
+  function lambda2(symbols) {
+    log(app_code_lesson_functions_arithmetic.name, {
+      symbols,
+    });
+  }
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
