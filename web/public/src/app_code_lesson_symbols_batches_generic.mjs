@@ -160,8 +160,8 @@ export function app_code_lesson_symbols_batches_generic(
                   app_shared_button_screen_green_style_assign(b);
                   html_visibility_visible_multiple(hides);
                 } else {
-                  let v = "rgb(255 168 168)";
-                  html_style_background_color_set(b, v);
+                  let color_bg = "rgb(255 168 168)";
+                  html_style_background_color_set(b, color_bg);
                   html_font_color_set(b, "rgb(167, 51, 51)");
                   on_answer_wrong(b);
                 }
