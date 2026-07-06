@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
@@ -19,10 +20,12 @@ export function app_code_lesson_functions_arithmetic() {
   const quiz_label = "How many symbols are there? ";
   let question_label = app_code_label_symbols();
   let operators = js_operators();
+  let next = range_1_next(m);
   function lambda2(symbols) {
     log(app_code_lesson_functions_arithmetic.name, {
       symbols,
     });
+    let mapped = list_map_property(list, property_name);
   }
   function lambda3() {}
   let r = app_code_lesson_symbols_batches_generic(
