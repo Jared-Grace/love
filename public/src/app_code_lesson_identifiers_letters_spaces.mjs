@@ -71,9 +71,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     "Identifiers (Letters allowed, spaces not)",
     "identifiers_letters_spaces",
     lambda,
-    noop,
     batch_get,
-    app_code_symbol_separated,
     app_code_symbols_separated_on_question,
   );
   return r5;
