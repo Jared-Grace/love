@@ -1,4 +1,3 @@
-import { html_span } from "../../../love/public/src/html_span.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
@@ -37,10 +36,7 @@ import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbo
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
-import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs";
-import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_medium_blue } from "../../../love/public/src/app_code_container_medium_blue.mjs";
@@ -189,18 +185,4 @@ export function app_code_lesson_symbols_batches_generic(
     },
   };
   return lesson;
-  function on_question(parent, symbols) {
-    html_style_assign(parent, {
-      display: "flex",
-      "flex-wrap": "wrap",
-    });
-    function lambda4(d, index_1) {
-      let row_item = html_span(parent);
-      html_flex_column_center(row_item);
-      let digit = symbol_create(row_item, d);
-      on_symbol(row_item, index_1, symbols);
-      return digit;
-    }
-    let spans = list_map_index_1(symbols, lambda4);
-  }
 }
