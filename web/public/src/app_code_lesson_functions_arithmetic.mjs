@@ -46,7 +46,7 @@ export function app_code_lesson_functions_arithmetic() {
     question_label,
     html_style_code_dark,
     html_text_set,
-    "What is this function rewritten using a math symbol?",
+    "Rewrite this function using a math symbol: ",
     html_style_code_dark,
     null,
   );
