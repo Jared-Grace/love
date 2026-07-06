@@ -41,24 +41,7 @@ export function app_code_lesson_functions_arithmetic() {
   );
   return r;
   function above(root) {
-    let operators = [
-      {
-        verb: js_operator_plus(),
-        operator: js_operator_plus_verb(),
-      },
-      {
-        verb: js_operator_minus(),
-        operator: js_operator_minus_verb(),
-      },
-      {
-        verb: js_operator_division(),
-        operator: js_operator_division_verb(),
-      },
-      {
-        verb: js_operator_asterisk(),
-        operator: js_operator_asterisk_verb(),
-      },
-    ];
+    let operators = js_operators();
     function lambda(o) {
       let operator = property_get(o, "operator");
       let verb = property_get(o, "verb");
@@ -78,3 +61,24 @@ export function app_code_lesson_functions_arithmetic() {
     each(operators, lambda);
   }
 }
+function js_operators() {
+  return [
+    {
+      verb: js_operator_plus(),
+      operator: js_operator_plus_verb(),
+    },
+    {
+      verb: js_operator_minus(),
+      operator: js_operator_minus_verb(),
+    },
+    {
+      verb: js_operator_division(),
+      operator: js_operator_division_verb(),
+    },
+    {
+      verb: js_operator_asterisk(),
+      operator: js_operator_asterisk_verb(),
+    },
+  ];
+}
+
