@@ -1,3 +1,4 @@
+import { app_code_lesson_symbols_digits_numbered_2 } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered_2.mjs";
 import { app_code_lesson_operators_dot_missing } from "../../../love/public/src/app_code_lesson_operators_dot_missing.mjs";
 import { app_code_lesson_operators_dot_numbers } from "../../../love/public/src/app_code_lesson_operators_dot_numbers.mjs";
 import { app_code_lesson_operators_slash_forward } from "../../../love/public/src/app_code_lesson_operators_slash_forward.mjs";
@@ -38,6 +39,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_slash_forward,
     app_code_lesson_operators_dot_numbers,
     app_code_lesson_operators_dot_missing,
+    app_code_lesson_symbols_digits_numbered_2,
   ];
   return r;
 }
