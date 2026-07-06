@@ -1,6 +1,6 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
-import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digits_positive_shuffled_next } from "../../../love/public/src/digits_positive_shuffled_next.mjs";
@@ -40,12 +40,12 @@ export function app_code_lesson_functions_arithmetic() {
         operator: js_operator_plus(),
       },
     ];
-    function lambda(item) {
+    function lambda(o) {
+      let operator = property_get(o, "operator");
+      let verb = property_get(o, "verb");
       let next = digits_positive_shuffled_next();
       let left = next();
       let right = next();
-      let operator = js_operator_plus();
-      let verb = js_operator_plus_verb();
       let combined = js_code_binary_spaced_nb(left, operator, right);
       let c = app_code_container_light_blue(root);
       let code = js_code_call_args(verb, [left, right]);
