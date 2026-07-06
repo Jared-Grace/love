@@ -14,9 +14,9 @@ export async function functions_expand_all(f_name_expand) {
       async function lambda4(item) {
         let v = property_get(item, "v");
         let stack = property_get(v, "stack");
-        let f = js_block_find(stack3);
+        let f = js_block_find(stack);
         log(functions_expand_all.name, {
-          v,
+          f,
         });
         return;
         let inserted = await js_expand_generic(next, stack2, ast);
