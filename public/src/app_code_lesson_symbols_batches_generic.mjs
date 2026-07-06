@@ -43,6 +43,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light } from "../../../love/public/src/app_code_container_light.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export function app_code_lesson_symbols_batches_generic(
   name,
   id,
@@ -112,7 +113,7 @@ export function app_code_lesson_symbols_batches_generic(
             let a_container = property_get(a, "container");
             app_code_example_answer_label(a_container, quiz_label);
             let bq = batch_get();
-            let answers = list_map(bq, symbols_to_answer);
+            let answers = list_map_property(bq, "answer");
             let answers_unique = list_unique(answers);
             list_remove_if_exists(answers_unique, answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
