@@ -1,3 +1,5 @@
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
@@ -10,7 +12,6 @@ import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_base_with_quizzes } from "../../../love/public/src/app_code_lesson_base_with_quizzes.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
@@ -96,8 +97,7 @@ export function app_code_lesson_operators_generic(
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
   );
-  let lesson = null;
-  lesson = app_code_lesson_base(
+  let lesson = app_code_lesson_base(
     id,
     name,
     above,
@@ -107,6 +107,5 @@ export function app_code_lesson_operators_generic(
     example_label,
     quizzes,
   );
-  let r = lesson;
-  return r;
+  return lesson;
 }
