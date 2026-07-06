@@ -125,7 +125,6 @@ export function app_code_lesson_identifiers_underscores_generic(
     id,
     above,
     batch_get,
-    app_code_symbol_separated,
     app_code_symbols_separated_on_question,
   );
   return r5;
