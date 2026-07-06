@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { data_identifiers_search_names } from "../../../love/public/src/data_identifiers_search_names.mjs";
@@ -9,6 +10,7 @@ import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mj
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function functions_expand_all(f_name_expand) {
   let f_names = await data_identifiers_search_names(f_name_expand);
+  list_remove(list2, item2);
   log(functions_expand_all.name, {
     f_names,
   });
