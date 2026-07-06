@@ -1,3 +1,4 @@
+import { list_filter_remove } from "../../../love/public/src/list_filter_remove.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -159,6 +160,8 @@ export function app_code_lesson_symbols_batches_generic(
           let a_container = property_get(a, "container");
           app_code_example_answer_label(a_container, label);
           let bq = batch_get();
+          function lambda2() {}
+          list_filter_remove(existing, lambda2);
           let answers = list_map_property(bq, answer_property);
           let answers_unique = list_unique(answers);
           list_remove_if_exists(answers_unique, quiz_answer);
