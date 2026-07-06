@@ -15,7 +15,10 @@ export function app_code_lesson_symbols_identifiers_valid(
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
   let question_label = app_code_label_symbols();
-  let batch_get2 = app_code_batch_question_answer_fns(batch_get);
+  let batch_get2 = app_code_batch_question_answer_fns(
+    batch_get,
+    app_code_symbols_eval_valid_identifier,
+  );
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
