@@ -16,7 +16,7 @@ export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
   const example_label = "Function: ";
-  const quiz_label = "What is this code written as a function call? ";
+  const quiz_label = "What is this code rewritten using a function?";
   let question_label = app_code_label_code_question();
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
