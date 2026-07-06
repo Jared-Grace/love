@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
@@ -32,7 +33,6 @@ import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mj
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
-import { app_code_symbol_generic } from "../../../love/public/src/app_code_symbol_generic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
@@ -84,12 +84,8 @@ export function app_code_lesson_symbols_batches_generic(
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
           let div3 = html_div_code_dark(container);
-          let s = app_code_symbol_generic(
-            div3,
-            answer,
-            "transparent",
-            "transparent",
-          );
+          ["app_code_symbol_generic", "transparent", "transparent"];
+          html_text_set(div3, answer);
         }
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
