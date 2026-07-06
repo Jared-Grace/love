@@ -22,7 +22,6 @@ import { property_set_exists_not } from "../../../love/public/src/property_set_e
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_generic.mjs";
-import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   let name = "Identifiers (first symbol)";
   let id = "identifiers_symbol_first";
