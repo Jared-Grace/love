@@ -1,9 +1,8 @@
+import { list_filter_remove } from "../../../love/public/src/list_filter_remove.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { indexeddb_put_multiple_backend } from "../../../love/public/src/indexeddb_put_multiple_backend.mjs";
@@ -19,8 +18,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     let includes = list_includes(keys, k);
     return includes;
   }
-  let filtered = list_filter(existing, lambda);
-  list_remove_multiple(existing, filtered);
+  list_filter_remove(existing, lambda);
   list_add_multiple(existing, v);
   async function lambda_async() {
     await indexeddb_put_multiple_backend(db_get, store, lookup);
