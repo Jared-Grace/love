@@ -6,7 +6,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function functions_expand_all(f_name) {
-  let properties = await data_identifiers_search_names(f_name);
+  let f_names = await data_identifiers_search_names(f_name);
   async function lambda2(item2) {
     async function lambda(ast) {
       let list = js_list_calls_named(ast, f_name);
@@ -26,5 +26,5 @@ export async function functions_expand_all(f_name) {
     }
     let output = await function_transform(f_name, lambda);
   }
-  await each_async(properties, lambda2);
+  await each_async(f_names, lambda2);
 }
