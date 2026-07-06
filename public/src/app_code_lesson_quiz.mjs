@@ -49,6 +49,7 @@ export function app_code_lesson_quiz(
   label_answer,
   on_quiz_answer_button,
   on_question,
+  question_label,
 ) {
   let a = app_code_lesson_above(
     container,
