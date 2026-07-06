@@ -60,7 +60,7 @@ export function app_code_lesson_symbols_batches_generic(
   quiz_backwards_label,
   on_quiz_answer_button_backwards,
 ) {
-  arguments_assert(arguments, 11);
+  arguments_assert(arguments, 12);
   id = text_replace_space_underscore(id);
   function example_above(parent, question) {
     app_code_example_answer_gap(parent);
