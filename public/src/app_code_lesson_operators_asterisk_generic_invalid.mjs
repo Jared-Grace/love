@@ -1,4 +1,3 @@
-import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_asterisk_generic_invalid(
