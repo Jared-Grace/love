@@ -100,9 +100,9 @@ export function app_code_lesson_symbols_batches_generic(
             let bq = batch_get();
             let answers = list_map_property(bq, answer_property);
             let answers_unique = list_unique(answers);
-            list_remove_if_exists(answers_unique, answer);
+            list_remove_if_exists(answers_unique, quiz_answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
-            let concated = list_concat(taken, [answer]);
+            let concated = list_concat(taken, [quiz_answer]);
             list_sort_text_to(concated);
             let on_success = html_div(parent);
             let success = app_replace_success_message(on_success);
