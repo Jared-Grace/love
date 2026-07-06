@@ -13,5 +13,5 @@ export async function js_expand_selects(ast, selects) {
   let stack = property_get(v, "stack");
   let stack2 = list_get_end_1(stack);
   let index = list_index_of(stack2, item);
-  let inserted = await js_expand_generic(item, stack2, index, ast);
+  let inserted = await js_expand_generic(item, stack2, ast);
 }
