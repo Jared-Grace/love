@@ -14,7 +14,7 @@ import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_base_with_quizzes } from "../../../love/public/src/app_code_lesson_base_with_quizzes.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
@@ -55,7 +55,7 @@ export function app_code_lesson_operators_dot_missing() {
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  let r = app_code_lesson_base(
+  let r = app_code_lesson_base_with_quizzes(
     name,
     id,
     above,

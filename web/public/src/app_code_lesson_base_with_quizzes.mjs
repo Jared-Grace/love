@@ -9,7 +9,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
 import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
-export function app_code_lesson_base(
+export function app_code_lesson_base_with_quizzes(
   name,
   id,
   above,
