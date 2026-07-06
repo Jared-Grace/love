@@ -1,16 +1,14 @@
-import { list_alphabet_cases_both_shuffled } from "../../../love/public/src/list_alphabet_cases_both_shuffled.mjs";
+import { list_alphabet_cases_both_shuffled_pairs } from "../../../love/public/src/list_alphabet_cases_both_shuffled_pairs.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
-import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 export function app_code_lesson_operators_dot_missing_batch(operator) {
   function batch_get() {
-    let letters = list_alphabet_cases_both_shuffled();
-    let pairs = list_chunk(letters, 2);
+    let pairs = list_alphabet_cases_both_shuffled_pairs();
     function lambda(la, pair) {
       let r = list_first_second_only(pair);
       let second = property_get(r, "second");
