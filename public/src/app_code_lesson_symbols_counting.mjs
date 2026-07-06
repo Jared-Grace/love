@@ -31,6 +31,7 @@ export function app_code_lesson_symbols_counting(
     on_question,
     null,
     null,
+    null,
   );
   return r;
 }
