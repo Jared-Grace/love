@@ -1,3 +1,4 @@
+import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
@@ -12,14 +13,13 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
-import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
   const example_label = "What is: ";
   const quiz_label = "How many symbols are there? ";
-  let question_label = app_code_label_symbols();
+  let question_label = app_code_label_code_question();
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
