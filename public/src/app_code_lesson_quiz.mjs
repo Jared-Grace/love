@@ -57,8 +57,8 @@ export function app_code_lesson_quiz(
   let answer_count_max = app_code_answer_count_max();
   let a = app_code_lesson_above(
     container,
-    quiz_question,
     question_label,
+    quiz_question,
     on_question,
   );
   let a_container = property_get(a, "container");
