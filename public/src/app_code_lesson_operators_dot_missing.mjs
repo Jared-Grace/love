@@ -1,3 +1,4 @@
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
@@ -47,6 +48,7 @@ export function app_code_lesson_operators_dot_missing() {
     return list;
   };
   function above(root) {
+    let c = app_code_container_light_blue(root);
     let combined = js_code_binary("shirt", operator, "size");
     let example_get = lambda_value(combined);
     let text_before = "remember, ";
