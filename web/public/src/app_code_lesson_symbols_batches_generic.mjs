@@ -57,7 +57,7 @@ export function app_code_lesson_symbols_batches_generic(
   on_quiz_answer_button,
   on_question,
 ) {
-  arguments_assert(arguments, 11);
+  arguments_assert(arguments, 10);
   id = text_replace_space_underscore(id);
   function example_above(parent, question) {
     app_code_example_answer_gap(parent);
