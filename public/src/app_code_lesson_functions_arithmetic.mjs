@@ -12,7 +12,7 @@ export function app_code_lesson_functions_arithmetic() {
   const quiz_label = "How many symbols are there? ";
   let symbols_to_answer = text_size;
   let question_label = app_code_label_symbols();
-  let r5 = app_code_lesson_symbols_batches_generic(
+  let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
@@ -27,7 +27,7 @@ export function app_code_lesson_functions_arithmetic() {
   );
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
-  return r5;
+  return r;
   function above(root) {
     let next = digits_positive_shuffled_next();
     let c = app_code_container_light_blue(root);
