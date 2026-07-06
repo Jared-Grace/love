@@ -1,6 +1,4 @@
-import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
-import { html_display_inline } from "../../../love/public/src/html_display_inline.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
+import { html_style_code_dark_nowrap } from "../../../love/public/src/html_style_code_dark_nowrap.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -9,11 +7,7 @@ export function html_cycle_code(parent, parts) {
   let cycles = [
     noop,
     function lambda(span) {
-      html_display_inline(span);
-      html_style_assign(span, {
-        "white-space": "nowrap",
-      });
-      html_style_code_dark(span);
+      html_style_code_dark_nowrap(span);
     },
   ];
   html_cycle(parent, cycles, parts);
