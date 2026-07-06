@@ -1,5 +1,5 @@
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
-export function app_code_lesson_base_quizzes(
+export function app_code_lesson_base_quizzes_forwards_backwards(
   quiz_label,
   on_quiz_answer_button_forwards,
   on_question,
