@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
@@ -11,8 +12,10 @@ export async function functions_expand_all(f_name) {
       js_visit_calls_named(ast, f_name, la);
     }
     let list = list_adder(lambda2);
-    async function lambda4(item) {}
-    await each_async(list2, lambda4);
+    async function lambda4(item) {
+      let v = property_get(item, "v");
+    }
+    await each_async(list, lambda4);
     function lambda3() {}
     let inserted = await js_expand_generic(next, stack2, index, ast);
   }
