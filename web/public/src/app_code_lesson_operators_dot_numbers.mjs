@@ -119,8 +119,7 @@ export function app_code_lesson_operators_dot_numbers() {
     example_label,
     quizzes,
   );
-  let r = lesson;
   let example_count = 2;
   let quiz_backwards_answer_count_override = 2;
-  return r;
+  return lesson;
 }
