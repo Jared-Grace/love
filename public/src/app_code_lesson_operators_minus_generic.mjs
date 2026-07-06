@@ -1,3 +1,5 @@
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -11,7 +13,6 @@ import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/p
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_base_with_quizzes } from "../../../love/public/src/app_code_lesson_base_with_quizzes.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
