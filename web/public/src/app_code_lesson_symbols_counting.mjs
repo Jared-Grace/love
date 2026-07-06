@@ -11,6 +11,7 @@ export function app_code_lesson_symbols_counting(
   above,
   on_symbol,
   batch_symbols,
+  on_question,
 ) {
   const example_label = "Number of symbols: ";
   const quiz_label = "How many symbols are there? ";
