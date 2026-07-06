@@ -32,7 +32,7 @@ export function app_code_lesson_base(
   arguments_assert(arguments, 13);
   id = text_replace_space_underscore(id);
   function example_above(parent, question, label) {
-    let r4 = app_code_lesson_above(parent, label, on_question, question);
+    let r4 = app_code_lesson_above(parent, label, question, on_question);
     return r4;
   }
   let lesson = {
