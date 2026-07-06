@@ -31,6 +31,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     name,
     id,
     above,
+    on_question,
   );
   function above(root) {
     const identifier_symbols_types = [
