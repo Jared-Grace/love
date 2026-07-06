@@ -1,3 +1,4 @@
+import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -11,6 +12,7 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
     list_shuffle(letters);
     let pairs = list_chunk(letters, 2);
     function lambda(la, pair) {
+      let result = list_first_second_only(list2);
       let combined = js_code_binary(left2, operator, right2);
       let right4 = "";
       let combined2 = js_code_binary(left2, operator, right4);
@@ -20,7 +22,6 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
       each([combined, combined2, combined3, combined4], la);
     }
     let list = list_adder_each(pairs, lambda);
-    }
     list_shuffle_cycled(list, 4);
     return list;
   };
