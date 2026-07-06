@@ -36,7 +36,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { list_pair_other } from "../../../love/public/src/list_pair_other.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function app_code_lesson_symbols_batches_generic_quiz(
+export function app_code_lesson_quiz(
   container,
   quiz_question,
   answer_property,
