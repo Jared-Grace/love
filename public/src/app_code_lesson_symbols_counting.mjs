@@ -31,6 +31,7 @@ export function app_code_lesson_symbols_counting(
     app_code_symbol_separated,
     question_label,
     noop,
+    html_text_set,
   );
   return r;
 }
