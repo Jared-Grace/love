@@ -1,3 +1,5 @@
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_base_quizzes } from "../../../love/public/src/app_code_lesson_base_quizzes.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -10,7 +12,6 @@ import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { app_code_lesson_base_with_quizzes } from "../../../love/public/src/app_code_lesson_base_with_quizzes.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
@@ -35,21 +36,32 @@ export function app_code_lesson_functions_arithmetic() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch_get,
-    example_label,
+  let example_count = 1;
+  let quiz_backwards_label_answer =
+    "Rewrite this function using a math symbol: ";
+  let quiz_backwards_answer_count_override = null;
+  const quizzes = app_code_lesson_base_quizzes(
     quiz_label,
-    1,
-    question_label,
     html_style_code_dark,
     html_text_set,
-    "Rewrite this function using a math symbol: ",
+    question_label,
+    batch_get,
+    quiz_backwards_label_answer,
     html_style_code_dark,
-    null,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch_get,
+    html_text_set,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
   return r;
   function above(root) {
     let next = range_1_next(m);
