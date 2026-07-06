@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -110,6 +111,7 @@ export function app_code_lesson_symbols_batches_generic(
             );
           },
         ];
+        let nn = null_not_is(value2);
         if (quiz_backwards_label) {
           function quiz_backwards(context, parent, container, refresh) {
             log(app_code_lesson_symbols_batches_generic.name, "quiz_backwards");
