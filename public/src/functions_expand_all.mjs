@@ -10,23 +10,24 @@ export async function functions_expand_all(f_name) {
   let result = await data_identifiers_search(f_name);
   let properties = properties_get(result);
   return result;
-  async function lambda(ast) {
-    let list = js_list_calls_named(ast, f_name);
-    log(functions_expand_all.name, {
-      list,
-    });
-    async function lambda4(item) {
-      let v = property_get(item, "v");
-      let stack = property_get(v, "stack");
+  async function lambda2(item2) {
+    async function lambda(ast) {
+      let list = js_list_calls_named(ast, f_name);
       log(functions_expand_all.name, {
-        v,
+        list,
       });
-      return;
-      let inserted = await js_expand_generic(next, stack2, ast);
+      async function lambda4(item) {
+        let v = property_get(item, "v");
+        let stack = property_get(v, "stack");
+        log(functions_expand_all.name, {
+          v,
+        });
+        return;
+        let inserted = await js_expand_generic(next, stack2, ast);
+      }
+      await each_async(list, lambda4);
     }
-    await each_async(list, lambda4);
+    let output = await function_transform(f_name, lambda);
   }
-  let output = await function_transform(f_name, lambda);
-  async function lambda2(item2) {}
-  await each_async(list2, lambda2);
+  await each_async(properties, lambda2);
 }
