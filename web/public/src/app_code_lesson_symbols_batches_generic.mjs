@@ -108,7 +108,7 @@ export function app_code_lesson_symbols_batches_generic(
             );
           },
         ];
-        if (false) {
+        if (quiz_backwards_includes) {la
         }
         let mapped = {
           question,
