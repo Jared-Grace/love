@@ -17,11 +17,11 @@ export async function functions_expand_all(f_name_expand) {
         let stack = property_get(v, "stack");
         let r = js_block_find(stack);
         let body = property_get(r, "body");
-        let item2 = property_get(r, "item");
+        let item = property_get(r, "item");
         log(functions_expand_all.name, {
           f_name,
         });
-        let inserted = await js_expand_generic(next, body, ast);
+        let inserted = await js_expand_generic(item, body, ast);
         exit();
         return;
       }
