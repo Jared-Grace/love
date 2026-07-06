@@ -1,5 +1,5 @@
 import { range_map } from "../../../love/public/src/range_map.mjs";
-import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
+import { list_iterator_refillable_on } from "../../../love/public/src/list_iterator_refillable_on.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -16,7 +16,7 @@ export function app_code_batch_item_get(
     example_count = 1;
   }
   let container = html_div(parent);
-  let next_get = list_iterator_refillable(batch, on_batch);
+  let next_get = list_iterator_refillable_on(batch, on_batch);
   let refresh = function lambda() {
     html_clear(container);
     let bs = range_map(example_count, next_get);
