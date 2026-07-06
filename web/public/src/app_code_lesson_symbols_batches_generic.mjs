@@ -92,6 +92,7 @@ export function app_code_lesson_symbols_batches_generic(
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function on_quiz1(context, parent, container, refresh) {
+            let quiz_answer = answer;
             let a = example_above(container, question);
             let a_container = property_get(a, "container");
             app_code_example_answer_label(a_container, quiz_label);
