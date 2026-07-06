@@ -17,7 +17,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
-  const example_label = "What is: ";
+  const example_label = "Function: ";
   const quiz_label = "How many symbols are there? ";
   let question_label = app_code_label_code_question();
   let operators = js_operators();
