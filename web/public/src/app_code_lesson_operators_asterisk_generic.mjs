@@ -1,3 +1,4 @@
+import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
@@ -40,7 +41,7 @@ export function app_code_lesson_operators_asterisk_generic(
   let inside = text_first_upper_to(lesson_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + lesson_name;
-  let question_label = "Code: ";
+  let question_label = app_code_label_code_question();
   let batch_get = app_code_batch_question_answer_fns(
     batch,
     app_code_symbols_eval_valid_expression,
