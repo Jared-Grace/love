@@ -18,15 +18,15 @@ export function app_code_lesson_symbols_digits_numbered() {
   return r5;
   function above(root) {
     let c = app_code_container_light_blue(root);
-    let p3 = html_div(c);
+    let p = html_div(c);
     let ds = digits();
     html_cycle_mono_list_between_comma_space_before_after(
-      p3,
+      p,
       "The numbers ",
       ds,
       " are called ",
     );
-    html_span_text_bold(p3, "digits");
+    html_span_text_bold(p, "digits");
     let p2 = html_div(c);
     html_cycle_mono_list_between_comma_space_before_after(
       p2,
@@ -35,7 +35,7 @@ export function app_code_lesson_symbols_digits_numbered() {
       [", ..., ", 9, ") are examples of "],
     );
     html_span_text_bold(p2, "symbols");
-    let p = html_div_text(
+    html_div_text(
       c,
       "When we write computer programs, we use symbols, including numbers",
     );
