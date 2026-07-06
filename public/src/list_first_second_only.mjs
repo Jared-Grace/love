@@ -3,5 +3,11 @@ import { list_first_second } from "../../../love/public/src/list_first_second.mj
 export function list_first_second_only(list) {
   list_size_2_assert(list);
   let result = list_first_second(list);
+  if (false) {
+    let copy_paste = {
+      first,
+      second,
+    };
+  }
   return result;
 }
