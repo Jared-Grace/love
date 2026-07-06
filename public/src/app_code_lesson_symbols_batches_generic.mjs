@@ -60,7 +60,7 @@ export function app_code_lesson_symbols_batches_generic(
   question_label,
   on_quiz_answer_button_forwards,
   on_question,
-  quiz_backwards_label,
+  quiz_backwards_label_answer,
   on_quiz_answer_button_backwards,
   quiz_backwards_answer_count_override,
 ) {
@@ -118,7 +118,7 @@ export function app_code_lesson_symbols_batches_generic(
             );
           },
         ];
-        let nn = null_not_is(quiz_backwards_label);
+        let nn = null_not_is(quiz_backwards_label_answer);
         if (nn) {
           function quiz_backwards(context, parent, container, refresh) {
             log(app_code_lesson_symbols_batches_generic.name, "quiz_backwards");
@@ -134,7 +134,7 @@ export function app_code_lesson_symbols_batches_generic(
               quiz_backwards,
               context,
               refresh,
-              quiz_backwards_label,
+              quiz_backwards_label_answer,
               on_quiz_answer_button_backwards,
             );
           }
