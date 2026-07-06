@@ -9,6 +9,9 @@ import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mj
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function functions_expand_all(f_name_expand) {
   let f_names = await data_identifiers_search_names(f_name_expand);
+  log(functions_expand_all.name, {
+    f_names,
+  });
   async function lambda2(f_name) {
     async function lambda(ast) {
       let list = js_list_calls_named(ast, f_name_expand);
