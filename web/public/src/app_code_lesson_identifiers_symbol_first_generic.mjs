@@ -1,3 +1,4 @@
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -11,7 +12,6 @@ import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { invoke_map } from "../../../love/public/src/invoke_map.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
-import { list_iterator_refillable_on } from "../../../love/public/src/list_iterator_refillable_on.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
@@ -38,7 +38,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     list_shuffle_cycled(list2, size);
     let list = list2;
     let refill_get = digits_randomly_coupled;
-    let next_get_list = list_iterator_refillable_on(refill_get, noop);
+    let next_get_list = list_iterator_refillable(refill_get);
     let next_get = invoke_map(next_get_list, list_join_empty);
     function lambda2(batch_item, batch_item_index) {
       let joined = list_join_cycled_invoker(batch_item, next_get);
