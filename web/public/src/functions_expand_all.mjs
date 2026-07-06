@@ -18,7 +18,6 @@ export async function functions_expand_all(f_name_expand) {
         let r = js_block_find(stack);
         let body = property_get(r, "body");
         log(functions_expand_all.name, {
-          f,
           f_name,
         });
         exit();
