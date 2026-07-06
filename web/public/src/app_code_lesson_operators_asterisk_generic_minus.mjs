@@ -12,7 +12,7 @@ export function app_code_lesson_operators_asterisk_generic_minus(
 ) {
   let c = app_code_container_light_blue(root);
   let minus = js_operator_minus();
-  let t = text_first_upper_to("emember, for ");
+  let t = text_first_upper_to("remember, for ");
   html_div_cycle_code(c, [
     t,
     minus,
