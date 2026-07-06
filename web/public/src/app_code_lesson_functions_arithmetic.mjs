@@ -1,4 +1,3 @@
-import { html_font_color_set_black } from "../../../love/public/src/html_font_color_set_black.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -36,6 +35,7 @@ export function app_code_lesson_functions_arithmetic() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
+  function lambda3() {}
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -47,7 +47,7 @@ export function app_code_lesson_functions_arithmetic() {
     question_label,
     html_style_code_dark,
     html_text_set,
-    html_font_color_set_black,
+    lambda3,
   );
   return r;
   function above(root) {
