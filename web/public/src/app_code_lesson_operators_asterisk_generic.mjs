@@ -1,3 +1,4 @@
+import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
@@ -47,6 +48,7 @@ export function app_code_lesson_operators_asterisk_generic(
     batch,
     app_code_symbols_eval_valid_expression,
   );
+  let quiz_backwards_label = app_code_label_code_quiz_backwards();
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -58,7 +60,7 @@ export function app_code_lesson_operators_asterisk_generic(
     question_label,
     noop,
     html_text_set,
-    "What code matches this validity?",
+    quiz_backwards_label,
     html_style_code_dark,
     2,
   );
