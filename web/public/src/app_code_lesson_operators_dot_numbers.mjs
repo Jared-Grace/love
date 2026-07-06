@@ -1,3 +1,5 @@
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_base_quizzes } from "../../../love/public/src/app_code_lesson_base_quizzes.mjs";
 import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
@@ -18,7 +20,6 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_operators_arithmetic } from "../../../love/public/src/app_code_operators_arithmetic.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_base_with_quizzes } from "../../../love/public/src/app_code_lesson_base_with_quizzes.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
@@ -97,20 +98,31 @@ export function app_code_lesson_operators_dot_numbers() {
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch,
-    example_label,
+  const quizzes = app_code_lesson_base_quizzes(
+    question,
+    answer,
     quiz_label,
-    2,
-    question_label,
     noop,
     html_text_set,
+    question_label,
+    batch,
     quiz_backwards_label,
     html_style_code_dark,
-    2,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch,
+    html_text_set,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
+  let example_count = 2;
+  let quiz_backwards_answer_count_override = 2;
   return r;
 }
