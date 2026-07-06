@@ -14,7 +14,10 @@ export function app_code_lesson_symbols_counting(
   const quiz_label = "How many symbols are there? ";
   let symbols_to_answer = text_size;
   let question_label = app_code_label_symbols();
-  let batch_get = app_code_batch_question_answer_fns(batch_symbols);
+  let batch_get = app_code_batch_question_answer_fns(
+    batch_symbols,
+    symbols_to_answer,
+  );
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
