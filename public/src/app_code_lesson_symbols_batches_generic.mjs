@@ -55,12 +55,12 @@ export function app_code_lesson_symbols_batches_generic(
 ) {
   arguments_assert(arguments, 10);
   id = text_replace_space_underscore(id);
-  function example_above(parent, symbols) {
+  function example_above(parent, question) {
     app_code_example_answer_gap(parent);
     let container = app_code_container_medium_blue(parent);
     html_div_text(container, question_label);
     let row = html_div_code_dark(container);
-    on_question(row, symbols);
+    on_question(row, question);
     let r4 = {
       container,
     };
@@ -80,7 +80,7 @@ export function app_code_lesson_symbols_batches_generic(
         function example(parent) {
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
-          let a = example_above(parent, symbols);
+          let a = example_above(parent, question);
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
           let div3 = html_div_code_dark(container);
