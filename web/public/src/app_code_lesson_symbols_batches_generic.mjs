@@ -65,18 +65,7 @@ export function app_code_lesson_symbols_batches_generic(
     let container = app_code_container_medium_blue(parent);
     html_div_text(container, question_label);
     let row = html_div_code_dark(container);
-    html_style_assign(row, {
-      display: "flex",
-      "flex-wrap": "wrap",
-    });
-    function lambda4(d, index_1) {
-      let row_item = html_span(row);
-      html_flex_column_center(row_item);
-      let digit = symbol_create(row_item, d);
-      on_symbol(row_item, index_1, symbols);
-      return digit;
-    }
-    let spans = list_map_index_1(symbols, lambda4);
+    on_question(row, symbols);
     let r4 = {
       container,
     };
@@ -200,4 +189,18 @@ export function app_code_lesson_symbols_batches_generic(
     },
   };
   return lesson;
+  function on_question(parent, symbols) {
+    html_style_assign(parent, {
+      display: "flex",
+      "flex-wrap": "wrap",
+    });
+    function lambda4(d, index_1) {
+      let row_item = html_span(parent);
+      html_flex_column_center(row_item);
+      let digit = symbol_create(row_item, d);
+      on_symbol(row_item, index_1, symbols);
+      return digit;
+    }
+    let spans = list_map_index_1(symbols, lambda4);
+  }
 }
