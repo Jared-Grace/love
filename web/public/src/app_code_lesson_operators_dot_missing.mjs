@@ -67,7 +67,11 @@ export function app_code_lesson_operators_dot_missing() {
       example_get,
     );
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
-    app_code_lesson_operators_asterisk_generic_invalid(root, operator);
+    app_code_lesson_operators_asterisk_generic_invalid(
+      root,
+      operator,
+      text_combine_middle_space,
+    );
     return;
   }
   const example_label = "Is this code valid? ";
