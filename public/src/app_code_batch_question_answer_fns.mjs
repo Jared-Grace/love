@@ -5,8 +5,14 @@ export function app_code_batch_question_answer_fns(
 ) {
   let r = function lambda() {
     let questions = batch_questions_get();
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
+    function lambda2(question) {
+      let r2 = {
+        question,
+      };
+      return r2;
+    }
+    let mapped = list_map(questions, lambda2);
+    return mapped;
   };
   return r;
 }
