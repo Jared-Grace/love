@@ -1,4 +1,3 @@
-import { app_code_symbols_separated_on_question_numbered } from "../../../love/public/src/app_code_symbols_separated_on_question_numbered.mjs";
 import { text_size_text_to } from "../../../love/public/src/text_size_text_to.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
@@ -31,7 +30,7 @@ export function app_code_lesson_symbols_counting(
     question_label,
     batch_get,
     quiz_backwards_label_answer,
-    app_code_symbols_separated_on_question_numbered,
+    on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
   );
   let lesson = app_code_lesson_base(
