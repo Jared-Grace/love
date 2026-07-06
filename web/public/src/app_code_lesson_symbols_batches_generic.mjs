@@ -160,7 +160,10 @@ export function app_code_lesson_symbols_batches_generic(
           let a_container = property_get(a, "container");
           app_code_example_answer_label(a_container, label);
           let quiz_batch_items = batch_get();
-          function lambda2(quiz_batch_item) {}
+          function lambda2(quiz_batch_item) {
+            let eq3 = equal(left, right);
+            let eq4 = equal(left2, right2);
+          }
           list_filter_remove(quiz_batch_items, lambda2);
           let answers = list_map_property(batch_items, answer_property);
           let answers_unique = list_unique(answers);
