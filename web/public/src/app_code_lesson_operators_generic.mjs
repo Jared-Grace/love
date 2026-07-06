@@ -95,6 +95,7 @@ export function app_code_lesson_operators_generic(
     html_text_set,
     null,
     null,
+    null,
   );
   return r;
 }

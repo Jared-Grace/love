@@ -32,6 +32,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     on_question,
     null,
     null,
+    null,
   );
   return r;
 }

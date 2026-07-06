@@ -62,6 +62,7 @@ export function app_code_lesson_symbols_batches_generic(
   on_question,
   quiz_backwards_label,
   on_quiz_answer_button_backwards,
+  quiz_backwards_answer_count_override,
 ) {
   arguments_assert(arguments, 12);
   id = text_replace_space_underscore(id);
