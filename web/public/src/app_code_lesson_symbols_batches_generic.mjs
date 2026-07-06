@@ -93,11 +93,12 @@ export function app_code_lesson_symbols_batches_generic(
         const quizzes = [
           function on_quiz1(context, parent, container, refresh) {
             let quiz_answer = answer;
+            const answer_property = "answer";
             let a = example_above(container, question);
             let a_container = property_get(a, "container");
             app_code_example_answer_label(a_container, quiz_label);
             let bq = batch_get();
-            let answers = list_map_property(bq, "answer");
+            let answers = list_map_property(bq, answer_property);
             let answers_unique = list_unique(answers);
             list_remove_if_exists(answers_unique, answer);
             let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
