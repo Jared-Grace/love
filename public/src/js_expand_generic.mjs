@@ -35,7 +35,7 @@ import { function_parse_declaration } from "../../../love/public/src/function_pa
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 export async function js_expand_generic(next, stack2, index, ast) {
-  let index2 = list_index_of(list, item2);
+  index = list_index_of(stack2, next);
   let inserted = null;
   let v = js_statement_call_get(next);
   let call = property_get(v, "call");
