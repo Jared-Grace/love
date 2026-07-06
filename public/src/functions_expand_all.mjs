@@ -12,8 +12,8 @@ export async function functions_expand_all(f_name_expand) {
   async function lambda2(f_name) {
     async function lambda(ast) {
       let list = js_list_calls_named(ast, f_name_expand);
-      async function lambda4(item) {
-        let v = property_get(item, "v");
+      async function lambda4(call) {
+        let v = property_get(call, "v");
         let stack = property_get(v, "stack");
         let r = js_block_find(stack);
         let body = property_get(r, "body");
