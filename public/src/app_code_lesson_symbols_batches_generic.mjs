@@ -69,7 +69,7 @@ export function app_code_lesson_symbols_batches_generic(
   function example_above(parent, question, label) {
     app_code_example_answer_gap(parent);
     let container = app_code_container_medium_blue(parent);
-    html_div_text(container, question_label);
+    html_div_text(container, label);
     let row = html_div_code_dark(container);
     on_question(row, question);
     let r4 = {
