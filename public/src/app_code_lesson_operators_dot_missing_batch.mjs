@@ -1,3 +1,4 @@
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_second_only } from "../../../love/public/src/list_first_second_only.mjs";
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
@@ -26,5 +27,6 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
     list_shuffle_cycled(list, 4);
     return list;
   };
-  return r2;
+  let b = app_code_batch_question_answer_fns(r2);
+  return b;
 }
