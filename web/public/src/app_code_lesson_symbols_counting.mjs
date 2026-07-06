@@ -1,7 +1,6 @@
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
-import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 export function app_code_lesson_symbols_counting(
