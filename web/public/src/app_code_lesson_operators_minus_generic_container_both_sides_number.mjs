@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
@@ -28,6 +29,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
     );
     let list2 = batch_binary();
     let first = list_first(list2);
+    let question = property_get(first, "question");
     return first;
   }
 }
