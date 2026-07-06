@@ -1,8 +1,10 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export function app_code_batch_question_answer_fns(
   batch_questions_get,
   question_to_answer,
 ) {
+  arguments_assert(arguments, 2);
   let b = function lambda() {
     let questions = batch_questions_get();
     function lambda2(question) {
