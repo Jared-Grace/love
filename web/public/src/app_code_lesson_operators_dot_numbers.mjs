@@ -109,11 +109,7 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_code(c3, first2);
     return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
-    app_code_lesson_operators_asterisk_generic_invalid(
-      root,
-      operator,
-      text_combine,
-    );
+    app_code_lesson_operators_asterisk_generic_invalid(root, operator);
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;

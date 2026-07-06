@@ -4,7 +4,6 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_operators_asterisk_generic_invalid(
   root,
   operator,
-  combine,
 ) {
   let c4 = app_code_container_light_blue(root);
   let combined = text_combine("invalid ", operator);
