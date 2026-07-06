@@ -162,11 +162,11 @@ export function app_code_lesson_symbols_batches_generic(
                   app_shared_button_screen_green_style_assign(b);
                   html_visibility_visible_multiple(hides);
                 } else {
-                  if (not(b2)) {
-                  }
+                  if (not(answered)) {
                   let color_bg = "rgb(255 168 168)";
                   html_style_background_color_set(b, color_bg);
                   html_font_color_set(b, "rgb(167, 51, 51)");
+                  }
                 }
               }
               on_quiz_answer_button(b);
