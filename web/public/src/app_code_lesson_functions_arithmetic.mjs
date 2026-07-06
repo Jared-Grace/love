@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -35,10 +36,12 @@ export function app_code_lesson_functions_arithmetic() {
   function above(root) {
     let operators = [
       {
-        verb,
-        operator,
+        verb: js_operator_plus(),
+        operator: js_operator_plus(),
       },
     ];
+    function lambda(item) {}
+    each(list, lambda);
     let next = digits_positive_shuffled_next();
     let left = next();
     let right = next();
