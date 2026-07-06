@@ -36,7 +36,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let split = text_split_empty(question);
     html_div_text(c, "For example, instead of: ");
     let div3 = html_div(c);
-    let before = html_span_text_code_dark(div3);
+    let before = html_span_code_dark(div3);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
     html_span_text(div3, " , ");
@@ -44,7 +44,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let padded = text_pad_space("➡");
     html_div_text(c, "You will now see: ");
     let div4 = html_div(c);
-    let after = html_span_text_code_dark(div4);
+    let after = html_span_code_dark(div4);
     let lambda$item = app_code_symbol_curried(after);
     each(split, lambda$item);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
