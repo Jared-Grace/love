@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
