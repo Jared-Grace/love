@@ -12,7 +12,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
