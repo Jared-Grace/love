@@ -1,3 +1,10 @@
+import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
+import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
+import { js_operator_division_verb } from "../../../love/public/src/js_operator_division_verb.mjs";
+import { js_operator_division } from "../../../love/public/src/js_operator_division.mjs";
+import { js_operator_minus_verb } from "../../../love/public/src/js_operator_minus_verb.mjs";
+import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
+import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -37,7 +44,19 @@ export function app_code_lesson_functions_arithmetic() {
     let operators = [
       {
         verb: js_operator_plus(),
-        operator: js_operator_plus(),
+        operator: js_operator_plus_verb(),
+      },
+      {
+        verb: js_operator_minus(),
+        operator: js_operator_minus_verb(),
+      },
+      {
+        verb: js_operator_division(),
+        operator: js_operator_division_verb(),
+      },
+      {
+        verb: js_operator_asterisk(),
+        operator: js_operator_asterisk_verb(),
       },
     ];
     function lambda(o) {
