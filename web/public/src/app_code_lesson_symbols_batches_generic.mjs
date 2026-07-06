@@ -57,7 +57,7 @@ export function app_code_lesson_symbols_batches_generic(
   question_label,
   on_quiz_answer_button,
 ) {
-  arguments_assert(arguments, 10);
+  arguments_assert(arguments, 11);
   id = text_replace_space_underscore(id);
   function example_above(parent, symbols) {
     let container = app_code_container_light(parent);
