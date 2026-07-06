@@ -42,6 +42,7 @@ export function app_code_lesson_functions_arithmetic() {
       let left_transform = property_get(o, "left_transform");
       let left = next();
       let right = next();
+      left = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(left, operator, right);
       let c = app_code_container_light_blue(root);
       let code = js_code_call_args(verb, [left, right]);
