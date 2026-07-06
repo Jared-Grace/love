@@ -9,7 +9,6 @@ import { text_replace_space_underscore } from "../../../love/public/src/text_rep
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
@@ -52,7 +51,6 @@ export function app_code_lesson_base(
           ["app_code_symbol_generic", "transparent", "transparent"];
           html_text_set(div3, answer);
         }
-        let answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function quiz_forwards(context, parent, container, refresh) {
             let quiz_question = question;
