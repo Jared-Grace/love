@@ -1,3 +1,4 @@
+import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
@@ -31,7 +32,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     name,
     id,
     above,
-    on_question,
+    app_code_symbols_separated_on_question,
   );
   function above(root) {
     const identifier_symbols_types = [
