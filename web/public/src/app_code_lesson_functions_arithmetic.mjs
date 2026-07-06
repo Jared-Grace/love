@@ -35,6 +35,6 @@ export function app_code_lesson_functions_arithmetic() {
     let right = next();
     let operator = js_operator_plus();
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["Instead of ", left]);
+    html_div_cycle_code(c, ["Instead of ", left, operator, right]);
   }
 }
