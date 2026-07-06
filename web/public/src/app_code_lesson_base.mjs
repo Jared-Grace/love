@@ -40,6 +40,7 @@ export function app_code_lesson_base(
           ["app_code_symbol_generic", "transparent", "transparent"];
           html_text_set(div3, answer);
         }
+        quizzes = quizzes_get(question, answer);
         let mapped = {
           question,
           answer,
