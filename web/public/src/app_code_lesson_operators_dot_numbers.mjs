@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_dot_numbers_both_sides_text } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
@@ -84,10 +85,11 @@ export function app_code_lesson_operators_dot_numbers() {
     html_div_code_multiple(c2, ["person.name", "book.chapters"]);
     let combined = js_code_binary("shirt", operator, "size");
     let example_get = lambda_value(combined);
+    let text_before = app_code_lesson_operators_dot_numbers_both_sides_text();
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
-      "when used with identifiers, there must be something",
+      text_before,
       js_code_binary,
       example_get,
     );
