@@ -10,7 +10,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_join_cycled_invoker } from "../../../love/public/src/list_join_cycled_invoker.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { invoke_map } from "../../../love/public/src/invoke_map.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { digits_randomly_coupled } from "../../../love/public/src/digits_randomly_coupled.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -74,6 +73,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     id,
     above,
     batch_get,
+    symbol_create,
     on_question,
   );
   return r;
