@@ -7,7 +7,6 @@ import { list_swap_beginning } from "../../../love/public/src/list_swap_beginnin
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
@@ -125,6 +124,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     id,
     above,
     batch_get,
+    app_code_symbol_separated,
     app_code_symbols_separated_on_question,
   );
   return r5;
