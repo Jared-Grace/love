@@ -1,4 +1,4 @@
-import { app_code_lesson_symbols_batches_generic_quiz } from "../../../love/public/src/app_code_lesson_symbols_batches_generic_quiz.mjs";
+import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -71,7 +71,7 @@ export function app_code_lesson_base(
             let quiz_question = question;
             let quiz_answer = answer;
             const answer_property = "answer";
-            app_code_lesson_symbols_batches_generic_quiz(
+            app_code_lesson_quiz(
               container,
               quiz_question,
               answer_property,
@@ -92,7 +92,7 @@ export function app_code_lesson_base(
             let quiz_question = answer;
             let quiz_answer = question;
             const answer_property = "question";
-            app_code_lesson_symbols_batches_generic_quiz(
+            app_code_lesson_quiz(
               container,
               quiz_question,
               answer_property,
