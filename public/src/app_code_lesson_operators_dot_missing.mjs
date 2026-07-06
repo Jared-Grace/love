@@ -62,6 +62,7 @@ export function app_code_lesson_operators_dot_missing() {
     noop,
     html_text_set,
     null,
+    null,
   );
   return r;
 }
