@@ -95,7 +95,7 @@ export function app_code_lesson_symbols_batches_generic(
             let quiz_question = question;
             let quiz_answer = answer;
             const answer_property = "answer";
-            let a = example_above(container, question);
+            let a = example_above(container, quiz_question);
             let a_container = property_get(a, "container");
             app_code_example_answer_label(a_container, quiz_label);
             let bq = batch_get();
