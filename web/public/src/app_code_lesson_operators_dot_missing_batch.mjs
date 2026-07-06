@@ -10,11 +10,7 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
     let letters = list_alphabet_cases_both();
     list_shuffle(letters);
     let pairs = list_chunk(letters, 2);
-    function lambda(la2, pair) {
-      lambda$left$right$la(left3, right3, la2);
-    }
-    let list = list_adder_each(pairs, lambda);
-    function lambda$left$right$la(left2, right2, la) {
+    function lambda(la, pair) {
       let combined = js_code_binary(left2, operator, right2);
       let right4 = "";
       let combined2 = js_code_binary(left2, operator, right4);
@@ -22,6 +18,8 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
       let left4 = "";
       let combined4 = js_code_binary(left4, operator, right2);
       each([combined, combined2, combined3, combined4], la);
+    }
+    let list = list_adder_each(pairs, lambda);
     }
     list_shuffle_cycled(list, 4);
     return list;
