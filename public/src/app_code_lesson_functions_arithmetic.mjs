@@ -30,6 +30,8 @@ export function app_code_lesson_functions_arithmetic() {
   return r;
   function above(root) {
     let next = digits_positive_shuffled_next();
+    let left = next();
+    let right = next();
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["Instead of "]);
   }
