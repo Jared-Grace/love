@@ -16,7 +16,7 @@ export function app_code_lesson_base(
   batch_get,
   on_question,
   example_label,
-  quizzes,
+  quizzes_get,
 ) {
   id = text_replace_space_underscore(id);
   let lesson = {
