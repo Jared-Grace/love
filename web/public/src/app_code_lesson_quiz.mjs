@@ -21,7 +21,6 @@ import { list_index_last_is } from "../../../love/public/src/list_index_last_is.
 import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
-import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -44,7 +43,7 @@ export function app_code_lesson_quiz(
   answer_property,
   quiz_answer,
   parent,
-  quiz_fn,
+  quiz_index,
   context,
   refresh,
   label_answer,
@@ -89,11 +88,10 @@ export function app_code_lesson_quiz(
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let size = list_size(quizzes);
-    let index = list_index_of(quizzes, quiz_fn);
-    let a1 = add_1(index);
+    let a1 = add_1(quiz_index);
     let index_new = mod(a1, size);
     app_code_quiz_index_set(context, index_new);
-    let li = list_index_last_is(quizzes, index);
+    let li = list_index_last_is(quizzes, quiz_index);
     if (li) {
       app_code_quiz_index_reset(context);
       function lesson_id_transform(value) {
