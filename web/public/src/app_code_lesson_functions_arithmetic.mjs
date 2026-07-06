@@ -25,10 +25,14 @@ export function app_code_lesson_functions_arithmetic() {
   let next = range_1_next(m);
   function batch_get() {
     let mapper = function lambda2(o) {
-      let r2 = js_operator_to_expression(o, next);
-      let question = property_get(r2, "expression");
-      let code2 = js_operator_left_right_to_call(operator2, left_right);
-      return question;
+      let e = js_operator_to_expression(o, next);
+      let question = property_get(e, "expression");
+      let answer = js_operator_left_right_to_call(o, e);
+      let r3 = {
+        question,
+        answer,
+      };
+      return r3;
     };
     let mapped = list_map(operators, mapper);
     return mapped;
