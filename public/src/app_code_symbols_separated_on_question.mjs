@@ -20,6 +20,4 @@ export function app_code_symbols_separated_on_question(
     return digit;
   }
   let spans = list_map_index_1(symbols, lambda4);
-  let r = function lambda() {};
-  return r;
 }
