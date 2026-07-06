@@ -63,9 +63,8 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let min = 1;
     let max = 3;
     let counts = [1, 2, 1, 3];
-    let list2 = list_slices_size_cycler(mapped, counts, min);
-    list_shuffle_cycled_size(list2, counts);
-    let list = list2;
+    let list = list_slices_size_cycler(mapped, counts, min);
+    list_shuffle_cycled_size(list, counts);
     let mapped2 = list_map(list, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(mapped2, list_other);
