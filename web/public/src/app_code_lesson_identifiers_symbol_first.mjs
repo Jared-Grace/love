@@ -26,7 +26,6 @@ import { app_code_symbol_separated } from "../../../love/public/src/app_code_sym
 export function app_code_lesson_identifiers_symbol_first() {
   let name = "Identifiers (first symbol)";
   let id = "identifiers_symbol_first";
-  let symbol_create = app_code_symbol_separated;
   let r = app_code_lesson_identifiers_symbol_first_generic(
     name,
     id,
