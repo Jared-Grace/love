@@ -9,6 +9,6 @@ export function app_code_symbol_separated(parent, d) {
     color_background,
     color_box_shadow,
   );
-  html_style_margin_top(s, "0.2em");
+  html_style_margin_top(s, "0.3em");
   return s;
 }
