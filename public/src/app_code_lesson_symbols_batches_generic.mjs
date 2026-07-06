@@ -73,7 +73,7 @@ export function app_code_lesson_symbols_batches_generic(
     above,
     example_count,
     batch: function batch() {
-      let b = batch_get();
+      let batch_items = batch_get();
       function each_batch_item(bi) {
         let question = property_get(bi, "question");
         let answer = property_get(bi, "answer");
@@ -146,26 +146,26 @@ export function app_code_lesson_symbols_batches_generic(
             html_visibility_hidden_multiple(hides);
             let buttons = list_map(concated, lambda3);
             function lambda3(quiz_answer) {
-              let b2 = app_replace_button_wide(
+              let b = app_replace_button_wide(
                 a_container,
                 quiz_answer,
                 on_click,
               );
-              html_style_background_color_set(b2, "#ececec");
-              html_style_margin_top(b2, "0.2em");
+              html_style_background_color_set(b, "#ececec");
+              html_style_margin_top(b, "0.2em");
               async function on_click() {
                 let eq2 = equal(quiz_answer, answer);
                 if (eq2) {
-                  app_shared_button_screen_green_style_assign(b2);
+                  app_shared_button_screen_green_style_assign(b);
                   html_visibility_visible_multiple(hides);
                 } else {
                   let v = "rgb(255 168 168)";
-                  html_style_background_color_set(b2, v);
-                  on_answer_wrong(b2);
+                  html_style_background_color_set(b, v);
+                  on_answer_wrong(b);
                 }
               }
-              on_quiz_answer_button(b2);
-              return b2;
+              on_quiz_answer_button(b);
+              return b;
             }
           },
         ];
@@ -177,7 +177,7 @@ export function app_code_lesson_symbols_batches_generic(
         };
         return r2;
       }
-      let mapped = list_map(b, each_batch_item);
+      let mapped = list_map(batch_items, each_batch_item);
       return mapped;
     },
   };
