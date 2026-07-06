@@ -107,7 +107,9 @@ export function app_code_lesson_symbols_batches_generic(
               refresh,
             );
           },
-        ];$i
+        ];
+        if (false) {
+        }
         let mapped = {
           question,
           answer,
