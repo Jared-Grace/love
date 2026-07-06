@@ -25,9 +25,10 @@ export function app_code_lesson_functions_arithmetic() {
     log(app_code_lesson_functions_arithmetic.name, {
       symbols,
     });
-    let mapped = list_map_property(list, property_name);
   }
-  function batch_get() {}
+  function batch_get() {
+    let mapped = list_map_property(operators, "operator");
+  }
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
