@@ -74,6 +74,7 @@ export function app_code_lesson_operators_plus_unary() {
     noop,
     html_text_set,
     null,
+    null,
   );
   return r;
 }

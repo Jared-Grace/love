@@ -104,6 +104,7 @@ export function app_code_lesson_operators_dot_numbers() {
     noop,
     html_text_set,
     null,
+    null,
   );
   return r;
 }
