@@ -20,6 +20,7 @@ export function app_code_lesson_functions_arithmetic() {
   const quiz_label = "How many symbols are there? ";
   let question_label = app_code_label_symbols();
   let operators = js_operators();
+  let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
   function symbols_to_answer(symbols) {
     log(app_code_lesson_functions_arithmetic.name, {
@@ -50,7 +51,6 @@ export function app_code_lesson_functions_arithmetic() {
   );
   return r;
   function above(root) {
-    let m = app_code_lesson_operators_generic_batch_get_max();
     let next = range_1_next(m);
     function lambda(o) {
       let r2 = js_operator_to_expression(o, next);
