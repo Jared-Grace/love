@@ -8,7 +8,7 @@ export function app_code_batch_question_answer_fns(
     function lambda2(question) {
       let answer = question_to_answer(question);
       let r2 = {
-        question,
+        question,answer
       };
       return r2;
     }
