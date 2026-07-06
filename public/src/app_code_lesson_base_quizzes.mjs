@@ -12,7 +12,9 @@ export function app_code_lesson_base_quizzes(
   quiz_infos ==
     [
       {
-        answer_label: quiz_label,
+        answer: {
+          label: quiz_label,
+        },
       },
       {},
     ];
