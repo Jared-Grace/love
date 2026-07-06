@@ -1,5 +1,5 @@
+import { html_span_code_dark } from "../../../love/public/src/html_span_code_dark.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol_separated_curried } from "../../../love/public/src/app_code_symbol_separated_curried.mjs";
 import { app_code_symbol_curried } from "../../../love/public/src/app_code_symbol_curried.mjs";
