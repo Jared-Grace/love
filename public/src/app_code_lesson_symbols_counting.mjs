@@ -26,7 +26,6 @@ export function app_code_lesson_symbols_counting(
     batch_get,
     example_label,
     quiz_label,
-    symbols_to_answer,
     1,
     app_code_symbol_separated,
     question_label,
