@@ -71,6 +71,7 @@ export function app_code_lesson_base(
               on_quiz_answer_button_forwards,
               on_question,
               question_label,
+              batch_get,
             );
           },
         ];
@@ -94,6 +95,7 @@ export function app_code_lesson_base(
               on_quiz_answer_button_backwards,
               on_question,
               question_label,
+              batch_get,
             );
           }
           list_add(quizzes, quiz_backwards);
