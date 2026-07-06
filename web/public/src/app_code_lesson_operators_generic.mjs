@@ -80,7 +80,7 @@ export function app_code_lesson_operators_generic(
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
-  let r5 = app_code_lesson_symbols_batches_generic(
+  let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
@@ -93,5 +93,5 @@ export function app_code_lesson_operators_generic(
     app_code_symbol,
     question_label,
   );
-  return r5;
+  return r;
 }
