@@ -33,6 +33,7 @@ export function app_code_lesson_functions_arithmetic() {
       return expression;
     };
     let mapped = list_map(operators, mapper);
+    return mapped;
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
