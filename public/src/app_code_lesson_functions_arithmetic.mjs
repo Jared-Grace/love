@@ -21,7 +21,7 @@ export function app_code_lesson_functions_arithmetic() {
   let question_label = app_code_label_symbols();
   let operators = js_operators();
   let next = range_1_next(m);
-  function lambda2(symbols) {
+  function symbols_to_answer(symbols) {
     log(app_code_lesson_functions_arithmetic.name, {
       symbols,
     });
@@ -36,7 +36,7 @@ export function app_code_lesson_functions_arithmetic() {
     lambda3,
     example_label,
     quiz_label,
-    lambda2,
+    symbols_to_answer,
     1,
     app_code_symbol_separated,
     question_label,
