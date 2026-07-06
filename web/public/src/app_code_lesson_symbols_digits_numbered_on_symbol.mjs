@@ -5,7 +5,7 @@ export function app_code_lesson_symbols_digits_numbered_on_symbol(
   parent,
   index_1,
 ) {
-  let div4 = html_span_text_smaller(parent, index_1);
-  html_font_color_set(div4, "#bbb");
-  html_style_margin_top(component, value);
+  let d = html_span_text_smaller(parent, index_1);
+  html_font_color_set(d, "#bbb");
+  html_style_margin_top(d, "-0.25em");
 }
