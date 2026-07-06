@@ -70,6 +70,7 @@ export function app_code_lesson_base(
               on_question,
               question_label,
               batch_get,
+              answer_count_override,
             );
           },
         ];
@@ -94,6 +95,7 @@ export function app_code_lesson_base(
               on_question,
               question_label,
               batch_get,
+              answer_count_override,
             );
           }
           list_add(quizzes, quiz_backwards);
