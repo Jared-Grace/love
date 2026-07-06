@@ -7,7 +7,7 @@ import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
-export function app_code_lesson_symbols_digits_numbered_2() {
+export function app_code_lesson_functions_arithmetic() {
   let r5 = app_code_lesson_symbols_counting(
     "Symbols (Digits, numbered)",
     "symbols_digits_numbered",
