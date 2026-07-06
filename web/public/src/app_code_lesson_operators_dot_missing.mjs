@@ -51,7 +51,6 @@ export function app_code_lesson_operators_dot_missing() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
-      u,
       "For this lesson, ",
       operator,
       " will be used with identifiers, not as a decimal point in a number",
