@@ -55,6 +55,7 @@ export function app_code_lesson_symbols_batches_generic(
   example_count,
   symbol_create,
   question_label,
+  on_quiz_answer_button,
 ) {
   arguments_assert(arguments, 10);
   id = text_replace_space_underscore(id);

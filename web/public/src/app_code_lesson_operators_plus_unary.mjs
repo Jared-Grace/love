@@ -73,6 +73,7 @@ export function app_code_lesson_operators_plus_unary() {
     2,
     app_code_symbol,
     question_label,
+    noop,
   );
   return r;
 }
