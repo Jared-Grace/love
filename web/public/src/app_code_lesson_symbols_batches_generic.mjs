@@ -93,7 +93,7 @@ export function app_code_lesson_symbols_batches_generic(
         }
         const answer_count_max = app_code_answer_count_max();
         const quizzes = [
-          function on_quiz1(context, parent, container, refresh) {
+          function quiz_forwards(context, parent, container, refresh) {
             let quiz_question = question;
             let quiz_answer = answer;
             const answer_property = "answer";
@@ -103,14 +103,29 @@ export function app_code_lesson_symbols_batches_generic(
               answer_property,
               quiz_answer,
               parent,
-              on_quiz1,
+              quiz_forwards,
               context,
               refresh,
             );
           },
         ];
         if (quiz_backwards_includes) {
-          list_add(list, item);
+          function quiz_backwards(context, parent, container, refresh) {
+            let quiz_question = answer;
+            let quiz_answer = question;
+            const answer_property = "answer";
+            quiz_generic(
+              container,
+              quiz_question,
+              answer_property,
+              quiz_answer,
+              parent,
+              quiz_backwards,
+              context,
+              refresh,
+            );
+          }
+          list_add(quizzes, quiz_backwards);
         }
         let mapped = {
           question,
