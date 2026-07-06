@@ -6,8 +6,8 @@ export function app_code_lesson_operators_asterisk_generic_invalid(
   operator,
 ) {
   let c = app_code_container_light_blue(root);
-  let combined = text_combine_middle_space("invalid", operator);
-  let combined2 = text_combine_middle_space(operator, "invalid");
+  let missing_right = text_combine_middle_space("invalid", operator);
+  let missing_left = text_combine_middle_space(operator, "invalid");
   html_div_cycle_code_multiple(c, [
     [
       "Therefore, ",
@@ -19,12 +19,12 @@ export function app_code_lesson_operators_asterisk_generic_invalid(
       operator,
       " does not have anything on its right side, then that is invalid code: ",
     ],
-    ["", combined],
+    ["", missing_right],
     [
       "And, likewise, if ",
       operator,
       " does not have anything on its left side, then that is also invalid code: ",
     ],
-    ["", combined2],
+    ["", missing_left],
   ]);
 }
