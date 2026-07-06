@@ -4,7 +4,6 @@ import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
@@ -72,6 +71,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     "identifiers_letters_spaces",
     lambda,
     batch_get,
+    app_code_symbol_separated,
     app_code_symbols_separated_on_question,
   );
   return r5;
