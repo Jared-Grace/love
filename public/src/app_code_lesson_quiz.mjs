@@ -50,6 +50,7 @@ export function app_code_lesson_quiz(
   on_quiz_answer_button,
   on_question,
   question_label,
+  batch_get,
 ) {
   let a = app_code_lesson_above(
     container,
