@@ -7,8 +7,8 @@ export function app_code_lesson_operators_asterisk_generic_invalid(
   combine,
 ) {
   let c = app_code_container_light_blue(root);
-  let missing_right = text_combine_middle_space("invalid", operator);
-  let missing_left = text_combine_middle_space(operator, "invalid");
+  let missing_right = combine("invalid", operator);
+  let missing_left = combine(operator, "invalid");
   html_div_cycle_code_multiple(c, [
     [
       "Therefore, ",
