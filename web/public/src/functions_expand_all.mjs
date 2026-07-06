@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_list_calls_named } from "../../../love/public/src/js_list_calls_named.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -11,6 +12,9 @@ export async function functions_expand_all(f_name) {
     async function lambda4(item) {
       let v = property_get(item, "v");
       let stack = property_get(v, "stack");
+      log(functions_expand_all.name, {
+        v,
+      });
       return;
       let inserted = await js_expand_generic(next, stack2, ast);
     }
