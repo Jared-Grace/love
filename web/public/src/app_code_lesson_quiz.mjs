@@ -145,7 +145,9 @@ export function app_code_lesson_quiz(
         }
       }
     }
-    let nn = null_not_is(on_quiz_answer_button);$i
+    let nn = null_not_is(on_quiz_answer_button);
+    if (false) {
+    }
     on_quiz_answer_button(b);
     return b;
   }
