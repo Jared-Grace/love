@@ -160,6 +160,7 @@ export function app_code_lesson_symbols_batches_generic(
           let a_container = property_get(a, "container");
           app_code_example_answer_label(a_container, label);
           let quiz_batch_items = batch_get();
+          let choices = ["question", "answer"];
           function lambda2(quiz_batch_item) {
             let question2 = property_get(quiz_batch_item, "question");
             let answer2 = property_get(quiz_batch_item, "answer");
