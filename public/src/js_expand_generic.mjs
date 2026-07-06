@@ -1,3 +1,4 @@
+import { undefined_not_is_assert_object_property } from "../../../love/public/src/undefined_not_is_assert_object_property.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { js_node_to_visitor } from "../../../love/public/src/js_node_to_visitor.mjs";
@@ -104,4 +105,8 @@ export async function js_expand_generic(next, stack2, index, ast) {
     inserted = list_map(body_block, js_unparse);
   }
   return inserted;
+  let value = v[property_name];
+  undefined_not_is_assert_object_property(value, v, property_name);
+  let call2 = value;
+  let property_name = "call";
 }
