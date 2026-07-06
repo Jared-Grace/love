@@ -4,9 +4,9 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 export function app_code_lesson_symbols_digits_numbered_fifth_on_symbol(
+  parent,
   index_1,
   symbols,
-  parent,
 ) {
   let r = mod(index_1, 5);
   let eq = equal_0(r);
