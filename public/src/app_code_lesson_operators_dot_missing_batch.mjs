@@ -8,9 +8,9 @@ import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs"
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 export function app_code_lesson_operators_dot_missing_batch(operator) {
   let r2 = function batch_get() {
+    let lefts = list_alphabet_cases_both();
+    list_shuffle(lefts);
     function lambda(la2) {
-      let lefts = list_alphabet_cases_both();
-      list_shuffle(lefts);
       let chunks = list_chunk(lefts, 2);
       let rights = lefts;
       function lambda2(left5, right5) {
