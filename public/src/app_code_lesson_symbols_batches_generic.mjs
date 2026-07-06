@@ -55,7 +55,7 @@ export function app_code_lesson_symbols_batches_generic(
   quiz_label,
   example_count,
   question_label,
-  on_quiz_answer_button,
+  on_quiz_answer_button_forwards,
   on_question,
   quiz_backwards_label,
   on_quiz_answer_button_backwards,
