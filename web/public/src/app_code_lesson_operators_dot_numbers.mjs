@@ -4,7 +4,6 @@ import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs"
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "../../../love/public/src/number_pi_truncated_text.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
@@ -31,7 +30,6 @@ export function app_code_lesson_operators_dot_numbers() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
-  let max = app_code_lesson_operators_generic_batch_get_max();
   let batch = function batch_get() {
     function lambda(la2) {
       let lefts = list_alphabet_cases_both();
