@@ -66,7 +66,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let mapped2 = list_map(list, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(mapped2, list_other);
-    return difference;
+    return mapped2;
   }
   let r5 = app_code_lesson_symbols_identifiers_valid(
     "Identifiers (Letters allowed, spaces not)",
