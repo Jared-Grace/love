@@ -41,7 +41,7 @@ export function app_code_lesson_base_quizzes(
   let nn = null_not_is(quiz_backwards_label_answer);
   if (nn) {
     function quiz_backwards(context, parent, container, refresh) {
-      log(app_code_lesson_base.name, "quiz_backwards");
+      log(app_code_lesson_base_quizzes.name, "quiz_backwards");
       let quiz_question = answer;
       let quiz_answer = question;
       const answer_property = "question";
