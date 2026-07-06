@@ -1,5 +1,4 @@
 import { js_return_is_if_async } from "../../../love/public/src/js_return_is_if_async.mjs";
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_await_if_unwrap_argument } from "../../../love/public/src/js_await_if_unwrap_argument.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
@@ -48,7 +47,6 @@ export async function js_curry_replace(ast) {
     let list = js_visit_function_nodes_list(ast);
     async function lambda(v) {
       let node = property_get(v, "node");
-      log_unparse(node);
       let params = js_function_declaration_params_get(node);
       let body_block = js_function_declaration_to_block_body(node);
       let s1 = list_size_1(body_block);
