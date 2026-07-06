@@ -1,3 +1,4 @@
+import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
@@ -49,7 +50,7 @@ export function app_code_lesson_quiz(
   on_quiz_answer_button,
   on_question,
 ) {
-  let a = example_above(container, quiz_question, question_label);
+  let a = app_code_lesson_above(parent, label, question, on_question);
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, label_answer);
   let quiz_batch_items = batch_get();
