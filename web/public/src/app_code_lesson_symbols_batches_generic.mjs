@@ -181,6 +181,7 @@ export function app_code_lesson_symbols_batches_generic(
                   html_style_background_color_set(b2, v);
                 }
               }
+              on_quiz_answer_button(b2);
               return b2;
             }
           },
