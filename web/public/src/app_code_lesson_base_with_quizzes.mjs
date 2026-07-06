@@ -16,8 +16,6 @@ export function app_code_lesson_base_with_quizzes(
   quiz_backwards_answer_count_override,
 ) {
   const quizzes = app_code_lesson_base_quizzes(
-    question,
-    answer,
     quiz_label,
     on_quiz_answer_button_forwards,
     on_question,
