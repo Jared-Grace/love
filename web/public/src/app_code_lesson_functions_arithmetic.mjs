@@ -1,5 +1,5 @@
+import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
-import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -13,7 +13,6 @@ import { app_code_label_symbols } from "../../../love/public/src/app_code_label_
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
@@ -37,11 +36,7 @@ export function app_code_lesson_functions_arithmetic() {
   return r;
   function above(root) {
     let m = app_code_lesson_operators_generic_batch_get_max();
-    function lambda2() {
-      let r = range_1(m);
-      return r;
-    }
-    let next = list_iterator_refillable(lambda2);
+    let next = range_1_next(m);
     let operators = js_operators();
     function lambda(o) {
       let operator = property_get(o, "operator");
