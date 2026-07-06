@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -108,7 +109,8 @@ export function app_code_lesson_symbols_batches_generic(
             );
           },
         ];
-        if (quiz_backwards_includes) {la
+        if (quiz_backwards_includes) {
+          list_add(list, item);
         }
         let mapped = {
           question,
