@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -56,7 +57,9 @@ export function app_code_lesson_operators_dot_missing() {
       " will be used with identifiers, not as a decimal point in a number",
     ]);
     let example_get = app_code_lesson_operators_dot_numbers_example(operator);
-    let text_before = "remember, ";
+    let text_before =
+      "remember," +
+      app_code_lesson_operators_dot_numbers_both_sides_text_common();
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
