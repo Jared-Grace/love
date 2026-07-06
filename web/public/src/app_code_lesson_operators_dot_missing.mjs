@@ -1,3 +1,4 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
@@ -49,6 +50,12 @@ export function app_code_lesson_operators_dot_missing() {
   };
   function above(root) {
     let c = app_code_container_light_blue(root);
+    html_div_cycle_code(c, [
+      u,
+      "For this lesson, ",
+      operator,
+      " will be used with identifiers, not as a decimal point in a number",
+    ]);
     let combined = js_code_binary("shirt", operator, "size");
     let example_get = lambda_value(combined);
     let text_before = "remember, ";
