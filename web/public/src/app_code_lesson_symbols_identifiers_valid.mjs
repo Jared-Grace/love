@@ -31,6 +31,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     noop,
     on_question,
     null,
+    null,
   );
   return r;
 }
