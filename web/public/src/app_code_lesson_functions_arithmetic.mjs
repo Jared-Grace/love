@@ -36,7 +36,7 @@ export function app_code_lesson_functions_arithmetic() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
-  let c2 = html_font_color_set_curried_right(color);
+  let c2 = html_font_color_set_curried_right("rgb(255 168 168)");
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
