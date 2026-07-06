@@ -50,7 +50,12 @@ export function app_code_lesson_quiz(
   on_quiz_answer_button,
   on_question,
 ) {
-  let a = app_code_lesson_above(parent, label, question, on_question);
+  let a = app_code_lesson_above(
+    container,
+    quiz_question,
+    question_label,
+    on_question,
+  );
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, label_answer);
   let quiz_batch_items = batch_get();
