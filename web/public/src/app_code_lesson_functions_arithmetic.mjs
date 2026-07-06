@@ -10,15 +10,13 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
-import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
-  const example_label = "Number of symbols: ";
+  const example_label = "What is: ";
   const quiz_label = "How many symbols are there? ";
-  let symbols_to_answer = text_size;
   let question_label = app_code_label_symbols();
   function lambda2() {}
   let r = app_code_lesson_symbols_batches_generic(
