@@ -11,15 +11,11 @@ import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/
 import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
-import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_name.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
@@ -63,23 +59,9 @@ export function app_code_lesson_operators_dot_missing() {
       js_code_binary,
       example_get,
     );
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
-      "However, we cannot directly use ",
-      operator,
-      " with both an identifier and a number",
-    ]);
-    html_div_text(c3, "We cannot have a number on the right:");
-    let right = digit_random();
-    let first = js_code_binary("invalid", operator, right);
-    html_div_code(c3, first);
-    html_div_text(c3, "And we cannot have a number directly on the left:");
-    let left = digit_random();
-    let first2 = js_code_binary(left, operator, "invalid");
-    html_div_code(c3, first2);
-    return;
     app_code_lesson_operators_asterisk_generic_minus(root, operator);
     app_code_lesson_operators_asterisk_generic_invalid(root, operator);
+    return;
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
