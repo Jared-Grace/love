@@ -30,6 +30,7 @@ export function app_code_lesson_symbols_identifiers_valid(
     2,
     symbol_create,
     question_label,
+    noop,
   );
   return r;
 }
