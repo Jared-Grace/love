@@ -173,8 +173,8 @@ export function app_code_lesson_symbols_batches_generic(
               answer2,
               answer,
             });
-            let eq3 = equal(answer2, answer);
-            let eq4 = equal(question2, question);
+            let eq3 = equal(answer2, quiz_answer);
+            let eq4 = equal(question2, quiz_question);
             let ored = or(eq3, eq4);
             return ored;
           }
