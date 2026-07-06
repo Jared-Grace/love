@@ -49,7 +49,7 @@ export function app_code_lesson_operators_dot_missing() {
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
-  let question_label = "Code: ";
+  let question_label = app_code_label_code_question();
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
