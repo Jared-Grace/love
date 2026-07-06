@@ -1,3 +1,4 @@
+import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -12,6 +13,7 @@ import { js_operator_asterisk } from "../../../love/public/src/js_operator_aster
 import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 export function app_code_operators_arithmetic(d) {
+  let operators = js_operators();
   let p = js_operator_plus();
   let r2 = js_operator_minus();
   let r22 = js_operator_asterisk();
