@@ -40,21 +40,22 @@ export function app_code_lesson_functions_arithmetic() {
         operator: js_operator_plus(),
       },
     ];
-    function lambda(item) {}
-    each(list, lambda);
-    let next = digits_positive_shuffled_next();
-    let left = next();
-    let right = next();
-    let operator = js_operator_plus();
-    let verb = js_operator_plus_verb();
-    let combined = js_code_binary_spaced_nb(left, operator, right);
-    let c = app_code_container_light_blue(root);
-    let code = js_code_call_args(verb, [left, right]);
-    html_div_cycle_code(c, [
-      "Instead of ",
-      combined,
-      " we could write: ",
-      code,
-    ]);
+    function lambda(item) {
+      let next = digits_positive_shuffled_next();
+      let left = next();
+      let right = next();
+      let operator = js_operator_plus();
+      let verb = js_operator_plus_verb();
+      let combined = js_code_binary_spaced_nb(left, operator, right);
+      let c = app_code_container_light_blue(root);
+      let code = js_code_call_args(verb, [left, right]);
+      html_div_cycle_code(c, [
+        "Instead of ",
+        combined,
+        " we could write: ",
+        code,
+      ]);
+    }
+    each(operators, lambda);
   }
 }
