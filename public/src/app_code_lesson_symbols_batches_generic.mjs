@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -111,6 +112,7 @@ export function app_code_lesson_symbols_batches_generic(
         ];
         if (quiz_backwards_includes) {
           function quiz_backwards(context, parent, container, refresh) {
+            log(app_code_lesson_symbols_batches_generic.name, {});
             let quiz_question = answer;
             let quiz_answer = question;
             const answer_property = "question";
