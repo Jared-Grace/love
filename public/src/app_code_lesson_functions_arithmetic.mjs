@@ -46,7 +46,6 @@ export function app_code_lesson_functions_arithmetic() {
     question_label,
     html_style_code_dark,
     html_text_set,
-    c2,
   );
   return r;
   function above(root) {
