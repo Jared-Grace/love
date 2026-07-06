@@ -28,7 +28,6 @@ export function app_code_lesson_identifiers_symbol_first() {
   let id = "identifiers_symbol_first";
   let symbol_create = app_code_symbol_separated;
   let r = app_code_lesson_identifiers_symbol_first_generic(
-    symbol_create,
     name,
     id,
     above,
