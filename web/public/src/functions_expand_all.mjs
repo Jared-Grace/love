@@ -9,7 +9,6 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function functions_expand_all(f_name) {
   let result = await data_identifiers_search(f_name);
   let properties = properties_get(result);
-  return result;
   async function lambda2(item2) {
     async function lambda(ast) {
       let list = js_list_calls_named(ast, f_name);
