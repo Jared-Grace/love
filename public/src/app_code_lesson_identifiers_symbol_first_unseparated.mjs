@@ -25,6 +25,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     name,
     id,
     above,
+    on_question,
   );
   function above(root) {
     let text = app_code_lesson_same_message("the symbols are not separated");
