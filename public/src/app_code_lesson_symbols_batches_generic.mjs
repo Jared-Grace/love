@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
@@ -144,8 +145,9 @@ export function app_code_lesson_symbols_batches_generic(
             let container_on_success = property_get(r4, "container");
             let hides = [success, container_on_success];
             html_visibility_hidden_multiple(hides);
-            let buttons = list_map(concated, lambda3);
-            function lambda3(quiz_answer) {
+            let buttons = list_map(concated, each_button);
+            let answered = false;
+            function each_button(quiz_answer) {
               let b = app_replace_button_wide(
                 a_container,
                 quiz_answer,
@@ -156,9 +158,12 @@ export function app_code_lesson_symbols_batches_generic(
               async function on_click() {
                 let eq2 = equal(quiz_answer, answer);
                 if (eq2) {
+                  answered = true;
                   app_shared_button_screen_green_style_assign(b);
                   html_visibility_visible_multiple(hides);
                 } else {
+                  if (not(b2)) {
+                  }
                   let color_bg = "rgb(255 168 168)";
                   html_style_background_color_set(b, color_bg);
                   html_font_color_set(b, "rgb(167, 51, 51)");
