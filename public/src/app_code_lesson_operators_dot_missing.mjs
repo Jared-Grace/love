@@ -1,4 +1,3 @@
-import { app_code_lesson_operators_dot_numbers_both_sides_text } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
@@ -50,8 +49,7 @@ export function app_code_lesson_operators_dot_missing() {
   function above(root) {
     let combined = js_code_binary("shirt", operator, "size");
     let example_get = lambda_value(combined);
-    let text_before =
-      "remember, " + app_code_lesson_operators_dot_numbers_both_sides_text();
+    let text_before = "remember, ";
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
