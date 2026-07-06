@@ -5,10 +5,10 @@ export function app_code_lesson_operators_asterisk_generic_invalid(
   root,
   operator,
 ) {
-  let c4 = app_code_container_light_blue(root);
+  let c = app_code_container_light_blue(root);
   let combined = text_combine_middle_space("invalid", operator);
   let combined3 = text_combine_middle_space(operator, "invalid");
-  html_div_cycle_code_multiple(c4, [
+  html_div_cycle_code_multiple(c, [
     [
       "Therefore, ",
       operator,
