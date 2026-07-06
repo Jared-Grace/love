@@ -179,7 +179,7 @@ export function app_code_lesson_symbols_batches_generic(
             return ored;
           }
           list_filter_remove(quiz_batch_items, lambda2);
-          let answers = list_map_property(batch_items, answer_property);
+          let answers = list_map_property(quiz_batch_items, answer_property);
           let answers_unique = list_unique(answers);
           list_remove_if_exists(answers_unique, quiz_answer);
           let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
