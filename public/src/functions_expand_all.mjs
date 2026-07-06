@@ -1,3 +1,4 @@
+import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_list_calls_named } from "../../../love/public/src/js_list_calls_named.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -7,6 +8,7 @@ import { data_identifiers_search } from "../../../love/public/src/data_identifie
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function functions_expand_all(f_name) {
   let result = await data_identifiers_search(f_name);
+  let properties = properties_get(obj);
   return result;
   async function lambda(ast) {
     let list = js_list_calls_named(ast, f_name);
