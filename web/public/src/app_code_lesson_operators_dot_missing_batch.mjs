@@ -1,9 +1,9 @@
+import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 export function app_code_lesson_operators_dot_missing_batch(operator) {
@@ -21,7 +21,7 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
         lambda$left$right$la(left3, right3, la2);
       }
     }
-    let list = list_adder(lambda);
+    let list = list_adder_each(lambda);
     function lambda$left$right$la(left2, right2, la) {
       let combined = js_code_binary(left2, operator, right2);
       let right4 = "";
