@@ -33,8 +33,7 @@ export function app_code_lesson_symbols_counting(
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
   );
-  let lesson = null;
-  lesson = app_code_lesson_base(
+  let lesson = app_code_lesson_base(
     id,
     name,
     above,
@@ -44,6 +43,5 @@ export function app_code_lesson_symbols_counting(
     example_label,
     quizzes,
   );
-  let r = lesson;
-  return r;
+  return lesson;
 }
