@@ -24,7 +24,6 @@ export function app_code_lesson_symbols_counting(
     name,
     id,
     above,
-    on_symbol,
     batch_get,
     example_label,
     quiz_label,
