@@ -1,3 +1,4 @@
+import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
@@ -73,7 +74,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     noop,
     batch_get,
     app_code_symbol_separated,
-    on_question,
+    app_code_symbols_separated_on_question,
   );
   return r5;
 }
