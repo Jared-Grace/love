@@ -163,10 +163,10 @@ export function app_code_lesson_symbols_batches_generic(
             let index = list_index_of(quizzes, quiz_fn);
             let a1 = add_1(index);
             let index_new = mod(a1, size);
+            app_code_quiz_index_set(context, index_new);
             log(app_code_lesson_symbols_batches_generic.name, {
               index_new,
             });
-            app_code_quiz_index_set(context, index_new);
             let li = list_index_last_is(quizzes, index);
             if (li) {
               app_code_quiz_index_reset(context);
