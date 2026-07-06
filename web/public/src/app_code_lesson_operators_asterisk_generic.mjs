@@ -10,7 +10,7 @@ import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../lov
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
@@ -49,7 +49,7 @@ export function app_code_lesson_operators_asterisk_generic(
     app_code_symbols_eval_valid_expression,
   );
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  let r = app_code_lesson_symbols_batches_generic(
+  let r = app_code_lesson_base(
     name,
     id,
     above,
