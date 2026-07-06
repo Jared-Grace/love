@@ -7,6 +7,8 @@ import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mj
 import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
+import { add } from "../../../love/public/src/add.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export function js_operators() {
   let r = [
     {
@@ -17,7 +19,7 @@ export function js_operators() {
     {
       operator: js_operator_minus(),
       verb: js_operator_minus_verb(),
-      left_transform: identity,
+      left_transform: add,
     },
     {
       operator: js_operator_asterisk(),
@@ -27,7 +29,7 @@ export function js_operators() {
     {
       operator: js_operator_division(),
       verb: js_operator_division_verb(),
-      left_transform: identity,
+      left_transform: multiply,
     },
   ];
   return r;
