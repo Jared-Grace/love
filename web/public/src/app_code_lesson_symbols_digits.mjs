@@ -13,7 +13,6 @@ export function app_code_lesson_symbols_digits() {
     "Symbols (Digits)",
     "symbols_digits",
     lambda,
-    noop,
     app_code_lesson_symbols_batch_digits,
     app_code_symbols_separated_on_question,
   );
