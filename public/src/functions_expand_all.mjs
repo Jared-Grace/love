@@ -9,6 +9,9 @@ export async function functions_expand_all(f_name) {
   let result = await data_identifiers_search(f_name);
   async function lambda(ast) {
     let list = js_list_calls_named(ast, f_name);
+      log(functions_expand_all.name, {
+        list
+      });
     async function lambda4(item) {
       let v = property_get(item, "v");
       let stack = property_get(v, "stack");
