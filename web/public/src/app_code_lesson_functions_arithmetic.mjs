@@ -39,6 +39,11 @@ export function app_code_lesson_functions_arithmetic() {
     let combined = js_code_binary_spaced_nb(left, operator, right);
     let verb = js_operator_plus_verb();
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["Instead of ", combined, " we could write: "]);
+    html_div_cycle_code(c, [
+      "Instead of ",
+      combined,
+      " we could write: ",
+      verb,
+    ]);
   }
 }
