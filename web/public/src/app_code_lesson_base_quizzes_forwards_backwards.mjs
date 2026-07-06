@@ -13,13 +13,13 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     const quizzes = [
       function quiz_forwards(context, parent, container, refresh) {
         let quiz_question = question;
-        let quiz_answer = answer;
+        let question = answer;
         const answer_property = "answer";
         app_code_lesson_quiz(
           container,
           quiz_question,
           answer_property,
-          quiz_answer,
+          question,
           parent,
           quiz_forwards,
           context,
@@ -34,13 +34,12 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       },
       function quiz_backwards(context, parent, container, refresh) {
         let quiz_question = answer;
-        let quiz_answer = question;
         const answer_property = "question";
         app_code_lesson_quiz(
           container,
-          quiz_question,
+          answer,
           answer_property,
-          quiz_answer,
+          question,
           parent,
           quiz_backwards,
           context,
