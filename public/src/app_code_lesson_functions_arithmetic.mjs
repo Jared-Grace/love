@@ -26,8 +26,8 @@ export function app_code_lesson_functions_arithmetic() {
   function batch_get() {
     let mapper = function lambda2(o) {
       let r2 = js_operator_to_expression(o, next);
-      let expression = property_get(r2, "expression");
-      return expression;
+      let question = property_get(r2, "expression");
+      return question;
     };
     let mapped = list_map(operators, mapper);
     return mapped;
