@@ -30,6 +30,7 @@ export function app_code_lesson_symbols_counting(
     noop,
     on_question,
     null,
+    null,
   );
   return r;
 }
