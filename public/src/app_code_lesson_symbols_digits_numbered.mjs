@@ -8,14 +8,14 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
-  let r5 = app_code_lesson_symbols_counting(
+  let r = app_code_lesson_symbols_counting(
     "Symbols (Digits, numbered)",
     "symbols_digits_numbered",
     above,
     app_code_lesson_symbols_digits_numbered_on_symbol,
     app_code_lesson_symbols_batch_digits,
   );
-  return r5;
+  return r;
   function above(root) {
     let c = app_code_container_light_blue(root);
     let p = html_div(c);
