@@ -8,7 +8,6 @@ import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs"
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
@@ -39,10 +38,10 @@ export function app_code_lesson_operators_dot_missing() {
     let list = list_adder(lambda);
     function lambda$left$right$la(left2, right2, la) {
       let combined = js_code_binary(left2, operator, right2);
-      let right4 = digit_random();
+      let right4 = "";
       let combined2 = js_code_binary(left2, operator, right4);
       let combined3 = js_code_binary(right2, operator, left2);
-      let left4 = digit_random();
+      let left4 = "";
       let combined4 = js_code_binary(left4, operator, right2);
       each([combined, combined2, combined3, combined4], la);
     }
