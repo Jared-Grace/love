@@ -22,11 +22,6 @@ export function app_code_lesson_functions_arithmetic() {
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
-  function symbols_to_answer(symbols) {
-    log(app_code_lesson_functions_arithmetic.name, {
-      symbols,
-    });
-  }
   function batch_get() {
     let mapper = function lambda2(o) {
       let r2 = js_operator_to_expression(o, next);
@@ -35,6 +30,11 @@ export function app_code_lesson_functions_arithmetic() {
     };
     let mapped = list_map(operators, mapper);
     return mapped;
+  }
+  function symbols_to_answer(symbols) {
+    log(app_code_lesson_functions_arithmetic.name, {
+      symbols,
+    });
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
