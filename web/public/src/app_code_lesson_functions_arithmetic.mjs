@@ -27,13 +27,13 @@ export function app_code_lesson_functions_arithmetic() {
     });
     let mapped = list_map_property(list, property_name);
   }
-  function lambda3() {}
+  function batch_get() {}
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
     noop,
-    lambda3,
+    batch_get,
     example_label,
     quiz_label,
     symbols_to_answer,
