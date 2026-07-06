@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mjs";
 import { marker_next_get } from "../../../love/public/src/marker_next_get.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
@@ -7,8 +8,11 @@ export async function marker_expand() {
   let v = await function_transform_marker(f_name, lambda2);
   return v;
   async function lambda2(a) {
-    let { next, index } = marker_next_get(a);
-    let { stack2, ast } = a;
+    let r = marker_next_get(a);
+    let index = property_get(r, "index");
+    let next = property_get(r, "next");
+    let ast = property_get(a, "ast");
+    let stack2 = property_get(a, "stack2");
     let inserted = await js_expand_generic(next, stack2, ast);
     return inserted;
   }
