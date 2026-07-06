@@ -101,7 +101,6 @@ export function app_code_lesson_operators_dot_numbers() {
     batch,
     example_label,
     quiz_label,
-    app_code_symbols_eval_valid_expression,
     2,
     app_code_symbol,
     question_label,

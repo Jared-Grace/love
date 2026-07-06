@@ -52,7 +52,6 @@ export function app_code_lesson_operators_asterisk_generic(
     batch_get,
     example_label,
     quiz_label,
-    app_code_symbols_eval_valid_expression,
     2,
     app_code_symbol,
     question_label,
