@@ -1,7 +1,7 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
@@ -32,9 +32,8 @@ export function app_code_lesson_functions_arithmetic() {
     return mapped;
   }
   function symbols_to_answer(symbols) {
-    log(app_code_lesson_functions_arithmetic.name, {
-      symbols,
-    });
+    function lambda3(item) {}
+    let found = list_find(list, lambda3);
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
