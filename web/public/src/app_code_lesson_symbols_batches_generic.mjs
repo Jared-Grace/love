@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
@@ -69,7 +70,7 @@ export function app_code_lesson_symbols_batches_generic(
     });
     app_code_example_answer_gap(parent);
     function lambda4(d, index_1) {
-      let row_item = html_div(row);
+      let row_item = html_span(row);
       html_flex_column_center(row_item);
       let digit = symbol_create(row_item, d);
       on_symbol(row_item, index_1, symbols);
