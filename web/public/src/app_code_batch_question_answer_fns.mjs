@@ -3,18 +3,18 @@ export function app_code_batch_question_answer_fns(
   batch_questions_get,
   question_to_answer,
 ) {
-  let r = function lambda() {
+  let b = function lambda() {
     let questions = batch_questions_get();
     function lambda2(question) {
       let answer = question_to_answer(question);
-      let r2 = {
+      let qa = {
         question,
         answer,
       };
-      return r2;
+      return qa;
     }
     let mapped = list_map(questions, lambda2);
     return mapped;
   };
-  return r;
+  return b;
 }
