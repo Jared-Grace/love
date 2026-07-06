@@ -28,8 +28,7 @@ export function app_code_lesson_functions_arithmetic() {
   }
   function batch_get() {
     let r = function property_get_curried_right_result(object) {
-      let property_name = "operator";
-      let value = property_get(object, property_name);
+      let value = property_get(object, "operator");
       return value;
     };
     let mapped = list_map(operators, r);
