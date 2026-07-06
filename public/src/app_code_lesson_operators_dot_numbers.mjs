@@ -98,6 +98,8 @@ export function app_code_lesson_operators_dot_numbers() {
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
+  let example_count = 2;
+  let quiz_backwards_answer_count_override = 2;
   const quizzes_get = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     noop,
@@ -118,7 +120,5 @@ export function app_code_lesson_operators_dot_numbers() {
     example_label,
     quizzes,
   );
-  let example_count = 2;
-  let quiz_backwards_answer_count_override = 2;
   return lesson;
 }
