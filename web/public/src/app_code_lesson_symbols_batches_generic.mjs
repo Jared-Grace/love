@@ -111,8 +111,8 @@ export function app_code_lesson_symbols_batches_generic(
             );
           },
         ];
-        let nn = null_not_is(value2);
-        if (quiz_backwards_label) {
+        let nn = null_not_is(quiz_backwards_label);
+        if (nn) {
           function quiz_backwards(context, parent, container, refresh) {
             log(app_code_lesson_symbols_batches_generic.name, "quiz_backwards");
             let quiz_question = answer;
