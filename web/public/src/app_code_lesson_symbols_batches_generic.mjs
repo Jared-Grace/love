@@ -52,7 +52,6 @@ export function app_code_lesson_symbols_batches_generic(
   batch_get,
   example_label,
   quiz_label,
-  symbols_to_answer,
   example_count,
   symbol_create,
   question_label,
