@@ -51,7 +51,7 @@ export function app_code_lesson_symbols_space() {
     lambda,
     lambda4,
     batch_get,
-    app_code_symbols_separated_on_question,
+    app_code_symbols_separated_on_question_numbered_fifth,
   );
   return r5;
 }
