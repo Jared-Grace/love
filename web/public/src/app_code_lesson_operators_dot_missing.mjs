@@ -23,7 +23,6 @@ import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_n
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
   const operator = js_operator_dot();
-  const operator_name = js_operator_dot_name();
   let math_name = "property access, missing";
   let batch = function batch_get() {
     function lambda(la2) {
