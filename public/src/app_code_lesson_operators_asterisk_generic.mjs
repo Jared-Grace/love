@@ -49,20 +49,29 @@ export function app_code_lesson_operators_asterisk_generic(
     app_code_symbols_eval_valid_expression,
   );
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch_get,
-    example_label,
+  let example_count = 2;
+  let quiz_backwards_answer_count_override = 2;
+  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
-    2,
-    question_label,
     noop,
     html_text_set,
+    question_label,
+    batch_get,
     quiz_backwards_label,
     html_style_code_dark,
-    2,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch_get,
+    html_text_set,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
   return r;
 }
