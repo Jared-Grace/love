@@ -19,20 +19,31 @@ export function app_code_lesson_symbols_identifiers_valid(
     batch_get,
     app_code_symbols_eval_valid_identifier,
   );
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch_get2,
-    example_label,
+  let example_count = 2;
+  let quiz_backwards_label_answer = null;
+  let on_quiz_answer_button_backwards = null;
+  let quiz_backwards_answer_count_override = null;
+  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
-    2,
-    question_label,
     noop,
     on_question,
-    null,
-    null,
-    null,
+    question_label,
+    batch_get2,
+    quiz_backwards_label_answer,
+    on_quiz_answer_button_backwards,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch_get2,
+    on_question,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
   return r;
 }
