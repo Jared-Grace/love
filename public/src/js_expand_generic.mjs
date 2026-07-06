@@ -37,7 +37,6 @@ import { function_parse_declaration } from "../../../love/public/src/function_pa
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 export async function js_expand_generic(next, stack2, index, ast) {
-  index = list_index_of(stack2, next);
   let inserted = null;
   let v = js_statement_call_get(next);
   let call = property_get(v, "call");
@@ -54,6 +53,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       }
     }
     await each_index_async(arguments2, lambda5);
+    index = list_index_of(stack2, next);
     const a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
@@ -106,9 +106,9 @@ export async function js_expand_generic(next, stack2, index, ast) {
     inserted = list_map(body_block, js_unparse);
   }
   return inserted;
+  let property_name = "call";
   let value = v[property_name];
   undefined_not_is_assert_object_property(value, v, property_name);
   let call2 = value;
-  let property_name = "call";
   exit();
 }
