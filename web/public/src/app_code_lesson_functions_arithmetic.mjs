@@ -38,7 +38,8 @@ export function app_code_lesson_functions_arithmetic() {
   function above(root) {
     let m = app_code_lesson_operators_generic_batch_get_max();
     function lambda2() {
-      let r2 = range_1(count);
+      let r = range_1(m);
+      return r;
     }
     let next = list_iterator_refillable(lambda2);
     let operators = js_operators();
