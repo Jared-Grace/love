@@ -3,7 +3,7 @@ import { app_code_symbol_separated } from "../../../love/public/src/app_code_sym
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-export function app_code_symbols_separated_on_question(
+export function app_code_symbols_separated_on_question_generic(
   parent,
   symbols,
   on_symbol,
