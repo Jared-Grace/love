@@ -13,7 +13,7 @@ export function html_cycle_code(parent, parts) {
       html_style_assign(span, {
         "white-space": "nowrap",
       });
-      html_style_code_dark(component);
+      html_style_code_dark(span);
     },
   ];
   html_cycle(parent, cycles, parts);
