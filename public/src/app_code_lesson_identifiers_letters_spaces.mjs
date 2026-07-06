@@ -1,8 +1,9 @@
+import { list_shuffle_cycled_range } from "../../../love/public/src/list_shuffle_cycled_range.mjs";
+import { list_slices_size_cycle } from "../../../love/public/src/list_slices_size_cycle.mjs";
 import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
-import { list_slices_size_cycles_shuffled } from "../../../love/public/src/list_slices_size_cycles_shuffled.mjs";
 import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
@@ -59,7 +60,11 @@ export function app_code_lesson_identifiers_letters_spaces() {
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    let list = list_slices_size_cycles_shuffled(mapped, 1, 3);
+    let list2 = list_slices_size_cycle(mapped, min, max);
+    list_shuffle_cycled_range(list2, min, max);
+    let list = list2;
+    let min = 1;
+    let max = 3;
     let mapped2 = list_map(list, list_join_space_nb);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(mapped2, list_other);
