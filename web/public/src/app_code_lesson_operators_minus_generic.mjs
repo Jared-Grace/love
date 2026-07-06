@@ -103,20 +103,31 @@ export function app_code_lesson_operators_minus_generic(
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
-  let r = app_code_lesson_base_with_quizzes(
-    name,
-    id,
-    above,
-    batch,
-    example_label,
+  let example_count = 2;
+  let quiz_backwards_label_answer = null;
+  let on_quiz_answer_button_backwards = null;
+  let quiz_backwards_answer_count_override = null;
+  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
-    2,
-    question_label,
     noop,
     html_text_set,
-    null,
-    null,
-    null,
+    question_label,
+    batch,
+    quiz_backwards_label_answer,
+    on_quiz_answer_button_backwards,
+    quiz_backwards_answer_count_override,
   );
+  let lesson = null;
+  lesson = app_code_lesson_base(
+    id,
+    name,
+    above,
+    example_count,
+    batch,
+    html_text_set,
+    example_label,
+    quizzes,
+  );
+  let r = lesson;
   return r;
 }
