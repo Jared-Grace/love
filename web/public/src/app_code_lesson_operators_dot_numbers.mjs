@@ -118,7 +118,7 @@ export function app_code_lesson_operators_dot_numbers() {
     batch,
     html_text_set,
     example_label,
-    quizzes,
+    quizzes_get,
   );
   return lesson;
 }
