@@ -53,7 +53,7 @@ export function app_code_lesson_operators_dot_missing() {
     html_div_cycle_code(c, [
       "For this lesson, ",
       operator,
-      " will be used with identifiers, not as a decimal point in a number",
+      " will be used with identifiers, and not as a decimal point in a number",
     ]);
     let example_get = app_code_lesson_operators_dot_numbers_example(operator);
     let text_before =
