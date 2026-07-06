@@ -18,6 +18,6 @@ export function app_code_lesson_operators_generic_batch_get(
       la(combined);
     }
   }
-  let b = app_code_batch_question_answer_fns(batch_get);
+  let b = app_code_batch_question_answer_fns(batch_get, eval);
   return b;
 }
