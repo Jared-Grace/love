@@ -64,7 +64,7 @@ export function app_code_lesson_symbols_batches_generic(
   on_quiz_answer_button_backwards,
   quiz_backwards_answer_count_override,
 ) {
-  arguments_assert(arguments, 12);
+  arguments_assert(arguments, 13);
   id = text_replace_space_underscore(id);
   function example_above(parent, question) {
     app_code_example_answer_gap(parent);
