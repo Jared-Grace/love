@@ -156,12 +156,12 @@ export function app_code_lesson_symbols_batches_generic(
           quiz_fn,
           context,
           refresh,
-          label,
+          label_answer,
           on_quiz_answer_button,
         ) {
           let a = example_above(container, quiz_question);
           let a_container = property_get(a, "container");
-          app_code_example_answer_label(a_container, label);
+          app_code_example_answer_label(a_container, label_answer);
           let quiz_batch_items = batch_get();
           let choices = ["question", "answer"];
           let question_property = list_pair_other(choices, answer_property);
