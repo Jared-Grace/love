@@ -1,5 +1,4 @@
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { data_identifiers_search_names } from "../../../love/public/src/data_identifiers_search_names.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -31,7 +30,6 @@ export async function functions_expand_all(f_name_expand) {
       await each_async(list, lambda4);
     }
     let output = await function_transform(f_name, lambda);
-    exit();
     return;
   }
   await each_async(f_names, lambda2);
