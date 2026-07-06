@@ -1,3 +1,4 @@
+import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -52,6 +53,7 @@ export function app_code_lesson_operators_dot_missing() {
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
+  let quiz_backwards_label = app_code_label_code_quiz_backwards();
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
@@ -63,7 +65,7 @@ export function app_code_lesson_operators_dot_missing() {
     question_label,
     noop,
     html_text_set,
-    null,
+    quiz_backwards_label,
     null,
     null,
   );
