@@ -1,4 +1,4 @@
-import { noop } from "../../../love/public/src/noop.mjs";
+import { html_font_color_set_black } from "../../../love/public/src/html_font_color_set_black.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -47,7 +47,7 @@ export function app_code_lesson_functions_arithmetic() {
     question_label,
     html_style_code_dark,
     html_text_set,
-    noop,
+    html_font_color_set_black,
   );
   return r;
   function above(root) {
