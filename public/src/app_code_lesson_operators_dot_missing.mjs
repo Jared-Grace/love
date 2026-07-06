@@ -1,15 +1,11 @@
+import { app_code_lesson_operators_dot_missing_batch } from "../../../love/public/src/app_code_lesson_operators_dot_missing_batch.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
-import { each_nested_args } from "../../../love/public/src/each_nested_args.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
@@ -23,31 +19,7 @@ import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
   const operator = js_operator_dot();
   let math_name = "property access, missing";
-  let batch = function batch_get() {
-    function lambda(la2) {
-      let lefts = list_alphabet_cases_both();
-      let rights = lefts;
-      function lambda2(left5, right5) {
-        lambda$left$right(left5, right5);
-      }
-      each_nested_args(lefts, rights, lambda2);
-      function lambda$left$right(left3, right3) {
-        lambda$left$right$la(left3, right3, la2);
-      }
-    }
-    let list = list_adder(lambda);
-    function lambda$left$right$la(left2, right2, la) {
-      let combined = js_code_binary(left2, operator, right2);
-      let right4 = "";
-      let combined2 = js_code_binary(left2, operator, right4);
-      let combined3 = js_code_binary(right2, operator, left2);
-      let left4 = "";
-      let combined4 = js_code_binary(left4, operator, right2);
-      each([combined, combined2, combined3, combined4], la);
-    }
-    list_shuffle_cycled(list, 4);
-    return list;
-  };
+  let batch = app_code_lesson_operators_dot_missing_batch(operator);
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
