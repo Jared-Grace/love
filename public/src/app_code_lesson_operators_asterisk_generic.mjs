@@ -56,6 +56,7 @@ export function app_code_lesson_operators_asterisk_generic(
     app_code_symbol,
     question_label,
     noop,
+    html_text_set,
   );
   return r;
 }
