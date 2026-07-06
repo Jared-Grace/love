@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_display_inline } from "../../../love/public/src/html_display_inline.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
@@ -12,6 +13,7 @@ export function html_cycle_code(parent, parts) {
       html_style_assign(span, {
         "white-space": "nowrap",
       });
+      html_style_code_dark(component);
     },
   ];
   html_cycle(parent, cycles, parts);
