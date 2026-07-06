@@ -37,14 +37,6 @@ export function app_code_lesson_functions_arithmetic() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
-  function symbols_to_answer(symbols) {
-    function lambda3(o) {
-      let operator = property_get(o, "operator");
-      let i = text_includes(symbols, operator);
-      return i;
-    }
-    let found = list_find(operators, lambda3);
-  }
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
