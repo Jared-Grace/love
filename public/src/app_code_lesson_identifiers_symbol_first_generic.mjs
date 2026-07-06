@@ -37,10 +37,8 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     let size = list_size(doubled);
     list_shuffle_cycled(list2, size);
     let list = list2;
-    let next_get_list = list_iterator_refillable_on(
-      digits_randomly_coupled,
-      noop,
-    );
+    let refill_get = digits_randomly_coupled;
+    let next_get_list = list_iterator_refillable_on(refill_get, noop);
     let next_get = invoke_map(next_get_list, list_join_empty);
     function lambda2(batch_item, batch_item_index) {
       let joined = list_join_cycled_invoker(batch_item, next_get);
