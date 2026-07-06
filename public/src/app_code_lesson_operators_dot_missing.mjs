@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
@@ -9,7 +10,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { digit_random } from "../../../love/public/src/digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_invalid.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
-import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
