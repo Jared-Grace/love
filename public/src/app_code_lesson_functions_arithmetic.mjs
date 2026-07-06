@@ -35,7 +35,8 @@ export function app_code_lesson_functions_arithmetic() {
   function symbols_to_answer(symbols) {
     function lambda3(o) {
       let operator = property_get(o, "operator");
-      let i = text_includes(input, part);
+      let i = text_includes(symbols, operator);
+      return i;
     }
     let found = list_find(operators, lambda3);
   }
