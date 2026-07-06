@@ -1,9 +1,10 @@
+import { digits_positive_shuffled } from "../../../love/public/src/digits_positive_shuffled.mjs";
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
-import { digits_positive_shuffled_next } from "../../../love/public/src/digits_positive_shuffled_next.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
@@ -34,7 +35,7 @@ export function app_code_lesson_functions_arithmetic() {
   );
   return r;
   function above(root) {
-    let next = digits_positive_shuffled_next();
+    let next = list_iterator_refillable(digits_positive_shuffled);
     let operators = js_operators();
     function lambda(o) {
       let operator = property_get(o, "operator");
