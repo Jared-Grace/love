@@ -13,6 +13,7 @@ import { app_code_label_symbols } from "../../../love/public/src/app_code_label_
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
   let id = "functions_arithmetic";
@@ -36,7 +37,9 @@ export function app_code_lesson_functions_arithmetic() {
   return r;
   function above(root) {
     let m = app_code_lesson_operators_generic_batch_get_max();
-    function lambda2() {}
+    function lambda2() {
+      let r2 = range_1(count);
+    }
     let next = list_iterator_refillable(lambda2);
     let operators = js_operators();
     function lambda(o) {
