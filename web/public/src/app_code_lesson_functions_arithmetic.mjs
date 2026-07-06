@@ -11,7 +11,6 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_symbol_separated } from "../../../love/public/src/app_code_symbol_separated.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
-import { app_code_lesson_symbols_batch_digits } from "../../../love/public/src/app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name = "Functions (Arithmetic)";
@@ -24,12 +23,13 @@ export function app_code_lesson_functions_arithmetic() {
       symbols,
     });
   }
+  function lambda3() {}
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
     above,
     noop,
-    app_code_lesson_symbols_batch_digits,
+    lambda3,
     example_label,
     quiz_label,
     lambda2,
