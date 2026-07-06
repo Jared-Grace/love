@@ -98,7 +98,7 @@ export function app_code_lesson_symbols_batches_generic(
           ["app_code_symbol_generic", "transparent", "transparent"];
           html_text_set(div3, answer);
         }
-        const answer_count_max = app_code_answer_count_max();
+        let answer_count_max = app_code_answer_count_max();
         const quizzes = [
           function quiz_forwards(context, parent, container, refresh) {
             let quiz_question = question;
@@ -177,6 +177,7 @@ export function app_code_lesson_symbols_batches_generic(
           let answers = list_map_property(quiz_batch_items, answer_property);
           let answers_unique = list_unique(answers);
           list_remove_if_exists(answers_unique, quiz_answer);
+          let nn2 = null_not_is(value2);
           let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
           let concated = list_concat(taken, [quiz_answer]);
           list_sort_text_to(concated);
