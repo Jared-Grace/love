@@ -95,6 +95,7 @@ export function app_code_lesson_operators_dot_numbers() {
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
+    let quiz_backwards_label = app_code_label_code_quiz_backwards();
   let r = app_code_lesson_symbols_batches_generic(
     name,
     id,
