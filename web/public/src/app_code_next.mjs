@@ -15,6 +15,7 @@ export function app_code_next(
 ) {
   let container = app_code_container_light_blue(parent);
   let nt = app_karate_button_next_text();
+  let b = app_replace_button_wide(parent, nt, on_next);
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
     "Do you want to ",
@@ -26,7 +27,6 @@ export function app_code_next(
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
   app_replace_button_wide(container, answer_yes, refresh);
-  let b = app_replace_button_wide(parent, nt, on_next);
   let r = {
     container,
   };
