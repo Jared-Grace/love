@@ -56,6 +56,7 @@ export function app_code_lesson_symbols_batches_generic(
   question_label,
   on_quiz_answer_button,
   on_question,
+  quiz_backwards_label,
 ) {
   arguments_assert(arguments, 10);
   id = text_replace_space_underscore(id);
