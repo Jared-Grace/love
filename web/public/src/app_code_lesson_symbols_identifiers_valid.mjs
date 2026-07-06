@@ -27,7 +27,6 @@ export function app_code_lesson_symbols_identifiers_valid(
     example_label,
     quiz_label,
     2,
-    symbol_create,
     question_label,
     noop,
     on_question,
