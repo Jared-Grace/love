@@ -9,7 +9,7 @@ export function app_code_symbols_separated_on_question_generic(
   question,
   on_symbol,
 ) {
-  let split = text_split_empty(s);
+  let symbols = text_split_empty(question);
   html_style_assign(parent, {
     display: "flex",
     "flex-wrap": "wrap",
