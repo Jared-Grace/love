@@ -28,9 +28,9 @@ export function app_code_lesson_functions_arithmetic() {
   }
   function batch_get() {
     let mapper = function lambda2(o) {
-      let operator = property_get(o, "operator");
-      let left_transform = property_get(o, "left_transform");
-      return value;
+      let r2 = js_operator_to_expression(o, next);
+      let expression = property_get(r2, "expression");
+      return expression;
     };
     let mapped = list_map(operators, mapper);
   }
