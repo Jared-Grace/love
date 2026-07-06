@@ -16,16 +16,16 @@ export function app_code_next(
   let container = app_code_container_light_blue(parent);
   let nt = app_karate_button_next_text();
   let padded = text_pad_space_quote_double(nt);
-  let combined3 = text_combine_multiple([
+  let question = text_combine_multiple([
     "Do you want to ",
     do_you_want_to_text,
     "? If not, choose: ",
     padded,
   ]);
-  html_div_text(container, combined3);
+  html_div_text(container, question);
   let left = emoji_repeat_1();
-  let combined = text_combine_multiple([left, " Yes, ", yes_text]);
-  app_replace_button_wide(container, combined, refresh);
+  let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
+  app_replace_button_wide(container, answer_yes, refresh);
   let b = app_replace_button_wide(parent, nt, on_next);
   let r = {
     container,
