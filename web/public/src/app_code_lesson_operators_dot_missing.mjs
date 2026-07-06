@@ -71,7 +71,7 @@ export function app_code_lesson_operators_dot_missing() {
     app_code_lesson_operators_asterisk_generic_invalid(
       root,
       operator,
-      text_combine_middle_space,
+      text_combine,
     );
     return;
   }
