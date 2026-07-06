@@ -1,3 +1,4 @@
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
 import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -25,7 +26,7 @@ export function app_code_lesson_operators_plus_unary() {
   const operator_name = js_operator_plus_name();
   let math_name = "Plus sign unary";
   let sign = "positive";
-  let batch = function batch_get() {
+  function batch_get() {
     let dps = digits_positive();
     let list = list_adder_each(dps, on_each);
     function on_each(la, item) {
@@ -36,7 +37,8 @@ export function app_code_lesson_operators_plus_unary() {
     }
     list_shuffle_cycled(list, 2);
     return list;
-  };
+  }
+  let batch = app_code_batch_question_answer_fns(batch_get);
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(
