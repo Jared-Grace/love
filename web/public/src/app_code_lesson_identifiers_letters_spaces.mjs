@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
 import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
@@ -64,7 +65,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let max = 3;
     let counts = [1, 2, 1, 3];
     let list2 = list_slices_size_cycler(mapped, counts, min);
-    let choices_count = max - min + 1;
+    let size = list_size(list3);
     list_shuffle_cycled(list2, choices_count);
     let list = list2;
     let mapped2 = list_map(list, list_join_space_nb);
