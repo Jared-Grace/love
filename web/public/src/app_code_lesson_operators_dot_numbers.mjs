@@ -1,3 +1,4 @@
+import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
