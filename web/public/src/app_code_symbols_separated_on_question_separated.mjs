@@ -4,9 +4,10 @@ export function app_code_symbols_separated_on_question_separated(
   symbols,
   on_symbol,
 ) {
-  return app_code_symbols_separated_on_question_generic(
+  let r = app_code_symbols_separated_on_question_generic(
     parent,
     symbols,
     on_symbol,
   );
+  return r;
 }
