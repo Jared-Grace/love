@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -34,6 +35,7 @@ export function app_code_lesson_functions_arithmetic() {
   );
   return r;
   function above(root) {
+    let m = app_code_lesson_operators_generic_batch_get_max();
     function lambda2() {}
     let next = list_iterator_refillable(lambda2);
     let operators = js_operators();
