@@ -1,3 +1,4 @@
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { html_div_code_multiple } from "../../../love/public/src/html_div_code_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
@@ -11,8 +12,9 @@ export function app_code_lesson_operators_asterisk_generic_minus(
 ) {
   let c3 = app_code_container_light_blue(root);
   let minus = js_operator_minus();
+  let t = text_first_upper_to("emember, for ");
   html_div_cycle_code(c3, [
-    "Remember, for ",
+    t,
     minus,
     " it's possible to have a number only on the right and not on the left: ",
   ]);
