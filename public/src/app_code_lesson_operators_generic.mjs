@@ -9,7 +9,6 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
