@@ -1,4 +1,4 @@
-import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
