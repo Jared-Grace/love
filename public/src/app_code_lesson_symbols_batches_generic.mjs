@@ -1,6 +1,5 @@
+import { list_pair_other } from "../../../love/public/src/list_pair_other.mjs";
 import { or } from "../../../love/public/src/or.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
-import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_filter_remove } from "../../../love/public/src/list_filter_remove.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -164,8 +163,7 @@ export function app_code_lesson_symbols_batches_generic(
           app_code_example_answer_label(a_container, label);
           let quiz_batch_items = batch_get();
           let choices = ["question", "answer"];
-          list_remove(choices, answer_property);
-          let question_property = list_single(choices);
+          let question_property = list_pair_other(choices, answer_property);
           function lambda2(quiz_batch_item) {
             let question2 = property_get(quiz_batch_item, question_property);
             let answer2 = property_get(quiz_batch_item, answer_property);
