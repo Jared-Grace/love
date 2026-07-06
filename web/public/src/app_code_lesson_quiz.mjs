@@ -145,7 +145,7 @@ export function app_code_lesson_quiz(
         }
       }
     }
-    let nn = null_not_is(value2);
+    let nn = null_not_is(on_quiz_answer_button);$i
     on_quiz_answer_button(b);
     return b;
   }
