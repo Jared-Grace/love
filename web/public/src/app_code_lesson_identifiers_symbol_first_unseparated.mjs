@@ -1,5 +1,5 @@
+import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { app_code_container_dark_inline } from "../../../love/public/src/app_code_container_dark_inline.mjs";
 import { app_code_symbol_separated_curried } from "../../../love/public/src/app_code_symbol_separated_curried.mjs";
 import { app_code_symbol_curried } from "../../../love/public/src/app_code_symbol_curried.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -37,7 +37,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let split = text_split_empty(question);
     html_div_text(c, "For example, instead of: ");
     let div3 = html_div(c);
-    let before = app_code_container_dark_inline(div3);
+    let before = html_span_text_code_dark(div3);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
     html_span_text(div3, " , ");
@@ -45,7 +45,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let padded = text_pad_space("➡");
     html_div_text(c, "You will now see: ");
     let div4 = html_div(c);
-    let after = app_code_container_dark_inline(div4);
+    let after = html_span_text_code_dark(div4);
     let lambda$item = app_code_symbol_curried(after);
     each(split, lambda$item);
     log(app_code_lesson_identifiers_symbol_first_unseparated.name, {
