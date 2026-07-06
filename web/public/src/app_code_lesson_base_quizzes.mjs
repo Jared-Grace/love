@@ -1,5 +1,3 @@
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 export function app_code_lesson_base_quizzes(
   quiz_label,
@@ -35,9 +33,6 @@ export function app_code_lesson_base_quizzes(
           null,
         );
       },
-    ];
-    let nn = null_not_is(quiz_backwards_label_answer);
-    if (nn) {
       function quiz_backwards(context, parent, container, refresh) {
         let quiz_question = answer;
         let quiz_answer = question;
@@ -58,9 +53,8 @@ export function app_code_lesson_base_quizzes(
           batch_get,
           quiz_backwards_answer_count_override,
         );
-      }
-      list_add(quizzes, quiz_backwards);
-    }
+      },
+    ];
     return quizzes;
   };
   return quizzes_get;
