@@ -3,6 +3,7 @@ import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/p
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
+import { text_size } from "../../../love/public/src/text_size.mjs";
 export function app_code_lesson_symbols_counting(
   name,
   id,
@@ -12,7 +13,7 @@ export function app_code_lesson_symbols_counting(
 ) {
   const example_label = "Number of symbols: ";
   const quiz_label = "How many symbols are there? ";
-  let symbols_to_answer = function lambda() {};
+  let symbols_to_answer = text_size;
   let question_label = app_code_label_symbols();
   let batch_get = app_code_batch_question_answer_fns(
     batch_symbols,
