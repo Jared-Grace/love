@@ -1,3 +1,4 @@
+import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -52,7 +53,7 @@ export function app_code_lesson_quiz(
   question_label,
   batch_get,
 ) {
-        let answer_count_max = app_code_answer_count_max();
+  let answer_count_max = app_code_answer_count_max();
   let a = app_code_lesson_above(
     container,
     quiz_question,
