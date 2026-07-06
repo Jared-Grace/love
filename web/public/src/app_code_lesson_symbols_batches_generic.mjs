@@ -1,3 +1,4 @@
+import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
@@ -168,6 +169,7 @@ export function app_code_lesson_symbols_batches_generic(
                 quiz_answer,
                 on_click,
               );
+              html_font_jetbrains_mono(component);
               html_style_background_color_set(b2, "#ececec");
               html_style_margin_top(b2, "0.2em");
               async function on_click() {
