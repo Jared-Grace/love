@@ -27,8 +27,8 @@ export function app_code_lesson_functions_arithmetic() {
     });
   }
   function batch_get() {
-    let mapper = function lambda2(object) {
-      let value = property_get(object, "operator");
+    let mapper = function lambda2(o) {
+      let value = property_get(o, "operator");
       return value;
     };
     let mapped = list_map(operators, mapper);
