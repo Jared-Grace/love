@@ -115,7 +115,7 @@ export function app_code_lesson_symbols_batches_generic(
               let li = list_index_last_is(quizzes, index);
               if (li) {
                 app_code_quiz_index_reset(context);
-                function lambda7(value) {
+                function lesson_id_transform(value) {
                   let lessons = app_code_lessons();
                   let value_next = list_property_next_value(
                     lessons,
@@ -129,7 +129,7 @@ export function app_code_lesson_symbols_batches_generic(
                   context,
                   "lesson_id",
                   value_initial,
-                  lambda7,
+                  lesson_id_transform,
                 );
                 await app_shared_screen_set(context, app_code_examples);
               } else {
