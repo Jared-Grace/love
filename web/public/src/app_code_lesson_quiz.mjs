@@ -1,3 +1,4 @@
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -43,7 +44,7 @@ export function app_code_lesson_quiz(
   answer_property,
   quiz_answer,
   parent,
-  quiz_index,
+  quiz_fn,
   context,
   refresh,
   label_answer,
@@ -89,6 +90,7 @@ export function app_code_lesson_quiz(
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let size = list_size(quizzes);
+    let quiz_index = list_index_of(quizzes, quiz_fn);
     let a1 = add_1(quiz_index);
     let index_new = mod(a1, size);
     app_code_quiz_index_set(context, index_new);
