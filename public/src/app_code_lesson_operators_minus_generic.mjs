@@ -44,7 +44,15 @@ export function app_code_lesson_operators_minus_generic(
     list_shuffle_cycled(list, 4);
     return list;
   }
-  let batch = app_code_batch_question_answer_fns(batch_get);
+  let symbols_to_answer = function lambda(symbols) {
+    function lambda2() {
+      eval(symbols);
+    }
+    let valid = throws_not(lambda2);
+    let result = boolean_to_text_validity(valid);
+    return result;
+  };
+  let batch = app_code_batch_question_answer_fns(batch_get, symbols_to_answer);
   function above(root) {
     let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(operator, right_random_get);
@@ -89,14 +97,6 @@ export function app_code_lesson_operators_minus_generic(
   }
   const example_label = "Is this code valid? ";
   const quiz_label = example_label;
-  let symbols_to_answer = function lambda(symbols) {
-    function lambda2() {
-      eval(symbols);
-    }
-    let valid = throws_not(lambda2);
-    let result = boolean_to_text_validity(valid);
-    return result;
-  };
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
