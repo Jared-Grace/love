@@ -15,7 +15,7 @@ export function app_code_symbols_separated_on_question_generic(
     display: "flex",
     "flex-wrap": "wrap",
   });
-  html_style_padding_x(component, value);
+  html_style_padding_x(parent, "0.175em");
   function lambda4(d, index_1) {
     let row_item = html_span(parent);
     html_flex_column_center(row_item);
