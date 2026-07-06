@@ -98,7 +98,7 @@ export function app_code_lesson_operators_dot_numbers() {
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let quiz_backwards_label = app_code_label_code_quiz_backwards();
-  const quizzes = app_code_lesson_base_quizzes(
+  const quizzes_get = app_code_lesson_base_quizzes(
     question,
     answer,
     quiz_label,
