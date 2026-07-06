@@ -167,12 +167,6 @@ export function app_code_lesson_symbols_batches_generic(
           function lambda2(quiz_batch_item) {
             let question2 = property_get(quiz_batch_item, question_property);
             let answer2 = property_get(quiz_batch_item, answer_property);
-            log(app_code_lesson_symbols_batches_generic.name, {
-              question2,
-              quiz_question,
-              answer2,
-              quiz_answer,
-            });
             let eq3 = equal(answer2, quiz_answer);
             let eq4 = equal(question2, quiz_question);
             let ored = or(eq3, eq4);
