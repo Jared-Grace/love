@@ -3,8 +3,6 @@ import { log } from "../../../love/public/src/log.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 export function app_code_lesson_base_quizzes(
-  question,
-  answer,
   quiz_label,
   on_quiz_answer_button_forwards,
   on_question,
