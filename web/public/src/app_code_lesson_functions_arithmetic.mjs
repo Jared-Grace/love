@@ -59,7 +59,7 @@ export function app_code_lesson_functions_arithmetic() {
     function lambda(o) {
       let r2 = js_operator_to_expression(o, next);
       let expression = property_get(r2, "expression");
-      let code = js_operator_left_right_to_call(r2, o);
+      let code = js_operator_left_right_to_call(o, r2);
       let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
