@@ -10,8 +10,8 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
   let r2 = function batch_get() {
     let lefts = list_alphabet_cases_both();
     list_shuffle(lefts);
+    let chunks = list_chunk(lefts, 2);
     function lambda(la2) {
-      let chunks = list_chunk(lefts, 2);
       let rights = lefts;
       function lambda2(left5, right5) {
         lambda$left$right(left5, right5);
