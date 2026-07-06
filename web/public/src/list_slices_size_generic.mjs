@@ -5,7 +5,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 export function list_slices_size_generic(count_get, list, min) {
   function lambda3(la) {
-    function lambda2(word, index) {
+    function lambda2(item, index) {
       let count = count_get();
       let slice = list_slice(list, index, index + count);
       let z = list_size(slice);
