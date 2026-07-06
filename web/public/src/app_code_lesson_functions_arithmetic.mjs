@@ -1,3 +1,4 @@
+import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_code_symbol } from "../../../love/public/src/app_code_symbol.mjs";
@@ -8,7 +9,6 @@ import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/p
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
@@ -59,10 +59,7 @@ export function app_code_lesson_functions_arithmetic() {
     function lambda(o) {
       let r2 = js_operator_to_expression(o, next);
       let expression = property_get(r2, "expression");
-      let right = property_get(r2, "right");
-      let left = property_get(r2, "left");
-      let verb = property_get(o, "verb");
-      let code = js_code_call_args(verb, [left, right]);
+      let code = js_operator_left_right_to_call(r2, o);
       let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
