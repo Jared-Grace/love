@@ -15,13 +15,14 @@ export async function functions_expand_all(f_name_expand) {
       async function lambda4(item) {
         let v = property_get(item, "v");
         let stack = property_get(v, "stack");
-        let f = js_block_find(stack);
+        let r = js_block_find(stack);
+        let body = property_get(r, "body");
         log(functions_expand_all.name, {
           f,
         });
         exit();
         return;
-        let inserted = await js_expand_generic(next, stack2, ast);
+        let inserted = await js_expand_generic(next, body, ast);
       }
       await each_async(list, lambda4);
     }
