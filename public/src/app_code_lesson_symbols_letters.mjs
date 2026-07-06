@@ -1,4 +1,4 @@
-import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
+import { app_code_symbols_separated_on_question_numbered_fifth } from "../../../love/public/src/app_code_symbols_separated_on_question_numbered_fifth.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { app_code_lesson_symbols_letters_batch_get } from "../../../love/public/src/app_code_lesson_symbols_letters_batch_get.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -73,7 +73,7 @@ export function app_code_lesson_symbols_letters() {
     "symbols_letters",
     lambda,
     batch_get,
-    app_code_symbols_separated_on_question,
+    app_code_symbols_separated_on_question_numbered_fifth,
   );
   return r5;
 }
