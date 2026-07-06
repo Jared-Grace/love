@@ -9,7 +9,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { list_alphabet_cases_both } from "../../../love/public/src/list_alphabet_cases_both.mjs";
 export function app_code_lesson_operators_dot_missing_batch(operator) {
-  let r = function batch_get() {
+  let bg = function batch_get() {
     let letters = list_alphabet_cases_both();
     list_shuffle(letters);
     let pairs = list_chunk(letters, 2);
@@ -27,6 +27,6 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
     list_shuffle_cycled(list, 4);
     return list;
   };
-  let b = app_code_batch_question_answer_fns(r);
+  let b = app_code_batch_question_answer_fns(bg);
   return b;
 }
