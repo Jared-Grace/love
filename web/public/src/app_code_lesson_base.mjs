@@ -16,7 +16,7 @@ import { html_flex_column_stretch } from "../../../love/public/src/html_flex_col
 import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_medium_blue } from "../../../love/public/src/app_code_container_medium_blue.mjs";
-export function app_code_lesson_symbols_batches_generic(
+export function app_code_lesson_base(
   name,
   id,
   above,
@@ -88,7 +88,7 @@ export function app_code_lesson_symbols_batches_generic(
         let nn = null_not_is(quiz_backwards_label_answer);
         if (nn) {
           function quiz_backwards(context, parent, container, refresh) {
-            log(app_code_lesson_symbols_batches_generic.name, "quiz_backwards");
+            log(app_code_lesson_base.name, "quiz_backwards");
             let quiz_question = answer;
             let quiz_answer = question;
             const answer_property = "question";

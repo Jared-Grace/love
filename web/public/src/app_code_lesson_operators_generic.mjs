@@ -10,7 +10,7 @@ import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_symbols_batches_generic } from "../../../love/public/src/app_code_lesson_symbols_batches_generic.mjs";
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
@@ -82,7 +82,7 @@ export function app_code_lesson_operators_generic(
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
-  let r = app_code_lesson_symbols_batches_generic(
+  let r = app_code_lesson_base(
     name,
     id,
     above,
