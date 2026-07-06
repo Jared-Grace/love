@@ -28,11 +28,11 @@ export function app_code_lesson_functions_arithmetic() {
   }
   function batch_get() {
     let r2 = function property_get_curried_right_result(object) {
+      let property_name = "operator";
       let value = property_get(object, property_name);
       return value;
     };
     let mapped = list_map(operators, r2);
-    let property_name = "operator";
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
