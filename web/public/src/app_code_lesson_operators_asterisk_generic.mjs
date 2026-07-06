@@ -1,3 +1,5 @@
+import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -10,7 +12,6 @@ import { app_code_lesson_operators_asterisk_generic_invalid } from "../../../lov
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
-import { app_code_lesson_base_with_quizzes } from "../../../love/public/src/app_code_lesson_base_with_quizzes.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { app_code_lesson_operators_generic_batch_get_binary } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_binary.mjs";
@@ -61,8 +62,7 @@ export function app_code_lesson_operators_asterisk_generic(
     html_style_code_dark,
     quiz_backwards_answer_count_override,
   );
-  let lesson = null;
-  lesson = app_code_lesson_base(
+  let lesson = app_code_lesson_base(
     id,
     name,
     above,
@@ -72,6 +72,5 @@ export function app_code_lesson_operators_asterisk_generic(
     example_label,
     quizzes,
   );
-  let r = lesson;
-  return r;
+  return lesson;
 }
