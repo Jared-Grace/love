@@ -17,12 +17,12 @@ export function js_operators() {
       operator: js_operator_minus_verb(),
     },
     {
-      verb: js_operator_division(),
-      operator: js_operator_division_verb(),
-    },
-    {
       verb: js_operator_asterisk(),
       operator: js_operator_asterisk_verb(),
+    },
+    {
+      verb: js_operator_division(),
+      operator: js_operator_division_verb(),
     },
   ];
   return r2;
