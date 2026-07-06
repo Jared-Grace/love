@@ -16,12 +16,10 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
       let r = list_first_second_only(pair);
       let second = property_get(r, "second");
       let first = property_get(r, "first");
-      let combined = js_code_binary(left2, operator, right2);
-      let right4 = "";
-      let combined2 = js_code_binary(left2, operator, right4);
-      let combined3 = js_code_binary(right2, operator, left2);
-      let left4 = "";
-      let combined4 = js_code_binary(left4, operator, right2);
+      let combined = js_code_binary(first, operator, second);
+      let combined2 = js_code_binary(first, operator, "");
+      let combined3 = js_code_binary(second, operator, first);
+      let combined4 = js_code_binary("", operator, second);
       each([combined, combined2, combined3, combined4], la);
     }
     let list = list_adder_each(pairs, lambda);
