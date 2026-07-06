@@ -41,7 +41,7 @@ import { list_map_index_1 } from "../../../love/public/src/list_map_index_1.mjs"
 import { html_flex_column_center } from "../../../love/public/src/html_flex_column_center.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_code_container_dark } from "../../../love/public/src/app_code_container_dark.mjs";
+import { app_code_div_code_dark } from "../../../love/public/src/app_code_div_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_medium_blue } from "../../../love/public/src/app_code_container_medium_blue.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -63,7 +63,7 @@ export function app_code_lesson_symbols_batches_generic(
   function example_above(parent, symbols) {
     let container = app_code_container_medium_blue(parent);
     html_div_text(container, question_label);
-    let row = app_code_container_dark(container);
+    let row = app_code_div_code_dark(container);
     html_style_assign(row, {
       display: "flex",
       "flex-wrap": "wrap",
@@ -99,7 +99,7 @@ export function app_code_lesson_symbols_batches_generic(
           let a = example_above(parent, symbols);
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
-          let div3 = app_code_container_dark(container);
+          let div3 = app_code_div_code_dark(container);
           let s = app_code_symbol_generic(
             div3,
             answer,
