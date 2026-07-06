@@ -28,7 +28,8 @@ export function app_code_lesson_functions_arithmetic() {
   }
   function batch_get() {
     let mapper = function lambda2(o) {
-      let value = property_get(o, "operator");
+      let operator = property_get(o, "operator");
+      let left_transform = property_get(o, "left_transform");
       return value;
     };
     let mapped = list_map(operators, mapper);
@@ -52,13 +53,13 @@ export function app_code_lesson_functions_arithmetic() {
     let next = range_1_next(m);
     function lambda(o) {
       let operator = property_get(o, "operator");
-      let verb = property_get(o, "verb");
       let left_transform = property_get(o, "left_transform");
       let left = next();
       let right = next();
       left = left_transform(left, right);
       let combined = js_code_binary_spaced_nb(left, operator, right);
       let c = app_code_container_light_blue(root);
+      let verb = property_get(o, "verb");
       let code = js_code_call_args(verb, [left, right]);
       html_div_cycle_code(c, [
         "Instead of ",
