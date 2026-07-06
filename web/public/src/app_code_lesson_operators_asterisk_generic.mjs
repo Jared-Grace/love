@@ -55,7 +55,7 @@ export function app_code_lesson_operators_asterisk_generic(
     question_label,
     noop,
     html_text_set,
-    null,
+    "What code matches this validity?",
   );
   return r;
 }
