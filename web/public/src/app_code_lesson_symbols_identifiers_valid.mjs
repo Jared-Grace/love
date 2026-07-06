@@ -9,10 +9,9 @@ export function app_code_lesson_symbols_identifiers_valid(
   id,
   above,
   batch_get,
-  symbol_create,
   on_question,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 5);
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
   let question_label = app_code_label_symbols();
