@@ -27,7 +27,6 @@ export function app_code_lesson_symbols_identifiers_valid(
     batch_get2,
     example_label,
     quiz_label,
-    app_code_symbols_eval_valid_identifier,
     2,
     symbol_create,
     question_label,
