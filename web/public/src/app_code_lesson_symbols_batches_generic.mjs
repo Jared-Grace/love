@@ -169,16 +169,16 @@ export function app_code_lesson_symbols_batches_generic(
             }
           },
         ];
-        let r2 = {
+        let mapped = {
           question,
           answer,
           example,
           quizzes,
         };
-        return r2;
+        return mapped;
       }
-      let mapped = list_map(batch_items, each_batch_item);
-      return mapped;
+      let mapped_items = list_map(batch_items, each_batch_item);
+      return mapped_items;
     },
   };
   return lesson;
