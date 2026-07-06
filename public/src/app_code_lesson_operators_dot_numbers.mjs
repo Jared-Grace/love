@@ -87,7 +87,7 @@ export function app_code_lesson_operators_dot_numbers() {
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,
-      "There must be something",
+      "when used with identifiers, there must be something",
       js_code_binary,
       example_get,
     );
