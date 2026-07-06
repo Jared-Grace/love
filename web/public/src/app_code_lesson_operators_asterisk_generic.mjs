@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
@@ -56,7 +57,7 @@ export function app_code_lesson_operators_asterisk_generic(
     noop,
     html_text_set,
     "What code matches this validity?",
-    null,
+    html_style_code_dark,
   );
   return r;
 }
