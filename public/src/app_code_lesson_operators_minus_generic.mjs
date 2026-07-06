@@ -106,7 +106,6 @@ export function app_code_lesson_operators_minus_generic(
     name,
     id,
     above,
-    noop,
     batch,
     example_label,
     quiz_label,

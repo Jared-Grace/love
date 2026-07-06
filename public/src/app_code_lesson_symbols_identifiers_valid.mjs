@@ -23,7 +23,6 @@ export function app_code_lesson_symbols_identifiers_valid(
     name,
     id,
     above,
-    on_symbol,
     batch_get2,
     example_label,
     quiz_label,
