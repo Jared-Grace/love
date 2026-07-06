@@ -110,6 +110,7 @@ export function app_code_lesson_symbols_batches_generic(
               context,
               refresh,
               quiz_label,
+              on_quiz_answer_button_forwards,
             );
           },
         ];
@@ -130,6 +131,7 @@ export function app_code_lesson_symbols_batches_generic(
               context,
               refresh,
               quiz_backwards_label,
+              on_quiz_answer_button_backwards,
             );
           }
           list_add(quizzes, quiz_backwards);
@@ -151,6 +153,7 @@ export function app_code_lesson_symbols_batches_generic(
           context,
           refresh,
           label,
+          on_quiz_answer_button,
         ) {
           let a = example_above(container, quiz_question);
           let a_container = property_get(a, "container");
