@@ -27,11 +27,11 @@ export function app_code_lesson_functions_arithmetic() {
     });
   }
   function batch_get() {
-    let r = function property_get_curried_right_result(object) {
+    let mapper = function lambda2(object) {
       let value = property_get(object, "operator");
       return value;
     };
-    let mapped = list_map(operators, r);
+    let mapped = list_map(operators, mapper);
   }
   let r = app_code_lesson_symbols_batches_generic(
     name,
