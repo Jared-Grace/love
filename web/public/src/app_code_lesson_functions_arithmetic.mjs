@@ -1,4 +1,5 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { js_operator_plus_verb } from "../../../love/public/src/js_operator_plus_verb.mjs";
+import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digits_positive_shuffled_next } from "../../../love/public/src/digits_positive_shuffled_next.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -35,8 +36,9 @@ export function app_code_lesson_functions_arithmetic() {
     let left = next();
     let right = next();
     let operator = js_operator_plus();
-    let combined = text_combine(left2, right2);
+    let combined = js_code_binary_spaced_nb(left, operator, right);
+    let verb = js_operator_plus_verb();
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["Instead of ", left, operator, right]);
+    html_div_cycle_code(c, ["Instead of ", combined, " we could write: "]);
   }
 }
