@@ -6,6 +6,7 @@ export function app_code_batch_question_answer_fns(
   let r = function lambda() {
     let questions = batch_questions_get();
     function lambda2(question) {
+      let answer = question_to_answer(question);
       let r2 = {
         question,
       };
