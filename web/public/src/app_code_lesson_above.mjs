@@ -6,8 +6,8 @@ export function app_code_lesson_above(parent, label, question, on_question) {
   app_code_example_answer_gap(parent);
   let container = app_code_container_medium_blue(parent);
   html_div_text(container, label);
-  let container2 = html_div_code_dark(parent2);
-  on_question(container, question);
+  let c = html_div_code_dark(container);
+  on_question(c, question);
   let r4 = {
     container,
   };
