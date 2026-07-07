@@ -53,7 +53,7 @@ export function app_code_examples(context) {
   }
   app_code_next(
     context,
-    root,
+    c,
     "see " + another,
     "please show me " + another,
     refresh,
