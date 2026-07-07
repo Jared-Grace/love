@@ -20,7 +20,20 @@ export async function watch() {
         return;
       }
       property_set(in_progress, path, true);
-      function lambda3() {}
+      function lambda3() {
+      try {
+        await command_line_node_g(function_auto_path.name, [path]);
+      } finally {
+        property_set(in_progress, path, false);
+        if (0) {
+          try {
+            const args = [path];
+            await command_line_node_g(data_file_update.name, args);
+          } finally {
+            property_set(in_progress, path, false);
+          }
+        }
+      }}
       let r = await function_run_prompt_lock(lambda3);
     }
     await catch_log_async(lambda);
