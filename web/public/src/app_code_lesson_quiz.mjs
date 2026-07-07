@@ -42,8 +42,7 @@ import { app_code_example_answer_label } from "../../../love/public/src/app_code
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz(
   container,
-  quiz_question,
-  quiz_answer,
+  { question, answer },
   parent,
   context,
   refresh,
