@@ -46,25 +46,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
         );
       }
     }
-    let mapped = list_map(infos, lambda2);
-    $;
-    let quizzes = null;
-    quizzes = [
-      ,
-      function quiz_backwards(context, parent, container, refresh) {
-        app_code_lesson_quiz(
-          container,
-          answer,
-          question,
-          parent,
-          context,
-          refresh,
-          null,
-          batch_get,
-          quizzes,
-        );
-      },
-    ];
+    let quizzes = list_map(infos, lambda2);
     return quizzes;
   };
   return quizzes_get;
