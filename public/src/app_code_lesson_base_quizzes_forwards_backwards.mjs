@@ -29,10 +29,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     },
   ];
   let quizzes_get = function lambda(question, answer) {
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
-    let quizzes = null;
-    quizzes = [
+    function lambda2(qa) {
       function quiz_forwards(context, parent, container, refresh) {
         app_code_lesson_quiz(
           container,
@@ -42,11 +39,16 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           parent,
           context,
           refresh,
-          null,
+          qa,
           batch_get,
           quizzes,
         );
-      },
+      }
+    }
+    let mapped = list_map(infos, lambda2);
+    let quizzes = null;
+    quizzes = [
+      ,
       function quiz_backwards(context, parent, container, refresh) {
         app_code_lesson_quiz(
           container,
