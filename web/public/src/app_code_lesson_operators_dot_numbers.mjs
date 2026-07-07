@@ -82,6 +82,6 @@ export function app_code_lesson_operators_dot_numbers() {
       text_combine_middle_space,
     );
   }
-  let lesson = app_code_lesson_validity_operator(lesson_name, batch_get, above);
+  let lesson = app_code_lesson_validity_operator(math_name, batch_get, above);
   return lesson;
 }
