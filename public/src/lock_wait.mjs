@@ -12,7 +12,6 @@ export async function lock_wait(lock_name, lambda) {
       let result = path_join([f_path, lock_name]);
       release = await lockfile.lock(result);
       acquired = true;
-      await lambda();
     } catch (e) {
       await sleep(200);
     } finally {
@@ -21,6 +20,7 @@ export async function lock_wait(lock_name, lambda) {
       }
     }
     if (acquired) {
+      await lambda();
       break;
     }
   }
