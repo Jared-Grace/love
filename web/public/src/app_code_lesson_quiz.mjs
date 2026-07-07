@@ -68,8 +68,8 @@ export function app_code_lesson_quiz(
   let quiz_batch_items = batch_get();
   let choices = ["question", "answer"];
   let question_property = list_pair_other(choices, answer_property);
-  let answer = property_get(qa, answer_property);
-  let question = property_get(qa, question_property);
+  let quiz_answer = property_get(qa, answer_property);
+  let quiz_question = property_get(qa, question_property);
   function lambda2(quiz_batch_item) {
     let question2 = property_get(quiz_batch_item, question_property);
     let answer2 = property_get(quiz_batch_item, answer_property);
