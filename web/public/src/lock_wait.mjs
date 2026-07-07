@@ -11,8 +11,8 @@ export async function lock_wait(lock_name, lambda) {
   let release = null;
   try {
     let f_path = folder_user_storage_function_path(lock_wait);
-    let result = path_join(segments);
-    release = await lockfile.lock("some/file");
+    let result = path_join([f_path, lock_name]);
+    release = await lockfile.lock(result);
   } catch (e) {
     console.error(e);
   } finally {
