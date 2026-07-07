@@ -4,11 +4,8 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 export async function invoke_cache_file_exists_throw(fn, args) {
   let e = await invoke_cache_file_exists(fn, args);
   if (e) {
-    let combined = text_combine_multiple([
-      invoke_cache_file_exists.name,
-      " returned ",
-      e,
-    ]);
+    const list = [invoke_cache_file_exists.name, " returned ", e];
+    let combined = text_combine_multiple(list);
     error(combined);
   }
 }
