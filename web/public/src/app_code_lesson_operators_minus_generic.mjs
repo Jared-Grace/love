@@ -1,10 +1,5 @@
-import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
-import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
-import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
-import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
+import { app_code_lesson_validity_base } from "../../../love/public/src/app_code_lesson_validity_base.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
-import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -14,7 +9,6 @@ import { each_nested_args_range_1_list_adder } from "../../../love/public/src/ea
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
@@ -105,35 +99,13 @@ export function app_code_lesson_operators_minus_generic(
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
-  let question_label = app_code_label_code_question();
-  let example_count = 2;
-  let quiz_backwards_label_answer =
-    app_code_quiz_backwards_label_answer_validity();
-  let on_quiz_answer_button_backwards = null;
-  let quiz_backwards_answer_count_override = null;
-  let on_question_forwards = html_text_set_code_dark;
-  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+  let lesson = app_code_lesson_validity_base(
     quiz_label,
-    noop,
-    on_question_forwards,
-    question_label,
     batch,
-    quiz_backwards_label_answer,
-    on_question_forwards,
-    2,
-    "Identifier validity: ",
-    app_code_style_normal_text,
-  );
-  let lesson = app_code_lesson_base(
     id,
     name,
     above,
-    example_count,
-    batch,
-    on_question_forwards,
     example_label,
-    quizzes,
-    question_label,
   );
   return lesson;
 }
