@@ -27,16 +27,16 @@ export function app_code_lesson_identifiers_valid(
   let on_quiz_answer_button_backwards =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    batch_get2,
+    question_label,
+    on_question,
+    quiz_label,
+    noop,
+    "Identifier validity: ",
+    app_code_style_normal_text,
     quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
-    quiz_label,
-    noop,
-    on_question,
-    question_label,
-    batch_get2,
-    "Identifier validity: ",
-    app_code_style_normal_text,
   );
   let lesson = app_code_lesson_base(
     id,
