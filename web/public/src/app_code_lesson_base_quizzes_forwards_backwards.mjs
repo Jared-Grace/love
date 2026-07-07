@@ -35,8 +35,10 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       let r = function quiz(context, parent, container, refresh) {
         app_code_lesson_quiz(
           container,
-          question,
-          answer,
+          {
+            question,
+            answer,
+          },
           parent,
           context,
           refresh,
