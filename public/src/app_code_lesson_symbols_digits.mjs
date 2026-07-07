@@ -8,12 +8,12 @@ export function app_code_lesson_symbols_digits() {
     let text = app_code_lesson_same_message("there are not numbers underneath");
     app_code_container_light_blue_text(root, text);
   }
-  let r5 = app_code_lesson_symbols_counting(
+  let r = app_code_lesson_symbols_counting(
     "Symbols (Digits)",
     "symbols_digits",
     lambda,
     app_code_lesson_symbols_batch_digits,
     app_code_symbols_separated_on_question,
   );
-  return r5;
+  return r;
 }
