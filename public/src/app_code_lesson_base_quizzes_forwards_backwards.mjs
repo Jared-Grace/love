@@ -45,7 +45,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           refresh,
           label_answer_backwards,
           on_quiz_answer_button_backwards,
-          on_question_forwards,
+          on_question_backwards,
           label_question_backwards,
           batch_get,
           quiz_backwards_answer_count_override,
