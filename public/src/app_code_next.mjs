@@ -1,3 +1,4 @@
+import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { text_pad_space_quote_double } from "../../../love/public/src/text_pad_space_quote_double.mjs";
@@ -22,7 +23,8 @@ export function app_code_next(
   let bn = app_replace_button_wide(parent, nt, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
-    if (null_not_is(value)) {
+    if (null_not_is(back_text)) {
+      let combined = text_combine_middle_space(left2, right);
     }
     let bb = app_replace_button_wide(parent, bt, on_back);
   }
