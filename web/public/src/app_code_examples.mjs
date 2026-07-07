@@ -64,7 +64,8 @@ export function app_code_examples(context) {
       app_code_lesson_previous_set(context);
       let previous = app_code_lesson_current(context);
       let quizzes = property_get(previous, "quizzes");
-      let index_last = list_index_last(quizzes);lv
+      let index_last = list_index_last(quizzes);
+      lv;
       let quiz_index = app_code_quiz_index_transform(
         context,
         quizzes,
