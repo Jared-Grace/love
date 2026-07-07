@@ -117,7 +117,7 @@ export function app_code_lesson_operators_minus_generic(
     batch,
     quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
-    quiz_backwards_answer_count_override,
+    2,
     "Identifier validity: ",
     app_code_style_normal_text,
   );
