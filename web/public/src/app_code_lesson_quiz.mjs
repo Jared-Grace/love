@@ -56,7 +56,6 @@ export function app_code_lesson_quiz(
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
-  let answer_count_max = app_code_answer_count_max();
   let choices = ["question", "answer"];
   let question_property = list_pair_other(choices, answer_property);
   let quiz_answer = property_get(qa, answer_property);
@@ -82,6 +81,7 @@ export function app_code_lesson_quiz(
   let answers = list_map_property(quiz_batch_items, answer_property);
   let answers_unique = list_unique(answers);
   list_remove_if_exists(answers_unique, quiz_answer);
+  let answer_count_max = app_code_answer_count_max();
   let nn2 = null_not_is(answer_count_override);
   if (nn2) {
     answer_count_max = answer_count_override;
