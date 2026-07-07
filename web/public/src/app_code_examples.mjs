@@ -1,4 +1,4 @@
-import { app_code_lesson_previous } from "../../../love/public/src/app_code_lesson_previous.mjs";
+import { app_code_lesson_previous_set } from "../../../love/public/src/app_code_lesson_previous_set.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
@@ -82,7 +82,7 @@ export function app_code_examples(context) {
   );
   if (lesson_first_not) {
     async function previous() {
-      app_code_lesson_previous(context);
+      app_code_lesson_previous_set(context);
       await app_shared_screen_set(context, app_code_examples);
     }
     app_code_go_back(
