@@ -1,3 +1,4 @@
+import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "../../../love/public/src/app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
@@ -23,8 +24,9 @@ export function app_code_lesson_identifiers_valid(
   );
   let example_count = 2;
   let quiz_backwards_label_answer = null;
-  let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
+  let on_quiz_answer_button_backwards =
+    app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     noop,
