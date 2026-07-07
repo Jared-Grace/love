@@ -5,7 +5,7 @@ import { app_code_quiz_backwards_label_answer_validity } from "../../../love/pub
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { app_code_lesson_operators_dot_missing_batch } from "../../../love/public/src/app_code_lesson_operators_dot_missing_batch.mjs";
+import { app_code_lesson_operators_dot_batch_missing } from "../../../love/public/src/app_code_lesson_operators_dot_batch_missing.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text_common } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text_common.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
@@ -22,7 +22,7 @@ import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
   const operator = js_operator_dot();
   let math_name = "property access, missing";
-  let batch = app_code_lesson_operators_dot_missing_batch(operator);
+  let batch = app_code_lesson_operators_dot_batch_missing(operator);
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
