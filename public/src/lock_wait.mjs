@@ -2,8 +2,10 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
 import { npm_install } from "../../../love/public/src/npm_install.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
+import { import_install } from "./import_install.mjs";
 export async function lock_wait(lock_name, lambda) {
-  let lockfile = await npm_install("proper-lockfile");
+    return await lambda()
+  let lockfile = await import_install("proper-lockfile");
   let f_path = folder_user_storage_function_path(lock_wait);
   let result = path_join([f_path, lock_name]);
   let release = null;
