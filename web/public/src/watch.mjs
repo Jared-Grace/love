@@ -36,6 +36,7 @@ export async function watch() {
               property_set(in_progress, path, false);
             }
           }
+          
         }
       }
       let r = await lock_try(lambda3);
