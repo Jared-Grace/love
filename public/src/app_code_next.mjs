@@ -10,7 +10,7 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
 export function app_code_next(
   context,
-  parent,
+  parent_question,
   do_you_want_to_text,
   yes_text,
   refresh,
@@ -26,11 +26,11 @@ export function app_code_next(
     "? If not, choose: ",
     padded,
   ]);
-  html_div_text(parent, question);
+  html_div_text(parent_question, question);
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
-  app_replace_button_wide(parent, answer_yes, refresh);
-  let container = html_div(parent);
+  app_replace_button_wide(parent_question, answer_yes, refresh);
+  let container = html_div(parent_question);
   let bn = app_replace_button_wide(container, nt, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
