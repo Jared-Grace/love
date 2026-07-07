@@ -44,7 +44,6 @@ export function app_code_lesson_quiz(
   answer_property,
   quiz_answer,
   parent,
-  quiz_fn,
   context,
   refresh,
   label_answer,
