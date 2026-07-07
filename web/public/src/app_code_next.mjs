@@ -22,6 +22,8 @@ export function app_code_next(
   let bn = app_replace_button_wide(parent, nt, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
+    if (null_not_is(value)) {
+    }
     let bb = app_replace_button_wide(parent, bt, on_back);
   }
   let padded = text_pad_space_quote_double(nt);
