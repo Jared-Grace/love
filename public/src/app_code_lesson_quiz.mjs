@@ -113,7 +113,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  function lambda() {}
+  function on_back() {}
   let r4 = app_code_next(
     context,
     on_success,
