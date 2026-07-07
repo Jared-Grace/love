@@ -1,11 +1,9 @@
+import { function_run_prompt_lock } from "../../../love/public/src/function_run_prompt_lock.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "../../../love/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
-import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { property_exists_equals } from "../../../love/public/src/property_exists_equals.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
-import { function_auto_path } from "../../../love/public/src/function_auto_path.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
-import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 export async function watch() {
   let squashed =
@@ -22,19 +20,8 @@ export async function watch() {
         return;
       }
       property_set(in_progress, path, true);
-      try {
-        await command_line_node_g(function_auto_path.name, [path]);
-      } finally {
-        property_set(in_progress, path, false);
-        if (0) {
-          try {
-            const args = [path];
-            await command_line_node_g(data_file_update.name, args);
-          } finally {
-            property_set(in_progress, path, false);
-          }
-        }
-      }
+      function lambda3() {}
+      let r = await function_run_prompt_lock(lambda3);
     }
     await catch_log_async(lambda);
   }
