@@ -18,11 +18,10 @@ export async function watch() {
   let in_progress = {};
   async function lambda2(path) {
     async function lambda() {
-      const value = true;
-      if (property_exists_equals(path, in_progress, value)) {
+      if (property_exists_equals(path, in_progress, true)) {
         return;
       }
-      property_set(in_progress, path, value);
+      property_set(in_progress, path, true);
       try {
         await command_line_node_g(function_auto_path.name, [path]);
       } finally {
