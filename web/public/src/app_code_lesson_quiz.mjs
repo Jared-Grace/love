@@ -50,9 +50,10 @@ export function app_code_lesson_quiz(
   refresh,
   qa,
   batch_get,
-  answer_count_override,
+  answer_count_override1,
   quizzes,
 ) {
+  let answer_count_override = property_get(qa, "answer_count_override");
   let question_label = property_get(qa, "question_label");
   let on_question = property_get(qa, "on_question");
   let answer_on_button = property_get(qa, "answer_on_button");
