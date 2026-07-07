@@ -19,10 +19,10 @@ export function app_code_lesson_identifiers_letters_spaces() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let lp = languages_popular();
-    let combined2 = list_to_text_or_list(lp);
+    let languages = list_to_text_or_list(lp);
     let combined = text_combine_multiple([
       "Humans use languages like ",
-      combined2,
+      languages,
       " to speak to each other",
     ]);
     html_div_text(c, combined);
