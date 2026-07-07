@@ -28,7 +28,7 @@ export function app_code_next(
   html_div_text(parent, question);
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
-  app_replace_button_wide(container, answer_yes, refresh);
+  app_replace_button_wide(parent, answer_yes, refresh);
   let bn = app_replace_button_wide(parent, nt, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
