@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
