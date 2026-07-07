@@ -1,6 +1,6 @@
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
-import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
+import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
@@ -97,7 +97,7 @@ export function app_code_lesson_operators_dot_numbers() {
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
-  let quiz_backwards_label = app_code_label_code_quiz_backwards();
+  let quiz_backwards_label = app_code_quiz_backwards_label_answer_validity();
   let example_count = 2;
   let quiz_backwards_answer_count_override = 2;
   const quizzes_get = app_code_lesson_base_quizzes_forwards_backwards(
