@@ -41,13 +41,13 @@ export function app_code_lesson_base(
           );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
-          let div3 = html_style_code_generic_unfonted(
+          let answer_div = html_style_code_generic_unfonted(
             component,
             "white",
             "black",
           );
           ["app_code_symbol_generic", "transparent", "transparent"];
-          html_text_set(div3, answer);
+          html_text_set(answer_div, answer);
         }
         let quizzes = quizzes_get(question, answer);
         let mapped = {
