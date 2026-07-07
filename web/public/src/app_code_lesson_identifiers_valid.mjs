@@ -27,6 +27,7 @@ export function app_code_lesson_identifiers_valid(
   let on_quiz_answer_button_backwards =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     quiz_label,
     noop,
@@ -34,7 +35,6 @@ export function app_code_lesson_identifiers_valid(
     question_label,
     batch_get2,
     quiz_backwards_label_answer,
-    on_quiz_answer_button_backwards,
     "Identifier validity: ",
     app_code_style_normal_text,
   );

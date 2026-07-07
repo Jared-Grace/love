@@ -19,6 +19,7 @@ export function app_code_lesson_base_with_quizzes(
   quiz_backwards_answer_count_override,
 ) {
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     quiz_label,
     on_quiz_answer_button_forwards,
@@ -26,7 +27,6 @@ export function app_code_lesson_base_with_quizzes(
     question_label,
     batch_get,
     quiz_backwards_label_answer,
-    on_quiz_answer_button_backwards,
     null,
     html_text_set,
   );
