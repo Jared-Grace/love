@@ -1,7 +1,6 @@
-import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
+import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { app_code_lesson_previous_set } from "../../../love/public/src/app_code_lesson_previous_set.mjs";
-import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
@@ -65,8 +64,7 @@ export function app_code_examples(context) {
       let previous = app_code_lesson_current(context);
       let quizzes = property_get(previous, "quizzes");
       let index_last = list_index_last(quizzes);
-      let v = lambda_value(value);
-      let quiz_index = app_code_quiz_index_transform(context, quizzes, v);
+      app_code_quiz_index_set(context, index_last);
       await app_shared_screen_set(context, app_code_quiz);
     };
     back_text = " to the previous quiz";
