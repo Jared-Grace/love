@@ -58,7 +58,7 @@ export function app_code_lesson_functions_arithmetic() {
     above,
     example_count,
     batch_get,
-    html_text_set,
+    html_style_code_dark_text,
     example_label,
     quizzes,
     question_label,
