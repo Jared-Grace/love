@@ -88,12 +88,12 @@ export function app_code_examples(context) {
     async function previous() {
       await app_shared_screen_set(context, app_code_examples);
     }
-    app_code_go_back(
-      root,
-      "to the previous lesson",
-      "take me back to the previous lesson",
-      previous,
-    );
+    app_code_go_back(root, "to the previous lesson", [
+      {
+        text: "take me back to the previous lesson",
+        on_click: previous,
+      },
+    ]);
   }
   let text = app_replace_button_home_text();
   let b2 = app_replace_button_screen_wide(context, app_code_home, root, text);
