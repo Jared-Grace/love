@@ -1,7 +1,7 @@
+import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "../../../love/public/src/app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
@@ -39,7 +39,7 @@ export function app_code_lesson_identifiers_valid(
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     "Validity: ",
-    html_text_set,
+    app_code_style_normal_text,
   );
   let lesson = app_code_lesson_base(
     id,
