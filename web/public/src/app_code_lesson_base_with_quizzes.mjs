@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
@@ -29,6 +30,7 @@ export function app_code_lesson_base_with_quizzes(
     html_text_set,
   );
   let lesson = null;
+  let question_label2 = error();
   lesson = app_code_lesson_base(
     id,
     name,
@@ -38,7 +40,7 @@ export function app_code_lesson_base_with_quizzes(
     on_question,
     example_label,
     quizzes,
-    error(),
+    question_label2,
   );
   return lesson;
 }
