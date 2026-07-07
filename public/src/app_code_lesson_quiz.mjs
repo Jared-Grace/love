@@ -48,7 +48,7 @@ export function app_code_lesson_quiz(
   parent,
   context,
   refresh,
-  label_answer,
+  answer_label,
   on_quiz_answer_button,
   on_question,
   question_label,
@@ -64,7 +64,7 @@ export function app_code_lesson_quiz(
     on_question,
   );
   let a_container = property_get(a, "container");
-  app_code_example_answer_label(a_container, label_answer);
+  app_code_example_answer_label(a_container, answer_label);
   let quiz_batch_items = batch_get();
   let choices = ["question", "answer"];
   let question_property = list_pair_other(choices, answer_property);
