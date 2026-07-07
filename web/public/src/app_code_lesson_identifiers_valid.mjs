@@ -24,7 +24,7 @@ export function app_code_lesson_identifiers_valid(
   );
   let example_count = 2;
   let quiz_backwards_label_answer = null;
-  let quiz_backwards_answer_count_override = null;
+  let quiz_backwards_answer_count_override = 2;
   let on_quiz_answer_button_backwards =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
