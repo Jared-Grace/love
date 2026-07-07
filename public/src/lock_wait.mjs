@@ -2,5 +2,6 @@ import { invoke_cache_file_remove } from "../../../love/public/src/invoke_cache_
 import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
 export async function lock_wait(lock_name, lambda) {
   let v = await invoke_cache_file(fn, [lock_name]);
+  await lambda();
   await invoke_cache_file_remove(fn2, args);
 }
