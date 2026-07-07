@@ -35,7 +35,7 @@ export function app_code_lesson_base(
           app_code_flex_gap(parent);
           let a = app_code_lesson_above(
             parent,
-            example_label,
+            question_label,
             question,
             on_question,
           );
