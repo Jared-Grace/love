@@ -1,3 +1,4 @@
+import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { text_pad_space_quote_double } from "../../../love/public/src/text_pad_space_quote_double.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -16,6 +17,7 @@ export function app_code_next(
   let container = app_code_container_light_blue(parent);
   let nt = app_shared_button_next_text();
   let b = app_replace_button_wide(parent, nt, on_next);
+  let text = app_shared_button_back_text();
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
     "Do you want to ",
