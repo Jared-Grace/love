@@ -108,7 +108,9 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  let quiz_index = app_code_quiz_index_get(context);$i
+  let quiz_index = app_code_quiz_index_get(context);
+  if (false) {
+  }
   let on_back = null;
   on_back = function lambda() {
     let quiz_index = app_code_quiz_index_transform(
