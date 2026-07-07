@@ -91,6 +91,7 @@ export function app_code_lesson_operators_plus_unary() {
     example_label,
     quizzes,
     question_label2,
+    app_code_style_normal_text,
   );
   return lesson;
 }

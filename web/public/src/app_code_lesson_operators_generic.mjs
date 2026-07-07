@@ -110,6 +110,7 @@ export function app_code_lesson_operators_generic(
     example_label,
     quizzes,
     question_label,
+    app_code_style_normal_text,
   );
   return lesson;
 }
