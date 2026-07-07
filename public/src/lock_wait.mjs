@@ -13,11 +13,7 @@ export async function lock_wait(lock_name, lambda) {
     console.error(e);
   } finally {
     if (release) {
-      try {
-        await release();
-      } catch (e) {
-        console.error(e);
-      }
+      await release();
     }
   }
 }
