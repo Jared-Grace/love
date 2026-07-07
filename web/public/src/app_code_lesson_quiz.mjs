@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
@@ -151,7 +152,7 @@ export function app_code_lesson_quiz(
         html_visibility_visible_multiple(hides);
       } else {
         if (not(answered)) {
-          let color_bg = "rgb(254, 43, 43)";
+          let color_bg = app_code_lesson_quiz_wrong_background_color();
           html_style_background_color_set(b, color_bg);
           html_font_color_set(b, "rgb(255, 255, 255)");
         }
