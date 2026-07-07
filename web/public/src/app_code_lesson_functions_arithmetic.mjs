@@ -51,6 +51,7 @@ export function app_code_lesson_functions_arithmetic() {
     html_style_code_dark,
     quiz_backwards_answer_count_override,
     null,
+    html_text_set,
   );
   let lesson = app_code_lesson_base(
     id,
