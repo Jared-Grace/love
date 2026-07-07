@@ -11,7 +11,7 @@ export function app_code_symbols_separated_on_question_generic(
   question,
   on_symbol,
 ) {
-  html_style_code_dark(component);
+  html_style_code_dark(parent);
   let symbols = text_split_empty(question);
   html_style_assign(parent, {
     display: "flex",
