@@ -113,6 +113,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
+  function lambda() {}
   let r4 = app_code_next(
     context,
     on_success,
@@ -120,7 +121,7 @@ export function app_code_lesson_quiz(
     "please give me another quiz to take",
     refresh,
     on_next,
-    null,
+    on_back,
   );
   let container_on_success = property_get(r4, "container");
   let hides = [success, container_on_success];
