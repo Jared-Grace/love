@@ -2,7 +2,6 @@ import { html_div_text_code_dark } from "../../../love/public/src/html_div_text_
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
@@ -52,7 +51,7 @@ export function app_code_lesson_functions_arithmetic() {
     html_style_code_dark,
     quiz_backwards_answer_count_override,
     null,
-    html_text_set,
+    html_text_set_code_dark,
   );
   let lesson = app_code_lesson_base(
     id,
