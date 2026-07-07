@@ -70,6 +70,7 @@ export function app_code_lesson_operators_plus_unary() {
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     quiz_label,
@@ -77,7 +78,6 @@ export function app_code_lesson_operators_plus_unary() {
     html_text_set,
     question_label,
     batch,
-    quiz_backwards_label_answer,
     null,
     html_text_set,
   );
