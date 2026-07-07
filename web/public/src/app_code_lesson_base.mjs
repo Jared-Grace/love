@@ -1,4 +1,4 @@
-import { html_style_code_unfonted } from "../../../love/public/src/html_style_code_unfonted.mjs";
+import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -7,7 +7,6 @@ import { html_flex_column_stretch } from "../../../love/public/src/html_flex_col
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 export function app_code_lesson_base(
   id,
   name,
@@ -41,8 +40,7 @@ export function app_code_lesson_base(
           );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
-          let answer_div = html_div_text(container, answer);
-          html_style_code_unfonted(answer_div, "white", "black");
+          app_code_style_normal_text(container, answer);
           ["app_code_symbol_generic", "transparent", "transparent"];
         }
         let quizzes = quizzes_get(question, answer);
