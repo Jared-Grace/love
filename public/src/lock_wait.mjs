@@ -10,9 +10,9 @@ export async function lock_wait(lock_name, lambda) {
   }
   let fn = lock_wait_cacher;
   const args = [lock_name];
-  if (false) {
+  if (run) {
+    await invoke_cache_file(fn, args);
+    await lambda();
+    await invoke_cache_file_remove(fn, args);
   }
-  await invoke_cache_file(fn, args);
-  await lambda();
-  await invoke_cache_file_remove(fn, args);
 }
