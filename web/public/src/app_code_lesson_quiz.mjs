@@ -88,6 +88,8 @@ export function app_code_lesson_quiz(
   let on_success = html_div(parent);
   let success = app_replace_success_message(on_success);
   async function on_next() {
+    function lambda(value2) {}
+    storage_local_transform_context(context2, key, value_initial2, lambda);
     let size = list_size(quizzes);
     let quiz_index = app_code_quiz_index_get(context);
     let a1 = add_1(quiz_index);
