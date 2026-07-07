@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { text_pad_space_quote_double } from "../../../love/public/src/text_pad_space_quote_double.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
@@ -13,13 +14,14 @@ export function app_code_next(
   yes_text,
   refresh,
   on_next,
-  on_back,
 ) {
   let container = app_code_container_light_blue(parent);
   let nt = app_shared_button_next_text();
   let bn = app_replace_button_wide(parent, nt, on_next);
+  if (null_not_is(value)) {
+  }
   let bt = app_shared_button_back_text();
-  let bp = app_replace_button_wide(parent, bt, on_next);
+  let bb = app_replace_button_wide(parent, bt, on_next);
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
     "Do you want to ",
