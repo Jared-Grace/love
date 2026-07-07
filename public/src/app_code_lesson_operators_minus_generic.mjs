@@ -1,3 +1,4 @@
+import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
@@ -118,7 +119,7 @@ export function app_code_lesson_operators_minus_generic(
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     "Identifier validity: ",
-    noop,
+    app_code_style_normal_text,
   );
   let lesson = app_code_lesson_base(
     id,
