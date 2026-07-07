@@ -1,3 +1,4 @@
+import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
@@ -106,7 +107,8 @@ export function app_code_lesson_operators_minus_generic(
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let example_count = 2;
-  let quiz_backwards_label_answer = null;
+  let quiz_backwards_label_answer =
+    app_code_quiz_backwards_label_answer_validity();
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
