@@ -26,7 +26,8 @@ export function app_code_lesson_symbols_counting(
   let quiz_backwards_label_answer = null;
   let on_quiz_answer_button_backwards = function lambda(parent, text) {
     html_clear(parent);
-    html_text_set(component, text2);
+    html_text_set(parent, text);
+    return;
     let r = app_code_symbols_separated_on_question(parent, text);
   };
   let quiz_backwards_answer_count_override = null;
