@@ -1,5 +1,5 @@
 import { app_code_lesson_validity_operator } from "../../../love/public/src/app_code_lesson_validity_operator.mjs";
-import { app_code_lesson_operators_dot_batch_missing } from "../../../love/public/src/app_code_lesson_operators_dot_batch_missing.mjs";
+import { app_code_lesson_operators_dot_batch_numbers } from "../../../love/public/src/app_code_lesson_operators_dot_batch_numbers.mjs";
 import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_example.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text } from "../../../love/public/src/app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_operators_dot_numbers() {
   const operator = js_operator_dot();
   const operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
-  let batch = app_code_lesson_operators_dot_batch_missing(operator);
+  let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root) {
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     let c4 = app_code_container_light_blue(root);
