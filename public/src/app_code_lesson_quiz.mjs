@@ -1,4 +1,4 @@
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
+import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -89,7 +89,7 @@ export function app_code_lesson_quiz(
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let size = list_size(quizzes);
-    let quiz_index = storage_local_get_context(context, "quiz_index");
+    let quiz_index = app_code_quiz_index_get(context);
     let a1 = add_1(quiz_index);
     let index_new = mod(a1, size);
     app_code_quiz_index_set(context, index_new);
