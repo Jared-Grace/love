@@ -1,4 +1,3 @@
-import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { text_left_right_middle_random_space_nb } from "../../../love/public/src/text_left_right_middle_random_space_nb.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -31,9 +30,5 @@ export function app_code_lesson_operators_generic_batch_get_binary(
     list_shuffle_cycled(list, 4);
     return list;
   };
-  let b = app_code_batch_question_answer_fns(
-    batch_questions_get,
-    question_to_answer,
-  );
   return r;
 }
