@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "../../../love/public/src/app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { text_size_text_to } from "../../../love/public/src/text_size_text_to.mjs";
