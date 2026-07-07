@@ -24,7 +24,7 @@ export function app_code_next(
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
     if (null_not_is(back_text)) {
-      let combined = text_combine_middle_space(left2, right);
+      bt = text_combine_middle_space(bt, back_text);
     }
     let bb = app_replace_button_wide(parent, bt, on_back);
   }
