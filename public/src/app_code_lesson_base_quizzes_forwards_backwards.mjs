@@ -1,5 +1,6 @@
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 export function app_code_lesson_base_quizzes_forwards_backwards(
+  backwards_answer_label,
   backwards_answer_on_button,
   backwards_answer_count_override,
   forwards_answer_label,
@@ -7,7 +8,6 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
   forwards_on_question,
   forwards_question_label,
   batch_get,
-  backwards_answer_label,
   backwards_question_label,
   backwards_on_question,
 ) {
