@@ -64,8 +64,8 @@ export function app_code_examples(context) {
       app_code_lesson_previous_set(context);
       let previous = app_code_lesson_current(context);
       let batch = property_get(previous, "batch");
-      let first = list_first(list);
-      let quizzes = property_get(previous, "quizzes");
+      let first = list_first(batch);
+      let quizzes = property_get(first, "quizzes");
       let index_last = list_index_last(quizzes);
       app_code_quiz_index_set(context, index_last);
       await app_shared_screen_set(context, app_code_quiz);
