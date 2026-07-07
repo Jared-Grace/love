@@ -1,4 +1,4 @@
-import { html_style_code_generic_unfonted } from "../../../love/public/src/html_style_code_generic_unfonted.mjs";
+import { html_style_code_unfonted } from "../../../love/public/src/html_style_code_unfonted.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_base(
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
           let answer_div = html_div_text(answer_div, answer);
-          html_style_code_generic_unfonted(answer_div, "white", "black");
+          html_style_code_unfonted(answer_div, "white", "black");
           ["app_code_symbol_generic", "transparent", "transparent"];
         }
         let quizzes = quizzes_get(question, answer);
