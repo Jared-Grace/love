@@ -1,5 +1,5 @@
+import { lock_try } from "../../../love/public/src/lock_try.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
-import { function_run_prompt_lock } from "../../../love/public/src/function_run_prompt_lock.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "../../../love/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
 import { property_exists_equals } from "../../../love/public/src/property_exists_equals.mjs";
@@ -38,7 +38,7 @@ export async function watch() {
           }
         }
       }
-      let r = await function_run_prompt_lock(lambda3);
+      let r = await lock_try(lambda3);
     }
     await catch_log_async(lambda);
   }
