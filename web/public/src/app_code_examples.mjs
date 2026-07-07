@@ -51,6 +51,7 @@ export function app_code_examples(context) {
   async function example_another() {
     await app_shared_screen_set(context, app_code_quiz);
   }
+  function lambda3() {}
   app_code_next(
     context,
     c,
@@ -58,7 +59,7 @@ export function app_code_examples(context) {
     "please show me " + another,
     refresh,
     example_another,
-    null,
+    lambda3,
     null,
     root,
   );
