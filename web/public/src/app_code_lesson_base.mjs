@@ -1,6 +1,6 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_base(
           );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
-          let div3 = html_div_code_dark(container);
+          let div3 = html_div(container);
           ["app_code_symbol_generic", "transparent", "transparent"];
           html_text_set(div3, answer);
         }
