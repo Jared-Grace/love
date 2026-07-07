@@ -1,5 +1,5 @@
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
-import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
+import { app_code_lesson_identifiers_valid } from "../../../love/public/src/app_code_lesson_identifiers_valid.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
@@ -68,7 +68,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
-  let r = app_code_lesson_symbols_identifiers_valid(
+  let r = app_code_lesson_identifiers_valid(
     name,
     id,
     above,

@@ -4,7 +4,7 @@ import { app_code_symbols_separated_on_question } from "../../../love/public/src
 import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.mjs";
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
-import { app_code_lesson_symbols_identifiers_valid } from "../../../love/public/src/app_code_lesson_symbols_identifiers_valid.mjs";
+import { app_code_lesson_identifiers_valid } from "../../../love/public/src/app_code_lesson_identifiers_valid.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
@@ -68,7 +68,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let difference = list_difference(mapped2, list_other);
     return difference;
   }
-  let r5 = app_code_lesson_symbols_identifiers_valid(
+  let r5 = app_code_lesson_identifiers_valid(
     "Identifiers (Letters allowed, spaces not)",
     "identifiers_letters_spaces",
     lambda,
