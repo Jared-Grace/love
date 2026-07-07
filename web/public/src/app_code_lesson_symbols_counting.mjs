@@ -47,6 +47,7 @@ export function app_code_lesson_symbols_counting(
     on_question,
     example_label,
     quizzes,
+    error(),
   );
   return lesson;
 }

@@ -62,6 +62,7 @@ export function app_code_lesson_functions_arithmetic() {
     html_text_set,
     example_label,
     quizzes,
+    error(),
   );
   return lesson;
   function above(root) {
