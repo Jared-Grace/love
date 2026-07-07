@@ -19,6 +19,7 @@ export function app_code_next(
   back_text,
   parent_next_back,
 ) {
+  let container1 = html_div(parent_question);
   let nt = app_shared_button_next_text();
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
@@ -27,21 +28,21 @@ export function app_code_next(
     "? If not, choose: ",
     padded,
   ]);
-  html_div_text(parent_question, question);
+  html_div_text(container1, question);
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
-  app_replace_button_wide(parent_question, answer_yes, refresh);
-  let container = html_div(parent_next_back);
-  let bn = app_replace_button_wide(container, nt, on_next);
+  app_replace_button_wide(container1, answer_yes, refresh);
+  let container2 = html_div(parent_next_back);
+  let bn = app_replace_button_wide(container2, nt, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
     if (null_not_is(back_text)) {
       bt = text_combine_middle_space(bt, back_text);
     }
-    let bb = app_replace_button_wide(container, bt, on_back);
+    let bb = app_replace_button_wide(container2, bt, on_back);
   }
   let r = {
-    container,
+    container: container2,
   };
   return r;
 }
