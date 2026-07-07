@@ -13,7 +13,10 @@ export function app_code_go_back(root, question_text, buttons) {
   ]);
   html_div_text(container, combined2);
   let left = emoji_arrow_left();
-  function lambda(item) {}
+  function lambda(item) {
+    let r = {};
+    return r;
+  }
   each(buttons, lambda);
   let combined = text_combine_multiple([left, " Yes, please ", button_text]);
   let b = app_replace_button_wide(container, combined, on_click);
