@@ -49,6 +49,7 @@ export function app_code_lesson_functions_arithmetic() {
     quiz_backwards_label_answer,
     html_style_code_dark,
     quiz_backwards_answer_count_override,
+    null,
   );
   let lesson = app_code_lesson_base(
     id,
