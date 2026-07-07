@@ -60,6 +60,9 @@ export function app_code_examples(context) {
   let quiz_index = app_code_quiz_index_get(context);
   if (lesson_first_not) {
     on_back = function lambda() {
+      app_code_lesson_previous_set(context);
+      let previous = app_code_lesson_current(context);
+      let quizzes2 = property_get(previous, "quizzes");
       let quiz_index = app_code_quiz_index_transform(
         context,
         quizzes,
@@ -82,7 +85,6 @@ export function app_code_examples(context) {
   );
   if (lesson_first_not) {
     async function previous() {
-      app_code_lesson_previous_set(context);
       await app_shared_screen_set(context, app_code_examples);
     }
     app_code_go_back(
