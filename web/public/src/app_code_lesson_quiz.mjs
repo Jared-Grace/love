@@ -1,3 +1,4 @@
+import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
@@ -109,7 +110,7 @@ export function app_code_lesson_quiz(
     }
   }
   let quiz_index = app_code_quiz_index_get(context);
-  if (quiz_index >= 1) {
+  if (at_least_1(quiz_index)) {
   }
   let on_back = null;
   on_back = function lambda() {
