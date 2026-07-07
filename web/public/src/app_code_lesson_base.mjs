@@ -16,6 +16,7 @@ export function app_code_lesson_base(
   on_question,
   example_label,
   quizzes_get,
+  question_label,
 ) {
   lesson_unique_id = text_replace_space_underscore(lesson_unique_id);
   let lesson = {

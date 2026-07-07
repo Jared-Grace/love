@@ -79,6 +79,7 @@ export function app_code_lesson_operators_dot_missing() {
     html_text_set,
     example_label,
     quizzes,
+    error(),
   );
   return lesson;
 }
