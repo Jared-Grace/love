@@ -16,8 +16,9 @@ export function app_code_next(
 ) {
   let container = app_code_container_light_blue(parent);
   let nt = app_shared_button_next_text();
-  let b = app_replace_button_wide(parent, nt, on_next);
-  let text = app_shared_button_back_text();
+  let bn = app_replace_button_wide(parent, nt, on_next);
+  let bt = app_shared_button_back_text();
+  let bp = app_replace_button_wide(parent, bt, on_next);
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
     "Do you want to ",
