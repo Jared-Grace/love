@@ -11,8 +11,8 @@ export function app_code_lesson_symbols_counting_quiz_backwards_on_button(
       "justify-content": "center",
     });
     if (false) {
-    html_style_padding_y_none(parent);
-    html_style_background_color_black(parent);
+      html_style_padding_y_none(parent);
+      html_style_background_color_black(parent);
     }
     on_question(parent, text);
   };
