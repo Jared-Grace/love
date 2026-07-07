@@ -29,6 +29,7 @@ export async function lock_generic(lock_name, wait, lambda) {
           if (wait) {
             message = "waiting on " + result + " to be unlocked";
           } else {
+            message = result + " is locked, skipping";
           }
           log_keep(lock_generic.name, message);
           notified = true;
