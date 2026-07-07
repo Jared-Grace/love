@@ -6,13 +6,15 @@ import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_
 import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 export function app_code_lesson_validity_base(
-  quiz_label,
+  quiz_label1,
   batch,
   id,
   name,
   above,
-  example_label,
+  example_label1,
 ) {
+  const example_label = app_code_label_code_example();
+  const quiz_label = example_label;
   let question_label = app_code_label_code_question();
   let example_count = 2;
   let quiz_backwards_label_answer =
