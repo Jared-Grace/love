@@ -139,7 +139,7 @@ export function app_code_lesson_quiz(
     on_success,
   );
   let containers_on_success = property_get(n, "containers");
-  let hides = list_concat([success, c], containers_on_success);
+  let hides = [success, c, container_question];
   html_visibility_hidden_multiple(hides);
   let buttons = list_map(concated, each_button);
   let answered = false;
