@@ -27,6 +27,7 @@ export function app_code_lesson_symbols_counting(
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   let quiz_backwards_answer_count_override = null;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     label_answer_forwards,
@@ -34,7 +35,6 @@ export function app_code_lesson_symbols_counting(
     on_question,
     question_label,
     batch_get,
-    quiz_backwards_label_answer,
     "Count: ",
     app_code_style_normal_text,
   );
