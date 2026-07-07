@@ -28,7 +28,7 @@ export async function lock_wait(lock_name, lambda) {
           notified = true;
         }
         if (wait) {
-        await sleep(200);
+          await sleep(200);
         }
       }
     }
