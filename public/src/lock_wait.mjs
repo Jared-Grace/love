@@ -14,10 +14,12 @@ export async function lock_wait(lock_name, lambda) {
   let release = null;
   let r = null;
   try {
+    let locked = false;
     let notified = false;
     while (wait) {
       try {
         release = await lockfile.lock(result);
+        locked = true;
         break;
       } catch (e) {
         if (e.code !== "ELOCKED") {
@@ -35,6 +37,8 @@ export async function lock_wait(lock_name, lambda) {
           await sleep(200);
         }
       }
+    }
+    if (false) {
     }
     r = await lambda();
   } finally {
