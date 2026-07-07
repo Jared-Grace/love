@@ -42,7 +42,7 @@ export function app_code_next(
     let bb = app_replace_button_wide(container2, bt, on_back);
   }
   let r = {
-    container: container2,
+    containers: [container1, container2],
   };
   return r;
 }
