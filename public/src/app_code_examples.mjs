@@ -77,7 +77,7 @@ export function app_code_examples(context) {
     refresh,
     example_another,
     on_back,
-    null,
+    back_text,
     root,
   );
   if (lesson_first_not) {
