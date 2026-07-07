@@ -41,7 +41,7 @@ export function app_code_lesson_base(
           );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
-          let answer_div = html_div_text(answer_div, answer);
+          let answer_div = html_div_text(container, answer);
           html_style_code_unfonted(answer_div, "white", "black");
           ["app_code_symbol_generic", "transparent", "transparent"];
         }
