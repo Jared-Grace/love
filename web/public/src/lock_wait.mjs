@@ -7,8 +7,8 @@ export async function lock_wait(lock_name, lambda) {
   let f_path = folder_user_storage_function_path(lock_wait);
   let result = path_join([f_path, lock_name]);
   let release = null;
-  while (true) {
-    try {
+  try {
+    while (true) {
       let acquired = false;
       try {
         release = await lockfile.lock(result);
@@ -20,10 +20,10 @@ export async function lock_wait(lock_name, lambda) {
         await lambda();
         break;
       }
-    } finally {
-      if (release) {
-        await release();
-      }
+    }
+  } finally {
+    if (release) {
+      await release();
     }
   }
 }
