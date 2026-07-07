@@ -5,7 +5,6 @@ import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_b
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -131,7 +130,7 @@ export function app_code_lesson_operators_minus_generic(
     above,
     example_count,
     batch,
-    html_text_set,
+    on_question_forwards,
     example_label,
     quizzes,
     question_label,
