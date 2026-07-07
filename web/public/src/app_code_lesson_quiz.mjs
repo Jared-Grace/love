@@ -91,6 +91,7 @@ export function app_code_lesson_quiz(
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
     let li = list_index_last_is(quizzes, quiz_index);
     if (li) {
+      ("next lesson");
       app_code_quiz_index_reset(context);
       function lesson_id_transform(value) {
         let lessons = app_code_lessons();
