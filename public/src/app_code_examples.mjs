@@ -64,7 +64,8 @@ export function app_code_examples(context) {
       app_code_lesson_previous_set(context);
       let previous = app_code_lesson_current(context);
       let batch = property_get(previous, "batch");
-      let first = list_first(batch);
+      let list = batch();
+      let first = list_first(list);
       let quizzes = property_get(first, "quizzes");
       let index_last = list_index_last(quizzes);
       app_code_quiz_index_set(context, index_last);
