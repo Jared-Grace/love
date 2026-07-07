@@ -28,6 +28,7 @@ export async function lock_generic(lock_name, wait, lambda) {
           let message = null;
           if (wait) {
             message = "waiting on " + result + " to be unlocked";
+          } else {
           }
           log_keep(lock_generic.name, message);
           notified = true;
@@ -36,7 +37,7 @@ export async function lock_generic(lock_name, wait, lambda) {
           await sleep(200);
         }
       }
-    }while (wait) ;
+    } while (wait);
     if (locked) {
       r = await lambda();
     }
