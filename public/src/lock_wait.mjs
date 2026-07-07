@@ -7,7 +7,7 @@ export async function lock_wait(lock_name, lambda) {
     return await lambda()
   let lockfile = await import_install("proper-lockfile");
   let f_path = folder_user_storage_function_path(lock_wait);
-  let result = path_join([f_path, lock_name]);
+  let result = path_join([f_path, lock_name]);file_parent_exists_ensure
   let release = null;
   let r = null;
   try {
