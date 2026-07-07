@@ -1,3 +1,4 @@
+import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -106,7 +107,13 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  function on_back() {}
+  function on_back() {
+    let quiz_index = app_code_quiz_index_transform(
+      context,
+      quizzes,
+      subtract_1,
+    );
+  }
   let r4 = app_code_next(
     context,
     on_success,
