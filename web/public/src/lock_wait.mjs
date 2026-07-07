@@ -5,15 +5,18 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function lock_wait(lock_name, lambda) {
   let lockfile = await npm_install("proper-lockfile");
   let release = null;
-  try {
-    let f_path = folder_user_storage_function_path(lock_wait);
-    let result = path_join([f_path, lock_name]);
-    release = await lockfile.lock(result);
-  } catch (e) {
-    await sleep(200);
-  } finally {
-    if (release) {
-      await release();
+  while (true) {
+    try {
+      let f_path = folder_user_storage_function_path(lock_wait);
+      let result = path_join([f_path, lock_name]);
+      release = await lockfile.lock(result);
+    } catch (e) {
+      await sleep(200);
+      break;
+    } finally {
+      if (release) {
+        await release();
+      }
     }
   }
 }
