@@ -84,7 +84,7 @@ export function app_code_lesson_operators_generic(
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let example_count = 1;
-  let quiz_backwards_label_answer = null;
+  let quiz_backwards_label_answer = "What code produces this value? ";
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
