@@ -42,6 +42,7 @@ export function app_code_lesson_functions_arithmetic() {
     "Rewrite this function using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    html_style_code_dark,
     quiz_backwards_answer_count_override,
     quiz_label,
     html_style_code_dark,
@@ -49,7 +50,6 @@ export function app_code_lesson_functions_arithmetic() {
     question_label,
     batch_get,
     quiz_backwards_label_answer,
-    html_style_code_dark,
     null,
     html_text_set_code_dark,
   );
