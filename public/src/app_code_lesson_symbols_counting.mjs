@@ -1,3 +1,4 @@
+import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
 import { html_style_padding_y_0 } from "../../../love/public/src/html_style_padding_y_0.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -31,6 +32,7 @@ export function app_code_lesson_symbols_counting(
       "justify-content": "center",
     });
     html_style_padding_y_0(parent);
+    html_style_background_color_black(parent_new);
     let r = app_code_symbols_separated_on_question(parent, text);
   };
   let quiz_backwards_answer_count_override = null;
