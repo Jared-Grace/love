@@ -32,17 +32,17 @@ export function app_code_next(
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
   app_replace_button_wide(container1, answer_yes, refresh);
-  let container2 = html_div(parent_next_back);
-  let bn = app_replace_button_wide(container2, nt, on_next);
+  let container_buttons = html_div(parent_next_back);
+  let bn = app_replace_button_wide(container_buttons, nt, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
     if (null_not_is(back_text)) {
       bt = text_combine_middle_space(bt, back_text);
     }
-    let bb = app_replace_button_wide(container2, bt, on_back);
+    let bb = app_replace_button_wide(container_buttons, bt, on_back);
   }
   let r = {
-    containers: [container1, container2],
+    containers: [container1, container_buttons],
   };
   return r;
 }
