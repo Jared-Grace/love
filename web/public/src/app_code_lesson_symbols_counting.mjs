@@ -1,8 +1,5 @@
+import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "../../../love/public/src/app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { html_style_background_color_black } from "../../../love/public/src/html_style_background_color_black.mjs";
-import { html_style_padding_y_none } from "../../../love/public/src/html_style_padding_y_none.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_size_text_to } from "../../../love/public/src/text_size_text_to.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
@@ -26,15 +23,8 @@ export function app_code_lesson_symbols_counting(
   );
   let example_count = 1;
   let quiz_backwards_label_answer = "What symbols produce this count? ";
-  let on_quiz_answer_button_backwards = function lambda(parent, text) {
-    html_clear(parent);
-    html_style_assign(parent, {
-      "justify-content": "center",
-    });
-    html_style_padding_y_none(parent);
-    html_style_background_color_black(parent);
-    let r = on_question(parent, text);
-  };
+  let on_quiz_answer_button_backwards =
+    app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   let quiz_backwards_answer_count_override = null;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     label_answer_forwards,
