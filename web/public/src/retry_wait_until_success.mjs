@@ -1,13 +1,13 @@
 import { equal } from "../../../love/public/src/equal.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function retry_wait_until_success(lambda) {
-  let i = 0;
   let r = null;
   while (true) {
     try {
       r = await lambda();
+      await sleep(200);
       break;
     } catch (e) {}
-    i++;
     if (equal(i, 30)) {
       break;
     }
