@@ -111,6 +111,7 @@ export function app_code_lesson_quiz(
     }
   }
   let on_back = null;
+  let back_text = null;
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     on_back = function lambda() {
@@ -121,6 +122,7 @@ export function app_code_lesson_quiz(
       );
       refresh();
     };
+    back_text = " to the previous quiz";
   }
   let r4 = app_code_next(
     context,
@@ -130,7 +132,7 @@ export function app_code_lesson_quiz(
     refresh,
     on_next,
     on_back,
-    null,
+    back_text,
   );
   let container_on_success = property_get(r4, "container");
   let hides = [success, container_on_success];
