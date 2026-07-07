@@ -50,7 +50,6 @@ export function app_code_lesson_quiz(
   refresh,
   qa,
   batch_get,
-  answer_count_override1,
   quizzes,
 ) {
   let answer_count_override = property_get(qa, "answer_count_override");
