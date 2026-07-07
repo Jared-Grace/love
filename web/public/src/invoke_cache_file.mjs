@@ -9,7 +9,7 @@ export async function invoke_cache_file(fn, args) {
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = file_exists;
   let cached_get = invoke_cache_file_get();
-  let cache_save = async function lambda4(key, result) {
+  let cache_save = async function lambda(key, result) {
     await file_overwrite_json(key, {
       result,
     });
