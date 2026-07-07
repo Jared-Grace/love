@@ -76,7 +76,7 @@ export function app_code_examples(context) {
     "please show me " + another,
     refresh,
     example_another,
-    lambda3,
+    on_back,
     null,
     root,
   );
