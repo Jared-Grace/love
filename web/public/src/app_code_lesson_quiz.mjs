@@ -125,7 +125,7 @@ export function app_code_lesson_quiz(
     };
     back_text = " to the previous quiz";
   }
-  let r4 = app_code_next(
+  let n = app_code_next(
     context,
     on_success,
     "take another quiz to practice some more",
@@ -136,7 +136,7 @@ export function app_code_lesson_quiz(
     back_text,
     on_success,
   );
-  let container_on_success = property_get(r4, "container");
+  let container_on_success = property_get(n, "container");
   let hides = [success, container_on_success];
   html_visibility_hidden_multiple(hides);
   let buttons = list_map(concated, each_button);
