@@ -1,5 +1,6 @@
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
@@ -42,14 +43,14 @@ export function app_code_lesson_functions_arithmetic() {
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     html_style_code_dark,
-    html_style_code_dark,
+    html_text_set,
     question_label,
     batch_get,
     quiz_backwards_label_answer,
     html_style_code_dark,
     quiz_backwards_answer_count_override,
     null,
-    html_style_code_dark,
+    html_text_set,
   );
   let lesson = app_code_lesson_base(
     id,
@@ -57,7 +58,7 @@ export function app_code_lesson_functions_arithmetic() {
     above,
     example_count,
     batch_get,
-    html_style_code_dark,
+    html_text_set,
     example_label,
     quizzes,
     question_label,
