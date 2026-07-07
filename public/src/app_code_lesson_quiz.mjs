@@ -136,7 +136,7 @@ export function app_code_lesson_quiz(
     back_text,
     on_success,
   );
-  let container_on_success = property_get(n, "container");
+  let container_on_success = property_get(n, "containers");
   let hides = [success, container_on_success];
   html_visibility_hidden_multiple(hides);
   let buttons = list_map(concated, each_button);
