@@ -47,16 +47,16 @@ export function app_code_lesson_quiz(
   parent,
   context,
   refresh,
-  qa,
+  info,
   batch_get,
   quizzes,
 ) {
-  let answer_count_override = property_get(qa, "answer_count_override");
-  let question_label = property_get(qa, "question_label");
-  let on_question = property_get(qa, "on_question");
-  let answer_on_button = property_get(qa, "answer_on_button");
-  let answer_label = property_get(qa, "answer_label");
-  let answer_property = property_get(qa, "answer_property");
+  let answer_count_override = property_get(info, "answer_count_override");
+  let question_label = property_get(info, "question_label");
+  let on_question = property_get(info, "on_question");
+  let answer_on_button = property_get(info, "answer_on_button");
+  let answer_label = property_get(info, "answer_label");
+  let answer_property = property_get(info, "answer_property");
   let answer_count_max = app_code_answer_count_max();
   let a = app_code_lesson_above(
     container,
