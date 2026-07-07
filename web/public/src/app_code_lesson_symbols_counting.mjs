@@ -25,7 +25,7 @@ export function app_code_lesson_symbols_counting(
     symbols_to_answer,
   );
   let example_count = 1;
-  let quiz_backwards_label_answer = null;
+  let quiz_backwards_label_answer = "What symbols produce this count? ";
   let on_quiz_answer_button_backwards = function lambda(parent, text) {
     html_clear(parent);
     html_style_assign(parent, {
