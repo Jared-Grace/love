@@ -37,7 +37,7 @@ export function app_code_lesson_identifiers_valid(
     quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
-    null,
+    "null",
     html_text_set,
   );
   let lesson = app_code_lesson_base(
