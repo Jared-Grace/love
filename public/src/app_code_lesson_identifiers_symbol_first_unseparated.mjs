@@ -1,4 +1,4 @@
-import { html_style_code_dark_text } from "../../../love/public/src/html_style_code_dark_text.mjs";
+import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { html_display_inline_block } from "../../../love/public/src/html_display_inline_block.mjs";
 import { html_span_code_dark } from "../../../love/public/src/html_span_code_dark.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     name,
     id,
     above,
-    html_style_code_dark_text,
+    html_text_set_code_dark,
   );
   function above(root) {
     let text = app_code_lesson_same_message("the symbols are not separated");
