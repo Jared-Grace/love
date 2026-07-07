@@ -12,7 +12,6 @@ export async function lock_generic(lock_name, wait, lambda) {
   await folder_exists_ensure(result);
   let release = null;
   let r = null;
-  
   try {
     let locked = false;
     let notified = false;
