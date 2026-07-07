@@ -16,7 +16,7 @@ export function app_code_lesson_base(
   on_question,
   example_label,
   quizzes_get,
-  question_label,
+  example_question_label,
 ) {
   lesson_unique_id = text_replace_space_underscore(lesson_unique_id);
   let lesson = {
@@ -35,7 +35,7 @@ export function app_code_lesson_base(
           app_code_flex_gap(parent);
           let a = app_code_lesson_above(
             parent,
-            question_label,
+            example_question_label,
             question,
             on_question,
           );
