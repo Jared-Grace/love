@@ -1,5 +1,12 @@
-export function lock_generic(wait) {
-  `let lockfile = await import_install("proper-lockfile");
+import { not } from "../../../love/public/src/not.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ensure.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
+import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
+import { import_install } from "../../../love/public/src/import_install.mjs";
+export function lock_generic(lock_name, wait, lambda) {
+  let lockfile = await import_install("proper-lockfile");
   let f_path = folder_user_storage_function_path(lock_wait);
   let result = path_join([f_path, lock_name]);
   await folder_exists_ensure(result);
@@ -37,5 +44,5 @@ export function lock_generic(wait) {
     if (release) {
       await release();
     }
-  }`;
+  }
 }
