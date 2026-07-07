@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 export function app_code_lesson_base_quizzes_forwards_backwards(
   batch_get,
@@ -28,6 +29,8 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     },
   ];
   let quizzes_get = function lambda(question, answer) {
+    function lambda2(item) {}
+    let mapped = list_map(list, lambda2);
     let quizzes = null;
     quizzes = [
       function quiz_forwards(context, parent, container, refresh) {
