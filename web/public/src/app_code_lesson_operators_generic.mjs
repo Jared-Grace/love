@@ -89,6 +89,7 @@ export function app_code_lesson_operators_generic(
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    quiz_backwards_answer_count_override,
     quiz_label,
     noop,
     on_question_forwards,
@@ -96,7 +97,6 @@ export function app_code_lesson_operators_generic(
     batch,
     quiz_backwards_label_answer,
     on_question_forwards,
-    quiz_backwards_answer_count_override,
     "Value: ",
     app_code_style_normal_text,
   );
