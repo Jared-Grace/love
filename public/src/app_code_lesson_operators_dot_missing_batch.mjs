@@ -10,6 +10,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 export function app_code_lesson_operators_dot_missing_batch(operator) {
   let next_get = digits_positive_shuffled_next();
+  lv;
   function batch_get() {
     let pairs = list_alphabet_cases_both_shuffled_pairs();
     function lambda(la, pair) {
