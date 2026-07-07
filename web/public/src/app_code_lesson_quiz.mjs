@@ -84,9 +84,8 @@ export function app_code_lesson_quiz(
   list_sort_text_to(concated);
   let on_success = html_div(parent);
   let success = app_replace_success_message(on_success);
-  async function on_next() {$a
-    let transform = add_1;
-    let quiz_index = app_code_quiz_index_transform(context, quizzes, transform);
+  async function on_next() {
+    let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
     let li = list_index_last_is(quizzes, quiz_index);
     if (li) {
       app_code_quiz_index_reset(context);
