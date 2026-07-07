@@ -1,6 +1,5 @@
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
-import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
@@ -61,7 +60,7 @@ export function app_code_examples(context) {
   let on_back = null;
   let back_text = null;
   let quiz_index = app_code_quiz_index_get(context);
-  if (at_least_1(quiz_index)) {
+  if (lesson_first_not) {
     on_back = function lambda() {
       let quiz_index = app_code_quiz_index_transform(
         context,
@@ -90,10 +89,11 @@ export function app_code_examples(context) {
         let value_new = list_property_previous_value(list, "id", value);
         return value_new;
       }
+      let value_initial2 = app_code_lesson_first_id();
       storage_local_transform_context(
         context,
         "lesson_id",
-        value_initial,
+        value_initial2,
         lambda,
       );
       await app_shared_screen_set(context, app_code_examples);
