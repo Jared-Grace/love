@@ -8,6 +8,6 @@ export function app_code_lesson_previous_set(context) {
     let value_new = list_property_previous_value(list, "id", value);
     return value_new;
   }
-  let value_initial2 = app_code_lesson_first_id();
-  storage_local_transform_context(context, "lesson_id", value_initial2, lambda);
+  let value_initial = app_code_lesson_first_id();
+  storage_local_transform_context(context, "lesson_id", value_initial, lambda);
 }
