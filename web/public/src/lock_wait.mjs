@@ -22,9 +22,10 @@ export async function lock_wait(lock_name, lambda) {
         if (e.code !== "ELOCKED") {
           throw e;
         }
-        if (not(b)) {
+        if (not(notified)) {
+          log_keep(lock_wait.name, "waiting on " + result + " to be unlocked");
+          notified = true;
         }
-        log_keep(lock_wait.name, "waiting on " + result + " to be unlocked");
         await sleep(200);
       }
     }
