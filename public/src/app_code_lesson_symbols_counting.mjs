@@ -39,7 +39,6 @@ export function app_code_lesson_symbols_counting(
     "Count: ",
     app_code_style_normal_text,
   );
-  let question_label2 = error();
   let lesson = app_code_lesson_base(
     id,
     name,
@@ -49,7 +48,7 @@ export function app_code_lesson_symbols_counting(
     on_question,
     example_label,
     quizzes,
-    question_label2,
+    question_label,
   );
   return lesson;
 }
