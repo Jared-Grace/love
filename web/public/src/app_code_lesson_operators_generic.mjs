@@ -1,4 +1,4 @@
-import { html_style_code_dark_text } from "../../../love/public/src/html_style_code_dark_text.mjs";
+import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -105,7 +105,7 @@ export function app_code_lesson_operators_generic(
     above,
     example_count,
     batch,
-    html_style_code_dark_text,
+    html_text_set_code_dark,
     example_label,
     quizzes,
     question_label,
