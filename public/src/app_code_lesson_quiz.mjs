@@ -107,7 +107,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  function on_back() {
+ on_back= function () {
     let quiz_index = app_code_quiz_index_transform(
       context,
       quizzes,
