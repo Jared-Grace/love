@@ -13,7 +13,7 @@ export function app_code_symbols_separated_on_question_generic(
   on_symbol,
 ) {
   html_style_code_dark(parent);
-  html_style_padding_y_none(parent2);
+  html_style_padding_y_none(parent);
   let symbols = text_split_empty(question);
   html_style_assign(parent, {
     display: "flex",
