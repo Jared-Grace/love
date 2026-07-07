@@ -39,7 +39,7 @@ export async function lock_wait(lock_name, lambda) {
       }
     }
     if (locked) {
-        r = await lambda();
+      r = await lambda();
     }
   } finally {
     if (release) {
