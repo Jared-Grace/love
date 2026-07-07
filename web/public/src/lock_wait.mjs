@@ -1,4 +1,4 @@
-import { list_skip } from "../../../love/public/src/list_skip.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ensure.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
@@ -21,7 +21,7 @@ export async function lock_wait(lock_name, lambda) {
         if (e.code !== "ELOCKED") {
           throw e;
         }
-        let skipped = list_skip(list, skip_count);
+        log_keep(lock_wait.name, message);
         await sleep(200);
       }
     }
