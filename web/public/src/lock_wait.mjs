@@ -4,7 +4,9 @@ import { invoke_cache_file_remove } from "../../../love/public/src/invoke_cache_
 import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
 export async function lock_wait(lock_name, lambda) {
   let run = false;
-  function lambda2() {}
+  async function lambda2() {
+    await invoke_cache_file_exists_not_wait(fn2, args2);
+  }
   let fn = lock_wait_cacher;
   const args = [lock_name];
   await invoke_cache_file_exists_not_wait(fn, args);
