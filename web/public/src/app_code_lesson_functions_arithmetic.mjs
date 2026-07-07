@@ -45,7 +45,7 @@ export function app_code_lesson_functions_arithmetic() {
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     html_style_code_dark,
-    html_text_set,
+    html_text_set_code_dark,
     question_label,
     batch_get,
     quiz_backwards_label_answer,
