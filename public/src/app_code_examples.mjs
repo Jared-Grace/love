@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
@@ -88,12 +89,8 @@ export function app_code_examples(context) {
     async function previous() {
       await app_shared_screen_set(context, app_code_examples);
     }
-    const backs = [
-      {
-        text: "take me back to the previous lesson",
-        on_click: previous,
-      },
-    ];
+    const backs = [];
+    list_add(list2, item);
     app_code_go_back(root, "to the previous lesson", backs);
   }
   let text = app_replace_button_home_text();
