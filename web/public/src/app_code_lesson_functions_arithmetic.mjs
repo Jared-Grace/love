@@ -1,4 +1,3 @@
-import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
@@ -64,7 +63,7 @@ export function app_code_lesson_functions_arithmetic() {
     example_label,
     quizzes,
     question_label,
-    app_code_style_normal_text,
+    html_text_set_code_dark,
   );
   return lesson;
   function above(root) {
