@@ -1,3 +1,4 @@
+import { html_style_padding_y_none } from "../../../love/public/src/html_style_padding_y_none.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { html_style_padding_x } from "../../../love/public/src/html_style_padding_x.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -12,6 +13,7 @@ export function app_code_symbols_separated_on_question_generic(
   on_symbol,
 ) {
   html_style_code_dark(parent);
+  html_style_padding_y_none(parent2);
   let symbols = text_split_empty(question);
   html_style_assign(parent, {
     display: "flex",
