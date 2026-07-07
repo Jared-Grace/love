@@ -1,3 +1,7 @@
+import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
+import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
+import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
+import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
 import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
@@ -51,7 +55,20 @@ export function app_code_examples(context) {
   async function example_another() {
     await app_shared_screen_set(context, app_code_quiz);
   }
-  function lambda3() {}
+  let on_back = null;
+  let back_text = null;
+  let quiz_index = app_code_quiz_index_get(context);
+  if (at_least_1(quiz_index)) {
+    on_back = function lambda() {
+      let quiz_index = app_code_quiz_index_transform(
+        context,
+        quizzes,
+        subtract_1,
+      );
+      refresh();
+    };
+    back_text = " to the previous quiz";
+  }
   app_code_next(
     context,
     c,
