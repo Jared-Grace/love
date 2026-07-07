@@ -1,3 +1,4 @@
+import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
@@ -142,6 +143,7 @@ export function app_code_lesson_quiz(
   let answered = false;
   function each_button(quiz_choice) {
     let b = app_replace_button_wide(a_container, quiz_choice, on_click);
+    html_font_jetbrains_mono(b);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
