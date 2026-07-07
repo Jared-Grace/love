@@ -1,3 +1,4 @@
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
@@ -126,6 +127,7 @@ export function app_code_lesson_quiz(
     };
     back_text = " to the previous quiz";
   }
+  let c = app_code_container_light_blue(parent2);
   let n = app_code_next(
     context,
     on_success,
