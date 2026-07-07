@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
@@ -121,7 +120,6 @@ export function app_code_lesson_operators_minus_generic(
     null,
     html_text_set,
   );
-  let question_label2 = error();
   let lesson = app_code_lesson_base(
     id,
     name,
@@ -131,7 +129,7 @@ export function app_code_lesson_operators_minus_generic(
     html_text_set,
     example_label,
     quizzes,
-    question_label2,
+    question_label,
   );
   return lesson;
 }
