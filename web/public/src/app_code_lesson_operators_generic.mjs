@@ -78,7 +78,6 @@ export function app_code_lesson_operators_generic(
   }
   const example_label = app_code_label_code_answer_example();
   const quiz_label = app_code_label_code_answer_quiz();
-  let symbols_to_answer = eval;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
