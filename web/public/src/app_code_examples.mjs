@@ -90,11 +90,10 @@ export function app_code_examples(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     const backs = [];
-    list_add(backs, 
-      {
-        text: "take me back to the previous lesson",
-        on_click: previous,
-      },);
+    list_add(backs, {
+      text: "take me back to the previous lesson",
+      on_click: previous,
+    });
     app_code_go_back(root, "to the previous lesson", backs);
   }
   let text = app_replace_button_home_text();
