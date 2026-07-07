@@ -45,7 +45,12 @@ export function app_code_quiz(context) {
     app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_examples);
   }
-  app_code_go_back(root, question_text, button_text, lambda);
+  app_code_go_back(root, question_text, [
+    {
+      text: button_text,
+      on_click: lambda,
+    },
+  ]);
   let text = app_replace_button_home_text();
   async function lambda2() {
     app_code_quiz_index_reset(context);
