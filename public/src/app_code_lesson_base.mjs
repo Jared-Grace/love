@@ -42,6 +42,10 @@ export function app_code_lesson_base(
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_answer_label);
           on_example_answer(container, answer);
+          let r = {
+            container,
+          };
+          return r;
         }
         let quizzes = quizzes_get(question, answer);
         let mapped = {
