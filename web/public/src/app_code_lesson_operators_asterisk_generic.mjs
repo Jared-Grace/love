@@ -61,6 +61,7 @@ export function app_code_lesson_operators_asterisk_generic(
     quiz_backwards_label,
     html_style_code_dark,
     quiz_backwards_answer_count_override,
+    null,
   );
   let lesson = app_code_lesson_base(
     id,
