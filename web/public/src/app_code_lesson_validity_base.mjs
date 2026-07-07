@@ -1,3 +1,4 @@
+import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
