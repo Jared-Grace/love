@@ -14,6 +14,9 @@ export async function lock_wait(lock_name, lambda) {
         release = await lockfile.lock(result);
         break;
       } catch (e) {
+        if (e.code !== "ELOCKED") {
+          throw e;
+        }
         await sleep(200);
       }
     }
