@@ -28,6 +28,6 @@ export function app_code_lesson_operators_asterisk_generic(
       text_combine_middle_space,
     );
   }
-  let lesson = app_code_lesson_validity_operator(math_name, batch, above);
+  let lesson = app_code_lesson_validity_operator(lesson_name, batch, above);
   return lesson;
 }
