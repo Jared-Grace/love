@@ -50,6 +50,7 @@ export function app_code_lesson_identifiers_valid(
     on_question,
     example_label,
     quizzes,
+    error(),
   );
   return lesson;
 }

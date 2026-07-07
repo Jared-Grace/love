@@ -88,6 +88,7 @@ export function app_code_lesson_operators_plus_unary() {
     html_text_set,
     example_label,
     quizzes,
+    error(),
   );
   return lesson;
 }
