@@ -67,7 +67,7 @@ export function app_code_examples(context) {
       app_code_quiz_index_set(context, index_last);
       await app_shared_screen_set(context, app_code_quiz);
     };
-    back_text = " to the previous quiz";
+    back_text = " to the last quiz of the previous lesson";
   }
   app_code_next(
     context,
