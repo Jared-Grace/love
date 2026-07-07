@@ -57,6 +57,10 @@ export function app_code_lesson_quiz(
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
   let answer_count_max = app_code_answer_count_max();
+  let choices = ["question", "answer"];
+  let question_property = list_pair_other(choices, answer_property);
+  let quiz_answer = property_get(qa, answer_property);
+  let quiz_question = property_get(qa, question_property);
   let a = app_code_lesson_above(
     container,
     question_label,
@@ -66,10 +70,6 @@ export function app_code_lesson_quiz(
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, answer_label);
   let quiz_batch_items = batch_get();
-  let choices = ["question", "answer"];
-  let question_property = list_pair_other(choices, answer_property);
-  let quiz_answer = property_get(qa, answer_property);
-  let quiz_question = property_get(qa, question_property);
   function lambda2(quiz_batch_item) {
     let question2 = property_get(quiz_batch_item, question_property);
     let answer2 = property_get(quiz_batch_item, answer_property);
