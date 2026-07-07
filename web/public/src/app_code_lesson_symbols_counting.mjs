@@ -45,7 +45,7 @@ export function app_code_lesson_symbols_counting(
     quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
-    null,
+    "What symbols produce this count? ",
   );
   let lesson = app_code_lesson_base(
     id,
