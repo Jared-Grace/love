@@ -16,11 +16,12 @@ export async function lock_wait(lock_name, lambda) {
         await sleep(200);
       }
     }
-    let r = await lambda();
-    return r;
+    let r = null;
+    r = await lambda();
   } finally {
     if (release) {
       await release();
     }
   }
+  return r;
 }
