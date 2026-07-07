@@ -15,6 +15,7 @@ export function app_code_next(
   refresh,
   on_next,
   on_back,
+  back_text,
 ) {
   let container = app_code_container_light_blue(parent);
   let nt = app_shared_button_next_text();
