@@ -1,4 +1,3 @@
-import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -42,7 +41,7 @@ export function app_code_lesson_base(
           );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_answer_label);
-          app_code_style_normal_text(container, answer);
+          on_example_answer(container, answer);
         }
         let quizzes = quizzes_get(question, answer);
         let mapped = {
