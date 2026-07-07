@@ -49,7 +49,7 @@ export function app_code_lesson_quiz(
   context,
   refresh,
   answer_label,
-  on_quiz_answer_button,
+  answer_on_button,
   on_question,
   question_label,
   batch_get,
@@ -161,9 +161,9 @@ export function app_code_lesson_quiz(
         }
       }
     }
-    let nn = null_not_is(on_quiz_answer_button);
+    let nn = null_not_is(answer_on_button);
     if (nn) {
-      on_quiz_answer_button(b, quiz_choice);
+      answer_on_button(b, quiz_choice);
     }
     return b;
   }
