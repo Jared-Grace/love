@@ -1,5 +1,5 @@
+import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "../../../love/public/src/app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { text_size_text_to } from "../../../love/public/src/text_size_text_to.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
@@ -36,7 +36,7 @@ export function app_code_lesson_symbols_counting(
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     "Count: ",
-    html_text_set,
+    app_code_style_normal_text,
   );
   let lesson = app_code_lesson_base(
     id,
