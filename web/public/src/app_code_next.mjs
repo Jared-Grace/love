@@ -18,14 +18,6 @@ export function app_code_next(
   back_text,
 ) {
   let nt = app_shared_button_next_text();
-  let bn = app_replace_button_wide(parent, nt, on_next);
-  if (null_not_is(on_back)) {
-    let bt = app_shared_button_back_text();
-    if (null_not_is(back_text)) {
-      bt = text_combine_middle_space(bt, back_text);
-    }
-    let bb = app_replace_button_wide(parent, bt, on_back);
-  }
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
     "Do you want to ",
@@ -37,6 +29,14 @@ export function app_code_next(
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
   app_replace_button_wide(container, answer_yes, refresh);
+  let bn = app_replace_button_wide(parent, nt, on_next);
+  if (null_not_is(on_back)) {
+    let bt = app_shared_button_back_text();
+    if (null_not_is(back_text)) {
+      bt = text_combine_middle_space(bt, back_text);
+    }
+    let bb = app_replace_button_wide(parent, bt, on_back);
+  }
   let r = {
     container,
   };
