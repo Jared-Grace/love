@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
@@ -13,11 +14,11 @@ export function app_code_go_back(root, question_text, buttons) {
   ]);
   html_div_text(container, combined2);
   let left = emoji_arrow_left();
-  function lambda(item) {
-    let r = {};
-    return r;
+  function lambda(b) {
+    let text = property_get(b, "text");
+    let on_click2 = property_get(b, "on_click");
+    let combined = text_combine_multiple([left, " Yes, please ", button_text]);
+    app_replace_button_wide(container, combined, on_click);
   }
   each(buttons, lambda);
-  let combined = text_combine_multiple([left, " Yes, please ", button_text]);
-  let b = app_replace_button_wide(container, combined, on_click);
 }
