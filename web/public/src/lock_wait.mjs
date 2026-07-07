@@ -9,6 +9,8 @@ export async function lock_wait(lock_name, lambda) {
   async function lambda3() {}
   let r = await retry_until_success(lambda3);
   let e = await invoke_cache_file_exists(fn, args);
+  if (false) {
+  }
   await invoke_cache_file(fn, args);
   await lambda();
   await invoke_cache_file_remove(fn, args);
