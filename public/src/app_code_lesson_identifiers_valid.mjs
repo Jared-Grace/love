@@ -1,4 +1,4 @@
-import { app_code_label_code_quiz_backwards } from "../../../love/public/src/app_code_label_code_quiz_backwards.mjs";
+import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_lesson_symbols_counting_quiz_backwards_on_button } from "../../../love/public/src/app_code_lesson_symbols_counting_quiz_backwards_on_button.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -24,7 +24,8 @@ export function app_code_lesson_identifiers_valid(
     app_code_symbols_eval_valid_identifier,
   );
   let example_count = 2;
-  let quiz_backwards_label_answer = app_code_label_code_quiz_backwards();
+  let quiz_backwards_label_answer =
+    app_code_quiz_backwards_label_answer_validity();
   let quiz_backwards_answer_count_override = 2;
   let on_quiz_answer_button_backwards =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
