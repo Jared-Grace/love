@@ -11,7 +11,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 export function app_code_lesson_operators_dot_missing_batch(operator) {
   let next_get = digits_positive_shuffled_next();
-  let v = lambda_value(value);
+  let next = lambda_value("");
   function batch_get() {
     let pairs = list_alphabet_cases_both_shuffled_pairs();
     function lambda(la, pair) {
@@ -19,9 +19,11 @@ export function app_code_lesson_operators_dot_missing_batch(operator) {
       let second = property_get(r, "second");
       let first = property_get(r, "first");
       let combined = js_code_binary(first, operator, second);
-      let combined2 = js_code_binary(first, operator, "");
+      let right = next();
+      let combined2 = js_code_binary(first, operator, right);
       let combined3 = js_code_binary(second, operator, first);
-      let combined4 = js_code_binary("", operator, second);
+      let left = next();
+      let combined4 = js_code_binary(left, operator, second);
       each([combined, combined2, combined3, combined4], la);
     }
     let list = list_adder_each(pairs, lambda);
