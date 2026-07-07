@@ -43,6 +43,7 @@ export function app_code_next(
   }
   let r = {
     containers: [container_question, container_buttons],
+    container_question,
   };
   return r;
 }
