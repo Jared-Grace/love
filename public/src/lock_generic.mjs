@@ -15,7 +15,7 @@ export async function lock_generic(lock_name, wait, lambda) {
   try {
     let locked = false;
     let notified = false;
-    while (wait) {
+    do {
       try {
         release = await lockfile.lock(result);
         locked = true;
@@ -36,7 +36,7 @@ export async function lock_generic(lock_name, wait, lambda) {
           await sleep(200);
         }
       }
-    }
+    }while (wait) ;
     if (locked) {
       r = await lambda();
     }
