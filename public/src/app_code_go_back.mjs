@@ -1,9 +1,10 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-export function app_code_go_back(root, question_text, button_text, on_click) {
+export function app_code_go_back(root, question_text, buttons) {
   let container = app_code_container_light_blue(root);
   let combined2 = text_combine_multiple([
     "Do you want to go back ",
@@ -12,6 +13,8 @@ export function app_code_go_back(root, question_text, button_text, on_click) {
   ]);
   html_div_text(container, combined2);
   let left = emoji_arrow_left();
+  function lambda(item) {}
+  each(list, lambda);
   let combined = text_combine_multiple([left, " Yes, please ", button_text]);
   let b = app_replace_button_wide(container, combined, on_click);
 }
