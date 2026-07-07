@@ -46,6 +46,7 @@ export function app_code_lesson_symbols_counting(
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
     "Count: ",
+    null,
   );
   let lesson = app_code_lesson_base(
     id,
