@@ -38,6 +38,7 @@ export function app_code_lesson_validity_base(batch, id, name, above) {
     example_label,
     quizzes,
     question_label,
+    app_code_style_normal_text,
   );
   return lesson;
 }
