@@ -4,7 +4,7 @@ import { lock_wait_cacher } from "../../../love/public/src/lock_wait_cacher.mjs"
 import { invoke_cache_file_remove } from "../../../love/public/src/invoke_cache_file_remove.mjs";
 import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
 export async function lock_wait(lock_name, lambda) {
-  await npm_install("proper-lockfile");
+  let lockfile = await npm_install("proper-lockfile");
   let run = false;
   async function lambda2() {
     await invoke_cache_file_exists_not_wait(fn, args);
