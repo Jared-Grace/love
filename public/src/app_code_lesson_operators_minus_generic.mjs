@@ -1,4 +1,4 @@
-import { app_code_lesson_validity_base } from "../../../love/public/src/app_code_lesson_validity_base.mjs";
+import { app_code_lesson_validity_operator } from "../../../love/public/src/app_code_lesson_validity_operator.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -8,8 +8,6 @@ import { each_nested_args_range_1_list_adder } from "../../../love/public/src/ea
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
-import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
-import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
 import { throws_not } from "../../../love/public/src/throws_not.mjs";
 import { html_div_code } from "../../../love/public/src/html_div_code.mjs";
@@ -93,9 +91,6 @@ export function app_code_lesson_operators_minus_generic(
     let combined5 = text_combine("invalid", operator);
     html_div_code(c4, combined5);
   }
-  let inside = text_first_upper_to(math_name);
-  let name = "Operators " + text_wrap_parenthesis(inside);
-  let id = "operators_" + math_name;
-  let lesson = app_code_lesson_validity_base(batch, id, name, above);
+  let lesson = app_code_lesson_validity_operator(math_name, batch, above);
   return lesson;
 }
