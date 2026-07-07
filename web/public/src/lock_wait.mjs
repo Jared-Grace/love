@@ -1,1 +1,1 @@
-export function lock_wait() {}
+export function lock_wait(lock_name, lambda) {}
