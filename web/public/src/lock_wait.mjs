@@ -6,18 +6,22 @@ export async function lock_wait(lock_name, lambda) {
   let lockfile = await npm_install("proper-lockfile");
   let release = null;
   while (true) {
+    let acquired = false;
     try {
       let f_path = folder_user_storage_function_path(lock_wait);
       let result = path_join([f_path, lock_name]);
       release = await lockfile.lock(result);
+      acquired = true;
       await lambda();
-      break;
     } catch (e) {
       await sleep(200);
     } finally {
       if (release) {
         await release();
       }
+    }
+    if (acquired) {
+      break;
     }
   }
 }
