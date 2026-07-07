@@ -82,8 +82,8 @@ export function app_code_examples(context) {
   );
   let value_initial = app_code_lesson_first_id();
   let id = property_get(lesson, "id");
-  let not_first_lesson = equal_not(id, value_initial);
-  if (not_first_lesson) {
+  let lesson_first_not = equal_not(id, value_initial);
+  if (lesson_first_not) {
     async function previous() {
       function lambda(value) {
         let list = app_code_lessons();
