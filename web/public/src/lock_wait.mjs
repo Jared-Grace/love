@@ -24,7 +24,8 @@ export async function lock_wait(lock_name, lambda) {
           throw e;
         }
         if (not(notified)) {
-          log_keep(lock_wait.name, "waiting on " + result + " to be unlocked");
+          const message = "waiting on " + result + " to be unlocked";
+          log_keep(lock_wait.name, message);
           notified = true;
         }
         if (wait) {
