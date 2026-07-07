@@ -1,3 +1,4 @@
+import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
@@ -137,6 +138,7 @@ export function app_code_lesson_quiz(
     on_success,
   );
   let container_on_success = property_get(n, "containers");
+  let concated2 = list_concat_single(single, list);
   let hides = [success, container_on_success];
   html_visibility_hidden_multiple(hides);
   let buttons = list_map(concated, each_button);
