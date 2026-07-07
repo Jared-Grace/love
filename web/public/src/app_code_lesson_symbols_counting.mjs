@@ -32,7 +32,7 @@ export function app_code_lesson_symbols_counting(
       "justify-content": "center",
     });
     html_style_padding_y_0(parent);
-    html_style_background_color_black(parent_new);
+    html_style_background_color_black(parent);
     let r = app_code_symbols_separated_on_question(parent, text);
   };
   let quiz_backwards_answer_count_override = null;
