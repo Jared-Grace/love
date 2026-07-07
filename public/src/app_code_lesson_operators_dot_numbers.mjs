@@ -121,6 +121,7 @@ export function app_code_lesson_operators_dot_numbers() {
     html_text_set,
     example_label,
     quizzes_get,
+    error(),
   );
   return lesson;
 }

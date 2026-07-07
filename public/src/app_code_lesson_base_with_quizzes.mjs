@@ -38,6 +38,7 @@ export function app_code_lesson_base_with_quizzes(
     on_question,
     example_label,
     quizzes,
+    error(),
   );
   return lesson;
 }
