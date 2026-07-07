@@ -1,3 +1,4 @@
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
 import { text_size_text_to } from "../../../love/public/src/text_size_text_to.mjs";
@@ -25,6 +26,7 @@ export function app_code_lesson_symbols_counting(
   let quiz_backwards_label_answer = null;
   let on_quiz_answer_button_backwards = function lambda(parent, text) {
     html_clear(parent);
+    html_style_assign(b, s);
     let r = app_code_symbols_separated_on_question(parent, text);
   };
   let quiz_backwards_answer_count_override = null;
