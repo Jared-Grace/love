@@ -1,10 +1,10 @@
+import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_symbols_eval_valid_identifier } from "../../../love/public/src/app_code_symbols_eval_valid_identifier.mjs";
-import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export function app_code_lesson_symbols_identifiers_valid(
   name,
@@ -16,7 +16,7 @@ export function app_code_lesson_symbols_identifiers_valid(
   arguments_assert(arguments, 5);
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
-  let question_label = app_code_label_symbols();
+  let question_label = app_code_label_code_question();
   let batch_get2 = app_code_batch_question_answer_fns(
     batch_get,
     app_code_symbols_eval_valid_identifier,
