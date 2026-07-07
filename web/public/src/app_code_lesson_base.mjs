@@ -41,7 +41,6 @@ export function app_code_lesson_base(
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
           app_code_style_normal_text(container, answer);
-          ["app_code_symbol_generic", "transparent", "transparent"];
         }
         let quizzes = quizzes_get(question, answer);
         let mapped = {
