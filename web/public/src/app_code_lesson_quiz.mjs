@@ -118,6 +118,7 @@ export function app_code_lesson_quiz(
         quizzes,
         subtract_1,
       );
+      refresh();
     };
   }
   let r4 = app_code_next(
