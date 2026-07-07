@@ -14,7 +14,7 @@ export function app_code_lesson_base(
   example_count,
   batch_get,
   on_question,
-  example_label,
+  example_answer_label,
   quizzes_get,
   example_question_label,
 ) {
@@ -40,7 +40,7 @@ export function app_code_lesson_base(
             on_question,
           );
           let container = property_get(a, "container");
-          app_code_example_answer_label(container, example_label);
+          app_code_example_answer_label(container, example_answer_label);
           app_code_style_normal_text(container, answer);
         }
         let quizzes = quizzes_get(question, answer);
