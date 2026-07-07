@@ -6,6 +6,7 @@ import { folder_user_storage_function_path } from "../../../love/public/src/fold
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 export async function lock_wait(lock_name, lambda) {
+  let wait = true;
   let lockfile = await import_install("proper-lockfile");
   let f_path = folder_user_storage_function_path(lock_wait);
   let result = path_join([f_path, lock_name]);
@@ -14,7 +15,7 @@ export async function lock_wait(lock_name, lambda) {
   let r = null;
   try {
     let notified = false;
-    while (true) {
+    while (wait) {
       try {
         release = await lockfile.lock(result);
         break;
