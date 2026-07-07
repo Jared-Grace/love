@@ -96,13 +96,6 @@ export function app_code_lesson_operators_minus_generic(
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
-  let lesson = app_code_lesson_validity_base(
-    quiz_label,
-    batch,
-    id,
-    name,
-    above,
-    example_label,
-  );
+  let lesson = app_code_lesson_validity_base(batch, id, name, above);
   return lesson;
 }
