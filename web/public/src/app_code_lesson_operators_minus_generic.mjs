@@ -1,5 +1,4 @@
 import { app_code_lesson_validity_base } from "../../../love/public/src/app_code_lesson_validity_base.mjs";
-import { app_code_label_code_example } from "../../../love/public/src/app_code_label_code_example.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_shuffle_cycled } from "../../../love/public/src/list_shuffle_cycled.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -94,8 +93,6 @@ export function app_code_lesson_operators_minus_generic(
     let combined5 = text_combine("invalid", operator);
     html_div_code(c4, combined5);
   }
-  const example_label = app_code_label_code_example();
-  const quiz_label = example_label;
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
