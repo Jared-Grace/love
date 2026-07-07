@@ -1,7 +1,7 @@
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 export function app_code_lesson_base_quizzes_forwards_backwards(
   forwards_label_answer,
-  on_quiz_answer_button_forwards,
+  forwards_on_quiz_answer_button,
   on_question_forwards,
   label_question_forwards,
   batch_get,
@@ -24,7 +24,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           context,
           refresh,
           forwards_label_answer,
-          on_quiz_answer_button_forwards,
+          forwards_on_quiz_answer_button,
           on_question_forwards,
           label_question_forwards,
           batch_get,
