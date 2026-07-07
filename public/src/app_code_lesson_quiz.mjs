@@ -107,13 +107,13 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
- on_back= function () {
+  let on_back = function lambda() {
     let quiz_index = app_code_quiz_index_transform(
       context,
       quizzes,
       subtract_1,
     );
-  }
+  };
   let r4 = app_code_next(
     context,
     on_success,
