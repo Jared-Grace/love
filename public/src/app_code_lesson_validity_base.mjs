@@ -6,14 +6,7 @@ import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/p
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
-export function app_code_lesson_validity_base(
-  quiz_label1,
-  batch,
-  id,
-  name,
-  above,
-  example_label1,
-) {
+export function app_code_lesson_validity_base(batch, id, name, above) {
   const example_label = app_code_label_code_example();
   const quiz_label = example_label;
   let question_label = app_code_label_code_question();
