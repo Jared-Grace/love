@@ -8,6 +8,7 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { function_auto_path } from "../../../love/public/src/function_auto_path.mjs";
+import { function_run_prompt } from "../../../love/public/src/function_run_prompt.mjs";
 export async function watch() {
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(identity);
@@ -36,10 +37,9 @@ export async function watch() {
               property_set(in_progress, path, false);
             }
           }
-          
         }
       }
-      let r = await lock_try(lambda3);
+      let r = await lock_try(function_run_prompt.name, lambda3);
     }
     await catch_log_async(lambda);
   }
