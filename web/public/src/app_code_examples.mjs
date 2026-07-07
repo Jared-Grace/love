@@ -55,6 +55,9 @@ export function app_code_examples(context) {
   async function example_another() {
     await app_shared_screen_set(context, app_code_quiz);
   }
+  let value_initial = app_code_lesson_first_id();
+  let id = property_get(lesson, "id");
+  let lesson_first_not = equal_not(id, value_initial);
   let on_back = null;
   let back_text = null;
   let quiz_index = app_code_quiz_index_get(context);
@@ -80,9 +83,6 @@ export function app_code_examples(context) {
     null,
     root,
   );
-  let value_initial = app_code_lesson_first_id();
-  let id = property_get(lesson, "id");
-  let lesson_first_not = equal_not(id, value_initial);
   if (lesson_first_not) {
     async function previous() {
       function lambda(value) {
