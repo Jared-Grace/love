@@ -19,6 +19,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       on_question: forwards_on_question,
       question_label: forwards_question_label,
       answer_count_override: null,
+      answer_property: "answer",
     },
     {
       answer_label: backwards_answer_label,
@@ -26,15 +27,15 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       on_question: backwards_on_question,
       question_label: backwards_question_label,
       answer_count_override: backwards_answer_count_override,
+      answer_property: "question",
     },
   ];
   let quizzes_get = function lambda(question, answer) {
     function lambda2(qa) {
-      function quiz(context, parent, container, refresh) {
+      function quiz_forwards(context, parent, container, refresh) {
         app_code_lesson_quiz(
           container,
           question,
-          "answer",
           answer,
           parent,
           context,
@@ -46,7 +47,24 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       }
     }
     let mapped = list_map(infos, lambda2);
-    return mapped;
+    $;
+    let quizzes = null;
+    quizzes = [
+      ,
+      function quiz_backwards(context, parent, container, refresh) {
+        app_code_lesson_quiz(
+          container,
+          answer,
+          question,
+          parent,
+          context,
+          refresh,
+          null,
+          batch_get,
+          quizzes,
+        );
+      },
+    ];
     return quizzes;
   };
   return quizzes_get;
