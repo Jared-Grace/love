@@ -1,3 +1,4 @@
+import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
@@ -29,6 +30,7 @@ export function app_code_lesson_symbols_counting(
     html_style_assign(parent, {
       "justify-content": "center",
     });
+    html_style_padding_y(component, value);
     let r = app_code_symbols_separated_on_question(parent, text);
   };
   let quiz_backwards_answer_count_override = null;
