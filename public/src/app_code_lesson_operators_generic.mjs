@@ -87,10 +87,11 @@ export function app_code_lesson_operators_generic(
   let quiz_backwards_label_answer = null;
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
+  let on_question_forwards = html_text_set_code_dark;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
     quiz_label,
     noop,
-    html_text_set,
+    on_question_forwards,
     question_label,
     batch,
     quiz_backwards_label_answer,
@@ -105,7 +106,7 @@ export function app_code_lesson_operators_generic(
     above,
     example_count,
     batch,
-    html_text_set_code_dark,
+    on_question_forwards,
     example_label,
     quizzes,
     question_label,
