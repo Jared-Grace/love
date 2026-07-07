@@ -3,14 +3,12 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { app_code_lesson_previous_set } from "../../../love/public/src/app_code_lesson_previous_set.mjs";
-import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
 import { app_code_home } from "../../../love/public/src/app_code_home.mjs";
 import { app_replace_button_screen_wide } from "../../../love/public/src/app_replace_button_screen_wide.mjs";
 import { app_replace_button_home_text } from "../../../love/public/src/app_replace_button_home_text.mjs";
 import { app_code_go_back } from "../../../love/public/src/app_code_go_back.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_code_lesson_first_id } from "../../../love/public/src/app_code_lesson_first_id.mjs";
-import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { app_code_quiz } from "../../../love/public/src/app_code_quiz.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -59,22 +57,7 @@ export function app_code_examples(context) {
   let lesson_first_not = equal_not(id, value_initial);
   let on_back = null;
   let back_text = null;
-  let quiz_index = app_code_quiz_index_get(context);
-  if (lesson_first_not) {
-    on_back = async function lambda() {
-      app_code_lesson_previous_set(context);
-      let previous = app_code_lesson_current(context);
-      let batch = property_get(previous, "batch");
-      let list = batch();
-      let first = list_first(list);
-      let quizzes = property_get(first, "quizzes");
-      let index_last = list_index_last(quizzes);
-      app_code_quiz_index_set(context, index_last);
-      await app_shared_screen_set(context, app_code_quiz);
-    };
-    back_text = " to the last quiz of the previous lesson";
-  }
-  app_code_next(
+  t(
     context,
     c,
     "see " + another,
@@ -93,6 +76,20 @@ export function app_code_examples(context) {
     list_add(backs, {
       text: "take me back to the previous lesson",
       on_click: previous,
+    });
+    list_add(backs, {
+      text: "take me back to the last quiz of the previous lesson",
+      on_click: async function lambda() {
+        app_code_lesson_previous_set(context);
+        let previous = app_code_lesson_current(context);
+        let batch = property_get(previous, "batch");
+        let list = batch();
+        let first = list_first(list);
+        let quizzes = property_get(first, "quizzes");
+        let index_last = list_index_last(quizzes);
+        app_code_quiz_index_set(context, index_last);
+        await app_shared_screen_set(context, app_code_quiz);
+      },
     });
     app_code_go_back(root, "to the previous lesson", backs);
   }
