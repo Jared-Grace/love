@@ -110,7 +110,6 @@ export function app_code_lesson_operators_dot_numbers() {
     html_style_code_dark,
     quiz_backwards_answer_count_override,
     null,
-    null,
   );
   let lesson = app_code_lesson_base(
     id,
