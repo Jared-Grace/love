@@ -86,7 +86,7 @@ export function app_code_lesson_quiz(
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let transform = add_1;
-    let quiz_index = app_code_quiz_index_transform(context, transform, quizzes);
+    let quiz_index = app_code_quiz_index_transform(context, quizzes, transform);
     let li = list_index_last_is(quizzes, quiz_index);
     if (li) {
       app_code_quiz_index_reset(context);
