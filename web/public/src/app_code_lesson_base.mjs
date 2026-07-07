@@ -8,8 +8,8 @@ import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs"
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
 export function app_code_lesson_base(
-  id,
-  name,
+  lesson_unique_id,
+  lesson_name,
   above,
   example_count,
   batch_get,
@@ -17,10 +17,10 @@ export function app_code_lesson_base(
   example_label,
   quizzes_get,
 ) {
-  id = text_replace_space_underscore(id);
+  lesson_unique_id = text_replace_space_underscore(lesson_unique_id);
   let lesson = {
-    name,
-    id,
+    name: lesson_name,
+    id: lesson_unique_id,
     above,
     example_count,
     batch: function batch() {
