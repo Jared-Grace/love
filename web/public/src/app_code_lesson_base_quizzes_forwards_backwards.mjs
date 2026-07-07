@@ -11,6 +11,22 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
   backwards_answer_on_button,
   backwards_answer_count_override,
 ) {
+  let infos = [
+    {
+      answer_label: forwards_answer_label,
+      answer_on_button: forwards_answer_on_button,
+      on_question: forwards_on_question,
+      question_label: forwards_question_label,
+      answer_count_override: null,
+    },
+    {
+      answer_label: backwards_answer_label,
+      answer_on_button: backwards_answer_on_button,
+      on_question: backwards_on_question,
+      question_label: backwards_question_label,
+      answer_count_override: backwards_answer_count_override,
+    },
+  ];
   let quizzes_get = function lambda(question, answer) {
     let quizzes = null;
     quizzes = [
@@ -23,13 +39,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           parent,
           context,
           refresh,
-          {
-            answer_label: forwards_answer_label,
-            answer_on_button: forwards_answer_on_button,
-            on_question: forwards_on_question,
-            question_label: forwards_question_label,
-            answer_count_override: null,
-          },
+          null,
           batch_get,
           quizzes,
         );
@@ -43,13 +53,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           parent,
           context,
           refresh,
-          {
-            answer_label: backwards_answer_label,
-            answer_on_button: backwards_answer_on_button,
-            on_question: backwards_on_question,
-            question_label: backwards_question_label,
-            answer_count_override: backwards_answer_count_override,
-          },
+          null,
           batch_get,
           quizzes,
         );
