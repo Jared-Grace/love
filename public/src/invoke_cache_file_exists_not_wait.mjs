@@ -4,5 +4,5 @@ export async function invoke_cache_file_exists_not_wait(fn, args) {
   async function lambda3() {
     await invoke_cache_file_exists_throw(fn, args);
   }
-  let r = await retry_wait_until_success(lambda3);
+  await retry_wait_until_success(lambda3);
 }
