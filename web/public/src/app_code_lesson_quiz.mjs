@@ -109,7 +109,7 @@ export function app_code_lesson_quiz(
     }
   }
   let quiz_index = app_code_quiz_index_get(context);
-  if (false) {
+  if (quiz_index >= 1) {
   }
   let on_back = null;
   on_back = function lambda() {
