@@ -27,7 +27,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       on_question: backwards_on_question,
       question_label: backwards_question_label,
       answer_count_override: backwards_answer_count_override,
-      answer_property: "question",
+      answer_property: "answer",
     },
   ];
   let quizzes_get = function lambda(question, answer) {
