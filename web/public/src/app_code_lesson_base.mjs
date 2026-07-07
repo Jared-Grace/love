@@ -1,6 +1,5 @@
 import { html_style_code_generic_unfonted } from "../../../love/public/src/html_style_code_generic_unfonted.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mjs";
@@ -8,6 +7,7 @@ import { html_flex_column_stretch } from "../../../love/public/src/html_flex_col
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 export function app_code_lesson_base(
   id,
   name,
@@ -41,13 +41,9 @@ export function app_code_lesson_base(
           );
           let container = property_get(a, "container");
           app_code_example_answer_label(container, example_label);
-          let answer_div = html_style_code_generic_unfonted(
-            component,
-            "white",
-            "black",
-          );
+          let answer_div = html_div_text(answer_div, answer);
+          html_style_code_generic_unfonted(answer_div, "white", "black");
           ["app_code_symbol_generic", "transparent", "transparent"];
-          html_text_set(answer_div, answer);
         }
         let quizzes = quizzes_get(question, answer);
         let mapped = {
