@@ -15,8 +15,8 @@ export function app_code_go_back(root, question_text, buttons) {
   html_div_text(container, combined2);
   let left = emoji_arrow_left();
   function lambda(b) {
-    let text = property_get(b, "text");
-    let on_click2 = property_get(b, "on_click");
+    let button_text = property_get(b, "text");
+    let on_click = property_get(b, "on_click");
     let combined = text_combine_multiple([left, " Yes, please ", button_text]);
     app_replace_button_wide(container, combined, on_click);
   }
