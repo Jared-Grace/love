@@ -1,4 +1,4 @@
-import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
+import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
 import { app_code_answer_count_max } from "../../../love/public/src/app_code_answer_count_max.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -19,10 +19,7 @@ import { list_property_next_value } from "../../../love/public/src/list_property
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { app_code_quiz_index_reset } from "../../../love/public/src/app_code_quiz_index_reset.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
-import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
-import { mod } from "../../../love/public/src/mod.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_sort_text_to } from "../../../love/public/src/list_sort_text_to.mjs";
@@ -89,11 +86,7 @@ export function app_code_lesson_quiz(
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let transform = add_1;
-    let size = list_size(quizzes);
-    let quiz_index = app_code_quiz_index_get(context);
-    let a1 = transform(quiz_index);
-    let index_new = mod(a1, size);
-    app_code_quiz_index_set(context, index_new);
+    let quiz_index = app_code_quiz_index_transform(context, transform, quizzes);
     let li = list_index_last_is(quizzes, quiz_index);
     if (li) {
       app_code_quiz_index_reset(context);
