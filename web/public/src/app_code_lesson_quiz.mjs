@@ -42,7 +42,7 @@ import { app_code_example_answer_label } from "../../../love/public/src/app_code
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz(
   container,
-  { question, answer },
+  qa,
   parent,
   context,
   refresh,
@@ -50,6 +50,8 @@ export function app_code_lesson_quiz(
   batch_get,
   quizzes,
 ) {
+  let answer = property_get(qa, "answer");
+  let question = property_get(qa, "question");
   let answer_count_override = property_get(info, "answer_count_override");
   let question_label = property_get(info, "question_label");
   let on_question = property_get(info, "on_question");
