@@ -1,4 +1,3 @@
-import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
 import { error } from "../../../love/public/src/error.mjs";
@@ -21,5 +20,4 @@ export async function lock_wait(lock_name, lambda) {
       }
     }
   }
-  list_empty(list);
 }
