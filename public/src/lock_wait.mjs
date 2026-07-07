@@ -23,8 +23,9 @@ export async function lock_wait(lock_name, lambda) {
         if (e.code !== "ELOCKED") {
           throw e;
         }
-        if (not(notified)) {$s
-          const message = "waiting on " + result + " to be unlocked";
+        if (not(notified)) {
+          let message = null;
+          message = "waiting on " + result + " to be unlocked";
           log_keep(lock_wait.name, message);
           notified = true;
         }
