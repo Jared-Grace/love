@@ -9,18 +9,15 @@ export async function lock_wait(lock_name, lambda) {
   let release = null;
   try {
     while (true) {
-      let acquired = false;
       try {
         release = await lockfile.lock(result);
-        acquired = true;
+        break;
       } catch (e) {
         await sleep(200);
       }
-      if (acquired) {
-        await lambda();
-        break;
-      }
     }
+    let r = await lambda();
+    return r;
   } finally {
     if (release) {
       await release();
