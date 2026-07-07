@@ -147,7 +147,7 @@ export function app_code_lesson_quiz(
     }
     let nn = null_not_is(on_quiz_answer_button);
     if (nn) {
-      on_quiz_answer_button(b);
+      on_quiz_answer_button(b, quiz_choice);
     }
     return b;
   }
