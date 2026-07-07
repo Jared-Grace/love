@@ -17,6 +17,7 @@ export function app_code_lesson_validity_base(batch, id, name, above) {
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    2,
     quiz_label,
     noop,
     on_question_forwards,
@@ -24,7 +25,6 @@ export function app_code_lesson_validity_base(batch, id, name, above) {
     batch,
     quiz_backwards_label_answer,
     on_question_forwards,
-    2,
     "Identifier validity: ",
     app_code_style_normal_text,
   );
