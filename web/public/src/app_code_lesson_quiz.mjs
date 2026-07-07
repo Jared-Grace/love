@@ -127,10 +127,10 @@ export function app_code_lesson_quiz(
     };
     back_text = " to the previous quiz";
   }
-  let c = app_code_container_light_blue(parent2);
+  let c = app_code_container_light_blue(on_success);
   let n = app_code_next(
     context,
-    on_success,
+    c,
     "take another quiz to practice some more",
     "please give me another quiz to take",
     refresh,
