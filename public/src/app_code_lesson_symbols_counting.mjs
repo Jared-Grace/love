@@ -30,7 +30,7 @@ export function app_code_lesson_symbols_counting(
     html_style_assign(parent, {
       "justify-content": "center",
     });
-    html_style_padding_y(component, value);
+    html_style_padding_y(parent, 0);
     let r = app_code_symbols_separated_on_question(parent, text);
   };
   let quiz_backwards_answer_count_override = null;
