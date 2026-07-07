@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ensure.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -21,7 +22,9 @@ export async function lock_wait(lock_name, lambda) {
         if (e.code !== "ELOCKED") {
           throw e;
         }
-        log_keep(lock_wait.name, message);
+        if (not(b)) {
+        }
+        log_keep(lock_wait.name, "waiting on " + result + " to be unlocked");
         await sleep(200);
       }
     }
