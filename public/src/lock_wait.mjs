@@ -27,6 +27,8 @@ export async function lock_wait(lock_name, lambda) {
           log_keep(lock_wait.name, "waiting on " + result + " to be unlocked");
           notified = true;
         }
+        if (false) {
+        }
         await sleep(200);
       }
     }
