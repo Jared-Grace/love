@@ -4,7 +4,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
+import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
 export function app_code_next(
   context,
   parent,
@@ -14,7 +14,7 @@ export function app_code_next(
   on_next,
 ) {
   let container = app_code_container_light_blue(parent);
-  let nt = app_karate_button_next_text();
+  let nt = app_shared_button_next_text();
   let b = app_replace_button_wide(parent, nt, on_next);
   let padded = text_pad_space_quote_double(nt);
   let question = text_combine_multiple([
