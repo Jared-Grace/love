@@ -1,4 +1,4 @@
-import { lock_wait } from "../../../love/public/src/lock_wait.mjs";
+import { function_run_prompt_lock } from "../../../love/public/src/function_run_prompt_lock.mjs";
 import { function_run_prompt_repo_name_colored } from "../../../love/public/src/function_run_prompt_repo_name_colored.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
@@ -30,5 +30,5 @@ export async function function_run_prompt() {
   async function lambda2() {
     await function_run_line_git(line);
   }
-  let r = await lock_wait(function_run_prompt.name, lambda2);
+  let r = await function_run_prompt_lock(lambda2);
 }
