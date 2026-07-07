@@ -19,16 +19,16 @@ export function app_code_lesson_base_with_quizzes(
   quiz_backwards_answer_count_override,
 ) {
   const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+    batch_get,
+    question_label,
+    on_question,
+    quiz_label,
+    on_quiz_answer_button_forwards,
+    null,
+    html_text_set,
     quiz_backwards_label_answer,
     on_quiz_answer_button_backwards,
     quiz_backwards_answer_count_override,
-    quiz_label,
-    on_quiz_answer_button_forwards,
-    on_question,
-    question_label,
-    batch_get,
-    null,
-    html_text_set,
   );
   let lesson = null;
   let question_label2 = error();
