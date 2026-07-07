@@ -153,7 +153,7 @@ export function app_code_lesson_quiz(
         if (not(answered)) {
           let color_bg = "rgb(254, 43, 43)";
           html_style_background_color_set(b, color_bg);
-          html_font_color_set(b, "rgb(167, 51, 51)");
+          html_font_color_set(b, "rgb(255, 255, 255)");
         }
       }
     }
