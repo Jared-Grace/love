@@ -17,6 +17,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
   backwards_answer_on_button,
   backwards_answer_count_override,
 ) {
+  let backwards_code = true;
   const backwards = {
     answer_label: backwards_answer_label,
     answer_on_button: backwards_answer_on_button,
@@ -39,7 +40,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     backwards,
     token_select,
   ];
-  if (false) {
+  if (backwards_code) {
   }
   let token_select = object_copy(backwards);
   object_assign(token_select, {
