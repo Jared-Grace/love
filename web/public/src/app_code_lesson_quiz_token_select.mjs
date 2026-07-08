@@ -47,7 +47,8 @@ export function app_code_lesson_quiz_token_select(
       }
     }
   }
-  let buttons = list_map(normalized, lambda);
+  let buttons = null;
+  buttons = list_map(normalized, lambda);
   log(app_code_lesson_quiz_token_select.name, {
     variations,
   });
