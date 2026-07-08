@@ -26,7 +26,7 @@ export async function function_params_new_generic(
       function lambda({ args, v }) {
         on_call(args);
       }
-      await js_imports_missing_add_all(ast2);
+      await js_imports_missing_add_all(ast);
     }
     let output = await function_transform(f_name_caller, lambda5);
   }
