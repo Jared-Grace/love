@@ -62,7 +62,7 @@ export function app_code_lesson_quiz_token_select(
         variations = variations_new;
         html_clear(placeholder);
         let variation_first = list_first(variations);
-        let joined = list_join_space(list);
+        let joined = list_join_space(variation_first);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
