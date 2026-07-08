@@ -113,7 +113,6 @@ export function app_code_lesson_quiz(
       answers_div,
       on_success,
       on_wrong,
-      answer_on_button,
       qa,
       info,
     );
