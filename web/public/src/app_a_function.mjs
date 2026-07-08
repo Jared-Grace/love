@@ -229,8 +229,7 @@ export async function app_a_function(context) {
   });
   let f_names = await functions_names();
   function lambda8(la) {
-    const type = "FunctionDeclaration";
-    js_visit_type_node(ast, type, on_node);
+    js_visit_type_node(ast, "FunctionDeclaration", on_node);
     function on_node(n) {
       let id = property_get(n, "id");
       function lambda9() {
