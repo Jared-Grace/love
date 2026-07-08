@@ -23,7 +23,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   batch_get,
-  answer_property,
   answers_div,
   container_success_message,
   on_success,
