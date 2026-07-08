@@ -42,10 +42,10 @@ export function app_code_lesson_quiz_token_select(
       let operator = property_get(node, "operator");
       let includes = list_includes(commutative, operator);
       if (includes) {
-        function lambda5() {
+        function swap() {
           property_swap(node, "left", "right");
         }
-        la(lambda5);
+        la(swap);
       }
     }
     js_visit_type_node(ast, "BinaryExpression", lambda2);
