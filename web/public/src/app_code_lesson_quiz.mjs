@@ -82,7 +82,7 @@ export function app_code_lesson_quiz(
   let c = app_code_container_light_blue(parent_container);
   html_div_text(c, "Here is a new quiz, if you want");
   let nt = app_shared_button_next_text();
-  html_div_text(c, "Otherwise, choose: " + nt);
+  html_div_text(c, 'Otherwise, choose: "' + nt + '"');
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
