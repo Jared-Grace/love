@@ -65,8 +65,9 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
-  let parent_container = html_div(parent);
   let above_container = html_div(container);
+  let parent_container = html_div(parent);
+  let quiz_question = null;
   let quiz_new_message = app_code_container_light_blue(parent_container);
   let a = app_code_lesson_above(
     above_container,
@@ -125,7 +126,7 @@ export function app_code_lesson_quiz(
   on_correct();
   function on_correct() {
     let quiz_answer = property_get(qa, answer_property);
-    let quiz_question = property_get(qa, question_property);
+    quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     let quiz_batch_items = batch_get();
