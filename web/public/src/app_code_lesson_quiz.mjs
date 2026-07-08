@@ -1,3 +1,4 @@
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
@@ -76,6 +77,7 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
+  let c = app_code_container_light_blue(parent2);
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
