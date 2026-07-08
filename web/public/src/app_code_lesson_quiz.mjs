@@ -93,11 +93,9 @@ export function app_code_lesson_quiz(
     }
   }
   let c = app_code_container_light_blue(on_success);
-  let on_back = null;
-  let back_text = null;
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
-    on_back = function lambda() {
+    let on_back = function lambda() {
       let quiz_index = app_code_quiz_index_transform(
         context,
         quizzes,
@@ -105,8 +103,8 @@ export function app_code_lesson_quiz(
       );
       refresh();
     };
-    back_text = " to the previous quiz";
-    let bb = app_replace_button_wide(c, back_text, on_success);
+    let back_text = " to the previous quiz";
+    let bb = app_replace_button_wide(c, back_text, on_back);
   }
   let container_question = property_get(n, "container_question");
   let hides = [success, c, container_question];
