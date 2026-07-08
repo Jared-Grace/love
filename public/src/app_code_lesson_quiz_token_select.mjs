@@ -44,8 +44,7 @@ export function app_code_lesson_quiz_token_select(
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
       } else {
-        function lambda4(item) {}
-        each(list, lambda4);
+        each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
       }
