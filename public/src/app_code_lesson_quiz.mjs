@@ -127,6 +127,7 @@ export function app_code_lesson_quiz(
     html_visibility_hidden(quiz_new_message);
     html_visibility_visible(container_success_message);
     await sleep_seconds(0.55);
+    html_clear(container_success_message);
     qa = next_get();
     qa_refresh();
     html_visibility_visible(quiz_new_message);
