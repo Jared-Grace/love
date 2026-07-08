@@ -42,8 +42,8 @@ export function app_code_lesson_quiz_token_select(
     function lambda3() {
       let concated = list_concat_single_right(chosen, token);
       let lambda2 = list_starts_with_curried_right(concated);
-      variations = list_filter(variations, lambda2);
-      let e = list_empty_is(variations);
+      let variations_new = list_filter(variations, lambda2);
+      let e = list_empty_is(variations_new);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
         on_wrong();
@@ -51,6 +51,7 @@ export function app_code_lesson_quiz_token_select(
           concated,
         });
       } else {
+        variations = variations_new;
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
