@@ -3,8 +3,8 @@ import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_
 export function app_code_quiz_index_transform(context, quizzes, transform) {
   let index_new = app_code_quiz_index_transform_get(
     context,
-    transform,
     quizzes,
+    transform,
   );
   app_code_quiz_index_set(context, index_new);
   return index_new;
