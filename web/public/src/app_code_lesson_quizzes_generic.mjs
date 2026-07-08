@@ -40,6 +40,10 @@ export function app_code_lesson_quizzes_generic(
   let infos = [forwards, backwards];
   let codes = [
     {
+      include: forwards_code,
+      base: forwards,
+    },
+    {
       include: backwards_code,
       base: backwards,
     },
