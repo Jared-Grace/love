@@ -24,7 +24,7 @@ export function app_code_lesson_identifiers_valid(
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
   let quiz_backwards_answer_count_override = 2;
-  let on_quiz_answer_button_backwards =
+  let backwards_answer_on_button =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   const quizzes = app_code_lesson_quizzes(
     batch_get2,
@@ -35,7 +35,7 @@ export function app_code_lesson_identifiers_valid(
     "Identifier validity: ",
     app_code_style_normal_text,
     quiz_backwards_label_answer,
-    on_quiz_answer_button_backwards,
+    backwards_answer_on_button,
     quiz_backwards_answer_count_override,
   );
   let lesson = app_code_lesson_base(
