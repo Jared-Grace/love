@@ -23,7 +23,7 @@ export function app_code_lesson_quiz_token_select(
   let tokens = js_tokenizer(quiz_answer);
   let mapped = list_map_property(tokens, "value");
   let mapped2 = list_map(mapped, text_to);
-  list_shuffle(list);
+  list_shuffle(mapped2);
   function lambda(token) {
     function lambda3() {}
     let b = app_replace_button(parent, token, lambda3);
