@@ -46,7 +46,9 @@ export function app_code_lesson_quiz(
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
-  let quiz_question = null;
+  let question_property =
+    app_code_lesson_quiz_qa_property_other(answer_property);
+  let quiz_question = property_get(qa, question_property);
   let above_container = html_div(container);
   let a = app_code_lesson_above(
     above_container,
@@ -106,9 +108,6 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
-    let question_property =
-      app_code_lesson_quiz_qa_property_other(answer_property);
-    quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     app_code_lesson_quiz_multiple_choice(
