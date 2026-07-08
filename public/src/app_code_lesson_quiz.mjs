@@ -88,10 +88,11 @@ export function app_code_lesson_quiz(
     }
   }
   let lcli = app_code_lesson_current_last_is();
-  if (false) {
+  if (lcli) {
+    let div = html_div_text(parent2, text);
   } else {
+    app_replace_button_wide_next(parent_container, on_next);
   }
-  app_replace_button_wide_next(parent_container, on_next);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
