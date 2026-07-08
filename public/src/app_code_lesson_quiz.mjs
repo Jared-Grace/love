@@ -108,7 +108,6 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
-    let quiz_answer = property_get(qa, answer_property);
     quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
