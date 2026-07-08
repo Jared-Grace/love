@@ -1,3 +1,4 @@
+import { function_name_part_last_delete_2 } from "../../../love/public/src/function_name_part_last_delete_2.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { function_name_parts_delete_comma } from "../../../love/public/src/function_name_parts_delete_comma.mjs";
 import { function_name_part_insert } from "../../../love/public/src/function_name_part_insert.mjs";
@@ -16,6 +17,7 @@ export function function_name_new_get_generic_overrides() {
     d: function_name_parts_delete_comma,
     i: function_name_part_insert,
     l: function_name_part_last_delete,
+    l2: function_name_part_last_delete_2,
     r: lambda_right,
     s: function_name_parts_swap_end,
     t: text_replace,
