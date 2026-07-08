@@ -1,3 +1,4 @@
+import { text_index_of_from } from "../../../love/public/src/text_index_of_from.mjs";
 import { js_tokens_to_code } from "../../../love/public/src/js_tokens_to_code.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -59,7 +60,9 @@ export function app_code_lesson_quiz_token_select(
         variations = variations_new;
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
-        function lambda5(value, item) {}
+        function lambda5(value, item) {
+          let index = text_index_of_from(t, item2, index_from);
+        }
         let value2 = list_reduce(list, lambda5, inital);
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
