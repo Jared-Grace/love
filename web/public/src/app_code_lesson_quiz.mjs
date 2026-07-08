@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { app_code_lessons_fns } from "../../../love/public/src/app_code_lessons_fns.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
@@ -89,6 +90,7 @@ export function app_code_lesson_quiz(
   }
   let quiz_index = app_code_quiz_index_get(context);
   let r = app_code_lessons_fns();
+  let size = list_size(list);
   app_replace_button_wide_next(parent_container, on_next);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
