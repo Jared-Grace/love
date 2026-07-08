@@ -31,6 +31,7 @@ export function app_code_lesson_quiz_multiple_choice(
   answer_on_button,
   qa,
 ) {
+  let answer_count_override = property_get(info, "answer_count_override");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let question_property =
     app_code_lesson_quiz_qa_property_other(answer_property);
