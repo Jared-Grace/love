@@ -68,13 +68,13 @@ export function app_code_lesson_quiz_token_select(
         function lambda5(index, token) {
           let index2 = text_index_of_from(code2, token, index);
           let size = text_size(token);
-          let sum = add(left, right);
+          let sum = add(index2, size);
           log(app_code_lesson_quiz_token_select.name, {
             index,
             token,
             index2,
           });
-          return index2;
+          return sum;
         }
         let reduced = list_reduce(chosen, lambda5, 0);
         log(app_code_lesson_quiz_token_select.name, {
