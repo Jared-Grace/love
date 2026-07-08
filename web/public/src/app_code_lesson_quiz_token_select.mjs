@@ -66,4 +66,3 @@ export function app_code_lesson_quiz_token_select(
     mapped3,
   });
 }
-normalized;
