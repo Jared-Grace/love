@@ -1,3 +1,4 @@
+import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_current_last_is } from "../../../love/public/src/app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
@@ -92,7 +93,7 @@ export function app_code_lesson_quiz(
     }
   }
   if (lcli) {
-    let div = html_div_text(
+    let div = app_code_container_light_blue_text(
       parent_container,
       "Next: There are no more lessons available at this time",
     );
