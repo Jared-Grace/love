@@ -42,10 +42,10 @@ export function app_code_lesson_quiz(
   quizzes,
   next_get,
 ) {
-  let on_answer = property_get(info, "on_answer");
   let question_label = property_get(info, "question_label");
   let on_question = property_get(info, "on_question");
   let answer_label = property_get(info, "answer_label");
+  let on_answer = property_get(info, "on_answer");
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let a = app_code_lesson_above(
