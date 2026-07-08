@@ -169,6 +169,7 @@ export function app_code_lesson_quiz(
           qa = next_get();
           on_correct();
           html_visibility_hidden(on_success);
+          html_visibility_visible(quiz_new_message);
         } else {
           html_visibility_hidden(quiz_new_message);
           if (not(answered)) {
