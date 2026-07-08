@@ -31,6 +31,8 @@ export function app_code_lesson_quiz_multiple_choice(
   answer_on_button,
   qa,
 ) {
+    let question_property =
+      app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_answer = property_get(qa, answer_property);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
