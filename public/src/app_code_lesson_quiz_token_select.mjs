@@ -33,6 +33,7 @@ export function app_code_lesson_quiz_token_select(
   }
   each(mapped2, lambda);
   let ast = js_parse(code);
+  let interchangeables = ["+"];
   function lambda2(v) {
     log(app_code_lesson_quiz_token_select.name, {
       v,
