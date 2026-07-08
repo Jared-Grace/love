@@ -1,3 +1,4 @@
+import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
@@ -65,8 +66,10 @@ export function app_code_lesson_quiz_token_select(
         app_shared_button_screen_green_style_assign(b);
         list_add(chosen, token);
         variations = variations_new;
-        function lambda3(item) {}
-        let mapped = list_map(list, lambda3);
+        function lambda3(variation) {
+          let skipped = list_skip(list, skip_count);
+        }
+        let mapped = list_map(variations, lambda3);
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
