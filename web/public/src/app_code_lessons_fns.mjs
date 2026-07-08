@@ -20,7 +20,7 @@ import { app_code_lesson_symbols_digits } from "../../../love/public/src/app_cod
 import { app_code_lesson_symbols_digits_numbered } from "../../../love/public/src/app_code_lesson_symbols_digits_numbered.mjs";
 export function app_code_lessons_fns() {
   let invalid = app_code_lessons_fns_invalid();
-  let r = [
+  let fns = [
     app_code_lesson_symbols_digits_numbered,
     app_code_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
@@ -41,5 +41,5 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_dot_missing,
     app_code_lesson_functions_arithmetic,
   ];
-  return r;
+  return fns;
 }
