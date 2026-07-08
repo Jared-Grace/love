@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
@@ -36,7 +37,7 @@ export function app_code_lesson_quiz_token_select(
   let code = property_get(qa, answer_property);
   let nb = text_space_nb();
   ("ensures div is visible from beginning");
-  let placeholder = html_span_text(answer_div, code);
+  let placeholder = html_text_set(answer_div, code);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
@@ -59,7 +60,7 @@ export function app_code_lesson_quiz_token_select(
       } else {
         variations = variations_new;
         html_clear(placeholder);
-        let first = list_first(list);
+        let variation_first = list_first(variations);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
