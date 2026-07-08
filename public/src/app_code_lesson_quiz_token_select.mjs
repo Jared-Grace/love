@@ -12,9 +12,9 @@ import { log } from "../../../love/public/src/log.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 export function app_code_lesson_quiz_token_select(
   parent,
   info,
@@ -47,7 +47,7 @@ export function app_code_lesson_quiz_token_select(
       }
     }
   }
-  each(normalized, lambda);
+  let buttons = list_map(normalized, lambda);
   log(app_code_lesson_quiz_token_select.name, {
     variations,
   });
