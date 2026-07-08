@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -65,6 +66,7 @@ export function app_code_lesson_quiz_token_select(
         let variation_first = list_first(variations);
         let joined = list_join_space(variation_first);
         let expression = js_parse_expression(code_expression);
+        let code2 = js_unparse(ast);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
