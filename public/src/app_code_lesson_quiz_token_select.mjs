@@ -63,5 +63,6 @@ export function app_code_lesson_quiz_token_select(
   let mapped3 = list_map(codes, js_tokenizer_normalized);
   log(app_code_lesson_quiz_token_select.name, {
     mapped3,
+    ast,
   });
 }
