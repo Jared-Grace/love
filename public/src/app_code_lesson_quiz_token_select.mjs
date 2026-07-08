@@ -1,4 +1,4 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -62,7 +62,7 @@ export function app_code_lesson_quiz_token_select(
         variations = variations_new;
         html_clear(placeholder);
         let variation_first = list_first(variations);
-        log_json(object);
+        let joined = list_join_space(list);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
