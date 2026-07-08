@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
@@ -64,6 +65,7 @@ export function app_code_lesson_quiz_token_select(
       } else {
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
+        let size = list_size(list2);
         list_add(chosen, token);
         variations = variations_new;
         function lambda3(variation) {
