@@ -6,6 +6,7 @@ export function list_map_cycle(list, mappers) {
   let next_get = list_iterator_refillable(v);
   function lambda(la, item) {
     let mapper = next_get();
+    let mapped = mapper(item);
   }
   let r = list_adder_each(list, lambda);
 }
