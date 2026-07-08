@@ -36,7 +36,7 @@ export function app_code_lesson_quiz_token_select(
             starts_with = false;
           }
         }
-        each_pair(variation, chosen, lambda4);
+        each_pair(variation, concated, lambda4);
         log(app_code_lesson_quiz_token_select.name, {
           starts_with,
         });
