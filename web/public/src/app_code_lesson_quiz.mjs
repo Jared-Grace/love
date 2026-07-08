@@ -65,7 +65,6 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
-  let quiz_new_message = app_code_container_light_blue(parent);
   let above_container = html_div(container);
   let parent_container = html_div(parent);
   let quiz_question = null;
@@ -80,7 +79,8 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
-  html_div_text(quiz_new_message, "Here is a new quiz, if you want");
+  let quiz_new_message = app_code_container_light_blue(parent_container);
+  html_div_text(quiz_new_message, "Above is a new quiz, if you want");
   let nt = app_shared_button_next_text();
   html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
   let success = app_replace_success_message(on_success);
