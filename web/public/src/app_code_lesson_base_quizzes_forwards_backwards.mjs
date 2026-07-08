@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
