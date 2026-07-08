@@ -1,5 +1,4 @@
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -61,7 +60,7 @@ export function app_code_lesson_quiz_token_select(
     la(code_with_variation);
   }
   let codes = list_adder_unique(lambda5);
-  let mapped3 = list_map(codes, js_parse_expression);
+  let mapped3 = list_map(codes, js_tokenizer_normalized);
   log(app_code_lesson_quiz_token_select.name, {
     mapped3,
   });
