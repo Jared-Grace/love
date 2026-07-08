@@ -49,6 +49,7 @@ export function app_code_lesson_quiz_token_select(
         let span = html_span_text(answer_div, token);
       }
     }
+    return b;
   }
   buttons = list_map(normalized, lambda);
   log(app_code_lesson_quiz_token_select.name, {
