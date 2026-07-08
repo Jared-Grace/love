@@ -1,3 +1,5 @@
+import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
+import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -30,6 +32,7 @@ export function app_code_lesson_quiz_multiple_choice(
   answer_on_button,
   qa,
 ) {
+  let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let question_property =
     app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_answer = property_get(qa, answer_property);
