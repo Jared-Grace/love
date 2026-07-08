@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
@@ -145,6 +146,10 @@ export function app_code_lesson_quiz(
         app_shared_button_screen_green_style_assign(b);
         html_visibility_visible_multiple(hides);
         await sleep_seconds(0.5);
+        let n = next_get();
+        log(app_code_lesson_quiz.name, {
+          n,
+        });
         refresh();
       } else {
         if (not(answered)) {
