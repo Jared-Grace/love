@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { lists_equal_pair } from "../../../love/public/src/lists_equal_pair.mjs";
@@ -56,8 +57,9 @@ export function app_code_lesson_quiz_token_select(
           concated,
         });
       } else {
-        html_clear(placeholder);
         variations = variations_new;
+        html_clear(placeholder);
+        let first = list_first(list);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
