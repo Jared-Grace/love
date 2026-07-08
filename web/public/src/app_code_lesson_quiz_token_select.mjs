@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { lists_equal_pair } from "../../../love/public/src/lists_equal_pair.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -55,6 +56,7 @@ export function app_code_lesson_quiz_token_select(
           concated,
         });
       } else {
+        html_clear(element);
         variations = variations_new;
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
