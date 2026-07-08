@@ -46,8 +46,6 @@ export function app_code_lesson_quiz(
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
-  let properties = ["question", "answer"];
-  let question_property = list_pair_other(properties, answer_property);
   let quiz_question = null;
   let above_container = html_div(container);
   let a = app_code_lesson_above(
@@ -108,6 +106,8 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
+    let properties = ["question", "answer"];
+    let question_property = list_pair_other(properties, answer_property);
     quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
