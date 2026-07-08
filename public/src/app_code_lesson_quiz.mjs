@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -73,9 +72,6 @@ export function app_code_lesson_quiz(
   let qli = list_index_last_is(quizzes, quiz_index);
   async function on_next() {
     app_code_quiz_index_transform(context, quizzes, add_1);
-    log(app_code_lesson_quiz.name, {
-      quizzes,
-    });
     if (qli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
