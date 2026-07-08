@@ -90,8 +90,8 @@ export function app_code_lesson_quiz(
   let fns = app_code_lessons_fns();
   let li = list_index_last_is(fns, quiz_index);
   app_replace_button_wide_next(parent_container, on_next);
+  let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
-    let quiz_index = app_code_quiz_index_get(context);
     let on_back = function lambda() {
       let quiz_index = app_code_quiz_index_transform(
         context,
