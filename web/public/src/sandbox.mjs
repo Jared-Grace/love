@@ -46,7 +46,7 @@ export async function sandbox() {
   await function_current_selects_apply(js_expand_selects.name);
   return r;
   ("below is functionality that has been used in the past");
-  await function_new_text(text, f_name);
+  await function_new_text(f_name, text);
   (function_node_select_args,
     [js_function_node_find_named_node.name, "on_passage"],
     [js_statements_with_identifiers_named.name, "on_passage"],
