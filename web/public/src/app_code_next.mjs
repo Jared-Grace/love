@@ -1,3 +1,4 @@
+import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
