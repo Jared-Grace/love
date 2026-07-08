@@ -20,7 +20,7 @@ export function app_code_batch_item_get(
   let refresh = function lambda() {
     html_clear(container);
     let bs = range_map(example_count, next_get);
-    on_batch_item(container, bs, refresh);
+    on_batch_item(container, bs, refresh, next_get);
   };
   refresh();
   return refresh;
