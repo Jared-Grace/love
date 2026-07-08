@@ -10,6 +10,7 @@ export function app_code_lesson_current(context) {
     "lesson_id",
     first_id,
   );
-  let lesson = list_find_property(lessons, "id", lesson_id);
+  let lessons1 = app_code_lessons();
+  let lesson = list_find_property(lessons1, "id", lesson_id);
   return lesson;
 }
