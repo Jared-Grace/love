@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -45,8 +46,10 @@ export function app_code_lesson_quiz_token_select(
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
       } else {
-        function lambda4(item) {}
-        let any = list_any(list, lambda4);
+        function lambda4(item) {
+          let eq2 = equal(left, right);
+        }
+        let any = list_any(variations, lambda4);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
