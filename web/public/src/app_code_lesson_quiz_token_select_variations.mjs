@@ -37,7 +37,9 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   function lambda5(la) {
     let code_without_variation = js_unparse(ast);
     la(code_without_variation);
-    let ne = list_empty_not_is(list);
+    let ne = list_empty_not_is(variation_fns);
+    if (false) {
+    }
     let variation = list_single(variation_fns);
     variation();
     let code_with_variation = js_unparse(ast);
