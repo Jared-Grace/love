@@ -41,6 +41,8 @@ export function app_code_lesson_quiz_token_select(
       let operator = property_get(node, "operator");
       let includes = list_includes(commutative, operator);
       if (includes) {
+        function lambda5() {}
+        la(lambda5);
       }
     }
     js_visit_type_node(ast, "BinaryExpression", lambda2);
