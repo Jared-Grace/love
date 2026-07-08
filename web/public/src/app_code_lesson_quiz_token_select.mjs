@@ -61,7 +61,8 @@ export function app_code_lesson_quiz_token_select(
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
-          index = text_index_of_from(code2, token, index);
+          let index2 = text_index_of_from(code2, token, index);
+          return index2;
         }
         let reduced = list_reduce(variation_first, lambda5, 0);
         log(app_code_lesson_quiz_token_select.name, {
