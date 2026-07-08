@@ -17,6 +17,7 @@ export function app_code_lesson_quizzes_generic(
   forwards_question_label,
   backwards_code,
   batch_get,
+  forwards_code,
 ) {
   const backwards = {
     answer_label: backwards_answer_label,
