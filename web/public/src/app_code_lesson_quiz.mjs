@@ -87,7 +87,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  let lcli = app_code_lesson_current_last_is();
+  let lcli = app_code_lesson_current_last_is(context);
   if (lcli) {
     let div = html_div_text(
       parent_container,
