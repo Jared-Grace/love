@@ -1,3 +1,4 @@
+import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
@@ -92,6 +93,8 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
+  let nt = app_shared_button_next_text();
+  let bn = app_replace_button_wide(container_buttons, nt, on_next);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
