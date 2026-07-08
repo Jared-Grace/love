@@ -41,8 +41,8 @@ export function app_code_lesson_quiz(
   batch_get,
   quizzes,
   next_get,
-  on_answer,
 ) {
+  let on_answer = property_get(info, "on_answer");
   let question_label = property_get(info, "question_label");
   let on_question = property_get(info, "on_question");
   let answer_label = property_get(info, "answer_label");
