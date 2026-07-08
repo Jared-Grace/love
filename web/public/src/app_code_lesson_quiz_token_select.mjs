@@ -4,7 +4,6 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { lists_equal_pair } from "../../../love/public/src/lists_equal_pair.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
@@ -38,7 +37,6 @@ export function app_code_lesson_quiz_token_select(
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
-  let nb = text_space_nb();
   ("ensures div is visible from beginning");
   let placeholder = html_text_set(answer_div, code);
   let variations = app_code_lesson_quiz_token_select_variations(code);
@@ -66,7 +64,7 @@ export function app_code_lesson_quiz_token_select(
         let variation_first = list_first(variations);
         let joined = list_join_space(variation_first);
         let expression = js_parse_expression(code_expression);
-        let code2 = js_unparse(ast);
+        let code2 = js_unparse(expression);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
