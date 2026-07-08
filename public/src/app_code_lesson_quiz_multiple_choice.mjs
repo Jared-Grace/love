@@ -3,7 +3,6 @@ import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_c
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
@@ -69,7 +68,6 @@ export function app_code_lesson_quiz_multiple_choice(
       if (eq2) {
         answered = true;
         app_shared_button_screen_green_style_assign(b);
-        html_clear(container_success_message);
         await on_success();
       } else {
         on_wrong();
