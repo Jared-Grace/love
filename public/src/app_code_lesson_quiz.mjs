@@ -68,7 +68,7 @@ export function app_code_lesson_quiz(
   let above_container = html_div(container);
   let parent_container = html_div(parent);
   let quiz_question = null;
-  let quiz_new_message = app_code_container_light_blue(parent);
+  let quiz_new_message = app_code_container_light_blue(parent_container);
   let a = app_code_lesson_above(
     above_container,
     question_label,
