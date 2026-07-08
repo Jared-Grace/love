@@ -7,16 +7,17 @@ export function js_tokenizer(acorn, code) {
   try {
     let a = js_parse_generic_arg();
     const tokenizer = acorn.tokenizer(code, a);
-    function lambda(la) {}
-    let list = list_adder(lambda);
-    const tokens = [];
-    while (true) {
-      const token = tokenizer.getToken();
-      list_add(tokens, token);
-      if (token.type.label === "eof") {
-        break;
+    function lambda(la) {
+      while (true) {
+        const token = tokenizer.getToken();
+        list_add(tokens, token);
+        if (token.type.label === "eof") {
+          break;
+        }
       }
     }
+    let list = list_adder(lambda);
+    const tokens = [];
   } catch (e) {
     log_keep(js_tokenizer.name, code);
     throw e;
