@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { lists_sizes_equal_pair } from "../../../love/public/src/lists_sizes_equal_pair.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { each_pair_min } from "../../../love/public/src/each_pair_min.mjs";
@@ -11,6 +12,6 @@ export function lists_equal_pair(list_a, list_b) {
     }
   }
   each_pair_min(list_a, list_b, lambda);
-  let n = not(has_difference);
-  return n;
+  let equal = not(has_difference);
+  return equal;
 }
