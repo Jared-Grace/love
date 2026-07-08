@@ -142,7 +142,7 @@ export function app_code_lesson_quiz(
   let buttons = list_map(choices, each_button);
   let answered = false;
   function each_button(quiz_choice) {
-    let b = app_replace_button_wide(a_container, quiz_choice, on_click);
+    let b = app_replace_button_wide(answers_div, quiz_choice, on_click);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
