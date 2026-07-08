@@ -5,7 +5,7 @@ import { js_tokenizer } from "../../../love/public/src/js_tokenizer.mjs";
 export function js_tokenizer_normalized(code) {
   let tokens = js_tokenizer(code);
   let property_name = "value";
-  let r = function property_get_curried_right_result(object) {
+  let r = function lambda(object) {
     let value = property_get(object, property_name);
     return value;
   };
