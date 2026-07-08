@@ -64,9 +64,7 @@ export function app_code_lesson_quiz(
   let above_container = html_div(container);
   let parent_container = html_div(parent);
   let quiz_answer = null;
-  quiz_answer = property_get(qa, answer_property);
   let quiz_question = null;
-  quiz_question = property_get(qa, question_property);
   let a = app_code_lesson_above(
     above_container,
     question_label,
