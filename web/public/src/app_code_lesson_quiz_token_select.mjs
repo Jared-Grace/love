@@ -34,7 +34,7 @@ export function app_code_lesson_quiz_token_select(
       let concated = list_concat_single_right(chosen, token);
       let lambda2 = list_starts_with_curried_right(concated);
       let filtered = list_filter(variations, lambda2);
-      let e = list_empty_is(list);
+      let e = list_empty_is(filtered);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
       }
