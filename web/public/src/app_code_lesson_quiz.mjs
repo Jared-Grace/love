@@ -170,6 +170,6 @@ export function app_code_lesson_quiz(
   function on_correct() {
     quiz_answer = property_get(qa, answer_property);
     quiz_question = property_get(qa, question_property);
-    on_question(container_question, question);
+    on_question(container_question, quiz_question);
   }
 }
