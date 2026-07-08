@@ -2,7 +2,7 @@
 [
     {
         "key": "numpad0",
-        "command": "workbench.action.files.save"
+        "command": "-workbench.action.files.save"
     },
     {
         "key": "ctrl+s",
@@ -68,7 +68,7 @@
     },
     {
         "key": "numpad6",
-    "command": "workbench.action.files.saveAndClose"
+        "command": "workbench.action.closeActiveEditor"
     },
     {
         "key": "ctrl+w",
