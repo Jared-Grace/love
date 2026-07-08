@@ -37,6 +37,7 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(filtered);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
+      } else {
       }
     }
   }
