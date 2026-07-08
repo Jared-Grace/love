@@ -68,9 +68,9 @@ export function app_code_lesson_quiz(
     html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
   }
   let success = app_replace_success_message(container_success_message);
+  let quiz_index_next = app_code_quiz_index_transform(context, quizzes, add_1);
+  let qli = list_index_last_is(quizzes, quiz_index_next);
   async function on_next() {
-    let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
-    let qli = list_index_last_is(quizzes, quiz_index);
     if (qli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
@@ -91,7 +91,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  if (lcli) {
+  if (lcli && qli) {
     app_code_container_light_blue_text(
       parent_container,
       "Next: There are no more lessons available at this time",
