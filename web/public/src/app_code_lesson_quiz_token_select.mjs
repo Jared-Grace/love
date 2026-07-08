@@ -78,7 +78,9 @@ export function app_code_lesson_quiz_token_select(
         let mapped = list_map(variations, lambda3);
         let combined = list_concat_multiple(mapped);
         let unique = list_unique(combined);
-        let n = list_includes_not(list2, item);
+        let n = list_includes_not(unique, token);
+        if (false) {
+        }
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
