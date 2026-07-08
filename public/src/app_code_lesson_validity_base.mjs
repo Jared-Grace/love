@@ -16,14 +16,13 @@ export function app_code_lesson_validity_base(batch, id, name, above) {
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
-  const backwards_question_label = "Identifier validity: ";
   const quizzes = app_code_lesson_quizzes(
     batch,
     question_label,
     on_question_forwards,
     quiz_label,
     noop,
-    backwards_question_label,
+    "Identifier validity: ",
     app_code_style_normal_text,
     quiz_backwards_label_answer,
     on_question_forwards,
