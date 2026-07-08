@@ -4,6 +4,6 @@ export function list_reduce(list, lambda$value$item, inital) {
     let v = lambda$value$item(value, item);
     return v;
   }
-  let value = list_reduce_index(list, lambda, inital);
-  return value;
+  let reduced = list_reduce_index(list, lambda, inital);
+  return reduced;
 }
