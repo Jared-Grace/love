@@ -34,17 +34,18 @@ import { function_node_select_nested } from "../../../love/public/src/function_n
 export async function sandbox() {
   const f_name = sandbox_3_a.name;
   await function_current_set(f_name);
-  let r2 = await function_transform_current(
-    "js_identifier_name_new,c,list_join_newline,2",
-  );
-  return r2;
-  await function_current_selects_empty();
-  let r = await function_node_select_args(
-    js_call_named_find_alias.name,
-    "folder_user_docs_read",
-  );
-  await function_current_selects_apply(js_expand_selects.name);
-  return r;
+  {
+    let r2 = await function_transform_current(
+      "js_identifier_name_new,c,list_join_newline,2",
+    );
+    return r2;
+    await function_current_selects_empty();
+    let r = await function_node_select_args(
+      js_call_named_find_alias.name,
+      "folder_user_docs_read",
+    );
+    await function_current_selects_apply(js_expand_selects.name);
+  }
   ("below is functionality that has been used in the past: ");
   {
     ("function calls with varied arguments");
