@@ -25,7 +25,6 @@ export function app_code_lesson_quiz_multiple_choice(
   parent,
   on_success,
   on_wrong,
-  answer_on_button,
   qa,
   info,
 ) {
