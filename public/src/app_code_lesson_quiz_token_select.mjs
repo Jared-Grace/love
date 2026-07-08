@@ -54,10 +54,10 @@ export function app_code_lesson_quiz_token_select(
         let any = list_any(variations, lambda4);
         if (any) {
         } else {
+          each(buttons, html_style_code_dark);
+          list_add(chosen, token);
+          let span = html_span_text(answer_div, token);
         }
-        each(buttons, html_style_code_dark);
-        list_add(chosen, token);
-        let span = html_span_text(answer_div, token);
       }
     }
     return b;
