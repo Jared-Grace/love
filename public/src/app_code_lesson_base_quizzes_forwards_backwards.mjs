@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { app_code_lesson_quiz_token_select } from "../../../love/public/src/app_code_lesson_quiz_token_select.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
@@ -43,6 +44,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     backwards,
     token_select,
   ];
+  list_add(list, item);
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
