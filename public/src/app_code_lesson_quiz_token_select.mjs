@@ -21,6 +21,7 @@ import { app_replace_button } from "../../../love/public/src/app_replace_button.
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_reduce } from "../../../love/public/src/list_reduce.mjs";
 export function app_code_lesson_quiz_token_select(
   parent,
   info,
@@ -58,8 +59,8 @@ export function app_code_lesson_quiz_token_select(
         variations = variations_new;
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
-        function lambda5(item) {}
-        each(list, lambda5);
+        function lambda5(value, item) {}
+        let value2 = list_reduce(list, lambda5, inital);
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
