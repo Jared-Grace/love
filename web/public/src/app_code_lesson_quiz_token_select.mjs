@@ -60,7 +60,6 @@ export function app_code_lesson_quiz_token_select(
         });
       } else {
         variations = variations_new;
-        html_clear(placeholder);
         let variation_first = list_first(variations);
         let joined = list_join_space(variation_first);
         let expression = js_parse_expression(code_expression);
