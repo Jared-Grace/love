@@ -1,5 +1,4 @@
 import { list_remove_last_equal } from "../../../love/public/src/list_remove_last_equal.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
@@ -72,9 +71,8 @@ export function app_code_lesson_quiz_token_select(
     list_remove_last_equal(item, expected_last);
   }
   each(mapped2, lambda6);
-  let mapped3 = list_map(codes, js_parse_expression);
   log(app_code_lesson_quiz_token_select.name, {
-    mapped3,
+    mapped2,
     ast,
   });
 }
