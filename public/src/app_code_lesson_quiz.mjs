@@ -48,6 +48,7 @@ export function app_code_lesson_quiz(
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
+  let div = html_div(parent2);
   let a = app_code_lesson_above(
     container_blue_light,
     question_label,
