@@ -36,14 +36,6 @@ export async function sandbox() {
   await function_current_set(f_name);
   ("current_commands: ");
   {
-    let r2 = await function_transform_current(
-      "js_identifier_name_new,c,list_join_newline,2",
-    );
-    let r = await function_node_select_args(
-      js_call_named_find_alias.name,
-      "folder_user_docs_read",
-    );
-    await function_current_selects_apply(js_expand_selects.name);
   }
   return;
   ("below is functionality that has been used in the past: ");
@@ -52,6 +44,7 @@ export async function sandbox() {
     {
       {
         (function_node_select_args,
+          [js_call_named_find_alias.name, "folder_user_docs_read"],
           [js_function_node_find_named_node.name, "on_passage"],
           [js_statements_with_identifiers_named.name, "on_passage"],
           [js_statement_find_call_named.name, property_exists_not.name],
