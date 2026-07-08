@@ -1,3 +1,4 @@
+import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
@@ -24,6 +25,7 @@ export function app_code_lesson_quiz_token_select(
   function lambda(token) {
     function lambda3() {}
     let b = app_replace_button(parent, token, lambda3);
+    html_style_code_dark(component);
   }
   each(mapped2, lambda);
   log(app_code_lesson_quiz_token_select.name, {
