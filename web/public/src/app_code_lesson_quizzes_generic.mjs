@@ -22,19 +22,19 @@ export function app_code_lesson_quizzes_generic(
   forwards_code,
 ) {
   const backwards = {
+    question_label: backwards_question_label,
+    on_question: backwards_on_question,
     answer_label: backwards_answer_label,
     answer_on_button: backwards_answer_on_button,
-    on_question: backwards_on_question,
-    question_label: backwards_question_label,
     answer_count_override: backwards_answer_count_override,
     answer_property: "question",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
   const forwards = {
+    question_label: forwards_question_label,
+    on_question: forwards_on_question,
     answer_label: forwards_answer_label,
     answer_on_button: forwards_answer_on_button,
-    on_question: forwards_on_question,
-    question_label: forwards_question_label,
     answer_count_override: null,
     answer_property: "answer",
     on_answer: app_code_lesson_quiz_multiple_choice,
