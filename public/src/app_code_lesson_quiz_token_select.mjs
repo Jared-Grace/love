@@ -56,7 +56,7 @@ export function app_code_lesson_quiz_token_select(
           concated,
         });
       } else {
-        html_clear(element);
+        html_clear(placeholder);
         variations = variations_new;
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
