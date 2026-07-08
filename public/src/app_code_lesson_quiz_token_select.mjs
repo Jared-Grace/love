@@ -65,10 +65,8 @@ export function app_code_lesson_quiz_token_select(
     la(code_with_variation);
   }
   let codes = list_adder_unique(lambda5);
-  function lambda6(item) {}
-  let mapped3 = list_map(list, lambda6);
-  let expression = js_parse_expression(code_expression);
+  let mapped3 = list_map(codes, js_parse_expression);
   log(app_code_lesson_quiz_token_select.name, {
-    codes,
+    mapped3,
   });
 }
