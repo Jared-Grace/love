@@ -1,7 +1,7 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_visit_type_node } from "../../../love/public/src/js_visit_type_node.mjs";
 import { js_code_binary_expression_commutative } from "../../../love/public/src/js_code_binary_expression_commutative.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
@@ -34,16 +34,15 @@ export function app_code_lesson_quiz_token_select(
     html_style_code_dark(b);
   }
   each(mapped2, lambda);
+  function lambda4(la) {}
+  let list = list_adder(lambda4);
   let ast = js_parse(code);
   let commutative = js_code_binary_expression_commutative();
   function lambda2(node) {
     let operator = property_get(node, "operator");
     let includes = list_includes(commutative, operator);
-    if (false) {
+    if (includes) {
     }
-    log(app_code_lesson_quiz_token_select.name, {
-      node,
-    });
   }
   js_visit_type_node(ast, "BinaryExpression", lambda2);
 }
