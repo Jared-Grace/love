@@ -53,8 +53,8 @@ export function app_code_lesson_quizzes_generic(
   function lambda2(c) {
     let include2 = property_get(c, "include");
     let base2 = property_get(c, "base");
-    if (backwards_code) {
-      let token_select = object_copy(backwards);
+    if (include2) {
+      let token_select = object_copy(base2);
       object_assign(token_select, {
         on_answer: app_code_lesson_quiz_token_select,
         answer_label: "Please unscramble the code",
