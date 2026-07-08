@@ -69,17 +69,14 @@ export function app_code_lesson_quiz(
     html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
   }
   let success = app_replace_success_message(container_success_message);
+  let quiz_index = app_code_quiz_index_get(context);
+  let qli = list_index_last_is(quizzes, quiz_index);
   async function on_next() {
-    let quiz_index_next = app_code_quiz_index_transform(
-      context,
-      quizzes,
-      add_1,
-    );
+    app_code_quiz_index_transform(context, quizzes, add_1);
     log(app_code_lesson_quiz.name, {
       quizzes,
     });
-    let qnli = list_index_last_is(quizzes, quiz_index_next);
-    if (qnli) {
+    if (qli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
       function lesson_id_transform(value) {
@@ -99,8 +96,6 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  let quiz_index = app_code_quiz_index_get(context);
-  let qli = list_index_last_is(quizzes, quiz_index);
   if (lcli && qli) {
     app_code_container_light_blue_text(
       parent_container,
