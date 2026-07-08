@@ -55,24 +55,24 @@ export function app_code_lesson_quiz_token_select(
     }
     js_visit_type_node(ast, "BinaryExpression", lambda2);
   }
-  let variations = list_adder(lambda4);
+  let variation_fns = list_adder(lambda4);
   function lambda5(la) {
     let code_without_variation = js_unparse(ast);
     la(code_without_variation);
-    let variation = list_single(variations);
+    let variation = list_single(variation_fns);
     variation();
     let code_with_variation = js_unparse(ast);
     la(code_with_variation);
   }
   let codes = list_adder_unique(lambda5);
-  let mapped2 = list_map(codes, js_tokenizer_normalized);
+  let variations = list_map(codes, js_tokenizer_normalized);
   function lambda6(item) {
     const expected_last = ";";
     list_remove_last_equal(item, expected_last);
   }
-  each(mapped2, lambda6);
+  each(variations, lambda6);
   log(app_code_lesson_quiz_token_select.name, {
-    mapped2,
+    variations,
     ast,
   });
 }
