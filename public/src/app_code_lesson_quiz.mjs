@@ -164,8 +164,8 @@ export function app_code_lesson_quiz(
           app_shared_button_screen_green_style_assign(b);
           html_clear(on_success);
           app_replace_success_message(on_success);
-          html_visibility_hidden(i);
-          html_visibility_visible(success);
+          html_visibility_hidden(quiz_new_message);
+          html_visibility_visible(on_success);
           await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
