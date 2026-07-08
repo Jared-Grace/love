@@ -27,7 +27,6 @@ export function app_code_lesson_quiz_token_select(
   on_wrong,
   batch_get,
 ) {
-  alert("here");
   let answer_div = html_div_code_dark(parent);
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
@@ -48,6 +47,7 @@ export function app_code_lesson_quiz_token_select(
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
         on_wrong();
+        log(app_code_lesson_quiz_token_select.name, {});
       } else {
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
@@ -59,7 +59,6 @@ export function app_code_lesson_quiz_token_select(
         let any = list_any(variations, lambda4);
         if (any) {
           on_success();
-        } else {
         }
       }
     }
