@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -64,6 +65,9 @@ export function app_code_lesson_quiz_token_select(
     la(code_with_variation);
   }
   let codes = list_adder_unique(lambda5);
+  function lambda6(item) {}
+  let mapped3 = list_map(list, lambda6);
+  let expression = js_parse_expression(code_expression);
   log(app_code_lesson_quiz_token_select.name, {
     codes,
   });
