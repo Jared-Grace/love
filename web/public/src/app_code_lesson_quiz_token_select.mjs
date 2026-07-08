@@ -30,6 +30,7 @@ export function app_code_lesson_quiz_token_select(
 ) {
   let answer_div = html_div_code_dark(parent);
   let nb = text_space_nb();
+  html_span_text(answer_div, nb);
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
