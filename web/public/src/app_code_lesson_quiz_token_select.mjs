@@ -38,7 +38,9 @@ export function app_code_lesson_quiz_token_select(
   let commutative = js_code_binary_expression_commutative();
   function lambda2(node) {
     let operator = property_get(node, "operator");
-    let includes = list_includes(list, item);
+    let includes = list_includes(commutative, operator);
+    if (false) {
+    }
     log(app_code_lesson_quiz_token_select.name, {
       node,
     });
