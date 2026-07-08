@@ -41,7 +41,7 @@ export function app_code_lesson_quiz_token_select(
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
       } else {
-        let span = html_span_text(parent2, text);
+        let span = html_span_text(answer_div, token);
       }
     }
   }
