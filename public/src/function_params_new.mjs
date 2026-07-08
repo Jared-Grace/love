@@ -22,8 +22,8 @@ export async function function_params_new(
   );
   function on_call(args) {
     function lambda3(value_default) {
-      let expression2 = js_parse_expression(value_default);
-      list_add(args, expression2);
+      let expression = js_parse_expression(value_default);
+      list_add(args, expression);
     }
     each(values_default, lambda3);
   }
