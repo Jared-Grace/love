@@ -1,4 +1,4 @@
-import { sleep } from "../../../love/public/src/sleep.mjs";
+import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
@@ -143,7 +143,7 @@ export function app_code_lesson_quiz(
         answered = true;
         app_shared_button_screen_green_style_assign(b);
         html_visibility_visible_multiple(hides);
-        await sleep(ms);
+        await sleep_seconds(0.5);
       } else {
         if (not(answered)) {
           let color_bg = app_code_lesson_quiz_wrong_background_color();
