@@ -63,8 +63,10 @@ export function app_code_lesson_quiz(
   let question_property = list_pair_other(properties, answer_property);
   let above_container = html_div(container);
   let parent_container = html_div(parent);
-  let quiz_answer = property_get(qa, answer_property);
-  let quiz_question = property_get(qa, question_property);
+  let quiz_answer = null;
+  quiz_answer = property_get(qa, answer_property);
+  let quiz_question = null;
+  quiz_question = property_get(qa, question_property);
   let a = app_code_lesson_above(
     above_container,
     question_label,
@@ -73,6 +75,7 @@ export function app_code_lesson_quiz(
   );
   let a_container = property_get(a, "container");
   let container_question = property_get(a, "container_question");
+  on_correct();
   app_code_example_answer_label(a_container, answer_label);
   html_clear(parent_container);
   let on_success = html_div(parent_container);
@@ -151,9 +154,7 @@ export function app_code_lesson_quiz(
         html_visibility_visible_multiple(hides);
         await sleep_seconds(0.5);
         qa = next_get();
-        quiz_answer = property_get(qa, answer_property);
-        quiz_question = property_get(qa, question_property);
-        on_question(container_question, question);
+        on_correct();
       } else {
         if (not(answered)) {
           let color_bg = app_code_lesson_quiz_wrong_background_color();
@@ -167,5 +168,10 @@ export function app_code_lesson_quiz(
       answer_on_button(b, quiz_choice);
     }
     return b;
+  }
+  function on_correct() {
+    quiz_answer = property_get(qa, answer_property);
+    quiz_question = property_get(qa, question_property);
+    on_question(container_question, question);
   }
 }
