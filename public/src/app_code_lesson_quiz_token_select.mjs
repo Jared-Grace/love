@@ -33,6 +33,7 @@ export function app_code_lesson_quiz_token_select(
         log(app_code_lesson_quiz_token_select.name, {
           starts_with,
         });
+        return starts_with;
       }
       let filtered = list_filter(variations, lambda2);
     }
