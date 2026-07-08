@@ -70,11 +70,11 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
-    let question2 = property_get(quiz_batch_item, question_property);
-    let answer2 = property_get(quiz_batch_item, answer_property);
-    let eq3 = equal(answer2, quiz_answer);
-    let eq4 = equal(question2, quiz_question);
-    let ored = or(eq3, eq4);
+    let question_batch = property_get(quiz_batch_item, question_property);
+    let answer_batch = property_get(quiz_batch_item, answer_property);
+    let eq_a = equal(answer_batch, quiz_answer);
+    let eq_q = equal(question_batch, quiz_question);
+    let ored = or(eq_a, eq_q);
     return ored;
   }
   list_filter_remove(quiz_batch_items, filter);
