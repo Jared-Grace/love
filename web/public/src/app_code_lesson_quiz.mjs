@@ -93,7 +93,7 @@ export function app_code_lesson_quiz(
     }
   }
   if (lcli) {
-    let div = app_code_container_light_blue_text(
+    app_code_container_light_blue_text(
       parent_container,
       "Next: There are no more lessons available at this time",
     );
