@@ -1,5 +1,4 @@
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { each_pair } from "../../../love/public/src/each_pair.mjs";
+import { list_starts_with } from "../../../love/public/src/list_starts_with.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "../../../love/public/src/app_code_lesson_quiz_token_select_variations.mjs";
@@ -30,13 +29,7 @@ export function app_code_lesson_quiz_token_select(
     function lambda3() {
       let concated = list_concat_single_right(chosen, token);
       function lambda2(variation) {
-        let starts_with = true;
-        function lambda4(left, right) {
-          if (equal_not(left, right)) {
-            starts_with = false;
-          }
-        }
-        each_pair(variation, concated, lambda4);
+        let starts_with = list_starts_with(variation, concated);
         log(app_code_lesson_quiz_token_select.name, {
           starts_with,
         });
