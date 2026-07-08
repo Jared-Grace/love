@@ -71,6 +71,9 @@ export async function sandbox() {
     [js_statement_duplicate.name]);
   (function_current_selects_apply_args,
     [s_expression_functionize.name, "1,file_name"]);
-  await function_source_remove(f_name, "2");
-  await function_node_select_nested(js_call_callee_name_try.name);
+  {
+    ("regular function calls: ");
+    await function_source_remove(f_name, "2");
+    await function_node_select_nested(js_call_callee_name_try.name);
+  }
 }
