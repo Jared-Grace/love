@@ -23,7 +23,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     answer_property: "question",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
-  let copy = object_copy(from);
+  let token_select = object_copy(backwards);
   let infos = [
     {
       answer_label: forwards_answer_label,
@@ -35,6 +35,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       on_answer: app_code_lesson_quiz_multiple_choice,
     },
     backwards,
+    token_select,
   ];
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
