@@ -1,3 +1,4 @@
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
@@ -5,7 +6,6 @@ import { app_replace_button } from "../../../love/public/src/app_replace_button.
 import { each } from "../../../love/public/src/each.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_tokenizer } from "../../../love/public/src/js_tokenizer.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
@@ -32,7 +32,6 @@ export function app_code_lesson_quiz_token_select(
   }
   each(mapped2, lambda);
   let ast = js_parse(code);
-  log(app_code_lesson_quiz_token_select.name, {
-    mapped2,
-  });
+  function lambda2(v) {}
+  js_visit_type(ast2, type, lambda2);
 }
