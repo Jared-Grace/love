@@ -1,3 +1,4 @@
+import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "../../../love/public/src/app_code_lesson_quiz_token_select_variations.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -23,7 +24,9 @@ export function app_code_lesson_quiz_token_select(
   list_shuffle(normalized);
   let chosen = [];
   function lambda(token) {
-    function lambda3() {}
+    function lambda3() {
+      let concated = list_concat_single_right(list, single);
+    }
     let b = app_replace_button(parent, token, lambda3);
     html_style_code_dark(b);
   }
