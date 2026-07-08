@@ -12,5 +12,5 @@ export function app_code_lesson_quiz_token_select(
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let quiz_answer = property_get(qa, answer_property);
-  let ast = js_tokenizer(code);
+  let ast = js_tokenizer(quiz_answer);
 }
