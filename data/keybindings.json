@@ -68,7 +68,7 @@
     },
     {
         "key": "numpad6",
-        "command": "workbench.action.closeActiveEditor"
+    "command": "workbench.action.files.saveAndClose"
     },
     {
         "key": "ctrl+w",
