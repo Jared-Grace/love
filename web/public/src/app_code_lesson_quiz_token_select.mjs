@@ -60,9 +60,6 @@ export function app_code_lesson_quiz_token_select(
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
         on_wrong();
-        log(app_code_lesson_quiz_token_select.name, {
-          concated,
-        });
       } else {
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
@@ -75,9 +72,6 @@ export function app_code_lesson_quiz_token_select(
           return sum;
         }
         let reduced = list_reduce(chosen, lambda5, 0);
-        log(app_code_lesson_quiz_token_select.name, {
-          reduced,
-        });
         let taken = text_take(code2, reduced);
         html_clear(answer_div);
         let span_taken = html_span_text(answer_div, taken);
