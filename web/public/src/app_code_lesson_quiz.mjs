@@ -15,7 +15,6 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_visibility_hidden_multiple } from "../../../love/public/src/html_visibility_hidden_multiple.mjs";
-import { app_code_next } from "../../../love/public/src/app_code_next.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
@@ -106,19 +105,9 @@ export function app_code_lesson_quiz(
       refresh();
     };
     back_text = " to the previous quiz";
+    let bb = app_replace_button_wide(c, back_text, on_success);
   }
   let c = app_code_container_light_blue(on_success);
-  let n = app_code_next(
-    context,
-    c,
-    "take another quiz to practice some more",
-    "please give me another quiz to take",
-    refresh,
-    on_next,
-    on_back,
-    back_text,
-    on_success,
-  );
   let container_question = property_get(n, "container_question");
   let hides = [success, c, container_question];
   html_visibility_hidden_multiple(hides);
