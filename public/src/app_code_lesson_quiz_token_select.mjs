@@ -21,6 +21,7 @@ export function app_code_lesson_quiz_token_select(
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
+  let chosen = [];
   function lambda(token) {
     function lambda3() {}
     let b = app_replace_button(parent, token, lambda3);
