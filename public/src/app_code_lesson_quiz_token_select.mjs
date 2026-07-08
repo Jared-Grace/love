@@ -43,7 +43,7 @@ export function app_code_lesson_quiz_token_select(
       let includes = list_includes(commutative, operator);
       if (includes) {
         function lambda5() {
-          property_swap(object, property_name_a, property_name_b);
+          property_swap(node, "left", "right");
         }
         la(lambda5);
       }
