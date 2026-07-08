@@ -93,8 +93,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  let nt = app_shared_button_next_text();
-  let bn = app_replace_button_wide(container_buttons, nt, on_next);
+  app_replace_button_wide_next(parent, on_next);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
@@ -158,3 +157,8 @@ export function app_code_lesson_quiz(
     return b;
   }
 }
+function app_replace_button_wide_next(parent, on_next) {
+  let nt = app_shared_button_next_text();
+  let bn = app_replace_button_wide(parent, nt, on_next);
+}
+
