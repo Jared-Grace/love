@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
@@ -53,9 +52,6 @@ export function app_code_lesson_quiz(
   quizzes,
   next_get,
 ) {
-  log(app_code_lesson_quiz.name, {
-    info,
-  });
   let answer_count_override = property_get(info, "answer_count_override");
   let question_label = property_get(info, "question_label");
   let on_question = property_get(info, "on_question");
