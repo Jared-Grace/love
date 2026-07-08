@@ -150,6 +150,8 @@ export function app_code_lesson_quiz(
         html_visibility_visible_multiple(hides);
         await sleep_seconds(0.5);
         qa = next_get();
+        quiz_answer = property_get(qa, answer_property);
+        quiz_question = property_get(qa, question_property);
         on_question(container_question, question);
       } else {
         if (not(answered)) {
