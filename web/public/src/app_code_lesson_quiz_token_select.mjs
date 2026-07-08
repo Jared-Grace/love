@@ -32,7 +32,7 @@ export function app_code_lesson_quiz_token_select(
       let lambda2 = list_starts_with_curried_right(concated);
       let filtered = list_filter(variations, lambda2);
       let e = list_empty_is(list);
-      if (false) {
+      if (e) {
       }
     }
     let b = app_replace_button(parent, token, lambda3);
