@@ -12,6 +12,7 @@ export function app_code_lesson_validity_base(
   backwards_question_label,
   on_question_forwards,
   example_answer_label,
+  backwards_answer_on_button,
 ) {
   const quiz_label = example_answer_label;
   let question_label = app_code_label_code_question();
