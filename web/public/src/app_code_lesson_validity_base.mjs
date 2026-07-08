@@ -5,7 +5,7 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 export function app_code_lesson_validity_base(
-  batch,
+  batch_get,
   id,
   name,
   above,
@@ -19,7 +19,7 @@ export function app_code_lesson_validity_base(
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
   const quizzes = app_code_lesson_quizzes(
-    batch,
+    batch_get,
     question_label,
     on_question_forwards,
     quiz_label,
@@ -35,7 +35,7 @@ export function app_code_lesson_validity_base(
     name,
     above,
     example_count,
-    batch,
+    batch_get,
     on_question_forwards,
     example_label,
     quizzes,
