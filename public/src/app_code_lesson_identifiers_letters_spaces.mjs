@@ -1,3 +1,5 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
+import { list_map_cycle } from "../../../love/public/src/list_map_cycle.mjs";
 import { list_shuffle_cycled_size } from "../../../love/public/src/list_shuffle_cycled_size.mjs";
 import { list_slices_size_cycler } from "../../../love/public/src/list_slices_size_cycler.mjs";
 import { app_code_symbols_separated_on_question } from "../../../love/public/src/app_code_symbols_separated_on_question.mjs";
@@ -63,7 +65,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let counts = [2, 2, 3, 3];
     let list = list_slices_size_cycler(mapped, counts, 1);
     list_shuffle_cycled_size(list, counts);
-    let mapped2 = list_map(list, list_join_space_nb);
+    let mapped2 = list_map_cycle(list, [list_join_empty, list_join_space_nb]);
     let list_other = js_identifier_words_invalid();
     let difference = list_difference(mapped2, list_other);
     return difference;
