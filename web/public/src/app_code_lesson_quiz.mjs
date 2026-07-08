@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
+import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
@@ -46,9 +46,7 @@ export function app_code_lesson_quiz(
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
-  let question_property =
-    app_code_lesson_quiz_qa_property_other(answer_property);
-  let quiz_question = property_get(qa, question_property);
+  let quiz_question = app_code_lesson_quiz_qa_question(answer_property, qa);
   let above_container = html_div(container);
   let a = app_code_lesson_above(
     above_container,
