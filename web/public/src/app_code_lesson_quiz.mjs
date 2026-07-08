@@ -144,6 +144,7 @@ export function app_code_lesson_quiz(
         app_shared_button_screen_green_style_assign(b);
         html_visibility_visible_multiple(hides);
         await sleep_seconds(0.5);
+        refresh();
       } else {
         if (not(answered)) {
           let color_bg = app_code_lesson_quiz_wrong_background_color();
