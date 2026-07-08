@@ -1,4 +1,3 @@
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
@@ -61,9 +60,9 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
+  let div = html_div(parent2);
   let quiz_answer = property_get(qa, answer_property);
   let quiz_question = property_get(qa, question_property);
-  html_clear(container);
   let a = app_code_lesson_above(
     container,
     question_label,
