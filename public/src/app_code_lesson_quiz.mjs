@@ -91,7 +91,7 @@ export function app_code_lesson_quiz(
   if (lcli) {
     let div = html_div_text(
       parent_container,
-      "There are no more lessons available at this time",
+      "Next: There are no more lessons available at this time",
     );
   } else {
     app_replace_button_wide_next(parent_container, on_next);
