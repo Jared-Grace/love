@@ -29,7 +29,9 @@ export function app_code_lesson_quiz_token_select(
     function lambda3() {
       let concated = list_concat_single_right(chosen, token);
       function lambda2(variation) {
-        function lambda4() {}
+        function lambda4() {
+          ien;
+        }
         each_pair(variation, chosen, lambda4);
       }
       let filtered = list_filter(variations, lambda2);
