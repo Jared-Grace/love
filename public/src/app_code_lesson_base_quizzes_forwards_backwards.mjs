@@ -21,6 +21,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       question_label: forwards_question_label,
       answer_count_override: null,
       answer_property: "answer",
+      on_answer: app_code_lesson_quiz_multiple_choice,
     },
     {
       answer_label: backwards_answer_label,
