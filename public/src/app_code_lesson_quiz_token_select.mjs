@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -19,6 +20,8 @@ export function app_code_lesson_quiz_token_select(
   let tokens = js_tokenizer(quiz_answer);
   let mapped = list_map_property(tokens, "value");
   let mapped2 = list_map(mapped, text_to);
+  function lambda(item) {}
+  each(list, lambda);
   log(app_code_lesson_quiz_token_select.name, {
     mapped2,
   });
