@@ -1,7 +1,7 @@
 import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { app_code_lesson_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_quizzes_forwards_backwards.mjs";
+import { app_code_lesson_quizzes } from "../../../love/public/src/app_code_lesson_quizzes.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_operators_plus_unary() {
   let quiz_backwards_label_answer = null;
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
-  const quizzes = app_code_lesson_quizzes_forwards_backwards(
+  const quizzes = app_code_lesson_quizzes(
     batch,
     question_label,
     html_text_set,
