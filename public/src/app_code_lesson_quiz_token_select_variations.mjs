@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_remove_last_equal } from "../../../love/public/src/list_remove_last_equal.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
@@ -36,6 +37,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   function lambda5(la) {
     let code_without_variation = js_unparse(ast);
     la(code_without_variation);
+    let ne = list_empty_not_is(list);
     let variation = list_single(variation_fns);
     variation();
     let code_with_variation = js_unparse(ast);
