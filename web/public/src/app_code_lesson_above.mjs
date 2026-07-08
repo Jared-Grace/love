@@ -8,9 +8,9 @@ export function app_code_lesson_above(parent, label, question, on_question) {
   html_div_text(container, label);
   let container_question = html_div(container);
   on_question(container_question, question);
-  let r4 = {
+  let r = {
     container,
     container_question,
   };
-  return r4;
+  return r;
 }
