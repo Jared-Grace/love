@@ -23,7 +23,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   batch_get,
   parent,
-  container_success_message,
   on_success,
   on_wrong,
   answer_on_button,
