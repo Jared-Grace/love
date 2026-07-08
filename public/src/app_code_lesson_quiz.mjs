@@ -1,5 +1,4 @@
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
@@ -93,7 +92,6 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  let c = app_code_container_light_blue(on_success);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
@@ -107,7 +105,7 @@ export function app_code_lesson_quiz(
     let back_text = app_shared_button_back_text() + " to the previous quiz";
     let bb = app_replace_button_wide(parent, back_text, on_back);
   }
-  let hides = [success, c];
+  let hides = [success];
   html_visibility_hidden_multiple(hides);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
