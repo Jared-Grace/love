@@ -19,8 +19,6 @@ export function app_code_lesson_validity_base(
   let example_count = 2;
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
-  let on_quiz_answer_button_backwards = null;
-  let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
   const quizzes = app_code_lesson_quizzes(
     batch,
