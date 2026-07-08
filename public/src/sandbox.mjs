@@ -56,7 +56,10 @@ export async function sandbox() {
           [js_flo_body_empty.name],
           [js_call_generalize.name, "folder_user_docs_path,file_name_to_path"],
           [js_identifier_name_new.name, "l,folder_user_docs_path_previous"],
-          [js_identifier_rename.name, "html_hash_get,html_hash_object_get"],
+          [
+            js_identifier_rename.name,
+            html_hash_get.name + ",html_hash_object_get",
+          ],
           [js_call_add.name, "ldf"],
           [js_call_add_first.name, html_hash_get.name],
           [js_call_add_before_return.name, "ljn"],
