@@ -1,8 +1,6 @@
-import { add } from "../../../love/public/src/add.mjs";
-import { text_size } from "../../../love/public/src/text_size.mjs";
+import { text_index_of_from_start } from "../../../love/public/src/text_index_of_from_start.mjs";
 import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { text_take } from "../../../love/public/src/text_take.mjs";
-import { text_index_of_from } from "../../../love/public/src/text_index_of_from.mjs";
 import { js_tokens_to_code } from "../../../love/public/src/js_tokens_to_code.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -66,12 +64,11 @@ export function app_code_lesson_quiz_token_select(
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
-          let index2 = text_index_of_from(code2, token, index);
-          let size = text_size(token);
-          let sum = add(index2, size);
+          let sum = text_index_of_from_start(code2, token, index);
           log(app_code_lesson_quiz_token_select.name, {
             index,
-            token,sum
+            token,
+            sum,
           });
           return sum;
         }
