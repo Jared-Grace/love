@@ -116,7 +116,6 @@ export function app_code_lesson_quiz(
       batch_get,
       question_property,
       answer_property,
-      quiz_answer,
       quiz_question,
       answer_count_override,
       answers_div,
