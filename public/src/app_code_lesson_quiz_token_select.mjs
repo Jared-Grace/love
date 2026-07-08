@@ -63,7 +63,10 @@ export function app_code_lesson_quiz_token_select(
         function lambda5(index, token) {
           index = text_index_of_from(code2, token, index);
         }
-        let value2 = list_reduce(variation_first, lambda5, 0);
+        let reduced = list_reduce(variation_first, lambda5, 0);
+        log(app_code_lesson_quiz_token_select.name, {
+          reduced,
+        });
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
