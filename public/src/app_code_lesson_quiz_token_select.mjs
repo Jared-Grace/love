@@ -18,7 +18,7 @@ export function app_code_lesson_quiz_token_select(
   let quiz_answer = property_get(qa, answer_property);
   let tokens = js_tokenizer(quiz_answer);
   let mapped = list_map_property(tokens, "value");
-  let mapped2 = list_map(list, text_to);
+  let mapped2 = list_map(mapped, text_to);
   log(app_code_lesson_quiz_token_select.name, {
     mapped2,
   });
