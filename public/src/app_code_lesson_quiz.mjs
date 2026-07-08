@@ -1,5 +1,3 @@
-import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
-import { app_code_quiz_index_transform_get } from "../../../love/public/src/app_code_quiz_index_transform_get.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -70,15 +68,10 @@ export function app_code_lesson_quiz(
     html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
   }
   let success = app_replace_success_message(container_success_message);
-  let quiz_index_next = app_code_quiz_index_transform_get(
-    context,
-    quizzes,
-    add_1,
-  );
-  let qli = list_index_last_is(quizzes, quiz_index_next);
   async function on_next() {
-    app_code_quiz_index_set(context, quiz_index_next);
-    if (qli) {
+  let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
+  let qnli = list_index_last_is(quizzes, quiz_index);
+    if (qnli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
       function lesson_id_transform(value) {
@@ -98,7 +91,9 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  if (lcli && qli) {
+  let quiz_index = app_code_quiz_index_get(context);
+  let qli = list_index_last_is(quizzes, quiz_index);
+  if (lcli) {
     app_code_container_light_blue_text(
       parent_container,
       "Next: There are no more lessons available at this time",
@@ -106,7 +101,6 @@ export function app_code_lesson_quiz(
   } else {
     app_replace_button_wide_next(parent_container, on_next);
   }
-  let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
       let quiz_index = app_code_quiz_index_transform(
@@ -136,10 +130,11 @@ export function app_code_lesson_quiz(
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_hidden(quiz_new_message);
-    html_visibility_visible(container_success_message);
-    await sleep_success_color();
+    html_visibility_visible(container_success_message)n
+wFunatiit sleep_success_color();
     qa = next_get();
     on_qa_change();
-    html_visibility_visible(quiz_new_message);
-  }
+    html_visibility_visible(quiz
+async function newFunction() {
+  await sleep_seconds(0.55);
 }
