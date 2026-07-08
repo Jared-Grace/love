@@ -93,7 +93,7 @@ export function app_code_lesson_quiz(
   }
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
-  if (lcli) {
+  if (lcli && qli) {
     app_code_container_light_blue_text(
       parent_container,
       "Next: There are no more lessons available at this time",
