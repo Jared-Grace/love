@@ -2,7 +2,6 @@ import { app_code_container_light_blue_text } from "../../../love/public/src/app
 import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_current_last_is } from "../../../love/public/src/app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
-import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
 import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
@@ -120,14 +119,7 @@ export function app_code_lesson_quiz(
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
-    app_code_lesson_quiz_multiple_choice(
-      answers_div,
-      info,
-      qa,
-      on_success,
-      on_wrong,
-      batch_get,
-    );
+    on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
   }
   function on_wrong() {
     html_visibility_hidden(container_success_message);
