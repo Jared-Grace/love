@@ -1,3 +1,4 @@
+import { js_visit_type_node } from "../../../love/public/src/js_visit_type_node.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_history } from "../../../love/public/src/app_a_history.mjs";
 import { emoji_hourglass } from "../../../love/public/src/emoji_hourglass.mjs";
@@ -16,7 +17,6 @@ import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
-import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -230,11 +230,7 @@ export async function app_a_function(context) {
   let f_names = await functions_names();
   function lambda8(la) {
     const type = "FunctionDeclaration";
-    function lambda7(v) {
-      let n = property_get(v, "node");
-      on_node(n);
-    }
-    js_visit_type(ast, type, lambda7);
+    js_visit_type_node(on_node, ast, type);
     function on_node(n) {
       let id = property_get(n, "id");
       function lambda9() {
