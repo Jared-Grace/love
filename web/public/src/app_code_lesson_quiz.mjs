@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
@@ -105,6 +106,8 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
+    let question_property =
+      app_code_lesson_quiz_qa_property_other(answer_property);
     quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
