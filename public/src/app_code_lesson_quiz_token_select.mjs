@@ -20,6 +20,6 @@ export function app_code_lesson_quiz_token_select(
   let mapped = list_map_property(tokens, "value");
   let mapped2 = list_map(list, text_to);
   log(app_code_lesson_quiz_token_select.name, {
-    mapped,
+    mapped2,
   });
 }
