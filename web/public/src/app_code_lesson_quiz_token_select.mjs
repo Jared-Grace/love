@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
@@ -30,7 +31,8 @@ export function app_code_lesson_quiz_token_select(
       let concated = list_concat_single_right(chosen, token);
       function lambda2(variation) {
         function lambda4() {
-          ien;
+          if (null_is(value)) {
+          }
         }
         each_pair(variation, chosen, lambda4);
       }
