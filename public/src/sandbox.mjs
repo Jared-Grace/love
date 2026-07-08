@@ -38,7 +38,6 @@ export async function sandbox() {
     let r2 = await function_transform_current(
       "js_identifier_name_new,c,list_join_newline,2",
     );
-    return r2;
     await function_current_selects_empty();
     let r = await function_node_select_args(
       js_call_named_find_alias.name,
