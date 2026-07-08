@@ -154,6 +154,7 @@ export function app_code_lesson_quiz(
         if (eq2) {
           answered = true;
           app_shared_button_screen_green_style_assign(b);
+          app_replace_success_message(on_success);
           html_visibility_visible_multiple(hides);
           await sleep_seconds(0.5);
           qa = next_get();
