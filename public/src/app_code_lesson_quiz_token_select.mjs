@@ -37,7 +37,7 @@ export function app_code_lesson_quiz_token_select(
   let commutative = js_code_binary_expression_commutative();
   function lambda2(node) {
     log(app_code_lesson_quiz_token_select.name, {
-      v,
+      node,
     });
   }
   js_visit_type_node(ast, "BinaryExpression", lambda2);
