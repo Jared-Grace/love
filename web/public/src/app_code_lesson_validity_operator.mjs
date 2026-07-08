@@ -5,6 +5,12 @@ export function app_code_lesson_validity_operator(math_name, batch, above) {
   let inside = text_first_upper_to(math_name);
   let name = "Operators " + text_wrap_parenthesis(inside);
   let id = "operators_" + math_name;
-  let lesson = app_code_lesson_validity_base(batch, id, name, above);
+  let lesson = app_code_lesson_validity_base(
+    batch,
+    id,
+    name,
+    above,
+    backwards_question_label,
+  );
   return lesson;
 }
