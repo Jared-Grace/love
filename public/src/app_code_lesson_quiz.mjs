@@ -87,8 +87,7 @@ export function app_code_lesson_quiz(
     answer_count_max = answer_count_override;
   }
   let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
-  let concated = list_concat(taken, [quiz_answer]);
-  list_sort_text_to(concated);
+  let choices = list_concat(taken, [quiz_answer]);
   let on_success = html_div(parent);
   let success = app_replace_success_message(on_success);
   async function on_next() {
@@ -143,7 +142,8 @@ export function app_code_lesson_quiz(
   let container_question = property_get(n, "container_question");
   let hides = [success, c, container_question];
   html_visibility_hidden_multiple(hides);
-  let buttons = list_map(concated, each_button);
+  list_sort_text_to(choices);
+  let buttons = list_map(choices, each_button);
   let answered = false;
   function each_button(quiz_choice) {
     let b = app_replace_button_wide(a_container, quiz_choice, on_click);
