@@ -102,8 +102,8 @@ export function app_code_lesson_quiz(
   }
   let hides = [success, quiz_new_message];
   html_visibility_hidden_multiple(hides);
-  qa_refresh();
-  function qa_refresh() {
+  on_qa_change();
+  function on_qa_change() {
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
@@ -126,7 +126,7 @@ export function app_code_lesson_quiz(
     await sleep_seconds(0.55);
     html_clear(container_success_message);
     qa = next_get();
-    qa_refresh();
+    on_qa_change();
     html_visibility_visible(quiz_new_message);
   }
 }
