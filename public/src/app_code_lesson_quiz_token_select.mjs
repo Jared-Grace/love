@@ -64,6 +64,9 @@ export function app_code_lesson_quiz_token_select(
         });
       } else {
         app_shared_button_screen_green_style_assign(b);
+        log(app_code_lesson_quiz_token_select.name, {
+          b,
+        });
         list_add(chosen, token);
         variations = variations_new;
         let variation_first = list_first(variations);
