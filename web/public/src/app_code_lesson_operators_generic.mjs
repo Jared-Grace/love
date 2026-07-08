@@ -1,7 +1,7 @@
 import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { app_code_lesson_base_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_base_quizzes_forwards_backwards.mjs";
+import { app_code_lesson_quizzes_forwards_backwards } from "../../../love/public/src/app_code_lesson_quizzes_forwards_backwards.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
 import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
@@ -88,7 +88,7 @@ export function app_code_lesson_operators_generic(
   let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
-  const quizzes = app_code_lesson_base_quizzes_forwards_backwards(
+  const quizzes = app_code_lesson_quizzes_forwards_backwards(
     batch,
     question_label,
     on_question_forwards,
