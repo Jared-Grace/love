@@ -79,7 +79,7 @@ export function app_code_lesson_quiz(
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
   let c = app_code_container_light_blue(parent);
-  let div = html_div_text(parent2, text);
+  let div = html_div_text(c, "Here is a new quiz, if you want: ");
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
