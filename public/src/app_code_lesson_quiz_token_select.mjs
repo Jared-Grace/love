@@ -57,6 +57,9 @@ export function app_code_lesson_quiz_token_select(
     let code_without_variation = js_unparse(ast);
     la(code_without_variation);
     let variation = list_single(variations);
+    variation();
+    let code_with_variation = js_unparse(ast);
+    la(code_with_variation);
   }
   let list = list_adder(lambda5);
   only();
