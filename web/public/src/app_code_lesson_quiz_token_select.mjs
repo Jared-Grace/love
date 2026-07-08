@@ -1,3 +1,4 @@
+import { text_size } from "../../../love/public/src/text_size.mjs";
 import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { text_take } from "../../../love/public/src/text_take.mjs";
 import { text_index_of_from } from "../../../love/public/src/text_index_of_from.mjs";
@@ -73,6 +74,7 @@ export function app_code_lesson_quiz_token_select(
           return index2;
         }
         let reduced = list_reduce(chosen, lambda5, 0);
+        let size = text_size(s);
         log(app_code_lesson_quiz_token_select.name, {
           reduced,
         });
