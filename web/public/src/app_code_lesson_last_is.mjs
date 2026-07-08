@@ -4,6 +4,6 @@ import { app_code_lesson_index_by_id } from "../../../love/public/src/app_code_l
 export function app_code_lesson_last_is(context, lesson_id) {
   let lessons = app_code_lessons();
   let index = app_code_lesson_index_by_id(context, lesson_id);
-  let li = list_index_last_is(list, index2);
-  return index;
+  let li = list_index_last_is(lessons, index);
+  return li;
 }
