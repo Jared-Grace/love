@@ -14,7 +14,7 @@ export function js_tokenizer(code) {
       let r = token.type.label === "eof";
       return r;
     }
-    let next_get = tokenizer.getToken.bind(tokenizer);
+    let next_get = bind(tokenizer.getToken, tokenizer);
     tokens = invoke_until(next_get, end_is);
     log(js_tokenizer.name, {
       tokens,
