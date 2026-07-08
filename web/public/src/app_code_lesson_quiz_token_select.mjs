@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -22,6 +23,7 @@ export function app_code_lesson_quiz_token_select(
   let tokens = js_tokenizer(quiz_answer);
   let mapped = list_map_property(tokens, "value");
   let mapped2 = list_map(mapped, text_to);
+  list_shuffle(list);
   function lambda(token) {
     function lambda3() {}
     let b = app_replace_button(parent, token, lambda3);
