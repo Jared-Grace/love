@@ -79,7 +79,7 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
-  let c = app_code_container_light_blue(parent);
+  let c = app_code_container_light_blue(parent_container);
   html_div_text(c, "Here is a new quiz, if you want");
   let nt = app_shared_button_next_text();
   html_div_text(c, "Otherwise, choose: " + nt);
