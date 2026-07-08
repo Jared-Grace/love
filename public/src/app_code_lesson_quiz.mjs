@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_current_last_is } from "../../../love/public/src/app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
@@ -62,7 +63,7 @@ export function app_code_lesson_quiz(
   let quiz_new_message = app_code_container_light_blue(parent_container);
   html_div_text(quiz_new_message, "Above is a new quiz, if you want");
   let lcli = app_code_lesson_current_last_is(context);
-  if (lcli) {
+  if (not(lcli)) {
     let nt = app_shared_button_next_text();
     html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
   }
