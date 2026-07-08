@@ -1,3 +1,4 @@
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -25,6 +26,7 @@ export async function function_params_new_generic(
       function lambda({ args, v }) {
         on_call(args);
       }
+      await js_imports_missing_add_all(ast2);
     }
     let output = await function_transform(f_name_caller, lambda5);
   }
