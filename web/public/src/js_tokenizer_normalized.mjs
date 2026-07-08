@@ -1,3 +1,5 @@
+import { property_path_get } from "../../../love/public/src/property_path_get.mjs";
+import { js_tokenizer_label_property_path } from "../../../love/public/src/js_tokenizer_label_property_path.mjs";
 import { undefined_is } from "../../../love/public/src/undefined_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
@@ -10,7 +12,8 @@ export function js_tokenizer_normalized(code) {
     let value = property_get(object, property_name);
     let v = undefined_is(value);
     if (false) {
-      ppg;
+      let r2 = js_tokenizer_label_property_path();
+      let result = property_path_get(item, property_names);
     }
     return value;
   };
