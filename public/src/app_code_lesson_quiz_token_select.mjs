@@ -52,6 +52,8 @@ export function app_code_lesson_quiz_token_select(
           return equal;
         }
         let any = list_any(variations, lambda4);
+        if (false) {
+        }
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
