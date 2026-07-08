@@ -1,11 +1,10 @@
+import { js_parse_generic_arg } from "../../../love/public/src/js_parse_generic_arg.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export function js_tokenizer(acorn, code) {
   let ast = null;
   try {
-    ast = acorn.parse(code, {
-      ecmaVersion: 2020,
-      sourceType: "module",
-    });
+    let r = js_parse_generic_arg();
+    ast = acorn.parse(code, r);
     const tokenizer = acorn.tokenizer(code, {
       ecmaVersion: "latest",
     });
