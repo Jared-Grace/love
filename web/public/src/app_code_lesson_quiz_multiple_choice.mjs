@@ -21,12 +21,12 @@ import { or } from "../../../love/public/src/or.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
-  batch_get,
   parent,
+  info,
+  qa,
+  batch_get,
   on_success,
   on_wrong,
-  qa,
-  info,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_property = property_get(info, "answer_property");
