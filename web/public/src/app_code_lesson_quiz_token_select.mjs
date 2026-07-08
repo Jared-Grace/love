@@ -30,6 +30,7 @@ export function app_code_lesson_quiz_token_select(
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
+  let buttons = null;
   let chosen = [];
   function lambda(token) {
     let b = app_replace_button(parent, token, lambda3);
@@ -41,13 +42,12 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(filtered);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
-      } else {
+      } else {e
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
       }
     }
   }
-  let buttons = null;
   buttons = list_map(normalized, lambda);
   log(app_code_lesson_quiz_token_select.name, {
     variations,
