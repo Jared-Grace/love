@@ -35,7 +35,7 @@ export function app_code_lesson_quiz_token_select(
   let code = property_get(qa, answer_property);
   let nb = text_space_nb();
   ("ensures div is visible from beginning");
-  let placeholder = html_span_text(answer_div, nb);
+  let placeholder = html_span_text(answer_div, code);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
