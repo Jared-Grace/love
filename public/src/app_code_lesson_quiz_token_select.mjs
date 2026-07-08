@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
@@ -38,7 +39,7 @@ export function app_code_lesson_quiz_token_select(
   }
   each(normalized, lambda);
   let expression = js_parse_expression_try(code);
-  let nn = null_not_is(value);
+  let nn = null_not_is(expression);
   let ast = js_parse(code);
   function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
@@ -65,6 +66,7 @@ export function app_code_lesson_quiz_token_select(
   }
   let codes = list_adder_unique(lambda5);
   let mapped3 = list_map(codes, js_tokenizer_normalized);
+  assert(b2);
   log(app_code_lesson_quiz_token_select.name, {
     mapped3,
     ast,
