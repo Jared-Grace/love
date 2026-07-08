@@ -1,3 +1,4 @@
+import { property_swap } from "../../../love/public/src/property_swap.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_visit_type_node } from "../../../love/public/src/js_visit_type_node.mjs";
@@ -41,7 +42,9 @@ export function app_code_lesson_quiz_token_select(
       let operator = property_get(node, "operator");
       let includes = list_includes(commutative, operator);
       if (includes) {
-        function lambda5() {}
+        function lambda5() {
+          property_swap(object, property_name_a, property_name_b);
+        }
         la(lambda5);
       }
     }
