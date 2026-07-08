@@ -40,7 +40,6 @@ export function app_code_lesson_quiz(
   quizzes,
   next_get,
 ) {
-  let answer_count_override = property_get(info, "answer_count_override");
   let question_label = property_get(info, "question_label");
   let on_question = property_get(info, "on_question");
   let answer_on_button = property_get(info, "answer_on_button");
