@@ -150,6 +150,7 @@ export function app_code_lesson_quiz(
         html_visibility_visible_multiple(hides);
         await sleep_seconds(0.5);
         qa = next_get();
+        on_question(container_question, question);
       } else {
         if (not(answered)) {
           let color_bg = app_code_lesson_quiz_wrong_background_color();
