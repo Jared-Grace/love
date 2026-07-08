@@ -8,5 +8,5 @@ export function app_code_quiz_index_transform(context, quizzes, transform) {
   let size = list_size(quizzes);
   let index_new = mod(a1, size);
   app_code_quiz_index_set(context, index_new);
-  return quiz_index;
+  return index_new;
 }
