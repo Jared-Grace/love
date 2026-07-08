@@ -1,7 +1,6 @@
-import { html_font_color_set_white } from "../../../love/public/src/html_font_color_set_white.mjs";
+import { app_code_lesson_quiz_wrong_set } from "../../../love/public/src/app_code_lesson_quiz_wrong_set.mjs";
 import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
-import { app_code_lesson_quiz_wrong_background_color } from "../../../love/public/src/app_code_lesson_quiz_wrong_background_color.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
@@ -71,9 +70,7 @@ export function app_code_lesson_quiz_multiple_choice(
       } else {
         on_wrong();
         if (not(answered)) {
-          let color_bg = app_code_lesson_quiz_wrong_background_color();
-          html_style_background_color_set(b, color_bg);
-          html_font_color_set_white(b);
+          app_code_lesson_quiz_wrong_set(b);
         }
       }
     }
