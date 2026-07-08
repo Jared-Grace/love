@@ -37,10 +37,10 @@ export function app_code_lesson_quiz_token_select(
   each(mapped2, lambda);
   let ast = js_parse(code);
   function lambda4(la) {
-    let commutative = js_code_binary_expression_commutative();
+    let commutatives = js_code_binary_expression_commutative();
     function lambda2(node) {
       let operator = property_get(node, "operator");
-      let includes = list_includes(commutative, operator);
+      let includes = list_includes(commutatives, operator);
       if (includes) {
         function swap() {
           property_swap(node, "left", "right");
