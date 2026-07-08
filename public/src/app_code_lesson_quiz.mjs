@@ -1,3 +1,4 @@
+import { app_code_quiz_index_set } from "../../../love/public/src/app_code_quiz_index_set.mjs";
 import { app_code_quiz_index_transform_get } from "../../../love/public/src/app_code_quiz_index_transform_get.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
@@ -76,6 +77,7 @@ export function app_code_lesson_quiz(
   );
   let qli = list_index_last_is(quizzes, quiz_index_next);
   async function on_next() {
+    app_code_quiz_index_set(context2, index_new);
     if (qli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
