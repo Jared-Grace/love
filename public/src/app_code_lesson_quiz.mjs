@@ -104,8 +104,8 @@ export function app_code_lesson_quiz(
   }
   let hides = [success, quiz_new_message];
   html_visibility_hidden_multiple(hides);
-  on_correct();
-  function on_correct() {
+  qa_refresh();
+  function qa_refresh() {
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     app_code_lesson_quiz_multiple_choice(
@@ -130,7 +130,7 @@ export function app_code_lesson_quiz(
     html_visibility_visible(container_success_message);
     await sleep_seconds(0.55);
     qa = next_get();
-    on_correct();
+    qa_refresh();
     html_visibility_visible(quiz_new_message);
   }
 }
