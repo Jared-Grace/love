@@ -70,7 +70,7 @@ export function app_code_lesson_quiz_token_select(
   let mapped2 = list_map(codes, js_tokenizer_normalized);
   function lambda6(item) {
     let popped = list_remove_last(item);
-    equal_assert(left, right);
+    equal_assert(popped, ";");
   }
   let mapped = list_map(mapped2, lambda6);
   let mapped3 = list_map(codes, js_parse_expression);
