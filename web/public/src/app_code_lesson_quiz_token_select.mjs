@@ -25,7 +25,7 @@ export function app_code_lesson_quiz_token_select(
   function lambda(token) {
     function lambda3() {}
     let b = app_replace_button(parent, token, lambda3);
-    html_style_code_dark(component);
+    html_style_code_dark(b);
   }
   each(mapped2, lambda);
   log(app_code_lesson_quiz_token_select.name, {
