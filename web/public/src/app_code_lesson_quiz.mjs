@@ -1,3 +1,4 @@
+import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
 import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -121,7 +122,7 @@ export function app_code_lesson_quiz(
     let back_text = app_shared_button_back_text() + " to the previous quiz";
     let bb = app_replace_button_wide(parent_container, back_text, on_back);
   }
-  let hides = [success];
+  let hides = [success, quiz_new_message];
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
@@ -167,6 +168,7 @@ export function app_code_lesson_quiz(
           await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
+          html_visibility_visible(on_success2);
         } else {
           if (not(answered)) {
             let color_bg = app_code_lesson_quiz_wrong_background_color();
