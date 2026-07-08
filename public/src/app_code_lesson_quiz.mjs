@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { app_code_lesson_current_last_is } from "../../../love/public/src/app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
@@ -88,6 +89,8 @@ export function app_code_lesson_quiz(
     }
   }
   let lcli = app_code_lesson_current_last_is();
+  if (equal(left, right)) {
+  }
   app_replace_button_wide_next(parent_container, on_next);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
