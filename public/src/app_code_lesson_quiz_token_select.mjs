@@ -1,3 +1,4 @@
+import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -77,6 +78,7 @@ export function app_code_lesson_quiz_token_select(
         let mapped = list_map(variations, lambda3);
         let combined = list_concat_multiple(mapped);
         let unique = list_unique(combined);
+        let n = list_includes_not(list2, item);
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
