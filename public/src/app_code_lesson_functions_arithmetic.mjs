@@ -47,7 +47,7 @@ export function app_code_lesson_functions_arithmetic() {
     html_text_set_code_dark,
     quiz_label,
     html_style_code_dark,
-    null,
+    "Function: ",
     html_text_set_code_dark,
     quiz_backwards_label_answer,
     html_style_code_dark,

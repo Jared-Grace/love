@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
@@ -116,6 +117,7 @@ export function app_code_lesson_quiz(
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
+  html_clear(element);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
     let question_batch = property_get(quiz_batch_item, question_property);
