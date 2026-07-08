@@ -56,8 +56,8 @@ export function app_code_lesson_quiz(
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
-  let choices = ["question", "answer"];
-  let question_property = list_pair_other(choices, answer_property);
+  let properties = ["question", "answer"];
+  let question_property = list_pair_other(properties, answer_property);
   let quiz_answer = property_get(qa, answer_property);
   let quiz_question = property_get(qa, question_property);
   let a = app_code_lesson_above(
@@ -68,26 +68,6 @@ export function app_code_lesson_quiz(
   );
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, answer_label);
-  let quiz_batch_items = batch_get();
-  function filter(quiz_batch_item) {
-    let question_batch = property_get(quiz_batch_item, question_property);
-    let answer_batch = property_get(quiz_batch_item, answer_property);
-    let eq_a = equal(answer_batch, quiz_answer);
-    let eq_q = equal(question_batch, quiz_question);
-    let ored = or(eq_a, eq_q);
-    return ored;
-  }
-  list_filter_remove(quiz_batch_items, filter);
-  let answers = list_map_property(quiz_batch_items, answer_property);
-  let answers_unique = list_unique(answers);
-  list_remove_if_exists(answers_unique, quiz_answer);
-  let answer_count_max = app_code_answer_count_max();
-  let nn2 = null_not_is(answer_count_override);
-  if (nn2) {
-    answer_count_max = answer_count_override;
-  }
-  let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
-  let choices = list_concat(taken, [quiz_answer]);
   let on_success = html_div(parent);
   let success = app_replace_success_message(on_success);
   async function on_next() {
@@ -142,6 +122,26 @@ export function app_code_lesson_quiz(
   let container_question = property_get(n, "container_question");
   let hides = [success, c, container_question];
   html_visibility_hidden_multiple(hides);
+  let quiz_batch_items = batch_get();
+  function filter(quiz_batch_item) {
+    let question_batch = property_get(quiz_batch_item, question_property);
+    let answer_batch = property_get(quiz_batch_item, answer_property);
+    let eq_a = equal(answer_batch, quiz_answer);
+    let eq_q = equal(question_batch, quiz_question);
+    let ored = or(eq_a, eq_q);
+    return ored;
+  }
+  list_filter_remove(quiz_batch_items, filter);
+  let answers = list_map_property(quiz_batch_items, answer_property);
+  let answers_unique = list_unique(answers);
+  list_remove_if_exists(answers_unique, quiz_answer);
+  let answer_count_max = app_code_answer_count_max();
+  let nn2 = null_not_is(answer_count_override);
+  if (nn2) {
+    answer_count_max = answer_count_override;
+  }
+  let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
+  let choices = list_concat(taken, [quiz_answer]);
   list_sort_text_to(choices);
   let buttons = list_map(choices, each_button);
   let answered = false;
