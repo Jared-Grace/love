@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
@@ -26,7 +27,6 @@ import { list_index_last_is } from "../../../love/public/src/list_index_last_is.
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { list_pair_other } from "../../../love/public/src/list_pair_other.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz(
@@ -106,8 +106,8 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
-    let properties = ["question", "answer"];
-    let question_property = list_pair_other(properties, answer_property);
+    let question_property =
+      app_code_lesson_quiz_qa_property_other(answer_property);
     quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
