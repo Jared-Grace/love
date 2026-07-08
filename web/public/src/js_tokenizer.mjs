@@ -1,3 +1,4 @@
+import { bind } from "../../../love/public/src/bind.mjs";
 import { module_acorn_get } from "../../../love/public/src/module_acorn_get.mjs";
 import { invoke_until } from "../../../love/public/src/invoke_until.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -13,7 +14,8 @@ export function js_tokenizer(code) {
       let r = token.type.label === "eof";
       return r;
     }
-    tokens = invoke_until(tokenizer.getToken, end_is);
+    let next_get = tokenizer.getToken.bind(tokenizer);
+    tokens = invoke_until(next_get, end_is);
     log(js_tokenizer.name, {
       tokens,
     });
