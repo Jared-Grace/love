@@ -111,7 +111,6 @@ export function app_code_lesson_quiz(
     app_code_lesson_quiz_multiple_choice(
       batch_get,
       answers_div,
-      container_success_message,
       on_success,
       on_wrong,
       answer_on_button,
