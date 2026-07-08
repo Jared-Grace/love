@@ -39,7 +39,6 @@ export async function sandbox() {
     let r2 = await function_transform_current(
       "js_identifier_name_new,c,list_join_newline,2",
     );
-    await function_current_selects_empty();
     let r = await function_node_select_args(
       js_call_named_find_alias.name,
       "folder_user_docs_read",
@@ -72,6 +71,7 @@ export async function sandbox() {
       }
       {
         (function_current_selects_apply,
+          [js_expand_selects.name],
           [js_function_node_unwrap.name],
           [js_statement_delete.name],
           [js_statement_if_return_add.name],
@@ -88,6 +88,7 @@ export async function sandbox() {
       await function_source_remove(f_name, "2");
       await function_node_select_nested(js_call_callee_name_try.name);
       await function_new_text(f_name, text);
+      await function_current_selects_empty();
     }
   }
 }
