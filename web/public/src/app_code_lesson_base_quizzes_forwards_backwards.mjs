@@ -1,3 +1,4 @@
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
@@ -22,6 +23,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     answer_property: "question",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
+  let copy = object_copy(from);
   let infos = [
     {
       answer_label: forwards_answer_label,
