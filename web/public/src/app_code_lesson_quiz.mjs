@@ -162,13 +162,7 @@ export function app_code_lesson_quiz(
           answered = true;
           app_shared_button_screen_green_style_assign(b);
           html_clear(container_success_message);
-          app_replace_success_message(container_success_message);
-          html_visibility_hidden(quiz_new_message);
-          html_visibility_visible(container_success_message);
-          await sleep_seconds(0.55);
-          qa = next_get();
-          on_correct();
-          html_visibility_visible(quiz_new_message);
+          await on_success();
         } else {
           html_visibility_hidden(container_success_message);
           if (not(answered)) {
@@ -184,5 +178,14 @@ export function app_code_lesson_quiz(
       }
       return b;
     }
+  }
+  async function on_success() {
+    app_replace_success_message(container_success_message);
+    html_visibility_hidden(quiz_new_message);
+    html_visibility_visible(container_success_message);
+    await sleep_seconds(0.55);
+    qa = next_get();
+    on_correct();
+    html_visibility_visible(quiz_new_message);
   }
 }
