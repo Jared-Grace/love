@@ -1,6 +1,4 @@
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
+import { js_tokens_to_code } from "../../../love/public/src/js_tokens_to_code.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { lists_equal_pair } from "../../../love/public/src/lists_equal_pair.mjs";
@@ -59,9 +57,7 @@ export function app_code_lesson_quiz_token_select(
       } else {
         variations = variations_new;
         let variation_first = list_first(variations);
-        let joined = list_join_space(variation_first);
-        let expression = js_parse_expression(joined);
-        let code2 = js_unparse(expression);
+        let code2 = js_tokens_to_code(variation_first);
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
