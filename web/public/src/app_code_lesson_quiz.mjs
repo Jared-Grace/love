@@ -117,6 +117,7 @@ export function app_code_lesson_quiz(
       on_wrong,
       answer_on_button,
       qa,
+      info,
     );
   }
   function on_wrong() {
