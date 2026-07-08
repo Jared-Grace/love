@@ -7,6 +7,8 @@ export function list_map_cycle(list, mappers) {
   function lambda(la, item) {
     let mapper = next_get();
     let mapped = mapper(item);
+    la(mapped);
   }
   let r = list_adder_each(list, lambda);
+  return mapped;
 }
