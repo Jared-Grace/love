@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div_code_dark } from "../../../love/public/src/html_div_code_dark.mjs";
@@ -42,7 +43,9 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(filtered);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
-      } else {e
+      } else {
+        function lambda4(item) {}
+        each(list, lambda4);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
       }
