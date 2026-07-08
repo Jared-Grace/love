@@ -15,7 +15,7 @@ export function app_code_lesson_validity_base(
   example_answer_label,
 ) {
   const example_label = app_code_label_code_example();
-  const quiz_label = example_label;
+  const quiz_label = example_answer_label;
   let question_label = app_code_label_code_question();
   let example_count = 2;
   let quiz_backwards_label_answer =
