@@ -1,4 +1,4 @@
-import { each_pair } from "../../../love/public/src/each_pair.mjs";
+import { each_pair_min } from "../../../love/public/src/each_pair_min.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export function list_starts_with(list, list_prefix) {
   let starts_with = true;
@@ -7,6 +7,6 @@ export function list_starts_with(list, list_prefix) {
       starts_with = false;
     }
   }
-  each_pair(list, list_prefix, lambda);
+  each_pair_min(list, list_prefix, lambda);
   return starts_with;
 }
