@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
@@ -73,6 +74,7 @@ export function app_code_lesson_quiz_token_select(
           return skipped;
         }
         let mapped = list_map(variations, lambda3);
+        let combined = list_concat_multiple(lists);
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
