@@ -107,8 +107,7 @@ export function app_code_lesson_quiz(
     let back_text = app_shared_button_back_text() + " to the previous quiz";
     let bb = app_replace_button_wide(c, back_text, on_back);
   }
-  let container_question = property_get(n, "container_question");
-  let hides = [success, c, container_question];
+  let hides = [success, c];
   html_visibility_hidden_multiple(hides);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
