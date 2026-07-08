@@ -29,8 +29,8 @@ export function app_code_lesson_quiz_multiple_choice(
   batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
-  let answer_property = property_get(info, "answer_property");
   let answer_count_override = property_get(info, "answer_count_override");
+  let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let question_property =
     app_code_lesson_quiz_qa_property_other(answer_property);
