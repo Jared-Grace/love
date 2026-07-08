@@ -5,8 +5,8 @@ import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 export function js_code_binary_sorted_reversed(left, operator, right) {
   let operands = [left, right];
-  list_reverse(list);
   list_sort_text(operands);
+  list_reverse(operands);
   let r = list_first_second_only(operands);
   let second = property_get(r, "second");
   let first = property_get(r, "first");
