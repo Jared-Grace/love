@@ -38,6 +38,12 @@ export function app_code_lesson_quizzes_generic(
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
   let infos = [forwards, backwards];
+  let codes = [
+    {
+      include: backwards_code,
+      base: backwards,
+    },
+  ];
   if (backwards_code) {
     let token_select = object_copy(backwards);
     object_assign(token_select, {
