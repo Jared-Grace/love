@@ -52,6 +52,7 @@ export function app_code_lesson_quiz_token_select(
   html_text_set(answer_div, text);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
+  let unique2 = list_unique(list);
   list_sort_text(normalized);
   let buttons = null;
   let chosen = [];
