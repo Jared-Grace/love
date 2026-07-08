@@ -52,8 +52,8 @@ export function app_code_lesson_quiz_token_select(
   html_text_set(answer_div, text);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
-  let unique2 = list_unique(list);
-  list_sort_text(normalized);
+  let tokens_unique = list_unique(normalized);
+  list_sort_text(tokens_unique);
   let buttons = null;
   let chosen = [];
   function lambda(token) {
@@ -108,7 +108,7 @@ export function app_code_lesson_quiz_token_select(
     }
     return b;
   }
-  buttons = list_map(normalized, lambda);
+  buttons = list_map(tokens_unique, lambda);
   log(app_code_lesson_quiz_token_select.name, {
     variations,
   });
