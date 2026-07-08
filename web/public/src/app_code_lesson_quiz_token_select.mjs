@@ -71,8 +71,7 @@ export function app_code_lesson_quiz_token_select(
           let sum = add(index2, size);
           log(app_code_lesson_quiz_token_select.name, {
             index,
-            token,
-            index2,
+            token,sum
           });
           return sum;
         }
