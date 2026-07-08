@@ -11,7 +11,7 @@ export function app_code_lesson_quizzes(
   backwards_answer_on_button,
   backwards_answer_count_override,
 ) {
-  let backwards_code = true;
+  let backwards_code = false;
   let quizzes_get = app_code_lesson_quizzes_generic(
     backwards_answer_label,
     backwards_answer_on_button,
