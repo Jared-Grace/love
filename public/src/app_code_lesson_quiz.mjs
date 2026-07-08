@@ -92,6 +92,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
+  let c = app_code_container_light_blue(on_success);
   let on_back = null;
   let back_text = null;
   let quiz_index = app_code_quiz_index_get(context);
@@ -107,7 +108,6 @@ export function app_code_lesson_quiz(
     back_text = " to the previous quiz";
     let bb = app_replace_button_wide(c, back_text, on_success);
   }
-  let c = app_code_container_light_blue(on_success);
   let container_question = property_get(n, "container_question");
   let hides = [success, c, container_question];
   html_visibility_hidden_multiple(hides);
