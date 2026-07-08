@@ -46,7 +46,6 @@ export async function sandbox() {
   await function_current_selects_apply(js_expand_selects.name);
   return r;
   ("below is functionality that has been used in the past");
-  await function_new_text(f_name, text);
   {
     (function_node_select_args,
       [js_function_node_find_named_node.name, "on_passage"],
@@ -54,7 +53,6 @@ export async function sandbox() {
       [js_statement_find_call_named.name, property_exists_not.name],
       [js_expressions_with_string_starting_with.name, "p"]);
   }
-  return;
   {
     (function_transform_current,
       [js_find_return_argument_set.name, "joined"],
@@ -83,5 +81,6 @@ export async function sandbox() {
     ("regular function calls: ");
     await function_source_remove(f_name, "2");
     await function_node_select_nested(js_call_callee_name_try.name);
+    await function_new_text(f_name, text);
   }
 }
