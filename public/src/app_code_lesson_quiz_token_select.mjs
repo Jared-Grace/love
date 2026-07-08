@@ -71,19 +71,6 @@ export function app_code_lesson_quiz_token_select(
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
         list_add(chosen, token);
-        let size = list_size(chosen);
-        variations = variations_new;
-        function lambda3(variation) {
-          let skipped = list_skip(variation, size);
-          return skipped;
-        }
-        let mapped = list_map(variations, lambda3);
-        let combined = list_concat_multiple(mapped);
-        let unique = list_unique(combined);
-        let n = list_includes_not(unique, token);
-        if (n) {
-          html_remove(b);
-        }
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
@@ -104,6 +91,19 @@ export function app_code_lesson_quiz_token_select(
         }
         await sleep_success_color();
         html_style_code_dark(b);
+        let size = list_size(chosen);
+        variations = variations_new;
+        function lambda3(variation) {
+          let skipped = list_skip(variation, size);
+          return skipped;
+        }
+        let mapped = list_map(variations, lambda3);
+        let combined = list_concat_multiple(mapped);
+        let unique = list_unique(combined);
+        let n = list_includes_not(unique, token);
+        if (n) {
+          html_remove(b);
+        }
       }
     }
     return b;
