@@ -66,7 +66,7 @@ export function app_code_lesson_quiz_token_select(
     la(code_with_variation);
   }
   let codes = list_adder_unique(lambda5);
-  let mapped2 = list_map(list2, js_tokenizer_normalized);
+  let mapped2 = list_map(codes, js_tokenizer_normalized);
   function lambda6(item) {
     let popped = list_remove_last(list3);
   }
