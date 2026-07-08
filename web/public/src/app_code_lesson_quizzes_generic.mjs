@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -48,6 +49,8 @@ export function app_code_lesson_quizzes_generic(
       base: backwards,
     },
   ];
+  function lambda2(item) {}
+  each(list, lambda2);
   if (backwards_code) {
     let token_select = object_copy(backwards);
     object_assign(token_select, {
