@@ -64,7 +64,7 @@ export function app_code_lesson_quiz_token_select(
           let index2 = text_index_of_from(code2, token, index);
           return index2;
         }
-        let reduced = list_reduce(variation_first, lambda5, 0);
+        let reduced = list_reduce(chosen, lambda5, 0);
         log(app_code_lesson_quiz_token_select.name, {
           reduced,
         });
