@@ -69,7 +69,7 @@ export function app_code_lesson_quiz(
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, answer_label);
   let quiz_batch_items = batch_get();
-  function lambda2(quiz_batch_item) {
+  function filter(quiz_batch_item) {
     let question2 = property_get(quiz_batch_item, question_property);
     let answer2 = property_get(quiz_batch_item, answer_property);
     let eq3 = equal(answer2, quiz_answer);
@@ -77,7 +77,7 @@ export function app_code_lesson_quiz(
     let ored = or(eq3, eq4);
     return ored;
   }
-  list_filter_remove(quiz_batch_items, lambda2);
+  list_filter_remove(quiz_batch_items, filter);
   let answers = list_map_property(quiz_batch_items, answer_property);
   let answers_unique = list_unique(answers);
   list_remove_if_exists(answers_unique, quiz_answer);
