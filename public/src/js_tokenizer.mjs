@@ -3,7 +3,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { js_parse_generic_arg } from "../../../love/public/src/js_parse_generic_arg.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export function js_tokenizer(acorn, code) {
-  let ast = null;
+  let tokens = null;
   try {
     let a = js_parse_generic_arg();
     const tokenizer = acorn.tokenizer(code, a);
@@ -11,7 +11,7 @@ export function js_tokenizer(acorn, code) {
       let r = token.type.label === "eof";
       return r;
     }
-    const tokens = invoke_until(tokenizer.getToken, end_is);
+    tokens = invoke_until(tokenizer.getToken, end_is);
     log(js_tokenizer.name, {
       tokens,
     });
