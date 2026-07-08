@@ -18,6 +18,7 @@ export function app_code_lesson_quiz_token_select(
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
+  let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
   function lambda(token) {
@@ -26,7 +27,6 @@ export function app_code_lesson_quiz_token_select(
     html_style_code_dark(b);
   }
   each(normalized, lambda);
-  let variations = app_code_lesson_quiz_token_select_variations(code);
   log(app_code_lesson_quiz_token_select.name, {
     variations,
   });
