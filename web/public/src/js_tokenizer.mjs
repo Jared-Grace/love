@@ -4,10 +4,7 @@ export function js_tokenizer(acorn, code) {
   let ast = null;
   try {
     let a = js_parse_generic_arg();
-    ast = acorn.parse(code, a);
-    const tokenizer = acorn.tokenizer(code, {
-      ecmaVersion: "latest",
-    });
+    const tokenizer = acorn.tokenizer(code, a);
     const tokens = [];
     while (true) {
       const token = tokenizer.getToken();
