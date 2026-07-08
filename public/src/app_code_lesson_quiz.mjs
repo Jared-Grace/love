@@ -69,8 +69,8 @@ export function app_code_lesson_quiz(
   }
   let success = app_replace_success_message(container_success_message);
   async function on_next() {
-  let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
-  let qnli = list_index_last_is(quizzes, quiz_index);
+    let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
+    let qnli = list_index_last_is(quizzes, quiz_index);
     if (qnli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
@@ -130,11 +130,10 @@ export function app_code_lesson_quiz(
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_hidden(quiz_new_message);
-    html_visibility_visible(container_success_message)n
-wFunatiit sleep_success_color();
+    html_visibility_visible(container_success_message);
+    await sleep_success_color();
     qa = next_get();
     on_qa_change();
-    html_visibility_visible(quiz
-async function newFunction() {
-  await sleep_seconds(0.55);
+    html_visibility_visible(quiz_new_message);
+  }
 }
