@@ -50,5 +50,5 @@ export function app_code_lesson_quiz_token_select(
     }
     js_visit_type_node(ast, "BinaryExpression", lambda2);
   }
-  let list = list_adder(lambda4);
+  let variations = list_adder(lambda4);
 }
