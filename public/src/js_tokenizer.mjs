@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_parse_generic_arg } from "../../../love/public/src/js_parse_generic_arg.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export function js_tokenizer(acorn, code) {
@@ -8,6 +9,7 @@ export function js_tokenizer(acorn, code) {
     const tokens = [];
     while (true) {
       const token = tokenizer.getToken();
+      list_add(list, item);
       tokens.push(token);
       if (token.type.label === "eof") {
         break;
