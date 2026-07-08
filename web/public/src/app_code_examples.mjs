@@ -71,6 +71,7 @@ export function app_code_examples(context) {
   );
   if (lesson_first_not) {
     async function previous() {
+      app_code_lesson_previous_set(context);
       await app_shared_screen_set(context, app_code_examples);
     }
     const backs = [];
