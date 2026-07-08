@@ -81,7 +81,7 @@ export function app_code_lesson_quiz_token_select(
         let unique = list_unique(combined);
         let n = list_includes_not(unique, token);
         if (n) {
-          html_remove(component);
+          html_remove(b);
         }
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
