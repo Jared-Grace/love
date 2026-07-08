@@ -9,8 +9,7 @@ export function js_tokenizer(acorn, code) {
     const tokens = [];
     while (true) {
       const token = tokenizer.getToken();
-      list_add(list, item);
-      tokens.push(token);
+      list_add(tokens, token);
       if (token.type.label === "eof") {
         break;
       }
