@@ -50,6 +50,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           batch_get,
           quizzes,
           next_get,
+          app_code_lesson_quiz_multiple_choice,
         );
       };
       return r;
