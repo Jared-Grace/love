@@ -78,12 +78,12 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let parent_container = html_div(parent);
-  let on_success = html_div(parent_container);
+  let container_success_message = html_div(parent_container);
   let quiz_new_message = app_code_container_light_blue(parent_container);
   html_div_text(quiz_new_message, "Above is a new quiz, if you want");
   let nt = app_shared_button_next_text();
   html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
-  let success = app_replace_success_message(on_success);
+  let success = app_replace_success_message(container_success_message);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
     let li = list_index_last_is(quizzes, quiz_index);
@@ -161,16 +161,16 @@ export function app_code_lesson_quiz(
         if (eq2) {
           answered = true;
           app_shared_button_screen_green_style_assign(b);
-          html_clear(on_success);
-          app_replace_success_message(on_success);
+          html_clear(container_success_message);
+          app_replace_success_message(container_success_message);
           html_visibility_hidden(quiz_new_message);
-          html_visibility_visible(on_success);
+          html_visibility_visible(container_success_message);
           await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
           html_visibility_visible(quiz_new_message);
         } else {
-          html_visibility_hidden(on_success);
+          html_visibility_hidden(container_success_message);
           if (not(answered)) {
             let color_bg = app_code_lesson_quiz_wrong_background_color();
             html_style_background_color_set(b, color_bg);
