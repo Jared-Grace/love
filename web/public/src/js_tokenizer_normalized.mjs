@@ -10,6 +10,7 @@ export function js_tokenizer_normalized(code) {
     let value = property_get(object, property_name);
     let v = undefined_is(value);
     if (false) {
+      ppg;
     }
     return value;
   };
