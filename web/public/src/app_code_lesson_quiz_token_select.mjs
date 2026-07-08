@@ -1,3 +1,4 @@
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -21,7 +22,6 @@ import { list_concat_single_right } from "../../../love/public/src/list_concat_s
 import { app_code_lesson_quiz_token_select_variations } from "../../../love/public/src/app_code_lesson_quiz_token_select_variations.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
@@ -45,7 +45,7 @@ export function app_code_lesson_quiz_token_select(
   html_text_set(answer_div, text);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
-  list_shuffle(normalized);
+  list_sort_text(normalized);
   let buttons = null;
   let chosen = [];
   function lambda(token) {
