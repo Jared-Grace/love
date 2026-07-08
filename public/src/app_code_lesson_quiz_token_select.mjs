@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -79,7 +80,8 @@ export function app_code_lesson_quiz_token_select(
         let combined = list_concat_multiple(mapped);
         let unique = list_unique(combined);
         let n = list_includes_not(unique, token);
-        if (false) {
+        if (n) {
+          html_remove(component);
         }
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
