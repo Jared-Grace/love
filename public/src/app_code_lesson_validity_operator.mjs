@@ -13,6 +13,7 @@ export function app_code_lesson_validity_operator(math_name, batch, above) {
     above,
     "Code validity: ",
     html_text_set_code_dark,
+    example_answer_label,
   );
   return lesson;
 }
