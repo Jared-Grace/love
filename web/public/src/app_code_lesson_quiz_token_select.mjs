@@ -30,9 +30,6 @@ export function app_code_lesson_quiz_token_select(
       let concated = list_concat_single_right(chosen, token);
       function lambda2(variation) {
         let starts_with = list_starts_with(variation, concated);
-        log(app_code_lesson_quiz_token_select.name, {
-          starts_with,
-        });
         return starts_with;
       }
       let filtered = list_filter(variations, lambda2);
