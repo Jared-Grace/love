@@ -1,3 +1,4 @@
+import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
@@ -35,6 +36,7 @@ export function app_code_lesson_quiz_token_select(
     html_style_code_dark(b);
   }
   each(normalized, lambda);
+  let expression = js_parse_expression_try(joined);
   let ast = js_parse(code);
   function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
