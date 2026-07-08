@@ -5,6 +5,7 @@ import { each_pair_min } from "../../../love/public/src/each_pair_min.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export function lists_equal_pair(list_a, list_b) {
   let e = lists_sizes_equal_pair(list_a, list_b);
+  $inr;
   let has_difference = false;
   function lambda(left, right) {
     if (equal_not(left, right)) {
