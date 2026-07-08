@@ -23,7 +23,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   batch_get,
-  answers_div,
+  parent,
   container_success_message,
   on_success,
   on_wrong,
@@ -61,7 +61,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let buttons = list_map(choices, each_button);
   let answered = false;
   function each_button(quiz_choice) {
-    let b = app_replace_button_wide(answers_div, quiz_choice, on_click);
+    let b = app_replace_button_wide(parent, quiz_choice, on_click);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
