@@ -76,8 +76,8 @@ export function app_code_lesson_quiz_token_select(
         log(app_code_lesson_quiz_token_select.name, {
           reduced,
         });
-        let taken = text_take(s, count);
-        let skipped = text_skip(s2, skip_count);
+        let taken = text_take(code2, count);
+        let skipped = text_skip(code2, skip_count);
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         function lambda4(variation) {
