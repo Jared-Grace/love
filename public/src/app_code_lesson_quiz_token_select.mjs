@@ -36,6 +36,7 @@ export function app_code_lesson_quiz_token_select(
   let ast = js_parse(code);
   let commutative = js_code_binary_expression_commutative();
   function lambda2(node) {
+    let operator = property_get(node, "operator");
     log(app_code_lesson_quiz_token_select.name, {
       node,
     });
