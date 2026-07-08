@@ -48,7 +48,7 @@ export function app_code_lesson_quiz(
   let answer_label = property_get(info, "answer_label");
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
-  let question_label_div = html_div(parent);
+  let question_label_div = html_div(container_blue_light);
   let a = app_code_lesson_above(
     question_label_div,
     question_label,
