@@ -77,7 +77,7 @@ export function app_code_lesson_quiz(
   );
   let qli = list_index_last_is(quizzes, quiz_index_next);
   async function on_next() {
-    app_code_quiz_index_set(context2, index_new);
+    app_code_quiz_index_set(context, quiz_index_next);
     if (qli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
