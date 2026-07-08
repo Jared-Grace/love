@@ -1,5 +1,4 @@
 import { list_starts_with_curried_right } from "../../../love/public/src/list_starts_with_curried_right.mjs";
-import { list_starts_with } from "../../../love/public/src/list_starts_with.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "../../../love/public/src/app_code_lesson_quiz_token_select_variations.mjs";
