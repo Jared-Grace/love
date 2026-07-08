@@ -85,12 +85,12 @@ export function app_code_lesson_quiz_token_select(
           let equal = lists_equal_pair(variation, chosen);
           return equal;
         }
-        await sleep_success_color();
-        html_style_code_dark(b);
         let any = list_any(variations, lambda4);
         if (any) {
           await on_success();
         }
+        await sleep_success_color();
+        html_style_code_dark(b);
       }
     }
     return b;
