@@ -63,11 +63,8 @@ export function app_code_lesson_quiz_token_select(
           concated,
         });
       } else {
+        each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
-        log(app_code_lesson_quiz_token_select.name, {
-          b,
-        });
-        return;
         list_add(chosen, token);
         variations = variations_new;
         let variation_first = list_first(variations);
@@ -83,7 +80,6 @@ export function app_code_lesson_quiz_token_select(
         let taken = text_take(code2, reduced);
         html_clear(answer_div);
         let span_taken = html_span_text(answer_div, taken);
-        each(buttons, html_style_code_dark);
         function lambda4(variation) {
           let equal = lists_equal_pair(variation, chosen);
           return equal;
