@@ -120,6 +120,7 @@ export function app_code_lesson_quiz(
     html_visibility_hidden(container_success_message);
   }
   async function on_success() {
+    html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_hidden(quiz_new_message);
     html_visibility_visible(container_success_message);
