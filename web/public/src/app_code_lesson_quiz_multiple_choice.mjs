@@ -24,9 +24,9 @@ export function app_code_lesson_quiz_multiple_choice(
   parent,
   info,
   qa,
-  batch_get,
   on_success,
   on_wrong,
+  batch_get,
 ) {
   let answer_on_button = property_get(info, "answer_on_button");
   let answer_property = property_get(info, "answer_property");

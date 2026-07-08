@@ -111,9 +111,9 @@ export function app_code_lesson_quiz(
       answers_div,
       info,
       qa,
-      batch_get,
       on_success,
       on_wrong,
+      batch_get,
     );
   }
   function on_wrong() {
