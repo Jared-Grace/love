@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_visit_type_node } from "../../../love/public/src/js_visit_type_node.mjs";
 import { js_code_binary_expression_commutative } from "../../../love/public/src/js_code_binary_expression_commutative.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -37,6 +38,7 @@ export function app_code_lesson_quiz_token_select(
   let commutative = js_code_binary_expression_commutative();
   function lambda2(node) {
     let operator = property_get(node, "operator");
+    let includes = list_includes(list, item);
     log(app_code_lesson_quiz_token_select.name, {
       node,
     });
