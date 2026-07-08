@@ -9,6 +9,6 @@ export function invoke_until(next_get, end_is) {
       }
     }
   }
-  const tokens = list_adder(lambda);
-  return tokens;
+  const list = list_adder(lambda);
+  return list;
 }
