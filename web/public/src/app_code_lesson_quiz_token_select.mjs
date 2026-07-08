@@ -76,8 +76,8 @@ export function app_code_lesson_quiz_token_select(
         let taken = text_take(code2, reduced);
         let skipped = text_skip(code2, reduced);
         html_clear(answer_div);
-        let span = html_span_text(answer_div, text);
-        let span2 = html_span_text(answer_div, text2);
+        let span_taken = html_span_text(answer_div, taken);
+        let span_skipped = html_span_text(answer_div, skipped);
         each(buttons, html_style_code_dark);
         function lambda4(variation) {
           let equal = lists_equal_pair(variation, chosen);
