@@ -1,3 +1,4 @@
+import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { lists_equal_pair } from "../../../love/public/src/lists_equal_pair.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
@@ -28,6 +29,7 @@ export function app_code_lesson_quiz_token_select(
   batch_get,
 ) {
   let answer_div = html_div_code_dark(parent);
+  let nb = text_space_nb();
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
