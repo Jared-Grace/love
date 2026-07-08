@@ -26,7 +26,7 @@ export function app_code_lesson_validity_base(
     on_question_forwards,
     quiz_label,
     noop,
-    "Identifier validity: ",
+    backwards_question_label,
     app_code_style_normal_text,
     quiz_backwards_label_answer,
     on_question_forwards,
