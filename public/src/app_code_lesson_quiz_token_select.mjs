@@ -1,3 +1,4 @@
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -68,9 +69,10 @@ export function app_code_lesson_quiz_token_select(
   let codes = list_adder_unique(lambda5);
   let mapped2 = list_map(codes, js_tokenizer_normalized);
   function lambda6(item) {
-    let popped = list_remove_last(list3);
+    let popped = list_remove_last(item);
+    equal_assert(left, right);
   }
-  let mapped = list_map(list, lambda6);
+  let mapped = list_map(mapped2, lambda6);
   let mapped3 = list_map(codes, js_parse_expression);
   log(app_code_lesson_quiz_token_select.name, {
     mapped3,
