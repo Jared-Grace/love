@@ -38,12 +38,12 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     let code_without_variation = js_unparse(ast);
     la(code_without_variation);
     let ne = list_empty_not_is(variation_fns);
-    if (false) {
+    if (ne) {
+      let variation = list_single(variation_fns);
+      variation();
+      let code_with_variation = js_unparse(ast);
+      la(code_with_variation);
     }
-    let variation = list_single(variation_fns);
-    variation();
-    let code_with_variation = js_unparse(ast);
-    la(code_with_variation);
   }
   let codes = list_adder_unique(lambda5);
   let variations = list_map(codes, js_tokenizer_normalized);
