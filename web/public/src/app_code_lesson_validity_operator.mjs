@@ -10,7 +10,7 @@ export function app_code_lesson_validity_operator(math_name, batch, above) {
     id,
     name,
     above,
-    backwards_question_label,
+    "Code validity: ",
   );
   return lesson;
 }
