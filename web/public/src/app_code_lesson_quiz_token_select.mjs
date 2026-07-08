@@ -21,7 +21,7 @@ export function app_code_lesson_quiz_token_select(
   on_wrong,
   batch_get,
 ) {
-  let div = html_div(parent2);
+  let answer_div = html_div(parent);
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
