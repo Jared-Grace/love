@@ -73,7 +73,7 @@ export function app_code_lesson_quiz_token_select(
         let size = list_size(chosen);
         variations = variations_new;
         function lambda3(variation) {
-          let skipped = list_skip(list, size);
+          let skipped = list_skip(variation, size);
           return skipped;
         }
         let mapped = list_map(variations, lambda3);
