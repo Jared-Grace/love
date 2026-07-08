@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { each_pair_min } from "../../../love/public/src/each_pair_min.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export function list_pair_equal(list, list_prefix) {
@@ -8,5 +9,6 @@ export function list_pair_equal(list, list_prefix) {
     }
   }
   each_pair_min(list, list_prefix, lambda);
-  return difference;
+  let n = not(difference);
+  return n;
 }
