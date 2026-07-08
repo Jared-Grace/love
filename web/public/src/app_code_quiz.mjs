@@ -27,7 +27,7 @@ export function app_code_quiz(context) {
     list_shuffle,
     true,
   );
-  function on_batch_item(container, bs, refresh) {
+  function on_batch_item(container, bs, refresh, next_get) {
     let b = list_single(bs);
     let c = app_code_container_light_blue(container);
     app_code_example_answer_gap(c);
@@ -35,7 +35,7 @@ export function app_code_quiz(context) {
     let qs = property_get(b, "quizzes");
     let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
     let q = list_get(qs, quiz_index);
-    q(context, container, c, refresh);
+    q(context, container, c, refresh, next_get);
   }
   refresh();
   let another = app_code_lesson_text_example_another(lesson);
