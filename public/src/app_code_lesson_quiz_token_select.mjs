@@ -1,3 +1,4 @@
+import { list_starts_with_curried_right } from "../../../love/public/src/list_starts_with_curried_right.mjs";
 import { list_starts_with } from "../../../love/public/src/list_starts_with.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
@@ -28,10 +29,7 @@ export function app_code_lesson_quiz_token_select(
   function lambda(token) {
     function lambda3() {
       let concated = list_concat_single_right(chosen, token);
-      function lambda2(variation) {
-        let starts_with = list_starts_with(variation, concated);
-        return starts_with;
-      }
+      let lambda2 = list_starts_with_curried_right(concated);
       let filtered = list_filter(variations, lambda2);
     }
     let b = app_replace_button(parent, token, lambda3);
