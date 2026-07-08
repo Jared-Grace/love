@@ -32,7 +32,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     },
   ];
   let quizzes_get = function lambda(question, answer) {
-    function lambda2(qa) {
+    function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
           container,
@@ -52,7 +52,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
       };
       return r;
     }
-    let quizzes = list_map(infos, lambda2);
+    let quizzes = list_map(infos, each_info);
     return quizzes;
   };
   return quizzes_get;
