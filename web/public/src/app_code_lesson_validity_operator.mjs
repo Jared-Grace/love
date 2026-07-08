@@ -1,3 +1,4 @@
+import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_lesson_validity_base } from "../../../love/public/src/app_code_lesson_validity_base.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
@@ -11,6 +12,7 @@ export function app_code_lesson_validity_operator(math_name, batch, above) {
     name,
     above,
     "Code validity: ",
+    html_text_set_code_dark,
   );
   return lesson;
 }
