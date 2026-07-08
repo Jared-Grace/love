@@ -60,17 +60,17 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
-  let div = html_div(parent2);
+  let above_container = html_div(container);
   let quiz_answer = property_get(qa, answer_property);
   let quiz_question = property_get(qa, question_property);
   let a = app_code_lesson_above(
-    container,
+    above_container,
     question_label,
     quiz_question,
     on_question,
   );
   let a_container = property_get(a, "container");
-  app_code_example_answer_label(a_container, answer_label);
+  app_code_example_answer_label(a_container, answer_label);hc
   let on_success = html_div(parent);
   let success = app_replace_success_message(on_success);
   async function on_next() {
