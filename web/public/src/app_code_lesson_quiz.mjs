@@ -164,7 +164,7 @@ export function app_code_lesson_quiz(
           html_clear(container_success_message);
           await on_success();
         } else {
-          html_visibility_hidden(container_success_message);
+          on_wrong();
           if (not(answered)) {
             let color_bg = app_code_lesson_quiz_wrong_background_color();
             html_style_background_color_set(b, color_bg);
@@ -178,6 +178,9 @@ export function app_code_lesson_quiz(
       }
       return b;
     }
+  }
+  function on_wrong() {
+    html_visibility_hidden(container_success_message);
   }
   async function on_success() {
     app_replace_success_message(container_success_message);
