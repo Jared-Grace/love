@@ -106,6 +106,7 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   qa_refresh();
   function qa_refresh() {
+    quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     app_code_lesson_quiz_multiple_choice(
