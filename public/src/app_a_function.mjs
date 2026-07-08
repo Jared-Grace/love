@@ -63,7 +63,7 @@ import { app_shared_screen_set } from "../../../love/public/src/app_shared_scree
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
-import { json_format_to } from "./json_format_to.mjs";
+import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
   let key = app_a_function_name_selected_key();
@@ -231,6 +231,10 @@ export async function app_a_function(context) {
   function lambda8(la) {
     function lambda7(v) {
       let n = property_get(v, "node");
+      on_node(n);
+    }
+    js_visit_type(ast, "FunctionDeclaration", lambda7);
+    function on_node(n) {
       let id = property_get(n, "id");
       function lambda9() {
         let name2 = property_get(id, "name");
@@ -238,7 +242,6 @@ export async function app_a_function(context) {
       }
       js_node_type_is_if(id, "Identifier", lambda9);
     }
-    js_visit_type(ast, "FunctionDeclaration", lambda7);
   }
   let fds = list_adder_unique(lambda8);
   let f_names_local = list_difference(fds, f_names);
