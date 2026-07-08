@@ -110,7 +110,6 @@ export function app_code_lesson_quiz(
     html_clear(answers_div);
     app_code_lesson_quiz_multiple_choice(
       batch_get,
-      answer_property,
       answers_div,
       container_success_message,
       on_success,
