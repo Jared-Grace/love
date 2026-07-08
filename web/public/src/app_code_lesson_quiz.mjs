@@ -65,9 +65,8 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
-  let above_container = html_div(container);
-  let parent_container = html_div(parent);
   let quiz_question = null;
+  let above_container = html_div(container);
   let a = app_code_lesson_above(
     above_container,
     question_label,
@@ -78,6 +77,7 @@ export function app_code_lesson_quiz(
   let container_question = property_get(a, "container_question");
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
+  let parent_container = html_div(parent);
   let on_success = html_div(parent_container);
   let quiz_new_message = app_code_container_light_blue(parent_container);
   html_div_text(quiz_new_message, "Above is a new quiz, if you want");
