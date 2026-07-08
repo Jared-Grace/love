@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_wrong_set } from "../../../love/public/src/app_code_lesson_quiz_wrong_set.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_starts_with_curried_right } from "../../../love/public/src/list_starts_with_curried_right.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -27,16 +28,17 @@ export function app_code_lesson_quiz_token_select(
   list_shuffle(normalized);
   let chosen = [];
   function lambda(token) {
+    let b = app_replace_button(parent, token, lambda3);
+    html_style_code_dark(b);
     function lambda3() {
       let concated = list_concat_single_right(chosen, token);
       let lambda2 = list_starts_with_curried_right(concated);
       let filtered = list_filter(variations, lambda2);
       let e = list_empty_is(list);
       if (e) {
+        app_code_lesson_quiz_wrong_set(b);
       }
     }
-    let b = app_replace_button(parent, token, lambda3);
-    html_style_code_dark(b);
   }
   each(normalized, lambda);
   log(app_code_lesson_quiz_token_select.name, {
