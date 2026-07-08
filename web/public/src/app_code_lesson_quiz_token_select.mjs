@@ -72,7 +72,7 @@ export function app_code_lesson_quiz_token_select(
     let popped = list_remove_last(item);
     equal_assert(popped, ";");
   }
-  let mapped = list_map(mapped2, lambda6);
+  each(mapped2, lambda6);
   let mapped3 = list_map(codes, js_parse_expression);
   log(app_code_lesson_quiz_token_select.name, {
     mapped3,
