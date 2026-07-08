@@ -108,12 +108,12 @@ export function app_code_lesson_quiz(
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     app_code_lesson_quiz_multiple_choice(
-      batch_get,
       answers_div,
+      info,
+      qa,
+      batch_get,
       on_success,
       on_wrong,
-      qa,
-      info,
     );
   }
   function on_wrong() {
