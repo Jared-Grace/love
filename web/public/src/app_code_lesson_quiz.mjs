@@ -105,7 +105,7 @@ export function app_code_lesson_quiz(
       refresh();
     };
     let back_text = app_shared_button_back_text() + " to the previous quiz";
-    let bb = app_replace_button_wide(c, back_text, on_back);
+    let bb = app_replace_button_wide(parent, back_text, on_back);
   }
   let hides = [success, c];
   html_visibility_hidden_multiple(hides);
