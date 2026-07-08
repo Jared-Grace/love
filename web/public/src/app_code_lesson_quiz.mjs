@@ -154,7 +154,7 @@ export function app_code_lesson_quiz(
       if (eq2) {
         answered = true;
         app_shared_button_screen_green_style_assign(b);
-        html_visibility_visible_multiple(hides);
+        on_correct();
       } else {
         if (not(answered)) {
           let color_bg = app_code_lesson_quiz_wrong_background_color();
@@ -168,5 +168,8 @@ export function app_code_lesson_quiz(
       answer_on_button(b, quiz_choice);
     }
     return b;
+  }
+  function on_correct() {
+    html_visibility_visible_multiple(hides);
   }
 }
