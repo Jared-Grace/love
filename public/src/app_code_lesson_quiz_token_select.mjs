@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_tokenizer } from "../../../love/public/src/js_tokenizer.mjs";
@@ -16,6 +17,8 @@ export function app_code_lesson_quiz_token_select(
   let quiz_answer = property_get(qa, answer_property);
   let tokens = js_tokenizer(quiz_answer);
   let mapped = list_map_property(tokens, "value");
+  function lambda(item) {}
+  let mapped2 = list_map(list, lambda);
   log(app_code_lesson_quiz_token_select.name, {
     mapped,
   });
