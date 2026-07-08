@@ -1,3 +1,4 @@
+import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -79,7 +80,9 @@ export function app_code_lesson_quiz(
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
   let c = app_code_container_light_blue(parent);
-  let div = html_div_text(c, "Here is a new quiz, if you want: ");
+  html_div_text(c, "Here is a new quiz, if you want");
+  let nt = app_shared_button_next_text();
+  html_div_text(c, "Otherwise, choose: " + nt);
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
