@@ -53,9 +53,11 @@ export function app_code_lesson_quiz_token_select(
     js_visit_type_node(ast, "BinaryExpression", lambda2);
   }
   let variations = list_adder(lambda4);
-  function lambda5(la2) {}
+  function lambda5(la) {
+    let code = js_unparse(ast);
+    la(code);
+    let only = list_single(variations);
+  }
   let list = list_adder(lambda5);
-  let code2 = js_unparse(ast2);
-  let only = list_single(variations);
   only();
 }
