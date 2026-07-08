@@ -1,6 +1,6 @@
+import { js_visit_type_node } from "../../../love/public/src/js_visit_type_node.mjs";
 import { js_code_binary_expression_commutative } from "../../../love/public/src/js_code_binary_expression_commutative.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
@@ -35,10 +35,10 @@ export function app_code_lesson_quiz_token_select(
   each(mapped2, lambda);
   let ast = js_parse(code);
   let commutative = js_code_binary_expression_commutative();
-  function lambda2(v) {
+  function lambda2(node) {
     log(app_code_lesson_quiz_token_select.name, {
       v,
     });
   }
-  js_visit_type(ast, "BinaryExpression", lambda2);
+  js_visit_type_node(ast, "BinaryExpression", lambda2);
 }
