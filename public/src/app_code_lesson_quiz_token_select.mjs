@@ -1,3 +1,4 @@
+import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
@@ -84,6 +85,8 @@ export function app_code_lesson_quiz_token_select(
           let equal = lists_equal_pair(variation, chosen);
           return equal;
         }
+        await sleep_success_color();
+        html_style_code_dark(b);
         let any = list_any(variations, lambda4);
         if (any) {
           await on_success();
