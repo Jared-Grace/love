@@ -75,6 +75,7 @@ export function app_code_lesson_quiz(
   let container_question = property_get(a, "container_question");
   on_correct();
   app_code_example_answer_label(a_container, answer_label);
+  let div = html_div(parent2);
   html_clear(parent_container);
   let on_success = html_div(parent_container);
   let success = app_replace_success_message(on_success);
