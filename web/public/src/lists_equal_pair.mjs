@@ -4,13 +4,13 @@ import { each_pair_min } from "../../../love/public/src/each_pair_min.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export function lists_equal_pair(list_a, list_b) {
   let e = lists_sizes_equal_pair(list_a, list_b);
-  let difference = false;
+  let has_difference = false;
   function lambda(left, right) {
     if (equal_not(left, right)) {
-      difference = true;
+      has_difference = true;
     }
   }
   each_pair_min(list_a, list_b, lambda);
-  let n = not(difference);
+  let n = not(has_difference);
   return n;
 }
