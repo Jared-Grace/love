@@ -33,7 +33,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_quiz(
-  container,
+  container_blue_light,
   qa,
   parent,
   context,
@@ -42,6 +42,7 @@ export function app_code_lesson_quiz(
   batch_get,
   quizzes,
   next_get,
+  on_answer,
 ) {
   let question_label = property_get(info, "question_label");
   let on_question = property_get(info, "on_question");
@@ -49,7 +50,7 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let a = app_code_lesson_above(
-    container,
+    container_blue_light,
     question_label,
     quiz_question,
     on_question,
