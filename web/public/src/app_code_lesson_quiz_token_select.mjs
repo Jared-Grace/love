@@ -30,12 +30,12 @@ export function app_code_lesson_quiz_token_select(
   batch_get,
 ) {
   let answer_div = html_div_code_dark(parent);
-  let nb = text_space_nb();
-  ("ensures div is visible from beginning");
-  let placeholder = html_span_text(answer_div, nb);
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
+  let nb = text_space_nb();
+  ("ensures div is visible from beginning");
+  let placeholder = html_span_text(answer_div, nb);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
