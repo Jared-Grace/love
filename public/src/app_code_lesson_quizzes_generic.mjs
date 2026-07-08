@@ -28,18 +28,16 @@ export function app_code_lesson_quizzes_generic(
     answer_property: "question",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
-  let infos = [
-    {
-      answer_label: forwards_answer_label,
-      answer_on_button: forwards_answer_on_button,
-      on_question: forwards_on_question,
-      question_label: forwards_question_label,
-      answer_count_override: null,
-      answer_property: "answer",
-      on_answer: app_code_lesson_quiz_multiple_choice,
-    },
-    backwards,
-  ];
+  const forwards = {
+    answer_label: forwards_answer_label,
+    answer_on_button: forwards_answer_on_button,
+    on_question: forwards_on_question,
+    question_label: forwards_question_label,
+    answer_count_override: null,
+    answer_property: "answer",
+    on_answer: app_code_lesson_quiz_multiple_choice,
+  };
+  let infos = [forwards, backwards];
   if (backwards_code) {
     let token_select = object_copy(backwards);
     object_assign(token_select, {
