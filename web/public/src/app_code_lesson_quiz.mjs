@@ -72,6 +72,7 @@ export function app_code_lesson_quiz(
     on_question,
   );
   let a_container = property_get(a, "container");
+  let container_question = property_get(a, "container_question");
   app_code_example_answer_label(a_container, answer_label);
   html_clear(parent_container);
   let on_success = html_div(parent_container);
