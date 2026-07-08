@@ -32,7 +32,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
   ];
   let quizzes_get = function lambda(question, answer) {
     function lambda2(qa) {
-      let r = function quiz(context, parent, container, refresh) {
+      let r = function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
           container,
           {
