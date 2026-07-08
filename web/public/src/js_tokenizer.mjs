@@ -6,9 +6,10 @@ export function js_tokenizer(acorn, code) {
   try {
     let a = js_parse_generic_arg();
     const tokenizer = acorn.tokenizer(code, a);
+    const next = tokenizer.getToken;
     function lambda(la) {
       while (true) {
-        const token = tokenizer.getToken();
+        const token = next();
         la(token);
         if (token.type.label === "eof") {
           break;
