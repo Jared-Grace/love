@@ -1,3 +1,4 @@
+import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_visibility_visible } from "../../../love/public/src/html_visibility_visible.mjs";
 import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -15,7 +16,6 @@ import { app_code_answer_count_max } from "../../../love/public/src/app_code_ans
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { html_visibility_visible_multiple } from "../../../love/public/src/html_visibility_visible_multiple.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
@@ -164,7 +164,8 @@ export function app_code_lesson_quiz(
           app_shared_button_screen_green_style_assign(b);
           html_clear(on_success);
           app_replace_success_message(on_success);
-          html_visibility_visible_multiple(hides);
+          html_visibility_hidden(i);
+          html_visibility_visible(success);
           await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
