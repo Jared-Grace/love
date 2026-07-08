@@ -62,6 +62,7 @@ export function app_code_lesson_quiz(
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
   let above_container = html_div(container);
+  let parent_container = html_div(parent);
   let quiz_answer = property_get(qa, answer_property);
   let quiz_question = property_get(qa, question_property);
   let a = app_code_lesson_above(
@@ -72,8 +73,8 @@ export function app_code_lesson_quiz(
   );
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, answer_label);
-  html_clear(element);
-  let on_success = html_div(parent);
+  html_clear(parent_container);
+  let on_success = html_div(parent_container);
   let success = app_replace_success_message(on_success);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
@@ -98,7 +99,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  app_replace_button_wide_next(parent, on_next);
+  app_replace_button_wide_next(parent_container, on_next);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
@@ -110,7 +111,7 @@ export function app_code_lesson_quiz(
       refresh();
     };
     let back_text = app_shared_button_back_text() + " to the previous quiz";
-    let bb = app_replace_button_wide(parent, back_text, on_back);
+    let bb = app_replace_button_wide(parent_container, back_text, on_back);
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
