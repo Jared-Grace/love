@@ -31,6 +31,7 @@ export function app_code_lesson_quiz_multiple_choice(
   on_success,
   on_wrong,
   answer_on_button,
+  qa,
 ) {
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
