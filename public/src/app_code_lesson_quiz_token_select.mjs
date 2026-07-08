@@ -65,8 +65,8 @@ export function app_code_lesson_quiz_token_select(
       } else {
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
-        let size = list_size(list2);
         list_add(chosen, token);
+        let size = list_size(list2);
         variations = variations_new;
         function lambda3(variation) {
           let skipped = list_skip(list, skip_count);
