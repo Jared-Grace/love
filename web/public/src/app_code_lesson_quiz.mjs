@@ -157,7 +157,7 @@ export function app_code_lesson_quiz(
           html_clear(on_success);
           app_replace_success_message(on_success);
           html_visibility_visible_multiple(hides);
-          await sleep_seconds(0.75);
+          await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
         } else {
