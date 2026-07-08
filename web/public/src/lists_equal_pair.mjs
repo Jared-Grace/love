@@ -6,7 +6,7 @@ import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export function lists_equal_pair(list_a, list_b) {
   let e = lists_sizes_equal_pair(list_a, list_b);
   if (not(e)) {
-    return;
+    return false;
   }
   let has_difference = false;
   function lambda(left, right) {
