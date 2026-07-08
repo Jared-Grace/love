@@ -1,4 +1,4 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "../../../love/public/src/app_code_lesson_quiz_token_select_variations.mjs";
@@ -29,8 +29,7 @@ export function app_code_lesson_quiz_token_select(
     function lambda3() {
       let concated = list_concat_single_right(chosen, token);
       function lambda2(item) {
-        function lambda4(item2) {}
-        let mapped = list_map(list, lambda4);
+        each_pair(list_a, list_b, lambda);
       }
       let filtered = list_filter(variations, lambda2);
     }
