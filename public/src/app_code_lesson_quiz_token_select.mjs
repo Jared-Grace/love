@@ -34,15 +34,16 @@ export function app_code_lesson_quiz_token_select(
     html_style_code_dark(b);
   }
   each(mapped2, lambda);
-  function lambda4(la) {}
-  let list = list_adder(lambda4);
   let ast = js_parse(code);
-  let commutative = js_code_binary_expression_commutative();
-  function lambda2(node) {
-    let operator = property_get(node, "operator");
-    let includes = list_includes(commutative, operator);
-    if (includes) {
+  function lambda4(la) {
+    let commutative = js_code_binary_expression_commutative();
+    function lambda2(node) {
+      let operator = property_get(node, "operator");
+      let includes = list_includes(commutative, operator);
+      if (includes) {
+      }
     }
+    js_visit_type_node(ast, "BinaryExpression", lambda2);
   }
-  js_visit_type_node(ast, "BinaryExpression", lambda2);
+  let list = list_adder(lambda4);
 }
