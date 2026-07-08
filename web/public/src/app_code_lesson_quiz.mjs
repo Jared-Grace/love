@@ -1,4 +1,4 @@
-import { app_code_lessons_fns } from "../../../love/public/src/app_code_lessons_fns.mjs";
+import { app_code_lesson_current_last_is } from "../../../love/public/src/app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "../../../love/public/src/app_code_lesson_quiz_multiple_choice.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
@@ -87,7 +87,7 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  let fns = app_code_lessons_fns();
+  let fns = app_code_lesson_current_last_is();
   app_replace_button_wide_next(parent_container, on_next);
   let quiz_index = app_code_quiz_index_get(context);
   if (at_least_1(quiz_index)) {
