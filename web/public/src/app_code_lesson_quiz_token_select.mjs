@@ -71,6 +71,7 @@ export function app_code_lesson_quiz_token_select(
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
         list_add(chosen, token);
+        variations = variations_new;
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
         function lambda5(index, token) {
@@ -92,7 +93,6 @@ export function app_code_lesson_quiz_token_select(
         await sleep_success_color();
         html_style_code_dark(b);
         let size = list_size(chosen);
-        variations = variations_new;
         function lambda3(variation) {
           let skipped = list_skip(variation, size);
           return skipped;
