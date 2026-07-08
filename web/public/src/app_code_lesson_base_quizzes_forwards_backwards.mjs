@@ -45,6 +45,7 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
           qa,
           batch_get,
           quizzes,
+          next_get,
         );
       };
       return r;
