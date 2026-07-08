@@ -1,3 +1,5 @@
+import { lists_equal_pair } from "../../../love/public/src/lists_equal_pair.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -50,6 +52,7 @@ export function app_code_lesson_quiz_token_select(
           function lambda5(item, index) {}
           each_index(list, lambda5);
         }
+        let equal = lists_equal_pair(list_a, list_b);
         let any = list_any(variations, lambda4);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
