@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_parse_generic_arg } from "../../../love/public/src/js_parse_generic_arg.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -21,6 +22,9 @@ export function js_tokenizer(acorn, code) {
       }
     }
     const tokens = list_adder(lambda);
+    log(js_tokenizer.name, {
+      tokens,
+    });
   } catch (e) {
     log_keep(js_tokenizer.name, code);
     throw e;
