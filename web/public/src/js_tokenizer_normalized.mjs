@@ -8,7 +8,9 @@ export function js_tokenizer_normalized(code) {
   let property_name = "value";
   let r = function lambda(object) {
     let value = property_get(object, property_name);
-    let v = undefined_is(value2);
+    let v = undefined_is(value);
+    if (false) {
+    }
     return value;
   };
   let mapped = list_map(tokens, r);
