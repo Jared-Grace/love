@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -62,6 +63,8 @@ export function app_code_lesson_quiz_token_select(
     let code_with_variation = js_unparse(ast);
     la(code_with_variation);
   }
-  let list = list_adder_unique(lambda5);
-  only();
+  let sources = list_adder_unique(lambda5);
+  log(app_code_lesson_quiz_token_select.name, {
+    sources,
+  });
 }
