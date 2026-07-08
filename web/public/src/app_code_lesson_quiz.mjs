@@ -63,7 +63,9 @@ export function app_code_lesson_quiz(
   html_div_text(quiz_new_message, "Above is a new quiz, if you want");
   let nt = app_shared_button_next_text();
   let lcli = app_code_lesson_current_last_is(context);
-  html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');$i
+  html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
+  if (false) {
+  }
   let success = app_replace_success_message(container_success_message);
   async function on_next() {
     let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
