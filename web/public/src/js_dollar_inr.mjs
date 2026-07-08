@@ -1,3 +1,4 @@
+import { js_dollar_if_add_return } from "../../../love/public/src/js_dollar_if_add_return.mjs";
 import { js_dollar_in } from "../../../love/public/src/js_dollar_in.mjs";
 export async function js_dollar_inr({
   remaining,
@@ -17,5 +18,6 @@ export async function js_dollar_inr({
     ast,
     afters,
   });
+  js_dollar_if_add_return(stack1);
   return;
 }
