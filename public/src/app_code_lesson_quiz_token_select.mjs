@@ -60,10 +60,10 @@ export function app_code_lesson_quiz_token_select(
         variations = variations_new;
         let variation_first = list_first(variations);
         let code2 = js_tokens_to_code(variation_first);
-        function lambda5(value, item) {
-          let index = text_index_of_from(t, item2, index_from);
+        function lambda5(index, token) {
+          index = text_index_of_from(code2, token, index);
         }
-        let value2 = list_reduce(list, lambda5, inital);
+        let value2 = list_reduce(variation_first, lambda5, 0);
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
