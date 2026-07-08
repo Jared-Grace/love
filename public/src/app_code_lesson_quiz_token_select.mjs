@@ -27,6 +27,7 @@ export function app_code_lesson_quiz_token_select(
   on_wrong,
   batch_get,
 ) {
+  alert("here");
   let answer_div = html_div_code_dark(parent);
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
