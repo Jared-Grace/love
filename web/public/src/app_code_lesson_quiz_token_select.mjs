@@ -1,7 +1,7 @@
+import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { text_index_of_from_start } from "../../../love/public/src/text_index_of_from_start.mjs";
-import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { text_take } from "../../../love/public/src/text_take.mjs";
 import { js_tokens_to_code } from "../../../love/public/src/js_tokens_to_code.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -40,7 +40,8 @@ export function app_code_lesson_quiz_token_select(
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
   ("ensures div is visible from beginning");
-  html_text_set(answer_div, code);
+  let text = text_space_nb();
+  html_text_set(answer_div, text);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
@@ -74,10 +75,8 @@ export function app_code_lesson_quiz_token_select(
           reduced,
         });
         let taken = text_take(code2, reduced);
-        let skipped = text_skip(code2, reduced);
         html_clear(answer_div);
         let span_taken = html_span_text(answer_div, taken);
-        let span_skipped = html_span_text(answer_div, skipped);
         each(buttons, html_style_code_dark);
         function lambda4(variation) {
           let equal = lists_equal_pair(variation, chosen);
