@@ -46,6 +46,7 @@ export async function sandbox() {
     );
     await function_current_selects_apply(js_expand_selects.name);
   }
+  return;
   ("below is functionality that has been used in the past: ");
   {
     ("function calls with varied arguments");
