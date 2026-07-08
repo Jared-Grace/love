@@ -1,4 +1,4 @@
-import { app_code_lesson_quizzes_unscramble } from "../../../love/public/src/app_code_lesson_quizzes_unscramble.mjs";
+import { app_code_lesson_quizzes_unscramble_both } from "../../../love/public/src/app_code_lesson_quizzes_unscramble_both.mjs";
 import { html_div_text_code_dark } from "../../../love/public/src/html_div_text_code_dark.mjs";
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
@@ -41,7 +41,7 @@ export function app_code_lesson_functions_arithmetic() {
   let quiz_backwards_label_answer =
     "Rewrite this function using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
-  const quizzes = app_code_lesson_quizzes_unscramble(
+  const quizzes = app_code_lesson_quizzes_unscramble_both(
     batch_get,
     question_label,
     html_text_set_code_dark,
