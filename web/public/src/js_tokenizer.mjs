@@ -3,8 +3,8 @@ import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export function js_tokenizer(acorn, code) {
   let ast = null;
   try {
-    let r = js_parse_generic_arg();
-    ast = acorn.parse(code, r);
+    let a = js_parse_generic_arg();
+    ast = acorn.parse(code, a);
     const tokenizer = acorn.tokenizer(code, {
       ecmaVersion: "latest",
     });
