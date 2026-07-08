@@ -1,3 +1,4 @@
+import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_quiz_token_select(
     html_style_code_dark(b);
   }
   each(mapped2, lambda);
+  let ast = js_parse(code);
   log(app_code_lesson_quiz_token_select.name, {
     mapped2,
   });
