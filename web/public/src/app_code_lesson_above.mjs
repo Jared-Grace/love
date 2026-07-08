@@ -6,10 +6,11 @@ export function app_code_lesson_above(parent, label, question, on_question) {
   app_code_example_answer_gap(parent);
   let container = app_code_container_medium_blue(parent);
   html_div_text(container, label);
-  let c = html_div(container);
-  on_question(c, question);
+  let container_question = html_div(container);
+  on_question(container_question, question);
   let r4 = {
     container,
+    container_question,
   };
   return r4;
 }
