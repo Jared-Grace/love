@@ -1,3 +1,4 @@
+import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_code_lesson_current_last_is } from "../../../love/public/src/app_code_lesson_current_last_is.mjs";
@@ -8,7 +9,6 @@ import { app_shared_button_next_text } from "../../../love/public/src/app_shared
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
@@ -130,7 +130,7 @@ export function app_code_lesson_quiz(
     app_replace_success_message(container_success_message);
     html_visibility_hidden(quiz_new_message);
     html_visibility_visible(container_success_message);
-    await sleep_seconds(0.55);
+    await sleep_success_color();
     qa = next_get();
     on_qa_change();
     html_visibility_visible(quiz_new_message);
