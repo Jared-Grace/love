@@ -1,12 +1,12 @@
 import { each_pair_min } from "../../../love/public/src/each_pair_min.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export function list_pair_equal(list, list_prefix) {
-  let starts_with = true;
+  let difference = false;
   function lambda(left, right) {
     if (equal_not(left, right)) {
-      starts_with = false;
+      difference = true;
     }
   }
   each_pair_min(list, list_prefix, lambda);
-  return starts_with;
+  return difference;
 }
