@@ -1,4 +1,4 @@
 export function undefined_is(value) {
-  let v = typeof value === "undefined";
-  return v;
+  let u = typeof value === "undefined";
+  return u;
 }
