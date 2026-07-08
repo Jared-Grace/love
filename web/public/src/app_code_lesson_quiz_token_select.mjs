@@ -28,14 +28,14 @@ export function app_code_lesson_quiz_token_select(
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
-  let mapped2 = js_tokenizer_normalized(code);
-  list_shuffle(mapped2);
+  let normalized = js_tokenizer_normalized(code);
+  list_shuffle(normalized);
   function lambda(token) {
     function lambda3() {}
     let b = app_replace_button(parent, token, lambda3);
     html_style_code_dark(b);
   }
-  each(mapped2, lambda);
+  each(normalized, lambda);
   let ast = js_parse(code);
   function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
@@ -66,3 +66,4 @@ export function app_code_lesson_quiz_token_select(
     mapped3,
   });
 }
+normalized;

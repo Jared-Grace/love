@@ -5,6 +5,6 @@ import { js_tokenizer } from "../../../love/public/src/js_tokenizer.mjs";
 export function js_tokenizer_normalized(code) {
   let tokens = js_tokenizer(code);
   let mapped = list_map_property(tokens, "value");
-  let mapped2 = list_map(mapped, text_to);
-  return mapped2;
+  let normalized = list_map(mapped, text_to);
+  return normalized;
 }
