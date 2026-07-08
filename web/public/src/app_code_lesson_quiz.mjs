@@ -1,4 +1,3 @@
-import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
@@ -76,7 +75,6 @@ export function app_code_lesson_quiz(
   on_correct();
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
-  html_clear(parent_container);
   let on_success = html_div(parent_container);
   let success = app_replace_success_message(on_success);
   async function on_next() {
