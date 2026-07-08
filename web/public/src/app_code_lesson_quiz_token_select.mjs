@@ -25,7 +25,7 @@ export function app_code_lesson_quiz_token_select(
   let chosen = [];
   function lambda(token) {
     function lambda3() {
-      let concated = list_concat_single_right(list, single);
+      let concated = list_concat_single_right(chosen, token);
     }
     let b = app_replace_button(parent, token, lambda3);
     html_style_code_dark(b);
