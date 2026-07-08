@@ -19,17 +19,17 @@ export function app_code_lesson_validity_base(
   let example_count = 2;
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
-  let on_question_forwards = html_text_set_code_dark;
+  let on_question_forwards1 = html_text_set_code_dark;
   const quizzes = app_code_lesson_quizzes(
     batch,
     question_label,
-    on_question_forwards,
+    on_question_forwards1,
     quiz_label,
     noop,
     backwards_question_label,
     app_code_style_normal_text,
     quiz_backwards_label_answer,
-    on_question_forwards,
+    on_question_forwards1,
     2,
   );
   let lesson = app_code_lesson_base(
@@ -38,7 +38,7 @@ export function app_code_lesson_validity_base(
     above,
     example_count,
     batch,
-    on_question_forwards,
+    on_question_forwards1,
     example_label,
     quizzes,
     question_label,
