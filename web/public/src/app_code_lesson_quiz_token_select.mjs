@@ -49,9 +49,9 @@ export function app_code_lesson_quiz_token_select(
   let buttons = null;
   let chosen = [];
   function lambda(token) {
-    let b = app_replace_button(parent, token, lambda3);
+    let b = app_replace_button(parent, token, on_click);
     html_style_code_dark(b);
-    async function lambda3() {
+    async function on_click() {
       let concated = list_concat_single_right(chosen, token);
       let lambda2 = list_starts_with_curried_right(concated);
       let variations_new = list_filter(variations, lambda2);
