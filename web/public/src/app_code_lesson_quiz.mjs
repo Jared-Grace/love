@@ -73,7 +73,6 @@ export function app_code_lesson_quiz(
   );
   let a_container = property_get(a, "container");
   let container_question = property_get(a, "container_question");
-  on_correct();
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
@@ -117,60 +116,61 @@ export function app_code_lesson_quiz(
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
-  html_clear(element);
-  let quiz_batch_items = batch_get();
-  function filter(quiz_batch_item) {
-    let question_batch = property_get(quiz_batch_item, question_property);
-    let answer_batch = property_get(quiz_batch_item, answer_property);
-    let eq_a = equal(answer_batch, quiz_answer);
-    let eq_q = equal(question_batch, quiz_question);
-    let ored = or(eq_a, eq_q);
-    return ored;
-  }
-  list_filter_remove(quiz_batch_items, filter);
-  let answers = list_map_property(quiz_batch_items, answer_property);
-  let answers_unique = list_unique(answers);
-  list_remove_if_exists(answers_unique, quiz_answer);
-  let answer_count_max = app_code_answer_count_max();
-  let nn2 = null_not_is(answer_count_override);
-  if (nn2) {
-    answer_count_max = answer_count_override;
-  }
-  let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
-  let choices = list_concat(taken, [quiz_answer]);
-  list_sort_text_to(choices);
-  let buttons = list_map(choices, each_button);
-  let answered = false;
-  function each_button(quiz_choice) {
-    let b = app_replace_button_wide(answers_div, quiz_choice, on_click);
-    html_style_background_color_set(b, "#ececec");
-    html_style_margin_top(b, "0.2em");
-    async function on_click() {
-      let eq2 = equal(quiz_choice, quiz_answer);
-      if (eq2) {
-        answered = true;
-        app_shared_button_screen_green_style_assign(b);
-        html_visibility_visible_multiple(hides);
-        await sleep_seconds(0.5);
-        qa = next_get();
-        on_correct();
-      } else {
-        if (not(answered)) {
-          let color_bg = app_code_lesson_quiz_wrong_background_color();
-          html_style_background_color_set(b, color_bg);
-          html_font_color_set(b, "rgb(255, 255, 255)");
-        }
-      }
-    }
-    let nn = null_not_is(answer_on_button);
-    if (nn) {
-      answer_on_button(b, quiz_choice);
-    }
-    return b;
-  }
+  on_correct();
   function on_correct() {
     quiz_answer = property_get(qa, answer_property);
     quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
+    html_clear(answers_div);
+    let quiz_batch_items = batch_get();
+    function filter(quiz_batch_item) {
+      let question_batch = property_get(quiz_batch_item, question_property);
+      let answer_batch = property_get(quiz_batch_item, answer_property);
+      let eq_a = equal(answer_batch, quiz_answer);
+      let eq_q = equal(question_batch, quiz_question);
+      let ored = or(eq_a, eq_q);
+      return ored;
+    }
+    list_filter_remove(quiz_batch_items, filter);
+    let answers = list_map_property(quiz_batch_items, answer_property);
+    let answers_unique = list_unique(answers);
+    list_remove_if_exists(answers_unique, quiz_answer);
+    let answer_count_max = app_code_answer_count_max();
+    let nn2 = null_not_is(answer_count_override);
+    if (nn2) {
+      answer_count_max = answer_count_override;
+    }
+    let taken = list_shuffle_take(answers_unique, answer_count_max - 1);
+    let choices = list_concat(taken, [quiz_answer]);
+    list_sort_text_to(choices);
+    let buttons = list_map(choices, each_button);
+    let answered = false;
+    function each_button(quiz_choice) {
+      let b = app_replace_button_wide(answers_div, quiz_choice, on_click);
+      html_style_background_color_set(b, "#ececec");
+      html_style_margin_top(b, "0.2em");
+      async function on_click() {
+        let eq2 = equal(quiz_choice, quiz_answer);
+        if (eq2) {
+          answered = true;
+          app_shared_button_screen_green_style_assign(b);
+          html_visibility_visible_multiple(hides);
+          await sleep_seconds(0.5);
+          qa = next_get();
+          on_correct();
+        } else {
+          if (not(answered)) {
+            let color_bg = app_code_lesson_quiz_wrong_background_color();
+            html_style_background_color_set(b, color_bg);
+            html_font_color_set(b, "rgb(255, 255, 255)");
+          }
+        }
+      }
+      let nn = null_not_is(answer_on_button);
+      if (nn) {
+        answer_on_button(b, quiz_choice);
+      }
+      return b;
+    }
   }
 }
