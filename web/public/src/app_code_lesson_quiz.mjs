@@ -169,7 +169,7 @@ export function app_code_lesson_quiz(
           await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
-          html_visibility_visible(on_success);
+          html_visibility_visible(quiz_new_message);
         } else {
           if (not(answered)) {
             let color_bg = app_code_lesson_quiz_wrong_background_color();
