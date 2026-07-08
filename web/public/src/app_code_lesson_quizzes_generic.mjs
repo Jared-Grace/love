@@ -38,16 +38,15 @@ export function app_code_lesson_quizzes_generic(
       on_answer: app_code_lesson_quiz_multiple_choice,
     },
     backwards,
-    token_select,
   ];
   if (backwards_code) {
+    let token_select = object_copy(backwards);
+    object_assign(token_select, {
+      on_answer: app_code_lesson_quiz_token_select,
+      answer_label: "Please unscramble the code",
+    });
+    list_add(infos, token_select);
   }
-  let token_select = object_copy(backwards);
-  object_assign(token_select, {
-    on_answer: app_code_lesson_quiz_token_select,
-    answer_label: "Please unscramble the code",
-  });
-  list_add(infos, token_select);
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
