@@ -1,3 +1,4 @@
+import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -50,7 +51,7 @@ export function app_code_lesson_quiz_token_select(
   function lambda(token) {
     let b = app_replace_button(parent, token, lambda3);
     html_style_code_dark(b);
-    function lambda3() {
+    async function lambda3() {
       let concated = list_concat_single_right(chosen, token);
       let lambda2 = list_starts_with_curried_right(concated);
       let variations_new = list_filter(variations, lambda2);
@@ -62,6 +63,7 @@ export function app_code_lesson_quiz_token_select(
           concated,
         });
       } else {
+        app_shared_button_screen_green_style_assign(b);
         list_add(chosen, token);
         variations = variations_new;
         let variation_first = list_first(variations);
@@ -84,7 +86,7 @@ export function app_code_lesson_quiz_token_select(
         }
         let any = list_any(variations, lambda4);
         if (any) {
-          on_success();
+          await on_success();
         }
       }
     }
