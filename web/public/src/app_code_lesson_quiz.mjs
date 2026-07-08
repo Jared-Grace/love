@@ -65,10 +65,9 @@ export function app_code_lesson_quiz(
   let answer_property = property_get(info, "answer_property");
   let properties = ["question", "answer"];
   let question_property = list_pair_other(properties, answer_property);
-  let above_container = html_div(container);
   let parent_container = html_div(parent);
-  let quiz_answer = null;
-  let quiz_question = null;
+  let above_container = html_div(container);
+  let quiz_new_message = app_code_container_light_blue(parent_container);
   let a = app_code_lesson_above(
     above_container,
     question_label,
@@ -80,7 +79,6 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let on_success = html_div(parent_container);
-  let quiz_new_message = app_code_container_light_blue(parent_container);
   html_div_text(quiz_new_message, "Here is a new quiz, if you want");
   let nt = app_shared_button_next_text();
   html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
@@ -126,8 +124,8 @@ export function app_code_lesson_quiz(
   html_visibility_hidden_multiple(hides);
   on_correct();
   function on_correct() {
-    quiz_answer = property_get(qa, answer_property);
-    quiz_question = property_get(qa, question_property);
+    let quiz_answer = property_get(qa, answer_property);
+    let quiz_question = property_get(qa, question_property);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     let quiz_batch_items = batch_get();
