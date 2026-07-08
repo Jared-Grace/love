@@ -38,7 +38,7 @@ export function app_code_lesson_quiz_token_select(
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let code = property_get(qa, answer_property);
   ("ensures div is visible from beginning");
-  let placeholder = html_text_set(answer_div, code);
+  html_text_set(answer_div, code);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   list_shuffle(normalized);
@@ -65,6 +65,7 @@ export function app_code_lesson_quiz_token_select(
         let joined = list_join_space(variation_first);
         let expression = js_parse_expression(code_expression);
         let code2 = js_unparse(expression);
+        html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         list_add(chosen, token);
         let span = html_span_text(answer_div, token);
