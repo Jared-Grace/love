@@ -1,3 +1,4 @@
+import { app_code_lesson_validity_base } from "../../../love/public/src/app_code_lesson_validity_base.mjs";
 import { app_code_batch_question_answer_fns_validity_identifier } from "../../../love/public/src/app_code_batch_question_answer_fns_validity_identifier.mjs";
 import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
 import { app_code_quiz_backwards_label_answer_validity } from "../../../love/public/src/app_code_quiz_backwards_label_answer_validity.mjs";
@@ -15,6 +16,17 @@ export function app_code_lesson_identifiers_valid(
   on_question,
 ) {
   arguments_assert(arguments, 5);
+  let lesson2 = app_code_lesson_validity_base(
+    batch_get,
+    id,
+    name,
+    above,
+    backwards_question_label,
+    on_question_forwards,
+    example_answer_label,
+    backwards_answer_on_button,
+  );
+  return lesson2;
   const example_label = "Is this a valid identifier? ";
   const quiz_label = example_label;
   let question_label = app_code_label_code_question();
