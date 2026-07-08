@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { text_index_of_from_start } from "../../../love/public/src/text_index_of_from_start.mjs";
 import { text_skip } from "../../../love/public/src/text_skip.mjs";
@@ -74,8 +75,9 @@ export function app_code_lesson_quiz_token_select(
         });
         let taken = text_take(code2, reduced);
         let skipped = text_skip(code2, reduced);
-        let span = html_span_text(parent2, text);
-        let span2 = html_span_text(parent3, text2);
+        html_clear(element);
+        let span = html_span_text(answer_div, text);
+        let span2 = html_span_text(answer_div, text2);
         html_text_set(answer_div, code2);
         each(buttons, html_style_code_dark);
         function lambda4(variation) {
