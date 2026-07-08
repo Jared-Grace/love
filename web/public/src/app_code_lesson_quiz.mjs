@@ -113,7 +113,6 @@ export function app_code_lesson_quiz(
     html_clear(answers_div);
     app_code_lesson_quiz_multiple_choice(
       batch_get,
-      question_property,
       answer_property,
       quiz_question,
       answer_count_override,
