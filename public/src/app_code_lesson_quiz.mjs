@@ -117,6 +117,7 @@ export function app_code_lesson_quiz(
   on_qa_change();
   function on_qa_change() {
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
+    html_clear(element);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
