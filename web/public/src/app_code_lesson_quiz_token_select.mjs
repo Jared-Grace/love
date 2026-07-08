@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -32,6 +33,10 @@ export function app_code_lesson_quiz_token_select(
   }
   each(mapped2, lambda);
   let ast = js_parse(code);
-  function lambda2(v) {}
-  js_visit_type(ast2, type, lambda2);
+  function lambda2(v) {
+    log(app_code_lesson_quiz_token_select.name, {
+      v,
+    });
+  }
+  js_visit_type(ast, "BinaryExpression", lambda2);
 }
