@@ -61,10 +61,10 @@ export function app_code_lesson_quiz(
   let container_success_message = html_div(parent_container);
   let quiz_new_message = app_code_container_light_blue(parent_container);
   html_div_text(quiz_new_message, "Above is a new quiz, if you want");
-  let nt = app_shared_button_next_text();
   let lcli = app_code_lesson_current_last_is(context);
-  html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
-  if (false) {
+  if (lcli) {
+    let nt = app_shared_button_next_text();
+    html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
   }
   let success = app_replace_success_message(container_success_message);
   async function on_next() {
