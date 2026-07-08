@@ -168,10 +168,9 @@ export function app_code_lesson_quiz(
           await sleep_seconds(0.55);
           qa = next_get();
           on_correct();
-          html_visibility_hidden(on_success);
           html_visibility_visible(quiz_new_message);
         } else {
-          html_visibility_hidden(quiz_new_message);
+          html_visibility_hidden(on_success);
           if (not(answered)) {
             let color_bg = app_code_lesson_quiz_wrong_background_color();
             html_style_background_color_set(b, color_bg);
