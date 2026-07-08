@@ -26,11 +26,6 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     answer_property: "question",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
-  let token_select = object_copy(backwards);
-  object_assign(token_select, {
-    on_answer: app_code_lesson_quiz_token_select,
-    answer_label: "Please unscramble the code",
-  });
   let infos = [
     {
       answer_label: forwards_answer_label,
@@ -44,7 +39,14 @@ export function app_code_lesson_base_quizzes_forwards_backwards(
     backwards,
     token_select,
   ];
-  list_add(list, item);
+  if (false) {
+  }
+  let token_select = object_copy(backwards);
+  object_assign(token_select, {
+    on_answer: app_code_lesson_quiz_token_select,
+    answer_label: "Please unscramble the code",
+  });
+  list_add(infos, token_select);
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
