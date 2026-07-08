@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_lesson_quiz } from "../../../love/public/src/app_code_lesson_quiz.mjs";
@@ -49,7 +50,9 @@ export function app_code_lesson_quizzes_generic(
       base: backwards,
     },
   ];
-  function lambda2(item) {
+  function lambda2(c) {
+    let include2 = property_get(c, "include");
+    let base2 = property_get(c, "base");
     if (backwards_code) {
       let token_select = object_copy(backwards);
       object_assign(token_select, {
@@ -59,7 +62,7 @@ export function app_code_lesson_quizzes_generic(
       list_add(infos, token_select);
     }
   }
-  each(list, lambda2);
+  each(codes, lambda2);
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
