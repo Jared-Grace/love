@@ -3,6 +3,7 @@ import { assert } from "../../../love/public/src/assert.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -67,4 +68,8 @@ export function app_code_lesson_quiz_token_select(
   let codes = list_adder_unique(lambda5);
   assert(nn);
   let mapped3 = list_map(codes, js_parse_expression);
+  log(app_code_lesson_quiz_token_select.name, {
+    mapped3,
+    ast,
+  });
 }
