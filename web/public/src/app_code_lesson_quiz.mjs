@@ -86,8 +86,8 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
-  app_replace_button_wide_next(parent_container, on_next);
   let quiz_index = app_code_quiz_index_get(context);
+  app_replace_button_wide_next(parent_container, on_next);
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
       let quiz_index = app_code_quiz_index_transform(
