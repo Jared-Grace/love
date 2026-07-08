@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -69,8 +70,15 @@ export function app_code_lesson_quiz(
   }
   let success = app_replace_success_message(container_success_message);
   async function on_next() {
-    let quiz_index = app_code_quiz_index_transform(context, quizzes, add_1);
-    let qnli = list_index_last_is(quizzes, quiz_index);
+    let quiz_index_next = app_code_quiz_index_transform(
+      context,
+      quizzes,
+      add_1,
+    );
+    log(app_code_lesson_quiz.name, {
+      quizzes,
+    });
+    let qnli = list_index_last_is(quizzes, quiz_index_next);
     if (qnli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
