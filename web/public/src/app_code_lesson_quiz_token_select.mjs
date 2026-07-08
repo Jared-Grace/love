@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_swap } from "../../../love/public/src/property_swap.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -52,6 +53,7 @@ export function app_code_lesson_quiz_token_select(
     js_visit_type_node(ast, "BinaryExpression", lambda2);
   }
   let variations = list_adder(lambda4);
+  let code2 = js_unparse(ast2);
   let only = list_single(variations);
   only();
 }
