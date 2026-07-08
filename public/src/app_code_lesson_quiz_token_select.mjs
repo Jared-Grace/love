@@ -66,10 +66,11 @@ export function app_code_lesson_quiz_token_select(
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
         list_add(chosen, token);
-        let size = list_size(list2);
+        let size = list_size(chosen);
         variations = variations_new;
         function lambda3(variation) {
-          let skipped = list_skip(list, skip_count);
+          let skipped = list_skip(list, size);
+          return skipped;
         }
         let mapped = list_map(variations, lambda3);
         let variation_first = list_first(variations);
