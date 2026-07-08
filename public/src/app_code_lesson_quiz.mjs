@@ -50,7 +50,7 @@ export function app_code_lesson_quiz(
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let above_container = html_div(container);
   let a = app_code_lesson_above(
-    above_container,
+    container,
     question_label,
     quiz_question,
     on_question,
