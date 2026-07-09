@@ -4,8 +4,7 @@ import { list_index_not_is } from "../../../love/public/src/list_index_not_is.mj
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function list_power_set_inner(list, index, result, results) {
-  let n = list_index_not_is(list, index);
-  if (n) {
+  if (list_index_not_is(list, index)) {
     let copy = list_copy(result);
     list_add(results, copy);
     return;
