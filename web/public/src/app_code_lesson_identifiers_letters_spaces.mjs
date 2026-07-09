@@ -74,7 +74,7 @@ export function app_code_lesson_identifiers_letters_spaces() {
     return difference;
   }
   let r5 = app_code_lesson_identifiers_valid(
-    "Identifiers (Letters allowed, spaces not)",
+    "Identifiers (letters allowed, spaces not)",
     "identifiers_letters_spaces",
     lambda,
     batch_get,
