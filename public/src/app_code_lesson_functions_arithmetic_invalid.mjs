@@ -11,7 +11,6 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
@@ -24,14 +23,11 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let symbols_required = ["(", ",", ")"];
   function batch_get() {
     let operators_next = list_iterator_refillable(operators);
-    let mapper = function lambda2(o) {
-      let next_get = list_iterator_refillable(refill_get);
-      let r = js_operator_to_code_call(o, next);
-      let call = property_get(r, "call");
-      let next_get2 = list_iterator_refillable(symbols_required);
-      return call;
-    };
-    let mapped = list_map(operators, mapper);
+    let o = operators_next();
+    let next_get = list_iterator_refillable(refill_get);
+    let r = js_operator_to_code_call(o, next);
+    let call = property_get(r, "call");
+    let next_get2 = list_iterator_refillable(symbols_required);
     return mapped;
   }
   let b = app_code_batch_question_answer_fns(
