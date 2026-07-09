@@ -12,9 +12,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic_invalid() {
-  let ni = app_code_lesson_name_id("functions", ["arithmetic", "invalid"]);
-  let name = "Functions (arithmetic, invalid)";
-  let id = "functions_arithmetic_invalid";
+  let r = app_code_lesson_name_id("functions", ["arithmetic", "invalid"]);
+  let id = property_get(r, "id");
+  let name = property_get(r, "name");
   const example_label = "Function: ";
   const quiz_label = "What is this code rewritten using a function?";
   let question_label = app_code_label_code_question();
