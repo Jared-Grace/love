@@ -1,3 +1,6 @@
+import { html_cycle } from "../../../love/public/src/html_cycle.mjs";
+import { html_bold } from "../../../love/public/src/html_bold.mjs";
+import { noop } from "../../../love/public/src/noop.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
@@ -83,6 +86,8 @@ export function app_code_lesson_functions_arithmetic() {
     each_index(operators, lambda);
     let c = app_code_container_light_blue(root);
     let verb = property_get(o, "verb");
+    let cycles = [noop, html_style_code_dark, noop, html_bold];
+    html_cycle(parent, cycles, parts);
     html_div_cycle_code(c, ["", verb, " is an example of a ", "function"]);
     html_div_cycle_code(c, ["", code, " is called a ", "function call"]);
   }
