@@ -38,7 +38,7 @@ export function app_code_lesson_validity_base(
     example_count,
     batch_get,
     on_question_forwards,
-    example_label,
+    backwards_question_label,
     quizzes,
     question_label,
     app_code_style_normal_text,
