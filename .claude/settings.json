@@ -24,7 +24,9 @@
       "Bash(rm /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(rm -r /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(rm -rf /tmp/claude-1000/-home-j-repos-love/:*)",
-      "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)"
+      "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
+      "Edit(.claude/hooks/bash-command-guard.py)",
+      "Write(.claude/hooks/bash-command-guard.py)"
     ],
     "defaultMode": "acceptEdits"
   },
