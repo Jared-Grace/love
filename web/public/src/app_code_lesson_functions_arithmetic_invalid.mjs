@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { text_replace_to_space } from "../../../love/public/src/text_replace_to_space.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
@@ -65,8 +66,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let combined2 = list_between_space(symbols_required);
     list_add_first(
       combined2,
-      "If any of these symbols are missing from the function call, then the code is invalid ",
+      "If any of these symbols ",
+      " are missing from the function call, then the code is invalid ",
     );
+    list_add(list2, item);
     let c2 = app_code_container_light_blue(root);
     html_div_cycle_code(c2, combined2);
   }
