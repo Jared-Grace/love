@@ -5,7 +5,7 @@ import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
-import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
+import { js_operator_left_right_to_code_call } from "../../../love/public/src/js_operator_left_right_to_code_call.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_functions_arithmetic() {
     let mapper = function lambda2(o) {
       let e = js_operator_to_expression(o, next);
       let question = property_get(e, "expression");
-      let answer = js_operator_left_right_to_call(o, e);
+      let answer = js_operator_left_right_to_code_call(o, e);
       let r3 = {
         question,
         answer,
@@ -70,7 +70,7 @@ export function app_code_lesson_functions_arithmetic() {
     function lambda(o) {
       let r2 = js_operator_to_expression(o, next);
       let expression = property_get(r2, "expression");
-      let code = js_operator_left_right_to_call(o, r2);
+      let code = js_operator_left_right_to_code_call(o, r2);
       let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
