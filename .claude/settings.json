@@ -37,7 +37,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/bash-command-guard.py",
+            "command": "python3 /home/j/repos/love/.claude/hooks/bash-command-guard.py",
             "timeout": 5
           }
         ]
