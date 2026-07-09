@@ -1,4 +1,4 @@
-import { js_operator_to_call } from "../../../love/public/src/js_operator_to_call.mjs";
+import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
 import { js_operator_left_right_to_code_call } from "../../../love/public/src/js_operator_left_right_to_code_call.mjs";
@@ -18,7 +18,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let next = range_1_next(m);
   function batch_get() {
     let mapper = function lambda2(o) {
-      let r = js_operator_to_call(o, next);
+      let r = js_operator_to_code_call(o, next);
       return r;
     };
     let mapped = list_map(operators, mapper);
