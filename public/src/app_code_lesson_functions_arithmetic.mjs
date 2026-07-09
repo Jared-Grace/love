@@ -68,7 +68,6 @@ export function app_code_lesson_functions_arithmetic() {
   function above(root) {
     let next = range_1_next(m);
     function lambda(o, index) {
-      let eq = equal_0(item);
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
@@ -79,6 +78,9 @@ export function app_code_lesson_functions_arithmetic() {
         " we could write: ",
         code,
       ]);
+      let eq = equal_0(index);
+      if (false) {
+      }
     }
     each_index(operators, lambda);
   }
