@@ -14,6 +14,7 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_symbols_space() {
@@ -47,8 +48,9 @@ export function app_code_lesson_symbols_space() {
       symbols,
     );
   }
+  let name_id = app_code_lesson_name_id("symbols", ["space"]);
   let r5 = app_code_lesson_symbols_counting(
-    { name: "Symbols (space)", id: "symbols_space" },
+    name_id,
     lambda,
     batch_get,
     app_code_symbols_separated_on_question_numbered_fifth,
