@@ -1,5 +1,4 @@
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 export async function sandbox_3() {
-  let expression = js_parse_expression("let c=b");
-  return expression;
+  let r = app_code_lesson_name_id(left, rights);
 }
