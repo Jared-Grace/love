@@ -1,3 +1,4 @@
+import { js_return_atomize } from "../../../love/public/src/js_return_atomize.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -21,5 +22,6 @@ export async function function_wrap(f_name, f_name_wrapped) {
       ast,
     );
     await js_function_declaration_asyncify_params_from(ast, declaration_call);
+    await js_return_atomize(ast);
   }
 }
