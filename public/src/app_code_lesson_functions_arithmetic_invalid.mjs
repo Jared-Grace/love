@@ -1,3 +1,4 @@
+import { list_power_set } from "../../../love/public/src/list_power_set.mjs";
 import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { text_replace_to_space } from "../../../love/public/src/text_replace_to_space.mjs";
@@ -24,6 +25,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   let operators_next = list_iterator_refillable_value(operators);
+  let results = list_power_set(list2);
   let next_get = list_iterator_refillable_value(symbols_required);
   function batch_get() {
     function lambda(la) {
