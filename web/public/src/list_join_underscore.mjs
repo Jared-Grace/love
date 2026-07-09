@@ -1,0 +1,7 @@
+import { text_comma_space } from "../../../love/public/src/text_comma_space.mjs";
+import { list_join } from "../../../love/public/src/list_join.mjs";
+export function list_join_underscore(list) {
+  let separator = text_comma_space();
+  let joined = list_join(list, separator);
+  return joined;
+}
