@@ -1,4 +1,4 @@
-import { lambda_value } from "../../../love/public/src/lambda_value.mjs";
+import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { text_replace_to_space } from "../../../love/public/src/text_replace_to_space.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -26,8 +26,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   let operators_next = list_iterator_refillable(operators);
-  let v = lambda_value(symbols_required);
-  let next_get = list_iterator_refillable(v);
+  let next_get = list_iterator_refillable_value(symbols_required);
   function batch_get() {
     function lambda(la) {
       let o = operators_next();
