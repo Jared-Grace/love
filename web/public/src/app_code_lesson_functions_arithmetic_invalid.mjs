@@ -24,7 +24,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   function batch_get() {
     let mapper = function lambda2(o) {
       let r = js_operator_to_code_call(o, next);
-      let answer = property_get(r, "call");
+      let call = property_get(r, "call");
       return r3;
     };
     let mapped = list_map(operators, mapper);
