@@ -1,3 +1,4 @@
+import { list_filter_list_empty_not_is } from "../../../love/public/src/list_filter_list_empty_not_is.mjs";
 import { list_power_set } from "../../../love/public/src/list_power_set.mjs";
 import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
@@ -26,6 +27,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let symbols_required = ["(", ",", ")"];
   let operators_next = list_iterator_refillable_value(operators);
   let results = list_power_set(symbols_required);
+  let filtered = list_filter_list_empty_not_is(list2);
   let next_get = list_iterator_refillable_value(symbols_required);
   function batch_get() {
     function lambda(la) {
