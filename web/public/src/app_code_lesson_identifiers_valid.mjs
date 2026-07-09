@@ -16,6 +16,8 @@ export function app_code_lesson_identifiers_valid(
   on_question_forwards,
 ) {
   arguments_assert(arguments, 5);
+  let batch_get2 =
+    app_code_batch_question_answer_fns_validity_identifier(batch_get);
   const backwards_question_label = "Identifier validity: ";
   const example_answer_label = "Is this a valid identifier? ";
   let backwards_answer_on_button =
@@ -23,7 +25,7 @@ export function app_code_lesson_identifiers_valid(
       on_question_forwards,
     );
   let lesson2 = app_code_lesson_validity_base(
-    batch_get,
+    batch_get2,
     id,
     name,
     above,
@@ -35,8 +37,6 @@ export function app_code_lesson_identifiers_valid(
   return lesson2;
   const quiz_label = example_answer_label;
   let question_label = app_code_label_code_question();
-  let batch_get2 =
-    app_code_batch_question_answer_fns_validity_identifier(batch_get);
   let example_count = 2;
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
