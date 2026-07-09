@@ -22,6 +22,8 @@ import { property_set_exists_not } from "../../../love/public/src/property_set_e
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_generic.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
   let name = "Identifiers (first symbol)";
   let id = "identifiers_symbol_first";
@@ -62,13 +64,19 @@ export function app_code_lesson_identifiers_symbol_first() {
     let c2 = app_code_container_light_blue(root);
     html_div_text(
       c2,
-      "Remember, identifiers can have different kinds of symbols including " +
+      text_combine(
+        "Remember, identifiers can have different kinds of symbols including ",
         identifiers_valid_anywhere,
+      ),
     );
     let ds = digits();
     let combined = list_between_space(ds);
     let parts = list_concat_single(
-      "Identifiers can also have " + word_plural("digit") + ": ",
+      text_combine_multiple([
+        "Identifiers can also have ",
+        word_plural("digit"),
+        ": ",
+      ]),
       combined,
     );
     html_div_cycle_code(c2, parts);

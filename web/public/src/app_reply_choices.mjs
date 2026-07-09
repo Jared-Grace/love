@@ -61,6 +61,8 @@ import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_reply_choices() {
   let education = app_reply_pray(
     "Education",
@@ -71,14 +73,17 @@ export function app_reply_choices() {
   let provide = app_reply_pray("Provide", "provide what is needed");
   let travel_pray = app_reply_pray(
     "Travel pray",
-    "give you safe travels " + emoji_dove(),
+    text_combine("give you safe travels ", emoji_dove()),
   );
   let pray_request = app_reply_choices_will_done_fragment();
   let will = app_reply_pray("Will", pray_request);
-  let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
+  let with2 = app_reply_pray(
+    "With",
+    text_combine("always be with you! ", emoji_dove()),
+  );
   let s = app_reply_response_how_r_u_skip_first_upper();
   let b = {
-    text: emoji_pray() + " Bless",
+    text: text_combine(emoji_pray(), " Bless"),
     response: prayer_blessing_expand(),
   };
   let greetings = app_reply_response_greetings();
@@ -88,29 +93,34 @@ export function app_reply_choices() {
   const how_day = app_reply_response_how_day();
   let live = app_reply_response_live();
   const called_why = app_reply_call_why_generic("did", "");
-  const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
+  const how_feel = text_combine(
+    emoji_pray(),
+    " God is helping me be joyful when I suffer",
+  );
   let how_feel_today = text_combine_today(how_feel);
   const s3 = text_the_servant_of_god_first_upper();
   let v = [
     {
-      text: emoji_pray() + " Amazing",
-      response:
-        emoji_pray() + " Yet not I, but the grace of God that is with me!",
+      text: text_combine(emoji_pray(), " Amazing"),
+      response: text_combine(
+        emoji_pray(),
+        " Yet not I, but the grace of God that is with me!",
+      ),
     },
     {
-      text: emoji_pray() + " Amen",
+      text: text_combine(emoji_pray(), " Amen"),
       response: prayer_end(),
     },
     {
-      text: emoji_question() + " Ask",
+      text: text_combine(emoji_question(), " Ask"),
       response: "What are you asking me to do?",
     },
     {
-      text: emoji_pray() + " Bless short",
-      response: "God bless" + prayer_end(),
+      text: text_combine(emoji_pray(), " Bless short"),
+      response: text_combine("God bless", prayer_end()),
     },
     {
-      text: emoji_phone() + " Call want why?",
+      text: text_combine(emoji_phone(), " Call want why?"),
       response: app_reply_call_why_generic("do", "want to "),
     },
     {
@@ -118,32 +128,42 @@ export function app_reply_choices() {
       response: called_why,
     },
     {
-      text: emoji_phone() + " Call no",
-      response: emoji_phone() + " No video call",
+      text: text_combine(emoji_phone(), " Call no"),
+      response: text_combine(emoji_phone(), " No video call"),
     },
     {
-      text: emoji_pray() + " Church",
-      response:
-        emoji_pray() + text_lord_bless_your() + "church " + emoji_church(),
+      text: text_combine(emoji_pray(), " Church"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        text_lord_bless_your(),
+        "church ",
+        emoji_church(),
+      ]),
     },
     education,
     {
-      text: emoji_pray() + " Family",
-      response:
-        emoji_pray() + text_lord_bless_your() + "family " + emoji_family(),
+      text: text_combine(emoji_pray(), " Family"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        text_lord_bless_your(),
+        "family ",
+        emoji_family(),
+      ]),
     },
     {
-      text: emoji_pray() + " Friends",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_pray(), " Friends"),
+      response: text_combine(
+        emoji_pray(),
         'Every friend of Jesus is a friend of mine! Jesus says: "You are My friends if you do what I command you." (John 15:14)',
+      ),
     },
     {
-      text: emoji_pray() + " Future",
-      response:
-        emoji_pray() +
-        "God knows the future. I do not know the future." +
+      text: text_combine(emoji_pray(), " Future"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        "God knows the future. I do not know the future.",
         emoji_question(),
+      ]),
     },
     {
       text: app_reply_glory(),
@@ -154,44 +174,72 @@ export function app_reply_choices() {
       response: app_reply_choices_give(),
     },
     {
-      text: emoji_pray() + " Fundraiser",
-      response: emoji_pray() + " Sorry, I cannot create a fundraiser for you",
+      text: text_combine(emoji_pray(), " Fundraiser"),
+      response: text_combine(
+        emoji_pray(),
+        " Sorry, I cannot create a fundraiser for you",
+      ),
     },
     {
       text: app_reply_greetings(),
       response: greetings,
     },
     {
-      text: app_reply_greetings() + " " + app_reply_called_why(),
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_called_why(),
+      ]),
       response: list_join_newline_2([greetings, called_why]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_how_day(),
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_how_day(),
+      ]),
       response: list_join_newline_2([greetings, how_day]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_how_family(),
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_how_family(),
+      ]),
       response: list_join_newline_2([greetings, how_family]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_how_feel(),
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_how_feel(),
+      ]),
       response: list_join_newline_2([greetings, how_feel]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_how_r_u(),
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_how_r_u(),
+      ]),
       response: list_join_newline_2([greetings, hru]),
     },
     {
-      text: app_reply_greetings() + " " + app_reply_how_r_u_today(),
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_how_r_u_today(),
+      ]),
       response: list_join_newline_2([greetings, hru_today]),
     },
     {
-      text:
-        app_reply_greetings() +
-        " " +
-        app_reply_how_r_u() +
-        " " +
+      text: text_combine_multiple([
+        app_reply_greetings(),
+        " ",
+        app_reply_how_r_u(),
+        " ",
         app_reply_how_family(),
+      ]),
       response: list_join_newline_2([greetings, hru, how_family]),
     },
     {
@@ -199,32 +247,35 @@ export function app_reply_choices() {
       response: list_join_newline_2([greetings, live]),
     },
     {
-      text: emoji_hands_raising() + " Hallelujah",
-      response:
-        emoji_hands_raising() +
-        " Hallelujah! Hallelujah! Hallelujah! " +
+      text: text_combine(emoji_hands_raising(), " Hallelujah"),
+      response: text_combine_multiple([
+        emoji_hands_raising(),
+        " Hallelujah! Hallelujah! Hallelujah! ",
         emoji_pray(),
+      ]),
     },
     heal,
     {
-      text: emoji_pray() + " Health",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_pray(), " Health"),
+      response: text_combine(
+        emoji_pray(),
         " The doctors said I had a diagnosis of schizoaffective disorder. Please pray for my health, that I am healed from everything and that those who gave me medicine command me to stop taking medicine.",
+      ),
     },
     {
-      text: emoji_pray() + " Help me",
+      text: text_combine(emoji_pray(), " Help me"),
       response: app_reply_pray_help_generic("me"),
     },
     {
-      text: emoji_pray() + " Help us",
+      text: text_combine(emoji_pray(), " Help us"),
       response: app_reply_pray_help_generic("us"),
     },
     {
-      text: emoji_question() + " Help what",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_question(), " Help what"),
+      response: text_combine(
+        emoji_pray(),
         "What help are you asking for? What are you asking me to do?",
+      ),
     },
     {
       text: app_reply_how_day(),
@@ -251,129 +302,167 @@ export function app_reply_choices() {
       response: hru_today,
     },
     {
-      text: app_reply_how_r_u() + " " + app_reply_how_family(),
+      text: text_combine_multiple([
+        app_reply_how_r_u(),
+        " ",
+        app_reply_how_family(),
+      ]),
       response: list_join_newline_2([hru, how_family]),
     },
     {
-      text: app_reply_how_r_u() + " " + app_reply_how_day(),
+      text: text_combine_multiple([
+        app_reply_how_r_u(),
+        " ",
+        app_reply_how_day(),
+      ]),
       response: list_join_newline_2([hru, how_day]),
     },
     {
-      text: emoji_pray() + " Invite",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_pray(), " Invite"),
+      response: text_combine(
+        emoji_pray(),
         "If the LORD makes a way, then I will travel to you. However at this time I have no money to travel.",
+      ),
     },
     job,
     {
-      text: emoji_globe_americas() + " Language",
-      response:
-        emoji_globe_americas() + " " + s3 + " speaks English. " + emoji_pray(),
+      text: text_combine(emoji_globe_americas(), " Language"),
+      response: text_combine_multiple([
+        emoji_globe_americas(),
+        " ",
+        s3,
+        " speaks English. ",
+        emoji_pray(),
+      ]),
     },
     {
       text: app_reply_live(),
       response: live,
     },
     {
-      text: emoji_globe_americas() + " Location",
+      text: text_combine(emoji_globe_americas(), " Location"),
       response: app_reply_choices_location(),
     },
     {
-      text: emoji_wave() + " Meet",
-      response: emoji_pray() + " Nice to meet you! " + emoji_handshake(),
+      text: text_combine(emoji_wave(), " Meet"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        " Nice to meet you! ",
+        emoji_handshake(),
+      ]),
     },
     {
-      text: emoji_wave() + " Name",
+      text: text_combine(emoji_wave(), " Name"),
       response: app_reply_choices_name(),
     },
     {
-      text: emoji_wave() + " Name location",
-      response:
-        app_reply_choices_name() + newline_2() + app_reply_choices_location(),
+      text: text_combine(emoji_wave(), " Name location"),
+      response: text_combine_multiple([
+        app_reply_choices_name(),
+        newline_2(),
+        app_reply_choices_location(),
+      ]),
     },
     {
-      text: emoji_wave() + " Name ministry",
-      response:
-        'The name of my ministry is: \"JESUS rose to life\" ' + emoji_cross(),
+      text: text_combine(emoji_wave(), " Name ministry"),
+      response: text_combine(
+        'The name of my ministry is: \"JESUS rose to life\" ',
+        emoji_cross(),
+      ),
     },
     {
-      text: emoji_ok() + "Okay",
-      response:
-        emoji_ok() +
-        " " +
-        text_the_servant_of_god_is_first_upper() +
-        " okay, yes " +
-        emoji_100() +
-        " " +
+      text: text_combine(emoji_ok(), "Okay"),
+      response: text_combine_multiple([
+        emoji_ok(),
+        " ",
+        text_the_servant_of_god_is_first_upper(),
+        " okay, yes ",
+        emoji_100(),
+        " ",
         emoji_pray(),
+      ]),
     },
     {
-      text: emoji_dove() + " Peace",
-      response:
-        emoji_dove() +
-        " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with you " +
+      text: text_combine(emoji_dove(), " Peace"),
+      response: text_combine_multiple([
+        emoji_dove(),
+        " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with you ",
         emoji_rainbow(),
+      ]),
     },
     {
-      text: emoji_camera() + " Pictures",
-      response:
-        emoji_camera() +
+      text: text_combine(emoji_camera(), " Pictures"),
+      response: text_combine(
+        emoji_camera(),
         " Here are some pictures of my wife and I: https://www.facebook.com/media/set/?set=a.761930266739275&type=3",
+      ),
     },
     {
       text: "🎵 Praise",
       response: app_reply_choices_praise(),
     },
     {
-      text: emoji_pray() + " Pray",
+      text: text_combine(emoji_pray(), " Pray"),
       response: prayer_start(),
     },
     {
-      text: emoji_pray() + " Preach",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_pray(), " Preach"),
+      response: text_combine(
+        emoji_pray(),
         "If God wills, then yes I will preach teach. Do you have a day and time?",
+      ),
     },
     {
-      text: emoji_pray() + " " + "Prayers",
-      response:
-        emoji_pray() + "According to the desire of God, may there be prayer",
+      text: text_combine_multiple([emoji_pray(), " ", "Prayers"]),
+      response: text_combine(
+        emoji_pray(),
+        "According to the desire of God, may there be prayer",
+      ),
     },
     {
-      text: emoji_pray() + " " + "Programming",
-      response: emoji_pray() + "I have been computer programming 💻",
+      text: text_combine_multiple([emoji_pray(), " ", "Programming"]),
+      response: text_combine(
+        emoji_pray(),
+        "I have been computer programming 💻",
+      ),
     },
     {
-      text: emoji_pray() + " " + "Replying",
-      response: emoji_pray() + "I have been replying to messages 📨",
+      text: text_combine_multiple([emoji_pray(), " ", "Replying"]),
+      response: text_combine(
+        emoji_pray(),
+        "I have been replying to messages 📨",
+      ),
     },
     {
-      text: emoji_pray() + " Share",
-      response:
-        emoji_pray() +
-        " What day and time are you asking me to share the word of God? " +
+      text: text_combine(emoji_pray(), " Share"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        " What day and time are you asking me to share the word of God? ",
         emoji_book_open(),
+      ]),
     },
     provide,
     {
-      text: emoji_pray() + " Sleep",
-      response:
-        emoji_pray() +
-        emoji_sleep_z() +
-        " " +
-        text_lord_bless_your() +
-        "sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. " +
+      text: text_combine(emoji_pray(), " Sleep"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        emoji_sleep_z(),
+        " ",
+        text_lord_bless_your(),
+        "sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. ",
         emoji_sleep_face(),
+      ]),
     },
     {
       text: "Song",
-      response:
-        "https://youtu.be/rNhSoUKPgMQ" +
-        newline_2() +
+      response: text_combine_multiple([
+        "https://youtu.be/rNhSoUKPgMQ",
+        newline_2(),
         " Jesus gave me the grace to write this song",
+      ]),
     },
     {
-      text: emoji_no() + " Sorry",
+      text: text_combine(emoji_no(), " Sorry"),
       response: " Sorry, I will not do that",
     },
     {
@@ -381,74 +470,86 @@ export function app_reply_choices() {
       response: "What do you want to talk about?",
     },
     {
-      text: emoji_pray() + " Testimony",
-      response:
-        emoji_pray() +
-        " Jesus died for my sins. " +
-        emoji_cross() +
-        " Jesus was buried. " +
-        emoji_rock() +
-        " Jesus rose to life. " +
-        emoji_pray() +
-        emoji_church() +
-        " I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to ministry. " +
-        emoji_cross() +
+      text: text_combine(emoji_pray(), " Testimony"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        " Jesus died for my sins. ",
+        emoji_cross(),
+        " Jesus was buried. ",
+        emoji_rock(),
+        " Jesus rose to life. ",
+        emoji_pray(),
+        emoji_church(),
+        " I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to ministry. ",
+        emoji_cross(),
         emoji_smile(),
+      ]),
     },
     {
-      text: emoji_pray() + " Thank God",
-      response: emoji_pray() + " Thank the LORD, our God! " + emoji_smile(),
+      text: text_combine(emoji_pray(), " Thank God"),
+      response: text_combine_multiple([
+        emoji_pray(),
+        " Thank the LORD, our God! ",
+        emoji_smile(),
+      ]),
     },
     {
-      text: emoji_pray() + " Thank you",
+      text: text_combine(emoji_pray(), " Thank you"),
       response: app_reply_choices_thanks(),
     },
     {
-      text: emoji_clock() + " Time",
-      response: emoji_pray() + " I have time to reply to messages",
+      text: text_combine(emoji_clock(), " Time"),
+      response: text_combine(emoji_pray(), " I have time to reply to messages"),
     },
     {
-      text: emoji_pray() + " Travel ask",
-      response: emoji_pray() + "No money for travel",
+      text: text_combine(emoji_pray(), " Travel ask"),
+      response: text_combine(emoji_pray(), "No money for travel"),
     },
     travel_pray,
     {
-      text: emoji_voice() + " Voice",
-      response:
-        emojis_sing_wrap("My voice is a gift and miracle from God! ") +
-        app_reply_choices_glory() +
-        " " +
+      text: text_combine(emoji_voice(), " Voice"),
+      response: text_combine_multiple([
+        emojis_sing_wrap("My voice is a gift and miracle from God! "),
+        app_reply_choices_glory(),
+        " ",
         app_reply_choices_thanks(),
+      ]),
     },
     {
-      text: emoji_smile() + " Well",
-      response: emoji_smile() + " All is well! " + emoji_pray(),
+      text: text_combine(emoji_smile(), " Well"),
+      response: text_combine_multiple([
+        emoji_smile(),
+        " All is well! ",
+        emoji_pray(),
+      ]),
     },
     {
-      text: emoji_question() + " What",
-      response: emoji_pray() + " What do you mean?",
+      text: text_combine(emoji_question(), " What"),
+      response: text_combine(emoji_pray(), " What do you mean?"),
     },
     {
       text: app_reply_choices_whatsapp(),
-      response: emoji_phone() + " WhatsApp: +1-904-314-4052",
+      response: text_combine(emoji_phone(), " WhatsApp: +1-904-314-4052"),
     },
     will,
     {
-      text: emoji_pray() + " Wills",
-      response: emoji_pray() + " If God wills, yes",
+      text: text_combine(emoji_pray(), " Wills"),
+      response: text_combine(emoji_pray(), " If God wills, yes"),
     },
     with2,
     {
-      text: emoji_pray() + " Word",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_pray(), " Word"),
+      response: text_combine(
+        emoji_pray(),
         " Behold, I am an unworthy servant of the LORD. May the word of the LORD come true!",
+      ),
     },
     {
-      text: emoji_pray() + " Work",
-      response:
-        emoji_pray() +
+      text: text_combine(emoji_pray(), " Work"),
+      response: text_combine(
+        emoji_pray(),
         " Through the grace of God: Recently, I have only been doing ministry work. I have been preaching at different churches. I have also made Bible singing videos: https://www.youtube.com/@CHRISTrosetolifesinging Also, I have been doing some computer programming.",
+      ),
     },
   ];
   return v;

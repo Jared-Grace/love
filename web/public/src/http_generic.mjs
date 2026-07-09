@@ -14,6 +14,7 @@ import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function http_generic(url, options) {
   const method = options.method || "GET";
   const body = options.body || null;
@@ -53,7 +54,7 @@ export async function http_generic(url, options) {
   }
   let swHttps = text_starts_with_https_prefix(url);
   let h_name = ternary(swHttps, "s", "");
-  let h = await import("http" + h_name);
+  let h = await import(text_combine("http", h_name));
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
     const urlObj = new URL(url);
@@ -81,7 +82,7 @@ export async function http_generic(url, options) {
     const a = {
       hostname: urlObj.hostname,
       port: urlObj.port || (swHttps ? 443 : 80),
-      path: urlObj.pathname + urlObj.search,
+      path: text_combine(urlObj.pathname, urlObj.search),
       method,
       headers: {
         ...(options.headers || {}),

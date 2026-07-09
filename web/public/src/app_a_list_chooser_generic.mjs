@@ -13,6 +13,7 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { text_articled } from "../../../love/public/src/text_articled.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_a_list_chooser_generic(
   root,
   noun,
@@ -21,7 +22,7 @@ export function app_a_list_chooser_generic(
   lambda$button$text,
 ) {
   const articled = text_articled(noun);
-  const text = "Choose " + articled + ":";
+  const text = text_combine_multiple(["Choose ", articled, ":"]);
   let d = html_div_text_centered(root, text);
   app_a_control_style(d);
   html_style_background_color_set(d, "white");

@@ -3,6 +3,7 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function ebible_parts_to_reference(
   books,
   book_code,
@@ -18,8 +19,14 @@ export function ebible_parts_to_reference(
     verse_numbers_s = first;
   } else {
     let last = list_last(unique);
-    verse_numbers_s = first + "-" + last;
+    verse_numbers_s = text_combine_multiple([first, "-", last]);
   }
-  const reference = book_name + " " + chapter_name + ":" + verse_numbers_s;
+  const reference = text_combine_multiple([
+    book_name,
+    " ",
+    chapter_name,
+    ":",
+    verse_numbers_s,
+  ]);
   return reference;
 }

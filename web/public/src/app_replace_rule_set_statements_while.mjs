@@ -2,6 +2,7 @@ import { app_replace_rule_set_statements_while_abbreviations } from "../../../lo
 import { app_replace_rule_set_statements_while_rules } from "../../../love/public/src/app_replace_rule_set_statements_while_rules.mjs";
 import { js_keyword_while } from "../../../love/public/src/js_keyword_while.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_set_statements_while() {
   const rules = [];
   app_replace_rule_set_statements_while_rules(rules);
@@ -23,20 +24,28 @@ export function app_replace_rule_set_statements_while() {
     goals: [
       {
         start: "ws",
-        end: js_keyword_while() + " ( x < 3 ) x = x + 1 ;",
+        end: text_combine(js_keyword_while(), " ( x < 3 ) x = x + 1 ;"),
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( y > 0 ) { y = y - 1 ; }",
+        end: text_combine(js_keyword_while(), " ( y > 0 ) { y = y - 1 ; }"),
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
+        end: text_combine(
+          js_keyword_while(),
+          " ( ! found ( door ) ) { sm sm }",
+        ),
       },
       {
-        start: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
-        end:
-          js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
+        start: text_combine(
+          js_keyword_while(),
+          " ( ! found ( door ) ) { sm sm }",
+        ),
+        end: text_combine(
+          js_keyword_while(),
+          " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
+        ),
       },
     ],
     why: "The replacement rules define a grammar for parsing JavaScript-like while statements, including variable declarations, assignments, expressions, blocks, and if-else statements, demonstrating how complex control flow and statement grouping are constructed from simpler syntactic elements.",

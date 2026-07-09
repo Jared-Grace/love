@@ -10,6 +10,7 @@ import { command_line_read_empty } from "../../../love/public/src/command_line_r
 import { messenger_reply_url } from "../../../love/public/src/messenger_reply_url.mjs";
 import { retry_on_error } from "../../../love/public/src/retry_on_error.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function messenger_reply_playwright() {
   let p = folder_user_docs_path("fb.json");
   let data = await file_read_json(p);
@@ -42,7 +43,7 @@ export async function messenger_reply_playwright() {
   const count = await locator.count();
   let b = equal(count, 4);
   assert(b);
-  console.log(`Found ${count} matches`);
+  console.log(text_combine_multiple(['Found ', count, ' matches']));
   await locator.nth(0).click();
   if (false) {
   }

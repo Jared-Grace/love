@@ -6,6 +6,7 @@ import { command_line_generic_code_ignore } from "../../../love/public/src/comma
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function command_line_generic(command, extra) {
   arguments_assert(arguments, 2);
   text_is_assert(command);
@@ -45,7 +46,14 @@ export async function command_line_generic(command, extra) {
       if (code_ignore !== true && code !== 0) {
         reject(
           new Error(
-            `Command exited with code ${code}\n\nSTDOUT:\n${stdout}\n\nSTDERR:\n${stderr}`,
+            text_combine_multiple([
+              'Command exited with code ',
+              code,
+              '\n\nSTDOUT:\n',
+              stdout,
+              '\n\nSTDERR:\n',
+              stderr,
+            ]),
           ),
         );
         if (false) {

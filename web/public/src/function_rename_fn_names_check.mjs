@@ -9,6 +9,7 @@ import { function_rename_open } from "../../../love/public/src/function_rename_o
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { data_identifiers_fn_names_get } from "../../../love/public/src/data_identifiers_fn_names_get.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function function_rename_fn_names_check(
   f_name_before,
   f_name_after,
@@ -27,18 +28,19 @@ export async function function_rename_fn_names_check(
     let waited = await functions_transform_list(value, lambda3);
     return;
     error_json({
-      message:
-        "You are trying to rename: " +
-        f_name_before +
-        ". However that is referenced by " +
-        value +
-        " through " +
-        fn_name.name +
-        ". TODO: " +
-        function_rename_open.name +
-        " needs enhancing to rename " +
-        fn_name.name +
+      message: text_combine_multiple([
+        "You are trying to rename: ",
+        f_name_before,
+        ". However that is referenced by ",
+        value,
+        " through ",
+        fn_name.name,
+        ". TODO: ",
+        function_rename_open.name,
+        " needs enhancing to rename ",
+        fn_name.name,
         " references.",
+      ]),
       f_name_before,
       value,
     });

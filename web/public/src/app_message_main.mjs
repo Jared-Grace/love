@@ -35,6 +35,8 @@ import { app_replace_font_size_refresh } from "../../../love/public/src/app_repl
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_shared_style_control } from "../../../love/public/src/app_shared_style_control.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_message_main(context) {
   const messages_property = "messages";
   let u = await uuid();
@@ -60,7 +62,7 @@ export async function app_message_main(context) {
   let div_checks = html_div(div);
   let button_send = app_shared_button_green(
     div,
-    emoji_email() + " Send",
+    text_combine(emoji_email(), " Send"),
     on_send,
   );
   let v = html_check_empty_not();
@@ -100,7 +102,7 @@ export async function app_message_main(context) {
     let div_message = app_shared_container(div_messages);
     html_style_assign(div_message, {
       width: "80%",
-      ["margin-" + direction]: "auto",
+      [text_combine("margin-", direction)]: "auto",
     });
     html_text_set(div_message, message);
     return div_message;
@@ -120,7 +122,12 @@ export async function app_message_main(context) {
     let ei = list_empty_is(results);
     if (ei) {
       let message_id = await uuid();
-      const file_name = app_message_firebase_path() + u + "/" + message_id;
+      const file_name = text_combine_multiple([
+        app_message_firebase_path(),
+        u,
+        "/",
+        message_id,
+      ]);
       let file_path = file_name_json(file_name);
       await firebase_upload_object(file_path, {
         message,

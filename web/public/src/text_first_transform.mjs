@@ -3,6 +3,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function text_first_transform(s, transform) {
   let split = text_split_empty(s);
   let r = list_first_remaining(split);
@@ -13,6 +14,6 @@ export function text_first_transform(s, transform) {
     remaining = [];
   }
   let joined = list_join_empty(remaining);
-  let v = "" + lower + joined;
+  let v = text_combine_multiple([lower, joined]);
   return v;
 }

@@ -7,8 +7,9 @@ import { app_karate } from "../../../karate_code/public/src/app_karate.mjs";
 import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "../../../love/public/src/playwright_by_attribute_type.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function karate_tests() {
-  "TODO: fix url like " + app_replace_url_dev;
+  text_combine("TODO: fix url like ", app_replace_url_dev);
   await playwright_test_app_dev(url_prefix, app_karate, lambda);
   async function lambda(page) {
     const title_actual = await page.title();

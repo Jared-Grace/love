@@ -5,6 +5,8 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function lock_generic(lock_name, wait, lambda) {
   let lockfile = await import_install("proper-lockfile");
   let f_path = folder_user_storage_function_path(lock_generic);
@@ -27,9 +29,13 @@ export async function lock_generic(lock_name, wait, lambda) {
         if (not(notified)) {
           let message = null;
           if (wait) {
-            message = "waiting on " + result + " to be unlocked";
+            message = text_combine_multiple([
+              "waiting on ",
+              result,
+              " to be unlocked",
+            ]);
           } else {
-            message = result + " is locked, skipping";
+            message = text_combine(result, " is locked, skipping");
           }
           log_keep(lock_generic.name, message);
           notified = true;

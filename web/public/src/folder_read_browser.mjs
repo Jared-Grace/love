@@ -6,6 +6,7 @@ import { list_filter_starts_with } from "../../../love/public/src/list_filter_st
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { text_slash_forward } from "../../../love/public/src/text_slash_forward.mjs";
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function folder_read_browser(path_folder) {
   let files_paths = await app_a_files_paths();
   let r = global_function_property_cache(
@@ -18,7 +19,7 @@ export async function folder_read_browser(path_folder) {
   function value_get() {
     let n = path_normalize(path_folder);
     let s = text_slash_forward();
-    let prefix = "" + n + s;
+    let prefix = text_combine_multiple([n, s]);
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
     function lambda(item) {

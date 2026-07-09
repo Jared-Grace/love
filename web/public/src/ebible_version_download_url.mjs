@@ -1,4 +1,11 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function ebible_version_download_url(bible_folder, name) {
-  let v = "https://ebible.org/Scriptures/" + bible_folder + "_" + name + ".zip";
+  let v = text_combine_multiple([
+    "https://ebible.org/Scriptures/",
+    bible_folder,
+    "_",
+    name,
+    ".zip",
+  ]);
   return v;
 }

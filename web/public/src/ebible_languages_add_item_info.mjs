@@ -10,13 +10,15 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_url } from "../../../love/public/src/ebible_url.mjs";
 import { http_local_html_parse } from "../../../love/public/src/http_local_html_parse.mjs";
 import { ebible_url_details } from "../../../love/public/src/ebible_url_details.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function ebible_languages_add_item_info(bible_folder) {
-  "gets language information for " + bible_folder;
+  text_combine("gets language information for ", bible_folder);
   text_is_assert(bible_folder);
   let prefix = ebible_url_details();
   let project_url = firebase_storage_url_project_jg();
   let r = await http_local_html_parse(
-    ebible_url() + prefix + bible_folder,
+    text_combine_multiple([ebible_url(), prefix, bible_folder]),
     project_url,
   );
   let root = property_get(r, "root");
@@ -28,7 +30,10 @@ export async function ebible_languages_add_item_info(bible_folder) {
     url_language_prefix,
   );
   let language_code = list_single(unique);
-  let url_language = url_language_prefix + language_code + "";
+  let url_language = text_combine_multiple([
+    url_language_prefix,
+    language_code,
+  ]);
   let mapped = html_parse_find_a_href_text(root, d);
   let filtered = list_filter_property(mapped, "href", url_language);
   list_size_assert_message(

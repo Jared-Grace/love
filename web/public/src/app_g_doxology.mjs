@@ -7,46 +7,74 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
 import { text_random_or_empty } from "../../../love/public/src/text_random_or_empty.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_g_doxology() {
   function jesus_christ() {
-    let v = "Jesus" + text_random_or_empty(" Christ");
+    let v = text_combine("Jesus", text_random_or_empty(" Christ"));
     return v;
   }
   let t = trinity_name_prayer();
   const believe = list_random_item([
-    text_random_or_empty("Now ") +
-      "I believe" +
+    text_combine_multiple([
+      text_random_or_empty("Now "),
+      "I believe",
       text_random_or_empty(
-        ", in " +
-          jesus_christ() +
+        text_combine_multiple([
+          ", in ",
+          jesus_christ(),
           text_random_or_empty(
-            ", the Son of" + text_random_or_empty(" the living") + " God",
+            text_combine_multiple([
+              ", the Son of",
+              text_random_or_empty(" the living"),
+              " God",
+            ]),
           ),
+        ]),
       ),
-    "I " +
-      list_random_item(["confess", "recieve"]) +
-      " " +
-      jesus_christ() +
-      " as my" +
-      text_random_or_empty(" risen") +
+    ]),
+    text_combine_multiple([
+      "I ",
+      list_random_item(["confess", "recieve"]),
+      " ",
+      jesus_christ(),
+      " as my",
+      text_random_or_empty(" risen"),
       " Lord and Savior",
+    ]),
   ]);
-  const blessing =
-    "God bless you " +
+  const blessing = text_combine_multiple([
+    "God bless you ",
     text_random_or_empty(
-      " in the name of " + list_random_item(["Jesus", t]) + " ",
-    ) +
-    "amen";
+      text_combine_multiple([
+        " in the name of ",
+        list_random_item(["Jesus", t]),
+        " ",
+      ]),
+    ),
+    "amen",
+  ]);
   const choices = [
-    "Thank you" +
+    text_combine(
+      "Thank you",
       text_random_or_empty(
-        " very much" + text_random_or_empty(" from the bottom of my heart"),
+        text_combine(
+          " very much",
+          text_random_or_empty(" from the bottom of my heart"),
+        ),
       ),
-    "Glory to God" + text_random_or_empty(" in the highest"),
-    "Praise God" +
+    ),
+    text_combine("Glory to God", text_random_or_empty(" in the highest")),
+    text_combine(
+      "Praise God",
       text_random_or_empty(
-        ", the Father of " + text_random_or_empty("our Lord ") + jesus_christ(),
+        text_combine_multiple([
+          ", the Father of ",
+          text_random_or_empty("our Lord "),
+          jesus_christ(),
+        ]),
       ),
+    ),
     "Hallelujah",
     "Amen",
   ];

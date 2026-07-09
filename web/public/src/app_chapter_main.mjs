@@ -19,6 +19,7 @@ import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_chapter_main(context) {
   let root = html_mobile_default(context);
   html_margin_0(root);
@@ -29,9 +30,11 @@ export async function app_chapter_main(context) {
   let max = app_chapter_chosen_max();
   let p2 = html_p_text(
     bar,
-    "Choose " +
-      number_to_words(max) +
+    text_combine_multiple([
+      "Choose ",
+      number_to_words(max),
       " verses. That will copy all the verses in between (inclusive).",
+    ]),
   );
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
@@ -57,7 +60,10 @@ export async function app_chapter_main(context) {
       async function lambda(v) {
         let verse_number_v = property_get(v, "verse_number");
         let text = property_get(v, "text");
-        let p = html_p_text(content, verse_number_v + " " + text);
+        let p = html_p_text(
+          content,
+          text_combine_multiple([verse_number_v, " ", text]),
+        );
         let r = app_chapter_toggle_update(
           updates,
           p,

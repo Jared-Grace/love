@@ -4,11 +4,13 @@ import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs"
 import { app_replace_rule_set_statements_for_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_for_abbreviations.mjs";
 import { app_replace_rule_set_statements_for_rules } from "../../../love/public/src/app_replace_rule_set_statements_for_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_function_declarations() {
   const rules = [];
   app_replace_rule_set_statements_for_rules(rules);
   list_add_multiple(rules, [
-    "fd > " + js_keyword_function() + " id ( fdm bs",
+    text_combine_multiple(["fd > ", js_keyword_function(), " id ( fdm bs"]),
     "fdm > )",
     "fdm > fpg )",
     "fpg > fpg , id",
@@ -48,51 +50,80 @@ export function app_replace_rule_set_function_declarations() {
     goals: [
       {
         start: "fd",
-        end: js_keyword_function() + " empty ( ) { }",
+        end: text_combine(js_keyword_function(), " empty ( ) { }"),
       },
       {
         start: "fd",
-        end: js_keyword_function() + " tautology ( ) { return true ; }",
+        end: text_combine(
+          js_keyword_function(),
+          " tautology ( ) { return true ; }",
+        ),
       },
       {
         start: "fd",
-        end: js_keyword_function() + " id ( id ) bs",
+        end: text_combine(js_keyword_function(), " id ( id ) bs"),
       },
       {
-        start: js_keyword_function() + " id ( id ) { return ex ; }",
-        end: js_keyword_function() + " identity ( i ) { return i ; }",
+        start: text_combine(
+          js_keyword_function(),
+          " id ( id ) { return ex ; }",
+        ),
+        end: text_combine(
+          js_keyword_function(),
+          " identity ( i ) { return i ; }",
+        ),
       },
       {
-        start: js_keyword_function() + " id ( id ) { return ex ; }",
-        end: js_keyword_function() + " invoke ( f ) { return f ( ) ; }",
+        start: text_combine(
+          js_keyword_function(),
+          " id ( id ) { return ex ; }",
+        ),
+        end: text_combine(
+          js_keyword_function(),
+          " invoke ( f ) { return f ( ) ; }",
+        ),
       },
       {
         start: "fd",
-        end: js_keyword_function() + " id ( fpg ) { smg }",
+        end: text_combine(js_keyword_function(), " id ( fpg ) { smg }"),
       },
       {
-        start: js_keyword_function() + " id ( fpg ) { smg }",
-        end: js_keyword_function() + " id ( x , y ) { smg }",
+        start: text_combine(js_keyword_function(), " id ( fpg ) { smg }"),
+        end: text_combine(js_keyword_function(), " id ( x , y ) { smg }"),
       },
       {
-        start: js_keyword_function() + " id ( x , y ) { smg }",
-        end: js_keyword_function() + " add ( x , y ) { return x + y ; }",
+        start: text_combine(js_keyword_function(), " id ( x , y ) { smg }"),
+        end: text_combine(
+          js_keyword_function(),
+          " add ( x , y ) { return x + y ; }",
+        ),
       },
       {
-        start: js_keyword_function() + " id ( x , y ) { smg }",
-        end: js_keyword_function() + " id ( x , y ) { vs return ex ; }",
+        start: text_combine(js_keyword_function(), " id ( x , y ) { smg }"),
+        end: text_combine(
+          js_keyword_function(),
+          " id ( x , y ) { vs return ex ; }",
+        ),
       },
       {
-        start: js_keyword_function() + " id ( x , y ) { vs return ex ; }",
-        end:
-          js_keyword_function() + " id ( x , y ) { let id = ex ; return ex ; }",
+        start: text_combine(
+          js_keyword_function(),
+          " id ( x , y ) { vs return ex ; }",
+        ),
+        end: text_combine(
+          js_keyword_function(),
+          " id ( x , y ) { let id = ex ; return ex ; }",
+        ),
       },
       {
-        start:
-          js_keyword_function() + " id ( x , y ) { let id = ex ; return ex ; }",
-        end:
-          js_keyword_function() +
+        start: text_combine(
+          js_keyword_function(),
+          " id ( x , y ) { let id = ex ; return ex ; }",
+        ),
+        end: text_combine(
+          js_keyword_function(),
           " average ( x , y ) { let sum = add ( x , y ) ; return sum / 2 ; }",
+        ),
       },
     ],
     why: "The replacement rules define a context-free grammar for JavaScript-like function declarations, including variable declarations, statements, blocks, control flow, and expressions, demonstrating how to construct valid function definitions and bodies. This is evident from the presence of rules for 'function', parameter lists, variable declarations (let, const, var), statements (return, if, while, for), and arithmetic expressions, as well as the provided example goals that match typical JavaScript function syntax.",

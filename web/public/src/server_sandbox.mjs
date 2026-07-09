@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url'; // 
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 
 export function server_sandbox() {
 const __filename = fileURLToPath(import.meta.url);
@@ -16,6 +17,6 @@ app.use(express.static(__dirname));
 
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(text_combine('Server running on http://localhost:', PORT));
 });
 }

@@ -12,6 +12,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function reply_wrap_invoke(item, possibilities) {
   let fi = function_is(item);
   let wrapped = null;
@@ -44,7 +45,7 @@ export async function reply_wrap_invoke(item, possibilities) {
           let matches = matches_previous && (e || empty);
           let r = {
             matches,
-            index: index_start + delta,
+            index: text_combine(index_start, delta),
           };
           object_assign(p, r);
         }
