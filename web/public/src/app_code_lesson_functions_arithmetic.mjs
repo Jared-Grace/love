@@ -1,3 +1,4 @@
+import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "../../../love/public/src/app_code_lesson_quizzes_unscramble_both.mjs";
@@ -67,6 +68,7 @@ export function app_code_lesson_functions_arithmetic() {
   function above(root) {
     let next = range_1_next(m);
     function lambda(o, index) {
+      let eq = equal_0(item);
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
