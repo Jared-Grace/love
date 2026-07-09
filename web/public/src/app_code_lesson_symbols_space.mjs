@@ -48,8 +48,7 @@ export function app_code_lesson_symbols_space() {
     );
   }
   let r5 = app_code_lesson_symbols_counting(
-    "Symbols (space)",
-    "symbols_space",
+    { name: "Symbols (space)", id: "symbols_space" },
     lambda,
     batch_get,
     app_code_symbols_separated_on_question_numbered_fifth,

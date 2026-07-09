@@ -16,9 +16,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
-  let r = app_code_lesson_name_id("functions", ["arithmetic"]);
-  let id = property_get(r, "id");
-  let name = property_get(r, "name");
+  let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
   const example_label = "Function: ";
   const quiz_label = "What is this code rewritten using a function?";
   let question_label = app_code_label_code_question();
@@ -56,8 +54,7 @@ export function app_code_lesson_functions_arithmetic() {
     quiz_backwards_answer_count_override,
   );
   let lesson = app_code_lesson_base(
-    id,
-    name,
+    name_id,
     above,
     example_count,
     batch_get,

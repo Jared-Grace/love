@@ -8,7 +8,6 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { list_to_text_and_list } from "../../../love/public/src/list_to_text_and_list.mjs";
 import { app_code_lesson_identifiers_valid } from "../../../love/public/src/app_code_lesson_identifiers_valid.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -119,15 +118,12 @@ export function app_code_lesson_identifiers_underscores_generic(
     let mapped3 = list_map_index(list, lambda2);
     return mapped3;
   }
-  let r = app_code_lesson_name_id("identifiers", [
+  let name_id = app_code_lesson_name_id("identifiers", [
     text_combine(separator_valid_name, 's allowed'),
     text_combine(separator_invalid_name, 's not'),
   ]);
-  let id = property_get(r, "id");
-  let name = property_get(r, "name");
   let r5 = app_code_lesson_identifiers_valid(
-    name,
-    id,
+    name_id,
     above,
     batch_get,
     app_code_symbols_separated_on_question,

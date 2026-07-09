@@ -7,8 +7,7 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { app_code_label_symbols } from "../../../love/public/src/app_code_label_symbols.mjs";
 export function app_code_lesson_symbols_counting(
-  name,
-  id,
+  name_id,
   above,
   batch_symbols,
   on_question,
@@ -39,8 +38,7 @@ export function app_code_lesson_symbols_counting(
     quiz_backwards_answer_count_override,
   );
   let lesson = app_code_lesson_base(
-    id,
-    name,
+    name_id,
     above,
     example_count,
     batch_get,

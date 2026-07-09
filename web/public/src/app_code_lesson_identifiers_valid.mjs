@@ -9,13 +9,12 @@ import { app_code_lesson_quizzes } from "../../../love/public/src/app_code_lesso
 import { noop } from "../../../love/public/src/noop.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export function app_code_lesson_identifiers_valid(
-  name,
-  id,
+  name_id,
   above,
   batch_get,
   on_question_forwards,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 4);
   let batch_get2 =
     app_code_batch_question_answer_fns_validity_identifier(batch_get);
   const backwards_question_label = "Identifier validity: ";
@@ -26,8 +25,7 @@ export function app_code_lesson_identifiers_valid(
     );
   let lesson2 = app_code_lesson_validity_base(
     batch_get2,
-    id,
-    name,
+    name_id,
     above,
     backwards_question_label,
     on_question_forwards,
@@ -54,8 +52,7 @@ export function app_code_lesson_identifiers_valid(
     quiz_backwards_answer_count_override,
   );
   let lesson = app_code_lesson_base(
-    id,
-    name,
+    name_id,
     above,
     example_count,
     batch_get2,

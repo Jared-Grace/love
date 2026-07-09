@@ -17,11 +17,12 @@ import { app_code_container_light_blue_text } from "../../../love/public/src/app
 import { app_code_lesson_same_message } from "../../../love/public/src/app_code_lesson_same_message.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_generic.mjs";
 export function app_code_lesson_identifiers_symbol_first_unseparated() {
-  let name = "Identifiers (first symbol, unseparated)";
-  let id = "identifiers_symbol_first_unseparated";
+  let name_id = {
+    name: "Identifiers (first symbol, unseparated)",
+    id: "identifiers_symbol_first_unseparated",
+  };
   let r = app_code_lesson_identifiers_symbol_first_generic(
-    name,
-    id,
+    name_id,
     above,
     html_text_set_code_dark,
   );

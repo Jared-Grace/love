@@ -17,6 +17,7 @@ Without permission, you may
         - diff
         - show
         - status
+    - looping, such as "for"
     - ls
     - node --check
 
