@@ -9,7 +9,7 @@ export function app_code_lesson_symbols_digits() {
     app_code_container_light_blue_text(root, text);
   }
   let r = app_code_lesson_symbols_counting(
-    "Symbols (Digits)",
+    "Symbols (digits)",
     "symbols_digits",
     lambda,
     app_code_lesson_symbols_batch_digits,
