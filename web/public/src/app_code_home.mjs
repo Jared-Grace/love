@@ -1,3 +1,4 @@
+import { app_replace_button_wide_text_left_centered } from "../../../love/public/src/app_replace_button_wide_text_left_centered.mjs";
 import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { add_1_period } from "../../../love/public/src/add_1_period.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -21,6 +22,7 @@ export function app_code_home(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     let text = add_1_period(index);
+    app_replace_button_wide_text_left_centered(root, lambda, text, name);
     let combined = text_combine_middle_space(text, name);
     let b = app_replace_button_wide(root, combined, lambda3);
   }
