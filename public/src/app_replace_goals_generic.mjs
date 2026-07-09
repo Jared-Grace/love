@@ -28,8 +28,9 @@ export function app_replace_goals_generic(
       text += string_pad_left_space(e);
     }
   }
+  const text_centered = "";
   let b = app_replace_button_wide(root, "", lambda);
-  let r = html_style_text_left_centered(b, text, "");
+  let r = html_style_text_left_centered(b, text, text_centered);
   app_replace_button_rule_style(b);
   let title = property_get(r, "title");
   html_style_set(title, "line-height", 1.5);
