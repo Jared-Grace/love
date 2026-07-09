@@ -1,9 +1,9 @@
+import { text_replace_multiple_to } from "../../../love/public/src/text_replace_multiple_to.mjs";
 import { list_sort_list_size } from "../../../love/public/src/list_sort_list_size.mjs";
 import { list_filter_list_empty_not_is } from "../../../love/public/src/list_filter_list_empty_not_is.mjs";
 import { list_power_set } from "../../../love/public/src/list_power_set.mjs";
 import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
-import { text_replace_to_space } from "../../../love/public/src/text_replace_to_space.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
@@ -38,7 +38,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       la(call);
       let call2 = js_operator_to_code_call_only(o, next);
       let missing = next_get();
-      let replaced = text_replace_to_space(call2, missing);
+      let replaced = text_replace_multiple_to(call2, missing, " ");
       la(replaced);
     }
     let list = list_adder(lambda);
