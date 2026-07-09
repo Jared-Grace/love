@@ -2,7 +2,6 @@ import { list_iterator_refillable_value } from "../../../love/public/src/list_it
 import { text_replace_to_space } from "../../../love/public/src/text_replace_to_space.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
@@ -25,7 +24,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
-  let operators_next = list_iterator_refillable(operators);
+  let operators_next = list_iterator_refillable_value(operators);
   let next_get = list_iterator_refillable_value(symbols_required);
   function batch_get() {
     function lambda(la) {
