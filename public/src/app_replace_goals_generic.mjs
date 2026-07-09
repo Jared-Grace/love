@@ -29,12 +29,12 @@ export function app_replace_goals_generic(
     }
   }
   const text_centered = "";
-  let b = app_replace_button_wide(root, "", lambda);
-  let r = html_style_text_left_centered(b, text_left, text_centered);
+  let button = app_replace_button_wide(root, "", lambda);
+  let r = html_style_text_left_centered(button, text_left, text_centered);
   let title = property_get(r, "title");
   html_style_set(title, "line-height", 1.5);
-  app_replace_button_rule_style(b);
+  app_replace_button_rule_style(button);
   let background = app_replace_rule_set_highlight();
-  html_style_background_color_set_if(choose_this_next, b, background);
+  html_style_background_color_set_if(choose_this_next, button, background);
   return title;
 }
