@@ -32,6 +32,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       la(call);
       let call2 = js_operator_to_code_call_only(o, next);
       let missing = next_get();
+      trs;
     }
     let list = list_adder(lambda);
     return mapped;
