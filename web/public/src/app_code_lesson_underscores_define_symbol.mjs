@@ -17,11 +17,8 @@ export function app_code_lesson_underscores_define_symbol(
   let r = text_articled_split(symbol_name);
   let text = property_get(r, "text");
   let article = property_get(r, "article");
+  let combined = text_combine_multiple([" This is ", article, " "]);
+  const parts = [combined, text, ": ", symbol];
   let cycles = [noop, html_bold, noop, html_style_code_dark];
-  html_cycle(row, cycles, [
-    text_combine_multiple([" This is ", article, " "]),
-    text,
-    ": ",
-    symbol,
-  ]);
+  html_cycle(row, cycles, parts);
 }
