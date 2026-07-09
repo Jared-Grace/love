@@ -15,6 +15,5 @@ export function app_code_lesson_underscores_define_symbol(
   let text = property_get(r, "text");
   let article = property_get(r, "article");
   let combined = text_combine_multiple([" This is ", article, " "]);
-  const parts = [combined, text, ": ", symbol];
-  html_cycle_bold_code(row, parts);
+  html_cycle_bold_code(row, [combined, text, ": ", symbol]);
 }
