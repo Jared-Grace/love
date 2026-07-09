@@ -11,5 +11,6 @@ export function list_power_set(list, index, result, results) {
   let item = list_get(list, index);
   list_add(result, item);
   list_power_set(list, index + 1, result);
-  list_remove_last_equal(item2, expected_last);
+  list_remove_last_equal(result, item);
+  list_power_set(list, index + 1, result);
 }
