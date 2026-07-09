@@ -21,10 +21,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
+  let operators_next = list_iterator_refillable(operators);
+  let next_get = list_iterator_refillable(refill_get);
   function batch_get() {
-    let operators_next = list_iterator_refillable(operators);
     let o = operators_next();
-    let next_get = list_iterator_refillable(refill_get);
     let r = js_operator_to_code_call(o, next);
     let call = property_get(r, "call");
     let next_get2 = list_iterator_refillable(symbols_required);
