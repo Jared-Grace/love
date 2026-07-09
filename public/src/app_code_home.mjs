@@ -21,8 +21,8 @@ export function app_code_home(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     let text = add_1_period(index);
-    let combined = text_combine_middle_space(left, right);
-    let b = app_replace_button_wide(root, name, lambda3);
+    let combined = text_combine_middle_space(text, name);
+    let b = app_replace_button_wide(root, combined, lambda3);
   }
   each(lessons, lambda);
 }
