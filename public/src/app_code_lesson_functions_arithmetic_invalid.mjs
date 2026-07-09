@@ -44,17 +44,16 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let right = property_get(r2, "right");
     let left = property_get(r2, "left");
     let call = property_get(r, "call");
-    let normalized = js_tokenizer_normalized(code);
+    let normalized = js_tokenizer_normalized(call);
     let parts2 = [
       "Calling the ",
       verb,
       " function requires all of these parts: ",
     ];
     html_div_cycle_code(c, parts2);
-    let parts = [verb, "(", left, ",", right, ")"];
-    let combined = list_between_space_before(parts);
+    let combined = list_between_space_before(normalized);
     html_div_cycle_code(c, combined);
-    let r4 = list_filter_indices_odd(parts);
+    let r4 = [ "(",  ",",  ")"];
     let combined2 = list_between_space(r4);
     list_add_first(
       combined2,
