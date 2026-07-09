@@ -1,4 +1,4 @@
-import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { list_join_underscore } from "../../../love/public/src/list_join_underscore.mjs";
 import { list_concat_single } from "../../../love/public/src/list_concat_single.mjs";
@@ -9,7 +9,7 @@ export function app_code_lesson_name_id(left, rights) {
   let joined = list_join_comma_space(rights);
   let wrapped = text_wrap_parenthesis(joined);
   let combined = text_combine_middle_space(left, wrapped);
-  let name = text_upper_to(combined);
+  let name = text_first_upper_to(combined);
   let concated = list_concat_single(left, rights);
   let joined_id = list_join_underscore(concated);
   let id = text_lower_to(joined_id);
