@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(cp:*)",
+      "Bash(cd:*)",
+      "Bash(diff:*)",
+      "Bash(echo:*)",
+      "Bash(head:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git status:*)",
+      "Bash(ls:*)",
+      "Bash(node --check:*)",
+      "Write(/tmp/claude-1000/-home-j-repos-love/**)",
+      "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
+      "Read(/tmp/claude-1000/-home-j-repos-love/**)",
+      "Bash(mkdir /tmp/claude-1000/-home-j-repos-love/:*)",
+      "Bash(mkdir -p /tmp/claude-1000/-home-j-repos-love/:*)",
+      "Bash(rm /tmp/claude-1000/-home-j-repos-love/:*)",
+      "Bash(rm -r /tmp/claude-1000/-home-j-repos-love/:*)",
+      "Bash(rm -rf /tmp/claude-1000/-home-j-repos-love/:*)",
+      "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}
