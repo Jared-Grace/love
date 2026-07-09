@@ -36,7 +36,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let right = next();
     let parts = ["add", "(", left, ",", right, ")"];
     let combined = list_between_empty(parts);
-    ("Calling the add function requires all of these parts: ");
-    html_cycle_code(parent, parts2);
+    let parts2 = ["Calling the add function requires all of these parts: "];
+    html_cycle_code(c, parts2);
   }
 }
