@@ -1,9 +1,8 @@
-import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
+import { list_between_comma_space_before_after } from "../../../love/public/src/list_between_comma_space_before_after.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { list_between_empty } from "../../../love/public/src/list_between_empty.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
@@ -47,8 +46,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     ];
     html_div_cycle_code(c, parts2);
     let parts = [verb, "(", left, ",", right, ")"];
-    let combined = list_between_empty(parts);
-    list_add_first(combined, "");
+    let combined = list_between_comma_space_before_after(parts);
     html_div_cycle_code(c, combined);
   }
 }
