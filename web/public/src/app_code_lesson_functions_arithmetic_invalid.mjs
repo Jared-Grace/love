@@ -55,7 +55,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let combined2 = list_between_space(r4);
     list_add_first(
       combined2,
-      "If any of these are missing from the function call, then the code is invalid ",
+      "If any of these symbols are missing from the function call, then the code is invalid ",
     );
     let c2 = app_code_container_light_blue(root);
     html_div_cycle_code(c2, combined2);
