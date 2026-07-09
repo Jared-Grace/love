@@ -10,10 +10,10 @@ export async function marker_new() {
   return v;
   async function lambda(a) {
     let v2 = marker_next_index(a);
-    let stack = property_get(v2, "stack2");
+    let stack2 = property_get(v2, "stack2");
     let index = property_get(v2, "index");
     let name = "2";
-    await js_marker_insert(name, stack, index);
+    await js_marker_insert(name, stack2, index);
     await marker_current_set(name);
   }
 }
