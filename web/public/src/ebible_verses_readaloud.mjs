@@ -16,6 +16,7 @@ import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebibl
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   if (browser_is()) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
@@ -28,7 +29,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
-  let search = "_" + book_code + "_" + name_code + "_";
+  let search = text_combine_multiple(["_", book_code, "_", name_code, "_"]);
   let only = list_find_includes(files, search);
   let contents = await file_read(only);
   let lines = text_split_newline(contents);

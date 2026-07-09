@@ -44,6 +44,7 @@ import { app_bible_search_word_path } from "../../../love/public/src/app_bible_s
 import { text_to_words } from "../../../love/public/src/text_to_words.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let en = ebible_folder_english();
@@ -93,7 +94,11 @@ export async function app_search_results(context, div_results) {
       let squashed = list_squash(waited);
       await list_join_newline_2_copy(squashed);
     }
-    let component = html_button_wide(expand_all_div, c2 + " all", lambda6);
+    let component = html_button_wide(
+      expand_all_div,
+      text_combine(c2, " all"),
+      lambda6,
+    );
   }
   expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
   html_br_2(div_results);

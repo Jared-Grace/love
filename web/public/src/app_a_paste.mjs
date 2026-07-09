@@ -5,6 +5,7 @@ import { storage_local_get_context } from "../../../love/public/src/storage_loca
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_a_paste(
   choices,
   a,
@@ -19,7 +20,7 @@ export function app_a_paste(
     let value = storage_local_get_context(context, app_a_paste.name);
     list_add(choices, {
       shortcut: "v",
-      text: "Paste " + text_suffix,
+      text: text_combine("Paste ", text_suffix),
       fn: async function lambda() {
         list_insert(body_list, index, value);
         await app_a_function_on_change(a, overlay_result);

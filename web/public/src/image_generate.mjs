@@ -4,6 +4,8 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function image_generate(text, path_output) {
   let v2 = await import_install("canvas");
   let registerFont = property_get(v2, "registerFont");
@@ -21,12 +23,12 @@ export async function image_generate(text, path_output) {
   ctx.fillStyle = BACKGROUND;
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
   function wrapText(text, fontSize) {
-    ctx.font = `${fontSize}px ${FONT_FAMILY}`;
+    ctx.font = text_combine_multiple([fontSize, 'px ', FONT_FAMILY]);
     const words = text.split(" ");
     const lines = [];
     let line = "";
     for (const word of words) {
-      const test = line ? `${line} ${word}` : word;
+      const test = line ? text_combine_multiple([line, ' ', word]) : word;
       if (ctx.measureText(test).width <= MAX_WIDTH) {
         line = test;
       } else {
@@ -44,13 +46,13 @@ export async function image_generate(text, path_output) {
     let high = 500;
     let best = low;
     while (low <= high) {
-      const mid = Math.floor((low + high) / 2);
+      const mid = Math.floor(text_combine(low, high) / 2);
       const lines = wrapText(text, mid);
       const lineHeight = mid * 1.25;
       const totalHeight = lines.length * lineHeight;
       if (totalHeight <= MAX_HEIGHT) {
         best = mid;
-        low = mid + 1;
+        low = text_combine(mid, 1);
       } else {
         high = mid - 1;
       }
@@ -60,13 +62,13 @@ export async function image_generate(text, path_output) {
   const FONT_SIZE = findMaxFontSize();
   const lines = wrapText(text, FONT_SIZE);
   const lineHeight = FONT_SIZE * 1.25;
-  ctx.font = `${FONT_SIZE}px ${FONT_FAMILY}`;
+  ctx.font = text_combine_multiple([FONT_SIZE, 'px ', FONT_FAMILY]);
   ctx.fillStyle = TEXT_COLOR;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   const startY = HEIGHT / 2 - ((lines.length - 1) * lineHeight) / 2;
   function lambda(line, i) {
-    ctx.fillText(line, WIDTH / 2, startY + i * lineHeight);
+    ctx.fillText(line, WIDTH / 2, text_combine(startY, i * lineHeight));
   }
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");

@@ -12,6 +12,8 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_g_conversation(
   prayer,
   npcs_matched,
@@ -27,34 +29,47 @@ export async function app_g_conversation(
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = text_first_upper_to(greet);
   let s2 = list_random_item(["nice", "great", "good"]);
-  const a = list_random_item(["it's", "it is"]) + " ";
-  let meet_message =
-    " " + text_first_upper_to(text_random_or_empty(a) + s2 + " to ");
+  const a = text_combine(list_random_item(["it's", "it is"]), " ");
+  let meet_message = text_combine(
+    " ",
+    text_first_upper_to(
+      text_combine_multiple([text_random_or_empty(a), s2, " to "]),
+    ),
+  );
   let meet = property_get(npc, "meet");
   if (not(meet)) {
     property_set(npc, "meet", true);
-    meet_message += "meet you" + g_random_dot_bang();
+    meet_message += text_combine("meet you", g_random_dot_bang());
   } else {
-    meet_message +=
-      list_random_item(["see", "talk to", "hear from"]) +
-      " you" +
-      text_random_or_empty(", again") +
-      g_random_dot_bang() +
-      " " +
-      "What " +
+    meet_message += text_combine_multiple([
+      list_random_item(["see", "talk to", "hear from"]),
+      " you",
+      text_random_or_empty(", again"),
+      g_random_dot_bang(),
+      " ",
+      "What ",
       list_random_item([
-        "do you " +
-          list_random_item(["want", "wish"]) +
-          " to " +
-          list_random_item(["talk about", "discuss"]) +
-          text_random_or_empty(" today") +
+        text_combine_multiple([
+          "do you ",
+          list_random_item(["want", "wish"]),
+          " to ",
+          list_random_item(["talk about", "discuss"]),
+          text_random_or_empty(" today"),
           text_random_or_empty(" with me"),
-        "is on your " + list_random_item(["mind", "heart"]),
-      ]) +
-      "?";
+        ]),
+        text_combine("is on your ", list_random_item(["mind", "heart"])),
+      ]),
+      "?",
+    ]);
   }
   let name_player = property_get(player, "name");
-  const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
+  const npc_says = text_combine_multiple([
+    v,
+    " ",
+    name_player,
+    g_random_dot_bang(),
+    meet_message,
+  ]);
   app_g_npc_says(npc, overlay, npc_says);
   async function npc_gospel() {
     await app_g_gospel(overlay, npc, overlay_close, player, div_map, refresh);
@@ -65,9 +80,11 @@ export async function app_g_conversation(
   if (not(christian)) {
     app_g_button_green(
       overlay,
-      "Tell " +
-        name_npc2 +
+      text_combine_multiple([
+        "Tell ",
+        name_npc2,
         " that Jesus died, was buried and rose to life and share the gospel!",
+      ]),
       npc_gospel,
     );
   }

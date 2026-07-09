@@ -21,6 +21,7 @@ import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs"
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_success_message(parent) {
   let choices = [
     emoji_trophy,
@@ -61,7 +62,7 @@ export function app_replace_success_message(parent) {
   let encouragements = list_shuffle_take(encouragements_choices, 2);
   html_bold(p_encouragement);
   function lambda(encouragement) {
-    html_span_text(p_encouragement, encouragement + "! ");
+    html_span_text(p_encouragement, text_combine(encouragement, "! "));
   }
   each(encouragements, lambda);
   return p;

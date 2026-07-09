@@ -5,12 +5,13 @@ import { app_replace_rule_sets_progress_bar } from "../../../love/public/src/app
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_set_title(context) {
   let r2 = app_replace_rule_sets_progress_bar(context);
   let root = property_get(context, "root");
   let rule_set = app_replace_rule_set_get(context);
   let rule_set_name = property_get(rule_set, "name");
-  let title = html_p_text(root, "Rule set: " + rule_set_name);
+  let title = html_p_text(root, text_combine("Rule set: ", rule_set_name));
   html_style_margin_y(title, "0.4em");
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);

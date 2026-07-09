@@ -5,6 +5,6 @@ export function folder_current_join(result) {
   let s = text_slash_forward();
   let current = folder_current();
   let combined = text_combine(current, s);
-  let value_string = combined + result;
+  let value_string = text_combine(combined, result);
   return value_string;
 }

@@ -2,6 +2,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_scroll_generic_wait } from "../../../love/public/src/html_scroll_generic_wait.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function html_scroll_center_container_generic(
   component,
   behavior,
@@ -12,16 +13,16 @@ export async function html_scroll_center_container_generic(
   await html_request_animation_frame();
   const containerRect = container_e.getBoundingClientRect();
   const tileRect = e.getBoundingClientRect();
-  const scrollLeft =
-    container_e.scrollLeft +
-    (tileRect.left - containerRect.left) -
-    container_e.clientWidth / 2 +
-    tileRect.width / 2;
-  const scrollTop =
-    container_e.scrollTop +
-    (tileRect.top - containerRect.top) -
-    container_e.clientHeight / 2 +
-    tileRect.height / 2;
+  const scrollLeft = text_combine(
+    text_combine(container_e.scrollLeft, tileRect.left - containerRect.left) -
+      container_e.clientWidth / 2,
+    tileRect.width / 2,
+  );
+  const scrollTop = text_combine(
+    text_combine(container_e.scrollTop, tileRect.top - containerRect.top) -
+      container_e.clientHeight / 2,
+    tileRect.height / 2,
+  );
   const s = {
     left: scrollLeft,
     top: scrollTop,

@@ -2,8 +2,9 @@ import { playwright_session_save_facebook } from "../../../love/public/src/playw
 import { playwright_chromium } from "../../../love/public/src/playwright_chromium.mjs";
 import { messenger_reply_url } from "../../../love/public/src/messenger_reply_url.mjs";
 import { command_line_read_empty } from "../../../love/public/src/command_line_read_empty.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function messenger_reply_login() {
-  "TODO: use this instead: " + playwright_session_save_facebook;
+  text_combine("TODO: use this instead: ", playwright_session_save_facebook);
   let chromium = await playwright_chromium();
   const browser = await chromium.launch({
     headless: false,

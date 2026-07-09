@@ -15,6 +15,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_calendar_url_ids } from "../../../love/public/src/app_calendar_url_ids.mjs";
 import { playwright_session_load } from "../../../love/public/src/playwright_session_load.mjs";
 import { playwright_session_save_facebook_name } from "../../../love/public/src/playwright_session_save_facebook_name.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_calendar_preaching_ask_lookup_load() {
   let url_ids_all = await app_calendar_url_ids();
   let lookup = await app_calendar_preaching_ask_lookup_get();
@@ -27,7 +28,7 @@ export async function app_calendar_preaching_ask_lookup_load() {
     let property_name = app_calendar_facebook_name();
     await property_exists_not_if_async(v, property_name, lambda2);
     async function lambda2() {
-      const url_goto1 = "https://www.facebook.com/" + url_id;
+      const url_goto1 = text_combine("https://www.facebook.com/", url_id);
       await playwright_sleep_goto(page, url_goto1);
       let h2 = await playwright_by_tag_name_text_contents(page, "h2");
       let includes = list_includes(
@@ -49,7 +50,7 @@ export async function app_calendar_preaching_ask_lookup_load() {
     }
     let property = app_calendar_facebook_conversation_url();
     async function lambda4() {
-      const url_goto = "https://www.m.me/" + url_id;
+      const url_goto = text_combine("https://www.m.me/", url_id);
       await playwright_sleep_goto(page, url_goto);
       const url = page.url();
       property_set_exists_not(v, property, url);

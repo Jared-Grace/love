@@ -37,6 +37,8 @@ import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_reply_main_old(context) {
   let r = await app_reply_initialize(context);
   let books = property_get(r, "books");
@@ -112,7 +114,7 @@ export async function app_reply_main_old(context) {
   let mapped = list_map(rg, double);
   function lambda13(v) {
     let f = verse_random_reset_n(v);
-    html_button(root, "Reset " + v, f);
+    html_button(root, text_combine("Reset ", v), f);
   }
   each(mapped, lambda13);
   function verses_list_reset() {
@@ -181,7 +183,13 @@ export async function app_reply_main_old(context) {
       let chapter_name = ebible_chapter_code_to_name(chapter_code2);
       let book_name = ebible_book_code_to_name(books, book_code);
       let verse_number2 = property_get(verse, "verse_number");
-      let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
+      let reference2 = text_combine_multiple([
+        book_name,
+        " ",
+        chapter_name,
+        ":",
+        verse_number2,
+      ]);
     }
     const other = [];
     function lambda11(v) {

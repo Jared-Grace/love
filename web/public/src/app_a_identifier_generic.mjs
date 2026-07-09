@@ -47,6 +47,7 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_a_identifier_generic(
   a,
   span,
@@ -73,9 +74,9 @@ export function app_a_identifier_generic(
         let overlay = property_get(o, "overlay");
         let oc = property_get(r, "container");
         let text2 = property_get(change, "text");
-        let div2 = html_div_text(oc, text2 + " from:");
+        let div2 = html_div_text(oc, text_combine(text2, " from:"));
         let div = html_div_text(oc, name);
-        html_div_text(oc, text2 + " to:");
+        html_div_text(oc, text_combine(text2, " to:"));
         let fn = null;
         fn = ternary(lines_multiple, app_a_textarea, app_a_input);
         let input = fn(overlay);

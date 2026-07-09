@@ -16,6 +16,8 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_operators_generic(
   operator_js,
   operator_math,
@@ -43,11 +45,13 @@ export function app_code_lesson_operators_generic(
     const operator_name_math_articled =
       text_articled_pad_space(operator_name_math);
     html_div_cycle_code(c, [
-      "In math," +
-        operator_name_math_articled +
-        "can be used to " +
-        verb +
+      text_combine_multiple([
+        "In math,",
+        operator_name_math_articled,
+        "can be used to ",
+        verb,
         " numbers: ",
+      ]),
       replaced,
     ]);
     let ne = equal_not(operator_js, operator_math);
@@ -59,9 +63,12 @@ export function app_code_lesson_operators_generic(
         operator_js,
       );
       html_div_cycle_code(c, [
-        "In JavaScript, we do not use" + operator_name_math_articled,
+        text_combine(
+          "In JavaScript, we do not use",
+          operator_name_math_articled,
+        ),
         operator_math,
-        " to " + verb + " numbers",
+        text_combine_multiple([" to ", verb, " numbers"]),
       ]);
     }
     let t = null;
@@ -71,9 +78,9 @@ export function app_code_lesson_operators_generic(
       t = "In JavaScript";
     }
     html_div_cycle_code(c, [
-      t + ", the ",
+      text_combine(t, ", the "),
       operator_js,
-      " symbol can be used to " + verb + " two numbers",
+      text_combine_multiple([" symbol can be used to ", verb, " two numbers"]),
     ]);
   }
   const example_label = app_code_label_code_answer_example();

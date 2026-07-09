@@ -18,6 +18,7 @@ import { messenger_reply_puppeteer } from "../../../love/public/src/messenger_re
 import { command_line_read_empty } from "../../../love/public/src/command_line_read_empty.mjs";
 import { bind_property } from "../../../love/public/src/bind_property.mjs";
 import { keyboard_type_delay } from "../../../love/public/src/keyboard_type_delay.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function messenger_reply() {
   async function lambda2(page) {
     let messages_urls = null;
@@ -28,7 +29,7 @@ export async function messenger_reply() {
     let properties = properties_get(messages_urls);
     let skips = ["7632130373481137"];
     function lambda4(s) {
-      let v = "/" + s;
+      let v = text_combine("/", s);
       return v;
     }
     let mapped = list_map(skips, lambda4);

@@ -31,6 +31,8 @@ import { app_replace_success_message } from "../../../love/public/src/app_replac
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -65,7 +67,10 @@ export function app_code_lesson_quiz(
   let lcli = app_code_lesson_current_last_is(context);
   if (not(lcli)) {
     let nt = app_shared_button_next_text();
-    html_div_text(quiz_new_message, 'Otherwise, choose: "' + nt + '"');
+    html_div_text(
+      quiz_new_message,
+      text_combine_multiple(['Otherwise, choose: "', nt, '"']),
+    );
   }
   let success = app_replace_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
@@ -109,7 +114,10 @@ export function app_code_lesson_quiz(
       );
       refresh();
     };
-    let back_text = app_shared_button_back_text() + " to the previous quiz";
+    let back_text = text_combine(
+      app_shared_button_back_text(),
+      " to the previous quiz",
+    );
     let bb = app_replace_button_wide(parent_container, back_text, on_back);
   }
   let hides = [success, quiz_new_message];

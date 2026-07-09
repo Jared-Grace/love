@@ -30,6 +30,7 @@ import { bible_interlinear_chapters } from "../../../love/public/src/bible_inter
 import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function g_sermon_generate_book_generic_prompts(
   bible_folders,
   book_code,
@@ -146,18 +147,21 @@ export async function g_sermon_generate_book_generic_prompts(
         let user_prompt = list_join(mapped, " :: ");
         return user_prompt;
       }
-      const prompt_user =
-        "Here is the context: " +
-        user_prompt_before +
-        " :::: " +
-        prompt_user_middle +
-        user_prompt_after;
-      g_sermon_generate +
-        "sermons were originally generated using: " +
-        openai_chat_completions;
+      const prompt_user = text_combine_multiple([
+        "Here is the context: ",
+        user_prompt_before,
+        " :::: ",
+        prompt_user_middle,
+        user_prompt_after,
+      ]);
+      text_combine_multiple([
+        g_sermon_generate,
+        "sermons were originally generated using: ",
+        openai_chat_completions,
+      ]);
       log_keep(
         g_sermon_generate_book_generic_prompts.name,
-        prompt_system + " " + prompt_user,
+        text_combine_multiple([prompt_system, " ", prompt_user]),
       );
       let r2 = {
         prompt_system,

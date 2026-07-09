@@ -9,6 +9,7 @@ import { list_map_prefix_without_any } from "../../../love/public/src/list_map_p
 import { list_map_prefix_any } from "../../../love/public/src/list_map_prefix_any.mjs";
 import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function ebible_references_names(books, lines) {
   function lambda(item) {
     let replacements = {
@@ -17,7 +18,11 @@ export function ebible_references_names(books, lines) {
     };
     function lambda2(froms, to) {
       function lambda3(from) {
-        item = text_replace_if_starts_with(item, from + " ", to + " ");
+        item = text_replace_if_starts_with(
+          item,
+          text_combine(from, " "),
+          text_combine(to, " "),
+        );
       }
       each(froms, lambda3);
     }

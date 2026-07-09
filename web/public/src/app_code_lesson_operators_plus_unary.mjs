@@ -23,6 +23,7 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_operators_plus_unary() {
   "TODO: if teach unary + operator, then correct this";
   const operator = js_operator_plus();
@@ -50,11 +51,13 @@ export function app_code_lesson_operators_plus_unary() {
     );
     const operator_name_math_articled = text_articled_pad_space(operator_name);
     html_div_cycle_code(c, [
-      "In math and JavaScript, " +
-        operator_name_math_articled +
-        "can be used to make a number " +
-        sign +
+      text_combine_multiple([
+        "In math and JavaScript, ",
+        operator_name_math_articled,
+        "can be used to make a number ",
+        sign,
         ": ",
+      ]),
       combined,
     ]);
   }

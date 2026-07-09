@@ -4,6 +4,7 @@ import { app_replace_rule_set_statements_variable_rules } from "../../../love/pu
 import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_statements_variable() {
   const rules = [];
   app_replace_rule_set_statements_variable_rules(rules);
@@ -51,11 +52,11 @@ export function app_replace_rule_set_statements_variable() {
       },
       {
         start: "vs",
-        end: "const vdg , " + y_eq_2 + " ;",
+        end: text_combine_multiple(["const vdg , ", y_eq_2, " ;"]),
       },
       {
-        start: "const vdg , " + y_eq_2 + " ;",
-        end: "const x = 1 , " + y_eq_2 + " ;",
+        start: text_combine_multiple(["const vdg , ", y_eq_2, " ;"]),
+        end: text_combine_multiple(["const x = 1 , ", y_eq_2, " ;"]),
       },
     ],
     why: "The replacement rules define a context-free grammar for variable declaration statements in a JavaScript-like language, demonstrating how variable keywords, identifiers, and optional initializations can be combined and separated by commas to form valid statements.",

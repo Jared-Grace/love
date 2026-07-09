@@ -3,6 +3,7 @@ import { html_on_scroll } from "../../../love/public/src/html_on_scroll.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
   let element = html_component_element_get(container);
@@ -15,10 +16,10 @@ export function html_overlay(container, z_index) {
   html_style_assign(overlay, s);
   function update() {
     let s = {
-      top: element.scrollTop + "px",
-      left: element.scrollLeft + "px",
-      width: element.clientWidth + "px",
-      height: element.clientHeight + "px",
+      top: text_combine(element.scrollTop, "px"),
+      left: text_combine(element.scrollLeft, "px"),
+      width: text_combine(element.clientWidth, "px"),
+      height: text_combine(element.clientHeight, "px"),
     };
     html_style_assign(overlay, s);
   }

@@ -14,15 +14,17 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_symbols_space() {
   function lambda(root) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     let nb = text_space_nb();
     let list = [
-      "In English, when writing, we use" + nb,
-      nb + "spaces" + nb,
-      nb + "to separate words",
+      text_combine("In English, when writing, we use", nb),
+      text_combine_multiple([nb, "spaces", nb]),
+      text_combine(nb, "to separate words"),
     ];
     let parts = list_between_space_nb(list);
     html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);

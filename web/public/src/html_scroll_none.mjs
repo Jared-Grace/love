@@ -2,6 +2,7 @@ import { uuid_browser } from "../../../love/public/src/uuid_browser.mjs";
 import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function html_scroll_none(component) {
   html_style_assign(component, {
     scrollbarWidth: "none",
@@ -9,9 +10,11 @@ export function html_scroll_none(component) {
   });
   let u = uuid_browser();
   html_data_set(component, html_scroll_none.name, u);
-  html_style_head(`
-  [data-${html_scroll_none.name}="${u}"]::-webkit-scrollbar {
-    display: none;
-  }
-`);
+  html_style_head(text_combine_multiple([
+    '\n  [data-',
+    html_scroll_none.name,
+    '="',
+    u,
+    '"]::-webkit-scrollbar {\n    display: none;\n  }\n',
+  ]));
 }

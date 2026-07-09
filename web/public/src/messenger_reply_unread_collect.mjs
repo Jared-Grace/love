@@ -11,6 +11,7 @@ import { messenger_reply_wait } from "../../../love/public/src/messenger_reply_w
 import { messenger_reply_unread_click } from "../../../love/public/src/messenger_reply_unread_click.mjs";
 import { messenger_reply_messages } from "../../../love/public/src/messenger_reply_messages.mjs";
 import { messenger_reply_url } from "../../../love/public/src/messenger_reply_url.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function messenger_reply_unread_collect() {
   const page = await messenger_reply_puppeteer(lambda);
   async function lambda(page) {
@@ -27,7 +28,7 @@ export async function messenger_reply_unread_collect() {
       let url = list_first(urls);
       let prefix = "https://www.facebook.com";
       let without = text_prefix_without(url, prefix);
-      const selector = `a[href="${without}"]`;
+      const selector = text_combine_multiple(['a[href="', without, '"]']);
       const link = await page.$(selector);
       if (link !== null) {
         await link.click();

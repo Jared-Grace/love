@@ -23,6 +23,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_examples(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -36,9 +37,9 @@ export function app_code_examples(context) {
   const root_word = "example";
   let is_a = null;
   if (plural) {
-    is_a = "are some " + root_word + "s:";
+    is_a = text_combine_multiple(["are some ", root_word, "s:"]);
   } else {
-    is_a = "is an " + root_word + ":";
+    is_a = text_combine_multiple(["is an ", root_word, ":"]);
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
@@ -61,8 +62,8 @@ export function app_code_examples(context) {
   app_code_next(
     context,
     c,
-    "see " + another,
-    "please show me " + another,
+    text_combine("see ", another),
+    text_combine("please show me ", another),
     refresh,
     example_another,
     on_back,

@@ -17,6 +17,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_code_lesson_current } from "../../../love/public/src/app_code_lesson_current.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -39,8 +40,8 @@ export function app_code_quiz(context) {
   }
   refresh();
   let another = app_code_lesson_text_example_another(lesson);
-  const question_text = "and see " + another;
-  const button_text = "go back and show me " + another;
+  const question_text = text_combine("and see ", another);
+  const button_text = text_combine("go back and show me ", another);
   async function lambda() {
     app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_examples);

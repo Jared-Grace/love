@@ -5,6 +5,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_pad } from "../../../love/public/src/text_pad.mjs";
 import { text_between_equal } from "../../../love/public/src/text_between_equal.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function html_code_script_attributes(attributes, middle) {
   let list = object_to_list(attributes);
   function lambda(item) {
@@ -17,8 +18,12 @@ export function html_code_script_attributes(attributes, middle) {
   let mapped = list_map(list, lambda);
   list_add_first(mapped, "");
   let joined = list_join_space(mapped);
-  let c = `<script${joined}> 
-    ${middle}
-  </script>`;
+  let c = text_combine_multiple([
+    '<script',
+    joined,
+    '> \n    ',
+    middle,
+    '\n  </script>',
+  ]);
   return c;
 }
