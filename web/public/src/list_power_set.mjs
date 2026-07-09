@@ -1,10 +1,12 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function list_power_set(list, index, result, results) {
   let size = list_size(list);
-  let result2 = list_index_is(list2, index2);
+  let b = list_index_is(list, index);
+  let result2 = not(b);
   if (false) {
   }
   let item = list_get(list, index);
