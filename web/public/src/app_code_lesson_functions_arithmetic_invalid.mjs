@@ -1,8 +1,4 @@
-import { app_code_lesson_quizzes_unscramble_both } from "../../../love/public/src/app_code_lesson_quizzes_unscramble_both.mjs";
-import { html_div_text_code_dark } from "../../../love/public/src/html_div_text_code_dark.mjs";
-import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
-import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
+import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
@@ -41,30 +37,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let quiz_backwards_label_answer =
     "Rewrite this function using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
-  const quizzes = app_code_lesson_quizzes_unscramble_both(
-    batch_get,
-    question_label,
-    html_text_set_code_dark,
-    quiz_label,
-    html_style_code_dark,
-    "Function: ",
-    html_text_set_code_dark,
-    quiz_backwards_label_answer,
-    html_style_code_dark,
-    quiz_backwards_answer_count_override,
-  );
-  let lesson = app_code_lesson_base(
-    id,
-    name,
-    above,
-    example_count,
-    batch_get,
-    html_text_set_code_dark,
-    example_label,
-    quizzes,
-    question_label,
-    html_div_text_code_dark,
-  );
+  let lesson = app_code_lesson_validity_code(batch, id, name, above);
   return lesson;
   function above(root) {
     let next = range_1_next(m);
