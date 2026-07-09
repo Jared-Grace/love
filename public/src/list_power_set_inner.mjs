@@ -6,8 +6,8 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 export function list_power_set_inner(list, index, result, results) {
   let n = list_index_not_is(list, index);
   if (n) {
-    let copy = list_copy(original);
-    list_add(results, result);
+    let copy = list_copy(result);
+    list_add(results, copy);
     return;
   }
   let item = list_get(list, index);
