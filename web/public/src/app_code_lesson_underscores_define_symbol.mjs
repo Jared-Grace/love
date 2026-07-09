@@ -6,6 +6,7 @@ import { html_style_code_dark } from "../../../love/public/src/html_style_code_d
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_underscores_define_symbol(
   c,
   symbol_name,
@@ -17,5 +18,10 @@ export function app_code_lesson_underscores_define_symbol(
   let text = property_get(r, "text");
   let article = property_get(r, "article");
   let cycles = [noop, html_bold, noop, html_style_code_dark];
-  html_cycle(row, cycles, [" This is " + article + " ", text, ": ", symbol]);
+  html_cycle(row, cycles, [
+    text_combine_multiple([" This is ", article, " "]),
+    text,
+    ": ",
+    symbol,
+  ]);
 }

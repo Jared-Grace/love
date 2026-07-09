@@ -19,6 +19,7 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { html_bar_content_padding } from "../../../love/public/src/html_bar_content_padding.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_supper_main_generic(folder_gets, context) {
   let folders = invoke_multiple(folder_gets);
   let root = html_mobile_default(context);
@@ -55,9 +56,11 @@ export async function app_supper_main_generic(folder_gets, context) {
   function lambda(item) {
     let p2 = html_p_text(
       root,
-      "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Thanks. Help. Bless this " +
-        item +
+      text_combine_multiple([
+        "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Thanks. Help. Bless this ",
+        item,
         ". Amen.",
+      ]),
     );
   }
   each(["bread", "fruit of the vine"], lambda);

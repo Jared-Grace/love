@@ -25,6 +25,7 @@ import { app_code_verse_words } from "../../../love/public/src/app_code_verse_wo
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_underscores_generic(
   separator_invalid_name,
   separator_invalid,
@@ -47,17 +48,25 @@ export function app_code_lesson_identifiers_underscores_generic(
     list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
     html_div_text(
       c2,
-      "Remember, identifiers can have different kinds of symbols including " +
+      text_combine(
+        "Remember, identifiers can have different kinds of symbols including ",
         list_to_text_and_list(identifier_symbols_types),
+      ),
     );
     html_div_cycle_code(c2, [
-      "Identifiers can also have " + word_plural(separator_valid_name) + " ",
+      text_combine_multiple([
+        "Identifiers can also have ",
+        word_plural(separator_valid_name),
+        " ",
+      ]),
       separator_valid,
     ]);
     html_div_cycle_code(c2, [
-      "However identifiers cannot have " +
-        word_plural(separator_invalid_name) +
+      text_combine_multiple([
+        "However identifiers cannot have ",
+        word_plural(separator_invalid_name),
         " ",
+      ]),
       separator_invalid,
     ]);
     function define_valid() {
@@ -111,8 +120,8 @@ export function app_code_lesson_identifiers_underscores_generic(
     return mapped3;
   }
   let r = app_code_lesson_name_id("identifiers", [
-    `${separator_valid_name}s allowed`,
-    `${separator_invalid_name}s not`,
+    text_combine(separator_valid_name, 's allowed'),
+    text_combine(separator_invalid_name, 's not'),
   ]);
   let id = property_get(r, "id");
   let name = property_get(r, "name");

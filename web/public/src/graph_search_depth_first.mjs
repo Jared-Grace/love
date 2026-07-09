@@ -5,6 +5,7 @@ import { set_add } from "../../../love/public/src/set_add.mjs";
 import { set_includes } from "../../../love/public/src/set_includes.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function graph_search_depth_first(
   start,
   neighbors_get,
@@ -52,7 +53,7 @@ export function graph_search_depth_first(
           node: neighbor,
           data,
           previous: q_current,
-          depth: depth + 1,
+          depth: text_combine(depth, 1),
         });
       }
     }

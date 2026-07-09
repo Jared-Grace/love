@@ -11,6 +11,7 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
 import { bible_audio_folder } from "../../../love/public/src/bible_audio_folder.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function ebible_chapter_videos_generate(
   bible_folder,
   chapter_code,
@@ -25,15 +26,15 @@ export async function ebible_chapter_videos_generate(
       let contents = await file_read(joined_text);
       let sw = text_suffix_without(file_path, suffix);
       let joined = path_join([folder_path, sw]);
-      let joined_image = joined + ".png";
+      let joined_image = text_combine(joined, ".png");
       const n = await file_exists_not(joined_image);
       if (n) {
         await image_generate(contents, joined_image);
       }
-      let joined_video = joined + file_extension_mp4();
+      let joined_video = text_combine(joined, file_extension_mp4());
       let n2 = await file_exists_not(joined_video);
       if (n2) {
-        let joined_audio = joined + ".wav";
+        let joined_audio = text_combine(joined, ".wav");
         await video_generate(joined_image, joined_audio, joined_video);
       }
       la(joined_video);

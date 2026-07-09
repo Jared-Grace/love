@@ -4,6 +4,8 @@ import { app_replace_rule_set_identifiers_simple_abbreviations } from "../../../
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_strings_simple() {
   let abbreviations = {};
   app_replace_rule_set_strings_simple_abbreviation_st(abbreviations);
@@ -16,9 +18,9 @@ export function app_replace_rule_set_strings_simple() {
   const item = "stg";
   let quoted = text_pad_nested_space_quote_double(item);
   const rules = [
-    "st > " + quoted,
-    "stg > " + character,
-    "stg > " + character + " stg",
+    text_combine("st > ", quoted),
+    text_combine("stg > ", character),
+    text_combine_multiple(["stg > ", character, " stg"]),
   ];
   list_add_multiple(rules, extra);
   let r = {

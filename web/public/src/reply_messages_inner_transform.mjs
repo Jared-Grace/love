@@ -5,11 +5,12 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { digits_text } from "../../../love/public/src/digits_text.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function reply_messages_inner_transform(message) {
   let lower = text_lower_to(message);
   let tokens = text_split_empty(lower);
   let string_includes_curry_right = text_includes_curried_right_get(
-    "'" + digits_text(),
+    text_combine("'", digits_text()),
   );
   const choices = [text_letters_is, string_includes_curry_right];
   function lambda(item) {

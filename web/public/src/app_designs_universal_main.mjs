@@ -8,6 +8,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_cartesian_product_self } from "../../../love/public/src/list_cartesian_product_self.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_designs_universal_main(context) {
   let root = property_get(context, "root");
   const size = "7px";
@@ -44,7 +45,7 @@ export function app_designs_universal_main(context) {
       function lambda(y) {
         let offset = y * columns;
         function lambda2(x) {
-          let offset_x = offset + x;
+          let offset_x = text_combine(offset, x);
           let column = html_div(shape);
           html_style_assign(column, {
             width: size,

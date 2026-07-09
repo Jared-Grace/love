@@ -14,12 +14,17 @@ import { app_shared_screen_set } from "../../../love/public/src/app_shared_scree
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_home(context) {
   let root = property_get(context, "root");
   function lambda4() {
     app_shared_screen_set(context, app_replace_settings);
   }
-  app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
+  app_replace_button_wide(
+    root,
+    text_combine(emoji_gear(), " Settings"),
+    lambda4,
+  );
   let d = app_replace_rule_sets_data_initialize(context);
   let rule_sets = app_replace_rule_sets();
   let completed_previous = true;

@@ -13,6 +13,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function js_dollar(ast) {
   let choices = js_dollar_choices();
   let afters = [];
@@ -44,7 +45,10 @@ export async function js_dollar(ast) {
       let remaining = list_skip(split, 2);
       let lower = text_lower_to(second);
       if (lower === choice_name) {
-        "This variable name is used by " + js_dollar_choice_argument.name;
+        text_combine(
+          "This variable name is used by ",
+          js_dollar_choice_argument.name,
+        );
         const js_dollar_arguments = {
           remaining,
           node,

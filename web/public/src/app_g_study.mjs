@@ -28,11 +28,12 @@ import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_g_study(player, overlay, close) {
   let review = property_get(player, "review");
   let ne = list_empty_not_is(review);
   if (ne) {
-    let text2 = emoji_book_open() + " Study";
+    let text2 = text_combine(emoji_book_open(), " Study");
     async function lambda() {
       app_g_menu_clear_back(overlay, player);
       let chapter_code = app_g_chapter_code();

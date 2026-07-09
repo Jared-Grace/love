@@ -26,6 +26,7 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_karate_container_main } from "../../../karate_code/public/src/app_karate_container_main.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function html_checkboxes(
   context,
   button_back,
@@ -78,10 +79,11 @@ export function html_checkboxes(
       let ci = app_karate_button_background_invalid();
       const c = valid ? "#4ad66bff" : ci;
       html_style_assign(container, {
-        "box-shadow":
-          "inset 0 0 0 .15em " +
-          html_rgba_to_rgb(c) +
+        "box-shadow": text_combine_multiple([
+          "inset 0 0 0 .15em ",
+          html_rgba_to_rgb(c),
           ", inset 0 0 0 .3em white",
+        ]),
       });
     }
     html_on_click(container, on_click);

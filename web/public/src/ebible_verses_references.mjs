@@ -5,6 +5,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function ebible_verses_references(bible_folder, chapter_code) {
   let books = await ebible_version_books(bible_folder);
   let vs = await ebible_verses(bible_folder, chapter_code);
@@ -16,7 +17,11 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
       books,
       [verse_number],
     );
-    let v2 = text + " " + text_wrap_parenthesis(reference);
+    let v2 = text_combine_multiple([
+      text,
+      " ",
+      text_wrap_parenthesis(reference),
+    ]);
     return v2;
   }
   let mapped = list_map(vs, lambda);
