@@ -15,6 +15,7 @@ Without permission, you may
     - head
     - git if:
         - diff
+        - log
         - show
         - status
     - looping, such as "for"
