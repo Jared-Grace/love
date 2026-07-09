@@ -34,9 +34,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       let call2 = js_operator_to_code_call_only(o, next);
       let missing = next_get();
       let replaced = text_replace_to_space(call2, missing);
+      la(replaced);
     }
     let list = list_adder(lambda);
-    return mapped;
+    return list;
   }
   let b = app_code_batch_question_answer_fns(
     batch_get,
