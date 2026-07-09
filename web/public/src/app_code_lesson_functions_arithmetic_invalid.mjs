@@ -1,7 +1,7 @@
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
-import { list_filter_indices_odd } from "../../../love/public/src/list_filter_indices_odd.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_between_space_before } from "../../../love/public/src/list_between_space_before.mjs";
@@ -21,9 +21,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
-    let symbols_required = [ "(",  ",",  ")"];
+  let symbols_required = ["(", ",", ")"];
   function batch_get() {
     let mapper = function lambda2(o) {
+      let next_get = list_iterator_refillable(refill_get);
       let r = js_operator_to_code_call(o, next);
       let call = property_get(r, "call");
       return call;
