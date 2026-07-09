@@ -79,7 +79,8 @@ export function app_code_lesson_functions_arithmetic() {
         code,
       ]);
       let eq = equal_0(index);
-      if (false) {
+      if (eq) {
+        html_div_cycle_code(c, ["", code, " is called a ", "function call"]);
       }
     }
     each_index(operators, lambda);
