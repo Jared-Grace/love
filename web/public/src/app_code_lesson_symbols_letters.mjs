@@ -69,7 +69,7 @@ export function app_code_lesson_symbols_letters() {
     return mapped;
   }
   let r5 = app_code_lesson_symbols_counting(
-    "Symbols (Letters)",
+    "Symbols (letters)",
     "symbols_letters",
     lambda,
     batch_get,
