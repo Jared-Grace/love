@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_cycle_code_bold } from "../../../love/public/src/html_cycle_code_bold.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
@@ -86,6 +87,7 @@ export function app_code_lesson_functions_arithmetic() {
     let o_f = list_first(operators);
     let c = app_code_container_light_blue(root);
     let verb = property_get(o_f, "verb");
+    let div = html_div(parent);
     html_cycle_code_bold(c, ["", verb, " is an example of a ", "function"]);
     html_cycle_code_bold(c, ["", verb, " is called a ", "function call"]);
   }
