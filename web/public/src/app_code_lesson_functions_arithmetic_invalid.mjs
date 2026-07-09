@@ -1,3 +1,4 @@
+import { list_between } from "../../../love/public/src/list_between.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
@@ -38,7 +39,9 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       ",",
       "separated_by_commas",
       ")",
-    ]("Function calls require all of these parts: ");
+    ];
+    let combined = list_between(list, item_between);
+    ("Function calls require all of these parts: ");
     let next = range_1_next(m);
     function lambda(o) {
       let r = js_operator_to_code_call(o, next);
