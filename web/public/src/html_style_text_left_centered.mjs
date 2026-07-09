@@ -19,7 +19,7 @@ export function html_style_text_left_centered(
   html_style_assign(title, {
     "justify-self": "center",
   });
-  let component2 = html_span(parent);
+  let right = html_span(component);
   let r = {
     title,
   };
