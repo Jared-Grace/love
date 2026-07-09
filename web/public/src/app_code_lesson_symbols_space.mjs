@@ -46,7 +46,7 @@ export function app_code_lesson_symbols_space() {
     );
   }
   let r5 = app_code_lesson_symbols_counting(
-    "Symbols (Space)",
+    "Symbols (space)",
     "symbols_space",
     lambda,
     batch_get,
