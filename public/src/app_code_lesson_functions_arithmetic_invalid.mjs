@@ -57,6 +57,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       combined2,
       "If any of these are missing from the function call, then the code is invalid ",
     );
-    html_div_cycle_code(c, combined2);
+    let c2 = app_code_container_light_blue(root);
+    html_div_cycle_code(c2, combined2);
   }
 }
