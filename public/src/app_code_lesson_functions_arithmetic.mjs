@@ -86,9 +86,9 @@ export function app_code_lesson_functions_arithmetic() {
     each_index(operators, lambda);
     let c = app_code_container_light_blue(root);
     let verb = property_get(o, "verb");
+    let parts = ["", verb, " is an example of a ", "function"];
     let cycles = [noop, html_style_code_dark, noop, html_bold];
-    html_cycle(parent, cycles, parts);
-    html_div_cycle_code(c, ["", verb, " is an example of a ", "function"]);
+    html_cycle(c, cycles, parts);
     html_div_cycle_code(c, ["", code, " is called a ", "function call"]);
   }
 }
