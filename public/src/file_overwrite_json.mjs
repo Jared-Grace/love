@@ -5,6 +5,7 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function file_overwrite_json(file_path, object) {
   if (browser_is()) {
     let json = json_format_to(object);
@@ -12,9 +13,11 @@ export async function file_overwrite_json(file_path, object) {
     return;
   }
   await file_parent_exists_ensure(file_path);
-  "Using " +
-    json_to.name +
-    " did not work on sufficiently large object, whereas the following did:";
+  text_combine_multiple([
+    "Using ",
+    json_to.name,
+    " did not work on sufficiently large object, whereas the following did:",
+  ]);
   let fs = await import("fs");
   const v = await import("stream/promises");
   let pipeline = property_get(v, "pipeline");

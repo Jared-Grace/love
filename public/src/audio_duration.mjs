@@ -5,10 +5,12 @@ import { text_size } from "../../../love/public/src/text_size.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function audio_duration(joined_audio) {
   let result = null;
   try {
-    let stdout = await command_line("ffmpeg -i " + joined_audio);
+    let stdout = await command_line(text_combine("ffmpeg -i ", joined_audio));
   } catch (e) {
     let stderr = property_get(e, "stderr");
     let lines = text_split_newline(stderr);
@@ -21,7 +23,11 @@ export async function audio_duration(joined_audio) {
   }
   function duration_to_seconds(duration_str) {
     let [h, m, s] = duration_str.split(":");
-    let v = parseInt(h) * 3600 + parseInt(m) * 60 + parseFloat(s);
+    let v = text_combine_multiple([
+      parseInt(h) * 3600,
+      parseInt(m) * 60,
+      parseFloat(s),
+    ]);
     return v;
   }
   return result;

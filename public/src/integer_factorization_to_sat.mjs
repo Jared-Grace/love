@@ -1,4 +1,6 @@
 import { ceil } from "../../../love/public/src/ceil.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function integer_factorization_to_sat(integer_to_factor) {
   class CNF {
     constructor() {
@@ -22,9 +24,15 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       this.clauses.push(clean);
     }
     toDimacs() {
-      let out = `p cnf ${this.varCount} ${this.clauses.length}\n`;
+      let out = text_combine_multiple([
+        'p cnf ',
+        this.varCount,
+        ' ',
+        this.clauses.length,
+        '\n',
+      ]);
       for (const c of this.clauses) {
-        out += c.join(" ") + " 0\n";
+        out += text_combine(c.join(" "), " 0\n");
       }
       return out;
     }
@@ -85,7 +93,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     const next = Array.from(
       {
-        length: columns.length + 1,
+        length: text_combine(columns.length, 1),
       },
       lambda6,
     );
@@ -97,12 +105,12 @@ export async function integer_factorization_to_sat(integer_to_factor) {
         const c = col.pop();
         const [s, carry] = fullAdderCSA(cnf, a, b, c);
         next[i].push(s);
-        next[i + 1].push(carry);
+        next[text_combine(i, 1)].push(carry);
       }
       if (col.length === 2) {
         const [s, carry] = halfAdder(cnf, col[0], col[1]);
         next[i].push(s);
-        next[i + 1].push(carry);
+        next[text_combine(i, 1)].push(carry);
       } else if (col.length === 1) {
         next[i].push(col[0]);
       }
@@ -124,7 +132,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     for (let i = 0; i < bits; i++) {
       for (let j = 0; j < bits; j++) {
         const p = andGate(cnf, x[i], y[j]);
-        columns[i + j].push(p);
+        columns[text_combine(i, j)].push(p);
       }
     }
     function lambda8(col) {
@@ -235,7 +243,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   }
   let v4 = Math.sqrt(integer_to_factor);
   let v5 = Math.log2(v4);
-  let bits = Math.ceil(v5) + 1;
+  let bits = text_combine(Math.ceil(v5), 1);
   const cnf = factorizationCNF(integer_to_factor, bits);
   const cnf3 = to3SAT(cnf);
   cnf3.bits = bits;

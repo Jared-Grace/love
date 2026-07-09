@@ -11,11 +11,13 @@ import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mj
 import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_g_menu(overlay, player) {
   html_clear(overlay);
   let close = html_remove_lambda(overlay);
   app_g_button_back(overlay, close);
-  let text = emoji_pray() + " Pray";
+  let text = text_combine(emoji_pray(), " Pray");
   function lambda7() {
     app_g_menu_clear_back(overlay, player);
     app_g_container_text(overlay, "What prayer would you like to pray?");
@@ -25,10 +27,11 @@ export function app_g_menu(overlay, player) {
       await app_g_player_save(player);
       close();
     }
-    const text =
-      emoji_bow() +
-      " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
-      emoji_pray();
+    const text = text_combine_multiple([
+      emoji_bow(),
+      " Heavenly Father, please bless this next conversation, in Jesus' name, amen! ",
+      emoji_pray(),
+    ]);
     app_g_button_green(overlay, text, lambda22);
   }
   app_g_button_uncolored(overlay, text, lambda7);

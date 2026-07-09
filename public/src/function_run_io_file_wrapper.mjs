@@ -4,18 +4,21 @@ import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function function_run_io_file_wrapper(body) {
   let r = null;
   async function lambda2(temp_path_input) {
     let result5 = await file_overwrite_json(temp_path_input, body);
     async function lambda3(temp_path_output) {
       let stdout = await command_line(
-        "node scripts/r.mjs " +
-          fn_name("function_run_io_file") +
-          " " +
-          temp_path_input +
-          " " +
+        text_combine_multiple([
+          "node scripts/r.mjs ",
+          fn_name("function_run_io_file"),
+          " ",
+          temp_path_input,
+          " ",
           temp_path_output,
+        ]),
       );
       r = await file_read_json(temp_path_output);
     }

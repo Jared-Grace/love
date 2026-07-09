@@ -9,9 +9,7 @@ export async function firebase_upload_text_generic_browser(
 ) {
   async function lambda2() {
     const app = await firebase_app_initialize();
-    `const storageMod = await import(
-      "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
-    );`;
+    'const storageMod = await import(\n      "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"\n    );';
     const storage = getStorage(app);
     const jsonRef = ref(storage, destination);
     await uploadString(jsonRef, content, "raw", {

@@ -12,6 +12,7 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function server() {
   const app = express();
   let v3 = express.json({
@@ -48,7 +49,10 @@ export function server() {
   server_data_endpoints(app);
   app.use(v);
   function lambda() {
-    log_keep(server.name, "Static server running at: " + server_url());
+    log_keep(
+      server.name,
+      text_combine("Static server running at: ", server_url()),
+    );
   }
   app.listen(port, lambda);
 }

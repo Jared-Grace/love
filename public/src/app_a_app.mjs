@@ -17,6 +17,7 @@ import { app_shared_name_main } from "../../../love/public/src/app_shared_name_m
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_a_app_selected_key } from "../../../love/public/src/app_a_app_selected_key.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_a_app(context) {
   let root = html_clear_context(context);
   let e = emoji_mobile();
@@ -37,7 +38,7 @@ export async function app_a_app(context) {
     },
     {
       shortcut: "p",
-      text: e + " Preview",
+      text: text_combine(e, " Preview"),
       fn: function lambda3() {
         app_shared_screen_set(context, app_a_app_run);
       },

@@ -14,30 +14,11 @@ import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
 import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_verify_nearley() {
   let r2 = app_replace_rule_set_strings_simple();
   let rules = app_replace_rule_set_rules_get(r2);
-  const grammarText = `
-bits -> bits di {% (d) => ({
-  ['left']: 'bits',
-  ['right']: d
-}) %}
-
-bits -> di {% (d) => ({
-  ['left']: 'bits',
-  ['right']: d
-}) %}
-
-di -> "0" {% (d) => {
-  const val = d.flat(Infinity)[0];
-  return { ['left']: "di", ['right']: d };
-} %}
-
-di -> "1" {% (d) => {
-  const val = d.flat(Infinity)[0];
-  return { ['left']: "di", ['right']: d };
-} %}
-`;
+  const grammarText = '\nbits -> bits di {% (d) => ({\n  [\'left\']: \'bits\',\n  [\'right\']: d\n}) %}\n\nbits -> di {% (d) => ({\n  [\'left\']: \'bits\',\n  [\'right\']: d\n}) %}\n\ndi -> "0" {% (d) => {\n  const val = d.flat(Infinity)[0];\n  return { [\'left\']: "di", [\'right\']: d };\n} %}\n\ndi -> "1" {% (d) => {\n  const val = d.flat(Infinity)[0];\n  return { [\'left\']: "di", [\'right\']: d };\n} %}\n';
   function lambda(rule) {
     let left = property_get(rule, "left");
     let only = list_single(left);
@@ -51,7 +32,7 @@ di -> "1" {% (d) => {
     let w = js_code_object(object);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
-    let r = `${only} -> ${joined} {% ${code} %}`;
+    let r = text_combine_multiple([only, ' -> ', joined, ' {% ', code, ' %}']);
     return r;
   }
   let mapped = list_map(rules, lambda);

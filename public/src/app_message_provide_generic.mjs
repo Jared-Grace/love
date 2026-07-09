@@ -8,6 +8,8 @@ import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { emoji_x_purple } from "../../../love/public/src/emoji_x_purple.mjs";
 import { app_shared_button_back } from "../../../love/public/src/app_shared_button_back.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_message_provide_generic(category, emoji, context, verse) {
   let button_back = function lambda(context, parent) {
     function lambda5() {
@@ -17,12 +19,13 @@ export function app_message_provide_generic(category, emoji, context, verse) {
     let button2 = app_shared_button_back(parent, lambda5);
     return button2;
   };
-  let top_text =
-    "Will you provide for all of my " +
-    category +
-    "? " +
-    emoji +
-    " Please choose one of the following:";
+  let top_text = text_combine_multiple([
+    "Will you provide for all of my ",
+    category,
+    "? ",
+    emoji,
+    " Please choose one of the following:",
+  ]);
   let value_previous_get = function lambda2() {
     return null;
   };
@@ -30,31 +33,35 @@ export function app_message_provide_generic(category, emoji, context, verse) {
   const choices = [
     {
       value: "no",
-      title:
-        emoji_x_purple() +
-        " I cannot agree to provide for all of your " +
-        category +
+      title: text_combine_multiple([
+        emoji_x_purple(),
+        " I cannot agree to provide for all of your ",
+        category,
         " at this time",
-      details:
-        "If you cannot provide for all of my " +
-        category +
-        ", then I have no money to pay for my " +
-        category +
-        ' to you. Please choose "' +
-        app_shared_button_back_text() +
+      ]),
+      details: text_combine_multiple([
+        "If you cannot provide for all of my ",
+        category,
+        ", then I have no money to pay for my ",
+        category,
+        ' to you. Please choose "',
+        app_shared_button_back_text(),
         '"',
+      ]),
     },
     {
       value: yes,
-      title:
-        emoji_check() +
-        " Yes, I will provide for all of your " +
-        category +
-        " " +
+      title: text_combine_multiple([
+        emoji_check(),
+        " Yes, I will provide for all of your ",
+        category,
+        " ",
         emoji,
-      details:
-        "May you reap abundant blessings from God for your generosity: " +
+      ]),
+      details: text_combine(
+        "May you reap abundant blessings from God for your generosity: ",
         verse,
+      ),
     },
   ];
   let on_next = function lambda4() {

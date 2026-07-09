@@ -10,6 +10,8 @@ import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
 import { folder_delete } from "../../../love/public/src/folder_delete.mjs";
 import { command_line_git_current } from "../../../love/public/src/command_line_git_current.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function git_history_delete(user, repo, f_path, repo_path) {
   await git_push_folder_now(repo_path);
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
@@ -19,7 +21,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   let repo_folder = folder_gitignore_join(repo_folder_name);
   let repo_folder_resolved = await path_resolve(repo_folder);
   let stdout = await command_line_git_current(
-    "clone --mirror " + url + " " + repo_folder,
+    text_combine_multiple(["clone --mirror ", url, " ", repo_folder]),
   );
   log(git_history_delete.name, {
     stdout,
@@ -34,9 +36,16 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   let r = await catch_ignore_async(lambda2);
   await command_line_git_folder(
     repo_folder,
-    "filter-repo --path " + f_path + " --invert-paths --force",
+    text_combine_multiple([
+      "filter-repo --path ",
+      f_path,
+      " --invert-paths --force",
+    ]),
   );
-  await command_line_git_folder(repo_folder, "remote add origin " + url);
+  await command_line_git_folder(
+    repo_folder,
+    text_combine("remote add origin ", url),
+  );
   await command_line_git_folder(repo_folder, "push --force --all origin");
   await command_line_git_folder(repo_folder, "push --force --tags origin");
   await folder_delete(repo_folder_resolved);
