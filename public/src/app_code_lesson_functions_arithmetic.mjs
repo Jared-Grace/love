@@ -89,6 +89,11 @@ export function app_code_lesson_functions_arithmetic() {
     html_div_cycle_code_bold(c, ["", verb, " is an example of a ", "function"]);
     let r = js_operator_to_code_call(o_f, next);
     let code = property_get(r, "call");
-    html_div_cycle_code_bold(c, ["", code, " is called a ", "function call"]);
+    html_div_cycle_code_bold(c, [
+      "",
+      code,
+      " is an example of a ",
+      "function call",
+    ]);
   }
 }
