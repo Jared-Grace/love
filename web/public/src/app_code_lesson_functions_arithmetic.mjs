@@ -87,8 +87,9 @@ export function app_code_lesson_functions_arithmetic() {
     let o_f = list_first(operators);
     let c = app_code_container_light_blue(root);
     let verb = property_get(o_f, "verb");
+    const parts = ["", verb, " is an example of a ", "function"];
     let div = html_div(parent);
-    html_cycle_code_bold(c, ["", verb, " is an example of a ", "function"]);
+    html_cycle_code_bold(c, parts);
     html_cycle_code_bold(c, ["", verb, " is called a ", "function call"]);
   }
 }
