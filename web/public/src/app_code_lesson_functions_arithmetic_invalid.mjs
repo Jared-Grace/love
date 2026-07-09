@@ -36,7 +36,11 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let o_f = list_first(operators);
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
-    let r2 = js_operator_to_expression(o2, next2);
+    let {
+    left,
+    right,
+    expression,
+  } = js_operator_to_expression(o_f, next);
     let left = next();
     let right = next();
     let parts = ["add", "(", left, ",", right, ")"];
