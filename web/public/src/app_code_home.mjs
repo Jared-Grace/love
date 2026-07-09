@@ -1,12 +1,10 @@
 import { app_replace_button_wide_text_left_centered } from "../../../love/public/src/app_replace_button_wide_text_left_centered.mjs";
-import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 import { add_1_period } from "../../../love/public/src/add_1_period.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -22,9 +20,7 @@ export function app_code_home(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     let text = add_1_period(index);
-    app_replace_button_wide_text_left_centered(root, lambda, text, name);
-    let combined = text_combine_middle_space(text, name);
-    let b = app_replace_button_wide(root, combined, lambda3);
+    app_replace_button_wide_text_left_centered(root, lambda3, text, name);
   }
   each_index(lessons, lambda);
 }
