@@ -9,7 +9,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
   let r = app_code_lesson_symbols_counting(
-    "Symbols (Digits, numbered)",
+    "Symbols (digits, numbered)",
     "symbols_digits_numbered",
     above,
     app_code_lesson_symbols_batch_digits,
