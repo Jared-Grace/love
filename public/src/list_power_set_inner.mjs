@@ -1,9 +1,11 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_remove_last_equal } from "../../../love/public/src/list_remove_last_equal.mjs";
 import { list_index_not_is } from "../../../love/public/src/list_index_not_is.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function list_power_set_inner(list, index, result, results) {
+  arguments_assert(arguments, 4);
   if (list_index_not_is(list, index)) {
     let copy = list_copy(result);
     list_add(results, copy);
