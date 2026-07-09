@@ -14,9 +14,9 @@ export async function js_call_fill_inner(ast, visitor, functions, visited) {
     let unaliased = await function_name_unalias_only(name);
     const valid = await functions_names_includes(unaliased);
     if (valid) {
-      let v3 = await js_call_new(unaliased, ast);
-      let async_is = property_get(v3, "async_is");
-      let parsed = property_get(v3, "parsed");
+      let v = await js_call_new(unaliased, ast);
+      let async_is = property_get(v, "async_is");
+      let parsed = property_get(v, "parsed");
       object_replace(node, parsed);
       await js_function_last_asyncify(stack, async_is, ast, functions, visited);
     }

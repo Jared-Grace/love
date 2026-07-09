@@ -11,8 +11,8 @@ export function app_a_button_function_if_exists(context) {
   let button = null;
   if (exists) {
     let root = property_get(context, "root");
-    button = app_a_button_function(context, root, lambda2);
-    function lambda2() {
+    button = app_a_button_function(context, root, lambda);
+    function lambda() {
       app_shared_screen_set(context, app_a_function);
     }
   }

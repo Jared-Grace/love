@@ -20,7 +20,7 @@ export async function wiki_monotheism_dates() {
   let mapped = list_map(list, lambda);
   return mapped;
   function predicate(item) {
-    let sw2 = text_starts_with(item, "BCE");
-    return sw2;
+    let sw = text_starts_with(item, "BCE");
+    return sw;
   }
 }

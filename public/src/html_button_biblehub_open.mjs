@@ -12,7 +12,7 @@ export function html_button_biblehub_open(
   folder,
   ending,
 ) {
-  function lambda10() {
+  function lambda() {
     let replaced = text_replace_space_underscore_lower(book_name);
     if (equal(replaced, "song")) {
       replaced = "songs";
@@ -31,6 +31,6 @@ export function html_button_biblehub_open(
       ]),
     );
   }
-  let b = html_button(parent, button_text, lambda10);
+  let b = html_button(parent, button_text, lambda);
   return b;
 }

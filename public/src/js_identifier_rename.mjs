@@ -5,6 +5,6 @@ export function js_identifier_rename(ast, name_from, name_to) {
   if (equal(name_from, name_to)) {
     return;
   }
-  let r2 = property_set_if_equals_curried_right_3("name", name_from, name_to);
-  js_visit_identifiers_nodes(ast, r2);
+  let r = property_set_if_equals_curried_right_3("name", name_from, name_to);
+  js_visit_identifiers_nodes(ast, r);
 }

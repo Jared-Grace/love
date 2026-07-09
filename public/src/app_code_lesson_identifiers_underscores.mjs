@@ -22,26 +22,26 @@ export function app_code_lesson_identifiers_underscores() {
     true,
   );
   function defines_after(root) {
-    let c4 = app_code_container_light_blue(root);
-    html_div_text(c4, "How they look different:");
-    let div3 = html_div(c4);
-    html_style_assign(div3, {
+    let c = app_code_container_light_blue(root);
+    html_div_text(c, "How they look different:");
+    let div = html_div(c);
+    html_style_assign(div, {
       display: "grid",
       "grid-template-columns": "auto 1fr",
     });
-    app_code_flex_gap(div3);
-    html_span_text_code_dark_centered(div3, separator_invalid);
+    app_code_flex_gap(div);
+    html_span_text_code_dark_centered(div, separator_invalid);
     html_div_text(
-      div3,
+      div,
       text_combine_multiple([
         "The line of",
         text_articled_pad_space(separator_invalid_name),
         "is shorter and is near the middle vertically, not the bottom or the top",
       ]),
     );
-    let d = html_span_text_code_dark_centered(div3, separator_valid);
+    let d = html_span_text_code_dark_centered(div, separator_valid);
     html_div_text(
-      div3,
+      div,
       text_combine_multiple([
         "The line of",
         text_articled_pad_space(separator_valid_name),

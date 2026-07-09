@@ -14,19 +14,19 @@ export function app_g_wrong(passage, passages, property) {
   let split = app_g_openai_split(objections);
   let ob = list_random_item(split);
   let themes_correct = g_themes(text_combine_multiple([text, " ", ob]));
-  function lambda2(p) {
+  function lambda(p) {
     let text_candidate = property_get(p, "text");
     let themes_candidate = g_themes(text_candidate);
-    let list2 = list_intersect(themes_candidate, themes_correct);
-    let size = list_size(list2);
+    let list = list_intersect(themes_candidate, themes_correct);
+    let size = list_size(list);
     return size;
   }
-  list_sort_number_mapper(passages, lambda2);
-  let r6 = integer_random_0(1);
-  let passage_wrong = list_get(passages, r6);
-  let v2 = {
+  list_sort_number_mapper(passages, lambda);
+  let r = integer_random_0(1);
+  let passage_wrong = list_get(passages, r);
+  let v = {
     ob,
     passage_wrong,
   };
-  return v2;
+  return v;
 }

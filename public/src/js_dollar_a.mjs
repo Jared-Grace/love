@@ -11,8 +11,8 @@ import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
 export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
   let count = 1;
-  let s1 = list_size_1(remaining);
-  if (s1) {
+  let s = list_size_1(remaining);
+  if (s) {
     let first = list_first(remaining);
     count = integer_to_try(first);
   }

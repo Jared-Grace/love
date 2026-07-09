@@ -5,10 +5,10 @@ import { html_font_sans_serif_value } from "../../../love/public/src/html_font_s
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function html_font_sans_serif_set_html() {
-  let html2 = html_document_root();
+  let html = html_document_root();
   html_roboto_include();
   let style_value = html_font_sans_serif_value();
-  html_font_set(html2, style_value);
+  html_font_set(html, style_value);
   const style = text_combine(":font-family: ", html_font_sans_serif_value());
   html_style_button(style);
 }

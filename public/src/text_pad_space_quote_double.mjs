@@ -1,5 +1,5 @@
 import { text_pad } from "../../../love/public/src/text_pad.mjs";
 export function text_pad_space_quote_double(item) {
-  let padded3 = text_pad(item, '"');
-  return padded3;
+  let padded = text_pad(item, '"');
+  return padded;
 }

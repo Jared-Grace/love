@@ -4,6 +4,6 @@ import { properties_get } from "../../../love/public/src/properties_get.mjs";
 export function object_property_single_value(object) {
   let properties = properties_get(object);
   let only = list_single(properties);
-  let value3 = property_get(object, only);
-  return value3;
+  let value = property_get(object, only);
+  return value;
 }

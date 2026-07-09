@@ -20,6 +20,6 @@ export function app_replace_rule_set_identifiers_simple_abbreviations(
     ],
     di: ["", "di", "git sample: a few choices of digits"],
   };
-  let to2 = object_merge_set(abbreviations, abbreviations2);
+  let to = object_merge_set(abbreviations, abbreviations2);
   app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
 }

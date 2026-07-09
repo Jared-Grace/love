@@ -19,10 +19,10 @@ export async function sermon_translate_urdu(file_name) {
   let value = list_filter_index(groups, lambda);
   let language = "Urdu";
   let value2 = await list_translate_openai(value, language);
-  function lambda2(item2, index2) {
-    let change = lambda(item2, index2);
+  function lambda2(item2, index) {
+    let change = lambda(item2, index);
     if (change) {
-      let i = floor(index2 / 2);
+      let i = floor(index / 2);
       let item3 = list_get(value2, i);
       let mapped2 = list_map_pairs(item3, item2, pair_to_list);
       return mapped2;

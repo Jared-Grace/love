@@ -7,6 +7,6 @@ export function list_slice_from(list, item_from, item_to) {
     return index;
   }
   let mapped = list_map([item_from, item_to], lambda);
-  let v2 = list_slice_from_indices(list, mapped);
-  return v2;
+  let v = list_slice_from_indices(list, mapped);
+  return v;
 }

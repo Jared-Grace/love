@@ -6,6 +6,6 @@ export function js_find_return_insert_statement(ast, statement) {
   let only = js_find_return(ast);
   let node = property_get(only, "node");
   let stack = property_get(only, "stack");
-  let e1 = list_get_end_1(stack);
-  list_index_of_insert(e1, node, statement);
+  let e = list_get_end_1(stack);
+  list_index_of_insert(e, node, statement);
 }

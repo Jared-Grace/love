@@ -30,8 +30,8 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
       operator,
       left_transform,
     );
-    let list2 = batch_binary();
-    let first = list_first(list2);
+    let list = batch_binary();
+    let first = list_first(list);
     let question = property_get(first, "question");
     return question;
   }

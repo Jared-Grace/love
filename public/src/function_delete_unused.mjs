@@ -5,9 +5,9 @@ import { data_identifiers_search } from "../../../love/public/src/data_identifie
 export async function function_delete_unused(s) {
   let search = await data_identifiers_search(s);
   let properties = properties_get(search);
-  let eq2 = json_equal(properties, [s]);
+  let eq = json_equal(properties, [s]);
   let result = null;
-  if (eq2) {
+  if (eq) {
     result = await function_delete(s);
   } else {
     result = {

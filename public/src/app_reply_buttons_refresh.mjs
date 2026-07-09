@@ -8,7 +8,7 @@ import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs"
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
-  let v4 = function lambda10() {
+  let v = function lambda10() {
     function lambda(c) {
       function lambda2(item) {
         let text = html_text_get(item);
@@ -28,5 +28,5 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
     let visible_count = counter(lambda);
     return visible_count;
   };
-  return v4;
+  return v;
 }

@@ -57,12 +57,12 @@ export function app_karate_screen_input_validate(
     html_clear(ul);
     let valid = true;
     function lambda(c) {
-      let text2 = property_get(c, "text");
-      let check2 = property_get(c, "check");
-      let a = check2(trimmed);
+      let text = property_get(c, "text");
+      let check = property_get(c, "check");
+      let a = check(trimmed);
       if (not(a)) {
         let li = html_element(ul, "li");
-        html_text_set(li, text2);
+        html_text_set(li, text);
         valid = false;
       }
     }

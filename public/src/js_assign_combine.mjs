@@ -20,12 +20,12 @@ export function js_assign_combine(ast) {
     if (null_is(declaration)) {
       return;
     }
-    let e1 = list_get_end_1(stack);
-    let nl = list_not_is(e1);
+    let e = list_get_end_1(stack);
+    let nl = list_not_is(e);
     if (nl) {
       return;
     }
-    let next = list_next_try(e1, node);
+    let next = list_next_try(e, node);
     if (null_is(next)) {
       return;
     }
@@ -50,7 +50,7 @@ export function js_assign_combine(ast) {
       if (count === 2) {
         let init = property_get(declaration, "init");
         property_set(declaration2, "init", init);
-        list_remove(e1, node);
+        list_remove(e, node);
       }
     }
   }

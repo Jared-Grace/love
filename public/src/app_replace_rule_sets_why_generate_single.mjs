@@ -8,7 +8,7 @@ import { property_transform } from "../../../love/public/src/property_transform.
 export async function app_replace_rule_sets_why_generate_single(rs) {
   let rule_set = property_get(rs, "rule_set");
   properties_delete_if_exists(rule_set, ["why", "rules_used"]);
-  let value2 = property_transform(
+  let value = property_transform(
     rule_set,
     "rules",
     app_replace_rules_parse_left_right_only,

@@ -10,7 +10,7 @@ import { text_is } from "../../../love/public/src/text_is.mjs";
 export function app_code_operators_arithmetic(d) {
   let operators = js_operators();
   let concated = list_to_and_list(operators);
-  function lambda4(item) {
+  function lambda(item) {
     let condition = text_is(item);
     let result = ternary(
       condition,
@@ -22,5 +22,5 @@ export function app_code_operators_arithmetic(d) {
     }
     result(d, item);
   }
-  each(concated, lambda4);
+  each(concated, lambda);
 }
