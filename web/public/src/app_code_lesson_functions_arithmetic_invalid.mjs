@@ -15,7 +15,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic_invalid() {
-  let name = "Functions (Arithmetic, invalid)";
+  let name = "Functions (arithmetic, invalid)";
   let id = "functions_arithmetic_invalid";
   const example_label = "Function: ";
   const quiz_label = "What is this code rewritten using a function?";
