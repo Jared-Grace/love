@@ -18,19 +18,19 @@ export function app_replace_goals_generic(
   lambda,
 ) {
   const choose_this_next = not(completed) && completed_previous;
-  let text = add_1_period(index);
+  let text_left = add_1_period(index);
   if (completed) {
     let e = emoji_check();
-    text += string_pad_left_space(e);
+    text_left += string_pad_left_space(e);
   } else {
     if (choose_this_next) {
       let e = emoji_point_right();
-      text += string_pad_left_space(e);
+      text_left += string_pad_left_space(e);
     }
   }
   const text_centered = "";
   let b = app_replace_button_wide(root, "", lambda);
-  let r = html_style_text_left_centered(b, text, text_centered);
+  let r = html_style_text_left_centered(b, text_left, text_centered);
   app_replace_button_rule_style(b);
   let title = property_get(r, "title");
   html_style_set(title, "line-height", 1.5);
