@@ -20,8 +20,7 @@ import { text_letters_only } from "../../../love/public/src/text_letters_only.mj
 import { app_code_verse_words } from "../../../love/public/src/app_code_verse_words.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export function app_code_lesson_identifiers_symbol_first_generic(
-  name,
-  id,
+  name_id,
   above,
   on_question,
 ) {
@@ -69,8 +68,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     return mapped3;
   }
   let r = app_code_lesson_identifiers_valid(
-    name,
-    id,
+    name_id,
     above,
     batch_get,
     on_question,

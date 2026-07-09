@@ -6,8 +6,7 @@ import { app_code_quiz_backwards_label_answer_validity } from "../../../love/pub
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 export function app_code_lesson_validity_base(
   batch_get,
-  id,
-  name,
+  name_id,
   above,
   backwards_question_label,
   on_question_forwards,
@@ -32,8 +31,7 @@ export function app_code_lesson_validity_base(
     2,
   );
   let lesson = app_code_lesson_base(
-    id,
-    name,
+    name_id,
     above,
     example_count,
     batch_get,

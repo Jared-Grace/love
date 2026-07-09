@@ -69,8 +69,7 @@ export function app_code_lesson_symbols_letters() {
     return mapped;
   }
   let r5 = app_code_lesson_symbols_counting(
-    "Symbols (letters)",
-    "symbols_letters",
+    { name: "Symbols (letters)", id: "symbols_letters" },
     lambda,
     batch_get,
     app_code_symbols_separated_on_question_numbered_fifth,
