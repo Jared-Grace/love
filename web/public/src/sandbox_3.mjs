@@ -1,5 +1,5 @@
-import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
+import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 export async function sandbox_3() {
-  let r = app_code_lesson_name_id("a", ["b", "c"]);
+  let result = await data_identifiers_search(ids_comma);
   return r;
 }
