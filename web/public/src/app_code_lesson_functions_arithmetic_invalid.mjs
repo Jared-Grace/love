@@ -1,3 +1,4 @@
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
@@ -32,7 +33,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       la(call);
       let call2 = js_operator_to_code_call_only(o, next);
       let missing = next_get();
-      trs;
+      let replaced = text_replace(t, from, to);
     }
     let list = list_adder(lambda);
     return mapped;
