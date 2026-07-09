@@ -41,7 +41,11 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let left = property_get(r2, "left");
     let parts = [verb, "(", left, ",", right, ")"];
     let combined = list_between_empty(parts);
-    let parts2 = ["Calling the add function requires all of these parts: "];
+    let parts2 = [
+      "Calling the ",
+      verb,
+      " function requires all of these parts: ",
+    ];
     html_div_cycle_code(c, parts2);
   }
 }
