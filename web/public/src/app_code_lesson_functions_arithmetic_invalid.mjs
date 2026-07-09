@@ -48,7 +48,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     html_div_cycle_code(c, parts2);
     let parts = [verb, "(", left, ",", right, ")"];
     let combined = list_between_empty(parts);
-    list_add_first(list, item);
+    list_add_first(combined, "");
     html_div_cycle_code(c, combined);
   }
 }
