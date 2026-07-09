@@ -11,9 +11,9 @@ import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { each_index } from "../../../love/public/src/each_index.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
   const example_label = "Function: ";
@@ -66,7 +66,7 @@ export function app_code_lesson_functions_arithmetic() {
   return lesson;
   function above(root) {
     let next = range_1_next(m);
-    function lambda(o) {
+    function lambda(o, index) {
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
@@ -78,6 +78,6 @@ export function app_code_lesson_functions_arithmetic() {
         code,
       ]);
     }
-    each(operators, lambda);
+    each_index(operators, lambda);
   }
 }
