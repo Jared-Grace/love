@@ -8,9 +8,10 @@ export function app_code_lesson_name_id(left, rights) {
   let wrapped = text_wrap_parenthesis(joined);
   let name = text_combine_middle_space(left, wrapped);
   let concated = list_concat_single(left, rights);
-  let joined2 = list_join_underscore(list);
+  let id = list_join_underscore(concated);
   let r = {
     name,
+    id,
   };
   return r;
 }
