@@ -7,9 +7,11 @@ import { digits } from "../../../love/public/src/digits.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 export function app_code_lesson_symbols_digits_numbered() {
+  let name_id = app_code_lesson_name_id("symbols", ["digits", "numbered"]);
   let r = app_code_lesson_symbols_counting(
-    { name: "Symbols (digits, numbered)", id: "symbols_digits_numbered" },
+    name_id,
     above,
     app_code_lesson_symbols_batch_digits,
     app_code_symbols_separated_on_question_numbered,
