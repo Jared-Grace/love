@@ -25,12 +25,13 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let operators_next = list_iterator_refillable(operators);
   let next_get = list_iterator_refillable(refill_get);
   function batch_get() {
-    function lambda(la) {}
+    function lambda(la) {
+      let o = operators_next();
+      let r = js_operator_to_code_call(o, next);
+      let call = property_get(r, "call");
+      let next_get2 = list_iterator_refillable(symbols_required);
+    }
     let list = list_adder(lambda);
-    let o = operators_next();
-    let r = js_operator_to_code_call(o, next);
-    let call = property_get(r, "call");
-    let next_get2 = list_iterator_refillable(symbols_required);
     return mapped;
   }
   let b = app_code_batch_question_answer_fns(
