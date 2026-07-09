@@ -1,16 +1,7 @@
-import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
+import { list_power_set } from "../../../love/public/src/list_power_set.mjs";
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 export async function sandbox_3() {
-  return ['app_code_lesson_identifiers_symbol_first_generic',
-  'app_code_lesson_identifiers_symbol_first_unseparated',
-  'app_code_lesson_identifiers_symbol_first',
-  'app_code_lesson_identifiers_underscores_generic',
-  'app_code_lesson_identifiers_valid',
-  'app_code_lesson_name_id',
-  'app_code_lesson_operators_generic',
-  'app_code_lesson_operators_plus_unary',
-  'app_code_lesson_symbols_counting',
-  'app_code_lesson_validity_base',
-  'app_code_lesson_validity_code',
-  'app_code_lesson_validity_operator',];
+  let list = range_1(3);
+  let r = list_power_set(list);
+  return r;
 }
