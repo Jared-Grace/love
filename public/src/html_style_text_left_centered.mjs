@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export function html_style_text_left_centered(
@@ -7,7 +8,7 @@ export function html_style_text_left_centered(
 ) {
   html_style_assign(component, {
     display: "grid",
-    "grid-template-columns": "auto 1fr",
+    "grid-template-columns": "auto 1fr auto",
     "align-items": "center",
   });
   let left = html_span_text(component, text_left);
@@ -18,6 +19,7 @@ export function html_style_text_left_centered(
   html_style_assign(title, {
     "justify-self": "center",
   });
+  let component2 = html_span(parent);
   let r = {
     title,
   };
