@@ -1,3 +1,4 @@
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "../../../love/public/src/app_code_lesson_quizzes_unscramble_both.mjs";
 import { html_div_text_code_dark } from "../../../love/public/src/html_div_text_code_dark.mjs";
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
@@ -15,8 +16,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic() {
-  let name = "Functions (arithmetic)";
-  let id = "functions_arithmetic";
+  let r = app_code_lesson_name_id("functions", ["arithmetic"]);
+  let id = property_get(r, "id");
+  let name = property_get(r, "name");
   const example_label = "Function: ";
   const quiz_label = "What is this code rewritten using a function?";
   let question_label = app_code_label_code_question();
