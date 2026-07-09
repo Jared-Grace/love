@@ -1,3 +1,4 @@
+import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_quizzes_unscramble_both } from "../../../love/public/src/app_code_lesson_quizzes_unscramble_both.mjs";
 import { html_div_text_code_dark } from "../../../love/public/src/html_div_text_code_dark.mjs";
@@ -68,9 +69,9 @@ export function app_code_lesson_functions_arithmetic() {
   function above(root) {
     let next = range_1_next(m);
     function lambda(o) {
-      let r2 = js_operator_to_expression(o, next);
-      let expression = property_get(r2, "expression");
-      let code = js_operator_left_right_to_code_call(o, r2);
+      let r = js_operator_to_code_call(o, next);
+      let code = property_get(r, "call");
+      let expression = property_get(r, "expression");
       let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
