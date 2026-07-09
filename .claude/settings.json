@@ -9,6 +9,7 @@
       "Bash(diff:*)",
       "Bash(echo:*)",
       "Bash(head:*)",
+      "Bash(wc:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(git show:*)",
@@ -26,5 +27,19 @@
       "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)"
     ],
     "defaultMode": "acceptEdits"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/bash-command-guard.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
   }
 }
