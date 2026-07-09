@@ -13,7 +13,7 @@ export function list_power_set_inner(list, index, result, results) {
   }
   let item = list_get(list, index);
   list_add(result, item);
-  list_power_set_inner(list, index + 1, result);
+  list_power_set_inner(list, index + 1, result, results);
   list_remove_last_equal(result, item);
-  list_power_set_inner(list, index + 1, result);
+  list_power_set_inner(list, index + 1, result, results);
 }
