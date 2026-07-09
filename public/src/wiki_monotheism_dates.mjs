@@ -6,13 +6,14 @@ import { list_find_indices } from "../../../love/public/src/list_find_indices.mj
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export async function wiki_monotheism_dates() {
   let p = folder_user_docs_path("monothesism_wiki.txt");
   let contents = await file_read(p);
   let split = text_split_space(contents);
   let list = list_find_indices(split, predicate);
   function lambda(right) {
-    let left = right - 2;
+    let left = subtract(right, 2);
     let sliced = list_range(split, left, right);
     let joined = list_join_space(sliced);
     return joined;

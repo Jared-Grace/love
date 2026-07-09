@@ -7,6 +7,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export async function audio_duration(joined_audio) {
   let result = null;
   try {
@@ -24,8 +25,8 @@ export async function audio_duration(joined_audio) {
   function duration_to_seconds(duration_str) {
     let [h, m, s] = duration_str.split(":");
     let v = text_combine_multiple([
-      parseInt(h) * 3600,
-      parseInt(m) * 60,
+      multiply(parseInt(h), 3600),
+      multiply(parseInt(m), 60),
       parseFloat(s),
     ]);
     return v;

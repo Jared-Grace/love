@@ -11,6 +11,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
 import { list_split } from "../../../love/public/src/list_split.mjs";
+import { divide } from "../../../love/public/src/divide.mjs";
 export async function sermon_translate_urdu(file_name) {
   let filtered = await file_read_folder_user_txt_split_normalize(file_name);
   let separator = "---";
@@ -22,7 +23,7 @@ export async function sermon_translate_urdu(file_name) {
   function lambda2(item2, index) {
     let change = lambda(item2, index);
     if (change) {
-      let i = floor(index / 2);
+      let i = floor(divide(index, 2));
       let item3 = list_get(value2, i);
       let mapped2 = list_map_pairs(item3, item2, pair_to_list);
       return mapped2;

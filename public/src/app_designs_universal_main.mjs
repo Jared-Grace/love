@@ -9,6 +9,7 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_cartesian_product_self } from "../../../love/public/src/list_cartesian_product_self.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export function app_designs_universal_main(context) {
   let root = property_get(context, "root");
   const size = "7px";
@@ -37,13 +38,13 @@ export function app_designs_universal_main(context) {
     });
     let columns = property_get(dimension, "columns");
     let rows = property_get(dimension, "rows");
-    let slots = rows * columns;
+    let slots = multiply(rows, columns);
     let possbilities = list_cartesian_product_self(colors, slots);
     function lambda3(possibility) {
       let shape = html_div(container);
       html_style_grid(shape, columns, rows);
       function lambda(y) {
-        let offset = y * columns;
+        let offset = multiply(y, columns);
         function lambda2(x) {
           let offset_x = text_combine(offset, x);
           let column = html_div(shape);

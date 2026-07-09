@@ -10,6 +10,8 @@ import { app_replace_button_rule_background_color } from "../../../love/public/s
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { divide } from "../../../love/public/src/divide.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export function html_progress_bar(
   root,
   count_progress,
@@ -31,7 +33,7 @@ export function html_progress_bar(
     "background-color": color_valid,
     "padding-left": "0.6em",
     height: "100%",
-    width: text_combine((100 * count_progress) / count_total, "%"),
+    width: text_combine(divide(multiply(100, count_progress), count_total), "%"),
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
