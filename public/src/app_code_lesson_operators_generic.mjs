@@ -14,7 +14,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
-import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_generic(
@@ -79,8 +78,7 @@ export function app_code_lesson_operators_generic(
   }
   const example_label = app_code_label_code_answer_example();
   const quiz_label = app_code_label_code_answer_quiz();
-  let inside = text_first_upper_to(math_name);
-  let name = "Operators " + text_wrap_parenthesis(inside);
+  let name = "Operators " + text_wrap_parenthesis(math_name);
   let id = "operators_" + math_name;
   let question_label = app_code_label_code_question();
   let example_count = 1;
