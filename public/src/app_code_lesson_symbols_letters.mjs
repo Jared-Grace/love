@@ -12,6 +12,7 @@ import { list_alphabet_lower } from "../../../love/public/src/list_alphabet_lowe
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_lesson_symbols_counting } from "../../../love/public/src/app_code_lesson_symbols_counting.mjs";
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_upper_to } from "../../../love/public/src/text_upper_to.mjs";
 export function app_code_lesson_symbols_letters() {
@@ -68,8 +69,9 @@ export function app_code_lesson_symbols_letters() {
     let mapped = app_code_lesson_symbols_letters_batch_get(lambda2);
     return mapped;
   }
+  let name_id = app_code_lesson_name_id("symbols", ["letters"]);
   let r5 = app_code_lesson_symbols_counting(
-    { name: "Symbols (letters)", id: "symbols_letters" },
+    name_id,
     lambda,
     batch_get,
     app_code_symbols_separated_on_question_numbered_fifth,
