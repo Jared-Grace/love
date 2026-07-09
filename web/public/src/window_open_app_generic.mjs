@@ -5,6 +5,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function window_open_app_generic(fn, app_fn_name, hash) {
   let without = fn(app_fn_name);
   let file_name = file_name_html(without);
-  let h2 = hash_to_url(hash);
-  window_open(text_combine(file_name, h2));
+  let h = hash_to_url(hash);
+  window_open(text_combine(file_name, h));
 }

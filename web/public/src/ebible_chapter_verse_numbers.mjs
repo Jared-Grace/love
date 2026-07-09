@@ -19,8 +19,8 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
   let d = property_get(v2, "d");
   let main = html_parse_find(root, ".main");
   let list = html_parse_find_list_to(main, ".verse");
-  let verse_numbers = list_map(list, lambda2);
-  function lambda2(item) {
+  let verse_numbers = list_map(list, lambda);
+  function lambda(item) {
     let t = html_parse_text(d, item);
     const name = "id";
     let id = html_parse_attr(d, item, name);

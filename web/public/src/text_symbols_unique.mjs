@@ -4,11 +4,11 @@ import { each } from "../../../love/public/src/each.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 export function text_symbols_unique(s) {
-  function lambda4(la) {
+  function lambda(la) {
     let split = text_split_empty(s);
     each(split, la);
   }
-  let unique_list = list_adder_unique(lambda4);
+  let unique_list = list_adder_unique(lambda);
   list_sort_text(unique_list);
   let unique = list_join_empty(unique_list);
   return unique;

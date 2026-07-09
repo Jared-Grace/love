@@ -4,6 +4,6 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 export function html_checked_get(input) {
   arguments_assert(arguments, 1);
   let element = html_component_element_get(input);
-  let value2 = property_get(element, "checked");
-  return value2;
+  let value = property_get(element, "checked");
+  return value;
 }

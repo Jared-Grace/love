@@ -11,11 +11,11 @@ export async function ebible_chapters_upload(bible_folder) {
     });
     let chapter_code = property_get(value, "chapter_code");
     let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
-    let v3 = {
+    let v = {
       destination,
       value,
     };
-    return v3;
+    return v;
   }
   await firebase_upload_object_compressed_chunked(chapters, lambda);
   return chapters;

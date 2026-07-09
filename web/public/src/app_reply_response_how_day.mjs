@@ -4,11 +4,11 @@ import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_reply_response_how_day() {
   let s = app_reply_response_how_r_u_skip_before_first_upper();
-  let v2 = text_combine_multiple([
+  let v = text_combine_multiple([
     emoji_ok(),
     " The day of the ",
     text_first_lower_to(s),
     "today is one day closer to the return of Jesus than yesterday!",
   ]);
-  return v2;
+  return v;
 }

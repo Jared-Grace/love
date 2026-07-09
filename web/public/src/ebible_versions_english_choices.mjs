@@ -6,7 +6,7 @@ export async function ebible_versions_english_choices() {
   let object = await ebible_versions_english_full();
   let properties = properties_get(object);
   let excluded_prefixes = ["engweb", "eng-web"];
-  let filter = function lambda4(property) {
+  let filter = function lambda(property) {
     let any = list_any_starts_with_not(property, excluded_prefixes);
     return any;
   };

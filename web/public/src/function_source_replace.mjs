@@ -4,7 +4,7 @@ import { function_name_to_path_search } from "../../../love/public/src/function_
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export async function function_source_replace(f_name, from, to) {
   arguments_assert(arguments, 3);
-  let r3 = await function_name_to_path_search(f_name);
-  let f_path = property_get(r3, "f_path");
+  let r = await function_name_to_path_search(f_name);
+  let f_path = property_get(r, "f_path");
   await file_transform_replace(f_path, from, to);
 }

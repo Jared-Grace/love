@@ -13,7 +13,7 @@ export async function app_calendar_home(context) {
   let root = html_clear_context(context);
   let dictionary = await app_calendar_download_browser_contacts();
   let input_set = null;
-  let component2 = app_a_button_wide(root, "Paste and Search", lambda2);
+  let component = app_a_button_wide(root, "Paste and Search", lambda2);
   async function lambda2() {
     let paste = await clipboard_paste();
     input_set(paste);

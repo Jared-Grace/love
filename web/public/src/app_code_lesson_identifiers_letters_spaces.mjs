@@ -78,11 +78,11 @@ export function app_code_lesson_identifiers_letters_spaces() {
     "letters allowed",
     "spaces not",
   ]);
-  let r5 = app_code_lesson_identifiers_valid(
+  let r = app_code_lesson_identifiers_valid(
     name_id,
     lambda,
     batch_get,
     app_code_symbols_separated_on_question,
   );
-  return r5;
+  return r;
 }

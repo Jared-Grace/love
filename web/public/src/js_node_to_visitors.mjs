@@ -14,10 +14,10 @@ export function js_node_to_visitors(ast, node_search) {
         if (node === node_search) {
           let add_to_list = true;
           let stack = property_get(v, "stack");
-          let e1 = list_get_end_1(stack);
-          let type_is = js_import_specifier_is(e1);
+          let e = list_get_end_1(stack);
+          let type_is = js_import_specifier_is(e);
           if (type_is) {
-            let eq = object_properties_equal(e1, ["imported", "imported"]);
+            let eq = object_properties_equal(e, ["imported", "imported"]);
             if (eq) {
               let first = sa(node);
               if (not(first)) {

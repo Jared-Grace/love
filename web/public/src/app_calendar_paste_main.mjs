@@ -38,10 +38,10 @@ export function app_calendar_paste_main(context) {
   };
   let countries = [pakistan, kenya, bangladesh, india];
   function lambda3(country) {
-    let name2 = property_get(country, "name");
+    let name = property_get(country, "name");
     let flag = property_get(country, "flag");
-    let combined2 = text_combine_multiple([name2, " ", flag]);
-    let component = html_button(root, combined2, lambda2);
+    let combined = text_combine_multiple([name, " ", flag]);
+    let component = html_button(root, combined, lambda2);
     async function lambda2() {
       html_clear(output);
       let lines = null;

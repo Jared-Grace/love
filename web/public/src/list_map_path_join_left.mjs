@@ -5,6 +5,6 @@ export function list_map_path_join_left(list, folder_prefix) {
     let joined = path_join([folder_prefix, item]);
     return joined;
   }
-  let mapped2 = list_map(list, lambda);
-  return mapped2;
+  let mapped = list_map(list, lambda);
+  return mapped;
 }

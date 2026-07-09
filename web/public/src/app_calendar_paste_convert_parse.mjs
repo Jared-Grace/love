@@ -8,10 +8,10 @@ export function app_calendar_paste_convert_parse(date, hour, zone) {
   let input_luxon = text_combine_multiple([date, " ", y, " ", hour]);
   let format = date_time_zone_format_google_calendar();
   const dt = date_time_zone_parse(input_luxon, format, zone);
-  function lambda2() {
+  function lambda() {
     let r = [dt.invalidReason, dt.invalidExplanation];
     return r;
   }
-  assert_json_get(dt.isValid, lambda2);
+  assert_json_get(dt.isValid, lambda);
   return dt;
 }

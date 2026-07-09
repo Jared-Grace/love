@@ -116,8 +116,8 @@ export function app_a_function_node(a) {
       let k = js_keyword_return();
       app_a_keyword_purple(parent, k);
       let argument2 = js_return_argument_get(node);
-      let nn2 = null_not_is(argument2);
-      if (nn2) {
+      let nn = null_not_is(argument2);
+      if (nn) {
         html_span_space(parent);
         app_a_function_node_child(a, argument2);
       }
@@ -173,8 +173,8 @@ export function app_a_function_node(a) {
     },
     ["ObjectExpression"]: o_props,
     ["Property"]: function lambda14() {
-      let kind2 = property_get(node, "kind");
-      equal_assert(kind2, "init");
+      let kind = property_get(node, "kind");
+      equal_assert(kind, "init");
       let key = property_get(node, "key");
       app_a_function_node_child(a, key);
       let shorthand = property_get(node, "shorthand");

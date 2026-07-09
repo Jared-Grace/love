@@ -5,9 +5,9 @@ export function app_a_raw(node, parent) {
   let raw = property_get(node, "raw");
   let component = html_span_text(parent, raw);
   app_a_color_literal(component);
-  let v3 = {
+  let v = {
     component,
     raw,
   };
-  return v3;
+  return v;
 }

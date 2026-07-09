@@ -4,8 +4,8 @@ import { not } from "../../../love/public/src/not.mjs";
 export function list_without(list, item) {
   function lambda(other) {
     let b = equal(other, item);
-    let eq2 = not(b);
-    return eq2;
+    let eq = not(b);
+    return eq;
   }
   let filtered = list_filter(list, lambda);
   return filtered;

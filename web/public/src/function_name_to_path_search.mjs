@@ -22,8 +22,8 @@ export async function function_name_to_path_search(f_name) {
   function lambda2(m) {
     let mapped = property_get(m, "mapped");
     let exists2 = property_get(mapped, "exists");
-    let ti2 = true_is(exists2);
-    return ti2;
+    let ti = true_is(exists2);
+    return ti;
   }
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);

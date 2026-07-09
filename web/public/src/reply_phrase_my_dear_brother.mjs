@@ -9,9 +9,9 @@ import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 export function reply_phrase_my_dear_brother() {
   let fn15 = reply_optional("y");
   let my = reply_sequence_optional(["m", fn15]);
-  let phrase_jesus2 = reply_phrase_jesus();
-  let n2 = reply_word_in();
-  let in_christ = reply_sequence_optional([n2, phrase_jesus2]);
+  let phrase_jesus = reply_phrase_jesus();
+  let n = reply_word_in();
+  let in_christ = reply_sequence_optional([n, phrase_jesus]);
   const brother = reply_word_brother();
   const dear = "dear";
   let db = reply_either_both(dear, brother);

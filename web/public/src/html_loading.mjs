@@ -5,8 +5,8 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function html_loading(lambda) {
   let div = null;
-  let b2 = browser_is();
-  if (b2) {
+  let b = browser_is();
+  if (b) {
     let body = html_document_body();
     div = html_div(body);
     let s = {
@@ -29,7 +29,7 @@ export async function html_loading(lambda) {
   } catch (e) {
     throw e;
   } finally {
-    if (b2) {
+    if (b) {
       html_remove(div);
     }
   }

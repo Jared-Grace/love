@@ -26,8 +26,8 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
     "todo handle more than 1";
-    let s1 = list_size_1(declarations);
-    assert(s1);
+    let s = list_size_1(declarations);
+    assert(s);
     function lambda2(declaration) {
       let expression = js_assign_default();
       let init = js_declare_init_get(declaration);
@@ -40,9 +40,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
         }
       }
       js_left_right_set(expression, id, init);
-      let name3 = property_get(id, "name");
+      let name = property_get(id, "name");
       let init2 = js_null();
-      let assign = js_declare(name3, init2);
+      let assign = js_declare(name, init2);
       object_replace(next, expression);
       let index_next = list_next_index(stack2, stack1);
       list_insert(stack2, index_next, assign);

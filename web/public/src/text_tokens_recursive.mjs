@@ -17,7 +17,7 @@ export function text_tokens_recursive(
     let copy = list_copy(current);
     list_add(tokens_matches, copy);
   }
-  function lambda3(index_right) {
+  function lambda(index_right) {
     let sliced = text_slice(input, index_left, index_right);
     let exists = property_exists(dictionary, sliced);
     if (exists) {
@@ -32,5 +32,5 @@ export function text_tokens_recursive(
       );
     }
   }
-  each_range_from(text_combine(index_left, 1), index_last, lambda3);
+  each_range_from(text_combine(index_left, 1), index_last, lambda);
 }

@@ -32,10 +32,10 @@ export function js_statement_call_get(node) {
   if (not(a)) {
     return null;
   }
-  let v3 = {
+  let v = {
     call,
     declaration,
     assignment,
   };
-  return v3;
+  return v;
 }

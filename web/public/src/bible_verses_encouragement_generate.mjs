@@ -21,14 +21,14 @@ export async function bible_verses_encouragement_generate() {
     text_starts_with_dot,
     text_starts_with_space,
   ];
-  function lambda2(item2) {
-    item2 = whitespace_normalize(item2);
+  function lambda2(item) {
+    item = whitespace_normalize(item);
     each(fns, lambda);
     function lambda(fn) {
-      item2 = text_skip_while(fn, item2);
+      item = text_skip_while(fn, item);
     }
-    item2 = text_trim_right(text_ends_with_space, item2);
-    return item2;
+    item = text_trim_right(text_ends_with_space, item);
+    return item;
   }
   let mapped = list_map(split, lambda2);
   let bible_folder = ebible_folder_english();

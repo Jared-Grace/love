@@ -13,8 +13,8 @@ export function js_strings_generic(ast) {
       let value = null;
       function lambda5() {
         let quasis = property_get(node, "quasis");
-        let s1 = list_size_1(quasis);
-        if (s1) {
+        let s = list_size_1(quasis);
+        if (s) {
           let expressions = property_get(node, "expressions");
           let e = list_empty_is(expressions);
           if (e) {
@@ -29,8 +29,8 @@ export function js_strings_generic(ast) {
         value = property_get(node, "value");
       }
       js_node_type_is_if(node, "Literal", lambda4);
-      let si2 = text_is(value);
-      if (si2) {
+      let si = text_is(value);
+      if (si) {
         la({
           value,
           node,

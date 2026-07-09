@@ -28,7 +28,7 @@ export function server_data_endpoints(app) {
   }
   let du = server_url_data();
   app.get(du, d_get);
-  async function lambda4(req, res) {
+  async function lambda(req, res) {
     let data_next = property_get(req, "body");
     update();
     data_sequence = data_sequence.then(update);
@@ -38,5 +38,5 @@ export function server_data_endpoints(app) {
     await data_sequence;
     res.end();
   }
-  app.post(du, lambda4);
+  app.post(du, lambda);
 }

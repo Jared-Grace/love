@@ -2,10 +2,10 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function js_visit_each(a, lambda$item) {
-  function lambda2(la) {
+  function lambda(la) {
     let v = js_visit(a, la);
     return v;
   }
-  let vs = list_adder(lambda2);
+  let vs = list_adder(lambda);
   each(vs, lambda$item);
 }

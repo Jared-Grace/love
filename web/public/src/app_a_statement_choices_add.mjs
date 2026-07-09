@@ -13,7 +13,7 @@ export function app_a_statement_choices_add(choices, a, o) {
   let ab = {
     shortcut: "a",
     text: "Add call above",
-    fn: async function lambda2() {
+    fn: async function lambda() {
       let overlay_close = property_get(o, "overlay_close");
       overlay_close();
       let v2 = await app_a_functions_overlay(a, on_select);
@@ -42,7 +42,7 @@ export function app_a_statement_choices_add(choices, a, o) {
     {
       shortcut: "r",
       text: "Add return below",
-      fn: async function lambda2() {
+      fn: async function lambda() {
         let overlay_close = property_get(o, "overlay_close");
         overlay_close();
         let ast2 = property_get(a, "ast");

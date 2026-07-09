@@ -1,4 +1,4 @@
 export function emoji_party_face() {
-  let r4 = "🥳";
-  return r4;
+  let r = "🥳";
+  return r;
 }

@@ -9,9 +9,9 @@ export function app_message_reply_iam_titled_name() {
   let names = reply_names();
   let names_once_or_more = reply_once_or_more(names);
   let titles = reply_titles_ministry();
-  let iam2 = reply_phrase_i_am();
+  let iam = reply_phrase_i_am();
   let iam_titled_name = reply_sequence_output(
-    [iam2, titles, names_once_or_more],
+    [iam, titles, names_once_or_more],
     response,
   );
   return iam_titled_name;

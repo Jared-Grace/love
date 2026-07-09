@@ -4,8 +4,8 @@ import { js_visit_id_to_nodes } from "../../../love/public/src/js_visit_id_to_no
 export function js_visit_id_to_node_try(ast, id) {
   let node = null;
   let selects = js_visit_id_to_nodes(ast, id);
-  let s1 = list_size_1(selects);
-  if (s1) {
+  let s = list_size_1(selects);
+  if (s) {
     node = list_first(selects);
   }
   return node;

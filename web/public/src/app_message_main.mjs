@@ -72,7 +72,7 @@ export async function app_message_main(context) {
   async function refresh() {
     html_clear(div_messages);
     let messages = messages_get();
-    function lambda2(message) {
+    function lambda(message) {
       message_display("left", message);
       let right = message_display("right", "(Loading...)");
       html_style_assign(right, {
@@ -95,7 +95,7 @@ export async function app_message_main(context) {
       }
       return next;
     }
-    let nexts = list_map(messages, lambda2);
+    let nexts = list_map(messages, lambda);
     await invoke_multiple_unordered_async(nexts);
   }
   function message_display(direction, message) {
