@@ -1,10 +1,10 @@
+import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_filter_indices_odd } from "../../../love/public/src/list_filter_indices_odd.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_between_space_before } from "../../../love/public/src/list_between_space_before.mjs";
-import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -40,9 +40,11 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let o_f = list_first(operators);
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
-    let r2 = js_operator_to_expression(o_f, next);
+    let r2 = js_operator_to_code_call(o_f, next);
     let right = property_get(r2, "right");
     let left = property_get(r2, "left");
+    let call = property_get(r, "call");
+    let normalized = js_tokenizer_normalized(code);
     let parts2 = [
       "Calling the ",
       verb,
