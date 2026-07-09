@@ -26,8 +26,8 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   let operators_next = list_iterator_refillable(operators);
-  let v = lambda_value(value);
-  let next_get = list_iterator_refillable(symbols_required);
+  let v = lambda_value(symbols_required);
+  let next_get = list_iterator_refillable(v);
   function batch_get() {
     function lambda(la) {
       let o = operators_next();
