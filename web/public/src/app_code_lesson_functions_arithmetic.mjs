@@ -39,7 +39,7 @@ export function app_code_lesson_functions_arithmetic() {
   }
   let example_count = 1;
   let quiz_backwards_label_answer =
-    "Rewrite this function using a math symbol: ";
+    "Rewrite this function call using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
   const quizzes = app_code_lesson_quizzes_unscramble_both(
     batch_get,
@@ -47,7 +47,7 @@ export function app_code_lesson_functions_arithmetic() {
     html_text_set_code_dark,
     quiz_label,
     html_style_code_dark,
-    "Function: ",
+    "Function call: ",
     html_text_set_code_dark,
     quiz_backwards_label_answer,
     html_style_code_dark,
