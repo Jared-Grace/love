@@ -52,7 +52,8 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     html_div_cycle_code(c, combined);
     function lambda(la, item, index) {
       let eq = integer_even_is(index);
-      if (false) {
+      if (eq) {
+        la(item);
       }
     }
     let r4 = list_adder_each_index(list, lambda);
