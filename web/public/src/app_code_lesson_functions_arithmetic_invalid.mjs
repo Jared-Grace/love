@@ -1,3 +1,4 @@
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { list_between_empty } from "../../../love/public/src/list_between_empty.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
@@ -30,6 +31,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
+    let c = app_code_container_light_blue(root);
     let left = next();
     let right = next();
     let parts = ["add", "(", left, ",", right, ")"];
