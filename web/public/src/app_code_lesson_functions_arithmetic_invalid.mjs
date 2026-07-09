@@ -12,7 +12,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic_invalid() {
-  let r = app_code_lesson_name_id(left, rights);
+  let r = app_code_lesson_name_id("Functions", rights);
   let name = "Functions (arithmetic, invalid)";
   let id = "functions_arithmetic_invalid";
   const example_label = "Function: ";
