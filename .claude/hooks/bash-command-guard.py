@@ -11,14 +11,27 @@ awareness of shell grammar. That cuts both ways:
      list.
   2. Too broad: `find . && rm -rf ~` DOES start with "find", so the naive
      prefix match silently approves the whole string - "&& rm -rf ~" and
-     all - since the matcher never looks past the leading token.
+     all - since the matcher never looks past the leading token. Note
+     this specific example still correctly forces "ask" below: unqualified
+     "rm" isn't itself a verb in permissions.allow in this repo, so the
+     second command fails the same allowlist check as the first.
 
 This hook parses the command with a small quote-aware tokenizer that
-understands exactly two safe shapes: a ';'-separated sequence of simple
-commands, and a single-level 'for VAR in LIST; do CMDS; done' loop.
-Anything outside that (command substitution, redirection, subshells,
-backgrounding, pipes, &&/||, nested control flow) is deliberately left
-unparsed.
+understands exactly two safe shapes, which may be combined: a chain of
+simple commands joined by any mix of ';', '|', '&&', '||' (every chained
+command's verb must independently be in permissions.allow - conditional
+vs. unconditional execution doesn't matter, since the check is about
+which verbs can run, not when), and a single-level
+'for VAR in LIST; do CMDS; done' loop wrapping such a chain. Anything
+outside that (command substitution, redirection, subshells, backgrounding,
+nested control flow) is deliberately left unparsed.
+
+Characters that only have special meaning to the shell when unquoted
+(the pipeline/redirection/grouping/background operators) are treated as
+plain literal text when they appear inside single or double quotes -
+matching actual shell quoting rules - so a quoted regex alternation
+pattern containing a literal pipe character doesn't get misidentified
+as an unparsed shell pipe.
 
   - If the whole command parses into that narrow shape AND every simple
     command's verb is already in permissions.allow: emit "allow" (closes
@@ -53,7 +66,7 @@ RESERVED_WORDS = {
     "while", "until", "case", "esac", "function", "select", "time",
 }
 
-DANGEROUS_CHARS = set("`<>{}()&|")
+DANGEROUS_CHARS = set("`<>{}()")
 
 
 class Unsupported(Exception):
@@ -111,8 +124,8 @@ def tokenize(command):
                 quote = None
                 i += 1
                 continue
-            if c in DANGEROUS_CHARS:
-                raise Unsupported(f"unsupported char {c!r} in double quotes")
+            if c == "`":
+                raise Unsupported("command substitution (backtick) in double quotes")
             if c == "$" and i + 1 < n and command[i + 1] == "(":
                 raise Unsupported("command substitution")
             word.append(c)
@@ -135,6 +148,23 @@ def tokenize(command):
             else:
                 i += 1
             continue
+        if c == "|":
+            if i + 1 < n and command[i + 1] == "|":
+                flush_word()
+                tokens.append("||")
+                i += 2
+                continue
+            flush_word()
+            tokens.append("|")
+            i += 1
+            continue
+        if c == "&":
+            if i + 1 < n and command[i + 1] == "&":
+                flush_word()
+                tokens.append("&&")
+                i += 2
+                continue
+            raise Unsupported("unsupported operator '&' (backgrounding)")
         if c in DANGEROUS_CHARS:
             raise Unsupported(f"unsupported operator {c!r}")
         if c == "$" and i + 1 < n and command[i + 1] == "(":
@@ -167,17 +197,21 @@ def tokenize(command):
     return collapsed
 
 
-def split_commands(tokens):
+SEPARATORS = {";", "|", "&&", "||"}
+
+
+def split_statements(tokens):
+    """Split on any mix of ';', '|', '&&', '||' - they all carry the same
+    verb-allowlist requirement here, so this hook doesn't need to
+    distinguish sequencing from piping from conditional chaining."""
     groups, current = [], []
     for t in tokens:
-        if t == ";":
-            if current:
-                groups.append(current)
-                current = []
+        if t in SEPARATORS:
+            groups.append(current)
+            current = []
         else:
             current.append(t)
-    if current:
-        groups.append(current)
+    groups.append(current)
     return groups
 
 
@@ -187,19 +221,22 @@ def verb_of(words):
     return words[0]
 
 
-def check_simple_commands(word_groups, safe_verbs):
-    if not word_groups:
+def check_simple_commands(tokens, safe_verbs):
+    groups = split_statements(tokens)
+    if not groups:
         return False
-    for words in word_groups:
+    found_command = False
+    for words in groups:
         if not words:
             continue
+        found_command = True
         if words[0] in RESERVED_WORDS:
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
         if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", words[0]):
             raise Unsupported("variable assignment prefix")
         if verb_of(words) not in safe_verbs:
             return False
-    return True
+    return found_command
 
 
 def check_for_loop(tokens, safe_verbs):
@@ -227,7 +264,7 @@ def check_for_loop(tokens, safe_verbs):
     i += 1
     if i != len(tokens):
         raise Unsupported("trailing content after 'done'")
-    return check_simple_commands(split_commands(body), safe_verbs)
+    return check_simple_commands(body, safe_verbs)
 
 
 def is_safe(command, safe_verbs):
@@ -238,7 +275,7 @@ def is_safe(command, safe_verbs):
         return check_for_loop(tokens, safe_verbs)
     if tokens[0] in RESERVED_WORDS:
         raise Unsupported(f"unsupported construct {tokens[0]!r}")
-    return check_simple_commands(split_commands(tokens), safe_verbs)
+    return check_simple_commands(tokens, safe_verbs)
 
 
 def matched_leading_verb(command, safe_verbs):
