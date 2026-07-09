@@ -1,5 +1,5 @@
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
-export function text_replace_multiple(t, froms, to) {
+export function text_replace_multiple_to(t, froms, to) {
   t = text_replace(t, from, to);
   return replaced;
 }
