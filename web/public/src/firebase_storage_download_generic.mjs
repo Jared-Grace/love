@@ -7,11 +7,11 @@ export async function firebase_storage_download_generic(
   http_fn,
 ) {
   destination = firebase_path_fix(destination);
-  async function lambda2() {
+  async function lambda() {
     let url = firebase_storage_url(destination, project_url);
     let buffer = await http_fn(url);
     return buffer;
   }
-  let result = await html_loading(lambda2);
+  let result = await html_loading(lambda);
   return result;
 }

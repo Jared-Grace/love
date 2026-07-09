@@ -6,8 +6,8 @@ import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_na
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { functions_search } from "../../../love/public/src/functions_search.mjs";
 export async function functions_search_app_prefix(s) {
-  let v2 = await app_shared_name_search_info(s);
-  s = property_get(v2, "a_name");
+  let v = await app_shared_name_search_info(s);
+  s = property_get(v, "a_name");
   let a_name = app_shared_name_prefixed(s);
   const c = function_name_separator_trail(a_name);
   let results_search = await functions_search(c);

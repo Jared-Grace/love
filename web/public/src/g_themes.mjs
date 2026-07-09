@@ -22,8 +22,8 @@ export function g_themes(text) {
     }
     return item;
   }
-  let mapped2 = list_map(split, lambda2);
-  let joined = list_join_empty(mapped2);
+  let mapped = list_map(split, lambda2);
+  let joined = list_join_empty(mapped);
   let n = whitespace_normalize(joined);
   let map = {
     [g_themes_verb("act")]: "morality",

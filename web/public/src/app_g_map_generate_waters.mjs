@@ -11,11 +11,11 @@ export function app_g_map_generate_waters(rows) {
   let total = list_size_nested(rows);
   let water_count = floor(total * 0.3);
   let waters = [];
-  function lambda2(i) {
+  function lambda(i) {
     let r = app_g_map_generate_waters_next(waters, coordinates);
     let w = app_a_water();
     list_set_nested_y_x(rows, r, w);
     list_remove_add(coordinates, waters, r);
   }
-  each_range(water_count, lambda2);
+  each_range(water_count, lambda);
 }

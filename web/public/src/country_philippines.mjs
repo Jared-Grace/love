@@ -1,8 +1,8 @@
 export function country_philippines() {
-  let r6 = {
+  let r = {
     zone: "Asia/Manila",
     name: "Philippines",
     flag: "🇵🇭",
   };
-  return r6;
+  return r;
 }

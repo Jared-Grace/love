@@ -7,7 +7,7 @@ export async function firebase_upload_text_generic_browser(
   destination,
   content,
 ) {
-  async function lambda2() {
+  async function lambda() {
     const app = await firebase_app_initialize();
     'const storageMod = await import(\n      "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"\n    );';
     const storage = getStorage(app);
@@ -17,6 +17,6 @@ export async function firebase_upload_text_generic_browser(
     });
     log_keep(firebase_upload_text_generic_browser.name, "✅ JSON uploaded successfully");
   }
-  let r = await html_loading(lambda2);
+  let r = await html_loading(lambda);
   return r;
 }

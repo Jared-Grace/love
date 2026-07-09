@@ -6,7 +6,7 @@ export async function html_on_transitionend(
   c,
   on_transition_begin,
 ) {
-  await new Promise(function lambda20(resolve) {
+  await new Promise(function lambda(resolve) {
     function handler(e) {
       let includes = list_includes(properties, e.propertyName);
       if (includes) {

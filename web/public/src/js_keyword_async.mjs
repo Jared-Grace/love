@@ -1,4 +1,4 @@
 export function js_keyword_async() {
-  let v2 = "async";
-  return v2;
+  let v = "async";
+  return v;
 }

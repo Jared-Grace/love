@@ -28,12 +28,12 @@ export async function app_g_conversation(
   let npc = list_single(npcs_matched);
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = text_first_upper_to(greet);
-  let s2 = list_random_item(["nice", "great", "good"]);
+  let s = list_random_item(["nice", "great", "good"]);
   const a = text_combine(list_random_item(["it's", "it is"]), " ");
   let meet_message = text_combine(
     " ",
     text_first_upper_to(
-      text_combine_multiple([text_random_or_empty(a), s2, " to "]),
+      text_combine_multiple([text_random_or_empty(a), s, " to "]),
     ),
   );
   let meet = property_get(npc, "meet");
@@ -75,14 +75,14 @@ export async function app_g_conversation(
     await app_g_gospel(overlay, npc, overlay_close, player, div_map, refresh);
   }
   app_g_container_text(overlay, "What would you like to do?");
-  let name_npc2 = property_get(npc, "name");
+  let name_npc = property_get(npc, "name");
   let christian = property_get(npc, "christian");
   if (not(christian)) {
     app_g_button_green(
       overlay,
       text_combine_multiple([
         "Tell ",
-        name_npc2,
+        name_npc,
         " that Jesus died, was buried and rose to life and share the gospel!",
       ]),
       npc_gospel,

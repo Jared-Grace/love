@@ -154,8 +154,8 @@ export function app_reply_main_shortcuts(
     return r2;
   }
   function languages_default_concat(right) {
-    let concated2 = list_concat(languages_chosen_default, right);
-    return concated2;
+    let concated = list_concat(languages_chosen_default, right);
+    return concated;
   }
   function shortcut_extend_count(base, count) {
     let extended = shortcut_extend(base, count);
@@ -173,10 +173,10 @@ export function app_reply_main_shortcuts(
     return extended;
   }
   function shortcut_each(s) {
-    let name2 = property_get(s, "name");
+    let name = property_get(s, "name");
     let languages2 = property_get(s, "languages");
     let count2 = property_get(s, "count");
-    let responses2 = property_get(s, "responses");
+    let responses = property_get(s, "responses");
     async function lambda5() {
       app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
       await update(count2);
@@ -185,9 +185,9 @@ export function app_reply_main_shortcuts(
         let b = list_find_property(buttons_responses, "text", r);
         property_get_invoke(b, "click");
       }
-      each(responses2, lambda7);
+      each(responses, lambda7);
     }
-    let component2 = html_button(root, name2, lambda5);
+    let component = html_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
 }

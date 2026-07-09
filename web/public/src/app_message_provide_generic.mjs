@@ -16,8 +16,8 @@ export function app_message_provide_generic(category, emoji, context, verse) {
       let screens = app_message_flow_travel();
       app_shared_flow_back(context, screens);
     }
-    let button2 = app_shared_button_back(parent, lambda5);
-    return button2;
+    let button = app_shared_button_back(parent, lambda5);
+    return button;
   };
   let top_text = text_combine_multiple([
     "Will you provide for all of my ",
@@ -71,8 +71,8 @@ export function app_message_provide_generic(category, emoji, context, verse) {
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
     let value_checked = html_checkboxes_checked_value_get(checkboxes);
-    let v2 = value_checked === yes;
-    return v2;
+    let v = value_checked === yes;
+    return v;
   };
   html_checkboxes(
     context,

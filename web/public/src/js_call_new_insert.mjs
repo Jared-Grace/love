@@ -10,9 +10,9 @@ export async function js_call_new_insert(
   index,
   stack,
 ) {
-  let v2 = await js_call_new(f_name_call, ast);
-  let parsed = property_get(v2, "parsed");
-  let declaration = property_get(v2, "declaration");
+  let v = await js_call_new(f_name_call, ast);
+  let parsed = property_get(v, "parsed");
+  let declaration = property_get(v, "declaration");
   list_insert(stack2, index, parsed);
   await js_imports_missing_add_all(ast);
   js_stack_declaration_asyncify(stack, declaration);

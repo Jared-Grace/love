@@ -57,8 +57,8 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     dictionary,
   });
   function lambda(item) {
-    let selector2 = css_class_prefix_combine(item);
-    html_parse_find_remove(main, selector2);
+    let selector = css_class_prefix_combine(item);
+    html_parse_find_remove(main, selector);
   }
   each(exclude, lambda);
   let text = html_parse_text(d, main);

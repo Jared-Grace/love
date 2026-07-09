@@ -38,7 +38,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
     let refill_get = digits_randomly_coupled;
     let next_get_list = list_iterator_refillable(refill_get);
     let next_get = invoke_map(next_get_list, list_join_empty);
-    function lambda2(batch_item, batch_item_index) {
+    function lambda(batch_item, batch_item_index) {
       let joined = list_join_cycled_invoker(batch_item, next_get);
       let right = next_get();
       joined = text_combine(joined, right);
@@ -64,7 +64,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
       joined = text_combine(prefix, joined);
       return joined;
     }
-    let mapped3 = list_map_index(list, lambda2);
+    let mapped3 = list_map_index(list, lambda);
     return mapped3;
   }
   let r = app_code_lesson_identifiers_valid(

@@ -307,9 +307,9 @@ export function reply_test() {
   ];
   async function lambda(item) {
     let message = property_get(item, "message");
-    let start2 = property_get(item, "start");
+    let start = property_get(item, "start");
     let expected = property_get(item, "expected");
-    let actual = await reply_messages_inner(message, start2);
+    let actual = await reply_messages_inner(message, start);
     json_equal_assert(actual, expected);
   }
   each(cases, lambda);

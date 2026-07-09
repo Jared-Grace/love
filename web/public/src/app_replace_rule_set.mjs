@@ -158,14 +158,14 @@ export async function app_replace_rule_set(context) {
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
-    let mapped3 = list_map_property_multiple(rules_used, properties);
-    let squashed = list_squash(mapped3);
+    let mapped = list_map_property_multiple(rules_used, properties);
+    let squashed = list_squash(mapped);
     let unique = list_unique(squashed);
     html_p_text(div_abbreviations, "Abbreviations");
     let component = html_element(div_abbreviations, "ul");
     let abbreviations = property_get(rs, "abbreviations");
-    let list2 = object_to_list(abbreviations);
-    list_sort_text_property(list2, "key");
+    let list = object_to_list(abbreviations);
+    list_sort_text_property(list, "key");
     function lambda6(kv) {
       let key = property_get(kv, "key");
       let includes2 = list_includes(unique, key);
@@ -176,7 +176,7 @@ export async function app_replace_rule_set(context) {
         html_cycle_bold(component2, concated);
       }
     }
-    each(list2, lambda6);
+    each(list, lambda6);
   }
   await refresh();
   async function refresh() {
@@ -213,8 +213,8 @@ export async function app_replace_rule_set(context) {
       });
       function refresh_rb() {
         let rule2 = property_get(rb, "rule");
-        let size2 = list_size(start);
-        let r = range(size2);
+        let size = list_size(start);
+        let r = range(size);
         let lambda7 = app_replace_rule_valid_curried(rule2, start);
         let enabled = list_any(r, lambda7);
         const selected = index2 === index_selected;
@@ -289,8 +289,8 @@ export async function app_replace_rule_set(context) {
     ("no success yet?");
     if (not(success)) {
       ("goal satisfied?");
-      let eq2 = json_equal(start, end);
-      if (eq2) {
+      let eq = json_equal(start, end);
+      if (eq) {
         success = true;
         await app_replace_rule_set_success(
           rule_set_name,

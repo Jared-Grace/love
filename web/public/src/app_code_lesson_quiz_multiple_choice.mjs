@@ -62,8 +62,8 @@ export function app_code_lesson_quiz_multiple_choice(
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
-      let eq2 = equal(quiz_choice, quiz_answer);
-      if (eq2) {
+      let eq = equal(quiz_choice, quiz_answer);
+      if (eq) {
         answered = true;
         app_shared_button_screen_green_style_assign(b);
         await on_success();

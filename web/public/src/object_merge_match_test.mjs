@@ -56,12 +56,12 @@ export function object_merge_match_test() {
     b: 2,
     a: 1,
   };
-  function lambda2() {
+  function lambda() {
     object_merge_match(to, {
       a: 2,
     });
   }
-  let input = throws_assert_text(lambda2);
+  let input = throws_assert_text(lambda);
   let part = object_merge_generic_message_match();
   text_includes_assert(input, part);
 }

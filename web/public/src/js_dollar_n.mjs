@@ -21,7 +21,7 @@ export function js_dollar_n({
 }) {
   let n = list_next(stack2, stack1);
   let test = property_get(n, "test");
-  function lambda2() {
+  function lambda() {
     let name = js_call_callee_name_try(test);
     log(js_dollar_n.name, {
       name,
@@ -34,6 +34,6 @@ export function js_dollar_n({
       list_remove(stack2, stack1);
     }
   }
-  js_node_type_is_if(test, "CallExpression", lambda2);
+  js_node_type_is_if(test, "CallExpression", lambda);
   return;
 }

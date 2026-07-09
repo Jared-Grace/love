@@ -4,7 +4,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function fn_name_arg_get(args, f_name) {
   let first = list_first(args);
-  function lambda3() {
+  function lambda() {
     let v = {
       msg: text_combine_multiple([
         fn_name.name,
@@ -14,6 +14,6 @@ export function fn_name_arg_get(args, f_name) {
     };
     return v;
   }
-  js_literal_is_assert(first, lambda3);
+  js_literal_is_assert(first, lambda);
   return first;
 }

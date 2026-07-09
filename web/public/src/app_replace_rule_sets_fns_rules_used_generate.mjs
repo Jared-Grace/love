@@ -23,7 +23,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     async function lambda(a) {
       let f_name = property_get(a, "name");
       let rs = await function_run_args_none(f_name);
-      let name2 = property_get(rs, "name");
+      let name = property_get(rs, "name");
       log(app_replace_rule_sets_fns_rules_used_generate.name, {
         rs,
       });
@@ -45,13 +45,13 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       let s = js_string(p_name);
       let p = js_property(s, expression);
       list_add(properties, p);
-      oad(name2, rules_used);
+      oad(name, rules_used);
     }
-    let r2 =
+    let r =
       await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
     let names = app_replace_rule_sets_fns_names();
     let asts = await functions_asts_list(names);
-    let waited = await list_map_unordered_async(asts, r2);
+    let waited = await list_map_unordered_async(asts, r);
   }
   let result = await object_adder_async(lambda3);
   let e = js_object_to_expression(result);

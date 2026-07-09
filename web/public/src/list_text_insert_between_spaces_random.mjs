@@ -16,15 +16,15 @@ export function list_text_insert_between_spaces_random(item3) {
   let m = math_max(1, max);
   let count = integer_random(1, m);
   let items = list_shuffle_take(skipped, count);
-  function lambda2(item, index) {
+  function lambda(item, index) {
     let includes = list_includes(items, index);
     let on_true = text_space_nb();
     let result = ternary(includes, on_true, "");
     let r = [result, item];
     return r;
   }
-  let mapped3 = list_map_index(item3, lambda2);
-  let squashed = list_squash(mapped3);
+  let mapped = list_map_index(item3, lambda);
+  let squashed = list_squash(mapped);
   let joined = list_join_empty(squashed);
   let split = text_split_empty(joined);
   return split;

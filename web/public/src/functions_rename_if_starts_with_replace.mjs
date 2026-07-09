@@ -7,6 +7,6 @@ export async function functions_rename_if_starts_with_replace(
   to,
 ) {
   arguments_assert(arguments, 3);
-  let r2 = text_replace_curried_right_2(from, to);
-  await functions_rename_generic_starts_with(r2, f_name_prefix);
+  let r = text_replace_curried_right_2(from, to);
+  await functions_rename_generic_starts_with(r, f_name_prefix);
 }

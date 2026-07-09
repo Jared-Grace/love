@@ -7,12 +7,12 @@ export async function app_a_file_system_initialize() {
   if (value) {
     return;
   }
-  async function lambda2() {
+  async function lambda() {
     await app_a_file_system_initialize_download();
     return true;
   }
   let value2 = await global_function_initialize_lambda_async(
     app_a_file_system_initialize,
-    lambda2,
+    lambda,
   );
 }

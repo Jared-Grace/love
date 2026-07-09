@@ -13,9 +13,9 @@ export function ebible_parts_to_reference(
   let book_name = ebible_book_code_to_name(books, book_code);
   let verse_numbers_s = null;
   let unique = list_unique(verse_numbers);
-  let s1 = list_size_1(unique);
+  let s = list_size_1(unique);
   let first = list_first(unique);
-  if (s1) {
+  if (s) {
     verse_numbers_s = first;
   } else {
     let last = list_last(unique);

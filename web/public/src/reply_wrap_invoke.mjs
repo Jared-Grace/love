@@ -19,9 +19,9 @@ export async function reply_wrap_invoke(item, possibilities) {
   if (fi) {
     wrapped = item;
   } else {
-    let si2 = text_is(item);
+    let si = text_is(item);
     let size = null;
-    if (si2) {
+    if (si) {
       size = text_size(item);
       if (size > 1) {
         let split = text_split_empty(item);
@@ -38,7 +38,7 @@ export async function reply_wrap_invoke(item, possibilities) {
           let e = json_equal(item, token);
           let empty = item === "";
           let delta = 1;
-          if (si2) {
+          if (si) {
             integer_is_assert(size);
             delta = size;
           }
