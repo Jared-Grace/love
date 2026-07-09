@@ -23,6 +23,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   function batch_get() {
+    list_iterator_refillable(operators);
     let mapper = function lambda2(o) {
       let next_get = list_iterator_refillable(refill_get);
       let r = js_operator_to_code_call(o, next);
