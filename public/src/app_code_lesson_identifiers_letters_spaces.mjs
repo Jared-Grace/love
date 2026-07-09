@@ -7,6 +7,8 @@ import { list_join_space_nb } from "../../../love/public/src/list_join_space_nb.
 import { js_identifier_words_invalid } from "../../../love/public/src/js_identifier_words_invalid.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { app_code_lesson_identifiers_valid } from "../../../love/public/src/app_code_lesson_identifiers_valid.mjs";
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
 import { languages_popular } from "../../../love/public/src/languages_popular.mjs";
@@ -73,9 +75,15 @@ export function app_code_lesson_identifiers_letters_spaces() {
     let difference = list_difference(mapped2, list_other);
     return difference;
   }
+  let r = app_code_lesson_name_id("identifiers", [
+    "letters allowed",
+    "spaces not",
+  ]);
+  let id = property_get(r, "id");
+  let name = property_get(r, "name");
   let r5 = app_code_lesson_identifiers_valid(
-    "Identifiers (letters allowed, spaces not)",
-    "identifiers_letters_spaces",
+    name,
+    id,
     lambda,
     batch_get,
     app_code_symbols_separated_on_question,
