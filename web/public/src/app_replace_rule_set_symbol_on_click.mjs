@@ -26,6 +26,8 @@ import { app_replace_button_symbol_style_valid_if_multiple } from "../../../love
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { divide } from "../../../love/public/src/divide.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export async function app_replace_rule_set_symbol_on_click(
   rules_parsed,
   index_selected,
@@ -73,7 +75,7 @@ export async function app_replace_rule_set_symbol_on_click(
       await html_request_animation_frame();
       ("here the duration depends on the distance so that smaller distances take less time");
       const time =
-        (distance * 4 * duration) / app_replace_animation_duration_max();
+        divide(multiply(multiply(distance, 4), duration), app_replace_animation_duration_max());
       await html_move_animate_translate(el, 0, 0, time);
       await sleep(time);
       html_translation_transition_clear(el);

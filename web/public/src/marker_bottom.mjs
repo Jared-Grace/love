@@ -2,13 +2,14 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { marker_down_generic } from "../../../love/public/src/marker_down_generic.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export async function marker_bottom() {
   let v2 = await marker_down_generic(delta_get);
   return v2;
   function delta_get(a) {
     let index = property_get(a, "index");
     let choices = property_get(a, "choices");
-    let v = text_combine(list_index_last(choices) - index, 1);
+    let v = text_combine(subtract(list_index_last(choices), index), 1);
     return v;
   }
 }
