@@ -13,9 +13,9 @@ export function app_code_lesson_name_id(left, rights) {
   let concated = list_concat_single(left, rights);
   let joined_id = list_join_underscore(concated);
   let id = text_lower_to(joined_id);
-  let r = {
+  let ni = {
     name,
     id,
   };
-  return r;
+  return ni;
 }
