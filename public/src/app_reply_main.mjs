@@ -34,6 +34,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export async function app_reply_main(context) {
   let r = await app_reply_initialize(context);
   let choices = property_get(r, "choices");
@@ -86,7 +87,7 @@ export async function app_reply_main(context) {
   }
   each_range_from(1, 4, lambda10);
   function lambda4(item) {
-    let c = item * 2;
+    let c = multiply(item, 2);
     list_add(choices_verse_count, c);
   }
   each_range_from(3, 6, lambda4);

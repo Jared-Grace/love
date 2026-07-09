@@ -1,5 +1,6 @@
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { each_previous_generic } from "../../../love/public/src/each_previous_generic.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export function each_previous_reverse(list, lambda$item$previous) {
   let reversed = list_copy_reverse(list);
   let v4 = each_previous_generic(
@@ -14,7 +15,7 @@ export function each_previous_reverse(list, lambda$item$previous) {
     return v2;
   }
   function index_other_get(index) {
-    let v3 = index - 1;
+    let v3 = subtract(index, 1);
     return v3;
   }
 }

@@ -1,4 +1,5 @@
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export function path_join(segments) {
   if (!segments || !segments.length) throw new Error("Missing segments");
 
@@ -21,7 +22,7 @@ export function path_join(segments) {
     for (let s of split) {
       if (s === "" || s === ".") continue;
       if (s === "..") {
-        if (parts.length && parts[parts.length - 1] !== "..") {
+        if (parts.length && parts[subtract(parts.length, 1)] !== "..") {
           parts.pop();
         } else {
           parts.push("..");
