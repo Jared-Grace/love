@@ -7,7 +7,7 @@ export function html_style_text_left_centered(
 ) {
   html_style_assign(component, {
     display: "grid",
-    "grid-template-columns": "auto 1fr auto",
+    "grid-template-columns": "auto 1fr",
     "align-items": "center",
   });
   let left = html_span_text(component, text_left);
