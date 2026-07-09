@@ -1,3 +1,4 @@
+import { app_code_lesson_name_id_space } from "../../../love/public/src/app_code_lesson_name_id_space.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
@@ -11,6 +12,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic_invalid() {
+  app_code_lesson_name_id_space();
   let name = "Functions (arithmetic, invalid)";
   let id = "functions_arithmetic_invalid";
   const example_label = "Function: ";
