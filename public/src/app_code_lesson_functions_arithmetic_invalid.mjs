@@ -17,7 +17,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   function batch_get() {
     let mapper = function lambda2(o) {
       let r = js_operator_to_code_call(o, next);
-      let ca = property_get(r, "call");
+      let answer = property_get(r, "call");
       let question = property_get(r, "expression");
       let r3 = {
         question,
