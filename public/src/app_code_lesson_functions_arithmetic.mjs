@@ -1,3 +1,4 @@
+import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { app_code_code_example_name } from "../../../love/public/src/app_code_code_example_name.mjs";
 import { html_div_cycle_code_bold } from "../../../love/public/src/html_div_cycle_code_bold.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -88,8 +89,7 @@ export function app_code_lesson_functions_arithmetic() {
     let c = app_code_container_light_blue(root);
     let verb = property_get(o_f, "verb");
     app_code_code_example_name(c, verb, "function");
-    let r = js_operator_to_code_call(o_f, next);
-    let code = property_get(r, "call");
+    let code = js_operator_to_code_call_only(o_f, next);
     html_div_cycle_code_bold(c, ["", code, " is called a ", "function call"]);
   }
 }
