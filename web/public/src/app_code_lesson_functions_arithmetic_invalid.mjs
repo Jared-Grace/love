@@ -29,6 +29,8 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     function lambda(la) {
       let o = operators_next();
       let call = js_operator_to_code_call_only(o, next);
+      la(call);
+      let call2 = js_operator_to_code_call_only(o, next);
       let next_get2 = list_iterator_refillable(symbols_required);
     }
     let list = list_adder(lambda);
