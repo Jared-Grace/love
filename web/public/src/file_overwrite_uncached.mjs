@@ -14,6 +14,7 @@ import { app_a_file_system_initialize } from "../../../love/public/src/app_a_fil
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
+import { file_path_temp } from "../../../love/public/src/file_path_temp.mjs";
 export async function file_overwrite_uncached(file_path, contents) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -56,7 +57,14 @@ export async function file_overwrite_uncached(file_path, contents) {
   } else {
     await file_parent_exists_ensure(file_path);
     let fs = await import("fs");
-    await fs.promises.writeFile(file_path, contents, "utf-8");
+    let temp_path = file_path_temp(file_path);
+    try {
+      await fs.promises.writeFile(temp_path, contents, "utf-8");
+      await fs.promises.rename(temp_path, file_path);
+    } catch (e) {
+      await fs.promises.unlink(temp_path).catch(() => {});
+      throw e;
+    }
   }
   await data_file_update(file_path);
   return;
