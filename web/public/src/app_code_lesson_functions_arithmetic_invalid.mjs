@@ -12,9 +12,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic_invalid() {
-  let r = app_code_lesson_name_id("functions", ["arithmetic", "invalid"]);
-  let id = property_get(r, "id");
-  let name = property_get(r, "name");
+  let name_id = app_code_lesson_name_id("functions", ["arithmetic", "invalid"]);
   const example_label = "Function: ";
   const quiz_label = "What is this code rewritten using a function?";
   let question_label = app_code_label_code_question();
@@ -39,7 +37,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let quiz_backwards_label_answer =
     "Rewrite this function using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
-  let lesson = app_code_lesson_validity_code(batch_get, id, name, above);
+  let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
     let next = range_1_next(m);

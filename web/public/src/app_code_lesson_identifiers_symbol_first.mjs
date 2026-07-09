@@ -25,11 +25,12 @@ import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
-  let name = "Identifiers (first symbol)";
-  let id = "identifiers_symbol_first";
+  let name_id = {
+    name: "Identifiers (first symbol)",
+    id: "identifiers_symbol_first",
+  };
   let r = app_code_lesson_identifiers_symbol_first_generic(
-    name,
-    id,
+    name_id,
     above,
     app_code_symbols_separated_on_question,
   );
