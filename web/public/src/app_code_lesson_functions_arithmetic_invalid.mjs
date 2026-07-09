@@ -1,3 +1,4 @@
+import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_adder_each_index } from "../../../love/public/src/list_adder_each_index.mjs";
@@ -58,10 +59,11 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       }
     }
     let r4 = list_adder_each_index(list, lambda);
+    let combined2 = list_between_space(r4);
     list_add_first(
-      r4,
-      "If any of these are missing from the function call, then the code is invalid",
+      combined2,
+      "If any of these are missing from the function call, then the code is invalid ",
     );
-    html_div_cycle_code(c, []);
+    html_div_cycle_code(c, combined2);
   }
 }
