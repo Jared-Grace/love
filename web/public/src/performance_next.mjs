@@ -5,6 +5,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { performance_now } from "../../../love/public/src/performance_now.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export function performance_next(p, category) {
   arguments_assert(arguments, 2);
   const time = performance_now();
@@ -13,7 +14,7 @@ export function performance_next(p, category) {
   if (e) {
     let last = list_last(p);
     let time_previous = property_get(last, "time");
-    delta = time - time_previous;
+    delta = subtract(time, time_previous);
     property_set(last, "delta", delta);
   }
   list_add(p, {

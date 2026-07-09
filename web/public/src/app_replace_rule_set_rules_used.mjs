@@ -8,12 +8,13 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export function app_replace_rule_set_rules_used(rules_parsed, start, end) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
   let size = list_size(rules_used);
-  let number_to_add = 3 - size;
+  let number_to_add = subtract(3, size);
   let p = positive_is(number_to_add);
   log(app_replace_rule_set_rules_used.name, {
     number_to_add,

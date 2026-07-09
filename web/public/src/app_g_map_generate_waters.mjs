@@ -6,10 +6,11 @@ import { list_set_nested_y_x } from "../../../love/public/src/list_set_nested_y_
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { app_g_map_generate_waters_next } from "../../../love/public/src/app_g_map_generate_waters_next.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
 export function app_g_map_generate_waters(rows) {
   let coordinates = g_coordinates(rows);
   let total = list_size_nested(rows);
-  let water_count = floor(total * 0.3);
+  let water_count = floor(multiply(total, 0.3));
   let waters = [];
   function lambda(i) {
     let r = app_g_map_generate_waters_next(waters, coordinates);
