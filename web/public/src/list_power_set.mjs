@@ -7,6 +7,7 @@ export function list_power_set(list, index, result, results) {
   let n = list_index_not_is(list, index);
   if (n) {
     list_add(results, result);
+    return;
   }
   let item = list_get(list, index);
   list_add(result, item);
