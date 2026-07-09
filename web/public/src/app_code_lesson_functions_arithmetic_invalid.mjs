@@ -1,8 +1,6 @@
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
-import { js_operator_left_right_to_code_call } from "../../../love/public/src/js_operator_left_right_to_code_call.mjs";
-import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
@@ -19,6 +17,12 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   function batch_get() {
     let mapper = function lambda2(o) {
       let r = js_operator_to_code_call(o, next);
+      let answer = property_get(r, "answer");
+      let question = property_get(r, "question");
+      let r3 = {
+        question,
+        answer,
+      };
       return r;
     };
     let mapped = list_map(operators, mapper);
@@ -29,9 +33,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   function above(root) {
     let next = range_1_next(m);
     function lambda(o) {
-      let r2 = js_operator_to_expression(o, next);
-      let expression = property_get(r2, "expression");
-      let code = js_operator_left_right_to_code_call(o, r2);
+      let r = js_operator_to_code_call(o, next);
       let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
