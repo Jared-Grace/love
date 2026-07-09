@@ -1,1 +1,1 @@
-export function list_power_set() {}
+export function list_power_set(list) {}
