@@ -6,10 +6,15 @@ export function html_style_text_left_centered(
   text_centered,
 ) {
   html_style_assign(component, {
-    display: "flex",
+    display: "grid",
+    "grid-template-columns": "auto 1fr auto",
     "align-items": "center",
   });
-  let n = html_span_text(component, text_left);
+  let left = html_span_text(component, text_left);
+  html_style_assign(left, {
+    "flex-grow": "1",
+    "text-align": "center",
+  });
   let title = html_span_text(component, text_centered);
   html_style_assign(title, {
     "flex-grow": "1",
