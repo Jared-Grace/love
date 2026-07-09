@@ -58,7 +58,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
         la(item);
       }
     }
-    let r4 = list_adder_each_index(list, lambda);
+    let r4 = list_adder_each_index(parts, lambda);
     let combined2 = list_between_space(r4);
     list_add_first(
       combined2,
