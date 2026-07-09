@@ -1,6 +1,6 @@
+import { js_operator_to_call } from "../../../love/public/src/js_operator_to_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
-import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { js_operator_left_right_to_call } from "../../../love/public/src/js_operator_left_right_to_call.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -13,17 +13,14 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_functions_arithmetic_invalid() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic", "invalid"]);
-  const example_label = "Function: ";
-  const quiz_label = "What is this code rewritten using a function?";
-  let question_label = app_code_label_code_question();
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
   function batch_get() {
     let mapper = function lambda2(o) {
-      let e = js_operator_to_expression(o, next);
-      let question = property_get(e, "expression");
-      let answer = js_operator_left_right_to_call(o, e);
+      let r = js_operator_to_call(o, next);
+      let answer = property_get(r, "answer");
+      let question = property_get(r, "question");
       let r3 = {
         question,
         answer,
@@ -33,10 +30,6 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
-  let example_count = 1;
-  let quiz_backwards_label_answer =
-    "Rewrite this function using a math symbol: ";
-  let quiz_backwards_answer_count_override = null;
   let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
