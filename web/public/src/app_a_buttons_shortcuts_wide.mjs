@@ -3,7 +3,7 @@ import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_e
 export function app_a_buttons_shortcuts_wide(parent, choices) {
   app_a_shortcuts_each(choices, on_choice);
   function on_choice(shortcut, text, fn) {
-    let b3 = app_a_button_shortcut_wide(parent, shortcut, text, fn);
-    return b3;
+    let b = app_a_button_shortcut_wide(parent, shortcut, text, fn);
+    return b;
   }
 }

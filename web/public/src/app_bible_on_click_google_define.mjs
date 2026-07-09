@@ -5,10 +5,10 @@ import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 export function app_bible_on_click_google_define(top, text) {
   let split = text_split_space(text);
-  function lambda2(item) {
+  function lambda(item) {
     html_span_space(top);
     let search_term = text_combine(item, " (Bible)");
     html_span_on_click_google_define(top, item, search_term);
   }
-  each(split, lambda2);
+  each(split, lambda);
 }

@@ -14,8 +14,8 @@ export async function invoke_cache_indexeddb(fn, args, db_get, store) {
     return item;
   };
   let cache_save = async function lambda4(key, value) {
-    let value_get2 = lambda_get(value);
-    await indexeddb_put(db_get, store, key, value_get2);
+    let value_get = lambda_get(value);
+    await indexeddb_put(db_get, store, key, value_get);
   };
   let r = await invoke_cache_generic(
     fn,

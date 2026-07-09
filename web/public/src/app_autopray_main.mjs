@@ -9,7 +9,7 @@ import { object_map_async } from "../../../love/public/src/object_map_async.mjs"
 import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function app_autopray_main(context) {
   let root = property_get(context, "root");
-  async function lambda2(verse_text, verse_reference) {
+  async function lambda(verse_text, verse_reference) {
     html_clear(root);
     let v2 = prayer_start();
     let v3 = prayer_end();
@@ -26,6 +26,6 @@ export async function app_autopray_main(context) {
     await sleep(c);
   }
   while (true) {
-    await object_map_async(v, lambda2);
+    await object_map_async(v, lambda);
   }
 }

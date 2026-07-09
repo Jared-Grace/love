@@ -4,9 +4,9 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-export function app_replace_rule_apply(rule2, index, start) {
-  let right = property_get(rule2, "right");
-  let left = property_get(rule2, "left");
+export function app_replace_rule_apply(rule, index, start) {
+  let right = property_get(rule, "right");
+  let left = property_get(rule, "left");
   let before = list_take(start, index);
   let size = list_size(left);
   let after = list_skip(start, text_combine(index, size));

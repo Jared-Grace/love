@@ -5,6 +5,6 @@ export function list_map_path_join(list, f_name) {
     let joined = path_join([item, f_name]);
     return joined;
   }
-  let mapped2 = list_map(list, lambda);
-  return mapped2;
+  let mapped = list_map(list, lambda);
+  return mapped;
 }

@@ -24,8 +24,8 @@ export async function webpack_build_generic(
   let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
   let combined = function_name_combine(f_name, "run");
-  let path2 = path_join(["temp", combined]);
-  let f_name_ext = folder_scripts_join_mjs(path2);
+  let path = path_join(["temp", combined]);
+  let f_name_ext = folder_scripts_join_mjs(path);
   let joined = webpack_build_generic_source(f_name);
   let r = file_name_js(a_name);
   async function lambda(entry) {

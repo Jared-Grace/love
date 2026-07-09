@@ -19,14 +19,14 @@ export async function app_index_main_fns_migrate() {
       let identifier_name = "app_fn";
       let filter = function lambda4(item3) {
         let i = property_get(item3, key);
-        let r2 = js_identifier_named_try(i, identifier_name);
-        return r2;
+        let r = js_identifier_named_try(i, identifier_name);
+        return r;
       };
       let item2 = list_find(properties, filter);
       const value = "value";
       let v2 = property_get(item2, value);
-      let name2 = js_identifier_name(v2);
-      let code_string = js_code_string(name2);
+      let name = js_identifier_name(v2);
+      let code_string = js_code_string(name);
       let parsed = js_call_arg_code(fn_name.name, code_string);
       property_set(item2, value, parsed);
     }

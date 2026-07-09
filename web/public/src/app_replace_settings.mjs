@@ -68,20 +68,20 @@ export function app_replace_settings(context) {
       },
     ];
     function lambda(choice) {
-      let ending2 = property_get(choice, "ending");
-      let animation_duration2 = property_get(choice, "animation_duration");
-      let combined2 = text_combine("Animations ", ending2);
+      let ending = property_get(choice, "ending");
+      let animation_duration = property_get(choice, "animation_duration");
+      let combined2 = text_combine("Animations ", ending);
       let combined = text_combine(left, combined2);
       function lambda4() {
         storage_local_set_context(
           context,
           "animation_duration",
-          animation_duration2,
+          animation_duration,
         );
         app_shared_screen_set(context, app_replace_settings);
       }
       let b = app_replace_button(div2, combined, lambda4);
-      if (equal(animation_duration2, duration)) {
+      if (equal(animation_duration, duration)) {
         html_style_background_color_set(b, highlight);
       }
     }

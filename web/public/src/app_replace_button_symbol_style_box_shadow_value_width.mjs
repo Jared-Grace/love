@@ -3,6 +3,6 @@ export function app_replace_button_symbol_style_box_shadow_value_width(
   color,
   width,
 ) {
-  let r2 = text_combine_multiple([" 0 0 0 ", width, "em", " ", color]);
-  return r2;
+  let r = text_combine_multiple([" 0 0 0 ", width, "em", " ", color]);
+  return r;
 }

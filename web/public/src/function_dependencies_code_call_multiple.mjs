@@ -13,6 +13,6 @@ export async function function_dependencies_code_call_multiple(
     let code = app_shared_code_run(f_name_call, dependencies, call_code_get);
     return code;
   }
-  let value2 = property_transform(r, "code", lambda);
+  let value = property_transform(r, "code", lambda);
   return r;
 }

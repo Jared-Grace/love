@@ -6,7 +6,7 @@ export function app_replace_rule_set_expressions_function_calls_abbreviations(
   app_replace_rule_set_expressions_member_and_access_abbreviations(
     abbreviations,
   );
-  let to2 = object_merge_set(abbreviations, {
+  let to = object_merge_set(abbreviations, {
     ce: ["", "c", "all ", "e", "xpression"],
     ag: ["", "a", "rguments ", "g", "rower"],
   });

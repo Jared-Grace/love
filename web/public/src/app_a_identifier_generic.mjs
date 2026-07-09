@@ -61,7 +61,7 @@ export function app_a_identifier_generic(
     let ast = property_get(a, "ast");
     let v_match = js_node_to_visitor(ast, node);
     let stack = property_get(v_match, "stack");
-    let e2 = list_get_end_2(stack);
+    let e = list_get_end_2(stack);
     let overlay_close = property_get(o3, "overlay_close");
     let overlay = property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
@@ -73,10 +73,10 @@ export function app_a_identifier_generic(
         let o = property_get(r, "overlay_result");
         let overlay = property_get(o, "overlay");
         let oc = property_get(r, "container");
-        let text2 = property_get(change, "text");
-        let div2 = html_div_text(oc, text_combine(text2, " from:"));
+        let text = property_get(change, "text");
+        let div2 = html_div_text(oc, text_combine(text, " from:"));
         let div = html_div_text(oc, name);
-        html_div_text(oc, text_combine(text2, " to:"));
+        html_div_text(oc, text_combine(text, " to:"));
         let fn = null;
         fn = ternary(lines_multiple, app_a_textarea, app_a_input);
         let input = fn(overlay);
@@ -94,10 +94,10 @@ export function app_a_identifier_generic(
           await on_change(value_new);
           await app_a_function_on_change(a, o);
         }
-        let component = app_a_button_wide(overlay, text2, on_enter);
+        let component = app_a_button_wide(overlay, text, on_enter);
       },
     };
-    let to2 = object_merge_set(change, c);
+    let to = object_merge_set(change, c);
     list_add_multiple(choices, [
       {
         shortcut: "c",
@@ -199,7 +199,7 @@ export function app_a_identifier_generic(
             log(app_a_identifier_generic.name, {
               assign,
             });
-            object_replace(e2, assign);
+            object_replace(e, assign);
             await app_a_function_on_change(a, o3);
           },
         };
@@ -207,7 +207,7 @@ export function app_a_identifier_generic(
       }
       js_node_type_is_if(e1, "CallExpression", lambda7);
     }
-    js_node_type_is_if(e2, "ExpressionStatement", lambda6);
+    js_node_type_is_if(e, "ExpressionStatement", lambda6);
     function lambda4() {
       const c = {
         shortcut: "q",
@@ -221,7 +221,7 @@ export function app_a_identifier_generic(
       };
       list_add(choices, c);
     }
-    js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
+    js_node_type_is_if(e, "FunctionDeclaration", lambda4);
   }
   app_a_overlay_choices(a, span, choices_get);
 }

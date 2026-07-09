@@ -92,15 +92,15 @@ export function app_code_lesson_identifiers_underscores_generic(
       [separator_valid, separator_invalid],
       [separator_invalid, separator_valid],
     ]);
-    function lambda2(batch_item, batch_item_index) {
+    function lambda(batch_item, batch_item_index) {
       let separators = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {
         separators = [separator_valid];
       } else {
         let size = list_size(batch_item);
-        let eq2 = equal_2(size);
-        if (eq2) {
+        let eq = equal_2(size);
+        if (eq) {
           separators = [separator_invalid];
         } else {
           separators = separators_invalid_next();
@@ -115,7 +115,7 @@ export function app_code_lesson_identifiers_underscores_generic(
       }
       return joined;
     }
-    let mapped3 = list_map_index(list, lambda2);
+    let mapped3 = list_map_index(list, lambda);
     return mapped3;
   }
   let name_id = app_code_lesson_name_id("identifiers", [

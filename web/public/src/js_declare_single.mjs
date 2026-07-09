@@ -9,8 +9,8 @@ export function js_declare_single(vd) {
     return null;
   }
   let declarations = js_declare_declarations_get(vd);
-  let s1 = list_size_1(declarations);
-  if (not(s1)) {
+  let s = list_size_1(declarations);
+  if (not(s)) {
     return null;
   }
   let declaration = list_single(declarations);

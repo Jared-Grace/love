@@ -93,14 +93,14 @@ export function app_chapter_toggle_update(
         verses,
         "verse_number",
       );
-      let mapped3 = list_map_property(verse_numbers_mapped, "text");
+      let mapped = list_map_property(verse_numbers_mapped, "text");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
         [first, last],
       );
-      let concated2 = list_concat([reference], mapped3);
-      return concated2;
+      let concated = list_concat([reference], mapped);
+      return concated;
     }
     let m = list_map(languages_verses, lambda3);
     let squashed = list_squash(m);

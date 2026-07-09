@@ -4,10 +4,10 @@ import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs"
 export function bible_verse_trim_right(text) {
   let suffixes = '"”) ’';
   let split = text_split_empty(suffixes);
-  function lambda3(s2) {
-    let ew = text_ends_with_any(s2, split);
+  function lambda(s) {
+    let ew = text_ends_with_any(s, split);
     return ew;
   }
-  let trimmed = text_trim_right(lambda3, text);
+  let trimmed = text_trim_right(lambda, text);
   return trimmed;
 }

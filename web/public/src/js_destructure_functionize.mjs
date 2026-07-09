@@ -20,20 +20,20 @@ import { js_return_identifier_name } from "../../../love/public/src/js_return_id
 export async function js_destructure_functionize(ast) {
   let variable_name = js_return_identifier_name();
   function lambda(v) {
-    let node2 = property_get(v, "node");
-    let properties = property_get(node2, "properties");
+    let node = property_get(v, "node");
+    let properties = property_get(node, "properties");
     let stack = property_get(v, "stack");
-    let e1 = list_get_end_1(stack);
-    let l = list_is(e1);
+    let e = list_get_end_1(stack);
+    let l = list_is(e);
     if (l) {
       return;
     }
-    let type_is = js_node_type_is(e1, "AssignmentExpression");
+    let type_is = js_node_type_is(e, "AssignmentExpression");
     if (type_is) {
       return;
     }
-    js_node_type_is_assert(e1, "VariableDeclarator");
-    let init = js_declare_init_get(e1);
+    js_node_type_is_assert(e, "VariableDeclarator");
+    let init = js_declare_init_get(e);
     let ii = js_identifier_is(init);
     let result = null;
     if (ii) {
@@ -65,7 +65,7 @@ export async function js_destructure_functionize(ast) {
       list_remove(block_body, block_body_item);
     } else {
       let expression = js_parse_expression(name4);
-      property_set(e1, "id", expression);
+      property_set(e, "id", expression);
     }
   }
   js_visit_type(ast, "ObjectPattern", lambda);

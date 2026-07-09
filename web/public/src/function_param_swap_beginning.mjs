@@ -14,8 +14,8 @@ export async function function_param_swap_beginning(f_name) {
     list_swap_at(args, index_a, index_b);
   }
   function function_transform_current_lambda(ast) {
-    let v2 = js_function_declaration_params_ast_get(ast);
-    let params = property_get(v2, "params");
+    let v = js_function_declaration_params_ast_get(ast);
+    let params = property_get(v, "params");
     list_swap_at(params, index_a, index_b);
   }
 }

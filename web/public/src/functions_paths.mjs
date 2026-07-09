@@ -7,11 +7,11 @@ export async function functions_paths() {
   arguments_assert(arguments, 0);
   async function mapper(folder) {
     let f_names = await functions_names_from_path(folder);
-    function lambda2(f_name) {
+    function lambda(f_name) {
       let v = function_name_folder_to_path(f_name, folder);
       return v;
     }
-    let mapped = list_map(f_names, lambda2);
+    let mapped = list_map(f_names, lambda);
     return mapped;
   }
   let squashed =

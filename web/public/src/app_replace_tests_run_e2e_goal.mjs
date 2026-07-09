@@ -65,8 +65,8 @@ export async function app_replace_tests_run_e2e_goal(
       }
       await each_async(path, each_step);
       let last_goal = false;
-      let eq2 = json_equal(rule_set, last_rs);
-      if (eq2) {
+      let eq = json_equal(rule_set, last_rs);
+      if (eq) {
         if (json_equal(goal, goal_last)) {
           last_goal = true;
         }

@@ -10,9 +10,9 @@ export function js_object_expression_named_generic(ast, node_type, search) {
   function lambda2(la) {
     function lambda(v) {
       let stack = property_get(v, "stack");
-      let e1 = list_get_end_1(stack);
+      let e = list_get_end_1(stack);
       function lambda3() {
-        let id = property_get(e1, "id");
+        let id = property_get(e, "id");
         function lambda4() {
           let name = js_identifier_name(id);
           if (equal(name, search)) {
@@ -22,7 +22,7 @@ export function js_object_expression_named_generic(ast, node_type, search) {
         }
         js_node_type_is_if(id, "Identifier", lambda4);
       }
-      js_node_type_is_if(e1, "VariableDeclarator", lambda3);
+      js_node_type_is_if(e, "VariableDeclarator", lambda3);
     }
     js_visit_type(ast, node_type, lambda);
   }

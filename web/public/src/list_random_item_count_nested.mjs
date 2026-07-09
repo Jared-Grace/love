@@ -8,8 +8,8 @@ export function list_random_item_count_nested(
 ) {
   function lambda10(la) {
     function lambda6(i) {
-      let list2 = list_random_item_count(tiles_choices, column_count);
-      la(list2);
+      let list = list_random_item_count(tiles_choices, column_count);
+      la(list);
     }
     each_range(row_count, lambda6);
   }

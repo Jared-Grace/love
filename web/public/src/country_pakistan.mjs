@@ -1,8 +1,8 @@
 export function country_pakistan() {
-  let r2 = {
+  let r = {
     name: "Pakistan",
     zone: "Asia/Karachi",
     flag: "🇵🇰",
   };
-  return r2;
+  return r;
 }

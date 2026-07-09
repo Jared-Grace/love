@@ -10,10 +10,10 @@ export function storage_local_remove_app(context) {
   let keys = storage_local_keys_context(context);
   ("confirm local storage values");
   let dictionary = storage_local_keys_values(context, keys);
-  function lambda3(key) {
+  function lambda(key) {
     storage_local_remove(af, key);
   }
-  each(keys, lambda3);
+  each(keys, lambda);
   storage_local_keys_context_empty_is_assert(context);
   return dictionary;
 }

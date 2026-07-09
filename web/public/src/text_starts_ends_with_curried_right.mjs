@@ -13,7 +13,7 @@ export function text_starts_ends_with_curried_right(
     " is ran correctly",
   ]);
   text_is_assert_multiple([f_name_prefix, f_name_suffix_before]);
-  let r2 = function text_starts_ends_with_curry_right_result(f_name) {
+  let r = function text_starts_ends_with_curry_right_result(f_name) {
     text_is_assert(f_name);
     let sew = text_starts_ends_with(
       f_name,
@@ -22,5 +22,5 @@ export function text_starts_ends_with_curried_right(
     );
     return sew;
   };
-  return r2;
+  return r;
 }

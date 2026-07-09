@@ -12,9 +12,9 @@ export async function app_message_download() {
     prefix: app_message_firebase_path(),
   });
   async function lambda(item) {
-    let name2 = property_get(item, "name");
+    let name = property_get(item, "name");
     let project_url = firebase_storage_url_project_jg();
-    let buffer = await firebase_storage_download(project_url, name2);
+    let buffer = await firebase_storage_download(project_url, name);
     let s = buffer_text_to(buffer);
     let o = json_from(s);
     return o;

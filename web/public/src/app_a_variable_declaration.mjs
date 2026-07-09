@@ -14,7 +14,7 @@ export function app_a_variable_declaration(a) {
   let kind = property_get(node, "kind");
   let k = app_a_keyword_blue_space(parent, kind);
   let keyword = property_get(k, "keyword");
-  function lambda19(o, choices) {
+  function lambda(o, choices) {
     app_a_statement_choices_add(choices, a, o);
     app_a_functionize_choices_add(choices, a, o);
     let v = app_a_node_index(a);
@@ -22,7 +22,7 @@ export function app_a_variable_declaration(a) {
     let list = property_get(v, "list");
     app_a_paste(choices, a, o, list, index, "above");
   }
-  app_a_overlay_choices(a, keyword, lambda19);
+  app_a_overlay_choices(a, keyword, lambda);
   let declarations = js_declare_declarations_get(node);
   app_a_nodes_list(a, declarations, parent);
   app_a_semicolon(parent);

@@ -10,8 +10,8 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_parse_left_right_only(rule) {
   let split = text_split_space(rule);
   let middle = list_index_of(split, ">");
-  let r2 = text_replace_curried_right_2(">>", ">");
-  let mapped = list_map(split, r2);
+  let r = text_replace_curried_right_2(">>", ">");
+  let mapped = list_map(split, r);
   let left = list_take(mapped, middle);
   let right = list_skip(mapped, text_combine(middle, 1));
   each([left, right], list_includes_empty_not_assert);

@@ -21,9 +21,9 @@ export async function app_g_game_initialize() {
     coordinates,
     rows,
   });
-  let lambda4 = global_function_property_set_curried_specify_1_3(
+  let lambda = global_function_property_set_curried_specify_1_3(
     app_g_main,
     null,
   );
-  g_tutorials_each(lambda4);
+  g_tutorials_each(lambda);
 }

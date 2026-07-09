@@ -3,8 +3,8 @@ export async function puppeteer_matches(page, tag_name, text) {
   const matches = [];
   for (const el of elements) {
     function lambda(n) {
-      let v2 = n.textContent;
-      return v2;
+      let v = n.textContent;
+      return v;
     }
     const txt = await el.evaluate(lambda);
     if (txt === text) {

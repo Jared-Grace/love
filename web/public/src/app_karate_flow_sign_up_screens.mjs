@@ -11,7 +11,7 @@ export function app_karate_flow_sign_up_screens(context) {
     },
     {
       fn: app_karate_computer_save,
-      skip: function lambda3() {
+      skip: function lambda() {
         let value = app_karate_computer_save_property_value(context);
         let v2 = value === app_karate_computer_save_trusted();
         return v2;

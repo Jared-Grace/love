@@ -89,14 +89,14 @@ export async function app_search_results(context, div_results) {
     }
     let waited = await list_map_unordered_async(button_list, lambda9);
     html_remove(expand_all);
-    let c2 = html_button_copy_text();
+    let c = html_button_copy_text();
     async function lambda6() {
       let squashed = list_squash(waited);
       await list_join_newline_2_copy(squashed);
     }
     let component = html_button_wide(
       expand_all_div,
-      text_combine(c2, " all"),
+      text_combine(c, " all"),
       lambda6,
     );
   }
@@ -165,8 +165,8 @@ export async function app_search_results(context, div_results) {
   let button_lists = list_map(results, each_result);
   let mapped2 = list_filter(button_lists, null_not_is);
   button_list = list_squash(mapped2);
-  let s1 = list_size_1(button_list);
-  if (s1) {
+  let s = list_size_1(button_list);
+  if (s) {
     let only = list_single(button_list);
     only();
   }

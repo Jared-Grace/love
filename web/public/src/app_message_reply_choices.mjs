@@ -52,10 +52,10 @@ export function app_message_reply_choices() {
     o_according_to_gods_will,
   ]);
   let visit = reply_on_match_output_code(s_visit, will_be_done, "todo()");
-  let you2 = reply_phrase_you();
-  let thank_you = reply_sequence(["thank", you2]);
-  let item6 = app_reply_choices_glory();
-  let thanks = reply_choice_output(["thanks", thank_you], item6);
+  let you = reply_phrase_you();
+  let thank_you = reply_sequence(["thank", you]);
+  let item = app_reply_choices_glory();
+  let thanks = reply_choice_output(["thanks", thank_you], item);
   let d = digits();
   let rc_digits = reply_choice(d);
   let digits_oom = reply_once_or_more(rc_digits);

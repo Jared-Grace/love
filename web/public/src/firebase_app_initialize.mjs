@@ -2,12 +2,12 @@ import { global_function_async } from "../../../love/public/src/global_function_
 import { firebase_config_get } from "../../../love/public/src/firebase_config_get.mjs";
 import { initializeApp } from "firebase/app";
 export async function firebase_app_initialize() {
-  async function lambda2() {
+  async function lambda() {
     'const firebase = await import(\n      "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"\n    );';
     let firebase_config = firebase_config_get();
     const app = initializeApp(firebase_config);
     return app;
   }
-  let awaited = await global_function_async(firebase_app_initialize, lambda2);
+  let awaited = await global_function_async(firebase_app_initialize, lambda);
   return awaited;
 }

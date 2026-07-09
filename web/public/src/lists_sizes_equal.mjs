@@ -4,11 +4,11 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export function lists_sizes_equal(lists) {
   let first = list_first(lists);
   let fs = list_size(first);
-  function lambda3(list) {
+  function lambda(list) {
     let size = list_size(list);
     let v = size === fs;
     return v;
   }
-  let e = list_all(lists, lambda3);
+  let e = list_all(lists, lambda);
   return e;
 }

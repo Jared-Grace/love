@@ -13,11 +13,11 @@ export function app_a_list_overlay_generic(a, texts, noun, lambda$text) {
   };
   let context = property_get(a, "context");
   let copy = object_copy_assign(context, replacement);
-  function lambda3() {
+  function lambda() {
     let overlay_close = property_get(overlay_result, "overlay_close");
     overlay_close();
   }
-  app_a_button_function(context, overlay, lambda3);
+  app_a_button_function(context, overlay, lambda);
   let chooser_result = app_a_list_chooser(copy, noun, texts, lambda$text);
   let v = {
     overlay_result,

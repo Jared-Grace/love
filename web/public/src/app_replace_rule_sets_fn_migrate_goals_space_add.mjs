@@ -10,7 +10,7 @@ import { js_object_expression_properties_find_key_named_curried_right } from "..
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
-  async function lambda3(ast) {
+  async function lambda(ast) {
     log(app_replace_rule_sets_fn_migrate_goals_space_add.name, {
       name,
     });
@@ -19,8 +19,8 @@ export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
     let search = "goals";
     let m =
       js_object_expression_properties_find_key_named_curried_right(search);
-    let mapped2 = list_map(list, m);
-    let filtered = list_filter_null_not_is(mapped2);
+    let mapped = list_map(list, m);
+    let filtered = list_filter_null_not_is(mapped);
     let e = list_empty_is(filtered);
     if (e) {
       log(app_replace_rule_sets_fn_migrate_goals_space_add.name, {
@@ -33,5 +33,5 @@ export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
       app_replace_rule_sets_fn_migrate_goals_space_add_elements(elements);
     }
   }
-  let output = await function_transform(name, lambda3);
+  let output = await function_transform(name, lambda);
 }

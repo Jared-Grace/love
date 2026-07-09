@@ -10,12 +10,12 @@ export function js_assert_arguments_args(ast) {
   let declaration = js_flo(ast);
   let params = js_function_declaration_params_get(declaration);
   let size = list_size(params);
-  function lambda2({ args }) {
+  function lambda({ args }) {
     let code_expression = js_special_arguments();
     let args_expression = js_parse_expression(code_expression);
     let size_expression = js_parse_expression(size);
     let args_new = [args_expression, size_expression];
     list_replace_all(args, args_new);
   }
-  js_visit_calls_named(ast, arguments_assert.name, lambda2);
+  js_visit_calls_named(ast, arguments_assert.name, lambda);
 }

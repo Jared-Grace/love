@@ -148,20 +148,20 @@ export async function app_reply_generic(verse_get) {
   function languages_reset() {
     html_clear(component_languages);
     function lambda5(language) {
-      let name2 = property_get(language, "name");
+      let name = property_get(language, "name");
       let language_button = null;
       async function lambda7() {
         html_disable(language_button);
         await language_choose(language);
       }
-      language_button = html_button(component_languages, name2, lambda7);
+      language_button = html_button(component_languages, name, lambda7);
     }
     each(languages, lambda5);
   }
   async function language_choose(language) {
-    let bible_folder2 = property_get(language, "bible_folder");
+    let bible_folder = property_get(language, "bible_folder");
     let language_code = property_get(language, "language_code");
-    let v = await app_reply_main_verse_add(verses_list, bible_folder2);
+    let v = await app_reply_main_verse_add(verses_list, bible_folder);
     list_add_first(languages_chosens, language_code);
     await preview_refresh();
   }
@@ -178,12 +178,12 @@ export async function app_reply_generic(verse_get) {
     each(buttons, lambda2);
   }
   function lambda(choice) {
-    let response2 = property_get(choice, "response");
+    let response = property_get(choice, "response");
     let text = property_get(choice, "text");
     let component = html_button(root, text, lambda3);
     property_set_exists_not(component, "text", text);
     async function lambda3() {
-      list_add(copied, response2);
+      list_add(copied, response);
       await preview_refresh();
       list_add(chosens, component);
       typed = "";
@@ -205,17 +205,17 @@ export async function app_reply_generic(verse_get) {
     if (false) {
       function lambda9(item3) {}
       each(list, lambda9);
-      let chapter_code2 = property_get(verse, "chapter_code");
-      let book_code = ebible_chapter_code_to_book(chapter_code2);
-      let chapter_name = ebible_chapter_code_to_name(chapter_code2);
+      let chapter_code = property_get(verse, "chapter_code");
+      let book_code = ebible_chapter_code_to_book(chapter_code);
+      let chapter_name = ebible_chapter_code_to_name(chapter_code);
       let book_name = ebible_book_code_to_name(books, book_code);
-      let verse_number2 = property_get(verse, "verse_number");
+      let verse_number = property_get(verse, "verse_number");
       let reference2 = text_combine_multiple([
         book_name,
         " ",
         chapter_name,
         ":",
-        verse_number2,
+        verse_number,
       ]);
     }
     const other = [];
@@ -253,17 +253,17 @@ export async function app_reply_generic(verse_get) {
       list_add_multiple(other, verse_texts);
     }
   }
-  async function app_reply_main_verse_add(verses_list, bible_folder2) {
+  async function app_reply_main_verse_add(verses_list, bible_folder) {
     async function lambda12(v_item) {
       let verses2 = property_get(v_item, "verses");
       let reference = property_get(v_item, "reference");
       async function lambda8(verse) {
-        let chapter_code2 = property_get(verse, "chapter_code");
-        let verse_number2 = property_get(verse, "verse_number");
+        let chapter_code = property_get(verse, "chapter_code");
+        let verse_number = property_get(verse, "verse_number");
         let d = await ebible_verse_browser(
-          bible_folder2,
-          chapter_code2,
-          verse_number2,
+          bible_folder,
+          chapter_code,
+          verse_number,
         );
         return d;
       }

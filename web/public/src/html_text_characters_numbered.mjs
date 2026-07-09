@@ -13,7 +13,7 @@ export function html_text_characters_numbered(parent, text) {
   let squashed = list_squash(betweened);
   let i = incrementer();
   let cycles = [
-    function lambda2(span) {
+    function lambda(span) {
       html_font_jetbrains_mono(span);
       html_flex_column_center(span);
       html_display_set(span, "inline-flex");

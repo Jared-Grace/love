@@ -21,8 +21,8 @@ export async function function_exists_inner(u) {
   let mapped = await repos_paths_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
     let exists2 = property_get(m, "exists");
-    let ti2 = true_is(exists2);
-    return ti2;
+    let ti = true_is(exists2);
+    return ti;
   }
   let filtered = list_filter(mapped, lambda2);
   let multiple = list_multiple_is(filtered);

@@ -5,6 +5,6 @@ export function list_map_replace(list, from, to) {
     let replaced = text_replace(item, from, to);
     return replaced;
   }
-  let mapped2 = list_map(list, lambda);
-  return mapped2;
+  let mapped = list_map(list, lambda);
+  return mapped;
 }

@@ -8,7 +8,7 @@ export async function ebible_text_to_speech_book(bible_folder, book_code) {
     bible_folder,
     book_code,
   );
-  async function lambda2(chapter_code) {
+  async function lambda(chapter_code) {
     log(ebible_text_to_speech_book.name, {
       chapter_code,
     });
@@ -19,5 +19,5 @@ export async function ebible_text_to_speech_book(bible_folder, book_code) {
       chapter_code,
     );
   }
-  await each_async(chapter_codes, lambda2);
+  await each_async(chapter_codes, lambda);
 }

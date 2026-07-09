@@ -7,10 +7,10 @@ export function js_operator_to_expression(o, next) {
   let right = next();
   left = left_transform(left, right);
   let expression = js_code_binary_spaced_nb(left, operator, right);
-  let r2 = {
+  let r = {
     left,
     right,
     expression,
   };
-  return r2;
+  return r;
 }

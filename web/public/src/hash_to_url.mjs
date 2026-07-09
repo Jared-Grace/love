@@ -13,8 +13,8 @@ export function hash_to_url(hash) {
     each_object(hash, lambda);
   }
   let parts = list_adder(lambda3);
-  let result2 = list_join_comma(parts);
+  let result = list_join_comma(parts);
   let h = html_hash_symbol();
-  const url = text_combine(h, result2);
+  const url = text_combine(h, result);
   return url;
 }

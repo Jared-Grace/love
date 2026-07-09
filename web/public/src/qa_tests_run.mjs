@@ -16,8 +16,8 @@ export async function qa_tests_run(fns, name_get) {
     let i = catch_call_later_async(on_error, item);
     return i;
   }
-  let mapped2 = list_map(fns, lambda);
-  let r2 = await invoke_multiple_unordered_async(mapped2);
+  let mapped = list_map(fns, lambda);
+  let r = await invoke_multiple_unordered_async(mapped);
   let result = portfolio_qa_tests_run_result(fns, errors);
   return result;
 }

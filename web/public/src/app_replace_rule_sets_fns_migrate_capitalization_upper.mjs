@@ -12,7 +12,7 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   return result;
   function on_result(a) {
     let name_property = property_get(a, "name_property");
-    function lambda2(t) {
+    function lambda(t) {
       log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
         t,
       });
@@ -21,7 +21,7 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
       let joined = list_join_space(mapped);
       return joined;
     }
-    let r = js_literal_map_curried_right(lambda2);
+    let r = js_literal_map_curried_right(lambda);
     js_property_value_change(name_property, r);
   }
 }

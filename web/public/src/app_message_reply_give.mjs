@@ -13,9 +13,9 @@ export function app_message_reply_give() {
   let n = reply_word_in();
   let o_ing = reply_optional("ing");
   let requesting = reply_sequence(["request", o_ing]);
-  const us2 = reply_word_us();
-  let o_us = reply_optional(us2);
-  let according_to_gods_will2 = reply_phrase_according_to_gods_will();
+  const us = reply_word_us();
+  let o_us = reply_optional(us);
+  let according_to_gods_will = reply_phrase_according_to_gods_will();
   let item = app_reply_choices_give();
   let you = reply_phrase_you();
   let to = reply_word_to();
@@ -29,7 +29,7 @@ export function app_message_reply_give() {
       o_us,
       n,
       "ministry",
-      according_to_gods_will2,
+      according_to_gods_will,
     ],
     item,
   );
