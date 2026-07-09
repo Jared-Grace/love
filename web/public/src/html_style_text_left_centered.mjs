@@ -16,8 +16,7 @@ export function html_style_text_left_centered(
   });
   let title = html_span_text(component, text_centered);
   html_style_assign(title, {
-    "flex-grow": "1",
-    "text-align": "center",
+    "justify-self": "center",
   });
   let r = {
     title,
