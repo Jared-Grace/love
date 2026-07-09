@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { list_between_empty } from "../../../love/public/src/list_between_empty.mjs";
@@ -31,6 +32,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
+    let o_f = list_first(operators);
     let c = app_code_container_light_blue(root);
     let left = next();
     let right = next();
