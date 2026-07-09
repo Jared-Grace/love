@@ -1,3 +1,4 @@
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -47,6 +48,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     html_div_cycle_code(c, parts2);
     let parts = [verb, "(", left, ",", right, ")"];
     let combined = list_between_empty(parts);
+    list_add_first(list, item);
     html_div_cycle_code(c, combined);
   }
 }
