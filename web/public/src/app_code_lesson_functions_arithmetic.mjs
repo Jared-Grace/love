@@ -79,12 +79,11 @@ export function app_code_lesson_functions_arithmetic() {
         code,
       ]);
       let eq = equal_0(index);
-      if (eq) {
-        let verb = property_get(o, "verb");
-        html_div_cycle_code(c, ["", verb, " is an example of a ", "function"]);
-        html_div_cycle_code(c, ["", code, " is called a ", "function call"]);
-      }
     }
     each_index(operators, lambda);
+    let c = app_code_container_light_blue(root);
+    let verb = property_get(o, "verb");
+    html_div_cycle_code(c, ["", verb, " is an example of a ", "function"]);
+    html_div_cycle_code(c, ["", code, " is called a ", "function call"]);
   }
 }
