@@ -1,3 +1,5 @@
+import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
+import { add_1_period } from "../../../love/public/src/add_1_period.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_code_examples } from "../../../love/public/src/app_code_examples.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -18,6 +20,8 @@ export function app_code_home(context) {
       storage_local_set_context(context, "lesson_id", id);
       await app_shared_screen_set(context, app_code_examples);
     }
+    let text = add_1_period(index);
+    let combined = text_combine_middle_space(left, right);
     let b = app_replace_button_wide(root, name, lambda3);
   }
   each(lessons, lambda);
