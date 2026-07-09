@@ -9,6 +9,7 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 import { subtract } from "../../../love/public/src/subtract.mjs";
 import { multiply } from "../../../love/public/src/multiply.mjs";
 import { divide } from "../../../love/public/src/divide.mjs";
+import { add } from "./add.mjs";
 export async function image_generate(text, path_output) {
   let v2 = await import_install("canvas");
   let registerFont = property_get(v2, "registerFont");
@@ -49,7 +50,7 @@ export async function image_generate(text, path_output) {
     let high = 500;
     let best = low;
     while (low <= high) {
-      const mid = Math.floor(divide(text_combine(low, high), 2));
+      const mid = Math.floor(divide(add(low, high), 2));
       const lines = wrapText(text, mid);
       const lineHeight = multiply(mid, 1.25);
       const totalHeight = multiply(lines.length, lineHeight);
