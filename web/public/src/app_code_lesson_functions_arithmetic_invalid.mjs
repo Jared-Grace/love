@@ -27,6 +27,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       let next_get = list_iterator_refillable(refill_get);
       let r = js_operator_to_code_call(o, next);
       let call = property_get(r, "call");
+      let next_get2 = list_iterator_refillable(refill_get2);
       return call;
     };
     let mapped = list_map(operators, mapper);
