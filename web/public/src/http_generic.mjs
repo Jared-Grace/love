@@ -15,6 +15,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { divide } from "../../../love/public/src/divide.mjs";
 export async function http_generic(url, options) {
   const method = options.method || "GET";
   const body = options.body || null;
@@ -67,7 +68,7 @@ export async function http_generic(url, options) {
       res.on("data", i);
       function on_end() {
         let statusCode = property_get(res, "statusCode");
-        const d = statusCode / 100;
+        const d = divide(statusCode, 100);
         const rounded = round(d);
         assert_json(rounded === 2, {
           url,

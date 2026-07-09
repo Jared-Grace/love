@@ -1,6 +1,8 @@
 import { ceil } from "../../../love/public/src/ceil.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { multiply } from "../../../love/public/src/multiply.mjs";
+import { subtract } from "../../../love/public/src/subtract.mjs";
 export async function integer_factorization_to_sat(integer_to_factor) {
   class CNF {
     constructor() {
@@ -125,7 +127,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     let columns = Array.from(
       {
-        length: 2 * bits,
+        length: multiply(2, bits),
       },
       lambda7,
     );
@@ -208,7 +210,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       cnf.addClause(...x.slice(1));
       cnf.addClause(...y.slice(1));
     }
-    cnf.addClause(-x[bits - 1], y[bits - 1]);
+    cnf.addClause(-x[subtract(bits, 1)], y[subtract(bits, 1)]);
     const columns = buildMultiplierCSA(cnf, x, y);
     const result = finalizeSum(cnf, columns);
     for (let i = 0; i < result.length; i++) {
@@ -227,15 +229,15 @@ export async function integer_factorization_to_sat(integer_to_factor) {
         out.clauses.push(clause);
       } else {
         let prev = clause[0];
-        for (let i = 1; i < clause.length - 2; i++) {
+        for (let i = 1; i < subtract(clause.length, 2); i++) {
           const v = out.newVar();
           out.addClause(prev, clause[i], v);
           prev = -v;
         }
         out.addClause(
           prev,
-          clause[clause.length - 2],
-          clause[clause.length - 1],
+          clause[subtract(clause.length, 2)],
+          clause[subtract(clause.length, 1)],
         );
       }
     }
