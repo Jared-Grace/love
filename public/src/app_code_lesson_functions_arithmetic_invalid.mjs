@@ -34,6 +34,8 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let next = range_1_next(m);
     function lambda(o) {
       let r = js_operator_to_code_call(o, next);
+      let code = property_get(r, "call");
+      let expression = property_get(r, "expression");
       let c = app_code_container_light_blue(root);
       html_div_cycle_code(c, [
         "Instead of ",
