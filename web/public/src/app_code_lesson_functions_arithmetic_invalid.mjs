@@ -23,7 +23,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
         question,
         answer,
       };
-      return r;
+      return r3;
     };
     let mapped = list_map(operators, mapper);
     return mapped;
