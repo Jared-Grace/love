@@ -1,4 +1,4 @@
-import { list_add } from "../../../love/public/src/list_add.mjs";
+import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { text_replace_to_space } from "../../../love/public/src/text_replace_to_space.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
@@ -6,8 +6,6 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
-import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
-import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_between_space_before } from "../../../love/public/src/list_between_space_before.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -63,11 +61,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     html_div_cycle_code(c, parts2);
     let combined = list_between_space_before(normalized);
     html_div_cycle_code(c, combined);
-    let combined2 = list_between_space(symbols_required);
-    list_add_first(combined2, "If any of these symbols ");
-    list_add(
-      combined2,
-      " are missing from the function call, then the code is invalid ",
+    let combined2 = list_between_space_before_after(
+      ["If any of these symbols "],
+      symbols_required,
+      [" are missing from the function call, then the code is invalid "],
     );
     let c2 = app_code_container_light_blue(root);
     html_div_cycle_code(c2, combined2);
