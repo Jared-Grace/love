@@ -48,5 +48,8 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let parts = [verb, "(", left, ",", right, ")"];
     let combined = list_between_space_before(parts);
     html_div_cycle_code(c, combined);
+    html_div_cycle_code(c, [
+      "If the function call is missing any of these, then the code is invalid: ",
+    ]);
   }
 }
