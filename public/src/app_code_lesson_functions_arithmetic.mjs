@@ -21,7 +21,7 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
   const example_label = "Function: ";
-  const quiz_label = "What is this code rewritten using a function?";
+  const quiz_label = "What is this code rewritten using a function call?";
   let question_label = app_code_label_code_question();
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
