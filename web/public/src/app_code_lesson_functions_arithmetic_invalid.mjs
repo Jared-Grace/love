@@ -25,7 +25,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   let operators_next = list_iterator_refillable_value(operators);
-  let results = list_power_set(list2);
+  let results = list_power_set(symbols_required);
   let next_get = list_iterator_refillable_value(symbols_required);
   function batch_get() {
     function lambda(la) {
