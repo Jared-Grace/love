@@ -29,8 +29,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
-    let parts = ["function_name", "(", "arg1", ",", "arg2", ")"];
+    let left = next();
+    let right = next();
+    let parts = ["add", "(", left, ",", right, ")"];
     let combined = list_between_empty(parts);
-    ("Function calls require all of these parts: ");
+    ("Calling the add function requires all of these parts: ");
   }
 }
