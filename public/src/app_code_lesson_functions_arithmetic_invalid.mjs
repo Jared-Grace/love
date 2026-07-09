@@ -59,8 +59,6 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     }
     let r4 = list_adder_each_index(list, lambda);
     list_add_first(list2, item2);
-    html_div_cycle_code(c, [
-      "If the function call is missing any of these, then the code is invalid: ",
-    ]);
+    html_div_cycle_code(c, []);
   }
 }
