@@ -1,11 +1,9 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { app_replace_button_wide_text_left_centered } from "../../../love/public/src/app_replace_button_wide_text_left_centered.mjs";
 import { add_1_period } from "../../../love/public/src/add_1_period.mjs";
 import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
-import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { app_replace_button_rule_style } from "../../../love/public/src/app_replace_button_rule_style.mjs";
-import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
 import { emoji_point_right } from "../../../love/public/src/emoji_point_right.mjs";
 import { string_pad_left_space } from "../../../love/public/src/string_pad_left_space.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
@@ -29,10 +27,14 @@ export function app_replace_goals_generic(
     }
   }
   const text_centered = "";
-  let button = app_replace_button_wide(root, "", lambda);
-  let r = html_style_text_left_centered(button, text_left, text_centered);
+  let r = app_replace_button_wide_text_left_centered(
+    root,
+    lambda,
+    text_left,
+    text_centered,
+  );
   let title = property_get(r, "title");
-  html_style_set(title, "line-height", 1.5);
+  let button = property_get(r, "button");
   app_replace_button_rule_style(button);
   let background = app_replace_rule_set_highlight();
   html_style_background_color_set_if(choose_this_next, button, background);
