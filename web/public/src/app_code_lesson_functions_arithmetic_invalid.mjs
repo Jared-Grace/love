@@ -33,6 +33,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   return lesson;
   function above(root) {
     let o_f = list_first(operators);
+    let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
     let left = next();
     let right = next();
