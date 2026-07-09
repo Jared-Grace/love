@@ -1,4 +1,4 @@
-import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
+import { list_filter_text_empty_not_is } from "../../../love/public/src/list_filter_text_empty_not_is.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
@@ -9,6 +9,6 @@ export function app_g_openai_split(objections) {
   let n = newline_windows();
   let split = text_split_multiple(objections, [separator, n]);
   let mapped = list_map(split, text_trim);
-  let filtered = list_filter_empty_not_is(mapped);
+  let filtered = list_filter_text_empty_not_is(mapped);
   return filtered;
 }
