@@ -6,8 +6,6 @@ import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_
 import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
 import { html_style_code_dark } from "../../../love/public/src/html_style_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
-import { js_operator_left_right_to_code_call } from "../../../love/public/src/js_operator_left_right_to_code_call.mjs";
-import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
@@ -26,9 +24,9 @@ export function app_code_lesson_functions_arithmetic() {
   let next = range_1_next(m);
   function batch_get() {
     let mapper = function lambda2(o) {
-      let e = js_operator_to_expression(o, next);
-      let question = property_get(e, "expression");
-      let answer = js_operator_left_right_to_code_call(o, e);
+      let r = js_operator_to_code_call(o, next);
+      let answer = property_get(r, "call");
+      let question = property_get(r, "expression");
       let r3 = {
         question,
         answer,
