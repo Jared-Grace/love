@@ -39,7 +39,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let quiz_backwards_label_answer =
     "Rewrite this function using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
-  let lesson = app_code_lesson_validity_code(batch, id, name, above);
+  let lesson = app_code_lesson_validity_code(batch_get, id, name, above);
   return lesson;
   function above(root) {
     let next = range_1_next(m);
