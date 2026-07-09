@@ -21,11 +21,12 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
+    let symbols_required = [ "(",  ",",  ")"];
   function batch_get() {
     let mapper = function lambda2(o) {
       let r = js_operator_to_code_call(o, next);
       let call = property_get(r, "call");
-      return r3;
+      return call;
     };
     let mapped = list_map(operators, mapper);
     return mapped;
@@ -34,7 +35,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     batch_get,
     app_code_symbols_eval_valid_expression,
   );
-  let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
+  let lesson = app_code_lesson_validity_code(b, name_id, above);
   return lesson;
   function above(root) {
     let o_f = list_first(operators);
@@ -43,7 +44,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let r2 = js_operator_to_code_call(o_f, next);
     let right = property_get(r2, "right");
     let left = property_get(r2, "left");
-    let call = property_get(r, "call");
+    let call = property_get(r2, "call");
     let normalized = js_tokenizer_normalized(call);
     let parts2 = [
       "Calling the ",
@@ -53,8 +54,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     html_div_cycle_code(c, parts2);
     let combined = list_between_space_before(normalized);
     html_div_cycle_code(c, combined);
-    let r4 = [ "(",  ",",  ")"];
-    let combined2 = list_between_space(r4);
+    let combined2 = list_between_space(symbols_required);
     list_add_first(
       combined2,
       "If any of these symbols are missing from the function call, then the code is invalid ",
