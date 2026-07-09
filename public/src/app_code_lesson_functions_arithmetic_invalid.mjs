@@ -1,3 +1,4 @@
+import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
@@ -27,8 +28,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   function batch_get() {
     function lambda(la) {
       let o = operators_next();
-      let r = js_operator_to_code_call(o, next);
-      let call = property_get(r, "call");
+      let call = js_operator_to_code_call_only(o, next);
       let next_get2 = list_iterator_refillable(symbols_required);
     }
     let list = list_adder(lambda);
