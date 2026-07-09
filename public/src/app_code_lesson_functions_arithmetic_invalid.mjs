@@ -33,7 +33,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
       la(call);
       let call2 = js_operator_to_code_call_only(o, next);
       let missing = next_get();
-      let replaced = text_replace(t, from, to);
+      let replaced = text_replace(call2, missing, " ");
     }
     let list = list_adder(lambda);
     return mapped;
