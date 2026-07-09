@@ -29,7 +29,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let operators_next = list_iterator_refillable_value(operators);
   let results = list_power_set(symbols_required);
   let filtered = list_filter_list_empty_not_is(results);
-  list_sort_list_size(list2);
+  list_sort_list_size(filtered);
   let next_get = list_iterator_refillable_value(symbols_required);
   function batch_get() {
     function lambda(la) {
