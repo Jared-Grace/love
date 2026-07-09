@@ -31,13 +31,9 @@ export function app_code_lesson_functions_arithmetic_invalid() {
   let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
-    ("Function calls require all of these parts: ",
-      "function_name",
-      "(",
-      "any_arguments",
-      ",",
-      "separated_by_commas",
-      ")");
+    ["function_name", "(", "any_arguments", ",", "separated_by_commas", ")"](
+      "Function calls require all of these parts: ",
+    );
     let next = range_1_next(m);
     function lambda(o) {
       let r = js_operator_to_code_call(o, next);
