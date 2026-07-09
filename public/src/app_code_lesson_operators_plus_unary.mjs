@@ -18,7 +18,6 @@ import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs"
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
@@ -64,9 +63,7 @@ export function app_code_lesson_operators_plus_unary() {
   const example_label = app_code_label_code_answer_example();
   const quiz_label = app_code_label_code_answer_quiz();
   let symbols_to_answer = eval;
-  let r = app_code_lesson_name_id("operators", [math_name]);
-  let id = property_get(r, "id");
-  let name = property_get(r, "name");
+  let name_id = app_code_lesson_name_id("operators", [math_name]);
   let question_label = app_code_label_code_question();
   let example_count = 2;
   let quiz_backwards_label_answer = null;
@@ -86,8 +83,7 @@ export function app_code_lesson_operators_plus_unary() {
   );
   let question_label2 = error();
   let lesson = app_code_lesson_base(
-    id,
-    name,
+    name_id,
     above,
     example_count,
     batch,

@@ -85,9 +85,7 @@ export function app_code_lesson_operators_generic(
   }
   const example_label = app_code_label_code_answer_example();
   const quiz_label = app_code_label_code_answer_quiz();
-  let r = app_code_lesson_name_id("operators", [math_name]);
-  let id = property_get(r, "id");
-  let name = property_get(r, "name");
+  let name_id = app_code_lesson_name_id("operators", [math_name]);
   let question_label = app_code_label_code_question();
   let example_count = 1;
   let quiz_backwards_label_answer = "What code produces this value? ";
@@ -107,8 +105,7 @@ export function app_code_lesson_operators_generic(
     quiz_backwards_answer_count_override,
   );
   let lesson = app_code_lesson_base(
-    id,
-    name,
+    name_id,
     above,
     example_count,
     batch,
