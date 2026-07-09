@@ -12,8 +12,7 @@ export function html_style_text_left_centered(
   });
   let left = html_span_text(component, text_left);
   html_style_assign(left, {
-    "flex-grow": "1",
-    "text-align": "center",
+    "justify-self": "start",
   });
   let title = html_span_text(component, text_centered);
   html_style_assign(title, {
