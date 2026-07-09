@@ -29,8 +29,8 @@ export function app_replace_goals_generic(
     }
   }
   let b = app_replace_button_wide(root, "", lambda);
-  app_replace_button_rule_style(b);
   let r = html_style_text_left_centered(b, text, "");
+  app_replace_button_rule_style(b);
   let title = property_get(r, "title");
   html_style_set(title, "line-height", 1.5);
   let background = app_replace_rule_set_highlight();
