@@ -33,6 +33,14 @@ matching actual shell quoting rules - so a quoted regex alternation
 pattern containing a literal pipe character doesn't get misidentified
 as an unparsed shell pipe.
 
+Redirection is unsupported in general (see above), with two narrow
+exceptions that are parsed and allowed inline regardless of the target
+verb's trust level: redirecting to `/dev/null` (e.g. `2>/dev/null`,
+`>/dev/null`, `>>/dev/null`) and fd-dup redirects (`&1`/`&2`, e.g.
+`2>&1`, `1>&2`). Both are safe by construction - neither can write to
+an arbitrary file - so allowing them doesn't weaken the guarantee that
+every write-capable construct still forces a real prompt.
+
   - If the whole command parses into that narrow shape AND every simple
     command's verb is already in permissions.allow: emit "allow" (closes
     gap #1 - loops/sequences of already-trusted commands stop prompting).
@@ -66,7 +74,7 @@ RESERVED_WORDS = {
     "while", "until", "case", "esac", "function", "select", "time",
 }
 
-DANGEROUS_CHARS = set("`<>{}()")
+DANGEROUS_CHARS = set("`<{}()")
 
 
 class Unsupported(Exception):
@@ -165,6 +173,33 @@ def tokenize(command):
                 i += 2
                 continue
             raise Unsupported("unsupported operator '&' (backgrounding)")
+        if c == ">":
+            # Bare ">"/">>"" only mean fd redirection here if the word
+            # accumulated since the last boundary is empty (default fd 1)
+            # or all-digits (explicit "2>", "1>", ...). Anything else means
+            # this '>' is glued onto a real word (e.g. "foo>bar"), which
+            # doesn't change the analysis - it's still a fresh redirect at
+            # this position with an implied default fd.
+            is_fd_prefix = bool(word) and all(ch.isdigit() for ch in word)
+            if is_fd_prefix or not word:
+                j = i + 1
+                if j < n and command[j] == ">":
+                    j += 1  # ">>" (append) - equally harmless for these targets
+                target_len = 0
+                if command[j:j + 2] in ("&1", "&2"):
+                    target_len = 2
+                elif command[j:j + len("/dev/null")] == "/dev/null":
+                    target_len = len("/dev/null")
+                if target_len:
+                    end = j + target_len
+                    if end >= n or command[end].isspace() or command[end] in (";", "&", "|", "\n"):
+                        word.clear()
+                        i = end
+                        continue
+            raise Unsupported(
+                "unsupported operator '>' (redirection, except >/dev/null "
+                "or fd dup &1/&2)"
+            )
         if c in DANGEROUS_CHARS:
             raise Unsupported(f"unsupported operator {c!r}")
         if c == "$" and i + 1 < n and command[i + 1] == "(":
