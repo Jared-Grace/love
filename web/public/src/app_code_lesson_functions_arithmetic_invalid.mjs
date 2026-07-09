@@ -1,3 +1,5 @@
+import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_filter_indices_odd } from "../../../love/public/src/list_filter_indices_odd.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -33,6 +35,10 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let mapped = list_map(operators, mapper);
     return mapped;
   }
+  let b = app_code_batch_question_answer_fns(
+    batch_get,
+    app_code_symbols_eval_valid_expression,
+  );
   let lesson = app_code_lesson_validity_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
