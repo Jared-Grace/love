@@ -49,11 +49,11 @@ export function app_code_lesson_symbols_space() {
     );
   }
   let name_id = app_code_lesson_name_id("symbols", ["space"]);
-  let r5 = app_code_lesson_symbols_counting(
+  let r = app_code_lesson_symbols_counting(
     name_id,
     lambda,
     batch_get,
     app_code_symbols_separated_on_question_numbered_fifth,
   );
-  return r5;
+  return r;
 }

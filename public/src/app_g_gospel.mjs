@@ -31,8 +31,8 @@ export async function app_g_gospel(
   refresh,
 ) {
   html_clear(overlay);
-  let objections2 = property_get(npc, "objections");
-  let p = positive_is(objections2);
+  let objections = property_get(npc, "objections");
+  let p = positive_is(objections);
   if (p) {
     let books = app_g_main_books();
     let chapter_code = app_g_chapter_code();

@@ -8,7 +8,7 @@ export function app_a_cut(o, a) {
   let r = {
     shortcut: "u",
     text: "Cut",
-    fn: async function lambda2() {
+    fn: async function lambda() {
       let overlay_close = property_get(o, "overlay_close");
       overlay_close();
       let ast = property_get(a, "ast");

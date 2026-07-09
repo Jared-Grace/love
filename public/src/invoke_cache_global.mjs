@@ -12,12 +12,12 @@ export async function invoke_cache_global(fn, args) {
     return value;
   };
   let cache_save = function lambda4(key, value) {
-    let v2 = global_function_property_set_exists_not(
+    let v = global_function_property_set_exists_not(
       invoke_cache_global,
       key,
       value,
     );
-    return v2;
+    return v;
   };
   let r = await invoke_cache_generic(
     fn,

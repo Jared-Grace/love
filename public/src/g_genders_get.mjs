@@ -14,10 +14,10 @@ export function g_genders_get(player_img) {
     names: names_women,
     imgs: list_without(imgs_women, player_img),
   };
-  let names_men1 = bible_names_men();
+  let names_men = bible_names_men();
   let male = {
     name: g_gender_male(),
-    names: names_men1,
+    names: names_men,
     imgs: list_without(imgs_men, player_img),
   };
   let genders = [male, female];

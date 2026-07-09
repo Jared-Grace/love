@@ -106,8 +106,8 @@ export async function app_a_function(context) {
   if (false) {
     let a = emoji_up();
     let b2 = app_a_button(content, a, upload);
-    let text2 = emoji_down();
-    let b3 = app_a_button(content, text2, download);
+    let text = emoji_down();
+    let b3 = app_a_button(content, text, download);
   }
   let bc = html_bar_content(root);
   let content = property_get(bc, "content");
@@ -181,8 +181,8 @@ export async function app_a_function(context) {
         let overlay_result = property_get(v6, "overlay_result");
         let chooser_result = property_get(v6, "chooser_result");
         let input_set = property_get(chooser_result, "input_set");
-        let combined2 = function_new_js_name("");
-        input_set(combined2);
+        let combined = function_new_js_name("");
+        input_set(combined);
         async function lambda11(f_name_call) {
           let fn = await app_a_function_import(f_name_call);
           await fn(ast);
@@ -233,8 +233,8 @@ export async function app_a_function(context) {
     function on_node(n) {
       let id = property_get(n, "id");
       function lambda9() {
-        let name2 = property_get(id, "name");
-        la(name2);
+        let name = property_get(id, "name");
+        la(name);
       }
       js_node_type_is_if(id, "Identifier", lambda9);
     }

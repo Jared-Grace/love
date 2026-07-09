@@ -88,23 +88,23 @@ export function app_code_lesson_identifiers_symbol_first() {
     ]);
     function lambda3(t) {
       let plural = property_get(t, "plural");
-      let examples2 = property_get(t, "examples");
+      let examples = property_get(t, "examples");
       let combined2 = text_combine_space_right(plural);
-      let concated2 = list_concat_single(combined2, examples2);
+      let concated2 = list_concat_single(combined2, examples);
       return concated2;
     }
-    let mapped2 = list_map(identifier_symbols_types, lambda3);
-    let concated = list_to_and_list(mapped2);
-    let div2 = html_div(c);
-    html_span_text(div2, "And ");
+    let mapped = list_map(identifier_symbols_types, lambda3);
+    let concated = list_to_and_list(mapped);
+    let div = html_div(c);
+    html_span_text(div, "And ");
     function lambda4(item) {
       let l = list_is(item);
       let result = ternary(l, html_cycle_code, html_span_text_padded_space);
-      result(div2, item);
+      result(div, item);
     }
     each(concated, lambda4);
     html_span_text(
-      div2,
+      div,
       " may be used anywhere in an identifier, even as the first symbol",
     );
   }

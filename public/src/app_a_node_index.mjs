@@ -10,12 +10,12 @@ export function app_a_node_index(a) {
   let node = property_get(a, "node");
   let v_match = js_visit_match(ast, node);
   let stack = property_get(v_match, "stack");
-  function lambda3(item) {
+  function lambda(item) {
     let index_end = list_index_of_end(stack, item);
     let i = js_stack_list_block_is(stack, index_end);
     return i;
   }
-  let list = list_filter_last(stack, lambda3);
+  let list = list_filter_last(stack, lambda);
   let statement = list_next(stack, list);
   let index = list_index_of(list, statement);
   let v = {

@@ -27,8 +27,8 @@ export async function function_run_prompt() {
   let colored = await function_run_prompt_repo_name_colored(repo_name);
   let combined = text_combine_multiple([prompt_colored, colored, " "]);
   let line = await command_line_read(combined);
-  async function lambda2() {
+  async function lambda() {
     await function_run_line_git(line);
   }
-  let r = await function_run_prompt_lock(lambda2);
+  let r = await function_run_prompt_lock(lambda);
 }

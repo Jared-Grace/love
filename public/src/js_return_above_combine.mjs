@@ -16,12 +16,12 @@ export function js_return_above_combine(ast) {
   js_visit_returns_identifiers(ast, lambda2);
   function lambda2({ v, node, argument }) {
     let stack = property_get(v, "stack");
-    let e1 = list_get_end_1(stack);
-    let l = list_is(e1);
+    let e = list_get_end_1(stack);
+    let l = list_is(e);
     if (not(l)) {
       return;
     }
-    let fi = list_first_is(e1, node);
+    let fi = list_first_is(e, node);
     if (fi) {
       return;
     }
@@ -36,12 +36,12 @@ export function js_return_above_combine(ast) {
         list_includes_if(values, value, lambda_if);
         function lambda_if() {
           js_return_argument_set(node, init);
-          list_remove(e1, previous);
+          list_remove(e, previous);
         }
       }
       js_literal_is_if(init, lambda6);
     }
-    let previous = list_previous(e1, node);
+    let previous = list_previous(e, node);
     js_declare_single_identifier_is_if(previous, lambda4);
   }
 }

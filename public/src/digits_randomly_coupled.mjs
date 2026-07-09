@@ -7,8 +7,8 @@ export function digits_randomly_coupled() {
   let ds = digits();
   let chunks = list_chunk(ds, 2);
   function lambda(la, c) {
-    let rb2 = boolean_random_3();
-    if (rb2) {
+    let rb = boolean_random_3();
+    if (rb) {
       la(c);
     } else {
       function lambda4(d) {

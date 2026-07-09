@@ -38,8 +38,8 @@ export function app_code_lesson_operators_generic(
       operator_name_math,
       operator_math,
     );
-    let list2 = batch();
-    let first = list_first(list2);
+    let list = batch();
+    let first = list_first(list);
     let question = property_get(first, "question");
     let replaced = text_replace(question, operator_js, operator_math);
     const operator_name_math_articled =

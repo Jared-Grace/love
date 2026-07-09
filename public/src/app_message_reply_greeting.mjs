@@ -7,9 +7,9 @@ export function app_message_reply_greeting() {
   let greeting_response = app_reply_response_greetings();
   const hello = reply_word_hello();
   let hi_word = reply_choice(["hi", hello, "hey"]);
-  let my_dear_brother2 = reply_phrase_my_dear_brother();
+  let my_dear_brother = reply_phrase_my_dear_brother();
   let greeting = reply_sequence_output(
-    [hi_word, my_dear_brother2],
+    [hi_word, my_dear_brother],
     greeting_response,
   );
   return greeting;

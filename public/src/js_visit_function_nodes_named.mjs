@@ -12,8 +12,8 @@ export function js_visit_function_nodes_named(ast, lambda$v, name) {
     });
     function lambda3() {
       let actual = property_get(id, "name");
-      let eq2 = equal(actual, name);
-      if (eq2) {
+      let eq = equal(actual, name);
+      if (eq) {
         lambda$v(v);
       }
     }

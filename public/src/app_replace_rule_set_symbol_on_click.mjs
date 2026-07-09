@@ -49,16 +49,16 @@ export async function app_replace_rule_set_symbol_on_click(
       start_indices,
     });
     let rb = list_get(rules_buttons, index_selected);
-    let lefts2 = property_get(rb, "lefts");
-    let rights2 = property_get(rb, "rights");
-    let size3 = list_size(lefts2);
-    let sliced2 = list_slice_count(sbs, index, size3);
-    const sum = text_combine(index, size3);
+    let lefts = property_get(rb, "lefts");
+    let rights = property_get(rb, "rights");
+    let size = list_size(lefts);
+    let sliced = list_slice_count(sbs, index, size);
+    const sum = text_combine(index, size);
     let skipped = list_skip(sbs, sum);
     let rects_before = list_map(skipped, html_bounding_client_rect);
-    await html_move_animate_multiple_parent_remove(sliced2, lefts2, duration);
+    await html_move_animate_multiple_parent_remove(sliced, lefts, duration);
     await html_request_animation_frame();
-    let rights_cloned = list_map(rights2, html_clone);
+    let rights_cloned = list_map(rights, html_clone);
     function lambda8(item, index5) {
       html_visibility_hidden(item);
       html_insert(div_symbols, item, text_combine(index, index5));
@@ -78,9 +78,9 @@ export async function app_replace_rule_set_symbol_on_click(
       await sleep(time);
       html_translation_transition_clear(el);
     }
-    let mapped2 = lists_map([skipped, rects_after, rects_before], lambda9);
-    await list_wait(mapped2);
-    await html_move_animate_multiple(rights2, rights_cloned, duration);
+    let mapped = lists_map([skipped, rects_after, rects_before], lambda9);
+    await list_wait(mapped);
+    await html_move_animate_multiple(rights, rights_cloned, duration);
   } else {
     property_set(symbols_invalid_chosen, index, true);
   }

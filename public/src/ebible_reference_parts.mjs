@@ -11,8 +11,8 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 export function ebible_reference_parts(books, book_name, chapter_verses) {
   let book = list_find_property(books, "text", book_name);
   let book_code = property_get(book, "book_code");
-  let split2 = text_split_colon(chapter_verses);
-  let v2 = list_first_second(split2);
+  let split = text_split_colon(chapter_verses);
+  let v2 = list_first_second(split);
   let second = property_get(v2, "second");
   let chapter_name = property_get(v2, "first");
   let chapter_code = ebible_chapter_code_pad(book_code, chapter_name);

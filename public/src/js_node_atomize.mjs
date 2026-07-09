@@ -22,6 +22,6 @@ export async function js_node_atomize(ast, visitor, variable_name, offset) {
   let unique = property_get(r, "unique");
   let declare = property_get(r, "declare");
   js_block_insert(stack, declare);
-  let v2 = js_parse_expression(unique);
-  object_replace(copied, v2);
+  let v = js_parse_expression(unique);
+  object_replace(copied, v);
 }

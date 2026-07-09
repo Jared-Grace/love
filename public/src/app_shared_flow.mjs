@@ -12,13 +12,13 @@ export function app_shared_flow(context, screens, before_or_after, find) {
   let current = storage_local_get_context(context, "screen");
   text_is_assert(current);
   function lambda(item2) {
-    let fn2 = property_get(item2, "fn");
-    let self = property_get(fn2, "name");
-    let eq2 = equal(self, current);
-    return eq2;
+    let fn = property_get(item2, "fn");
+    let self = property_get(fn, "name");
+    let eq = equal(self, current);
+    return eq;
   }
-  let only2 = list_find(screens, lambda);
-  let index = list_index_of(screens, only2);
+  let only = list_find(screens, lambda);
+  let index = list_index_of(screens, only);
   let ba = before_or_after(screens, index);
   function lambda4(item) {
     let exists = property_exists(item, "skip");
@@ -32,6 +32,6 @@ export function app_shared_flow(context, screens, before_or_after, find) {
   }
   let filtered = list_filter(ba, lambda4);
   let first = find(filtered);
-  let name2 = property_get(first, "fn");
-  app_shared_screen_set(context, name2);
+  let name = property_get(first, "fn");
+  app_shared_screen_set(context, name);
 }

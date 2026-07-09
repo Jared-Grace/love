@@ -3,14 +3,14 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_await_if_unwrap(expression) {
   let async_is = false;
   let argument = expression;
-  function lambda3() {
+  function lambda() {
     async_is = true;
     argument = property_get(expression, "argument");
   }
-  js_node_type_is_if(expression, "AwaitExpression", lambda3);
-  let r2 = {
+  js_node_type_is_if(expression, "AwaitExpression", lambda);
+  let r = {
     async_is,
     argument,
   };
-  return r2;
+  return r;
 }

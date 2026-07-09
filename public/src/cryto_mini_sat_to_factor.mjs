@@ -8,7 +8,7 @@ export function cryto_mini_sat_to_factor(reversed, bits) {
   let e = list_remove_last_multiple(reversed, bits);
   let mapped2 = list_map(e, positive_is);
   let mapped3 = list_map(mapped2, boolean_to_binary_text);
-  let joined2 = list_join_empty(mapped3);
-  let i = integer_base_2_from(joined2);
+  let joined = list_join_empty(mapped3);
+  let i = integer_base_2_from(joined);
   return i;
 }

@@ -7,7 +7,7 @@ export async function list_translate_openai(list, language) {
   let json = json_to({
     value: list,
   });
-  let r3 = await openai_responses_cache(
+  let r = await openai_responses_cache(
     text_combine_multiple([
       "Translate the text inside the JSON object to ",
       language,
@@ -15,7 +15,7 @@ export async function list_translate_openai(list, language) {
     ]),
     json,
   );
-  let v = json_from(r3);
+  let v = json_from(r);
   let translated = property_get(v, "value");
   return translated;
 }

@@ -14,11 +14,11 @@ export async function functions_rename_if_starts_ends_with(
   );
   await functions_rename_generic(filter, name_change);
   function name_change(f_name_before) {
-    let together2 = text_suffix_change(
+    let together = text_suffix_change(
       f_name_before,
       f_name_suffix_before,
       f_name_suffix_after,
     );
-    return together2;
+    return together;
   }
 }

@@ -29,8 +29,8 @@ export async function app_gloss_bible_home_generic(
   text_use,
 ) {
   let generated = g_sermon_generate_book_generic_property();
-  let v2 = await app_g_bible_home_inner(context, download);
-  let passages = property_get(v2, "passages");
+  let v = await app_g_bible_home_inner(context, download);
+  let passages = property_get(v, "passages");
   let first2 = list_first(passages);
   let verses = property_get(a, "verses");
   let passage = property_get(a, "passage");
@@ -88,9 +88,9 @@ export async function app_gloss_bible_home_generic(
   async function lambda6() {
     await scroll(verses);
   }
-  let text2 = emoji_arrow_up();
+  let text = emoji_arrow_up();
   let d = html_div_centered(p);
-  let component = html_button(d, text2, lambda6);
+  let component = html_button(d, text, lambda6);
   let component22 = html_hr(p);
   return;
   async function scroll(verses) {

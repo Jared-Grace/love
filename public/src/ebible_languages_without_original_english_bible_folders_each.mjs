@@ -17,12 +17,12 @@ export async function ebible_languages_without_original_english_bible_folders_ea
       including_and_onward,
     );
   }
-  async function lambda2(language, i) {
+  async function lambda(language, i) {
     if (i < index_next) {
       return;
     }
     let bible_folder = property_get(language, "bible_folder");
     await lambda$bible_folder(bible_folder);
   }
-  await each_index_async(languages, lambda2);
+  await each_index_async(languages, lambda);
 }

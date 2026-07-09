@@ -21,11 +21,11 @@ export async function function_params_new(
     f_name,
   );
   function on_call(args) {
-    function lambda3(value_default) {
+    function lambda(value_default) {
       let expression = js_parse_expression(value_default);
       list_add(args, expression);
     }
-    each(values_default, lambda3);
+    each(values_default, lambda);
   }
   function function_transform_current_lambda(ast) {
     if (false) {

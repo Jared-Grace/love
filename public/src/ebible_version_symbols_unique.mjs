@@ -6,7 +6,7 @@ import { text_symbols_unique_adder } from "../../../love/public/src/text_symbols
 export async function ebible_version_symbols_unique(bible_folder) {
   let unique = await text_symbols_unique_adder(lambda$la);
   async function lambda$la(la) {
-    async function lambda2(chapter_code, verses) {
+    async function lambda(chapter_code, verses) {
       log(ebible_version_symbols_unique.name, {
         bible_folder,
         chapter_code,
@@ -15,7 +15,7 @@ export async function ebible_version_symbols_unique(bible_folder) {
       let unique_chapter = text_symbols_unique_multiple(mapped);
       la(unique_chapter);
     }
-    await ebible_chapters_each_verses_check_with(bible_folder, lambda2);
+    await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
   return unique;
 }

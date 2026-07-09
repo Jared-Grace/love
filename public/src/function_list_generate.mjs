@@ -17,12 +17,12 @@ export async function function_list_generate(f_generate, list) {
   if (not(exists)) {
     await function_new_open(f_name);
   }
-  async function lambda3(ast) {
+  async function lambda(ast) {
     let body_block = js_flo_body(ast);
     list_empty(body_block);
     let code = json_to(list);
     js_statement_return_insert_code(body_block, index, code);
   }
-  let output = await function_transform(f_name, lambda3);
+  let output = await function_transform(f_name, lambda);
   await function_open(f_name);
 }

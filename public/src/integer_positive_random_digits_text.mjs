@@ -8,13 +8,13 @@ import { digits } from "../../../love/public/src/digits.mjs";
 export function integer_positive_random_digits_text(digit_count) {
   let dsa = digits();
   let dps = digits_positive();
-  function lambda2(item) {
+  function lambda(item) {
     let first_is = equal_0(item);
     let choices = ternary(first_is, dps, dsa);
     let choice = list_random_item(choices);
     return choice;
   }
-  let ds = range_map(digit_count, lambda2);
+  let ds = range_map(digit_count, lambda);
   let joined = list_join_empty(ds);
   return joined;
 }

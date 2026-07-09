@@ -4,6 +4,6 @@ export function app_replace_button_symbol_style_valid_if_multiple_nested(
   lists,
   valid,
 ) {
-  let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(valid);
-  each_nested(lists, lambda4);
+  let lambda = app_replace_button_symbol_style_valid_if_curried_right(valid);
+  each_nested(lists, lambda);
 }

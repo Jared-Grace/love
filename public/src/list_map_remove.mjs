@@ -5,6 +5,6 @@ export function list_map_remove(list, from) {
     let replaced = text_remove(item, from);
     return replaced;
   }
-  let mapped2 = list_map(list, lambda);
-  return mapped2;
+  let mapped = list_map(list, lambda);
+  return mapped;
 }

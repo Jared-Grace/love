@@ -16,9 +16,9 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_calendar_contact_add(data, item) {
   app_calendar_contact_names_normalize(item);
   const id_properties = app_calendar_id_properties();
-  let r3 = app_calendar_facebook_conversation_id();
+  let r = app_calendar_facebook_conversation_id();
   let properties_unique_across_all = list_concat(
-    ["facebook_conversation_url", r3],
+    ["facebook_conversation_url", r],
     id_properties,
   );
   let picked = object_pick_try(item, properties_unique_across_all);
@@ -31,8 +31,8 @@ export function app_calendar_contact_add(data, item) {
   let unique = object_values_map_list_unique(picked, lambda);
   let list = list_filter_null_not_is(unique);
   list_multiple_not_is_assert(list);
-  let s1 = list_size_1(list);
-  if (s1) {
+  let s = list_size_1(list);
+  if (s) {
     let only = list_single(list);
     object_merge_match(only, item);
   } else {

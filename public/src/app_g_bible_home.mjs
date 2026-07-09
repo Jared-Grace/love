@@ -35,19 +35,19 @@ export async function app_g_bible_home(context) {
       let last = list_last(verses);
       let p = property_get(last, "p");
       let sermon = property_get(passage, "sermon");
-      let mapped2 = app_g_openai_split(sermon);
-      let size = list_size(mapped2);
-      let joined = list_join_newline(mapped2);
+      let mapped = app_g_openai_split(sermon);
+      let size = list_size(mapped);
+      let joined = list_join_newline(mapped);
       let ta = html_textarea(p);
       html_mobile_default_font_size(ta);
       html_width_full(ta);
       html_rows_set(ta, size);
       html_value_set(ta, joined);
       let update = function lambda3() {
-        let value2 = html_value_get(ta);
+        let value = html_value_get(ta);
         let from = newline();
         let to = newline_windows();
-        let replaced = text_replace(value2, from, to);
+        let replaced = text_replace(value, from, to);
         property_set(passage, "sermon", replaced);
       };
       la(update);
@@ -61,5 +61,5 @@ export async function app_g_bible_home(context) {
     let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed_browser(destination, downloaded);
   }
-  let component2 = html_button(bar, "Update", lambda4);
+  let component = html_button(bar, "Update", lambda4);
 }

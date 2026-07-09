@@ -12,7 +12,7 @@ export async function function_curryify_count(f_name, count) {
     let combined = function_name_combine(n, count);
     return combined;
   }
-  let r2 = function_curryify_count_args_get_curried_right(count);
-  let output = await function_curryify_generic_open(f_name, lambda, r2);
+  let r = function_curryify_count_args_get_curried_right(count);
+  let output = await function_curryify_generic_open(f_name, lambda, r);
   return output;
 }

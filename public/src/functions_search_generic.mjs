@@ -6,6 +6,6 @@ export async function functions_search_generic(search, fn) {
   let r = await functions_names_to_paths();
   let r2 = property_get_curried(r);
   let properties = properties_get(r);
-  let result2 = search_generic(search, properties, r2, fn);
-  return result2;
+  let result = search_generic(search, properties, r2, fn);
+  return result;
 }

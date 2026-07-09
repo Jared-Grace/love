@@ -1,5 +1,5 @@
 import { js_expression_array } from "../../../love/public/src/js_expression_array.mjs";
 export function js_expression_array_empty() {
-  let expression2 = js_expression_array([]);
-  return expression2;
+  let expression = js_expression_array([]);
+  return expression;
 }

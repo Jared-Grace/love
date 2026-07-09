@@ -14,8 +14,8 @@ export function app_a_if_statement(a) {
   let node = property_get(a, "node");
   let parent = property_get(a, "parent");
   let k = js_keyword_if();
-  let v4 = app_a_keyword_purple_space(parent, k);
-  let keyword = property_get(v4, "keyword");
+  let v = app_a_keyword_purple_space(parent, k);
+  let keyword = property_get(v, "keyword");
   async function lambda(o, choices) {
     app_a_statement_choices_add(choices, a, o);
   }

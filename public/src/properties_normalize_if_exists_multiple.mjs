@@ -4,6 +4,6 @@ export function properties_normalize_if_exists_multiple(
   contacts,
   name_properties,
 ) {
-  let lambda2 = properties_normalize_if_exists_curried_right(name_properties);
-  each(contacts, lambda2);
+  let lambda = properties_normalize_if_exists_curried_right(name_properties);
+  each(contacts, lambda);
 }

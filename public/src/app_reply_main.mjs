@@ -165,13 +165,13 @@ export async function app_reply_main(context) {
   }
   list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
-    let v22 = prayer_blessing_expand();
+    let v = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
     let mapped = list_map_property(copy, "language_code");
     let result = list_join_comma(mapped);
     let concated = list_concat_multiple([
       responses,
-      [v22],
+      [v],
       bible_texts,
       [result],
     ]);

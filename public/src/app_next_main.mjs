@@ -20,7 +20,7 @@ export async function app_next_main(context) {
   let chapter_code = property_get(hash, "c");
   let verse_number = property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
-  async function lambda2(language) {
+  async function lambda(language) {
     let bible_folder = ebible_language_to_bible_folder(language);
     let d = await ebible_verse_browser(
       bible_folder,
@@ -35,7 +35,7 @@ export async function app_next_main(context) {
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse_number,
   ]);
-  let mapped = await list_map_unordered_async(languages_chosen, lambda2);
+  let mapped = await list_map_unordered_async(languages_chosen, lambda);
   list_add_first(mapped, reference);
   let list = await ebible_index_flat(version_english);
   let next = list_find_json_next(list, {
@@ -46,9 +46,9 @@ export async function app_next_main(context) {
   let verse_number2 = property_get(next, "verse_number");
   property_set(hash, "v", verse_number2);
   property_set(hash, "c", chapter_code2);
-  const h2 = hash_to_url(hash);
+  const h = hash_to_url(hash);
   let url = html_url_without_hash();
-  url += h2;
+  url += h;
   list_add(mapped, url);
   let joined = await list_join_newline_2_copy(mapped);
   let root = property_get(context, "root");

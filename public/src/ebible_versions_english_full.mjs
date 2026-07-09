@@ -7,8 +7,8 @@ export async function ebible_versions_english_full() {
   let object = await ebible_versions_english_books_count_cache();
   const c = isaiah_chapters_count();
   let filter = function lambda3(value, key) {
-    let v2 = value >= c;
-    return v2;
+    let v = value >= c;
+    return v;
   };
   function lambda(oad) {
     function lambda2(value, key) {

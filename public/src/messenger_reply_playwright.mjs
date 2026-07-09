@@ -20,13 +20,13 @@ export async function messenger_reply_playwright() {
   let firefox = property_get(v2, "firefox");
   let chromium = property_get(v2, "chromium");
   let browser = null;
-  async function lambda2() {
+  async function lambda() {
     browser = await chromium.launch({
       headless: false,
     });
   }
   const command = "npx playwright install";
-  await retry_on_error(command, lambda2, command);
+  await retry_on_error(command, lambda, command);
   const context = await browser.newContext({
     storageState: "fb-session.json",
   });
