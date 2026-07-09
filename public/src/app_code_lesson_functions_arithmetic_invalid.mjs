@@ -1,3 +1,4 @@
+import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -35,6 +36,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let o_f = list_first(operators);
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
+    let r2 = js_operator_to_expression(o2, next2);
     let left = next();
     let right = next();
     let parts = ["add", "(", left, ",", right, ")"];
