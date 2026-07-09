@@ -1,7 +1,6 @@
-import { integer_odd_is } from "../../../love/public/src/integer_odd_is.mjs";
+import { list_filter_indices_odd } from "../../../love/public/src/list_filter_indices_odd.mjs";
 import { list_between_space } from "../../../love/public/src/list_between_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
-import { list_adder_each_index } from "../../../love/public/src/list_adder_each_index.mjs";
 import { list_between_space_before } from "../../../love/public/src/list_between_space_before.mjs";
 import { js_operator_to_expression } from "../../../love/public/src/js_operator_to_expression.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -52,13 +51,7 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let parts = [verb, "(", left, ",", right, ")"];
     let combined = list_between_space_before(parts);
     html_div_cycle_code(c, combined);
-    function lambda(la, item, index) {
-      let eq = integer_odd_is(index);
-      if (eq) {
-        la(item);
-      }
-    }
-    let r4 = list_adder_each_index(parts, lambda);
+    let r4 = list_filter_indices_odd(parts);
     let combined2 = list_between_space(r4);
     list_add_first(
       combined2,
