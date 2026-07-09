@@ -64,12 +64,11 @@ export function app_code_lesson_functions_arithmetic_invalid() {
     let combined = list_between_space_before(normalized);
     html_div_cycle_code(c, combined);
     let combined2 = list_between_space(symbols_required);
-    list_add_first(
+    list_add_first(combined2, "If any of these symbols ");
+    list_add(
       combined2,
-      "If any of these symbols ",
       " are missing from the function call, then the code is invalid ",
     );
-    list_add(list2, item);
     let c2 = app_code_container_light_blue(root);
     html_div_cycle_code(c2, combined2);
   }
