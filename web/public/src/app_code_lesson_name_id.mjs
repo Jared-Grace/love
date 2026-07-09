@@ -14,7 +14,7 @@ export function app_code_lesson_name_id(left, rights) {
   let joined_id = list_join_underscore(concated);
   let id = text_lower_to(joined_id);
   let r = {
-    name: name,
+    name,
     id,
   };
   return r;
