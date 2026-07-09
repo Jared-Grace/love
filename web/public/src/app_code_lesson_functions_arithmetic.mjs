@@ -1,5 +1,4 @@
 import { app_code_code_example_name } from "../../../love/public/src/app_code_code_example_name.mjs";
-import { html_div_cycle_code_bold } from "../../../love/public/src/html_div_cycle_code_bold.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
@@ -91,11 +90,6 @@ export function app_code_lesson_functions_arithmetic() {
     app_code_code_example_name(c, verb, name);
     let r = js_operator_to_code_call(o_f, next);
     let code = property_get(r, "call");
-    html_div_cycle_code_bold(c, [
-      "",
-      code,
-      " is an example of a ",
-      "function call",
-    ]);
+    app_code_code_example_name(c, code, "function call");
   }
 }
