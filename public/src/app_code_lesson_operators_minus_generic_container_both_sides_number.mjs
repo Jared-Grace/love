@@ -5,6 +5,7 @@ import { app_code_lesson_operators_generic_batch_get } from "../../../love/publi
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { word_add_ing } from "../../../love/public/src/word_add_ing.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_operators_minus_generic_container_both_sides_number(
   root,
   operator,
@@ -14,11 +15,13 @@ export function app_code_lesson_operators_minus_generic_container_both_sides_num
   app_code_lesson_operators_minus_generic_container_both_sides(
     root,
     operator,
-    "when " +
-      word_add_ing(verb) +
-      " two numbers" +
-      " there is " +
+    text_combine_multiple([
+      "when ",
+      word_add_ing(verb),
+      " two numbers",
+      " there is ",
       text_articled_pad_space("number"),
+    ]),
     js_code_binary_spaced_nb,
     example_get,
   );

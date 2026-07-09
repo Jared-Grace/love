@@ -7,6 +7,8 @@ import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_g_npc_says(npc, overlay, npc_says) {
   let gender = property_get(npc, "gender");
   let container = app_g_container(overlay);
@@ -16,11 +18,14 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   };
   let color_background = property_get(map, gender);
   html_style_assign(container, {
-    "background-color": color_background + "bc",
+    "background-color": text_combine(color_background, "bc"),
   });
   let game_prefix = g_game_prefix();
   const c_src = g_character_img_url(npc);
   let component = html_img(container, c_src);
   let name_npc = property_get(npc, "name");
-  app_g_p_text(container, name_npc + " says: " + npc_says);
+  app_g_p_text(
+    container,
+    text_combine_multiple([name_npc, " says: ", npc_says]),
+  );
 }

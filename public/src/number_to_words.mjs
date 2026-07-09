@@ -1,4 +1,6 @@
 import { floor } from "../../../love/public/src/floor.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function number_to_words(num) {
   const a = [
     "",
@@ -49,13 +51,20 @@ export function number_to_words(num) {
         str = a[n % 100];
         n = Math.floor(n / 100);
       } else {
-        str = b[(n % 100) - (n % 10)] + (n % 10 ? "-" + a[n % 10] : "");
+        str = text_combine(
+          b[(n % 100) - (n % 10)],
+          n % 10 ? text_combine("-", a[n % 10]) : "",
+        );
         n = Math.floor(n / 100);
       }
       if (n > 0) {
-        str = a[n] + " hundred" + (str ? " " + str : "");
+        str = text_combine_multiple([
+          a[n],
+          " hundred",
+          str ? text_combine(" ", str) : "",
+        ]);
       }
-      words = str + " " + g[group] + " " + words;
+      words = text_combine_multiple([str, " ", g[group], " ", words]);
     }
     num = Math.floor(num / 1000);
     group++;

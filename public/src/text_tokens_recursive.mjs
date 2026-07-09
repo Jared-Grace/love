@@ -4,6 +4,7 @@ import { text_size } from "../../../love/public/src/text_size.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { text_slice } from "../../../love/public/src/text_slice.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function text_tokens_recursive(
   input,
   dictionary,
@@ -31,5 +32,5 @@ export function text_tokens_recursive(
       );
     }
   }
-  each_range_from(index_left + 1, index_last, lambda3);
+  each_range_from(text_combine(index_left, 1), index_last, lambda3);
 }

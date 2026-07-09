@@ -8,6 +8,7 @@ import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs"
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_a_statement_choices_add(choices, a, o) {
   let ab = {
     shortcut: "a",
@@ -57,7 +58,11 @@ export function app_a_statement_choices_add(choices, a, o) {
           let v = app_a_node_index(a);
           let list = property_get(v, "list");
           let index = property_get(v, "index");
-          js_statement_return_insert_code(list, index + 1, identifier_name);
+          js_statement_return_insert_code(
+            list,
+            text_combine(index, 1),
+            identifier_name,
+          );
           await app_a_function_on_change(a, overlay_result);
         }
       },

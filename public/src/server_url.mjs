@@ -1,6 +1,7 @@
 import { server_port } from "../../../love/public/src/server_port.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function server_url() {
   const port = server_port();
-  let url = "http://localhost:" + port;
+  let url = text_combine("http://localhost:", port);
   return url;
 }

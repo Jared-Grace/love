@@ -51,6 +51,8 @@ import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_up
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
 import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_reply_generic(verse_get) {
   let choices = app_reply_choices();
   let original = bible_interlinear_verses_upload_folder();
@@ -125,7 +127,7 @@ export async function app_reply_generic(verse_get) {
   let mapped = list_map(r, double);
   function lambda13(v) {
     let f = verse_random_reset_n(v);
-    html_button(root, "Reset " + v, f);
+    html_button(root, text_combine("Reset ", v), f);
   }
   each(mapped, lambda13);
   function verses_list_reset() {
@@ -208,7 +210,13 @@ export async function app_reply_generic(verse_get) {
       let chapter_name = ebible_chapter_code_to_name(chapter_code2);
       let book_name = ebible_book_code_to_name(books, book_code);
       let verse_number2 = property_get(verse, "verse_number");
-      let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
+      let reference2 = text_combine_multiple([
+        book_name,
+        " ",
+        chapter_name,
+        ":",
+        verse_number2,
+      ]);
     }
     const other = [];
     function lambda11(v) {

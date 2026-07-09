@@ -30,13 +30,17 @@ export function app_replace_settings(context) {
   async function lambda2() {
     await c(value_get_multiply);
   }
-  app_replace_button(div, emoji_font_larger() + " Font size larger", lambda2);
+  app_replace_button(
+    div,
+    text_combine(emoji_font_larger(), " Font size larger"),
+    lambda2,
+  );
   async function lambda3() {
     await c(value_get_divide);
   }
   let component = app_replace_button(
     div,
-    emoji_font_smaller() + " Font size smaller",
+    text_combine(emoji_font_smaller(), " Font size smaller"),
     lambda3,
   );
   let div2 = html_div(root);

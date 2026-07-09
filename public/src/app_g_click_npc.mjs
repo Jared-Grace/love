@@ -13,6 +13,7 @@ import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_g_click_npc(div_map, npcs_matched, refresh) {
   let player = await app_g_player_get();
   let overlay = app_g_overlay(div_map);
@@ -26,7 +27,7 @@ export async function app_g_click_npc(div_map, npcs_matched, refresh) {
     let container = app_g_container(overlay);
     app_g_p_text(
       container,
-      emoji_book_open() + " You remember that you need to study!",
+      text_combine(emoji_book_open(), " You remember that you need to study!"),
     );
     app_g_button_back(overlay, overlay_close);
     let studied = property_get(player, "studied");
@@ -40,8 +41,10 @@ export async function app_g_click_npc(div_map, npcs_matched, refresh) {
       let container = app_g_container(overlay);
       app_g_p_text(
         container,
-        emoji_pray() +
+        text_combine(
+          emoji_pray(),
           " You remember that you have not prayed, yet, before your next conversation!",
+        ),
       );
       let conversed = property_get(player, "conversed");
       if (not(conversed)) {

@@ -7,12 +7,13 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_g_wrong(passage, passages, property) {
   let text = property_get(passage, "text");
   let objections = property_get(passage, property);
   let split = app_g_openai_split(objections);
   let ob = list_random_item(split);
-  let themes_correct = g_themes(text + " " + ob);
+  let themes_correct = g_themes(text_combine_multiple([text, " ", ob]));
   function lambda2(p) {
     let text_candidate = property_get(p, "text");
     let themes_candidate = g_themes(text_candidate);

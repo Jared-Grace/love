@@ -1,6 +1,7 @@
 import { js_keyword_null } from "../../../love/public/src/js_keyword_null.mjs";
 import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_set_expressions_primary_rules(rules) {
   let added = [
     "pe > id",
@@ -16,7 +17,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
     "in > 2",
     "li > st",
     'st > "luv"',
-    "li > " + js_keyword_null(),
+    text_combine("li > ", js_keyword_null()),
     "li > bo",
   ];
   list_add_multiple(rules, added);

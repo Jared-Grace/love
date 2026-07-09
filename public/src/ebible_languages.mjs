@@ -11,8 +11,9 @@ import { list_sort_text_property } from "../../../love/public/src/list_sort_text
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function ebible_languages() {
-  "to add an entry, run: " + fn_name("ebible_languages_add");
+  text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
   let en = ebible_language_english();
   let o = ebible_language_original();
   const ur = ebible_language_urdu();

@@ -1,4 +1,5 @@
 import { not } from "../../../love/public/src/not.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function roman_to_integer(input) {
   function unicodeToAscii(roman) {
     const map = {
@@ -39,7 +40,7 @@ export function roman_to_integer(input) {
     let total = 0;
     for (let i = 0; i < roman.length; i++) {
       const v1 = values[roman[i]];
-      const v2 = values[roman[i + 1]] || 0;
+      const v2 = values[roman[text_combine(i, 1)]] || 0;
       total += v1 < v2 ? -v1 : v1;
     }
     return total;
@@ -52,7 +53,7 @@ export function roman_to_integer(input) {
     const romanPart = match[1];
     const suffix = match[2] || "";
     const asciiRoman = unicodeToAscii(romanPart);
-    let v5 = romanToInt(asciiRoman) + suffix;
+    let v5 = text_combine(romanToInt(asciiRoman), suffix);
     return v5;
   }
   let v6 = parseRomanOrInteger(input);

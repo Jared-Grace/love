@@ -4,12 +4,13 @@ import { html_parse_find_a_href_starts_with } from "../../../love/public/src/htm
 import { list_filter_starts_with_not_multiple } from "../../../love/public/src/list_filter_starts_with_not_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_parse_read } from "../../../love/public/src/html_parse_read.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function ebible_chapters(bible_folder, book_code) {
   let joined = ebible_version_download_path_combine(bible_folder, book_code);
   let { d, root } = await html_parse_read(joined);
   let filtered = html_parse_find_a_href_starts_with(root, d, book_code);
   function lambda(item) {
-    let combined = book_code + item + ".";
+    let combined = text_combine_multiple([book_code, item, "."]);
     return combined;
   }
   let prefixes = list_map(["00", "000"], lambda);

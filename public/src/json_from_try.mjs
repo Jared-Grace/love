@@ -8,17 +8,18 @@ import { json_starts_find_index } from "../../../love/public/src/json_starts_fin
 import { text_slice_0 } from "../../../love/public/src/text_slice_0.mjs";
 import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function json_from_try(json) {
   let left = json_starts_find_index(json);
   let skipped = text_skip(json, left);
   let right = json_ends_find_index(skipped);
-  let without = text_slice_0(skipped, right + 1);
+  let without = text_slice_0(skipped, text_combine(right, 1));
   let first = text_first(without);
   if (first === js_code_bracket_open()) {
     let last = text_last(without);
     let end = js_code_bracket_close();
     if (equal_not(last, end)) {
-      without += end + "";
+      without += end;
     }
   }
   let result = json_from(without);

@@ -48,7 +48,7 @@ export async function app_next_main(context) {
   property_set(hash, "c", chapter_code2);
   const h2 = hash_to_url(hash);
   let url = html_url_without_hash();
-  url += "" + h2;
+  url += h2;
   list_add(mapped, url);
   let joined = await list_join_newline_2_copy(mapped);
   let root = property_get(context, "root");

@@ -3,9 +3,7 @@ import { firebase_config_get } from "../../../love/public/src/firebase_config_ge
 import { initializeApp } from "firebase/app";
 export async function firebase_app_initialize() {
   async function lambda2() {
-    `const firebase = await import(
-      "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
-    );`;
+    'const firebase = await import(\n      "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"\n    );';
     let firebase_config = firebase_config_get();
     const app = initializeApp(firebase_config);
     return app;

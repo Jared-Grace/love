@@ -20,6 +20,7 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   let v2 = await ebible_chapter_text(bible_folder, chapter_code);
   let property = "text";
@@ -46,7 +47,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
         let filtered4 = list_filter(r, lambda2);
         index = list_first(filtered4);
       }
-      let skipped = list_skip(filtered, index + 1);
+      let skipped = list_skip(filtered, text_combine(index, 1));
       const v = ebible_verse_new(skipped, number);
       la(v);
       filtered = list_take(filtered, index);

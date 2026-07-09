@@ -31,6 +31,7 @@ import { function_current_set } from "../../../love/public/src/function_current_
 import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee_name_try.mjs";
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function sandbox() {
   const f_name = sandbox_3_a.name;
   await function_current_set(f_name);
@@ -58,7 +59,7 @@ export async function sandbox() {
           [js_identifier_name_new.name, "l,folder_user_docs_path_previous"],
           [
             js_identifier_rename.name,
-            html_hash_get.name + ",html_hash_object_get",
+            text_combine(html_hash_get.name, ",html_hash_object_get"),
           ],
           [js_call_add.name, "ldf"],
           [js_call_add_first.name, html_hash_get.name],

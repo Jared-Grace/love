@@ -5,6 +5,7 @@ import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { ebible_references_parse } from "../../../love/public/src/ebible_references_parse.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function ebible_references_parse_folder_user_docs(
   file_name,
   second_language,
@@ -16,7 +17,7 @@ export async function ebible_references_parse_folder_user_docs(
   function lambda(item) {
     let text = property_get(item, "text");
     let reference = property_get(item, "reference");
-    let v2 = reference + " " + text;
+    let v2 = text_combine_multiple([reference, " ", text]);
     return v2;
   }
   let mapped = list_map(list, lambda);

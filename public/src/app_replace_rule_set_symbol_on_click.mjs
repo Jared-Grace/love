@@ -25,6 +25,7 @@ import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rul
 import { app_replace_button_symbol_style_valid_if_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_multiple.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_replace_rule_set_symbol_on_click(
   rules_parsed,
   index_selected,
@@ -52,7 +53,7 @@ export async function app_replace_rule_set_symbol_on_click(
     let rights2 = property_get(rb, "rights");
     let size3 = list_size(lefts2);
     let sliced2 = list_slice_count(sbs, index, size3);
-    const sum = index + size3;
+    const sum = text_combine(index, size3);
     let skipped = list_skip(sbs, sum);
     let rects_before = list_map(skipped, html_bounding_client_rect);
     await html_move_animate_multiple_parent_remove(sliced2, lefts2, duration);
@@ -60,7 +61,7 @@ export async function app_replace_rule_set_symbol_on_click(
     let rights_cloned = list_map(rights2, html_clone);
     function lambda8(item, index5) {
       html_visibility_hidden(item);
-      html_insert(div_symbols, item, index + index5);
+      html_insert(div_symbols, item, text_combine(index, index5));
     }
     each_index(rights_cloned, lambda8);
     let rects_after = list_map(skipped, html_bounding_client_rect);

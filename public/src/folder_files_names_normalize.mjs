@@ -3,13 +3,14 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_move } from "../../../love/public/src/file_move.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function folder_files_names_normalize(path, matches, prefix) {
   let files = await folder_read_files(path);
   let index = 1;
   async function lambda2(la) {
     async function lambda(name_old) {
       if (matches(name_old)) {
-        let name_new = prefix + index + ".zip";
+        let name_new = text_combine_multiple([prefix, index, ".zip"]);
         let path_new = path_join([path, name_new]);
         let path_old = path_join([path, name_old]);
         await file_move(path_old, path_new);

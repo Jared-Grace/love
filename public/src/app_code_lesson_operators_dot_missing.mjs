@@ -22,9 +22,10 @@ export function app_code_lesson_operators_dot_missing() {
       " will be used with identifiers, and not as a decimal point in a number",
     ]);
     let example_get = app_code_lesson_operators_dot_numbers_example(operator);
-    let text_before =
-      "remember," +
-      app_code_lesson_operators_dot_numbers_both_sides_text_common();
+    let text_before = text_combine(
+      "remember,",
+      app_code_lesson_operators_dot_numbers_both_sides_text_common(),
+    );
     app_code_lesson_operators_minus_generic_container_both_sides(
       root,
       operator,

@@ -17,6 +17,7 @@ import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_search_home(context) {
   let root = property_get(context, "root");
   html_clear(root);
@@ -34,7 +35,7 @@ export function app_search_home(context) {
   app_reply_buttons_languages(languages_chosen, root, languages);
   const search_instructions =
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
-  let p2 = html_p_text(root, "2. " + search_instructions);
+  let p2 = html_p_text(root, text_combine("2. ", search_instructions));
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);

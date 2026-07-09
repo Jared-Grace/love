@@ -1,5 +1,6 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function path_join(segments) {
-  if (!segments || !segments.length) throw new Error('Missing segments');
+  if (!segments || !segments.length) throw new Error("Missing segments");
 
   const parts = [];
   let isAbsolute = false;
@@ -10,7 +11,7 @@ export function path_join(segments) {
 
     // Check for absolute path only in the first non-empty segment
     if (i === 0) {
-      if (seg.startsWith('/') || /^[a-zA-Z]:[\\/]/.test(seg)) {
+      if (seg.startsWith("/") || /^[a-zA-Z]:[\\/]/.test(seg)) {
         isAbsolute = true;
       }
     }
@@ -18,12 +19,12 @@ export function path_join(segments) {
     // Split on both forward and backward slashes
     const split = seg.split(/[\\/]+/);
     for (let s of split) {
-      if (s === '' || s === '.') continue;
-      if (s === '..') {
-        if (parts.length && parts[parts.length - 1] !== '..') {
+      if (s === "" || s === ".") continue;
+      if (s === "..") {
+        if (parts.length && parts[parts.length - 1] !== "..") {
           parts.pop();
         } else {
-          parts.push('..');
+          parts.push("..");
         }
       } else {
         parts.push(s);
@@ -32,8 +33,8 @@ export function path_join(segments) {
   }
 
   // Join with forward slash
-  const joined = parts.join('/');
+  const joined = parts.join("/");
 
   // Add leading slash if absolute
-  return isAbsolute ? '/' + joined : joined;
+  return isAbsolute ? text_combine("/", joined) : joined;
 }
