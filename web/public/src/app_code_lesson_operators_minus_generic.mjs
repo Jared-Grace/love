@@ -5,7 +5,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { text_left_right_middle_random_space_nb } from "../../../love/public/src/text_left_right_middle_random_space_nb.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
 import { each_nested_args_range_1_list_adder } from "../../../love/public/src/each_nested_args_range_1_list_adder.mjs";
-import { app_code_lesson_operators_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_batch_get_max.mjs";
+import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides_number } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides_number.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { boolean_to_text_validity } from "../../../love/public/src/boolean_to_text_validity.mjs";
@@ -27,7 +27,7 @@ export function app_code_lesson_operators_minus_generic(
   math_name,
   right_random_get,
 ) {
-  let max = app_code_lesson_operators_batch_get_max();
+  let max = app_code_lesson_operators_value_max();
   function batch_get() {
     let list = each_nested_args_range_1_list_adder(max, lambda$left$right$la);
     function lambda$left$right$la(left, right, la) {
