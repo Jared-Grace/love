@@ -14,7 +14,7 @@ export function app_code_lesson_functions_console_log() {
   function lambda() {
     const digit_count_max = 3;
     let digit_count = range_1(digit_count_max);
-    function lambda2(i) {}
+    function lambda2(c) {}
     each_range_1(digit_count_max, lambda2);
   }
   let next = list_iterator_refillable(lambda);
