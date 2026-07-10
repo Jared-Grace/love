@@ -49,12 +49,12 @@ export function app_code_lesson_functions_console_log() {
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
     let v3 = next();
-    let console_log = js_code_call_arg(fn_name, v3);
+    let fn_name_call = js_code_call_arg(fn_name, v3);
     html_div_cycle_code(c, [
       "Instead of ",
       code2,
       " we could write: ",
-      console_log,
+      fn_name_call,
     ]);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
