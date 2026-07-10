@@ -17,6 +17,7 @@ import { html_div_code_multiple } from "../../../love/public/src/html_div_code_m
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_operators_minus_generic(
   operator,
@@ -51,10 +52,9 @@ export function app_code_lesson_operators_minus_generic(
   };
   let batch = app_code_batch_question_answer_fns(batch_get, symbols_to_answer);
   function above(root) {
-    let c = app_code_container_light_blue(root);
     let combined = text_combine_right_fn(operator, right_random_get);
     const operator_name_math_articled = text_articled_pad_space(operator_name);
-    html_div_cycle_code(c, [
+    app_code_container_light_blue_cycle_code(root, [
       text_combine_multiple([
         "In math and JavaScript, ",
         operator_name_math_articled,

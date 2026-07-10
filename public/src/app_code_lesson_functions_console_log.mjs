@@ -20,7 +20,8 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
+import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
+import { app_code_container_light_blue_cycle_code_multiple } from "../../../love/public/src/app_code_container_light_blue_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
@@ -64,8 +65,7 @@ export function app_code_lesson_functions_console_log() {
       fn_name,
       " are different",
     ]);
-    let c2 = app_code_container_light_blue(root);
-    html_div_cycle_code_multiple(c2, [
+    app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
       [
         "But ",
@@ -73,8 +73,7 @@ export function app_code_lesson_functions_console_log() {
         ...list_transform_first_combine(" only has one number ", inside),
       ],
     ]);
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
+    app_code_container_light_blue_cycle_code(root, [
       "Whatever is inside the ",
       ...parts,
       " of ",
