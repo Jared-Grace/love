@@ -5,6 +5,6 @@ import { js_expression_is } from "../../../love/public/src/js_expression_is.mjs"
 export function js_parse_choose(joined) {
   let expression_is = js_expression_is(joined);
   let parse = ternary(expression_is, js_parse_expression, js_parse);
-  let expression = parse(joined);
-  return expression;
+  let parsed = parse(joined);
+  return parsed;
 }
