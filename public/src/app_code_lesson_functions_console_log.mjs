@@ -1,9 +1,9 @@
+import { html_div_cycle_code_instead_could_write } from "../../../love/public/src/html_div_cycle_code_instead_could_write.mjs";
 import { list_transform_first_combine } from "../../../love/public/src/list_transform_first_combine.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { js_code_call_arg } from "../../../love/public/src/js_code_call_arg.mjs";
-import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_operator_first_code_call } from "../../../love/public/src/js_operator_first_code_call.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
@@ -51,12 +51,7 @@ export function app_code_lesson_functions_console_log() {
     let c = app_code_container_light_blue(root);
     let v3 = next();
     let fn_name_call = js_code_call_arg(fn_name, v3);
-    html_div_cycle_code(c, [
-      "Instead of ",
-      code2,
-      " we could write: ",
-      fn_name_call,
-    ]);
+    html_div_cycle_code_instead_could_write(c, code2, fn_name_call);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
