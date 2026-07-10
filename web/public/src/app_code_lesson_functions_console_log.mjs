@@ -1,6 +1,6 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_operators_arithmetic_generic } from "../../../love/public/src/app_code_operators_arithmetic_generic.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
@@ -35,8 +35,8 @@ export function app_code_lesson_functions_console_log() {
       let code = js_operator_to_code_call_only(item, next_operator);
       return code;
     }
-    app_code_operators_arithmetic_generic(root, lambda);
-    let mapped = list_map(list, lambda);
+    let div = html_div(parent);
+    app_code_operators_arithmetic_generic(c, lambda);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
