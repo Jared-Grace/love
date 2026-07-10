@@ -36,7 +36,7 @@ import { js_identifiers_names } from "../../../love/public/src/js_identifiers_na
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
-export async function js_expand_generic(next, stack2, ast) {
+export async function js_expand_generic(next, stack_2, ast) {
   let inserted = null;
   let v = js_statement_call_get(next);
   let call = property_get(v, "call");
@@ -53,7 +53,7 @@ export async function js_expand_generic(next, stack2, ast) {
       }
     }
     await each_index_async(arguments2, lambda5);
-    let index = list_index_of(stack2, next);
+    let index = list_index_of(stack_2, next);
     const a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
@@ -98,10 +98,10 @@ export async function js_expand_generic(next, stack2, ast) {
       }
     }
     js_return_on(last, lambda, noop);
-    list_remove(stack2, next);
+    list_remove(stack_2, next);
     each_reverse(body_block, lambda4);
     function lambda4(item) {
-      list_insert(stack2, index, item);
+      list_insert(stack_2, index, item);
     }
     inserted = list_map(body_block, js_unparse);
   }

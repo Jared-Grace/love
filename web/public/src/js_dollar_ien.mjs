@@ -3,12 +3,12 @@ import { null_is } from "../../../love/public/src/null_is.mjs";
 export async function js_dollar_ien({
   remaining,
   node,
-  stack1,
-  stack2,
-  stack3,
+  stack_1,
+  stack_2,
+  stack_3,
   ast,
   afters,
 }) {
   let fn = null_is;
-  await js_dollar_ien_generic(stack1, fn, ast);
+  await js_dollar_ien_generic(stack_1, fn, ast);
 }

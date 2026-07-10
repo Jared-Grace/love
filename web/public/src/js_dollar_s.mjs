@@ -14,17 +14,17 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_dollar_a_generic } from "../../../love/public/src/js_dollar_a_generic.mjs";
 import { js_null } from "../../../love/public/src/js_null.mjs";
-export function js_dollar_s({ stack1, stack2, ast, afters }) {
+export function js_dollar_s({ stack_1, stack_2, ast, afters }) {
   let count = 1;
   js_dollar_a_generic({
-    stack1,
-    stack2,
+    stack_1,
+    stack_2,
     afters,
     lambda,
     ast,
     count,
   });
-  function lambda({ stack1, next, stack2, ast, declarations }) {
+  function lambda({ stack_1, next, stack_2, ast, declarations }) {
     "todo handle more than 1";
     let s = list_size_1(declarations);
     assert(s);
@@ -44,9 +44,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let init2 = js_null();
       let assign = js_declare(name, init2);
       object_replace(next, expression);
-      let index_next = list_next_index(stack2, stack1);
-      list_insert(stack2, index_next, assign);
-      list_remove(stack2, stack1);
+      let index_next = list_next_index(stack_2, stack_1);
+      list_insert(stack_2, index_next, assign);
+      list_remove(stack_2, stack_1);
       return;
     }
     each(declarations, lambda2);

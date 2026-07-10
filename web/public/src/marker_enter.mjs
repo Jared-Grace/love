@@ -12,12 +12,12 @@ import { function_transform_marker_current } from "../../../love/public/src/func
 export async function marker_enter() {
   async function lambda(a) {
     let v2 = marker_next_index(a);
-    let stack2 = property_get(v2, "stack2");
-    let stack1 = property_get(v2, "stack1");
+    let stack_2 = property_get(v2, "stack_2");
+    let stack_1 = property_get(v2, "stack_1");
     let index = property_get(v2, "index");
     let body = null;
     while (body === null) {
-      let next = list_get(stack2, index);
+      let next = list_get(stack_2, index);
       var i = js_types_function_includes_node(next);
       if (i) {
         body = js_function_declaration_to_block_body(next);
@@ -32,8 +32,8 @@ export async function marker_enter() {
     }
     let nn = null_not_is(body);
     if (nn) {
-      list_add_first(body, stack1);
-      list_remove(stack2, stack1);
+      list_add_first(body, stack_1);
+      list_remove(stack_2, stack_1);
     }
   }
   let v = await function_transform_marker_current(lambda);
