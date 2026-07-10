@@ -1,7 +1,5 @@
-import { digits_text } from "../../../love/public/src/digits_text.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
+import { digits } from "../../../love/public/src/digits.mjs";
 export function digits_count() {
-  let d = digits_text();
-  let ds = text_split_empty(d);
+  let ds = digits();
   return ds;
 }
