@@ -1,4 +1,4 @@
-import { list_size_less_than } from "../../../love/public/src/list_size_less_than.mjs";
+import { list_size_less_than_other } from "../../../love/public/src/list_size_less_than_other.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
@@ -44,7 +44,7 @@ export function app_code_lesson_quiz_multiple_choice(
     let n = next_get();
     list_empty_not_is_assert(n);
     let list = la(n);
-    let v = list_size_less_than(list_a, list_b);
+    let v = list_size_less_than_other(list_a, list_b);
   }
   let list = list_adder_multiple(lambda);
   let quiz_batch_items = batch_get();
