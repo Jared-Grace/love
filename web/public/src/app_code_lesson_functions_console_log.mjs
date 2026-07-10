@@ -14,9 +14,11 @@ export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let digit_count = 1;
-  let next1 = digit_count_values_shuffled_next(digit_count);
   function lambda() {
-    function lambda5() {}
+    function lambda5() {
+      let next = digit_count_values_shuffled_next(digit_count);
+      return next;
+    }
     let value = property_initialize_lambda(object, property_name, lambda5);
     const digit_count_max = 3;
     let digit_counts = range_1(digit_count_max);
