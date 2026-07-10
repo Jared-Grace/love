@@ -6,10 +6,10 @@ export function list_first_remaining(list) {
   let r = list_first_second_generic(list, value_get, property_name);
   if (false) {
     ("this is for copy and pasting");
-    ({
+    let o = {
       first,
       remaining,
-    });
+    };
   }
   return r;
 }
