@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_flex_grow_1 } from "../../../love/public/src/html_flex_grow_1.mjs";
 import { html_display_flex } from "../../../love/public/src/html_display_flex.mjs";
 import { app_bible_button_chapter_previous } from "../../../love/public/src/app_bible_button_chapter_previous.mjs";
@@ -137,6 +138,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
   let r = html_button_arrow_right(verse_pickers, lambda7);
+  function lambda2(item) {}
+  each(list, lambda2);
   html_flex_grow_1(r);
   list_add(languages_verses, {
     verses,
