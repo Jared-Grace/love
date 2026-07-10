@@ -1,3 +1,4 @@
+import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
 import { js_code_call_arg_fn } from "../../../love/public/src/js_code_call_arg_fn.mjs";
 import { js_operator_first_code_call_only } from "../../../love/public/src/js_operator_first_code_call_only.mjs";
@@ -14,7 +15,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
 import { app_code_container_light_blue_cycle_code_multiple } from "../../../love/public/src/app_code_container_light_blue_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
-  var r = app_code_lesson_functions_console_log_generic(above);
+  var r = app_code_lesson_functions_console_log_generic(above, identity);
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");
   let next_operator = property_get(r, "next_operator");
