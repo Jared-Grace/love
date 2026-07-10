@@ -29,7 +29,7 @@ export function app_code_lesson_functions_console_log() {
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
     let operators = js_operators();
     let span = html_div_cycle_code(c, [
-      "Here is an examples of a function call: ",
+      "Here is an example of a function call: ",
       call,
     ]);
     let r2 = js_code_parenthesis_list();
