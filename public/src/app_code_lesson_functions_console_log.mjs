@@ -68,7 +68,7 @@ export function app_code_lesson_functions_console_log() {
         " inside the ",
         ...parts,
       ],
-      [""],
+      ["But ", fn_name, " only has one number ", " inside the ", ...parts],
     ]);
   }
   function batch_get() {
