@@ -4,6 +4,9 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { text_replace_multiple_to_space } from "../../../love/public/src/text_replace_multiple_to_space.mjs";
+import { list_sort_list_size } from "../../../love/public/src/list_sort_list_size.mjs";
+import { list_filter_list_empty_not_is } from "../../../love/public/src/list_filter_list_empty_not_is.mjs";
+import { list_power_set } from "../../../love/public/src/list_power_set.mjs";
 import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
@@ -22,6 +25,9 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
   let symbols_required = ["(", ",", ")"];
   let next = list_iterator_refillable(digits_count_2_to_3_random);
+  let results = list_power_set(symbols_required);
+  let filtered = list_filter_list_empty_not_is(results);
+  list_sort_list_size(filtered);
   let next_get = list_iterator_refillable_value(filtered);
   function batch_get() {
     function lambda(la) {
