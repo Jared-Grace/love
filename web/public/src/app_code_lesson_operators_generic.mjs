@@ -44,16 +44,14 @@ export function app_code_lesson_operators_generic(
     let replaced = text_replace(question, operator_js, operator_math);
     const operator_name_math_articled =
       text_articled_pad_space(operator_name_math);
-    html_div_cycle_code(c, [
-      text_combine_multiple([
-        "In math,",
-        operator_name_math_articled,
-        "can be used to ",
-        verb,
-        " numbers: ",
-      ]),
-      replaced,
+    let combined = text_combine_multiple([
+      "In math,",
+      operator_name_math_articled,
+      "can be used to ",
+      verb,
+      " numbers: ",
     ]);
+    html_div_cycle_code(c, [combined, replaced]);
     let ne = equal_not(operator_js, operator_math);
     if (ne) {
       c = app_code_container_light_blue(root);
@@ -62,14 +60,12 @@ export function app_code_lesson_operators_generic(
         operator_name_js,
         operator_js,
       );
-      html_div_cycle_code(c, [
-        text_combine(
-          "In JavaScript, we do not use",
-          operator_name_math_articled,
-        ),
-        operator_math,
-        text_combine_multiple([" to ", verb, " numbers"]),
-      ]);
+      let combined2 = text_combine(
+        "In JavaScript, we do not use",
+        operator_name_math_articled,
+      );
+      let combined3 = text_combine_multiple([" to ", verb, " numbers"]);
+      html_div_cycle_code(c, [combined2, operator_math, combined3]);
     }
     let t = null;
     if (ne) {
@@ -77,11 +73,13 @@ export function app_code_lesson_operators_generic(
     } else {
       t = "In JavaScript";
     }
-    html_div_cycle_code(c, [
-      text_combine(t, ", the "),
-      operator_js,
-      text_combine_multiple([" symbol can be used to ", verb, " two numbers"]),
+    let combined4 = text_combine(t, ", the ");
+    let combined5 = text_combine_multiple([
+      " symbol can be used to ",
+      verb,
+      " two numbers",
     ]);
+    html_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
   const example_label = app_code_label_code_answer_example();
   const quiz_label = app_code_label_code_answer_quiz();
@@ -89,7 +87,6 @@ export function app_code_lesson_operators_generic(
   let question_label = app_code_label_code_question();
   let example_count = 1;
   let quiz_backwards_label_answer = "What code produces this value? ";
-  let on_quiz_answer_button_backwards = null;
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
   const quizzes = app_code_lesson_quizzes_unscramble(
