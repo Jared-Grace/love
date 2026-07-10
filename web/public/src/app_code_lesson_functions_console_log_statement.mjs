@@ -1,4 +1,5 @@
-import { html_div_cycle_code_bold } from "../../../love/public/src/html_div_cycle_code_bold.mjs";
+import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
+import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -21,6 +22,11 @@ export function app_code_lesson_functions_console_log_statement() {
   });
   return lesson;
   function above(root) {
+    let c2 = app_code_container_light_blue(root);
+    html_div_cycle_bold(c2, [
+      'In JavaScript, "sentences" are called ',
+      "statements",
+    ]);
     let c = app_code_container_light_blue_text(
       root,
       "In English, we can use a period (.) to mean the end of a sentence.",
@@ -29,10 +35,6 @@ export function app_code_lesson_functions_console_log_statement() {
       "In JavaScript, instead of a period (.), we use a ",
       ";",
       ' as the end of a JavaScript "sentence"',
-    ]);
-    html_div_cycle_code_bold(c, [
-      'Although, in JavaScript, "sentences" are called ',
-      "statements",
     ]);
   }
 }
