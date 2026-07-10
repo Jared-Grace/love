@@ -1,7 +1,3 @@
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
-import { app_code_operators_arithmetic_generic } from "../../../love/public/src/app_code_operators_arithmetic_generic.mjs";
-import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
@@ -29,19 +25,14 @@ export function app_code_lesson_functions_console_log() {
     let o_f = js_operator_first_code_call(next_operator);
     let code_operator = property_get(o_f, "code");
     let verb = property_get(o_f, "verb");
+    let call = property_get(o_f, "call");
     let c = app_code_container_light_blue(root);
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
     let operators = js_operators();
-    function lambda(item) {
-      let code = js_operator_to_code_call_only(item, next_operator);
-      return code;
-    }
-    let div = html_div(c);
-    let span = html_span_text(
-      div,
-      "Here are some examples of function calls: ",
-    );
-    app_code_operators_arithmetic_generic(div, lambda);
+    let span = html_div_cycle_code(c, [
+      "Here is an examples of a function call: ",
+      call,
+    ]);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
