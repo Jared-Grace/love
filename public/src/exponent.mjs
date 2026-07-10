@@ -1,4 +1,4 @@
-export function exponent(base, digit_count) {
-  let r2 = base ** digit_count;
-  return r2;
+export function exponent(left, right) {
+  let e = left ** right;
+  return e;
 }
