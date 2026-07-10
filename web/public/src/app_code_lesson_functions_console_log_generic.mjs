@@ -19,7 +19,7 @@ export function app_code_lesson_functions_console_log_generic(
 ) {
   const fn_name = "console.log";
   const rights = [fn_name];
-  list_add_multiple(list2, items);
+  list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
