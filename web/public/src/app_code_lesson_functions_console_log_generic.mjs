@@ -41,7 +41,8 @@ export function app_code_lesson_functions_console_log_generic(
   function batch_get() {
     let v = next();
     let code = js_code_call_arg(fn_name, v);
-    let r = [code];
+    let transfomed = code_transform(code);
+    let r = [transfomed];
     return r;
   }
   let b = app_code_batch_question_answer_fns(
