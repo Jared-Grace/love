@@ -15,7 +15,7 @@ export function app_code_lesson_functions_console_log() {
     let r = [list];
     return r;
   }
-  let lesson = app_code_lesson_code(batch, name_id, above);
+  let lesson = app_code_lesson_code(batch_get, name_id, above);
   return lesson;
   function above(root) {
     let c = app_code_container_light_blue(root);
