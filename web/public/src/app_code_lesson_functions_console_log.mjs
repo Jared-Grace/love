@@ -1,3 +1,4 @@
+import { digit_count_value_min } from "../../../love/public/src/digit_count_value_min.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { exponent } from "../../../love/public/src/exponent.mjs";
 import { digits_count } from "../../../love/public/src/digits_count.mjs";
@@ -18,8 +19,7 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda4() {
     let digit_count = 1;
-    const base = digits_count();
-    let from = exponent(base, digit_count);
+    let from = digit_count_value_min(digit_count);
     {
       let a = add_1(digit_count);
       const base = digits_count();
