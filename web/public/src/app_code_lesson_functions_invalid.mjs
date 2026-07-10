@@ -20,8 +20,8 @@ import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function app_code_lesson_functions_arithmetic_invalid() {
-  let name_id = app_code_lesson_name_id("functions", ["arithmetic", "invalid"]);
+export function app_code_lesson_functions_invalid() {
+  let name_id = app_code_lesson_name_id("functions", ["invalid"]);
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
