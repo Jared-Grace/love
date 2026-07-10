@@ -23,7 +23,6 @@ export function app_code_lesson_functions_console_log() {
   return lesson;
   function above(root) {
     let o_f = js_operator_first_code_call(next_operator);
-    let code_operator = property_get(o_f, "code");
     let verb = property_get(o_f, "verb");
     let call = property_get(o_f, "call");
     let c = app_code_container_light_blue(root);
