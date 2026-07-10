@@ -1,5 +1,4 @@
-import { eval_console_log_replace } from "../../../love/public/src/eval_console_log_replace.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { eval_console_log_to_list } from "../../../love/public/src/eval_console_log_to_list.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -19,15 +18,7 @@ export function app_code_lesson_functions_console_log() {
     return r;
   }
   function console_log_list(code) {
-    function lambda3(la) {
-      function console_log_replacement(...args) {
-        let r2 = la(args);
-        return r2;
-      }
-      let r3 = eval_console_log_replace(code, console_log_replacement);
-      return r3;
-    }
-    let logs = list_adder(lambda3);
+    let logs = eval_console_log_to_list(code);
     return logs;
   }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
