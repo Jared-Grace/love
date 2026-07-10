@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_operators_arithmetic_generic } from "../../../love/public/src/app_code_operators_arithmetic_generic.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
@@ -37,6 +38,7 @@ export function app_code_lesson_functions_console_log() {
     }
     let div = html_div(c);
     app_code_operators_arithmetic_generic(div, lambda);
+    let span = html_span_text(parent, text);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
