@@ -19,6 +19,9 @@ export function app_code_lesson_functions_console_log_statement() {
   });
   return lesson;
   function above(root) {
-    app_code_container_light_blue_text(root2, text);
+    app_code_container_light_blue_text(
+      root,
+      "In English, we can use a period (.) to mean the end of a sentence.",
+    );
   }
 }
