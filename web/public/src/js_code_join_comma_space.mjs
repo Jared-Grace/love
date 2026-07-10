@@ -1,7 +1,9 @@
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
 export function js_code_join_comma_space(args) {
-  let v = list_join(args, text_combine(js_code_comma(), " "));
+  let t = js_code_comma();
+  let separator = text_combine_space_right(t);
+  let v = list_join(args, separator);
   return v;
 }
