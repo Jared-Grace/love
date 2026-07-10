@@ -88,6 +88,10 @@ export function app_code_lesson_quiz_token_select(
         }
         let any = list_any(variations, lambda4);
         if (any) {
+          log(app_code_lesson_quiz_token_select.name, {
+            variations,
+            chosen,
+          });
           await on_success();
         }
         await sleep_success_color();
