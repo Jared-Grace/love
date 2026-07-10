@@ -1,3 +1,4 @@
+import { js_code_call_arg_fn } from "../../../love/public/src/js_code_call_arg_fn.mjs";
 import { js_operator_first_code_call_only } from "../../../love/public/src/js_operator_first_code_call_only.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { html_div_cycle_code_instead_could_write } from "../../../love/public/src/html_div_cycle_code_instead_could_write.mjs";
@@ -52,8 +53,7 @@ export function app_code_lesson_functions_console_log() {
     let code2 = property_get(o_f, "code");
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
-    let v3 = next();
-    let fn_name_call = js_code_call_arg(fn_name, v3);
+    let fn_name_call = js_code_call_arg_fn(next, fn_name);
     html_div_cycle_code_instead_could_write(c, code2, fn_name_call);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
