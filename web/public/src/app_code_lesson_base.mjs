@@ -1,6 +1,4 @@
-import { list_join } from "../../../love/public/src/list_join.mjs";
-import { list_filter_text_empty_not_is } from "../../../love/public/src/list_filter_text_empty_not_is.mjs";
-import { text_split } from "../../../love/public/src/text_split.mjs";
+import { text_adjascent_duplicates_remove } from "../../../love/public/src/text_adjascent_duplicates_remove.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -22,10 +20,8 @@ export function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
-  const split_by = "_";
-  let split = text_split(lesson_unique_id, split_by);
-  let filtered = list_filter_text_empty_not_is(split);
-  let joined = list_join(list, separator);
+  const separator = "_";
+  text_adjascent_duplicates_remove(lesson_unique_id, separator);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
