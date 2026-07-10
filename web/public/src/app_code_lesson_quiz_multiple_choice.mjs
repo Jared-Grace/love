@@ -1,4 +1,4 @@
-import { list_size_less_than_other } from "../../../love/public/src/list_size_less_than_other.mjs";
+import { list_size_less_than_value } from "../../../love/public/src/list_size_less_than_value.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
@@ -39,12 +39,17 @@ export function app_code_lesson_quiz_multiple_choice(
   let question_property =
     app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_answer = property_get(qa, answer_property);
+  let answer_count_max = app_code_answer_count_max();
+  let nn2 = null_not_is(answer_count_override);
+  if (nn2) {
+    answer_count_max = answer_count_override;
+  }
   let next_get = list_iterator_refillable(batch_get);
   function lambda(la) {
     let n = next_get();
     list_empty_not_is_assert(n);
     let list = la(n);
-    let v = list_size_less_than_other(list_a, list_b);
+    let v = list_size_less_than_value(list, answer_count_max);
   }
   let list = list_adder_multiple(lambda);
   let quiz_batch_items = batch_get();
@@ -60,11 +65,6 @@ export function app_code_lesson_quiz_multiple_choice(
   let answers = list_map_property(quiz_batch_items, answer_property);
   let answers_unique = list_unique(answers);
   list_remove_if_exists(answers_unique, quiz_answer);
-  let answer_count_max = app_code_answer_count_max();
-  let nn2 = null_not_is(answer_count_override);
-  if (nn2) {
-    answer_count_max = answer_count_override;
-  }
   let count = subtract(answer_count_max, 1);
   let taken = list_shuffle_take(answers_unique, count);
   let choices = list_concat(taken, [quiz_answer]);
