@@ -1,14 +1,12 @@
-import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { app_code_container_light_blue_cycle_code_multiple } from "../../../love/public/src/app_code_container_light_blue_cycle_code_multiple.mjs";
 export function app_code_lesson_operators_asterisk_generic_invalid(
   root,
   operator,
   combine,
 ) {
-  let c = app_code_container_light_blue(root);
   let missing_right = combine("invalid", operator);
   let missing_left = combine(operator, "invalid");
-  html_div_cycle_code_multiple(c, [
+  app_code_container_light_blue_cycle_code_multiple(root, [
     [
       "Therefore, ",
       operator,
