@@ -17,6 +17,7 @@ export function app_code_lesson_name_id_function(left, rights) {
     let mapped = list_map(remaining, html_span_text);
     let spans = html_span_text_multiple(parent, mapped);
   };
+  function lambda2() {}
   let name_id = app_code_lesson_name_id_generic(rights, left, name_get);
   return name_id;
 }
