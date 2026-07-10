@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { digit_count_values } from "../../../love/public/src/digit_count_values.mjs";
 import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { app_code_lesson_code_logged } from "../../../love/public/src/app_code_lesson_code_logged.mjs";
@@ -15,6 +16,7 @@ export function app_code_lesson_functions_console_log() {
   let digit_count = 1;
   function lambda4() {
     digit_count_values(digit_count);
+    list_shuffle(list);
   }
   let next_get = list_iterator_refillable(lambda4);
   function lambda() {
