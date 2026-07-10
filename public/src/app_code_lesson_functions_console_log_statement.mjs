@@ -1,3 +1,4 @@
+import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
@@ -17,5 +18,7 @@ export function app_code_lesson_functions_console_log_statement() {
     lesson,
   });
   return lesson;
-  function above(root) {}
+  function above(root) {
+    app_code_container_light_blue_text(root2, text);
+  }
 }
