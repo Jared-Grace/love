@@ -19,7 +19,7 @@ export function app_code_lesson_base(
   on_example_answer,
 ) {
   let t = property_get(name_id, "id");
-  let t_underscored = text_replace_multiple_to(t);
+  let t_underscored = text_replace_multiple_to(t, [" ", "."], "_");
   let lesson_unique_id =
     text_adjascent_duplicates_remove_underscore(t_underscored);
   let lesson_name = property_get(name_id, "name");
