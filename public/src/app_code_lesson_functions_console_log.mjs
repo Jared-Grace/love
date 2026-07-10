@@ -33,7 +33,7 @@ export function app_code_lesson_functions_console_log() {
   let symbols_required = ["(", ",", ")"];
   function lambda2() {
     let mapped = digits_count_2_to_3();
-    list_shuffle(list2);
+    list_shuffle(mapped);
     return mapped;
   }
   let operators_next = list_iterator_refillable(lambda2);
