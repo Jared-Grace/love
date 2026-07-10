@@ -1,3 +1,4 @@
+import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { js_code_call_arg } from "../../../love/public/src/js_code_call_arg.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -48,6 +49,7 @@ export function app_code_lesson_functions_console_log() {
     let v3 = next();
     let code3 = js_code_call_arg(fn_name, v3);
     html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", code3]);
+    let r2 = js_code_parenthesis_list();
     let comma = js_code_comma();
     html_div_cycle_code(c, [
       "Inside the",
