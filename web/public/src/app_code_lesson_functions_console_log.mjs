@@ -1,3 +1,5 @@
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { app_code_lesson_code } from "../../../love/public/src/app_code_lesson_code.mjs";
 import { digits_count_2_to_3_random } from "../../../love/public/src/digits_count_2_to_3_random.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
@@ -14,6 +16,7 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
   let next = list_iterator_refillable(digits_count_2_to_3_random);
   function batch_get() {
+    let code = js_code_call_args(fn_name, args);
     let r = [list];
     return r;
   }
