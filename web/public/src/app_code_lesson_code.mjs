@@ -7,7 +7,8 @@ import { app_code_label_code_question } from "../../../love/public/src/app_code_
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
 export function app_code_lesson_code(batch, name_id, above) {
   let example_label = "Value of code: ";
-  const quiz_label = app_code_label_code_answer_quiz();
+  let r = "What is the value of this code? ";
+  let quiz_label = r;
   let question_label = app_code_label_code_question();
   let example_count = 1;
   let quiz_backwards_label_answer = "What code produces this value? ";
