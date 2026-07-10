@@ -41,7 +41,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let next_get = list_iterator_refillable(batch_get);
   function lambda(la) {
     let n = next_get();
-    list_empty_not_is_assert(list2);
+    list_empty_not_is_assert(n);
   }
   let list = list_adder_multiple(lambda);
   let quiz_batch_items = batch_get();
