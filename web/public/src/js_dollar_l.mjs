@@ -9,9 +9,9 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export function js_dollar_l({
   remaining,
   node,
-  stack1,
-  stack2,
-  stack3,
+  stack_1,
+  stack_2,
+  stack_3,
   ast,
   afters,
 }) {

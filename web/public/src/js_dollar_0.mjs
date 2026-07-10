@@ -3,9 +3,9 @@ import { js_keyword_false } from "../../../love/public/src/js_keyword_false.mjs"
 export function js_dollar_0({
   remaining,
   node,
-  stack1,
-  stack2,
-  stack3,
+  stack_1,
+  stack_2,
+  stack_3,
   ast,
   afters,
 }) {

@@ -11,8 +11,8 @@ export async function marker_expand() {
     let r = marker_next_get(a);
     let next = property_get(r, "next");
     let ast = property_get(a, "ast");
-    let stack2 = property_get(a, "stack2");
-    let inserted = await js_expand_generic(next, stack2, ast);
+    let stack_2 = property_get(a, "stack_2");
+    let inserted = await js_expand_generic(next, stack_2, ast);
     return inserted;
   }
 }

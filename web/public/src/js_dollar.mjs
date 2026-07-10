@@ -28,9 +28,9 @@ export async function js_dollar(ast) {
         ("during the transformations, an identifier could be replaced into another node");
         return;
       }
-      let stack1 = list_get_end_1(stack);
-      let stack2 = list_get_end_2(stack);
-      let stack3 = list_get_end_3(stack);
+      let stack_1 = list_get_end_1(stack);
+      let stack_2 = list_get_end_2(stack);
+      let stack_3 = list_get_end_3(stack);
       let name = property_get(node, "name");
       const separator = "$";
       let split = text_split(name, separator);
@@ -52,9 +52,9 @@ export async function js_dollar(ast) {
         const js_dollar_arguments = {
           remaining,
           node,
-          stack1,
-          stack2,
-          stack3,
+          stack_1,
+          stack_2,
+          stack_3,
           ast,
           afters,
         };

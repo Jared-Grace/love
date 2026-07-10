@@ -3,12 +3,12 @@ import { equal_not } from "../../../love/public/src/equal_not.mjs";
 export async function js_dollar_ine({
   remaining,
   node,
-  stack1,
-  stack2,
-  stack3,
+  stack_1,
+  stack_2,
+  stack_3,
   ast,
   afters,
 }) {
   let fn = equal_not;
-  await js_dollar_ien_generic(stack1, fn, ast);
+  await js_dollar_ien_generic(stack_1, fn, ast);
 }

@@ -10,6 +10,6 @@ export async function js_expand_selects(ast, selects) {
   let item = property_get(block, "item");
   let v = js_node_to_visitor(ast, item);
   let stack = property_get(v, "stack");
-  let stack2 = list_get_end_1(stack);
-  let inserted = await js_expand_generic(item, stack2, ast);
+  let stack_2 = list_get_end_1(stack);
+  let inserted = await js_expand_generic(item, stack_2, ast);
 }

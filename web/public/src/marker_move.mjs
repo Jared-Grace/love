@@ -13,12 +13,12 @@ export async function marker_move(m_name_from, m_name_to) {
     let a_from = js_marker_named_ast_arg(ast, m_name_from);
     let v = marker_next_get(a_from);
     let next = property_get(v, "next");
-    let stack2_from = property_get(a_from, "stack2");
-    list_remove(stack2_from, next);
+    let stack_2_from = property_get(a_from, "stack_2");
+    list_remove(stack_2_from, next);
     let a_to = js_marker_named_ast_arg(ast, m_name_to);
     let v2 = marker_next_index(a_to);
-    let stack2_to = property_get(v2, "stack2");
+    let stack_2_to = property_get(v2, "stack_2");
     let index = property_get(v2, "index");
-    list_insert(stack2_to, index, next);
+    list_insert(stack_2_to, index, next);
   }
 }
