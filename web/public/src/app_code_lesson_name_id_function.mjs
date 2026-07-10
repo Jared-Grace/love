@@ -11,6 +11,7 @@ export function app_code_lesson_name_id_function(left, rights) {
     let r = list_first_remaining(rights);
     let remaining = property_get(r, "remaining");
     let first = property_get(r, "first");
+    let value = property_get(object, property_name);
     html_span_text_code_dark(parent, first);
   };
   let name_id = app_code_lesson_name_id_generic(rights, left, name_get);
