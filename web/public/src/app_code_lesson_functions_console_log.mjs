@@ -20,17 +20,11 @@ import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_cod
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
-import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
-import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
-  let operators = js_operators();
-  let m = app_code_lesson_operators_value_max();
-  let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
-  let operators_next = list_iterator_refillable(digits_count_2_to_3_random);
+  let next = list_iterator_refillable(digits_count_2_to_3_random);
   let results = list_power_set(symbols_required);
   let filtered = list_filter_list_empty_not_is(results);
   list_sort_list_size(filtered);
