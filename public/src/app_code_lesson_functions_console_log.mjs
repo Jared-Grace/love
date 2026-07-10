@@ -61,14 +61,14 @@ export function app_code_lesson_functions_console_log() {
     let comma = js_code_comma();
     let ai = html_div_cycle_code_multiple(c, [
       [
-        " ",
+        "",
         verb,
         " has two numbers separated by a ",
         comma,
         " inside the ",
         ...parts,
       ],
-      [],
+      [""],
     ]);
   }
   function batch_get() {
