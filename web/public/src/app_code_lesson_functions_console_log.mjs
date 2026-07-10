@@ -18,6 +18,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
@@ -53,13 +54,15 @@ export function app_code_lesson_functions_console_log() {
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
-    let ai = html_div_cycle_code(c, [
-      " ",
-      verb,
-      " has two numbers separated by a ",
-      comma,
-      " inside the ",
-      ...parts,
+    let ai = html_div_cycle_code_multiple(c, [
+      [
+        " ",
+        verb,
+        " has two numbers separated by a ",
+        comma,
+        " inside the ",
+        ...parts,
+      ],
     ]);
   }
   function batch_get() {
