@@ -32,7 +32,7 @@ export function app_code_lesson_functions_console_log() {
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
     let operators = js_operators();
     function lambda(item) {
-      let code = js_operator_to_code_call_only(first, next);
+      let code = js_operator_to_code_call_only(item, next_operator);
       return code;
     }
     app_code_operators_arithmetic_generic(root, lambda);
