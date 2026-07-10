@@ -1,3 +1,4 @@
+import { list_filter_text_empty_not_is } from "../../../love/public/src/list_filter_text_empty_not_is.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
@@ -20,7 +21,8 @@ export function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
-  let split = text_split(s, separator);
+  let split = text_split(lesson_unique_id, "_");
+  let filtered = list_filter_text_empty_not_is(list);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
