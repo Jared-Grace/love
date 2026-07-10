@@ -1,3 +1,5 @@
+import { digits } from "../../../love/public/src/digits.mjs";
+import { html_span_text_multiple } from "../../../love/public/src/html_span_text_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { html_span_text_code_dark } from "../../../love/public/src/html_span_text_code_dark.mjs";
@@ -12,6 +14,7 @@ export function app_code_lesson_name_id_function(left, rights) {
     let remaining = property_get(r, "remaining");
     let first = property_get(r, "first");
     html_span_text_code_dark(parent, first);
+    let spans = html_span_text_multiple(parent2, digits);
   };
   let name_id = app_code_lesson_name_id_generic(rights, left, name_get);
   return name_id;
