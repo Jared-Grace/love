@@ -50,7 +50,7 @@ export function app_code_lesson_functions_console_log() {
     html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", code3]);
     let comma = js_code_comma();
     html_div_cycle_code(c, [
-      "",
+      "Inside the",
       verb,
       " has two numbers separated by a ",
       comma,
