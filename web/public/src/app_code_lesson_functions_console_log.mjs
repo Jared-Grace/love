@@ -31,7 +31,7 @@ export function app_code_lesson_functions_console_log() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   function lambda2() {
-    let mapped = range_from(from, to);
+    let mapped = range_from(10, 999);
   }
   let operators_next = list_iterator_refillable(lambda2);
   let results = list_power_set(symbols_required);
