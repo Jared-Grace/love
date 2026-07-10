@@ -1,3 +1,5 @@
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { text_replace_multiple_to_space } from "../../../love/public/src/text_replace_multiple_to_space.mjs";
 import { list_sort_list_size } from "../../../love/public/src/list_sort_list_size.mjs";
@@ -33,6 +35,7 @@ export function app_code_lesson_functions_console_log() {
   let next_get = list_iterator_refillable_value(filtered);
   function batch_get() {
     function lambda(la) {
+      let code = js_code_call_args(fn_name, args);
       let o = operators_next();
       let call = js_operator_to_code_call_only(o, next);
       la(call);
