@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -16,8 +17,18 @@ export function app_code_lesson_functions_console_log() {
     let r = [code];
     return r;
   }
-  function lambda() {
-    eval();
+  async function console_log_list(code) {
+    const list = [];
+    const original = console.log;
+    try {
+      console.log = function lambda2(...args) {
+        list.push(args);
+      };
+      await eval(code);
+    } finally {
+      console.log = original;
+    }
+    return list;
   }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
   let lesson = app_code_lesson_code(b, name_id, above);
