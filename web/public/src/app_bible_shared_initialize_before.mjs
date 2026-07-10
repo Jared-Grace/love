@@ -11,7 +11,7 @@ export function app_bible_shared_initialize_before(
   object_merge(context, {
     screen_home,
   });
-  let root2 = property_get(context, "root");
+  let root = property_get(context, "root");
   html_margin_0(root);
   app_shared_initialize(context, app_fn, screens);
 }
