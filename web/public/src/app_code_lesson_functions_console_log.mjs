@@ -56,7 +56,9 @@ export function app_code_lesson_functions_console_log() {
     let ai = html_div_cycle_code(c, [
       "Inside the",
       ...parts,
-      " has two numbers separated by a ",
+      " ",
+      verb,
+      "has two numbers separated by a ",
       comma,
     ]);
   }
