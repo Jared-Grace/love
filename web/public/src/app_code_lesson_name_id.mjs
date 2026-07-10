@@ -7,7 +7,7 @@ import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parent
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
 export function app_code_lesson_name_id(left, rights) {
-  let on_lesson_name = html_text_set_curried_right;
+  let name_get = html_text_set_curried_right;
   let rights_joined = list_join_comma_space(rights);
   let rights_wrapped = text_wrap_parenthesis(rights_joined);
   let combined = text_combine_middle_space(left, rights_wrapped);
@@ -15,7 +15,7 @@ export function app_code_lesson_name_id(left, rights) {
   let concated = list_concat_single(left, rights);
   let joined_id = list_join_underscore(concated);
   let id = text_lower_to(joined_id);
-  let lambda = on_lesson_name(lesson_name);
+  let lambda = name_get(lesson_name);
   let name_id = {
     name: lambda,
     id,
