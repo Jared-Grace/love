@@ -34,7 +34,7 @@ export function app_code_lesson_functions_console_log_statement() {
       "In English, we can use a period (.) to mean the end of a sentence.",
     );
     let div = html_div_cycle_code(c, [
-      "In JavaScript, instead of a period, we use a semicolon ",
+      "In JavaScript, instead of a period (.), we use a semicolon ",
       ";",
       ' as the end of a JavaScript "sentence"',
     ]);
