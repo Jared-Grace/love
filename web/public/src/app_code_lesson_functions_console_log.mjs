@@ -70,13 +70,13 @@ export function app_code_lesson_functions_console_log() {
     let v4 = next();
     app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
-      [first],
+      ["", first],
       [
         "But ",
         fn_name,
         ...list_transform_first_combine(" only has one number ", inside),
       ],
-      [v4],
+      ["", v4],
     ]);
     app_code_container_light_blue_cycle_code(root, [
       "Whatever is inside the ",
