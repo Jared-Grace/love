@@ -1,18 +1,11 @@
-import { app_code_lesson_quizzes_unscramble } from "../../../love/public/src/app_code_lesson_quizzes_unscramble.mjs";
-import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
-import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
-import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
+import { app_code_lesson_code } from "../../../love/public/src/app_code_lesson_code.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
-import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
-import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_underscores_define_symbol } from "../../../love/public/src/app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -82,35 +75,6 @@ export function app_code_lesson_operators_generic(
     html_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
   let name_id = app_code_lesson_name_id("operators", [math_name]);
-  const example_label = app_code_label_code_answer_example();
-  const quiz_label = app_code_label_code_answer_quiz();
-  let question_label = app_code_label_code_question();
-  let example_count = 1;
-  let quiz_backwards_label_answer = "What code produces this value? ";
-  let quiz_backwards_answer_count_override = null;
-  let on_question_forwards = html_text_set_code_dark;
-  const quizzes = app_code_lesson_quizzes_unscramble(
-    batch,
-    question_label,
-    on_question_forwards,
-    quiz_label,
-    noop,
-    "Value: ",
-    app_code_style_normal_text,
-    quiz_backwards_label_answer,
-    on_question_forwards,
-    quiz_backwards_answer_count_override,
-  );
-  let lesson = app_code_lesson_base(
-    name_id,
-    above,
-    example_count,
-    batch,
-    on_question_forwards,
-    example_label,
-    quizzes,
-    question_label,
-    app_code_style_normal_text,
-  );
+  let lesson = app_code_lesson_code(batch, name_id, above);
   return lesson;
 }
