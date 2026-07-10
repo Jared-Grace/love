@@ -1,4 +1,4 @@
-import { js_operator_first_call } from "../../../love/public/src/js_operator_first_call.mjs";
+import { js_operator_first_code_call } from "../../../love/public/src/js_operator_first_code_call.mjs";
 import { app_code_code_example_name } from "../../../love/public/src/app_code_code_example_name.mjs";
 import { html_div_cycle_code_bold } from "../../../love/public/src/html_div_cycle_code_bold.mjs";
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
@@ -85,7 +85,7 @@ export function app_code_lesson_functions_arithmetic() {
     }
     each_index(operators, lambda);
     let c = app_code_container_light_blue(root);
-    let r2 = js_operator_first_call(next);
+    let r2 = js_operator_first_code_call(next);
     let code = property_get(r2, "code");
     let verb = property_get(r2, "verb");
     app_code_code_example_name(c, verb, "function");
