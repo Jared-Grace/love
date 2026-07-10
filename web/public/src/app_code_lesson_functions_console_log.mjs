@@ -48,6 +48,18 @@ export function app_code_lesson_functions_console_log() {
     return list;
   }
   let next = list_iterator_refillable(lambda);
+  function batch_get() {
+    let v = next();
+    let code = js_code_call_arg(fn_name, v);
+    let r = [code];
+    return r;
+  }
+  let b = app_code_batch_question_answer_fns(
+    batch_get,
+    eval_console_log_to_list,
+  );
+  let lesson = app_code_lesson_code_logged(b, name_id, above);
+  return lesson;
   function above(root) {
     let o_f = js_operator_first_code_call(next_operator);
     let code2 = property_get(o_f, "code");
@@ -87,16 +99,4 @@ export function app_code_lesson_functions_console_log() {
       " will be written out for someone to read",
     ]);
   }
-  function batch_get() {
-    let v = next();
-    let code = js_code_call_arg(fn_name, v);
-    let r = [code];
-    return r;
-  }
-  let b = app_code_batch_question_answer_fns(
-    batch_get,
-    eval_console_log_to_list,
-  );
-  let lesson = app_code_lesson_code_logged(b, name_id, above);
-  return lesson;
 }
