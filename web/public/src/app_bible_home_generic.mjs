@@ -131,11 +131,11 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function lambda() {
     await app_bible_verse_previous(context, chapter_code, verse_current);
   }
-  html_button_arrow_left(verse_pickers, lambda);
+  let l = html_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
-  html_button_arrow_right(verse_pickers, lambda7);
+  let r = html_button_arrow_right(verse_pickers, lambda7);
   list_add(languages_verses, {
     verses,
     books,
