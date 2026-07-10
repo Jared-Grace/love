@@ -13,7 +13,7 @@ import { app_code_lesson_name_id_function } from "../../../love/public/src/app_c
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export function app_code_lesson_functions_console_log_generic(
   above,
-  code_transform,
+  lambda$code,
 ) {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
@@ -41,7 +41,7 @@ export function app_code_lesson_functions_console_log_generic(
   function batch_get() {
     let v = next();
     let code = js_code_call_arg(fn_name, v);
-    let transfomed = code_transform(code);
+    let transfomed = lambda$code(code);
     let r = [transfomed];
     return r;
   }
