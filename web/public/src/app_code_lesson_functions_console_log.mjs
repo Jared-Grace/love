@@ -1,3 +1,4 @@
+import { js_operator_first_code_call_only } from "../../../love/public/src/js_operator_first_code_call_only.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { html_div_cycle_code_instead_could_write } from "../../../love/public/src/html_div_cycle_code_instead_could_write.mjs";
 import { list_transform_first_combine } from "../../../love/public/src/list_transform_first_combine.mjs";
@@ -65,7 +66,7 @@ export function app_code_lesson_functions_console_log() {
       fn_name,
       " are different",
     ]);
-    let first = js_operator_first_code_call(next_operator);
+    let first = js_operator_first_code_call_only(next_operator);
     app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
       [first],
