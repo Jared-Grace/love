@@ -1,3 +1,4 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
@@ -19,9 +20,10 @@ export function app_code_lesson_functions_console_log_statement() {
   });
   return lesson;
   function above(root) {
-    app_code_container_light_blue_text(
+    let c = app_code_container_light_blue_text(
       root,
       "In English, we can use a period (.) to mean the end of a sentence.",
     );
+    let div = html_div_cycle_code(parent, parts);
   }
 }
