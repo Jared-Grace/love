@@ -68,7 +68,13 @@ export function app_code_lesson_functions_console_log() {
         fn_name,
         ...list_transform_first_combine(" only has one number ", inside),
       ],
-      ["Whatever is inside the ", ...parts, " will be outputted to a log"],
+      [
+        "Whatever is inside the ",
+        ...parts,
+        " of ",
+        fn_name,
+        " will be written out for someone to read",
+      ],
     ]);
   }
   function batch_get() {
