@@ -9,7 +9,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
-export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
+export function js_dollar_a({ stack_1, stack_2, ast, afters, remaining }) {
   let count = 1;
   let s = list_size_1(remaining);
   if (s) {
@@ -17,15 +17,15 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
     count = integer_to_try(first);
   }
   js_dollar_a_generic({
-    stack1,
-    stack2,
+    stack_1,
+    stack_2,
     afters,
     lambda,
     ast,
     count,
   });
-  function lambda({ stack1, next, stack2, ast, declarations }) {
-    list_remove_multiple(stack2, [stack1, next]);
+  function lambda({ stack_1, next, stack_2, ast, declarations }) {
+    list_remove_multiple(stack_2, [stack_1, next]);
     function lambda2(declaration) {
       let init = js_declare_init_get(declaration);
       let id = property_get(declaration, "id");

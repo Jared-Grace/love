@@ -10,8 +10,8 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_let_add(ast) {
   function lambda(v) {
     let stack = property_get(v, "stack");
-    let stack1 = list_get_end_1(stack);
-    let type_is = js_node_type_is(stack1, "ExpressionStatement");
+    let stack_1 = list_get_end_1(stack);
+    let type_is = js_node_type_is(stack_1, "ExpressionStatement");
     if (not(type_is)) {
       return;
     }
@@ -28,7 +28,7 @@ export function js_let_add(ast) {
       return;
     }
     let assign = js_declare(name, right);
-    object_replace(stack1, assign);
+    object_replace(stack_1, assign);
   }
   js_visit_type(ast, "AssignmentExpression", lambda);
   return;
