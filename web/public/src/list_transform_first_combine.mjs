@@ -1,7 +1,7 @@
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { list_transform_first } from "../../../love/public/src/list_transform_first.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-export function list_concat_first_pair(item, list) {
+export function list_transform_first_combine(item, list) {
   arguments_assert(arguments, 2);
   function lambda2(first) {
     let combined = text_combine(item, first);
