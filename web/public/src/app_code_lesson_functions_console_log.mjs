@@ -13,15 +13,12 @@ export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let digit_count = 1;
-  function lambda4() {
-    digit_count_values_shuffled(digit_count);
-  }
-  let next_get = list_iterator_refillable(lambda4);
+  let next = digit_count_values_shuffled_next(digit_count);
   function lambda() {
     const digit_count_max = 3;
-    let digit_count = range_1(digit_count_max);
+    let digit_counts = range_1(digit_count_max);
     function lambda2(c) {
-      next_get();
+      next();
     }
     each_range_1(digit_count_max, lambda2);
   }
@@ -42,3 +39,11 @@ export function app_code_lesson_functions_console_log() {
     let c = app_code_container_light_blue(root);
   }
 }
+function digit_count_values_shuffled_next(digit_count) {
+  function lambda4() {
+    digit_count_values_shuffled(digit_count);
+  }
+  let next = list_iterator_refillable(lambda4);
+  return next;
+}
+
