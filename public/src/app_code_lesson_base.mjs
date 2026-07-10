@@ -1,3 +1,4 @@
+import { list_replace_multiple } from "../../../love/public/src/list_replace_multiple.mjs";
 import { text_adjascent_duplicates_remove_underscore } from "../../../love/public/src/text_adjascent_duplicates_remove_underscore.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
@@ -6,7 +7,6 @@ import { app_code_flex_gap } from "../../../love/public/src/app_code_flex_gap.mj
 import { html_flex_column_stretch } from "../../../love/public/src/html_flex_column_stretch.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
 export function app_code_lesson_base(
   name_id,
   above,
@@ -19,7 +19,7 @@ export function app_code_lesson_base(
   on_example_answer,
 ) {
   let t = property_get(name_id, "id");
-  let t_underscored = text_replace_space_underscore(t);
+  let t_underscored = list_replace_multiple(t);
   let lesson_unique_id =
     text_adjascent_duplicates_remove_underscore(t_underscored);
   let lesson_name = property_get(name_id, "name");
