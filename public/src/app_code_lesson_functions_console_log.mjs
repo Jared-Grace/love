@@ -24,12 +24,7 @@ export function app_code_lesson_functions_console_log() {
     let o_f = js_operator_first_code_call(next_operator);
     let code2 = property_get(o_f, "code");
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
-      "Instead of ",
-      expression,
-      " we could write: ",
-      code,
-    ]);
+    html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", code]);
   }
   let data = {};
   function lambda() {
