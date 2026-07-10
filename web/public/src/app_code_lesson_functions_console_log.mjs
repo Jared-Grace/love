@@ -1,4 +1,4 @@
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_functions_console_log() {
         console.log = original;
       }
     }
-    let list = list_adder(lambda3);
+    let list = await list_adder_async(lambda3);
     return list;
   }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
