@@ -22,13 +22,11 @@ import { property_set_exists_not } from "../../../love/public/src/property_set_e
 import { word_plural } from "../../../love/public/src/word_plural.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_identifiers_symbol_first_generic } from "../../../love/public/src/app_code_lesson_identifiers_symbol_first_generic.mjs";
+import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_symbol_first() {
-  let name_id = {
-    name: "Identifiers (first symbol)",
-    id: "identifiers_symbol_first",
-  };
+  let name_id = app_code_lesson_name_id("identifiers", ["symbol", "first"]);
   let r = app_code_lesson_identifiers_symbol_first_generic(
     name_id,
     above,

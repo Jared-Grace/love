@@ -17,14 +17,16 @@ awareness of shell grammar. That cuts both ways:
      second command fails the same allowlist check as the first.
 
 This hook parses the command with a small quote-aware tokenizer that
-understands exactly two safe shapes, which may be combined: a chain of
-simple commands joined by any mix of ';', '|', '&&', '||' (every chained
-command's verb must independently be in permissions.allow - conditional
-vs. unconditional execution doesn't matter, since the check is about
-which verbs can run, not when), and a single-level
-'for VAR in LIST; do CMDS; done' loop wrapping such a chain. Anything
-outside that (command substitution, redirection, subshells, backgrounding,
-nested control flow) is deliberately left unparsed.
+understands exactly one safe shape: a top-level chain of links joined by
+any mix of ';', '|', '&&', '||', where each link is either a plain simple
+command or a single-level 'for VAR in LIST; do CMDS; done' loop (whose own
+body is in turn a chain of simple commands - no nested for-loops). Every
+simple command's verb, wherever it appears in the chain or inside a loop
+body, must independently be in permissions.allow - conditional vs.
+unconditional execution doesn't matter, since the check is about which
+verbs can run, not when. Anything outside that (command substitution,
+redirection, subshells, backgrounding, nested control flow) is
+deliberately left unparsed.
 
 Characters that only have special meaning to the shell when unquoted
 (the pipeline/redirection/grouping/background operators) are treated as
@@ -250,6 +252,47 @@ def split_statements(tokens):
     return groups
 
 
+def split_top_level(tokens):
+    """Split into top-level links on any mix of ';', '|', '&&', '||',
+    except that a 'for ... done' loop is kept together as one link even
+    though it contains its own internal ';' before 'do' - otherwise a
+    naive split would slice the loop apart. This is what lets a for-loop
+    be chained with plain commands via any separator (e.g.
+    'cd X && for ... done'), while nested for-loops are still rejected
+    separately, in check_for_loop's own body scan."""
+    groups, current = [], []
+    i, n = 0, len(tokens)
+    while i < n:
+        t = tokens[i]
+        if t in SEPARATORS:
+            groups.append(current)
+            current = []
+            i += 1
+            continue
+        if t == "for" and not current:
+            depth, j, closed = 0, i, False
+            while j < n:
+                if tokens[j] == "for":
+                    depth += 1
+                elif tokens[j] == "done":
+                    depth -= 1
+                    if depth == 0:
+                        j += 1
+                        closed = True
+                        break
+                j += 1
+            if not closed:
+                raise Unsupported("malformed for-loop: missing 'done'")
+            groups.append(tokens[i:j])
+            current = []
+            i = j
+            continue
+        current.append(t)
+        i += 1
+    groups.append(current)
+    return groups
+
+
 def verb_of(words):
     if words[0] in ("git", "node") and len(words) >= 2:
         return f"{words[0]} {words[1]}"
@@ -306,11 +349,19 @@ def is_safe(command, safe_verbs):
     tokens = tokenize(command)
     if not tokens:
         return False
-    if tokens[0] == "for":
-        return check_for_loop(tokens, safe_verbs)
-    if tokens[0] in RESERVED_WORDS:
-        raise Unsupported(f"unsupported construct {tokens[0]!r}")
-    return check_simple_commands(tokens, safe_verbs)
+    found_command = False
+    for group in split_top_level(tokens):
+        if not group:
+            continue
+        found_command = True
+        if group[0] == "for":
+            if not check_for_loop(group, safe_verbs):
+                return False
+        elif group[0] in RESERVED_WORDS:
+            raise Unsupported(f"unsupported construct {group[0]!r}")
+        elif not check_simple_commands(group, safe_verbs):
+            return False
+    return found_command
 
 
 def matched_leading_verb(command, safe_verbs):
