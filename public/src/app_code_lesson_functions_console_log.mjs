@@ -9,22 +9,21 @@ import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mj
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
 export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
+  let data = {};
   let digit_count = 1;
   function lambda() {
-    function lambda5() {
-      let next = digit_count_values_shuffled_next(digit_count);
-      return next;
-    }
-    let value = property_initialize_lambda(object, property_name, lambda5);
-    const digit_count_max = 3;
-    let digit_counts = range_1(digit_count_max);
     function lambda2(c) {
+      function lambda5() {
+        let next = digit_count_values_shuffled_next(c);
+        return next;
+      }
+      let next = property_initialize_lambda(data, property_name, lambda5);
       next();
     }
+    const digit_count_max = 3;
     each_range_1(digit_count_max, lambda2);
   }
   let next = list_iterator_refillable(lambda);
