@@ -51,11 +51,11 @@ export function app_code_lesson_functions_console_log() {
     let code3 = js_code_call_arg(fn_name, v3);
     html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", code3]);
     let r2 = js_code_parenthesis_list();
-    let parts = list_between_space_nb(list2);
+    let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
     html_div_cycle_code(c, [
       "Inside the",
-      verb,
+      parts,
       " has two numbers separated by a ",
       comma,
     ]);
