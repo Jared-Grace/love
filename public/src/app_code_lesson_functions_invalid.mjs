@@ -13,6 +13,7 @@ import { list_between_space_before } from "../../../love/public/src/list_between
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
@@ -71,7 +72,6 @@ export function app_code_lesson_functions_invalid() {
       symbols_required,
       [" are missing from the function call, then the code is invalid "],
     );
-    let c2 = app_code_container_light_blue(root);
-    html_div_cycle_code(c2, combined2);
+    app_code_container_light_blue_cycle_code(root, combined2);
   }
 }
