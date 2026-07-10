@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_size_less_than_value } from "../../../love/public/src/list_size_less_than_value.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
@@ -44,6 +45,10 @@ export function app_code_lesson_quiz_multiple_choice(
   if (nn2) {
     answer_count_max = answer_count_override;
   }
+  let quiz_batch_items = batch_get();
+  log(app_code_lesson_quiz_multiple_choice.name, {
+    quiz_batch_items,
+  });
   let next_get = list_iterator_refillable(batch_get);
   function lambda(la) {
     let needs_more = null;
@@ -55,7 +60,6 @@ export function app_code_lesson_quiz_multiple_choice(
     } while (needs_more);
   }
   let list = list_adder_multiple(lambda);
-  let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
     let question_batch = property_get(quiz_batch_item, question_property);
     let answer_batch = property_get(quiz_batch_item, answer_property);
