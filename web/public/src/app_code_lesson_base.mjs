@@ -1,4 +1,4 @@
-import { data_texts_search } from "../../../love/public/src/data_texts_search.mjs";
+import { text_split } from "../../../love/public/src/text_split.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -7,7 +7,7 @@ import { html_flex_column_stretch } from "../../../love/public/src/html_flex_col
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
-export async function app_code_lesson_base(
+export function app_code_lesson_base(
   name_id,
   above,
   example_count,
@@ -20,7 +20,7 @@ export async function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
-  let result = await data_texts_search(s);
+  let split = text_split(s, separator);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
