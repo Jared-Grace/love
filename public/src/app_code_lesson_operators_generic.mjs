@@ -1,4 +1,4 @@
-import { app_code_lesson_code } from "../../../love/public/src/app_code_lesson_code.mjs";
+import { app_code_lesson_code_expression } from "../../../love/public/src/app_code_lesson_code_expression.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_lesson_operators_generic_batch_get } from "../../../love/public/src/app_code_lesson_operators_generic_batch_get.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
@@ -75,6 +75,6 @@ export function app_code_lesson_operators_generic(
     html_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
   let name_id = app_code_lesson_name_id("operators", [math_name]);
-  let lesson = app_code_lesson_code(batch, name_id, above);
+  let lesson = app_code_lesson_code_expression(batch, name_id, above);
   return lesson;
 }
