@@ -20,11 +20,12 @@ export function app_code_lesson_functions_console_log() {
   }
   function console_log_list(code) {
     function lambda3(la) {
+      function console_log_replacement(...args) {
+        let r2 = la(args);
+        return r2;
+      }
       const console_replacement = {
-        log: function lambda2(...args) {
-          let r2 = la(args);
-          return r2;
-        },
+        log: console_log_replacement,
       };
       new Function("console", code)(console_replacement);
     }
