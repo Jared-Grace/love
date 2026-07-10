@@ -14,7 +14,8 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda4() {
     let digit_count = 1;
-    let from = 10 ** digit_count;
+    const base = digit_count();
+    let from = base ** digit_count;
     let mapped = range_from(from, to);
   }
   let next_get = list_iterator_refillable(lambda4);
