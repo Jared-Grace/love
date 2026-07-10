@@ -1,3 +1,4 @@
+import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
 import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -8,4 +9,5 @@ export function js_parse_expression_from_assignment(code) {
   let d = js_declare_single(statement);
   let init = js_declare_init_get(d);
   return init;
+  js_code_wrap_parenthesis(code);
 }
