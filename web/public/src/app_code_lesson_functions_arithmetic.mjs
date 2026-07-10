@@ -73,7 +73,7 @@ export function app_code_lesson_functions_arithmetic() {
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
-      let c = app_code_container_light_blue(parent);
+      let c = app_code_container_light_blue(root);
       html_div_cycle_code_instead_could_write(c, expression, code);
       let eq = equal_0(index);
     }
