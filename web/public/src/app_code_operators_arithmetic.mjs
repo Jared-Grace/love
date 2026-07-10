@@ -7,7 +7,7 @@ import { html_span_text_code_dark } from "../../../love/public/src/html_span_tex
 import { html_span_text_padded_space } from "../../../love/public/src/html_span_text_padded_space.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
-export function app_code_operators_arithmetic(d) {
+export function app_code_operators_arithmetic(parent) {
   let operators = js_operators();
   let concated = list_to_and_list(operators);
   function lambda(item) {
@@ -20,7 +20,7 @@ export function app_code_operators_arithmetic(d) {
     if (not(condition)) {
       item = property_get(item, "operator");
     }
-    result(d, item);
+    result(parent, item);
   }
   each(concated, lambda);
 }
