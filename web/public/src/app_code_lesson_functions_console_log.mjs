@@ -1,3 +1,8 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { js_operator_first_code_call } from "../../../love/public/src/js_operator_first_code_call.mjs";
+import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
+import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { property_initialize_lambda } from "../../../love/public/src/property_initialize_lambda.mjs";
 import { digit_count_values_shuffled_next } from "../../../love/public/src/digit_count_values_shuffled_next.mjs";
@@ -13,8 +18,18 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
+  let m = app_code_lesson_operators_value_max();
+  let next_operator = range_1_next(m);
   function above(root) {
+    let o_f = js_operator_first_code_call(next_operator);
+    let code2 = property_get(o_f, "code");
     let c = app_code_container_light_blue(root);
+    html_div_cycle_code(c, [
+      "Instead of ",
+      expression,
+      " we could write: ",
+      code,
+    ]);
   }
   let data = {};
   function lambda() {
