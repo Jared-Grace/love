@@ -36,6 +36,7 @@ export function app_code_lesson_functions_console_log() {
     let from = digit_count_2_min();
     let to = digit_count_3_max();
     let mapped = range_from(from, to);
+    return mapped;
   }
   let operators_next = list_iterator_refillable(lambda2);
   let results = list_power_set(symbols_required);
