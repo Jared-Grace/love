@@ -12,9 +12,10 @@ export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda() {
-    let digit_count = range_1(3);
+    const digit_count_max = 3;
+    let digit_count = range_1(digit_count_max);
     function lambda2(i) {}
-    each_range_1(count, lambda2);
+    each_range_1(digit_count_max, lambda2);
   }
   let next = list_iterator_refillable(lambda);
   function batch_get() {
