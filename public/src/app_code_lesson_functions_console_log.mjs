@@ -32,7 +32,7 @@ export function app_code_lesson_functions_console_log() {
     let span = html_div_cycle_code_multiple(c, [
       ["Here is an example of a function call: ", call],
       ["", verb, " is a function"],
-      ["", fn_name, " is also a function"],
+      ["And here is a new function: ", fn_name],
     ]);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
