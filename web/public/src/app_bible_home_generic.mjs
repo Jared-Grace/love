@@ -138,9 +138,9 @@ export async function app_bible_home_generic(context, lambda$a) {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
   let r = html_button_arrow_right(verse_pickers, lambda7);
+  let list = [l, r];
   function lambda2(item) {}
-  each(list, lambda2);
-  html_flex_grow_1(r);
+  each(list, html_flex_grow_1);
   list_add(languages_verses, {
     verses,
     books,
