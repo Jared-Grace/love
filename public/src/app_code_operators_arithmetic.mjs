@@ -18,9 +18,13 @@ export function app_code_operators_arithmetic(parent) {
       html_span_text_code_dark,
     );
     if (not(condition)) {
-      item = property_get(item, "operator");
+      item = operator_map(item);
     }
     result(parent, item);
   }
   each(concated, lambda);
+  function operator_map(item) {
+    item = property_get(item, "operator");
+    return item;
+  }
 }
