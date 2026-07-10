@@ -53,7 +53,7 @@ export function app_code_lesson_functions_console_log() {
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
-    html_div_cycle_code(c, [
+    let ai = html_div_cycle_code(c, [
       "Inside the",
       parts,
       " has two numbers separated by a ",
