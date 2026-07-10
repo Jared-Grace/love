@@ -64,7 +64,8 @@ export function app_code_lesson_functions_console_log() {
       fn_name,
       " are different",
     ]);
-    html_div_cycle_code_multiple(c, [
+    let c2 = app_code_container_light_blue(root);
+    html_div_cycle_code_multiple(c2, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
       [
         "But ",
@@ -72,7 +73,8 @@ export function app_code_lesson_functions_console_log() {
         ...list_transform_first_combine(" only has one number ", inside),
       ],
     ]);
-    html_div_cycle_code_multiple(c, [
+    let c3 = app_code_container_light_blue(root);
+    html_div_cycle_code_multiple(c3, [
       [
         "Whatever is inside the ",
         ...parts,
