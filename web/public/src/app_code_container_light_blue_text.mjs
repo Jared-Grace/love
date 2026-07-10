@@ -3,4 +3,5 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_container_light_blue_text(root, text) {
   let c = app_code_container_light_blue(root);
   let div = html_div_text(c, text);
+  return c;
 }
