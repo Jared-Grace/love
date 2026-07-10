@@ -7,17 +7,19 @@ import { text_combine_space_right } from "../../../love/public/src/text_combine_
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { app_code_lesson_name_id_generic } from "../../../love/public/src/app_code_lesson_name_id_generic.mjs";
 export function app_code_lesson_name_id_function(left, rights) {
-  let name_get = function lambda(parent) {
-    let combined = text_combine_space_right(left);
-    let span = html_span_text(parent, combined);
-    let r = list_first_remaining(rights);
-    let remaining = property_get(r, "remaining");
-    let first = property_get(r, "first");
-    html_span_text_code_dark(parent, first);
-    let mapped = list_map(remaining, html_span_text);
-    let spans = html_span_text_multiple(parent, mapped);
+  let name_get = function lambda2(lesson_name) {
+    let r2 = function lambda(parent) {
+      let combined = text_combine_space_right(left);
+      let span = html_span_text(parent, combined);
+      let r = list_first_remaining(rights);
+      let remaining = property_get(r, "remaining");
+      let first = property_get(r, "first");
+      html_span_text_code_dark(parent, first);
+      let mapped = list_map(remaining, html_span_text);
+      let spans = html_span_text_multiple(parent, mapped);
+    };
+    return r2;
   };
-  function lambda2() {}
   let name_id = app_code_lesson_name_id_generic(rights, left, name_get);
   return name_id;
 }
