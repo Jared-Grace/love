@@ -49,20 +49,17 @@ export function app_code_lesson_operators_plus_unary() {
       digit_negative_random_parenthesis_wrapped,
     );
     const operator_name_math_articled = text_articled_pad_space(operator_name);
-    html_div_cycle_code(c, [
-      text_combine_multiple([
-        "In math and JavaScript, ",
-        operator_name_math_articled,
-        "can be used to make a number ",
-        sign,
-        ": ",
-      ]),
-      combined,
+    let combined3 = text_combine_multiple([
+      "In math and JavaScript, ",
+      operator_name_math_articled,
+      "can be used to make a number ",
+      sign,
+      ": ",
     ]);
+    html_div_cycle_code(c, [combined3, combined]);
   }
   const example_label = app_code_label_code_answer_example();
   const quiz_label = app_code_label_code_answer_quiz();
-  let symbols_to_answer = eval;
   let name_id = app_code_lesson_name_id("operators", [math_name]);
   let question_label = app_code_label_code_question();
   let example_count = 2;
