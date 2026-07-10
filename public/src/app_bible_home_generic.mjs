@@ -1,5 +1,4 @@
-import { ebible_language_en_code } from "../../../love/public/src/ebible_language_en_code.mjs";
-import { app_chapter_open } from "../../../love/public/src/app_chapter_open.mjs";
+import { app_chapter_open_en } from "../../../love/public/src/app_chapter_open_en.mjs";
 import { html_flex_grow_1_multiple } from "../../../love/public/src/html_flex_grow_1_multiple.mjs";
 import { html_display_flex } from "../../../love/public/src/html_display_flex.mjs";
 import { app_bible_button_chapter_previous } from "../../../love/public/src/app_bible_button_chapter_previous.mjs";
@@ -103,8 +102,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number,
   );
   function lambda3() {
-    let v = ebible_language_en_code();
-    app_chapter_open([v], chapter_code, verse_number);
+    app_chapter_open_en(chapter_code, verse_number);
   }
   let component2 = html_button(parent, "Chapter", lambda3);
   let text4 = html_button_copy_text();
