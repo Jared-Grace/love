@@ -15,7 +15,7 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
 import { app_code_container_light_blue_cycle_code_multiple } from "../../../love/public/src/app_code_container_light_blue_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
-  var r = app_code_lesson_functions_console_log_generic(above, identity);
+  var r = app_code_lesson_functions_console_log_generic(above, identity, []);
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");
   let next_operator = property_get(r, "next_operator");

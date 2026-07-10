@@ -7,6 +7,7 @@ export function app_code_lesson_functions_console_log_statement() {
   var r = app_code_lesson_functions_console_log_generic(
     above,
     js_code_statement,
+    [],
   );
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");

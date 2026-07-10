@@ -14,6 +14,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export function app_code_lesson_functions_console_log_generic(
   above,
   lambda$code,
+  name_id_rights,
 ) {
   const fn_name = "console.log";
   const rights = [fn_name];
