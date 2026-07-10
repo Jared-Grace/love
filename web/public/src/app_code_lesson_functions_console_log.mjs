@@ -1,3 +1,4 @@
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
@@ -28,7 +29,8 @@ export function app_code_lesson_functions_console_log() {
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
-  let operators_next = list_iterator_refillable_value(operators);
+  function lambda2() {}
+  let operators_next = list_iterator_refillable(lambda2);
   let results = list_power_set(symbols_required);
   let filtered = list_filter_list_empty_not_is(results);
   list_sort_list_size(filtered);
