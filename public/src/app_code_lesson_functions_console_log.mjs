@@ -1,5 +1,4 @@
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { digit_count_values } from "../../../love/public/src/digit_count_values.mjs";
+import { digit_count_values_shuffled } from "../../../love/public/src/digit_count_values_shuffled.mjs";
 import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { app_code_lesson_code_logged } from "../../../love/public/src/app_code_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "../../../love/public/src/eval_console_log_to_list.mjs";
@@ -15,8 +14,7 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let digit_count = 1;
   function lambda4() {
-    let values = digit_count_values(digit_count);
-    list_shuffle(values);
+    digit_count_values_shuffled(digit_count);
   }
   let next_get = list_iterator_refillable(lambda4);
   function lambda() {
