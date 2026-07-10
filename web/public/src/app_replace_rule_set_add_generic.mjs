@@ -15,7 +15,7 @@ export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     list_add(elements, expression);
-    await js_imports_missing_add_specified(ast, expression);
+    await js_imports_missing_add_specified(ast, [expression]);
   }
   let output = await function_transform(fns_list.name, lambda);
   return name_new;
