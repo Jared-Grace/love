@@ -20,6 +20,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   let expression = js_parse_expression_try(code);
   log(app_code_lesson_quiz_token_select_variations.name, {
     expression,
+    code,
   });
   let nn = null_not_is(expression);
   let ast = js_parse(code);
