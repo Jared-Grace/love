@@ -1,3 +1,4 @@
+import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "../../../love/public/src/app_code_lesson_quiz_wrong_set.mjs";
 import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
 import { app_code_lesson_quiz_qa_question } from "../../../love/public/src/app_code_lesson_quiz_qa_question.mjs";
@@ -35,6 +36,8 @@ export function app_code_lesson_quiz_multiple_choice(
   let question_property =
     app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_answer = property_get(qa, answer_property);
+  function lambda2() {}
+  let next_get = list_iterator_refillable(lambda2);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
     let question_batch = property_get(quiz_batch_item, question_property);
