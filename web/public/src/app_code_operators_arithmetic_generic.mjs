@@ -6,7 +6,7 @@ import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
-export function app_code_operators_arithmetic_generic(operator_map, parent) {
+export function app_code_operators_arithmetic_generic(parent, operator_map) {
   let operators = js_operators();
   let concated = list_to_and_list(operators);
   function lambda(item) {
