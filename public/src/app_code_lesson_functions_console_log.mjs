@@ -3,7 +3,6 @@ import { digits_count_2_to_3_random } from "../../../love/public/src/digits_coun
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
-import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
 import { list_between_space_before } from "../../../love/public/src/list_between_space_before.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -14,7 +13,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
   let next = list_iterator_refillable(digits_count_2_to_3_random);
-  let next_get = list_iterator_refillable_value(filtered);
   function batch_get() {
     let r = [list];
     return r;
