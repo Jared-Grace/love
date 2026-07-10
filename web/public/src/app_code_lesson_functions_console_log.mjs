@@ -1,4 +1,3 @@
-import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { app_code_lesson_code_logged } from "../../../love/public/src/app_code_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "../../../love/public/src/eval_console_log_to_list.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
@@ -13,7 +12,7 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda() {
     let digit_count = range_1(3);
-    let v2 = emoji_100();
+    er1;
   }
   let next = list_iterator_refillable(lambda);
   function batch_get() {
