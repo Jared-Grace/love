@@ -3,9 +3,9 @@ import { text_replace_space_to } from "../../../love/public/src/text_replace_spa
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 export function js_operator_to_code_call_only(o_f, next) {
-  let next2 = text_space_nb();
-  let r = js_operator_to_code_call(o_f, next2);
-  let replaced2 = text_replace_space_to(t, to);
+  let r = js_operator_to_code_call(o_f, next);
+  let nb = text_space_nb();
+  let replaced2 = text_replace_space_to(t, nb);
   let call = property_get(r, "call");
   return call;
 }
