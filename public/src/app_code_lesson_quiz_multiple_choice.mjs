@@ -42,6 +42,7 @@ export function app_code_lesson_quiz_multiple_choice(
   function lambda(la) {
     let n = next_get();
     list_empty_not_is_assert(n);
+    la(n);
   }
   let list = list_adder_multiple(lambda);
   let quiz_batch_items = batch_get();
