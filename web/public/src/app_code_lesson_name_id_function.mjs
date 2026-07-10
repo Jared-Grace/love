@@ -20,8 +20,8 @@ export function app_code_lesson_name_id_function(left, rights) {
       let first = property_get(r, "first");
       html_span_text_code_dark(parent, first);
       let mapped = list_map(remaining, html_span_text);
-      let c = html_span_text_curried(parent2);
-      let spans = html_span_text_multiple(parent, mapped);
+      let c = html_span_text_curried(parent);
+      let spans = html_span_text_multiple(parent, c);
     };
     return r2;
   };
