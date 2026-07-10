@@ -1,4 +1,3 @@
-import { html_text_set_curried_right } from "../../../love/public/src/html_text_set_curried_right.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -21,9 +20,8 @@ export function app_code_lesson_base(
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
   let lesson_name = property_get(name_id, "name");
-  let lambda = html_text_set_curried_right(lesson_name);
   let lesson = {
-    name: lambda,
+    name: lesson_name,
     id: lesson_unique_id,
     above,
     example_count,
