@@ -13,7 +13,7 @@ import { html_style_code_dark } from "../../../love/public/src/html_style_code_d
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
-import { app_code_lesson_operators_batch_get_max } from "../../../love/public/src/app_code_lesson_operators_batch_get_max.mjs";
+import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_functions_arithmetic() {
   const quiz_label = "What is this code rewritten using a function call?";
   let question_label = app_code_label_code_question();
   let operators = js_operators();
-  let m = app_code_lesson_operators_batch_get_max();
+  let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   function batch_get() {
     let mapper = function lambda2(o) {
