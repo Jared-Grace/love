@@ -42,10 +42,12 @@ export function app_code_lesson_functions_console_log() {
   function above(root) {
     let o_f = js_operator_first_code_call(next_operator);
     let code2 = property_get(o_f, "code");
+    let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
     let v3 = next();
     let code3 = js_code_call_arg(fn_name, v3);
     html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", code3]);
+    html_div_cycle_code(c, ["", code2, " we could write: ", code3]);
   }
   function batch_get() {
     let v = next();
