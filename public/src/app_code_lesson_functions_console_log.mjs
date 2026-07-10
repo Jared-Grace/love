@@ -1,4 +1,4 @@
-import { range } from "../../../love/public/src/range.mjs";
+import { range_from } from "../../../love/public/src/range_from.mjs";
 import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { app_code_lesson_code_logged } from "../../../love/public/src/app_code_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "../../../love/public/src/eval_console_log_to_list.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda4() {
-    let r2 = range(count);
+    let mapped = range_from(from, to);
   }
   let next_get = list_iterator_refillable(lambda4);
   function lambda() {
