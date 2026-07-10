@@ -1,4 +1,4 @@
-import { list_concat_first_pair } from "../../../love/public/src/list_concat_first_pair.mjs";
+import { list_transform_first_combine } from "../../../love/public/src/list_transform_first_combine.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_functions_console_log() {
       [
         "But ",
         fn_name,
-        ...list_concat_first_pair(" only has one number ", inside),
+        ...list_transform_first_combine(" only has one number ", inside),
       ],
     ]);
   }
