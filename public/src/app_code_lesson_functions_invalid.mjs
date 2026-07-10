@@ -1,3 +1,4 @@
+import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
 import { list_power_set_empty_not_is } from "../../../love/public/src/list_power_set_empty_not_is.mjs";
 import { text_replace_multiple_to_space } from "../../../love/public/src/text_replace_multiple_to_space.mjs";
 import { list_sort_list_size } from "../../../love/public/src/list_sort_list_size.mjs";
@@ -19,8 +20,6 @@ import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_code_parenthesis_left } from "../../../love/public/src/js_code_parenthesis_left.mjs";
-import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
 export function app_code_lesson_functions_invalid() {
@@ -28,10 +27,9 @@ export function app_code_lesson_functions_invalid() {
   let operators = js_operators();
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
-  let symbols_required = list_concat_single_right(
-    js_code_parenthesis_list(),
-    js_code_comma(),
-  );
+  let list2 = js_code_parenthesis_list();
+  let single = js_code_comma();
+  let symbols_required = list_concat_single_right(list2, single);
   let operators_next = list_iterator_refillable_value(operators);
   let filtered = list_power_set_empty_not_is(symbols_required);
   list_sort_list_size(filtered);
@@ -81,7 +79,3 @@ export function app_code_lesson_functions_invalid() {
     html_div_cycle_code(c2, combined2);
   }
 }
-function js_code_parenthesis_list() {
-  return [js_code_parenthesis_left(), js_code_parenthesis_right()];
-}
-
