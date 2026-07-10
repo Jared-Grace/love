@@ -18,13 +18,15 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda4() {
     let digit_count = 1;
-    const base1 = digits_count();
-    let from = exponent(base1, digit_count);
-    let a = add_1(digit_count);
     const base = digits_count();
-    let from_1 = exponent(base, a);
-    let difference = subtract_1(from_1);
-    let mapped = range_from(from, difference);
+    let from = exponent(base, digit_count);
+    {
+      let a = add_1(digit_count);
+      const base = digits_count();
+      let from_1 = exponent(base, a);
+      let difference = subtract_1(from_1);
+      let mapped = range_from(from, difference);
+    }
   }
   let next_get = list_iterator_refillable(lambda4);
   function lambda() {
