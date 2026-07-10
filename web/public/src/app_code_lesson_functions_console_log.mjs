@@ -58,12 +58,16 @@ export function app_code_lesson_functions_console_log() {
     const inside = [" inside its ", ...parts];
     html_div_cycle_code_multiple(c, [
       ["However, ", verb, " and ", fn_name, " are different"],
+    ]);
+    html_div_cycle_code_multiple(c, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
       [
         "But ",
         fn_name,
         ...list_transform_first_combine(" only has one number ", inside),
       ],
+    ]);
+    html_div_cycle_code_multiple(c, [
       [
         "Whatever is inside the ",
         ...parts,
