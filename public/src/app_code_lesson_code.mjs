@@ -12,13 +12,14 @@ export function app_code_lesson_code(batch, name_id, above) {
   let quiz_backwards_label_answer = "What code produces this value? ";
   let quiz_backwards_answer_count_override = null;
   let on_question_forwards = html_text_set_code_dark;
+  const backwards_question_label = "Value: ";
   const quizzes = app_code_lesson_quizzes_unscramble(
     batch,
     question_label,
     on_question_forwards,
     quiz_label,
     noop,
-    "Value: ",
+    backwards_question_label,
     app_code_style_normal_text,
     quiz_backwards_label_answer,
     on_question_forwards,
