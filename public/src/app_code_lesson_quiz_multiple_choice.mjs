@@ -1,5 +1,4 @@
 import { range_map } from "../../../love/public/src/range_map.mjs";
-import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "../../../love/public/src/app_code_lesson_quiz_wrong_set.mjs";
 import { app_code_lesson_quiz_qa_property_other } from "../../../love/public/src/app_code_lesson_quiz_qa_property_other.mjs";
@@ -45,7 +44,6 @@ export function app_code_lesson_quiz_multiple_choice(
   }
   let next_get = list_iterator_refillable(batch_get);
   let quiz_batch_items = range_map(answer_count_max, next_get);
-  let list = list_adder_multiple(lambda);
   function filter(quiz_batch_item) {
     let question_batch = property_get(quiz_batch_item, question_property);
     let answer_batch = property_get(quiz_batch_item, answer_property);
