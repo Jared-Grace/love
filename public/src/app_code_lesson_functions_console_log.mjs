@@ -1,3 +1,4 @@
+import { list_concat_first_pair } from "../../../love/public/src/list_concat_first_pair.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
@@ -62,7 +63,11 @@ export function app_code_lesson_functions_console_log() {
     const inside = [" inside its ", ...parts];
     let ai = html_div_cycle_code_multiple(c, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
-      ["But ", fn_name, " only has one number ", ...inside],
+      [
+        "But ",
+        fn_name,
+        ...list_concat_first_pair(" only has one number ", ...inside),
+      ],
     ]);
   }
   function batch_get() {
