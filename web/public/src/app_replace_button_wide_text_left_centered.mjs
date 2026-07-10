@@ -15,7 +15,6 @@ export function app_replace_button_wide_text_left_centered(
   html_style_set(title, "line-height", 1.5);
   object_merge(r, {
     button,
-    title,
   });
   return r;
 }
