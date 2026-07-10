@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -18,6 +19,8 @@ export function app_code_lesson_functions_console_log() {
     return r;
   }
   async function console_log_list(code) {
+    function lambda3(la) {}
+    let list2 = list_adder(lambda3);
     const list = [];
     const original = console.log;
     try {
