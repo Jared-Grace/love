@@ -27,7 +27,8 @@ export function app_code_lesson_functions_console_log() {
       const console_replacement = {
         log: console_log_replacement,
       };
-      new Function("console", code)(console_replacement);
+      let r3 = new Function("console", code)(console_replacement);
+      return r3;
     }
     let logs = list_adder(lambda3);
     return logs;
