@@ -20,12 +20,6 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
-  function above(root) {
-    let o_f = js_operator_first_code_call(next_operator);
-    let code2 = property_get(o_f, "code");
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", code]);
-  }
   let data = {};
   function lambda() {
     function lambda3(la) {
@@ -45,6 +39,13 @@ export function app_code_lesson_functions_console_log() {
     return list;
   }
   let next = list_iterator_refillable(lambda);
+  function above(root) {
+    let o_f = js_operator_first_code_call(next_operator);
+    let code2 = property_get(o_f, "code");
+    let c = app_code_container_light_blue(root);
+    let v3 = next();
+    html_div_cycle_code(c, ["Instead of ", code2, " we could write: ", v3]);
+  }
   function batch_get() {
     let v = next();
     let code = js_code_call_args(fn_name, [v]);
