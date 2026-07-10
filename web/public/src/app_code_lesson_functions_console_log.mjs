@@ -24,7 +24,7 @@ export function app_code_lesson_functions_console_log() {
         let r2 = la(args);
         return r2;
       }
-      let r3 = eval_console_log_replace(console_log_replacement, code);
+      let r3 = eval_console_log_replace(code, console_log_replacement);
       return r3;
     }
     let logs = list_adder(lambda3);
