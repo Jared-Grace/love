@@ -1,7 +1,4 @@
 import { range_map } from "../../../love/public/src/range_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { list_size_less_than_value } from "../../../love/public/src/list_size_less_than_value.mjs";
-import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "../../../love/public/src/app_code_lesson_quiz_wrong_set.mjs";
@@ -46,25 +43,8 @@ export function app_code_lesson_quiz_multiple_choice(
   if (nn2) {
     answer_count_max = answer_count_override;
   }
-  let quiz_batch_items = batch_get();
-  log(app_code_lesson_quiz_multiple_choice.name, {
-    quiz_batch_items,
-  });
   let next_get = list_iterator_refillable(batch_get);
-  function lambda(la) {
-    function lambda2(item) {}
-    let mapped = range_map(digit_count, lambda2);
-    let needs_more = null;
-    do {
-      let n = next_get();
-      log(app_code_lesson_quiz_multiple_choice.name, {
-        n,
-      });
-      list_empty_not_is_assert(n);
-      let list = la(n);
-      needs_more = list_size_less_than_value(list, answer_count_max);
-    } while (needs_more);
-  }
+  let quiz_batch_items = range_map(answer_count_max, next_get);
   let list = list_adder_multiple(lambda);
   function filter(quiz_batch_item) {
     let question_batch = property_get(quiz_batch_item, question_property);
