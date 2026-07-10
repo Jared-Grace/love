@@ -1,10 +1,10 @@
+import { sleep_seconds } from "../../../love/public/src/sleep_seconds.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
-import { sleep_success_color } from "../../../love/public/src/sleep_success_color.mjs";
 import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { app_shared_button_screen_green_style_assign } from "../../../love/public/src/app_shared_button_screen_green_style_assign.mjs";
 import { text_space_nb } from "../../../love/public/src/text_space_nb.mjs";
@@ -94,7 +94,7 @@ export function app_code_lesson_quiz_token_select(
           });
           await on_success();
         }
-        await sleep_success_color();
+        await sleep_seconds(0.55);
         html_style_code_dark(b);
         let size = list_size(chosen);
         function lambda3(variation) {
