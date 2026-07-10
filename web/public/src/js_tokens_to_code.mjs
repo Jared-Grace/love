@@ -7,8 +7,8 @@ import { ternary } from "../../../love/public/src/ternary.mjs";
 export function js_tokens_to_code(tokens) {
   let joined = list_join_space(tokens);
   let expression_is = js_expression_is(joined);
-  let result = ternary(expression_is, js_parse_expression, js_parse);
-  let expression = js_parse_expression(joined);
+  let parse = ternary(expression_is, js_parse_expression, js_parse);
+  let expression = parse(joined);
   let code = js_unparse(expression);
   return code;
 }
