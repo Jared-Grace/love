@@ -54,6 +54,9 @@ export function app_code_lesson_quiz_multiple_choice(
     let needs_more = null;
     do {
       let n = next_get();
+      log(app_code_lesson_quiz_multiple_choice.name, {
+        n,
+      });
       list_empty_not_is_assert(n);
       let list = la(n);
       needs_more = list_size_less_than_value(list, answer_count_max);
