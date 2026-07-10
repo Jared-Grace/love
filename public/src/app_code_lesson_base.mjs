@@ -17,12 +17,11 @@ export function app_code_lesson_base(
   example_question_label,
   on_example_answer,
 ) {
-  let lesson_unique_id = text_replace_space_underscore(
-    property_get(name_id, "id"),
-  );
+  let t = property_get(name_id, "id");
+  let lesson_unique_id = text_replace_space_underscore(t);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
-    name: lesson_name,
+    name: function lambda() {},
     id: lesson_unique_id,
     above,
     example_count,
