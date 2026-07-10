@@ -1,3 +1,4 @@
+import { js_code_call_arg } from "../../../love/public/src/js_code_call_arg.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_operator_first_code_call } from "../../../love/public/src/js_operator_first_code_call.mjs";
@@ -11,7 +12,6 @@ import { app_code_lesson_code_logged } from "../../../love/public/src/app_code_l
 import { eval_console_log_to_list } from "../../../love/public/src/eval_console_log_to_list.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
-import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
@@ -48,7 +48,7 @@ export function app_code_lesson_functions_console_log() {
   }
   function batch_get() {
     let v = next();
-    let code = js_code_call_args(fn_name, [v]);
+    let code = js_code_call_arg(fn_name, v);
     let r = [code];
     return r;
   }
