@@ -13,10 +13,9 @@ export function app_replace_button_wide_text_left_centered(
   let r = html_style_text_left_centered(button, text_left, text_centered);
   let title = property_get(r, "title");
   html_style_set(title, "line-height", 1.5);
-  object_merge(to, from);
-  let r2 = {
+  object_merge(r, {
     button,
     title,
-  };
-  return r2;
+  });
+  return r;
 }
