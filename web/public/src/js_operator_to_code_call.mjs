@@ -7,7 +7,7 @@ export function js_operator_to_code_call(o, next) {
   let e = js_operator_to_expression(o, next);
   let call = js_operator_left_right_to_code_call(o, e);
   let nb = text_space_nb();
-  let replaced = text_replace_space_to(call);
+  let replaced = text_replace_space_to(call, nb);
   property_set_if_exists_not(e, "call", replaced);
   return e;
 }
