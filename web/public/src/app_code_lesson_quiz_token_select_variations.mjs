@@ -23,6 +23,8 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     code,
   });
   let nn = null_not_is(expression);
+  if (false) {
+  }
   let ast = js_parse(code);
   function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
