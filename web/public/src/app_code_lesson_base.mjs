@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -21,7 +22,9 @@ export function app_code_lesson_base(
   let lesson_unique_id = text_replace_space_underscore(t);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
-    name: function lambda() {},
+    name: function lambda() {
+      html_text_set(component, text);
+    },
     id: lesson_unique_id,
     above,
     example_count,
