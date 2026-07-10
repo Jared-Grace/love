@@ -81,7 +81,7 @@ export function app_code_lesson_functions_arithmetic() {
         " we could write: ",
         code,
       ]);
-      html_div_cycle_code_instead_could_write(parent, code_a, code_b);
+      html_div_cycle_code_instead_could_write(parent, expression, code);
       let eq = equal_0(index);
     }
     each_index(operators, lambda);
