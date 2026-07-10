@@ -1,5 +1,4 @@
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { digits_count_2_to_3 } from "../../../love/public/src/digits_count_2_to_3.mjs";
+import { digits_count_2_to_3_random } from "../../../love/public/src/digits_count_2_to_3_random.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -32,8 +31,7 @@ export function app_code_lesson_functions_console_log() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   function lambda2() {
-    let mapped = digits_count_2_to_3();
-    list_shuffle(mapped);
+    let mapped = digits_count_2_to_3_random();
     return mapped;
   }
   let operators_next = list_iterator_refillable(lambda2);
