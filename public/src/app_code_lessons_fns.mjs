@@ -1,3 +1,4 @@
+import { app_code_lesson_functions_console_log } from "../../../love/public/src/app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_invalid } from "../../../love/public/src/app_code_lesson_functions_invalid.mjs";
 import { app_code_lesson_functions_arithmetic } from "../../../love/public/src/app_code_lesson_functions_arithmetic.mjs";
 import { app_code_lesson_operators_dot_missing } from "../../../love/public/src/app_code_lesson_operators_dot_missing.mjs";
