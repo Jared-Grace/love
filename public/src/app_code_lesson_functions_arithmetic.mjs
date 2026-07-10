@@ -87,8 +87,8 @@ export function app_code_lesson_functions_arithmetic() {
     each_index(operators, lambda);
     let operators1 = js_operators();
     let o_f = list_first(operators1);
-    let c = app_code_container_light_blue(root);
     let verb = property_get(o_f, "verb");
+    let c = app_code_container_light_blue(root);
     app_code_code_example_name(c, verb, "function");
     let code = js_operator_to_code_call_only(o_f, next);
     html_div_cycle_code_bold(c, ["", code, " is called a ", "function call"]);
