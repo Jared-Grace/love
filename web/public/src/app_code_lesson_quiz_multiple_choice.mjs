@@ -36,8 +36,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let question_property =
     app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_answer = property_get(qa, answer_property);
-  function lambda2() {}
-  let next_get = list_iterator_refillable(lambda2);
+  let next_get = list_iterator_refillable(batch_get);
   let quiz_batch_items = batch_get();
   function filter(quiz_batch_item) {
     let question_batch = property_get(quiz_batch_item, question_property);
