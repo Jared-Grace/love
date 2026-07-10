@@ -19,7 +19,8 @@ export function app_code_lesson_functions_console_log() {
     let digit_count = 1;
     const base = digits_count();
     let from = exponent(base, digit_count);
-    let a = add_1(n);
+    let a = add_1(digit_count);
+    let from_1 = exponent(base, a);
     let mapped = range_from(from, to);
   }
   let next_get = list_iterator_refillable(lambda4);
