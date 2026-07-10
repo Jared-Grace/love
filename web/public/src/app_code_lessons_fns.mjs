@@ -42,6 +42,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_dot_missing,
     app_code_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
+    app_code_lesson_functions_console_log,
   ];
   return fns;
 }
