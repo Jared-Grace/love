@@ -53,9 +53,9 @@ export function app_code_lesson_functions_console_log() {
     ]);
     app_code_container_light_blue_cycle_code_multiple(root, [
       [
-        "But ",
+        "But, for now, we will see ",
         fn_name,
-        ...list_transform_first_combine(" only has one number ", inside),
+        ...list_transform_first_combine(" with only one number ", inside),
         " :",
       ],
       ["", v4],
