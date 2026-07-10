@@ -16,7 +16,6 @@ import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 export function app_code_lesson_functions_arithmetic() {
@@ -74,13 +73,8 @@ export function app_code_lesson_functions_arithmetic() {
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
       let expression = property_get(r, "expression");
-      app_code_container_light_blue_cycle_code(root, [
-        "Instead of ",
-        expression,
-        " we could write: ",
-        code,
-      ]);
-      html_div_cycle_code_instead_could_write(root, expression, code);
+      let c = app_code_container_light_blue(parent);
+      html_div_cycle_code_instead_could_write(c, expression, code);
       let eq = equal_0(index);
     }
     each_index(operators, lambda);
