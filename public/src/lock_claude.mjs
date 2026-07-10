@@ -23,7 +23,8 @@ export async function lock_claude() {
   await lock_wait(function_run_prompt.name, lambda);
   let r = {
     on_lock,
-    on_finish,
+    on_finish_resolve,
+    on_finish_reject,
   };
   return r;
 }
