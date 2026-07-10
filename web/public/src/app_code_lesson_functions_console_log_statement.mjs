@@ -13,7 +13,7 @@ export function app_code_lesson_functions_console_log_statement() {
   let next_operator = property_get(r, "next_operator");
   let lesson = property_get(r, "lesson");
   let name_id_rights = property_get(r, "name_id_rights");
-  list_add(list, item);
+  list_add(name_id_rights, "statement");
   return lesson;
   function above(root) {}
 }
