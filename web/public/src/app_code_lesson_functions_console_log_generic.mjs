@@ -16,7 +16,8 @@ export function app_code_lesson_functions_console_log_generic(
   lambda$code,
 ) {
   const fn_name = "console.log";
-  let name_id = app_code_lesson_name_id_function("function", [fn_name]);
+  const name_id_rights = [fn_name];
+  let name_id = app_code_lesson_name_id_function("function", name_id_rights);
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
   let data = {};
@@ -54,7 +55,7 @@ export function app_code_lesson_functions_console_log_generic(
     lesson,
     next_operator,
     fn_name,
-    next,
+    next,name_id_rights
   };
   return r3;
 }
