@@ -44,7 +44,7 @@ export function app_code_lesson_functions_console_log_statement() {
       " to mean the end of a JavaScript statement",
     ]);
     app_code_container_light_blue_cycle_code(root, [
-      "Therefore, this lessons is the same as the previous, except there is a ",
+      "Therefore, this lesson is the same as the previous, except there is a ",
       ";",
       " at the end of the ",
       fn_name,
