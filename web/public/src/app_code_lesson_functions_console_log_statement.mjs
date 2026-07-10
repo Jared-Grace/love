@@ -40,7 +40,7 @@ export function app_code_lesson_functions_console_log_statement() {
       "semicolon",
       " ",
       ";",
-      ' as the end of a JavaScript "sentence"',
+      ' to mean the end of a JavaScript "sentence"',
     ]);
   }
 }
