@@ -2,8 +2,8 @@ import { promise_wrap_unawait } from "../../../love/public/src/promise_wrap_unaw
 import { lock_wait } from "../../../love/public/src/lock_wait.mjs";
 import { function_run_prompt } from "../../../love/public/src/function_run_prompt.mjs";
 export async function lock_claude() {
-  let on_lock_resolve = null;
   let on_lock_reject = null;
+  let on_lock_resolve = null;
   async function on_lock_lambda(resolve, reject) {
     on_lock_resolve = resolve;
     on_lock_reject = reject;
