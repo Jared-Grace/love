@@ -16,7 +16,9 @@ export function app_code_lesson_functions_console_log() {
     let r = [code];
     return r;
   }
-  function lambda() {}
+  function lambda() {
+    eval();
+  }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
   let lesson = app_code_lesson_code(b, name_id, above);
   return lesson;
