@@ -35,7 +35,7 @@ export function app_code_lesson_functions_console_log() {
       let code = js_operator_to_code_call_only(item, next_operator);
       return code;
     }
-    let div = html_div(parent);
+    let div = html_div(c);
     app_code_operators_arithmetic_generic(div, lambda);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
