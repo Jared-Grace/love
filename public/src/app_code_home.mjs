@@ -22,6 +22,7 @@ export function app_code_home(context) {
     let text = add_1_period(index);
     let r = app_replace_button_wide_text_left_centered(root, lambda3, text, "");
     let title = property_get(r, "title");
+    name(title);
   }
   each_index(lessons, lambda);
 }
