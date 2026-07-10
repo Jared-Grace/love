@@ -4,6 +4,7 @@ import { function_run_prompt } from "../../../love/public/src/function_run_promp
 export async function lock_claude() {
   async function on_lock(resolve, reject) {
     let on_lock_resolve = resolve;
+    let on_lock_reject = reject;
   }
   let p = await promise_wrap(on_lock);
   async function lambda2() {}
