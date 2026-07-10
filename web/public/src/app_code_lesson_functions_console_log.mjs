@@ -13,7 +13,6 @@ export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let data = {};
-  let digit_count = 1;
   function lambda() {
     function lambda2(c) {
       function lambda5() {
