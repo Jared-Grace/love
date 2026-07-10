@@ -30,11 +30,7 @@ export function app_code_lesson_functions_console_log() {
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
-  function lambda2() {
-    let mapped = digits_count_2_to_3_random();
-    return mapped;
-  }
-  let operators_next = list_iterator_refillable(lambda2);
+  let operators_next = list_iterator_refillable(digits_count_2_to_3_random);
   let results = list_power_set(symbols_required);
   let filtered = list_filter_list_empty_not_is(results);
   list_sort_list_size(filtered);
