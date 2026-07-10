@@ -13,11 +13,7 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_code_binary_expression_commutative } from "../../../love/public/src/js_code_binary_expression_commutative.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
-  let expression = js_parse_expression_try(code);
-  let expression_not_is = null_not_is(expression);
   let ast = js_parse(code);
   function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
