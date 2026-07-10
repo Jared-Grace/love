@@ -4,5 +4,6 @@ import { digit_count_value_min } from "../../../love/public/src/digit_count_valu
 export function digit_count_values(digit_count) {
   let from = digit_count_value_min(digit_count);
   let to = digit_count_value_max(digit_count);
-  let mapped = range_from(from, to);
+  let values = range_from(from, to);
+  return values;
 }
