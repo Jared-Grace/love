@@ -13,6 +13,7 @@ export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   function lambda4() {
+    let digit_count = 1;
     let mapped = range_from(from, to);
   }
   let next_get = list_iterator_refillable(lambda4);
