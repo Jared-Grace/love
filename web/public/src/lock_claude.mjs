@@ -16,7 +16,7 @@ export async function lock_claude() {
     on_finish_reject = reject;
   }
   let on_finish = promise_wrap_unawait(on_finish_lambda);
-  async function lambda() {}
+  function lambda() {}
   await lock_wait(function_run_prompt.name, lambda);
   let r = {
     on_lock,
