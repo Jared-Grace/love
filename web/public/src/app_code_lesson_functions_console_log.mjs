@@ -27,7 +27,7 @@ export function app_code_lesson_functions_console_log() {
   return lesson;
   function above(root) {
     let o_f = js_operator_first_code_call(next_operator);
-    let code2 = property_get(o_f, "code");
+    let code_operator = property_get(o_f, "code");
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
@@ -37,7 +37,6 @@ export function app_code_lesson_functions_console_log() {
     }
     app_code_operators_arithmetic_generic(parent, operator_map);
     let mapped = list_map(list, lambda);
-    html_div_cycle_code_instead_could_write(c, code2, fn_name_call);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
