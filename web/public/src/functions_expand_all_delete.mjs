@@ -3,5 +3,4 @@ import { functions_expand_all } from "../../../love/public/src/functions_expand_
 export async function functions_expand_all_delete(f_name_expand) {
   let r = await functions_expand_all(f_name_expand);
   let result = await function_delete(f_name_expand);
-  return r;
 }
