@@ -5,10 +5,8 @@ import { app_code_lesson_quizzes_unscramble } from "../../../love/public/src/app
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
-import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
 export function app_code_lesson_code(batch, name_id, above) {
-  let t = "Value of code: ";
-  let example_label = t;
+  let example_label = "Value of code: ";
   const quiz_label = app_code_label_code_answer_quiz();
   let question_label = app_code_label_code_question();
   let example_count = 1;
