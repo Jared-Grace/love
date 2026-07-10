@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { digits_count_2_to_3 } from "../../../love/public/src/digits_count_2_to_3.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -32,6 +33,7 @@ export function app_code_lesson_functions_console_log() {
   let symbols_required = ["(", ",", ")"];
   function lambda2() {
     let mapped = digits_count_2_to_3();
+    list_shuffle(list2);
     return mapped;
   }
   let operators_next = list_iterator_refillable(lambda2);
