@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_cycle_bold_code } from "../../../love/public/src/html_cycle_bold_code.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
@@ -33,6 +34,7 @@ export function app_code_lesson_functions_console_log_statement() {
       root,
       "In English, we can use a period (.) to mean the end of a sentence.",
     );
+    let div2 = html_div(parent);
     let div = html_cycle_bold_code(c, [
       "In JavaScript, instead of a period (.), we use a ",
       "semicolon",
