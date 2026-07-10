@@ -4,6 +4,6 @@ import { digit_count_2_min } from "../../../love/public/src/digit_count_2_min.mj
 export function digits_count_2_to_3() {
   let from = digit_count_2_min();
   let to = digit_count_3_max();
-  let mapped = range_from(from, to);
-  return mapped;
+  let ds = range_from(from, to);
+  return ds;
 }
