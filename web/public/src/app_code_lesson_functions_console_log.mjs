@@ -1,3 +1,4 @@
+import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { html_div_cycle_code_instead_could_write } from "../../../love/public/src/html_div_cycle_code_instead_could_write.mjs";
 import { list_transform_first_combine } from "../../../love/public/src/list_transform_first_combine.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
@@ -56,8 +57,12 @@ export function app_code_lesson_functions_console_log() {
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
     const inside = [" inside its ", ...parts];
-    html_div_cycle_code_multiple(c, [
-      ["However, ", verb, " and ", fn_name, " are different"],
+    html_div_cycle_code(c, [
+      "However, ",
+      verb,
+      " and ",
+      fn_name,
+      " are different",
     ]);
     html_div_cycle_code_multiple(c, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
