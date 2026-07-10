@@ -27,7 +27,13 @@
       "Bash(rm -rf /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
       "Edit(.claude/hooks/bash-command-guard.py)",
-      "Write(.claude/hooks/bash-command-guard.py)"
+      "Write(.claude/hooks/bash-command-guard.py)",
+      "Edit(.claude/hooks/lock_claude_acquire.mjs)",
+      "Write(.claude/hooks/lock_claude_acquire.mjs)",
+      "Edit(.claude/hooks/lock_claude_daemon.mjs)",
+      "Write(.claude/hooks/lock_claude_daemon.mjs)",
+      "Edit(.claude/hooks/lock_claude_release.mjs)",
+      "Write(.claude/hooks/lock_claude_release.mjs)"
     ],
     "defaultMode": "acceptEdits"
   },
@@ -39,6 +45,27 @@
           {
             "type": "command",
             "command": "python3 /home/j/repos/love/.claude/hooks/bash-command-guard.py",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /home/j/repos/love/.claude/hooks/lock_claude_acquire.mjs",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /home/j/repos/love/.claude/hooks/lock_claude_release.mjs",
             "timeout": 5
           }
         ]
