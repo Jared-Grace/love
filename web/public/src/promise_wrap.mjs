@@ -1,10 +1,5 @@
+import { promise_wrap_unawait } from "../../../love/public/src/promise_wrap_unawait.mjs";
 export async function promise_wrap(lambda$resolve$reject) {
-  let p = await new Promise(function promise_wrap_inner(resolve, reject) {
-    try {
-      lambda$resolve$reject(resolve, reject);
-    } catch (e) {
-      reject(e);
-    }
-  });
+  let p = await promise_wrap_unawait(lambda$resolve$reject);
   return p;
 }
