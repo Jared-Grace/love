@@ -1,3 +1,4 @@
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -6,6 +7,7 @@ export function js_operator_first_code_call(next) {
   let operators1 = js_operators();
   let o_f = list_first(operators1);
   let verb = property_get(o_f, "verb");
+  property_set_exists_not(object, property_name, value);
   let code = js_operator_to_code_call_only(o_f, next);
   let r2 = {
     verb,
