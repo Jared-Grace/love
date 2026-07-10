@@ -1,3 +1,4 @@
+import { html_div_cycle_code_instead_could_write } from "../../../love/public/src/html_div_cycle_code_instead_could_write.mjs";
 import { js_operator_first_code_call } from "../../../love/public/src/js_operator_first_code_call.mjs";
 import { app_code_code_example_name } from "../../../love/public/src/app_code_code_example_name.mjs";
 import { html_div_cycle_code_bold } from "../../../love/public/src/html_div_cycle_code_bold.mjs";
@@ -80,6 +81,7 @@ export function app_code_lesson_functions_arithmetic() {
         " we could write: ",
         code,
       ]);
+      html_div_cycle_code_instead_could_write(parent, code_a, code_b);
       let eq = equal_0(index);
     }
     each_index(operators, lambda);
