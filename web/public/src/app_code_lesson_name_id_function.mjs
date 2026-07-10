@@ -1,3 +1,4 @@
+import { html_cycle_code } from "../../../love/public/src/html_cycle_code.mjs";
 import { text_combine_space_right } from "../../../love/public/src/text_combine_space_right.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -7,7 +8,7 @@ export function app_code_lesson_name_id_function(left, rights) {
     let first = list_first(rights);
     let combined = text_combine_space_right(left);
     let span = html_span_text(parent, combined);
-    hcc;
+    html_cycle_code(parent2, parts);
   };
   let name_id = app_code_lesson_name_id_generic(rights, left, name_get);
   return name_id;
