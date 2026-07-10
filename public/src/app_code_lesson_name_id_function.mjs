@@ -9,6 +9,7 @@ import { app_code_lesson_name_id_generic } from "../../../love/public/src/app_co
 export function app_code_lesson_name_id_function(left, rights) {
   let name_get = function app_code_lesson_name_id_function_name_get(
     lesson_name,
+    left,
   ) {
     let r2 = function app_code_lesson_name_id_function_inner(parent) {
       let combined = text_combine_space_right(left);
