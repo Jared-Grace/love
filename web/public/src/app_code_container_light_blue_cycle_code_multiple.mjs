@@ -5,6 +5,5 @@ export function app_code_container_light_blue_cycle_code_multiple(
   list_parts,
 ) {
   let c = app_code_container_light_blue(parent);
-  html_div_cycle_code_multiple(c3, list_parts);
-  return c;
+  html_div_cycle_code_multiple(c, list_parts);
 }
