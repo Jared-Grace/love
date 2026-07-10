@@ -20,12 +20,8 @@ export function app_code_home(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     let text = add_1_period(index);
-    let r = app_replace_button_wide_text_left_centered(
-      root,
-      lambda3,
-      text,
-      name,
-    );
+    let r = app_replace_button_wide_text_left_centered(root, lambda3, text, "");
+    let title = property_get(r, "title");
   }
   each_index(lessons, lambda);
 }
