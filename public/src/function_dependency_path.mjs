@@ -1,5 +1,5 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_size_less_than } from "../../../love/public/src/list_size_less_than.mjs";
+import { list_size_less_than_other } from "../../../love/public/src/list_size_less_than_other.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_exists_assert } from "../../../love/public/src/function_exists_assert.mjs";
@@ -16,7 +16,7 @@ export async function function_dependency_path(f_name_from, f_name_to) {
     let node = property_get(v, "node");
     if (node === to) {
       let stack = property_get(v, "stack");
-      if (result === null || list_size_less_than(stack, result)) {
+      if (result === null || list_size_less_than_other(stack, result)) {
         result = stack;
       }
     }
