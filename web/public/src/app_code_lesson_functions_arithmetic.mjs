@@ -69,7 +69,6 @@ export function app_code_lesson_functions_arithmetic() {
   );
   return lesson;
   function above(root) {
-    let next = range_1_next(m);
     function lambda(o, index) {
       let r = js_operator_to_code_call(o, next);
       let code = property_get(r, "call");
