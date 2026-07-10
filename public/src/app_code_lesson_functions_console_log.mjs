@@ -1,3 +1,5 @@
+import { digit_count_3_max } from "../../../love/public/src/digit_count_3_max.mjs";
+import { digit_count_2_min } from "../../../love/public/src/digit_count_2_min.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -31,7 +33,9 @@ export function app_code_lesson_functions_console_log() {
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
   function lambda2() {
-    let mapped = range_from(10, 999);
+    let from = digit_count_2_min();
+    let to = digit_count_3_max();
+    let mapped = range_from(from, to);
   }
   let operators_next = list_iterator_refillable(lambda2);
   let results = list_power_set(symbols_required);
