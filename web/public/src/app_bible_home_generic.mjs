@@ -100,6 +100,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     book_name,
     verse_number,
   );
+  function lambda3() {}
+  let component2 = html_button(parent, text2, lambda3);
   let text4 = html_button_copy_text();
   let component = html_button(bottom, text4, noop);
   let v3 = app_chapter_toggle_update(
