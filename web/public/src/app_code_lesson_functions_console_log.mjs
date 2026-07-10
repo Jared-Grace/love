@@ -69,12 +69,13 @@ export function app_code_lesson_functions_console_log() {
     let first = js_operator_first_code_call_only(next_operator);
     let v4 = js_code_call_arg_fn(fn_name, next);
     app_code_container_light_blue_cycle_code_multiple(root, [
-      ["", verb, " has two numbers separated by a ", comma, ...inside],
+      ["", verb, " has two numbers separated by a ", comma, ...inside, " :"],
       ["", first],
       [
         "But ",
         fn_name,
         ...list_transform_first_combine(" only has one number ", inside),
+        " :",
       ],
       ["", v4],
     ]);
