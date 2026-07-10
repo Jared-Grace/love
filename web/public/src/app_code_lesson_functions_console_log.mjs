@@ -6,10 +6,13 @@ import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mj
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
-  function lambda() {}
+  function lambda() {
+    range_1(3);
+  }
   let next = list_iterator_refillable(lambda);
   function batch_get() {
     let v = next();
