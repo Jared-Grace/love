@@ -37,8 +37,11 @@ export function app_code_lesson_functions_console_log() {
       return code;
     }
     let div = html_div(c);
+    let span = html_span_text(
+      div,
+      "Here are some examples of function calls: ",
+    );
     app_code_operators_arithmetic_generic(div, lambda);
-    let span = html_span_text(div, "Here are some examples of function calls");
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
