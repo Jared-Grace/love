@@ -19,7 +19,7 @@ export function app_code_lesson_functions_console_log() {
         let next = digit_count_values_shuffled_next(c);
         return next;
       }
-      let next = property_initialize_lambda(data, property_name, lambda5);
+      let next = property_initialize_lambda(data, c, lambda5);
       next();
     }
     const digit_count_max = 3;
