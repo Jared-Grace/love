@@ -17,7 +17,8 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let next = list_iterator_refillable(digits_count_2_to_3_random);
   function batch_get() {
-    let code = js_code_call_args(fn_name, args);
+    let v = next();
+    let code = js_code_call_args(fn_name, [v]);
     let r = [list];
     return r;
   }
