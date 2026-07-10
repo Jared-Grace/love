@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { property_initialize_lambda } from "../../../love/public/src/property_initialize_lambda.mjs";
 import { digit_count_values_shuffled_next } from "../../../love/public/src/digit_count_values_shuffled_next.mjs";
 import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
@@ -14,6 +15,8 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let data = {};
   function lambda() {
+    function lambda3(la) {}
+    let list = list_adder(lambda3);
     function lambda2(c) {
       function lambda5() {
         let next = digit_count_values_shuffled_next(c);
