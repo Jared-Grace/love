@@ -44,6 +44,8 @@ export function app_code_lesson_functions_console_log() {
     app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside, " :"],
       ["", first],
+    ]);
+    app_code_container_light_blue_cycle_code_multiple(root, [
       [
         "But ",
         fn_name,
