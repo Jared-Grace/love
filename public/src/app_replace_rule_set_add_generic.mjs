@@ -1,4 +1,4 @@
-import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
+import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
 import { function_copy } from "../../../love/public/src/function_copy.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -15,7 +15,7 @@ export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     list_add(elements, expression);
-    await js_imports_missing_add_all(ast);
+    await js_imports_missing_add_specified(ast, expression);
   }
   let output = await function_transform(fns_list.name, lambda);
   return name_new;
