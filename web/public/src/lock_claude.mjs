@@ -1,3 +1,4 @@
+import { invoke } from "../../../love/public/src/invoke.mjs";
 import { promise_wrap_unawait } from "../../../love/public/src/promise_wrap_unawait.mjs";
 import { lock_wait } from "../../../love/public/src/lock_wait.mjs";
 import { function_run_prompt } from "../../../love/public/src/function_run_prompt.mjs";
@@ -20,6 +21,8 @@ export async function lock_claude() {
     on_lock_resolve();
     return on_finish;
   }
+  function lambda3() {}
+  let r2 = invoke(lambda3);
   await lock_wait(function_run_prompt.name, lambda);
   let r = {
     on_lock,
