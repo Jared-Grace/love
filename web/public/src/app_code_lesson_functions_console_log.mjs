@@ -1,17 +1,15 @@
+import { app_code_lesson_code } from "../../../love/public/src/app_code_lesson_code.mjs";
 import { digits_count_2_to_3_random } from "../../../love/public/src/digits_count_2_to_3_random.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { list_between_space_before_after } from "../../../love/public/src/list_between_space_before_after.mjs";
 import { list_iterator_refillable_value } from "../../../love/public/src/list_iterator_refillable_value.mjs";
 import { js_tokenizer_normalized } from "../../../love/public/src/js_tokenizer_normalized.mjs";
-import { app_code_symbols_eval_valid_expression } from "../../../love/public/src/app_code_symbols_eval_valid_expression.mjs";
-import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { list_between_space_before } from "../../../love/public/src/list_between_space_before.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
-import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
@@ -22,11 +20,7 @@ export function app_code_lesson_functions_console_log() {
     let r = [list];
     return r;
   }
-  let b = app_code_batch_question_answer_fns(
-    batch_get,
-    app_code_symbols_eval_valid_expression,
-  );
-  let lesson = app_code_lesson_validity_code(b, name_id, above);
+  let lesson = app_code_lesson_code(batch, name_id, above);
   return lesson;
   function above(root) {
     let o_f = list_first(operators);
