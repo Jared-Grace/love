@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_remove_last_equal } from "../../../love/public/src/list_remove_last_equal.mjs";
@@ -18,13 +17,7 @@ import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
   let expression = js_parse_expression_try(code);
-  log(app_code_lesson_quiz_token_select_variations.name, {
-    expression,
-    code,
-  });
-  let nn = null_not_is(expression);
-  if (false) {
-  }
+  let expression_not_is = null_not_is(expression);
   let ast = js_parse(code);
   function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
@@ -54,10 +47,12 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   let codes = list_adder_unique(lambda5);
   let variations = list_map(codes, js_tokenizer_normalized);
-  function lambda6(item) {
-    const expected_last = ";";
-    list_remove_last_equal(item, expected_last);
+  if (expression_not_is) {
+    function lambda6(item) {
+      const expected_last = ";";
+      list_remove_last_equal(item, expected_last);
+    }
+    each(variations, lambda6);
   }
-  each(variations, lambda6);
   return variations;
 }
