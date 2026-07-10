@@ -33,7 +33,7 @@ import { app_code_example_answer_label } from "../../../love/public/src/app_code
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-export async function app_code_lesson_quiz(
+export function app_code_lesson_quiz(
   container_blue_light,
   qa,
   parent,
@@ -118,13 +118,13 @@ export async function app_code_lesson_quiz(
   }
   let hides = [success, quiz_new_message];
   html_visibility_hidden_multiple(hides);
-  await on_qa_change();
-  async function on_qa_change() {
+  on_qa_change();
+  function on_qa_change() {
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
-    await on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
+    on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
   }
   function on_wrong() {
     html_visibility_hidden(container_success_message);
@@ -136,7 +136,7 @@ export async function app_code_lesson_quiz(
     html_visibility_visible(container_success_message);
     await sleep_success_color();
     qa = next_get();
-    await on_qa_change();
+    on_qa_change();
     html_visibility_visible(quiz_new_message);
   }
 }
