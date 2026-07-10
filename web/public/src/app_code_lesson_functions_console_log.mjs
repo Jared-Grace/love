@@ -66,7 +66,7 @@ export function app_code_lesson_functions_console_log() {
       [
         "But ",
         fn_name,
-        ...list_concat_first_pair(" only has one number ", ...inside),
+        ...list_concat_first_pair(" only has one number ", inside),
       ],
     ]);
   }
