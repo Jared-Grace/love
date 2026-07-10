@@ -12,7 +12,6 @@ import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_bible_hash_v_get } from "../../../love/public/src/app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "../../../love/public/src/app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "../../../love/public/src/app_shared_screen_set_button.mjs";
-import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_button_arrow_right } from "../../../love/public/src/html_button_arrow_right.mjs";
 import { html_button_arrow_left } from "../../../love/public/src/html_button_arrow_left.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -125,7 +124,9 @@ export async function app_bible_home_generic(context, lambda$a) {
     chapter_code,
     verse_number,
   });
-  let verse_pickers = html_div_centered(content);
+  let d = html_div(content);
+  html_centered(d);
+  let verse_pickers = d;
   async function lambda() {
     await app_bible_verse_previous(context, chapter_code, verse_current);
   }
