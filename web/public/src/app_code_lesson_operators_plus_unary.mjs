@@ -1,12 +1,5 @@
-import { app_code_style_normal_text } from "../../../love/public/src/app_code_style_normal_text.mjs";
-import { error } from "../../../love/public/src/error.mjs";
-import { app_code_lesson_base } from "../../../love/public/src/app_code_lesson_base.mjs";
-import { app_code_lesson_quizzes } from "../../../love/public/src/app_code_lesson_quizzes.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
+import { app_code_lesson_code } from "../../../love/public/src/app_code_lesson_code.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
-import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
-import { app_code_label_code_answer_example } from "../../../love/public/src/app_code_label_code_answer_example.mjs";
-import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { js_code_negation_parenthesis_wrapped } from "../../../love/public/src/js_code_negation_parenthesis_wrapped.mjs";
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
@@ -16,7 +9,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { js_operator_plus_name } from "../../../love/public/src/js_operator_plus_name.mjs";
 import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs";
 import { digit_negative_random_parenthesis_wrapped } from "../../../love/public/src/digit_negative_random_parenthesis_wrapped.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesson_name_id.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
 import { text_articled_pad_space } from "../../../love/public/src/text_articled_pad_space.mjs";
@@ -59,36 +51,6 @@ export function app_code_lesson_operators_plus_unary() {
     html_div_cycle_code(c, [combined3, combined]);
   }
   let name_id = app_code_lesson_name_id("operators", [math_name]);
-  const example_label = app_code_label_code_answer_example();
-  const quiz_label = app_code_label_code_answer_quiz();
-  let question_label = app_code_label_code_question();
-  let example_count = 2;
-  let quiz_backwards_label_answer = null;
-  let on_quiz_answer_button_backwards = null;
-  let quiz_backwards_answer_count_override = null;
-  const quizzes = app_code_lesson_quizzes(
-    batch,
-    question_label,
-    html_text_set,
-    quiz_label,
-    noop,
-    null,
-    html_text_set,
-    quiz_backwards_label_answer,
-    on_quiz_answer_button_backwards,
-    quiz_backwards_answer_count_override,
-  );
-  let question_label2 = error();
-  let lesson = app_code_lesson_base(
-    name_id,
-    above,
-    example_count,
-    batch,
-    html_text_set,
-    example_label,
-    quizzes,
-    question_label2,
-    app_code_style_normal_text,
-  );
+  let lesson2 = app_code_lesson_code(batch2, name_id2, above2);
   return lesson;
 }
