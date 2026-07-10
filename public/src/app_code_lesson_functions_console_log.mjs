@@ -15,8 +15,8 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let digit_count = 1;
   function lambda4() {
-    digit_count_values(digit_count);
-    list_shuffle(list);
+    let values = digit_count_values(digit_count);
+    list_shuffle(values);
   }
   let next_get = list_iterator_refillable(lambda4);
   function lambda() {
