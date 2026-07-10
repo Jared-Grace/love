@@ -14,6 +14,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "../../../love/public/src/app_code_container_light_blue_cycle_code.mjs";
 import { app_code_container_light_blue_cycle_code_multiple } from "../../../love/public/src/app_code_container_light_blue_cycle_code_multiple.mjs";
+import { html_div_cycle_code_multiple } from "../../../love/public/src/html_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
   var r = app_code_lesson_functions_console_log_generic(above, identity, []);
   let next = property_get(r, "next");
@@ -28,9 +29,9 @@ export function app_code_lesson_functions_console_log() {
     let c = app_code_container_light_blue(root);
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
     let operators = js_operators();
-    let span = html_div_cycle_code(c, [
-      "Here is an example of a function call: ",
-      call,
+    let span = html_div_cycle_code_multiple(c, [
+      ["Here is an example of a function call: ", call],
+      [verb, " is a function"],
     ]);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
