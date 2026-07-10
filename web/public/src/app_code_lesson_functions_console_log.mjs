@@ -56,7 +56,7 @@ export function app_code_lesson_functions_console_log() {
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
     const inside = [" inside its ", ...parts];
-    let ai = html_div_cycle_code_multiple(c, [
+    html_div_cycle_code_multiple(c, [
       ["However, ", verb, " and ", fn_name, " are different"],
       ["", verb, " has two numbers separated by a ", comma, ...inside],
       [
