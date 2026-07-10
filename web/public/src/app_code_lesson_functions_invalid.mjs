@@ -29,7 +29,7 @@ export function app_code_lesson_functions_invalid() {
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   let symbols_required = list_concat_single_right(
-    [js_code_parenthesis_left(), js_code_parenthesis_right()],
+    js_code_parenthesis_list(),
     js_code_comma(),
   );
   let operators_next = list_iterator_refillable_value(operators);
@@ -81,3 +81,7 @@ export function app_code_lesson_functions_invalid() {
     html_div_cycle_code(c2, combined2);
   }
 }
+function js_code_parenthesis_list() {
+  return [js_code_parenthesis_left(), js_code_parenthesis_right()];
+}
+
