@@ -58,7 +58,7 @@ export function app_code_lesson_functions_console_log() {
       verb,
       " has two numbers separated by a ",
       comma,
-      "Inside the",
+      " inside the",
       ...parts,
     ]);
   }
