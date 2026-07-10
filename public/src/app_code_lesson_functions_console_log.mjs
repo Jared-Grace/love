@@ -7,7 +7,6 @@ import { app_code_lesson_functions_console_log_generic } from "../../../love/pub
 import { js_code_call_arg_fn } from "../../../love/public/src/js_code_call_arg_fn.mjs";
 import { js_operator_first_code_call_only } from "../../../love/public/src/js_operator_first_code_call_only.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { html_div_cycle_code_instead_could_write } from "../../../love/public/src/html_div_cycle_code_instead_could_write.mjs";
 import { list_transform_first_combine } from "../../../love/public/src/list_transform_first_combine.mjs";
 import { list_between_space_nb } from "../../../love/public/src/list_between_space_nb.mjs";
 import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
@@ -34,8 +33,9 @@ export function app_code_lesson_functions_console_log() {
     let operators = js_operators();
     function lambda(item) {
       let code = js_operator_to_code_call_only(first, next);
+      return code;
     }
-    app_code_operators_arithmetic_generic(parent, operator_map);
+    app_code_operators_arithmetic_generic(root, lambda);
     let mapped = list_map(list, lambda);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
