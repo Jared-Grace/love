@@ -1,4 +1,3 @@
-import { server } from "../../../love/public/src/server.mjs";
 import { promise_wrap_unawait } from "../../../love/public/src/promise_wrap_unawait.mjs";
 import { lock_wait } from "../../../love/public/src/lock_wait.mjs";
 import { function_run_prompt } from "../../../love/public/src/function_run_prompt.mjs";
@@ -19,7 +18,7 @@ export async function lock_claude() {
   let on_finish = promise_wrap_unawait(on_finish_lambda);
   function lambda() {
     on_lock_resolve();
-    server();
+    return on_finish;
   }
   await lock_wait(function_run_prompt.name, lambda);
   let r = {
