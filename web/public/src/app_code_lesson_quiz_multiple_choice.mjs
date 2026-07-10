@@ -1,3 +1,4 @@
+import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "../../../love/public/src/app_code_lesson_quiz_wrong_set.mjs";
@@ -40,6 +41,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let next_get = list_iterator_refillable(batch_get);
   function lambda(la) {
     let n = next_get();
+    list_empty_not_is_assert(list2);
   }
   let list = list_adder_multiple(lambda);
   let quiz_batch_items = batch_get();
