@@ -63,6 +63,7 @@ export function app_code_lesson_functions_console_log() {
     const inside = [" inside its ", ...parts];
     let ai = html_div_cycle_code_multiple(c, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
+      ["However, ", verb, " and ", fn_name, " are different"],
       [
         "But ",
         fn_name,
