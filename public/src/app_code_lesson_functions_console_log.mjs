@@ -13,7 +13,8 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { js_operator_to_code_call } from "../../../love/public/src/js_operator_to_code_call.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_console_log() {
-  let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
+  const fn = "console.log";
+  let name_id = app_code_lesson_name_id_function("function", [fn]);
   let next = list_iterator_refillable(digits_count_2_to_3_random);
   function batch_get() {
     let code = js_code_call_args(fn_name, args);
