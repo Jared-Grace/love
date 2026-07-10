@@ -20,18 +20,16 @@ export function app_code_lesson_functions_console_log() {
   }
   async function console_log_list(code) {
     async function lambda3(la) {
-      const logs = [];
       const fakeConsole = {
         log: function lambda2(...args) {
-          let r2 = logs.push(args);
+          let r2 = la(args);
           return r2;
         },
       };
       new Function("console", code)(fakeConsole);
-      console.log(logs);
     }
-    let list = await list_adder_async(lambda3);
-    return list;
+    let logs = await list_adder_async(lambda3);
+    return logs;
   }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
   let lesson = app_code_lesson_code(b, name_id, above);
