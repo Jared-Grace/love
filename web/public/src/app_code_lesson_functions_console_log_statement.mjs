@@ -1,8 +1,6 @@
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_cycle_bold_code } from "../../../love/public/src/html_cycle_bold_code.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div_cycle_bold } from "../../../love/public/src/html_div_cycle_bold.mjs";
-import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_text } from "../../../love/public/src/app_code_container_light_blue_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
@@ -24,8 +22,10 @@ export function app_code_lesson_functions_console_log_statement() {
   });
   return lesson;
   function above(root) {
-    let c2 = app_code_container_light_blue(root);
-    html_div_text(c2, "In English we use sentences");
+    let c2 = app_code_container_light_blue_text(
+      root,
+      "In English we use sentences",
+    );
     html_div_cycle_bold(c2, [
       'In JavaScript, "sentences" are called ',
       "statements",
@@ -41,6 +41,11 @@ export function app_code_lesson_functions_console_log_statement() {
       " ",
       ";",
       " to mean the end of a JavaScript statement",
+    ]);
+    app_code_container_light_blue_text(root, [
+      "Therefore, this lessons is the same as the previous, except there is a ",
+      ";",
+      " at the end of the ",
     ]);
   }
 }
