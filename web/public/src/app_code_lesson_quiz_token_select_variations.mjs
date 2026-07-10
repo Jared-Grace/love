@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_remove_last_equal } from "../../../love/public/src/list_remove_last_equal.mjs";
@@ -17,6 +18,9 @@ import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
   let expression = js_parse_expression_try(code);
+  log(app_code_lesson_quiz_token_select_variations.name, {
+    expression,
+  });
   let nn = null_not_is(expression);
   let ast = js_parse(code);
   function lambda4(la) {
