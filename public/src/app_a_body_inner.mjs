@@ -1,3 +1,4 @@
+import { html_display_flex } from "../../../love/public/src/html_display_flex.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -56,9 +57,7 @@ export function app_a_body_inner(parent, body, a, indent) {
     }
     let line = html_div(parent_new);
     if (indent) {
-      html_style_assign(line, {
-        display: "flex",
-      });
+      html_display_flex(line);
       let s = html_span_text(line, " ");
       html_style_assign(s, {
         flex: "0 0 auto",
