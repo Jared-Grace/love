@@ -13,6 +13,9 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 export function app_code_lesson_functions_console_log() {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
+  function above(root) {
+    let c = app_code_container_light_blue(root);
+  }
   let data = {};
   function lambda() {
     function lambda3(la) {
@@ -44,7 +47,4 @@ export function app_code_lesson_functions_console_log() {
   );
   let lesson = app_code_lesson_code_logged(b, name_id, above);
   return lesson;
-  function above(root) {
-    let c = app_code_container_light_blue(root);
-  }
 }
