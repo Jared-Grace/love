@@ -19,18 +19,18 @@ export function app_code_lesson_functions_console_log() {
     return r;
   }
   async function console_log_list(code) {
-    function lambda3(la) {}
-    let list2 = list_adder(lambda3);
-    const list = [];
-    const original = console.log;
-    try {
-      console.log = function lambda2(...args) {
-        list.push(args);
-      };
-      await eval(code);
-    } finally {
-      console.log = original;
+    async function lambda3(la) {
+      const original = console.log;
+      try {
+        console.log = function lambda2(...args) {
+          la(args);
+        };
+        await eval(code);
+      } finally {
+        console.log = original;
+      }
     }
+    let list = list_adder(lambda3);
     return list;
   }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
