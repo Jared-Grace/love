@@ -3,6 +3,7 @@ export function list_adder_generic(lambda, fn) {
   let list = [];
   function list_adder_inner(item) {
     fn(list, item);
+    return list;
   }
   let result = lambda(list_adder_inner);
   promise_not_is_assert(result);
