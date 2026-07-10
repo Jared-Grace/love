@@ -58,6 +58,35 @@ every write-capable construct still forces a real prompt.
 Note this hook can only ever narrow what would already prompt or widen an
 existing allow rule's scope to loops/sequences - it never grants a verb
 that wasn't already independently allowed in permissions.allow.
+
+One additional, separately-gated exception exists outside the verb
+allowlist entirely: a single exact template for running an ad-hoc `node
+-e` snippet under real sandboxing rather than trusting the source text.
+`node -e` is otherwise never auto-approved (arbitrary JS can shell out,
+touch the network, or read/write any file the process can reach - a
+verb-prefix check has no visibility into what happens after `-e`, and
+blocklisting dangerous identifiers in the script text is not real safety
+since it's trivially bypassed, e.g. `globalThis['requ'+'ire']`). Instead
+`is_safe_sandboxed_node_eval` recognizes exactly one token-for-token
+shape - `unshare --net --map-root-user -- node --permission
+--allow-fs-read=<abs path under this repo> -e <script>` - and grants that
+regardless of the script's content, because the safety guarantee here
+comes entirely from the OS/runtime sandboxing flags, not from parsing
+the JS. Verified experimentally: Node's `--permission` model blocks fs
+write, fs read outside the allowed path, child_process, workers,
+addons, and wasi by default, but does NOT block outbound network
+(fetch() succeeded in testing even with `--permission
+--allow-fs-read=...` alone) - `unshare --net` closes that gap
+independently. `--map-root-user` just lets an unprivileged user create
+the namespace; it grants no real host privileges. Any deviation from
+the exact template (extra flags, a relative or out-of-repo read path,
+missing `--net`) is deliberately rejected rather than pattern-matched
+loosely, since this check's whole job is to make sure nothing broader
+than the tested guarantee ever slips through. This is also why no
+generic `Bash(unshare:*)` or `Bash(node:*)` rule is added to
+permissions.allow - that would let the native prefix matcher wave
+through `unshare ... -- rm -rf ~` or `node -e '<anything>'` unrelated to
+this template.
 """
 import json
 import os
@@ -70,6 +99,8 @@ SETTINGS_PATHS = [
     ".claude/settings.json",
     ".claude/settings.local.json",
 ]
+
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
 RESERVED_WORDS = {
     "for", "in", "do", "done", "if", "then", "elif", "else", "fi",
@@ -299,6 +330,31 @@ def verb_of(words):
     return words[0]
 
 
+def is_safe_sandboxed_node_eval(words):
+    """Recognize exactly one template: an ad-hoc `node -e` snippet run
+    under real OS/runtime sandboxing rather than trusted by verb prefix.
+    See the module docstring for why this exists and what it was tested
+    against. Any deviation - extra/reordered flags, a relative or
+    out-of-repo read path, additional --allow-* grants, trailing args -
+    is rejected; this only ever matches the one exact shape that was
+    actually verified to block fs write, out-of-scope fs read,
+    child_process, and network."""
+    if len(words) != 9:
+        return False
+    if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
+        return False
+    if words[5] != "--permission":
+        return False
+    if not words[6].startswith("--allow-fs-read="):
+        return False
+    path = words[6][len("--allow-fs-read="):]
+    if not os.path.isabs(path) or os.path.normpath(path) != path:
+        return False
+    if path != REPO_ROOT and not path.startswith(REPO_ROOT + os.sep):
+        return False
+    return words[7] == "-e"
+
+
 def check_simple_commands(tokens, safe_verbs):
     groups = split_statements(tokens)
     if not groups:
@@ -312,7 +368,7 @@ def check_simple_commands(tokens, safe_verbs):
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
         if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", words[0]):
             raise Unsupported("variable assignment prefix")
-        if verb_of(words) not in safe_verbs:
+        if verb_of(words) not in safe_verbs and not is_safe_sandboxed_node_eval(words):
             return False
     return found_command
 
