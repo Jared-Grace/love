@@ -1,4 +1,4 @@
-import { app_code_batch_code } from "../../../love/public/src/app_code_batch_code.mjs";
+import { app_code_batch_code_eval } from "../../../love/public/src/app_code_batch_code_eval.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { each_nested_args_range_1_list_adder } from "../../../love/public/src/each_nested_args_range_1_list_adder.mjs";
 import { js_code_binary_spaced_nb } from "../../../love/public/src/js_code_binary_spaced_nb.mjs";
@@ -18,6 +18,6 @@ export function app_code_lesson_operators_generic_batch_get(
       la(combined);
     }
   }
-  let b = app_code_batch_code(batch_get);
+  let b = app_code_batch_code_eval(batch_get);
   return b;
 }
