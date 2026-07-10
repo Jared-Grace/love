@@ -1,4 +1,4 @@
-import { text_adjascent_duplicates_remove } from "../../../love/public/src/text_adjascent_duplicates_remove.mjs";
+import { text_adjascent_duplicates_remove_underscore } from "../../../love/public/src/text_adjascent_duplicates_remove_underscore.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -20,7 +20,7 @@ export function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
-  text_adjascent_duplicates_remove(lesson_unique_id, "_");
+  text_adjascent_duplicates_remove_underscore(lesson_unique_id);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
