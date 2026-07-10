@@ -20,15 +20,15 @@ export function app_code_lesson_functions_console_log() {
   }
   async function console_log_list(code) {
     async function lambda3(la) {
-      const original = console.log;
-      try {
-        console.log = function lambda2(...args) {
-          la(args);
-        };
-        await eval(code);
-      } finally {
-        console.log = original;
-      }
+      const logs = [];
+      const fakeConsole = {
+        log: function lambda2(...args) {
+          let r2 = logs.push(args);
+          return r2;
+        },
+      };
+      new Function("console", code)(fakeConsole);
+      console.log(logs);
     }
     let list = await list_adder_async(lambda3);
     return list;
