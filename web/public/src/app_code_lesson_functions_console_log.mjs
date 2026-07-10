@@ -74,14 +74,12 @@ export function app_code_lesson_functions_console_log() {
       ],
     ]);
     let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code_multiple(c3, [
-      [
-        "Whatever is inside the ",
-        ...parts,
-        " of ",
-        fn_name,
-        " will be written out for someone to read",
-      ],
+    html_div_cycle_code(c3, [
+      "Whatever is inside the ",
+      ...parts,
+      " of ",
+      fn_name,
+      " will be written out for someone to read",
     ]);
   }
   function batch_get() {
