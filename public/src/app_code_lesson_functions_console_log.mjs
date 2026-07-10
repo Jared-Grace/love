@@ -59,10 +59,10 @@ export function app_code_lesson_functions_console_log() {
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
-    const inside = [" inside the ", ...parts];
+    const inside = [" inside its ", ...parts];
     let ai = html_div_cycle_code_multiple(c, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
-      ["But ", fn_name, " only has one number ", " inside the ", ...parts],
+      ["But ", fn_name, " only has one number ", ...inside],
     ]);
   }
   function batch_get() {
