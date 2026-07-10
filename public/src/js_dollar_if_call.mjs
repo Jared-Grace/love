@@ -1,10 +1,10 @@
 import { js_statement_if_test_set } from "../../../love/public/src/js_statement_if_test_set.mjs";
 import { js_call_new_expression } from "../../../love/public/src/js_call_new_expression.mjs";
 import { js_dollar_i } from "../../../love/public/src/js_dollar_i.mjs";
-export async function js_dollar_if_call(stack1, fn, ast) {
+export async function js_dollar_if_call(stack_1, fn, ast) {
   js_dollar_i({
-    stack1,
+    stack_1,
   });
   let expression = await js_call_new_expression(fn.name, ast);
-  js_statement_if_test_set(stack1, expression);
+  js_statement_if_test_set(stack_1, expression);
 }

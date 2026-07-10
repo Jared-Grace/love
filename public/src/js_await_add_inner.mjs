@@ -25,13 +25,13 @@ export async function js_await_add_inner(functions, ast, visited) {
       }
       let stack = property_get(v, "stack");
       await js_function_last_asyncify(stack, async_is, ast, functions, visited);
-      let stack1 = list_get_end_1(stack);
+      let stack_1 = list_get_end_1(stack);
       function lambda4() {
         let copy = object_copy(node);
         let awaited = js_await(copy);
         object_replace(node, awaited);
       }
-      js_node_type_not_is_if(stack1, "AwaitExpression", lambda4);
+      js_node_type_not_is_if(stack_1, "AwaitExpression", lambda4);
     }
     await js_call_function_if(node, lambda3);
   }

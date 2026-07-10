@@ -15,22 +15,22 @@ export async function js_if_else_if_combine(ast) {
   async function lambda(v) {
     let stack = property_get(v, "stack");
     let node = property_get(v, "node");
-    let stack1 = list_get_end_1(stack);
+    let stack_1 = list_get_end_1(stack);
     async function lambda3() {
       let consequent2 = js_statement_if_consequent_get(node);
-      let consequent = js_statement_if_consequent_get(stack1);
+      let consequent = js_statement_if_consequent_get(stack_1);
       let eq = await equal_by_async(consequent, consequent2, js_unparse);
       if (eq) {
         let test = js_statement_if_test_get(node);
-        let test2 = js_statement_if_test_get(stack1);
+        let test2 = js_statement_if_test_get(stack_1);
         let code_expression = js_code_or("a", "a");
         let expression = js_parse_expression(code_expression);
         js_left_right_set(expression, test2, test);
-        js_statement_if_test_set(stack1, expression);
-        property_set(stack1, "alternate", null);
+        js_statement_if_test_set(stack_1, expression);
+        property_set(stack_1, "alternate", null);
       }
     }
-    await js_node_type_is_if_async(stack1, "IfStatement", lambda3);
+    await js_node_type_is_if_async(stack_1, "IfStatement", lambda3);
   }
   await js_visit_type_each_async(ast, "IfStatement", lambda);
 }

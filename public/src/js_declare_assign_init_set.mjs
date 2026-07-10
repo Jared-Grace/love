@@ -10,8 +10,8 @@ export function js_declare_assign_init_set(ast, lambda) {
     let node = property_get(v, "node");
     let init = js_declare_init_get(node);
     if (init === null) {
-      let stack3 = list_get_end(stack, 3);
-      let n = js_node_type_not_is(stack3, "ForOfStatement");
+      let stack_3 = list_get_end(stack, 3);
+      let n = js_node_type_not_is(stack_3, "ForOfStatement");
       if (n) {
         let value = lambda();
         js_declarator_init_set(node, value);

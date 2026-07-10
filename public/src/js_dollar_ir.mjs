@@ -3,15 +3,15 @@ import { js_dollar_i } from "../../../love/public/src/js_dollar_i.mjs";
 export function js_dollar_ir({
   remaining,
   node,
-  stack1,
-  stack2,
-  stack3,
+  stack_1,
+  stack_2,
+  stack_3,
   ast,
   afters,
 }) {
   js_dollar_i({
-    stack1,
+    stack_1,
   });
-  js_dollar_if_add_return(stack1);
+  js_dollar_if_add_return(stack_1);
   return;
 }

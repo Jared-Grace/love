@@ -11,12 +11,12 @@ import { js_node_is } from "../../../love/public/src/js_node_is.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 export function js_marker_name_get(v) {
   let stack = property_get(v, "stack");
-  let stack1 = list_get_end(stack, 1);
-  let a = js_node_is(stack1);
+  let stack_1 = list_get_end(stack, 1);
+  let a = js_node_is(stack_1);
   if (not(a)) {
     return null;
   }
-  let a2 = js_node_type_is(stack1, "ExpressionStatement");
+  let a2 = js_node_type_is(stack_1, "ExpressionStatement");
   if (not(a2)) {
     return null;
   }
@@ -39,8 +39,8 @@ export function js_marker_name_get(v) {
   if (not(a4)) {
     return null;
   }
-  let stack2 = list_get_end(stack, 2);
-  let a5 = list_is(stack2);
+  let stack_2 = list_get_end(stack, 2);
+  let a5 = list_is(stack_2);
   assert(a5);
   let value = property_get(a_first, "value");
   return value;

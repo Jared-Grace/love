@@ -28,12 +28,12 @@ import { range } from "../../../love/public/src/range.mjs";
 export async function js_functionize(
   ast,
   f_name_new,
-  stack2,
+  stack_2,
   index_from,
   index_to,
 ) {
   const indices = [index_from, index_to];
-  let range = list_slice_from_indices(stack2, indices);
+  let range = list_slice_from_indices(stack_2, indices);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
@@ -53,9 +53,9 @@ export async function js_functionize(
     function lambda2(v) {
       let stack = property_get(v, "stack");
       let node = property_get(v, "node");
-      let stack1 = list_get_end(stack, 1);
-      if (js_node_type_is(stack1, "Property")) {
-        if (property_equals(stack1, "key", node)) {
+      let stack_1 = list_get_end(stack, 1);
+      if (js_node_type_is(stack_1, "Property")) {
+        if (property_equals(stack_1, "key", node)) {
           return;
         }
       }
@@ -74,13 +74,13 @@ export async function js_functionize(
   let list = property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
-  list_remove_multiple(stack2, range);
+  list_remove_multiple(stack_2, range);
   let parsed = js_code_call_args_await_maybe_parse_statement(
     f_name_new,
     missing,
     declaration,
   );
   let m = list_min(indices);
-  list_insert(stack2, m, parsed);
+  list_insert(stack_2, m, parsed);
   await js_outside_move(ast);
 }
