@@ -20,8 +20,7 @@ export function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
-  const separator = "_";
-  text_adjascent_duplicates_remove(lesson_unique_id, separator);
+  text_adjascent_duplicates_remove(lesson_unique_id, "_");
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
