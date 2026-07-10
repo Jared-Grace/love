@@ -35,13 +35,24 @@ matching actual shell quoting rules - so a quoted regex alternation
 pattern containing a literal pipe character doesn't get misidentified
 as an unparsed shell pipe.
 
-Redirection is unsupported in general (see above), with two narrow
+Redirection is unsupported in general (see above), with three narrow
 exceptions that are parsed and allowed inline regardless of the target
 verb's trust level: redirecting to `/dev/null` (e.g. `2>/dev/null`,
-`>/dev/null`, `>>/dev/null`) and fd-dup redirects (`&1`/`&2`, e.g.
-`2>&1`, `1>&2`). Both are safe by construction - neither can write to
-an arbitrary file - so allowing them doesn't weaken the guarantee that
-every write-capable construct still forces a real prompt.
+`>/dev/null`, `>>/dev/null`), fd-dup redirects (`&1`/`&2`, e.g.
+`2>&1`, `1>&2`), and redirecting into this project's Bash-writable
+scratchpad (SCRATCHPAD_PREFIX, e.g. `> /tmp/claude-1000/-home-j-repos-love/x/scratchpad/out.txt`).
+The first two are safe by construction - neither can write to an
+arbitrary file. The scratchpad case is safe for a different reason: it
+doesn't grant a new capability at all, it just extends a capability the
+Bash/Write/Edit tools already have unconditionally in that directory
+(see permissions.allow's `Write(/tmp/claude-1000/-home-j-repos-love/**)`
+etc.) to the shell-redirect surface too. The target path is validated
+with a strict character allowlist (no `$`, backticks, `(`, `<`, spaces,
+quotes, etc. can sneak through) plus an exact-prefix + normpath-equality
+check that rejects `../` traversal and double slashes - so this can't be
+abused to redirect outside the scratchpad. None of these three
+exceptions weakens the guarantee that every *other* write-capable
+construct still forces a real prompt.
 
   - If the whole command parses into that narrow shape AND every simple
     command's verb is already in permissions.allow: emit "allow" (closes
@@ -102,6 +113,13 @@ SETTINGS_PATHS = [
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
+# Mirrors the Write/Edit/Read/rm/mkdir/mv scratchpad rules already granted
+# in permissions.allow (e.g. "Write(/tmp/claude-1000/-home-j-repos-love/**)").
+# Derived, not hardcoded, so it tracks the repo path and uid automatically.
+SCRATCHPAD_PREFIX = f"/tmp/claude-{os.getuid()}/{REPO_ROOT.replace(os.sep, '-')}/"
+
+SAFE_SCRATCHPAD_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
+
 RESERVED_WORDS = {
     "for", "in", "do", "done", "if", "then", "elif", "else", "fi",
     "while", "until", "case", "esac", "function", "select", "time",
@@ -112,6 +130,23 @@ DANGEROUS_CHARS = set("`<{}()")
 
 class Unsupported(Exception):
     """Command doesn't fit the narrow shape this hook parses."""
+
+
+def is_safe_scratchpad_target(path):
+    """True iff `path` is a plain, already-normalized path strictly inside
+    this project's scratchpad. Rejects anything containing shell
+    metacharacters (so a redirect target can't smuggle in `$(...)`,
+    backticks, `<`, spaces, quotes, etc.) and anything that isn't
+    byte-for-byte its own os.path.normpath (so `../` traversal and
+    `//` collapsing can't escape the prefix even though the raw text
+    still starts with it)."""
+    if not SAFE_SCRATCHPAD_PATH_RE.match(path):
+        return False
+    if not path.startswith(SCRATCHPAD_PREFIX):
+        return False
+    if os.path.normpath(path) != path:
+        return False
+    return True
 
 
 def load_safe_verbs():
@@ -229,9 +264,21 @@ def tokenize(command):
                         word.clear()
                         i = end
                         continue
+                else:
+                    k = j
+                    while k < n and command[k] == " ":
+                        k += 1
+                    path_start = k
+                    while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n"):
+                        k += 1
+                    path = command[path_start:k]
+                    if path and is_safe_scratchpad_target(path):
+                        word.clear()
+                        i = k
+                        continue
             raise Unsupported(
-                "unsupported operator '>' (redirection, except >/dev/null "
-                "or fd dup &1/&2)"
+                "unsupported operator '>' (redirection, except >/dev/null, "
+                "fd dup &1/&2, or a path inside this project's scratchpad)"
             )
         if c in DANGEROUS_CHARS:
             raise Unsupported(f"unsupported operator {c!r}")
