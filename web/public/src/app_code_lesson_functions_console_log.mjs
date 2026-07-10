@@ -65,8 +65,10 @@ export function app_code_lesson_functions_console_log() {
       fn_name,
       " are different",
     ]);
+    let first = js_operator_first_code_call(next_operator);
     app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside],
+      [first],
       [
         "But ",
         fn_name,
