@@ -21,7 +21,7 @@ import { app_code_lesson_operators_generic_batch_get_max } from "../../../love/p
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_console_log() {
-  let name_id = app_code_lesson_name_id("functions", ["invalid"]);
+  let name_id = app_code_lesson_name_id("functions", ["console.log"]);
   let operators = js_operators();
   let m = app_code_lesson_operators_generic_batch_get_max();
   let next = range_1_next(m);
