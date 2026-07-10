@@ -13,7 +13,6 @@ import { js_operator_to_code_call } from "../../../love/public/src/js_operator_t
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", ["console.log"]);
-  let symbols_required = ["(", ",", ")"];
   let next = list_iterator_refillable(digits_count_2_to_3_random);
   let next_get = list_iterator_refillable_value(filtered);
   function batch_get() {
