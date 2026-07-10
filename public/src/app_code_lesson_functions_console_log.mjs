@@ -1,3 +1,4 @@
+import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { exponent } from "../../../love/public/src/exponent.mjs";
 import { digits_count } from "../../../love/public/src/digits_count.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
@@ -18,6 +19,7 @@ export function app_code_lesson_functions_console_log() {
     let digit_count = 1;
     const base = digits_count();
     let from = exponent(base, digit_count);
+    let a = add_1(n);
     let mapped = range_from(from, to);
   }
   let next_get = list_iterator_refillable(lambda4);
