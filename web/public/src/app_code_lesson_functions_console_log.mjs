@@ -54,12 +54,12 @@ export function app_code_lesson_functions_console_log() {
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
     let ai = html_div_cycle_code(c, [
-      "Inside the",
-      ...parts,
       " ",
       verb,
-      "has two numbers separated by a ",
+      " has two numbers separated by a ",
       comma,
+      "Inside the",
+      ...parts,
     ]);
   }
   function batch_get() {
