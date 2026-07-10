@@ -7,6 +7,7 @@ export function app_code_lesson_name_id_function(left, rights) {
     let first = list_first(rights);
     let combined = text_combine_space_right(left);
     let span = html_span_text(parent, combined);
+    hcc;
   };
   let name_id = app_code_lesson_name_id_generic(rights, left, name_get);
   return name_id;
