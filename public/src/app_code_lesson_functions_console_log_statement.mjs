@@ -12,7 +12,6 @@ export function app_code_lesson_functions_console_log_statement() {
   let fn_name = property_get(r, "fn_name");
   let next_operator = property_get(r, "next_operator");
   let lesson = property_get(r, "lesson");
-  let name_id_rights = property_get(r, "name_id_rights");
   return lesson;
   function above(root) {}
 }
