@@ -126,7 +126,6 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number,
   });
   let d = html_div(content);
-  html_centered(d);
   html_display_flex(d);
   let verse_pickers = d;
   async function lambda() {
