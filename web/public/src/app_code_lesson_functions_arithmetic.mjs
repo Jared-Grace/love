@@ -89,8 +89,8 @@ export function app_code_lesson_functions_arithmetic() {
     let o_f = list_first(operators1);
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
-    app_code_code_example_name(c, verb, "function");
     let code = js_operator_to_code_call_only(o_f, next);
+    app_code_code_example_name(c, verb, "function");
     html_div_cycle_code_bold(c, ["", code, " is called a ", "function call"]);
   }
 }
