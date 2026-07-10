@@ -53,4 +53,5 @@ export async function lock_generic(lock_name, wait, lambda) {
       await release();
     }
   }
+  return r;
 }
