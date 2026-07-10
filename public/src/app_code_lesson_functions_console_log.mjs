@@ -1,3 +1,4 @@
+import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -29,7 +30,9 @@ export function app_code_lesson_functions_console_log() {
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   let symbols_required = ["(", ",", ")"];
-  function lambda2() {}
+  function lambda2() {
+    let mapped = range_from(from, to);
+  }
   let operators_next = list_iterator_refillable(lambda2);
   let results = list_power_set(symbols_required);
   let filtered = list_filter_list_empty_not_is(results);
