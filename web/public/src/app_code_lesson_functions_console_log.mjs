@@ -12,7 +12,7 @@ export function app_code_lesson_functions_console_log() {
   function batch_get() {
     let v = next();
     let code = js_code_call_args(fn_name, [v]);
-    let r = [list];
+    let r = [code];
     return r;
   }
   let lesson = app_code_lesson_code(batch_get, name_id, above);
