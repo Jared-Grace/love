@@ -22,7 +22,8 @@ export function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
-  let split = text_split(lesson_unique_id, "_");
+  const split_by = "_";
+  let split = text_split(lesson_unique_id, split_by);
   let filtered = list_filter_text_empty_not_is(split);
   let joined = list_join(list, separator);
   let lesson_name = property_get(name_id, "name");
