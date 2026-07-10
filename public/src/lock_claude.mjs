@@ -21,9 +21,10 @@ export async function lock_claude() {
     on_lock_resolve();
     return on_finish;
   }
-  function lambda3() {}
+  async function lambda3() {
+    await lock_wait(function_run_prompt.name, lambda);
+  }
   let r2 = invoke(lambda3);
-  await lock_wait(function_run_prompt.name, lambda);
   let r = {
     on_lock,
     on_finish_resolve,
