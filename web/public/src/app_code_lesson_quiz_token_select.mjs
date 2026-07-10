@@ -94,7 +94,7 @@ export function app_code_lesson_quiz_token_select(
           });
           await on_success();
         }
-        await sleep_seconds(0.55);
+        await sleep_seconds(0.1);
         html_style_code_dark(b);
         let size = list_size(chosen);
         function lambda3(variation) {
