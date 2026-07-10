@@ -1,5 +1,5 @@
+import { eval_console_log_replace } from "../../../love/public/src/eval_console_log_replace.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -24,10 +24,7 @@ export function app_code_lesson_functions_console_log() {
         let r2 = la(args);
         return r2;
       }
-      const console_replacement = {
-        log: console_log_replacement,
-      };
-      let r3 = new Function("console", code)(console_replacement);
+      let r3 = eval_console_log_replace(console_log_replacement, code);
       return r3;
     }
     let logs = list_adder(lambda3);
