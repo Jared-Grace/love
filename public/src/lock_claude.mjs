@@ -22,7 +22,11 @@ export async function lock_claude() {
     return on_finish;
   }
   async function lambda3() {
-    await lock_wait(function_run_prompt.name, lambda);
+    try {
+      await lock_wait(function_run_prompt.name, lambda);
+    } catch (e) {
+      on_lock_reject(e);
+    }
   }
   let r2 = invoke(lambda3);
   let r = {
