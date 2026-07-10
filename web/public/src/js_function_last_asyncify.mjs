@@ -35,7 +35,7 @@ export async function js_function_last_asyncify(
       return;
       async function lambda(f_name) {
         async function lambda2(ast) {
-          list_add(visited, name);
+          list_add(visited, f_name);
           let v = await js_await_add_inner(functions, ast, visited);
           return v;
         }
