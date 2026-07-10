@@ -6,7 +6,8 @@ import { list_concat_single } from "../../../love/public/src/list_concat_single.
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { text_combine_middle_space } from "../../../love/public/src/text_combine_middle_space.mjs";
-export function app_code_lesson_name_id(left, rights) {let on_lesson_name=html_text_set_curried_right
+export function app_code_lesson_name_id(left, rights) {
+  let on_lesson_name = html_text_set_curried_right;
   let joined = list_join_comma_space(rights);
   let wrapped = text_wrap_parenthesis(joined);
   let combined = text_combine_middle_space(left, wrapped);
@@ -14,7 +15,6 @@ export function app_code_lesson_name_id(left, rights) {let on_lesson_name=html_t
   let concated = list_concat_single(left, rights);
   let joined_id = list_join_underscore(concated);
   let id = text_lower_to(joined_id);
-
   let lambda = html_text_set_curried_right(lesson_name);
   let name_id = {
     name: lambda,
