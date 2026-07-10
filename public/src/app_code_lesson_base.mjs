@@ -22,8 +22,8 @@ export function app_code_lesson_base(
   let lesson_unique_id = text_replace_space_underscore(t);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
-    name: function lambda() {
-      html_text_set(component, text);
+    name: function lambda(parent) {
+      html_text_set(parent, lesson_name);
     },
     id: lesson_unique_id,
     above,
