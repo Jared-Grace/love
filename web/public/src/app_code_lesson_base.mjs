@@ -1,3 +1,4 @@
+import { text_symbols_unique } from "../../../love/public/src/text_symbols_unique.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
@@ -19,6 +20,7 @@ export function app_code_lesson_base(
 ) {
   let t = property_get(name_id, "id");
   let lesson_unique_id = text_replace_space_underscore(t);
+  let unique = text_symbols_unique(s);
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
