@@ -1,5 +1,3 @@
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { js_parse_expression_try } from "../../../love/public/src/js_parse_expression_try.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -52,8 +50,6 @@ export function app_code_lesson_quiz_token_select(
   ("ensures div is visible from beginning");
   let text = text_space_nb();
   html_text_set(answer_div, text);
-  let expression = js_parse_expression_try(code);
-  let expression_is = null_not_is(expression);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   let tokens_unique = list_unique(normalized);
