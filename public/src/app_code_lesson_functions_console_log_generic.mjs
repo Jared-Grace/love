@@ -11,7 +11,10 @@ import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_name_id_function } from "../../../love/public/src/app_code_lesson_name_id_function.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
-export function app_code_lesson_functions_console_log_generic(above) {
+export function app_code_lesson_functions_console_log_generic(
+  above,
+  code_transform,
+) {
   const fn_name = "console.log";
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let m = app_code_lesson_operators_value_max();
