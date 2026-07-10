@@ -1,4 +1,4 @@
-import { app_code_batch_code_eval } from "../../../love/public/src/app_code_batch_code_eval.mjs";
+import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { app_code_lesson_code } from "../../../love/public/src/app_code_lesson_code.mjs";
@@ -16,7 +16,7 @@ export function app_code_lesson_functions_console_log() {
     let r = [code];
     return r;
   }
-  let b = app_code_batch_code_eval(batch_get);
+  let b = app_code_batch_question_answer_fns(batch_get, eval);
   let lesson = app_code_lesson_code(b, name_id, above);
   return lesson;
   function above(root) {
