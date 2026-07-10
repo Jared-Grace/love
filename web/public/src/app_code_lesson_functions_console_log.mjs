@@ -15,18 +15,21 @@ export function app_code_lesson_functions_console_log() {
   let name_id = app_code_lesson_name_id_function("function", [fn_name]);
   let data = {};
   function lambda() {
-    function lambda3(la) {}
-    let list = list_adder(lambda3);
-    function lambda2(c) {
-      function lambda5() {
-        let next = digit_count_values_shuffled_next(c);
-        return next;
+    function lambda3(la) {
+      function lambda2(c) {
+        function lambda5() {
+          let next = digit_count_values_shuffled_next(c);
+          return next;
+        }
+        let next = property_initialize_lambda(data, c, lambda5);
+        let v2 = next();
+        la(v2);
       }
-      let next = property_initialize_lambda(data, c, lambda5);
-      next();
+      const digit_count_max = 3;
+      each_range_1(digit_count_max, lambda2);
     }
-    const digit_count_max = 3;
-    each_range_1(digit_count_max, lambda2);
+    let list = list_adder(lambda3);
+    return list;
   }
   let next = list_iterator_refillable(lambda);
   function batch_get() {
