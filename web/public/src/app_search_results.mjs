@@ -1,3 +1,4 @@
+import { app_chapter_open } from "../../../love/public/src/app_chapter_open.mjs";
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_margin } from "../../../love/public/src/html_margin.mjs";
 import { html_border_style } from "../../../love/public/src/html_border_style.mjs";
@@ -8,9 +9,6 @@ import { firebase_storage_url_project_jg } from "../../../love/public/src/fireba
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
-import { list_join_plus } from "../../../love/public/src/list_join_plus.mjs";
-import { window_open_app_fn } from "../../../love/public/src/window_open_app_fn.mjs";
-import { app_chapter } from "../../../love/public/src/app_chapter.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -43,7 +41,6 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { text_to_words } from "../../../love/public/src/text_to_words.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
-import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
@@ -94,11 +91,8 @@ export async function app_search_results(context, div_results) {
       let squashed = list_squash(waited);
       await list_join_newline_2_copy(squashed);
     }
-    let component = html_button_wide(
-      expand_all_div,
-      text_combine(c, " all"),
-      lambda6,
-    );
+    let text2 = text_combine(c, " all");
+    let component = html_button_wide(expand_all_div, text2, lambda6);
   }
   expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
   html_br_2(div_results);
@@ -128,14 +122,7 @@ export async function app_search_results(context, div_results) {
         let cb = html_button_copy_width_full(div_verse, copy);
         html_style_margin_y(cb, "0.2em");
         function lambda3() {
-          let mapped4 = list_map_property(languages_chosen, "language_code");
-          list_reverse(mapped4);
-          let joined = list_join_plus(mapped4);
-          window_open_app_fn(app_chapter, {
-            c: chapter_code,
-            v: verse_number,
-            l: joined,
-          });
+          app_chapter_open(languages_chosen, chapter_code, verse_number);
         }
         let oc = html_button_wide(div_verse, "Open chapter", lambda3);
         html_style_margin_y(oc, "0.2em");
