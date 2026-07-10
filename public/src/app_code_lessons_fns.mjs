@@ -1,3 +1,4 @@
+import { app_code_lesson_functions_console_log_statement } from "../../../love/public/src/app_code_lesson_functions_console_log_statement.mjs";
 import { app_code_lesson_functions_console_log } from "../../../love/public/src/app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_invalid } from "../../../love/public/src/app_code_lesson_functions_invalid.mjs";
 import { app_code_lesson_functions_arithmetic } from "../../../love/public/src/app_code_lesson_functions_arithmetic.mjs";
@@ -42,6 +43,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
     app_code_lesson_functions_console_log,
+    app_code_lesson_functions_console_log_statement,
   ];
   return fns;
 }
