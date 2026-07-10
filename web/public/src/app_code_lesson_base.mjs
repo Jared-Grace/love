@@ -25,8 +25,8 @@ export function app_code_lesson_base(
     id: lesson_unique_id,
     above,
     example_count,
-    batch: async function batch() {
-      let batch_items = await batch_get();
+    batch: function batch() {
+      let batch_items = batch_get();
       function each_batch_item(bi) {
         let question = property_get(bi, "question");
         let answer = property_get(bi, "answer");

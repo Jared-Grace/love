@@ -5,8 +5,8 @@ export function app_code_batch_question_answer_fns(
   question_to_answer,
 ) {
   arguments_assert(arguments, 2);
-  let b = async function lambda() {
-    let questions = await batch_questions_get();
+  let b = function lambda() {
+    let questions = batch_questions_get();
     function lambda2(question) {
       let answer = question_to_answer(question);
       let qa = {

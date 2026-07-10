@@ -1,4 +1,4 @@
-import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_code_batch_question_answer_fns } from "../../../love/public/src/app_code_batch_question_answer_fns.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -18,8 +18,8 @@ export function app_code_lesson_functions_console_log() {
     let r = [code];
     return r;
   }
-  async function console_log_list(code) {
-    async function lambda3(la) {
+  function console_log_list(code) {
+    function lambda3(la) {
       const console_replacement = {
         log: function lambda2(...args) {
           let r2 = la(args);
@@ -28,7 +28,7 @@ export function app_code_lesson_functions_console_log() {
       };
       new Function("console", code)(console_replacement);
     }
-    let logs = await list_adder_async(lambda3);
+    let logs = list_adder(lambda3);
     return logs;
   }
   let b = app_code_batch_question_answer_fns(batch_get, lambda);
