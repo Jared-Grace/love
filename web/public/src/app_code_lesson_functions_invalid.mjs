@@ -1,4 +1,4 @@
-import { js_code_parenthesis_list } from "../../../love/public/src/js_code_parenthesis_list.mjs";
+import { js_code_call_symbols } from "../../../love/public/src/js_code_call_symbols.mjs";
 import { list_power_set_empty_not_is } from "../../../love/public/src/list_power_set_empty_not_is.mjs";
 import { text_replace_multiple_to_space } from "../../../love/public/src/text_replace_multiple_to_space.mjs";
 import { list_sort_list_size } from "../../../love/public/src/list_sort_list_size.mjs";
@@ -20,16 +20,12 @@ import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
-import { list_concat_single_right } from "../../../love/public/src/list_concat_single_right.mjs";
 export function app_code_lesson_functions_invalid() {
   let name_id = app_code_lesson_name_id("functions", ["invalid"]);
   let operators = js_operators();
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
-  let list2 = js_code_parenthesis_list();
-  let single = js_code_comma();
-  let symbols_required = list_concat_single_right(list2, single);
+  let symbols_required = js_code_call_symbols();
   let operators_next = list_iterator_refillable_value(operators);
   let filtered = list_power_set_empty_not_is(symbols_required);
   list_sort_list_size(filtered);
