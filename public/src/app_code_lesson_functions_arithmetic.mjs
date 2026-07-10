@@ -80,7 +80,7 @@ export function app_code_lesson_functions_arithmetic() {
         " we could write: ",
         code,
       ]);
-      html_div_cycle_code_instead_could_write(parent, expression, code);
+      html_div_cycle_code_instead_could_write(root, expression, code);
       let eq = equal_0(index);
     }
     each_index(operators, lambda);
