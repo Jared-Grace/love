@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
@@ -29,6 +30,8 @@ export function app_code_lesson_functions_console_log() {
     let c = app_code_container_light_blue(root);
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
     let operators = js_operators();
+    function lambda(item) {}
+    let mapped = list_map(list, lambda);
     html_div_cycle_code_instead_could_write(c, code2, fn_name_call);
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
