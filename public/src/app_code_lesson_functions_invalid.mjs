@@ -24,7 +24,7 @@ export function app_code_lesson_functions_invalid() {
   let operators = js_operators();
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
-  let symbols_required = ["(", ",", ")"];
+  let symbols_required = ["(", ")", ","];
   let operators_next = list_iterator_refillable_value(operators);
   let filtered = list_power_set_empty_not_is(symbols_required);
   list_sort_list_size(filtered);
