@@ -1,3 +1,4 @@
+import { html_display_flex } from "../../../love/public/src/html_display_flex.mjs";
 import { app_bible_button_chapter_previous } from "../../../love/public/src/app_bible_button_chapter_previous.mjs";
 import { app_bible_button_chapter_next } from "../../../love/public/src/app_bible_button_chapter_next.mjs";
 import { app_bible_chapter_set_default } from "../../../love/public/src/app_bible_chapter_set_default.mjs";
@@ -126,6 +127,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   });
   let d = html_div(content);
   html_centered(d);
+  html_display_flex(d);
   let verse_pickers = d;
   async function lambda() {
     await app_bible_verse_previous(context, chapter_code, verse_current);
