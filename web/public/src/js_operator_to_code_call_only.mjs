@@ -6,6 +6,7 @@ export function js_operator_to_code_call_only(o_f, next) {
   let r = js_operator_to_code_call(o_f, next);
   let nb = text_space_nb();
   let replaced2 = text_replace_space_to(t, nb);
-  let call = property_transform(r, "call");
+  function lambda() {}
+  let call = property_transform(r, "call", lambda);
   return call;
 }
