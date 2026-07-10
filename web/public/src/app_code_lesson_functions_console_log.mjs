@@ -1,3 +1,4 @@
+import { app_code_operators_arithmetic_generic } from "../../../love/public/src/app_code_operators_arithmetic_generic.mjs";
 import { js_operator_to_code_call_only } from "../../../love/public/src/js_operator_to_code_call_only.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_operators } from "../../../love/public/src/js_operators.mjs";
@@ -34,6 +35,7 @@ export function app_code_lesson_functions_console_log() {
     function lambda(item) {
       let code = js_operator_to_code_call_only(first, next);
     }
+    app_code_operators_arithmetic_generic(parent, operator_map);
     let mapped = list_map(list, lambda);
     html_div_cycle_code_instead_could_write(c, code2, fn_name_call);
     let r2 = js_code_parenthesis_list();
