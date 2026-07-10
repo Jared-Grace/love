@@ -17,6 +17,7 @@
       "Bash(ls:*)",
       "Bash(sort:*)",
       "Bash(node --check:*)",
+      "Bash(node scripts/g.mjs ai)",
       "Write(/tmp/claude-1000/-home-j-repos-love/**)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
       "Read(/tmp/claude-1000/-home-j-repos-love/**)",
