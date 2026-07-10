@@ -14,10 +14,10 @@ export async function js_atomize_function(ast) {
   let fes = js_list_type(ast, "FunctionExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
-    const stack1 = list_get_end_1(stack);
-    if (list_is(stack1)) {
-      const stack2 = list_get_end_2(stack);
-      let type_is = js_node_type_is(stack2, "CallExpression");
+    const stack_1 = list_get_end_1(stack);
+    if (list_is(stack_1)) {
+      const stack_2 = list_get_end_2(stack);
+      let type_is = js_node_type_is(stack_2, "CallExpression");
       if (type_is) {
         let node = property_get(v, "node");
         let name = js_function_declaration_name(node);

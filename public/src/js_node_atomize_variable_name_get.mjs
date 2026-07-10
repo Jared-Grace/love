@@ -32,11 +32,11 @@ export async function js_node_atomize_variable_name_get(
     }
   }
   ("use param name of containing fn");
-  let stack2 = list_get_end(stack, text_combine(2, offset));
-  if (js_node_type_is(stack2, "CallExpression")) {
-    let stack1 = list_get_end(stack, text_combine(1, offset));
-    if (list_is(stack1)) {
-      let callee = property_get(stack2, "callee");
+  let stack_2 = list_get_end(stack, text_combine(2, offset));
+  if (js_node_type_is(stack_2, "CallExpression")) {
+    let stack_1 = list_get_end(stack, text_combine(1, offset));
+    if (list_is(stack_1)) {
+      let callee = property_get(stack_2, "callee");
       if (js_node_type_is(callee, "Identifier")) {
         let name = property_get(callee, "name");
         const v4 = await function_exists_strict(name);
@@ -46,9 +46,9 @@ export async function js_node_atomize_variable_name_get(
           let declaration = property_get(r, "declaration");
           let params = property_get(declaration, "params");
           let child = list_get_end(stack, offset);
-          let index = list_index_of(stack1, child);
+          let index = list_index_of(stack_1, child);
           let param = list_get(params, index);
-          let b = equal_by(stack1, params, list_size);
+          let b = equal_by(stack_1, params, list_size);
           assert_json(b, {
             name,
             message: "param counts must match",

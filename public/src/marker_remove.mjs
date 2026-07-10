@@ -5,7 +5,7 @@ export async function marker_remove() {
   let f_name = await function_current_get();
   await function_transform_marker_all(f_name, lambda);
   function lambda(a) {
-    let { stack2, stack1 } = a;
-    list_remove(stack2, stack1);
+    let { stack_2, stack_1 } = a;
+    list_remove(stack_2, stack_1);
   }
 }
