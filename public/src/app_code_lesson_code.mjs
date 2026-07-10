@@ -4,11 +4,9 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { app_code_lesson_quizzes_unscramble } from "../../../love/public/src/app_code_lesson_quizzes_unscramble.mjs";
 import { html_text_set_code_dark } from "../../../love/public/src/html_text_set_code_dark.mjs";
 import { app_code_label_code_question } from "../../../love/public/src/app_code_label_code_question.mjs";
-import { app_code_label_code_answer_quiz } from "../../../love/public/src/app_code_label_code_answer_quiz.mjs";
 export function app_code_lesson_code(batch, name_id, above) {
   let example_label = "Value of code: ";
-  let r = "What is the value of this code? ";
-  let quiz_label = r;
+  let quiz_label = "What is the value of this code? ";
   let question_label = app_code_label_code_question();
   let example_count = 1;
   let quiz_backwards_label_answer = "What code produces this value? ";
