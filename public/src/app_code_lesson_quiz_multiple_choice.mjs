@@ -46,13 +46,13 @@ export function app_code_lesson_quiz_multiple_choice(
   }
   let next_get = list_iterator_refillable(batch_get);
   function lambda(la) {
+    let needs_more = null;
     do {
       let n = next_get();
       list_empty_not_is_assert(n);
       let list = la(n);
-      let needs_more = null;
       needs_more = list_size_less_than_value(list, answer_count_max);
-    } while (v);
+    } while (needs_more);
   }
   let list = list_adder_multiple(lambda);
   let quiz_batch_items = batch_get();
