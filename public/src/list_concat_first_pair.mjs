@@ -1,5 +1,5 @@
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
-export function list_concat_first_pair(a, b) {
-  let concated = list_concat(a, b);
-  return concated;
+import { list_first } from "../../../love/public/src/list_first.mjs";
+export function list_concat_first_pair(item, list) {
+  let first = list_first(list2);
+  return list;
 }
