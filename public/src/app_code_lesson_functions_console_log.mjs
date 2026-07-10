@@ -17,10 +17,8 @@ export function app_code_lesson_functions_console_log() {
   function lambda4() {
     let digit_count = 1;
     let from = digit_count_value_min(digit_count);
-    {
-      let to = digit_count_value_max(digit_count);
-      let mapped = range_from(from, to);
-    }
+    let to = digit_count_value_max(digit_count);
+    let mapped = range_from(from, to);
   }
   let next_get = list_iterator_refillable(lambda4);
   function lambda() {
