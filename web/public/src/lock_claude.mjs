@@ -8,13 +8,14 @@ export async function lock_claude() {
     let on_lock_reject = null;
     on_lock_reject = reject;
   }
+  let p_on_lock = promise_wrap_unawait(on_lock);
   async function on_finish(resolve, reject) {
     let on_finish_resolve = null;
     on_finish_resolve = resolve;
     let on_finish_reject = null;
     on_finish_reject = reject;
   }
-  let p = promise_wrap_unawait(on_lock);
+  let p_on_finish = promise_wrap_unawait(on_finish);
   async function lambda2() {}
   await lock_wait(function_run_prompt.name, lambda2);
   return r;
