@@ -18,19 +18,15 @@ export function js_triple_equal_to_equal(ast) {
     let node = property_get(v, "node");
     let operator = property_get(node, "operator");
     if (equal(operator, "===")) {
-      function lambda2(p) {
-        let left = property_get(node, p);
-      }
-      let mapped = list_map(["left", "right"], lambda2);
-      let left = property_get(node, "left");
-      let right = property_get(node, "right");
-      let left_copy = object_copy(left);
-      let right_copy = object_copy(right);
       let code = js_code_call(equal.name);
       let expression = js_parse_expression(code);
       let arguments2 = js_call_arguments_get(expression);
-      list_add(arguments2, left_copy);
-      list_add(arguments2, right_copy);
+      function lambda2(p) {
+        let lr = property_get(node, p);
+        let copy = object_copy(lr);
+        list_add(arguments2, copy);
+      }
+      let mapped = list_map(["left", "right"], lambda2);
       object_replace(node, expression);
     }
   }
