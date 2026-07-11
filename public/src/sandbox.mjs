@@ -1,3 +1,4 @@
+import { js_expression_functionize } from "../../../love/public/src/js_expression_functionize.mjs";
 import { js_function_node_empty } from "../../../love/public/src/js_function_node_empty.mjs";
 import { function_current_selects_nodes_log } from "../../../love/public/src/function_current_selects_nodes_log.mjs";
 import { js_find_function_type_name_starts_with } from "../../../love/public/src/js_find_function_type_name_starts_with.mjs";
@@ -77,7 +78,7 @@ export async function sandbox() {
       }
       {
         (function_current_selects_apply_args,
-          [s_expression_functionize.name, "1", "file_name"]);
+          [js_expression_functionize.name, "1", "file_name"]);
       }
       {
         let combined = text_combine(
