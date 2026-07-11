@@ -1,5 +1,5 @@
 import { js_function_node_call } from "../../../love/public/src/js_function_node_call.mjs";
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
+import { js_operators_arithmetic } from "../../../love/public/src/js_operators_arithmetic.mjs";
 import { js_expression_functionize } from "../../../love/public/src/js_expression_functionize.mjs";
 import { js_function_node_empty } from "../../../love/public/src/js_function_node_empty.mjs";
 import { function_current_selects_nodes_log } from "../../../love/public/src/function_current_selects_nodes_log.mjs";
@@ -80,7 +80,7 @@ export async function sandbox() {
       {
         (function_current_selects_apply_args,
           [js_expression_functionize.name, "1", "file_name"],
-          [js_function_node_call.name, js_operators.name]);
+          [js_function_node_call.name, js_operators_arithmetic.name]);
       }
       {
         let combined = text_combine(

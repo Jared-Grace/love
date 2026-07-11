@@ -19,11 +19,11 @@ import { app_code_lesson_name_id } from "../../../love/public/src/app_code_lesso
 import { app_code_lesson_validity_code } from "../../../love/public/src/app_code_lesson_validity_code.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
+import { js_operators_arithmetic } from "../../../love/public/src/js_operators_arithmetic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_code_lesson_functions_invalid() {
   let name_id = app_code_lesson_name_id("functions", ["invalid"]);
-  let operators = js_operators();
+  let operators = js_operators_arithmetic();
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   let symbols_required = js_code_call_symbols();
