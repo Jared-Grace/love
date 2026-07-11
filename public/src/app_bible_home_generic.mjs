@@ -46,11 +46,14 @@ import { list_filter_null_not_is } from "../../../love/public/src/list_filter_nu
 import { list_find_property_or_null } from "../../../love/public/src/list_find_property_or_null.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
+import { html_span_text_bold } from "../../../love/public/src/html_span_text_bold.mjs";
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
@@ -131,7 +134,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   let text_mapped = list_map(languages_available, lambda_text_map);
   let text_languages = list_filter_null_not_is(text_mapped);
-  if (list_empty_not_is(languages_available)) {
+  if (list_empty_is(languages_available)) {
     languages_available = [
       {
         language: ebible_language_english(),
@@ -140,7 +143,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       },
     ];
   }
-  if (list_empty_not_is(text_languages)) {
+  if (list_empty_is(text_languages)) {
     text_languages = [
       {
         language: ebible_language_english(),
@@ -194,7 +197,18 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_display_none_or_block(hidden, bottom);
   }
   html_span(top, verse_number);
-  app_bible_on_click_google_define(top, text);
+  let show_language_names = list_multiple_is(text_languages);
+  function lambda_text_render(item) {
+    let language = property_get(item, "language");
+    let name = property_get(language, "name");
+    let text_l = property_get(item, "text");
+    let div_l = html_div(top);
+    if (show_language_names) {
+      html_span_text_bold(div_l, text_combine(name, ": "));
+    }
+    app_bible_on_click_google_define(div_l, text_l);
+  }
+  each(text_languages, lambda_text_render);
   let p = html_p(content);
   await lambda$a({
     p_verse,
@@ -214,10 +228,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   let r = html_button_arrow_right(verse_pickers, lambda7);
   html_flex_grow_1_multiple([l, r]);
-  list_add(languages_verses, {
-    verses,
-    books,
-  });
+  list_add_multiple(languages_verses, languages_available);
   let v4 = {
     bar,
   };
