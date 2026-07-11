@@ -1,4 +1,5 @@
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { js_visit_function_nodes } from "../../../love/public/src/js_visit_function_nodes.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -13,7 +14,7 @@ export function js_identifiers_function_names(ast) {
         la(name);
       }
     }
-    js_visit_type(ast, "FunctionDeclaration", lambda_declaration);
+    js_visit_function_nodes(ast, lambda_declaration);
     function lambda_import(v) {
       let node = property_get(v, "node");
       let local = property_get(node, "local");
