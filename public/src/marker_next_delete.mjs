@@ -8,8 +8,8 @@ export async function marker_next_delete() {
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
     function lambda(a) {
-      let { index, stack_ } = marker_next_index(a);
-      list_remove_at(stack_, index);
+      let { index, stack_2 } = marker_next_index(a);
+      list_remove_at(stack_2, index);
     }
   }
   let list = await list_adder_async(lambda2);

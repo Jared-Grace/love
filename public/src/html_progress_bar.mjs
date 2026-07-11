@@ -1,4 +1,4 @@
-import { add_ } from "../../../love/public/src/add_1.mjs";
+import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -33,14 +33,11 @@ export function html_progress_bar(
     "background-color": color_valid,
     "padding-left": "0.6em",
     height: "100%",
-    width: text_combine(
-      divide(multiply(100, count_progress), count_total),
-      "%",
-    ),
+    width: text_combine(divide(multiply(100, count_progress), count_total), "%"),
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
-  let a = add_(count_progress, 1);
+  let a = add_1(count_progress, 1);
   let combined = text_combine_multiple([
     progress_bar_name,
     " ",

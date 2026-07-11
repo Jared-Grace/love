@@ -1,5 +1,5 @@
 import { js_declaration_declarators_get } from "../../../love/public/src/js_declaration_declarators_get.mjs";
-import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
@@ -9,7 +9,7 @@ export function js_declare_single(vd) {
     return null;
   }
   let declarations = js_declaration_declarators_get(vd);
-  let s = list_size_(declarations);
+  let s = list_size_1(declarations);
   if (not(s)) {
     return null;
   }

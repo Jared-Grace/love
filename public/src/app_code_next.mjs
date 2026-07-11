@@ -5,7 +5,7 @@ import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
 import { text_pad_space_quote_double } from "../../../love/public/src/text_pad_space_quote_double.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
-import { emoji_repeat_ } from "../../../love/public/src/emoji_repeat_1.mjs";
+import { emoji_repeat_1 } from "../../../love/public/src/emoji_repeat_1.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { app_shared_button_next_text } from "../../../love/public/src/app_shared_button_next_text.mjs";
@@ -30,7 +30,7 @@ export function app_code_next(
     padded,
   ]);
   html_div_text(container_question, question);
-  let left = emoji_repeat_();
+  let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
   app_replace_button_wide(container_question, answer_yes, refresh);
   let container_buttons = html_div(parent_next_back);

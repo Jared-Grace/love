@@ -1,13 +1,13 @@
 import { list_adder_each } from "../../../love/public/src/list_adder_each.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { boolean_random_ } from "../../../love/public/src/boolean_random_3.mjs";
+import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 export function digits_randomly_coupled() {
   let ds = digits();
   let chunks = list_chunk(ds, 2);
   function lambda(la, c) {
-    let rb = boolean_random_();
+    let rb = boolean_random_3();
     if (rb) {
       la(c);
     } else {

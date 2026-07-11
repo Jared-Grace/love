@@ -24,7 +24,7 @@ export function app_replace_rule_set_statements_variable() {
     "ex > 1",
     "ex > 2",
   ]);
-  const y_eq_ = js_code_assign("y", "2");
+  const y_eq_2 = js_code_assign("y", "2");
   let r = {
     name: "Statements Variable",
     abbreviations,
@@ -52,11 +52,11 @@ export function app_replace_rule_set_statements_variable() {
       },
       {
         start: "vs",
-        end: text_combine_multiple(["const vdg , ", y_eq_, " ;"]),
+        end: text_combine_multiple(["const vdg , ", y_eq_2, " ;"]),
       },
       {
-        start: text_combine_multiple(["const vdg , ", y_eq_, " ;"]),
-        end: text_combine_multiple(["const x = 1 , ", y_eq_, " ;"]),
+        start: text_combine_multiple(["const vdg , ", y_eq_2, " ;"]),
+        end: text_combine_multiple(["const x = 1 , ", y_eq_2, " ;"]),
       },
     ],
     why: "The replacement rules define a context-free grammar for variable declaration statements in a JavaScript-like language, demonstrating how variable keywords, identifiers, and optional initializations can be combined and separated by commas to form valid statements.",

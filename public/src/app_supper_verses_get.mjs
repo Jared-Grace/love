@@ -27,8 +27,7 @@ export async function app_supper_verses_get(ebible_folder) {
     let verses = property_get(value, "verses");
     return verses;
   }
-  let references =
-    "Matthew 26:26-30\nMark 14:22-26\nLuke 22:14-20\nJohn 6:27-35\nJohn 6:48-58\nActs 2:42\nActs 20:7\n1 Corinthians 10:16-22\n1 Corinthians 11:17-34";
+  let references = 'Matthew 26:26-30\nMark 14:22-26\nLuke 22:14-20\nJohn 6:27-35\nJohn 6:48-58\nActs 2:42\nActs 20:7\n1 Corinthians 10:16-22\n1 Corinthians 11:17-34';
   let split = text_split_newline(references);
   let list = await ebible_references_parse_lines_browser(
     [ebible_folder],

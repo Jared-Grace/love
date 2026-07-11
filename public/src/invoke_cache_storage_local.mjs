@@ -3,7 +3,7 @@ import { storage_local_set_exists_not } from "../../../love/public/src/storage_l
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
 export async function invoke_cache_storage_local(fn, args) {
-  let cached_exists = function lambda(key) {
+  let cached_exists = function lambda3(key) {
     let exists = storage_local_exists(invoke_cache_storage_local, key);
     return exists;
   };

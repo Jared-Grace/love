@@ -5,16 +5,16 @@ import { function_name_combine_multiple_concat } from "../../../love/public/src/
 import { function_curryify_specify_name } from "../../../love/public/src/function_curryify_specify_name.mjs";
 export async function function_curryify_specify_name_get(
   unaliased,
-  positions_,
+  positions_1,
 ) {
   let params = await function_params_get(unaliased);
   let ending = null;
-  let e = lists_sizes_equal([params, positions_]);
+  let e = lists_sizes_equal([params, positions_1]);
   if (e) {
     ending = ["later"];
   } else {
     let n = function_curryify_specify_name(unaliased);
-    ending = list_concat_single(n, positions_);
+    ending = list_concat_single(n, positions_1);
   }
   const parts = [unaliased];
   let combined = function_name_combine_multiple_concat(parts, ending);

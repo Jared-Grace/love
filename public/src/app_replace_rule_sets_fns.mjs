@@ -23,9 +23,9 @@ import { app_replace_rule_set_scientific_notation_numbers } from "../../../love/
 import { app_replace_rule_set_decimals } from "../../../love/public/src/app_replace_rule_set_decimals.mjs";
 import { app_replace_rule_set_integers } from "../../../love/public/src/app_replace_rule_set_integers.mjs";
 import { app_replace_rule_set_integer_digits } from "../../../love/public/src/app_replace_rule_set_integer_digits.mjs";
-import { app_replace_rule_set_binary_numbers_simple_ } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple_2.mjs";
+import { app_replace_rule_set_binary_numbers_simple_2 } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple_2.mjs";
 import { app_replace_rule_set_binary_numbers } from "../../../love/public/src/app_replace_rule_set_binary_numbers.mjs";
-import { app_replace_rule_set_swap_ } from "../../../love/public/src/app_replace_rule_set_swap_3.mjs";
+import { app_replace_rule_set_swap_3 } from "../../../love/public/src/app_replace_rule_set_swap_3.mjs";
 import { app_replace_rule_set_swap_2 } from "../../../love/public/src/app_replace_rule_set_swap_2.mjs";
 import { app_replace_rule_set_unary_to_binary_equations } from "../../../love/public/src/app_replace_rule_set_unary_to_binary_equations.mjs";
 import { app_replace_rule_set_unary_to_binary_equations_preparation } from "../../../love/public/src/app_replace_rule_set_unary_to_binary_equations_preparation.mjs";
@@ -34,16 +34,16 @@ import { app_replace_rule_set_two_different_grow_same } from "../../../love/publ
 import { app_replace_rule_set_shrink_same_three_different } from "../../../love/public/src/app_replace_rule_set_shrink_same_three_different.mjs";
 import { app_replace_rule_set_three_different_grow_same } from "../../../love/public/src/app_replace_rule_set_three_different_grow_same.mjs";
 import { app_replace_rule_set_binary_counting } from "../../../love/public/src/app_replace_rule_set_binary_counting.mjs";
-import { app_replace_rule_set_binary_counting_prepare_ } from "../../../love/public/src/app_replace_rule_set_binary_counting_prepare_2.mjs";
+import { app_replace_rule_set_binary_counting_prepare_2 } from "../../../love/public/src/app_replace_rule_set_binary_counting_prepare_2.mjs";
 import { app_replace_rule_set_binary_counting_prepare_1 } from "../../../love/public/src/app_replace_rule_set_binary_counting_prepare_1.mjs";
 import { app_replace_rule_set_unary_equations_adding } from "../../../love/public/src/app_replace_rule_set_unary_equations_adding.mjs";
 import { app_replace_rule_set_shrink_left_pair_replace_right_same } from "../../../love/public/src/app_replace_rule_set_shrink_left_pair_replace_right_same.mjs";
 import { app_replace_rule_set_grow_left_pair_change_right } from "../../../love/public/src/app_replace_rule_set_grow_left_pair_change_right.mjs";
 import { app_replace_rule_set_expand_collapse } from "../../../love/public/src/app_replace_rule_set_expand_collapse.mjs";
-import { app_replace_rule_set_shrink_different_ } from "../../../love/public/src/app_replace_rule_set_shrink_different_2.mjs";
-import { app_replace_rule_set_grow_different_ } from "../../../love/public/src/app_replace_rule_set_grow_different_2.mjs";
+import { app_replace_rule_set_shrink_different_2 } from "../../../love/public/src/app_replace_rule_set_shrink_different_2.mjs";
+import { app_replace_rule_set_grow_different_2 } from "../../../love/public/src/app_replace_rule_set_grow_different_2.mjs";
 import { app_replace_rule_set_replace_flow } from "../../../love/public/src/app_replace_rule_set_replace_flow.mjs";
-import { app_replace_rule_set_replace_ } from "../../../love/public/src/app_replace_rule_set_replace_2.mjs";
+import { app_replace_rule_set_replace_2 } from "../../../love/public/src/app_replace_rule_set_replace_2.mjs";
 import { app_replace_rule_set_shrink_between } from "../../../love/public/src/app_replace_rule_set_shrink_between.mjs";
 import { app_replace_rule_set_grow_between } from "../../../love/public/src/app_replace_rule_set_grow_between.mjs";
 import { app_replace_rule_set_shrink_both_same } from "../../../love/public/src/app_replace_rule_set_shrink_both_same.mjs";
@@ -92,18 +92,18 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_shrink_both_same,
     app_replace_rule_set_grow_between,
     app_replace_rule_set_shrink_between,
-    app_replace_rule_set_replace_,
+    app_replace_rule_set_replace_2,
     app_replace_rule_set_replace_flow,
-    app_replace_rule_set_grow_different_,
-    app_replace_rule_set_shrink_different_,
+    app_replace_rule_set_grow_different_2,
+    app_replace_rule_set_shrink_different_2,
     app_replace_rule_set_swap_2,
-    app_replace_rule_set_swap_,
+    app_replace_rule_set_swap_3,
     app_replace_rule_set_expand_collapse,
     app_replace_rule_set_grow_left_pair_change_right,
     app_replace_rule_set_shrink_left_pair_replace_right_same,
     app_replace_rule_set_unary_equations_adding,
     app_replace_rule_set_binary_counting_prepare_1,
-    app_replace_rule_set_binary_counting_prepare_,
+    app_replace_rule_set_binary_counting_prepare_2,
     app_replace_rule_set_binary_counting,
     app_replace_rule_set_three_different_grow_same,
     app_replace_rule_set_shrink_same_three_different,
@@ -113,7 +113,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_unary_to_binary_equations,
     app_replace_rule_set_boolean_literal,
     app_replace_rule_set_binary_numbers_simple,
-    app_replace_rule_set_binary_numbers_simple_,
+    app_replace_rule_set_binary_numbers_simple_2,
     app_replace_rule_set_binary_numbers,
     app_replace_rule_set_integer_digits,
     app_replace_rule_set_integers,

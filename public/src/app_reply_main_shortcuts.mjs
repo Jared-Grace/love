@@ -51,7 +51,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_pk_ = shortcut_extend_count(r_pk_base, 1);
+  let r_pk_1 = shortcut_extend_count(r_pk_base, 1);
   let r_pk_10 = shortcut_extend_count(r_pk_base, 10);
   let g = app_reply_greetings();
   let r_pk_10_g = shortcut_extend_response(r_pk_10, "g", g);
@@ -59,11 +59,11 @@ export function app_reply_main_shortcuts(
   let r_pk_10_gh = shortcut_extend_response(r_pk_10_g, "h", h);
   let r_pk_10_h = shortcut_extend_response(r_pk_10, "h", h);
   let c = app_reply_called_why();
-  let r_pk_1_c = shortcut_extend_response(r_pk_, "c", c);
+  let r_pk_1_c = shortcut_extend_response(r_pk_1, "c", c);
   let m = app_reply_give();
-  let r_pk_1_m = shortcut_extend_response(r_pk_, "m", m);
+  let r_pk_1_m = shortcut_extend_response(r_pk_1, "m", m);
   let w = app_reply_choices_whatsapp();
-  let r_pk_1_w = shortcut_extend_response(r_pk_, "w", w);
+  let r_pk_1_w = shortcut_extend_response(r_pk_1, "w", w);
   let glory = app_reply_glory();
   let v = emoji_fire();
   let r_pk_10_glory = shortcut_extend_response(r_pk_10, v, glory);
@@ -76,7 +76,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ug_ = shortcut_extend_count(r_ug_base, 10);
+  let r_ug_10 = shortcut_extend_count(r_ug_base, 10);
   let r_ug_40 = shortcut_extend_count(r_ug_base, 40);
   let languages_ke = languages_default_concat_single(ke);
   const r_ke_base = {
@@ -85,7 +85,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ke_ = shortcut_extend_count(r_ke_base, 10);
+  let r_ke_10 = shortcut_extend_count(r_ke_base, 10);
   let r_ke_40 = shortcut_extend_count(r_ke_base, 40);
   const r_default = {
     name: "",
@@ -99,7 +99,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_te_ = shortcut_extend_count(r_te_base, 10);
+  let r_te_10 = shortcut_extend_count(r_te_base, 10);
   let bn = ebible_language_bengali();
   const r_bn_base = {
     name: "BN",
@@ -107,7 +107,7 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_bn_ = shortcut_extend_count(r_bn_base, 10);
+  let r_bn_10 = shortcut_extend_count(r_bn_base, 10);
   let ar = ebible_language_arabic();
   const r_ar_base = {
     name: "AR",
@@ -115,11 +115,11 @@ export function app_reply_main_shortcuts(
     count: 0,
     responses: [],
   };
-  let r_ar_ = shortcut_extend_count(r_ar_base, 10);
+  let r_ar_10 = shortcut_extend_count(r_ar_base, 10);
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
-  const r_en_ = {
+  const r_en_40 = {
     name: "en40",
     languages: [en_l],
     count: 40,
@@ -128,7 +128,7 @@ export function app_reply_main_shortcuts(
   let r_intro = shortcut_extend_response(r_default, "intro", gl);
   let shortcuts = [
     r_intro,
-    r_pk_,
+    r_pk_1,
     r_pk_1_c,
     r_pk_1_m,
     r_pk_1_w,
@@ -139,14 +139,14 @@ export function app_reply_main_shortcuts(
     r_pk_10_glory,
     r_pk_20,
     r_pk_40,
-    r_ug_,
+    r_ug_10,
     r_ug_40,
-    r_ke_,
+    r_ke_10,
     r_ke_40,
-    r_te_,
-    r_bn_,
-    r_ar_,
-    r_en_,
+    r_te_10,
+    r_bn_10,
+    r_ar_10,
+    r_en_40,
     r_yt,
   ];
   function languages_default_concat_single(ke) {
@@ -177,7 +177,7 @@ export function app_reply_main_shortcuts(
     let languages2 = property_get(s, "languages");
     let count2 = property_get(s, "count");
     let responses = property_get(s, "responses");
-    async function lambda() {
+    async function lambda5() {
       app_reply_languages_chosen_reset(languages_chosen, languages2, languages);
       await update(count2);
       list_map_property_invoke(buttons_languages, "update");
@@ -187,7 +187,7 @@ export function app_reply_main_shortcuts(
       }
       each(responses, lambda7);
     }
-    let component = html_button(root, name, lambda);
+    let component = html_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
 }

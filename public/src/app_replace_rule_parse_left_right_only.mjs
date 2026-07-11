@@ -1,4 +1,4 @@
-import { text_replace_curried_right_ } from "../../../love/public/src/text_replace_curried_right_2.mjs";
+import { text_replace_curried_right_2 } from "../../../love/public/src/text_replace_curried_right_2.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_includes_empty_not_assert } from "../../../love/public/src/list_includes_empty_not_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -10,7 +10,7 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_parse_left_right_only(rule) {
   let split = text_split_space(rule);
   let middle = list_index_of(split, ">");
-  let r = text_replace_curried_right_(">>", ">");
+  let r = text_replace_curried_right_2(">>", ">");
   let mapped = list_map(split, r);
   let left = list_take(mapped, middle);
   let right = list_skip(mapped, text_combine(middle, 1));

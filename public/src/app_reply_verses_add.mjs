@@ -16,7 +16,9 @@ export async function app_reply_verses_add(
 ) {
   let copy = list_copy_reverse(languages_chosen);
   let mapped = list_map_property(copy, "bible_folder");
-  let verses = await ebible_references_parse_lines_browser(mapped, [reference]);
+  let verses = await ebible_references_parse_lines_browser(mapped, [
+    reference,
+  ]);
   function lambda(v) {
     if (null_is(v)) {
       return;

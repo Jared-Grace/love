@@ -1,8 +1,8 @@
 export async function puppeteer_hrefs(page) {
   function lambda3(links) {
     function lambda(link) {
-      let v = link.href;
-      return v;
+      let v2 = link.href;
+      return v2;
     }
     function lambda2(href) {
       return href;

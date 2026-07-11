@@ -41,10 +41,10 @@ export function app_code_lesson_symbols_space() {
     let mapped2 = list_map(list2, list_join_space_nb);
     return mapped2;
   }
-  function lambda4(parent, index_, symbols) {
+  function lambda4(parent, index_1, symbols) {
     app_code_lesson_symbols_digits_numbered_fifth_on_symbol(
       parent,
-      index_,
+      index_1,
       symbols,
     );
   }

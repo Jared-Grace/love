@@ -4,17 +4,17 @@ import { list_next } from "../../../love/public/src/list_next.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_dollar_a_generic({
-  stack_,
+  stack_1,
   stack_2,
   afters,
   lambda,
   ast,
   count,
 }) {
-  if (js_node_type_is(stack_, "ExpressionStatement")) {
+  if (js_node_type_is(stack_1, "ExpressionStatement")) {
     let l = list_is(stack_2);
     if (l) {
-      let next = stack_;
+      let next = stack_1;
       function lambda3() {
         next = list_next(stack_2, next);
         let type_is = js_node_type_is(next, "VariableDeclaration");
@@ -23,7 +23,7 @@ export function js_dollar_a_generic({
           list_add(afters, after);
           function after() {
             lambda({
-              stack_,
+              stack_1,
               next,
               stack_2,
               ast,

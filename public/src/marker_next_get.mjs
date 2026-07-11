@@ -4,9 +4,9 @@ import { marker_next_index } from "../../../love/public/src/marker_next_index.mj
 import { list_get } from "../../../love/public/src/list_get.mjs";
 export function marker_next_get(a) {
   let ni = marker_next_index(a);
-  let stack_ = property_get(ni, "stack_2");
+  let stack_2 = property_get(ni, "stack_2");
   let index = property_get(ni, "index");
-  let next = list_get(stack_, index);
+  let next = list_get(stack_2, index);
   let n = {
     next,
   };

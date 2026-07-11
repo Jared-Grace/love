@@ -2,7 +2,7 @@ import { crypto_mini_sat_dimacs_to_factors } from "../../../love/public/src/cryp
 import { integer_factorization_to_sat } from "../../../love/public/src/integer_factorization_to_sat.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function cryto_mini_sat(n) {
-  "sudo apt update\nsudo apt install cryptominisat";
+  'sudo apt update\nsudo apt install cryptominisat';
   let cnf = await integer_factorization_to_sat(n);
   let bits = property_get(cnf, "bits");
   let dimacs = property_get(cnf, "dimacs");
