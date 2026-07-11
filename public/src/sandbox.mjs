@@ -73,7 +73,7 @@ export async function sandbox() {
       }
       {
         (function_current_selects_apply_args,
-          [s_expression_functionize.name, "1,file_name"]);
+          [s_expression_functionize.name, "1", "file_name"]);
       }
       {
         let combined = text_combine(
@@ -83,8 +83,8 @@ export async function sandbox() {
         (function_transform_current,
           [js_find_return_argument_set.name, "joined"],
           [js_flo_body_empty.name],
-          [js_call_generalize.name, "folder_user_docs_path,file_name_to_path"],
-          [js_identifier_name_new.name, "l,folder_user_docs_path_previous"],
+          [js_call_generalize.name, "folder_user_docs_path", "file_name_to_path"],
+          [js_identifier_name_new.name, "l", "folder_user_docs_path_previous"],
           [js_identifier_rename.name, combined],
           [js_call_add.name, "ldf"],
           [js_call_add_first.name, html_hash_get.name],
