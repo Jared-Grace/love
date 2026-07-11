@@ -4,7 +4,7 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { digit_positive_random } from "../../../love/public/src/digit_positive_random.mjs";
 import { text_combine_right_fn } from "../../../love/public/src/text_combine_right_fn.mjs";
 import { html_div_cycle_code } from "../../../love/public/src/html_div_cycle_code.mjs";
-import { js_operator_minus } from "../../../love/public/src/js_operator_minus.mjs";
+import { js_operator_minus_symbol } from "../../../love/public/src/js_operator_minus_symbol.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 export function app_code_lesson_operators_asterisk_generic_minus(
   root,
@@ -12,7 +12,7 @@ export function app_code_lesson_operators_asterisk_generic_minus(
   text_before,
 ) {
   let c = app_code_container_light_blue(root);
-  let minus = js_operator_minus();
+  let minus = js_operator_minus_symbol();
   let t = text_first_upper_to(text_combine(text_before, "remember, for "));
   html_div_cycle_code(c, [
     t,
