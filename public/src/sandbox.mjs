@@ -55,6 +55,7 @@ export async function sandbox() {
     {
       {
         (function_node_select_args,
+          [js_find_function_type_name_starts_with.name, "ab"],
           [js_call_named_find_alias.name, "folder_user_docs_read"],
           [js_function_node_find_named_node.name, "on_passage"],
           [js_statements_with_identifiers_named.name, "on_passage"],
