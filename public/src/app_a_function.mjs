@@ -105,7 +105,7 @@ export async function app_a_function(context) {
   }
   if (false) {
     let a = emoji_up();
-    let b2 = app_a_button(content, a, upload);
+    let b = app_a_button(content, a, upload);
     let text = emoji_down();
     let b3 = app_a_button(content, text, download);
   }
