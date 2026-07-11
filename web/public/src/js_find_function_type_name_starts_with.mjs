@@ -17,4 +17,5 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
   }
   let filtered = list_filter(mapped, lambda);
   let only = list_single(filtered);
+  return only;
 }
