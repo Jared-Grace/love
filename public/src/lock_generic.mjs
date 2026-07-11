@@ -1,4 +1,4 @@
-import { file_write } from "../../../love/public/src/file_write.mjs";
+import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_read_try } from "../../../love/public/src/file_read_try.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -61,7 +61,7 @@ export async function lock_generic(lock_name, wait, lambda, who) {
       }
     } while (wait);
     if (locked) {
-      await file_write(owner_path, who ? who : "unknown");
+      await file_overwrite(owner_path, who ? who : "unknown");
       r = await lambda();
     }
   } finally {
