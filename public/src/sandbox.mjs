@@ -1,5 +1,4 @@
-import { log_keep } from "../../../love/public/src/log_keep.mjs";
-import { function_current_selects_nodes } from "../../../love/public/src/function_current_selects_nodes.mjs";
+import { function_current_selects_nodes_log } from "../../../love/public/src/function_current_selects_nodes_log.mjs";
 import { js_find_function_type_name_starts_with } from "../../../love/public/src/js_find_function_type_name_starts_with.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "../../../love/public/src/app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_find_return_argument_set } from "../../../love/public/src/js_find_return_argument_set.mjs";
@@ -45,10 +44,7 @@ export async function sandbox() {
       js_find_function_type_name_starts_with.name,
       "ab",
     );
-    let selects = await function_current_selects_nodes();
-    log_keep(sandbox.name, {
-      selects,
-    });
+    await function_current_selects_nodes_log();
   }
   return;
   ("below is functionality that has been used in the past: ");
