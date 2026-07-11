@@ -40,11 +40,11 @@ import { js_expression_statement_is } from "../../../love/public/src/js_expressi
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_list_function_nodes } from "../../../love/public/src/js_list_function_nodes.mjs";
+import { js_list_function_nodes_visitors } from "../../../love/public/src/js_list_function_nodes_visitors.mjs";
 export async function js_curry_replace(ast) {
   let f_names = await functions_names();
   async function lambda2(la) {
-    let list = js_list_function_nodes(ast);
+    let list = js_list_function_nodes_visitors(ast);
     async function lambda(v) {
       let node = property_get(v, "node");
       let params = js_function_declaration_params_get(node);
