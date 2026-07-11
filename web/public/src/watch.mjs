@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { lock_try } from "../../../love/public/src/lock_try.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
@@ -10,12 +11,11 @@ import { property_set } from "../../../love/public/src/property_set.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { function_auto_path } from "../../../love/public/src/function_auto_path.mjs";
 import { function_run_prompt } from "../../../love/public/src/function_run_prompt.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function watch() {
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(identity);
-  const chokidar = (await import_install("chokidar")).default;
-  const watcher = chokidar.watch(squashed, {
+  let chokidar = (await import_install("chokidar")).default;
+  let watcher = chokidar.watch(squashed, {
     persistent: true,
     ignoreInitial: true,
   });
@@ -33,7 +33,7 @@ export async function watch() {
           property_set(in_progress, path, false);
           if (0) {
             try {
-              const args = [path];
+              let args = [path];
               await command_line_node_g(data_file_update.name, args);
             } finally {
               property_set(in_progress, path, false);
@@ -45,7 +45,7 @@ export async function watch() {
         path,
       });
       try {
-        let who = text_combine("watch:", path);
+        let who = text_combine_multiple([watch.name, ":", path]);
         let r = await lock_try(function_run_prompt.name, lambda3, who);
       } finally {
         property_set(in_progress, path, false);
