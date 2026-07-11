@@ -64,10 +64,12 @@ export async function file_overwrite_uncached(file_path, contents) {
       await fs.promises.rename(temp_path, file_path);
     } catch (e) {
       const promise = fs.promises.unlink(temp_path);
-      await promise.catch(noop);
+      function lambda() {}
+      await promise.catch(lambda);
       throw e;
     }
   }
   await data_file_update(file_path);
   return;
+  noop();
 }
