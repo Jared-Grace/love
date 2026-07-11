@@ -1,4 +1,4 @@
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
+import { js_operators_arithmetic } from "../../../love/public/src/js_operators_arithmetic.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
 import { js_code_call_arg_fn } from "../../../love/public/src/js_code_call_arg_fn.mjs";
@@ -28,7 +28,7 @@ export function app_code_lesson_functions_console_log() {
     let call = property_get(o_f, "call");
     let c = app_code_container_light_blue(root);
     let fn_name_call = js_code_call_arg_fn(fn_name, next);
-    let operators = js_operators();
+    let operators = js_operators_arithmetic();
     let span = html_div_cycle_code_multiple(c, [
       ["Here is an example of a function call: ", call],
       ["", verb, " is a function"],
