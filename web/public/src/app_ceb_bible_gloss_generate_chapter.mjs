@@ -9,7 +9,7 @@ export async function app_ceb_bible_gloss_generate_chapter(
   let book_code = ebible_chapter_code_to_book(chapter_code_specified);
   let language = app_ceb_bible_gloss_generate_chapter_language();
   let fn = app_ceb_bible_gloss_generate;
-  const bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
+  let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let last = "original language and English are";
   await app_gloss_bible_generate_generic(
     language,

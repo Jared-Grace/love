@@ -1,7 +1,7 @@
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 export async function firebase_upload_buffer(content, destination) {
   let buffer = Buffer.from(content);
-  const settings = {
+  let settings = {
     contentType: "application/octet-stream",
     resumable: false,
   };

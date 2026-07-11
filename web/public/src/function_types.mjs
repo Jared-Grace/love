@@ -5,7 +5,7 @@ import { function_parse_unaliased } from "../../../love/public/src/function_pars
 export async function function_types(f_name) {
   let v = await function_parse_unaliased(f_name);
   let ast = property_get(v, "ast");
-  const f_types = js_node_types(ast);
+  let f_types = js_node_types(ast);
   list_sort_text(f_types);
   return f_types;
 }

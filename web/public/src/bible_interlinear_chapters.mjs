@@ -23,7 +23,7 @@ export async function bible_interlinear_chapters() {
   let books = await ebible_version_books("engbsb");
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
-  const vid_property = "Verse";
+  let vid_property = "Verse";
   let verses = list_to_lookup(words, vid_property);
   let sorts = ["Heb Sort", "Greek Sort"];
   let chapters = {};

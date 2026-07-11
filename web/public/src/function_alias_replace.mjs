@@ -5,7 +5,7 @@ import { text_is_assert_multiple } from "../../../love/public/src/text_is_assert
 import { function_alias_generic } from "../../../love/public/src/function_alias_generic.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
-  const items = [alias_old, f_name];
+  let items = [alias_old, f_name];
   text_is_assert_multiple(items);
   f_name = await function_name_unalias_only(f_name);
   function lambda(a) {

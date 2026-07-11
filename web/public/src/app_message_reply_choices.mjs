@@ -43,7 +43,7 @@ export function app_message_reply_choices() {
   let o_come_and = reply_sequence_optional(["come", "and"]);
   let pray_request = app_reply_choices_will_done_fragment();
   let will_be_done = app_reply_pray_response(pray_request);
-  const us = reply_word_us();
+  let us = reply_word_us();
   let s_visit = reply_sequence([
     o_come_and,
     "fellowship",
@@ -71,7 +71,7 @@ export function app_message_reply_choices() {
       let v = property_get(data, u);
       let after = property_get(v, "after");
       let before = property_get(v, "before");
-      const sliced = list_slice(tokens, before, after);
+      let sliced = list_slice(tokens, before, after);
       let quote = list_join_empty(sliced);
       reply_on_match_output_add_multiple(possibility, [
         "If you want, please change the wording of what you said and send me another message. Here is what you said: ",

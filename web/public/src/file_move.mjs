@@ -10,6 +10,6 @@ export async function file_move(old_path, new_path) {
   if (not(a)) {
     await file_exists_not_assert(new_path);
   }
-  const fs = await import("fs");
+  let fs = await import("fs");
   await fs.promises.rename(old_path, new_path);
 }

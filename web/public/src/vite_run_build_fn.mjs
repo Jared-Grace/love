@@ -6,7 +6,7 @@ import { function_name_to_path } from "../../../love/public/src/function_name_to
 export async function vite_run_build_fn(f_name) {
   let path = function_name_to_path(f_name);
   let name = path_name(path);
-  const command = await vite_run_build_command(path, name);
+  let command = await vite_run_build_command(path, name);
   log_keep(vite_run_build_fn.name, command);
   let stdout = await command_line(command);
   return stdout;

@@ -8,7 +8,7 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
   let f_names = await functions_names();
-  const f = fn_base_name;
+  let f = fn_base_name;
   let name_new = text_unique_underscore(f_names, f);
   await function_copy(f, name_new);
   let expression = js_parse_expression(name_new);

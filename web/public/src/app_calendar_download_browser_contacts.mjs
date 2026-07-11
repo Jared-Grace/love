@@ -23,7 +23,7 @@ export async function app_calendar_download_browser_contacts() {
   let id_properties = app_calendar_id_properties();
   let r = app_calendar_whatsapp_phone();
   let name_properties = app_calendar_name_properties();
-  const properties_to_concat = [name_properties, id_properties];
+  let properties_to_concat = [name_properties, id_properties];
   let properties = list_concat_multiple(properties_to_concat);
   function lambda(o) {
     let joined = object_pick_try_values_join_space(o, properties);

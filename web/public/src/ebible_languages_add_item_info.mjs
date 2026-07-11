@@ -23,7 +23,7 @@ export async function ebible_languages_add_item_info(bible_folder) {
   );
   let root = property_get(r, "root");
   let d = property_get(r, "d");
-  const url_language_prefix = "http://www.ethnologue.com/language/";
+  let url_language_prefix = "http://www.ethnologue.com/language/";
   let unique = html_parse_find_a_href_starts_with_without_unique(
     root,
     d,

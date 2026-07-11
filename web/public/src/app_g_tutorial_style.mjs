@@ -2,10 +2,10 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_g_tutorial_style(tutorial) {
-  const square_size = text_combine_multiple([
-    'calc(',
+  let square_size = text_combine_multiple([
+    "calc(",
     g_img_square_size_css(),
-    '*.4)',
+    "*.4)",
   ]);
   html_style_assign(tutorial, {
     display: "flex",

@@ -2,7 +2,7 @@ import { firebase_storage_url_project_jg } from "../../../love/public/src/fireba
 import { http_local_json } from "../../../love/public/src/http_local_json.mjs";
 import { properties_delete } from "../../../love/public/src/properties_delete.mjs";
 export async function reply_dictionary() {
-  const url =
+  let url =
     "https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json";
   let project_url = firebase_storage_url_project_jg();
   let dictionary = await http_local_json(url, project_url);

@@ -12,7 +12,7 @@ export function reply_messages_inner_transform(message) {
   let string_includes_curry_right = text_includes_curried_right_get(
     text_combine("'", digits_text()),
   );
-  const choices = [text_letters_is, string_includes_curry_right];
+  let choices = [text_letters_is, string_includes_curry_right];
   function lambda(item) {
     function lambda2(fn) {
       let v = fn(item);

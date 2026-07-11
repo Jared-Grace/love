@@ -1,10 +1,10 @@
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_get_all_backend(db_get, store) {
-  const db = await db_get();
-  const tx = db.transaction(store, "readonly");
-  const s = tx.objectStore(store);
+  let db = await db_get();
+  let tx = db.transaction(store, "readonly");
+  let s = tx.objectStore(store);
   let all = await new Promise(function lambda3(resolve, reject) {
-    const req = s.getAll();
+    let req = s.getAll();
     req.onsuccess = function lambda() {
       let v = resolve(req.result);
       return v;

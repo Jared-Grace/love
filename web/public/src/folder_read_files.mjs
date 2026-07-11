@@ -33,7 +33,7 @@ export async function folder_read_files(path_folder) {
       throw e;
     }
   }
-  const all = fs.readdirSync(path_folder);
+  let all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
   list_sort_text(files);
   return files;

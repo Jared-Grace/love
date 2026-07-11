@@ -1,5 +1,5 @@
 export async function playwright_refresh(page) {
-  const context = page.context();
+  let context = page.context();
   await context.clearCookies();
   function lambda() {
     localStorage.clear();

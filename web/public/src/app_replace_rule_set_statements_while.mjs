@@ -4,7 +4,7 @@ import { js_keyword_while } from "../../../love/public/src/js_keyword_while.mjs"
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_set_statements_while() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_statements_while_rules(rules);
   list_add_multiple(rules, [
     "ex > y > 0",

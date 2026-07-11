@@ -18,7 +18,7 @@ export async function ebible_chapter_videos_generate(
 ) {
   let folder_path = bible_audio_folder(bible_folder, chapter_code);
   let files = await folder_read_files_exists_ensure(folder_path);
-  const suffix = ".txt";
+  let suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
   async function lambda2(la) {
     async function lambda(file_path) {
@@ -27,7 +27,7 @@ export async function ebible_chapter_videos_generate(
       let sw = text_suffix_without(file_path, suffix);
       let joined = path_join([folder_path, sw]);
       let joined_image = text_combine(joined, ".png");
-      const n = await file_exists_not(joined_image);
+      let n = await file_exists_not(joined_image);
       if (n) {
         await image_generate(contents, joined_image);
       }

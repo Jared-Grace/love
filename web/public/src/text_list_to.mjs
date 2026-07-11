@@ -1,6 +1,6 @@
 import { undefined } from "../../../love/public/src/undefined.mjs";
 export function text_list_to(str) {
-  const segmenter = new Intl.Segmenter(undefined, {
+  let segmenter = new Intl.Segmenter(undefined, {
     granularity: "grapheme",
   });
   function lambda(s) {
@@ -8,6 +8,6 @@ export function text_list_to(str) {
     return v;
   }
   let v2 = segmenter.segment(str);
-  const list = Array.from(v2, lambda);
+  let list = Array.from(v2, lambda);
   return list;
 }

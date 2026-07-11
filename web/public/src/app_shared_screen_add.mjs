@@ -18,7 +18,7 @@ export async function app_shared_screen_add(a_name, screen_name) {
     let value = js_parse_expression(combined_screen);
     list_add(properties, value);
     await function_new_open(combined_screen);
-    const v = "context";
+    let v = "context";
     await function_param_new_double(combined_screen, v);
     async function lambda2(ast) {
       let code = js_code_call_args(html_clear_context.name, [v]);

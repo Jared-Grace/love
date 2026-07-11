@@ -2,7 +2,7 @@ import { app_replace_rule_set_statements_simple_rules_ex } from "../../../love/p
 import { app_replace_rule_set_statements_block_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_block_abbreviations.mjs";
 import { app_replace_rule_set_statements_block_rules } from "../../../love/public/src/app_replace_rule_set_statements_block_rules.mjs";
 export function app_replace_rule_set_statements_block() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_statements_block_rules(rules);
   app_replace_rule_set_statements_simple_rules_ex(rules);
   let abbreviations = {};

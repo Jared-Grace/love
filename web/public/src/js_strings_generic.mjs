@@ -39,6 +39,6 @@ export function js_strings_generic(ast) {
     }
     js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
   }
-  const results = list_adder_unique(lambda2);
+  let results = list_adder_unique(lambda2);
   return results;
 }

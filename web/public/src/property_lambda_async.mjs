@@ -3,7 +3,7 @@ import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export async function property_lambda_async(object, property_name, lambda) {
-  const exists = property_exists(object, property_name);
+  let exists = property_exists(object, property_name);
   if (not(exists)) {
     let value_set = await lambda();
     property_set(object, property_name, value_set);

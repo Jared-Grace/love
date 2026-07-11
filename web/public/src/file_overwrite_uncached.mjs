@@ -22,7 +22,7 @@ export async function file_overwrite_uncached(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     async function value_get(previous) {
-      const p = "compressed";
+      let p = "compressed";
       let f = null;
       let nn = null_is(previous);
       if (nn) {

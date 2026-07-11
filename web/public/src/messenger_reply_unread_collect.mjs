@@ -13,7 +13,7 @@ import { messenger_reply_messages } from "../../../love/public/src/messenger_rep
 import { messenger_reply_url } from "../../../love/public/src/messenger_reply_url.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function messenger_reply_unread_collect() {
-  const page = await messenger_reply_puppeteer(lambda);
+  let page = await messenger_reply_puppeteer(lambda);
   async function lambda(page) {
     let v = messenger_reply_url();
     let messages = await messenger_reply_messages(page, v);
@@ -28,8 +28,8 @@ export async function messenger_reply_unread_collect() {
       let url = list_first(urls);
       let prefix = "https://www.facebook.com";
       let without = text_prefix_without(url, prefix);
-      const selector = text_combine_multiple(['a[href="', without, '"]']);
-      const link = await page.$(selector);
+      let selector = text_combine_multiple(['a[href="', without, '"]']);
+      let link = await page.$(selector);
       if (link !== null) {
         await link.click();
         await page.waitForSelector(selector, {

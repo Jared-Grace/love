@@ -20,14 +20,14 @@ export async function file_overwrite_json(file_path, object) {
     " did not work on sufficiently large object, whereas the following did:",
   ]);
   let fs = await import("fs");
-  const v = await import("stream/promises");
+  let v = await import("stream/promises");
   let pipeline = property_get(v, "pipeline");
   let streamJsonStringify = await (
     await import_install("stream-json-stringify")
   ).default;
   let temp_path = file_path_temp(file_path);
   try {
-    const out = fs.createWriteStream(temp_path);
+    let out = fs.createWriteStream(temp_path);
     let json = streamJsonStringify(object);
     await pipeline(json, out);
     await fs.promises.rename(temp_path, file_path);

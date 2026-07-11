@@ -29,15 +29,12 @@ import { not } from "../../../love/public/src/not.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-const a = 3;
+let a = 3;
 export async function js_ternary_replace(ast) {
   let replaced = null;
   async function lambda(v) {
     let node = property_get(v, "node");
-    const props = [
-      js_statement_if_alternate_get,
-      js_statement_if_consequent_get,
-    ];
+    let props = [js_statement_if_alternate_get, js_statement_if_consequent_get];
     let list = invoke_multiple_arg(props, node);
     let bs = list_all(list, js_block_statement_is);
     if (not(bs)) {
@@ -90,8 +87,8 @@ export async function js_ternary_replace(ast) {
   }
   return;
   let a = null;
-  const test = b === 1;
-  const b = 2;
+  let test = b === 1;
+  let b = 2;
   let c = 1;
   a = ternary(test, b, c);
 }

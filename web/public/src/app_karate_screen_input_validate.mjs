@@ -31,7 +31,7 @@ export function app_karate_screen_input_validate(
   list_is_assert(inputs);
   function lambda2(input) {
     app_shared_style_control(input);
-    const border_color = app_karate_green_dark();
+    let border_color = app_karate_green_dark();
     app_karate_style_control_border(input, border_color);
     let ul = html_element(div_checks, "ul");
     property_set(input, "ul", ul);

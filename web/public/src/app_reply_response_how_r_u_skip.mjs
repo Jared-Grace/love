@@ -3,7 +3,7 @@ import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_reply_response_how_r_u_skip() {
-  const before = app_reply_response_how_r_u_skip_before();
+  let before = app_reply_response_how_r_u_skip_before();
   let t = text_combine_multiple([
     before,
     emoji_book_open(),

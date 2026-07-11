@@ -1,4 +1,4 @@
 export function subtract(left, right) {
-  const difference = left - right;
+  let difference = left - right;
   return difference;
 }

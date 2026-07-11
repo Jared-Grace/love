@@ -5,7 +5,7 @@ import { each_range_index } from "../../../love/public/src/each_range_index.mjs"
 export function storage_local_keys_browser() {
   function lambda(la) {
     function lambda2(i) {
-      const key = localStorage.key(i);
+      let key = localStorage.key(i);
       la(key);
     }
     let size = property_get(localStorage, "length");

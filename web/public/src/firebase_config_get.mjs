@@ -1,5 +1,5 @@
 export function firebase_config_get() {
-  const firebase_config = {
+  let firebase_config = {
     apiKey: "AIzaSyABi8aveEhWeD6GyRXj9FUqu_aDWxhuBGQ",
     authDomain: "jared-grace.firebaseapp.com",
     projectId: "jared-grace",

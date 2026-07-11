@@ -12,7 +12,7 @@ import { data_path } from "../../../love/public/src/data_path.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 export async function function_run_prompt() {
   if (false) {
-    const property_name = "error_attention";
+    let property_name = "error_attention";
     let d_path = data_path();
     let ea = await data_property_get_generic(d_path, property_name);
     let nn = null_not_is(ea);

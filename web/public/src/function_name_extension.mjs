@@ -1,4 +1,4 @@
 export function function_name_extension() {
-  const ext = ".mjs";
+  let ext = ".mjs";
   return ext;
 }

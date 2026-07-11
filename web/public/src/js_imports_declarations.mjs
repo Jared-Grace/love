@@ -44,6 +44,6 @@ export function js_imports_declarations(ast) {
     }
     each(vs, lambda);
   }
-  const imports = list_adder_unique(lambda2);
+  let imports = list_adder_unique(lambda2);
   return imports;
 }

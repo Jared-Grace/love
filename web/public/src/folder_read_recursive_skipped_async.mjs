@@ -4,21 +4,21 @@ export async function folder_read_recursive_skipped_async(
   path_folder,
   folders_skipped,
 ) {
-  const fs = await import("fs/promises");
-  const path = await import("path");
+  let fs = await import("fs/promises");
+  let path = await import("path");
   let result = [];
-  const entries = await fs.readdir(path_folder, {
+  let entries = await fs.readdir(path_folder, {
     withFileTypes: true,
   });
-  for (const entry of entries) {
+  for (let entry of entries) {
     let name = property_get(entry, "name");
     if (entry.isFile()) {
       result.push(name);
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
       if (n) {
-        const fullPath = path.join(path_folder, name);
-        const subFiles = await folder_read_recursive_skipped_async(
+        let fullPath = path.join(path_folder, name);
+        let subFiles = await folder_read_recursive_skipped_async(
           fullPath,
           folders_skipped,
         );

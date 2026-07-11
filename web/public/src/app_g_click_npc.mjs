@@ -56,8 +56,8 @@ export async function app_g_click_npc(div_map, npcs_matched, refresh) {
       async function on_back() {
         await overlay_close();
         let text = emoji_pray();
-        const player_property = "conversed";
-        const tutorial_property = "tutorial_converse";
+        let player_property = "conversed";
+        let tutorial_property = "tutorial_converse";
         await app_g_tutorial(player_property, div_map, tutorial_property, text);
       }
       app_g_button_back(overlay, on_back);

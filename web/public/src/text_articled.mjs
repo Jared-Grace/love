@@ -14,6 +14,6 @@ export function text_articled(noun) {
   if (any) {
     article += "n";
   }
-  const articled = text_combine_multiple([article, " ", noun]);
+  let articled = text_combine_multiple([article, " ", noun]);
   return articled;
 }

@@ -5,7 +5,7 @@ import { subtract } from "../../../love/public/src/subtract.mjs";
 export function list_size_max_skip(list, max) {
   let size = list_size(list);
   if (greater_than(size, max)) {
-    const s = subtract(size, max);
+    let s = subtract(size, max);
     list_remove_start(list, s);
   }
   return list;

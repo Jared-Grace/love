@@ -5,7 +5,7 @@ export async function catch_only_run_async(lambda, message_fragment, on_error) {
     await lambda();
   } catch (e) {
     let json = json_to(e);
-    const message = e.message;
+    let message = e.message;
     let a = message.includes(message_fragment);
     let a2 = json.includes(message_fragment);
     if (not(a) && not(a2)) {

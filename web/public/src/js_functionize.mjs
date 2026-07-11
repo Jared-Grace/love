@@ -32,18 +32,14 @@ export async function js_functionize(
   index_from,
   index_to,
 ) {
-  const indices = [index_from, index_to];
+  let indices = [index_from, index_to];
   let range = list_slice_from_indices(stack_2, indices);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
   }
   let async_is = list_any(range, lambda);
-  const code_declaration = js_code_function_declaration(
-    f_name_new,
-    "",
-    async_is,
-  );
+  let code_declaration = js_code_function_declaration(f_name_new, "", async_is);
   let declaration = js_parse_statement_module(code_declaration);
   let body_block = js_function_declaration_to_block_body(declaration);
   list_add_multiple(body_block, range);

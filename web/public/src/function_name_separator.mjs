@@ -1,4 +1,4 @@
 export function function_name_separator() {
-  const separator = "_";
+  let separator = "_";
   return separator;
 }

@@ -16,7 +16,7 @@ export async function app_reply_verse(
   let choices = null;
   let right = ebible_folder_english();
   let lambda11 = catch_ignore_async;
-  const en_is = equal(bible_folder, right);
+  let en_is = equal(bible_folder, right);
   if (en_is) {
     lambda11 = retry_until_success;
   }

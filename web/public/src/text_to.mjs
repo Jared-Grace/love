@@ -1,4 +1,4 @@
 export function text_to(input) {
-  const t = input.toString();
+  let t = input.toString();
   return t;
 }

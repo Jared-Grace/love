@@ -9,6 +9,6 @@ export function js_parse_statement(code) {
   let f = list_first(body);
   let block = property_get(f, "body");
   let statements = property_get(block, "body");
-  const statement = list_first(statements);
+  let statement = list_first(statements);
   return statement;
 }

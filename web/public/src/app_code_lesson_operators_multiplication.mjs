@@ -5,9 +5,9 @@ import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_operators_generic } from "../../../love/public/src/app_code_lesson_operators_generic.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_code_lesson_operators_multiplication() {
-  const operator_js = js_operator_asterisk_symbol();
-  const operator_name_js = js_operator_asterisk_name();
-  const operator_math = "×";
+  let operator_js = js_operator_asterisk_symbol();
+  let operator_name_js = js_operator_asterisk_name();
+  let operator_math = "×";
   let math_name = "multiplication";
   let operator_name_math = text_combine(math_name, " sign");
   let verb = js_operator_asterisk_verb();

@@ -2,7 +2,7 @@ import { app_replace_rule_set_expressions_equality_abbreviations } from "../../.
 import { app_replace_rule_set_expressions_equality_rules } from "../../../love/public/src/app_replace_rule_set_expressions_equality_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_equality() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_expressions_equality_rules(rules);
   list_add(rules, "ex > ee");
   let abbreviations = {};

@@ -9,7 +9,7 @@ export function text_unique(used, name, prefix) {
   let unique = null;
   let attempt = 1;
   do {
-    const suffix =
+    let suffix =
       attempt === 1 && text_empty_not_is(name)
         ? ""
         : text_combine(prefix, attempt);

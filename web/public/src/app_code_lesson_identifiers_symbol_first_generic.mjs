@@ -27,8 +27,8 @@ export function app_code_lesson_identifiers_symbol_first_generic(
   function batch_get() {
     let words = app_code_verse_words();
     let mapped = list_map(words, text_letters_only);
-    const min = 1;
-    const max = 2;
+    let min = 1;
+    let max = 2;
     let counts = range_from(min, max);
     let doubled = list_items_double(counts);
     let list2 = list_slices_size_cycler(mapped, doubled, min);
@@ -49,7 +49,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
         let m = mod(batch_item_index, 4);
         let eq = equal_0(m);
         if (eq) {
-          const valid_prefixes = ["$", "_"];
+          let valid_prefixes = ["$", "_"];
           prefix = list_random_item(valid_prefixes);
           if (rb) {
             let right3 = list_random_item(valid_prefixes);

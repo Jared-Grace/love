@@ -9,9 +9,9 @@ import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_test() {
   let last = reply_last();
-  const choice_a_k = reply_choice(["a", "k"]);
-  const item = "a";
-  const optional_a = reply_optional(item);
+  let choice_a_k = reply_choice(["a", "k"]);
+  let item = "a";
+  let optional_a = reply_optional(item);
   let seq_a_k = reply_sequence(["a", "k"]);
   let seq_k_a = reply_sequence(["k", "a"]);
   let cases = [

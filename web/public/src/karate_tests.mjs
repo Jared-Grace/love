@@ -12,8 +12,8 @@ export async function karate_tests() {
   text_combine("TODO: fix url like ", app_replace_url_dev);
   await playwright_test_app_dev(url_prefix, app_karate, lambda);
   async function lambda(page) {
-    const title_actual = await page.title();
-    const title = app_karate_main_title();
+    let title_actual = await page.title();
+    let title = app_karate_main_title();
     equal_assert(title_actual, title);
     await sleep_seconds(10);
     return;

@@ -14,14 +14,14 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function server() {
-  const app = express();
+  let app = express();
   let v3 = express.json({
     limit: "50mb",
   });
   app.use(v3);
-  const port = server_port();
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
+  let port = server_port();
+  let __filename = fileURLToPath(import.meta.url);
+  let __dirname = path.dirname(__filename);
   let previous = folder_previous();
   let result = path_join([__dirname, previous, previous, previous]);
   result = path.resolve(result);

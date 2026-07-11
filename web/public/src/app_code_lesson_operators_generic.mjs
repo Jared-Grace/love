@@ -35,7 +35,7 @@ export function app_code_lesson_operators_generic(
     let first = list_first(list);
     let question = property_get(first, "question");
     let replaced = text_replace(question, operator_js, operator_math);
-    const operator_name_math_articled =
+    let operator_name_math_articled =
       text_articled_pad_space(operator_name_math);
     let combined = text_combine_multiple([
       "In math,",

@@ -40,8 +40,8 @@ export function app_code_quiz(context) {
   }
   refresh();
   let another = app_code_lesson_text_example_another(lesson);
-  const question_text = text_combine("and see ", another);
-  const button_text = text_combine("go back and show me ", another);
+  let question_text = text_combine("and see ", another);
+  let button_text = text_combine("go back and show me ", another);
   async function lambda() {
     app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_examples);
