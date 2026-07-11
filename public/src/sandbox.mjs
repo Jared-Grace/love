@@ -1,7 +1,7 @@
+import { app_code_lesson_functions_console_log_arithmetic } from "../../../love/public/src/app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_find_return_argument_set } from "../../../love/public/src/js_find_return_argument_set.mjs";
 import { js_call_add_before_return } from "../../../love/public/src/js_call_add_before_return.mjs";
 import { js_call_add } from "../../../love/public/src/js_call_add.mjs";
-import { sandbox_3_a } from "../../../love/public/src/sandbox_3_a.mjs";
 import { js_flo_body_empty } from "../../../love/public/src/js_flo_body_empty.mjs";
 import { js_call_generalize } from "../../../love/public/src/js_call_generalize.mjs";
 import { js_identifier_name_new } from "../../../love/public/src/js_identifier_name_new.mjs";
@@ -33,7 +33,7 @@ import { function_current_selects_empty } from "../../../love/public/src/functio
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function sandbox() {
-  const f_name = sandbox_3_a.name;
+  const f_name = app_code_lesson_functions_console_log_arithmetic.name;
   await function_current_set(f_name);
   ("current_commands: ");
   {
@@ -52,15 +52,16 @@ export async function sandbox() {
           [js_expressions_with_string_starting_with.name, "p"]);
       }
       {
+        let combined = text_combine(
+          html_hash_get.name,
+          ",html_hash_object_get",
+        );
         (function_transform_current,
           [js_find_return_argument_set.name, "joined"],
           [js_flo_body_empty.name],
           [js_call_generalize.name, "folder_user_docs_path,file_name_to_path"],
           [js_identifier_name_new.name, "l,folder_user_docs_path_previous"],
-          [
-            js_identifier_rename.name,
-            text_combine(html_hash_get.name, ",html_hash_object_get"),
-          ],
+          [js_identifier_rename.name, combined],
           [js_call_add.name, "ldf"],
           [js_call_add_first.name, html_hash_get.name],
           [js_call_add_before_return.name, "ljn"],
