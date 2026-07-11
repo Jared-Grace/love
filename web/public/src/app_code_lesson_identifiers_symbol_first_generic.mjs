@@ -5,7 +5,7 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { equal_0 } from "../../../love/public/src/equal_0.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
-import { boolean_random_ } from "../../../love/public/src/boolean_random_3.mjs";
+import { boolean_random_3 } from "../../../love/public/src/boolean_random_3.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_join_cycled_invoker } from "../../../love/public/src/list_join_cycled_invoker.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -42,7 +42,7 @@ export function app_code_lesson_identifiers_symbol_first_generic(
       let joined = list_join_cycled_invoker(batch_item, next_get);
       let right = next_get();
       joined = text_combine(joined, right);
-      let rb = boolean_random_();
+      let rb = boolean_random_3();
       let prefix = null;
       let valid = integer_even_is(batch_item_index);
       if (valid) {

@@ -17,7 +17,7 @@ import { js_parse } from "../../../love/public/src/js_parse.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
   let expression_is = js_expression_is(code);
   let ast = js_parse(code);
-  function lambda(la) {
+  function lambda4(la) {
     let commutatives = js_code_binary_expression_commutative();
     function lambda2(node) {
       let operator = property_get(node, "operator");
@@ -31,7 +31,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     }
     js_visit_type_node(ast, "BinaryExpression", lambda2);
   }
-  let variation_fns = list_adder(lambda);
+  let variation_fns = list_adder(lambda4);
   function lambda5(la) {
     let code_without_variation = js_unparse(ast);
     la(code_without_variation);

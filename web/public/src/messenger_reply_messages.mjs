@@ -20,8 +20,8 @@ export async function messenger_reply_messages(page, url) {
       const children2 = await c.$$('[role="none"]');
       for (const c2 of children2) {
         function lambda2(node) {
-          let v = node.parentElement?.tagName;
-          return v;
+          let v3 = node.parentElement?.tagName;
+          return v3;
         }
         const parentTag = await c2.evaluate(lambda2);
         if (parentTag === "H5") {

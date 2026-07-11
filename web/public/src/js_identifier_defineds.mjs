@@ -1,5 +1,5 @@
 import { js_declaration_declarators_get } from "../../../love/public/src/js_declaration_declarators_get.mjs";
-import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
@@ -20,7 +20,7 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
   let stack = property_get(v, "stack");
   function lambda4(la) {
-    let e = list_get_end_(stack);
+    let e = list_get_end_1(stack);
     if (js_node_type_is(e, "Property")) {
       let node = property_get(v, "node");
       let value = property_get(node, "name");

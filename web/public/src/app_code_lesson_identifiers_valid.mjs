@@ -20,7 +20,9 @@ export function app_code_lesson_identifiers_valid(
   const backwards_question_label = "Identifier validity: ";
   const example_answer_label = "Is this a valid identifier? ";
   let backwards_answer_on_button =
-    app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
+    app_code_lesson_symbols_counting_quiz_backwards_on_button(
+      on_question,
+    );
   let lesson2 = app_code_lesson_validity_base(
     batch_get2,
     name_id,

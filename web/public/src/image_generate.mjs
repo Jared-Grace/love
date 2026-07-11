@@ -27,12 +27,12 @@ export async function image_generate(text, path_output) {
   ctx.fillStyle = BACKGROUND;
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
   function wrapText(text, fontSize) {
-    ctx.font = text_combine_multiple([fontSize, "px ", FONT_FAMILY]);
+    ctx.font = text_combine_multiple([fontSize, 'px ', FONT_FAMILY]);
     const words = text.split(" ");
     const lines = [];
     let line = "";
     for (const word of words) {
-      const test = line ? text_combine_multiple([line, " ", word]) : word;
+      const test = line ? text_combine_multiple([line, ' ', word]) : word;
       if (ctx.measureText(test).width <= MAX_WIDTH) {
         line = test;
       } else {
@@ -66,20 +66,13 @@ export async function image_generate(text, path_output) {
   const FONT_SIZE = findMaxFontSize();
   const lines = wrapText(text, FONT_SIZE);
   const lineHeight = multiply(FONT_SIZE, 1.25);
-  ctx.font = text_combine_multiple([FONT_SIZE, "px ", FONT_FAMILY]);
+  ctx.font = text_combine_multiple([FONT_SIZE, 'px ', FONT_FAMILY]);
   ctx.fillStyle = TEXT_COLOR;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  const startY = subtract(
-    divide(HEIGHT, 2),
-    divide(multiply(subtract(lines.length, 1), lineHeight), 2),
-  );
+  const startY = subtract(divide(HEIGHT, 2), divide(multiply(subtract(lines.length, 1), lineHeight), 2));
   function lambda(line, i) {
-    ctx.fillText(
-      line,
-      divide(WIDTH, 2),
-      text_combine(startY, multiply(i, lineHeight)),
-    );
+    ctx.fillText(line, divide(WIDTH, 2), text_combine(startY, multiply(i, lineHeight)));
   }
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");

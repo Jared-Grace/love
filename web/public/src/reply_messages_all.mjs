@@ -2,7 +2,7 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { text_take } from "../../../love/public/src/text_take.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
-import { range_ } from "../../../love/public/src/range_1.mjs";
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -14,7 +14,7 @@ export async function reply_messages_all(start, messages) {
     let value = property_get(result, "matches");
     if (equal(value, false)) {
       let size = text_size(message);
-      let r = range_(size);
+      let r = range_1(size);
       list_reverse(r);
       async function lambda2(t) {
         let taken = text_take(message, t);

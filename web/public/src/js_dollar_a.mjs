@@ -3,29 +3,29 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
-import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_dollar_a_generic } from "../../../love/public/src/js_dollar_a_generic.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
-export function js_dollar_a({ stack_, stack_2, ast, afters, remaining }) {
+export function js_dollar_a({ stack_1, stack_2, ast, afters, remaining }) {
   let count = 1;
-  let s = list_size_(remaining);
+  let s = list_size_1(remaining);
   if (s) {
     let first = list_first(remaining);
     count = integer_to_try(first);
   }
   js_dollar_a_generic({
-    stack_,
+    stack_1,
     stack_2,
     afters,
     lambda,
     ast,
     count,
   });
-  function lambda({ stack_, next, stack_2, ast, declarations }) {
-    list_remove_multiple(stack_2, [stack_, next]);
+  function lambda({ stack_1, next, stack_2, ast, declarations }) {
+    list_remove_multiple(stack_2, [stack_1, next]);
     function lambda2(declaration) {
       let init = js_declare_init_get(declaration);
       let id = property_get(declaration, "id");

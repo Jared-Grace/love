@@ -1,5 +1,5 @@
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { function_names_to_acronyms } from "../../../love/public/src/function_names_to_acronyms.mjs";
@@ -10,7 +10,7 @@ export async function function_acronym_to_name(alias) {
   const exists = property_exists(acronyms, alias);
   if (exists) {
     expandeds = property_get(acronyms, alias);
-    let s = list_size_(expandeds);
+    let s = list_size_1(expandeds);
     if (s) {
       expanded = list_single(expandeds);
     }

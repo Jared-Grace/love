@@ -1,6 +1,6 @@
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { html_attribute_get_unwrapped_curried_right } from "../../../love/public/src/html_attribute_get_unwrapped_curried_right.mjs";
@@ -39,7 +39,7 @@ export async function app_replace_tests_run_e2e_hinted_fn(
     let ag = html_attribute_get_unwrapped_curried_right(combined2);
     let waited = await list_map_unordered_async(values, ag);
     let filtered = list_filter_null_not_is(waited);
-    let s = list_size_(filtered);
+    let s = list_size_1(filtered);
     if (s) {
       symbol_id = list_single(filtered);
       return true;

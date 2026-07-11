@@ -1,4 +1,4 @@
-export function app_replace_rule_set_shrink_different_() {
+export function app_replace_rule_set_shrink_different_2() {
   let r = {
     name: "Shrink Different 2",
     rules: ["b c > a", "d e > b"],

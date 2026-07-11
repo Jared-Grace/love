@@ -7,8 +7,8 @@ import { reply_phrase_jesus } from "../../../love/public/src/reply_phrase_jesus.
 import { reply_sequence_optional } from "../../../love/public/src/reply_sequence_optional.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 export function reply_phrase_my_dear_brother() {
-  let fn = reply_optional("y");
-  let my = reply_sequence_optional(["m", fn]);
+  let fn15 = reply_optional("y");
+  let my = reply_sequence_optional(["m", fn15]);
   let phrase_jesus = reply_phrase_jesus();
   let n = reply_word_in();
   let in_christ = reply_sequence_optional([n, phrase_jesus]);

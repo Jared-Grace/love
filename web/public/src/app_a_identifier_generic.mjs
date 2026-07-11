@@ -1,6 +1,6 @@
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
-import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
@@ -177,7 +177,7 @@ export function app_a_identifier_generic(
       list_add(choices, references);
     }
     async function lambda6() {
-      let e1 = list_get_end_(stack);
+      let e1 = list_get_end_1(stack);
       log(app_a_identifier_generic.name, {
         e1,
       });

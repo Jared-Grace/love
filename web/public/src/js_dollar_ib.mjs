@@ -1,6 +1,6 @@
 import { js_dollar_if_call } from "../../../love/public/src/js_dollar_if_call.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-export async function js_dollar_ib({ stack_, ast }) {
+export async function js_dollar_ib({ stack_1, ast }) {
   let fn = browser_is;
-  await js_dollar_if_call(stack_, fn, ast);
+  await js_dollar_if_call(stack_1, fn, ast);
 }

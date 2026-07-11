@@ -1,4 +1,4 @@
-export function emoji_() {
+export function emoji_100() {
   let v = "💯";
   return v;
 }
