@@ -1,4 +1,4 @@
-import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -12,13 +12,13 @@ export async function js_atomize(ast) {
   async function lambda(v) {
     let stack = property_get(v, "stack");
     let offset = 0;
-    const stack_1 = list_get_end_1(stack);
-    let list_possible = stack_1;
+    const stack_ = list_get_end_1(stack);
+    let list_possible = stack_;
     function lambda3() {
       offset = 1;
-      list_possible = list_get_end_2(stack);
+      list_possible = list_get_end_(stack);
     }
-    js_node_type_is_if(stack_1, "AwaitExpression", lambda3);
+    js_node_type_is_if(stack_, "AwaitExpression", lambda3);
     if (list_is(list_possible)) {
       ("this list could be a block body or an argument list of a fn call or an array");
       let variable_name = js_node_atomize_name();

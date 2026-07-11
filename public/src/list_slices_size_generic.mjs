@@ -5,7 +5,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function list_slices_size_generic(count_get, list, min) {
-  function lambda3(la) {
+  function lambda(la) {
     function lambda2(item, index) {
       let count = count_get();
       let slice = list_slice(list, index, text_combine(index, count));
@@ -17,6 +17,6 @@ export function list_slices_size_generic(count_get, list, min) {
     }
     each_index(list, lambda2);
   }
-  let slices = list_adder(lambda3);
+  let slices = list_adder(lambda);
   return slices;
 }

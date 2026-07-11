@@ -1,1 +1,1 @@
-export function tst1() {}
+export function tst() {}

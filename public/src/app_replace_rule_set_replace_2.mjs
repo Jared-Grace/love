@@ -1,4 +1,4 @@
-export function app_replace_rule_set_replace_2() {
+export function app_replace_rule_set_replace_() {
   let r = {
     name: "Replace 2",
     rules: ["a > b", "c > d"],

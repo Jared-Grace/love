@@ -1,4 +1,4 @@
-export function emoji_medal_1() {
+export function emoji_medal_() {
   let r = "🥇";
   return r;
 }

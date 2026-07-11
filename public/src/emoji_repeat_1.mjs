@@ -1,4 +1,4 @@
-export function emoji_repeat_1() {
+export function emoji_repeat_() {
   let r = "🔂";
   return r;
 }

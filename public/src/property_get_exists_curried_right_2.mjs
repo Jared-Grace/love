@@ -1,5 +1,5 @@
 import { property_get_exists } from "../../../love/public/src/property_get_exists.mjs";
-export function property_get_exists_curried_right_2(
+export function property_get_exists_curried_right_(
   property_name_a,
   property_name_b,
 ) {

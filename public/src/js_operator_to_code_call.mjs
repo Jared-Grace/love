@@ -15,4 +15,3 @@ function text_replace_space_nb(call) {
   let replaced = text_replace_space_to(call, nb);
   return replaced;
 }
-

@@ -70,8 +70,8 @@ export function app_code_lesson_operators_minus_generic(
       left_transform,
       verb,
     );
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
+    let c = app_code_container_light_blue(root);
+    html_div_cycle_code(c, [
       text_combine_multiple([
         "However, when making a number ",
         sign,
@@ -83,7 +83,7 @@ export function app_code_lesson_operators_minus_generic(
     let combined2 = text_combine_right_fn(operator, right_random_get);
     const right2 = "right";
     let combined4 = text_combine(operator, right2);
-    html_div_code_multiple(c3, [combined2, combined4]);
+    html_div_code_multiple(c, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
       ["Therefore, ", operator, " must have a value on the right side"],

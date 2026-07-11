@@ -4,11 +4,11 @@ import { html_margin } from "../../../love/public/src/html_margin.mjs";
 import { html_border_style } from "../../../love/public/src/html_border_style.mjs";
 import { html_border } from "../../../love/public/src/html_border.mjs";
 import { html_border_radius } from "../../../love/public/src/html_border_radius.mjs";
-import { html_br_2 } from "../../../love/public/src/html_br_2.mjs";
+import { html_br_ } from "../../../love/public/src/html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -95,7 +95,7 @@ export async function app_search_results(context, div_results) {
     let component = html_button_wide(expand_all_div, text2, lambda6);
   }
   expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
-  html_br_2(div_results);
+  html_br_(div_results);
   let results = object_to_list(dictionary);
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
@@ -152,7 +152,7 @@ export async function app_search_results(context, div_results) {
   let button_lists = list_map(results, each_result);
   let mapped2 = list_filter(button_lists, null_not_is);
   button_list = list_squash(mapped2);
-  let s = list_size_1(button_list);
+  let s = list_size_(button_list);
   if (s) {
     let only = list_single(button_list);
     only();

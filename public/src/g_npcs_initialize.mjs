@@ -13,8 +13,8 @@ export function g_npcs_initialize(player_img, coordinates_land) {
   let npc_count = 30;
   let npcs = list_remove_end(coordinates_land, npc_count);
   function npc_initialize(npc, index) {
-    let r4 = mod(index, gender_count);
-    let gender = list_get(genders, r4);
+    let r = mod(index, gender_count);
+    let gender = list_get(genders, r);
     let imgs = property_get(gender, "imgs");
     let r3 = list_random_item(imgs);
     property_set(npc, "img", r3);

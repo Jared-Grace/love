@@ -5,14 +5,14 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 export async function marker_rename(from, to) {
   async function lambda(a) {
     let node = property_get(a, "node");
     let arguments2 = js_call_arguments_get(node);
-    let s1 = list_size_1(arguments2);
+    let s1 = list_size_(arguments2);
     if (not(s1)) {
       return;
     }

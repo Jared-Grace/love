@@ -23,7 +23,7 @@ import { js_expression_statement_is } from "../../../love/public/src/js_expressi
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_block_statement_is } from "../../../love/public/src/js_block_statement_is.mjs";
-import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
 import { js_block_body_get } from "../../../love/public/src/js_block_body_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
@@ -44,7 +44,7 @@ export async function js_ternary_replace(ast) {
       return false;
     }
     let mapped = list_map(list, js_block_body_get);
-    let bb = list_all(mapped, list_size_1);
+    let bb = list_all(mapped, list_size_);
     if (not(bb)) {
       return false;
     }

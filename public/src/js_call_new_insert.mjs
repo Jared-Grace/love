@@ -6,14 +6,14 @@ import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 export async function js_call_new_insert(
   f_name_call,
   ast,
-  stack_2,
+  stack_,
   index,
   stack,
 ) {
   let v = await js_call_new(f_name_call, ast);
   let parsed = property_get(v, "parsed");
   let declaration = property_get(v, "declaration");
-  list_insert(stack_2, index, parsed);
+  list_insert(stack_, index, parsed);
   await js_imports_missing_add_all(ast);
   js_stack_declaration_asyncify(stack, declaration);
   return parsed;

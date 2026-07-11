@@ -16,7 +16,7 @@ import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
-import { text_take_less_1 } from "../../../love/public/src/text_take_less_1.mjs";
+import { text_take_less_ } from "../../../love/public/src/text_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -64,10 +64,10 @@ export async function app_reply_main(context) {
     let languages_chosen_before = languages_chosen;
     languages_chosen = [];
     languages_chosen_reset();
-    function lambda13(language) {
+    function lambda(language) {
       list_add(languages_chosen, language);
     }
-    await app_reply_love(languages, lambda13);
+    await app_reply_love(languages, lambda);
     await update(3);
     languages_chosen = languages_chosen_before;
   }
@@ -184,7 +184,7 @@ export async function app_reply_main(context) {
     if (equal(key, "backspace")) {
       let ne = text_empty_not_is(typed);
       if (ne) {
-        typed = text_take_less_1(typed);
+        typed = text_take_less_(typed);
       }
     } else {
       let includes = text_alphabet_includes(key);
