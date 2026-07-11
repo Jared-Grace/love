@@ -1,3 +1,4 @@
+import { list_any } from "../../../love/public/src/list_any.mjs";
 import { js_identifiers_invalid } from "../../../love/public/src/js_identifiers_invalid.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { js_identifier_name_number_suffix_base } from "../../../love/public/src/js_identifier_name_number_suffix_base.mjs";
@@ -14,6 +15,8 @@ export function js_identifiers_rename_unused_number_suffixes(ast) {
       return;
     }
     let lists = [names, invalid];
+    function lambda2(item) {}
+    let any = list_any(list, lambda2);
     let exists = list_includes(names, base);
     if (exists) {
       return;
