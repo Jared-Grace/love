@@ -533,9 +533,14 @@ def split_top_level(tokens):
     return groups
 
 
+TIMEOUT_DURATION_RE = re.compile(r"^\d+(\.\d+)?[smhd]?$")
+
+
 def verb_of(words):
     if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
         return verb_of(words[1:])
+    if words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
+        return verb_of(words[2:])
     if words[0] == "git":
         idx = 1
         if idx < len(words) and words[idx] == "-C" and idx + 1 < len(words):
