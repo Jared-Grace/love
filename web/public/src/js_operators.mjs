@@ -10,7 +10,7 @@ import { identity } from "../../../love/public/src/identity.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { multiply } from "../../../love/public/src/multiply.mjs";
 export function js_operators() {
-  let r = [
+  let os = [
     {
       operator: js_operator_plus(),
       verb: js_operator_plus_verb(),
@@ -32,5 +32,5 @@ export function js_operators() {
       left_transform: multiply,
     },
   ];
-  return r;
+  return os;
 }
