@@ -45,6 +45,7 @@ export async function sandbox() {
       "ab",
     );
     await function_current_selects_nodes_log();
+    await function_current_selects_apply(apply_fn_name);
   }
   return;
   ("below is functionality that has been used in the past: ");
