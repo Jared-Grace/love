@@ -1,4 +1,4 @@
-export function text_colon_() {
+export function text_colon_3() {
   let v = " ::: ";
   return v;
 }

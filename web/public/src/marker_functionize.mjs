@@ -11,8 +11,8 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let a_from = js_marker_named_ast_arg(ast, m_name_from);
-    let v = marker_next_index(a_from);
-    let index_from = property_get(v, "index");
+    let v2 = marker_next_index(a_from);
+    let index_from = property_get(v2, "index");
     let a_to = js_marker_named_ast_arg(ast, m_name_to);
     let v3 = marker_previous_index(a_to);
     let index_to = property_get(v3, "index");

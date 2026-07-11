@@ -1,5 +1,5 @@
 import { change_if_equal } from "../../../love/public/src/change_if_equal.mjs";
-export function change_if_equal_curried_right_(from, to) {
+export function change_if_equal_curried_right_2(from, to) {
   let r = function change_if_equal_curried_right_2_result(item) {
     let result = change_if_equal(item, from, to);
     return result;

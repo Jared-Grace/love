@@ -5,7 +5,7 @@ import { app_code_batch_question_answer_fns } from "../../../love/public/src/app
 import { js_code_call_arg } from "../../../love/public/src/js_code_call_arg.mjs";
 import { list_iterator_refillable } from "../../../love/public/src/list_iterator_refillable.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { each_range_ } from "../../../love/public/src/each_range_1.mjs";
+import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { property_initialize_lambda } from "../../../love/public/src/property_initialize_lambda.mjs";
 import { digit_count_values_shuffled_next } from "../../../love/public/src/digit_count_values_shuffled_next.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_functions_console_log_generic(
         la(v2);
       }
       const digit_count_max = 3;
-      each_range_(digit_count_max, lambda2);
+      each_range_1(digit_count_max, lambda2);
     }
     let list = list_adder(lambda3);
     return list;

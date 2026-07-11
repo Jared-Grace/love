@@ -8,11 +8,11 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { math_max } from "../../../love/public/src/math_max.mjs";
-import { list_size_less_ } from "../../../love/public/src/list_size_less_1.mjs";
-import { list_to_indices_skip_ } from "../../../love/public/src/list_to_indices_skip_1.mjs";
+import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
+import { list_to_indices_skip_1 } from "../../../love/public/src/list_to_indices_skip_1.mjs";
 export function list_text_insert_between_spaces_random(item3) {
-  let skipped = list_to_indices_skip_(item3);
-  let max = list_size_less_(skipped);
+  let skipped = list_to_indices_skip_1(item3);
+  let max = list_size_less_1(skipped);
   let m = math_max(1, max);
   let count = integer_random(1, m);
   let items = list_shuffle_take(skipped, count);

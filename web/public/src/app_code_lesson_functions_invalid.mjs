@@ -54,17 +54,17 @@ export function app_code_lesson_functions_invalid() {
     let o_f = list_first(operators);
     let verb = property_get(o_f, "verb");
     let c = app_code_container_light_blue(root);
-    let r = js_operator_to_code_call(o_f, next);
-    let right = property_get(r, "right");
-    let left = property_get(r, "left");
-    let call = property_get(r, "call");
+    let r2 = js_operator_to_code_call(o_f, next);
+    let right = property_get(r2, "right");
+    let left = property_get(r2, "left");
+    let call = property_get(r2, "call");
     let normalized = js_tokenizer_normalized(call);
-    let parts = [
+    let parts2 = [
       "Calling the ",
       verb,
       " function requires all of these parts: ",
     ];
-    html_div_cycle_code(c, parts);
+    html_div_cycle_code(c, parts2);
     let combined = list_between_space_before(normalized);
     html_div_cycle_code(c, combined);
     let combined2 = list_between_space_before_after(

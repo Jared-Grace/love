@@ -30,8 +30,11 @@ export async function app_calendar_preaching_ask_lookup_load() {
     async function lambda2() {
       const url_goto1 = text_combine("https://www.facebook.com/", url_id);
       await playwright_sleep_goto(page, url_goto1);
-      let h = await playwright_by_tag_name_text_contents(page, "h2");
-      let includes = list_includes(h, "This content isn't available right now");
+      let h2 = await playwright_by_tag_name_text_contents(page, "h2");
+      let includes = list_includes(
+        h2,
+        "This content isn't available right now",
+      );
       let name = null;
       if (includes) {
         property_set_exists_not(v, "unavailable", true);
