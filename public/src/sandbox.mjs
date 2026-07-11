@@ -1,3 +1,4 @@
+import { js_function_node_empty } from "../../../love/public/src/js_function_node_empty.mjs";
 import { function_current_selects_nodes_log } from "../../../love/public/src/function_current_selects_nodes_log.mjs";
 import { js_find_function_type_name_starts_with } from "../../../love/public/src/js_find_function_type_name_starts_with.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "../../../love/public/src/app_code_lesson_functions_console_log_arithmetic.mjs";
@@ -45,7 +46,7 @@ export async function sandbox() {
       "ab",
     );
     await function_current_selects_nodes_log();
-    await function_current_selects_apply(apply_fn_name);
+    await function_current_selects_apply(js_function_node_empty.name);
   }
   return;
   ("below is functionality that has been used in the past: ");
