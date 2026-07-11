@@ -10,6 +10,6 @@ export async function puppeteer_hrefs(page) {
     let v3 = links.map(lambda).filter(lambda2);
     return v3;
   }
-  const hrefs = await page.$$eval("a", lambda3);
+  let hrefs = await page.$$eval("a", lambda3);
   return hrefs;
 }

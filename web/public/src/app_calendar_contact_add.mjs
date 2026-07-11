@@ -15,7 +15,7 @@ import { app_calendar_contacts_initialize } from "../../../love/public/src/app_c
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_calendar_contact_add(data, item) {
   app_calendar_contact_names_normalize(item);
-  const id_properties = app_calendar_id_properties();
+  let id_properties = app_calendar_id_properties();
   let r = app_calendar_facebook_conversation_id();
   let properties_unique_across_all = list_concat(
     ["facebook_conversation_url", r],

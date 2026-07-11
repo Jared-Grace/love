@@ -4,7 +4,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_cache_name } from "../../../love/public/src/function_cache_name.mjs";
 import { function_import } from "./function_import.mjs";
 export async function function_cache_refresh(f_name) {
-  const args = [];
+  let args = [];
   let fn = await function_import(f_name);
   let v = await function_cache_name(f_name);
   let f_name_cache = property_get(v, "f_name_cache");

@@ -21,8 +21,8 @@ export function app_a_list_chooser_generic(
   lambda$text,
   lambda$button$text,
 ) {
-  const articled = text_articled(noun);
-  const text = text_combine_multiple(["Choose ", articled, ":"]);
+  let articled = text_articled(noun);
+  let text = text_combine_multiple(["Choose ", articled, ":"]);
   let d = html_div_text_centered(root, text);
   app_a_control_style(d);
   html_style_background_color_set(d, "white");

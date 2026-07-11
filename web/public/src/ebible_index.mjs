@@ -16,7 +16,7 @@ export async function ebible_index(bible_folder) {
     });
     list_add_if_not_includes(index, book);
     let verse_numbers = list_map_property(verses, "verse_number");
-    const chapter = {
+    let chapter = {
       chapter_name,
       verse_numbers,
     };

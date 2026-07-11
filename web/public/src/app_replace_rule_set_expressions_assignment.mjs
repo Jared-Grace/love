@@ -4,7 +4,7 @@ import { app_replace_rule_set_logical_expressions_abbreviations } from "../../..
 import { app_replace_rule_set_logical_expressions_rules } from "../../../love/public/src/app_replace_rule_set_logical_expressions_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_expressions_assignment() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_logical_expressions_rules(rules);
   list_add_multiple(rules, [
     "ase > lh = ase",

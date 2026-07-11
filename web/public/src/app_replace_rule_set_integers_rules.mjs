@@ -1,7 +1,7 @@
 import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_replace_rule_set_add_rights.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 export function app_replace_rule_set_integers_rules() {
-  const rules = [
+  let rules = [
     "in > pi ig",
     "in > di",
     "ig > di ig",

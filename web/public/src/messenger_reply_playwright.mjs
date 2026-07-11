@@ -15,7 +15,7 @@ export async function messenger_reply_playwright() {
   let p = folder_user_docs_path("fb.json");
   let data = await file_read_json(p);
   let pin = property_get(data, "pin");
-  const v2 = await import_install("playwright");
+  let v2 = await import_install("playwright");
   let webkit = property_get(v2, "webkit");
   let firefox = property_get(v2, "firefox");
   let chromium = property_get(v2, "chromium");
@@ -25,25 +25,25 @@ export async function messenger_reply_playwright() {
       headless: false,
     });
   }
-  const command = "npx playwright install";
+  let command = "npx playwright install";
   await retry_on_error(command, lambda, command);
-  const context = await browser.newContext({
+  let context = await browser.newContext({
     storageState: "fb-session.json",
   });
-  const page = await context.newPage();
+  let page = await context.newPage();
   let v = messenger_reply_url();
   await page.goto(v);
-  const input = await page.waitForSelector(
+  let input = await page.waitForSelector(
     "#mw-numeric-code-input-prevent-composer-focus-steal",
   );
   await input.focus();
   let fn = bind_property(page.keyboard, "type");
   await keyboard_type_delay(pin, fn);
-  const locator = page.locator("text=Unread");
-  const count = await locator.count();
+  let locator = page.locator("text=Unread");
+  let count = await locator.count();
   let b = equal(count, 4);
   assert(b);
-  console.log(text_combine_multiple(['Found ', count, ' matches']));
+  console.log(text_combine_multiple(["Found ", count, " matches"]));
   await locator.nth(0).click();
   if (false) {
   }

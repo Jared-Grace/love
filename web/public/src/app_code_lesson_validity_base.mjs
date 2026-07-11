@@ -13,12 +13,12 @@ export function app_code_lesson_validity_base(
   example_answer_label,
   backwards_answer_on_button,
 ) {
-  const quiz_label = example_answer_label;
+  let quiz_label = example_answer_label;
   let example_question_label = app_code_label_code_question();
   let example_count = 2;
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
-  const quizzes_get = app_code_lesson_quizzes(
+  let quizzes_get = app_code_lesson_quizzes(
     batch_get,
     example_question_label,
     on_question,

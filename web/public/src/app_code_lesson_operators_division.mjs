@@ -4,8 +4,8 @@ import { js_operator_division_symbol } from "../../../love/public/src/js_operato
 import { multiply } from "../../../love/public/src/multiply.mjs";
 import { app_code_lesson_operators_generic } from "../../../love/public/src/app_code_lesson_operators_generic.mjs";
 export function app_code_lesson_operators_division() {
-  const operator = js_operator_division_symbol();
-  const operator_name = js_operator_division_name();
+  let operator = js_operator_division_symbol();
+  let operator_name = js_operator_division_name();
   let math_name = "division";
   let verb = js_operator_division_verb();
   let r = app_code_lesson_operators_generic(

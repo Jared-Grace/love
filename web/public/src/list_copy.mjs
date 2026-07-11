@@ -1,4 +1,4 @@
 export function list_copy(original) {
-  const copy = [...original];
+  let copy = [...original];
   return copy;
 }

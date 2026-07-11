@@ -21,7 +21,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
     "background-color": text_combine(color_background, "bc"),
   });
   let game_prefix = g_game_prefix();
-  const c_src = g_character_img_url(npc);
+  let c_src = g_character_img_url(npc);
   let component = html_img(container, c_src);
   let name_npc = property_get(npc, "name");
   app_g_p_text(

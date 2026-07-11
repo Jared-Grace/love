@@ -41,7 +41,7 @@ export async function app_replace_rule_sets_why_generate() {
     let result = property_get(parsed, "result");
     let f_name = property_get(rs, "f_name");
     async function lambda4(ast) {
-      const type = "ObjectExpression";
+      let type = "ObjectExpression";
       let list = js_list_type_nodes(ast, type);
       function lambda3(e) {
         let search = "name";
@@ -49,7 +49,7 @@ export async function app_replace_rule_sets_why_generate() {
         return found;
       }
       let f = list_find(list, lambda3);
-      const property = "why";
+      let property = "why";
       let found = js_object_expression_properties_find_key_named(f, property);
       let n = null_is(found);
       if (n) {

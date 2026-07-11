@@ -96,5 +96,9 @@ export async function app_chapter_main(context) {
     };
     return v2;
   }
-  await list_map_unordered_add_async(languages_chosen, lambda2, languages_verses);
+  await list_map_unordered_add_async(
+    languages_chosen,
+    lambda2,
+    languages_verses,
+  );
 }

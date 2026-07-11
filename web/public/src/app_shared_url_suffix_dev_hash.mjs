@@ -10,6 +10,6 @@ export async function app_shared_url_suffix_dev_hash(app_fn, hash) {
   let f_path_dev = property_get(r, "f_path_dev");
   let previous = folder_previous();
   let together = text_prefix_without(f_path_dev, previous);
-  const suffix = text_combine_multiple([together, hash_url]);
+  let suffix = text_combine_multiple([together, hash_url]);
   return suffix;
 }

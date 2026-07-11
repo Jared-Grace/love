@@ -39,13 +39,13 @@ export function app_reply_main_shortcuts(
   let languages_chosen_default = app_reply_languages_chosen_default();
   html_p_text(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
   let gl = app_reply_greetings_live();
-  const ur = ebible_language_urdu();
-  const pa = ebible_language_punjabi();
+  let ur = ebible_language_urdu();
+  let pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
-  const te = ebible_language_telugu();
+  let te = ebible_language_telugu();
   let languages_pk = languages_default_concat([pa, ur]);
-  const r_pk_base = {
+  let r_pk_base = {
     name: "PK",
     languages: languages_pk,
     count: 0,
@@ -70,7 +70,7 @@ export function app_reply_main_shortcuts(
   let r_pk_20 = shortcut_extend_count(r_pk_base, 20);
   let r_pk_40 = shortcut_extend_count(r_pk_base, 40);
   let languages_ug = languages_default_concat_single(lug);
-  const r_ug_base = {
+  let r_ug_base = {
     name: "UG",
     languages: languages_ug,
     count: 0,
@@ -79,7 +79,7 @@ export function app_reply_main_shortcuts(
   let r_ug_10 = shortcut_extend_count(r_ug_base, 10);
   let r_ug_40 = shortcut_extend_count(r_ug_base, 40);
   let languages_ke = languages_default_concat_single(ke);
-  const r_ke_base = {
+  let r_ke_base = {
     name: "KE",
     languages: languages_ke,
     count: 0,
@@ -87,13 +87,13 @@ export function app_reply_main_shortcuts(
   };
   let r_ke_10 = shortcut_extend_count(r_ke_base, 10);
   let r_ke_40 = shortcut_extend_count(r_ke_base, 40);
-  const r_default = {
+  let r_default = {
     name: "",
     languages: languages_chosen_default,
     count: 1,
     responses: [],
   };
-  const r_te_base = {
+  let r_te_base = {
     name: "TE",
     languages: languages_default_concat_single(te),
     count: 0,
@@ -101,7 +101,7 @@ export function app_reply_main_shortcuts(
   };
   let r_te_10 = shortcut_extend_count(r_te_base, 10);
   let bn = ebible_language_bengali();
-  const r_bn_base = {
+  let r_bn_base = {
     name: "BN",
     languages: languages_default_concat_single(bn),
     count: 0,
@@ -109,7 +109,7 @@ export function app_reply_main_shortcuts(
   };
   let r_bn_10 = shortcut_extend_count(r_bn_base, 10);
   let ar = ebible_language_arabic();
-  const r_ar_base = {
+  let r_ar_base = {
     name: "AR",
     languages: languages_default_concat_single(ar),
     count: 0,
@@ -119,7 +119,7 @@ export function app_reply_main_shortcuts(
   let r_yt = shortcut_extend_count(r_default, 2);
   r_yt = shortcut_extend(r_yt, "yt");
   let en_l = ebible_language_english();
-  const r_en_40 = {
+  let r_en_40 = {
     name: "en40",
     languages: [en_l],
     count: 40,

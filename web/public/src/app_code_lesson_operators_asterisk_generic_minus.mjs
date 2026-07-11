@@ -20,7 +20,7 @@ export function app_code_lesson_operators_asterisk_generic_minus(
     " it's possible to have a number only on the right and not on the left: ",
   ]);
   let combined2 = text_combine_right_fn(minus, digit_positive_random);
-  const right = "right";
+  let right = "right";
   let combined4 = text_combine(minus, right);
   html_div_code_multiple(c, [combined2, combined4]);
   html_div_cycle_code(c, [

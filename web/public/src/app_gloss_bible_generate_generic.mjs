@@ -11,12 +11,12 @@ export async function app_gloss_bible_generate_generic(
   chapter_code_specified,
 ) {
   let word = app_gloss_bible_generate_generic_word();
-  const prompt_system = app_gloss_bible_generate_generic_prompt_system(
+  let prompt_system = app_gloss_bible_generate_generic_prompt_system(
     language,
     word,
     last,
   );
-  const prompt_user_middle =
+  let prompt_user_middle =
     app_gloss_bible_generate_generic_prompt_user_middle(language);
   await g_sermon_generate_book_generic(
     bible_folders,

@@ -16,7 +16,7 @@ export async function function_curryify_specify_name_get(
     let n = function_curryify_specify_name(unaliased);
     ending = list_concat_single(n, positions_1);
   }
-  const parts = [unaliased];
+  let parts = [unaliased];
   let combined = function_name_combine_multiple_concat(parts, ending);
   return combined;
 }

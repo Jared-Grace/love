@@ -14,7 +14,7 @@ export function app_replace_goals_generic(
   index,
   lambda,
 ) {
-  const choose_this_next = not(completed) && completed_previous;
+  let choose_this_next = not(completed) && completed_previous;
   let text_left = add_1_period(index);
   if (completed) {
     let e = emoji_check();
@@ -25,7 +25,7 @@ export function app_replace_goals_generic(
       text_left += string_pad_left_space(e);
     }
   }
-  const text_centered = "";
+  let text_centered = "";
   let r = app_replace_button_wide_text_left_centered(
     root,
     lambda,

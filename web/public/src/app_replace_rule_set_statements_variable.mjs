@@ -6,7 +6,7 @@ import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_statements_variable() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_statements_variable_rules(rules);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
@@ -24,7 +24,7 @@ export function app_replace_rule_set_statements_variable() {
     "ex > 1",
     "ex > 2",
   ]);
-  const y_eq_2 = js_code_assign("y", "2");
+  let y_eq_2 = js_code_assign("y", "2");
   let r = {
     name: "Statements Variable",
     abbreviations,

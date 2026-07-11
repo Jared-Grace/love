@@ -8,7 +8,7 @@ export function app_a_list_overlay_generic(a, texts, noun, lambda$text) {
   let overlay_result = app_a_overlay(a);
   let overlay = property_get(overlay_result, "overlay");
   html_style_overflow_hidden(overlay);
-  const replacement = {
+  let replacement = {
     root: overlay,
   };
   let context = property_get(a, "context");

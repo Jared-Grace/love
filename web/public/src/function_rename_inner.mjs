@@ -7,7 +7,7 @@ import { function_parse_unaliased } from "../../../love/public/src/function_pars
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 export async function function_rename_inner(f_name_before, f_name_after) {
-  const v = await function_name_to_path_unalias(f_name_before);
+  let v = await function_name_to_path_unalias(f_name_before);
   let unaliased = property_get(v, "unaliased");
   f_name_before = unaliased;
   let v2 = await function_parse_unaliased(f_name_before);

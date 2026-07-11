@@ -8,7 +8,7 @@ export async function app_original_bible_gloss_generate_chapter(
   let bible_folder = "engbsb";
   let language = "Greek";
   let fn = app_original_bible_gloss_generate;
-  const bible_folders = [bible_folder];
+  let bible_folders = [bible_folder];
   let last = "English is";
   await app_gloss_bible_generate_generic(
     language,

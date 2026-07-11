@@ -5,6 +5,6 @@ export function js_node_types_is(item, types) {
     let type_is = js_node_type_is(item, type);
     return type_is;
   }
-  const match = list_any(types, lambda);
+  let match = list_any(types, lambda);
   return match;
 }

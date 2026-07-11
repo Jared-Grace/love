@@ -23,7 +23,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let squashed = list_squash(dfss);
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let squashed2 = list_squash(paths);
-  const properties = ["rule", "original"];
+  let properties = ["rule", "original"];
   let unique = list_map_properties_unique(squashed2, properties);
   let rules = property_get(rule_set, "rules");
   let value = property_get_or_null(rule_set, "rules_unused");

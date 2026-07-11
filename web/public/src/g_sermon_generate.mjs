@@ -5,7 +5,7 @@ import { g_sermon_generate_book } from "../../../love/public/src/g_sermon_genera
 export async function g_sermon_generate() {
   "dont want to accidentally overwrite sermons";
   return;
-  const bible_folder = "engbsb";
+  let bible_folder = "engbsb";
   let books = await ebible_version_books(bible_folder);
   async function lambda(b) {
     let book_code = property_get(b, "book_code");

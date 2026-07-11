@@ -37,7 +37,7 @@ export async function app_replace_rule_set_success(
     return value;
   }
   storage_local_transform_empty_context(context, "rule_sets_data", lambda5);
-  const list = [goal_list_symbols, sbs];
+  let list = [goal_list_symbols, sbs];
   app_replace_button_symbol_style_valid_multiple_nested(list);
   await html_move_animate_multiple(sbs, goal_list_symbols, duration);
   app_replace_success_message(div_below);

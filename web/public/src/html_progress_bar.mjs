@@ -33,7 +33,10 @@ export function html_progress_bar(
     "background-color": color_valid,
     "padding-left": "0.6em",
     height: "100%",
-    width: text_combine(divide(multiply(100, count_progress), count_total), "%"),
+    width: text_combine(
+      divide(multiply(100, count_progress), count_total),
+      "%",
+    ),
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");

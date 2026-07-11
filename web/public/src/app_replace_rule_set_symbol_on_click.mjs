@@ -55,7 +55,7 @@ export async function app_replace_rule_set_symbol_on_click(
     let rights = property_get(rb, "rights");
     let size = list_size(lefts);
     let sliced = list_slice_count(sbs, index, size);
-    const sum = text_combine(index, size);
+    let sum = text_combine(index, size);
     let skipped = list_skip(sbs, sum);
     let rects_before = list_map(skipped, html_bounding_client_rect);
     await html_move_animate_multiple_parent_remove(sliced, lefts, duration);
@@ -74,8 +74,10 @@ export async function app_replace_rule_set_symbol_on_click(
       el.offsetWidth;
       await html_request_animation_frame();
       ("here the duration depends on the distance so that smaller distances take less time");
-      const time =
-        divide(multiply(multiply(distance, 4), duration), app_replace_animation_duration_max());
+      let time = divide(
+        multiply(multiply(distance, 4), duration),
+        app_replace_animation_duration_max(),
+      );
       await html_move_animate_translate(el, 0, 0, time);
       await sleep(time);
       html_translation_transition_clear(el);

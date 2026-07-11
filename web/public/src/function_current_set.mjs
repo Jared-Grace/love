@@ -10,7 +10,7 @@ import { marker_first } from "../../../love/public/src/marker_first.mjs";
 import { marker_current_set } from "../../../love/public/src/marker_current_set.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 export async function function_current_set(f_name) {
-  const v2 = await function_unalias_exists(f_name);
+  let v2 = await function_unalias_exists(f_name);
   let unaliased = property_get(v2, "unaliased");
   let exists = property_get(v2, "exists");
   assert_json(exists, {

@@ -22,7 +22,7 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
   let verse_numbers = list_map(list, lambda);
   function lambda(item) {
     let t = html_parse_text(d, item);
-    const name = "id";
+    let name = "id";
     let id = html_parse_attr(d, item, name);
     let without = text_prefix_without(id, "V");
     let i = roman_to_integer(without);

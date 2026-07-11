@@ -4,7 +4,7 @@ export function app_a_function_node_child_parent(
   node_replacement,
   parent_replacement,
 ) {
-  const replacements = {
+  let replacements = {
     node: node_replacement,
     parent: parent_replacement,
   };

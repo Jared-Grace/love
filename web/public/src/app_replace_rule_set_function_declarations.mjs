@@ -7,7 +7,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_function_declarations() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_statements_for_rules(rules);
   list_add_multiple(rules, [
     text_combine_multiple(["fd > ", js_keyword_function(), " id ( fdm bs"]),

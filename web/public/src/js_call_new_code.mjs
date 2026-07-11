@@ -23,7 +23,7 @@ export async function js_call_new_code(f_name_call, ast) {
   async function lambda3(arg_name) {
     let arg_code = await js_identifier_unique(existing, arg_name);
     let split = text_split(arg_name, "$");
-    const lambda = "lambda";
+    let lambda = "lambda";
     if (list_first(split) === lambda) {
       let skip_count = 1;
       let b = list_size(split);
