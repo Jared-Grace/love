@@ -11,7 +11,7 @@ import { html_span_text_nbsp_replace_property_from } from "../../../love/public/
 import { html_span_nbsp } from "../../../love/public/src/html_span_nbsp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_font_color_set_white } from "../../../love/public/src/html_font_color_set_white.mjs";
-import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
+import { html_span_colon_ } from "../../../love/public/src/html_span_colon_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -75,11 +75,11 @@ export async function app_gloss_bible_home_generic(
     let span = html_span_text(div2, word);
     html_bold_mild(span);
     html_font_color_set(span, "#e40000ff");
-    let c = html_span_colon_2(div2);
+    let c = html_span_colon_(div2);
     html_font_color_set(c, "#aaa");
     let span2 = html_span_text(div2, gloss);
     html_font_color_set_white(span2);
-    let c2 = html_span_colon_2(div2);
+    let c2 = html_span_colon_(div2);
     html_font_color_set(c2, "#aaa");
     let span3 = html_span_text(div2, explain);
     html_font_color_set(span3, "#7b3f97ff");

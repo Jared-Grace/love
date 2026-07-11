@@ -30,11 +30,11 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { each } from "../../../love/public/src/each.mjs";
 import { double } from "../../../love/public/src/double.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { range_1 } from "../../../love/public/src/range_1.mjs";
+import { range_ } from "../../../love/public/src/range_1.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
-import { text_take_less_1 } from "../../../love/public/src/text_take_less_1.mjs";
+import { text_take_less_ } from "../../../love/public/src/text_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -71,7 +71,7 @@ export async function app_reply_generic(verse_get) {
   let preview = null;
   let chosens = [];
   let typed = "";
-  async function verse_random_reset_1() {
+  async function verse_random_reset_() {
     await reset();
     await verse_random_add();
   }
@@ -97,7 +97,7 @@ export async function app_reply_generic(verse_get) {
   function lambda6(event) {
     let key = property_get(event, "key");
     if (equal(key, "Backspace")) {
-      typed = text_take_less_1(typed);
+      typed = text_take_less_(typed);
     } else {
       typed = key;
     }
@@ -122,8 +122,8 @@ export async function app_reply_generic(verse_get) {
     preview_refresh();
   }
   let component3 = html_button(root, "Clear", lambda14);
-  html_button(root, "Reset 1", verse_random_reset_1);
-  let r = range_1(5);
+  html_button(root, "Reset 1", verse_random_reset_);
+  let r = range_(5);
   let mapped = list_map(r, double);
   function lambda13(v) {
     let f = verse_random_reset_n(v);

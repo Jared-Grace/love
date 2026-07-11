@@ -1,5 +1,5 @@
 import { html_on_enter } from "../../../love/public/src/html_on_enter.mjs";
-import { html_br_2 } from "../../../love/public/src/html_br_2.mjs";
+import { html_br_ } from "../../../love/public/src/html_br_2.mjs";
 import { ebible_language_english } from "../../../love/public/src/ebible_language_english.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -42,7 +42,7 @@ export function app_search_home(context) {
   html_on_enter(input, search);
   const text = "Search";
   html_button_wide(root, text, search);
-  html_br_2(root);
+  html_br_(root);
   let div_results = html_div(root);
   async function search() {
     let query = html_value_get(input);

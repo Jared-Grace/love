@@ -19,11 +19,11 @@ export function html_code_script_attributes(attributes, middle) {
   list_add_first(mapped, "");
   let joined = list_join_space(mapped);
   let c = text_combine_multiple([
-    '<script',
+    "<script",
     joined,
-    '> \n    ',
+    "> \n    ",
     middle,
-    '\n  </script>',
+    "\n  </script>",
   ]);
   return c;
 }

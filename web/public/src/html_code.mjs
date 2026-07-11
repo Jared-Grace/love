@@ -3,9 +3,9 @@ export function html_code(name, body) {
   let r = text_combine_multiple([
     '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>',
     name,
-    '</title>\n</head>\n<body>\n  ',
+    "</title>\n</head>\n<body>\n  ",
     body,
-    '\n</body>\n</html>',
+    "\n</body>\n</html>",
   ]);
   return r;
 }

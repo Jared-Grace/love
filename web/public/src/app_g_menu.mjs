@@ -18,7 +18,7 @@ export function app_g_menu(overlay, player) {
   let close = html_remove_lambda(overlay);
   app_g_button_back(overlay, close);
   let text = text_combine(emoji_pray(), " Pray");
-  function lambda7() {
+  function lambda() {
     app_g_menu_clear_back(overlay, player);
     app_g_container_text(overlay, "What prayer would you like to pray?");
     async function lambda22() {
@@ -34,6 +34,6 @@ export function app_g_menu(overlay, player) {
     ]);
     app_g_button_green(overlay, text, lambda22);
   }
-  app_g_button_uncolored(overlay, text, lambda7);
+  app_g_button_uncolored(overlay, text, lambda);
   app_g_study(player, overlay, close);
 }

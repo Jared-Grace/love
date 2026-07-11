@@ -47,11 +47,11 @@ export async function command_line_generic(command, extra) {
         reject(
           new Error(
             text_combine_multiple([
-              'Command exited with code ',
+              "Command exited with code ",
               code,
-              '\n\nSTDOUT:\n',
+              "\n\nSTDOUT:\n",
               stdout,
-              '\n\nSTDERR:\n',
+              "\n\nSTDERR:\n",
               stderr,
             ]),
           ),

@@ -5,13 +5,13 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_let_add(ast) {
   function lambda(v) {
     let stack = property_get(v, "stack");
-    let stack_1 = list_get_end_1(stack);
-    let type_is = js_node_type_is(stack_1, "ExpressionStatement");
+    let stack_ = list_get_end_(stack);
+    let type_is = js_node_type_is(stack_, "ExpressionStatement");
     if (not(type_is)) {
       return;
     }
@@ -28,7 +28,7 @@ export function js_let_add(ast) {
       return;
     }
     let assign = js_declare(name, right);
-    object_replace(stack_1, assign);
+    object_replace(stack_, assign);
   }
   js_visit_type(ast, "AssignmentExpression", lambda);
   return;

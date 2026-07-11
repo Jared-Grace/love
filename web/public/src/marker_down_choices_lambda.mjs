@@ -5,11 +5,11 @@ import { js_flo } from "../../../love/public/src/js_flo.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
-export function marker_down_choices_lambda({ stack_2, stack_1, ast }) {
+export function marker_down_choices_lambda({ stack_, stack_1, ast }) {
   "not using this as of now";
   let declaration = js_flo(ast);
   let body_block = js_function_declaration_to_block_body(declaration);
-  function lambda3(la) {
+  function lambda(la) {
     function lambda2(v) {
       let node = property_get(v, "node");
       let stack = property_get(v, "stack");
@@ -26,6 +26,6 @@ export function marker_down_choices_lambda({ stack_2, stack_1, ast }) {
     }
     js_visit(ast, lambda2);
   }
-  let choices = list_adder(lambda3);
+  let choices = list_adder(lambda);
   return choices;
 }

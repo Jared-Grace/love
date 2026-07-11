@@ -4,7 +4,7 @@ import { property_transform } from "../../../love/public/src/property_transform.
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_visit_declarators_uniqueify(ast, copy) {
-  function lambda2(v) {
+  function lambda(v) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
     function lambda4() {
@@ -16,5 +16,5 @@ export function js_visit_declarators_uniqueify(ast, copy) {
     }
     js_identifier_is_if(id, lambda4);
   }
-  js_visit_declarators(copy, lambda2);
+  js_visit_declarators(copy, lambda);
 }

@@ -1,7 +1,7 @@
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function ebible_parts_to_reference(
@@ -13,7 +13,7 @@ export function ebible_parts_to_reference(
   let book_name = ebible_book_code_to_name(books, book_code);
   let verse_numbers_s = null;
   let unique = list_unique(verse_numbers);
-  let s = list_size_1(unique);
+  let s = list_size_(unique);
   let first = list_first(unique);
   if (s) {
     verse_numbers_s = first;

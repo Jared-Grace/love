@@ -7,16 +7,16 @@ export function g_img_square_style_position_only(tile, x, y) {
     left: text_combine_multiple([
       "calc(",
       x,
-      ' * (',
+      " * (",
       g_img_square_size_css(),
-      '))',
+      "))",
     ]),
     top: text_combine_multiple([
       "calc(",
       y,
-      ' * (',
+      " * (",
       g_img_square_size_css(),
-      '))',
+      "))",
     ]),
     transition: text_combine_multiple(["left ", time, ", top ", time]),
   });

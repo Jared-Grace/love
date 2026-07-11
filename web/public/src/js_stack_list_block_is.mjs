@@ -4,8 +4,8 @@ import { list_is } from "../../../love/public/src/list_is.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function js_stack_list_block_is(stack, index_end) {
-  let stack_1 = list_get_end(stack, index_end);
-  let a = list_is(stack_1);
+  let stack_ = list_get_end(stack, index_end);
+  let a = list_is(stack_);
   if (not(a)) {
     return false;
   }

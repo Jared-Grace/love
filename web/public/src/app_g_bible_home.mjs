@@ -25,7 +25,7 @@ export async function app_g_bible_home(context) {
   let downloaded = null;
   let chapter_code = null;
   let r = null;
-  async function lambda5(la) {
+  async function lambda(la) {
     let passages = null;
     ({ chapter_code, downloaded, r, passages } = await app_g_bible_home_inner(
       context,
@@ -54,7 +54,7 @@ export async function app_g_bible_home(context) {
     }
     each(passages, on_passage);
   }
-  let updates = await list_adder_async(lambda5);
+  let updates = await list_adder_async(lambda);
   let bar = property_get(r, "bar");
   async function lambda4() {
     invoke_multiple(updates);

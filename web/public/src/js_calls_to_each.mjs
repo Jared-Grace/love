@@ -10,7 +10,7 @@ import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_i
 import { js_statement_expression_get } from "../../../love/public/src/js_statement_expression_get.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -25,7 +25,7 @@ export function js_calls_to_each(ast) {
     let r2 = js_await_if_unwrap(expression);
     let call = property_get(r2, "argument");
     let async_is = property_get(r2, "async_is");
-    let e = list_get_end_1(stack);
+    let e = list_get_end_(stack);
     let next = list_next_try(e, node);
     if (null_is(next)) {
       return;

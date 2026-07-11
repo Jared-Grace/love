@@ -61,7 +61,7 @@ export function app_message_reply_choices() {
   let digits_oom = reply_once_or_more(rc_digits);
   let r_roads = reply_roads();
   let r_cities = reply_cities();
-  let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
+  let fn = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
@@ -91,7 +91,7 @@ export function app_message_reply_choices() {
     give,
     visit,
     thanks,
-    fn24,
+    fn,
     matcher,
   ]);
   let room = reply_once_or_more(choices_main);

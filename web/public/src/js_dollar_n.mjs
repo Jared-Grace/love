@@ -13,13 +13,13 @@ import { log } from "../../../love/public/src/log.mjs";
 export function js_dollar_n({
   remaining,
   node,
-  stack_1,
+  stack_,
   stack_2,
   stack_3,
   ast,
   afters,
 }) {
-  let n = list_next(stack_2, stack_1);
+  let n = list_next(stack_2, stack_);
   let test = property_get(n, "test");
   function lambda() {
     let name = js_call_callee_name_try(test);
@@ -31,7 +31,7 @@ export function js_dollar_n({
       let only = list_single(arguments2);
       js_statement_if_test_set(n, only);
       js_statement_if_swap(n);
-      list_remove(stack_2, stack_1);
+      list_remove(stack_2, stack_);
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda);

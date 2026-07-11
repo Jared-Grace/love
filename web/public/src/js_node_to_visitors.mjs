@@ -2,7 +2,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { set_on_first } from "../../../love/public/src/set_on_first.mjs";
 import { object_properties_equal } from "../../../love/public/src/object_properties_equal.mjs";
 import { js_import_specifier_is } from "../../../love/public/src/js_import_specifier_is.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -14,7 +14,7 @@ export function js_node_to_visitors(ast, node_search) {
         if (node === node_search) {
           let add_to_list = true;
           let stack = property_get(v, "stack");
-          let e = list_get_end_1(stack);
+          let e = list_get_end_(stack);
           let type_is = js_import_specifier_is(e);
           if (type_is) {
             let eq = object_properties_equal(e, ["imported", "imported"]);

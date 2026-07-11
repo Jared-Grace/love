@@ -1,4 +1,4 @@
-import { text_prefix_change_curried_right_2 } from "../../../love/public/src/text_prefix_change_curried_right_2.mjs";
+import { text_prefix_change_curried_right_ } from "../../../love/public/src/text_prefix_change_curried_right_2.mjs";
 import { functions_rename_generic_starts_with } from "../../../love/public/src/functions_rename_generic_starts_with.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export async function functions_rename_if_starts_with(
@@ -6,7 +6,7 @@ export async function functions_rename_if_starts_with(
   f_name_prefix_after,
 ) {
   arguments_assert(arguments, 2);
-  let curried = text_prefix_change_curried_right_2(
+  let curried = text_prefix_change_curried_right_(
     f_name_prefix_before,
     f_name_prefix_after,
   );

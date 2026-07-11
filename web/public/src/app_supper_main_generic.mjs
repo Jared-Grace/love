@@ -5,11 +5,11 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_find_property_curried_right_2 } from "../../../love/public/src/list_find_property_curried_right_2.mjs";
+import { list_find_property_curried_right_ } from "../../../love/public/src/list_find_property_curried_right_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { html_hr_2 } from "../../../love/public/src/html_hr_2.mjs";
+import { html_hr_ } from "../../../love/public/src/html_hr_2.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_first_not_is } from "../../../love/public/src/list_first_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -34,7 +34,7 @@ export async function app_supper_main_generic(folder_gets, context) {
     let n = list_first_not_is(verses_first, v);
     if (n) {
       if (equal_not(chapter_code, previous_chapter_code)) {
-        html_hr_2(root);
+        html_hr_(root);
       }
     }
     previous_chapter_code = chapter_code;
@@ -42,7 +42,7 @@ export async function app_supper_main_generic(folder_gets, context) {
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");
-    let c = list_find_property_curried_right_2("reference", reference);
+    let c = list_find_property_curried_right_("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
     log(app_supper_main_generic.name, {
@@ -52,7 +52,7 @@ export async function app_supper_main_generic(folder_gets, context) {
     html_p_text_multiple(p, texts);
   }
   each(verses_first, lambda2);
-  html_hr_2(root);
+  html_hr_(root);
   function lambda(item) {
     let p2 = html_p_text(
       root,

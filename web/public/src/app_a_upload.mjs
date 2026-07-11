@@ -5,7 +5,7 @@ import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
-import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
+import { list_skip_ } from "../../../love/public/src/list_skip_1.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -32,7 +32,7 @@ export async function app_a_upload(deltas) {
   async function lambda2(d) {
     let key = property_get(d, "key");
     let versions = property_get(d, "versions");
-    let skipped = list_skip_1(versions);
+    let skipped = list_skip_(versions);
     async function lambda3(item) {
       let e2 = text_empty_is(item);
       if (e2) {

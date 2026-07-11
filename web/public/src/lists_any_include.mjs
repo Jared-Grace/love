@@ -1,10 +1,10 @@
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function lists_any_include(lists, target) {
-  function lambda2(list) {
+  function lambda(list) {
     let i = list_includes(list, target);
     return i;
   }
-  let any = list_any(lists, lambda2);
+  let any = list_any(lists, lambda);
   return any;
 }

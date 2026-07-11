@@ -2,7 +2,7 @@ import { js_dollar_choice_argument } from "../../../love/public/src/js_dollar_ch
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
-import { list_get_end_3 } from "../../../love/public/src/list_get_end_3.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_3.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
@@ -28,9 +28,9 @@ export async function js_dollar(ast) {
         ("during the transformations, an identifier could be replaced into another node");
         return;
       }
-      let stack_1 = list_get_end_1(stack);
+      let stack_ = list_get_end_1(stack);
       let stack_2 = list_get_end_2(stack);
-      let stack_3 = list_get_end_3(stack);
+      let stack_3 = list_get_end_(stack);
       let name = property_get(node, "name");
       const separator = "$";
       let split = text_split(name, separator);
@@ -52,7 +52,7 @@ export async function js_dollar(ast) {
         const js_dollar_arguments = {
           remaining,
           node,
-          stack_1,
+          stack_,
           stack_2,
           stack_3,
           ast,

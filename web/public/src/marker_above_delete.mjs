@@ -6,8 +6,8 @@ export async function marker_above_delete() {
   async function lambda(a) {
     let p = marker_previous_index(a);
     let index = property_get(p, "index");
-    let stack_2 = property_get(p, "stack_2");
-    list_remove_at(stack_2, index);
+    let stack_ = property_get(p, "stack_2");
+    list_remove_at(stack_, index);
   }
   let v = await function_transform_marker_current(lambda);
   return v;

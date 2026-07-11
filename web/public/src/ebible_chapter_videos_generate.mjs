@@ -3,7 +3,7 @@ import { bible_audio_folder_book_video_join } from "../../../love/public/src/bib
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
-import { file_extension_mp4 } from "../../../love/public/src/file_extension_mp4.mjs";
+import { file_extension_mp } from "../../../love/public/src/file_extension_mp4.mjs";
 import { image_generate } from "../../../love/public/src/image_generate.mjs";
 import { file_exists_not } from "../../../love/public/src/file_exists_not.mjs";
 import { text_suffix_without } from "../../../love/public/src/text_suffix_without.mjs";
@@ -31,7 +31,7 @@ export async function ebible_chapter_videos_generate(
       if (n) {
         await image_generate(contents, joined_image);
       }
-      let joined_video = text_combine(joined, file_extension_mp4());
+      let joined_video = text_combine(joined, file_extension_mp());
       let n2 = await file_exists_not(joined_video);
       if (n2) {
         let joined_audio = text_combine(joined, ".wav");

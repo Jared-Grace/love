@@ -3,7 +3,7 @@ import { js_parse_expression_replace } from "../../../love/public/src/js_parse_e
 export function js_dollar_t({
   remaining,
   node,
-  stack_1,
+  stack_,
   stack_2,
   stack_3,
   ast,

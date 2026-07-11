@@ -1,4 +1,4 @@
-import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
+import { list_skip_ } from "../../../love/public/src/list_skip_1.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_linked_to_list } from "../../../love/public/src/list_linked_to_list.mjs";
@@ -9,6 +9,6 @@ export function app_replace_rule_set_verify_path_get(dfs) {
   let list = list_linked_to_list(dfs, property_name, max_depth);
   let path_all = list_map_property(list, "data");
   list_reverse(path_all);
-  let path = list_skip_1(path_all);
+  let path = list_skip_(path_all);
   return path;
 }
