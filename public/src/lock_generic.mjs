@@ -1,3 +1,4 @@
+import { file_write } from "../../../love/public/src/file_write.mjs";
 import { file_read_try } from "../../../love/public/src/file_read_try.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -8,7 +9,6 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { file_write } from "../../../love/public/src/file_write.mjs";
 import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
 export async function lock_generic(lock_name, wait, lambda, who) {
   let lockfile = await import_install("proper-lockfile");
