@@ -18,10 +18,6 @@ export function app_code_lesson_functions_console_log_generic(
   name_id_rights,
 ) {
   const fn_name = "console.log";
-  const rights = [fn_name];
-  list_add_multiple(rights, name_id_rights);
-  let name_id = app_code_lesson_name_id_function("function", rights);
-  let m = app_code_lesson_operators_value_max();
   let data = {};
   function lambda() {
     function lambda3(la) {
@@ -52,7 +48,11 @@ export function app_code_lesson_functions_console_log_generic(
     batch_get,
     eval_console_log_to_list,
   );
+  const rights = [fn_name];
+  list_add_multiple(rights, name_id_rights);
+  let name_id = app_code_lesson_name_id_function("function", rights);
   let lesson = app_code_lesson_code_logged(b, name_id, above);
+  let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
   let r3 = {
     lesson,
