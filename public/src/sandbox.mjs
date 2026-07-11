@@ -45,9 +45,9 @@ export async function sandbox() {
       js_find_function_type_name_starts_with.name,
       "ab",
     );
-    let r2 = await function_current_selects_nodes();
+    let selects = await function_current_selects_nodes();
     log(sandbox.name, {
-      r2,
+      selects,
     });
   }
   return;
