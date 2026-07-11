@@ -22,50 +22,5 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   let next_operator = property_get(r, "next_operator");
   let lesson = property_get(r, "lesson");
   return lesson;
-  function above(root) {
-    let o_f = js_operator_first_code_call(next_operator);
-    let verb = property_get(o_f, "verb");
-    let call = property_get(o_f, "call");
-    let c = app_code_container_light_blue(root);
-    let fn_name_call = js_code_call_arg_fn(fn_name, next);
-    let operators = js_operators();
-    let span = html_div_cycle_code_multiple(c, [
-      ["Here is an example of a function call: ", call],
-      ["", verb, " is a function"],
-      ["And here is a new function: ", fn_name],
-    ]);
-    let r2 = js_code_parenthesis_list();
-    let parts = list_between_space_nb(r2);
-    let comma = js_code_comma();
-    const inside = [" inside its ", ...parts];
-    html_div_cycle_code(c, [
-      "However, ",
-      verb,
-      " and ",
-      fn_name,
-      " are different",
-    ]);
-    let first = js_operator_first_code_call_only(next_operator);
-    let v4 = js_code_call_arg_fn(fn_name, next);
-    app_code_container_light_blue_cycle_code_multiple(root, [
-      ["", verb, " has two numbers separated by a ", comma, ...inside, " :"],
-      ["", first],
-    ]);
-    app_code_container_light_blue_cycle_code_multiple(root, [
-      [
-        "But, for now, we will see ",
-        fn_name,
-        ...list_transform_first_combine(" with only one number ", inside),
-        " :",
-      ],
-      ["", v4],
-    ]);
-    app_code_container_light_blue_cycle_code(root, [
-      "Whatever is inside the ",
-      ...parts,
-      " of ",
-      fn_name,
-      " will be written out for someone to read",
-    ]);
-  }
+  function above(root) {}
 }
