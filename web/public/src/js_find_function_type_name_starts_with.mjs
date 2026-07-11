@@ -12,9 +12,6 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
     let id = property_get(n, "id");
     function lambda3() {
       starts_with = js_identifier_name_starts_with(id, prefix);
-      log(js_find_function_type_name_starts_with.name, {
-        starts_with,
-      });
     }
     js_identifier_is_if(id, lambda3);
     return starts_with;
