@@ -17,8 +17,8 @@ export async function js_triple_equal_to_equal(ast) {
   }
   function lambda(v) {
     let node = property_get(v, "node");
-    let operator = property_get(node, "operator");
-    if (equal(operator, "===")) {
+    let node_operator = property_get(node, "operator");
+    if (equal(node_operator, "===")) {
       let code = js_code_call(equal.name);
       let expression = js_parse_expression(code);
       let arguments2 = js_call_arguments_get(expression);
