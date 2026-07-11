@@ -43,7 +43,11 @@ export async function watch() {
       log(watch.name, {
         path,
       });
-      let r = await lock_try(function_run_prompt.name, lambda3);
+      try {
+        let r = await lock_try(function_run_prompt.name, lambda3);
+      } finally {
+        property_set(in_progress, path, false);
+      }
     }
     await catch_log_async(lambda);
   }
