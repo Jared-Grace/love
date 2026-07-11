@@ -1,10 +1,10 @@
 import { js_visit_identifiers_nodes } from "../../../love/public/src/js_visit_identifiers_nodes.mjs";
-import { property_set_if_equals_curried_right_3 } from "../../../love/public/src/property_set_if_equals_curried_right_3.mjs";
+import { property_set_if_equals_curried_right_ } from "../../../love/public/src/property_set_if_equals_curried_right_3.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 export function js_identifier_rename(ast, name_from, name_to) {
   if (equal(name_from, name_to)) {
     return;
   }
-  let r = property_set_if_equals_curried_right_3("name", name_from, name_to);
+  let r = property_set_if_equals_curried_right_("name", name_from, name_to);
   js_visit_identifiers_nodes(ast, r);
 }

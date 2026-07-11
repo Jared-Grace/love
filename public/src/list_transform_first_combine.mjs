@@ -3,10 +3,10 @@ import { list_transform_first } from "../../../love/public/src/list_transform_fi
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function list_transform_first_combine(item, list) {
   arguments_assert(arguments, 2);
-  function lambda2(first) {
+  function lambda(first) {
     let combined = text_combine(item, first);
     return combined;
   }
-  list_transform_first(list, lambda2);
+  list_transform_first(list, lambda);
   return list;
 }

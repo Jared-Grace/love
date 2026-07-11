@@ -6,19 +6,19 @@ import { list_previous } from "../../../love/public/src/list_previous.mjs";
 export function js_dollar_e({
   remaining,
   node,
-  stack_1,
+  stack_,
   stack_2,
   stack_3,
   ast,
   afters,
 }) {
   let previous = null;
-  let alternate = list_previous(stack_2, stack_1);
+  let alternate = list_previous(stack_2, stack_);
   while (alternate !== null) {
     previous = alternate;
     alternate = property_get(alternate, "alternate");
   }
   let b = js_statement_block_new([]);
   property_set(previous, "alternate", b);
-  list_remove(stack_2, stack_1);
+  list_remove(stack_2, stack_);
 }

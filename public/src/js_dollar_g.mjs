@@ -12,7 +12,7 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 export async function js_dollar_g({
   remaining,
   node,
-  stack_1,
+  stack_,
   stack_2,
   ast,
   afters,
@@ -21,17 +21,17 @@ export async function js_dollar_g({
   let property_names = property_get(r, "remaining");
   let object_name = property_get(r, "first");
   async function lambda2(property_name) {
-    if (js_node_type_is(stack_1, "ExpressionStatement")) {
+    if (js_node_type_is(stack_, "ExpressionStatement")) {
       let unique = js_identifier_unique_ast(ast, property_name);
       let assign = js_assign_object_property_get(
         property_name,
         object_name,
         stack_2,
-        stack_1,
+        stack_,
         unique,
       );
       function lambda() {
-        object_replace(stack_1, assign);
+        object_replace(stack_, assign);
       }
       list_add(afters, lambda);
     } else {
@@ -44,7 +44,7 @@ export async function js_dollar_g({
     }
   }
   each_reverse(property_names, lambda2);
-  if (js_node_type_is(stack_1, "ExpressionStatement")) {
-    list_remove(stack_2, stack_1);
+  if (js_node_type_is(stack_, "ExpressionStatement")) {
+    list_remove(stack_2, stack_);
   }
 }

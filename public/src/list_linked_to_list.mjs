@@ -3,7 +3,7 @@ import { each_range } from "../../../love/public/src/each_range.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function list_linked_to_list(node_first, property_name_next, max_depth) {
-  function lambda12(la) {
+  function lambda(la) {
     la(node_first);
     function lambda10(i) {
       node_first = property_get(node_first, property_name_next);
@@ -14,6 +14,6 @@ export function list_linked_to_list(node_first, property_name_next, max_depth) {
     }
     each_range(max_depth, lambda10);
   }
-  let list = list_adder(lambda12);
+  let list = list_adder(lambda);
   return list;
 }

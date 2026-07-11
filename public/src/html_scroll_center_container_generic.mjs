@@ -17,11 +17,17 @@ export async function html_scroll_center_container_generic(
   const containerRect = container_e.getBoundingClientRect();
   const tileRect = e.getBoundingClientRect();
   const scrollLeft = add(
-    subtract(add(container_e.scrollLeft, subtract(tileRect.left, containerRect.left)), divide(container_e.clientWidth, 2)),
+    subtract(
+      add(container_e.scrollLeft, subtract(tileRect.left, containerRect.left)),
+      divide(container_e.clientWidth, 2),
+    ),
     divide(tileRect.width, 2),
   );
   const scrollTop = add(
-    subtract(add(container_e.scrollTop, subtract(tileRect.top, containerRect.top)), divide(container_e.clientHeight, 2)),
+    subtract(
+      add(container_e.scrollTop, subtract(tileRect.top, containerRect.top)),
+      divide(container_e.clientHeight, 2),
+    ),
     divide(tileRect.height, 2),
   );
   const s = {

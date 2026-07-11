@@ -15,11 +15,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       return r;
     }
     addClause(...lits) {
-      function lambda3(x) {
+      function lambda(x) {
         let r2 = x !== 0;
         return r2;
       }
-      const clean = lits.filter(lambda3);
+      const clean = lits.filter(lambda);
       if (clean.length === 0) {
         return;
       }
@@ -27,11 +27,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     toDimacs() {
       let out = text_combine_multiple([
-        'p cnf ',
+        "p cnf ",
         this.varCount,
-        ' ',
+        " ",
         this.clauses.length,
-        '\n',
+        "\n",
       ]);
       for (const c of this.clauses) {
         out += text_combine(c.join(" "), " 0\n");
@@ -244,7 +244,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return out;
   }
   let v4 = Math.sqrt(integer_to_factor);
-  let v5 = Math.log2(v4);
+  let v5 = Math.log(v4);
   let bits = text_combine(Math.ceil(v5), 1);
   const cnf = factorizationCNF(integer_to_factor, bits);
   const cnf3 = to3SAT(cnf);

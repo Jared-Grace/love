@@ -11,14 +11,14 @@ import { list_first_second } from "../../../love/public/src/list_first_second.mj
 import { list_adder_unique_async } from "../../../love/public/src/list_adder_unique_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_size_2 } from "../../../love/public/src/list_size_2.mjs";
+import { list_size_ } from "../../../love/public/src/list_size_2.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_call_args_code } from "../../../love/public/src/js_call_args_code.mjs";
 import { function_curryify_specify_curried_right } from "../../../love/public/src/function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "../../../love/public/src/function_curryify_specify_name_get_curried_right.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
-import { list_map_index_of_1 } from "../../../love/public/src/list_map_index_of_1.mjs";
+import { list_map_index_of_ } from "../../../love/public/src/list_map_index_of_1.mjs";
 import { js_identifiers_names_difference_try } from "../../../love/public/src/js_identifiers_names_difference_try.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { js_imports_missing_add_specified } from "../../../love/public/src/js_imports_missing_add_specified.mjs";
@@ -49,8 +49,8 @@ export async function js_curry_replace(ast) {
       let node = property_get(v, "node");
       let params = js_function_declaration_params_get(node);
       let body_block = js_function_declaration_to_block_body(node);
-      let s1 = list_size_1(body_block);
-      if (s1) {
+      let s = list_size_1(body_block);
+      if (s) {
         let only = list_single(body_block);
         let esi = js_expression_statement_is(only);
         if (esi) {
@@ -61,7 +61,7 @@ export async function js_curry_replace(ast) {
           }
         }
       }
-      let s2 = list_size_2(body_block);
+      let s2 = list_size_(body_block);
       if (s2) {
         let r = list_first_second(body_block);
         log(js_curry_replace.name, {
@@ -92,24 +92,24 @@ export async function js_curry_replace(ast) {
           if (includes) {
             let args = js_call_arguments_get(expression);
             let difference = js_identifiers_names_difference_try(args, params);
-            let difference_sz_1 = list_size_1(difference);
+            let difference_sz_ = list_size_1(difference);
             let first = list_first(difference);
             let fi = list_first_is(args, first);
             let name_get = null;
             let curry_generate = null;
-            if (fi && difference_sz_1) {
+            if (fi && difference_sz_) {
               name_get = function_curryify_generic_name;
               curry_generate = function_curryify;
             } else {
               let li = list_last_is(args, first);
-              if (li && difference_sz_1) {
+              if (li && difference_sz_) {
                 name_get = function_curryify_right_name;
                 curry_generate = function_curryify_right;
               } else {
-                let positions_1 = list_map_index_of_1(difference, args);
+                let positions_ = list_map_index_of_(difference, args);
                 name_get =
-                  function_curryify_specify_name_get_curried_right(positions_1);
-                let positions_1_comma = list_join_comma(positions_1);
+                  function_curryify_specify_name_get_curried_right(positions_);
+                let positions_1_comma = list_join_comma(positions_);
                 curry_generate =
                   function_curryify_specify_curried_right(positions_1_comma);
               }
