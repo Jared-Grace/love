@@ -22,7 +22,6 @@ export function app_code_lesson_functions_console_log_generic(
   list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
   let m = app_code_lesson_operators_value_max();
-  let next_operator = range_1_next(m);
   let data = {};
   function lambda() {
     function lambda3(la) {
@@ -54,6 +53,7 @@ export function app_code_lesson_functions_console_log_generic(
     eval_console_log_to_list,
   );
   let lesson = app_code_lesson_code_logged(b, name_id, above);
+  let next_operator = range_1_next(m);
   let r3 = {
     lesson,
     next_operator,
