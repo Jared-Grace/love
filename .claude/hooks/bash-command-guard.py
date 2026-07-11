@@ -133,6 +133,35 @@ with real side effects elsewhere in the repo (e.g. `scripts/g.mjs`).
 `--allow-fs-read` still grants read of the whole repo tree (not just
 `scripts/temp/`), same as the `-e` template - acceptable here because
 this repo keeps all secrets outside the repo folder.
+
+A third exception, `is_safe_sed`, takes the same "exact shape or reject"
+approach for `sed` (no `Bash(sed:*)` entry exists in permissions.allow at
+all - this check is the only path by which a sed invocation is ever
+auto-allowed). `-i`/`--in-place` (arbitrary file overwrite) is the obvious
+risk, but GNU sed has two more independent of -i: the `e` command/flag
+executes the pattern space (or an explicit command) as a shell command -
+arbitrary code execution - and the `w`/`W` command writes matched output
+to an arbitrary file path - an arbitrary-file-write primitive. `-f`/
+`--file=` is rejected outright because it reads the real script from a
+file this hook never sees. Reliably telling "e"/"w" apart as a trailing
+command/flag versus just a literal letter inside someone's regex pattern
+or replacement text isn't doable with regex short of a real sed parser, so
+this deliberately does not attempt a blacklist scan for those letters
+anywhere in the script (that either false-positives on harmless scripts or
+false-negatives on obfuscated ones). Instead it only auto-allows a single
+`sed` [`-n`] followed by one `-e SCRIPT` or one bare positional SCRIPT,
+where SCRIPT matches SED_SCRIPT_RE: a plain `s/PATTERN/REPLACEMENT/FLAGS`
+substitution (FLAGS restricted to digits/g/p/I/i/M/m, excluding e and w),
+or a single address (line number, `$`, or one `/regex/`, optionally a
+range of two) followed by only `d` or `p`. Any trailing argument that
+still starts with `-` fails the check - which is what rejects -i, -f,
+--posix, and a second chained -e (chaining lets a second -e's `w`/`e`
+command ride in after a first, innocuous-looking one) without needing to
+enumerate each flag by name. Anything outside this narrow shape - other
+delimiters (`s#..#..#`), multiple semicolon-joined commands in one script,
+a/i/c text-insertion commands, negation (`!`), etc. - falls through to a
+real prompt rather than being pattern-matched loosely, same posture as
+every other exception in this file.
 """
 import json
 import os
@@ -480,6 +509,62 @@ def is_safe_sandboxed_node_script(words):
     return is_safe_temp_script_path(words[7])
 
 
+# Matches exactly one sed script shape, anchored start-to-end:
+#   - a single `s/PATTERN/REPLACEMENT/FLAGS` substitution, where FLAGS is
+#     restricted to digits (occurrence number) plus g/p/I/i/M/m - notably
+#     excluding `e` (execute) and `w` (write-to-file);
+#   - or a single address (line number, `$`, or a `/regex/` - optionally a
+#     `,`-separated range of two) followed by only `d` or `p`.
+# PATTERN/REPLACEMENT content itself is unrestricted (any char but an
+# unescaped `/` or newline) - letters like e/w are only rejected when they'd
+# be read as the trailing command/flag, never as literal pattern text, since
+# telling those apart in general requires a real sed parser (see module
+# docstring). Only `/` is accepted as the s-command delimiter - alternate
+# delimiters (`s#..#..#`, `s,..,..,`) are deliberately out of scope and fall
+# through to a real prompt rather than being pattern-matched loosely.
+_SED_ADDR = r"(?:\d+|\$|/(?:[^/\\\n]|\\.)+/)(?:,(?:\d+|\$|/(?:[^/\\\n]|\\.)+/))?"
+SED_SCRIPT_RE = re.compile(
+    r"^(?:"
+    r"s/(?:[^/\\\n]|\\.)*/(?:[^/\\\n]|\\.)*/[0-9gpIiMm]*"
+    r"|" + _SED_ADDR + r"[dp]"
+    r")$"
+)
+
+
+def is_safe_sed(words):
+    """Narrow allow-shape for `sed`, mirroring the sandboxed-node templates'
+    "exact shape or reject" posture rather than blacklisting dangerous
+    tokens. See module docstring for the full risk analysis (why plain
+    `-i`/`--in-place` isn't the only danger - GNU sed's `e` command/flag is
+    arbitrary code execution and `w`/`W` is an arbitrary-file-write
+    primitive, independent of -i; `-f`/`--file=` hides the actual script
+    from the command string entirely).
+
+    Accepted shape: `sed` [`-n`] then exactly one of (`-e SCRIPT` | bare
+    positional SCRIPT), where SCRIPT matches SED_SCRIPT_RE, followed by
+    nothing but plain filename arguments (no further `-`-prefixed flags -
+    this alone rejects -i, -f/--file, --posix, a second -e, etc.)."""
+    if not words or words[0] != "sed":
+        return False
+    idx = 1
+    if idx < len(words) and words[idx] == "-n":
+        idx += 1
+    if idx >= len(words):
+        return False
+    if words[idx] == "-e":
+        idx += 1
+        if idx >= len(words):
+            return False
+        script = words[idx]
+        idx += 1
+    else:
+        script = words[idx]
+        idx += 1
+    if not SED_SCRIPT_RE.match(script):
+        return False
+    return all(not w.startswith("-") for w in words[idx:])
+
+
 def check_simple_commands(tokens, safe_verbs):
     groups = split_statements(tokens)
     if not groups:
@@ -497,6 +582,7 @@ def check_simple_commands(tokens, safe_verbs):
             verb_of(words) not in safe_verbs
             and not is_safe_sandboxed_node_eval(words)
             and not is_safe_sandboxed_node_script(words)
+            and not is_safe_sed(words)
         ):
             return False
     return found_command
