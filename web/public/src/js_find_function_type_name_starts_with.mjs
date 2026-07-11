@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_identifier_name_starts_with } from "../../../love/public/src/js_identifier_name_starts_with.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
@@ -9,13 +10,22 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
   function lambda(n) {
     let starts_with = false;
     let id = property_get(n, "id");
+    log(js_find_function_type_name_starts_with.name, {
+      id,
+    });
     function lambda3() {
       starts_with = js_identifier_name_starts_with(id, prefix);
+      log(js_find_function_type_name_starts_with.name, {
+        starts_with,
+      });
     }
     js_identifier_is_if(n, lambda3);
     return starts_with;
   }
   let filtered = list_filter(mapped, lambda);
+  log(js_find_function_type_name_starts_with.name, {
+    filtered,
+  });
   let only = list_single(filtered);
   return only;
 }
