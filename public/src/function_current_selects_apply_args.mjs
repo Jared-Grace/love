@@ -4,5 +4,5 @@ import { function_current_selects_apply_generic } from "../../../love/public/src
 export async function function_current_selects_apply_args(apply_fn_name, args) {
   arguments_assert(arguments, 2);
   let split = text_split_comma_dot(args);
-  await function_current_selects_apply_generic(apply_fn_name, split);
+  await function_current_selects_apply_generic(apply_fn_name, ...split);
 }
