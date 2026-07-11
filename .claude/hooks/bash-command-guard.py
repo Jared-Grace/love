@@ -66,6 +66,24 @@ construct still forces a real prompt.
     unchanged (this is the case for any command whose leading verb isn't
     on the allow list at all - nothing to add or restrict here).
 
+`xargs` is treated as transparent rather than as a verb of its own:
+`xargs cat` is checked as `cat`, `xargs git status` is checked as `git
+status`, etc. - `verb_of` recurses past a leading `xargs` token straight
+into whatever command follows it, so no separate "Bash(xargs cat:*)"
+style rule is ever needed. This is deliberately narrow: it only recurses
+when the token right after `xargs` is not itself a flag (does not start
+with `-`). `xargs -I{} rm {}` or `xargs -0 sh -c ...` do NOT recurse and
+so are never auto-approved by this path - parsing which xargs flags take
+a following value (`-I`, `-n`, `-P`, `-a`, `-d`, `-L`, `-s`, ...) well
+enough to reliably find the real command word is more complexity than
+this hook is willing to trust itself with, so any flagged invocation
+just falls through to a real prompt instead of being guessed at. Note
+that unlike the git/node case, this never widens permissions.allow
+itself - `xargs cat` is approved because `cat` already is, not because
+of any new rule - so adding a command to the safe-verb list automatically
+makes the flagless `xargs <that command>` form safe too, without an
+separate xargs-specific entry.
+
 Note this hook can only ever narrow what would already prompt or widen an
 existing allow rule's scope to loops/sequences - it never grants a verb
 that wasn't already independently allowed in permissions.allow.
@@ -372,6 +390,8 @@ def split_top_level(tokens):
 
 
 def verb_of(words):
+    if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
+        return verb_of(words[1:])
     if words[0] in ("git", "node") and len(words) >= 2:
         return f"{words[0]} {words[1]}"
     return words[0]
