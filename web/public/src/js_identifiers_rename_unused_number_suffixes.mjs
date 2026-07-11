@@ -15,8 +15,11 @@ export function js_identifiers_rename_unused_number_suffixes(ast) {
       return;
     }
     let lists = [names, invalid];
-    function lambda2(item) {}
-    let any = list_any(list, lambda2);
+    function lambda2(item) {
+      let i = list_includes(names, base);
+      return i;
+    }
+    let any = list_any(lists, lambda2);
     let exists = list_includes(names, base);
     if (exists) {
       return;
