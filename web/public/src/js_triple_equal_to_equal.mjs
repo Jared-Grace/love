@@ -19,7 +19,7 @@ export function js_triple_equal_to_equal(ast) {
     let operator = property_get(node, "operator");
     if (equal(operator, "===")) {
       function lambda2(item) {}
-      let mapped = list_map(list, lambda2);
+      let mapped = list_map(["left", "right"], lambda2);
       let left = property_get(node, "left");
       let right = property_get(node, "right");
       let left_copy = object_copy(left);
