@@ -11,6 +11,7 @@ import { js_atomize_function } from "../../../love/public/src/js_atomize_functio
 import { js_if_else_if_combine } from "../../../love/public/src/js_if_else_if_combine.mjs";
 import { js_declare_assign_null } from "../../../love/public/src/js_declare_assign_null.mjs";
 import { js_let_add } from "../../../love/public/src/js_let_add.mjs";
+import { js_const_to_let } from "../../../love/public/src/js_const_to_let.mjs";
 import { js_function_id_add } from "../../../love/public/src/js_function_id_add.mjs";
 import { js_arrow_to_function } from "../../../love/public/src/js_arrow_to_function.mjs";
 import { js_if_blockify } from "../../../love/public/src/js_if_blockify.mjs";
@@ -29,6 +30,7 @@ export function js_auto_transforms() {
     js_arrow_to_function,
     js_function_id_add,
     js_let_add,
+    js_const_to_let,
     js_declare_assign_null,
     js_if_else_if_combine,
     js_return_atomize,
