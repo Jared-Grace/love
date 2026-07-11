@@ -187,6 +187,20 @@ normpath-equality checks as is_safe_scratchpad_target, so `../` traversal
 or a glob character (which would need real shell expansion this hook
 never performs) both fail closed to a real prompt.
 
+A seventh exception, `is_safe_verify_html_rm`, is the same idea as
+`is_safe_claude_temp_rm` applied to a different Claude-owned location:
+file-only `rm` (same flag restriction, 'v'/'f' only) where every argument is
+an absolute path under `<repo>/public/` whose basename matches
+`tmp_verify_<name>.html`. These are scratch files created for manual
+in-browser verification (see the `verify` skill) - they have to live under
+`public/` rather than the real /tmp scratchpad because that's the directory
+vite actually serves, but they're just as disposable as anything in the
+scratchpad once verification is done. The basename pattern is deliberately
+narrow (fixed `tmp_verify_` prefix, `.html` suffix, no `../` - same
+character-allowlist + normpath-equality checks as everywhere else in this
+file) so this can't be widened into a general "rm anything under public/"
+capability.
+
 A fourth check, `is_dangerous_find`, goes the other direction: it
 *narrows* an existing broad allow rule instead of adding a new auto-allow
 path. `Bash(find:*)` is in permissions.allow for ordinary read-only
@@ -610,6 +624,45 @@ def is_safe_claude_temp_rm(words):
     if not paths:
         return False
     return all(is_safe_claude_temp_path(p) for p in paths)
+
+
+VERIFY_HTML_DIR = os.path.join(REPO_ROOT, "public") + os.sep
+VERIFY_HTML_BASENAME_RE = re.compile(r"^tmp_verify_[A-Za-z0-9_-]+\.html$")
+
+
+def is_safe_verify_html_path(path):
+    """True iff `path` is a plain, already-normalized absolute path to a
+    `tmp_verify_<name>.html` scratch file directly inside this repo's
+    `public/` directory. Same character-allowlist + normpath-equality
+    checks as is_safe_scratchpad_target/is_safe_claude_temp_path, plus a
+    basename pattern so this can't be widened to any file under public/."""
+    if not SAFE_SCRATCHPAD_PATH_RE.match(path):
+        return False
+    if not path.startswith(VERIFY_HTML_DIR):
+        return False
+    if os.path.normpath(path) != path:
+        return False
+    return bool(VERIFY_HTML_BASENAME_RE.match(os.path.basename(path)))
+
+
+def is_safe_verify_html_rm(words):
+    """Exact-shape exception for `rm`, sibling of is_safe_claude_temp_rm:
+    file-only removal (same 'v'/'f'-only flag restriction) where every
+    argument passes is_safe_verify_html_path. See module docstring for why
+    these files exist under public/ instead of the real scratchpad."""
+    if not words or words[0] != "rm":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(c not in RM_SAFE_FLAG_CHARS for c in flag_chars):
+                return False
+            continue
+        paths.append(word)
+    if not paths:
+        return False
+    return all(is_safe_verify_html_path(p) for p in paths)
 
 
 def is_safe_bare_mount(words):
