@@ -9,7 +9,7 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
     let starts_with = false;
     let id = property_get(n, "id");
     function lambda3() {
-      starts_with = js_identifier_name_starts_with(id, starts_with, prefix);
+      starts_with = js_identifier_name_starts_with(id, prefix);
     }
     js_identifier_is_if(node, lambda3);
     return starts_with;
