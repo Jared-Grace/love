@@ -6,7 +6,8 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function js_operator_node_to_call(node, fn, properties) {
+export function js_operator_node_to_call(node, o, properties) {
+  let fn = property_get(o, "fn");
   let code = js_code_call(fn.name);
   let expression = js_parse_expression(code);
   let arguments2 = js_call_arguments_get(expression);
