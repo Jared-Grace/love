@@ -84,6 +84,14 @@ of any new rule - so adding a command to the safe-verb list automatically
 makes the flagless `xargs <that command>` form safe too, without an
 separate xargs-specific entry.
 
+A fifth exception, `is_safe_bare_mount`, auto-allows `mount` invoked with
+zero arguments - the read-only form that just lists current mounts. No
+blanket `Bash(mount:*)` rule exists because `mount SRC DST` (and mount's
+other argument forms - remount, bind mounts, `-o` options, etc.) actually
+changes system state; the exception is deliberately exact-shape (no
+arguments at all, not a flag blacklist) for the same reason `is_safe_sed`
+and the sandboxed-node templates are exact-shape rather than pattern-matched.
+
 Note this hook can only ever narrow what would already prompt or widen an
 existing allow rule's scope to loops/sequences - it never grants a verb
 that wasn't already independently allowed in permissions.allow.
@@ -492,6 +500,20 @@ def is_dangerous_find(words):
     return words[0] == "find" and any(w in DANGEROUS_FIND_FLAGS for w in words[1:])
 
 
+def is_safe_bare_mount(words):
+    """True iff this is `mount` invoked with zero arguments - the read-only
+    form that just lists currently mounted filesystems (equivalent to
+    reading /proc/mounts). No `Bash(mount:*)` entry exists in
+    permissions.allow because `mount SRC DST` (or any of mount's other
+    argument forms - remount, bind mount, -o options, etc.) actually
+    changes system state, the same risk class as why bare `rm` isn't
+    blanket-trusted either. This exception is deliberately exact-shape
+    (no arguments at all) rather than trying to distinguish "safe" flags
+    from "unsafe" ones - mount's flag surface is large enough that a
+    blacklist/whitelist of individual options isn't worth trusting."""
+    return words == ["mount"]
+
+
 def is_safe_sandboxed_node_eval(words):
     """Recognize exactly one template: an ad-hoc `node -e` snippet run
     under real OS/runtime sandboxing rather than trusted by verb prefix.
@@ -629,6 +651,7 @@ def check_simple_commands(tokens, safe_verbs):
             and not is_safe_sandboxed_node_eval(words)
             and not is_safe_sandboxed_node_script(words)
             and not is_safe_sed(words)
+            and not is_safe_bare_mount(words)
         ):
             return False
     return found_command
