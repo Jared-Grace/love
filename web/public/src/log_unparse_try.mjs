@@ -6,6 +6,6 @@ export function log_unparse_try(right) {
   let a = js_node_types_is(right, ["ImportSpecifier", "Identifier"]);
   let match = not(a || list_is(right));
   if (match) {
-    log_unparse(right);
+    log_unparse(log_unparse_try.name, right);
   }
 }
