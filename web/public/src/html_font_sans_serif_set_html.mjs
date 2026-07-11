@@ -9,6 +9,6 @@ export function html_font_sans_serif_set_html() {
   html_roboto_include();
   let style_value = html_font_sans_serif_value();
   html_font_set(html, style_value);
-  const style = text_combine(":font-family: ", html_font_sans_serif_value());
+  let style = text_combine(":font-family: ", html_font_sans_serif_value());
   html_style_button(style);
 }

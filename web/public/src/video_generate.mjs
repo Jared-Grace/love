@@ -7,7 +7,7 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 export async function video_generate(path_image, path_audio, path_output) {
   let d = await audio_duration(path_audio);
   await file_parent_exists_ensure(path_output);
-  const cmd = text_combine_multiple([
+  let cmd = text_combine_multiple([
     '\nffmpeg -y\n-loop 1\n-i "',
     path_image,
     '"\n-i "',

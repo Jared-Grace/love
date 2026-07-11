@@ -10,7 +10,7 @@ export async function function_alias_add_generic(alias) {
     file_path,
     data,
   } = await data_get("aliases", {}, d_path);
-  const exists = property_exists(aliases, alias);
+  let exists = property_exists(aliases, alias);
   if (exists) {
     unaliased = property_get(aliases, alias);
   }

@@ -90,15 +90,15 @@ export function app_reply_choices() {
   let hru = app_reply_response_how_r_u();
   let hru_today = app_reply_response_how_r_u_today();
   let how_family = app_reply_response_how_family();
-  const how_day = app_reply_response_how_day();
+  let how_day = app_reply_response_how_day();
   let live = app_reply_response_live();
-  const called_why = app_reply_call_why_generic("did", "");
-  const how_feel = text_combine(
+  let called_why = app_reply_call_why_generic("did", "");
+  let how_feel = text_combine(
     emoji_pray(),
     " God is helping me be joyful when I suffer",
   );
   let how_feel_today = text_combine_today(how_feel);
-  const s3 = text_the_servant_of_god_first_upper();
+  let s3 = text_the_servant_of_god_first_upper();
   let v = [
     {
       text: text_combine(emoji_pray(), " Amazing"),

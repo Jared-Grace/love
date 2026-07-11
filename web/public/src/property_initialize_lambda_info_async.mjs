@@ -7,7 +7,7 @@ export async function property_initialize_lambda_info_async(
   property_name,
   lambda,
 ) {
-  const exists = property_exists(object, property_name);
+  let exists = property_exists(object, property_name);
   if (not(exists)) {
     let value_set = lambda();
     property_set(object, property_name, value_set);

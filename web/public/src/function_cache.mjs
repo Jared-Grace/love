@@ -19,7 +19,7 @@ export async function function_cache(f_name) {
   let unaliased = property_get(v3, "unaliased");
   let parsed = property_get(v3, "parsed");
   let declaration_call = property_get(parsed, "declaration");
-  const c = invoke_cache_file.name;
+  let c = invoke_cache_file.name;
   let v4 = await function_parse_declaration(c);
   let declaration_cache = property_get(v4, "declaration");
   async function lambda(ast) {

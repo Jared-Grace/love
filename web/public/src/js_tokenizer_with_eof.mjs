@@ -9,7 +9,7 @@ export function js_tokenizer_with_eof(code) {
   let tokens = null;
   try {
     let a = js_parse_generic_arg();
-    const tokenizer = acorn.tokenizer(code, a);
+    let tokenizer = acorn.tokenizer(code, a);
     function end_is(token) {
       let r = token.type.label === "eof";
       return r;

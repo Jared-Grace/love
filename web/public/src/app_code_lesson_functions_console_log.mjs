@@ -37,7 +37,7 @@ export function app_code_lesson_functions_console_log() {
     let r2 = js_code_parenthesis_list();
     let parts = list_between_space_nb(r2);
     let comma = js_code_comma();
-    const inside = [" inside its ", ...parts];
+    let inside = [" inside its ", ...parts];
     html_div_cycle_code(c, [
       "However, ",
       verb,

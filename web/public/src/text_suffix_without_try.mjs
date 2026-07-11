@@ -5,6 +5,6 @@ export function text_suffix_without_try(t, suffix) {
   if (n) {
     return t;
   }
-  const without = text_suffix_without_inner(t, suffix);
+  let without = text_suffix_without_inner(t, suffix);
   return without;
 }

@@ -12,7 +12,7 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { multiply } from "../../../love/public/src/multiply.mjs";
 export function app_designs_universal_main(context) {
   let root = property_get(context, "root");
-  const size = "7px";
+  let size = "7px";
   html_style_background_color_set(root, "gray");
   let colors = ["red", "orange", "yellow", "green", "blue", "purple"];
   let dimensions = [

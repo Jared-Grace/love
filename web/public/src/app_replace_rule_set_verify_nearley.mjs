@@ -18,7 +18,8 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 export function app_replace_rule_set_verify_nearley() {
   let r2 = app_replace_rule_set_strings_simple();
   let rules = app_replace_rule_set_rules_get(r2);
-  const grammarText = '\nbits -> bits di {% (d) => ({\n  [\'left\']: \'bits\',\n  [\'right\']: d\n}) %}\n\nbits -> di {% (d) => ({\n  [\'left\']: \'bits\',\n  [\'right\']: d\n}) %}\n\ndi -> "0" {% (d) => {\n  const val = d.flat(Infinity)[0];\n  return { [\'left\']: "di", [\'right\']: d };\n} %}\n\ndi -> "1" {% (d) => {\n  const val = d.flat(Infinity)[0];\n  return { [\'left\']: "di", [\'right\']: d };\n} %}\n';
+  let grammarText =
+    "\nbits -> bits di {% (d) => ({\n  ['left']: 'bits',\n  ['right']: d\n}) %}\n\nbits -> di {% (d) => ({\n  ['left']: 'bits',\n  ['right']: d\n}) %}\n\ndi -> \"0\" {% (d) => {\n  const val = d.flat(Infinity)[0];\n  return { ['left']: \"di\", ['right']: d };\n} %}\n\ndi -> \"1\" {% (d) => {\n  const val = d.flat(Infinity)[0];\n  return { ['left']: \"di\", ['right']: d };\n} %}\n";
   function lambda(rule) {
     let left = property_get(rule, "left");
     let only = list_single(left);
@@ -32,26 +33,26 @@ export function app_replace_rule_set_verify_nearley() {
     let w = js_code_object(object);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
-    let r = text_combine_multiple([only, ' -> ', joined, ' {% ', code, ' %}']);
+    let r = text_combine_multiple([only, " -> ", joined, " {% ", code, " %}"]);
     return r;
   }
   let mapped = list_map(rules, lambda);
   let joined2 = list_join_newline_2(mapped);
   let v = nearley.Grammar.fromCompiled(grammarParser);
-  const parserGrammar = new nearley.Parser(v);
+  let parserGrammar = new nearley.Parser(v);
   parserGrammar.feed(grammarText);
-  const grammarAst = parserGrammar.results[0];
-  const compiled = compile(grammarAst, {});
-  const jsModule = generate(compiled, "grammar", {
+  let grammarAst = parserGrammar.results[0];
+  let compiled = compile(grammarAst, {});
+  let jsModule = generate(compiled, "grammar", {
     output: "commonjs",
   });
-  const module = {
+  let module = {
     exports: {},
   };
   eval(jsModule);
-  const grammar = module.exports;
+  let grammar = module.exports;
   let v2 = nearley.Grammar.fromCompiled(grammar);
-  const parser = new nearley.Parser(v2);
+  let parser = new nearley.Parser(v2);
   let input = '"_"';
   input = "001";
   parser.feed(input);

@@ -15,7 +15,7 @@ export function app_code_lesson_operators_minus_generic_container_both_sides(
     text_combine(text_before, " on both the left and right sides of the "),
   );
   html_div_cycle_code(c, [u, operator, " : "]);
-  const right = "right";
+  let right = "right";
   let left = "left";
   let combined = code_to(left, operator, right);
   let first = example_get();

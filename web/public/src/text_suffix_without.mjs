@@ -6,6 +6,6 @@ export function text_suffix_without(t, suffix) {
   if (n) {
     error();
   }
-  const without = text_suffix_without_inner(t, suffix);
+  let without = text_suffix_without_inner(t, suffix);
   return without;
 }

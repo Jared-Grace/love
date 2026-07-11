@@ -7,8 +7,8 @@ export async function html_move_animate_rect(
   rect_to,
   duration,
 ) {
-  const x = subtract(rect_to.left, rect_from.left);
-  const y = subtract(rect_to.top, rect_from.top);
+  let x = subtract(rect_to.left, rect_from.left);
+  let y = subtract(rect_to.top, rect_from.top);
   await html_move_animate_translate(component, x, y, duration);
   let distance = hypotenuse(x, y);
   let r = {

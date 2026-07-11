@@ -33,14 +33,14 @@ export function app_search_home(context) {
   );
   let p = app_reply_languages_prompt(root);
   app_reply_buttons_languages(languages_chosen, root, languages);
-  const search_instructions =
+  let search_instructions =
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   let p2 = html_p_text(root, text_combine("2. ", search_instructions));
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
   html_on_enter(input, search);
-  const text = "Search";
+  let text = "Search";
   html_button_wide(root, text, search);
   html_br_2(root);
   let div_results = html_div(root);

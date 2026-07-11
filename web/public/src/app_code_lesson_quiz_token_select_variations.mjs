@@ -47,7 +47,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   let variations = list_map(codes, js_tokenizer_normalized);
   if (expression_is) {
     function lambda6(item) {
-      const expected_last = ";";
+      let expected_last = ";";
       list_remove_last_equal(item, expected_last);
     }
     each(variations, lambda6);

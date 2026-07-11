@@ -22,7 +22,7 @@ export async function app_autopray_main(context) {
       verse_reference,
       v3,
     ]);
-    const c = isaiah_chapters_count();
+    let c = isaiah_chapters_count();
     await sleep(c);
   }
   while (true) {

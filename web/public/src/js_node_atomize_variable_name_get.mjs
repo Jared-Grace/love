@@ -39,7 +39,7 @@ export async function js_node_atomize_variable_name_get(
       let callee = property_get(stack_2, "callee");
       if (js_node_type_is(callee, "Identifier")) {
         let name = property_get(callee, "name");
-        const v4 = await function_exists_strict(name);
+        let v4 = await function_exists_strict(name);
         let exists = property_get(v4, "exists");
         if (exists) {
           let r = await function_parse_strict_declaration(name);

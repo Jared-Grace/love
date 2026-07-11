@@ -14,14 +14,14 @@ import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
 export async function git_push_folder(folder) {
   await catch_log_async(lambda);
   async function lambda() {
-    const now = date_now();
+    let now = date_now();
     let now_iso = date_iso_to(now);
     let property_name = function_name_combine(git_push.name, "when");
     let d_path = user_data_path();
     let joined = path_join([folder, d_path]);
     let before_iso = await data_property_get_generic(joined, property_name);
     let before = date_to(before_iso);
-    const mins = date_diff_mins(now, before);
+    let mins = date_diff_mins(now, before);
     if (mins < 5) {
       return;
     }

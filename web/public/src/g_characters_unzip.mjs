@@ -9,7 +9,7 @@ export async function g_characters_unzip() {
   }
   await folder_files_names_normalize_unzip(path, lambda, "woman_");
   function lambda2(input) {
-    const item = "man";
+    let item = "man";
     let v = text_includes(input, text_combine("_", item));
     return v;
   }

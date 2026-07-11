@@ -20,8 +20,8 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { each_index } from "../../../love/public/src/each_index.mjs";
 export function app_code_lesson_functions_arithmetic() {
   let name_id = app_code_lesson_name_id("functions", ["arithmetic"]);
-  const example_answer_label = "Function: ";
-  const quiz_label = "What is this code rewritten using a function call?";
+  let example_answer_label = "Function: ";
+  let quiz_label = "What is this code rewritten using a function call?";
   let example_question_label = app_code_label_code_question();
   let operators = js_operators_arithmetic();
   let m = app_code_lesson_operators_value_max();
@@ -44,7 +44,7 @@ export function app_code_lesson_functions_arithmetic() {
   let quiz_backwards_label_answer =
     "Rewrite this function call using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
-  const quizzes_get = app_code_lesson_quizzes_unscramble_both(
+  let quizzes_get = app_code_lesson_quizzes_unscramble_both(
     batch_get,
     example_question_label,
     html_text_set_code_dark,

@@ -6,7 +6,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 export async function ebible_apocrypha_videos_generate() {
-  const bible_folder = "engwebu";
+  let bible_folder = "engwebu";
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   async function lambda(item) {
     let book_code = property_get(item, "book_code");

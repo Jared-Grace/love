@@ -7,8 +7,8 @@ import { firebase_storage_download } from "../../../love/public/src/firebase_sto
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
 export async function app_message_download() {
-  const bucket = await firebase_bucket();
-  const [files] = await bucket.getFiles({
+  let bucket = await firebase_bucket();
+  let [files] = await bucket.getFiles({
     prefix: app_message_firebase_path(),
   });
   async function lambda(item) {

@@ -3,13 +3,13 @@ import { app_a } from "../../../love/public/src/app_a.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 export async function app_a_indexeddb_initialize() {
-  const db_name = app_a.name;
-  const store_files = "files";
-  const version = 1;
-  const db = await new Promise(function lambda4(resolve, reject) {
-    const req = indexedDB.open(db_name, version);
+  let db_name = app_a.name;
+  let store_files = "files";
+  let version = 1;
+  let db = await new Promise(function lambda4(resolve, reject) {
+    let req = indexedDB.open(db_name, version);
     req.onupgradeneeded = function lambda() {
-      const db = req.result;
+      let db = req.result;
       let b = db.objectStoreNames.contains(store_files);
       if (not(b)) {
         db.createObjectStore(store_files, {

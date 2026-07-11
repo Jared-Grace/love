@@ -92,7 +92,7 @@ export async function app_g_gospel(
     invoke_multiple_shuffle_2(correct, wrong);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
-    const doxology = app_g_doxology();
+    let doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, doxology);
     async function lambda4() {
       overlay_close();

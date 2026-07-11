@@ -10,7 +10,7 @@ import { js_code_binary } from "../../../love/public/src/js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "../../../love/public/src/app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
-  const operator = js_operator_dot();
+  let operator = js_operator_dot();
   let math_name = "property access, missing";
   let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root) {

@@ -9,7 +9,7 @@ export async function openai_cmd_py_api(
 ) {
   let k = openai_key_folder();
   let result = path_join([k, "openai.txt"]);
-  const script_name = text_combine("openai_", openai_script_name);
+  let script_name = text_combine("openai_", openai_script_name);
   let concated = [result, input_file_path, output_file_path];
   await py_script_run(script_name, concated);
 }

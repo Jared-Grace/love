@@ -26,10 +26,10 @@ export async function app_g_conversation(
   property_set(player, "conversed", true);
   property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
-  const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
+  let greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = text_first_upper_to(greet);
   let s = list_random_item(["nice", "great", "good"]);
-  const a = text_combine(list_random_item(["it's", "it is"]), " ");
+  let a = text_combine(list_random_item(["it's", "it is"]), " ");
   let meet_message = text_combine(
     " ",
     text_first_upper_to(
@@ -63,7 +63,7 @@ export async function app_g_conversation(
     ]);
   }
   let name_player = property_get(player, "name");
-  const npc_says = text_combine_multiple([
+  let npc_says = text_combine_multiple([
     v,
     " ",
     name_player,

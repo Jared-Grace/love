@@ -7,7 +7,7 @@ export function app_calendar_paste_convert_parse(date, hour, zone) {
   let y = date_time_zone_now_year();
   let input_luxon = text_combine_multiple([date, " ", y, " ", hour]);
   let format = date_time_zone_format_google_calendar();
-  const dt = date_time_zone_parse(input_luxon, format, zone);
+  let dt = date_time_zone_parse(input_luxon, format, zone);
   function lambda() {
     let r = [dt.invalidReason, dt.invalidExplanation];
     return r;

@@ -6,11 +6,11 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function messenger_reply_login() {
   text_combine("TODO: use this instead: ", playwright_session_save_facebook);
   let chromium = await playwright_chromium();
-  const browser = await chromium.launch({
+  let browser = await chromium.launch({
     headless: false,
   });
-  const context = await browser.newContext();
-  const page = await context.newPage();
+  let context = await browser.newContext();
+  let page = await context.newPage();
   let v = messenger_reply_url();
   await page.goto(v);
   await command_line_read_empty();

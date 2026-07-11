@@ -8,9 +8,9 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_identifiers_underscores() {
-  const separator_valid = "_";
+  let separator_valid = "_";
   let separator_valid_name = "underscore";
-  const separator_invalid = "-";
+  let separator_invalid = "-";
   let separator_invalid_name = "hyphen";
   let r = app_code_lesson_identifiers_underscores_generic(
     separator_invalid_name,

@@ -10,7 +10,7 @@ export async function firebase_upload_text_generic(
     destination,
   });
   let buffer = Buffer.from(content);
-  const settings = {
+  let settings = {
     contentType: content_type,
     gzip: true,
   };

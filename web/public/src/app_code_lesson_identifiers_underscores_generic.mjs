@@ -43,7 +43,7 @@ export function app_code_lesson_identifiers_underscores_generic(
     invoke_multiple(defines);
     defines_after(root);
     let c2 = app_code_container_light_blue(root);
-    const identifier_symbols_types = ["letters"];
+    let identifier_symbols_types = ["letters"];
     list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
     html_div_text(
       c2,
@@ -119,8 +119,8 @@ export function app_code_lesson_identifiers_underscores_generic(
     return mapped3;
   }
   let name_id = app_code_lesson_name_id("identifiers", [
-    text_combine(separator_valid_name, 's allowed'),
-    text_combine(separator_invalid_name, 's not'),
+    text_combine(separator_valid_name, "s allowed"),
+    text_combine(separator_invalid_name, "s not"),
   ]);
   let r5 = app_code_lesson_identifiers_valid(
     name_id,

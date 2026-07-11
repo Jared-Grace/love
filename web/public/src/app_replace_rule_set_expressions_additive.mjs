@@ -2,7 +2,7 @@ import { app_replace_rule_set_expresions_additive_abbreviations } from "../../..
 import { app_replace_rule_set_expresions_additive_rules } from "../../../love/public/src/app_replace_rule_set_expresions_additive_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_additive() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_expresions_additive_rules(rules);
   list_add(rules, "ex > ade");
   let abbreviations = {};

@@ -6,7 +6,7 @@ export async function clipboard_paste() {
     paste = await navigator.clipboard.readText();
     return paste;
   }
-  const clipboard = await import("clipboardy");
+  let clipboard = await import("clipboardy");
   paste = await clipboard.default.read();
   return paste;
 }

@@ -21,7 +21,7 @@ export function app_code_lesson_quizzes_generic(
   batch_get,
   forwards_code,
 ) {
-  const backwards = {
+  let backwards = {
     question_label: backwards_question_label,
     on_question: backwards_on_question,
     answer_label: backwards_answer_label,
@@ -30,7 +30,7 @@ export function app_code_lesson_quizzes_generic(
     answer_property: "question",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
-  const forwards = {
+  let forwards = {
     question_label: forwards_question_label,
     on_question: forwards_on_question,
     answer_label: forwards_answer_label,

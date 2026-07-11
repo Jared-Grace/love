@@ -27,7 +27,7 @@ export function app_g_menu(overlay, player) {
       await app_g_player_save(player);
       close();
     }
-    const text = text_combine_multiple([
+    let text = text_combine_multiple([
       emoji_bow(),
       " Heavenly Father, please bless this next conversation, in Jesus' name, amen! ",
       emoji_pray(),

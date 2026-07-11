@@ -15,6 +15,6 @@ export function js_visit_function_nodes_names(ast) {
     }
     js_visit_function_nodes(ast, lambda_declaration);
   }
-  const names = list_adder_unique(lambda2);
+  let names = list_adder_unique(lambda2);
   return names;
 }

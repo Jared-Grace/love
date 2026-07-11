@@ -9,7 +9,7 @@ export async function app_g_click(e, div_map, player_img_c, refresh) {
   let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
   let player = await app_g_player_get();
-  const clicked_on_player = g_distance_0(player, clicked_coordinates);
+  let clicked_on_player = g_distance_0(player, clicked_coordinates);
   if (clicked_on_player) {
     await app_g_menu_new(div_map);
   } else {

@@ -10,23 +10,23 @@ import { text_combine_multiple } from "../../../love/public/src/text_combine_mul
 export async function command_line_generic(command, extra) {
   arguments_assert(arguments, 2);
   text_is_assert(command);
-  const r3 = await import("child_process");
+  let r3 = await import("child_process");
   let ci = property_delete_if_exists_fn(
     extra,
     command_line_generic_code_ignore,
   );
   let code_ignore = property_get(ci, "value");
   let spawn = property_get(r3, "spawn");
-  const match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+  let match = command.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
   let r5 = parseCommand(command);
   let args = property_get(r5, "args");
   let cmd = property_get(r5, "cmd");
   let result = new Promise(function lambda5(resolve, reject) {
-    const options = {
+    let options = {
       ...extra,
       shell: false,
     };
-    const child = spawn(cmd, args, options);
+    let child = spawn(cmd, args, options);
     let stdout = "";
     let stderr = "";
     function lambda(data) {
@@ -47,11 +47,11 @@ export async function command_line_generic(command, extra) {
         reject(
           new Error(
             text_combine_multiple([
-              'Command exited with code ',
+              "Command exited with code ",
               code,
-              '\n\nSTDOUT:\n',
+              "\n\nSTDOUT:\n",
               stdout,
-              '\n\nSTDERR:\n',
+              "\n\nSTDERR:\n",
               stderr,
             ]),
           ),
@@ -81,11 +81,11 @@ export async function command_line_generic(command, extra) {
         "Shell operators are not allowed in command_line_generic",
       );
     }
-    const args = [];
+    let args = [];
     let current = "";
     let inQuotes = false;
     for (let i = 0; i < command.length; i++) {
-      const c = command[i];
+      let c = command[i];
       if (c === '"') {
         inQuotes = not(inQuotes);
         continue;
@@ -109,15 +109,15 @@ export async function command_line_generic(command, extra) {
     return r2;
   }
   return;
-  const c = await import("child_process");
+  let c = await import("child_process");
   let exec = property_get(c, "exec");
-  const u = await import("util");
+  let u = await import("util");
   let promisify = property_get(u, "promisify");
-  const execAsync = promisify(exec);
-  const options = {
+  let execAsync = promisify(exec);
+  let options = {
     encoding: "utf8",
   };
   object_merge_set(options, extra);
-  const stdout = await execAsync(command, options);
+  let stdout = await execAsync(command, options);
   return stdout;
 }

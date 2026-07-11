@@ -13,7 +13,7 @@ export function js_unparse(ast) {
   }
   let a3 = js_visit_filter(ast);
   if (not(a3)) {
-    const o = {
+    let o = {
       ast,
     };
     error_json(o);

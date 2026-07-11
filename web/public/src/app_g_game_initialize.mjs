@@ -12,7 +12,7 @@ export async function app_g_game_initialize() {
   let rows = app_g_map_generate();
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_get(coordinates);
-  const player_img = g_player_img_get();
+  let player_img = g_player_img_get();
   let npcs = g_npcs_initialize(player_img, coordinates_land);
   let player = g_player_initialize(player_img, coordinates_land);
   await app_g_game_save({

@@ -4,7 +4,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { undefined_not_is_assert_lambda } from "../../../love/public/src/undefined_not_is_assert_lambda.mjs";
 export function property_initialize_lambda(object, property_name, lambda) {
-  const exists = property_exists(object, property_name);
+  let exists = property_exists(object, property_name);
   if (not(exists)) {
     let value_set = lambda();
     property_set(object, property_name, value_set);

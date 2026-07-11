@@ -1,11 +1,11 @@
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put_backend(db_get, store, key, next) {
-  const db = await db_get();
+  let db = await db_get();
   if (false) {
-    const previous = await new Promise(function lambda3(resolve, reject) {
-      const tx = db.transaction(store, "readonly");
-      const s = tx.objectStore(store);
-      const req = s.get(key);
+    let previous = await new Promise(function lambda3(resolve, reject) {
+      let tx = db.transaction(store, "readonly");
+      let s = tx.objectStore(store);
+      let req = s.get(key);
       req.onsuccess = function lambda() {
         let v = resolve(req.result ?? null);
         return v;
@@ -16,8 +16,8 @@ export async function indexeddb_put_backend(db_get, store, key, next) {
       };
     });
   }
-  const tx = db.transaction(store, "readwrite");
-  const s = tx.objectStore(store);
+  let tx = db.transaction(store, "readwrite");
+  let s = tx.objectStore(store);
   s.put(next);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;

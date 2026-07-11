@@ -1,6 +1,6 @@
 export function bible_verses_uplifting() {
   ["Exodus 14:14", "Moses said be still, then God said move"];
-  const verses_uplifting = [
+  let verses_uplifting = [
     "Genesis 1:31",
     "Genesis 12:2-3",
     "Genesis 28:15",

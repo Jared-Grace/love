@@ -14,8 +14,8 @@ export function graph_search_depth_first(
   target,
 ) {
   let mt = mapper(target);
-  const visited = new Set();
-  const queue = [];
+  let visited = new Set();
+  let queue = [];
   queue.push({
     node: start,
     data: null,
@@ -23,7 +23,7 @@ export function graph_search_depth_first(
     depth: 0,
   });
   while (queue.length > 0) {
-    const q_current = list_pop_first(queue);
+    let q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
     let node = property_get(q_current, "node");
     let json = mapper(node);
@@ -42,8 +42,8 @@ export function graph_search_depth_first(
     if (depth >= max_depth) {
       continue;
     }
-    const neighbors = neighbors_get(node);
-    for (const n of neighbors) {
+    let neighbors = neighbors_get(node);
+    for (let n of neighbors) {
       let data = property_get(n, "data");
       let neighbor = property_get(n, "neighbor");
       let json3 = mapper(neighbor);

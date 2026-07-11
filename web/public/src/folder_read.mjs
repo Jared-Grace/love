@@ -8,6 +8,6 @@ export async function folder_read(path_folder) {
     return unique;
   }
   let fs = await import("fs");
-  const all = await fs.promises.readdir(path_folder);
+  let all = await fs.promises.readdir(path_folder);
   return all;
 }

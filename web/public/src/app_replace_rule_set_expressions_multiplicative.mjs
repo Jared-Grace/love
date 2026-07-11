@@ -2,7 +2,7 @@ import { app_replace_rule_set_expressions_multiplicative_abbreviations } from ".
 import { app_replace_rule_set_expressions_multiplicative_rules } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_multiplicative() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_expressions_multiplicative_rules(rules);
   list_add(rules, "ex > mue");
   let abbreviations = {};

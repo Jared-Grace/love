@@ -34,7 +34,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let verse_numbers = list_map(list, lambda2);
   function lambda2(item2) {
     let t = html_parse_text(d, item2);
-    const name = "id";
+    let name = "id";
     let id = html_parse_attr(d, item2, name);
     let without = text_prefix_without(id, "V");
     let i = roman_to_integer(without);

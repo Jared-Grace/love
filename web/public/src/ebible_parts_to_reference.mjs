@@ -21,7 +21,7 @@ export function ebible_parts_to_reference(
     let last = list_last(unique);
     verse_numbers_s = text_combine_multiple([first, "-", last]);
   }
-  const reference = text_combine_multiple([
+  let reference = text_combine_multiple([
     book_name,
     " ",
     chapter_name,

@@ -29,8 +29,8 @@ export function app_message_provide_generic(category, emoji, context, verse) {
   let value_previous_get = function lambda2() {
     return null;
   };
-  const yes = "yes";
-  const choices = [
+  let yes = "yes";
+  let choices = [
     {
       value: "no",
       title: text_combine_multiple([

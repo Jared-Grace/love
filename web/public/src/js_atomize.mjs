@@ -12,7 +12,7 @@ export async function js_atomize(ast) {
   async function lambda(v) {
     let stack = property_get(v, "stack");
     let offset = 0;
-    const stack_1 = list_get_end_1(stack);
+    let stack_1 = list_get_end_1(stack);
     let list_possible = stack_1;
     function lambda3() {
       offset = 1;

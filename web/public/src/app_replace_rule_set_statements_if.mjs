@@ -4,7 +4,7 @@ import { app_replace_rule_set_statements_if_rules } from "../../../love/public/s
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_rule_set_statements_if() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_statements_if_rules(rules);
   list_add_multiple(rules, [
     "ex > x < 0",

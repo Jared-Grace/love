@@ -53,7 +53,7 @@ export function app_code_lesson_operators_minus_generic(
   let batch = app_code_batch_question_answer_fns(batch_get, symbols_to_answer);
   function above(root) {
     let combined = text_combine_right_fn(operator, right_random_get);
-    const operator_name_math_articled = text_articled_pad_space(operator_name);
+    let operator_name_math_articled = text_articled_pad_space(operator_name);
     app_code_container_light_blue_cycle_code(root, [
       text_combine_multiple([
         "In math and JavaScript, ",
@@ -81,7 +81,7 @@ export function app_code_lesson_operators_minus_generic(
       " : ",
     ]);
     let combined2 = text_combine_right_fn(operator, right_random_get);
-    const right2 = "right";
+    let right2 = "right";
     let combined4 = text_combine(operator, right2);
     html_div_code_multiple(c3, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);

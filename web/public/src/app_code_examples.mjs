@@ -33,8 +33,8 @@ export function app_code_examples(context) {
   app_code_example_answer_gap(c);
   let another = app_code_lesson_text_example_another(lesson);
   let example_count = property_get(lesson, "example_count");
-  const plural = example_count >= 2;
-  const root_word = "example";
+  let plural = example_count >= 2;
+  let root_word = "example";
   let is_a = null;
   if (plural) {
     is_a = text_combine_multiple(["are some ", root_word, "s:"]);
@@ -75,7 +75,7 @@ export function app_code_examples(context) {
       app_code_lesson_previous_set(context);
       await app_shared_screen_set(context, app_code_examples);
     }
-    const backs = [];
+    let backs = [];
     list_add(backs, {
       text: "take me back to the previous lesson",
       on_click: previous,

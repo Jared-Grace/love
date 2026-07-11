@@ -111,7 +111,11 @@ export async function app_bible_home_generic(context, lambda$a) {
     return r;
   }
   let fetched = [];
-  await list_map_unordered_add_async(languages_chosen, lambda_language, fetched);
+  await list_map_unordered_add_async(
+    languages_chosen,
+    lambda_language,
+    fetched,
+  );
   let languages_available = list_filter_null_not_is(fetched);
   function lambda_text_map(item) {
     let verses_l = property_get(item, "verses");

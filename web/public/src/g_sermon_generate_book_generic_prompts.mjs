@@ -147,7 +147,7 @@ export async function g_sermon_generate_book_generic_prompts(
         let user_prompt = list_join(mapped, " :: ");
         return user_prompt;
       }
-      const prompt_user = text_combine_multiple([
+      let prompt_user = text_combine_multiple([
         "Here is the context: ",
         user_prompt_before,
         " :::: ",

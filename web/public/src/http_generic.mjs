@@ -17,12 +17,12 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { divide } from "../../../love/public/src/divide.mjs";
 export async function http_generic(url, options) {
-  const method = options.method || "GET";
-  const body = options.body || null;
-  const b = browser_is();
+  let method = options.method || "GET";
+  let body = options.body || null;
+  let b = browser_is();
   if (b) {
     async function lambda3() {
-      const r = {
+      let r = {
         method,
       };
       let exists = property_exists(options, "body");
@@ -35,11 +35,11 @@ export async function http_generic(url, options) {
           body: json_to(body),
         });
       }
-      const response = await fetch(url, r);
+      let response = await fetch(url, r);
       if (not(response.ok)) {
         error("Failed to fetch file");
       }
-      const buf = await response.arrayBuffer();
+      let buf = await response.arrayBuffer();
       return buf;
     }
     let v = await html_loading(lambda3);
@@ -58,9 +58,9 @@ export async function http_generic(url, options) {
   let h = await import(text_combine("http", h_name));
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
-    const urlObj = new URL(url);
+    let urlObj = new URL(url);
     function lambda5(res) {
-      const chunks = [];
+      let chunks = [];
       function lambda2(chunk) {
         chunks.push(chunk);
       }
@@ -68,8 +68,8 @@ export async function http_generic(url, options) {
       res.on("data", i);
       function on_end() {
         let statusCode = property_get(res, "statusCode");
-        const d = divide(statusCode, 100);
-        const rounded = round(d);
+        let d = divide(statusCode, 100);
+        let rounded = round(d);
         assert_json(rounded === 2, {
           url,
           statusCode,
@@ -80,7 +80,7 @@ export async function http_generic(url, options) {
       let i2 = catch_call_later(reject, on_end);
       res.on("end", i2);
     }
-    const a = {
+    let a = {
       hostname: urlObj.hostname,
       port: urlObj.port || (swHttps ? 443 : 80),
       path: text_combine(urlObj.pathname, urlObj.search),
@@ -94,7 +94,7 @@ export async function http_generic(url, options) {
           : {}),
       },
     };
-    const req = h.request(a, lambda5);
+    let req = h.request(a, lambda5);
     req.on("error", reject);
     if (body) {
       let json = json_to(body);

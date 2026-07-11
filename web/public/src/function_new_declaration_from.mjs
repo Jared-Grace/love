@@ -13,9 +13,9 @@ import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_
 export async function function_new_declaration_from(declaration) {
   let f_name = js_function_declaration_name(declaration);
   await function_unalias_exists_not_assert(f_name);
-  const f_path = function_name_to_path(f_name);
+  let f_path = function_name_to_path(f_name);
   let code_declaration = js_unparse(declaration);
-  const contents = js_code_export(code_declaration);
+  let contents = js_code_export(code_declaration);
   let ast = js_parse(contents);
   await js_imports_missing_add_all(ast);
   let contents_import = js_unparse(ast);

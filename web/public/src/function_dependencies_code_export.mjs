@@ -18,11 +18,11 @@ export async function function_dependencies_code_export(f_name) {
       let g = js_code_export_wrapped(gn);
       let parts = [global_init, dependencies, e, g];
       let code = list_join_newline(parts);
-      const blob = new Blob([code], {
+      let blob = new Blob([code], {
         type: "text/javascript",
       });
-      const url = URL.createObjectURL(blob);
-      const mod = await import(url);
+      let url = URL.createObjectURL(blob);
+      let mod = await import(url);
       let fn = property_get(mod, f_name);
       let global = property_get(mod, gn);
       let v3 = {

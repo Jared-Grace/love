@@ -70,8 +70,8 @@ export async function app_reply_main_old(context) {
   async function verse_random_add() {
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
-    const translations = [];
-    const v = {
+    let translations = [];
+    let v = {
       verses,
       reference,
       translations,
@@ -191,7 +191,7 @@ export async function app_reply_main_old(context) {
         verse_number,
       ]);
     }
-    const other = [];
+    let other = [];
     function lambda11(v) {
       let reference = property_get(v, "reference");
       list_add(other, reference);

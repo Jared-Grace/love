@@ -34,7 +34,7 @@ export async function app_gloss_bible_home_generic(
   let first2 = list_first(passages);
   let verses = property_get(a, "verses");
   let passage = property_get(a, "passage");
-  const prop = "p";
+  let prop = "p";
   let last = list_last(verses);
   let p = property_get(last, prop);
   let h = html_hr(p);

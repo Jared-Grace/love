@@ -11,7 +11,7 @@ export async function function_params_consolidate(f_name) {
   async function lambda(ast) {
     let declaration = js_flo(ast);
     let params = js_function_declaration_params_get(declaration);
-    const params_names = js_identifiers_to_names(params);
+    let params_names = js_identifiers_to_names(params);
     function lambda2(param_name) {
       let v = js_property_identifier(param_name);
       return v;

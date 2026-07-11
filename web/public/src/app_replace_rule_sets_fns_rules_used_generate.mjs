@@ -40,7 +40,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       let rules_used = list_map(goals, lambda2);
       let item = property_get(a, "item");
       let properties = js_object_expression_properties(item);
-      const p_name = "rules_used";
+      let p_name = "rules_used";
       let expression = js_object_to_expression(rules_used);
       let s = js_string(p_name);
       let p = js_property(s, expression);

@@ -57,7 +57,7 @@ export function app_g_study(player, overlay, close) {
         verse_numbers,
       );
       let books = app_g_main_books();
-      const text = app_g_passage_to_reference(passage, chapter_code, books);
+      let text = app_g_passage_to_reference(passage, chapter_code, books);
       let c = app_g_container_text(overlay, text);
       html_bold_mild(c);
       html_style_background_color_set(c, "#ffffffcd");
@@ -66,7 +66,7 @@ export function app_g_study(player, overlay, close) {
         "If you were preaching from this Bible passage, what would you say?",
       );
       let div = html_div(overlay);
-      const property = "sermon";
+      let property = "sermon";
       let sermon_correct = property_get(passage, property);
       let sermon_correct_list = app_g_openai_split(sermon_correct);
       let sermon_index = 0;

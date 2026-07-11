@@ -30,7 +30,7 @@ export async function webpack_build_generic(
   let r = file_name_js(a_name);
   async function lambda(entry) {
     await file_overwrite(entry, joined);
-    const entry_path = folder_current_join(entry);
+    let entry_path = folder_current_join(entry);
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
       [webpack_config_filename()]: r,

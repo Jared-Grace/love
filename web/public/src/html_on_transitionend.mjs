@@ -10,7 +10,7 @@ export async function html_on_transitionend(
     function handler(e) {
       let includes = list_includes(properties, e.propertyName);
       if (includes) {
-        const type = "transitionend";
+        let type = "transitionend";
         html_listener_remove(c, type, handler);
         resolve();
       }

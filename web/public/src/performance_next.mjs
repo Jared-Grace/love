@@ -8,7 +8,7 @@ import { performance_now } from "../../../love/public/src/performance_now.mjs";
 import { subtract } from "../../../love/public/src/subtract.mjs";
 export function performance_next(p, category) {
   arguments_assert(arguments, 2);
-  const time = performance_now();
+  let time = performance_now();
   let delta = null;
   let e = list_empty_not_is(p);
   if (e) {

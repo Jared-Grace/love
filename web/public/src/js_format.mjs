@@ -15,7 +15,7 @@ export async function js_format(code) {
     parserBabel = await import("prettier/plugins/babel");
     plugins = [parserBabel];
   }
-  const formatted = await pr.format(code, {
+  let formatted = await pr.format(code, {
     parser: "babel",
     plugins: plugins,
     braceStyle: "allman",

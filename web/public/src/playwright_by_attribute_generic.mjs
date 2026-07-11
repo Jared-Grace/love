@@ -5,10 +5,12 @@ export async function playwright_by_attribute_generic(
   value,
   compare,
 ) {
-  const elements = await page.locator(text_combine_multiple(['[', name, ']'])).elementHandles();
-  const filtered = [];
-  for (const el of elements) {
-    const a = await el.getAttribute(name);
+  let elements = await page
+    .locator(text_combine_multiple(["[", name, "]"]))
+    .elementHandles();
+  let filtered = [];
+  for (let el of elements) {
+    let a = await el.getAttribute(name);
     if (compare(a, value)) {
       filtered.push(el);
     }

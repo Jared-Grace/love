@@ -21,12 +21,12 @@ import { js_operator_dot_name } from "../../../love/public/src/js_operator_dot_n
 import { js_operator_dot } from "../../../love/public/src/js_operator_dot.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_code_lesson_operators_dot_numbers() {
-  const operator = js_operator_dot();
-  const operator_name = js_operator_dot_name();
+  let operator = js_operator_dot();
+  let operator_name = js_operator_dot_name();
   let math_name = "property access, numbers";
   let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root) {
-    const operator_name_math_articled = text_articled_pad_space(operator_name);
+    let operator_name_math_articled = text_articled_pad_space(operator_name);
     let c4 = app_code_container_light_blue(root);
     let div = html_div_cycle_code(c4, [
       text_combine_multiple([

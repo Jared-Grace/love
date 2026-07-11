@@ -28,6 +28,6 @@ export function js_imports_declarations_externals(ast) {
     }
     each(vs, lambda);
   }
-  const externals = list_adder_unique(lambda2);
+  let externals = list_adder_unique(lambda2);
   return externals;
 }
