@@ -116,6 +116,23 @@ generic `Bash(unshare:*)` or `Bash(node:*)` rule is added to
 permissions.allow - that would let the native prefix matcher wave
 through `unshare ... -- rm -rf ~` or `node -e '<anything>'` unrelated to
 this template.
+
+A second exact template, `is_safe_sandboxed_node_script`, extends the
+same idea to running a *file* instead of an inline `-e` string:
+`unshare --net --map-root-user -- node --permission
+--allow-fs-read=<abs path under this repo> scripts/temp/<name>.mjs`.
+Same sandboxing guarantee, same "exact shape or reject" posture, but two
+extra restrictions specific to running a file: (1) `--allow-fs-write` is
+never part of the accepted template, so these scripts can only read and
+print, never modify the repo - if a scratch script needs to write, that
+is deliberately not handled by this template; (2) the script path itself
+must resolve (same normpath-equality + character-allowlist check used
+for the scratchpad case) to something under `scripts/temp/` specifically
+- this keeps the template from being reusable to silently run a script
+with real side effects elsewhere in the repo (e.g. `scripts/g.mjs`).
+`--allow-fs-read` still grants read of the whole repo tree (not just
+`scripts/temp/`), same as the `-e` template - acceptable here because
+this repo keeps all secrets outside the repo folder.
 """
 import json
 import os
@@ -137,6 +154,11 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file_
 SCRATCHPAD_PREFIX = f"/tmp/claude-{os.getuid()}/{REPO_ROOT.replace(os.sep, '-')}/"
 
 SAFE_SCRATCHPAD_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
+
+# Same character allowlist as the scratchpad case, applied to the
+# relative script path accepted by is_safe_sandboxed_node_script.
+SAFE_TEMP_SCRIPT_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
+SCRIPTS_TEMP_PREFIX = "scripts/temp/"
 
 RESERVED_WORDS = {
     "for", "in", "do", "done", "if", "then", "elif", "else", "fi",
@@ -422,6 +444,42 @@ def is_safe_sandboxed_node_eval(words):
     return words[7] == "-e"
 
 
+def is_safe_temp_script_path(path):
+    """True iff `path` is a plain, already-normalized relative path
+    strictly inside this project's scripts/temp/ directory, with a
+    .mjs extension. Mirrors is_safe_scratchpad_target's checks (no
+    shell metacharacters, no ../ traversal) applied to a different
+    target directory."""
+    if not SAFE_TEMP_SCRIPT_PATH_RE.match(path):
+        return False
+    if not path.startswith(SCRIPTS_TEMP_PREFIX):
+        return False
+    if os.path.normpath(path) != path:
+        return False
+    return path.endswith(".mjs")
+
+
+def is_safe_sandboxed_node_script(words):
+    """Sibling of is_safe_sandboxed_node_eval: same sandboxing template,
+    but running a script file under scripts/temp/ instead of an inline
+    -e string. See module docstring for the two extra restrictions
+    (read-only, path pinned to scripts/temp/) this adds."""
+    if len(words) != 8:
+        return False
+    if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
+        return False
+    if words[5] != "--permission":
+        return False
+    if not words[6].startswith("--allow-fs-read="):
+        return False
+    path = words[6][len("--allow-fs-read="):]
+    if not os.path.isabs(path) or os.path.normpath(path) != path:
+        return False
+    if path != REPO_ROOT and not path.startswith(REPO_ROOT + os.sep):
+        return False
+    return is_safe_temp_script_path(words[7])
+
+
 def check_simple_commands(tokens, safe_verbs):
     groups = split_statements(tokens)
     if not groups:
@@ -435,7 +493,11 @@ def check_simple_commands(tokens, safe_verbs):
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
         if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", words[0]):
             raise Unsupported("variable assignment prefix")
-        if verb_of(words) not in safe_verbs and not is_safe_sandboxed_node_eval(words):
+        if (
+            verb_of(words) not in safe_verbs
+            and not is_safe_sandboxed_node_eval(words)
+            and not is_safe_sandboxed_node_script(words)
+        ):
             return False
     return found_command
 
