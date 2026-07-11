@@ -1,0 +1,16 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+export function js_const_to_let(ast) {
+  function lambda(v) {
+    let node = property_get(v, "node");
+    let kind = property_get(node, "kind");
+    let is_const = equal(kind, "const");
+    if (is_const) {
+      property_set(node, "kind", "let");
+    }
+  }
+  js_visit_type(ast, "VariableDeclaration", lambda);
+  return;
+}
