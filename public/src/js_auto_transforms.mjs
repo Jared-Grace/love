@@ -17,9 +17,11 @@ import { js_if_blockify } from "../../../love/public/src/js_if_blockify.mjs";
 import { js_arrow_blockify } from "../../../love/public/src/js_arrow_blockify.mjs";
 import { js_await_add } from "../../../love/public/src/js_await_add.mjs";
 import { js_bang_to_not } from "../../../love/public/src/js_bang_to_not.mjs";
+import { js_triple_equal_to_equal } from "../../../love/public/src/js_triple_equal_to_equal.mjs";
 export function js_auto_transforms() {
   let transforms = [
     js_bang_to_not,
+    js_triple_equal_to_equal,
     js_await_add,
     js_dollar,
     js_arrow_blockify,
