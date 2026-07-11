@@ -9,5 +9,6 @@ export async function lock_force_release(lock_name) {
   let result = path_join([f_path, lock_name]);
   let lock_path = text_combine(result, ".lock");
   await folder_delete(lock_path);
-  log_keep(lock_force_release.name, text_combine("removed ", lock_path));
+  let message = text_combine("removed ", lock_path);
+  log_keep(lock_force_release.name, message);
 }
