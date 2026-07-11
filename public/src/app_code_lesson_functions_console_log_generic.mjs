@@ -17,7 +17,6 @@ export function app_code_lesson_functions_console_log_generic(
   lambda$code,
   name_id_rights,
 ) {
-  const fn_name = "console.log";
   let data = {};
   function lambda() {
     function lambda3(la) {
@@ -37,6 +36,7 @@ export function app_code_lesson_functions_console_log_generic(
     return list;
   }
   let next_number = list_iterator_refillable(lambda);
+  const fn_name = "console.log";
   function batch_get() {
     let v = next_number();
     let code = js_code_call_arg(fn_name, v);
