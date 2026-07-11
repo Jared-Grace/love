@@ -1,3 +1,4 @@
+import { js_find_function_type_name_starts_with } from "../../../love/public/src/js_find_function_type_name_starts_with.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "../../../love/public/src/app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_find_return_argument_set } from "../../../love/public/src/js_find_return_argument_set.mjs";
 import { js_call_add_before_return } from "../../../love/public/src/js_call_add_before_return.mjs";
@@ -37,7 +38,10 @@ export async function sandbox() {
   await function_current_set(f_name);
   ("current_commands: ");
   {
-    let r = await function_node_select_args(select_fn_name, args_comma);
+    let r = await function_node_select_args(
+      js_find_function_type_name_starts_with.name,
+      "ab",
+    );
   }
   return;
   ("below is functionality that has been used in the past: ");
