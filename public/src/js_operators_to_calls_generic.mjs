@@ -26,11 +26,16 @@ export async function js_operators_to_calls_generic(ast, operators, properties, 
     each(usable, lambda2);
   }
   js_visit_type(ast, type, lambda);
+  let names = js_operators_to_fn_name(usable);
+  await js_imports_missing_add_specified(ast, names);
+  return;
+}
+
+function js_operators_to_fn_name(usable) {
   function lambda_name(o) {
     let n = property_path_get(o, ["fn", "name"]);
     return n;
   }
   let names = list_map(usable, lambda_name);
-  await js_imports_missing_add_specified(ast, names);
-  return;
+  return names;
 }
