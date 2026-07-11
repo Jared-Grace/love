@@ -1,4 +1,4 @@
-import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { js_visit_import_specifiers } from "../../../love/public/src/js_visit_import_specifiers.mjs";
 import { js_visit_function_nodes } from "../../../love/public/src/js_visit_function_nodes.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
@@ -21,7 +21,7 @@ export function js_identifiers_function_names(ast) {
       let name = property_get(local, "name");
       la(name);
     }
-    js_visit_type(ast, "ImportSpecifier", lambda_import);
+    js_visit_import_specifiers(ast, lambda_import);
   }
   const names = list_adder_unique(lambda2);
   return names;
