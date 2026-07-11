@@ -171,6 +171,22 @@ a/i/c text-insertion commands, negation (`!`), etc. - falls through to a
 real prompt rather than being pattern-matched loosely, same posture as
 every other exception in this file.
 
+A sixth exception, `is_safe_claude_temp_rm`, is the other direction from
+the sandboxed-node/sed templates: instead of trusting one exact command
+shape regardless of target, it trusts one narrow *verb* (`rm`, file-only -
+no -r/-R/-d/long-options) whenever every argument resolves to a path
+strictly inside a short fixed list of directories nothing but Claude Code
+tooling ever writes to (CLAUDE_TEMP_RM_PREFIXES: this repo's scratchpad,
+plus the /tmp/claude-code-lock-claude/<session>/ dirs the lock hooks use
+for their hold/holder.pid/acquired sentinel files). Bare `rm` is
+deliberately never a trusted verb anywhere else in this file - the whole
+point here is that "target is provably inside a Claude-owned /tmp
+directory" is a narrower, safer condition than "verb is rm", not a
+loosening of it. Path validation reuses the same character-allowlist +
+normpath-equality checks as is_safe_scratchpad_target, so `../` traversal
+or a glob character (which would need real shell expansion this hook
+never performs) both fail closed to a real prompt.
+
 A fourth check, `is_dangerous_find`, goes the other direction: it
 *narrows* an existing broad allow rule instead of adding a new auto-allow
 path. `Bash(find:*)` is in permissions.allow for ordinary read-only
@@ -215,6 +231,17 @@ SAFE_SCRATCHPAD_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 # relative script path accepted by is_safe_sandboxed_node_script.
 SAFE_TEMP_SCRIPT_PATH_RE = re.compile(r"^[A-Za-z0-9_./-]+$")
 SCRIPTS_TEMP_PREFIX = "scripts/temp/"
+
+# Directories that only Claude Code's own tooling writes into - never a
+# real project path a user would mind losing a file from. Used by
+# is_safe_claude_temp_rm below. Deliberately a short fixed list, not a
+# broad pattern like "/tmp/claude-*", so this can't be widened by
+# accident to some unrelated /tmp/claude-flavored directory a human
+# happens to be using for something else.
+CLAUDE_TEMP_RM_PREFIXES = (
+    SCRATCHPAD_PREFIX,
+    "/tmp/claude-code-lock-claude/",
+)
 
 RESERVED_WORDS = {
     "for", "in", "do", "done", "if", "then", "elif", "else", "fi",
@@ -500,6 +527,61 @@ def is_dangerous_find(words):
     return words[0] == "find" and any(w in DANGEROUS_FIND_FLAGS for w in words[1:])
 
 
+def is_safe_claude_temp_path(path):
+    """True iff `path` is a plain, already-normalized path strictly inside
+    one of CLAUDE_TEMP_RM_PREFIXES. Same checks as
+    is_safe_scratchpad_target (character allowlist, prefix match,
+    normpath-equality to block '../' traversal and '//' collapsing), just
+    against a small set of prefixes instead of one."""
+    if not SAFE_SCRATCHPAD_PATH_RE.match(path):
+        return False
+    if not any(path.startswith(prefix) for prefix in CLAUDE_TEMP_RM_PREFIXES):
+        return False
+    if os.path.normpath(path) != path:
+        return False
+    return True
+
+
+RM_SAFE_FLAG_CHARS = set("vf")
+
+
+def is_safe_claude_temp_rm(words):
+    """Exact-shape exception for `rm`, mirroring is_safe_sed's posture:
+    file-only removal (no -r/-R/--recursive, no -d, no long options at
+    all) where every non-flag argument resolves to a path strictly inside
+    a Claude-owned /tmp directory (see CLAUDE_TEMP_RM_PREFIXES) - the
+    per-repo scratchpad and this hook's own lock-coordination sentinel
+    dirs (.claude/hooks/lock_claude_acquire.mjs et al). Unqualified `rm`
+    is deliberately never a blanket-trusted verb elsewhere in this file;
+    this narrows that to "single files, inside a directory nothing but
+    Claude Code tooling ever writes to" rather than widening it generally.
+
+    Flags are checked one token at a time against RM_SAFE_FLAG_CHARS
+    ('v', 'f' only, in any combination, e.g. '-v', '-f', '-vf') - any
+    long option ('--force', '--recursive', ...) or any short flag
+    carrying a character outside {v, f} (notably 'r'/'R' for recursion,
+    or 'd' which removes empty directories) fails closed rather than
+    being enumerated as a blacklist, so a flag this list didn't
+    anticipate can't slip a wider capability through. At least one
+    non-flag argument is required, and every one of them must pass
+    is_safe_claude_temp_path - so `rm -rf /` or `rm -v /etc/passwd`
+    both fail (wrong flag / wrong path) and fall through to a real
+    prompt like any other unrecognized `rm` invocation."""
+    if not words or words[0] != "rm":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(c not in RM_SAFE_FLAG_CHARS for c in flag_chars):
+                return False
+            continue
+        paths.append(word)
+    if not paths:
+        return False
+    return all(is_safe_claude_temp_path(p) for p in paths)
+
+
 def is_safe_bare_mount(words):
     """True iff this is `mount` invoked with zero arguments - the read-only
     form that just lists currently mounted filesystems (equivalent to
@@ -652,6 +734,7 @@ def check_simple_commands(tokens, safe_verbs):
             and not is_safe_sandboxed_node_script(words)
             and not is_safe_sed(words)
             and not is_safe_bare_mount(words)
+            and not is_safe_claude_temp_rm(words)
         ):
             return False
     return found_command
