@@ -19,7 +19,7 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
         starts_with,
       });
     }
-    js_identifier_is_if(n, lambda3);
+    js_identifier_is_if(id, lambda3);
     return starts_with;
   }
   let filtered = list_filter(mapped, lambda);
