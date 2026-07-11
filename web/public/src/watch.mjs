@@ -21,7 +21,7 @@ export async function watch() {
   let in_progress = {};
   async function lambda2(path) {
     async function lambda() {
-      if (property_exists_equals(path, in_progress, true)) {
+      if (property_exists_equals(in_progress, path, true)) {
         return;
       }
       property_set(in_progress, path, true);
