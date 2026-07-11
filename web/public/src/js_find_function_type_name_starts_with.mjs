@@ -4,13 +4,13 @@ import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_i
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { js_list_function_nodes } from "../../../love/public/src/js_list_function_nodes.mjs";
-export function js_find_function_type_name_starts_with(ast) {
+export function js_find_function_type_name_starts_with(ast, prefix) {
   let mapped = js_list_function_nodes(ast);
   function lambda(n) {
     let id = property_get(n, "id");
     function lambda3() {
       let name = js_identifier_name(i);
-      let sw = text_starts_with(t, prefix);
+      let sw = text_starts_with(t, prefix);$i
     }
     js_identifier_is_if(node, lambda3);
   }
