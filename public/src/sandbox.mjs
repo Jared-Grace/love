@@ -1,3 +1,5 @@
+import { js_function_node_call } from "../../../love/public/src/js_function_node_call.mjs";
+import { js_operators } from "../../../love/public/src/js_operators.mjs";
 import { js_expression_functionize } from "../../../love/public/src/js_expression_functionize.mjs";
 import { js_function_node_empty } from "../../../love/public/src/js_function_node_empty.mjs";
 import { function_current_selects_nodes_log } from "../../../love/public/src/function_current_selects_nodes_log.mjs";
@@ -50,7 +52,8 @@ export async function sandbox() {
       "ab",
     );
     await function_current_selects_nodes_log();
-    await function_current_selects_apply(js_function_node_empty.name);
+    let r2 = js_operators();
+    await function_current_selects_apply(js_function_node_call.name);
   }
   return;
   ("below is functionality that has been used in the past: ");
