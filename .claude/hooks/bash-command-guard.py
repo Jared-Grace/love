@@ -820,6 +820,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_sed(words)
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
+            and not is_safe_verify_html_rm(words)
         ):
             return False
     return found_command
