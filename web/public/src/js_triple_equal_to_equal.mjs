@@ -4,6 +4,6 @@ export async function js_triple_equal_to_equal(ast) {
   let o = js_operator_triple_equal();
   let properties = ["left", "right"];
   let type = "BinaryExpression";
-  let r = await js_operator_to_call(o, ast, properties, type);
+  let r = await js_operator_to_call(ast, o, properties, type);
   return r;
 }
