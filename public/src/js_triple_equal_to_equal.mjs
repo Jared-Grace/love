@@ -11,6 +11,7 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_imports_missing_add_specified_single } from "../../../love/public/src/js_imports_missing_add_specified_single.mjs";
 export async function js_triple_equal_to_equal(ast) {
+  const operator = "===";
   let name = js_flo_name(ast);
   if (equal(name, equal.name)) {
     return;
@@ -18,7 +19,7 @@ export async function js_triple_equal_to_equal(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let node_operator = property_get(node, "operator");
-    if (equal(node_operator, "===")) {
+    if (equal(node_operator, operator)) {
       let code = js_code_call(equal.name);
       let expression = js_parse_expression(code);
       let arguments2 = js_call_arguments_get(expression);
