@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { lock_try } from "../../../love/public/src/lock_try.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -39,6 +40,9 @@ export async function watch() {
           }
         }
       }
+      log(watch.name, {
+        path,
+      });
       let r = await lock_try(function_run_prompt.name, lambda3);
     }
     await catch_log_async(lambda);
