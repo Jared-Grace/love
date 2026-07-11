@@ -7,12 +7,11 @@ import { js_list_function_nodes } from "../../../love/public/src/js_list_functio
 export function js_find_function_type_name_starts_with(ast, prefix) {
   let mapped = js_list_function_nodes(ast);
   function lambda(n) {
+    let starts_with = false;
     let id = property_get(n, "id");
     function lambda3() {
       let name = js_identifier_name(i);
-      let sw = text_starts_with(t, prefix);
-      if (sw) {
-      }
+      starts_with = text_starts_with(t, prefix);
     }
     js_identifier_is_if(node, lambda3);
   }
