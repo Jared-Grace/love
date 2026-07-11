@@ -9,6 +9,8 @@ export function property_get(object, property_name) {
         property_name,
         properties,
         object,
+        properties_end: properties,
+        property_name_end: property_name,
       };
       return v;
     }
