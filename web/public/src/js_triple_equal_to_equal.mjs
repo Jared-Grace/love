@@ -9,7 +9,8 @@ import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-export function js_triple_equal_to_equal(ast) {operator={}
+import { js_imports_missing_add_specified_single } from "../../../love/public/src/js_imports_missing_add_specified_single.mjs";
+export async function js_triple_equal_to_equal(ast) {
   let name = js_flo_name(ast);
   if (equal(name, equal.name)) {
     return;
@@ -31,5 +32,6 @@ export function js_triple_equal_to_equal(ast) {operator={}
     }
   }
   js_visit_type(ast, "BinaryExpression", lambda);
+  await js_imports_missing_add_specified_single(ast, equal.name);
   return;
 }
