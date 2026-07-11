@@ -1,5 +1,4 @@
 import { js_code_call_args_await_maybe_parse_expression } from "../../../love/public/src/js_code_call_args_await_maybe_parse_expression.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
@@ -14,9 +13,6 @@ export async function js_expression_functionize(
   ...list
 ) {
   let name = js_flo_name(ast);
-  log(js_expression_functionize.name, {
-    args,
-  });
   list_add_first(list, name);
   let r = await function_name_new_get_args_list(plugin_fn, list);
   let f_name_new = property_get(r, "f_name_new");
