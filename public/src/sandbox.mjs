@@ -68,6 +68,7 @@ export async function sandbox() {
       {
         (function_current_selects_apply,
           [js_expand_selects.name],
+          [js_function_node_empty.name],
           [js_function_node_unwrap.name],
           [js_statement_delete.name],
           [js_statement_if_return_add.name],
@@ -86,8 +87,16 @@ export async function sandbox() {
         (function_transform_current,
           [js_find_return_argument_set.name, "joined"],
           [js_flo_body_empty.name],
-          [js_call_generalize.name, folder_user_docs_path.name, "file_name_to_path"],
-          [js_identifier_name_new.name, "l", folder_user_docs_path_previous.name],
+          [
+            js_call_generalize.name,
+            folder_user_docs_path.name,
+            "file_name_to_path",
+          ],
+          [
+            js_identifier_name_new.name,
+            "l",
+            folder_user_docs_path_previous.name,
+          ],
           [js_identifier_rename.name, combined],
           [js_call_add.name, "ldf"],
           [js_call_add_first.name, html_hash_get.name],
