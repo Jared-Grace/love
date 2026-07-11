@@ -5,17 +5,17 @@ import { function_dependencies_externals_to_urls } from "../../../love/public/sr
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_dependencies_code_export } from "../../../love/public/src/function_dependencies_code_export.mjs";
 export async function app_a_function_import(f_name) {
-  let v = await function_dependencies_code_export(f_name);
-  let externals = property_get(v, "externals");
-  let get = property_get(v, "get");
+  let v2 = await function_dependencies_code_export(f_name);
+  let externals = property_get(v2, "externals");
+  let get = property_get(v2, "get");
   let v3 = await get();
   let global = property_get(v3, "global");
   let imports = function_dependencies_externals_to_urls(externals);
-  async function lambda(url) {
+  async function lambda6(url) {
     let v4 = await import(url);
     return v4;
   }
-  let modules = await object_values_map_async(imports, lambda);
+  let modules = await object_values_map_async(imports, lambda6);
   function lambda4(m, name) {
     global_import_set(name, m, global);
   }

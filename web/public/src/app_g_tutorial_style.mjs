@@ -3,9 +3,9 @@ import { g_img_square_size_css } from "../../../love/public/src/g_img_square_siz
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_g_tutorial_style(tutorial) {
   const square_size = text_combine_multiple([
-    "calc(",
+    'calc(',
     g_img_square_size_css(),
-    "*.4)",
+    '*.4)',
   ]);
   html_style_assign(tutorial, {
     display: "flex",

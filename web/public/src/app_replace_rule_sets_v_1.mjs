@@ -5,16 +5,16 @@ import { app_replace_rule_set_two_different_grow_same } from "../../../love/publ
 import { app_replace_rule_set_shrink_same_three_different } from "../../../love/public/src/app_replace_rule_set_shrink_same_three_different.mjs";
 import { app_replace_rule_set_three_different_grow_same } from "../../../love/public/src/app_replace_rule_set_three_different_grow_same.mjs";
 import { app_replace_rule_set_binary_counting } from "../../../love/public/src/app_replace_rule_set_binary_counting.mjs";
-import { app_replace_rule_set_binary_counting_prepare_ } from "../../../love/public/src/app_replace_rule_set_binary_counting_prepare_2.mjs";
+import { app_replace_rule_set_binary_counting_prepare_2 } from "../../../love/public/src/app_replace_rule_set_binary_counting_prepare_2.mjs";
 import { app_replace_rule_set_binary_counting_prepare_1 } from "../../../love/public/src/app_replace_rule_set_binary_counting_prepare_1.mjs";
 import { app_replace_rule_set_unary_equations_adding } from "../../../love/public/src/app_replace_rule_set_unary_equations_adding.mjs";
 import { app_replace_rule_set_shrink_left_pair_replace_right_same } from "../../../love/public/src/app_replace_rule_set_shrink_left_pair_replace_right_same.mjs";
 import { app_replace_rule_set_grow_left_pair_change_right } from "../../../love/public/src/app_replace_rule_set_grow_left_pair_change_right.mjs";
 import { app_replace_rule_set_expand_collapse } from "../../../love/public/src/app_replace_rule_set_expand_collapse.mjs";
-import { app_replace_rule_set_shrink_different_ } from "../../../love/public/src/app_replace_rule_set_shrink_different_2.mjs";
-import { app_replace_rule_set_grow_different_ } from "../../../love/public/src/app_replace_rule_set_grow_different_2.mjs";
+import { app_replace_rule_set_shrink_different_2 } from "../../../love/public/src/app_replace_rule_set_shrink_different_2.mjs";
+import { app_replace_rule_set_grow_different_2 } from "../../../love/public/src/app_replace_rule_set_grow_different_2.mjs";
 import { app_replace_rule_set_replace_flow } from "../../../love/public/src/app_replace_rule_set_replace_flow.mjs";
-import { app_replace_rule_set_replace_ } from "../../../love/public/src/app_replace_rule_set_replace_2.mjs";
+import { app_replace_rule_set_replace_2 } from "../../../love/public/src/app_replace_rule_set_replace_2.mjs";
 import { app_replace_rule_set_shrink_between } from "../../../love/public/src/app_replace_rule_set_shrink_between.mjs";
 import { app_replace_rule_set_grow_between } from "../../../love/public/src/app_replace_rule_set_grow_between.mjs";
 import { app_replace_rule_set_shrink_both_same } from "../../../love/public/src/app_replace_rule_set_shrink_both_same.mjs";
@@ -39,7 +39,7 @@ import { app_replace_rule_set_shrink_different } from "../../../love/public/src/
 import { app_replace_rule_set_grow_different } from "../../../love/public/src/app_replace_rule_set_grow_different.mjs";
 import { app_replace_rule_set_replace } from "../../../love/public/src/app_replace_rule_set_replace.mjs";
 import { marker } from "./marker.mjs";
-export function app_replace_rule_sets_v_() {
+export function app_replace_rule_sets_v_1() {
   let r = app_replace_rule_set_replace();
   let r2 = app_replace_rule_set_grow_different();
   let r3 = app_replace_rule_set_shrink_different();
@@ -63,16 +63,16 @@ export function app_replace_rule_sets_v_() {
   let r20 = app_replace_rule_set_shrink_both_same();
   let r21 = app_replace_rule_set_grow_between();
   let r22 = app_replace_rule_set_shrink_between();
-  let r23 = app_replace_rule_set_replace_();
+  let r23 = app_replace_rule_set_replace_2();
   let r24 = app_replace_rule_set_replace_flow();
-  let r25 = app_replace_rule_set_grow_different_();
-  let r26 = app_replace_rule_set_shrink_different_();
+  let r25 = app_replace_rule_set_grow_different_2();
+  let r26 = app_replace_rule_set_shrink_different_2();
   let r27 = app_replace_rule_set_expand_collapse();
   let r28 = app_replace_rule_set_grow_left_pair_change_right();
   let r29 = app_replace_rule_set_shrink_left_pair_replace_right_same();
   let r30 = app_replace_rule_set_unary_equations_adding();
   let r31 = app_replace_rule_set_binary_counting_prepare_1();
-  let r32 = app_replace_rule_set_binary_counting_prepare_();
+  let r32 = app_replace_rule_set_binary_counting_prepare_2();
   let r33 = app_replace_rule_set_binary_counting();
   let r34 = app_replace_rule_set_three_different_grow_same();
   let r35 = app_replace_rule_set_shrink_same_three_different();

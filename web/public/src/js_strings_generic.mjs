@@ -4,7 +4,7 @@ import { text_is } from "../../../love/public/src/text_is.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_strings_generic(ast) {
   function lambda2(la) {
@@ -13,7 +13,7 @@ export function js_strings_generic(ast) {
       let value = null;
       function lambda5() {
         let quasis = property_get(node, "quasis");
-        let s = list_size_(quasis);
+        let s = list_size_1(quasis);
         if (s) {
           let expressions = property_get(node, "expressions");
           let e = list_empty_is(expressions);

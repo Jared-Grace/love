@@ -9,9 +9,9 @@ export async function marker_above_generic(lambda$index, code) {
     let i = marker_index(a);
     let index = property_get(i, "index");
     index = lambda$index(index);
-    let stack_ = property_get(i, "stack_2");
+    let stack_2 = property_get(i, "stack_2");
     let statement = js_parse_statement(code);
-    list_insert(stack_, index, statement);
+    list_insert(stack_2, index, statement);
     let ast = property_get(a, "ast");
     await js_auto(ast);
   }

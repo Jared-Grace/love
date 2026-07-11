@@ -17,11 +17,11 @@ export async function autopray() {
   }
   let verses = await list_adder_async(lambda3);
   function lambda2(verse_text, verse_reference) {
-    let v = prayer_start();
+    let v2 = prayer_start();
     let v3 = prayer_end();
     let v4 = text_may_the_lord();
     let p = list_join_newline([
-      v,
+      v2,
       v4,
       "lead all creation to hear, believe, obey, enjoy and proclaim the word of God:",
       verse_text,

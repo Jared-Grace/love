@@ -1,7 +1,7 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_block_insert } from "../../../love/public/src/js_block_insert.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
-import { list_get_end_ } from "../../../love/public/src/list_get_end_2.mjs";
+import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
@@ -14,9 +14,9 @@ export async function js_atomize_function(ast) {
   let fes = js_list_type(ast, "FunctionExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
-    const stack_ = list_get_end_1(stack);
-    if (list_is(stack_)) {
-      const stack_2 = list_get_end_(stack);
+    const stack_1 = list_get_end_1(stack);
+    if (list_is(stack_1)) {
+      const stack_2 = list_get_end_2(stack);
       let type_is = js_node_type_is(stack_2, "CallExpression");
       if (type_is) {
         let node = property_get(v, "node");

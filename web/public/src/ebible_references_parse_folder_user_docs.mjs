@@ -1,4 +1,4 @@
-import { list_join_newline_ } from "../../../love/public/src/list_join_newline_2.mjs";
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
@@ -21,7 +21,7 @@ export async function ebible_references_parse_folder_user_docs(
     return v2;
   }
   let mapped = list_map(list, lambda);
-  let joined = list_join_newline_(mapped);
+  let joined = list_join_newline_2(mapped);
   await clipboard_copy(joined);
   return joined;
 }

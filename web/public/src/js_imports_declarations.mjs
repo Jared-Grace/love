@@ -1,7 +1,7 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_imports_all } from "../../../love/public/src/js_imports_all.mjs";
-import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -16,7 +16,7 @@ export function js_imports_declarations(ast) {
       let node = property_get(v, "node");
       let source = property_get(node, "source");
       let specifiers = property_get(node, "specifiers");
-      let a = list_size_(specifiers);
+      let a = list_size_1(specifiers);
       if (not(a)) {
         return;
       }

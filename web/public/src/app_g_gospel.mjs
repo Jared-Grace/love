@@ -3,7 +3,7 @@ import { property_set } from "../../../love/public/src/property_set.mjs";
 import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
-import { invoke_multiple_shuffle_ } from "../../../love/public/src/invoke_multiple_shuffle_2.mjs";
+import { invoke_multiple_shuffle_2 } from "../../../love/public/src/invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
@@ -12,7 +12,7 @@ import { global_function_property_nested_lambda } from "../../../love/public/src
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
-import { subtract_ } from "../../../love/public/src/subtract_1.mjs";
+import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { property_transform } from "../../../love/public/src/property_transform.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
@@ -58,7 +58,7 @@ export async function app_g_gospel(
     app_g_container_text(overlay, "What would you like to say?");
     function correct() {
       async function lambda() {
-        property_transform(npc, "objections", subtract_);
+        property_transform(npc, "objections", subtract_1);
         await app_g_gospel(
           overlay,
           npc,
@@ -89,7 +89,7 @@ export async function app_g_gospel(
         });
       }
     }
-    invoke_multiple_shuffle_(correct, wrong);
+    invoke_multiple_shuffle_2(correct, wrong);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     const doxology = app_g_doxology();

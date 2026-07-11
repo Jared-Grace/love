@@ -6,7 +6,7 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function videos_join(paths_videos, path_output) {
-  async function lambda(temp_path) {
+  async function lambda3(temp_path) {
     function lambda4(item) {
       let v = text_combine_multiple(["file '", item, "'"]);
       return v;
@@ -24,5 +24,5 @@ export async function videos_join(paths_videos, path_output) {
       ]),
     );
   }
-  let result = await file_temp(lambda);
+  let result = await file_temp(lambda3);
 }

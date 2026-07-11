@@ -2,7 +2,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_replace_multiple } from "../../../love/public/src/list_replace_multiple.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
-import { list_get_end_ } from "../../../love/public/src/list_get_end_2.mjs";
+import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
@@ -38,7 +38,7 @@ export function app_a_function_declaration(a) {
     let ast = property_get(a, "ast");
     let v_match = js_visit_match(ast, node);
     let stack = property_get(v_match, "stack");
-    let e = list_get_end_(stack);
+    let e2 = list_get_end_2(stack);
     function lambda6() {
       list_add(choices, {
         shortcut: "l",
@@ -51,7 +51,7 @@ export function app_a_function_declaration(a) {
         },
       });
     }
-    js_node_type_is_if(e, "BlockStatement", lambda6);
+    js_node_type_is_if(e2, "BlockStatement", lambda6);
   }
   app_a_overlay_choices(a, keyword, choices_get);
   let id = property_get(node, "id");

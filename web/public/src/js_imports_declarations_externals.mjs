@@ -12,8 +12,8 @@ export function js_imports_declarations_externals(ast) {
       let node = property_get(v, "node");
       let source = property_get(node, "source");
       let specifiers = property_get(node, "specifiers");
-      let a = js_node_type_is(source, "Literal");
-      if (not(a)) {
+      let a2 = js_node_type_is(source, "Literal");
+      if (not(a2)) {
         return;
       }
       let source_value = property_get(source, "value");

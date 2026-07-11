@@ -20,7 +20,7 @@ export function storage_local_mock_enable() {
       let size = properties_size(s);
       return size;
     },
-    key: function lambda(index) {
+    key: function lambda2(index) {
       let properties = properties_get(s);
       let item = list_get(properties, index);
       return item;
