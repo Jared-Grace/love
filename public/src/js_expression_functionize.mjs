@@ -9,7 +9,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_name_new_get_args_list } from "../../../love/public/src/function_name_new_get_args_list.mjs";
 import { function_new_expression } from "../../../love/public/src/function_new_expression.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-export async function js_expression_functionize(ast, selects, args) {
+export async function js_expression_functionize(ast, selects, ...args) {
   arguments_assert(arguments, 3);
   let name = js_flo_name(ast);
   log(js_expression_functionize.name, {
