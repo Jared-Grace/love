@@ -11,17 +11,18 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_imports_missing_add_specified_single } from "../../../love/public/src/js_imports_missing_add_specified_single.mjs";
 export async function js_triple_equal_to_equal(ast) {
-  let operator = "===";
+  let { fn, operator } = js_operator_triple_equal();
   let properties = ["left", "right"];
+  const type = "BinaryExpression";
   let name = js_flo_name(ast);
-  if (equal(name, equal.name)) {
+  if (equal(name, fn.name)) {
     return;
   }
   function lambda(v) {
     let node = property_get(v, "node");
     let node_operator = property_get(node, "operator");
     if (equal(node_operator, operator)) {
-      let code = js_code_call(equal.name);
+      let code = js_code_call(fn.name);
       let expression = js_parse_expression(code);
       let arguments2 = js_call_arguments_get(expression);
       function lambda2(p) {
@@ -33,7 +34,13 @@ export async function js_triple_equal_to_equal(ast) {
       object_replace(node, expression);
     }
   }
-  js_visit_type(ast, "BinaryExpression", lambda);
-  await js_imports_missing_add_specified_single(ast, equal.name);
+  js_visit_type(ast, type, lambda);
+  await js_imports_missing_add_specified_single(ast, fn.name);
   return;
 }
+function js_operator_triple_equal() {
+  let operator = "===";
+  let fn = equal;
+  return { fn, operator };
+}
+
