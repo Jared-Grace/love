@@ -10,6 +10,7 @@ import { property_set } from "../../../love/public/src/property_set.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { function_auto_path } from "../../../love/public/src/function_auto_path.mjs";
 import { function_run_prompt } from "../../../love/public/src/function_run_prompt.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function watch() {
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(identity);
@@ -44,7 +45,8 @@ export async function watch() {
         path,
       });
       try {
-        let r = await lock_try(function_run_prompt.name, lambda3);
+        let who = text_combine("watch:", path);
+        let r = await lock_try(function_run_prompt.name, lambda3, who);
       } finally {
         property_set(in_progress, path, false);
       }

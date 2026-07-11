@@ -497,7 +497,12 @@ def split_top_level(tokens):
 def verb_of(words):
     if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
         return verb_of(words[1:])
-    if words[0] in ("git", "node") and len(words) >= 2:
+    if words[0] == "git":
+        idx = 1
+        if idx < len(words) and words[idx] == "-C" and idx + 1 < len(words):
+            idx += 2
+        return f"git {words[idx]}" if idx < len(words) else words[0]
+    if words[0] == "node" and len(words) >= 2:
         return f"{words[0]} {words[1]}"
     return words[0]
 
