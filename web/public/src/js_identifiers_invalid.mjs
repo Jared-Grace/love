@@ -3,5 +3,6 @@ import { js_special_arguments } from "../../../love/public/src/js_special_argume
 export function js_identifiers_invalid(existing) {
   let v2 = js_special_arguments();
   let v = js_keyword_default();
+  const invalid = [v2, v];
   return invalid;
 }
