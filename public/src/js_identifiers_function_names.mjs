@@ -1,27 +1,10 @@
-import { js_visit_import_specifiers } from "../../../love/public/src/js_visit_import_specifiers.mjs";
-import { js_visit_function_nodes } from "../../../love/public/src/js_visit_function_nodes.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
+import { js_visit_function_nodes_names } from "../../../love/public/src/js_visit_function_nodes_names.mjs";
+import { js_visit_import_specifiers_names } from "../../../love/public/src/js_visit_import_specifiers_names.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
-import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 export function js_identifiers_function_names(ast) {
   function lambda2(la) {
-    function lambda_declaration(v) {
-      let node = property_get(v, "node");
-      let id = property_get(node, "id");
-      let is_identifier = js_identifier_is(id);
-      if (is_identifier) {
-        let name = property_get(id, "name");
-        la(name);
-      }
-    }
-    js_visit_function_nodes(ast, lambda_declaration);
-    function lambda_import(v) {
-      let node = property_get(v, "node");
-      let local = property_get(node, "local");
-      let name = property_get(local, "name");
-      la(name);
-    }
-    js_visit_import_specifiers(ast, lambda_import);
+    js_visit_function_nodes_names(ast, la);
+    js_visit_import_specifiers_names(ast, la);
   }
   const names = list_adder_unique(lambda2);
   return names;
