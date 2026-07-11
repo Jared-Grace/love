@@ -5,6 +5,6 @@ import { function_rename } from "../../../love/public/src/function_rename.mjs";
 export async function functions_rename_swap(f_name_a, f_name_b) {
   arguments_assert(arguments, 2);
   let f_names = await functions_names();
-  let unique = text_unique_underscore(used, name);
+  let unique = text_unique_underscore(f_names, f_name_b);
   await function_rename(f_name_a, f_name_b);
 }
