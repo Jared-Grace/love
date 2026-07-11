@@ -41,9 +41,9 @@ export function app_code_lesson_functions_console_log_generic(
     let list = list_adder(lambda3);
     return list;
   }
-  let next = list_iterator_refillable(lambda);
+  let next_number = list_iterator_refillable(lambda);
   function batch_get() {
-    let v = next();
+    let v = next_number();
     let code = js_code_call_arg(fn_name, v);
     let transfomed = lambda$code(code);
     let r = [transfomed];
@@ -58,7 +58,7 @@ export function app_code_lesson_functions_console_log_generic(
     lesson,
     next_operator,
     fn_name,
-    next,
+    next: next_number,
   };
   return r3;
 }
