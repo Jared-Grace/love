@@ -5,9 +5,9 @@ import { html_span_text_padded_space } from "../../../love/public/src/html_span_
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_to_and_list } from "../../../love/public/src/list_to_and_list.mjs";
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
+import { js_operators_arithmetic } from "../../../love/public/src/js_operators_arithmetic.mjs";
 export function app_code_operators_arithmetic_generic(parent, operator_map) {
-  let operators = js_operators();
+  let operators = js_operators_arithmetic();
   let concated = list_to_and_list(operators);
   function lambda(item) {
     let condition = text_is(item);

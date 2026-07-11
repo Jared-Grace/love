@@ -1,4 +1,4 @@
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
+import { js_operators_arithmetic } from "../../../love/public/src/js_operators_arithmetic.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../../love/public/src/app_code_lesson_functions_console_log_generic.mjs";
 import { js_code_call_arg_fn } from "../../../love/public/src/js_code_call_arg_fn.mjs";
@@ -23,6 +23,6 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   let lesson = property_get(r, "lesson");
   return lesson;
   function above(root) {
-    let os = js_operators();
+    let os = js_operators_arithmetic();
   }
 }
