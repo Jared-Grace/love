@@ -642,7 +642,12 @@ def is_safe_verify_html_path(path):
         return False
     if os.path.normpath(path) != path:
         return False
-    return bool(VERIFY_HTML_BASENAME_RE.match(os.path.basename(path)))
+    basename = os.path.basename(path)
+    # Must be a direct child of public/, not some/subdir/tmp_verify_x.html -
+    # startswith(VERIFY_HTML_DIR) alone doesn't rule out subdirectories.
+    if os.path.join(VERIFY_HTML_DIR, basename) != path:
+        return False
+    return bool(VERIFY_HTML_BASENAME_RE.match(basename))
 
 
 def is_safe_verify_html_rm(words):
