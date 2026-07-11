@@ -1,6 +1,6 @@
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
+import { property_get_equal } from "../../../love/public/src/property_get_equal.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -15,8 +15,7 @@ export async function js_operators_to_calls_generic(ast, operators, properties, 
     let node = property_get(v, "node");
     let node_operator = property_get(node, "operator");
     function lambda2(o) {
-      let operator = property_get(o, "operator");
-      let matched = equal(node_operator, operator);
+      let matched = property_get_equal(o, "operator", node_operator);
       if (matched) {
         let fn = property_get(o, "fn");
         js_operator_node_to_call(node, fn, properties);
