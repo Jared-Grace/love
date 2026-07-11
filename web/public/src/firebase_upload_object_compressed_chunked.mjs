@@ -8,7 +8,7 @@ export async function firebase_upload_object_compressed_chunked(
   lambda$item,
 ) {
   let cs = list_chunk(list, 20);
-  async function lambda2(c) {
+  async function lambda(c) {
     async function lambda4(item) {
       let v = lambda$item(item);
       let value = property_get(v, "value");
@@ -17,5 +17,5 @@ export async function firebase_upload_object_compressed_chunked(
     }
     await each_unordered_async(c, lambda4);
   }
-  await each_async(cs, lambda2);
+  await each_async(cs, lambda);
 }

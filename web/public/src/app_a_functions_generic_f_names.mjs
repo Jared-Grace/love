@@ -9,10 +9,10 @@ import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mj
 export async function app_a_functions_generic_f_names() {
   let mapped = await app_a_files_paths();
   let suffix = function_name_extension();
-  let filtered3 = list_filter_ends_with(mapped, suffix);
+  let filtered = list_filter_ends_with(mapped, suffix);
   let joined = functions_path();
   let padded = text_pad(joined, "/");
-  let filtered4 = list_filter_text_includes(filtered3, padded);
+  let filtered4 = list_filter_text_includes(filtered, padded);
   let f_names = list_map(filtered4, function_path_to_name);
   return f_names;
 }

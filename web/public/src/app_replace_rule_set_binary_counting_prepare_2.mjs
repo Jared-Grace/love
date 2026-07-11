@@ -1,4 +1,4 @@
-export function app_replace_rule_set_binary_counting_prepare_2() {
+export function app_replace_rule_set_binary_counting_prepare_() {
   let r = {
     name: "Binary Counting Prepare 2",
     rules: ["0 a > 1", "1 a > a 0", "1 > 1 1"],

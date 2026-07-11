@@ -40,11 +40,11 @@ export async function ebible_verses(bible_folder, chapter_code) {
         let filtered3 = list_take(filtered, index);
         let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
-        function lambda2(item2) {
+        function lambda(item2) {
           let g = greater_than(item2, index_next);
           return g;
         }
-        let filtered4 = list_filter(r, lambda2);
+        let filtered4 = list_filter(r, lambda);
         index = list_first(filtered4);
       }
       let skipped = list_skip(filtered, text_combine(index, 1));

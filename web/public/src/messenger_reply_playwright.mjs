@@ -43,7 +43,7 @@ export async function messenger_reply_playwright() {
   const count = await locator.count();
   let b = equal(count, 4);
   assert(b);
-  console.log(text_combine_multiple(['Found ', count, ' matches']));
+  console.log(text_combine_multiple(["Found ", count, " matches"]));
   await locator.nth(0).click();
   if (false) {
   }

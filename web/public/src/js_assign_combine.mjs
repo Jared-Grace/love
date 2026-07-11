@@ -8,7 +8,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_declare_init_get } from "../../../love/public/src/js_declare_init_get.mjs";
@@ -20,7 +20,7 @@ export function js_assign_combine(ast) {
     if (null_is(declaration)) {
       return;
     }
-    let e = list_get_end_1(stack);
+    let e = list_get_end_(stack);
     let nl = list_not_is(e);
     if (nl) {
       return;

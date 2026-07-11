@@ -51,9 +51,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   let hash = html_hash_object_get();
   let verse_number_hash = app_bible_hash_v_get(hash);
   let chapter_code = property_get(hash, "c");
-  let v2 = ebible_chapter_code_parse(chapter_code);
-  let chapter_name = property_get(v2, "chapter_name");
-  let book_code = property_get(v2, "book_code");
+  let v = ebible_chapter_code_parse(chapter_code);
+  let chapter_name = property_get(v, "chapter_name");
+  let book_code = property_get(v, "book_code");
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   app_bible_button_chapter_previous(bar, context, chapter_code);

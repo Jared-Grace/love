@@ -1,5 +1,5 @@
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-export function list_find_property_curried_right_2(
+export function list_find_property_curried_right_(
   property_name,
   property_value,
 ) {
