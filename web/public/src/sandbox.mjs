@@ -35,6 +35,9 @@ import { js_call_callee_name_try } from "../../../love/public/src/js_call_callee
 import { function_current_selects_empty } from "../../../love/public/src/function_current_selects_empty.mjs";
 import { function_node_select_nested } from "../../../love/public/src/function_node_select_nested.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
+import { folder_user_docs_read } from "../../../love/public/src/folder_user_docs_read.mjs";
+import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
+import { folder_user_docs_path_previous } from "../../../love/public/src/folder_user_docs_path_previous.mjs";
 export async function sandbox() {
   const f_name = app_code_lesson_functions_console_log_arithmetic.name;
   await function_current_set(f_name);
@@ -56,7 +59,7 @@ export async function sandbox() {
       {
         (function_node_select_args,
           [js_find_function_type_name_starts_with.name, "ab"],
-          [js_call_named_find_alias.name, "folder_user_docs_read"],
+          [js_call_named_find_alias.name, folder_user_docs_read.name],
           [js_function_node_find_named_node.name, "on_passage"],
           [js_statements_with_identifiers_named.name, "on_passage"],
           [js_statement_find_call_named.name, property_exists_not.name],
@@ -83,8 +86,8 @@ export async function sandbox() {
         (function_transform_current,
           [js_find_return_argument_set.name, "joined"],
           [js_flo_body_empty.name],
-          [js_call_generalize.name, "folder_user_docs_path", "file_name_to_path"],
-          [js_identifier_name_new.name, "l", "folder_user_docs_path_previous"],
+          [js_call_generalize.name, folder_user_docs_path.name, "file_name_to_path"],
+          [js_identifier_name_new.name, "l", folder_user_docs_path_previous.name],
           [js_identifier_rename.name, combined],
           [js_call_add.name, "ldf"],
           [js_call_add_first.name, html_hash_get.name],
