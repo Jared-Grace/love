@@ -6,9 +6,9 @@ export function js_find_function_type_name_starts_with(ast) {
   let mapped = js_list_function_nodes(ast);
   function lambda(n) {
     let id = property_get(n, "id");
+    log(js_find_function_type_name_starts_with.name, {
+      id,
+    });
   }
   let filtered = list_filter(mapped, lambda);
-  log(js_find_function_type_name_starts_with.name, {
-    mapped,
-  });
 }
