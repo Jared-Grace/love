@@ -1,9 +1,9 @@
 import { app_code_lesson_operators_asterisk_generic } from "../../../love/public/src/app_code_lesson_operators_asterisk_generic.mjs";
 import { js_operator_asterisk_verb } from "../../../love/public/src/js_operator_asterisk_verb.mjs";
-import { js_operator_asterisk } from "../../../love/public/src/js_operator_asterisk.mjs";
+import { js_operator_asterisk_symbol } from "../../../love/public/src/js_operator_asterisk_symbol.mjs";
 import { multiply } from "../../../love/public/src/multiply.mjs";
 export function app_code_lesson_operators_asterisk() {
-  const operator = js_operator_asterisk();
+  const operator = js_operator_asterisk_symbol();
   let lesson_name = "asterisk";
   let verb = js_operator_asterisk_verb();
   let left_transform = multiply;
