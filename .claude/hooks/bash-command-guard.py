@@ -212,13 +212,13 @@ import re
 import sys
 
 
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+
 SETTINGS_PATHS = [
     os.path.expanduser("~/.claude/settings.json"),
-    ".claude/settings.json",
-    ".claude/settings.local.json",
+    os.path.join(REPO_ROOT, ".claude/settings.json"),
+    os.path.join(REPO_ROOT, ".claude/settings.local.json"),
 ]
-
-REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
 # Mirrors the Write/Edit/Read/rm/mkdir/mv scratchpad rules already granted
 # in permissions.allow (e.g. "Write(/tmp/claude-1000/-home-j-repos-love/**)").
