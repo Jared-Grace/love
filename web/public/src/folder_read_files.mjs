@@ -23,8 +23,15 @@ export async function folder_read_files(path_folder) {
   let fs = await import("fs");
   function lambda(file) {
     let result = path_join([path_folder, file]);
-    let v = fs.statSync(result).isFile();
-    return v;
+    try {
+      let v = fs.statSync(result).isFile();
+      return v;
+    } catch (e) {
+      if (e.code === "ENOENT") {
+        return false;
+      }
+      throw e;
+    }
   }
   const all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
