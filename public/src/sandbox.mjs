@@ -37,6 +37,7 @@ export async function sandbox() {
   await function_current_set(f_name);
   ("current_commands: ");
   {
+    let r = await function_node_select_args(select_fn_name, args_comma);
   }
   return;
   ("below is functionality that has been used in the past: ");
