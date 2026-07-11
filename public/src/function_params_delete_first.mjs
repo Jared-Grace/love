@@ -12,6 +12,6 @@ export async function function_params_delete_first(f_name) {
   log(function_params_delete_first.name, {
     first,
   });
-  let r = await function_params_delete(f_name, first);
+  let r = await function_params_delete(f_name, name2);
   return r;
 }
