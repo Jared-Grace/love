@@ -14,6 +14,7 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
       starts_with = text_starts_with(t, prefix);
     }
     js_identifier_is_if(node, lambda3);
+    return starts_with;
   }
   let filtered = list_filter(mapped, lambda);
 }
