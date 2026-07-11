@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_identifier_name_starts_with } from "../../../love/public/src/js_identifier_name_starts_with.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -15,4 +16,5 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
     return starts_with;
   }
   let filtered = list_filter(mapped, lambda);
+  let only = list_single(list);
 }
