@@ -11,7 +11,7 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_imports_missing_add_specified_single } from "../../../love/public/src/js_imports_missing_add_specified_single.mjs";
 export async function js_triple_equal_to_equal(ast) {
-  const operator = "===";
+  let operator = "===";
   let name = js_flo_name(ast);
   if (equal(name, equal.name)) {
     return;
@@ -28,7 +28,7 @@ export async function js_triple_equal_to_equal(ast) {
         let copy = object_copy(lr);
         list_add(arguments2, copy);
       }
-      const properties = ["left", "right"];
+      let properties = ["left", "right"];
       let mapped = list_map(properties, lambda2);
       object_replace(node, expression);
     }
