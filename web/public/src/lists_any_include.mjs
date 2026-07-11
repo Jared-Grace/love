@@ -6,4 +6,5 @@ export function lists_any_include(base, lists) {
     return i;
   }
   let any = list_any(lists, lambda2);
+  return any;
 }
