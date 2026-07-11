@@ -14,7 +14,7 @@ import { app_code_label_code_question } from "../../../love/public/src/app_code_
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1_next } from "../../../love/public/src/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../../love/public/src/app_code_lesson_operators_value_max.mjs";
-import { js_operators } from "../../../love/public/src/js_operators.mjs";
+import { js_operators_arithmetic } from "../../../love/public/src/js_operators_arithmetic.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_code_container_light_blue } from "../../../love/public/src/app_code_container_light_blue.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_functions_arithmetic() {
   const example_answer_label = "Function: ";
   const quiz_label = "What is this code rewritten using a function call?";
   let example_question_label = app_code_label_code_question();
-  let operators = js_operators();
+  let operators = js_operators_arithmetic();
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
   function batch_get() {

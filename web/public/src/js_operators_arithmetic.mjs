@@ -9,7 +9,7 @@ import { js_operator_plus } from "../../../love/public/src/js_operator_plus.mjs"
 import { identity } from "../../../love/public/src/identity.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { multiply } from "../../../love/public/src/multiply.mjs";
-export function js_operators() {
+export function js_operators_arithmetic() {
   let os = [
     {
       operator: js_operator_plus(),
