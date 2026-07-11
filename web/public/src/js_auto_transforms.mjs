@@ -17,36 +17,10 @@ import { js_arrow_to_function } from "../../../love/public/src/js_arrow_to_funct
 import { js_if_blockify } from "../../../love/public/src/js_if_blockify.mjs";
 import { js_arrow_blockify } from "../../../love/public/src/js_arrow_blockify.mjs";
 import { js_await_add } from "../../../love/public/src/js_await_add.mjs";
-import { js_bang_to_not } from "../../../love/public/src/js_bang_to_not.mjs";
-import { js_triple_equal_to_equal } from "../../../love/public/src/js_triple_equal_to_equal.mjs";
-import { js_minus_to_subtract } from "../../../love/public/src/js_minus_to_subtract.mjs";
-import { js_asterisk_to_multiply } from "../../../love/public/src/js_asterisk_to_multiply.mjs";
-import { js_division_to_divide } from "../../../love/public/src/js_division_to_divide.mjs";
-import { js_percent_to_modulo } from "../../../love/public/src/js_percent_to_modulo.mjs";
-import { js_double_asterisk_to_exponent } from "../../../love/public/src/js_double_asterisk_to_exponent.mjs";
-import { js_less_than_to_call } from "../../../love/public/src/js_less_than_to_call.mjs";
-import { js_greater_than_to_call } from "../../../love/public/src/js_greater_than_to_call.mjs";
-import { js_less_than_equal_to_call } from "../../../love/public/src/js_less_than_equal_to_call.mjs";
-import { js_greater_than_equal_to_call } from "../../../love/public/src/js_greater_than_equal_to_call.mjs";
-import { js_double_equal_to_equal_loose } from "../../../love/public/src/js_double_equal_to_equal_loose.mjs";
-import { js_bang_equal_to_not_equal_loose } from "../../../love/public/src/js_bang_equal_to_not_equal_loose.mjs";
-import { js_bang_double_equal_to_not_equal } from "../../../love/public/src/js_bang_double_equal_to_not_equal.mjs";
+import { js_operators_to_calls } from "../../../love/public/src/js_operators_to_calls.mjs";
 export function js_auto_transforms() {
   let transforms = [
-    js_bang_to_not,
-    js_triple_equal_to_equal,
-    js_bang_double_equal_to_not_equal,
-    js_double_equal_to_equal_loose,
-    js_bang_equal_to_not_equal_loose,
-    js_less_than_equal_to_call,
-    js_greater_than_equal_to_call,
-    js_less_than_to_call,
-    js_greater_than_to_call,
-    js_double_asterisk_to_exponent,
-    js_percent_to_modulo,
-    js_division_to_divide,
-    js_asterisk_to_multiply,
-    js_minus_to_subtract,
+    js_operators_to_calls,
     js_await_add,
     js_dollar,
     js_arrow_blockify,
