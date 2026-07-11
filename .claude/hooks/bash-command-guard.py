@@ -162,6 +162,25 @@ delimiters (`s#..#..#`), multiple semicolon-joined commands in one script,
 a/i/c text-insertion commands, negation (`!`), etc. - falls through to a
 real prompt rather than being pattern-matched loosely, same posture as
 every other exception in this file.
+
+A fourth check, `is_dangerous_find`, goes the other direction: it
+*narrows* an existing broad allow rule instead of adding a new auto-allow
+path. `Bash(find:*)` is in permissions.allow for ordinary read-only
+lookups, but verb_of() only ever looks at the leading token - it has no
+idea whether the rest of a `find` invocation is `-iname foo -type f` or
+`-exec rm -rf / \\;`. Since a single unchained `find ... -exec ...`
+command parses as one ordinary simple command whose verb ("find") is
+already trusted, it would otherwise sail through as a silent "allow"
+despite being able to run arbitrary commands (-exec/-execdir/-ok/-okdir)
+or delete/overwrite arbitrary files (-delete/-fls/-fprint/-fprint0/
+-fprintf). check_simple_commands rejects any `find` call carrying one of
+those action flags before it ever consults safe_verbs, which falls
+through to the same "ask" path as any other unsafe command - a real
+prompt instead of a missed hole. Unlike is_safe_sed's blacklist-scan
+avoidance, a plain token scan is safe to use here because find's action
+flags are always their own separate shell word; the only false positive
+is a flag's own argument happening to spell one (`find . -name -exec`),
+which just costs an extra prompt.
 """
 import json
 import os
@@ -448,6 +467,31 @@ def verb_of(words):
     return words[0]
 
 
+DANGEROUS_FIND_FLAGS = {
+    "-exec", "-execdir", "-ok", "-okdir",
+    "-delete", "-fls", "-fprint", "-fprint0", "-fprintf",
+}
+
+
+def is_dangerous_find(words):
+    """True iff this is a `find` invocation carrying an action flag that
+    executes a command (-exec/-execdir/-ok/-okdir) or deletes/writes files
+    (-delete/-fls/-fprint/-fprint0/-fprintf) - i.e. everything find can do
+    beyond read-only querying. `Bash(find:*)` in permissions.allow only
+    ever meant "let read-only lookups through without a prompt"; without
+    this check, a single unchained command like `find / -exec rm -rf / \\;`
+    would auto-approve silently, since verb_of() sees only the leading
+    "find" token and that's already in safe_verbs. Scanning the token list
+    for these flags (rather than an exact allow-shape like is_safe_sed
+    uses) is safe here because, unlike sed's e/w which can hide inside
+    arbitrary pattern text, find's action flags are always their own
+    separate word once shell-tokenized - the only false positive is
+    something like `find . -name -exec`, where "-exec" is actually the
+    argument to a preceding flag rather than an action in its own right,
+    and that just costs an extra prompt, not a missed hole."""
+    return words[0] == "find" and any(w in DANGEROUS_FIND_FLAGS for w in words[1:])
+
+
 def is_safe_sandboxed_node_eval(words):
     """Recognize exactly one template: an ad-hoc `node -e` snippet run
     under real OS/runtime sandboxing rather than trusted by verb prefix.
@@ -578,6 +622,8 @@ def check_simple_commands(tokens, safe_verbs):
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
         if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", words[0]):
             raise Unsupported("variable assignment prefix")
+        if is_dangerous_find(words):
+            return False
         if (
             verb_of(words) not in safe_verbs
             and not is_safe_sandboxed_node_eval(words)
