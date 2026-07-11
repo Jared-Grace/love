@@ -16,8 +16,8 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   await git_push_folder_now(repo_path);
   ("make sure all changes are in repo first like pushing; may need to coordinate with other users");
   ("make sure this is ran from the correct directory");
-  const url = git_repo_url(user, repo);
-  const repo_folder_name = await git_history_delete_repo_folder_name(repo);
+  let url = git_repo_url(user, repo);
+  let repo_folder_name = await git_history_delete_repo_folder_name(repo);
   let repo_folder = folder_gitignore_join(repo_folder_name);
   let repo_folder_resolved = await path_resolve(repo_folder);
   let stdout = await command_line_git_current(

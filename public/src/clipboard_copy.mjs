@@ -5,6 +5,6 @@ export async function clipboard_copy(text) {
     await navigator.clipboard.writeText(text);
     return;
   }
-  const clipboard = await import("clipboardy");
+  let clipboard = await import("clipboardy");
   await clipboard.default.write(text);
 }

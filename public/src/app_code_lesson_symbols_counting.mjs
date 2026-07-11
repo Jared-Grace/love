@@ -12,8 +12,8 @@ export function app_code_lesson_symbols_counting(
   batch_symbols,
   on_question,
 ) {
-  const example_answer_label = "Number of symbols: ";
-  const label_answer_forwards = "How many symbols are there? ";
+  let example_answer_label = "Number of symbols: ";
+  let label_answer_forwards = "How many symbols are there? ";
   let symbols_to_answer = text_size_text_to;
   let example_question_label = app_code_label_symbols();
   let batch_get = app_code_batch_question_answer_fns(
@@ -25,7 +25,7 @@ export function app_code_lesson_symbols_counting(
   let on_quiz_answer_button_backwards =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   let quiz_backwards_answer_count_override = null;
-  const quizzes_get = app_code_lesson_quizzes(
+  let quizzes_get = app_code_lesson_quizzes(
     batch_get,
     example_question_label,
     on_question,

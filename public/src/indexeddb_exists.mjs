@@ -3,7 +3,7 @@ import { indexeddb_exists_backend } from "../../../love/public/src/indexeddb_exi
 import { list_find_property_exists } from "../../../love/public/src/list_find_property_exists.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 export async function indexeddb_exists(db_get, store, key) {
-  const property = "key";
+  let property = "key";
   let all = await indexeddb_get_all(db_get, store);
   list_property_exists_not_error(all, property);
   let e = list_find_property_exists(all, property, key);

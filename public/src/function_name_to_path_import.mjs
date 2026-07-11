@@ -7,6 +7,6 @@ export function function_name_to_path_import(import_, dictionary) {
   let previous = folder_previous();
   let previous2 = folder_previous();
   let joined = path_join([previous, previous2, value]);
-  const c = js_code_string(joined);
+  let c = js_code_string(joined);
   return c;
 }

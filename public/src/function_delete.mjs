@@ -7,7 +7,7 @@ import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_names_comma) {
   await text_split_comma_dot_map_unordered(f_names_comma, lambda);
   async function lambda(f_name) {
-    const u = await function_unalias_exists(f_name);
+    let u = await function_unalias_exists(f_name);
     let exists = property_get(u, "exists");
     assert(exists);
     let f_path = property_get(u, "f_path");

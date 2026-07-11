@@ -19,7 +19,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
         let r2 = x !== 0;
         return r2;
       }
-      const clean = lits.filter(lambda3);
+      let clean = lits.filter(lambda3);
       if (clean.length === 0) {
         return;
       }
@@ -27,27 +27,27 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     toDimacs() {
       let out = text_combine_multiple([
-        'p cnf ',
+        "p cnf ",
         this.varCount,
-        ' ',
+        " ",
         this.clauses.length,
-        '\n',
+        "\n",
       ]);
-      for (const c of this.clauses) {
+      for (let c of this.clauses) {
         out += text_combine(c.join(" "), " 0\n");
       }
       return out;
     }
   }
   function andGate(cnf, a, b) {
-    const z = cnf.newVar();
+    let z = cnf.newVar();
     cnf.addClause(-a, -b, z);
     cnf.addClause(a, -z);
     cnf.addClause(b, -z);
     return z;
   }
   function xorGate(cnf, a, b) {
-    const z = cnf.newVar();
+    let z = cnf.newVar();
     cnf.addClause(-a, -b, -z);
     cnf.addClause(a, b, -z);
     cnf.addClause(a, -b, z);
@@ -55,18 +55,18 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return z;
   }
   function halfAdder(cnf, a, b) {
-    const sum = xorGate(cnf, a, b);
-    const carry = andGate(cnf, a, b);
+    let sum = xorGate(cnf, a, b);
+    let carry = andGate(cnf, a, b);
     let r3 = [sum, carry];
     return r3;
   }
   function fullAdder(cnf, a, b, cin) {
-    const s1 = xorGate(cnf, a, b);
-    const sum = xorGate(cnf, s1, cin);
-    const c1 = andGate(cnf, a, b);
-    const c2 = andGate(cnf, a, cin);
-    const c3 = andGate(cnf, b, cin);
-    const cout = cnf.newVar();
+    let s1 = xorGate(cnf, a, b);
+    let sum = xorGate(cnf, s1, cin);
+    let c1 = andGate(cnf, a, b);
+    let c2 = andGate(cnf, a, cin);
+    let c3 = andGate(cnf, b, cin);
+    let cout = cnf.newVar();
     cnf.addClause(-c1, cout);
     cnf.addClause(-c2, cout);
     cnf.addClause(-c3, cout);
@@ -76,11 +76,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   }
   function fullAdderCSA(cnf, a, b, c) {
     let v2 = xorGate(cnf, a, b);
-    const s = xorGate(cnf, v2, c);
-    const ab = andGate(cnf, a, b);
-    const ac = andGate(cnf, a, c);
-    const bc = andGate(cnf, b, c);
-    const carry = cnf.newVar();
+    let s = xorGate(cnf, v2, c);
+    let ab = andGate(cnf, a, b);
+    let ac = andGate(cnf, a, c);
+    let bc = andGate(cnf, b, c);
+    let carry = cnf.newVar();
     cnf.addClause(-ab, carry);
     cnf.addClause(-ac, carry);
     cnf.addClause(-bc, carry);
@@ -93,7 +93,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       let r6 = [];
       return r6;
     }
-    const next = Array.from(
+    let next = Array.from(
       {
         length: text_combine(columns.length, 1),
       },
@@ -102,15 +102,15 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     for (let i = 0; i < columns.length; i++) {
       let col = [...columns[i]];
       while (col.length >= 3) {
-        const a = col.pop();
-        const b = col.pop();
-        const c = col.pop();
-        const [s, carry] = fullAdderCSA(cnf, a, b, c);
+        let a = col.pop();
+        let b = col.pop();
+        let c = col.pop();
+        let [s, carry] = fullAdderCSA(cnf, a, b, c);
         next[i].push(s);
         next[text_combine(i, 1)].push(carry);
       }
       if (col.length === 2) {
-        const [s, carry] = halfAdder(cnf, col[0], col[1]);
+        let [s, carry] = halfAdder(cnf, col[0], col[1]);
         next[i].push(s);
         next[text_combine(i, 1)].push(carry);
       } else if (col.length === 1) {
@@ -120,7 +120,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return next;
   }
   function buildMultiplierCSA(cnf, x, y) {
-    const bits = x.length;
+    let bits = x.length;
     function lambda7() {
       let r7 = [];
       return r7;
@@ -133,7 +133,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     );
     for (let i = 0; i < bits; i++) {
       for (let j = 0; j < bits; j++) {
-        const p = andGate(cnf, x[i], y[j]);
+        let p = andGate(cnf, x[i], y[j]);
         columns[text_combine(i, j)].push(p);
       }
     }
@@ -147,12 +147,12 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return columns;
   }
   function finalizeSum(cnf, columns) {
-    const result = [];
+    let result = [];
     let carry = null;
     for (let i = 0; i < columns.length; i++) {
-      const col = columns[i];
-      const a = col[0] || null;
-      const b = col[1] || null;
+      let col = columns[i];
+      let a = col[0] || null;
+      let b = col[1] || null;
       if (a && b) {
         if (carry === null) {
           [result[i], carry] = halfAdder(cnf, a, b);
@@ -183,12 +183,12 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return result;
   }
   function factorizationCNF(N, bits) {
-    const cnf = new CNF();
+    let cnf = new CNF();
     function lambda9() {
       let r9 = cnf.newVar();
       return r9;
     }
-    const x = Array.from(
+    let x = Array.from(
       {
         length: bits,
       },
@@ -198,7 +198,7 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       let r10 = cnf.newVar();
       return r10;
     }
-    const y = Array.from(
+    let y = Array.from(
       {
         length: bits,
       },
@@ -211,10 +211,10 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       cnf.addClause(...y.slice(1));
     }
     cnf.addClause(-x[subtract(bits, 1)], y[subtract(bits, 1)]);
-    const columns = buildMultiplierCSA(cnf, x, y);
-    const result = finalizeSum(cnf, columns);
+    let columns = buildMultiplierCSA(cnf, x, y);
+    let result = finalizeSum(cnf, columns);
     for (let i = 0; i < result.length; i++) {
-      const bit = (N >> i) & 1;
+      let bit = (N >> i) & 1;
       if (result[i] !== null) {
         cnf.addClause(bit ? result[i] : -result[i]);
       }
@@ -222,15 +222,15 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return cnf;
   }
   function to3SAT(cnf) {
-    const out = new CNF();
+    let out = new CNF();
     out.varCount = cnf.varCount;
-    for (const clause of cnf.clauses) {
+    for (let clause of cnf.clauses) {
       if (clause.length <= 3) {
         out.clauses.push(clause);
       } else {
         let prev = clause[0];
         for (let i = 1; i < subtract(clause.length, 2); i++) {
-          const v = out.newVar();
+          let v = out.newVar();
           out.addClause(prev, clause[i], v);
           prev = -v;
         }
@@ -246,8 +246,8 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   let v4 = Math.sqrt(integer_to_factor);
   let v5 = Math.log2(v4);
   let bits = text_combine(Math.ceil(v5), 1);
-  const cnf = factorizationCNF(integer_to_factor, bits);
-  const cnf3 = to3SAT(cnf);
+  let cnf = factorizationCNF(integer_to_factor, bits);
+  let cnf3 = to3SAT(cnf);
   cnf3.bits = bits;
   cnf3.dimacs = cnf3.toDimacs();
   return cnf3;

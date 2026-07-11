@@ -14,7 +14,7 @@ export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
     log(app_replace_rule_sets_fn_migrate_goals_space_add.name, {
       name,
     });
-    const type = "ObjectExpression";
+    let type = "ObjectExpression";
     let list = js_list_type_nodes(ast, type);
     let search = "goals";
     let m =

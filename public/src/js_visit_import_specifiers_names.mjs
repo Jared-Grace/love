@@ -11,6 +11,6 @@ export function js_visit_import_specifiers_names(ast) {
     }
     js_visit_import_specifiers(ast, lambda_import);
   }
-  const names = list_adder_unique(lambda2);
+  let names = list_adder_unique(lambda2);
   return names;
 }

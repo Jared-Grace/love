@@ -1,4 +1,4 @@
 export function folder_current() {
-  const current = ".";
+  let current = ".";
   return current;
 }

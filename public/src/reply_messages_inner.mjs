@@ -12,7 +12,7 @@ export async function reply_messages_inner(message, start) {
   let base = {
     message,
   };
-  const possbility_start = {
+  let possbility_start = {
     tokens,
     outputs: [],
     index: 0,

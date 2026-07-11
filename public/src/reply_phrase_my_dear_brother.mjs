@@ -12,11 +12,11 @@ export function reply_phrase_my_dear_brother() {
   let phrase_jesus = reply_phrase_jesus();
   let n = reply_word_in();
   let in_christ = reply_sequence_optional([n, phrase_jesus]);
-  const brother = reply_word_brother();
-  const dear = "dear";
+  let brother = reply_word_brother();
+  let dear = "dear";
   let db = reply_either_both(dear, brother);
   let fn16 = reply_sequence([my, db, in_christ]);
-  const choices = [fn16, my];
+  let choices = [fn16, my];
   let c = reply_choice(choices);
   let my_dear_brother = reply_optional(c);
   return my_dear_brother;

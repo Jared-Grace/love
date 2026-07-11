@@ -32,7 +32,7 @@ export async function js_dollar(ast) {
       let stack_2 = list_get_end_2(stack);
       let stack_3 = list_get_end_3(stack);
       let name = property_get(node, "name");
-      const separator = "$";
+      let separator = "$";
       let split = text_split(name, separator);
       let v2 = list_first_second(split);
       let second = property_get(v2, "second");
@@ -49,7 +49,7 @@ export async function js_dollar(ast) {
           "This variable name is used by ",
           js_dollar_choice_argument.name,
         );
-        const js_dollar_arguments = {
+        let js_dollar_arguments = {
           remaining,
           node,
           stack_1,

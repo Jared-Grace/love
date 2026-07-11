@@ -1,7 +1,7 @@
 export async function folder_read_async(path_folder) {
-  const fs = await import("fs/promises");
-  const path = await import("path");
-  const entries = await fs.readdir(path_folder, {
+  let fs = await import("fs/promises");
+  let path = await import("path");
+  let entries = await fs.readdir(path_folder, {
     withFileTypes: true,
   });
   function lambda(entry) {
@@ -12,6 +12,6 @@ export async function folder_read_async(path_folder) {
     let v2 = entry.name;
     return v2;
   }
-  const files = entries.filter(lambda).map(lambda2);
+  let files = entries.filter(lambda).map(lambda2);
   return files;
 }

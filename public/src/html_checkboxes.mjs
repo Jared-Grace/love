@@ -69,7 +69,7 @@ export function html_checkboxes(
       }
       each(checkboxes, lambda2);
       html_checked_set(checkbox, true);
-      const selected = "#5ffb84ff";
+      let selected = "#5ffb84ff";
       html_style_assign(container, {
         "background-color": selected,
       });
@@ -77,7 +77,7 @@ export function html_checkboxes(
       let valid = valid_get(checkboxes);
       validate(valid);
       let ci = app_karate_button_background_invalid();
-      const c = valid ? "#4ad66bff" : ci;
+      let c = valid ? "#4ad66bff" : ci;
       html_style_assign(container, {
         "box-shadow": text_combine_multiple([
           "inset 0 0 0 .15em ",

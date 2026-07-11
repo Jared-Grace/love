@@ -5,7 +5,7 @@ import { ebible_versions_english_books_count_cache } from "../../../love/public/
 export async function ebible_versions_english_full() {
   "full meaning all books of the bible, as oppose to versions that are missing books";
   let object = await ebible_versions_english_books_count_cache();
-  const c = isaiah_chapters_count();
+  let c = isaiah_chapters_count();
   let filter = function lambda3(value, key) {
     let v = value >= c;
     return v;

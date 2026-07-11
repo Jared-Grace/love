@@ -3,7 +3,7 @@ import { properties_from } from "../../../love/public/src/properties_from.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function function_dependencies_externals_to_urls(externals) {
   let o = null;
-  const pb = "prettier";
+  let pb = "prettier";
   let includes = list_includes(externals, pb);
   if (includes) {
     o = {
@@ -15,7 +15,7 @@ export function function_dependencies_externals_to_urls(externals) {
   } else {
     o = {};
   }
-  const lookup = {
+  let lookup = {
     acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
     astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
     "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",

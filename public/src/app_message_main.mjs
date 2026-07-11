@@ -38,9 +38,9 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function app_message_main(context) {
-  const messages_property = "messages";
+  let messages_property = "messages";
   let u = await uuid();
-  const user_id_property = "user_id";
+  let user_id_property = "user_id";
   let app_fn = app_message_main;
   let root = property_get(context, "root");
   object_merge_set(context, {
@@ -122,7 +122,7 @@ export async function app_message_main(context) {
     let ei = list_empty_is(results);
     if (ei) {
       let message_id = await uuid();
-      const file_name = text_combine_multiple([
+      let file_name = text_combine_multiple([
         app_message_firebase_path(),
         u,
         "/",

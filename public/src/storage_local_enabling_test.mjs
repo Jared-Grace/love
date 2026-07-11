@@ -21,9 +21,9 @@ export function storage_local_enabling_test() {
   let context = {
     app_fn,
   };
-  const key = "test";
-  const v = 123;
-  const expected = {
+  let key = "test";
+  let v = 123;
+  let expected = {
     test: v,
   };
   ("global object is empty initially");

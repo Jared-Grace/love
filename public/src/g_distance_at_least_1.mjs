@@ -8,6 +8,6 @@ export function g_distance_at_least_1(player, coordinates_move_to) {
     player,
     coordinates_move_to,
   });
-  const away = at_least_1(distance);
+  let away = at_least_1(distance);
   return away;
 }

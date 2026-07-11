@@ -15,7 +15,7 @@ export async function audio_duration(joined_audio) {
   } catch (e) {
     let stderr = property_get(e, "stderr");
     let lines = text_split_newline(stderr);
-    const prefix = "  Duration: ";
+    let prefix = "  Duration: ";
     let size = text_size(prefix);
     let found = list_find_starts_with(lines, prefix);
     let index = list_index_of(found, ",");

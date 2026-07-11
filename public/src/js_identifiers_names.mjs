@@ -9,6 +9,6 @@ export function js_identifiers_names(ast) {
     }
     js_visit_identifiers_nodes(ast, lambda);
   }
-  const names = list_adder_unique(lambda2);
+  let names = list_adder_unique(lambda2);
   return names;
 }

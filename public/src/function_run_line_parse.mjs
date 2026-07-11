@@ -5,7 +5,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 export async function function_run_line_parse(line) {
   let trimmed = text_trim(line);
-  const [f_name, ...args] = trimmed.split(" ");
+  let [f_name, ...args] = trimmed.split(" ");
   function lambda(previous) {
     list_add(previous, trimmed);
     let unique = list_unique_reverse(previous);

@@ -21,14 +21,12 @@ export function app_code_lesson_code_generic(value, batch_get, name_id, above) {
     value,
     "? ",
   ]);
-  const backwards_question_label = text_first_upper_to(
-    text_combine(value, ": "),
-  );
+  let backwards_question_label = text_first_upper_to(text_combine(value, ": "));
   let example_question_label = app_code_label_code_question();
   let example_count = 1;
   let quiz_backwards_answer_count_override = null;
   let on_question = html_text_set_code_dark;
-  const quizzes_get = app_code_lesson_quizzes_unscramble(
+  let quizzes_get = app_code_lesson_quizzes_unscramble(
     batch_get,
     example_question_label,
     on_question,

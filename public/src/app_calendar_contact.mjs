@@ -29,7 +29,7 @@ export async function app_calendar_contact(context) {
   let contact = property_get(dictionary, contact_selected);
   let json = json_to(contact);
   let p = html_p_text(root, json);
-  const id_properties = app_calendar_id_properties();
+  let id_properties = app_calendar_id_properties();
   let id = object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
     let paste = await clipboard_paste();

@@ -7,7 +7,7 @@ import { app_replace_rule_set_statements_simple_rules } from "../../../love/publ
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export function app_replace_rule_set_statements_simple() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_statements_simple_rules(rules);
   app_replace_rule_set_statements_simple_rules_ex(rules);
   let abbreviations = {};

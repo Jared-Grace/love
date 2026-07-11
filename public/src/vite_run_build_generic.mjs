@@ -12,7 +12,7 @@ export async function vite_run_build_generic(
   name,
 ) {
   let path = vite_config_path();
-  const command_parts = ["vite", "--config", path];
+  let command_parts = ["vite", "--config", path];
   command_transform(command_parts);
   await file_exists_assert(path);
   let command = list_join_space(command_parts);

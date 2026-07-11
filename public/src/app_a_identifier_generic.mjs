@@ -67,7 +67,7 @@ export function app_a_identifier_generic(
     let oc = app_a_overlay_container_centered(overlay);
     let div4 = html_div_text(oc, name);
     let context = property_get(a, "context");
-    const change = {
+    let change = {
       fn: async function lambda15() {
         let r = app_a_overlay_on_enter(on_enter, o3, a);
         let o = property_get(r, "overlay_result");
@@ -81,7 +81,7 @@ export function app_a_identifier_generic(
         fn = ternary(lines_multiple, app_a_textarea, app_a_input);
         let input = fn(overlay);
         if (lines_multiple) {
-          const row_count = 20;
+          let row_count = 20;
           html_rows_set(input, row_count);
         } else {
           html_centered(input);
@@ -151,7 +151,7 @@ export function app_a_identifier_generic(
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
     if (includes) {
-      const choice_function_open = {
+      let choice_function_open = {
         shortcut: "o",
         text: "Open",
         fn: function lambda() {
@@ -161,7 +161,7 @@ export function app_a_identifier_generic(
         },
       };
       list_add(choices, choice_function_open);
-      const references = {
+      let references = {
         shortcut: "s",
         text: "References",
         fn: async function lambda() {
@@ -182,7 +182,7 @@ export function app_a_identifier_generic(
         e1,
       });
       function lambda7() {
-        const c = {
+        let c = {
           shortcut: "g",
           text: "Assign result",
           fn: async function lambda() {
@@ -209,7 +209,7 @@ export function app_a_identifier_generic(
     }
     js_node_type_is_if(e, "ExpressionStatement", lambda6);
     function lambda4() {
-      const c = {
+      let c = {
         shortcut: "q",
         text: "Param delete",
         fn: async function lambda() {

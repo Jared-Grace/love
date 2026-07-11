@@ -15,7 +15,7 @@ export async function app_replace_rule_sets_fns_migrate_rules_used_remove() {
     });
     let item = property_get(a, "item");
     let properties = js_object_expression_properties(item);
-    const p_name = "rules_used";
+    let p_name = "rules_used";
     let p_existing = js_object_expression_properties_find_key_named(
       item,
       p_name,

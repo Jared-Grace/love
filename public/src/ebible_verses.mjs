@@ -48,7 +48,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
         index = list_first(filtered4);
       }
       let skipped = list_skip(filtered, text_combine(index, 1));
-      const v = ebible_verse_new(skipped, number);
+      let v = ebible_verse_new(skipped, number);
       la(v);
       filtered = list_take(filtered, index);
     }
@@ -58,7 +58,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let ne = list_empty_not_is(filtered);
   if (ne) {
     let verse_number = ebible_verses_before();
-    const v = ebible_verse_new(filtered, verse_number);
+    let v = ebible_verse_new(filtered, verse_number);
     list_add(verses_unfiltered, v);
   }
   list_reverse(verses_unfiltered);

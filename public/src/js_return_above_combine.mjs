@@ -26,7 +26,7 @@ export function js_return_above_combine(ast) {
       return;
     }
     function lambda4(init) {
-      const n = js_identifiers_names_equal_not(id, argument);
+      let n = js_identifiers_names_equal_not(id, argument);
       if (n) {
         return;
       }

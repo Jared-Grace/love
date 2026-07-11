@@ -33,7 +33,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     app_code_symbols_separated_on_question,
   );
   function above(root) {
-    const identifier_symbols_types = [
+    let identifier_symbols_types = [
       {
         name: "letter",
         examples: ["a", " - ", "z", " ", "A", " - ", "Z"],
@@ -57,7 +57,7 @@ export function app_code_lesson_identifiers_symbol_first() {
       identifier_symbols_types,
       "plural",
     );
-    const identifiers_valid_anywhere = list_to_text_and_list(
+    let identifiers_valid_anywhere = list_to_text_and_list(
       identifier_symbols_types_plural,
     );
     let c2 = app_code_container_light_blue(root);

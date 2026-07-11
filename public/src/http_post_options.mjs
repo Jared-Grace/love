@@ -1,7 +1,7 @@
 import { http_generic } from "../../../love/public/src/http_generic.mjs";
 import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs";
 export async function http_post_options(url, body, options_extra) {
-  const options = {
+  let options = {
     method: "POST",
     body: body,
   };

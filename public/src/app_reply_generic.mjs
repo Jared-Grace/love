@@ -64,7 +64,7 @@ export async function app_reply_generic(verse_get) {
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books_browser(en);
   let verses_list = null;
-  const root = html_document_body();
+  let root = html_document_body();
   let copied = [];
   let languages_chosens = [];
   let buttons = null;
@@ -85,8 +85,8 @@ export async function app_reply_generic(verse_get) {
   async function verse_random_add() {
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
-    const translations = [];
-    const v = {
+    let translations = [];
+    let v = {
       verses,
       reference,
       translations,
@@ -172,7 +172,7 @@ export async function app_reply_generic(verse_get) {
       let lower = text_lower_to(letters);
       let sw = text_starts_with(lower, typed);
       let includes = list_includes(chosens, item);
-      const condition = includes || not(sw);
+      let condition = includes || not(sw);
       html_display_none_or_block(condition, item);
     }
     each(buttons, lambda2);
@@ -218,7 +218,7 @@ export async function app_reply_generic(verse_get) {
         verse_number,
       ]);
     }
-    const other = [];
+    let other = [];
     function lambda11(v) {
       let reference = property_get(v, "reference");
       list_add(other, reference);

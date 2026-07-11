@@ -16,7 +16,7 @@ export async function js_node_atomize(ast, visitor, variable_name, offset) {
     offset,
   );
   ("this is in case there is an await");
-  const copied = list_get_end(stack, offset);
+  let copied = list_get_end(stack, offset);
   let copy = object_copy(copied);
   let r = js_declare_unique_ast(ast, variable_name, copy);
   let unique = property_get(r, "unique");
