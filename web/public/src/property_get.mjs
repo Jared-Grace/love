@@ -5,6 +5,9 @@ export function property_get(object, property_name) {
   if (not(property_name in object)) {
     function object_get() {
       let properties = properties_get(object);
+      ("this way you see ",
+        property_name,
+        " if you receive truncated beginning or ending");
       let v = {
         property_name,
         properties,
