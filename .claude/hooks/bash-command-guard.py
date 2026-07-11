@@ -287,6 +287,31 @@ def load_safe_verbs():
     return verbs
 
 
+def load_safe_exact_commands():
+    """Exact Bash allow rules with no trailing ':*' verb wildcard, e.g.
+    "Bash(node scripts/g.mjs ai)". load_safe_verbs() can't see these - its
+    regex only recognizes the "Bash(verb:*)" prefix-wildcard shape - so a
+    fully-trusted exact command like this one fails check_simple_commands
+    and forces an "ask" the moment it's chained with anything else (e.g.
+    "git status && node scripts/g.mjs ai"), even though the native
+    permission engine already runs it unprompted on its own. Loading these
+    separately and matching a simple command's full word sequence against
+    them (see check_simple_commands) lets that same already-granted trust
+    apply inside a chain too, without widening what's trusted standalone."""
+    commands = set()
+    for path in SETTINGS_PATHS:
+        try:
+            with open(path) as f:
+                data = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError, OSError):
+            continue
+        for rule in data.get("permissions", {}).get("allow", []):
+            m = re.match(r"^Bash\((.+)\)$", rule)
+            if m and not m.group(1).rstrip().endswith(":*"):
+                commands.add(m.group(1).strip())
+    return commands
+
+
 def tokenize(command):
     """Quote-aware tokenizer. Emits word tokens (quotes stripped) and a
     single ';' token for each unquoted ';' or newline. Raises Unsupported
@@ -718,7 +743,7 @@ def is_safe_sed(words):
     return all(not w.startswith("-") for w in words[idx:])
 
 
-def check_simple_commands(tokens, safe_verbs):
+def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
     groups = split_statements(tokens)
     if not groups:
         return False
@@ -733,6 +758,8 @@ def check_simple_commands(tokens, safe_verbs):
             raise Unsupported("variable assignment prefix")
         if is_dangerous_find(words):
             return False
+        if " ".join(words) in safe_exact_commands:
+            continue
         if (
             verb_of(words) not in safe_verbs
             and not is_safe_sandboxed_node_eval(words)
@@ -745,7 +772,7 @@ def check_simple_commands(tokens, safe_verbs):
     return found_command
 
 
-def check_for_loop(tokens, safe_verbs):
+def check_for_loop(tokens, safe_verbs, safe_exact_commands):
     if len(tokens) < 5 or tokens[1] in RESERVED_WORDS or tokens[2] != "in":
         raise Unsupported("malformed for-loop")
     i = 3
@@ -770,10 +797,10 @@ def check_for_loop(tokens, safe_verbs):
     i += 1
     if i != len(tokens):
         raise Unsupported("trailing content after 'done'")
-    return check_simple_commands(body, safe_verbs)
+    return check_simple_commands(body, safe_verbs, safe_exact_commands)
 
 
-def is_safe(command, safe_verbs):
+def is_safe(command, safe_verbs, safe_exact_commands):
     tokens = tokenize(command)
     if not tokens:
         return False
@@ -783,11 +810,11 @@ def is_safe(command, safe_verbs):
             continue
         found_command = True
         if group[0] == "for":
-            if not check_for_loop(group, safe_verbs):
+            if not check_for_loop(group, safe_verbs, safe_exact_commands):
                 return False
         elif group[0] in RESERVED_WORDS:
             raise Unsupported(f"unsupported construct {group[0]!r}")
-        elif not check_simple_commands(group, safe_verbs):
+        elif not check_simple_commands(group, safe_verbs, safe_exact_commands):
             return False
     return found_command
 
@@ -824,11 +851,12 @@ def main():
     command = raw_command.strip()
 
     safe_verbs = load_safe_verbs()
-    if not safe_verbs:
+    safe_exact_commands = load_safe_exact_commands()
+    if not safe_verbs and not safe_exact_commands:
         return
 
     try:
-        safe = is_safe(command, safe_verbs)
+        safe = is_safe(command, safe_verbs, safe_exact_commands)
     except Unsupported:
         safe = False
 
