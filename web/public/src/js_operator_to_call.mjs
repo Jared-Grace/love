@@ -15,7 +15,7 @@ export async function js_operator_to_call(ast, o, properties, type) {
   let fn = property_get(o, "fn");
   let name = js_flo_name(ast);
   if (equal(name, fn.name)) {
-    ("return");
+    return;
   }
   function lambda(v) {
     let node = property_get(v, "node");
