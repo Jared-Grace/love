@@ -1,3 +1,4 @@
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -9,6 +10,7 @@ export function js_find_function_type_name_starts_with(ast) {
     let id = property_get(n, "id");
     function lambda3() {
       let name = js_identifier_name(i);
+      let sw = text_starts_with(t, prefix);
     }
     js_identifier_is_if(node, lambda3);
   }
