@@ -7,11 +7,16 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-export async function lock_generic(lock_name, wait, lambda) {
+import { file_write } from "../../../love/public/src/file_write.mjs";
+import { file_read } from "../../../love/public/src/file_read.mjs";
+import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
+export async function lock_generic(lock_name, wait, lambda, who) {
   let lockfile = await import_install("proper-lockfile");
   let f_path = folder_user_storage_function_path(lock_generic);
   let result = path_join([f_path, lock_name]);
   await folder_exists_ensure(result);
+  let owner_path = path_join([result, "owner"]);
   let release = null;
   let r = null;
   try {
@@ -27,15 +32,26 @@ export async function lock_generic(lock_name, wait, lambda) {
           throw e;
         }
         if (not(notified)) {
+          async function lambda_owner() {
+            let exists = await file_exists(owner_path);
+            return exists ? await file_read(owner_path) : null;
+          }
+          let owner = await catch_null_async(lambda_owner);
+          let owner_suffix = owner ? text_combine(" held by ", owner) : "";
           let message = null;
           if (wait) {
             message = text_combine_multiple([
               "waiting on ",
               result,
               " to be unlocked",
+              owner_suffix,
             ]);
           } else {
-            message = text_combine(result, " is locked, skipping");
+            message = text_combine_multiple([
+              result,
+              " is locked, skipping",
+              owner_suffix,
+            ]);
           }
           log_keep(lock_generic.name, message);
           notified = true;
@@ -46,6 +62,7 @@ export async function lock_generic(lock_name, wait, lambda) {
       }
     } while (wait);
     if (locked) {
+      await file_write(owner_path, who ? who : "unknown");
       r = await lambda();
     }
   } finally {

@@ -14,6 +14,7 @@
       "Bash(which:*)",
       "Bash(df:*)",
       "Bash(ps:*)",
+      "Bash(sleep:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(git show:*)",
