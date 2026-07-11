@@ -52,10 +52,6 @@ export async function sandbox() {
       "ab",
     );
     await function_current_selects_nodes_log();
-    await function_current_selects_apply_args(
-      js_function_node_call.name,
-      js_operators.name,
-    );
   }
   return;
   ("below is functionality that has been used in the past: ");
@@ -83,7 +79,8 @@ export async function sandbox() {
       }
       {
         (function_current_selects_apply_args,
-          [js_expression_functionize.name, "1", "file_name"]);
+          [js_expression_functionize.name, "1", "file_name"],
+          [js_function_node_call.name, js_operators.name]);
       }
       {
         let combined = text_combine(
