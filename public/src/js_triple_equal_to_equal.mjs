@@ -27,7 +27,8 @@ export async function js_triple_equal_to_equal(ast) {
         let copy = object_copy(lr);
         list_add(arguments2, copy);
       }
-      let mapped = list_map(["left", "right"], lambda2);
+      const properties = ["left", "right"];
+      let mapped = list_map(properties, lambda2);
       object_replace(node, expression);
     }
   }
