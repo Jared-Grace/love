@@ -14,7 +14,7 @@ export function js_identifiers_rename_unused_number_suffixes(ast) {
       return;
     }
     let lists = [names, invalid];
-    let any = lists_any_include(base, lists);
+    let any = lists_any_include(lists, base);
     if (any) {
       return;
     }
