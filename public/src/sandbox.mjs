@@ -52,8 +52,10 @@ export async function sandbox() {
       "ab",
     );
     await function_current_selects_nodes_log();
-    let r2 = js_operators();
-    await function_current_selects_apply_args(js_function_node_call.name, r2);
+    await function_current_selects_apply_args(
+      js_function_node_call.name,
+      js_operators.name,
+    );
   }
   return;
   ("below is functionality that has been used in the past: ");
