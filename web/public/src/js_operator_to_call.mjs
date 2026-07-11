@@ -10,7 +10,7 @@ import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function js_operator_to_call(o, ast, properties, type) {
+export async function js_operator_to_call(ast, o, properties, type) {
   let operator = property_get(o, "operator");
   let fn = property_get(o, "fn");
   let name = js_flo_name(ast);
