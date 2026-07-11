@@ -63,7 +63,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       await fs.promises.writeFile(temp_path, contents, "utf-8");
       await fs.promises.rename(temp_path, file_path);
     } catch (e) {
-      const promise = fs.promises.unlink(temp_path);
+      let promise = fs.promises.unlink(temp_path);
       await promise_catch_ignore(promise);
       throw e;
     }
