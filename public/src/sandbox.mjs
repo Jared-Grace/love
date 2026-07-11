@@ -37,6 +37,7 @@ export async function sandbox() {
   await function_current_set(f_name);
   ("current_commands: ");
   {
+    let r = await function_node_select_args(select_fn_name, args_comma);
   }
   return;
   ("below is functionality that has been used in the past: ");
@@ -50,6 +51,19 @@ export async function sandbox() {
           [js_statements_with_identifiers_named.name, "on_passage"],
           [js_statement_find_call_named.name, property_exists_not.name],
           [js_expressions_with_string_starting_with.name, "p"]);
+      }
+      {
+        (function_current_selects_apply,
+          [js_expand_selects.name],
+          [js_function_node_unwrap.name],
+          [js_statement_delete.name],
+          [js_statement_if_return_add.name],
+          [js_statement_wrap_if.name],
+          [js_statement_duplicate.name]);
+      }
+      {
+        (function_current_selects_apply_args,
+          [s_expression_functionize.name, "1,file_name"]);
       }
       {
         let combined = text_combine(
@@ -66,19 +80,6 @@ export async function sandbox() {
           [js_call_add_first.name, html_hash_get.name],
           [js_call_add_before_return.name, "ljn"],
           [js_flo_body_add_return_argument_from_code.name, "n"]);
-      }
-      {
-        (function_current_selects_apply,
-          [js_expand_selects.name],
-          [js_function_node_unwrap.name],
-          [js_statement_delete.name],
-          [js_statement_if_return_add.name],
-          [js_statement_wrap_if.name],
-          [js_statement_duplicate.name]);
-      }
-      {
-        (function_current_selects_apply_args,
-          [s_expression_functionize.name, "1,file_name"]);
       }
     }
     ("regular function calls: ");
