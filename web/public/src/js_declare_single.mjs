@@ -1,4 +1,4 @@
-import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
+import { js_declaration_declarators_get } from "../../../love/public/src/js_declaration_declarators_get.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -8,7 +8,7 @@ export function js_declare_single(vd) {
   if (not(b)) {
     return null;
   }
-  let declarations = js_declare_declarations_get(vd);
+  let declarations = js_declaration_declarators_get(vd);
   let s = list_size_1(declarations);
   if (not(s)) {
     return null;

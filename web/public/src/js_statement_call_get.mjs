@@ -1,5 +1,5 @@
 import { js_await_if_unwrap_argument } from "../../../love/public/src/js_await_if_unwrap_argument.mjs";
-import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
+import { js_declaration_declarators_get } from "../../../love/public/src/js_declaration_declarators_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -20,7 +20,7 @@ export function js_statement_call_get(node) {
       call = expression_next;
     }
   } else if (js_node_type_is(node, "VariableDeclaration")) {
-    let declarations = js_declare_declarations_get(node);
+    let declarations = js_declaration_declarators_get(node);
     if (list_multiple_is(declarations)) {
       return null;
     }
