@@ -5,8 +5,15 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { storage_local_exists_not_context } from "../../../love/public/src/storage_local_exists_not_context.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { app_shared_button_back } from "../../../love/public/src/app_shared_button_back.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
+import { app_bible_home } from "../../../love/public/src/app_bible_home.mjs";
 export function app_bible_languages(context) {
   let root = html_clear_context(context);
+  function lambda_back() {
+    app_shared_screen_set(context, app_bible_home);
+  }
+  app_shared_button_back(root, lambda_back);
   let languages = ebible_languages();
   let key = "languages_chosen";
   let n = storage_local_exists_not_context(context, key);

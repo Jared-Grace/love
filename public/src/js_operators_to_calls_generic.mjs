@@ -16,8 +16,7 @@ export async function js_operators_to_calls_generic(ast, operators, properties, 
     function lambda2(o) {
       let matched = property_get_equal(o, "operator", node_operator);
       if (matched) {
-        let fn = property_get(o, "fn");
-        js_operator_node_to_call(node, fn, properties);
+        js_operator_node_to_call(node, o, properties);
       }
       return matched;
     }
