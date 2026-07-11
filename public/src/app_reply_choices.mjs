@@ -3,7 +3,7 @@ import { app_reply_glory } from "../../../love/public/src/app_reply_glory.mjs";
 import { app_reply_give } from "../../../love/public/src/app_reply_give.mjs";
 import { text_combine_today } from "../../../love/public/src/text_combine_today.mjs";
 import { app_reply_how_feel_today } from "../../../love/public/src/app_reply_how_feel_today.mjs";
-import { newline_ } from "../../../love/public/src/newline_2.mjs";
+import { newline_2 } from "../../../love/public/src/newline_2.mjs";
 import { app_reply_greetings_live } from "../../../love/public/src/app_reply_greetings_live.mjs";
 import { app_reply_response_how_r_u_today } from "../../../love/public/src/app_reply_response_how_r_u_today.mjs";
 import { app_reply_how_r_u_today } from "../../../love/public/src/app_reply_how_r_u_today.mjs";
@@ -18,7 +18,7 @@ import { app_reply_response_how_day } from "../../../love/public/src/app_reply_r
 import { app_reply_how_day } from "../../../love/public/src/app_reply_how_day.mjs";
 import { app_reply_response_how_family } from "../../../love/public/src/app_reply_response_how_family.mjs";
 import { app_reply_how_family } from "../../../love/public/src/app_reply_how_family.mjs";
-import { list_join_newline_ } from "../../../love/public/src/list_join_newline_2.mjs";
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_reply_greetings } from "../../../love/public/src/app_reply_greetings.mjs";
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
@@ -52,7 +52,7 @@ import { emoji_sleep_face } from "../../../love/public/src/emoji_sleep_face.mjs"
 import { emoji_sleep_z } from "../../../love/public/src/emoji_sleep_z.mjs";
 import { emoji_globe_americas } from "../../../love/public/src/emoji_globe_americas.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
-import { emoji_ } from "../../../love/public/src/emoji_100.mjs";
+import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { text_the_servant_of_god_is_first_upper } from "../../../love/public/src/text_the_servant_of_god_is_first_upper.mjs";
 import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 import { emoji_cross } from "../../../love/public/src/emoji_cross.mjs";
@@ -190,7 +190,7 @@ export function app_reply_choices() {
         " ",
         app_reply_called_why(),
       ]),
-      response: list_join_newline_([greetings, called_why]),
+      response: list_join_newline_2([greetings, called_why]),
     },
     {
       text: text_combine_multiple([
@@ -198,7 +198,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_day(),
       ]),
-      response: list_join_newline_([greetings, how_day]),
+      response: list_join_newline_2([greetings, how_day]),
     },
     {
       text: text_combine_multiple([
@@ -206,7 +206,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_family(),
       ]),
-      response: list_join_newline_([greetings, how_family]),
+      response: list_join_newline_2([greetings, how_family]),
     },
     {
       text: text_combine_multiple([
@@ -214,7 +214,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_feel(),
       ]),
-      response: list_join_newline_([greetings, how_feel]),
+      response: list_join_newline_2([greetings, how_feel]),
     },
     {
       text: text_combine_multiple([
@@ -222,7 +222,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_r_u(),
       ]),
-      response: list_join_newline_([greetings, hru]),
+      response: list_join_newline_2([greetings, hru]),
     },
     {
       text: text_combine_multiple([
@@ -230,7 +230,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_r_u_today(),
       ]),
-      response: list_join_newline_([greetings, hru_today]),
+      response: list_join_newline_2([greetings, hru_today]),
     },
     {
       text: text_combine_multiple([
@@ -240,11 +240,11 @@ export function app_reply_choices() {
         " ",
         app_reply_how_family(),
       ]),
-      response: list_join_newline_([greetings, hru, how_family]),
+      response: list_join_newline_2([greetings, hru, how_family]),
     },
     {
       text: app_reply_greetings_live(),
-      response: list_join_newline_([greetings, live]),
+      response: list_join_newline_2([greetings, live]),
     },
     {
       text: text_combine(emoji_hands_raising(), " Hallelujah"),
@@ -307,7 +307,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_family(),
       ]),
-      response: list_join_newline_([hru, how_family]),
+      response: list_join_newline_2([hru, how_family]),
     },
     {
       text: text_combine_multiple([
@@ -315,7 +315,7 @@ export function app_reply_choices() {
         " ",
         app_reply_how_day(),
       ]),
-      response: list_join_newline_([hru, how_day]),
+      response: list_join_newline_2([hru, how_day]),
     },
     {
       text: text_combine(emoji_pray(), " Invite"),
@@ -359,7 +359,7 @@ export function app_reply_choices() {
       text: text_combine(emoji_wave(), " Name location"),
       response: text_combine_multiple([
         app_reply_choices_name(),
-        newline_(),
+        newline_2(),
         app_reply_choices_location(),
       ]),
     },
@@ -377,7 +377,7 @@ export function app_reply_choices() {
         " ",
         text_the_servant_of_god_is_first_upper(),
         " okay, yes ",
-        emoji_(),
+        emoji_100(),
         " ",
         emoji_pray(),
       ]),
@@ -457,7 +457,7 @@ export function app_reply_choices() {
       text: "Song",
       response: text_combine_multiple([
         "https://youtu.be/rNhSoUKPgMQ",
-        newline_(),
+        newline_2(),
         " Jesus gave me the grace to write this song",
       ]),
     },

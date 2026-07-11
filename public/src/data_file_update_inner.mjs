@@ -52,7 +52,7 @@ export function data_file_update_inner(parsed, data) {
     js_visit_calls_named(ast, fn_name.name, lambda4);
     function lambda4({ args }) {
       let first = fn_name_arg_get(args, f_name);
-      let value = property_get(first, "value");
+  let value = property_get(first, "value");
       la(value);
     }
   }

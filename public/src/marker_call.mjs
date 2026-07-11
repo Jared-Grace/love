@@ -13,12 +13,12 @@ export async function marker_call(f_name_call) {
       let v = marker_next_index(a);
       let ast = property_get(v, "ast");
       let index = property_get(v, "index");
-      let stack_ = property_get(v, "stack_2");
+      let stack_2 = property_get(v, "stack_2");
       let stack = property_get(v, "stack");
       let parsed = await js_call_new_insert(
         f_name_call,
         ast,
-        stack_,
+        stack_2,
         index,
         stack,
       );

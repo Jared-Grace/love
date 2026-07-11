@@ -7,13 +7,13 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 export function js_dollar_aa({
   remaining,
   node,
-  stack_,
+  stack_1,
   stack_2,
   stack_3,
   ast,
   afters,
 }) {
-  list_remove(stack_2, stack_);
+  list_remove(stack_2, stack_1);
   let body_block = js_flo_body(ast);
   let code = js_code_call(arguments_assert.name);
   let expression = js_parse_statement(code);

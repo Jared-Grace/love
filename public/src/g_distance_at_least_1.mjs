@@ -1,13 +1,13 @@
 import { log_json } from "../../../love/public/src/log_json.mjs";
-import { at_least_ } from "../../../love/public/src/at_least_1.mjs";
+import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
-export function g_distance_at_least_(player, coordinates_move_to) {
+export function g_distance_at_least_1(player, coordinates_move_to) {
   let distance = g_distance(player, coordinates_move_to);
   log_json({
     distance,
     player,
     coordinates_move_to,
   });
-  const away = at_least_(distance);
+  const away = at_least_1(distance);
   return away;
 }

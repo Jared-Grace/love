@@ -8,9 +8,6 @@ import { subtract } from "../../../love/public/src/subtract.mjs";
 export function integer_random(min, max) {
   let list = [min, max];
   assert_multiple(integer_is, list);
-  let r = text_combine(
-    floor(multiply(random(), text_combine(subtract(max, min), 1))),
-    min,
-  );
+  let r = text_combine(floor(multiply(random(), text_combine(subtract(max, min), 1))), min);
   return r;
 }

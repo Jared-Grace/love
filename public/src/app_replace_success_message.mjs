@@ -16,19 +16,19 @@ import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { emoji_party_face } from "../../../love/public/src/emoji_party_face.mjs";
 import { emoji_party_popper } from "../../../love/public/src/emoji_party_popper.mjs";
-import { emoji_medal_ } from "../../../love/public/src/emoji_medal_1.mjs";
+import { emoji_medal_1 } from "../../../love/public/src/emoji_medal_1.mjs";
 import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs";
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
-import { emoji_ } from "../../../love/public/src/emoji_100.mjs";
+import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export function app_replace_success_message(parent) {
   let choices = [
     emoji_trophy,
-    emoji_,
+    emoji_100,
     emoji_clap,
     emoji_medal_star,
-    emoji_medal_,
+    emoji_medal_1,
     emoji_party_popper,
     emoji_party_face,
   ];

@@ -1,5 +1,5 @@
 import { function_name_to_part_replace_last_multiple } from "../../../love/public/src/function_name_to_part_replace_last_multiple.mjs";
-export function function_name_to_part_replace_last_(f_name_old, replacement) {
+export function function_name_to_part_replace_last_3(f_name_old, replacement) {
   let count = 3;
   let f_name_new = function_name_to_part_replace_last_multiple(
     f_name_old,

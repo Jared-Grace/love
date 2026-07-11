@@ -5,9 +5,7 @@ export async function playwright_by_attribute_generic(
   value,
   compare,
 ) {
-  const elements = await page
-    .locator(text_combine_multiple(["[", name, "]"]))
-    .elementHandles();
+  const elements = await page.locator(text_combine_multiple(['[', name, ']'])).elementHandles();
   const filtered = [];
   for (const el of elements) {
     const a = await el.getAttribute(name);
