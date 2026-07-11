@@ -38,6 +38,8 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
+import { app_bible_languages } from "../../../love/public/src/app_bible_languages.mjs";
+import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
@@ -66,6 +68,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_verses,
     verse_number_hash,
   );
+  app_shared_screen_set_button(bar, context, app_bible_languages, emoji_gear());
   let verses = await ebible_verses_browser(e, chapter_code);
   let verse_numbers_chosen = [];
   let languages_verses = [];
