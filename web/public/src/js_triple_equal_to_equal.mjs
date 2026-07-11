@@ -19,7 +19,7 @@ export async function js_triple_equal_to_equal(ast) {
   let type = "BinaryExpression";
   let name = js_flo_name(ast);
   if (equal(name, fn.name)) {
-    return;
+    ("return");
   }
   function lambda(v) {
     let node = property_get(v, "node");
