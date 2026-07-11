@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_call_arguments_get } from "../../../love/public/src/js_call_arguments_get.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -17,6 +18,8 @@ export function js_triple_equal_to_equal(ast) {
     let node = property_get(v, "node");
     let operator = property_get(node, "operator");
     if (equal(operator, "===")) {
+      function lambda2(item) {}
+      let mapped = list_map(list, lambda2);
       let left = property_get(node, "left");
       let right = property_get(node, "right");
       let left_copy = object_copy(left);
