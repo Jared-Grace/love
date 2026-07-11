@@ -36,6 +36,7 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function sandbox() {
   const f_name = app_code_lesson_functions_console_log_arithmetic.name;
   await function_current_set(f_name);
+  await function_current_selects_empty();
   ("current_commands: ");
   {
     let r = await function_node_select_args(
