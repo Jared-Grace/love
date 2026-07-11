@@ -1,4 +1,4 @@
 export function js_keyword_with() {
-  let k = "while";
+  let k = "with";
   return k;
 }
