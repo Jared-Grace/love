@@ -10,7 +10,7 @@ import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
-import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { js_visit_identifiers } from "../../../love/public/src/js_visit_identifiers.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { property_equals } from "../../../love/public/src/property_equals.mjs";
@@ -65,7 +65,7 @@ export async function js_functionize(
         la(name);
       }
     }
-    js_visit_type(declaration, "Identifier", lambda2);
+    js_visit_identifiers(declaration, lambda2);
   }
   let missing = list_adder_unique(lambda3);
   list_remove(missing, f_name_new);
