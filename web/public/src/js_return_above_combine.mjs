@@ -9,14 +9,14 @@ import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_return_above_combine(ast) {
   "this refactors two sequential statements to be one return statement";
-  js_visit_returns_identifiers(ast, lambda2);
-  function lambda2({ v, node, argument }) {
+  js_visit_returns_identifiers(ast, lambda);
+  function lambda({ v, node, argument }) {
     let stack = property_get(v, "stack");
-    let e = list_get_end_1(stack);
+    let e = list_get_end_(stack);
     let l = list_is(e);
     if (not(l)) {
       return;

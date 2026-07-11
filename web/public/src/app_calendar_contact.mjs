@@ -16,11 +16,11 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { app_calendar_home } from "../../../love/public/src/app_calendar_home.mjs";
 export async function app_calendar_contact(context) {
   let root = html_clear_context(context);
-  async function lambda2() {
+  async function lambda() {
     await app_shared_screen_set(context, app_calendar_home);
   }
   let text = app_replace_button_home_text();
-  let component = app_a_button_wide(root, text, lambda2);
+  let component = app_a_button_wide(root, text, lambda);
   let dictionary = await app_calendar_download_browser_contacts();
   let contact_selected = storage_local_get_context(context, "contact_selected");
   log(app_calendar_contact.name, {

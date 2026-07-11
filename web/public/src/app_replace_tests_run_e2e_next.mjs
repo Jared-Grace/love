@@ -10,7 +10,7 @@ export async function app_replace_tests_run_e2e_next(url) {
   let rule_sets = app_replace_rule_sets();
   let taken = list_take(rule_sets, 2);
   async function on_page(page) {
-    async function lambda3(rule_set) {
+    async function lambda(rule_set) {
       let goals = property_get(rule_set, "goals");
       async function lambda2(goal) {
         await app_replace_tests_run_e2e_goal(
@@ -22,7 +22,7 @@ export async function app_replace_tests_run_e2e_next(url) {
       }
       await each_async(goals, lambda2);
     }
-    await each_async(taken, lambda3);
+    await each_async(taken, lambda);
   }
   await playwright_test_url(url, on_page);
 }

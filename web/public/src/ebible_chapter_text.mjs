@@ -26,9 +26,9 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     bible_folder,
     chapter_code,
   );
-  let v2 = await html_parse_read(chapter_path);
-  let root = property_get(v2, "root");
-  let d = property_get(v2, "d");
+  let v = await html_parse_read(chapter_path);
+  let root = property_get(v, "root");
+  let d = property_get(v, "d");
   let main = html_parse_find(root, ".main");
   let list = html_parse_find_list_to(main, ".verse");
   let verse_numbers = list_map(list, lambda2);

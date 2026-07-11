@@ -7,7 +7,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_join_space } from "../../../love/public/src/list_map_join_space.mjs";
 import { list_new_multiple } from "../../../love/public/src/list_new_multiple.mjs";
-import { add_1 } from "../../../love/public/src/add_1.mjs";
+import { add_ } from "../../../love/public/src/add_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
@@ -128,7 +128,7 @@ export async function g_sermon_generate_book_generic_prompts(
       let user_prompt_after = prompt_get([passage]);
       function prompt_get(groups) {
         let size = list_size(bible_folders);
-        let a = add_1(size);
+        let a = add_(size);
         let r = list_new_multiple(a);
         function each_group(group) {
           let texts = property_get(group, "texts");

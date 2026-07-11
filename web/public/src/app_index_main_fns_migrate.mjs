@@ -17,8 +17,8 @@ export async function app_index_main_fns_migrate() {
       let properties = js_object_expression_properties(node);
       let key = "key";
       let identifier_name = "app_fn";
-      let filter = function lambda4(item3) {
-        let i = property_get(item3, key);
+      let filter = function lambda4(item) {
+        let i = property_get(item, key);
         let r = js_identifier_named_try(i, identifier_name);
         return r;
       };

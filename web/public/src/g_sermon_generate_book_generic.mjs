@@ -24,7 +24,7 @@ export async function g_sermon_generate_book_generic(
     prompt_user_middle,
     prompt_system,
   );
-  async function lambda2(c) {
+  async function lambda(c) {
     let chapter_code = property_get(c, "chapter_code");
     let passages_with_prompts = property_get(c, "passages");
     async function lambda3(p) {
@@ -50,5 +50,5 @@ export async function g_sermon_generate_book_generic(
       path,
     });
   }
-  await each_async(chapters, lambda2);
+  await each_async(chapters, lambda);
 }

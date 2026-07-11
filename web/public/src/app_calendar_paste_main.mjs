@@ -8,7 +8,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
+import { list_join_newline_ } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_calendar_paste_convert } from "../../../love/public/src/app_calendar_paste_convert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { clipboard_transform } from "../../../love/public/src/clipboard_transform.mjs";
@@ -50,7 +50,7 @@ export function app_calendar_paste_main(context) {
         try {
           let r = app_calendar_paste_convert(input, country);
           let date_time_zones = property_get(r, "date_time_zones");
-          let joined = list_join_newline_2([
+          let joined = list_join_newline_([
             "Do you want me to share the word of God on this day and time?",
             date_time_zones,
           ]);

@@ -1,5 +1,5 @@
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
-export async function js_identifier_rename_imports_fix_curried_right_2(
+export async function js_identifier_rename_imports_fix_curried_right_(
   f_name_before,
   f_name_after,
 ) {

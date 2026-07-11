@@ -7,7 +7,7 @@ import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { list_find_property_try_or_null_curried } from "../../../love/public/src/list_find_property_try_or_null_curried.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_merge_match } from "../../../love/public/src/object_merge_match.mjs";
-import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
+import { list_size_ } from "../../../love/public/src/list_size_1.mjs";
 import { list_multiple_not_is_assert } from "../../../love/public/src/list_multiple_not_is_assert.mjs";
 import { object_values_map_list_unique } from "../../../love/public/src/object_values_map_list_unique.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
@@ -31,7 +31,7 @@ export function app_calendar_contact_add(data, item) {
   let unique = object_values_map_list_unique(picked, lambda);
   let list = list_filter_null_not_is(unique);
   list_multiple_not_is_assert(list);
-  let s = list_size_1(list);
+  let s = list_size_(list);
   if (s) {
     let only = list_single(list);
     object_merge_match(only, item);

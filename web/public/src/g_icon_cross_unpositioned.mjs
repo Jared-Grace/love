@@ -9,14 +9,14 @@ export function g_icon_cross_unpositioned(parent) {
   html_click_none(i);
   html_class_add(i, "ri-cross-fill");
   const square_size = text_combine_multiple([
-    'calc(',
+    "calc(",
     g_img_square_size_css(),
-    '*.4)',
+    "*.4)",
   ]);
   const glow_size = text_combine_multiple([
-    'calc(',
+    "calc(",
     g_img_square_size_css(),
-    '*.05)',
+    "*.05)",
   ]);
   html_style_assign(i, {
     display: "flex",

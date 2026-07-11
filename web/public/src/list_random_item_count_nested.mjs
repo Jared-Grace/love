@@ -6,13 +6,13 @@ export function list_random_item_count_nested(
   row_count,
   column_count,
 ) {
-  function lambda10(la) {
+  function lambda(la) {
     function lambda6(i) {
       let list = list_random_item_count(tiles_choices, column_count);
       la(list);
     }
     each_range(row_count, lambda6);
   }
-  let rows = list_adder(lambda10);
+  let rows = list_adder(lambda);
   return rows;
 }

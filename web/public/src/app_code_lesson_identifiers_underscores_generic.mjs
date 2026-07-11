@@ -13,7 +13,7 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { boolean_random } from "../../../love/public/src/boolean_random.mjs";
 import { list_join_cycled } from "../../../love/public/src/list_join_cycled.mjs";
-import { equal_2 } from "../../../love/public/src/equal_2.mjs";
+import { equal_ } from "../../../love/public/src/equal_2.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_even_is } from "../../../love/public/src/integer_even_is.mjs";
 import { list_cycler } from "../../../love/public/src/list_cycler.mjs";
@@ -99,7 +99,7 @@ export function app_code_lesson_identifiers_underscores_generic(
         separators = [separator_valid];
       } else {
         let size = list_size(batch_item);
-        let eq = equal_2(size);
+        let eq = equal_(size);
         if (eq) {
           separators = [separator_invalid];
         } else {
@@ -119,8 +119,8 @@ export function app_code_lesson_identifiers_underscores_generic(
     return mapped3;
   }
   let name_id = app_code_lesson_name_id("identifiers", [
-    text_combine(separator_valid_name, 's allowed'),
-    text_combine(separator_invalid_name, 's not'),
+    text_combine(separator_valid_name, "s allowed"),
+    text_combine(separator_invalid_name, "s not"),
   ]);
   let r5 = app_code_lesson_identifiers_valid(
     name_id,

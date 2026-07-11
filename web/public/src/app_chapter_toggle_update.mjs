@@ -35,7 +35,7 @@ export function app_chapter_toggle_update(
     await copy();
   }
   html_on_click(component_clicked, choose);
-  let toggle = function lambda5() {
+  let toggle = function lambda() {
     list_toggle(verse_numbers_chosen, verse_number);
     let max = app_chapter_chosen_max();
     list_size_max_skip_replace(verse_numbers_chosen, max);

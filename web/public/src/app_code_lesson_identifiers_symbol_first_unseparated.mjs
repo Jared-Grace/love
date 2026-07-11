@@ -38,12 +38,12 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let question = property_get(first, "question");
     let split = text_split_empty(question);
     html_div_text(c, "For example, instead of: ");
-    let div3 = html_div(c);
-    let before = html_span_code_dark(div3);
+    let div = html_div(c);
+    let before = html_span_code_dark(div);
     html_display_inline_block(before);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
-    html_span_text(div3, " , ");
+    html_span_text(div, " , ");
     let s = emoji_arrow_right();
     let padded = text_pad_space("➡");
     html_div_text(c, "You will now see: ");

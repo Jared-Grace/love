@@ -11,9 +11,9 @@ import { app_code_container_light_blue } from "../../../love/public/src/app_code
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { app_replace_button_wide_next } from "../../../love/public/src/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../../love/public/src/app_shared_button_back_text.mjs";
-import { at_least_1 } from "../../../love/public/src/at_least_1.mjs";
+import { at_least_ } from "../../../love/public/src/at_least_1.mjs";
 import { app_code_quiz_index_get } from "../../../love/public/src/app_code_quiz_index_get.mjs";
-import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
+import { subtract_ } from "../../../love/public/src/subtract_1.mjs";
 import { app_code_quiz_index_transform } from "../../../love/public/src/app_code_quiz_index_transform.mjs";
 import { app_code_lesson_above } from "../../../love/public/src/app_code_lesson_above.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
@@ -26,7 +26,7 @@ import { list_property_next_value } from "../../../love/public/src/list_property
 import { app_code_lessons } from "../../../love/public/src/app_code_lessons.mjs";
 import { app_code_quiz_index_reset } from "../../../love/public/src/app_code_quiz_index_reset.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
-import { add_1 } from "../../../love/public/src/add_1.mjs";
+import { add_ } from "../../../love/public/src/add_1.mjs";
 import { app_replace_success_message } from "../../../love/public/src/app_replace_success_message.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_code_example_answer_label } from "../../../love/public/src/app_code_example_answer_label.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_quiz(
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
   async function on_next() {
-    app_code_quiz_index_transform(context, quizzes, add_1);
+    app_code_quiz_index_transform(context, quizzes, add_);
     if (qli) {
       ("next lesson");
       app_code_quiz_index_reset(context);
@@ -103,12 +103,12 @@ export function app_code_lesson_quiz(
   } else {
     app_replace_button_wide_next(parent_container, on_next);
   }
-  if (at_least_1(quiz_index)) {
+  if (at_least_(quiz_index)) {
     let on_back = function lambda() {
       let quiz_index = app_code_quiz_index_transform(
         context,
         quizzes,
-        subtract_1,
+        subtract_,
       );
       refresh();
     };

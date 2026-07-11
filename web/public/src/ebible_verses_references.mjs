@@ -1,4 +1,4 @@
-import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
+import { list_join_newline_ } from "../../../love/public/src/list_join_newline_2.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -25,6 +25,6 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
     return v2;
   }
   let mapped = list_map(vs, lambda);
-  let text = list_join_newline_2(mapped);
+  let text = list_join_newline_(mapped);
   return text;
 }

@@ -4,7 +4,7 @@ import { js_node_type_not_is_if } from "../../../love/public/src/js_node_type_no
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_await } from "../../../love/public/src/js_await.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
+import { list_get_end_ } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
@@ -25,13 +25,13 @@ export async function js_await_add_inner(functions, ast, visited) {
       }
       let stack = property_get(v, "stack");
       await js_function_last_asyncify(stack, async_is, ast, functions, visited);
-      let stack_1 = list_get_end_1(stack);
+      let stack_ = list_get_end_(stack);
       function lambda4() {
         let copy = object_copy(node);
         let awaited = js_await(copy);
         object_replace(node, awaited);
       }
-      js_node_type_not_is_if(stack_1, "AwaitExpression", lambda4);
+      js_node_type_not_is_if(stack_, "AwaitExpression", lambda4);
     }
     await js_call_function_if(node, lambda3);
   }

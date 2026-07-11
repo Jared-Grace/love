@@ -23,8 +23,8 @@ export async function js_node_atomize_variable_name_get(
   if (js_node_type_is(node, "CallExpression")) {
     await js_call_function_if(node, lambda);
     async function lambda(name) {
-      let v3 = await function_parse_unaliased(name);
-      let ast_callee = property_get(v3, "ast");
+      let v = await function_parse_unaliased(name);
+      let ast_callee = property_get(v, "ast");
       let return_name = js_return_name(ast_callee);
       if (return_name !== null) {
         variable_name = return_name;
@@ -32,11 +32,11 @@ export async function js_node_atomize_variable_name_get(
     }
   }
   ("use param name of containing fn");
-  let stack_2 = list_get_end(stack, text_combine(2, offset));
-  if (js_node_type_is(stack_2, "CallExpression")) {
+  let stack_ = list_get_end(stack, text_combine(2, offset));
+  if (js_node_type_is(stack_, "CallExpression")) {
     let stack_1 = list_get_end(stack, text_combine(1, offset));
     if (list_is(stack_1)) {
-      let callee = property_get(stack_2, "callee");
+      let callee = property_get(stack_, "callee");
       if (js_node_type_is(callee, "Identifier")) {
         let name = property_get(callee, "name");
         const v4 = await function_exists_strict(name);

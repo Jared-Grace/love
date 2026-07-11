@@ -17,14 +17,14 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     settings,
   );
   await retry_standard(lambda);
-  log_keep(firebase_upload_generic.name, text_combine(
-    'Uploaded data to ',
-    destination,
-  ));
+  log_keep(
+    firebase_upload_generic.name,
+    text_combine("Uploaded data to ", destination),
+  );
   const url = text_combine_multiple([
-    'https://storage.googleapis.com/',
+    "https://storage.googleapis.com/",
     bucket.name,
-    '/',
+    "/",
     file.name,
   ]);
   log_keep(firebase_upload_generic.name, text_combine("Accessible at:", url));

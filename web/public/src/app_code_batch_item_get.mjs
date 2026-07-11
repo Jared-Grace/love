@@ -8,11 +8,11 @@ export function app_code_batch_item_get(
   lesson,
   on_batch_item,
   on_batch,
-  example_count_1,
+  example_count_,
 ) {
   let batch = property_get(lesson, "batch");
   let example_count = property_get(lesson, "example_count");
-  if (example_count_1) {
+  if (example_count_) {
     example_count = 1;
   }
   let container = html_div(parent);

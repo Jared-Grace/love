@@ -1,4 +1,4 @@
-import { global_function_property_set_curried_specify_1_3 } from "../../../love/public/src/global_function_property_set_curried_specify_1_3.mjs";
+import { global_function_property_set_curried_specify_1_ } from "../../../love/public/src/global_function_property_set_curried_specify_1_3.mjs";
 import { g_player_initialize } from "../../../love/public/src/g_player_initialize.mjs";
 import { g_npcs_initialize } from "../../../love/public/src/g_npcs_initialize.mjs";
 import { g_player_img_get } from "../../../love/public/src/g_player_img_get.mjs";
@@ -21,7 +21,7 @@ export async function app_g_game_initialize() {
     coordinates,
     rows,
   });
-  let lambda = global_function_property_set_curried_specify_1_3(
+  let lambda = global_function_property_set_curried_specify_1_(
     app_g_main,
     null,
   );

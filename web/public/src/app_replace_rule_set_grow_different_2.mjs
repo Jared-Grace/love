@@ -1,4 +1,4 @@
-export function app_replace_rule_set_grow_different_2() {
+export function app_replace_rule_set_grow_different_() {
   let r = {
     name: "Grow Different 2",
     rules: ["a > b c", "b > d e"],

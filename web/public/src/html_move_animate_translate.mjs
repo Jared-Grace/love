@@ -8,18 +8,18 @@ export async function html_move_animate_translate(
   offsetY,
   duration,
 ) {
-  html_style_set(component, "transition", text_combine_multiple([
-    'transform ',
-    duration,
-    'ms',
-  ]));
+  html_style_set(
+    component,
+    "transition",
+    text_combine_multiple(["transform ", duration, "ms"]),
+  );
   let e = html_component_element_get(component);
   const u = text_combine_multiple([
-    'translate(',
+    "translate(",
     offsetX,
-    'px, ',
+    "px, ",
     offsetY,
-    'px)',
+    "px)",
   ]);
   e.style.transform = u;
   await sleep(duration);
