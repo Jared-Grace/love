@@ -3,6 +3,7 @@ import { ebible_version_books_browser } from "../../../love/public/src/ebible_ve
 import { promise_later } from "../../../love/public/src/promise_later.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { list_map_add_async } from "../../../love/public/src/list_map_add_async.mjs";
+import { list_map_unordered_add_async } from "../../../love/public/src/list_map_unordered_add_async.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
@@ -95,5 +96,5 @@ export async function app_chapter_main(context) {
     };
     return v2;
   }
-  await list_map_add_async(languages_chosen, lambda2, languages_verses);
+  await list_map_unordered_add_async(languages_chosen, lambda2, languages_verses);
 }
