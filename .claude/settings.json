@@ -12,6 +12,7 @@
       "Bash(tail:*)",
       "Bash(wc:*)",
       "Bash(which:*)",
+      "Bash(df:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(git show:*)",
