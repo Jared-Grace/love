@@ -9,7 +9,7 @@ export function js_imports_paths_fix_inner(ast, dictionary) {
   function lambda(i) {
     let name = property_get(i, "name");
     let declaration = property_get(i, "declaration");
-    const from = function_name_to_path_import(name, dictionary);
+    let from = function_name_to_path_import(name, dictionary);
     let expression = js_parse_expression(from);
     property_set(declaration, "source", expression);
   }

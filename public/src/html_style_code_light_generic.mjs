@@ -1,7 +1,7 @@
 import { html_style_code_generic } from "../../../love/public/src/html_style_code_generic.mjs";
 export function html_style_code_light_generic(component, color_box_shadow) {
-  const color_background = "white";
-  const color_font = "black";
+  let color_background = "white";
+  let color_font = "black";
   html_style_code_generic(
     component,
     color_background,

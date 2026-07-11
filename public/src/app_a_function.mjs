@@ -121,12 +121,12 @@ export async function app_a_function(context) {
     });
     await app_a_function_refresh_scroll(content, context);
   }
-  const preview_app = {
+  let preview_app = {
     shortcut: "p",
     text: emoji_mobile(),
     fn: screen_choose(app_a_app_run),
   };
-  const screen_choose_open = screen_choose(app_a_functions);
+  let screen_choose_open = screen_choose(app_a_functions);
   let choices = [
     {
       shortcut: "o",
@@ -241,7 +241,7 @@ export async function app_a_function(context) {
   }
   let fds = list_adder_unique(lambda8);
   let f_names_local = list_difference(fds, f_names);
-  const a = {
+  let a = {
     node: ast,
     content,
     parent: content,

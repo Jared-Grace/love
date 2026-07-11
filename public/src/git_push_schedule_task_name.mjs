@@ -1,4 +1,4 @@
 export function git_push_schedule_task_name() {
-  const name = "GitPushDaily";
+  let name = "GitPushDaily";
   return name;
 }

@@ -8,9 +8,9 @@ export function function_code_import_dev(name_prefixed) {
   let f_name_ext = function_name_to_base(name_prefixed);
   let src = folder_src();
   let previous = folder_previous();
-  const from_paths = [previous, src, f_name_ext];
+  let from_paths = [previous, src, f_name_ext];
   let f_path = path_join(from_paths);
-  const from = folder_current_join_code(f_path);
+  let from = folder_current_join_code(f_path);
   let code = js_code_import_single(name_prefixed, from);
   return code;
 }

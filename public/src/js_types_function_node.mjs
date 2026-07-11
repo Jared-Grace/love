@@ -1,5 +1,5 @@
 export function js_types_function_node() {
-  const types_function = [
+  let types_function = [
     "FunctionExpression",
     "ArrowFunctionExpression",
     "FunctionDeclaration",

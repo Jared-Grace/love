@@ -13,11 +13,11 @@ export function app_replace_rule_set_strings_simple() {
     stg: ["", "st", "ring ", "g", "rower"],
   });
   app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);
-  const extra = app_replace_rule_set_strings_simple_rules_base();
+  let extra = app_replace_rule_set_strings_simple_rules_base();
   let character = "ida";
-  const item = "stg";
+  let item = "stg";
   let quoted = text_pad_nested_space_quote_double(item);
-  const rules = [
+  let rules = [
     text_combine("st > ", quoted),
     text_combine("stg > ", character),
     text_combine_multiple(["stg > ", character, " stg"]),

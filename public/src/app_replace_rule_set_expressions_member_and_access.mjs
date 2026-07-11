@@ -3,7 +3,7 @@ import { app_replace_rule_set_expressions_member_and_access_abbreviations } from
 import { app_replace_rule_set_expressions_member_and_access_rules } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_member_and_access() {
-  const rules = [];
+  let rules = [];
   app_replace_rule_set_expressions_member_and_access_rules(rules);
   list_add_multiple(rules, [
     "id > prop",

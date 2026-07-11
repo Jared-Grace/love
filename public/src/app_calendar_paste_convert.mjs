@@ -24,7 +24,7 @@ import { text_split } from "../../../love/public/src/text_split.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export function app_calendar_paste_convert(input, country) {
-  const speaker_country = country_philippines();
+  let speaker_country = country_philippines();
   let zone = property_get(speaker_country, "zone");
   let split = text_split(input, "⋅");
   let r2 = list_first_second_only(split);
@@ -37,24 +37,24 @@ export function app_calendar_paste_convert(input, country) {
   let item2 = text_last(first);
   let nn = integer_to_try_is(item2);
   if (nn) {
-    const am_pm_size = 2;
+    let am_pm_size = 2;
     let am_pm = text_skip_end_count(second, am_pm_size);
     first = text_combine(first, am_pm);
   }
   let date = property_get(r2, "first");
-  const start = app_calendar_paste_convert_parse(date, first, zone);
-  const end = app_calendar_paste_convert_parse(date, second, zone);
-  const dts = [start, end];
+  let start = app_calendar_paste_convert_parse(date, first, zone);
+  let end = app_calendar_paste_convert_parse(date, second, zone);
+  let dts = [start, end];
   date_time_zone_future_is_assert_multiple(dts, zone);
-  const r4 = end.diff(start, ["hours", "minutes"]);
+  let r4 = end.diff(start, ["hours", "minutes"]);
   let minutes = property_get(r4, "minutes");
   let hours = property_get(r4, "hours");
-  const converted_info = {
+  let converted_info = {
     start,
     parenthesis: false,
   };
   object_merge(converted_info, country);
-  const speaker_info = {
+  let speaker_info = {
     start,
     parenthesis: true,
   };
@@ -66,7 +66,7 @@ export function app_calendar_paste_convert(input, country) {
     let name = property_get(item, "name");
     let parenthesis = property_get(item, "parenthesis");
     let flag = property_get(item, "flag");
-    const start_zoned = date_time_zone_set_zone(start, zone);
+    let start_zoned = date_time_zone_set_zone(start, zone);
     let start_formatted = date_time_zone_format_to_time_space(start_zoned);
     let t = text_combine_multiple([
       name,

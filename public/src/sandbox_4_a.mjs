@@ -12,7 +12,7 @@ import { text_split_semicolon } from "../../../love/public/src/text_split_semico
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
 export async function sandbox_4_a() {
-  const path = "nations_mentioned.carm.org.txt";
+  let path = "nations_mentioned.carm.org.txt";
   let r = await file_read_folder_user_split_normalize(path);
   let split = property_get(r, "split");
   let normalized = property_get(r, "normalized");

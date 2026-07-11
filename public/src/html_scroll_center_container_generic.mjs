@@ -14,17 +14,23 @@ export async function html_scroll_center_container_generic(
   let e = await html_scroll_generic_wait(component);
   let container_e = html_component_element_get(container);
   await html_request_animation_frame();
-  const containerRect = container_e.getBoundingClientRect();
-  const tileRect = e.getBoundingClientRect();
-  const scrollLeft = add(
-    subtract(add(container_e.scrollLeft, subtract(tileRect.left, containerRect.left)), divide(container_e.clientWidth, 2)),
+  let containerRect = container_e.getBoundingClientRect();
+  let tileRect = e.getBoundingClientRect();
+  let scrollLeft = add(
+    subtract(
+      add(container_e.scrollLeft, subtract(tileRect.left, containerRect.left)),
+      divide(container_e.clientWidth, 2),
+    ),
     divide(tileRect.width, 2),
   );
-  const scrollTop = add(
-    subtract(add(container_e.scrollTop, subtract(tileRect.top, containerRect.top)), divide(container_e.clientHeight, 2)),
+  let scrollTop = add(
+    subtract(
+      add(container_e.scrollTop, subtract(tileRect.top, containerRect.top)),
+      divide(container_e.clientHeight, 2),
+    ),
     divide(tileRect.height, 2),
   );
-  const s = {
+  let s = {
     left: scrollLeft,
     top: scrollTop,
     behavior,

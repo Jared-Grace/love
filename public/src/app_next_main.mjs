@@ -30,7 +30,7 @@ export async function app_next_main(context) {
     let text = property_get(d, "text");
     return text;
   }
-  const version_english = "engbsb";
+  let version_english = "engbsb";
   let books = await ebible_version_books_browser(version_english);
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse_number,
@@ -46,7 +46,7 @@ export async function app_next_main(context) {
   let verse_number2 = property_get(next, "verse_number");
   property_set(hash, "v", verse_number2);
   property_set(hash, "c", chapter_code2);
-  const h = hash_to_url(hash);
+  let h = hash_to_url(hash);
   let url = html_url_without_hash();
   url += h;
   list_add(mapped, url);

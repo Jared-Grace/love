@@ -7,11 +7,11 @@ export async function indexeddb_put_multiple_backend_transform(
   store,
   lookup,
 ) {
-  const db = await db_get();
+  let db = await db_get();
   let previouses = null;
   {
-    const tx = db.transaction(store, "readonly");
-    const s = tx.objectStore(store);
+    let tx = db.transaction(store, "readonly");
+    let s = tx.objectStore(store);
     async function lambda(value, key) {
       let p = await indexeddb_put_item(key, s);
       return p;
@@ -20,7 +20,7 @@ export async function indexeddb_put_multiple_backend_transform(
   }
   async function lambda3(previous, key) {
     let value_get = property_get(lookup, key);
-    const next = await value_get(previous);
+    let next = await value_get(previous);
     return next;
   }
   let nexts = await object_values_map_async(previouses, lambda3);

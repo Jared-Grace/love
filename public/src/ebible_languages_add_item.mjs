@@ -12,7 +12,7 @@ export async function ebible_languages_add_item(bible_folder) {
   let name = property_get(r, "name");
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
-    const object = {
+    let object = {
       name,
       bible_folder,
       language_code,

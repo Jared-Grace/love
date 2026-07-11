@@ -6,8 +6,8 @@ import { app_code_lesson_operators_minus_generic } from "../../../love/public/sr
 import { js_operator_minus_symbol } from "../../../love/public/src/js_operator_minus_symbol.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 export function app_code_lesson_operators_minus() {
-  const operator = js_operator_minus_symbol();
-  const operator_name = js_operator_minus_name();
+  let operator = js_operator_minus_symbol();
+  let operator_name = js_operator_minus_name();
   let math_name = js_operator_minus_name_root();
   let verb = js_operator_minus_verb();
   let sign = "negative";

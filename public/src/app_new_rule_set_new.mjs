@@ -1,6 +1,6 @@
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_new_rule_set_new() {
-  const rules = [];
+  let rules = [];
   list_add_multiple(rules, ["a > b"]);
   let abbreviations = {};
   let r = {

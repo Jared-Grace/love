@@ -16,11 +16,11 @@ export function ebible_languages() {
   text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
   let en = ebible_language_english();
   let o = ebible_language_original();
-  const ur = ebible_language_urdu();
-  const pa = ebible_language_punjabi();
+  let ur = ebible_language_urdu();
+  let pa = ebible_language_punjabi();
   let lug = ebible_language_luganda();
   let ke = ebible_language_kenya();
-  const te = ebible_language_telugu();
+  let te = ebible_language_telugu();
   let bn = ebible_language_bengali();
   let ar = ebible_language_arabic();
   let languages = [

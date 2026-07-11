@@ -22,7 +22,7 @@ import { emoji_font_larger } from "../../../love/public/src/emoji_font_larger.mj
 export function app_replace_settings(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
-  const factor = app_replace_font_size_factor();
+  let factor = app_replace_font_size_factor();
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
   let div = html_div(root);
@@ -46,7 +46,7 @@ export function app_replace_settings(context) {
   let div2 = html_div(root);
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
-  const duration = app_replace_animation_duration_get(context);
+  let duration = app_replace_animation_duration_get(context);
   ("if not null then speed is being overwritten by hash so don't show choices");
   if (null_is(duration)) {
     let choices = [

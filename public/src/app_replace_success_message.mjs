@@ -32,7 +32,7 @@ export function app_replace_success_message(parent) {
     emoji_party_popper,
     emoji_party_face,
   ];
-  const taken_count = 3;
+  let taken_count = 3;
   let taken = list_shuffle_take(choices, taken_count);
   list_add_first(taken, emoji_check);
   let mapped = invoke_multiple(taken);
@@ -41,14 +41,14 @@ export function app_replace_success_message(parent) {
   let highlight = app_replace_rule_set_highlight();
   html_style_background_color_set(p, highlight);
   app_replace_button_symbol_style_inner(p);
-  const value_em = "0.3";
+  let value_em = "0.3";
   html_style_padding_em(p, value_em);
   html_centered(p);
   let p_emojis = html_div(p);
   html_span_text(p_emojis, joined);
   html_style_font_size(p_emojis, "1.5em");
   let p_encouragement = html_div(p);
-  const encouragements_choices = [
+  let encouragements_choices = [
     "Congratulations",
     "Success",
     "Good job",

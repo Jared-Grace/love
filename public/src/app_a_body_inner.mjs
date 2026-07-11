@@ -19,7 +19,7 @@ export function app_a_body_inner(parent, body, a, indent) {
   let parent_new = parent;
   let imports = false;
   function lambda(b) {
-    const t = "ImportDeclaration";
+    let t = "ImportDeclaration";
     let v = list_first_is(body, b);
     if (v) {
       let type = property_get(b, "type");

@@ -5,7 +5,7 @@ import { mod } from "../../../love/public/src/mod.mjs";
 import { divide } from "../../../love/public/src/divide.mjs";
 import { subtract } from "../../../love/public/src/subtract.mjs";
 export function number_to_words(num) {
-  const a = [
+  let a = [
     "",
     "one",
     "two",
@@ -27,7 +27,7 @@ export function number_to_words(num) {
     "eighteen",
     "nineteen",
   ];
-  const b = [
+  let b = [
     "",
     "",
     "twenty",
@@ -39,7 +39,7 @@ export function number_to_words(num) {
     "eighty",
     "ninety",
   ];
-  const g = ["", "thousand", "million", "billion", "trillion"];
+  let g = ["", "thousand", "million", "billion", "trillion"];
   if (num === 0) {
     let v = "zero";
     return v;

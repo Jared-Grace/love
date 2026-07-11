@@ -15,6 +15,6 @@ export function hash_to_url(hash) {
   let parts = list_adder(lambda3);
   let result = list_join_comma(parts);
   let h = html_hash_symbol();
-  const url = text_combine(h, result);
+  let url = text_combine(h, result);
   return url;
 }

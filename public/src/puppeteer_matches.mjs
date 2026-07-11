@@ -1,12 +1,12 @@
 export async function puppeteer_matches(page, tag_name, text) {
-  const elements = await page.$$(tag_name);
-  const matches = [];
-  for (const el of elements) {
+  let elements = await page.$$(tag_name);
+  let matches = [];
+  for (let el of elements) {
     function lambda(n) {
       let v = n.textContent;
       return v;
     }
-    const txt = await el.evaluate(lambda);
+    let txt = await el.evaluate(lambda);
     if (txt === text) {
       matches.push(el);
     }

@@ -12,7 +12,7 @@ export async function function_name_unalias(f_name) {
   let expandeds = property_get(r, "expandeds");
   let expanded = property_get(r, "expanded");
   let expanded_paths = await functions_names_to_paths_list(expandeds);
-  const unaliased = exists_alias
+  let unaliased = exists_alias
     ? unaliased_actual
     : expanded !== null
       ? expanded

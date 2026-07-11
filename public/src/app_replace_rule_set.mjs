@@ -146,7 +146,7 @@ export async function app_replace_rule_set(context) {
   let success = false;
   let sbs = null;
   let rbs = null;
-  const duration = app_replace_animation_duration_get(context);
+  let duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
   let rules_useds = app_replace_rule_sets_fns_rules_used();
   let rules_used_all = property_get_or_null(rules_useds, rule_set_name);
@@ -217,7 +217,7 @@ export async function app_replace_rule_set(context) {
         let r = range(size);
         let lambda7 = app_replace_rule_valid_curried(rule2, start);
         let enabled = list_any(r, lambda7);
-        const selected = index2 === index_selected;
+        let selected = index2 === index_selected;
         enabled = index_selected === null || selected;
         enabled = true;
         html_enable_if(rb, enabled);

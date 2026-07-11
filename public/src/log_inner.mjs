@@ -5,7 +5,7 @@ import { global_function_initialize_null } from "../../../love/public/src/global
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 export function log_inner(f_name, message) {
-  const list = [message];
+  let list = [message];
   let value = global_function_initialize_null(log_inner);
   if (equal_not(value, f_name)) {
     global_function_set(log_inner, f_name);

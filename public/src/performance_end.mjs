@@ -18,7 +18,7 @@ export function performance_end(measurements) {
   let sorted = object_to_list_names(summary, "category", "delta");
   list_sort_number_property(sorted);
   list_reverse(sorted);
-  const r = {
+  let r = {
     measurements,
     grouped,
     summary,

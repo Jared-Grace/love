@@ -9,7 +9,7 @@ export async function app_g_player_move(
   div_map,
 ) {
   let player = await app_g_player_get();
-  const away = g_distance_at_least_1(player, coordinates_move_to);
+  let away = g_distance_at_least_1(player, coordinates_move_to);
   log_json({
     away,
   });

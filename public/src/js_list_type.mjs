@@ -4,6 +4,6 @@ export function js_list_type(ast, node_type) {
   function lambda(la) {
     js_visit_type(ast, node_type, la);
   }
-  const vs = list_adder(lambda);
+  let vs = list_adder(lambda);
   return vs;
 }

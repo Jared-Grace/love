@@ -6,7 +6,7 @@ export function html_code_script_importmap(externals) {
   let j = json_format_to({
     imports,
   });
-  const script_type = "importmap";
+  let script_type = "importmap";
   let importmap = html_code_script_type(script_type, j);
   return importmap;
 }

@@ -26,7 +26,7 @@ export async function js_auto(ast) {
   }
   let f_path = js_flo_path(ast);
   async function lambda() {
-    const p = performance_start(js_auto.name);
+    let p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
     async function lambda(t) {
       performance_next(p, t.name);

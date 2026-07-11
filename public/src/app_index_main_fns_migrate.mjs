@@ -23,7 +23,7 @@ export async function app_index_main_fns_migrate() {
         return r;
       };
       let item2 = list_find(properties, filter);
-      const value = "value";
+      let value = "value";
       let v2 = property_get(item2, value);
       let name = js_identifier_name(v2);
       let code_string = js_code_string(name);

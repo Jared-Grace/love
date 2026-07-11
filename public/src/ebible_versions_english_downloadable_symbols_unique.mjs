@@ -4,7 +4,7 @@ import { ebible_version_symbols_unique_cache } from "../../../love/public/src/eb
 import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
 import { ebible_versions_english_downloadable_cache } from "../../../love/public/src/ebible_versions_english_downloadable_cache.mjs";
 export async function ebible_versions_english_downloadable_symbols_unique() {
-  const versions = await ebible_versions_english_downloadable_cache();
+  let versions = await ebible_versions_english_downloadable_cache();
   let dictionary = await list_to_dictionary_async(
     versions,
     ebible_version_symbols_unique_cache,

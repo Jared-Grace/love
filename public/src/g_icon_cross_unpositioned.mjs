@@ -8,15 +8,15 @@ export function g_icon_cross_unpositioned(parent) {
   let i = html_element(parent, "i");
   html_click_none(i);
   html_class_add(i, "ri-cross-fill");
-  const square_size = text_combine_multiple([
-    'calc(',
+  let square_size = text_combine_multiple([
+    "calc(",
     g_img_square_size_css(),
-    '*.4)',
+    "*.4)",
   ]);
-  const glow_size = text_combine_multiple([
-    'calc(',
+  let glow_size = text_combine_multiple([
+    "calc(",
     g_img_square_size_css(),
-    '*.05)',
+    "*.05)",
   ]);
   html_style_assign(i, {
     display: "flex",

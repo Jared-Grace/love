@@ -1,4 +1,4 @@
 export function text_empty_is(s) {
-  const e = s === "";
+  let e = s === "";
   return e;
 }

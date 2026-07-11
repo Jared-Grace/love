@@ -17,7 +17,7 @@ export async function app_calendar_secret_facebook_add() {
       );
       let facebook_conversation_id =
         facebook_conversation_url_to_id(conversation_url);
-      const item = {
+      let item = {
         facebook_conversation_id,
         [app_calendar_facebook_url_id()]: facebook_url_id,
       };

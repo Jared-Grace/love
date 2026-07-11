@@ -10,7 +10,7 @@ export async function ebible_version_books(bible_folder) {
   if (null_not_is(result)) {
     return result;
   }
-  const n = ebible_class_new();
+  let n = ebible_class_new();
   let o = ebible_class_old();
   let a = ebible_class_apocrypha();
   let classes = list_join_comma_space([o, a, n]);

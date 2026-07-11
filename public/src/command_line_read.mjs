@@ -1,7 +1,7 @@
 import readline from "readline";
 export async function command_line_read(prompt) {
   let answer = await new Promise(function lambda2(resolve) {
-    const rl = readline.createInterface({
+    let rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout,
     });

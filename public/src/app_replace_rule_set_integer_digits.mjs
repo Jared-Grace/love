@@ -3,7 +3,7 @@ import { app_replace_rule_set_integer_digits_abbreviations } from "../../../love
 import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_replace_rule_set_add_rights.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 export function app_replace_rule_set_integer_digits() {
-  const rules = ["g > di g", "g > di"];
+  let rules = ["g > di g", "g > di"];
   let d = digits();
   app_replace_rule_set_add_rights(rules, "di", d);
   let abbreviations = app_replace_rule_set_integer_digits_abbreviations();

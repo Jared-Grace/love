@@ -1,11 +1,11 @@
 import { chromium } from "playwright";
 export async function playwright_test_url(url, lambda) {
-  const browser = await chromium.launch({
+  let browser = await chromium.launch({
     headless: false,
     args: ["--disable-dev-shm-usage"],
   });
   try {
-    const page = await browser.newPage();
+    let page = await browser.newPage();
     await page.goto(url);
     await lambda(page);
   } finally {

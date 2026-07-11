@@ -12,7 +12,7 @@ export async function js_call_fill_inner(ast, visitor, functions, visited) {
   if (js_identifier_is(expression)) {
     let name = property_get(expression, "name");
     let unaliased = await function_name_unalias_only(name);
-    const valid = await functions_names_includes(unaliased);
+    let valid = await functions_names_includes(unaliased);
     if (valid) {
       let v = await js_call_new(unaliased, ast);
       let async_is = property_get(v, "async_is");

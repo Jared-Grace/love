@@ -87,7 +87,7 @@ export function app_a_function_node(a) {
       let imported = property_get(node, "imported");
       js_identifier_is_assert(imported);
       let local = property_get(node, "local");
-      const property_name = "name";
+      let property_name = "name";
       property_get_double_equal_assert(imported, local, property_name);
       app_a_function_node_child(a, local);
     },

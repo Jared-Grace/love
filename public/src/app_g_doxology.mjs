@@ -15,7 +15,7 @@ export function app_g_doxology() {
     return v;
   }
   let t = trinity_name_prayer();
-  const believe = list_random_item([
+  let believe = list_random_item([
     text_combine_multiple([
       text_random_or_empty("Now "),
       "I believe",
@@ -43,7 +43,7 @@ export function app_g_doxology() {
       " Lord and Savior",
     ]),
   ]);
-  const blessing = text_combine_multiple([
+  let blessing = text_combine_multiple([
     "God bless you ",
     text_random_or_empty(
       text_combine_multiple([
@@ -54,7 +54,7 @@ export function app_g_doxology() {
     ),
     "amen",
   ]);
-  const choices = [
+  let choices = [
     text_combine(
       "Thank you",
       text_random_or_empty(
@@ -82,7 +82,7 @@ export function app_g_doxology() {
   let r = integer_random(1, 3);
   let taken = list_take(choices, r);
   let combined = list_concat_multiple([[believe], taken, [blessing]]);
-  const mapped = list_map_combine(combined, "!");
-  const doxology = list_join_space(mapped);
+  let mapped = list_map_combine(combined, "!");
+  let doxology = list_join_space(mapped);
   return doxology;
 }

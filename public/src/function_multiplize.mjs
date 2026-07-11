@@ -16,7 +16,7 @@ export async function function_multiplize(f_name) {
   list_size_1_assert(arg_names);
   let combined = function_name_combine(f_name, "multiple");
   async function lambda(ast) {
-    const list = "list";
+    let list = "list";
     let call = js_call_statement(each.name, [list, f_name]);
     js_flo_body_add(ast, call);
     js_flo_param_add(ast, list);

@@ -42,7 +42,7 @@ import { folder_user_docs_read } from "../../../love/public/src/folder_user_docs
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { folder_user_docs_path_previous } from "../../../love/public/src/folder_user_docs_path_previous.mjs";
 export async function sandbox() {
-  const f_name = app_code_lesson_functions_console_log_arithmetic.name;
+  let f_name = app_code_lesson_functions_console_log_arithmetic.name;
   await function_current_set(f_name);
   await function_current_selects_empty();
   ("current_commands: ");

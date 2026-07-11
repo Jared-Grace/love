@@ -3,7 +3,7 @@ import { object_merge_set } from "../../../love/public/src/object_merge_set.mjs"
 import { app_replace_rule_set_decimals_rules } from "../../../love/public/src/app_replace_rule_set_decimals_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_scientific_notation_numbers() {
-  const rules = app_replace_rule_set_decimals_rules();
+  let rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, [
     "sn > de se",
     "sn > ig se",

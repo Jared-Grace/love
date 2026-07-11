@@ -1,4 +1,4 @@
 export function mod(quotient, divisor) {
-  const m = quotient % divisor;
+  let m = quotient % divisor;
   return m;
 }

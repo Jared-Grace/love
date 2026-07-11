@@ -9,8 +9,8 @@ export async function function_import(f_name) {
   let v = await function_name_to_path_search(f_name);
   let f = property_get(v, "f_path");
   let f_path = await path_resolve(f);
-  const imported = await import(text_combine('file://', f_path));
-  const imported_fn = imported[f_name];
+  let imported = await import(text_combine("file://", f_path));
+  let imported_fn = imported[f_name];
   if (typeof imported_fn !== "function") {
     throw new Error(
       text_combine_multiple([

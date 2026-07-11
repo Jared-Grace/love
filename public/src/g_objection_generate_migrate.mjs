@@ -9,7 +9,7 @@ export async function g_objection_generate_migrate() {
     async function lambda(data) {
       let passages = property_get(data, "passages");
       function lambda3(item) {
-        const property_name_before = "objection";
+        let property_name_before = "objection";
         let property_name_after = g_objection_generate_property();
         property_rename(item, property_name_before, property_name_after);
       }

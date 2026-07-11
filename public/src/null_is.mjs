@@ -1,4 +1,4 @@
 export function null_is(value) {
-  const n = value === null;
+  let n = value === null;
   return n;
 }

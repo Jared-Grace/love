@@ -13,7 +13,7 @@ export function js_if_blockify_generic_node(node, property_name, add_copy) {
     let copy = object_copy(body);
     let nt = js_node_type(body);
     let includes = list_includes(["EmptyStatement"], nt);
-    const bs_body = [];
+    let bs_body = [];
     if (not(includes)) {
       add_copy(bs_body, copy);
     }

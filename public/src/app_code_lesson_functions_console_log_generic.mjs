@@ -29,14 +29,14 @@ export function app_code_lesson_functions_console_log_generic(
         let v2 = next();
         la(v2);
       }
-      const digit_count_max = 3;
+      let digit_count_max = 3;
       each_range_1(digit_count_max, lambda2);
     }
     let list = list_adder(lambda3);
     return list;
   }
   let next_number = list_iterator_refillable(lambda);
-  const fn_name = "console.log";
+  let fn_name = "console.log";
   function batch_get() {
     let v = next_number();
     let code = js_code_call_arg(fn_name, v);
@@ -48,7 +48,7 @@ export function app_code_lesson_functions_console_log_generic(
     batch_get,
     eval_console_log_to_list,
   );
-  const rights = [fn_name];
+  let rights = [fn_name];
   list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
   let lesson = app_code_lesson_code_logged(b, name_id, above);

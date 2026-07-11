@@ -4,6 +4,6 @@ export function lists_get_generic(getter, index, lists) {
     let item = getter(list, index);
     return item;
   }
-  const items = list_map(lists, lambda);
+  let items = list_map(lists, lambda);
   return items;
 }

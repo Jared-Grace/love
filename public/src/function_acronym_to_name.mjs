@@ -7,7 +7,7 @@ export async function function_acronym_to_name(alias) {
   let expanded = null;
   let expandeds = [];
   let acronyms = await function_names_to_acronyms();
-  const exists = property_exists(acronyms, alias);
+  let exists = property_exists(acronyms, alias);
   if (exists) {
     expandeds = property_get(acronyms, alias);
     let s = list_size_1(expandeds);

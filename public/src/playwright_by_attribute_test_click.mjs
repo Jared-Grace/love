@@ -4,6 +4,6 @@ export async function playwright_by_attribute_test_click(
   page,
   attribute_value,
 ) {
-  const name = qa_attribute_test_data();
+  let name = qa_attribute_test_data();
   await playwright_by_attribute_click(page, name, attribute_value);
 }

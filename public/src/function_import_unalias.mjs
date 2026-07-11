@@ -4,6 +4,6 @@ import { function_name_unalias } from "../../../love/public/src/function_name_un
 export async function function_import_unalias(f_name) {
   let v = await function_name_unalias(f_name);
   let unaliased = property_get(v, "unaliased");
-  const imported_fn = await function_import(unaliased);
+  let imported_fn = await function_import(unaliased);
   return imported_fn;
 }
