@@ -7,8 +7,9 @@ import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 export function js_log_f_name_add(ast) {
-  let log_fns = [log_keep, log];
+  let log_fns = [log_keep, log, log_unparse];
   let f_name = js_flo_name(ast);
   function lambda(log_fn) {
     function lambda2(a) {
