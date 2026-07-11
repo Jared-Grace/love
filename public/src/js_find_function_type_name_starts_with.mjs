@@ -11,7 +11,7 @@ export function js_find_function_type_name_starts_with(ast, prefix) {
     function lambda3() {
       let name = js_identifier_name(i);
       let sw = text_starts_with(t, prefix);
-      if (false) {
+      if (sw) {
       }
     }
     js_identifier_is_if(node, lambda3);
