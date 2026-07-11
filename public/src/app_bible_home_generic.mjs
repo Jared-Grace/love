@@ -40,6 +40,17 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { app_bible_languages } from "../../../love/public/src/app_bible_languages.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
+import { app_bible_languages_chosen_get } from "../../../love/public/src/app_bible_languages_chosen_get.mjs";
+import { list_map_unordered_add_async } from "../../../love/public/src/list_map_unordered_add_async.mjs";
+import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
+import { list_find_property_or_null } from "../../../love/public/src/list_find_property_or_null.mjs";
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
+import { catch_null_async } from "../../../love/public/src/catch_null_async.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
@@ -80,6 +91,63 @@ export async function app_bible_home_generic(context, lambda$a) {
   );
   let verse_number = property_get(verse_current, "verse_number");
   let text = property_get(verse_current, "text");
+  let languages_chosen = app_bible_languages_chosen_get(context);
+  async function lambda_language(lc) {
+    let bible_folder = property_get(lc, "bible_folder");
+    async function get() {
+      let verses_l = await ebible_verses_browser(bible_folder, chapter_code);
+      let books_l = await ebible_version_books_browser(bible_folder);
+      let v = {
+        language: lc,
+        verses: verses_l,
+        books: books_l,
+      };
+      return v;
+    }
+    let r = await catch_null_async(get);
+    return r;
+  }
+  let fetched = [];
+  await list_map_unordered_add_async(languages_chosen, lambda_language, fetched);
+  let languages_available = list_filter_null_not_is(fetched);
+  function lambda_text_map(item) {
+    let verses_l = property_get(item, "verses");
+    let verse_current_l = list_find_property_or_null(
+      verses_l,
+      "verse_number",
+      verse_number_hash,
+    );
+    let nn = null_not_is(verse_current_l);
+    if (nn) {
+      let language = property_get(item, "language");
+      let text_l = property_get(verse_current_l, "text");
+      let v = {
+        language,
+        text: text_l,
+      };
+      return v;
+    }
+    return null;
+  }
+  let text_mapped = list_map(languages_available, lambda_text_map);
+  let text_languages = list_filter_null_not_is(text_mapped);
+  if (list_empty_not_is(languages_available)) {
+    languages_available = [
+      {
+        language: ebible_language_english(),
+        verses,
+        books,
+      },
+    ];
+  }
+  if (list_empty_not_is(text_languages)) {
+    text_languages = [
+      {
+        language: ebible_language_english(),
+        text,
+      },
+    ];
+  }
   let p_verse = html_p(content);
   let top = html_div(p_verse);
   let bottom = html_p(p_verse);
