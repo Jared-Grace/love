@@ -4,7 +4,7 @@ import { function_params_get } from "../../../love/public/src/function_params_ge
 import { function_params_delete } from "../../../love/public/src/function_params_delete.mjs";
 export async function function_params_delete_first(f_name) {
   let unaliased = await function_name_unalias_only(name);
-  let params = await function_params_get(f_name);
+  let params = await function_params_get(unaliased);
   let first = list_first(params);
   let r = await function_params_delete(f_name, first);
   return r;
