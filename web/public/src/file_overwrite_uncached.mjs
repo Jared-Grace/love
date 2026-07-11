@@ -1,4 +1,4 @@
-import { noop } from "../../../love/public/src/noop.mjs";
+import { promise_catch_ignore } from "../../../love/public/src/promise_catch_ignore.mjs";
 import { property_delete_if_exists } from "../../../love/public/src/property_delete_if_exists.mjs";
 import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -64,7 +64,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       await fs.promises.rename(temp_path, file_path);
     } catch (e) {
       const promise = fs.promises.unlink(temp_path);
-      await promise.catch(noop);
+      await promise_catch_ignore(promise);
       throw e;
     }
   }
