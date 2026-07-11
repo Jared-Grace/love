@@ -84,6 +84,21 @@ of any new rule - so adding a command to the safe-verb list automatically
 makes the flagless `xargs <that command>` form safe too, without an
 separate xargs-specific entry.
 
+`timeout` gets the same transparent treatment, narrowed the same way:
+`verb_of` recurses past `timeout <DURATION>` into whatever follows only
+when DURATION matches TIMEOUT_DURATION_RE - a bare number with an
+optional single s/m/h/d suffix (`30`, `2.5`, `10m`) - so `timeout 30 git
+status` is checked as `git status`. Any leading flag (`-k`, `-s`,
+`--foreground`, `--preserve-status`, etc.) fails this exact-shape check
+and falls through to a real prompt instead, the same posture as xargs
+rejecting `-I{}`/`-0`. Also like xargs, this only ever reaches verb_of's
+safe_verbs lookup - it does not unwrap the leading `timeout <DURATION>`
+before the exact-command check in check_simple_commands or before any of
+the is_safe_* exact-shape templates (is_safe_sed, is_safe_sandboxed_node_*,
+etc.), so e.g. `timeout 60 node scripts/g.mjs ai` still isn't auto-approved
+even though `node scripts/g.mjs ai` alone is - only plain verb-list rules
+(Bash(verb:*)) get the benefit of a timeout wrapper.
+
 A fifth exception, `is_safe_bare_mount`, auto-allows `mount` invoked with
 zero arguments - the read-only form that just lists current mounts. No
 blanket `Bash(mount:*)` rule exists because `mount SRC DST` (and mount's
