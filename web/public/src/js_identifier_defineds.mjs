@@ -1,4 +1,4 @@
-import { js_declare_declarations_get } from "../../../love/public/src/js_declare_declarations_get.mjs";
+import { js_declaration_declarators_get } from "../../../love/public/src/js_declaration_declarators_get.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
@@ -35,7 +35,7 @@ export function js_identifier_defineds(v) {
       function each_statement_up_to(i) {
         let list_item = list_get(bs_list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
-          let declarations = js_declare_declarations_get(list_item);
+          let declarations = js_declaration_declarators_get(list_item);
           let ids = list_map_property(declarations, "id");
           function lambda(id) {
             if (js_node_type_is(id, "ObjectPattern")) {
