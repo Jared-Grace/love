@@ -31,7 +31,7 @@ export async function app_new_update_generic(
   async function lambda(ast) {
     let declaration = js_flo(ast);
     declaration.async = true;
-    let value_string = app_shared_name_main(name);
+    let value_string = await app_shared_name_main(name);
     let main_name = js_code_string(value_string);
     let code = js_code_call_args_await_maybe(
       unaliased,

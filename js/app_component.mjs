@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { html_button_wide } from "./html_button_wide.mjs";
 export async function app_component(a_name, on_click, button_text) {
-  let combined = app_shared_name_main(a_name);
+  let combined = await app_shared_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
   let d = property_get(v, "d");
   let code = property_get(d, "code");
