@@ -5,7 +5,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
-import { js_flo_params_add } from "../../../love/public/src/js_flo_params_add.mjs";
+import { js_flo_param_add } from "../../../love/public/src/js_flo_param_add.mjs";
 import { js_flo_body_add } from "../../../love/public/src/js_flo_body_add.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { js_code_function_declaration_args } from "../../../love/public/src/js_code_function_declaration_args.mjs";
@@ -26,7 +26,7 @@ export async function function_eachify(fn_name) {
   let f_name_multiple = function_name_combine(unaliased, "multiple");
   let output = await function_new_transform(f_name_multiple, lambda);
   async function lambda(ast) {
-    js_flo_params_add(ast, ["list"]);
+    js_flo_param_add(ast, "list");
     let call_inner_code = js_code_call_args_await_maybe(
       unaliased,
       ["item"],
