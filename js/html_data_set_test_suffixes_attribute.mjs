@@ -1,0 +1,10 @@
+import { html_data_set_test_attribute } from "./html_data_set_test_attribute.mjs";
+import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+export function html_data_set_test_suffixes_attribute(suffixes) {
+  let r = html_data_set_test_attribute();
+  let list = [r];
+  list_add_multiple(list, suffixes);
+  let combined = function_name_combine_multiple(list);
+  return combined;
+}

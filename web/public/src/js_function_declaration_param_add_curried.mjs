@@ -1,7 +1,0 @@
-import { js_function_declaration_param_add } from "../../../love/public/src/js_function_declaration_param_add.mjs";
-export function js_function_declaration_param_add_curried(declaration) {
-  let r = function js_declaration_param_add_curried_result(param_name) {
-    js_function_declaration_param_add(declaration, param_name);
-  };
-  return r;
-}

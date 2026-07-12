@@ -1,0 +1,6 @@
+import { html_code_script_type } from "./html_code_script_type.mjs";
+export function html_code_script_module(middle) {
+  let script_type = "module";
+  let script = html_code_script_type(script_type, middle);
+  return script;
+}

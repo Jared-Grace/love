@@ -1,0 +1,34 @@
+import { list_includes_not } from "./list_includes_not.mjs";
+import { property_get } from "./property_get.mjs";
+export async function folder_read_recursive_skipped_async(
+  path_folder,
+  folders_skipped,
+) {
+  let fs = await import("fs/promises");
+  let path = await import("path");
+  let result = [];
+  let entries = await fs.readdir(path_folder, {
+    withFileTypes: true,
+  });
+  for (let entry of entries) {
+    let name = property_get(entry, "name");
+    if (entry.isFile()) {
+      result.push(name);
+    } else if (entry.isDirectory()) {
+      let n = list_includes_not(folders_skipped, name);
+      if (n) {
+        let fullPath = path.join(path_folder, name);
+        let subFiles = await folder_read_recursive_skipped_async(
+          fullPath,
+          folders_skipped,
+        );
+        function lambda(f) {
+          let v = path.join(name, f);
+          return v;
+        }
+        result.push(...subFiles.map(lambda));
+      }
+    }
+  }
+  return result;
+}

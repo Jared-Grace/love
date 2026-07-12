@@ -1,0 +1,35 @@
+import { reply_messages_inner_transform } from "./reply_messages_inner_transform.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { reply_matches } from "./reply_matches.mjs";
+import { list_first } from "./list_first.mjs";
+import { object_merge_set } from "./object_merge_set.mjs";
+import { list_add } from "./list_add.mjs";
+import { reply_last } from "./reply_last.mjs";
+export async function reply_messages_inner(message, start) {
+  let last = reply_last();
+  let tokens = reply_messages_inner_transform(message);
+  list_add(tokens, last);
+  let base = {
+    message,
+  };
+  let possbility_start = {
+    tokens,
+    outputs: [],
+    index: 0,
+    matches: true,
+  };
+  object_merge_set(possbility_start, base);
+  let possibilities = [possbility_start];
+  possibilities = await start(possibilities);
+  let result = reply_matches(possibilities);
+  let e = list_empty_is(result);
+  if (e) {
+    result = {
+      matches: false,
+    };
+    object_merge_set(result, base);
+  } else {
+    result = list_first(result);
+  }
+  return result;
+}

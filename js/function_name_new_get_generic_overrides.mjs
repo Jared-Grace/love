@@ -1,0 +1,29 @@
+import { function_name_part_last_delete_2 } from "./function_name_part_last_delete_2.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { function_name_parts_delete_comma } from "./function_name_parts_delete_comma.mjs";
+import { function_name_part_insert } from "./function_name_part_insert.mjs";
+import { function_name_to_part_replace_last_3 } from "./function_name_to_part_replace_last_3.mjs";
+import { function_name_to_part_replace_last_2 } from "./function_name_to_part_replace_last_2.mjs";
+import { function_name_to_part_replace_last } from "./function_name_to_part_replace_last.mjs";
+import { text_replace } from "./text_replace.mjs";
+import { function_name_parts_swap_end } from "./function_name_parts_swap_end.mjs";
+import { lambda_right } from "./lambda_right.mjs";
+import { function_name_part_last_delete } from "./function_name_part_last_delete.mjs";
+import { function_name_combine } from "./function_name_combine.mjs";
+export function function_name_new_get_generic_overrides() {
+  let r = {
+    a: text_combine,
+    c: function_name_combine,
+    d: function_name_parts_delete_comma,
+    i: function_name_part_insert,
+    l: function_name_part_last_delete,
+    l2: function_name_part_last_delete_2,
+    r: lambda_right,
+    s: function_name_parts_swap_end,
+    t: text_replace,
+    1: function_name_to_part_replace_last,
+    2: function_name_to_part_replace_last_2,
+    3: function_name_to_part_replace_last_3,
+  };
+  return r;
+}

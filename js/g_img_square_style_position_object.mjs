@@ -1,0 +1,7 @@
+import { g_img_square_style_position_only } from "./g_img_square_style_position_only.mjs";
+import { property_get } from "./property_get.mjs";
+export function g_img_square_style_position_object(c, ci) {
+  let x = property_get(c, "x");
+  let y = property_get(c, "y");
+  g_img_square_style_position_only(ci, x, y);
+}

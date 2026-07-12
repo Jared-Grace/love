@@ -1,0 +1,19 @@
+import { null_is } from "./null_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
+import { list_first_remaining } from "./list_first_remaining.mjs";
+import { text_split_empty } from "./text_split_empty.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+export function text_first_transform(s, transform) {
+  let split = text_split_empty(s);
+  let r = list_first_remaining(split);
+  let remaining = property_get(r, "remaining");
+  let first = property_get(r, "first");
+  let lower = transform(first);
+  if (null_is(remaining)) {
+    remaining = [];
+  }
+  let joined = list_join_empty(remaining);
+  let v = text_combine_multiple([lower, joined]);
+  return v;
+}

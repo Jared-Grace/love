@@ -1,0 +1,10 @@
+import { property_get } from "./property_get.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+export function invoke_cache_file_get() {
+  let r2 = async function lambda(key) {
+    let data = await file_read_json(key);
+    let r = property_get(data, "result");
+    return r;
+  };
+  return r2;
+}

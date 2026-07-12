@@ -1,0 +1,7 @@
+import { list_filter } from "./list_filter.mjs";
+import { property_equals_not_curried_right_2 } from "./property_equals_not_curried_right_2.mjs";
+export function list_filter_property_not(list, property_name, value) {
+  let c = property_equals_not_curried_right_2(property_name, value);
+  let filtered = list_filter(list, c);
+  return filtered;
+}

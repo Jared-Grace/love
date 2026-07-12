@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, readdirSync } from "fs";
 import path from "path";
 import * as acorn from "acorn";
 
-const SRC = "/home/j/repos/love/public/src";
+const SRC = "/home/j/repos/love/js";
 const DRY_RUN = process.argv.includes("--dry-run");
 const ONLY = process.argv.find((a) => a.startsWith("--only="));
 const onlyFile = ONLY ? ONLY.slice("--only=".length) : null;
@@ -158,7 +158,7 @@ function buildFinalText(source, candidates) {
 }
 
 function ensureImport(text, fnName) {
-  const importLine = `import { ${fnName} } from "../../../love/public/src/${fnName}.mjs";\n`;
+  const importLine = `import { ${fnName} } from "../../../love/js/${fnName}.mjs";\n`;
   const re = new RegExp(`import\\s*\\{\\s*${fnName}\\s*\\}\\s*from`);
   if (re.test(text)) return text;
   // insert after the last top-level import statement, or at top if none

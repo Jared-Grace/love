@@ -1,0 +1,67 @@
+import { text_includes_assert } from "./text_includes_assert.mjs";
+import { object_merge_generic_message_match } from "./object_merge_generic_message_match.mjs";
+import { throws_assert_text } from "./throws_assert_text.mjs";
+import { json_equal_assert } from "./json_equal_assert.mjs";
+import { object_merge_match } from "./object_merge_match.mjs";
+export function object_merge_match_test() {
+  let to = null;
+  to = {};
+  object_merge_match(to, {});
+  json_equal_assert(to, {});
+  to = {};
+  object_merge_match(to, {
+    a: 1,
+  });
+  json_equal_assert(to, {
+    a: 1,
+  });
+  to = {
+    b: 2,
+  };
+  object_merge_match(to, {
+    a: 1,
+  });
+  json_equal_assert(to, {
+    b: 2,
+    a: 1,
+  });
+  to = {
+    b: 2,
+    a: 1,
+  };
+  object_merge_match(to, {
+    b: 2,
+    a: 1,
+  });
+  json_equal_assert(to, {
+    b: 2,
+    a: 1,
+  });
+  to = {
+    c: 3,
+    b: 2,
+    a: 1,
+  };
+  object_merge_match(to, {
+    b: 2,
+    a: 1,
+  });
+  json_equal_assert(to, {
+    c: 3,
+    b: 2,
+    a: 1,
+  });
+  to = {
+    c: 3,
+    b: 2,
+    a: 1,
+  };
+  function lambda() {
+    object_merge_match(to, {
+      a: 2,
+    });
+  }
+  let input = throws_assert_text(lambda);
+  let part = object_merge_generic_message_match();
+  text_includes_assert(input, part);
+}

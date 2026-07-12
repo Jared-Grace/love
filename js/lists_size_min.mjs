@@ -1,0 +1,7 @@
+import { list_min } from "./list_min.mjs";
+import { list_map_size } from "./list_map_size.mjs";
+export function lists_size_min(lists) {
+  let mapped = list_map_size(lists);
+  let min = list_min(mapped);
+  return min;
+}

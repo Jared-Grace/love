@@ -1,8 +1,0 @@
-import { property_equals } from "../../../love/public/src/property_equals.mjs";
-export function property_equals_curried_right_2(property_name, property_value) {
-  let c = function object_property_equals_lambda_result(item) {
-    let r = property_equals(item, property_name, property_value);
-    return r;
-  };
-  return c;
-}

@@ -1,0 +1,7 @@
+import { buffer_text_to } from "./buffer_text_to.mjs";
+import { firebase_storage_download } from "./firebase_storage_download.mjs";
+export async function firebase_storage_download_text(project_url, destination) {
+  let buffer = await firebase_storage_download(project_url, destination);
+  let s = buffer_text_to(buffer);
+  return s;
+}

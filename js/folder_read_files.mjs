@@ -1,0 +1,40 @@
+import { list_map } from "./list_map.mjs";
+import { path_base } from "./path_base.mjs";
+import { file_path_normalize } from "./file_path_normalize.mjs";
+import { list_intersect } from "./list_intersect.mjs";
+import { list_map_combine_left } from "./list_map_combine_left.mjs";
+import { property_get } from "./property_get.mjs";
+import { folder_read_browser } from "./folder_read_browser.mjs";
+import { browser_is } from "./browser_is.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
+import { path_join } from "./path_join.mjs";
+export async function folder_read_files(path_folder) {
+  if (browser_is()) {
+    path_folder = file_path_normalize(path_folder);
+    let r = await folder_read_browser(path_folder);
+    let filtered = property_get(r, "filtered");
+    let prefix = property_get(r, "prefix");
+    let unique = property_get(r, "unique");
+    let combineds = list_map_combine_left(unique, prefix);
+    let r2 = list_intersect(filtered, combineds);
+    let r3 = list_map(r2, path_base);
+    return r3;
+  }
+  let fs = await import("fs");
+  function lambda(file) {
+    let result = path_join([path_folder, file]);
+    try {
+      let v = fs.statSync(result).isFile();
+      return v;
+    } catch (e) {
+      if (e.code === "ENOENT") {
+        return false;
+      }
+      throw e;
+    }
+  }
+  let all = fs.readdirSync(path_folder);
+  let files = all.filter(lambda);
+  list_sort_text(files);
+  return files;
+}

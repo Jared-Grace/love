@@ -1,0 +1,7 @@
+import { function_transform_result } from "./function_transform_result.mjs";
+import { function_import_unalias } from "./function_import_unalias.mjs";
+export async function function_transform_prompt(f_name, transformer_name) {
+  let transformer = await function_import_unalias(transformer_name);
+  let r = await function_transform_result(f_name, transformer);
+  return r;
+}

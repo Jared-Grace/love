@@ -1,0 +1,23 @@
+import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
+import { global_function_call_cache_async } from "./global_function_call_cache_async.mjs";
+import { property_get } from "./property_get.mjs";
+import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
+import { ebible_firebase_upload_path } from "./ebible_firebase_upload_path.mjs";
+export async function ebible_verses_browser(bible_folder, chapter_code) {
+  async function get() {
+    let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
+    let project_url = firebase_storage_url_project_jg();
+    let c = await firebase_storage_download_json_decompress(
+      project_url,
+      destination,
+    );
+    let verses = property_get(c, "verses");
+    return verses;
+  }
+  let value = await global_function_call_cache_async(
+    ebible_verses_browser,
+    arguments,
+    get,
+  );
+  return value;
+}

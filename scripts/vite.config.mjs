@@ -1,2 +1,2 @@
-import { vite_config } from '../public/src/vite_config.mjs';
+import { vite_config } from '../js/vite_config.mjs';
 export default vite_config();

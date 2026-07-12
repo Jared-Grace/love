@@ -1,0 +1,6 @@
+import { http_post_json } from "./http_post_json.mjs";
+import { invoke_cache_storage_local } from "./invoke_cache_storage_local.mjs";
+export async function http_post_json_cache_storage_local(url, body) {
+  let v = await invoke_cache_storage_local(http_post_json, [url, body]);
+  return v;
+}

@@ -1,0 +1,88 @@
+import { list_map_first_upper_join } from "./list_map_first_upper_join.mjs";
+import { list_map_cycle } from "./list_map_cycle.mjs";
+import { list_shuffle_cycled_size } from "./list_shuffle_cycled_size.mjs";
+import { list_slices_size_cycler } from "./list_slices_size_cycler.mjs";
+import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
+import { list_join_space_nb } from "./list_join_space_nb.mjs";
+import { js_identifier_words_invalid } from "./js_identifier_words_invalid.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { app_code_lesson_identifiers_valid } from "./app_code_lesson_identifiers_valid.mjs";
+import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
+import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
+import { languages_popular } from "./languages_popular.mjs";
+import { list_to_text_or_list } from "./list_to_text_or_list.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_code_verse_words } from "./app_code_verse_words.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+export function app_code_lesson_identifiers_letters_spaces() {
+  function lambda(root) {
+    let c = app_code_container_light_blue(root);
+    let lp = languages_popular();
+    let languages = list_to_text_or_list(lp);
+    let combined = text_combine_multiple([
+      "Humans use languages like ",
+      languages,
+      " to speak to each other",
+    ]);
+    html_div_text(c, combined);
+    let parts = [
+      "For a human to talk to a computer, the human can use a ",
+      "programming language",
+    ];
+    html_div_cycle_bold(c, parts);
+    html_div_cycle_bold(c, [
+      "The programming language we will learn now is called ",
+      "JavaScript",
+    ]);
+    let c2 = app_code_container_light_blue(root);
+    html_div_text(
+      c2,
+      "We can give names to people, cities, countries, mountains, rivers, etc.",
+    );
+    html_div_cycle_bold(c2, [
+      "In JavaScript, ",
+      "identifiers",
+      " are used as names",
+    ]);
+    let c4 = app_code_container_light_blue(root);
+    html_div_text_multiple(c4, [
+      "In English, letters are inside of words, words are inside of sentences and sentences are inside of paragraphs",
+      "In English, letters are a basic building block and in JavaScript, symbols are a basic building block",
+      "In English, letters are inside of words and in JavaScript, symbols (like letters) are inside of identifiers",
+    ]);
+    let c3 = app_code_container_light_blue(root);
+    html_div_text_multiple(c3, [
+      "Identifiers can have different kinds of symbols including letters",
+      "But identifiers cannot have spaces",
+    ]);
+  }
+  function batch_get() {
+    let words = app_code_verse_words();
+    let mapped = list_map(words, text_letters_only);
+    let counts = [2, 2, 3, 3];
+    let list = list_slices_size_cycler(mapped, counts, 1);
+    list_shuffle_cycled_size(list, counts);
+    let mapped2 = list_map_cycle(list, [
+      list_map_first_upper_join,
+      list_join_space_nb,
+    ]);
+    let list_other = js_identifier_words_invalid();
+    let difference = list_difference(mapped2, list_other);
+    return difference;
+  }
+  let name_id = app_code_lesson_name_id("identifiers", [
+    "letters allowed",
+    "spaces not",
+  ]);
+  let r = app_code_lesson_identifiers_valid(
+    name_id,
+    lambda,
+    batch_get,
+    app_code_symbols_separated_on_question,
+  );
+  return r;
+}

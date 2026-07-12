@@ -1,0 +1,18 @@
+import { app_a_file_system_initialize_download } from "./app_a_file_system_initialize_download.mjs";
+import { global_function_initialize_lambda_async } from "./global_function_initialize_lambda_async.mjs";
+import { app_a } from "./app_a.mjs";
+import { storage_local_exists } from "./storage_local_exists.mjs";
+export async function app_a_file_system_initialize() {
+  let value = storage_local_exists(app_a, app_a_file_system_initialize.name);
+  if (value) {
+    return;
+  }
+  async function lambda() {
+    await app_a_file_system_initialize_download();
+    return true;
+  }
+  let value2 = await global_function_initialize_lambda_async(
+    app_a_file_system_initialize,
+    lambda,
+  );
+}

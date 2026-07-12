@@ -1,0 +1,36 @@
+import { list_remove } from "./list_remove.mjs";
+import { js_block_find } from "./js_block_find.mjs";
+import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
+import { log } from "./log.mjs";
+import { js_list_calls_named } from "./js_list_calls_named.mjs";
+import { property_get } from "./property_get.mjs";
+import { each_async } from "./each_async.mjs";
+import { js_expand_generic } from "./js_expand_generic.mjs";
+import { function_transform } from "./function_transform.mjs";
+export async function functions_expand_all(f_name_expand) {
+  let f_names = await data_identifiers_search_names(f_name_expand);
+  list_remove(f_names, f_name_expand);
+  log(functions_expand_all.name, {
+    f_names,
+  });
+  async function lambda2(f_name) {
+    async function lambda(ast) {
+      let list = js_list_calls_named(ast, f_name_expand);
+      async function lambda4(call) {
+        let v = property_get(call, "v");
+        let stack = property_get(v, "stack");
+        let r = js_block_find(stack);
+        let body = property_get(r, "body");
+        let item = property_get(r, "item");
+        log(functions_expand_all.name, {
+          f_name,
+        });
+        let inserted = await js_expand_generic(item, body, ast);
+      }
+      await each_async(list, lambda4);
+    }
+    let output = await function_transform(f_name, lambda);
+    return;
+  }
+  await each_async(f_names, lambda2);
+}

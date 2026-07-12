@@ -1,0 +1,41 @@
+import { js_await_if_unwrap_argument } from "./js_await_if_unwrap_argument.mjs";
+import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
+import { not } from "./not.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_single } from "./list_single.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_declare_init_get } from "./js_declare_init_get.mjs";
+export function js_statement_call_get(node) {
+  let call = null;
+  let declaration = null;
+  let assignment = null;
+  if (js_node_type_is(node, "ExpressionStatement")) {
+    let expression_next = property_get(node, "expression");
+    call = expression_next;
+    if (js_node_type_is(expression_next, "AssignmentExpression")) {
+      assignment = expression_next;
+      call = property_get(assignment, "right");
+    } else {
+      call = expression_next;
+    }
+  } else if (js_node_type_is(node, "VariableDeclaration")) {
+    let declarations = js_declaration_declarators_get(node);
+    if (list_multiple_is(declarations)) {
+      return null;
+    }
+    declaration = list_single(declarations);
+    call = js_declare_init_get(declaration);
+  }
+  call = js_await_if_unwrap_argument(call);
+  let a = js_node_type_is(call, "CallExpression");
+  if (not(a)) {
+    return null;
+  }
+  let v = {
+    call,
+    declaration,
+    assignment,
+  };
+  return v;
+}

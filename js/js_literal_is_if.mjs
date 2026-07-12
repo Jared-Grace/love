@@ -1,0 +1,4 @@
+import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
+export function js_literal_is_if(init, lambda) {
+  js_node_type_is_if(init, "Literal", lambda);
+}

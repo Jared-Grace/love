@@ -1,0 +1,62 @@
+import { ternary } from "./ternary.mjs";
+import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
+import { property_set } from "./property_set.mjs";
+import { js_identifier_defineds_includes } from "./js_identifier_defineds_includes.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { js_identifier_rename_imports_fix } from "./js_identifier_rename_imports_fix.mjs";
+import { app_a_identifier_generic } from "./app_a_identifier_generic.mjs";
+import { app_a_keyword_blue } from "./app_a_keyword_blue.mjs";
+import { js_special_arguments } from "./js_special_arguments.mjs";
+import { equal } from "./equal.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { property_get } from "./property_get.mjs";
+export function app_a_identifier(a) {
+  let node = property_get(a, "node");
+  let parent = property_get(a, "parent");
+  let name = property_get(node, "name");
+  let a2 = js_special_arguments();
+  let span = null;
+  if (equal(name, a2)) {
+    span = app_a_keyword_blue(parent, name);
+  } else {
+    let f_names = property_get(a, "f_names");
+    let includes = list_includes(f_names, name);
+    span = html_span_text(parent, name);
+    let color = null;
+    if (includes) {
+      color = "#007f00ff";
+    } else {
+      let ast = property_get(a, "ast");
+      let v_match = js_node_to_visitor(ast, node);
+      let includes3 = js_identifier_defineds_includes(v_match, name);
+      if (includes3) {
+        let f_names_local = property_get(a, "f_names_local");
+        let includes2 = list_includes(f_names_local, name);
+        color = ternary(includes2, "#00c800ff", "#4a4affff");
+      } else {
+        color = "red";
+      }
+    }
+    html_font_color_set(span, color);
+  }
+  function replace(value_new) {
+    property_set(node, "name", value_new);
+  }
+  app_a_identifier_generic(
+    a,
+    span,
+    name,
+    {
+      shortcut: "r",
+      text: "Rename",
+      on_change,
+    },
+    false,
+    replace,
+  );
+  async function on_change(name_new) {
+    let ast = property_get(a, "ast");
+    await js_identifier_rename_imports_fix(ast, name, name_new);
+  }
+}

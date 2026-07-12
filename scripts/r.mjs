@@ -1,5 +1,5 @@
-import { function_run } from '../public/src/function_run.mjs';
-import { log_keep } from '../public/src/log_keep.mjs';
+import { function_run } from '../js/function_run.mjs';
+import { log_keep } from '../js/log_keep.mjs';
 Error.stackTraceLimit = Infinity;
 (async () => {
   const [, , funcName, ...args] = process.argv;

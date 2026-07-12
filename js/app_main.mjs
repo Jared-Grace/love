@@ -1,0 +1,9 @@
+import { firebase_name_browser } from "./firebase_name_browser.mjs";
+import { js_code_call_app_context_initialize } from "./js_code_call_app_context_initialize.mjs";
+import { firebase_storage_function_run_generic } from "./firebase_storage_function_run_generic.mjs";
+import { global_function_initialize } from "./global_function_initialize.mjs";
+export async function app_main(f_name, firebase_name_value, version_get) {
+  global_function_initialize(firebase_name_browser, firebase_name_value);
+  let call = js_code_call_app_context_initialize(f_name);
+  await firebase_storage_function_run_generic(version_get, f_name, call);
+}

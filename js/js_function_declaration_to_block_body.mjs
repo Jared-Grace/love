@@ -1,0 +1,7 @@
+import { js_block_body_get } from "./js_block_body_get.mjs";
+import { property_get } from "./property_get.mjs";
+export function js_function_declaration_to_block_body(declaration) {
+  let block = property_get(declaration, "body");
+  let body_block = js_block_body_get(block);
+  return body_block;
+}

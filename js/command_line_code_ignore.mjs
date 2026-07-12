@@ -1,0 +1,10 @@
+import { command_line_generic } from "./command_line_generic.mjs";
+import { property_set_new_fn } from "./property_set_new_fn.mjs";
+import { command_line_generic_code_ignore } from "./command_line_generic_code_ignore.mjs";
+export async function command_line_code_ignore(command) {
+  let fn = command_line_generic_code_ignore;
+  let value = true;
+  let object = property_set_new_fn(fn, value);
+  let r = await command_line_generic(command, object);
+  return r;
+}

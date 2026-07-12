@@ -1,0 +1,75 @@
+import { app_replace_rule_set_expressions_equality_abbreviations } from "./app_replace_rule_set_expressions_equality_abbreviations.mjs";
+import { app_replace_rule_set_expressions_equality_rules } from "./app_replace_rule_set_expressions_equality_rules.mjs";
+import { list_add } from "./list_add.mjs";
+export function app_replace_rule_set_expressions_equality() {
+  let rules = [];
+  app_replace_rule_set_expressions_equality_rules(rules);
+  list_add(rules, "ex > ee");
+  let abbreviations = {};
+  app_replace_rule_set_expressions_equality_abbreviations(abbreviations);
+  let r = {
+    name: "Expressions Equality",
+    abbreviations,
+    rules,
+    goals: [
+      {
+        start: "ee",
+        end: "mue === mue",
+      },
+      {
+        start: "mue === mue",
+        end: "mae === mae",
+      },
+      {
+        start: "mae === mae",
+        end: "pe === pe",
+      },
+      {
+        start: "mae === mae",
+        end: "li === li",
+      },
+      {
+        start: "li === li",
+        end: "nu === nu",
+      },
+      {
+        start: "nu === nu",
+        end: "1 === 1",
+      },
+      {
+        start: "pe === pe",
+        end: "( ade ao mue ) === pe",
+      },
+      {
+        start: "( ade ao mue ) === pe",
+        end: "( ue ao ue ) === pe",
+      },
+      {
+        start: "( ue ao ue ) === pe",
+        end: "( mae ao mae ) === pe",
+      },
+      {
+        start: "( mae ao mae ) === pe",
+        end: "( pe ao pe ) === pe",
+      },
+      {
+        start: "( pe ao pe ) === pe",
+        end: "( li ao li ) === li",
+      },
+      {
+        start: "( li ao li ) === li",
+        end: "( nu ao nu ) === nu",
+      },
+      {
+        start: "( nu ao nu ) === nu",
+        end: "( 1 + 1 ) === 2",
+      },
+      {
+        start: "( nu ao nu ) === nu",
+        end: "( 2 - 1 ) === 1",
+      },
+    ],
+    why: "The replacement rules define a grammar for parsing and evaluating equality expressions involving identifiers, literals, arithmetic, member access, function calls, and various data types, demonstrating how complex expressions can be reduced to simpler forms and ultimately compared for equality. This is shown by the progressive breakdown of expressions into their components and the explicit handling of the '===' equality operator in the grammar.",
+  };
+  return r;
+}
