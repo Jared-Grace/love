@@ -1,0 +1,11 @@
+import { html_style_code_generic } from "./html_style_code_generic.mjs";
+export function html_style_code_light_generic(component, color_box_shadow) {
+  let color_background = "white";
+  let color_font = "black";
+  html_style_code_generic(
+    component,
+    color_background,
+    color_box_shadow,
+    color_font,
+  );
+}

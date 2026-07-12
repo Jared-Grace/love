@@ -1,0 +1,9 @@
+import { list_map } from "./list_map.mjs";
+export function lists_get_generic(getter, index, lists) {
+  function lambda(list) {
+    let item = getter(list, index);
+    return item;
+  }
+  let items = list_map(lists, lambda);
+  return items;
+}

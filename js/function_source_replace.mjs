@@ -1,0 +1,10 @@
+import { file_transform_replace } from "./file_transform_replace.mjs";
+import { property_get } from "./property_get.mjs";
+import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+export async function function_source_replace(f_name, from, to) {
+  arguments_assert(arguments, 3);
+  let r = await function_name_to_path_search(f_name);
+  let f_path = property_get(r, "f_path");
+  await file_transform_replace(f_path, from, to);
+}

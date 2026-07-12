@@ -1,0 +1,8 @@
+import { firebase_deploy_function_destination_json } from "./firebase_deploy_function_destination_json.mjs";
+export function firebase_deploy_function_destination_production(f_name) {
+  let destination = firebase_deploy_function_destination_json(
+    "version_production",
+    f_name,
+  );
+  return destination;
+}

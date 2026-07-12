@@ -1,0 +1,7 @@
+import { path_base } from "./path_base.mjs";
+export function path_name(file_path) {
+  let filename = path_base(file_path);
+  let v = filename.lastIndexOf(".");
+  let name = filename.includes(".") ? filename.slice(0, v) : filename;
+  return name;
+}

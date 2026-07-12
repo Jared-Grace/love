@@ -1,0 +1,23 @@
+import { global_function_property_initialize_async } from "./global_function_property_initialize_async.mjs";
+import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
+export async function global_firebase_storage_download_json_decompress(
+  fn,
+  destination_get,
+  property_name,
+  project_url,
+) {
+  async function get() {
+    let destination = destination_get(property_name);
+    let o = await firebase_storage_download_json_decompress(
+      project_url,
+      destination,
+    );
+    return o;
+  }
+  let value = await global_function_property_initialize_async(
+    fn,
+    property_name,
+    get,
+  );
+  return value;
+}

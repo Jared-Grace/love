@@ -1,0 +1,6 @@
+import { git_call_message } from "./git_call_message.mjs";
+import { git_acp_folder } from "./git_acp_folder.mjs";
+export async function git_acp_call_folder(f_name, args, folder) {
+  let message = git_call_message(f_name, args);
+  await git_acp_folder(folder, message);
+}

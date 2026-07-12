@@ -1,0 +1,8 @@
+import { folder_public_join } from "./folder_public_join.mjs";
+import { path_join } from "./path_join.mjs";
+export function html_name_to_path_folder(folder, name, file_name_get) {
+  let file_name = file_name_get(name);
+  let joined = path_join([folder, file_name]);
+  let file_path = folder_public_join(joined);
+  return file_path;
+}

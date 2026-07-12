@@ -1,0 +1,19 @@
+import { each_index } from "./each_index.mjs";
+import { list_get } from "./list_get.mjs";
+export function each_previous_generic(
+  index_valid_is,
+  index_other_get,
+  list,
+  lambda$item$other,
+) {
+  function lambda_each_previous_generic(item, index) {
+    let other = null;
+    if (index_valid_is(index)) {
+      let index_other = index_other_get(index);
+      other = list_get(list, index_other);
+    }
+    lambda$item$other(item, other);
+  }
+  let v = each_index(list, lambda_each_previous_generic);
+  return v;
+}

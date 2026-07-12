@@ -1,0 +1,26 @@
+import { list_remove } from "./list_remove.mjs";
+import { js_node_type_set } from "./js_node_type_set.mjs";
+import { js_expression_statement_is_if } from "./js_expression_statement_is_if.mjs";
+import { js_arrow_to_function_node } from "./js_arrow_to_function_node.mjs";
+import { list_add } from "./list_add.mjs";
+import { js_code_arrow } from "./js_code_arrow.mjs";
+import { object_replace } from "./object_replace.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
+export function js_dollar_f({ node, afters, stack_1 }) {
+  let code = js_code_arrow();
+  let parsed = js_parse_expression(code);
+  js_arrow_to_function_node(parsed);
+  list_add(afters, lambda);
+  function lambda() {
+    object_replace(node, parsed);
+  }
+  function lambda3() {
+    list_add(afters, lambda2);
+    function lambda2() {
+      js_node_type_set(node, "FunctionDeclaration");
+      object_replace(stack_1, parsed);
+    }
+    list_remove(afters, lambda);
+  }
+  js_expression_statement_is_if(stack_1, lambda3);
+}

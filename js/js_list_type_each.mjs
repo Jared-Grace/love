@@ -1,0 +1,6 @@
+import { each } from "./each.mjs";
+import { js_list_type } from "./js_list_type.mjs";
+export function js_list_type_each(ast, type, lambda) {
+  let vs = js_list_type(ast, type);
+  each(vs, lambda);
+}

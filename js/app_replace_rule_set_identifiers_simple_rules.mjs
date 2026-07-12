@@ -1,0 +1,8 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { app_replace_rule_set_strings_simple_rules_base } from "./app_replace_rule_set_strings_simple_rules_base.mjs";
+export function app_replace_rule_set_identifiers_simple_rules() {
+  let rules = app_replace_rule_set_strings_simple_rules_base();
+  let r = ["id > idf", "id > idf idg", "idg > ida", "idg > ida idg"];
+  list_add_multiple(r, rules);
+  return r;
+}

@@ -1,0 +1,51 @@
+import { app_replace_rule_set_expressions_unary_abbreviations } from "./app_replace_rule_set_expressions_unary_abbreviations.mjs";
+import { app_replace_rule_set_expressions_unary_rules } from "./app_replace_rule_set_expressions_unary_rules.mjs";
+import { list_add } from "./list_add.mjs";
+export function app_replace_rule_set_expressions_unary() {
+  let rules = [];
+  app_replace_rule_set_expressions_unary_rules(rules);
+  list_add(rules, "ex > ue");
+  let abbreviations = {};
+  app_replace_rule_set_expressions_unary_abbreviations(abbreviations);
+  let r = {
+    name: "Expressions Unary",
+    rules,
+    abbreviations,
+    goals: [
+      {
+        start: "ue",
+        end: "uo li",
+      },
+      {
+        start: "uo li",
+        end: "- 2",
+      },
+      {
+        start: "uo li",
+        end: "! true",
+      },
+      {
+        start: "uo li",
+        end: "+ 3.14",
+      },
+      {
+        start: "uo li",
+        end: "typeof null",
+      },
+      {
+        start: "ue",
+        end: "- ( ex )",
+      },
+      {
+        start: "- ( ex )",
+        end: "- ( - li )",
+      },
+      {
+        start: "- ( - li )",
+        end: "- ( - 1 )",
+      },
+    ],
+    why: "These replacement rules define a grammar for parsing unary expressions, primary expressions, literals, member access, and function calls, similar to the syntax found in JavaScript or similar languages, demonstrating how identifiers, literals, and unary operators combine to form valid expressions.",
+  };
+  return r;
+}

@@ -1,0 +1,9 @@
+import { list_adder } from "./list_adder.mjs";
+import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
+export function js_list_calls_named(ast, f_name) {
+  function lambda(la) {
+    js_visit_calls_named(ast, f_name, la);
+  }
+  let list = list_adder(lambda);
+  return list;
+}

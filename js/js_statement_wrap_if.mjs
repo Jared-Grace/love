@@ -1,0 +1,12 @@
+import { object_replace } from "./object_replace.mjs";
+import { js_statement_if_test_set } from "./js_statement_if_test_set.mjs";
+import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
+import { js_statement_if } from "./js_statement_if.mjs";
+import { list_single } from "./list_single.mjs";
+export function js_statement_wrap_if(ast, selects) {
+  let node = list_single(selects);
+  let expression = js_statement_expression_get(node);
+  let statement_if = js_statement_if();
+  js_statement_if_test_set(statement_if, expression);
+  object_replace(node, statement_if);
+}

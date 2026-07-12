@@ -1,0 +1,39 @@
+import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
+import { js_statement_if_swap } from "./js_statement_if_swap.mjs";
+import { js_statement_if_test_set } from "./js_statement_if_test_set.mjs";
+import { list_remove } from "./list_remove.mjs";
+import { list_single } from "./list_single.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
+import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_next } from "./list_next.mjs";
+import { log } from "./log.mjs";
+export function js_dollar_n({
+  remaining,
+  node,
+  stack_1,
+  stack_2,
+  stack_3,
+  ast,
+  afters,
+}) {
+  let n = list_next(stack_2, stack_1);
+  let test = property_get(n, "test");
+  function lambda() {
+    let name = js_call_callee_name_try(test);
+    log(js_dollar_n.name, {
+      name,
+    });
+    if (equal(name, not.name)) {
+      let arguments2 = js_call_arguments_get(test);
+      let only = list_single(arguments2);
+      js_statement_if_test_set(n, only);
+      js_statement_if_swap(n);
+      list_remove(stack_2, stack_1);
+    }
+  }
+  js_node_type_is_if(test, "CallExpression", lambda);
+  return;
+}

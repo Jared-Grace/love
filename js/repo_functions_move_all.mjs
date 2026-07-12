@@ -1,0 +1,10 @@
+import { user_repo_set } from "./user_repo_set.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { user_repo_get_functions_names } from "./user_repo_get_functions_names.mjs";
+import { repo_functions_move_acronym } from "./repo_functions_move_acronym.mjs";
+export async function repo_functions_move_all(from, to) {
+  arguments_assert(arguments, 2);
+  let repo_name = await user_repo_set(from);
+  let filtered = await user_repo_get_functions_names();
+  await repo_functions_move_acronym(filtered, to);
+}
