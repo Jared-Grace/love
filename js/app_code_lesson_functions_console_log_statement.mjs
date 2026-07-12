@@ -1,3 +1,4 @@
+import { digits_3_random_next } from "../../love/js/digits_3_random_next.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_cycle_bold_code } from "./html_cycle_bold_code.mjs";
@@ -12,6 +13,7 @@ export function app_code_lesson_functions_console_log_statement() {
     above,
     js_code_statement,
     [" statement"],
+    digits_3_random_next,
   );
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
