@@ -17,16 +17,45 @@ awareness of shell grammar. That cuts both ways:
      second command fails the same allowlist check as the first.
 
 This hook parses the command with a small quote-aware tokenizer that
-understands exactly one safe shape: a top-level chain of links joined by
-any mix of ';', '|', '&&', '||', where each link is either a plain simple
-command or a single-level 'for VAR in LIST; do CMDS; done' loop (whose own
-body is in turn a chain of simple commands - no nested for-loops). Every
-simple command's verb, wherever it appears in the chain or inside a loop
-body, must independently be in permissions.allow - conditional vs.
+understands a deliberately narrow shape: a chain of statements joined by
+any mix of ';', '|', '&&', '||', where each statement is a plain simple
+command, a 'for VAR in LIST; do CMDS; done' loop, or an
+'if COND; then CMDS; [elif COND; then CMDS;]* [else CMDS;] fi' conditional.
+for/if blocks may nest inside one another's bodies to any depth - the body
+of a loop or a branch is itself just another such statement chain,
+validated by the same recursion (see check_statements / check_for_loop /
+check_if). Every simple command's verb, wherever it appears - in the
+top-level chain, inside a loop body, or inside any condition or branch of
+an if - must independently be in permissions.allow; conditional vs.
 unconditional execution doesn't matter, since the check is about which
-verbs can run, not when. Anything outside that (command substitution,
-redirection, subshells, backgrounding, nested control flow) is
-deliberately left unparsed.
+verbs can run, not when. The loop-control builtins break and continue are
+also allowed inside a body (they run no external command; see
+SAFE_BUILTINS). Anything outside that grammar (redirection, subshells,
+backgrounding, other control flow such as while/until/case) is deliberately
+left unparsed and falls through to a real prompt.
+
+Two constructs that once fell in that "left unparsed" bucket are now
+parsed, because doing so extends the exact same verb-allowlist guarantee
+rather than weakening it:
+
+  - Leading `VAR=...` assignments on a simple command are stripped before
+    the verb check (a simple command that is *only* assignments runs no
+    verb at all and is safe on its own). Any `$(...)` in an assignment's
+    right-hand side is validated the same way as anywhere else. The one
+    carve-out is assignments to execution-influencing names (PATH, LD_*,
+    DYLD_*, IFS, GLOBIGNORE, CDPATH, BASH_ENV/ENV, PROMPT_COMMAND, PS4,
+    BASH_FUNC_*, SHELLOPTS/BASHOPTS - see DANGEROUS_ASSIGN_NAMES): those
+    fail closed to a real prompt, since they could change how a following
+    trusted verb is resolved or what it loads.
+  - `$(...)` command substitution is parsed by extracting its inner command
+    and requiring *that* command to be entirely trusted verbs too (see
+    tokenize / _scan_substitution / is_safe's subst_validator), then
+    collapsing the whole substitution to an opaque placeholder. Running the
+    substitution is thus trusted exactly as much as running its inner
+    command standalone; the text it *produces* is never trusted, so a
+    command whose verb comes from a substitution (`$(echo grep) x`) still
+    prompts. Backtick substitution stays rejected - only `$(...)` is
+    parsed.
 
 Characters that only have special meaning to the shell when unquoted
 (the pipeline/redirection/grouping/background operators) are treated as
@@ -339,9 +368,92 @@ RESERVED_WORDS = {
 
 DANGEROUS_CHARS = set("`<{}()")
 
+# A single command-substitution `$(...)` collapses to this placeholder word
+# once its inner command has been recursively validated (see tokenize /
+# _scan_substitution). It is deliberately a value that can never itself be a
+# trusted verb or a valid assignment name, so a command whose verb *comes
+# from* a substitution (`$(echo grep) foo`) still falls through to a prompt -
+# only the already-validated act of running the inner command is trusted, not
+# whatever text it prints.
+SUBSTITUTION_PLACEHOLDER = "\x00"
+
+ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)=")
+
+# Variable names whose assignment can change how the *following* command is
+# located (PATH/CDPATH), which code it loads before running (LD_*/DYLD_*),
+# how the shell splits/globs its arguments (IFS/GLOBIGNORE), or what runs
+# implicitly (BASH_ENV/ENV/PROMPT_COMMAND/PS4, BASH_FUNC_* exported
+# functions). An assignment to any of these is NOT stripped as a harmless
+# env-set; it fails closed to a real prompt, so e.g. `LD_PRELOAD=./evil.so
+# grep x` can never ride in on grep's verb trust. Plain data assignments
+# (apps=..., imp=$(...)) are unaffected.
+DANGEROUS_ASSIGN_NAMES = {
+    "PATH", "CDPATH", "IFS", "GLOBIGNORE", "ENV", "BASH_ENV",
+    "SHELLOPTS", "BASHOPTS", "PS4", "PROMPT_COMMAND",
+}
+DANGEROUS_ASSIGN_PREFIXES = ("LD_", "DYLD_", "BASH_FUNC_")
+
+
+def is_dangerous_assignment_name(name):
+    if name in DANGEROUS_ASSIGN_NAMES:
+        return True
+    return any(name.startswith(p) for p in DANGEROUS_ASSIGN_PREFIXES)
+
 
 class Unsupported(Exception):
     """Command doesn't fit the narrow shape this hook parses."""
+
+
+def _scan_substitution(command, i):
+    """Given `command` and an index `i` pointing at the first character
+    *inside* a `$(` command substitution, return (inner, end) where `inner`
+    is the raw substring between the parentheses and `end` is the index just
+    past the matching `)`. Quote-aware (single/double quotes suspend paren
+    counting; a backslash escapes the next char) and paren-depth-aware so
+    nested `$(...)` / subshells find their true close. Backticks are rejected
+    outright - only `$(...)` substitution is ever parsed. Raises Unsupported
+    if the substitution is unterminated. The returned `inner` is handed back
+    to tokenize's caller for its own recursive is_safe() check - this scanner
+    only finds the boundary, it makes no trust decision itself."""
+    depth = 1
+    quote = None  # None | "'" | '"'
+    n = len(command)
+    start = i
+    while i < n:
+        c = command[i]
+        if quote == "'":
+            if c == "'":
+                quote = None
+            i += 1
+            continue
+        if quote == '"':
+            if c == "\\" and i + 1 < n:
+                i += 2
+                continue
+            if c == '"':
+                quote = None
+            elif c == "`":
+                raise Unsupported("backtick command substitution")
+            i += 1
+            continue
+        # unquoted
+        if c == "'":
+            quote = "'"
+        elif c == '"':
+            quote = '"'
+        elif c == "\\":
+            i += 2
+            continue
+        elif c == "`":
+            raise Unsupported("backtick command substitution")
+        elif c == "(":
+            depth += 1
+        elif c == ")":
+            depth -= 1
+            if depth == 0:
+                return command[start:i], i + 1
+        i += 1
+    raise Unsupported("unterminated command substitution")
 
 
 def is_safe_scratchpad_target(path):
@@ -401,12 +513,24 @@ def load_safe_exact_commands():
     return commands
 
 
-def tokenize(command):
+def tokenize(command, subst_validator=None):
     """Quote-aware tokenizer. Emits word tokens (quotes stripped) and a
     single ';' token for each unquoted ';' or newline. Raises Unsupported
-    for any command substitution, redirection, subshell/group,
+    for any redirection (except the narrow cases below), subshell/group,
     backgrounding, or pipe/&&/|| operator found outside single quotes
-    (inside single quotes everything is always literal in POSIX shell)."""
+    (inside single quotes everything is always literal in POSIX shell).
+
+    A `$(...)` command substitution is parsed rather than rejected when
+    `subst_validator` is supplied: its inner command is extracted (see
+    _scan_substitution) and passed to subst_validator, which returns True
+    only if that inner command is itself entirely made of already-trusted
+    verbs. On success the whole `$(...)` collapses to a single
+    SUBSTITUTION_PLACEHOLDER character in the current word - so running the
+    substitution is trusted exactly as much as running its inner command
+    standalone would be, and nothing about the text it *produces* is
+    trusted. On failure (or when subst_validator is None) it raises
+    Unsupported, the same as any other unparsed construct. Backtick
+    substitution is always rejected - only `$(...)` is ever parsed."""
     tokens = []
     word = []
     quote = None  # None | "'" | '"'
@@ -440,7 +564,12 @@ def tokenize(command):
             if c == "`":
                 raise Unsupported("command substitution (backtick) in double quotes")
             if c == "$" and i + 1 < n and command[i + 1] == "(":
-                raise Unsupported("command substitution")
+                inner, end = _scan_substitution(command, i + 2)
+                if subst_validator is None or not subst_validator(inner):
+                    raise Unsupported("command substitution")
+                word.append(SUBSTITUTION_PLACEHOLDER)
+                i = end
+                continue
             word.append(c)
             i += 1
             continue
@@ -534,7 +663,12 @@ def tokenize(command):
         if c in DANGEROUS_CHARS:
             raise Unsupported(f"unsupported operator {c!r}")
         if c == "$" and i + 1 < n and command[i + 1] == "(":
-            raise Unsupported("command substitution")
+            inner, end = _scan_substitution(command, i + 2)
+            if subst_validator is None or not subst_validator(inner):
+                raise Unsupported("command substitution")
+            word.append(SUBSTITUTION_PLACEHOLDER)
+            i = end
+            continue
         if c in (";", "\n"):
             flush_word()
             tokens.append(";")
@@ -1067,10 +1201,25 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
         if not words:
             continue
         found_command = True
+        # Strip leading `VAR=...` assignment words. An assignment executes no
+        # verb of its own - it just sets a shell/environment variable; any
+        # `$(...)` in its right-hand side was already validated during
+        # tokenize. A simple command that is *only* assignments
+        # (apps="...", imp=$(...)) is therefore safe on its own. Assignments
+        # to execution-influencing names (PATH, LD_*, IFS, ...) are the one
+        # exception - they fail closed so they can't quietly change how a
+        # following trusted verb is resolved or what it loads.
+        while words:
+            m = ASSIGN_RE.match(words[0])
+            if not m:
+                break
+            if is_dangerous_assignment_name(m.group(1)):
+                return False
+            words = words[1:]
+        if not words:
+            continue
         if words[0] in RESERVED_WORDS:
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
-        if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", words[0]):
-            raise Unsupported("variable assignment prefix")
         if words[0] == "find" and any(w in FIND_EXEC_FLAGS for w in words[1:]):
             if not is_safe_find_exec(words, safe_verbs):
                 return False
@@ -1123,7 +1272,19 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
 
 
 def is_safe(command, safe_verbs, safe_exact_commands):
-    tokens = tokenize(command)
+    def subst_validator(inner):
+        # A `$(...)` is trusted iff its inner command is itself entirely
+        # made of already-trusted verbs - exactly the same requirement every
+        # other link in a chain must meet. An inner command this hook can't
+        # confidently parse (Unsupported) is treated as untrusted rather than
+        # letting the exception propagate, so the enclosing command falls
+        # through to a real prompt.
+        try:
+            return is_safe(inner, safe_verbs, safe_exact_commands)
+        except Unsupported:
+            return False
+
+    tokens = tokenize(command, subst_validator)
     if not tokens:
         return False
     found_command = False

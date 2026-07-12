@@ -12,6 +12,8 @@ import { app_a_function_select } from "./app_a_function_select.mjs";
 import { app_a_app_run } from "./app_a_app_run.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_fn } from "./property_get_fn.mjs";
+import { on_keydowns_key } from "./on_keydowns_key.mjs";
 import { function_unalias_exists } from "./function_unalias_exists.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
@@ -67,7 +69,7 @@ export async function app_a_app(context) {
     property_set(item, "fn", wrapped);
   }
   each(choices, lambda);
-  let on_keydowns = property_get(context, "on_keydowns");
+  let on_keydowns = property_get_fn(context, on_keydowns_key);
   list_add(on_keydowns, on_keydown);
   app_a_buttons_shortcuts_wide(root, choices);
 }
