@@ -1,5 +1,0 @@
-import { tmp_deasync_test_leaf } from "./tmp_deasync_test_leaf.mjs";
-export function tmp_deasync_test_middle() {
-  let v = tmp_deasync_test_leaf();
-  return v;
-}

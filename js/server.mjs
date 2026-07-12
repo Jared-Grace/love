@@ -18,7 +18,7 @@ export async function server() {
   });
   app.use(v3);
   let port = server_port();
-  let __dirname = await module_dirname(import.meta.url);
+  let __dirname = await module_dirname(import.meta);
   let result = await folder_repos_resolve(__dirname);
   let v = express.static(result);
   let u = server_url_api();
