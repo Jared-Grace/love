@@ -784,6 +784,20 @@ def split_blocks(tokens):
 
 TIMEOUT_DURATION_RE = re.compile(r"^\d+(\.\d+)?[smhd]?$")
 
+# git global options that take NO argument and cannot inject an executable or
+# change how a subcommand is resolved - so skipping them before reading the
+# subcommand (see verb_of) never widens trust beyond the subcommand's own
+# allow rule. Value-taking globals (-c, -C, --exec-path, --git-dir,
+# --work-tree, --namespace, --config-env) are deliberately excluded: those
+# are the ones that can point the pager/alias/exec-path at an arbitrary
+# command, so they must keep falling through to a real prompt.
+GIT_SAFE_GLOBAL_FLAGS = {
+    "--no-pager", "-P", "--paginate", "-p",
+    "--bare", "--no-replace-objects", "--no-optional-locks",
+    "--literal-pathspecs", "--glob-pathspecs", "--noglob-pathspecs",
+    "--icase-pathspecs",
+}
+
 
 def verb_of(words):
     if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
@@ -792,6 +806,20 @@ def verb_of(words):
         return verb_of(words[2:])
     if words[0] == "git":
         idx = 1
+        # Skip git's value-less global options before reading the subcommand,
+        # so `git --no-pager diff` resolves to the already-trusted `git diff`
+        # verb (same spirit as the -C skip below). Every flag here takes no
+        # argument and cannot inject an executable or redirect how a
+        # subcommand is resolved. This is deliberately an explicit allowlist,
+        # NOT a blanket "skip anything starting with -": the value-taking
+        # globals are exactly the dangerous ones and must keep prompting -
+        # `-c <name=value>` can set core.pager/alias.* to an arbitrary command
+        # (code execution), and `--exec-path`/`--git-dir`/`--work-tree`/
+        # `--namespace`/`--config-env`/`-C` redirect where git runs or what it
+        # touches. None of those are skipped here, so a git invocation
+        # carrying one still falls through to a real prompt.
+        while idx < len(words) and words[idx] in GIT_SAFE_GLOBAL_FLAGS:
+            idx += 1
         if idx < len(words) and words[idx] == "-C" and idx + 1 < len(words):
             idx += 2
         return f"git {words[idx]}" if idx < len(words) else words[0]

@@ -42,6 +42,9 @@ import { app_bible_languages } from "./app_bible_languages.mjs";
 import { emoji_gear } from "./emoji_gear.mjs";
 import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
+import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_second } from "./list_second.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -70,7 +73,20 @@ export async function app_bible_home_generic(context, lambda$a) {
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
   let book_code = property_get(v2, "book_code");
-  let books = await ebible_version_books_browser(e);
+  async function lambda_books_en() {
+    let r = await ebible_version_books_browser(e);
+    return r;
+  }
+  async function lambda_verses_en() {
+    let r = await ebible_verses_browser(e, chapter_code);
+    return r;
+  }
+  let fetched_en = await invoke_multiple_unordered_async([
+    lambda_books_en,
+    lambda_verses_en,
+  ]);
+  let books = list_first(fetched_en);
+  let verses = list_second(fetched_en);
   let book_name = ebible_book_code_to_name(books, book_code);
   app_bible_button_chapter_previous(bar, context, chapter_code);
   app_shared_screen_set_button(bar, context, app_bible_books, book_name);
@@ -83,7 +99,6 @@ export async function app_bible_home_generic(context, lambda$a) {
     verse_number_hash,
   );
   app_shared_screen_set_button(bar, context, app_bible_languages, emoji_gear());
-  let verses = await ebible_verses_browser(e, chapter_code);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
@@ -98,8 +113,20 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function lambda_language(lc) {
     let bible_folder = property_get(lc, "bible_folder");
     async function get() {
-      let verses_l = await ebible_verses_browser(bible_folder, chapter_code);
-      let books_l = await ebible_version_books_browser(bible_folder);
+      async function lambda_verses_l() {
+        let r = await ebible_verses_browser(bible_folder, chapter_code);
+        return r;
+      }
+      async function lambda_books_l() {
+        let r = await ebible_version_books_browser(bible_folder);
+        return r;
+      }
+      let fetched_l = await invoke_multiple_unordered_async([
+        lambda_verses_l,
+        lambda_books_l,
+      ]);
+      let verses_l = list_first(fetched_l);
+      let books_l = list_second(fetched_l);
       let v = {
         language: lc,
         verses: verses_l,
