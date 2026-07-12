@@ -1,0 +1,7 @@
+import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+export function js_code_arrow_args_body_expression(args, expression) {
+  let oc = js_code_wrap_parenthesis(args);
+  let code = text_combine_multiple([oc, "=>", expression]);
+  return code;
+}

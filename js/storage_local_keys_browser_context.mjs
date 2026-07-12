@@ -1,0 +1,9 @@
+import { list_map_prefix_without } from "./list_map_prefix_without.mjs";
+import { storage_local_key_prefix } from "./storage_local_key_prefix.mjs";
+import { storage_local_keys_starts_with } from "./storage_local_keys_starts_with.mjs";
+export function storage_local_keys_browser_context(context) {
+  let prefix = storage_local_key_prefix(context);
+  let keys = storage_local_keys_starts_with(prefix);
+  let mapped = list_map_prefix_without(keys, prefix);
+  return mapped;
+}

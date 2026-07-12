@@ -1,0 +1,5 @@
+import { html_scroll_center_generic } from "./html_scroll_center_generic.mjs";
+export async function html_scroll_center_now(component) {
+  let behavior = "auto";
+  await html_scroll_center_generic(component, behavior);
+}

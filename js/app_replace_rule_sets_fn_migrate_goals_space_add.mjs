@@ -1,0 +1,37 @@
+import { app_replace_rule_sets_fn_migrate_goals_space_add_elements } from "./app_replace_rule_sets_fn_migrate_goals_space_add_elements.mjs";
+import { function_transform } from "./function_transform.mjs";
+import { js_array_expression_elements } from "./js_array_expression_elements.mjs";
+import { js_property_value_get } from "./js_property_value_get.mjs";
+import { list_single } from "./list_single.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_object_expression_properties_find_key_named_curried_right } from "./js_object_expression_properties_find_key_named_curried_right.mjs";
+import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { log } from "./log.mjs";
+export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
+  async function lambda(ast) {
+    log(app_replace_rule_sets_fn_migrate_goals_space_add.name, {
+      name,
+    });
+    let type = "ObjectExpression";
+    let list = js_list_type_nodes(ast, type);
+    let search = "goals";
+    let m =
+      js_object_expression_properties_find_key_named_curried_right(search);
+    let mapped = list_map(list, m);
+    let filtered = list_filter_null_not_is(mapped);
+    let e = list_empty_is(filtered);
+    if (e) {
+      log(app_replace_rule_sets_fn_migrate_goals_space_add.name, {
+        name,
+      });
+    } else {
+      let only = list_single(filtered);
+      let value = js_property_value_get(only);
+      let elements = js_array_expression_elements(value);
+      app_replace_rule_sets_fn_migrate_goals_space_add_elements(elements);
+    }
+  }
+  let output = await function_transform(name, lambda);
+}

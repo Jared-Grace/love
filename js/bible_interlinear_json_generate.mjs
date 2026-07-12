@@ -1,0 +1,17 @@
+import { file_overwrite } from "./file_overwrite.mjs";
+import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
+import { bible_interlinear_excel_path } from "./bible_interlinear_excel_path.mjs";
+import { json_format_to } from "./json_format_to.mjs";
+export async function bible_interlinear_json_generate() {
+  let { default: XLSX } = await import("xlsx");
+  ("todo: download from");
+  ("https://bereanbible.com/bsb_tables.xlsx");
+  ("that way more is automated for other users of this script");
+  let path_input = bible_interlinear_excel_path();
+  let wb = XLSX.readFile(path_input);
+  let ws = wb.Sheets["biblosinterlinear96"];
+  let json = XLSX.utils.sheet_to_json(ws);
+  let contents = json_format_to(json);
+  let path_output = bible_interlinear_json_path();
+  let result = await file_overwrite(path_output, contents);
+}

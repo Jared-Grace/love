@@ -1,0 +1,34 @@
+import { js_statement_return_add } from "./js_statement_return_add.mjs";
+import { object_replace } from "./object_replace.mjs";
+import { js_call_empty } from "./js_call_empty.mjs";
+import { app_replace_rule_sets_name_expression_value } from "./app_replace_rule_sets_name_expression_value.mjs";
+import { function_new_declaration_from } from "./function_new_declaration_from.mjs";
+import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
+import { function_new_declaration_to } from "./function_new_declaration_to.mjs";
+import { marker_next_declare_single_init_elements } from "./marker_next_declare_single_init_elements.mjs";
+import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
+import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
+import { each_async } from "./each_async.mjs";
+export async function app_replace_rule_sets_migrate_functionize() {
+  "this took a list of objects and moved each object to its own file";
+  let f_name = app_replace_rule_sets.name;
+  let code = await function_transform_marker_specified(f_name, "rules", lambda);
+  async function lambda(a) {
+    let elements = marker_next_declare_single_init_elements(a);
+    async function lambda2(e) {
+      let f_name_new = app_replace_rule_sets_name_expression_value(e);
+      let declaration = function_new_declaration_to(f_name_new);
+      let body_block = js_function_declaration_to_block_body(declaration);
+      js_statement_return_add(body_block, e);
+      await function_new_declaration_from(declaration);
+    }
+    await each_async(elements, lambda2);
+    async function lambda3(e) {
+      let f_name_new = app_replace_rule_sets_name_expression_value(e);
+      let parsed = js_call_empty(f_name_new);
+      object_replace(e, parsed);
+    }
+    await each_async(elements, lambda3);
+  }
+  return;
+}

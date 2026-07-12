@@ -1,0 +1,6 @@
+import { repo_about_get } from "./repo_about_get.mjs";
+export async function repo_acronym_get(repo) {
+  let key = "acronym";
+  let v = await repo_about_get(repo, key);
+  return v;
+}

@@ -1,0 +1,7 @@
+import { html_width_full } from "./html_width_full.mjs";
+import { app_a_button_shortcut } from "./app_a_button_shortcut.mjs";
+export function app_a_button_shortcut_wide(parent, shortcut, text, fn) {
+  let b = app_a_button_shortcut(parent, shortcut, text, fn);
+  html_width_full(b);
+  return b;
+}

@@ -1,0 +1,30 @@
+import { text_first_upper_to } from "./text_first_upper_to.mjs";
+import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { digit_positive_random } from "./digit_positive_random.mjs";
+import { text_combine_right_fn } from "./text_combine_right_fn.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+export function app_code_lesson_operators_asterisk_generic_minus(
+  root,
+  operator,
+  text_before,
+) {
+  let c = app_code_container_light_blue(root);
+  let minus = js_operator_minus_symbol();
+  let t = text_first_upper_to(text_combine(text_before, "remember, for "));
+  html_div_cycle_code(c, [
+    t,
+    minus,
+    " it's possible to have a number only on the right and not on the left: ",
+  ]);
+  let combined2 = text_combine_right_fn(minus, digit_positive_random);
+  let right = "right";
+  let combined4 = text_combine(minus, right);
+  html_div_code_multiple(c, [combined2, combined4]);
+  html_div_cycle_code(c, [
+    "However JavaScript does not have something like this for ",
+    operator,
+  ]);
+}
