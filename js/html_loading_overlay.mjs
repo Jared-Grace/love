@@ -1,0 +1,28 @@
+import { html_div } from "./html_div.mjs";
+import { html_document_body } from "./html_document_body.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { html_reflow_force } from "./html_reflow_force.mjs";
+export function html_loading_overlay() {
+  let body = html_document_body();
+  let div = html_div(body);
+  let s = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+    background: "rgba(0, 0, 0, 0.6)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "1000",
+    opacity: "0",
+    transition: "opacity 0.15s ease",
+  };
+  html_style_assign(div, s);
+  html_reflow_force(div);
+  html_style_assign(div, {
+    opacity: "1",
+  });
+  return div;
+}
