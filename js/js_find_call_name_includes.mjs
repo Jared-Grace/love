@@ -8,14 +8,14 @@ export function js_find_call_name_includes(ast, part) {
   let nodes = js_list_calls_nodes(ast);
   function lambda(n) {
     let callee = property_get(n, "callee");
-    let includes = js_identifier_name_includes(callee, part);
+    let includes = js_identifier_name_includes_try(callee, part);
     return includes;
   }
   let filtered = list_filter(nodes, lambda);
   let only = list_single(filtered);
   return only;
 }
-function js_identifier_name_includes(callee, part) {
+function js_identifier_name_includes_try(callee, part) {
   let includes = false;
   function lambda2() {
     includes = js_identifier_name_includes(callee, part);
