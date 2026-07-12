@@ -232,6 +232,23 @@ touch a file that has uncommitted local modifications stays intact as a
 real safety net rather than being bypassed), plus the same no-absolute-
 path, no-`../`-traversal checks used everywhere else in this file.
 
+A ninth exception, `is_safe_curl_status_check`, is the first one in this
+file for a tool capable of outbound network requests at all - no
+`Bash(curl:*)` rule exists, since beyond networking, curl can also write
+arbitrary files (-o/-O) or upload local file contents to a remote host
+(-T/--upload-file, -d/--data, -F). Rather than a flag blacklist, this
+recognizes exactly one 7-word template: `curl -s -o /dev/null -w FORMAT
+URL`, where the URL's host is pinned to localhost/127.0.0.1 (never a real
+network destination - this can't become a general-purpose fetch tool),
+`-o /dev/null` is required verbatim (the response body is always
+discarded, so nothing the server returns can escape via a written file),
+and FORMAT may only reference a small whitelist of curl's own read-only
+post-transfer metadata fields (is_safe_curl_write_out) - curl never
+shell-interprets that string, it only prints it, so this last check is
+narrowness for its own sake rather than a real risk closed. Any deviation
+- extra or reordered flags, a non-localhost URL, a different scheme -
+falls through to a real prompt exactly like the sandboxed-node templates.
+
 A fourth check, `is_dangerous_find`, goes the other direction: it
 *narrows* an existing broad allow rule instead of adding a new auto-allow
 path. `Bash(find:*)` is in permissions.allow for ordinary read-only
