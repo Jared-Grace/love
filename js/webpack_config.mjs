@@ -4,6 +4,7 @@ import { path_resolve } from "./path_resolve.mjs";
 import { webpack_config_filename } from "./webpack_config_filename.mjs";
 import { process_env_args_get } from "./process_env_args_get.mjs";
 import { webpack_config_entry_path } from "./webpack_config_entry_path.mjs";
+import { webpack_config_node_builtins_fallback } from "./webpack_config_node_builtins_fallback.mjs";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
@@ -21,33 +22,7 @@ export async function webpack_config() {
       path,
     },
     resolve: {
-      fallback: {
-        fs: false,
-        "fs/promises": false,
-        path: false,
-        child_process: false,
-        readline: false,
-        url: false,
-        stream: false,
-        "stream/promises": false,
-        util: false,
-        os: false,
-        querystring: false,
-        assert: false,
-        crypto: false,
-        http: false,
-        https: false,
-        http2: false,
-        net: false,
-        tls: false,
-        tty: false,
-        zlib: false,
-        dns: false,
-        dgram: false,
-        module: false,
-        worker_threads: false,
-        perf_hooks: false,
-      },
+      fallback: webpack_config_node_builtins_fallback(),
     },
     optimization: {
       minimize: true,
