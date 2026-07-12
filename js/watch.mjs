@@ -1,16 +1,15 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { log } from "./log.mjs";
-import { lock_try } from "./lock_try.mjs";
-import { data_file_update } from "./data_file_update.mjs";
-import { identity } from "./identity.mjs";
-import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
-import { property_exists_equals } from "./property_exists_equals.mjs";
-import { catch_log_async } from "./catch_log_async.mjs";
-import { import_install } from "./import_install.mjs";
-import { property_set } from "./property_set.mjs";
-import { command_line_node_g } from "./command_line_node_g.mjs";
-import { function_auto_path } from "./function_auto_path.mjs";
-import { function_run_prompt } from "./function_run_prompt.mjs";
+import { lock_try_prompt } from "../../love/js/lock_try_prompt.mjs";
+import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
+import { log } from "../../love/js/log.mjs";
+import { data_file_update } from "../../love/js/data_file_update.mjs";
+import { identity } from "../../love/js/identity.mjs";
+import { repos_paths_map_unordered_combine_squash_functions } from "../../love/js/repos_paths_map_unordered_combine_squash_functions.mjs";
+import { property_exists_equals } from "../../love/js/property_exists_equals.mjs";
+import { catch_log_async } from "../../love/js/catch_log_async.mjs";
+import { import_install } from "../../love/js/import_install.mjs";
+import { property_set } from "../../love/js/property_set.mjs";
+import { command_line_node_g } from "../../love/js/command_line_node_g.mjs";
+import { function_auto_path } from "../../love/js/function_auto_path.mjs";
 export async function watch() {
   let squashed =
     await repos_paths_map_unordered_combine_squash_functions(identity);
@@ -46,7 +45,7 @@ export async function watch() {
       });
       try {
         let who = text_combine_multiple([watch.name, ":", path]);
-        let r = await lock_try(function_run_prompt.name, lambda3, who);
+        let r = await lock_try_prompt(lambda3, who);
       } finally {
         property_set(in_progress, path, false);
       }
