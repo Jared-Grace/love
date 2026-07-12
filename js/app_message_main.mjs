@@ -13,7 +13,7 @@ import { app_message_firebase_path } from "./app_message_firebase_path.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { date_now_iso } from "./date_now_iso.mjs";
 import { file_name_json } from "./file_name_json.mjs";
-import { firebase_upload_object } from "./firebase_upload_object.mjs";
+import { firebase_upload_object_browser } from "./firebase_upload_object_browser.mjs";
 import { uuid } from "./uuid.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
@@ -129,7 +129,7 @@ export async function app_message_main(context) {
         message_id,
       ]);
       let file_path = file_name_json(file_name);
-      await firebase_upload_object(file_path, {
+      await firebase_upload_object_browser(file_path, {
         message,
         when: date_now_iso(),
       });

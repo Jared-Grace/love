@@ -216,6 +216,22 @@ character-allowlist + normpath-equality checks as everywhere else in this
 file) so this can't be widened into a general "rm anything under public/"
 capability.
 
+An eighth exception, `is_safe_git_rm_tmp`, covers `git rm <files...>`
+where every argument's basename matches the user's own `_tmp_` scratch
+naming convention (e.g. `_tmp_codemod.mjs`). `git rm` isn't in
+permissions.allow at all otherwise - it removes a tracked file from both
+the working tree and the index, the same destructive-operation class as
+bare `rm`. Unlike the other rm exceptions above, this one isn't scoped to
+a fixed Claude-owned directory - it trusts a basename convention instead,
+which is a strictly weaker guarantee (nothing stops some other real file
+in the repo from coincidentally starting with `_tmp_`), so it's kept
+stricter than those in every other respect: no flags are accepted at all
+(not even 'v'/'f' - notably no -r/-R, so a same-prefixed directory can
+never be removed this way, and no -f/--cached, so git's own refusal to
+touch a file that has uncommitted local modifications stays intact as a
+real safety net rather than being bypassed), plus the same no-absolute-
+path, no-`../`-traversal checks used everywhere else in this file.
+
 A fourth check, `is_dangerous_find`, goes the other direction: it
 *narrows* an existing broad allow rule instead of adding a new auto-allow
 path. `Bash(find:*)` is in permissions.allow for ordinary read-only
@@ -777,6 +793,51 @@ def is_safe_verify_html_rm(words):
     return all(is_safe_verify_html_path(p) for p in paths)
 
 
+GIT_RM_TMP_BASENAME_RE = re.compile(r"^_tmp_[A-Za-z0-9_.-]+$")
+
+
+def is_safe_git_rm_tmp(words):
+    """Exact-shape exception for `git rm <files...>`, matching the user's
+    own '_tmp_' naming convention for disposable scratch scripts (e.g.
+    '_tmp_codemod.mjs'). Unlike is_safe_claude_temp_rm/is_safe_verify_html_rm,
+    this doesn't trust a fixed Claude-owned directory - it trusts a
+    basename convention instead, which is a weaker guarantee (a real file
+    anywhere in the repo could coincidentally start with '_tmp_'), so this
+    is kept deliberately stricter than those in every other dimension: no
+    flags at all are accepted (not even 'v'/'f' - notably no -r/-R, so this
+    can never remove a directory, and no -f/--cached, so `git rm`'s own
+    refusal to touch a file with uncommitted local modifications stays
+    intact as a real safety net rather than being bypassed), no absolute
+    paths, and no '../' traversal, applied to every argument's basename.
+
+    Traversal is checked by rejecting any '..' path *segment* directly,
+    not just via normpath-equality like the other rm exceptions in this
+    file - those all additionally require an absolute-path prefix match
+    against a fixed directory, which by itself already rules out a
+    leading '..' (an absolute path can't start with one). Paths here are
+    relative (that's how `git rm` is actually invoked), so a leading
+    '../_tmp_x.mjs' is already in normalized form - normpath() leaves it
+    unchanged since there's nothing before the '..' for it to cancel
+    against - and would otherwise slip through unnoticed."""
+    if len(words) < 3 or words[0] != "git" or words[1] != "rm":
+        return False
+    paths = words[2:]
+    for p in paths:
+        if p.startswith("-"):
+            return False
+        if not SAFE_SCRATCHPAD_PATH_RE.match(p):
+            return False
+        if os.path.isabs(p):
+            return False
+        if os.path.normpath(p) != p:
+            return False
+        if any(part == ".." for part in p.split("/")):
+            return False
+        if not GIT_RM_TMP_BASENAME_RE.match(os.path.basename(p)):
+            return False
+    return True
+
+
 def is_safe_bare_mount(words):
     """True iff this is `mount` invoked with zero arguments - the read-only
     form that just lists currently mounted filesystems (equivalent to
@@ -937,6 +998,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
             and not is_safe_verify_html_rm(words)
+            and not is_safe_git_rm_tmp(words)
         ):
             return False
     return found_command
