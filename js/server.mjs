@@ -9,8 +9,7 @@ import { property_get } from "../../love/js/property_get.mjs";
 import { folder_repos_resolve } from "../../love/js/folder_repos_resolve.mjs";
 import { log_keep } from "../../love/js/log_keep.mjs";
 import express from "express";
-import { path_dirname } from "../../love/js/path_dirname.mjs";
-import { fileURLToPath } from "url";
+import { module_dirname } from "./module_dirname.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 export async function server() {
   let app = express();
@@ -19,8 +18,7 @@ export async function server() {
   });
   app.use(v3);
   let port = server_port();
-  let __filename = fileURLToPath(import.meta.url);
-  let __dirname = await path_dirname(__filename);
+  let __dirname = await module_dirname(import.meta.url);
   let result = await folder_repos_resolve(__dirname);
   let v = express.static(result);
   let u = server_url_api();
