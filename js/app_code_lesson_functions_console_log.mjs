@@ -1,3 +1,4 @@
+import { digits_3_random_next } from "../../love/js/digits_3_random_next.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
@@ -16,7 +17,12 @@ import { app_code_container_light_blue_cycle_code } from "./app_code_container_l
 import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
 import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
-  var r = app_code_lesson_functions_console_log_generic(above, identity, []);
+  var r = app_code_lesson_functions_console_log_generic(
+    above,
+    identity,
+    [],
+    digits_3_random_next,
+  );
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");
   let next_operator = property_get(r, "next_operator");
