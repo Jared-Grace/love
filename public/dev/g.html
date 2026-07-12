@@ -8,14 +8,19 @@
   <script type="importmap"> 
     {
  "imports": {
-  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+  "prettier": "https://unpkg.com/prettier@3.7.4/standalone.mjs",
+  "parserBabel": "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
+  "parserEstree": "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
+  "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
+  "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
  }
 }
   </script>
 <script type="module"> 
-    import {app_g_main} from "./../src/app_g_main.mjs"
-import {app_context_initialize} from "./../src/app_context_initialize.mjs"
-app_context_initialize( app_g_main );
+    import {app_g} from "/love/js/app_g.mjs"
+import {app_context_initialize} from "/love/js/app_context_initialize.mjs"
+app_context_initialize(app_g);
   </script>
 </body>
 </html>

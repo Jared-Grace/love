@@ -5,10 +5,17 @@
   <title>calendar_paste</title>
 </head>
 <body>
-  <script type="module"> 
-    import {app_calendar_paste_main} from "../../../love/public/src/app_calendar_paste_main.mjs"
-import {app_context_initialize} from "../../../love/public/src/app_context_initialize.mjs"
-app_context_initialize( app_calendar_paste_main );
+  <script type="importmap"> 
+    {
+ "imports": {
+  "luxon": "https://esm.sh/luxon"
+ }
+}
+  </script>
+<script type="module"> 
+    import {app_calendar_paste} from "/love/js/app_calendar_paste.mjs"
+import {app_context_initialize} from "/love/js/app_context_initialize.mjs"
+app_context_initialize(app_calendar_paste);
   </script>
 </body>
 </html>
