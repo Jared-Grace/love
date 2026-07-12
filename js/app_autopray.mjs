@@ -1,31 +1,30 @@
-import { isaiah_chapters_count } from "./isaiah_chapters_count.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_may_the_lord } from "./text_may_the_lord.mjs";
-import { prayer_end } from "./prayer_end.mjs";
-import { prayer_start } from "./prayer_start.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
-import { object_map_async } from "./object_map_async.mjs";
-import { sleep } from "./sleep.mjs";
+import { each_async } from "./each_async.mjs";
+import { ebible_version_chapters_all_download } from "./ebible_version_chapters_all_download.mjs";
+import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
+import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
+import { app_autopray_verse_show } from "./app_autopray_verse_show.mjs";
 export async function app_autopray(context) {
   let root = property_get(context, "root");
-  async function lambda(verse_text, verse_reference) {
-    html_clear(root);
-    let v2 = prayer_start();
-    let v3 = prayer_end();
-    let v4 = text_may_the_lord();
-    html_p_text_multiple(root, [
-      v2,
-      v4,
-      "lead all creation to hear, believe, obey, enjoy and proclaim the word of God:",
-      verse_text,
-      verse_reference,
-      v3,
-    ]);
-    let c = isaiah_chapters_count();
-    await sleep(c);
+  let version = "engbsb";
+  let chapters = await ebible_version_chapters_all_download(version);
+  let books = await ebible_version_books_browser(version);
+  async function each_chapter(chapter) {
+    let chapter_code = property_get(chapter, "chapter_code");
+    let verses = property_get(chapter, "verses");
+    async function each_verse(verse) {
+      let verse_number = property_get(verse, "verse_number");
+      let verse_text = property_get(verse, "text");
+      let reference = ebible_parts_chapter_code_to_reference(
+        chapter_code,
+        books,
+        [verse_number],
+      );
+      await app_autopray_verse_show(root, reference, verse_text);
+    }
+    await each_async(verses, each_verse);
   }
   while (true) {
-    await object_map_async(v, lambda);
+    await each_async(chapters, each_chapter);
   }
 }
