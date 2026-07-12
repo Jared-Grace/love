@@ -2,7 +2,7 @@ import { function_run_log } from "../../love/js/function_run_log.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { function_run_line_parse } from "../../love/js/function_run_line_parse.mjs";
 import { function_run_line_history_resolve } from "../../love/js/function_run_line_history_resolve.mjs";
-export async function function_run_line_git_before(line) {
+export async function function_run_line_history(line) {
   let resolved = await function_run_line_history_resolve(line);
   let r = await function_run_line_parse(resolved);
   let args = property_get(r, "args");
