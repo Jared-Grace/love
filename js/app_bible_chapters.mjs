@@ -1,7 +1,7 @@
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
-import { html_button_list_centered } from "./html_button_list_centered.mjs";
+import { app_replace_button_list_centered } from "./app_replace_button_list_centered.mjs";
 import { app_bible_chapter_open_curried } from "./app_bible_chapter_open_curried.mjs";
 import { ebible_book_code_to_chapter_codes_browser } from "./ebible_book_code_to_chapter_codes_browser.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
@@ -13,5 +13,5 @@ export async function app_bible_chapters(context) {
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let oc = app_bible_chapter_open_curried(context);
-  html_button_list_centered(root, items, code_to_button_text, oc);
+  app_replace_button_list_centered(root, items, code_to_button_text, oc);
 }

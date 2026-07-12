@@ -1,6 +1,7 @@
-import { assert_message } from "./assert_message.mjs";
-import { json_to } from "./json_to.mjs";
+import { assert_json_get } from "./assert_json_get.mjs";
 export function assert_json(b, o) {
-  let message = json_to(o);
-  assert_message(b, message);
+  function lambda() {
+    return o;
+  }
+  assert_json_get(b, lambda);
 }
