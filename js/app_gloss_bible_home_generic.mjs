@@ -32,8 +32,8 @@ export async function app_gloss_bible_home_generic(
   let v = await app_g_bible_home_inner(context, download);
   let passages = property_get(v, "passages");
   let first2 = list_first(passages);
-  let verses = property_get(a, "verses");
-  let passage = property_get(a, "passage");
+  let verses = property_get(first2, "verses");
+  let passage = property_get(first2, "passage");
   let prop = "p";
   let last = list_last(verses);
   let p = property_get(last, prop);
