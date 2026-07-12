@@ -15,8 +15,8 @@ import { html_span } from "./html_span.mjs";
 import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "./app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
-import { html_button_arrow_right } from "./html_button_arrow_right.mjs";
-import { html_button_arrow_left } from "./html_button_arrow_left.mjs";
+import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
+import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -253,11 +253,11 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function lambda() {
     await app_bible_verse_previous(context, chapter_code, verse_current);
   }
-  let l = html_button_arrow_left(verse_pickers, lambda);
+  let l = app_replace_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
-  let r = html_button_arrow_right(verse_pickers, lambda7);
+  let r = app_replace_button_arrow_right(verse_pickers, lambda7);
   html_flex_grow_1_multiple([l, r]);
   list_add_multiple(languages_verses, languages_available);
   let v4 = {
