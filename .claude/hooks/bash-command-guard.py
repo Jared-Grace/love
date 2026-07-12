@@ -366,6 +366,25 @@ RESERVED_WORDS = {
     "while", "until", "case", "esac", "function", "select", "time",
 }
 
+# Loop-control builtins. They run no external command and touch nothing on
+# disk or the network - `break`/`continue` only alter control flow within an
+# enclosing loop - so they're always safe as a simple command's verb, even
+# though no Bash(break:*)/Bash(continue:*) rule exists (and shouldn't: these
+# words have no meaning outside a loop body). A numeric argument (`break 2`)
+# is inert; a `$(...)` argument was already validated by tokenize like
+# anywhere else.
+SAFE_BUILTINS = {"break", "continue"}
+
+# Block-structure keywords this hook parses (in addition to plain simple
+# commands): `for … done` loops and `if … fi` conditionals, which may nest
+# freely inside one another's bodies. split_blocks() keeps each such block
+# together as one statement via opener/closer depth tracking; check_for_loop /
+# check_if then validate its exact shape and recurse into its body via
+# check_statements. Every other RESERVED_WORDS opener (while/until/case/…)
+# stays unparsed and falls through to a real prompt.
+BLOCK_OPENERS = {"for", "if"}
+BLOCK_CLOSERS = {"done", "fi"}
+
 DANGEROUS_CHARS = set("`<{}()")
 
 # A single command-substitution `$(...)` collapses to this placeholder word
@@ -715,14 +734,21 @@ def split_statements(tokens):
     return groups
 
 
-def split_top_level(tokens):
-    """Split into top-level links on any mix of ';', '|', '&&', '||',
-    except that a 'for ... done' loop is kept together as one link even
-    though it contains its own internal ';' before 'do' - otherwise a
-    naive split would slice the loop apart. This is what lets a for-loop
-    be chained with plain commands via any separator (e.g.
-    'cd X && for ... done'), while nested for-loops are still rejected
-    separately, in check_for_loop's own body scan."""
+def split_blocks(tokens):
+    """Split a token sequence into statements on any mix of ';', '|', '&&',
+    '||', except that a 'for … done' loop or an 'if … fi' conditional is kept
+    together as one statement - including all its internal separators and any
+    blocks nested inside it - via opener/closer depth tracking (see
+    BLOCK_OPENERS/BLOCK_CLOSERS). Without this a naive split would slice a
+    block apart at its first internal ';'. This is what lets a block be
+    chained with plain commands via any separator (e.g. 'cd X && for … done')
+    and lets blocks nest, while every other control-flow keyword
+    (while/until/case/…) is left intact for check_statements to reject as an
+    unparsed construct. A block whose closer is missing raises Unsupported.
+
+    A block opener only starts a block when it's the first word of a statement
+    (`not current`); an opener keyword appearing mid-statement is treated as a
+    plain word, the same posture the previous for-only splitter had."""
     groups, current = [], []
     i, n = 0, len(tokens)
     while i < n:
@@ -732,12 +758,12 @@ def split_top_level(tokens):
             current = []
             i += 1
             continue
-        if t == "for" and not current:
+        if t in BLOCK_OPENERS and not current:
             depth, j, closed = 0, i, False
             while j < n:
-                if tokens[j] == "for":
+                if tokens[j] in BLOCK_OPENERS:
                     depth += 1
-                elif tokens[j] == "done":
+                elif tokens[j] in BLOCK_CLOSERS:
                     depth -= 1
                     if depth == 0:
                         j += 1
@@ -745,7 +771,7 @@ def split_top_level(tokens):
                         break
                 j += 1
             if not closed:
-                raise Unsupported("malformed for-loop: missing 'done'")
+                raise Unsupported("malformed block: missing closer ('done'/'fi')")
             groups.append(tokens[i:j])
             current = []
             i = j
@@ -1220,6 +1246,8 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             continue
         if words[0] in RESERVED_WORDS:
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
+        if words[0] in SAFE_BUILTINS:
+            continue
         if words[0] == "find" and any(w in FIND_EXEC_FLAGS for w in words[1:]):
             if not is_safe_find_exec(words, safe_verbs):
                 return False
@@ -1244,6 +1272,13 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
 
 
 def check_for_loop(tokens, safe_verbs, safe_exact_commands):
+    """Validate a single `for VAR in LIST ; do BODY done` loop. The body may
+    itself contain nested for/if blocks (and break/continue), so it's handed
+    to check_statements, which recurses - this no longer rejects nested
+    control flow. It only verifies the header shape and locates the matching
+    'done' (depth-aware over nested openers/closers so a nested block's own
+    'done'/'fi' isn't mistaken for this loop's), then every simple command in
+    BODY still has its verb checked by that recursion."""
     if len(tokens) < 5 or tokens[1] in RESERVED_WORDS or tokens[2] != "in":
         raise Unsupported("malformed for-loop")
     i = 3
@@ -1257,18 +1292,115 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
     if i >= len(tokens) or tokens[i] != "do":
         raise Unsupported("malformed for-loop: expected 'do'")
     i += 1
-    body = []
-    while i < len(tokens) and tokens[i] != "done":
-        if tokens[i] in RESERVED_WORDS:
-            raise Unsupported(f"nested control flow {tokens[i]!r} unsupported")
-        body.append(tokens[i])
+    body_start = i
+    depth = 1  # the open 'for'
+    while i < len(tokens):
+        t = tokens[i]
+        if t in BLOCK_OPENERS:
+            depth += 1
+        elif t in BLOCK_CLOSERS:
+            depth -= 1
+            if depth == 0:
+                break
         i += 1
     if i >= len(tokens) or tokens[i] != "done":
         raise Unsupported("malformed for-loop: missing 'done'")
-    i += 1
-    if i != len(tokens):
+    if i + 1 != len(tokens):
         raise Unsupported("trailing content after 'done'")
-    return check_simple_commands(body, safe_verbs, safe_exact_commands)
+    return check_statements(tokens[body_start:i], safe_verbs, safe_exact_commands)
+
+
+def check_if(tokens, safe_verbs, safe_exact_commands):
+    """Validate an `if … fi` conditional:
+        if COND ; then BODY [ elif COND ; then BODY ]* [ else BODY ] fi
+    The tokens between 'if' and 'fi' are split at the depth-0 'then'/'elif'/
+    'else' keywords (depth-aware over nested for/if blocks, so a nested
+    block's own then/else/do don't count as this if's), the keyword sequence
+    is checked to form a well-formed conditional, and every condition and
+    every branch is validated with check_statements. Conditions run real
+    commands just like branches do, so their verbs are checked the same way;
+    break/continue in a branch are trusted via SAFE_BUILTINS. Any malformed
+    shape - or an untrusted verb anywhere - falls through (Unsupported / a
+    False return) to a real prompt."""
+    if len(tokens) < 4 or tokens[0] != "if" or tokens[-1] != "fi":
+        raise Unsupported("malformed if: missing 'if'/'fi'")
+    segments = []  # (keyword, [tokens]) in source order
+    current_kw, current, depth = "if", [], 0
+    for t in tokens[1:-1]:
+        if t in BLOCK_OPENERS:
+            depth += 1
+            current.append(t)
+        elif t in BLOCK_CLOSERS:
+            depth -= 1
+            current.append(t)
+        elif depth == 0 and t in ("then", "elif", "else"):
+            segments.append((current_kw, current))
+            current_kw, current = t, []
+        else:
+            current.append(t)
+    segments.append((current_kw, current))
+
+    # Keyword sequence must be: if, then, (elif, then)*, [else].
+    i, n = 0, len(segments)
+    branches = []  # condition/body token lists to validate, in order
+    if segments[i][0] != "if":
+        raise Unsupported("malformed if")
+    branches.append(segments[i][1])
+    i += 1
+    if i >= n or segments[i][0] != "then":
+        raise Unsupported("malformed if: expected 'then'")
+    branches.append(segments[i][1])
+    i += 1
+    while i < n and segments[i][0] == "elif":
+        branches.append(segments[i][1])
+        i += 1
+        if i >= n or segments[i][0] != "then":
+            raise Unsupported("malformed if: expected 'then' after 'elif'")
+        branches.append(segments[i][1])
+        i += 1
+    if i < n and segments[i][0] == "else":
+        branches.append(segments[i][1])
+        i += 1
+    if i != n:
+        raise Unsupported("malformed if: unexpected keyword sequence")
+
+    found_command = False
+    for seg in branches:
+        if not seg:
+            raise Unsupported("malformed if: empty condition or branch")
+        if not check_statements(seg, safe_verbs, safe_exact_commands):
+            return False
+        found_command = True
+    return found_command
+
+
+def check_statements(tokens, safe_verbs, safe_exact_commands):
+    """Validate a statement sequence - either a whole top-level command line
+    or the body of a for/if block. split_blocks() breaks it into statements
+    (splitting on ';'/'|'/'&&'/'||', but keeping each 'for … done' loop and
+    'if … fi' conditional whole); each statement is then a for-loop, an
+    if-conditional, or a single simple command. for/if bodies recurse back
+    into this function, so blocks nest to any depth while every simple
+    command's verb, wherever it sits, is still independently checked. Returns
+    True iff at least one command was found and all are trusted; returns False
+    the moment an untrusted verb appears; raises Unsupported for any construct
+    outside this grammar."""
+    found_command = False
+    for group in split_blocks(tokens):
+        if not group:
+            continue
+        found_command = True
+        if group[0] == "for":
+            if not check_for_loop(group, safe_verbs, safe_exact_commands):
+                return False
+        elif group[0] == "if":
+            if not check_if(group, safe_verbs, safe_exact_commands):
+                return False
+        elif group[0] in RESERVED_WORDS:
+            raise Unsupported(f"unsupported construct {group[0]!r}")
+        elif not check_simple_commands(group, safe_verbs, safe_exact_commands):
+            return False
+    return found_command
 
 
 def is_safe(command, safe_verbs, safe_exact_commands):
@@ -1287,19 +1419,7 @@ def is_safe(command, safe_verbs, safe_exact_commands):
     tokens = tokenize(command, subst_validator)
     if not tokens:
         return False
-    found_command = False
-    for group in split_top_level(tokens):
-        if not group:
-            continue
-        found_command = True
-        if group[0] == "for":
-            if not check_for_loop(group, safe_verbs, safe_exact_commands):
-                return False
-        elif group[0] in RESERVED_WORDS:
-            raise Unsupported(f"unsupported construct {group[0]!r}")
-        elif not check_simple_commands(group, safe_verbs, safe_exact_commands):
-            return False
-    return found_command
+    return check_statements(tokens, safe_verbs, safe_exact_commands)
 
 
 def matched_leading_verb(command, safe_verbs):
