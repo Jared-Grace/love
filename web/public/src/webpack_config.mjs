@@ -20,6 +20,19 @@ export async function webpack_config() {
       filename,
       path,
     },
+    resolve: {
+      fallback: {
+        fs: false,
+        "fs/promises": false,
+        path: false,
+        child_process: false,
+        readline: false,
+        url: false,
+        stream: false,
+        "stream/promises": false,
+        util: false,
+      },
+    },
     optimization: {
       minimize: true,
       minimizer: [
