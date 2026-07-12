@@ -6,6 +6,8 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 import { js_flo_param_add } from "../../../love/public/src/js_flo_param_add.mjs";
 import { js_flo_body_add } from "../../../love/public/src/js_flo_body_add.mjs";
+import { js_flo } from "../../../love/public/src/js_flo.mjs";
+import { js_function_declaration_asyncify } from "../../../love/public/src/js_function_declaration_asyncify.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { js_code_function_declaration_args } from "../../../love/public/src/js_code_function_declaration_args.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -26,6 +28,10 @@ export async function function_eachify(fn_name) {
   let output = await function_new_transform(f_name_multiple, lambda);
   async function lambda(ast) {
     js_flo_param_add(ast, "list");
+    if (async_is) {
+      let declaration = js_flo(ast);
+      js_function_declaration_asyncify(declaration, declaration_call);
+    }
     let call_inner_code = js_code_call_args_await_maybe(
       unaliased,
       ["item"],
