@@ -8,14 +8,17 @@
   <script type="importmap"> 
     {
  "imports": {
-  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+  "firebase/storage": "https://esm.sh/firebase@12.10.0/storage",
+  "firebase/app": "https://esm.sh/firebase@12.10.0/app",
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
+  "firebase/auth": "https://esm.sh/firebase@12.10.0/auth"
  }
 }
   </script>
 <script type="module"> 
-    import {app_g_bible_main} from "./../src/app_g_bible_main.mjs"
-import {app_context_initialize} from "./../src/app_context_initialize.mjs"
-app_context_initialize( app_g_bible_main );
+    import {app_g_bible} from "/love/js/app_g_bible.mjs"
+import {app_context_initialize} from "/love/js/app_context_initialize.mjs"
+app_context_initialize(app_g_bible);
   </script>
 </body>
 </html>
