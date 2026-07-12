@@ -4,6 +4,7 @@ import { js_expression_functionize } from "./js_expression_functionize.mjs";
 import { js_function_node_empty } from "./js_function_node_empty.mjs";
 import { function_current_selects_nodes_log } from "./function_current_selects_nodes_log.mjs";
 import { js_find_function_type_name_starts_with } from "./js_find_function_type_name_starts_with.mjs";
+import { js_find_call_name_includes } from "./js_find_call_name_includes.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_find_return_argument_set } from "./js_find_return_argument_set.mjs";
 import { js_call_add_before_return } from "./js_call_add_before_return.mjs";
@@ -62,6 +63,7 @@ export async function sandbox() {
         (function_node_select_args,
           [js_call_named_find_alias.name, folder_user_docs_read.name],
           [js_expressions_with_string_starting_with.name, "p"],
+          [js_find_call_name_includes.name, "ab"],
           [js_find_function_type_name_starts_with.name, "ab"],
           [js_function_node_find_named_node.name, "on_passage"],
           [js_statement_find_call_named.name, property_exists_not.name],
