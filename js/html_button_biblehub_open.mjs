@@ -1,4 +1,4 @@
-import { html_button } from "./html_button.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
 import { window_open } from "./window_open.mjs";
 import { equal } from "./equal.mjs";
 import { text_replace_space_underscore_lower } from "./text_replace_space_underscore_lower.mjs";
@@ -31,6 +31,6 @@ export function html_button_biblehub_open(
       ]),
     );
   }
-  let b = html_button(parent, button_text, lambda);
+  let b = app_replace_button(parent, button_text, lambda);
   return b;
 }
