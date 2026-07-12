@@ -1,8 +1,7 @@
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
+import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 import { js_flo_param_add } from "../../../love/public/src/js_flo_param_add.mjs";
@@ -20,7 +19,7 @@ export async function function_eachify(fn_name) {
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
   let arg_names = js_function_declaration_params_names(declaration_call);
-  equal_assert(list_size(arg_names), 1);
+  list_size_1_assert(arg_names);
   let async_is = property_get(declaration_call, "async");
   let each_name = async_is ? each_async.name : each.name;
   let f_name_multiple = function_name_combine(unaliased, "multiple");
