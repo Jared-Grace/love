@@ -13,6 +13,8 @@ import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mj
 import { js_code_await } from "../../../love/public/src/js_code_await.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function function_eachify(fn_name) {
   let u = await function_parse_declaration_unaliased(fn_name);
   let unaliased = property_get(u, "unaliased");
@@ -20,7 +22,7 @@ export async function function_eachify(fn_name) {
   let arg_names = js_function_declaration_params_names(declaration_call);
   equal_assert(list_size(arg_names), 1);
   let async_is = property_get(declaration_call, "async");
-  let each_name = async_is ? "each_async" : "each";
+  let each_name = async_is ? each_async.name : each.name;
   let f_name_multiple = function_name_combine(unaliased, "multiple");
   let output = await function_new_transform(f_name_multiple, lambda);
   async function lambda(ast) {
