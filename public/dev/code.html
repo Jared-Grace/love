@@ -8,15 +8,15 @@
   <script type="importmap"> 
     {
  "imports": {
-  "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
-  "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
+  "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
+  "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs"
  }
 }
   </script>
 <script type="module"> 
-    import {app_code_main} from "../../../love/public/src/app_code_main.mjs"
-import {app_context_initialize} from "../../../love/public/src/app_context_initialize.mjs"
-app_context_initialize(app_code_main);
+    import {app_code} from "/love/js/app_code.mjs"
+import {app_context_initialize} from "/love/js/app_context_initialize.mjs"
+app_context_initialize(app_code);
   </script>
 </body>
 </html>
