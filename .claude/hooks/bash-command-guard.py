@@ -852,6 +852,72 @@ def is_safe_bare_mount(words):
     return words == ["mount"]
 
 
+CURL_LOCALHOST_URL_RE = re.compile(
+    r"^http://(localhost|127\.0\.0\.1)(:[0-9]{1,5})?(/[A-Za-z0-9_./-]*)?$"
+)
+
+CURL_WRITE_OUT_VAR_RE = re.compile(r"%\{[a-z_]+\}")
+CURL_WRITE_OUT_ALLOWED_VARS = {
+    "http_code", "time_total", "size_download", "url_effective",
+}
+CURL_WRITE_OUT_LITERAL_RE = re.compile(r"^[A-Za-z0-9_ :./\\-]*$")
+
+
+def is_safe_curl_write_out(fmt):
+    """True iff `fmt` (curl's -w/--write-out format string) only
+    references curl's own read-only, post-transfer metadata fields
+    (CURL_WRITE_OUT_ALLOWED_VARS - none of which curl can populate from
+    anything other than the completed request/response it already made,
+    so none of them are a channel for exfiltrating anything beyond what
+    is_safe_curl_status_check already establishes is safe to request) plus
+    plain literal text. There's no code-execution or file-access risk in
+    the literal text itself either way - curl only ever prints this
+    string, it never shell-interprets it - so this check exists for
+    tidiness/narrowness rather than being load-bearing the way the URL and
+    flag-shape checks in is_safe_curl_status_check are."""
+    remainder = CURL_WRITE_OUT_VAR_RE.sub("", fmt)
+    if not CURL_WRITE_OUT_LITERAL_RE.match(remainder):
+        return False
+    return all(
+        v[2:-1] in CURL_WRITE_OUT_ALLOWED_VARS
+        for v in CURL_WRITE_OUT_VAR_RE.findall(fmt)
+    )
+
+
+def is_safe_curl_status_check(words):
+    """Recognize exactly one template: `curl -s -o /dev/null -w FORMAT
+    URL`, used to probe the HTTP status of this project's own local dev
+    server rather than trusted by verb prefix - `curl` otherwise grants no
+    trust at all (no Bash(curl:*) rule exists), since it's the first tool
+    in this file capable of outbound network requests and, with other
+    flags, arbitrary file write (-o/-O) or upload (-T/--upload-file,
+    -d/--data, -F). This template closes all of those off instead of
+    trying to blacklist them individually:
+
+      - the URL (last word) must match CURL_LOCALHOST_URL_RE - scheme
+        fixed to plain http, host fixed to localhost/127.0.0.1 only
+        (never a real network destination), so this can never be turned
+        into a general-purpose fetch tool;
+      - '-o /dev/null' must appear verbatim - the response body is always
+        discarded, so nothing the server returns can be written to a real
+        file or otherwise escape via the response;
+      - '-w FORMAT' must appear with FORMAT passing is_safe_curl_write_out;
+      - '-s' (silent - suppresses curl's own progress meter) must appear;
+      - no other words are permitted at all - this is an exact 7-word
+        shape (curl, -s, -o, /dev/null, -w, FORMAT, URL), not a flag scan,
+        so any additional or reordered flag (-X, --data, -T,
+        --upload-file, -F, -K, a second -o pointing at a real file, etc.)
+        falls through to a real prompt rather than being pattern-matched
+        loosely."""
+    if len(words) != 7:
+        return False
+    if words[0:5] != ["curl", "-s", "-o", "/dev/null", "-w"]:
+        return False
+    if not is_safe_curl_write_out(words[5]):
+        return False
+    return bool(CURL_LOCALHOST_URL_RE.match(words[6]))
+
+
 def is_safe_sandboxed_node_eval(words):
     """Recognize exactly one template: an ad-hoc `node -e` snippet run
     under real OS/runtime sandboxing rather than trusted by verb prefix.
@@ -999,6 +1065,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_claude_temp_rm(words)
             and not is_safe_verify_html_rm(words)
             and not is_safe_git_rm_tmp(words)
+            and not is_safe_curl_status_check(words)
         ):
             return False
     return found_command
