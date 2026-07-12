@@ -9,7 +9,6 @@ export async function function_run_prompt_unlocked() {
   let args = property_get(r2, "args");
   let f_name = property_get(r2, "f_name");
   let result = property_get(r2, "result");
-  return;
   async function lambda2() {
     git_acp_call_repos_unawait(f_name, args);
   }
