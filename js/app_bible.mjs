@@ -1,4 +1,8 @@
-import { app_main_production } from "./app_main_production.mjs";
-export async function app_bible() {
-  await app_main_production("app_bible_main", "jared-grace");
+import { app_bible_home } from "./app_bible_home.mjs";
+import { app_bible_shared_initialize } from "./app_bible_shared_initialize.mjs";
+import { app_bible_screens } from "./app_bible_screens.mjs";
+export async function app_bible(context) {
+  let app_fn = app_bible;
+  let screens = app_bible_screens();
+  await app_bible_shared_initialize(context, app_fn, screens, app_bible_home);
 }
