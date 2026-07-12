@@ -1,9 +1,9 @@
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
-import { app_a } from "./app_a.mjs";
+import { app_a_main } from "./app_a_main.mjs";
 import { error } from "./error.mjs";
 import { not } from "./not.mjs";
 export async function app_a_indexeddb_initialize() {
-  let db_name = app_a.name;
+  let db_name = app_a_main.name;
   let store_files = "files";
   let version = 1;
   let db = await new Promise(function lambda4(resolve, reject) {
