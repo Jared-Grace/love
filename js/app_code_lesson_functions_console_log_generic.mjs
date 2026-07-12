@@ -1,4 +1,3 @@
-import { digits_3_random_next } from "../../love/js/digits_3_random_next.mjs";
 import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
 import { app_code_lesson_code_logged } from "../../love/js/app_code_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "../../love/js/eval_console_log_to_list.mjs";
@@ -7,17 +6,16 @@ import { js_code_call_arg } from "../../love/js/js_code_call_arg.mjs";
 import { range_1_next } from "../../love/js/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../love/js/app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_name_id_function } from "../../love/js/app_code_lesson_name_id_function.mjs";
-import { fn_name } from "../../love/js/fn_name.mjs";
 export function app_code_lesson_functions_console_log_generic(
   above,
   lambda$code,
   name_id_rights,
+  next_arg,
 ) {
-  let next_arg = digits_3_random_next();
-  let fn_name = "console.log";
+  let name = "console.log";
   function batch_get() {
     let arg = next_arg();
-    let code = js_code_call_arg(fn_name, arg);
+    let code = js_code_call_arg(name, arg);
     let transfomed = lambda$code(code);
     let r = [transfomed];
     return r;
@@ -26,7 +24,7 @@ export function app_code_lesson_functions_console_log_generic(
     batch_get,
     eval_console_log_to_list,
   );
-  let rights = [fn_name];
+  let rights = [name];
   list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
   let lesson = app_code_lesson_code_logged(b, name_id, above);
@@ -35,7 +33,7 @@ export function app_code_lesson_functions_console_log_generic(
   let r3 = {
     lesson,
     next_operator,
-    fn_name,
+    fn_name: name,
     next: next_arg,
   };
   return r3;
