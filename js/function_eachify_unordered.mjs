@@ -12,7 +12,7 @@ export async function function_eachify_unordered(f_name) {
   function each_name_get(async_is) {
     assert_message(
       async_is,
-      "function_eachify_unordered requires an async function: unordering a synchronous function is meaningless - make the function async or use function_eachify",
+      "function_eachify_unordered requires an async function: unordering only affects concurrent async calls and has no effect on a synchronous function - make the function async or use function_eachify",
     );
     let each_name = fn_name("each_unordered_async");
     return each_name;
