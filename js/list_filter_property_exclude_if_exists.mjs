@@ -1,0 +1,19 @@
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { property_exists } from "./property_exists.mjs";
+export function list_filter_property_exclude_if_exists(
+  list,
+  property_name,
+  value,
+) {
+  function lambda(item) {
+    let exists = property_exists(item, property_name);
+    if (exists) {
+      let ne = property_get(item, property_name) !== value;
+      return ne;
+    }
+    return true;
+  }
+  let filtered = list_filter(list, lambda);
+  return filtered;
+}

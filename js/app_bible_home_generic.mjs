@@ -1,0 +1,240 @@
+import { app_chapter_open_en } from "./app_chapter_open_en.mjs";
+import { html_flex_grow_1_multiple } from "./html_flex_grow_1_multiple.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
+import { app_bible_button_chapter_previous } from "./app_bible_button_chapter_previous.mjs";
+import { app_bible_button_chapter_next } from "./app_bible_button_chapter_next.mjs";
+import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
+import { noop } from "./noop.mjs";
+import { app_bible_verse_previous } from "./app_bible_verse_previous.mjs";
+import { app_bible_verse_next } from "./app_bible_verse_next.mjs";
+import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
+import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
+import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
+import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
+import { html_span } from "./html_span.mjs";
+import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
+import { app_bible_verses } from "./app_bible_verses.mjs";
+import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
+import { html_button_arrow_right } from "./html_button_arrow_right.mjs";
+import { html_button_arrow_left } from "./html_button_arrow_left.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
+import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
+import { list_add } from "./list_add.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
+import { app_chapter_toggle_update } from "./app_chapter_toggle_update.mjs";
+import { html_clear_context } from "./html_clear_context.mjs";
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
+import { not } from "./not.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_p } from "./html_p.mjs";
+import { app_bible_chapters } from "./app_bible_chapters.mjs";
+import { app_bible_books } from "./app_bible_books.mjs";
+import { html_button } from "./html_button.mjs";
+import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
+import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { property_get } from "./property_get.mjs";
+import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
+import { app_bible_languages } from "./app_bible_languages.mjs";
+import { emoji_gear } from "./emoji_gear.mjs";
+import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
+import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
+import { each } from "./each.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { ebible_language_english } from "./ebible_language_english.mjs";
+import { html_span_text_bold } from "./html_span_text_bold.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+export async function app_bible_home_generic(context, lambda$a) {
+  let root = html_clear_context(context);
+  let bc = html_bar_content_padded(root);
+  let content = property_get(bc, "content");
+  let bar = property_get(bc, "bar");
+  html_centered(bar);
+  let e = ebible_folder_english();
+  if (app_bible_chapter_set_default(context)) {
+    return;
+  }
+  let hash = html_hash_object_get();
+  let verse_number_hash = app_bible_hash_v_get(hash);
+  let chapter_code = property_get(hash, "c");
+  let v2 = ebible_chapter_code_parse(chapter_code);
+  let chapter_name = property_get(v2, "chapter_name");
+  let book_code = property_get(v2, "book_code");
+  let books = await ebible_version_books_browser(e);
+  let book_name = ebible_book_code_to_name(books, book_code);
+  app_bible_button_chapter_previous(bar, context, chapter_code);
+  app_shared_screen_set_button(bar, context, app_bible_books, book_name);
+  app_shared_screen_set_button(bar, context, app_bible_chapters, chapter_name);
+  app_bible_button_chapter_next(bar, context, chapter_code);
+  app_shared_screen_set_button(
+    bar,
+    context,
+    app_bible_verses,
+    verse_number_hash,
+  );
+  app_shared_screen_set_button(bar, context, app_bible_languages, emoji_gear());
+  let verses = await ebible_verses_browser(e, chapter_code);
+  let verse_numbers_chosen = [];
+  let languages_verses = [];
+  let updates = [];
+  let verse_current = list_find_property(
+    verses,
+    "verse_number",
+    verse_number_hash,
+  );
+  let verse_number = property_get(verse_current, "verse_number");
+  let text = property_get(verse_current, "text");
+  let languages_chosen = app_bible_languages_chosen_get(context);
+  async function lambda_language(lc) {
+    let bible_folder = property_get(lc, "bible_folder");
+    async function get() {
+      let verses_l = await ebible_verses_browser(bible_folder, chapter_code);
+      let books_l = await ebible_version_books_browser(bible_folder);
+      let v = {
+        language: lc,
+        verses: verses_l,
+        books: books_l,
+      };
+      return v;
+    }
+    let r = await catch_null_async(get);
+    return r;
+  }
+  let fetched = [];
+  await list_map_unordered_add_async(
+    languages_chosen,
+    lambda_language,
+    fetched,
+  );
+  let languages_available = list_filter_null_not_is(fetched);
+  function lambda_text_map(item) {
+    let verses_l = property_get(item, "verses");
+    let verse_current_l = list_find_property_or_null(
+      verses_l,
+      "verse_number",
+      verse_number_hash,
+    );
+    let nn = null_not_is(verse_current_l);
+    if (nn) {
+      let language = property_get(item, "language");
+      let text_l = property_get(verse_current_l, "text");
+      let v = {
+        language,
+        text: text_l,
+      };
+      return v;
+    }
+    return null;
+  }
+  let text_mapped = list_map(languages_available, lambda_text_map);
+  let text_languages = list_filter_null_not_is(text_mapped);
+  if (list_empty_is(languages_available)) {
+    languages_available = [
+      {
+        language: ebible_language_english(),
+        verses,
+        books,
+      },
+    ];
+  }
+  if (list_empty_is(text_languages)) {
+    text_languages = [
+      {
+        language: ebible_language_english(),
+        text,
+      },
+    ];
+  }
+  let p_verse = html_p(content);
+  let top = html_div(p_verse);
+  let bottom = html_p(p_verse);
+  html_centered(bottom);
+  let hidden = true;
+  toggle();
+  html_button_biblehub_open_interlinear(
+    bottom,
+    chapter_name,
+    book_name,
+    verse_number,
+  );
+  html_button_biblehub_open_parallel(
+    bottom,
+    book_name,
+    chapter_name,
+    verse_number,
+  );
+  html_button_biblehub_open_commentary(
+    bottom,
+    chapter_name,
+    book_name,
+    verse_number,
+  );
+  function lambda3() {
+    app_chapter_open_en(chapter_code, verse_number);
+  }
+  let component2 = html_button(bottom, "Chapter", lambda3);
+  let text4 = html_button_copy_text();
+  let component = html_button(bottom, text4, noop);
+  let v3 = app_chapter_toggle_update(
+    updates,
+    component,
+    verse_numbers_chosen,
+    verse_number,
+    chapter_code,
+    languages_verses,
+    p_verse,
+  );
+  let update = property_get(v3, "update");
+  list_add(updates, update);
+  function toggle() {
+    hidden = not(hidden);
+    html_display_none_or_block(hidden, bottom);
+  }
+  html_span(top, verse_number);
+  let show_language_names = list_multiple_is(text_languages);
+  function lambda_text_render(item) {
+    let language = property_get(item, "language");
+    let name = property_get(language, "name");
+    let text_l = property_get(item, "text");
+    let div_l = html_div(top);
+    if (show_language_names) {
+      html_span_text_bold(div_l, text_combine(name, ": "));
+    }
+    app_bible_on_click_google_define(div_l, text_l);
+  }
+  each(text_languages, lambda_text_render);
+  let p = html_p(content);
+  await lambda$a({
+    p_verse,
+    p,
+    chapter_code,
+    verse_number,
+  });
+  let d = html_div(content);
+  html_display_flex(d);
+  let verse_pickers = d;
+  async function lambda() {
+    await app_bible_verse_previous(context, chapter_code, verse_current);
+  }
+  let l = html_button_arrow_left(verse_pickers, lambda);
+  async function lambda7() {
+    await app_bible_verse_next(context, chapter_code, verse_current);
+  }
+  let r = html_button_arrow_right(verse_pickers, lambda7);
+  html_flex_grow_1_multiple([l, r]);
+  list_add_multiple(languages_verses, languages_available);
+  let v4 = {
+    bar,
+  };
+  return v4;
+}

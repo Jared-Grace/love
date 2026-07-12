@@ -1,2 +1,2 @@
-import {webpack_config} from '../public/src/webpack_config.mjs'
+import {webpack_config} from '../js/webpack_config.mjs'
 export default webpack_config()

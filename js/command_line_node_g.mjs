@@ -1,0 +1,5 @@
+import { command_line_node_scripts } from "./command_line_node_scripts.mjs";
+export async function command_line_node_g(f_name, args) {
+  let script_name = "g";
+  await command_line_node_scripts(script_name, f_name, args);
+}

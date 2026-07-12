@@ -1,0 +1,9 @@
+import { file_transform } from "./file_transform.mjs";
+import { text_between_newline_curried_right } from "./text_between_newline_curried_right.mjs";
+import { git_ignore_name } from "./git_ignore_name.mjs";
+export async function git_ignore_add(f_path) {
+  let g_name = git_ignore_name();
+  let lambda = text_between_newline_curried_right(f_path);
+  let r = await file_transform(g_name, lambda);
+  return r;
+}

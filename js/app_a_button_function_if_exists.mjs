@@ -1,0 +1,20 @@
+import { app_a_button_function } from "./app_a_button_function.mjs";
+import { app_a_function_name_selected_key } from "./app_a_function_name_selected_key.mjs";
+import { app_a_function } from "./app_a_function.mjs";
+import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
+import { storage_local_exists_context } from "./storage_local_exists_context.mjs";
+import { property_get } from "./property_get.mjs";
+export function app_a_button_function_if_exists(context) {
+  "if there is a selected function, then this creates button for it";
+  let key = app_a_function_name_selected_key();
+  let exists = storage_local_exists_context(context, key);
+  let button = null;
+  if (exists) {
+    let root = property_get(context, "root");
+    button = app_a_button_function(context, root, lambda);
+    function lambda() {
+      app_shared_screen_set(context, app_a_function);
+    }
+  }
+  return button;
+}

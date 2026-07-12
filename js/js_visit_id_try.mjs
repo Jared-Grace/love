@@ -1,0 +1,13 @@
+import { equal } from "./equal.mjs";
+import { js_visit_property_node_index } from "./js_visit_property_node_index.mjs";
+export function js_visit_id_try(ast, target) {
+  let id = null;
+  js_visit_property_node_index(ast, inner);
+  function inner(node, i) {
+    let eq = equal(node, target);
+    if (eq) {
+      id = i;
+    }
+  }
+  return id;
+}

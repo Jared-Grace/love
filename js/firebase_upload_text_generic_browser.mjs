@@ -1,0 +1,25 @@
+import { html_loading } from "./html_loading.mjs";
+import { log } from "./log.mjs";
+import { firebase_app_initialize } from "./firebase_app_initialize.mjs";
+import { getStorage, ref, uploadString } from "firebase/storage";
+import { log_keep } from "./log_keep.mjs";
+export async function firebase_upload_text_generic_browser(
+  destination,
+  content,
+) {
+  async function lambda() {
+    let app = await firebase_app_initialize();
+    ('const storageMod = await import(\n      "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"\n    );');
+    let storage = getStorage(app);
+    let jsonRef = ref(storage, destination);
+    await uploadString(jsonRef, content, "raw", {
+      contentType: "application/json",
+    });
+    log_keep(
+      firebase_upload_text_generic_browser.name,
+      "✅ JSON uploaded successfully",
+    );
+  }
+  let r = await html_loading(lambda);
+  return r;
+}

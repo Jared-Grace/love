@@ -1,0 +1,17 @@
+import { property_get } from "./property_get.mjs";
+import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
+import { property_set } from "./property_set.mjs";
+import { js_visit_type } from "./js_visit_type.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
+export function js_function_id_add(ast) {
+  function lambda(v) {
+    let { node } = v;
+    let id = property_get(node, "id");
+    if (id === null) {
+      let unique = js_identifier_unique_ast(ast, "lambda");
+      let value = js_parse_expression(unique);
+      property_set(node, "id", value);
+    }
+  }
+  js_visit_type(ast, "FunctionExpression", lambda);
+}

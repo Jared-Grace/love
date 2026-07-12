@@ -1,0 +1,8 @@
+import { greater_than } from "./greater_than.mjs";
+import { text_size } from "./text_size.mjs";
+export function text_size_greater_than_1(item) {
+  let z = text_size(item);
+  let n = 1;
+  let g = greater_than(z, n);
+  return g;
+}
