@@ -1,4 +1,4 @@
-import { function_name_to_path_import_code_multiple_map } from "./function_name_to_path_import_code_multiple_map.mjs";
+import { function_name_to_path_import_code_root_multiple_map } from "./function_name_to_path_import_code_root_multiple_map.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_shared_name_search_info } from "./app_shared_name_search_info.mjs";
 import { js_code_call_app_context_initialize } from "./js_code_call_app_context_initialize.mjs";
@@ -23,7 +23,7 @@ export async function html_update_dev(name) {
   let name_prefixed = await app_shared_name_main(name);
   let call = js_code_call_app_context_initialize(name_prefixed);
   let imports = [name_prefixed, app_context_initialize.name];
-  let mapped = await function_name_to_path_import_code_multiple_map(imports);
+  let mapped = await function_name_to_path_import_code_root_multiple_map(imports);
   list_add(mapped, call);
   let middle = list_join_newline(mapped);
   let body = html_code_script_module(middle);

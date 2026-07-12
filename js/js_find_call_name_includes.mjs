@@ -7,15 +7,20 @@ import { js_list_calls_nodes } from "./js_list_calls_nodes.mjs";
 export function js_find_call_name_includes(ast, part) {
   let nodes = js_list_calls_nodes(ast);
   function lambda(n) {
-    let includes = false;
     let callee = property_get(n, "callee");
-    function lambda2() {
-      includes = js_identifier_name_includes(callee, part);
-    }
-    js_identifier_is_if(callee, lambda2);
+    let includes = js_identifier_name_includes(callee, part);
     return includes;
   }
   let filtered = list_filter(nodes, lambda);
   let only = list_single(filtered);
   return only;
 }
+function js_identifier_name_includes(callee, part) {
+  let includes = false;
+  function lambda2() {
+    includes = js_identifier_name_includes(callee, part);
+  }
+  js_identifier_is_if(callee, lambda2);
+  return includes;
+}
+
