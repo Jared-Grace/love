@@ -13,7 +13,7 @@ import { log_keep } from "./log_keep.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 export async function app_shared_name_search_info(search) {
   let a_name = await app_shared_name_search(search);
-  let f_name = app_shared_name_main(a_name);
+  let f_name = await app_shared_name_main(a_name);
   let app_name = app_shared_name_prefixed(a_name);
   let r = await function_name_to_path_search(app_name);
   let repo_name = property_get(r, "repo_name");

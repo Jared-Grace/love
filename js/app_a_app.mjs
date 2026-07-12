@@ -25,7 +25,7 @@ export async function app_a_app(context) {
   let a_name = storage_local_get_context(context, key);
   let f_name = app_a_function_name_selected(context);
   let a_name_f = app_shared_name_prefixed(a_name);
-  let combined = app_shared_name_main(a_name);
+  let combined = await app_shared_name_main(a_name);
   let v = await function_unalias_exists(combined);
   let unaliased = property_get(v, "unaliased");
   let choices = [

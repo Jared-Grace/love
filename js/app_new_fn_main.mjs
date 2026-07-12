@@ -3,6 +3,6 @@ import { function_new_open } from "./function_new_open.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 export async function app_new_fn_main(name) {
   text_and_empty_not_is_assert(name);
-  let combined = app_shared_name_main(name);
+  let combined = await app_shared_name_main(name);
   await function_new_open(combined);
 }
