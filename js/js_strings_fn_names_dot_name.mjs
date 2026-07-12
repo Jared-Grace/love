@@ -1,4 +1,6 @@
 import { functions_names } from "./functions_names.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { js_call_named_argument_nodes } from "./js_call_named_argument_nodes.mjs";
 import { js_strings_generic } from "./js_strings_generic.mjs";
 import { text_identifier_segments } from "./text_identifier_segments.mjs";
 import { js_code_fn_names_pieces } from "./js_code_fn_names_pieces.mjs";
@@ -16,10 +18,15 @@ import { property_get } from "./property_get.mjs";
 export async function js_strings_fn_names_dot_name(ast) {
   let fn_names = await functions_names();
   let results = js_strings_generic(ast);
+  let skip = js_call_named_argument_nodes(ast, fn_name.name);
   let replaced = false;
   function lambda(result) {
     let value = property_get(result, "value");
     let node = property_get(result, "node");
+    let skipped = list_includes(skip, node);
+    if (skipped) {
+      return;
+    }
     let segments = text_identifier_segments(value);
     function lambda2(segment) {
       let identifier = property_get(segment, "identifier");

@@ -30,7 +30,7 @@ import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { app_bible_chapters } from "./app_bible_chapters.mjs";
 import { app_bible_books } from "./app_bible_books.mjs";
-import { html_button } from "./html_button.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "./ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -209,9 +209,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda3() {
     app_chapter_open_en(chapter_code, verse_number);
   }
-  let component2 = html_button(bottom, "Chapter", lambda3);
+  let component2 = app_replace_button(bottom, "Chapter", lambda3);
   let text4 = html_button_copy_text();
-  let component = html_button(bottom, text4, noop);
+  let component = app_replace_button(bottom, text4, noop);
   let v3 = app_chapter_toggle_update(
     updates,
     component,
