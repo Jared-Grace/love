@@ -1,0 +1,9 @@
+import { js_code_import_single } from "./js_code_import_single.mjs";
+import { function_name_to_path_import_root } from "./function_name_to_path_import_root.mjs";
+import { text_is_assert } from "./text_is_assert.mjs";
+export function function_name_to_path_import_code_root(import_, dictionary) {
+  text_is_assert(import_);
+  let from = function_name_to_path_import_root(import_, dictionary);
+  let code = js_code_import_single(import_, from);
+  return code;
+}
