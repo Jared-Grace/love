@@ -81,6 +81,12 @@
         "hooks": [
           {
             "type": "command",
+            "command": "cd /home/j/repos/love; for i in $(seq 1 30); do pgrep -f \"g.mjs ai\" >/dev/null || break; sleep 2; done; node scripts/g.mjs ai 2>&1 | tail -8",
+            "timeout": 90,
+            "statusMessage": "Auto-committing"
+          },
+          {
+            "type": "command",
             "command": "node /home/j/repos/love/.claude/hooks/lock_claude_release.mjs",
             "timeout": 5
           }
