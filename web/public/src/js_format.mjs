@@ -6,8 +6,8 @@ export async function js_format(code) {
   let plugins = null;
   let b = browser_is();
   if (b) {
-    let pe = await import("parserEstree");
-    parserBabel = await import("parserBabel");
+    let pe = await import("prettier/plugins/estree");
+    parserBabel = await import("prettier/plugins/babel");
     pr = await import("prettier");
     plugins = [parserBabel, pe];
   } else {
