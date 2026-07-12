@@ -4,11 +4,10 @@ import { object_merge } from "./object_merge.mjs";
 import { app_a_file_system_initialize } from "./app_a_file_system_initialize.mjs";
 import { html_on_keydown } from "./html_on_keydown.mjs";
 import { invoke_multiple_arg } from "./invoke_multiple_arg.mjs";
-import { app_a } from "./app_a.mjs";
 import { app_a_screens } from "./app_a_screens.mjs";
 export async function app_a_main(context) {
   await app_a_file_system_initialize();
-  let app_fn = app_a;
+  let app_fn = app_a_main;
   let on_keydowns = [];
   object_merge(context, {
     on_keydowns,
