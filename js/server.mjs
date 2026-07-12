@@ -6,10 +6,9 @@ import { server_port } from "../../love/js/server_port.mjs";
 import { server_url_api } from "../../love/js/server_url_api.mjs";
 import { function_run_io_file_wrapper } from "../../love/js/function_run_io_file_wrapper.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
-import { folder_repos_resolve } from "../../love/js/folder_repos_resolve.mjs";
 import { log_keep } from "../../love/js/log_keep.mjs";
 import express from "express";
-import { module_dirname } from "./module_dirname.mjs";
+import { module_repos_resolve } from "./module_repos_resolve.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 export async function server() {
   let app = express();
@@ -18,8 +17,7 @@ export async function server() {
   });
   app.use(v3);
   let port = server_port();
-  let __dirname = await module_dirname(import.meta);
-  let result = await folder_repos_resolve(__dirname);
+  let result = await module_repos_resolve(import.meta);
   let v = express.static(result);
   let u = server_url_api();
   async function api_generic(req, res) {
