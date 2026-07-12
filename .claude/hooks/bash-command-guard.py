@@ -221,19 +221,46 @@ A fourth check, `is_dangerous_find`, goes the other direction: it
 path. `Bash(find:*)` is in permissions.allow for ordinary read-only
 lookups, but verb_of() only ever looks at the leading token - it has no
 idea whether the rest of a `find` invocation is `-iname foo -type f` or
-`-exec rm -rf / \\;`. Since a single unchained `find ... -exec ...`
-command parses as one ordinary simple command whose verb ("find") is
-already trusted, it would otherwise sail through as a silent "allow"
-despite being able to run arbitrary commands (-exec/-execdir/-ok/-okdir)
-or delete/overwrite arbitrary files (-delete/-fls/-fprint/-fprint0/
--fprintf). check_simple_commands rejects any `find` call carrying one of
-those action flags before it ever consults safe_verbs, which falls
-through to the same "ask" path as any other unsafe command - a real
-prompt instead of a missed hole. Unlike is_safe_sed's blacklist-scan
-avoidance, a plain token scan is safe to use here because find's action
-flags are always their own separate shell word; the only false positive
-is a flag's own argument happening to spell one (`find . -name -exec`),
-which just costs an extra prompt.
+`-delete`. Since a single unchained `find ...` command parses as one
+ordinary simple command whose verb ("find") is already trusted, it would
+otherwise sail through as a silent "allow" despite being able to
+delete/overwrite arbitrary files (-delete/-fls/-fprint/-fprint0/
+-fprintf) or run arbitrary commands with no visibility into what
+(-ok/-okdir, which prompt at runtime themselves - a different trust model
+than this hook reasons about, so still blocked here rather than treated
+as equivalent to a vetted -exec). check_simple_commands rejects any
+`find` call carrying one of those flags before it ever consults
+safe_verbs, which falls through to the same "ask" path as any other
+unsafe command - a real prompt instead of a missed hole. Unlike
+is_safe_sed's blacklist-scan avoidance, a plain token scan is safe to use
+here because find's action flags are always their own separate shell
+word; the only false positive is a flag's own argument happening to
+spell one (`find . -name -exec`), which just costs an extra prompt.
+
+`-exec`/`-execdir` are handled separately, by `is_safe_find_exec`, rather
+than blocked outright like the flags above. The command they run is its
+own clearly-delimited word sequence - the same shape xargs' target
+command is in (see above) - so instead of blocking on sight it's checked
+against safe_verbs the same way. Requires exactly one -exec/-execdir in
+the whole invocation (so trust never has to reason about two differently
+-targeted actions), no other DANGEROUS_FIND_FLAGS before it, a literal
+`{}` in its clause, and the clause to run all the way to the end of the
+simple command (only a trailing `+` - immediately after `{}`, per find's
+own syntax rules for that form - is stripped). That last constraint is
+what rejects anything chained after the -exec clause (e.g. `find X -exec
+cat {} + -delete`) rather than risking a parse that silently drops a
+trailing dangerous flag. It's also forced by a quirk of tokenize(): an
+escaped `\;` and a real shell `;` both collapse to the identical string
+token, and tokenize()'s dedup step merges adjacent `;` tokens, so a
+`\;`-terminated clause never survives as a distinguishable trailing
+token to strip in the first place - the words list for this simple
+command already ends exactly at the clause boundary by the time it
+reaches this function. Net effect: `find ... -exec cat {} \;` (or
+`... -exec grep foo {} +`) auto-approves when the target verb is already
+trusted, while any find invocation this shape can't confidently parse -
+multiple actions, other dangerous flags, trailing content after the
+clause, an unsafe target verb - falls through to a real prompt exactly
+as before.
 """
 import json
 import os
@@ -457,6 +484,20 @@ def tokenize(command):
                 "unsupported operator '>' (redirection, except >/dev/null, "
                 "fd dup &1/&2, or a path inside this project's scratchpad)"
             )
+        if c == "{" and i + 1 < n and command[i + 1] == "}":
+            # Bare '{}' - find's placeholder for the matched path in
+            # -exec/-execdir clauses (see is_safe_find_exec). Safe to
+            # accept as literal text even here in the general tokenizer:
+            # with nothing between the braces there is no brace expansion
+            # (that requires a comma-list or '..' range inside) and no
+            # valid '{ cmd; }' grouping either (grouping requires
+            # whitespace after '{' and a command before the closing '}') -
+            # bash itself treats standalone '{}' as literal text. Any
+            # other use of '{' or '}' still falls through to the
+            # DANGEROUS_CHARS check below and is rejected.
+            word.append("{}")
+            i += 2
+            continue
         if c in DANGEROUS_CHARS:
             raise Unsupported(f"unsupported operator {c!r}")
         if c == "$" and i + 1 < n and command[i + 1] == "(":
@@ -567,28 +608,67 @@ def verb_of(words):
 
 
 DANGEROUS_FIND_FLAGS = {
-    "-exec", "-execdir", "-ok", "-okdir",
+    "-ok", "-okdir",
     "-delete", "-fls", "-fprint", "-fprint0", "-fprintf",
 }
+
+FIND_EXEC_FLAGS = {"-exec", "-execdir"}
 
 
 def is_dangerous_find(words):
     """True iff this is a `find` invocation carrying an action flag that
-    executes a command (-exec/-execdir/-ok/-okdir) or deletes/writes files
-    (-delete/-fls/-fprint/-fprint0/-fprintf) - i.e. everything find can do
-    beyond read-only querying. `Bash(find:*)` in permissions.allow only
-    ever meant "let read-only lookups through without a prompt"; without
-    this check, a single unchained command like `find / -exec rm -rf / \\;`
-    would auto-approve silently, since verb_of() sees only the leading
-    "find" token and that's already in safe_verbs. Scanning the token list
-    for these flags (rather than an exact allow-shape like is_safe_sed
-    uses) is safe here because, unlike sed's e/w which can hide inside
-    arbitrary pattern text, find's action flags are always their own
-    separate word once shell-tokenized - the only false positive is
-    something like `find . -name -exec`, where "-exec" is actually the
-    argument to a preceding flag rather than an action in its own right,
-    and that just costs an extra prompt, not a missed hole."""
+    executes a command with no visibility into what (-ok/-okdir) or
+    deletes/writes files (-delete/-fls/-fprint/-fprint0/-fprintf) - i.e.
+    everything find can do beyond read-only querying and the -exec/
+    -execdir case handled separately by is_safe_find_exec. `Bash(find:*)`
+    in permissions.allow only ever meant "let read-only lookups through
+    without a prompt"; without this check, a single unchained command like
+    `find / -delete` would auto-approve silently, since verb_of() sees
+    only the leading "find" token and that's already in safe_verbs.
+    Scanning the token list for these flags (rather than an exact
+    allow-shape like is_safe_sed uses) is safe here because, unlike sed's
+    e/w which can hide inside arbitrary pattern text, find's action flags
+    are always their own separate word once shell-tokenized - the only
+    false positive is something like `find . -name -delete`, where
+    "-delete" is actually the argument to a preceding flag rather than an
+    action in its own right, and that just costs an extra prompt, not a
+    missed hole."""
     return words[0] == "find" and any(w in DANGEROUS_FIND_FLAGS for w in words[1:])
+
+
+def is_safe_find_exec(words, safe_verbs):
+    """See module docstring for the full rationale. Requires exactly one
+    -exec/-execdir in `words`, no other DANGEROUS_FIND_FLAGS before it, a
+    literal '{}' in its clause, and the clause to run to the end of
+    `words` (only a trailing '+' - required to sit immediately after '{}'
+    - is stripped, matching find's own syntax rule for that terminator
+    form). The remaining words' own verb (via verb_of, so 'git status'
+    style multi-word verbs still work) must be in safe_verbs - only plain
+    verb-list trust applies here, not the exact-shape exceptions
+    (is_safe_sed etc.), the same posture xargs' target command already
+    has."""
+    if words[0] != "find":
+        return False
+    exec_positions = [i for i, w in enumerate(words) if w in FIND_EXEC_FLAGS]
+    if len(exec_positions) != 1:
+        return False
+    idx = exec_positions[0]
+    if any(w in DANGEROUS_FIND_FLAGS for w in words[1:idx]):
+        return False
+    exec_words = words[idx + 1:]
+    if not exec_words:
+        return False
+    if exec_words[-1] == "+":
+        if len(exec_words) < 2 or exec_words[-2] != "{}":
+            return False
+        exec_words = exec_words[:-2]
+    else:
+        if "{}" not in exec_words:
+            return False
+        exec_words = [w for w in exec_words if w != "{}"]
+    if not exec_words:
+        return False
+    return verb_of(exec_words) in safe_verbs
 
 
 def is_safe_claude_temp_path(path):
@@ -834,6 +914,10 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             raise Unsupported(f"unsupported nested keyword {words[0]!r}")
         if re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", words[0]):
             raise Unsupported("variable assignment prefix")
+        if words[0] == "find" and any(w in FIND_EXEC_FLAGS for w in words[1:]):
+            if not is_safe_find_exec(words, safe_verbs):
+                return False
+            continue
         if is_dangerous_find(words):
             return False
         if " ".join(words) in safe_exact_commands:
