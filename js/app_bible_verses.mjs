@@ -8,7 +8,7 @@ import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
-import { html_button_list_centered } from "./html_button_list_centered.mjs";
+import { app_replace_button_list_centered } from "./app_replace_button_list_centered.mjs";
 export async function app_bible_verses(context) {
   let n = app_bible_chapter_set_default(context);
   if (n) {
@@ -23,5 +23,5 @@ export async function app_bible_verses(context) {
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, "verse_number");
   let oc = app_bible_verse_open_curried(context);
-  html_button_list_centered(root, items, identity, oc);
+  app_replace_button_list_centered(root, items, identity, oc);
 }

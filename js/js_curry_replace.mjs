@@ -14,7 +14,7 @@ import { log } from "./log.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { js_call_args_code } from "./js_call_args_code.mjs";
+import { js_call_args_from_code } from "./js_call_args_from_code.mjs";
 import { function_curryify_specify_curried_right } from "./function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "./function_curryify_specify_name_get_curried_right.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -121,7 +121,7 @@ export async function js_curry_replace(ast) {
               await curry_generate(f_name);
             }
             la(name_curried);
-            let call = js_call_args_code(name_curried, []);
+            let call = js_call_args_from_code(name_curried, []);
             js_call_arguments_add(call, difference);
             let name_function = js_function_declaration_name(node);
             let declare = js_declare(name_function, call);
