@@ -4,7 +4,7 @@ import { html_clear_context } from "./html_clear_context.mjs";
 import { app_bible_chapters } from "./app_bible_chapters.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
-import { html_button } from "./html_button.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
 import { each } from "./each.mjs";
 import { log } from "./log.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
@@ -21,7 +21,7 @@ export async function app_bible_books(context) {
       app_bible_chapter_set(chapter_code);
       app_shared_screen_set(context, app_bible_chapters);
     }
-    let component = html_button(root, text, lambda3);
+    let component = app_replace_button(root, text, lambda3);
   }
   each(books, lambda);
   log(app_bible_books.name, {
