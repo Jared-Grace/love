@@ -5,6 +5,7 @@ import { webpack_config_filename } from "./webpack_config_filename.mjs";
 import { process_env_args_get } from "./process_env_args_get.mjs";
 import { webpack_config_entry_path } from "./webpack_config_entry_path.mjs";
 import { webpack_config_node_builtins_fallback } from "./webpack_config_node_builtins_fallback.mjs";
+import { webpack_config_node_scheme_strip_plugin } from "./webpack_config_node_scheme_strip_plugin.mjs";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
@@ -39,6 +40,7 @@ export async function webpack_config() {
       new webpack.IgnorePlugin({
         resourceRegExp: /module-name-to-ignore/,
       }),
+      webpack_config_node_scheme_strip_plugin(),
     ],
   };
   log(webpack_config.name, {
