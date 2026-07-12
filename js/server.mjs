@@ -6,9 +6,8 @@ import { server_port } from "./server_port.mjs";
 import { server_url_api } from "./server_url_api.mjs";
 import { function_run_io_file_wrapper } from "./function_run_io_file_wrapper.mjs";
 import { property_get } from "./property_get.mjs";
-import { folder_previous } from "./folder_previous.mjs";
+import { folder_repo_root_find } from "./folder_repo_root_find.mjs";
 import { log_keep } from "./log_keep.mjs";
-import { path_join } from "./path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -22,9 +21,8 @@ export function server() {
   let port = server_port();
   let __filename = fileURLToPath(import.meta.url);
   let __dirname = path.dirname(__filename);
-  let previous = folder_previous();
-  let result = path_join([__dirname, previous, previous, previous]);
-  result = path.resolve(result);
+  let repo_root = folder_repo_root_find(__dirname);
+  let result = path.resolve(path.join(repo_root, ".."));
   let v = express.static(result);
   let u = server_url_api();
   async function api_generic(req, res) {
