@@ -1,0 +1,14 @@
+import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { app_g_click } from "./app_g_click.mjs";
+import { app_g_refresh } from "./app_g_refresh.mjs";
+export function app_g_div_map_on_click(context, div_map, player_img_c) {
+  let div_map_container = app_g_div_map_container_get(div_map);
+  async function on_click(e) {
+    async function refresh() {
+      await app_g_refresh(context, div_map_container);
+    }
+    await app_g_click(e, div_map, player_img_c, refresh);
+  }
+  html_on_click(div_map, on_click);
+}

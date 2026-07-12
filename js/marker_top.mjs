@@ -1,0 +1,27 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { js_identifier_unique } from "./js_identifier_unique.mjs";
+import { js_marker_insert } from "./js_marker_insert.mjs";
+import { js_flo_body } from "./js_flo_body.mjs";
+import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
+import { function_current_get } from "./function_current_get.mjs";
+import { function_transform } from "./function_transform.mjs";
+import { js_markers } from "./js_markers.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_marker_name_get } from "./js_marker_name_get.mjs";
+export async function marker_top() {
+  let f_name = await function_current_get();
+  let v = await function_transform(f_name, lambda);
+  return v;
+  async function lambda(ast) {
+    let markers = js_markers(ast);
+    let ne = list_empty_not_is(markers);
+    if (ne) {
+      return;
+    }
+    let names = list_map(markers, js_marker_name_get);
+    let name_next = js_identifier_unique(names, "");
+    let body = js_flo_body(ast);
+    await js_marker_insert(name_next, body, 0);
+    await js_imports_missing_add_all(ast);
+  }
+}

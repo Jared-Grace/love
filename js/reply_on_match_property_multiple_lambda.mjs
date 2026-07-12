@@ -1,0 +1,12 @@
+import { each } from "./each.mjs";
+import { reply_on_match_property_add_multiple } from "./reply_on_match_property_add_multiple.mjs";
+export function reply_on_match_property_multiple_lambda(property_name, items) {
+  let v = function lambda(possibilities) {
+    function lambda2(possibility) {
+      reply_on_match_property_add_multiple(possibility, property_name, items);
+    }
+    each(possibilities, lambda2);
+    return possibilities;
+  };
+  return v;
+}

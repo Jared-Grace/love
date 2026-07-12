@@ -1,0 +1,50 @@
+import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs";
+import { html_div } from "./html_div.mjs";
+import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
+import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
+import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
+export function app_code_next(
+  context,
+  parent_question,
+  do_you_want_to_text,
+  yes_text,
+  refresh,
+  on_next,
+  on_back,
+  back_text,
+  parent_next_back,
+) {
+  let container_question = html_div(parent_question);
+  let nt = app_shared_button_next_text();
+  let padded = text_pad_space_quote_double(nt);
+  let question = text_combine_multiple([
+    "Do you want to ",
+    do_you_want_to_text,
+    "? If not, choose: ",
+    padded,
+  ]);
+  html_div_text(container_question, question);
+  let left = emoji_repeat_1();
+  let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
+  app_replace_button_wide(container_question, answer_yes, refresh);
+  let container_buttons = html_div(parent_next_back);
+  let bn = app_replace_button_wide_next(container_buttons, on_next);
+  if (null_not_is(on_back)) {
+    let bt = app_shared_button_back_text();
+    if (null_not_is(back_text)) {
+      bt = text_combine_middle_space(bt, back_text);
+    }
+    let bb = app_replace_button_wide(container_buttons, bt, on_back);
+  }
+  let r = {
+    containers: [container_question, container_buttons],
+    container_question,
+  };
+  return r;
+}

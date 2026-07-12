@@ -1,0 +1,16 @@
+import { property_equals_try_curried_right_2 } from "./property_equals_try_curried_right_2.mjs";
+import { list_find_property_or_null_generic } from "./list_find_property_or_null_generic.mjs";
+export function list_find_property_try_or_null(
+  list,
+  property_name,
+  property_value,
+) {
+  let filter_get = property_equals_try_curried_right_2;
+  let r = list_find_property_or_null_generic(
+    filter_get,
+    property_name,
+    property_value,
+    list,
+  );
+  return r;
+}

@@ -1,0 +1,39 @@
+import { not } from "./not.mjs";
+import { set_on_first } from "./set_on_first.mjs";
+import { object_properties_equal } from "./object_properties_equal.mjs";
+import { js_import_specifier_is } from "./js_import_specifier_is.mjs";
+import { list_get_end_1 } from "./list_get_end_1.mjs";
+import { list_adder } from "./list_adder.mjs";
+import { js_visit } from "./js_visit.mjs";
+import { property_get } from "./property_get.mjs";
+export function js_node_to_visitors(ast, node_search) {
+  function lambda2(la) {
+    function lambda3(sa) {
+      function lambda(v) {
+        let node = property_get(v, "node");
+        if (node === node_search) {
+          let add_to_list = true;
+          let stack = property_get(v, "stack");
+          let e = list_get_end_1(stack);
+          let type_is = js_import_specifier_is(e);
+          if (type_is) {
+            let eq = object_properties_equal(e, ["imported", "imported"]);
+            if (eq) {
+              let first = sa(node);
+              if (not(first)) {
+                add_to_list = false;
+              }
+            }
+          }
+          if (add_to_list) {
+            la(v);
+          }
+        }
+      }
+      js_visit(ast, lambda);
+    }
+    set_on_first(lambda3);
+  }
+  let matches = list_adder(lambda2);
+  return matches;
+}

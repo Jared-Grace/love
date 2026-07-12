@@ -1,0 +1,5 @@
+import { function_dependencies } from "./function_dependencies.mjs";
+export async function function_dependencies_single(f_name) {
+  let r = await function_dependencies([f_name]);
+  return r;
+}

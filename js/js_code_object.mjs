@@ -1,0 +1,19 @@
+import { js_code_wrap_braces } from "./js_code_wrap_braces.mjs";
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
+import { list_map } from "./list_map.mjs";
+import { js_code_property } from "./js_code_property.mjs";
+import { property_get } from "./property_get.mjs";
+import { object_to_list } from "./object_to_list.mjs";
+export function js_code_object(object) {
+  let list = object_to_list(object);
+  function lambda(item) {
+    let key = property_get(item, "key");
+    let value = property_get(item, "value");
+    let combined = js_code_property(key, value);
+    return combined;
+  }
+  let mapped = list_map(list, lambda);
+  let v = list_join_comma_space(mapped);
+  let w = js_code_wrap_braces(v);
+  return w;
+}

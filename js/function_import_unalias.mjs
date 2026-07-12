@@ -1,0 +1,9 @@
+import { property_get } from "./property_get.mjs";
+import { function_import } from "./function_import.mjs";
+import { function_name_unalias } from "./function_name_unalias.mjs";
+export async function function_import_unalias(f_name) {
+  let v = await function_name_unalias(f_name);
+  let unaliased = property_get(v, "unaliased");
+  let imported_fn = await function_import(unaliased);
+  return imported_fn;
+}

@@ -1,5 +1,5 @@
 // Detached background holder for the repo's "function_run_prompt" lock
-// (public/src/lock_claude.mjs), spawned by lock_claude_acquire.mjs and
+// (js/lock_claude.mjs), spawned by lock_claude_acquire.mjs and
 // signaled to release by lock_claude_release.mjs. Runs on its own,
 // disowned from the Claude Code process, for the lifetime of one Claude
 // "turn" (roughly - see the two hook scripts for the exact protocol).
@@ -50,7 +50,7 @@ function cleanupSentinels() {
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..", "..");
 const { lock_claude } = await import(
-  path.join(repoRoot, "public/src/lock_claude.mjs")
+  path.join(repoRoot, "js/lock_claude.mjs")
 );
 
 const claudeLock = await lock_claude();

@@ -1,0 +1,12 @@
+import { list_adder } from "./list_adder.mjs";
+import { each_index } from "./each_index.mjs";
+export function list_adder_each_index(list, lambda$la$item$index) {
+  function lambda(la) {
+    function lambda2(item, index) {
+      lambda$la$item$index(la, item, index);
+    }
+    each_index(list, lambda2);
+  }
+  let r = list_adder(lambda);
+  return r;
+}

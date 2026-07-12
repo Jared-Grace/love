@@ -1,0 +1,7 @@
+import { reply_on_match_output } from "./reply_on_match_output.mjs";
+import { reply_word_god } from "./reply_word_god.mjs";
+export function app_message_reply_god() {
+  let god = reply_word_god();
+  let fn = reply_on_match_output(god, "❤️‍🔥 God is love! ✝️");
+  return fn;
+}

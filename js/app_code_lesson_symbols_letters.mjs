@@ -1,0 +1,80 @@
+import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
+import { html_div_cycle_bold } from "./html_div_cycle_bold.mjs";
+import { app_code_lesson_symbols_letters_batch_get } from "./app_code_lesson_symbols_letters_batch_get.mjs";
+import { identity } from "./identity.mjs";
+import { boolean_random } from "./boolean_random.mjs";
+import { text_transform } from "./text_transform.mjs";
+import { list_alphabet_upper } from "./list_alphabet_upper.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { html_text_characters_numbered } from "./html_text_characters_numbered.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { list_alphabet_lower } from "./list_alphabet_lower.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
+import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { ternary } from "./ternary.mjs";
+import { text_upper_to } from "./text_upper_to.mjs";
+export function app_code_lesson_symbols_letters() {
+  function lambda(root) {
+    let c = app_code_container_light_blue(root);
+    let div = html_div(c);
+    let span = html_span_text(
+      div,
+      "In English, there are 26 letters in the alphabet: ",
+    );
+    let div2 = html_div(c);
+    let alphabet_lower = list_alphabet_lower();
+    html_text_characters_numbered(div2, alphabet_lower);
+    html_div_cycle_bold(c, [
+      "Those 26 letters are written in ",
+      "lowercase",
+      ".",
+    ]);
+    let container = app_code_container_light_blue(root);
+    html_div_cycle_bold(container, [
+      "Here are the 26 English letters written in ",
+      "uppercase",
+      ":",
+    ]);
+    let div5 = html_div(container);
+    let alphabet_upper = list_alphabet_upper();
+    html_text_characters_numbered(div5, alphabet_upper);
+    let container2 = app_code_container_light_blue(root);
+    html_div_text(container2, "Remember, numbers are examples of symbols");
+    html_div_text(
+      container2,
+      "Also, both uppercase and lowercase letters are examples of symbols",
+    );
+    html_div_text(
+      container2,
+      "When we write computer programs, we use symbols, including letters and numbers",
+    );
+    html_div_text(
+      container2,
+      "For a computer, lowercase letters may be considered different than uppercase letters",
+    );
+  }
+  function lambda2(word) {
+    function lambda3(c2) {
+      let u = boolean_random();
+      let mapper = ternary(u, text_upper_to, identity);
+      let r = mapper(c2);
+      return r;
+    }
+    let joined = text_transform(word, lambda3);
+    return joined;
+  }
+  function batch_get() {
+    let mapped = app_code_lesson_symbols_letters_batch_get(lambda2);
+    return mapped;
+  }
+  let name_id = app_code_lesson_name_id("symbols", ["letters"]);
+  let r5 = app_code_lesson_symbols_counting(
+    name_id,
+    lambda,
+    batch_get,
+    app_code_symbols_separated_on_question_numbered_fifth,
+  );
+  return r5;
+}

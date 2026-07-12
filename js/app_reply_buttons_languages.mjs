@@ -1,0 +1,12 @@
+import { app_reply_buttons_languages_on_toggle } from "./app_reply_buttons_languages_on_toggle.mjs";
+import { noop } from "./noop.mjs";
+export function app_reply_buttons_languages(languages_chosen, root, languages) {
+  let on_toggle = noop;
+  let buttons = app_reply_buttons_languages_on_toggle(
+    languages_chosen,
+    on_toggle,
+    root,
+    languages,
+  );
+  return buttons;
+}

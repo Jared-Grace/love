@@ -1,0 +1,6 @@
+import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
+export async function function_ast_list_type_nodes_object_expression(f_name) {
+  let type = "ObjectExpression";
+  let list = await function_ast_list_type_nodes(f_name, type);
+  return list;
+}

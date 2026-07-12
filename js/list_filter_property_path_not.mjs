@@ -1,0 +1,10 @@
+import { property_path_get_not } from "./property_path_get_not.mjs";
+import { list_filter } from "./list_filter.mjs";
+export function list_filter_property_path_not(list, property_names, value) {
+  let c = function list_filter_property_path_not_inner(item) {
+    let result = property_path_get_not(item, property_names, value);
+    return result;
+  };
+  let filtered = list_filter(list, c);
+  return filtered;
+}

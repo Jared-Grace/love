@@ -1,0 +1,40 @@
+import { list_pop } from "./list_pop.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { null_is } from "./null_is.mjs";
+import { retry_until_success } from "./retry_until_success.mjs";
+import { equal } from "./equal.mjs";
+import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
+export async function app_reply_verse(
+  bible_folder,
+  english_choices,
+  chapter_code,
+  verse_number,
+) {
+  let choices = null;
+  let right = ebible_folder_english();
+  let lambda11 = catch_ignore_async;
+  let en_is = equal(bible_folder, right);
+  if (en_is) {
+    lambda11 = retry_until_success;
+  }
+  async function lambda() {
+    if (en_is) {
+      if (null_is(choices)) {
+        choices = list_copy(english_choices);
+        list_shuffle(choices);
+      }
+      bible_folder = list_pop(choices);
+    }
+    let d = await ebible_verse_browser(
+      bible_folder,
+      chapter_code,
+      verse_number,
+    );
+    return d;
+  }
+  let r = await lambda11(lambda);
+  return r;
+}

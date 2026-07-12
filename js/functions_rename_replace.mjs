@@ -1,0 +1,10 @@
+import { text_replace_curried_right_2 } from "./text_replace_curried_right_2.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { tautology } from "./tautology.mjs";
+import { functions_rename_generic } from "./functions_rename_generic.mjs";
+export async function functions_rename_replace(from, to) {
+  arguments_assert(arguments, 2);
+  let mapper = text_replace_curried_right_2(from, to);
+  let r = await functions_rename_generic(tautology, mapper);
+  return r;
+}

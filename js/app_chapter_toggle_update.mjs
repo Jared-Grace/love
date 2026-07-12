@@ -1,0 +1,110 @@
+import { list_first } from "./list_first.mjs";
+import { list_last } from "./list_last.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_first_last_slice } from "./list_first_last_slice.mjs";
+import { list_size_max_skip_replace } from "./list_size_max_skip_replace.mjs";
+import { log } from "./log.mjs";
+import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
+import { list_squash } from "./list_squash.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
+import { list_map_find_property } from "./list_map_find_property.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { property_get } from "./property_get.mjs";
+import { integer_to_try } from "./integer_to_try.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { html_style_background_color_set_or_remove_list } from "./html_style_background_color_set_or_remove_list.mjs";
+import { app_chapter_chosen_max } from "./app_chapter_chosen_max.mjs";
+import { list_toggle } from "./list_toggle.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { invoke_multiple } from "./invoke_multiple.mjs";
+export function app_chapter_toggle_update(
+  updates,
+  component_clicked,
+  verse_numbers_chosen,
+  verse_number,
+  chapter_code,
+  languages_verses,
+  component_highlighted,
+) {
+  async function choose() {
+    log(app_chapter_toggle_update.name, "message");
+    toggle();
+    invoke_multiple(updates);
+    await copy();
+  }
+  html_on_click(component_clicked, choose);
+  let toggle = function lambda5() {
+    list_toggle(verse_numbers_chosen, verse_number);
+    let max = app_chapter_chosen_max();
+    list_size_max_skip_replace(verse_numbers_chosen, max);
+  };
+  let update = function lambda4() {
+    let sliced = null;
+    let m = list_multiple_is(verse_numbers_chosen);
+    if (m) {
+      let l = list_last(languages_verses);
+      let verses = property_get(l, "verses");
+      let verse_numbers = list_map_property(verses, "verse_number");
+      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
+      sliced = property_get(v, "sliced");
+    } else {
+      sliced = verse_numbers_chosen;
+    }
+    html_style_background_color_set_or_remove_list(
+      component_highlighted,
+      sliced,
+      verse_number,
+    );
+  };
+  let r = {
+    toggle,
+    update,
+    copy,
+  };
+  async function copy() {
+    list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
+    function lambda3(bv) {
+      log(app_chapter_toggle_update.name, {
+        languages_verses,
+      });
+      let m = list_multiple_is(verse_numbers_chosen);
+      let verse_numbers_chosen_normalized = null;
+      if (m) {
+        verse_numbers_chosen_normalized = verse_numbers_chosen;
+      } else {
+        let f = list_first(verse_numbers_chosen);
+        verse_numbers_chosen_normalized = [f, f];
+      }
+      let verse_numbers_mapped = null;
+      let books = property_get(bv, "books");
+      let verses = property_get(bv, "verses");
+      let verse_numbers = list_map_property(verses, "verse_number");
+      let v = list_first_last_slice(
+        verse_numbers_chosen_normalized,
+        verse_numbers,
+      );
+      let last = property_get(v, "last");
+      let first = property_get(v, "first");
+      let sliced = property_get(v, "sliced");
+      verse_numbers_mapped = list_map_find_property(
+        sliced,
+        verses,
+        "verse_number",
+      );
+      let mapped = list_map_property(verse_numbers_mapped, "text");
+      let reference = ebible_parts_chapter_code_to_reference(
+        chapter_code,
+        books,
+        [first, last],
+      );
+      let concated = list_concat([reference], mapped);
+      return concated;
+    }
+    let m = list_map(languages_verses, lambda3);
+    let squashed = list_squash(m);
+    let joined = await list_join_newline_2_copy(squashed);
+  }
+  return r;
+}

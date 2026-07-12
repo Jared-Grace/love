@@ -1,0 +1,59 @@
+import { app_code_symbols_separated_on_question_numbered_fifth } from "./app_code_symbols_separated_on_question_numbered_fifth.mjs";
+import { app_code_lesson_symbols_digits_numbered_fifth_on_symbol } from "./app_code_lesson_symbols_digits_numbered_fifth_on_symbol.mjs";
+import { list_between_space_nb } from "./list_between_space_nb.mjs";
+import { app_code_lesson_symbols_space_style } from "./app_code_lesson_symbols_space_style.mjs";
+import { noop } from "./noop.mjs";
+import { text_space_nb } from "./text_space_nb.mjs";
+import { html_cycle } from "./html_cycle.mjs";
+import { html_div } from "./html_div.mjs";
+import { list_join_space_nb } from "./list_join_space_nb.mjs";
+import { list_slices_size_random } from "./list_slices_size_random.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_code_verse_words } from "./app_code_verse_words.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
+import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+export function app_code_lesson_symbols_space() {
+  function lambda(root) {
+    let c = app_code_container_light_blue(root);
+    let div = html_div(c);
+    let nb = text_space_nb();
+    let list = [
+      text_combine("In English, when writing, we use", nb),
+      text_combine_multiple([nb, "spaces", nb]),
+      text_combine(nb, "to separate words"),
+    ];
+    let parts = list_between_space_nb(list);
+    html_cycle(div, [noop, app_code_lesson_symbols_space_style], parts);
+    html_div_text(
+      c,
+      "For a computer, a space is considered a symbol, just like a letter or a number",
+    );
+  }
+  function batch_get() {
+    let words = app_code_verse_words();
+    let mapped = list_map(words, text_letters_only);
+    let list2 = list_slices_size_random(mapped, 2, 3);
+    let mapped2 = list_map(list2, list_join_space_nb);
+    return mapped2;
+  }
+  function lambda4(parent, index_1, symbols) {
+    app_code_lesson_symbols_digits_numbered_fifth_on_symbol(
+      parent,
+      index_1,
+      symbols,
+    );
+  }
+  let name_id = app_code_lesson_name_id("symbols", ["space"]);
+  let r = app_code_lesson_symbols_counting(
+    name_id,
+    lambda,
+    batch_get,
+    app_code_symbols_separated_on_question_numbered_fifth,
+  );
+  return r;
+}
