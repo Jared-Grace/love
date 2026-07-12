@@ -1,6 +1,6 @@
 import { function_eachify_transform } from "./function_eachify_transform.mjs";
 import { function_name_combine_multiple } from "./function_name_combine_multiple.mjs";
-import { true_is_assert } from "./true_is_assert.mjs";
+import { assert_message } from "./assert_message.mjs";
 import { each_unordered_async } from "./each_unordered_async.mjs";
 export async function function_eachify_unordered(fn_name) {
   let output = await function_eachify_transform(
@@ -10,7 +10,10 @@ export async function function_eachify_unordered(fn_name) {
   );
   return output;
   function each_name_get(async_is) {
-    true_is_assert(async_is);
+    assert_message(
+      async_is,
+      "function_eachify_unordered requires an async function: unordering a synchronous function is meaningless - make the function async or use function_eachify",
+    );
     let each_name = each_unordered_async.name;
     return each_name;
   }
