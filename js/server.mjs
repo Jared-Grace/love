@@ -9,10 +9,12 @@ import { property_get } from "./property_get.mjs";
 import { folder_repo_root_find } from "./folder_repo_root_find.mjs";
 import { log_keep } from "./log_keep.mjs";
 import express from "express";
-import path from "path";
+import { path_dirname } from "./path_dirname.mjs";
+import { path_resolve } from "./path_resolve.mjs";
+import { path_join } from "./path_join.mjs";
 import { fileURLToPath } from "url";
 import { text_combine } from "./text_combine.mjs";
-export function server() {
+export async function server() {
   let app = express();
   let v3 = express.json({
     limit: "50mb",
@@ -20,9 +22,9 @@ export function server() {
   app.use(v3);
   let port = server_port();
   let __filename = fileURLToPath(import.meta.url);
-  let __dirname = path.dirname(__filename);
+  let __dirname = await path_dirname(__filename);
   let repo_root = folder_repo_root_find(__dirname);
-  let result = path.resolve(path.join(repo_root, ".."));
+  let result = await path_resolve(path_join([repo_root, ".."]));
   let v = express.static(result);
   let u = server_url_api();
   async function api_generic(req, res) {
