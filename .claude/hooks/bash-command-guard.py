@@ -250,12 +250,12 @@ own syntax rules for that form - is stripped). That last constraint is
 what rejects anything chained after the -exec clause (e.g. `find X -exec
 cat {} + -delete`) rather than risking a parse that silently drops a
 trailing dangerous flag. It's also forced by a quirk of tokenize(): an
-escaped `\;` and a real shell `;` both collapse to the identical string
+escaped `\\;` and a real shell `;` both collapse to the identical string
 token, and tokenize()'s dedup step merges adjacent `;` tokens, so a
-`\;`-terminated clause never survives as a distinguishable trailing
+`\\;`-terminated clause never survives as a distinguishable trailing
 token to strip in the first place - the words list for this simple
 command already ends exactly at the clause boundary by the time it
-reaches this function. Net effect: `find ... -exec cat {} \;` (or
+reaches this function. Net effect: `find ... -exec cat {} \\;` (or
 `... -exec grep foo {} +`) auto-approves when the target verb is already
 trusted, while any find invocation this shape can't confidently parse -
 multiple actions, other dangerous flags, trailing content after the
@@ -640,13 +640,20 @@ def is_safe_find_exec(words, safe_verbs):
     """See module docstring for the full rationale. Requires exactly one
     -exec/-execdir in `words`, no other DANGEROUS_FIND_FLAGS before it, a
     literal '{}' in its clause, and the clause to run to the end of
-    `words` (only a trailing '+' - required to sit immediately after '{}'
-    - is stripped, matching find's own syntax rule for that terminator
-    form). The remaining words' own verb (via verb_of, so 'git status'
-    style multi-word verbs still work) must be in safe_verbs - only plain
-    verb-list trust applies here, not the exact-shape exceptions
-    (is_safe_sed etc.), the same posture xargs' target command already
-    has."""
+    `words` - a '+' terminator is only accepted as the literal last word,
+    immediately after '{}' (matching find's own syntax rule for that
+    form); a '+' appearing anywhere else is rejected outright rather than
+    falling through to the no-'+' branch below, since that would let
+    further chained flags/actions after it (`find X -exec cat {} +
+    -delete`) ride in unexamined. With no '+' at all, '{}' itself must be
+    the literal last word - per the module docstring, a real '\\;'
+    terminator never survives as its own token this far, so anything
+    trailing '{}' here isn't legitimate -exec syntax this function can
+    vouch for. The remaining words' own verb (via verb_of, so 'git
+    status' style multi-word verbs still work) must be in safe_verbs -
+    only plain verb-list trust applies here, not the exact-shape
+    exceptions (is_safe_sed etc.), the same posture xargs' target command
+    already has."""
     if words[0] != "find":
         return False
     exec_positions = [i for i, w in enumerate(words) if w in FIND_EXEC_FLAGS]
@@ -656,14 +663,14 @@ def is_safe_find_exec(words, safe_verbs):
     if any(w in DANGEROUS_FIND_FLAGS for w in words[1:idx]):
         return False
     exec_words = words[idx + 1:]
-    if not exec_words:
+    if not exec_words or "{}" not in exec_words:
         return False
-    if exec_words[-1] == "+":
-        if len(exec_words) < 2 or exec_words[-2] != "{}":
+    if "+" in exec_words:
+        if exec_words[-1] != "+" or exec_words[-2] != "{}":
             return False
         exec_words = exec_words[:-2]
     else:
-        if "{}" not in exec_words:
+        if exec_words[-1] != "{}":
             return False
         exec_words = [w for w in exec_words if w != "{}"]
     if not exec_words:
