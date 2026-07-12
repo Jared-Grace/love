@@ -810,13 +810,19 @@ def is_safe_verify_html_rm(words):
     return all(is_safe_verify_html_path(p) for p in paths)
 
 
-GIT_RM_TMP_BASENAME_RE = re.compile(r"^_tmp_[A-Za-z0-9_.-]+$")
+GIT_RM_TMP_BASENAME_RE = re.compile(r"^(?:_tmp_|claude_tmp_)[A-Za-z0-9_.-]+$")
 
 
 def is_safe_git_rm_tmp(words):
-    """Exact-shape exception for `git rm <files...>`, matching the user's
-    own '_tmp_' naming convention for disposable scratch scripts (e.g.
-    '_tmp_codemod.mjs'). Unlike is_safe_claude_temp_rm/is_safe_verify_html_rm,
+    """Exact-shape exception for `git rm <files...>`, matching either of
+    two disposable-scratch-script naming conventions: the user's own
+    '_tmp_' (e.g. '_tmp_codemod.mjs') or Claude's 'claude_tmp_' (e.g.
+    'claude_tmp_deasync_test_leaf.mjs') - the latter exists specifically
+    because a leading underscore trips a real, pre-existing crash in
+    function_name_to_acronym (its own code comment documents the failure:
+    empty first segment when a name starts with '_') the moment such a
+    file round-trips through function_transform, so Claude-created scratch
+    files use a prefix without one instead. Unlike is_safe_claude_temp_rm/is_safe_verify_html_rm,
     this doesn't trust a fixed Claude-owned directory - it trusts a
     basename convention instead, which is a weaker guarantee (a real file
     anywhere in the repo could coincidentally start with '_tmp_'), so this
