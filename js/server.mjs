@@ -1,17 +1,17 @@
-import { server_data_endpoints } from "./server_data_endpoints.mjs";
-import { promise_resolved } from "./promise_resolved.mjs";
-import { server_url_api_ordered } from "./server_url_api_ordered.mjs";
-import { server_url } from "./server_url.mjs";
-import { server_port } from "./server_port.mjs";
-import { server_url_api } from "./server_url_api.mjs";
-import { function_run_io_file_wrapper } from "./function_run_io_file_wrapper.mjs";
-import { property_get } from "./property_get.mjs";
-import { folder_repo_root_parent_resolve } from "./folder_repo_root_parent_resolve.mjs";
-import { log_keep } from "./log_keep.mjs";
+import { server_data_endpoints } from "../../love/js/server_data_endpoints.mjs";
+import { promise_resolved } from "../../love/js/promise_resolved.mjs";
+import { server_url_api_ordered } from "../../love/js/server_url_api_ordered.mjs";
+import { server_url } from "../../love/js/server_url.mjs";
+import { server_port } from "../../love/js/server_port.mjs";
+import { server_url_api } from "../../love/js/server_url_api.mjs";
+import { function_run_io_file_wrapper } from "../../love/js/function_run_io_file_wrapper.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { folder_repos_resolve } from "../../love/js/folder_repos_resolve.mjs";
+import { log_keep } from "../../love/js/log_keep.mjs";
 import express from "express";
-import { path_dirname } from "./path_dirname.mjs";
+import { path_dirname } from "../../love/js/path_dirname.mjs";
 import { fileURLToPath } from "url";
-import { text_combine } from "./text_combine.mjs";
+import { text_combine } from "../../love/js/text_combine.mjs";
 export async function server() {
   let app = express();
   let v3 = express.json({
@@ -21,7 +21,7 @@ export async function server() {
   let port = server_port();
   let __filename = fileURLToPath(import.meta.url);
   let __dirname = await path_dirname(__filename);
-  let result = await folder_repo_root_parent_resolve(__dirname);
+  let result = await folder_repos_resolve(__dirname);
   let v = express.static(result);
   let u = server_url_api();
   async function api_generic(req, res) {
