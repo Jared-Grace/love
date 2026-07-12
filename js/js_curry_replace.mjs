@@ -41,6 +41,7 @@ import { list_size_1 } from "./list_size_1.mjs";
 import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visitors.mjs";
+import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
 export async function js_curry_replace(ast) {
   let f_names = await functions_names();
   async function lambda2(la) {
@@ -133,6 +134,7 @@ export async function js_curry_replace(ast) {
   }
   let f_names_added = await list_adder_unique_async(lambda2);
   await js_imports_missing_add_specified(ast, f_names_added);
+  await js_imports_unused_remove(ast);
   function js_call_arguments_add(call, difference) {
     let args2 = js_call_arguments_get(call);
     list_add_multiple(args2, difference);
