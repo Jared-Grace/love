@@ -12,7 +12,7 @@ import { js_code_string } from "./js_code_string.mjs";
 import { firebase_name_repo } from "./firebase_name_repo.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
 import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
-import { text_and_empty_not_is_assert } from "./text_and_empty_not_is_assert.mjs";
+import { text_and_empty_not_is_assert_json } from "./text_and_empty_not_is_assert_json.mjs";
 export async function app_new_update_generic(
   name,
   fn_call,
