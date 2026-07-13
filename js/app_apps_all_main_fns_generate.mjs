@@ -8,12 +8,22 @@ import { list_sort_text } from "./list_sort_text.mjs";
 import { function_list_generate } from "./function_list_generate.mjs";
 export async function app_apps_all_main_fns_generate() {
   let prefixed = await apps_names_prefixed();
-  let identifiers = await data_identifiers_get();
-  let identifier_names = properties_get(identifiers);
-  let apps = list_intersect(prefixed, identifier_names);
-  list_sort_text(apps);
+  let identifier_names = await data_identifiers_get_properties();
+  let apps = list_intersect_sort_text(prefixed, identifier_names);
   await function_list_generate(app_apps_all_main_fns_generate, apps);
 }
+function list_intersect_sort_text(prefixed, identifier_names) {
+  let apps = list_intersect(prefixed, identifier_names);
+  list_sort_text(apps);
+  return apps;
+}
+
+async function data_identifiers_get_properties() {
+  let identifiers = await data_identifiers_get();
+  let identifier_names = properties_get(identifiers);
+  return identifier_names;
+}
+
 async function apps_names_prefixed() {
   let names = await apps_names();
   let prefixed = list_map_unique(names, app_shared_name_prefixed);
