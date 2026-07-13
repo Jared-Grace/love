@@ -32,15 +32,17 @@ export async function app_supper_verses_render(root, folders) {
     app_supper_passage_render(card, passage, remaining);
     app_supper_passage_arrows(passage_area, go_left, go_right);
   }
-  function go_left() {
-    index = list_get_wrap_index(passages, index + size - 1);
+  function go(new_index) {
+    index = new_index;
     app_supper_passage_index_set(index);
     show();
+    html_scroll_top_set(root, 0);
+  }
+  function go_left() {
+    go(list_get_wrap_index(passages, index + size - 1));
   }
   function go_right() {
-    index = list_get_wrap_index(passages, index + 1);
-    app_supper_passage_index_set(index);
-    show();
+    go(list_get_wrap_index(passages, index + 1));
   }
   show();
 }
