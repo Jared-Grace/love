@@ -9,9 +9,8 @@ import { list_find_property_curried_right_2 } from "./list_find_property_curried
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { html_p } from "./html_p.mjs";
-import { html_hr_2 } from "./html_hr_2.mjs";
+import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
 import { equal_not } from "./equal_not.mjs";
-import { list_first_not_is } from "./list_first_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { app_supper_verses_get } from "./app_supper_verses_get.mjs";
@@ -23,17 +22,15 @@ export async function app_supper_verses_render(root, folders) {
   let remaining = property_get(r, "remaining");
   let verses_first = property_get(r, "first");
   let previous_chapter_code = null;
+  let card = null;
   function lambda2(v) {
     let chapter_code = property_get(v, "chapter_code");
-    let n = list_first_not_is(verses_first, v);
-    if (n) {
-      if (equal_not(chapter_code, previous_chapter_code)) {
-        html_hr_2(root);
-      }
+    if (equal_not(chapter_code, previous_chapter_code)) {
+      card = app_shared_container_plain(root);
     }
     previous_chapter_code = chapter_code;
     let reference = property_get(v, "reference");
-    let p = html_p(root);
+    let p = html_p(card);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");
     let c = list_find_property_curried_right_2("reference", reference);
@@ -46,10 +43,10 @@ export async function app_supper_verses_render(root, folders) {
     html_p_text_multiple(p, texts);
   }
   each(verses_first, lambda2);
-  html_hr_2(root);
+  let prayer_card = app_shared_container_plain(root);
   function lambda(item) {
     let p2 = html_p_text(
-      root,
+      prayer_card,
       text_combine_multiple([
         "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Thanks. Help. Bless this ",
         item,
@@ -58,5 +55,5 @@ export async function app_supper_verses_render(root, folders) {
     );
   }
   each(["bread", "fruit of the vine"], lambda);
-  let p3 = html_p_text(root, "Sing hymn");
+  let p3 = html_p_text(prayer_card, "Sing hymn");
 }
