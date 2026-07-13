@@ -1,10 +1,10 @@
-import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { each } from "./each.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_supper_prayers_render(root) {
-  let prayer_card = app_shared_container_plain(root);
+  let prayer_card = app_shared_container_blue(root);
   function lambda(item) {
     let p2 = html_p_text(
       prayer_card,

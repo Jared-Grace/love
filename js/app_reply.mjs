@@ -35,7 +35,7 @@ import { list_add } from "./list_add.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
-import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { multiply } from "./multiply.mjs";
 export async function app_reply(context) {
   let r = await app_reply_initialize(context);
@@ -54,7 +54,7 @@ export async function app_reply(context) {
   let responses_buttons = [];
   let typed = null;
   typed_reset();
-  let card1 = app_shared_container_plain(root);
+  let card1 = app_shared_container_blue(root);
   let p = app_reply_languages_prompt(card1);
   function languages_chosen_reset() {
     app_reply_languages_chosen_reset(
@@ -80,7 +80,7 @@ export async function app_reply(context) {
     card1,
     languages,
   );
-  let card2 = app_shared_container_plain(root);
+  let card2 = app_shared_container_blue(root);
   html_p_text(
     card2,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
@@ -131,7 +131,7 @@ export async function app_reply(context) {
   }
   let buttons_responses = [];
   let component3 = app_replace_button(card2, html_button_copy_text(), copy_refresh);
-  let card3 = app_shared_container_plain(root);
+  let card3 = app_shared_container_blue(root);
   app_reply_main_shortcuts(
     card3,
     languages_chosen,
@@ -140,7 +140,7 @@ export async function app_reply(context) {
     buttons_languages,
     buttons_responses,
   );
-  let card4 = app_shared_container_plain(root);
+  let card4 = app_shared_container_blue(root);
   html_p_text(card4, "4. (Optional) Meeting:");
   async function lambda5() {
     await clipboard_copy(
@@ -148,7 +148,7 @@ export async function app_reply(context) {
     );
   }
   let component2 = app_replace_button(card4, "Meeting requested", lambda5);
-  let card5 = app_shared_container_plain(root);
+  let card5 = app_shared_container_blue(root);
   html_p_text(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
