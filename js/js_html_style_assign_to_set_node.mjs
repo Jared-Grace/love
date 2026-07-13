@@ -11,7 +11,7 @@ import { js_property_key_string_expression } from "./js_property_key_string_expr
 import { js_code_call } from "./js_code_call.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_copy } from "./object_copy.mjs";
-import { list_add } from "./list_add.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export function js_html_style_assign_to_set_node(node) {
@@ -37,8 +37,10 @@ export function js_html_style_assign_to_set_node(node) {
   let code = js_code_call(html_style_set.name);
   let expression = js_parse_expression(code);
   let arguments2 = js_call_arguments_get(expression);
-  list_add(arguments2, object_copy(b));
-  list_add(arguments2, key_expression);
-  list_add(arguments2, object_copy(value));
+  list_add_multiple(arguments2, [
+    object_copy(b),
+    key_expression,
+    object_copy(value),
+  ]);
   object_replace(node, expression);
 }
