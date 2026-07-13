@@ -25,6 +25,5 @@ export function app_apps_all_main_fns() {
     "app_search",
     "app_supper",
     "app_supper_tl",
-    "app_zztmp",
   ];
 }
