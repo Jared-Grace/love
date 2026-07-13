@@ -1,6 +1,6 @@
 import { app_chapter_open } from "./app_chapter_open.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
-import { html_margin } from "./html_margin.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_border_style } from "./html_border_style.mjs";
 import { html_border } from "./html_border.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -147,7 +147,7 @@ export async function app_search_results(context, div_results) {
         }
       }
       b = app_replace_button_wide(div_verse, reference, click);
-      html_margin(b, "0.2em");
+      html_style_margin_y(b, "0.2em");
       property_set_exists_not(b, "click", click);
       return b;
     }
