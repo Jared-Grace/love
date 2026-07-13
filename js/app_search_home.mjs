@@ -18,6 +18,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_border_style } from "./html_border_style.mjs";
 import { html_border } from "./html_border.mjs";
 import { app_replace_button_rule_background_color } from "./app_replace_button_rule_background_color.mjs";
+import { html_style_font_size_inherit } from "./html_style_font_size_inherit.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
@@ -49,6 +50,7 @@ export function app_search_home(context) {
   html_style_background_color_set(input, "white");
   html_border_style(input, "solid");
   html_border(input, "0.1em", app_replace_button_rule_background_color());
+  html_style_font_size_inherit(input);
   html_focus(input);
   html_on_enter(input, search);
   let text = "Search";
