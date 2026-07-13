@@ -1,4 +1,4 @@
-import { list_is_assert } from "./list_is_assert.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { each } from "./each.mjs";
 import { log } from "./log.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -10,7 +10,12 @@ import { json_to } from "./json_to.mjs";
 import { graph_search_depth_first } from "./graph_search_depth_first.mjs";
 import { app_replace_rule_set_verify_goal_depth_max } from "./app_replace_rule_set_verify_goal_depth_max.mjs";
 export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
-  each([start, end], list_is_assert);
+  function lambda4(item) {
+    list_is_assert_json(item, {
+      hint: "both the start and end states should be lists to verify a path between them",
+    });
+  }
+  each([start, end], lambda4);
   log(app_replace_rule_set_verify_from_try.name, {
     rules_parsed,
     start,
