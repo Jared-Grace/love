@@ -9,7 +9,7 @@ import { app_reply_called_why } from "./app_reply_called_why.mjs";
 import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
 import { property_combine } from "./property_combine.mjs";
 import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
-import { html_button } from "./html_button.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
 import { each } from "./each.mjs";
 import { property_get_invoke } from "./property_get_invoke.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -187,7 +187,7 @@ export function app_reply_main_shortcuts(
       }
       each(responses, lambda7);
     }
-    let component = html_button(root, name, lambda5);
+    let component = app_replace_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
 }
