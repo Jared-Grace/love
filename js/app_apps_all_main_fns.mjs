@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 export function app_apps_all_main_fns() {
   return [
     "app_a",
