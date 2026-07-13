@@ -36,6 +36,7 @@
       "Bash(uniq:*)",
       "Bash(node --check:*)",
       "Bash(node scripts/g.mjs ai)",
+      "Bash(node scripts/r.mjs app_shared_dev_build:*)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
       "Write(/tmp/claude-1000/-home-j-repos-love/**)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
