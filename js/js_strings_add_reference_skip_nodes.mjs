@@ -3,7 +3,7 @@ import { js_call_named_argument_nodes } from "./js_call_named_argument_nodes.mjs
 import { js_import_source_nodes } from "./js_import_source_nodes.mjs";
 import { each } from "./each.mjs";
 import { list_adder } from "./list_adder.mjs";
-export function js_strings_dot_name_skip_nodes(ast) {
+export function js_strings_add_reference_skip_nodes(ast) {
   let key_fns = [
     fn_name("property_get"),
     fn_name("property_set"),
