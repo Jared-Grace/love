@@ -32,7 +32,7 @@ import { app_replace_button } from "./app_replace_button.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_reply_love } from "./app_reply_love.mjs";
 import { list_add } from "./list_add.mjs";
-import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
@@ -81,7 +81,7 @@ export async function app_reply(context) {
     languages,
   );
   let card2 = app_shared_container_blue(root);
-  html_p_text(
+  app_shared_text_body(
     card2,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
   );
@@ -141,7 +141,7 @@ export async function app_reply(context) {
     buttons_responses,
   );
   let card4 = app_shared_container_blue(root);
-  html_p_text(card4, "4. (Optional) Meeting:");
+  app_shared_text_body(card4, "4. (Optional) Meeting:");
   async function lambda5() {
     await clipboard_copy(
       "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
@@ -149,7 +149,7 @@ export async function app_reply(context) {
   }
   let component2 = app_replace_button(card4, "Meeting requested", lambda5);
   let card5 = app_shared_container_blue(root);
-  html_p_text(card5, "5. (Optional) Choose any responses:");
+  app_shared_text_body(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
     let text = property_get(choice, "text");
