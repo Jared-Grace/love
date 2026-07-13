@@ -1,6 +1,9 @@
-import { assert_json_get } from "./assert_json_get.mjs";
+import { assert_json } from "./assert_json.mjs";
 import { list_is } from "./list_is.mjs";
-export function list_is_assert_json(list, lambda) {
+export function list_is_assert_json(list, json) {
   let result = list_is(list);
-  assert_json_get(result, lambda);
+  assert_json(result, {
+    list,
+    json,
+  });
 }
