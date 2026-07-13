@@ -18,6 +18,5 @@ export async function app_supper_versions(context) {
     "bible_folder",
     on_change,
     "Versions",
-    "Order shown in verses",
   );
 }
