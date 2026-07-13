@@ -1,9 +1,6 @@
 import { app_chapter_open } from "./app_chapter_open.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
-import { html_style_padding_x } from "./html_style_padding_x.mjs";
-import { html_border_style } from "./html_border_style.mjs";
-import { html_border } from "./html_border.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
+import { html_card } from "./html_card.mjs";
 import { html_br_2 } from "./html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -110,11 +107,8 @@ export async function app_search_results(context, div_results) {
     }
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);
-      html_border_radius(div_verse, "1em");
-      html_border(div_verse, "0.2em", "green");
-      html_border_style(div_verse, "solid");
+      html_card(div_verse);
       html_style_margin_y(div_verse, "0.2em");
-      html_style_padding_x(div_verse, "0.2em");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
