@@ -5,7 +5,6 @@ import { text_size } from "./text_size.mjs";
 import { text_is } from "./text_is.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_is_assert_json } from "./list_is_assert_json.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
 import { each } from "./each.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { list_get } from "./list_get.mjs";
@@ -57,16 +56,15 @@ export async function reply_wrap_invoke(item, possibilities) {
       };
     }
   }
-  list_is_assert(possibilities);
+  list_is_assert_json(possibilities, {
+    hint: "the possibilities to match against should be a list",
+  });
   let result = await wrapped(possibilities);
-  function lambda() {
-    let v = {
-      possibilities,
-      wrapped,
-      result,
-    };
-    return v;
-  }
-  list_is_assert_json(result, lambda);
+  list_is_assert_json(result, {
+    hint: "the wrapped matcher should return the possibilities list",
+    possibilities,
+    wrapped,
+    result,
+  });
   return result;
 }
