@@ -1,6 +1,6 @@
 import { app_chapter_open } from "./app_chapter_open.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
-import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_br_2 } from "./html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -106,7 +106,7 @@ export async function app_search_results(context, div_results) {
       return null;
     }
     function each_verse_number(verse_number) {
-      let div_verse = app_shared_container_plain(div_results);
+      let div_verse = app_shared_container_blue(div_results);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
