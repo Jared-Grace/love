@@ -18,7 +18,9 @@ export async function app_new_update_generic(
   fn_call,
   f_name_transformed,
 ) {
-  text_and_empty_not_is_assert(name);
+  text_and_empty_not_is_assert_json(name, {
+    hint: "the app name should be non-empty text — was it blank?",
+  });
   let a_name = app_shared_name_prefixed(name);
   let v = await function_name_to_path_search(a_name);
   let repo_name = property_get(v, "repo_name");
