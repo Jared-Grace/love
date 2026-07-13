@@ -43,7 +43,7 @@ export async function webpack_watch() {
     let r = await catch_ignore_async(lambda);
     return r;
   }
-  let built = await list_map_unordered_async(a_names, app_deps_get);
+  let built = await list_map_async(a_names, app_deps_get);
   let app_deps = list_filter(built, null_not_is);
   log(webpack_watch.name, {
     apps: a_names,
