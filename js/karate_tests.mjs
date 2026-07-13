@@ -6,7 +6,7 @@ import { app_karate_main_title } from "../../karate_code/js/app_karate_main_titl
 import { app_karate } from "../../karate_code/js/app_karate.mjs";
 import { playwright_by_attribute } from "./playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "./playwright_by_attribute_type.mjs";
-import { equal_assert } from "./equal_assert.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function karate_tests() {
   text_combine("TODO: fix url like ", app_replace_url_dev);
@@ -14,7 +14,9 @@ export async function karate_tests() {
   async function lambda(page) {
     let title_actual = await page.title();
     let title = app_karate_main_title();
-    equal_assert(title_actual, title);
+    equal_assert_json(title_actual, title, {
+      hint: "the page title should match the app's expected title — did the app load the right screen?",
+    });
     await sleep_seconds(10);
     return;
     ("this assert is a smoke test");
