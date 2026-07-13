@@ -5,7 +5,7 @@ import { text_is_assert } from "./text_is_assert.mjs";
 import { list_all } from "./list_all.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function text_unique(used, name, prefix) {
-  list_all(used, text_is_assert);
+  text_is_assert_multiple(used);
   let unique = null;
   let attempt = 1;
   do {
@@ -17,4 +17,8 @@ export function text_unique(used, name, prefix) {
     attempt++;
   } while (text_empty_is(unique) || list_includes(used, unique));
   return unique;
+}
+
+function text_is_assert_multiple(used) {
+  list_all(used, text_is_assert);
 }
