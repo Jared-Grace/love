@@ -2,7 +2,7 @@ import { g_game_prefix } from "./g_game_prefix.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { html_img } from "./html_img.mjs";
 import { g_character_img_url } from "./g_character_img_url.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { g_gender_male } from "./g_gender_male.mjs";
 import { g_gender_female } from "./g_gender_female.mjs";
 import { app_g_container } from "./app_g_container.mjs";

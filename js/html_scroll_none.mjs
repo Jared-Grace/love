@@ -5,8 +5,8 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function html_scroll_none(component) {
   html_style_assign(component, {
-    scrollbarWidth: "none",
-    msOverflowStyle: "none",
+    "scrollbar-width": "none",
+    "-ms-overflow-style": "none",
   });
   let u = uuid_browser();
   html_data_set(component, html_scroll_none.name, u);

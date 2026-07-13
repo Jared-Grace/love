@@ -20,9 +20,9 @@ export function g_icon_cross_unpositioned(parent) {
   ]);
   html_style_assign(i, {
     display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "flex-start",
-    textShadow: text_combine_multiple([
+    "justify-content": "flex-end",
+    "align-items": "flex-start",
+    "text-shadow": text_combine_multiple([
       "0 0 ",
       glow_size,
       " white, 0 0 ",
@@ -32,8 +32,8 @@ export function g_icon_cross_unpositioned(parent) {
       " white",
     ]),
     color: "#1fd000ff",
-    textAlign: "right",
-    fontSize: square_size,
+    "text-align": "right",
+    "font-size": square_size,
   });
   return i;
 }
