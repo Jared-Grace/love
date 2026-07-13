@@ -34,6 +34,7 @@ import { list_add } from "./list_add.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
+import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
 import { multiply } from "./multiply.mjs";
 export async function app_reply(context) {
   let r = await app_reply_initialize(context);
@@ -52,7 +53,8 @@ export async function app_reply(context) {
   let responses_buttons = [];
   let typed = null;
   typed_reset();
-  let p = app_reply_languages_prompt(root);
+  let card1 = app_shared_container_plain(root);
+  let p = app_reply_languages_prompt(card1);
   function languages_chosen_reset() {
     app_reply_languages_chosen_reset(
       languages_chosen,
@@ -71,14 +73,15 @@ export async function app_reply(context) {
     await update(3);
     languages_chosen = languages_chosen_before;
   }
-  let component4 = app_replace_button(root, "❤️", love);
+  let component4 = app_replace_button(card1, "❤️", love);
   let buttons_languages = app_reply_buttons_languages(
     languages_chosen,
-    root,
+    card1,
     languages,
   );
+  let card2 = app_shared_container_plain(root);
   html_p_text(
-    root,
+    card2,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
   );
   let choices_verse_count = [];
@@ -97,7 +100,7 @@ export async function app_reply(context) {
     async function lambda3() {
       await update(c);
     }
-    let component = app_replace_button(root, c, lambda3);
+    let component = app_replace_button(card2, c, lambda3);
   }
   each(choices_verse_count, lambda2);
   let visible_count = null;
@@ -126,23 +129,26 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let component3 = app_replace_button(root, "Copy", copy_refresh);
+  let component3 = app_replace_button(card2, "Copy", copy_refresh);
+  let card3 = app_shared_container_plain(root);
   app_reply_main_shortcuts(
-    root,
+    card3,
     languages_chosen,
     languages,
     update,
     buttons_languages,
     buttons_responses,
   );
-  html_p_text(root, "4. (Optional) Meeting:");
+  let card4 = app_shared_container_plain(root);
+  html_p_text(card4, "4. (Optional) Meeting:");
   async function lambda5() {
     await clipboard_copy(
       "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
     );
   }
-  let component2 = app_replace_button(root, "Meeting requested", lambda5);
-  html_p_text(root, "5. (Optional) Choose any responses:");
+  let component2 = app_replace_button(card4, "Meeting requested", lambda5);
+  let card5 = app_shared_container_plain(root);
+  html_p_text(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
     let text = property_get(choice, "text");
@@ -157,7 +163,7 @@ export async function app_reply(context) {
       typed_reset();
       visible_count = buttons_refresh();
     }
-    b = app_replace_button(root, text, click);
+    b = app_replace_button(card5, text, click);
     object_merge_set(b, choice);
     object_merge_set(b, {
       click,
