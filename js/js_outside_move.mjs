@@ -5,14 +5,16 @@ import { each } from "./each.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { function_new_declaration_from } from "./function_new_declaration_from.mjs";
-import { file_exists_not_assert } from "./file_exists_not_assert.mjs";
+import { file_exists_not_assert_json } from "./file_exists_not_assert_json.mjs";
 import { each_async } from "./each_async.mjs";
 export async function js_outside_move(ast) {
   let body = property_get(ast, "body");
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
   async function lambda(fd) {
     let f_path = js_function_declaration_name_to_path(fd);
-    await file_exists_not_assert(f_path);
+    await file_exists_not_assert_json(f_path, {
+      hint: "a file already exists at the function's target path — was it already extracted?",
+    });
   }
   await each_async(fds, lambda);
   async function lambda2(fd) {
