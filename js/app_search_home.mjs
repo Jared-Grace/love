@@ -12,6 +12,8 @@ import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { html_focus } from "./html_focus.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_input_text } from "./html_input_text.mjs";
+import { app_replace_button_style } from "./app_replace_button_style.mjs";
+import { html_style_padding_em } from "./html_style_padding_em.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
@@ -38,6 +40,8 @@ export function app_search_home(context) {
   let p2 = html_p_text(root, text_combine("2. ", search_instructions));
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
+  app_replace_button_style(input);
+  html_style_padding_em(input, "0.3");
   html_focus(input);
   html_on_enter(input, search);
   let text = "Search";
