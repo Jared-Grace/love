@@ -4,6 +4,7 @@ import { function_param_delete_curried } from "./function_param_delete_curried.m
 import { each_async } from "./each_async.mjs";
 export async function function_params_delete(f_name, param_names_comma) {
   text_is_assert_json(param_names_comma, {
+    hint: "the comma-separated parameter names should be text — did an empty or non-text value arrive?",
     f_name,
     param_names_comma,
   });

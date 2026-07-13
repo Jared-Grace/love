@@ -15,6 +15,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ebible_languages_add_item_info(bible_folder) {
   text_combine("gets language information for ", bible_folder);
   text_is_assert_json(bible_folder, {
+    hint: "the bible folder should be text so its language info can be fetched — did an empty or non-text value arrive?",
     bible_folder,
   });
   let prefix = ebible_url_details();

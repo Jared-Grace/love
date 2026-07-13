@@ -6,6 +6,7 @@ import { list_first_remaining } from "./list_first_remaining.mjs";
 import { each } from "./each.mjs";
 export function text_split_multiple(t, delimiters) {
   text_is_assert_json(t, {
+    hint: "the text to split should be text here — did an empty or non-text value arrive?",
     t,
     delimiters,
   });

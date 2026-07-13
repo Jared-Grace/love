@@ -4,6 +4,7 @@ import { property_set } from "./property_set.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 export function js_string(value_string) {
   text_is_assert_json(value_string, {
+    hint: "a text value is needed to build a string literal — did a non-text value arrive?",
     value_string,
   });
   let s = js_parse_expression('""');

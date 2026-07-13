@@ -8,6 +8,7 @@ export async function app_api(a) {
   arguments_assert(arguments, 1);
   let f_name = property_get(a, "f_name");
   text_is_assert_json(f_name, {
+    hint: "the request should carry a text f_name to call — is f_name present on the request?",
     a,
   });
   let fn_http = http_post_json;
