@@ -11,7 +11,6 @@ export function app_bible_subset_screen_generic(
   key_property,
   on_change,
   choices_label,
-  order_label,
 ) {
   let root = html_clear_context(context);
   html_centered(root);
@@ -27,6 +26,5 @@ export function app_bible_subset_screen_generic(
     key_property,
     on_change,
     choices_label,
-    order_label,
   );
 }
