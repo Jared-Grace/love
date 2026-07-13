@@ -28,7 +28,7 @@ import { list_copy_reverse } from "./list_copy_reverse.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 import { each } from "./each.mjs";
-import { html_button } from "./html_button.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
 import { app_reply_love } from "./app_reply_love.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -71,7 +71,7 @@ export async function app_reply(context) {
     await update(3);
     languages_chosen = languages_chosen_before;
   }
-  let component4 = html_button(root, "❤️", love);
+  let component4 = app_replace_button(root, "❤️", love);
   let buttons_languages = app_reply_buttons_languages(
     languages_chosen,
     root,
@@ -97,7 +97,7 @@ export async function app_reply(context) {
     async function lambda3() {
       await update(c);
     }
-    let component = html_button(root, c, lambda3);
+    let component = app_replace_button(root, c, lambda3);
   }
   each(choices_verse_count, lambda2);
   let visible_count = null;
@@ -126,7 +126,7 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let component3 = html_button(root, "Copy", copy_refresh);
+  let component3 = app_replace_button(root, "Copy", copy_refresh);
   app_reply_main_shortcuts(
     root,
     languages_chosen,
@@ -141,7 +141,7 @@ export async function app_reply(context) {
       "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
     );
   }
-  let component2 = html_button(root, "Meeting requested", lambda5);
+  let component2 = app_replace_button(root, "Meeting requested", lambda5);
   html_p_text(root, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
@@ -157,7 +157,7 @@ export async function app_reply(context) {
       typed_reset();
       visible_count = buttons_refresh();
     }
-    b = html_button(root, text, click);
+    b = app_replace_button(root, text, click);
     object_merge_set(b, choice);
     object_merge_set(b, {
       click,

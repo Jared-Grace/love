@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { app_search_results } from "./app_search_results.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { html_button_wide } from "./html_button_wide.mjs";
+import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { html_focus } from "./html_focus.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_input_text } from "./html_input_text.mjs";
@@ -41,7 +41,7 @@ export function app_search_home(context) {
   html_focus(input);
   html_on_enter(input, search);
   let text = "Search";
-  html_button_wide(root, text, search);
+  app_replace_button_wide(root, text, search);
   html_br_2(root);
   let div_results = html_div(root);
   async function search() {
