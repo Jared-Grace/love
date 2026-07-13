@@ -21,6 +21,7 @@ import { js_await_add } from "./js_await_add.mjs";
 import { js_operators_to_calls } from "./js_operators_to_calls.mjs";
 import { js_identifiers_rename_unused_number_suffixes } from "./js_identifiers_rename_unused_number_suffixes.mjs";
 import { js_declaration_unused_to_expression } from "./js_declaration_unused_to_expression.mjs";
+import { js_strings_fn_names_dot_name_maximal } from "./js_strings_fn_names_dot_name_maximal.mjs";
 export function js_auto_transforms() {
   let transforms = [
     js_operators_to_calls,
@@ -46,6 +47,7 @@ export function js_auto_transforms() {
     js_destructure_functionize,
     js_identifiers_rename_unused_number_suffixes,
     js_log_f_name_add,
+    js_strings_fn_names_dot_name_maximal,
   ];
   return transforms;
   return;
