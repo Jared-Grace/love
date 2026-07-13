@@ -10,9 +10,9 @@ export function app_supper_verse_color(index, count) {
     t = divide(index, last);
   }
   let f = subtract(1, t);
-  let r = round(multiply(30, f));
-  let g = round(multiply(58, f));
-  let b = round(multiply(138, f));
+  let r = round(multiply(37, f));
+  let g = round(multiply(99, f));
+  let b = round(multiply(235, f));
   let color = text_combine_multiple(["rgb(", r, ", ", g, ", ", b, ")"]);
   return color;
 }
