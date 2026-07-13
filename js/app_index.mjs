@@ -22,6 +22,7 @@ export function app_index(context) {
     }
     let card = app_shared_container(root);
     let component = app_replace_button_wide(card, without, lambda2);
+    app_shared_button_screen_green_style_assign(component);
     let text = property_get(a, "text");
     let div = html_div_text_centered(card, text);
   }
