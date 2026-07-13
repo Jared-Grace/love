@@ -1,4 +1,4 @@
 export function app_shared_name_prefix() {
-  let v = "app";
-  return v;
+  let p = "app";
+  return p;
 }
