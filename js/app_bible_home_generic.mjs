@@ -247,18 +247,13 @@ export async function app_bible_home_generic(context, lambda$a) {
     chapter_code,
     verse_number,
   });
-  let d = html_div(content);
-  html_display_flex(d);
-  let verse_pickers = d;
   async function lambda() {
     await app_bible_verse_previous(context, chapter_code, verse_current);
   }
-  let l = app_replace_button_arrow_left(verse_pickers, lambda);
   async function lambda7() {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
-  let r = app_replace_button_arrow_right(verse_pickers, lambda7);
-  html_flex_grow_1_multiple([l, r]);
+  app_shared_arrows_wide(content, lambda, lambda7);
   list_add_multiple(languages_verses, languages_available);
   let v4 = {
     bar,
