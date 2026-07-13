@@ -3,7 +3,7 @@ import { app_prefix_without } from "./app_prefix_without.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { html_p } from "./html_p.mjs";
-import { html_button_wide } from "./html_button_wide.mjs";
+import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { window_open_app_curried_right } from "./window_open_app_curried_right.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,7 +20,7 @@ export function app_index(context) {
       lambda(fn);
     }
     let p = html_p(root);
-    let component = html_button_wide(p, without, lambda2);
+    let component = app_replace_button_wide(p, without, lambda2);
     let text = property_get(a, "text");
     let div = html_div_text_centered(p, text);
   }
