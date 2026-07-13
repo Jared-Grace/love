@@ -10,6 +10,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function command_line_generic(command, extra) {
   arguments_assert(arguments, 2);
   text_is_assert_json(command, {
+    hint: "command should be text so it can be run — did an empty or missing value arrive?",
     command,
   });
   let r3 = await import("child_process");

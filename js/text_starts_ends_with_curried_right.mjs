@@ -15,6 +15,7 @@ export function text_starts_ends_with_curried_right(
   text_is_assert_multiple([f_name_prefix, f_name_suffix_before]);
   let r = function text_starts_ends_with_curry_right_result(f_name) {
     text_is_assert_json(f_name, {
+      hint: "each function name being checked should be text — did a non-text value arrive?",
       f_name,
       f_name_prefix,
       f_name_suffix_before,

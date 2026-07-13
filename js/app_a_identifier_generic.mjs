@@ -142,6 +142,7 @@ export function app_a_identifier_generic(
         fn: async function lambda2() {
           let name_new = await clipboard_paste();
           text_is_assert_json(name_new, {
+            hint: "the pasted replacement should be text — is there text on the clipboard to paste?",
             name,
             name_new,
           });

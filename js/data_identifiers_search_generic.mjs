@@ -6,6 +6,7 @@ import { list_map } from "./list_map.mjs";
 import { property_get_curried } from "./property_get_curried.mjs";
 export async function data_identifiers_search_generic(fn, ids_comma) {
   text_is_assert_json(ids_comma, {
+    hint: "the comma-separated identifiers should be text — did an empty or non-text value arrive?",
     ids_comma,
   });
   let identifiers = await fn();

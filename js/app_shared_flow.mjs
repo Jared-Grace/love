@@ -11,6 +11,7 @@ import { storage_local_get_context } from "./storage_local_get_context.mjs";
 export function app_shared_flow(context, screens, before_or_after, find) {
   let current = storage_local_get_context(context, "screen");
   text_is_assert_json(current, {
+    hint: "the current screen should be set in storage before the flow can move — was a screen chosen for this context yet?",
     context,
     current,
   });

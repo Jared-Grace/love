@@ -6,6 +6,7 @@ import { global_function_property_exists } from "./global_function_property_exis
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
 export async function file_overwrite(file_path, contents) {
   text_is_assert_json(contents, {
+    hint: "the file contents should be text before writing — did a non-text value arrive?",
     file_path,
   });
   let exists = global_function_property_exists(
