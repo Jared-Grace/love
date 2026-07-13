@@ -18,7 +18,3 @@ export function text_unique(used, name, prefix) {
   } while (text_empty_is(unique) || list_includes(used, unique));
   return unique;
 }
-
-function text_is_assert_multiple(used) {
-  list_all(used, text_is_assert);
-}
