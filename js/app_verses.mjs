@@ -8,15 +8,19 @@ import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
+import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_empty } from "./list_empty.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_verses(context) {
   let r = await app_reply_initialize(context);
@@ -40,15 +44,21 @@ export async function app_verses(context) {
   );
   let card2 = app_shared_container_blue(root);
   app_shared_text_body(card2, "2. How many Bible verses would you like?");
-  let count_label = app_shared_text_body(card2, "");
-  count_label_refresh();
   let counts = [1, 2, 3, 4, 6, 8, 10, 20, 40];
+  let count_updates = [];
   function count_each(c) {
-    function choose() {
+    let component = null;
+    function on_click() {
       verse_count = c;
-      count_label_refresh();
+      counts_refresh();
     }
-    let b = app_replace_button(card2, c, choose);
+    component = app_replace_button(card2, c, on_click);
+    function update() {
+      let chosen = equal(verse_count, c);
+      app_shared_button_toggle_style(chosen, component);
+    }
+    list_add(count_updates, update);
+    update();
   }
   each(counts, count_each);
   let card3 = app_shared_container_blue(root);
@@ -63,8 +73,12 @@ export async function app_verses(context) {
   );
   let copy_button = app_replace_button(card3, html_button_copy_text(), copy);
   let card4 = app_shared_container_blue(root);
-  function count_label_refresh() {
-    html_text_set(count_label, "You chose " + verse_count + ".");
+  card4_refresh();
+  function counts_refresh() {
+    each(count_updates, count_update_invoke);
+  }
+  function count_update_invoke(update) {
+    update();
   }
   async function generate() {
     list_empty(bible_texts);
@@ -91,9 +105,14 @@ export async function app_verses(context) {
   function display() {
     html_clear(card4);
     each(bible_texts, display_line);
+    card4_refresh();
   }
   function display_line(line) {
     app_shared_text_body(card4, line);
+  }
+  function card4_refresh() {
+    let empty = list_empty_is(bible_texts);
+    html_display_none_or_block(empty, card4);
   }
   async function copy() {
     let joined = await list_join_newline_2_copy(bible_texts);
