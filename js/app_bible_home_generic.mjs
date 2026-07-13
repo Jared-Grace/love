@@ -1,6 +1,5 @@
 import { app_chapter_open_en } from "./app_chapter_open_en.mjs";
-import { html_flex_grow_1_multiple } from "./html_flex_grow_1_multiple.mjs";
-import { html_display_flex } from "./html_display_flex.mjs";
+import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
 import { app_bible_button_chapter_previous } from "./app_bible_button_chapter_previous.mjs";
 import { app_bible_button_chapter_next } from "./app_bible_button_chapter_next.mjs";
 import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
@@ -15,8 +14,6 @@ import { html_span } from "./html_span.mjs";
 import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
 import { app_bible_verses } from "./app_bible_verses.mjs";
 import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
-import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
-import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
