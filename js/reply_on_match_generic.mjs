@@ -2,10 +2,12 @@ import { invoke_multiple_args } from "./invoke_multiple_args.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { reply_matches } from "./reply_matches.mjs";
 import { reply_wrap_invoke } from "./reply_wrap_invoke.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 export function reply_on_match_generic(fn, before, after, on_args, lambdas) {
   let v = async function reply_on_match_inner(possibilities) {
-    list_is_assert(possibilities);
+    list_is_assert_json(possibilities, {
+      hint: "the possibilities to match against should be a list",
+    });
     possibilities = await reply_wrap_invoke(fn, possibilities);
     let b = before(possibilities);
     let filtered = reply_matches(possibilities);
