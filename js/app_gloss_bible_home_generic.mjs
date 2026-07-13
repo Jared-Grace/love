@@ -52,7 +52,7 @@ export async function app_gloss_bible_home_generic(
   }
   function lambda5(t) {
     let div = html_div_text(p, t);
-    html_font_color_set_green(div);
+    html_font_color_set(div, "#15803dff");
   }
   each(texts, lambda5);
   let explains_json = property_get(passage, generated);
@@ -78,15 +78,15 @@ export async function app_gloss_bible_home_generic(
     let explain = property_get(e, "explain");
     let span = html_span_text(div2, word);
     html_bold_mild(span);
-    html_font_color_set(span, "#e40000ff");
+    html_font_color_set(span, "#b91c1cff");
     let c = html_span_colon_2(div2);
     html_font_color_set(c, "#aaa");
     let span2 = html_span_text(div2, gloss);
-    html_font_color_set(span2, "#2563ebff");
+    html_font_color_set(span2, "#1d4ed8ff");
     let c2 = html_span_colon_2(div2);
     html_font_color_set(c2, "#aaa");
     let span3 = html_span_text(div2, explain);
-    html_font_color_set(span3, "#7b3f97ff");
+    html_font_color_set(span3, "#a21cafff");
   }
   each(explains, lambda);
   async function lambda6() {
