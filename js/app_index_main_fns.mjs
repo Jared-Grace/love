@@ -6,6 +6,10 @@ export function app_index_main_fns() {
       text: "Allows you to choose languages, multiple encouraging bible verses and responses to copy and paste as messages",
     },
     {
+      app_fn: fn_name("app_verses"),
+      text: "Lets you choose languages and how many random encouraging Bible verses you would like, then generates and copies them for you to share",
+    },
+    {
       app_fn: fn_name("app_search"),
       text: "Allows search across multiple versions of the Bible in English and copying results in multiple languages",
     },
