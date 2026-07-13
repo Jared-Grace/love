@@ -39,7 +39,7 @@ import { app_a_parenthesis_wrap } from "./app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "./js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "./app_a_keyword_purple_space.mjs";
 import { app_a_body } from "./app_a_body.mjs";
-import { false_is_assert } from "./false_is_assert.mjs";
+import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { list_empty_is_assert } from "./list_empty_is_assert.mjs";
 import { js_keyword_export } from "./js_keyword_export.mjs";
 import { app_a_keyword_purple } from "./app_a_keyword_purple.mjs";
@@ -181,9 +181,13 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, key);
       let shorthand = property_get(node, "shorthand");
       let method = property_get(node, "method");
-      false_is_assert(method);
+      false_is_assert_json(method, {
+        hint: "object property methods aren't rendered here yet",
+      });
       let computed = property_get(node, "computed");
-      false_is_assert(computed);
+      false_is_assert_json(computed, {
+        hint: "computed object property keys aren't rendered here yet",
+      });
       if (not(shorthand)) {
         let c = js_code_colon();
         let span4 = html_span_text(parent, c);
@@ -217,9 +221,13 @@ export function app_a_function_node(a) {
     },
     ["MemberExpression"]: function lambda21() {
       let computed2 = property_get(node, "computed");
-      false_is_assert(computed2);
+      false_is_assert_json(computed2, {
+        hint: "computed member access isn't rendered here yet",
+      });
       let optional = property_get(node, "optional");
-      false_is_assert(optional);
+      false_is_assert_json(optional, {
+        hint: "optional chaining isn't rendered here yet",
+      });
       let object = property_get(node, "object");
       app_a_function_node_child(a, object);
       html_span_text(parent, ".");
