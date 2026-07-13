@@ -1,12 +1,14 @@
 import { function_name_unalias_only } from "./function_name_unalias_only.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_is_assert_multiple } from "./text_is_assert_multiple.mjs";
+import { text_is_assert_multiple_json } from "./text_is_assert_multiple_json.mjs";
 import { function_alias_generic } from "./function_alias_generic.mjs";
 import { property_set } from "./property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
   let items = [alias_old, f_name];
-  text_is_assert_multiple(items);
+  text_is_assert_multiple_json(items, {
+    hint: "the alias and function name should both be text",
+  });
   f_name = await function_name_unalias_only(f_name);
   function lambda(a) {
     let aliases = property_get(a, "aliases");
