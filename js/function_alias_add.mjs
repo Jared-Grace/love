@@ -1,6 +1,6 @@
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_identifier_is_assert } from "./js_identifier_is_assert.mjs";
+import { js_identifier_is_assert_json } from "./js_identifier_is_assert_json.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { undefined_not_is_assert_json } from "./undefined_not_is_assert_json.mjs";
 import { list_sort_text_size } from "./list_sort_text_size.mjs";
@@ -12,7 +12,10 @@ export async function function_alias_add(first, second) {
   list_sort_text_size(list);
   let [alias, f_name] = list;
   let expression = js_parse_expression(f_name);
-  js_identifier_is_assert(expression);
+  js_identifier_is_assert_json(expression, {
+    hint: "the function name should parse as a single identifier — is it a valid name?",
+    f_name,
+  });
   undefined_not_is_assert_json(f_name, {
     hint: "the function name to alias shouldn't be undefined",
   });
