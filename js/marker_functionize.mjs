@@ -4,7 +4,7 @@ import { js_marker_named_ast_arg } from "./js_marker_named_ast_arg.mjs";
 import { marker_next_index } from "./marker_next_index.mjs";
 import { function_current_get } from "./function_current_get.mjs";
 import { function_transform } from "./function_transform.mjs";
-import { assert } from "./assert.mjs";
+import { assert_message } from "./assert_message.mjs";
 import { property_get } from "./property_get.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   let f_name = await function_current_get();
@@ -18,7 +18,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let index_to = property_get(v3, "index");
     let stack_2_from = property_get(a_from, "stack_2");
     let stack_2_to = property_get(a_to, "stack_2");
-    assert(stack_2_from === stack_2_to);
+    assert_message(stack_2_from === stack_2_to, "The two markers were expected to live in the same block. Would you like to check that both sit in the same scope?");
     await js_functionize(ast, f_name_new, stack_2_from, index_from, index_to);
   }
 }
