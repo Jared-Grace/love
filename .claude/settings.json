@@ -17,7 +17,6 @@
       "Bash(du:*)",
       "Bash(ps:*)",
       "Bash(sleep:*)",
-      "Bash(timeout:*)",
       "Bash(git check-ignore:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
