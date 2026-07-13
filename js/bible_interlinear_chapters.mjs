@@ -1,7 +1,7 @@
 import { each_object } from "./each_object.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
-import { equal_assert } from "./equal_assert.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
 import { ebible_reference_parts } from "./ebible_reference_parts.mjs";
 import { list_single } from "./list_single.mjs";
 import { ebible_references_names } from "./ebible_references_names.mjs";
