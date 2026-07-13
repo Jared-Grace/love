@@ -1,4 +1,4 @@
-import { integer_is_assert } from "./integer_is_assert.mjs";
+import { integer_is_assert_json } from "./integer_is_assert_json.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_size } from "./text_size.mjs";
@@ -39,7 +39,10 @@ export async function reply_wrap_invoke(item, possibilities) {
           let empty = item === "";
           let delta = 1;
           if (si) {
-            integer_is_assert(size);
+            integer_is_assert_json(size, {
+              hint: "the text size should be a whole number so the token index can advance by it",
+              item,
+            });
             delta = size;
           }
           let matches = matches_previous && (e || empty);
