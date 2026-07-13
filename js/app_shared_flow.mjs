@@ -1,4 +1,4 @@
-import { text_is_assert } from "./text_is_assert.mjs";
+import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { not } from "./not.mjs";
@@ -10,7 +10,10 @@ import { property_get } from "./property_get.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
 export function app_shared_flow(context, screens, before_or_after, find) {
   let current = storage_local_get_context(context, "screen");
-  text_is_assert(current);
+  text_is_assert_json(current, {
+    context,
+    current,
+  });
   function lambda(item2) {
     let fn = property_get(item2, "fn");
     let self = property_get(fn, "name");

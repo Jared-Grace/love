@@ -1,9 +1,11 @@
 import { list_filter_text_match_ordered } from "./list_filter_text_match_ordered.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { apps_names } from "./apps_names.mjs";
-import { text_is_assert } from "./text_is_assert.mjs";
+import { text_is_assert_json } from "./text_is_assert_json.mjs";
 export async function app_shared_name_search_multiple(search) {
-  text_is_assert(search);
+  text_is_assert_json(search, {
+    search,
+  });
   let mapped = await apps_names();
   let includes = list_includes(mapped, search);
   let a_names = null;
