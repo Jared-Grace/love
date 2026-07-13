@@ -41,7 +41,10 @@ export function js_marker_name_get(v) {
   }
   let stack_2 = list_get_end(stack, 2);
   let a5 = list_is(stack_2);
-  assert_message(a5, "The marker's grandparent in the stack was expected to be a list. Would you like to check the AST stack?");
+  assert_message(
+    a5,
+    "The marker's grandparent in the stack was expected to be a list. Would you like to check the AST stack?",
+  );
   let value = property_get(a_first, "value");
   return value;
 }

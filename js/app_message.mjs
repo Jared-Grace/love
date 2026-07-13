@@ -75,9 +75,11 @@ export async function app_message(context) {
     function lambda(message) {
       message_display("left", message);
       let right = message_display("right", "(Loading...)");
-      html_style_assign(right, {
-        "background-color": app_shared_button_uncolored_background_color(),
-      });
+      html_style_set(
+        right,
+        "background-color",
+        app_shared_button_uncolored_background_color(),
+      );
       async function next() {
         let results = await reply_messages_matches([message], start);
         let e = list_empty_is(results);

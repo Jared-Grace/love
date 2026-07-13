@@ -35,9 +35,7 @@ export function app_karate_screen_input_validate(
     app_karate_style_control_border(input, border_color);
     let ul = html_element(div_checks, "ul");
     property_set(input, "ul", ul);
-    html_style_assign(ul, {
-      color: "#872121ff",
-    });
+    html_style_set(ul, "color", "#872121ff");
     html_style_set(ul, "margin", "0");
     html_on_input(input, validate_all);
     validate_input(input);

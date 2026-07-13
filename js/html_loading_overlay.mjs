@@ -21,8 +21,6 @@ export function html_loading_overlay() {
   };
   html_style_assign(div, s);
   html_reflow_force(div);
-  html_style_assign(div, {
-    opacity: "1",
-  });
+  html_style_set(div, "opacity", "1");
   return div;
 }
