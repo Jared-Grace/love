@@ -5,9 +5,7 @@ export function app_code_lesson_symbols_counting_quiz_backwards_on_button(
 ) {
   let r = function lambda(parent, text) {
     html_clear(parent);
-    html_style_assign(parent, {
-      "justify-content": "center",
-    });
+    html_style_set(parent, "justify-content", "center");
     on_question(parent, text);
   };
   return r;

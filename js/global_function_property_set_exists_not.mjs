@@ -9,7 +9,10 @@ export function global_function_property_set_exists_not(
 ) {
   let exists = global_function_property_exists(fn, property_name);
   let b = not(exists);
-  assert_message(b, "This property is already set on the function. Did you mean to overwrite it, or is a fresh name expected?");
+  assert_message(
+    b,
+    "This property is already set on the function. Did you mean to overwrite it, or is a fresh name expected?",
+  );
   let v = global_function_property_set(fn, property_name, value);
   return v;
 }

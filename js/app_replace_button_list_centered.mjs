@@ -7,6 +7,11 @@ export function app_replace_button_list_centered(
   on_click,
 ) {
   let div = html_div_centered(root);
-  let mapped = app_replace_button_list(div, items, item_to_button_text, on_click);
+  let mapped = app_replace_button_list(
+    div,
+    items,
+    item_to_button_text,
+    on_click,
+  );
   return mapped;
 }

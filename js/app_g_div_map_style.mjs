@@ -10,16 +10,16 @@ export async function app_g_div_map_style(div_map) {
     display: "grid",
   });
   let rows_size = list_size(rows);
-  html_style_assign(div_map, {
-    gridTemplateRows: text_combine_multiple(["repeat(", rows_size, ", auto)"]),
-  });
+  html_style_set(
+    div_map,
+    "gridTemplateRows",
+    text_combine_multiple(["repeat(", rows_size, ", auto)"]),
+  );
   let row_first = list_first(rows);
   let columns_size = list_size(row_first);
-  html_style_assign(div_map, {
-    gridTemplateColumns: text_combine_multiple([
-      "repeat(",
-      columns_size,
-      ", auto)",
-    ]),
-  });
+  html_style_set(
+    div_map,
+    "gridTemplateColumns",
+    text_combine_multiple(["repeat(", columns_size, ", auto)"]),
+  );
 }

@@ -26,9 +26,7 @@ export function app_g_html_initialize(context) {
     "pointer-events": "auto",
   });
   ("this was needed instead of 100% to allow vertical scrolling");
-  html_style_assign(div_map_container, {
-    height: "100vh",
-  });
+  html_style_set(div_map_container, "height", "100vh");
   html_scroll_none(div_map_container);
   let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);

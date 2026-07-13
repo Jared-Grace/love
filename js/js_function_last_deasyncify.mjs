@@ -13,7 +13,12 @@ import { js_stack_last_function } from "./js_stack_last_function.mjs";
 import { js_function_await_any_is } from "./js_function_await_any_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
-export async function js_function_last_deasyncify(stack, ast, functions, visited) {
+export async function js_function_last_deasyncify(
+  stack,
+  ast,
+  functions,
+  visited,
+) {
   let f = js_stack_last_function(stack);
   let property_name = "async";
   let async = property_get(f, property_name);

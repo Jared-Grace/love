@@ -29,7 +29,7 @@ export function html_subset_ordered_row(
     list_swap_at(chosen, i, i + 1);
     changed();
   }
-  "arrows first as fixed left columns; hide (keep the space) at the ends so up/down and the names all stay aligned";
+  ("arrows first as fixed left columns; hide (keep the space) at the ends so up/down and the names all stay aligned");
   let up_button = app_replace_button(row, emoji_arrow_up(), up);
   if (i === 0) {
     html_visibility_hidden(up_button);
