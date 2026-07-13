@@ -1,4 +1,4 @@
-import { null_not_is_assert } from "./null_not_is_assert.mjs";
+import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 import { file_temp } from "./file_temp.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -25,6 +25,8 @@ export async function function_run_io_file_wrapper(body) {
     let result4 = await file_temp(lambda3);
   }
   let result3 = await file_temp(lambda2);
-  null_not_is_assert(r);
+  null_not_is_assert_json(r, {
+    hint: "the io subprocess should have written a result to read back — did the run finish and produce output?",
+  });
   return r;
 }
