@@ -153,7 +153,7 @@ export async function function_aliases_restore() {
       fop: "folder_public",
       fpc: "folder_public_combine",
       oh: "app_html_open",
-      an: "app_new",
+      an: "app_shared_new",
     };
     return v2;
   }
