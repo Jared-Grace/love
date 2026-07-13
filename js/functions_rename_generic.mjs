@@ -9,12 +9,14 @@ import { property_exists_not_assert_json } from "./property_exists_not_assert_js
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_empty_not_is_assert } from "./list_empty_not_is_assert.mjs";
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { functions_names } from "./functions_names.mjs";
 export async function functions_rename_generic(filter, name_change) {
   let f_names = await functions_names();
   let filtered = list_filter(f_names, filter);
-  list_empty_not_is_assert(filtered);
+  list_empty_not_is_assert_json(filtered, {
+    hint: "the filter should match at least one function to rename — did nothing match?",
+  });
   let dictionary = list_to_dictionary_value(filtered, name_change);
   function lambda(f_name_before, f_name_after) {
     let ne = equal_not(f_name_before, f_name_after);
