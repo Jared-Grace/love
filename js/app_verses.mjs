@@ -6,7 +6,7 @@ import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
-import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -31,14 +31,14 @@ export async function app_verses(context) {
   languages_chosen_reset();
   let bible_texts = [];
   let verse_count = 1;
-  let card1 = app_shared_container_plain(root);
+  let card1 = app_shared_container_blue(root);
   let p = app_reply_languages_prompt(card1);
   let buttons_languages = app_reply_buttons_languages(
     languages_chosen,
     card1,
     languages,
   );
-  let card2 = app_shared_container_plain(root);
+  let card2 = app_shared_container_blue(root);
   html_p_text(card2, "2. How many Bible verses would you like?");
   let count_label = html_p_text(card2, "");
   count_label_refresh();
@@ -51,7 +51,7 @@ export async function app_verses(context) {
     let b = app_replace_button(card2, c, choose);
   }
   each(counts, count_each);
-  let card3 = app_shared_container_plain(root);
+  let card3 = app_shared_container_blue(root);
   html_p_text(
     card3,
     "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.",
@@ -62,7 +62,7 @@ export async function app_verses(context) {
     "If the copy did not work, this button will gently copy them again.",
   );
   let copy_button = app_replace_button(card3, html_button_copy_text(), copy);
-  let card4 = app_shared_container_plain(root);
+  let card4 = app_shared_container_blue(root);
   function count_label_refresh() {
     html_text_set(count_label, "You chose " + verse_count + ".");
   }
