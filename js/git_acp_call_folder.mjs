@@ -4,4 +4,3 @@ export async function git_acp_call_folder(f_name, args, folder) {
   await git_ac_call_folder(f_name, args, folder);
   await git_push_folder(folder);
 }
-
