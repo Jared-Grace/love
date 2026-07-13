@@ -1,12 +1,14 @@
 import { each_unordered_async } from "./each_unordered_async.mjs";
 import { property_get } from "./property_get.mjs";
-import { function_exists_assert } from "./function_exists_assert.mjs";
+import { function_exists_assert_json } from "./function_exists_assert_json.mjs";
 import { list_adder_unique_async } from "./list_adder_unique_async.mjs";
 import { visit_unique_async } from "./visit_unique_async.mjs";
 import { function_imports } from "./function_imports.mjs";
 export async function function_dependencies(f_names) {
   async function lambda4(f_name) {
-    await function_exists_assert(f_name);
+    await function_exists_assert_json(f_name, {
+      hint: "each function should exist to gather its dependencies",
+    });
   }
   await each_unordered_async(f_names, lambda4);
   async function lambda2(la) {
