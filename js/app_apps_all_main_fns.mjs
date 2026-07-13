@@ -12,7 +12,6 @@ export function app_apps_all_main_fns() {
     "app_designs_universal",
     "app_g",
     "app_g_bible",
-    "app_granddaddy",
     "app_index",
     "app_karate",
     "app_message",
