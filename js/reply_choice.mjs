@@ -1,13 +1,17 @@
 import { list_squash } from "./list_squash.mjs";
 import { json_copy } from "./json_copy.mjs";
 import { reply_wrap_invoke } from "./reply_wrap_invoke.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { reply_matches } from "./reply_matches.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export function reply_choice(choices) {
-  list_is_assert(choices);
+  list_is_assert_json(choices, {
+    hint: "reply_choice expects a list of choices",
+  });
   let fn = async function reply_choice_matches(possibilities) {
-    list_is_assert(possibilities);
+    list_is_assert_json(possibilities, {
+      hint: "the possibilities to match against should be a list",
+    });
     async function lambda(choice) {
       let copy = json_copy(possibilities);
       copy = await reply_wrap_invoke(choice, copy);

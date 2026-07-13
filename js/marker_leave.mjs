@@ -4,7 +4,7 @@ import { list_remove } from "./list_remove.mjs";
 import { list_get_end_2 } from "./list_get_end_2.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { list_index_of } from "./list_index_of.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { function_transform_marker_current } from "./function_transform_marker_current.mjs";
 export async function marker_leave() {
@@ -12,7 +12,9 @@ export async function marker_leave() {
     let stack = property_get(a, "stack");
     let stack_4 = list_get_end(stack, 4);
     let stack_5 = list_get_end(stack, 5);
-    list_is_assert(stack_5);
+    list_is_assert_json(stack_5, {
+      hint: "the marker stack should be a list",
+    });
     let index = list_index_of(stack_5, stack_4);
     let stack_1 = list_get_end_1(stack);
     let stack_2 = list_get_end_2(stack);
