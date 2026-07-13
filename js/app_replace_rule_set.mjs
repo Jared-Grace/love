@@ -78,7 +78,7 @@ import { html_p } from "./html_p.mjs";
 import { html_disable } from "./html_disable.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_button } from "./html_button.mjs";
-import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { list_get } from "./list_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -137,7 +137,7 @@ export async function app_replace_rule_set(context) {
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
   let div_refresh = html_div(root);
-  let label_goal = html_p_text(root, "Goal:");
+  let label_goal = app_shared_text_body(root, "Goal:");
   let p_goal = html_p(root);
   let goal_list_symbols = app_replace_button_side(p_goal, end);
   let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(false);
@@ -161,7 +161,7 @@ export async function app_replace_rule_set(context) {
     let mapped = list_map_property_multiple(rules_used, properties);
     let squashed = list_squash(mapped);
     let unique = list_unique(squashed);
-    html_p_text(div_abbreviations, "Abbreviations");
+    app_shared_text_body(div_abbreviations, "Abbreviations");
     let component = html_element(div_abbreviations, "ul");
     let abbreviations = property_get(rs, "abbreviations");
     let list = object_to_list(abbreviations);
