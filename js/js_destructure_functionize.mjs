@@ -9,7 +9,7 @@ import { js_assign_object_property_get } from "./js_assign_object_property_get.m
 import { js_identifier_name } from "./js_identifier_name.mjs";
 import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { list_get_end } from "./list_get_end.mjs";
-import { js_node_type_is_assert } from "./js_node_type_is_assert.mjs";
+import { js_node_type_is_assert_json } from "./js_node_type_is_assert_json.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
@@ -32,7 +32,9 @@ export async function js_destructure_functionize(ast) {
     if (type_is) {
       return;
     }
-    js_node_type_is_assert(e, "VariableDeclarator");
+    js_node_type_is_assert_json(e, "VariableDeclarator", {
+      hint: "the destructure target should be a variable declarator",
+    });
     let init = js_declare_init_get(e);
     let ii = js_identifier_is(init);
     let result = null;
