@@ -34,7 +34,7 @@ export async function app_supper_verses_render(root, folders) {
     let p = html_p(card);
     html_style_margin_y(p, "0.25em");
     let d = html_div_text_centered(p, reference);
-    html_font_color_set(d, "#2563eb");
+    html_font_color_set(d, "#1e3a8a");
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
