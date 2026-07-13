@@ -1,6 +1,6 @@
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { assert } from "./assert.mjs";
+import { assert_message } from "./assert_message.mjs";
 import { not } from "./not.mjs";
 import { list_is } from "./list_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -41,7 +41,7 @@ export function js_marker_name_get(v) {
   }
   let stack_2 = list_get_end(stack, 2);
   let a5 = list_is(stack_2);
-  assert(a5);
+  assert_message(a5, "The marker's grandparent in the stack was expected to be a list. Would you like to check the AST stack?");
   let value = property_get(a_first, "value");
   return value;
 }
