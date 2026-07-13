@@ -16,7 +16,6 @@ import { property_get } from "./property_get.mjs";
 import { log } from "./log.mjs";
 import { each } from "./each.mjs";
 import { js_imports_missing_add_specified_single } from "./js_imports_missing_add_specified_single.mjs";
-
 export async function js_log_assignments_add(ast) {
   let f_name = js_flo_name(ast);
   function lambda_declarator_name(declarator) {

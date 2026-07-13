@@ -11,13 +11,9 @@ export function html_style_text_left_centered(
     "align-items": "center",
   });
   let left = html_span_text(component, text_left);
-  html_style_assign(left, {
-    "justify-self": "start",
-  });
+  html_style_set(left, "justify-self", "start");
   let title = html_span_text(component, text_centered);
-  html_style_assign(title, {
-    "justify-self": "center",
-  });
+  html_style_set(title, "justify-self", "center");
   let r = {
     title,
   };

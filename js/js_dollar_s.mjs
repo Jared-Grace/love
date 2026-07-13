@@ -27,7 +27,10 @@ export function js_dollar_s({ stack_1, stack_2, ast, afters }) {
   function lambda({ stack_1, next, stack_2, ast, declarations }) {
     "todo handle more than 1";
     let s = list_size_1(declarations);
-    assert_message(s, "This handles a single declaration for now - more than one isn't supported yet. Would you like to split them apart?");
+    assert_message(
+      s,
+      "This handles a single declaration for now - more than one isn't supported yet. Would you like to split them apart?",
+    );
     function lambda2(declaration) {
       let expression = js_assign_default();
       let init = js_declare_init_get(declaration);

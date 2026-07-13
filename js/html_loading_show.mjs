@@ -14,7 +14,5 @@ export function html_loading_show() {
     state.overlay = html_loading_overlay();
     return;
   }
-  html_style_assign(overlay, {
-    opacity: "1",
-  });
+  html_style_set(overlay, "opacity", "1");
 }
