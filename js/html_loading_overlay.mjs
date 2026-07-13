@@ -4,6 +4,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
+import { html_loading_spinner } from "./html_loading_spinner.mjs";
 export function html_loading_overlay() {
   let body = html_document_body();
   let div = html_div(body);
@@ -15,13 +16,16 @@ export function html_loading_overlay() {
     height: "100vh",
     background: "rgba(0, 0, 0, 0.6)",
     display: "flex",
+    "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
+    gap: "1.5rem",
     "z-index": "1000",
     opacity: "0",
     transition: "opacity 0.15s ease",
   };
   html_style_assign(div, s);
+  html_loading_spinner(div);
   let message = html_p_text(div, "One moment, please 🙏");
   html_style_assign(message, {
     color: "white",

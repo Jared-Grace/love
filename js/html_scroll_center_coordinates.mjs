@@ -5,6 +5,7 @@ import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
+import { html_scroll_animate } from "./html_scroll_animate.mjs";
 export function html_scroll_center_coordinates(
   coordinates,
   tile_component,
@@ -24,10 +25,5 @@ export function html_scroll_center_coordinates(
     add(multiply(y, tile_size), half_tile),
     divide(container_e.clientHeight, 2),
   );
-  let s = {
-    left,
-    top,
-    behavior: "smooth",
-  };
-  container_e.scrollTo(s);
+  html_scroll_animate(container_e, left, top);
 }
