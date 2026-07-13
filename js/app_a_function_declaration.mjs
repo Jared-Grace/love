@@ -18,13 +18,15 @@ import { app_a_function_node_child } from "./app_a_function_node_child.mjs";
 import { js_keyword_async } from "./js_keyword_async.mjs";
 import { app_a_keyword_blue_space } from "./app_a_keyword_blue_space.mjs";
 import { js_keyword_function } from "./js_keyword_function.mjs";
-import { false_is_assert } from "./false_is_assert.mjs";
+import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_a_function_declaration(a) {
   let node = property_get(a, "node");
   let parent = property_get(a, "parent");
   let generator = property_get(node, "generator");
-  false_is_assert(generator);
+  false_is_assert_json(generator, {
+    hint: "generator functions aren't rendered here yet — was a function* declaration encountered?",
+  });
   let async = property_get(node, "async");
   if (async) {
     let ka = js_keyword_async();
