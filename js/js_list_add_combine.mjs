@@ -1,7 +1,3 @@
-import { add } from "../../love/js/add.mjs";
-import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
-import { or } from "../../love/js/or.mjs";
-import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { js_visit_type } from "./js_visit_type.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_list_add_call_try } from "./js_list_add_call_try.mjs";
@@ -16,15 +12,6 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { js_list_add_run_apply } from "./js_list_add_run_apply.mjs";
 export function js_list_add_combine(ast) {
-  text_combine_multiple([
-    "this refactors two ",
-    or.name,
-    " more consecutive ",
-    list_add.name,
-    " calls on the same list into a single ",
-    list_add_multiple.name,
-    " call",
-  ]);
   let runs = [];
   function lambda(v) {
     let node = property_get(v, "node");
