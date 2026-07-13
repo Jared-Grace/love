@@ -23,6 +23,14 @@
       },
     },
     {
+      "label": "Webpack Watcher",
+      "type": "shell",
+      "command": "cd love && node scripts/wp.mjs",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+    },
+    {
       "label": "Terminal",
       "type": "shell",
       "command": "cd love && bash scripts/p.sh",

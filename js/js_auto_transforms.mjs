@@ -2,6 +2,7 @@ import { js_log_f_name_add } from "./js_log_f_name_add.mjs";
 import { js_destructure_functionize } from "./js_destructure_functionize.mjs";
 import { js_assert_arguments_args } from "./js_assert_arguments_args.mjs";
 import { js_assign_combine } from "./js_assign_combine.mjs";
+import { js_list_add_combine } from "./js_list_add_combine.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
 import { js_dollar } from "./js_dollar.mjs";
@@ -39,6 +40,7 @@ export function js_auto_transforms() {
     js_outside_move,
     js_atomize,
     js_assign_combine,
+    js_list_add_combine,
     js_declaration_unused_to_expression,
     js_assert_arguments_args,
     js_destructure_functionize,
