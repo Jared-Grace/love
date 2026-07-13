@@ -1,4 +1,4 @@
-import { function_exists_assert } from "./function_exists_assert.mjs";
+import { function_exists_assert_json } from "./function_exists_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_is_assert_json } from "./js_identifier_is_assert_json.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -19,7 +19,9 @@ export async function function_alias_add(first, second) {
   undefined_not_is_assert_json(f_name, {
     hint: "the function name to alias shouldn't be undefined",
   });
-  await function_exists_assert(f_name);
+  await function_exists_assert_json(f_name, {
+    hint: "the function to alias should exist before an alias can point at it",
+  });
   function lambda(a) {
     let unaliased = property_get(a, "unaliased");
     let aliases = property_get(a, "aliases");

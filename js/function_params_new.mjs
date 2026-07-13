@@ -1,6 +1,6 @@
 import { function_params_new_generic } from "./function_params_new_generic.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
-import { list_intersect_empty_is_assert } from "./list_intersect_empty_is_assert.mjs";
+import { list_intersect_empty_is_assert_json } from "./list_intersect_empty_is_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -30,7 +30,9 @@ export async function function_params_new(
   function function_transform_current_lambda(ast) {
     if (false) {
       let names = js_identifiers_names(ast);
-      list_intersect_empty_is_assert(names, param_names);
+      list_intersect_empty_is_assert_json(names, param_names, {
+        hint: "the new param names shouldn't collide with identifiers already used in the function",
+      });
     }
     js_flo_params_add(ast, param_names);
   }
