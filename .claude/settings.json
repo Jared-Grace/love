@@ -36,6 +36,7 @@
       "Bash(uniq:*)",
       "Bash(node --check:*)",
       "Bash(node scripts/g.mjs ai)",
+      "Bash(node scripts/r.mjs ai_git)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
       "Write(/tmp/claude-1000/-home-j-repos-love/**)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
@@ -85,7 +86,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /home/j/repos/love; for i in $(seq 1 30); do pgrep -f \"g.mjs ai\" >/dev/null || break; sleep 2; done; node scripts/g.mjs ai 2>&1 | tail -8",
+            "command": "cd /home/j/repos/love; for i in $(seq 1 30); do pgrep -f \"ai_git\" >/dev/null || break; sleep 2; done; node scripts/r.mjs ai_git 2>&1 | tail -8",
             "timeout": 90,
             "statusMessage": "Auto-committing"
           },
