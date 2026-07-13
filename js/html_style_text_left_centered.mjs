@@ -1,3 +1,4 @@
+import { html_style_set } from "./html_style_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 export function html_style_text_left_centered(

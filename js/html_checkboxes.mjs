@@ -1,3 +1,4 @@
+import { html_style_set } from "./html_style_set.mjs";
 import { app_karate_button_background_invalid } from "../../karate_code/js/app_karate_button_background_invalid.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "./html_checkboxes_checked_value_get.mjs";
