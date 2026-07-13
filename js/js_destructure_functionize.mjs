@@ -7,7 +7,7 @@ import { js_identifier_unique_ast } from "./js_identifier_unique_ast.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_assign_object_property_get } from "./js_assign_object_property_get.mjs";
 import { js_identifier_name } from "./js_identifier_name.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { js_node_type_is_assert } from "./js_node_type_is_assert.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -45,7 +45,9 @@ export async function js_destructure_functionize(ast) {
     }
     let name4 = result;
     let block_body = list_get_end(stack, 4);
-    list_is_assert(block_body);
+    list_is_assert_json(block_body, {
+      hint: "the function block body should be a list of statements",
+    });
     let block_body_item = list_get_end(stack, 3);
     function lambda2(p) {
       let key = property_get(p, "key");
