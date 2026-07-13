@@ -51,9 +51,16 @@ export function app_reply_buttons_languages_on_toggle(
     update();
     function update() {
       let chosen = chosen_get();
+      let chosen_color = app_shared_button_background();
       let unchosen_color = app_replace_button_rule_background_color();
-      let color = ternary(chosen, "lightgreen", unchosen_color);
-      html_style_background_color_set(component, color);
+      html_style_background_color_set_if_else(
+        chosen,
+        component,
+        chosen_color,
+        unchosen_color,
+      );
+      let chosen_font_color = app_shared_button_font_color();
+      html_font_color_set_if(chosen, component, chosen_font_color, "black");
     }
     let to = object_merge_set(component, {
       update,
