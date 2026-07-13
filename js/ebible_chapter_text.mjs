@@ -14,7 +14,7 @@ import { css_class_prefix_combine } from "./css_class_prefix_combine.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { html_parse_classes_preview } from "./html_parse_classes_preview.mjs";
 import { list_difference } from "./list_difference.mjs";
-import { list_intersect_empty_is_assert } from "./list_intersect_empty_is_assert.mjs";
+import { list_intersect_empty_is_assert_json } from "./list_intersect_empty_is_assert_json.mjs";
 import { ebible_verses_exclude } from "./ebible_verses_exclude.mjs";
 import { ebible_verses_include } from "./ebible_verses_include.mjs";
 import { html_parse_descendants_classes } from "./html_parse_descendants_classes.mjs";
@@ -48,7 +48,9 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
   let exclude = ebible_verses_exclude();
-  list_intersect_empty_is_assert(include, exclude);
+  list_intersect_empty_is_assert_json(include, exclude, {
+    hint: "the include and exclude verse sets shouldn't overlap — a verse is listed in both",
+  });
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
   let dictionary = html_parse_classes_preview(main, d, extra);
