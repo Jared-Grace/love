@@ -4,12 +4,14 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_delete_if_exists_fn } from "./property_delete_if_exists_fn.mjs";
 import { command_line_generic_code_ignore } from "./command_line_generic_code_ignore.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_is_assert } from "./text_is_assert.mjs";
+import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function command_line_generic(command, extra) {
   arguments_assert(arguments, 2);
-  text_is_assert(command);
+  text_is_assert_json(command, {
+    command,
+  });
   let r3 = await import("child_process");
   let ci = property_delete_if_exists_fn(
     extra,

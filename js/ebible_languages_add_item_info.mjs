@@ -1,5 +1,5 @@
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
-import { text_is_assert } from "./text_is_assert.mjs";
+import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size_assert_message } from "./list_size_assert_message.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -14,7 +14,9 @@ import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ebible_languages_add_item_info(bible_folder) {
   text_combine("gets language information for ", bible_folder);
-  text_is_assert(bible_folder);
+  text_is_assert_json(bible_folder, {
+    bible_folder,
+  });
   let prefix = ebible_url_details();
   let project_url = firebase_storage_url_project_jg();
   let r = await http_local_html_parse(
