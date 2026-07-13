@@ -1,7 +1,7 @@
 import { app_prefix_without } from "./app_prefix_without.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_container_plain } from "./app_shared_container_plain.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { window_open_app_curried_right } from "./window_open_app_curried_right.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
@@ -18,7 +18,7 @@ export function app_index_generic(context, entries) {
     function lambda2() {
       open(fn);
     }
-    let card = app_shared_container_plain(root);
+    let card = app_shared_container_blue(root);
     let component = app_replace_button_wide(card, without, lambda2);
     let text = property_get(entry, "text");
     let has_text = text_empty_not_is(text);
