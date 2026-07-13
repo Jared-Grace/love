@@ -5,7 +5,7 @@ import { app_shared_delete_fn_main } from "../../love/js/app_shared_delete_fn_ma
 import { app_shared_delete_fn_latest } from "../../love/js/app_shared_delete_fn_latest.mjs";
 import { text_and_empty_not_is_assert_json } from "../../love/js/text_and_empty_not_is_assert_json.mjs";
 import { arguments_assert } from "../../love/js/arguments_assert.mjs";
-import { app_apps_all_main_fns_generate } from "../../love/js/app_apps_all_main_fns_generate.mjs";
+import { app_apps_all_main_fns_generate_open } from "../../love/js/app_apps_all_main_fns_generate_open.mjs";
 import { app_frozen_assert } from "../../love/js/app_frozen_assert.mjs";
 import { not } from "../../love/js/not.mjs";
 export async function app_shared_delete(name) {
@@ -22,5 +22,5 @@ export async function app_shared_delete(name) {
   await app_shared_delete_fn_main(name);
   await app_shared_delete_fn(name);
   await app_shared_delete_fn_latest(name);
-  await app_apps_all_main_fns_generate();
+  await app_apps_all_main_fns_generate_open();
 }
