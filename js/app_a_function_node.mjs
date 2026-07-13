@@ -30,7 +30,7 @@ import { app_a_comma } from "./app_a_comma.mjs";
 import { app_a_body_inner } from "./app_a_body_inner.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { js_code_colon } from "./js_code_colon.mjs";
-import { equal_assert } from "./equal_assert.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
 import { app_a_braces_wrap } from "./app_a_braces_wrap.mjs";
 import { js_code_equals_padded } from "./js_code_equals_padded.mjs";
 import { app_a_nodes_list } from "./app_a_nodes_list.mjs";
