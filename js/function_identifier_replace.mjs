@@ -1,5 +1,5 @@
 import { list_empty_is } from "./list_empty_is.mjs";
-import { not_assert } from "./not_assert.mjs";
+import { not_assert_json } from "./not_assert_json.mjs";
 import { function_current_get } from "./function_current_get.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -14,7 +14,10 @@ export async function function_identifier_replace(
   function lambda2(ast) {
     let identifiers_named = js_identifiers_named(ast, identifier_name);
     let b = list_empty_is(identifiers_named);
-    not_assert(b);
+    not_assert_json(b, {
+      hint: "at least one identifier with this name should exist to replace — was the name not found?",
+      identifier_name,
+    });
     let from = js_parse_expression(replacement);
     function lambda(i) {
       let v = object_replace(i, from);

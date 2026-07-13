@@ -40,7 +40,7 @@ import { js_keyword_await } from "./js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "./app_a_keyword_purple_space.mjs";
 import { app_a_body } from "./app_a_body.mjs";
 import { false_is_assert_json } from "./false_is_assert_json.mjs";
-import { list_empty_is_assert } from "./list_empty_is_assert.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { js_keyword_export } from "./js_keyword_export.mjs";
 import { app_a_keyword_purple } from "./app_a_keyword_purple.mjs";
 import { js_keyword_from } from "./js_keyword_from.mjs";
@@ -96,7 +96,9 @@ export function app_a_function_node(a) {
       app_a_keyword_purple_space(parent, text4);
       let declaration = property_get(node, "declaration");
       let specifiers = property_get(node, "specifiers");
-      list_empty_is_assert(specifiers);
+      list_empty_is_assert_json(specifiers, {
+        hint: "export declarations with named specifiers aren't rendered here yet — an inline export was expected",
+      });
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
