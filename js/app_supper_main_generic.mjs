@@ -9,8 +9,6 @@ import { app_supper_folders_chosen } from "./app_supper_folders_chosen.mjs";
 import { app_supper_folders_chosen_set } from "./app_supper_folders_chosen_set.mjs";
 import { app_supper_buttons_folders } from "./app_supper_buttons_folders.mjs";
 import { app_supper_verses_render } from "./app_supper_verses_render.mjs";
-import { app_supper_verses_get } from "./app_supper_verses_get.mjs";
-import { list_first_not_is } from "./list_first_not_is.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 import { html_bar_content_padding } from "./html_bar_content_padding.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
