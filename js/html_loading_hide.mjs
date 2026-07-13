@@ -1,5 +1,5 @@
 import { html_loading_state } from "./html_loading_state.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_remove } from "./html_remove.mjs";
 export function html_loading_hide() {
   let state = html_loading_state();

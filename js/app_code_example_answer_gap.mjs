@@ -1,4 +1,4 @@
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 export function app_code_example_answer_gap(parent) {
   html_style_set(parent, "gap", "0.1em");
 }

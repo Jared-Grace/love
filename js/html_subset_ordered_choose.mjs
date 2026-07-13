@@ -1,5 +1,6 @@
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_subset_ordered_selected } from "./html_subset_ordered_selected.mjs";
 import { html_subset_toggle } from "./html_subset_toggle.mjs";
 export function html_subset_ordered_choose(
@@ -9,11 +10,14 @@ export function html_subset_ordered_choose(
   name_property,
   key_property,
   on_change,
+  choices_label,
+  order_label,
 ) {
   let container = html_div(parent);
   function render() {
     html_clear(container);
     ("choices grid on top stays put (constant size) so tap targets don't shift; the selected/reorder strip grows below");
+    html_div_text_bold(container, choices_label);
     html_subset_toggle(
       container,
       options,
@@ -22,6 +26,7 @@ export function html_subset_ordered_choose(
       key_property,
       changed,
     );
+    html_div_text_bold(container, order_label);
     html_subset_ordered_selected(container, chosen, name_property, changed);
   }
   function changed() {
