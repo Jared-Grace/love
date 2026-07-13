@@ -784,6 +784,13 @@ def split_blocks(tokens):
 
 TIMEOUT_DURATION_RE = re.compile(r"^\d+(\.\d+)?[smhd]?$")
 
+# node scripts that are subcommand dispatchers (like git): the real operation
+# is the *third* word (`node scripts/r.mjs app_shared_dev_build`), not the
+# script itself, so a per-subcommand allow rule
+# (Bash(node scripts/r.mjs app_shared_dev_build:*)) can only match if verb_of
+# carries that third word. Every other node invocation keeps the 2-word verb.
+NODE_DISPATCHER_SCRIPTS = {"scripts/r.mjs", "scripts/g.mjs"}
+
 # git global options that take NO argument and cannot inject an executable or
 # change how a subcommand is resolved - so skipping them before reading the
 # subcommand (see verb_of) never widens trust beyond the subcommand's own
@@ -824,6 +831,18 @@ def verb_of(words):
             idx += 2
         return f"git {words[idx]}" if idx < len(words) else words[0]
     if words[0] == "node" and len(words) >= 2:
+        # For a dispatcher script, fold the subcommand into the verb (see
+        # NODE_DISPATCHER_SCRIPTS) so per-subcommand `:*` rules can match.
+        # Only when the third word is an actual subcommand, not a flag: a
+        # leading '-' keeps the 2-word verb so a flag can never masquerade as
+        # a trusted subcommand. This only ever makes the verb *more* specific,
+        # so it can't widen trust - it just enables a narrower allow rule.
+        if (
+            words[1] in NODE_DISPATCHER_SCRIPTS
+            and len(words) >= 3
+            and not words[2].startswith("-")
+        ):
+            return f"{words[0]} {words[1]} {words[2]}"
         return f"{words[0]} {words[1]}"
     return words[0]
 

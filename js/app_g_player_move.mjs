@@ -14,7 +14,7 @@ export async function app_g_player_move(
     away,
   });
   if (away) {
-    await app_g_player_move_animate(player, player_img_c);
+    await app_g_player_move_animate(coordinates_move_to, player_img_c);
   }
   await app_g_player_center(div_map, player_img_c);
 }
