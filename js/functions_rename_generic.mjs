@@ -24,6 +24,7 @@ export async function functions_rename_generic(filter, name_change) {
   let identifiers = await data_identifiers_get();
   function lambda2(f_name_after) {
     text_is_assert_json(f_name_after, {
+      hint: "each renamed function name should be text — did the name change produce a non-text value?",
       f_name_after,
     });
     property_exists_not_assert(identifiers, f_name_after);
