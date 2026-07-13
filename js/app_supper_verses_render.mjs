@@ -32,8 +32,9 @@ export async function app_supper_verses_render(root, folders) {
     previous_chapter_code = chapter_code;
     let reference = property_get(v, "reference");
     let p = html_p(card);
+    html_style_margin_y(p, "0.25em");
     let d = html_div_text_centered(p, reference);
-    html_font_color_set(d, "#aaa");
+    html_font_color_set(d, "#2563eb");
     let c = list_find_property_curried_right_2("reference", reference);
     let mapped = list_map(remaining, c);
     list_add_first(mapped, v);
@@ -54,7 +55,9 @@ export async function app_supper_verses_render(root, folders) {
         ". Amen.",
       ]),
     );
+    html_style_margin_y(p2, "0.25em");
   }
   each(["bread", "fruit of the vine"], lambda);
   let p3 = html_p_text(prayer_card, "Sing hymn");
+  html_style_margin_y(p3, "0.25em");
 }
