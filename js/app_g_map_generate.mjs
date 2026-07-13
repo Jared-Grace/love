@@ -3,7 +3,7 @@ import { list_random_item_count_nested } from "./list_random_item_count_nested.m
 import { g_tiles_grasses_choices_weighted } from "./g_tiles_grasses_choices_weighted.mjs";
 export function app_g_map_generate() {
   let tiles_choices = g_tiles_grasses_choices_weighted();
-  let row_count = 15;
+  let row_count = 25;
   let column_count = row_count;
   let rows = list_random_item_count_nested(
     tiles_choices,
