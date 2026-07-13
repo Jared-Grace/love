@@ -8,7 +8,7 @@ import { json_equal_assert } from "./json_equal_assert.mjs";
 import { storage_local_disable } from "./storage_local_disable.mjs";
 import { true_is_assert } from "./true_is_assert.mjs";
 import { storage_local_enabled } from "./storage_local_enabled.mjs";
-import { equal_assert } from "./equal_assert.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { null_is_assert } from "./null_is_assert.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
@@ -39,7 +39,9 @@ export function storage_local_enabling_test() {
   {
     storage_local_set(app_fn, key, v);
     let value2 = storage_local_get(app_fn, key);
-    equal_assert(v, value2);
+    equal_assert_json(v, value2, {
+      hint: "after setting a value, get should return that same value back",
+    });
   }
   ("by default local storage is enabled");
   {
@@ -61,7 +63,9 @@ export function storage_local_enabling_test() {
   {
     let storage_local_key = storage_local_key_get(app_fn, key);
     let value_global = storage_local_get_global(storage_local_key);
-    equal_assert(value_global, v);
+    equal_assert_json(value_global, v, {
+      hint: "the global store should hold the value that was set through the app function",
+    });
   }
   ("disabling local storage returns disabled flag");
   {

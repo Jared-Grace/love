@@ -29,6 +29,7 @@ import { list_empty } from "./list_empty.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 import { each } from "./each.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_reply_love } from "./app_reply_love.mjs";
 import { list_add } from "./list_add.mjs";
 import { html_p_text } from "./html_p_text.mjs";
