@@ -1,16 +1,22 @@
 import { app_supper_choices } from "./app_supper_choices.mjs";
-import { app_supper_versions_chosen_get } from "./app_supper_versions_chosen_get.mjs";
+import { app_supper_folders_get } from "./app_supper_folders_get.mjs";
+import { app_supper_chosen_from_options } from "./app_supper_chosen_from_options.mjs";
+import { app_supper_versions_hash_set } from "./app_supper_versions_hash_set.mjs";
 import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_generic.mjs";
 export async function app_supper_versions(context) {
   let options = await app_supper_choices();
-  let versions_chosen = app_supper_versions_chosen_get(context);
+  let folders = app_supper_folders_get(context);
+  let chosen = app_supper_chosen_from_options(folders, options);
+  function on_change() {
+    app_supper_versions_hash_set(chosen);
+  }
   app_bible_subset_screen_generic(
     context,
     options,
-    versions_chosen,
+    chosen,
     "name",
     "bible_folder",
-    "versions_chosen",
+    on_change,
     "Versions",
     "Order shown in verses",
   );
