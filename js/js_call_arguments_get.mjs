@@ -1,8 +1,10 @@
-import { js_call_is_assert } from "./js_call_is_assert.mjs";
+import { js_call_is_assert_json } from "./js_call_is_assert_json.mjs";
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_call_arguments_get(node_call) {
-  js_call_is_assert(node_call);
+  js_call_is_assert_json(node_call, {
+    hint: "expected a call expression to read its arguments",
+  });
   let property_name = js_special_arguments();
   let args = property_get(node_call, property_name);
   return args;
