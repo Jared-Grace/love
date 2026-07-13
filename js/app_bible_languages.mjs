@@ -24,5 +24,7 @@ export function app_bible_languages(context) {
     "name",
     "language_code",
     on_change,
+    "Languages",
+    "Order shown in verses",
   );
 }
