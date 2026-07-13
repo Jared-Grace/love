@@ -5,7 +5,6 @@ import { property_get } from "../../love/js/property_get.mjs";
 import { fn_name } from "../../love/js/fn_name.mjs";
 export function app_code_lesson_functions_console_log_arithmetic() {
   function lambda() {
-    app_code_lesson_functions_console_log_arithmetic();
   }
   var r = app_code_lesson_functions_console_log_generic(
     above,
