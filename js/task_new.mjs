@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_empty_not_is_assert } from "./text_empty_not_is_assert.mjs";
+import { text_empty_not_is_assert_json } from "./text_empty_not_is_assert_json.mjs";
 import { data_function_current_restore } from "./data_function_current_restore.mjs";
 import { function_name_unalias } from "./function_name_unalias.mjs";
 import { task_function_name_part } from "./task_function_name_part.mjs";
@@ -13,7 +13,9 @@ import { function_current_get } from "./function_current_get.mjs";
 import { todo } from "./todo.mjs";
 export async function task_new(task_name) {
   arguments_assert(arguments, 1);
-  text_empty_not_is_assert(task_name);
+  text_empty_not_is_assert_json(task_name, {
+    hint: "the task name should not be empty",
+  });
   let f_name = await function_current_get();
   let result2 = task_function_name_part();
   let v = await function_name_unalias(f_name);
