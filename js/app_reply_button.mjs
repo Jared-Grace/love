@@ -1,5 +1,6 @@
 import { html_style_background_color_set_or_remove_list } from "./html_style_background_color_set_or_remove_list.mjs";
 import { html_button } from "./html_button.mjs";
+import { app_shared_style_control_inline } from "./app_shared_style_control_inline.mjs";
 import { list_toggle } from "./list_toggle.mjs";
 export function app_reply_button(list, item, root, text) {
   let component = null;
@@ -8,6 +9,7 @@ export function app_reply_button(list, item, root, text) {
     html_style_background_color_set_or_remove_list(component, list, item);
   }
   component = html_button(root, text, lambda);
+  app_shared_style_control_inline(component);
   html_style_background_color_set_or_remove_list(component, list, item);
   return component;
 }
