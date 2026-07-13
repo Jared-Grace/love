@@ -1,5 +1,5 @@
 import { property_set } from "./property_set.mjs";
-import { list_is_assert } from "./list_is_assert.mjs";
+import { list_is_assert_json } from "./list_is_assert_json.mjs";
 import { list_all } from "./list_all.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_first } from "./list_first.mjs";
@@ -27,7 +27,9 @@ export function app_karate_screen_input_validate(
   button_below,
   checks,
 ) {
-  list_is_assert(inputs);
+  list_is_assert_json(inputs, {
+    hint: "the screen inputs should be a list to validate",
+  });
   function lambda2(input) {
     app_shared_style_control(input);
     let border_color = app_karate_green_dark();
