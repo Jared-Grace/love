@@ -9,10 +9,12 @@ export function text_starts_with_curried_right(f_name_prefix) {
     " is ran correctly",
   ]);
   text_is_assert_json(f_name_prefix, {
+    hint: "the function-name prefix should be text — did an empty or non-text value arrive?",
     f_name_prefix,
   });
   let r = function text_starts_with_curry_right_result(f_name) {
     text_is_assert_json(f_name, {
+      hint: "each function name being checked should be text — did a non-text value arrive?",
       f_name,
       f_name_prefix,
     });
