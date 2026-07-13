@@ -82,7 +82,7 @@ export async function app_gloss_bible_home_generic(
     let c = html_span_colon_2(div2);
     html_font_color_set(c, "#aaa");
     let span2 = html_span_text(div2, gloss);
-    html_font_color_set_white(span2);
+    html_font_color_set(span2, "#2563ebff");
     let c2 = html_span_colon_2(div2);
     html_font_color_set(c2, "#aaa");
     let span3 = html_span_text(div2, explain);
