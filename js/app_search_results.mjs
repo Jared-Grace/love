@@ -91,9 +91,13 @@ export async function app_search_results(context, div_results) {
       await list_join_newline_2_copy(squashed);
     }
     let text2 = text_combine(c, " all");
-    let component = html_button_wide(expand_all_div, text2, lambda6);
+    let component = app_replace_button_wide(expand_all_div, text2, lambda6);
   }
-  expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
+  expand_all = app_replace_button_wide(
+    div_results,
+    "Expand all",
+    expand_all_lambda,
+  );
   html_br_2(div_results);
   let results = object_to_list(dictionary);
   function each_result(vk) {
@@ -118,12 +122,13 @@ export async function app_search_results(context, div_results) {
       let b = null;
       async function click() {
         html_remove(b);
-        let cb = html_button_copy_width_full(div_verse, copy);
+        let cb_text = html_button_copy_text();
+        let cb = app_replace_button_wide(div_verse, cb_text, copy);
         html_style_margin_y(cb, "0.2em");
         function lambda3() {
           app_chapter_open(languages_chosen, chapter_code, verse_number);
         }
-        let oc = html_button_wide(div_verse, "Open chapter", lambda3);
+        let oc = app_replace_button_wide(div_verse, "Open chapter", lambda3);
         html_style_margin_y(oc, "0.2em");
         let bible_texts = [];
         await app_reply_verses_add(
@@ -140,7 +145,7 @@ export async function app_search_results(context, div_results) {
           await list_join_newline_2_copy(bible_texts);
         }
       }
-      b = html_button_wide(div_verse, reference, click);
+      b = app_replace_button_wide(div_verse, reference, click);
       html_margin(b, "0.2em");
       property_set_exists_not(b, "click", click);
       return b;
