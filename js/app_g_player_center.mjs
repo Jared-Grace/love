@@ -1,6 +1,6 @@
-import { html_scroll_center_container } from "./html_scroll_center_container.mjs";
+import { html_scroll_center_coordinates } from "./html_scroll_center_coordinates.mjs";
 import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
-export async function app_g_player_center(div_map, player_img_c) {
+export function app_g_player_center(coordinates, player_img_c, div_map) {
   let container = app_g_div_map_container_get(div_map);
-  await html_scroll_center_container(player_img_c, container);
+  html_scroll_center_coordinates(coordinates, player_img_c, container);
 }
