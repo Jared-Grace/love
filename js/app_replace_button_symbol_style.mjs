@@ -1,4 +1,4 @@
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_replace_button_symbol_style_inner } from "./app_replace_button_symbol_style_inner.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 export function app_replace_button_symbol_style(b) {

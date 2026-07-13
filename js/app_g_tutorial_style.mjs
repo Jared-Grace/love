@@ -9,10 +9,10 @@ export function app_g_tutorial_style(tutorial) {
   ]);
   html_style_assign(tutorial, {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    fontSize: square_size,
+    "justify-content": "center",
+    "align-items": "center",
+    "text-align": "center",
+    "font-size": square_size,
     animation: "upDown 1.25s infinite ease-in-out alternate",
   });
 }

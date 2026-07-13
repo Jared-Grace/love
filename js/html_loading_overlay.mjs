@@ -13,9 +13,9 @@ export function html_loading_overlay() {
     height: "100vh",
     background: "rgba(0, 0, 0, 0.6)",
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: "1000",
+    "justify-content": "center",
+    "align-items": "center",
+    "z-index": "1000",
     opacity: "0",
     transition: "opacity 0.15s ease",
   };
