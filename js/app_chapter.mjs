@@ -14,7 +14,7 @@ import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-import { app_shared_spaced } from "./app_shared_spaced.mjs";
+import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
 import { list_first_last } from "./list_first_last.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
@@ -27,7 +27,7 @@ export async function app_chapter(context) {
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
-  app_shared_spaced(content);
+  app_shared_spaced_small(content);
   let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
   let max = app_chapter_chosen_max();
