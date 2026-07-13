@@ -38,6 +38,7 @@ export async function app_shared_name_search_info(search) {
   let info = {
     f_name,
     a_name,
+    repo_name,
     f_path,
     f_path_latest,
     f_path_dev,
