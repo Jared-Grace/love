@@ -57,8 +57,7 @@ export async function app_message(context) {
   let div2 = html_div_text(div, "Please enter your message for me:");
   let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
-  app_shared_style_control(textarea);
-  app_karate_style_control_border(textarea, "gray");
+  app_shared_input_style(textarea);
   html_focus(textarea);
   let div_checks = html_div(div);
   let button_send = app_shared_button_green(

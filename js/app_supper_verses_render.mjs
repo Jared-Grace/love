@@ -7,7 +7,7 @@ import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_supper_passages_get } from "./app_supper_passages_get.mjs";
 import { app_supper_passage_render } from "./app_supper_passage_render.mjs";
-import { app_supper_passage_arrows } from "./app_supper_passage_arrows.mjs";
+import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
 import { app_supper_prayers_render } from "./app_supper_prayers_render.mjs";
 import { app_supper_passage_index_get } from "./app_supper_passage_index_get.mjs";
 import { app_supper_passage_index_set } from "./app_supper_passage_index_set.mjs";
@@ -30,7 +30,7 @@ export async function app_supper_verses_render(root, folders) {
     let passage = list_get(passages, index);
     let card = app_shared_container_blue(passage_area);
     app_supper_passage_render(card, passage, remaining);
-    app_supper_passage_arrows(passage_area, go_left, go_right);
+    app_shared_arrows_wide(passage_area, go_left, go_right);
   }
   function go(new_index) {
     index = new_index;
