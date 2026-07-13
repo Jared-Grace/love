@@ -1,4 +1,4 @@
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 export function app_code_lesson_symbols_counting_quiz_backwards_on_button(
   on_question,

@@ -11,7 +11,7 @@ export function html_overlay(container, z_index) {
     position: "absolute",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
-    zIndex: z_index,
+    "z-index": z_index,
   };
   html_style_assign(overlay, s);
   function update() {

@@ -1,5 +1,5 @@
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_g_button_uncolored_style(component) {
   html_style_set(

@@ -3,5 +3,6 @@ export function html_border(component, border_width, border_color) {
   html_style_assign(component, {
     "border-width": border_width,
     "border-color": border_color,
+    "border-style": "solid",
   });
 }

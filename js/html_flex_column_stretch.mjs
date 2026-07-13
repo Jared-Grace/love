@@ -2,7 +2,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 export function html_flex_column_stretch(column) {
   html_style_assign(column, {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "stretch",
+    "flex-direction": "column",
+    "align-items": "stretch",
   });
 }

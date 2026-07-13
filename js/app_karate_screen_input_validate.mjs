@@ -15,7 +15,6 @@ import { text_trim } from "./text_trim.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { html_element } from "./html_element.mjs";
 import { app_karate_style_control_border } from "./app_karate_style_control_border.mjs";
 import { app_karate_green_dark } from "../../karate_code/js/app_karate_green_dark.mjs";

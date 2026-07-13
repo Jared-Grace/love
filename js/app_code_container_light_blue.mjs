@@ -17,7 +17,7 @@ export function app_code_container_light_blue(parent) {
   html_style_margin_y(c, "0.5em");
   html_style_assign(c, {
     display: "flex",
-    flexDirection: "column",
+    "flex-direction": "column",
   });
   app_code_flex_gap(c);
   return c;
