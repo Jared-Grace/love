@@ -1,0 +1,9 @@
+import { function_is } from "./function_is.mjs";
+import { assert_json } from "./assert_json.mjs";
+export function function_is_assert_json(lambda, json) {
+  let fi = function_is(lambda);
+  assert_json(fi, {
+    lambda,
+    json,
+  });
+}
