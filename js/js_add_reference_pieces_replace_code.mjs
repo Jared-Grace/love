@@ -5,7 +5,7 @@ import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { js_code_wrap_brackets } from "./js_code_wrap_brackets.mjs";
 import { js_code_call_args } from "./js_code_call_args.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function js_fn_names_pieces_replace_code(pieces, statement) {
+export function js_add_reference_pieces_replace_code(pieces, statement) {
   let s1 = list_size_1(pieces);
   if (s1) {
     let single = list_first(pieces);
