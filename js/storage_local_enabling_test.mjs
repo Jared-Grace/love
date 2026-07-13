@@ -10,7 +10,7 @@ import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { storage_local_enabled } from "./storage_local_enabled.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
-import { null_is_assert } from "./null_is_assert.mjs";
+import { null_is_assert_json } from "./null_is_assert_json.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { storage_local_global_empty_assert } from "./storage_local_global_empty_assert.mjs";
 import { sandbox } from "./sandbox.mjs";
@@ -33,7 +33,9 @@ export function storage_local_enabling_test() {
   ("before setting value, get returns null");
   {
     let value = storage_local_get(app_fn, key);
-    null_is_assert(value);
+    null_is_assert_json(value, {
+      hint: "before a value is set, get should return null",
+    });
   }
   ("set a value and get the value");
   {
