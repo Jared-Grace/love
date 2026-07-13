@@ -1,10 +1,9 @@
 import { json_from_try } from "./json_from_try.mjs";
 import { app_gloss_bible_generate_generic_word } from "./app_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
-import { html_div_centered } from "./html_div_centered.mjs";
+import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { html_scroll_top_now } from "./html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { html_button } from "./html_button.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "./html_span_text_nbsp_replace_property_from.mjs";
@@ -93,8 +92,7 @@ export async function app_gloss_bible_home_generic(
     await scroll(verses);
   }
   let text = emoji_arrow_up();
-  let d = html_div_centered(p);
-  let component = html_button(d, text, lambda6);
+  let component = app_replace_button_wide(p, text, lambda6);
   let component22 = html_hr(p);
   return;
   async function scroll(verses) {
