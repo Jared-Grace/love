@@ -12,7 +12,7 @@ export async function function_eachify_unordered(f_name) {
   function each_name_get(async_is) {
     assert_message(
       async_is,
-      "function_eachify_unordered works with async functions. Unordering only reshuffles concurrent async calls, so it has no effect on a synchronous function. When you're ready, you can make the function async, or reach for function_eachify instead - both are lovely options.",
+      "Unordering only reshuffles concurrent async calls, so function_eachify_unordered needs an async function. Do you want to use function_eachify instead? Or should the function be async?",
     );
     let each_name = fn_name("each_unordered_async");
     return each_name;
