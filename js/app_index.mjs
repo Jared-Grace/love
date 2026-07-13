@@ -2,7 +2,7 @@ import { app_index_main_fns } from "./app_index_main_fns.mjs";
 import { app_prefix_without } from "./app_prefix_without.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { html_p } from "./html_p.mjs";
+import { app_shared_container } from "./app_shared_container.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { window_open_app_curried_right } from "./window_open_app_curried_right.mjs";
 import { each } from "./each.mjs";
@@ -19,10 +19,10 @@ export function app_index(context) {
     function lambda2() {
       lambda(fn);
     }
-    let p = html_p(root);
-    let component = app_replace_button_wide(p, without, lambda2);
+    let card = app_shared_container(root);
+    let component = app_replace_button_wide(card, without, lambda2);
     let text = property_get(a, "text");
-    let div = html_div_text_centered(p, text);
+    let div = html_div_text_centered(card, text);
   }
   each(fns, lambda3);
 }
