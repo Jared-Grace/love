@@ -1,4 +1,4 @@
-import { function_unalias_exists_not_assert } from "./function_unalias_exists_not_assert.mjs";
+import { function_unalias_exists_not_assert_json } from "./function_unalias_exists_not_assert_json.mjs";
 import { data_file_update } from "./data_file_update.mjs";
 import { repo_path_combine } from "./repo_path_combine.mjs";
 import { user_repo_get } from "./user_repo_get.mjs";
@@ -12,7 +12,9 @@ import { js_parse } from "./js_parse.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 export async function function_new_declaration_from(declaration) {
   let f_name = js_function_declaration_name(declaration);
-  await function_unalias_exists_not_assert(f_name);
+  await function_unalias_exists_not_assert_json(f_name, {
+    hint: "a function with this name shouldn't already exist before creating it fresh — is it already defined?",
+  });
   let f_path = function_name_to_path(f_name);
   let code_declaration = js_unparse(declaration);
   let contents = js_code_export(code_declaration);

@@ -4,7 +4,7 @@ import { vite_config_out_dir } from "./vite_config_out_dir.mjs";
 import { vite_config_name } from "./vite_config_name.mjs";
 import { vite_config_lib_entry } from "./vite_config_lib_entry.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { file_exists_assert } from "./file_exists_assert.mjs";
+import { file_exists_assert_json } from "./file_exists_assert_json.mjs";
 import { vite_config_path } from "./vite_config_path.mjs";
 export async function vite_run_build_generic(
   command_transform,
@@ -14,7 +14,9 @@ export async function vite_run_build_generic(
   let path = vite_config_path();
   let command_parts = ["vite", "--config", path];
   command_transform(command_parts);
-  await file_exists_assert(path);
+  await file_exists_assert_json(path, {
+    hint: "the vite config file should exist to run the build — was it generated first?",
+  });
   let command = list_join_space(command_parts);
   let env_vars = {
     [vite_config_lib_entry()]: lib_entry,
