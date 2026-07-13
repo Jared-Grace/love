@@ -45,7 +45,7 @@ import { js_keyword_export } from "./js_keyword_export.mjs";
 import { app_a_keyword_purple } from "./app_a_keyword_purple.mjs";
 import { js_keyword_from } from "./js_keyword_from.mjs";
 import { property_get_double_equal_assert } from "./property_get_double_equal_assert.mjs";
-import { js_identifier_is_assert } from "./js_identifier_is_assert.mjs";
+import { js_identifier_is_assert_json } from "./js_identifier_is_assert_json.mjs";
 import { app_a_function_node_child } from "./app_a_function_node_child.mjs";
 import { js_keyword_import } from "./js_keyword_import.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -85,7 +85,9 @@ export function app_a_function_node(a) {
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = property_get(node, "imported");
-      js_identifier_is_assert(imported);
+      js_identifier_is_assert_json(imported, {
+        hint: "an import specifier's imported binding should be an identifier",
+      });
       let local = property_get(node, "local");
       let property_name = "name";
       property_get_double_equal_assert(imported, local, property_name);
