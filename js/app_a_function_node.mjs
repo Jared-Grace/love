@@ -174,7 +174,9 @@ export function app_a_function_node(a) {
     ["ObjectExpression"]: o_props,
     ["Property"]: function lambda14() {
       let kind = property_get(node, "kind");
-      equal_assert(kind, "init");
+      equal_assert_json(kind, "init", {
+        hint: "object properties are expected to be plain init properties — a getter, setter, or method isn't rendered here yet",
+      });
       let key = property_get(node, "key");
       app_a_function_node_child(a, key);
       let shorthand = property_get(node, "shorthand");

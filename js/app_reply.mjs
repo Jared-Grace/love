@@ -130,7 +130,7 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let component3 = app_replace_button(card2, "Copy", copy_refresh);
+  let component3 = app_replace_button(card2, html_button_copy_text(), copy_refresh);
   let card3 = app_shared_container_plain(root);
   app_reply_main_shortcuts(
     card3,
