@@ -1,11 +1,7 @@
 import { list_map } from "./list_map.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
-import { app_replace_button_rule_background_color } from "./app_replace_button_rule_background_color.mjs";
-import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
-import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { html_style_background_color_set_if_else } from "./html_style_background_color_set_if_else.mjs";
-import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
+import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { list_remove_property } from "./list_remove_property.mjs";
 import { list_add } from "./list_add.mjs";
@@ -51,16 +47,7 @@ export function app_reply_buttons_languages_on_toggle(
     update();
     function update() {
       let chosen = chosen_get();
-      let chosen_color = app_shared_button_selected_background_color();
-      let unchosen_color = app_replace_button_rule_background_color();
-      html_style_background_color_set_if_else(
-        chosen,
-        component,
-        chosen_color,
-        unchosen_color,
-      );
-      let chosen_font_color = app_shared_button_font_color();
-      html_font_color_set_if(chosen, component, chosen_font_color, "black");
+      app_shared_button_toggle_style(chosen, component);
     }
     let to = object_merge_set(component, {
       update,
