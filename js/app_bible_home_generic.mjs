@@ -41,7 +41,7 @@ import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { app_bible_languages } from "./app_bible_languages.mjs";
 import { emoji_gear } from "./emoji_gear.mjs";
 import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
-import { list_map_add_async } from "./list_map_add_async.mjs";
+import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
@@ -138,7 +138,11 @@ export async function app_bible_home_generic(context, lambda$a) {
     return r;
   }
   let fetched = [];
-  await list_map_add_async(languages_chosen, lambda_language, fetched);
+  await list_map_unordered_add_async(
+    languages_chosen,
+    lambda_language,
+    fetched,
+  );
   let languages_available = list_filter_null_not_is(fetched);
   function lambda_text_map(item) {
     let verses_l = property_get(item, "verses");
