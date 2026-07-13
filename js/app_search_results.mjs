@@ -114,6 +114,7 @@ export async function app_search_results(context, div_results) {
       html_border(div_verse, "0.2em", "green");
       html_border_style(div_verse, "solid");
       html_style_margin_y(div_verse, "0.2em");
+      html_style_padding_x(div_verse, "0.2em");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
