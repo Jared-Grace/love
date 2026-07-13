@@ -7,11 +7,16 @@ import { list_intersect } from "./list_intersect.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { function_list_generate } from "./function_list_generate.mjs";
 export async function app_apps_all_main_fns_generate() {
-  let names = await apps_names();
+  let prefixed = await apps_names_prefixed();
   let identifiers = await data_identifiers_get();
-  let prefixed = list_map_unique(names, app_shared_name_prefixed);
   let identifier_names = properties_get(identifiers);
   let apps = list_intersect(prefixed, identifier_names);
   list_sort_text(apps);
   await function_list_generate(app_apps_all_main_fns_generate, apps);
 }
+async function apps_names_prefixed() {
+  let names = await apps_names();
+  let prefixed = list_map_unique(names, app_shared_name_prefixed);
+  return prefixed;
+}
+
