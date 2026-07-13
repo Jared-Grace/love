@@ -9,9 +9,7 @@ export function html_bar_content(root) {
     "box-sizing": "border-box",
   });
   let bar = html_div(shell);
-  html_style_assign(bar, {
-    flex: "0 0 auto",
-  });
+  html_style_set(bar, "flex", "0 0 auto");
   let content = html_div(shell);
   html_style_assign(content, {
     flex: "1 1 auto",
