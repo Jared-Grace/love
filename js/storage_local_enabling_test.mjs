@@ -1,12 +1,12 @@
 import { storage_local_enable } from "./storage_local_enable.mjs";
 import { global_function_initialize_object } from "./global_function_initialize_object.mjs";
-import { false_is_assert } from "./false_is_assert.mjs";
+import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { storage_local_get_global } from "./storage_local_get_global.mjs";
 import { storage_local_key_get } from "./storage_local_key_get.mjs";
 import { storage_local_keys_value_dictionary } from "./storage_local_keys_value_dictionary.mjs";
 import { json_equal_assert } from "./json_equal_assert.mjs";
 import { storage_local_disable } from "./storage_local_disable.mjs";
-import { true_is_assert } from "./true_is_assert.mjs";
+import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { storage_local_enabled } from "./storage_local_enabled.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
@@ -46,7 +46,9 @@ export function storage_local_enabling_test() {
   ("by default local storage is enabled");
   {
     let enabled = storage_local_enabled();
-    true_is_assert(enabled);
+    true_is_assert_json(enabled, {
+      hint: "local storage should be enabled by default",
+    });
   }
   ("disabling local storage returns a dictionary");
   {
@@ -70,7 +72,9 @@ export function storage_local_enabling_test() {
   ("disabling local storage returns disabled flag");
   {
     let enabled2 = storage_local_enabled();
-    false_is_assert(enabled2);
+    false_is_assert_json(enabled2, {
+      hint: "after disabling, local storage should report disabled",
+    });
   }
   ("global object is correct");
   {
