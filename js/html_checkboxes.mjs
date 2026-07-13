@@ -43,12 +43,8 @@ export function html_checkboxes(
   button_back(context, container_main);
   let div = html_div_text(container_main, top_text);
   html_centered(div);
-  html_style_assign(div, {
-    "font-size": app_shared_style_control_font_size(),
-  });
-  html_style_assign(div, {
-    padding: "0.6em",
-  });
+  html_style_set(div, "font-size", app_shared_style_control_font_size());
+  html_style_set(div, "padding", "0.6em");
   let checkboxes = null;
   let bn = null;
   let value_previous = value_previous_get();
@@ -62,29 +58,27 @@ export function html_checkboxes(
     async function on_click() {
       function lambda2(r) {
         let container2 = property_get(r, "container");
-        html_style_assign(container2, {
-          "box-shadow": "none",
-        });
+        html_style_set(container2, "box-shadow", "none");
         html_checked_set(r, false);
       }
       each(checkboxes, lambda2);
       html_checked_set(checkbox, true);
       let selected = "#5ffb84ff";
-      html_style_assign(container, {
-        "background-color": selected,
-      });
+      html_style_set(container, "background-color", selected);
       await sleep_0();
       let valid = valid_get(checkboxes);
       validate(valid);
       let ci = app_karate_button_background_invalid();
       let c = valid ? "#4ad66bff" : ci;
-      html_style_assign(container, {
-        "box-shadow": text_combine_multiple([
+      html_style_set(
+        container,
+        "box-shadow",
+        text_combine_multiple([
           "inset 0 0 0 .15em ",
           html_rgba_to_rgb(c),
           ", inset 0 0 0 .3em white",
         ]),
-      });
+      );
     }
     html_on_click(container, on_click);
     if (equal(value, value_previous)) {
@@ -97,9 +91,7 @@ export function html_checkboxes(
       margin: "1em",
     });
     let s = html_span_text(label, title);
-    html_style_assign(s, {
-      "font-size": app_shared_style_control_font_size(),
-    });
+    html_style_set(s, "font-size", app_shared_style_control_font_size());
     let div = html_div_text(label, details);
     object_merge_set(checkbox, {
       container,

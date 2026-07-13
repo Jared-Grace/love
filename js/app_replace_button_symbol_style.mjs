@@ -4,7 +4,5 @@ import { html_display_inline_block } from "./html_display_inline_block.mjs";
 export function app_replace_button_symbol_style(b) {
   app_replace_button_symbol_style_inner(b);
   html_display_inline_block(b);
-  html_style_assign(b, {
-    "line-height": 1,
-  });
+  html_style_set(b, "line-height", 1);
 }

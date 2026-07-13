@@ -17,9 +17,11 @@ export function app_g_npc_says(npc, overlay, npc_says) {
     [g_gender_male()]: "#acc1ff",
   };
   let color_background = property_get(map, gender);
-  html_style_assign(container, {
-    "background-color": text_combine(color_background, "bc"),
-  });
+  html_style_set(
+    container,
+    "background-color",
+    text_combine(color_background, "bc"),
+  );
   let game_prefix = g_game_prefix();
   let c_src = g_character_img_url(npc);
   let component = html_img(container, c_src);

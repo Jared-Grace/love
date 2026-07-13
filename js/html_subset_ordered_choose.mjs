@@ -13,7 +13,7 @@ export function html_subset_ordered_choose(
   let container = html_div(parent);
   function render() {
     html_clear(container);
-    "choices grid on top stays put (constant size) so tap targets don't shift; the selected/reorder strip grows below";
+    ("choices grid on top stays put (constant size) so tap targets don't shift; the selected/reorder strip grows below");
     html_subset_toggle(
       container,
       options,
