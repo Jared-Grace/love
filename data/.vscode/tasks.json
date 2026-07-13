@@ -29,6 +29,14 @@
       "runOptions": {
         "runOn": "folderOpen"
       },
+    },
+    {
+      "label": "Git Push Auto",
+      "type": "shell",
+      "command": "cd love && node scripts/r.mjs git_push_auto",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
     }
   ]
 }
