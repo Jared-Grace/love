@@ -2,7 +2,7 @@ import { list_map } from "./list_map.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { app_replace_button_rule_background_color } from "./app_replace_button_rule_background_color.mjs";
-import { app_shared_button_background } from "./app_shared_button_background.mjs";
+import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { html_style_background_color_set_if_else } from "./html_style_background_color_set_if_else.mjs";
 import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
@@ -51,7 +51,7 @@ export function app_reply_buttons_languages_on_toggle(
     update();
     function update() {
       let chosen = chosen_get();
-      let chosen_color = app_shared_button_background();
+      let chosen_color = app_shared_button_selected_background_color();
       let unchosen_color = app_replace_button_rule_background_color();
       html_style_background_color_set_if_else(
         chosen,
