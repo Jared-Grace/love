@@ -1,4 +1,5 @@
 import { ternary } from "./ternary.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { js_return_identifier_name } from "./js_return_identifier_name.mjs";
 import { list_get_end_1 } from "./list_get_end_1.mjs";
 import { object_replace } from "./object_replace.mjs";
@@ -101,7 +102,7 @@ export function app_a_identifier_generic(
     list_add_multiple(choices, [
       {
         shortcut: "c",
-        text: "Copy",
+        text: html_button_copy_text(),
         fn: async function lambda2() {
           await clipboard_copy(name);
           overlay_close();
