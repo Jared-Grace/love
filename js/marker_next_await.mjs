@@ -1,7 +1,7 @@
 import { js_await } from "./js_await.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { js_node_type_is_assert } from "./js_node_type_is_assert.mjs";
+import { js_node_type_is_assert_json } from "./js_node_type_is_assert_json.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { marker_next_get } from "./marker_next_get.mjs";
 import { function_transform_marker } from "./function_transform_marker.mjs";
@@ -14,7 +14,9 @@ export async function marker_next_await() {
     async function lambda(a) {
       let v = marker_next_get(a);
       let next = property_get(v, "next");
-      js_node_type_is_assert(next, "ExpressionStatement");
+      js_node_type_is_assert_json(next, "ExpressionStatement", {
+        hint: "the marked statement should be an expression statement so its expression can be awaited",
+      });
       let expression = property_get(next, "expression");
       let awaited = js_await(expression);
       property_set(next, "expression", awaited);
