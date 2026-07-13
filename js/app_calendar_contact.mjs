@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_replace_button_home_text } from "./app_replace_button_home_text.mjs";
 import { app_a_button_wide } from "./app_a_button_wide.mjs";
-import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { json_to } from "./json_to.mjs";
 import { app_calendar_download_browser_contacts } from "./app_calendar_download_browser_contacts.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
@@ -28,7 +28,7 @@ export async function app_calendar_contact(context) {
   });
   let contact = property_get(dictionary, contact_selected);
   let json = json_to(contact);
-  let p = html_p_text(root, json);
+  let p = app_shared_text_body(root, json);
   let id_properties = app_calendar_id_properties();
   let id = object_pick_try_single_value(contact, id_properties);
   async function lambda3() {
