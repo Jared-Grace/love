@@ -56,7 +56,10 @@ export async function bible_interlinear_chapters() {
     let verse_start = property_get(v2, "verse_start");
     let chapter_code = property_get(v2, "chapter_code");
     let index = property_get(v2, "index");
-    equal_assert(verse_start, verse_end);
+    equal_assert_json(verse_start, verse_end, {
+      hint: "a single-verse reference should have an equal start and end verse — did a multi-verse range slip in?",
+      vid,
+    });
     let verse = {
       verse_number: verse_start,
       text,
