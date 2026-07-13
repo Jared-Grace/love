@@ -20,7 +20,7 @@ import { function_dependencies } from "./function_dependencies.mjs";
 import { app_context_initialize } from "./app_context_initialize.mjs";
 import { property_exists_equals } from "./property_exists_equals.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { list_map_async } from "./list_map_async.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 export async function webpack_watch() {
   let dev_folder = folder_public_join(app_shared_name_dev_text());
