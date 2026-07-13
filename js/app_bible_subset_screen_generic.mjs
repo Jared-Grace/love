@@ -1,5 +1,6 @@
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_centered } from "./html_centered.mjs";
+import { html_page_padding_x } from "./html_page_padding_x.mjs";
 import { app_replace_button_back } from "./app_replace_button_back.mjs";
 import { app_shared_screen_set_home } from "./app_shared_screen_set_home.mjs";
 import { html_subset_ordered_choose } from "./html_subset_ordered_choose.mjs";
@@ -14,6 +15,7 @@ export function app_bible_subset_screen_generic(
 ) {
   let root = html_clear_context(context);
   html_centered(root);
+  html_page_padding_x(root);
   function lambda_back() {
     app_shared_screen_set_home(context);
   }
