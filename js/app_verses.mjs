@@ -9,7 +9,7 @@ import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
-import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -39,8 +39,8 @@ export async function app_verses(context) {
     languages,
   );
   let card2 = app_shared_container_blue(root);
-  html_p_text(card2, "2. How many Bible verses would you like?");
-  let count_label = html_p_text(card2, "");
+  app_shared_text_body(card2, "2. How many Bible verses would you like?");
+  let count_label = app_shared_text_body(card2, "");
   count_label_refresh();
   let counts = [1, 2, 3, 4, 6, 8, 10, 20, 40];
   function count_each(c) {
@@ -52,12 +52,12 @@ export async function app_verses(context) {
   }
   each(counts, count_each);
   let card3 = app_shared_container_blue(root);
-  html_p_text(
+  app_shared_text_body(
     card3,
     "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.",
   );
   let generate_button = app_replace_button(card3, "✨ Generate", generate);
-  html_p_text(
+  app_shared_text_body(
     card3,
     "If the copy did not work, this button will gently copy them again.",
   );
@@ -93,7 +93,7 @@ export async function app_verses(context) {
     each(bible_texts, display_line);
   }
   function display_line(line) {
-    html_p_text(card4, line);
+    app_shared_text_body(card4, line);
   }
   async function copy() {
     let joined = await list_join_newline_2_copy(bible_texts);
