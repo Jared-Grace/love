@@ -1,6 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 export function html_loading_overlay() {
   let body = html_document_body();
