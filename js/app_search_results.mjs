@@ -9,7 +9,7 @@ import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
-import { html_button_copy_width_full } from "./html_button_copy_width_full.mjs";
+import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -28,7 +28,6 @@ import { html_div } from "./html_div.mjs";
 import { not } from "./not.mjs";
 import { ebible_book_exists } from "./ebible_book_exists.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { html_button_wide } from "./html_button_wide.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
