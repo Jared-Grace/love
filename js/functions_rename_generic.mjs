@@ -5,7 +5,7 @@ import { log } from "./log.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { object_filter } from "./object_filter.mjs";
 import { object_map_async } from "./object_map_async.mjs";
-import { property_exists_not_assert } from "./property_exists_not_assert.mjs";
+import { property_exists_not_assert_json } from "./property_exists_not_assert_json.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -27,7 +27,9 @@ export async function functions_rename_generic(filter, name_change) {
       hint: "each renamed function name should be text — did the name change produce a non-text value?",
       f_name_after,
     });
-    property_exists_not_assert(identifiers, f_name_after);
+    property_exists_not_assert_json(identifiers, f_name_after, {
+      hint: "each new function name should not already be taken by another identifier — pick a name that isn't in use",
+    });
   }
   log(functions_rename_generic.name, {
     different,
