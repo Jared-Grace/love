@@ -1,6 +1,6 @@
 import { html_p_text } from "./html_p_text.mjs";
 import { each } from "./each.mjs";
-import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
+import { app_supper_texts_colored } from "./app_supper_texts_colored.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { log } from "./log.mjs";
 import { list_add_first } from "./list_add_first.mjs";
@@ -42,7 +42,7 @@ export async function app_supper_verses_render(root, folders) {
       mapped,
     });
     let texts = list_map_property(mapped, "text");
-    html_p_text_multiple(p, texts);
+    app_supper_texts_colored(p, texts);
   }
   each(verses_first, lambda2);
   let prayer_card = app_shared_container_plain(root);

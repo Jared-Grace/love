@@ -4,7 +4,7 @@ import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { storage_local_get_global } from "./storage_local_get_global.mjs";
 import { storage_local_key_get } from "./storage_local_key_get.mjs";
 import { storage_local_keys_value_dictionary } from "./storage_local_keys_value_dictionary.mjs";
-import { json_equal_assert } from "./json_equal_assert.mjs";
+import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
 import { storage_local_disable } from "./storage_local_disable.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { storage_local_enabled } from "./storage_local_enabled.mjs";
@@ -55,13 +55,17 @@ export function storage_local_enabling_test() {
   ("disabling local storage returns a dictionary");
   {
     let dictionary = storage_local_disable(context);
-    json_equal_assert(dictionary, expected);
+    json_equal_assert_json(dictionary, expected, {
+      hint: "disabling local storage should return the saved values as a dictionary",
+    });
     ("disabled local storage returns correct dictionary");
     let local_disabled = storage_local_keys_value_dictionary(
       dictionary,
       context,
     );
-    json_equal_assert(local_disabled, expected);
+    json_equal_assert_json(local_disabled, expected, {
+      hint: "the disabled storage's keys should map to the saved values",
+    });
   }
   ("global actually uses global");
   {
@@ -81,19 +85,25 @@ export function storage_local_enabling_test() {
   ("global object is correct");
   {
     let fn_object = global_function_initialize_object(storage_local_set);
-    json_equal_assert(fn_object, {
+    json_equal_assert_json(fn_object, {
       [storage_local_key_get(app_fn, key)]: v,
+    }, {
+      hint: "the global object should hold the key and value that were set",
     });
   }
   ("enabling local storage returns dictionary");
   {
     let dictionary2 = storage_local_enable(context);
-    json_equal_assert(dictionary2, expected);
+    json_equal_assert_json(dictionary2, expected, {
+      hint: "enabling local storage should return the saved values as a dictionary",
+    });
     let local_reenabled = storage_local_keys_value_dictionary(
       dictionary2,
       context,
     );
-    json_equal_assert(local_reenabled, expected);
+    json_equal_assert_json(local_reenabled, expected, {
+      hint: "the re-enabled storage's keys should map to the saved values",
+    });
   }
   ("global object is empty after enable");
   {

@@ -4,7 +4,7 @@ import { reply_optional } from "./reply_optional.mjs";
 import { reply_messages_inner } from "./reply_messages_inner.mjs";
 import { reply_last } from "./reply_last.mjs";
 import { property_get } from "./property_get.mjs";
-import { json_equal_assert } from "./json_equal_assert.mjs";
+import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_test() {
@@ -310,7 +310,10 @@ export function reply_test() {
     let start = property_get(item, "start");
     let expected = property_get(item, "expected");
     let actual = await reply_messages_inner(message, start);
-    json_equal_assert(actual, expected);
+    json_equal_assert_json(actual, expected, {
+      hint: "the reply parse should match the expected tokens for this message",
+      message,
+    });
   }
   each(cases, lambda);
 }

@@ -1,19 +1,23 @@
 import { text_includes_assert } from "./text_includes_assert.mjs";
 import { object_merge_generic_message_match } from "./object_merge_generic_message_match.mjs";
 import { throws_assert_text } from "./throws_assert_text.mjs";
-import { json_equal_assert } from "./json_equal_assert.mjs";
+import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
 import { object_merge_match } from "./object_merge_match.mjs";
 export function object_merge_match_test() {
   let to = null;
   to = {};
   object_merge_match(to, {});
-  json_equal_assert(to, {});
+  json_equal_assert_json(to, {}, {
+    hint: "object_merge_match should leave the merged object matching the expected shape",
+  });
   to = {};
   object_merge_match(to, {
     a: 1,
   });
-  json_equal_assert(to, {
+  json_equal_assert_json(to, {
     a: 1,
+  }, {
+    hint: "object_merge_match should leave the merged object matching the expected shape",
   });
   to = {
     b: 2,
@@ -21,9 +25,11 @@ export function object_merge_match_test() {
   object_merge_match(to, {
     a: 1,
   });
-  json_equal_assert(to, {
+  json_equal_assert_json(to, {
     b: 2,
     a: 1,
+  }, {
+    hint: "object_merge_match should leave the merged object matching the expected shape",
   });
   to = {
     b: 2,
@@ -33,9 +39,11 @@ export function object_merge_match_test() {
     b: 2,
     a: 1,
   });
-  json_equal_assert(to, {
+  json_equal_assert_json(to, {
     b: 2,
     a: 1,
+  }, {
+    hint: "object_merge_match should leave the merged object matching the expected shape",
   });
   to = {
     c: 3,
@@ -46,10 +54,12 @@ export function object_merge_match_test() {
     b: 2,
     a: 1,
   });
-  json_equal_assert(to, {
+  json_equal_assert_json(to, {
     c: 3,
     b: 2,
     a: 1,
+  }, {
+    hint: "object_merge_match should leave the merged object matching the expected shape",
   });
   to = {
     c: 3,
