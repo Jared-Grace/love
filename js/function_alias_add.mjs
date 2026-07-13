@@ -2,7 +2,7 @@ import { function_exists_assert } from "./function_exists_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_is_assert } from "./js_identifier_is_assert.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
-import { undefined_not_is_assert } from "./undefined_not_is_assert.mjs";
+import { undefined_not_is_assert_json } from "./undefined_not_is_assert_json.mjs";
 import { list_sort_text_size } from "./list_sort_text_size.mjs";
 import { function_alias_generic } from "./function_alias_generic.mjs";
 import { property_set } from "./property_set.mjs";
@@ -13,7 +13,9 @@ export async function function_alias_add(first, second) {
   let [alias, f_name] = list;
   let expression = js_parse_expression(f_name);
   js_identifier_is_assert(expression);
-  undefined_not_is_assert(f_name);
+  undefined_not_is_assert_json(f_name, {
+    hint: "the function name to alias shouldn't be undefined",
+  });
   await function_exists_assert(f_name);
   function lambda(a) {
     let unaliased = property_get(a, "unaliased");
