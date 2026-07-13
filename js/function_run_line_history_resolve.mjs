@@ -4,6 +4,7 @@ import { data_get } from "./data_get.mjs";
 import { data_prompts_path } from "./data_prompts_path.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get_end } from "./list_get_end.mjs";
+import { subtract } from "./subtract.mjs";
 export async function function_run_line_history_resolve(line) {
   let trimmed = text_trim(line);
   let steps_back = null;
@@ -21,6 +22,6 @@ export async function function_run_line_history_resolve(line) {
   let d_path = data_prompts_path();
   let d = await data_get("prompts", [], d_path);
   let previous = property_get(d, "value");
-  let resolved = list_get_end(previous, steps_back);
+  let resolved = list_get_end(previous, subtract(steps_back, 1));
   return resolved;
 }
