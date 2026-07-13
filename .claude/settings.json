@@ -16,6 +16,7 @@
       "Bash(df:*)",
       "Bash(du:*)",
       "Bash(ps:*)",
+      "Bash(pgrep:*)",
       "Bash(sleep:*)",
       "Bash(git check-ignore:*)",
       "Bash(git diff:*)",
