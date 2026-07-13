@@ -1,4 +1,4 @@
-import { function_exists_not_assert } from "./function_exists_not_assert.mjs";
+import { function_exists_not_assert_json } from "./function_exists_not_assert_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -8,7 +8,9 @@ import { error } from "./error.mjs";
 import { property_set } from "./property_set.mjs";
 export async function function_alias_change(alias_old, alias_new) {
   arguments_assert(arguments, 2);
-  await function_exists_not_assert(alias_new);
+  await function_exists_not_assert_json(alias_new, {
+    hint: "the new alias shouldn't already be an existing function — pick a name that's free",
+  });
   function lambda(a) {
     let unaliased = property_get(a, "unaliased");
     let aliases = property_get(a, "aliases");
