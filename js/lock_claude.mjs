@@ -2,6 +2,7 @@ import { invoke } from "./invoke.mjs";
 import { promise_wrap_unawait } from "./promise_wrap_unawait.mjs";
 import { lock_wait } from "./lock_wait.mjs";
 import { function_run_prompt } from "./function_run_prompt.mjs";
+import { lock_wait_prompt } from "./lock_wait_prompt.mjs";
 export async function lock_claude() {
   let on_lock_reject = null;
   let on_lock_resolve = null;
@@ -23,7 +24,7 @@ export async function lock_claude() {
   }
   async function lambda3() {
     try {
-      await lock_wait(function_run_prompt.name, lambda, lock_claude.name);
+      await lock_wait_prompt(lambda, lock_claude.name);
     } catch (e) {
       on_lock_reject(e);
     }
