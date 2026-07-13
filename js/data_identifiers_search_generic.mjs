@@ -3,6 +3,7 @@ import { function_list_names_to_paths } from "./function_list_names_to_paths.mjs
 import { list_intersect_multiple } from "./list_intersect_multiple.mjs";
 import { text_split_comma_dot } from "./text_split_comma_dot.mjs";
 import { list_map } from "./list_map.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { property_get_curried } from "./property_get_curried.mjs";
 import { data_identifiers_exist_assert } from "./data_identifiers_exist_assert.mjs";
 export async function data_identifiers_search_generic(fn, ids_comma) {
@@ -11,7 +12,8 @@ export async function data_identifiers_search_generic(fn, ids_comma) {
     ids_comma,
   });
   let identifiers = await fn();
-  let ids = text_split_comma_dot(ids_comma);
+  let ids_split = text_split_comma_dot(ids_comma);
+  let ids = list_map(ids_split, text_trim);
   data_identifiers_exist_assert(identifiers, ids);
   let r = property_get_curried(identifiers);
   let mapped = list_map(ids, r);
