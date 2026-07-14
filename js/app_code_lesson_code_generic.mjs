@@ -7,13 +7,16 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
-export function app_code_lesson_code_generic(
-  value,
-  batch_get,
-  name_id,
-  above,
-  quiz_backwards_answer_count_override,
-) {
+import { property_get } from "./property_get.mjs";
+export function app_code_lesson_code_generic(params) {
+  let value = property_get(params, "value");
+  let batch_get = property_get(params, "batch_get");
+  let name_id = property_get(params, "name_id");
+  let above = property_get(params, "above");
+  let quiz_backwards_answer_count_override = property_get(
+    params,
+    "quiz_backwards_answer_count_override",
+  );
   let example_answer_label = text_first_upper_to(
     text_combine(value, " of code: "),
   );
