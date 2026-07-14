@@ -23,6 +23,7 @@ export function app_code_lesson_functions_console_log() {
     name_id_rights: [],
     next_arg: digits_3_random_next(),
     quiz_backwards_answer_count_override: null,
+    forwards_answer_count_override: null,
   });
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");
