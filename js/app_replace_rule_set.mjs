@@ -1,5 +1,4 @@
 import { null_is } from "./null_is.mjs";
-import { app_replace_button_rule_selected_background_color } from "./app_replace_button_rule_selected_background_color.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
@@ -16,6 +15,7 @@ import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
+import { app_replace_rule_set_rule_background_color } from "./app_replace_rule_set_rule_background_color.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
@@ -47,10 +47,7 @@ import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { ternary } from "./ternary.mjs";
-import { app_replace_button_rule_background_color } from "./app_replace_button_rule_background_color.mjs";
-import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
 import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
-import { ternary_nested } from "./ternary_nested.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_replace_button_symbol_style_valid_if } from "./app_replace_button_symbol_style_valid_if.mjs";
 import { app_replace_rule_valid_curried } from "./app_replace_rule_valid_curried.mjs";
@@ -119,7 +116,6 @@ export async function app_replace_rule_set(context) {
   let r3 = html_progress_bar(root, goal_index, goals_count, "goal");
   let container = property_get(r3, "container");
   html_style_margin_top(container, "0");
-  let highlight = app_replace_rule_set_highlight();
   let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
   let label_rules = html_p(root);
@@ -186,19 +182,11 @@ export async function app_replace_rule_set(context) {
         enabled = true;
         html_enable_if(rb, enabled);
         app_replace_lefts_rights_style(rb, selected || success, success);
-        let button_background_color =
-          app_replace_button_rule_background_color();
-        let blue_strong = app_replace_button_rule_selected_background_color();
-        let c = ternary_nested(
+        let c = app_replace_rule_set_rule_background_color(
           selected,
-          blue_strong,
           enabled,
-          button_background_color,
-          "#a8a8a8ff",
+          success,
         );
-        if (success) {
-          c = highlight;
-        }
         html_style_background_color_set(rb, c);
         let arrow2 = property_get(rb, "arrow");
         html_font_color_set_if(selected && not(success), arrow2, "white", "black");
