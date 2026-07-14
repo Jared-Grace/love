@@ -1,8 +1,8 @@
+import { js_code_statement } from "../../love/js/js_code_statement.mjs";
 import { html_div_code } from "../../love/js/html_div_code.mjs";
 import { each } from "../../love/js/each.mjs";
 import { fn_name } from "../../love/js/fn_name.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "../../love/js/app_code_lesson_operators_value_max_range_1_next.mjs";
-import { identity } from "../../love/js/identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "../../love/js/app_code_lesson_functions_console_log_generic.mjs";
 import { js_operators_arithmetic } from "../../love/js/js_operators_arithmetic.mjs";
 import { list_map } from "../../love/js/list_map.mjs";
@@ -41,7 +41,8 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     function lambda(o) {
       let e = js_operator_to_expression_only(o, number_next);
       let call = js_code_call_arg(fn_name, e);
-      html_div_code(c, call);
+      let s = js_code_statement(call);
+      html_div_code(c, s);
     }
     each(operators, lambda);
     app_code_container_light_blue_cycle_code(root, [
