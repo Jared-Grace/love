@@ -7,20 +7,31 @@ import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_
 import { object_assign } from "./object_assign.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
-export function app_code_lesson_quizzes_generic(
-  backwards_answer_label,
-  backwards_answer_on_button,
-  backwards_on_question,
-  backwards_question_label,
-  backwards_answer_count_override,
-  forwards_answer_label,
-  forwards_answer_on_button,
-  forwards_on_question,
-  forwards_question_label,
-  backwards_code,
-  batch_get,
-  forwards_code,
-) {
+export function app_code_lesson_quizzes_generic(params) {
+  let backwards_answer_label = property_get(params, "backwards_answer_label");
+  let backwards_answer_on_button = property_get(
+    params,
+    "backwards_answer_on_button",
+  );
+  let backwards_on_question = property_get(params, "backwards_on_question");
+  let backwards_question_label = property_get(
+    params,
+    "backwards_question_label",
+  );
+  let backwards_answer_count_override = property_get(
+    params,
+    "backwards_answer_count_override",
+  );
+  let forwards_answer_label = property_get(params, "forwards_answer_label");
+  let forwards_answer_on_button = property_get(
+    params,
+    "forwards_answer_on_button",
+  );
+  let forwards_on_question = property_get(params, "forwards_on_question");
+  let forwards_question_label = property_get(params, "forwards_question_label");
+  let backwards_code = property_get(params, "backwards_code");
+  let batch_get = property_get(params, "batch_get");
+  let forwards_code = property_get(params, "forwards_code");
   let backwards = {
     question_label: backwards_question_label,
     on_question: backwards_on_question,
