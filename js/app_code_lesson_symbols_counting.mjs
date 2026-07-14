@@ -25,18 +25,25 @@ export function app_code_lesson_symbols_counting(
   let on_quiz_answer_button_backwards =
     app_code_lesson_symbols_counting_quiz_backwards_on_button(on_question);
   let quiz_backwards_answer_count_override = null;
-  let quizzes_get = app_code_lesson_quizzes(
-    batch_get,
-    example_question_label,
+  let forwards = {
+    question_label: example_question_label,
     on_question,
-    label_answer_forwards,
-    noop,
-    "Count: ",
-    app_code_style_normal_text,
-    quiz_backwards_label_answer,
-    on_quiz_answer_button_backwards,
-    quiz_backwards_answer_count_override,
-  );
+    answer_label: label_answer_forwards,
+    answer_on_button: noop,
+    answer_count_override: null,
+  };
+  let backwards = {
+    question_label: "Count: ",
+    on_question: app_code_style_normal_text,
+    answer_label: quiz_backwards_label_answer,
+    answer_on_button: on_quiz_answer_button_backwards,
+    answer_count_override: quiz_backwards_answer_count_override,
+  };
+  let quizzes_get = app_code_lesson_quizzes({
+    batch_get,
+    forwards,
+    backwards,
+  });
   let lesson = app_code_lesson_base(
     name_id,
     above,

@@ -18,18 +18,25 @@ export function app_code_lesson_validity_base(
   let example_count = 2;
   let quiz_backwards_label_answer =
     app_code_quiz_backwards_label_answer_validity();
-  let quizzes_get = app_code_lesson_quizzes(
+  let forwards = {
+    question_label: example_question_label,
+    on_question,
+    answer_label: quiz_label,
+    answer_on_button: noop,
+    answer_count_override: null,
+  };
+  let backwards = {
+    question_label: backwards_question_label,
+    on_question: app_code_style_normal_text,
+    answer_label: quiz_backwards_label_answer,
+    answer_on_button: on_question,
+    answer_count_override: 2,
+  };
+  let quizzes_get = app_code_lesson_quizzes({
     batch_get,
-    example_question_label,
-    on_question,
-    quiz_label,
-    noop,
-    backwards_question_label,
-    app_code_style_normal_text,
-    quiz_backwards_label_answer,
-    on_question,
-    2,
-  );
+    forwards,
+    backwards,
+  });
   let lesson = app_code_lesson_base(
     name_id,
     above,
