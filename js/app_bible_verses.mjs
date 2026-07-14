@@ -19,7 +19,8 @@ export async function app_bible_verses(context) {
   let root = property_get(r, "root");
   let chapter_code = property_get(r, "chapter_code");
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
-  html_div_text_centered(root, chapter_name);
+  let chapter_div = html_div_text_centered(root, chapter_name);
+  app_shared_text_deemphasized(chapter_div);
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, "verse_number");
