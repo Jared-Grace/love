@@ -32,12 +32,12 @@ export function app_code_lesson_functions_console_log_generic(params) {
   let rights = [name];
   list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
-  let lesson = app_code_lesson_code_logged(
-    b,
+  let lesson = app_code_lesson_code_logged({
+    batch_get: b,
     name_id,
     above,
     quiz_backwards_answer_count_override,
-  );
+  });
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
   let r3 = {
