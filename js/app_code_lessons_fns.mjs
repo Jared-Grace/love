@@ -1,4 +1,5 @@
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
+import { app_code_lesson_functions_console_log_less_than } from "./app_code_lesson_functions_console_log_less_than.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
@@ -46,6 +47,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log,
     app_code_lesson_functions_console_log_statement,
     app_code_lesson_functions_console_log_arithmetic,
+    app_code_lesson_functions_console_log_less_than,
   ];
   return fns;
 }
