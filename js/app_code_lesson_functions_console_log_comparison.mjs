@@ -14,7 +14,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { object_copy_assign } from "./object_copy_assign.mjs";
+import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_comparison(params) {
   let operator = property_get(params, "operator");
@@ -57,7 +57,7 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   });
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
-  let lesson_symbol = object_copy_assign(lesson, { symbol });
+  let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
   return lesson_symbol;
   function above(root) {
     let c = app_code_container_light_blue(root);

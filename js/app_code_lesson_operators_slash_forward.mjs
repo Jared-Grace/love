@@ -15,5 +15,5 @@ export function app_code_lesson_operators_slash_forward() {
     verb,
     lesson_name,
   );
-  return r;
+  return app_code_lesson_symbol_set(r, operator);
 }
