@@ -15,6 +15,8 @@ import { each_index } from "./each_index.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { property_get } from "./property_get.mjs";
+import { not } from "./not.mjs";
+import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -27,6 +29,7 @@ export function app_replace_goals(context) {
   function each_goal(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_set_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
+    let choose_this_next = not(completed) && completed_previous;
     let title = app_replace_goals_generic(
       root,
       completed,
@@ -41,7 +44,9 @@ export function app_replace_goals(context) {
     let start = property_get(r4, "start");
     let end = property_get(r4, "end");
     let r2 = app_replace_button_rule_content(title, start, end);
-    app_replace_lefts_rights_style(r2, completed, completed);
+    app_replace_lefts_rights_style(r2, completed || choose_this_next, completed);
+    let arrow = property_get(r2, "arrow");
+    html_font_color_set_if(choose_this_next, arrow, "white", "black");
     function lambda() {
       on_click(index);
     }
