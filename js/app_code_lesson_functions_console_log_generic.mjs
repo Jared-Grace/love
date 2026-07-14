@@ -17,6 +17,10 @@ export function app_code_lesson_functions_console_log_generic(params) {
     params,
     "quiz_backwards_answer_count_override",
   );
+  let forwards_answer_count_override = property_get(
+    params,
+    "forwards_answer_count_override",
+  );
   let name = "console.log";
   function batch_get() {
     let arg = next_arg();
@@ -37,6 +41,7 @@ export function app_code_lesson_functions_console_log_generic(params) {
     name_id,
     above,
     quiz_backwards_answer_count_override,
+    forwards_answer_count_override,
   });
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);

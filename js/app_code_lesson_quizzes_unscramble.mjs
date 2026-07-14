@@ -23,6 +23,10 @@ export function app_code_lesson_quizzes_unscramble(params) {
     params,
     "backwards_answer_count_override",
   );
+  let forwards_answer_count_override = property_get(
+    params,
+    "forwards_answer_count_override",
+  );
   let backwards_code = true;
   let quizzes_get = app_code_lesson_quizzes_generic({
     backwards_answer_label,
@@ -36,6 +40,7 @@ export function app_code_lesson_quizzes_unscramble(params) {
     forwards_question_label,
     backwards_code,
     batch_get,
+    forwards_answer_count_override,
     forwards_code: false,
   });
   return quizzes_get;
