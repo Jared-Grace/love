@@ -22,6 +22,7 @@ export function app_code_lesson_functions_console_log() {
     lambda$code: identity,
     name_id_rights: [],
     next_arg: digits_3_random_next(),
+    example_count: 1,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
