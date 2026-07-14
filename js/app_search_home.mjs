@@ -16,6 +16,7 @@ import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
+import { emoji_search } from "./emoji_search.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_search_home(context) {
   let root = property_get(context, "root");
@@ -38,7 +39,7 @@ export function app_search_home(context) {
   let input = html_input_text(root, search_instructions);
   app_shared_input_style(input);
   html_on_enter(input, search);
-  let text = "Search";
+  let text = text_combine(emoji_search(), " Search");
   app_replace_button_wide(root, text, search);
   html_br_2(root);
   let div_results = html_div(root);
