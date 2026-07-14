@@ -15,7 +15,9 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_less_than() {
-  let operators = [js_operator_less_than()];
+  let operator = js_operator_less_than();
+  let operators = [operator];
+  let symbol = property_get(operator, "operator");
   let number_next = app_code_lesson_operators_value_max_random_next();
   function refill() {
     function mapper(o) {
@@ -40,7 +42,7 @@ export function app_code_lesson_functions_console_log_less_than() {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
       "The symbol ",
-      "<",
+      symbol,
       " asks a question: is the left number smaller than the right number?",
     ]);
     html_div_cycle_code(c, ["For example: "]);
