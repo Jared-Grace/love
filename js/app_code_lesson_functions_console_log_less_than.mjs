@@ -30,6 +30,7 @@ export function app_code_lesson_functions_console_log_less_than() {
     above,
     js_code_statement,
     [" less than"],
+    
     next_arg,
     2,
   );
