@@ -16,6 +16,14 @@ export function app_replace_rule_set_marker_convert() {
         end: "a a a d",
       },
       {
+        start: "d b",
+        end: "b d",
+      },
+      {
+        start: "d b c",
+        end: "b a d",
+      },
+      {
         start: "d b c c",
         end: "b a a d",
       },
