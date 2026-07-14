@@ -22,7 +22,7 @@ import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_invalid() {
-  let name_id = app_code_lesson_name_id("functions", ["invalid"]);
+  let name_id = app_code_lesson_name_id("functions", ["validity"]);
   let operators = js_operators_arithmetic();
   let m = app_code_lesson_operators_value_max();
   let next = range_1_next(m);
