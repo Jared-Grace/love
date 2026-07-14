@@ -27,7 +27,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   let next_arg = list_iterator_refillable(refill);
   var r = app_code_lesson_functions_console_log_generic(
     above,
-    identity,
+    js_code_statement,
     [" arithmetic"],
     next_arg,
   );
