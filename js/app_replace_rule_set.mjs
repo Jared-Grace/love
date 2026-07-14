@@ -22,7 +22,6 @@ import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule
 import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "./html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
@@ -47,7 +46,6 @@ import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_replace_button_symbol_style_valid_if } from "./app_replace_button_symbol_style_valid_if.mjs";
 import { app_replace_button_symbol_style } from "./app_replace_button_symbol_style.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { html_div } from "./html_div.mjs";
