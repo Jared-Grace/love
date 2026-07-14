@@ -19,7 +19,7 @@ export function app_code_lesson_functions_console_log_comparison(
   operator,
   compare_word,
   name_id_rights,
-  answer_intro,
+  closing,
 ) {
   let symbol = property_get(operator, "operator");
   let compare = property_get(operator, "fn");
@@ -74,13 +74,7 @@ export function app_code_lesson_functions_console_log_comparison(
     }
     show(true);
     show(false);
-    app_code_container_light_blue_cycle_code(root, [
-      answer_intro,
-      fn_name,
-      " will write out ",
-      js_keyword_true(),
-      " or ",
-      js_keyword_false(),
-    ]);
+    let parts = closing(fn_name);
+    app_code_container_light_blue_cycle_code(root, parts);
   }
 }
