@@ -22,6 +22,7 @@ import { property_get } from "./property_get.mjs";
 import { g_objection_generate_upload_path } from "./g_objection_generate_upload_path.mjs";
 import { positive_is } from "./positive_is.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { g_icon_cross } from "./g_icon_cross.mjs";
 export async function app_g_gospel(
   overlay,
   npc,
@@ -94,9 +95,9 @@ export async function app_g_gospel(
   } else {
     let doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, doxology);
-    async function lambda4() {
+    function lambda4() {
       overlay_close();
-      await refresh();
+      g_icon_cross(div_map, npc);
     }
     app_g_button_conversation_end(overlay, lambda4);
     property_set(npc, "christian", true);
