@@ -19,7 +19,8 @@ export function app_replace_button_symbol_style_valid_if(sb, valid, solved) {
   let color_if = ternary(solved, color_valid_solved, color_valid_unsolved);
   html_style_background_color_set_if_else(valid, sb, color_if, color_else);
   let font_color_else = app_replace_button_symbol_style_font_color_invalid();
-  html_font_color_set_if(valid, sb, "white", font_color_else);
+  let font_color_if = ternary(solved, "white", color_else);
+  html_font_color_set_if(valid, sb, font_color_if, font_color_else);
   let suffix = app_replace_button_symbol_style_valid_if_attribute();
   html_data_set_test_suffix(sb, suffix, valid);
   let glow_solved = app_replace_rule_set_highlight();
