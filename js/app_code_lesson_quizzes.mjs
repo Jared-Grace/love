@@ -12,7 +12,7 @@ export function app_code_lesson_quizzes(
   backwards_answer_count_override,
 ) {
   let backwards_code = false;
-  let quizzes_get = app_code_lesson_quizzes_generic(
+  let quizzes_get = app_code_lesson_quizzes_generic({
     backwards_answer_label,
     backwards_answer_on_button,
     backwards_on_question,
@@ -24,7 +24,7 @@ export function app_code_lesson_quizzes(
     forwards_question_label,
     backwards_code,
     batch_get,
-    false,
-  );
+    forwards_code: false,
+  });
   return quizzes_get;
 }
