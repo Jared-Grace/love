@@ -6,6 +6,7 @@ export function app_code_lesson_functions_console_log_greater_than() {
     operator,
     "bigger",
     [" greater than"],
+    "",
   );
   return lesson;
 }
