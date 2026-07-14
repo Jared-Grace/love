@@ -1,8 +1,4 @@
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { range } from "./range.mjs";
-import { app_replace_rule_valid_curried } from "./app_replace_rule_valid_curried.mjs";
-import { list_any } from "./list_any.mjs";
 import { html_enable_if } from "./html_enable_if.mjs";
 import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
 import { app_replace_rule_set_rule_background_color } from "./app_replace_rule_set_rule_background_color.mjs";
@@ -10,17 +6,10 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
 import { not } from "./not.mjs";
 export function app_replace_rule_set_refresh_rb(rb, index2, state) {
-  let start = property_get(state, "start");
   let index_selected = property_get(state, "index_selected");
   let success = property_get(state, "success");
-  let rule2 = property_get(rb, "rule");
-  let size = list_size(start);
-  let r = range(size);
-  let lambda7 = app_replace_rule_valid_curried(rule2, start);
-  let enabled = list_any(r, lambda7);
   let selected = index2 === index_selected;
-  enabled = index_selected === null || selected;
-  enabled = true;
+  let enabled = true;
   html_enable_if(rb, enabled);
   app_replace_lefts_rights_style(rb, selected || success, success);
   let c = app_replace_rule_set_rule_background_color(selected, enabled, success);
