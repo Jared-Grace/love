@@ -141,6 +141,7 @@ export async function app_search_results(context, div_results) {
         }
       }
       b = app_replace_button_wide(div_verse, reference, click);
+      app_shared_text_deemphasized(b);
       html_style_margin_y(b, "0.2em");
       property_set_exists_not(b, "click", click);
       return b;
