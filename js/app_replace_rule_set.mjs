@@ -2,9 +2,8 @@ import { null_is } from "./null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
-import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
+import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
 import { app_replace_button_symbol_style_dead } from "./app_replace_button_symbol_style_dead.mjs";
-import { app_replace_button_symbol_style_box_shadow_value_width } from "./app_replace_button_symbol_style_box_shadow_value_width.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
@@ -276,11 +275,8 @@ export async function app_replace_rule_set(context) {
         app_replace_button_symbol_style_dead(sb);
       }
       each(sbs, symbol_dead);
-      let ring = app_replace_button_symbol_style_box_shadow_value_width(
-        "#d90000",
-        "0.2",
-      );
-      html_box_shadow_set(start_over, ring);
+      let green = app_replace_rule_set_highlight();
+      html_style_background_color_set(start_over, green);
       await html_scroll_center(start_over);
     }
   }
