@@ -6,7 +6,7 @@ import { set_includes } from "./set_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function graph_search_depth_first(
+export function graph_search_breadth_first(
   start,
   neighbors_get,
   mapper,

@@ -1,14 +1,14 @@
-import { list_is_assert_json } from "./list_is_assert_json.mjs";
-import { each } from "./each.mjs";
-import { log } from "./log.mjs";
-import { list_adder } from "./list_adder.mjs";
-import { app_replace_rule_apply } from "./app_replace_rule_apply.mjs";
-import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
-import { each_nested_args } from "./each_nested_args.mjs";
-import { list_size_range } from "./list_size_range.mjs";
-import { json_to } from "./json_to.mjs";
-import { graph_search_depth_first } from "./graph_search_depth_first.mjs";
-import { app_replace_rule_set_verify_goal_depth_max } from "./app_replace_rule_set_verify_goal_depth_max.mjs";
+import { list_is_assert_json } from "../../love/js/list_is_assert_json.mjs";
+import { each } from "../../love/js/each.mjs";
+import { log } from "../../love/js/log.mjs";
+import { list_adder } from "../../love/js/list_adder.mjs";
+import { app_replace_rule_apply } from "../../love/js/app_replace_rule_apply.mjs";
+import { app_replace_rule_valid } from "../../love/js/app_replace_rule_valid.mjs";
+import { each_nested_args } from "../../love/js/each_nested_args.mjs";
+import { list_size_range } from "../../love/js/list_size_range.mjs";
+import { json_to } from "../../love/js/json_to.mjs";
+import { graph_search_breadth_first } from "../../love/js/graph_search_breadth_first.mjs";
+import { app_replace_rule_set_verify_goal_depth_max } from "../../love/js/app_replace_rule_set_verify_goal_depth_max.mjs";
 export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
   function lambda4(item) {
     list_is_assert_json(item, {
@@ -22,7 +22,7 @@ export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
     end,
   });
   let max_depth = app_replace_rule_set_verify_goal_depth_max();
-  let dfs = graph_search_depth_first(
+  let dfs = graph_search_breadth_first(
     start,
     neighbors_get,
     json_to,
