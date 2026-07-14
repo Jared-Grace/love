@@ -14,7 +14,7 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_overlay } from "./app_g_overlay.mjs";
 import { text_combine } from "./text_combine.mjs";
-export async function app_g_click_npc(div_map, npcs_matched, refresh) {
+export async function app_g_click_npc(div_map, npcs_matched) {
   let player = await app_g_player_get();
   let overlay = app_g_overlay(div_map);
   async function overlay_close() {
@@ -68,7 +68,6 @@ export async function app_g_click_npc(div_map, npcs_matched, refresh) {
         overlay,
         overlay_close,
         div_map,
-        refresh,
       );
     }
   }

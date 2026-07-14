@@ -7,7 +7,6 @@ export async function app_g_click_map(
   clicked_coordinates,
   player_img_c,
   div_map,
-  refresh,
 ) {
   let npcs = await app_g_npcs_get();
   let npcs_matched = list_filter_object_includes(npcs, clicked_coordinates);
@@ -18,5 +17,5 @@ export async function app_g_click_map(
     player_img_c,
     div_map,
   );
-  await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, refresh);
+  await app_g_click_npc_if(npc_clicked, div_map, npcs_matched);
 }
