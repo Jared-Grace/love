@@ -14,5 +14,5 @@ export function app_code_lesson_operators_asterisk() {
     verb,
     lesson_name,
   );
-  return r;
+  return app_code_lesson_symbol_set(r, operator);
 }
