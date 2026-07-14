@@ -14,7 +14,7 @@ import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
-import { app_replace_rule_set_rule_background_color } from "./app_replace_rule_set_rule_background_color.mjs";
+import { app_replace_rule_set_refresh_rb } from "./app_replace_rule_set_refresh_rb.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
@@ -41,25 +41,19 @@ import { property_exists } from "./property_exists.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { each } from "./each.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
-import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { ternary } from "./ternary.mjs";
-import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_replace_button_symbol_style_valid_if } from "./app_replace_button_symbol_style_valid_if.mjs";
-import { app_replace_rule_valid_curried } from "./app_replace_rule_valid_curried.mjs";
 import { app_replace_button_symbol_style } from "./app_replace_button_symbol_style.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { range } from "./range.mjs";
-import { list_any } from "./list_any.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
 import { not } from "./not.mjs";
-import { html_enable_if } from "./html_enable_if.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { each_index } from "./each_index.mjs";
@@ -171,24 +165,12 @@ export async function app_replace_rule_set(context) {
         refresh_rb,
       });
       function refresh_rb() {
-        let rule2 = property_get(rb, "rule");
-        let size = list_size(start);
-        let r = range(size);
-        let lambda7 = app_replace_rule_valid_curried(rule2, start);
-        let enabled = list_any(r, lambda7);
-        let selected = index2 === index_selected;
-        enabled = index_selected === null || selected;
-        enabled = true;
-        html_enable_if(rb, enabled);
-        app_replace_lefts_rights_style(rb, selected || success, success);
-        let c = app_replace_rule_set_rule_background_color(
-          selected,
-          enabled,
+        let state = {
+          start,
+          index_selected,
           success,
-        );
-        html_style_background_color_set(rb, c);
-        let arrow2 = property_get(rb, "arrow");
-        html_font_color_set_if(selected && not(success), arrow2, "white", "black");
+        };
+        app_replace_rule_set_refresh_rb(rb, index2, state);
       }
     }
     each_index(rbs, rbs_each);
