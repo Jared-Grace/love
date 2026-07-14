@@ -29,7 +29,7 @@ import { app_replace_rule_set_swap_3 } from "./app_replace_rule_set_swap_3.mjs";
 import { app_replace_rule_set_swap_2 } from "./app_replace_rule_set_swap_2.mjs";
 import { app_replace_rule_set_unary_to_binary_equations } from "./app_replace_rule_set_unary_to_binary_equations.mjs";
 import { app_replace_rule_set_unary_to_binary_equations_preparation } from "./app_replace_rule_set_unary_to_binary_equations_preparation.mjs";
-import { app_replace_rule_set_grow_same_three_different } from "./app_replace_rule_set_grow_same_three_different.mjs";
+import { app_replace_rule_set_marker_convert } from "./app_replace_rule_set_marker_convert.mjs";
 import { app_replace_rule_set_two_different_grow_same } from "./app_replace_rule_set_two_different_grow_same.mjs";
 import { app_replace_rule_set_shrink_same_three_different } from "./app_replace_rule_set_shrink_same_three_different.mjs";
 import { app_replace_rule_set_three_different_grow_same } from "./app_replace_rule_set_three_different_grow_same.mjs";
@@ -110,7 +110,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_three_different_grow_same,
     app_replace_rule_set_shrink_same_three_different,
     app_replace_rule_set_two_different_grow_same,
-    app_replace_rule_set_grow_same_three_different,
+    app_replace_rule_set_marker_convert,
     app_replace_rule_set_unary_to_binary_equations_preparation,
     app_replace_rule_set_unary_to_binary_equations,
     app_replace_rule_set_boolean_literal,
