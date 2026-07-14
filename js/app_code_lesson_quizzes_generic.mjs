@@ -6,54 +6,23 @@ import { list_add } from "./list_add.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { object_copy } from "./object_copy.mjs";
+import { object_copy_assign } from "./object_copy_assign.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 export function app_code_lesson_quizzes_generic(params) {
-  let backwards_answer_label = property_get(params, "backwards_answer_label");
-  let backwards_answer_on_button = property_get(
-    params,
-    "backwards_answer_on_button",
-  );
-  let backwards_on_question = property_get(params, "backwards_on_question");
-  let backwards_question_label = property_get(
-    params,
-    "backwards_question_label",
-  );
-  let backwards_answer_count_override = property_get(
-    params,
-    "backwards_answer_count_override",
-  );
-  let forwards_answer_label = property_get(params, "forwards_answer_label");
-  let forwards_answer_on_button = property_get(
-    params,
-    "forwards_answer_on_button",
-  );
-  let forwards_on_question = property_get(params, "forwards_on_question");
-  let forwards_question_label = property_get(params, "forwards_question_label");
+  let forwards_record = property_get(params, "forwards");
+  let backwards_record = property_get(params, "backwards");
   let backwards_code = property_get(params, "backwards_code");
   let batch_get = property_get(params, "batch_get");
   let forwards_code = property_get(params, "forwards_code");
-  let forwards_answer_count_override = property_get(
-    params,
-    "forwards_answer_count_override",
-  );
-  let backwards = {
-    question_label: backwards_question_label,
-    on_question: backwards_on_question,
-    answer_label: backwards_answer_label,
-    answer_on_button: backwards_answer_on_button,
-    answer_count_override: backwards_answer_count_override,
+  let mc = app_code_lesson_quiz_multiple_choice;
+  let backwards = object_copy_assign(backwards_record, {
     answer_property: "question",
-    on_answer: app_code_lesson_quiz_multiple_choice,
-  };
-  let forwards = {
-    question_label: forwards_question_label,
-    on_question: forwards_on_question,
-    answer_label: forwards_answer_label,
-    answer_on_button: forwards_answer_on_button,
-    answer_count_override: forwards_answer_count_override,
+    on_answer: mc,
+  });
+  let forwards = object_copy_assign(forwards_record, {
     answer_property: "answer",
-    on_answer: app_code_lesson_quiz_multiple_choice,
-  };
+    on_answer: mc,
+  });
   let infos = [forwards, backwards];
   let codes = [
     {
