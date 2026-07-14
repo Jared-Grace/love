@@ -9,6 +9,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_space } from "./html_span_space.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -36,7 +37,9 @@ export function app_code_home(context) {
     let has_symbol = null_not_is(symbol);
     if (has_symbol) {
       html_span_space(title);
+      html_span_text(title, "(");
       html_span_text_code_dark(title, symbol);
+      html_span_text(title, ")");
     }
   }
   each_index(lessons, lambda);
