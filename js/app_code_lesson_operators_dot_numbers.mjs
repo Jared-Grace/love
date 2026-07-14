@@ -89,5 +89,5 @@ export function app_code_lesson_operators_dot_numbers() {
     );
   }
   let lesson = app_code_lesson_validity_operator(math_name, batch, above);
-  return lesson;
+  return app_code_lesson_symbol_set(lesson, operator);
 }
