@@ -1,4 +1,5 @@
 import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs";
+import { app_code_padding_x } from "./app_code_padding_x.mjs";
 import { html_div } from "./html_div.mjs";
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -34,6 +35,7 @@ export function app_code_next(
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
   app_replace_button_wide(container_question, answer_yes, refresh);
   let container_buttons = html_div(parent_next_back);
+  app_code_padding_x(container_buttons);
   let bn = app_replace_button_wide_next(container_buttons, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
