@@ -25,7 +25,7 @@
     {
       "label": "Webpack Watcher",
       "type": "shell",
-      "command": "cd love && node scripts/wp.mjs",
+      "command": "cd love && node scripts/r.mjs webpack_watch",
       "runOptions": {
         "runOn": "folderOpen"
       },
