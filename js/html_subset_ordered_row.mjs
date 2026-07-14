@@ -49,6 +49,7 @@ export function html_subset_ordered_row(
   }
   let label = html_div(row);
   html_style_set(label, "flex", "1 1 0");
+  html_style_set(label, "text-align", "left");
   html_style_set(label, "padding-left", app_shared_spaced_small_gap());
   html_span_text(label, name);
   return row;
