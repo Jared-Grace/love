@@ -1,3 +1,4 @@
+import { each } from "../../love/js/each.mjs";
 import { fn_name } from "../../love/js/fn_name.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "../../love/js/app_code_lesson_operators_value_max_range_1_next.mjs";
 import { identity } from "../../love/js/identity.mjs";
@@ -36,6 +37,8 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   return lesson;
   function above(root) {
     let first = list_first(operators);
+    function lambda(item) {}
+    each(list2, lambda);
     let e = js_operator_to_expression(first, number_next);
     let expression = property_get(e, "expression");
     let call = js_code_call_arg(fn_name, expression);
