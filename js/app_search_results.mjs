@@ -18,7 +18,9 @@ import { object_to_list } from "./object_to_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { each } from "./each.mjs";
+import { equal } from "./equal.mjs";
 import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
@@ -135,7 +137,14 @@ export async function app_search_results(context, div_results) {
           bible_texts,
           languages_chosen,
         );
-        html_p_text_multiple(div_verse, bible_texts);
+        function each_bible_text(bible_text) {
+          let p = html_p_text(div_verse, bible_text);
+          let is_reference = equal(bible_text, reference);
+          if (is_reference) {
+            app_shared_text_deemphasized(p);
+          }
+        }
+        each(bible_texts, each_bible_text);
         property_set_exists_not(b, "bible_texts", bible_texts);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
