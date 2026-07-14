@@ -38,18 +38,24 @@ export function app_code_lesson_code_generic(params) {
   let example_question_label = app_code_label_code_question();
   let example_count = 1;
   let on_question = html_text_set_code_dark;
+  let forwards = {
+    question_label: example_question_label,
+    on_question,
+    answer_label: quiz_label,
+    answer_on_button: noop,
+    answer_count_override: forwards_answer_count_override,
+  };
+  let backwards = {
+    question_label: backwards_question_label,
+    on_question: app_code_style_normal_text,
+    answer_label: quiz_backwards_label_answer,
+    answer_on_button: on_question,
+    answer_count_override: quiz_backwards_answer_count_override,
+  };
   let quizzes_get = app_code_lesson_quizzes_unscramble({
     batch_get,
-    forwards_question_label: example_question_label,
-    forwards_on_question: on_question,
-    forwards_answer_label: quiz_label,
-    forwards_answer_on_button: noop,
-    backwards_question_label,
-    backwards_on_question: app_code_style_normal_text,
-    backwards_answer_label: quiz_backwards_label_answer,
-    backwards_answer_on_button: on_question,
-    backwards_answer_count_override: quiz_backwards_answer_count_override,
-    forwards_answer_count_override,
+    forwards,
+    backwards,
   });
   let lesson = app_code_lesson_base(
     name_id,
