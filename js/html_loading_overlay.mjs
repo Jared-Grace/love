@@ -32,6 +32,7 @@ export function html_loading_overlay() {
     "font-size": "1.5rem",
     "font-family": "sans-serif",
     "text-align": "center",
+    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
