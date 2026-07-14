@@ -1,30 +1,15 @@
 import { app_code_lesson_quizzes_generic } from "./app_code_lesson_quizzes_generic.mjs";
-export function app_code_lesson_quizzes(
-  batch_get,
-  forwards_question_label,
-  forwards_on_question,
-  forwards_answer_label,
-  forwards_answer_on_button,
-  backwards_question_label,
-  backwards_on_question,
-  backwards_answer_label,
-  backwards_answer_on_button,
-  backwards_answer_count_override,
-) {
+import { property_get } from "./property_get.mjs";
+export function app_code_lesson_quizzes(params) {
+  let batch_get = property_get(params, "batch_get");
+  let forwards = property_get(params, "forwards");
+  let backwards = property_get(params, "backwards");
   let backwards_code = false;
   let quizzes_get = app_code_lesson_quizzes_generic({
-    backwards_answer_label,
-    backwards_answer_on_button,
-    backwards_on_question,
-    backwards_question_label,
-    backwards_answer_count_override,
-    forwards_answer_label,
-    forwards_answer_on_button,
-    forwards_on_question,
-    forwards_question_label,
+    forwards,
+    backwards,
     backwards_code,
     batch_get,
-    forwards_answer_count_override: null,
     forwards_code: false,
   });
   return quizzes_get;
