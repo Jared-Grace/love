@@ -7,7 +7,7 @@ import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_replace_button_symbol_style_background_color_valid } from "./app_replace_button_symbol_style_background_color_valid.mjs";
-import { app_replace_button_rule_background_color } from "./app_replace_button_rule_background_color.mjs";
+import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p } from "./html_p.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -21,11 +21,11 @@ export function html_progress_bar(
 ) {
   let progress_container_text = html_p(root);
   let progress_container = html_div(progress_container_text);
-  let button_background_color = app_replace_button_rule_background_color();
+  let track_color = app_replace_rule_set_highlight();
   let color_valid = app_replace_button_symbol_style_background_color_valid();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
-    "background-color": button_background_color,
+    "background-color": track_color,
     padding: "0",
   });
   let div = html_div(progress_container);
