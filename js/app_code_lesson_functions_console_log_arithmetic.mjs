@@ -30,6 +30,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     js_code_statement,
     [" arithmetic"],
     next_arg,
+    null,
   );
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");

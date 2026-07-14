@@ -14,6 +14,7 @@ export function app_code_lesson_functions_console_log_statement() {
     js_code_statement,
     [" statement"],
     digits_3_random_next(),
+    null,
   );
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
