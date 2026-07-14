@@ -301,6 +301,7 @@ export async function app_replace_rule_set(context) {
       let eq = json_equal(start, end);
       if (eq) {
         success = true;
+        list_map_property_invoke(rbs, "refresh_rb");
         await app_replace_rule_set_success(
           rule_set_name,
           goal,
@@ -312,7 +313,6 @@ export async function app_replace_rule_set(context) {
           goal_index,
           goals,
         );
-        list_map_property_invoke(rbs, "refresh_rb");
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
