@@ -11,11 +11,11 @@ import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_ver
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "./app_replace_animation_duration_get.mjs";
-import { emoji_target } from "./emoji_target.mjs";
 import { emoji_restart } from "./emoji_restart.mjs";
 import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
+import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
@@ -39,10 +39,8 @@ import { app_replace_button_symbol_style_invalid } from "./app_replace_button_sy
 import { app_replace_button_screen } from "./app_replace_button_screen.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { app_replace_button_home } from "./app_replace_button_home.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { each } from "./each.mjs";
-import { app_replace_goals } from "./app_replace_goals.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
@@ -79,10 +77,7 @@ import { html_clear } from "./html_clear.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
-  app_replace_button_home(root, context);
-  let left3 = emoji_target();
-  let combined2 = text_combine(left3, "Goals");
-  app_replace_button_screen(context, app_replace_goals, root, combined2);
+  app_replace_rule_set_nav(context, root);
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
   let goals_count = list_size(goals);
