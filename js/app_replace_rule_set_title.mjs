@@ -5,6 +5,7 @@ import { app_replace_rule_sets_progress_bar } from "./app_replace_rule_sets_prog
 import { html_p_text } from "./html_p_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_replace_rule_set_title(context) {
   let r2 = app_replace_rule_sets_progress_bar(context);
@@ -13,6 +14,7 @@ export function app_replace_rule_set_title(context) {
   let rule_set_name = property_get(rule_set, "name");
   let title = html_p_text(root, text_combine("Rule set: ", rule_set_name));
   html_style_margin_y(title, "0.4em");
+  app_shared_text_deemphasized(title);
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);
   html_style_margin_top(p, "0.5em");
