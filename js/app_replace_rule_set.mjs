@@ -225,7 +225,7 @@ export async function app_replace_rule_set(context) {
         enabled = index_selected === null || selected;
         enabled = true;
         html_enable_if(rb, enabled);
-        app_replace_lefts_rights_style(rb, enabled, success);
+        app_replace_lefts_rights_style(rb, selected || success, success);
         let button_background_color =
           app_replace_button_rule_background_color();
         let blue_strong = app_shared_button_selected_background_color();
