@@ -14,7 +14,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { html_style_background_color_set_or_remove_list } from "./html_style_background_color_set_or_remove_list.mjs";
+import { app_chapter_verse_highlight } from "./app_chapter_verse_highlight.mjs";
 import { app_chapter_chosen_max } from "./app_chapter_chosen_max.mjs";
 import { list_toggle } from "./list_toggle.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -52,11 +52,7 @@ export function app_chapter_toggle_update(
     } else {
       sliced = verse_numbers_chosen;
     }
-    html_style_background_color_set_or_remove_list(
-      component_highlighted,
-      sliced,
-      verse_number,
-    );
+    app_chapter_verse_highlight(component_highlighted, sliced, verse_number);
   };
   let r = {
     toggle,
