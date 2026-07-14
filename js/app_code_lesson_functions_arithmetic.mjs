@@ -23,7 +23,7 @@ export function app_code_lesson_functions_arithmetic() {
   let quiz_label = "What is this code rewritten using a function call?";
   let example_question_label = app_code_label_code_question();
   let operators = js_operators_arithmetic();
-  app_code_lesson_operators_value_max_range_1_next();
+  let next = app_code_lesson_operators_value_max_range_1_next();
   function batch_get() {
     let mapper = function lambda2(o) {
       let r = js_operator_to_code_call(o, next);
