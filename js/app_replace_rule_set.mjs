@@ -14,10 +14,8 @@ import { app_replace_animation_duration_get } from "./app_replace_animation_dura
 import { emoji_target } from "./emoji_target.mjs";
 import { emoji_restart } from "./emoji_restart.mjs";
 import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
+import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
-import { list_map_property_multiple } from "./list_map_property_multiple.mjs";
-import { list_squash } from "./list_squash.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
@@ -35,11 +33,6 @@ import { equal } from "./equal.mjs";
 import { emoji_question } from "./emoji_question.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "./app_replace_rule_set_rules_get.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { html_element } from "./html_element.mjs";
-import { html_cycle_bold } from "./html_cycle_bold.mjs";
-import { list_sort_text_property } from "./list_sort_text_property.mjs";
-import { object_to_list } from "./object_to_list.mjs";
 import { app_replace_start_end_get } from "./app_replace_start_end_get.mjs";
 import { app_replace_button_symbol_style_invalid } from "./app_replace_button_symbol_style_invalid.mjs";
 import { app_replace_button_screen } from "./app_replace_button_screen.mjs";
@@ -162,29 +155,7 @@ export async function app_replace_rule_set(context) {
   } else {
     rules_used = list_get(rules_used_all, goal_index);
   }
-  let exists2 = property_exists(rs, "abbreviations");
-  if (exists2) {
-    let properties = ["left", "right"];
-    let mapped = list_map_property_multiple(rules_used, properties);
-    let squashed = list_squash(mapped);
-    let unique = list_unique(squashed);
-    app_shared_text_body(div_abbreviations, "Abbreviations");
-    let component = html_element(div_abbreviations, "ul");
-    let abbreviations = property_get(rs, "abbreviations");
-    let list = object_to_list(abbreviations);
-    list_sort_text_property(list, "key");
-    function lambda6(kv) {
-      let key = property_get(kv, "key");
-      let includes2 = list_includes(unique, key);
-      if (includes2) {
-        let value2 = property_get(kv, "value");
-        let concated = list_concat(["", key, ": ", ""], value2);
-        let component2 = html_element(component, "li");
-        html_cycle_bold(component2, concated);
-      }
-    }
-    each(list, lambda6);
-  }
+  app_replace_rule_set_abbreviations(rs, rules_used, div_abbreviations);
   await refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
