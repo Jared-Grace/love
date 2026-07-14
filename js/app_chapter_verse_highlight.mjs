@@ -6,12 +6,13 @@ import { html_style_background_color_set_or_remove } from "./html_style_backgrou
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_remove } from "./html_style_remove.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 export function app_chapter_verse_highlight(component, sliced, verse_number) {
   let chosen = list_includes(sliced, verse_number);
   let color = app_shared_verse_selected_background_color();
   html_style_background_color_set_or_remove(chosen, component, color);
   if (chosen) {
-    let radius = "0.4em";
+    let radius = app_shared_border_radius();
     let first = list_first(sliced);
     let last = list_last(sliced);
     let top = "0";
