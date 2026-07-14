@@ -42,7 +42,7 @@ export function app_code_lesson_functions_console_log_less_than() {
     name_id_rights: [" less than"],
     next_arg,
     example_count: 2,
-    quiz_backwards_answer_count_override: null,
+    quiz_backwards_answer_count_override: 2,
     forwards_answer_count_override: 2,
   });
   let fn_name = property_get(r, "fn_name");
