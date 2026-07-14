@@ -19,7 +19,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 2. **Track your read-set:** remember which files you read to make your decision (not just the ones you'll write — a peer renaming a function you *call*, in a file you never opened, can still break you).
 3. **Make targeted edits, never full-file overwrites of an existing file.** Use `Edit` (exact-snippet replacement): a peer's change elsewhere survives, and a same-region conflict fails *loudly* instead of silently clobbering. Full-file `Write` is fine only for brand-new files.
 4. **Before committing**, run `git log <baseline>..HEAD -- <read-set>` and reason: *do any of these peer changes break mine?* If yes, reconcile before committing.
-5. **Commit** with `node scripts/r.mjs ai_git` (add + commit + push, whole tree, message `ai`). If the push is rejected, `pull`, re-run step 4 against the new commits, then re-push.
+5. **Commit** with `node scripts/r.mjs ai_git` (whole tree, message `ai`). This does **add + commit only** — it's local, but since every Claude shares this one repo, your commit is visible to peers immediately. Push to origin is a separate throttled background job (plain fast-forward, ~5-min interval, never force). Peers never diverge from each other (shared repo = linear history); a push only rejects if *origin* diverged externally, which needs a manual pull.
 
 ## Conventions
 
