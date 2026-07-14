@@ -8,19 +8,11 @@ import { range_1_next } from "../../love/js/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../love/js/app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_name_id_function } from "../../love/js/app_code_lesson_name_id_function.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
+import { object_copy_assign } from "../../love/js/object_copy_assign.mjs";
 export function app_code_lesson_functions_console_log_generic(params) {
-  let above = property_get(params, "above");
   let lambda$code = property_get(params, "lambda$code");
   let name_id_rights = property_get(params, "name_id_rights");
   let next_arg = property_get(params, "next_arg");
-  let quiz_backwards_answer_count_override = property_get(
-    params,
-    "quiz_backwards_answer_count_override",
-  );
-  let forwards_answer_count_override = property_get(
-    params,
-    "forwards_answer_count_override",
-  );
   let name = "console.log";
   function batch_get() {
     let arg = next_arg();
@@ -36,13 +28,11 @@ export function app_code_lesson_functions_console_log_generic(params) {
   let rights = [name];
   list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
-  let lesson = app_code_lesson_code_logged({
+  let logged_params = object_copy_assign(params, {
     batch_get: b,
     name_id,
-    above,
-    quiz_backwards_answer_count_override,
-    forwards_answer_count_override,
   });
+  let lesson = app_code_lesson_code_logged(logged_params);
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
   let r3 = {
