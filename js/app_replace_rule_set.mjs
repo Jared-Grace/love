@@ -51,7 +51,6 @@ import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
 import { not } from "./not.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -197,12 +196,6 @@ export async function app_replace_rule_set(context) {
       html_data_set_test(sb, value);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
-      let nn2 = null_not_is(index_selected);
-      if (nn2) {
-        let index3 = property_get(sb, "index");
-        let rule2 = list_get(rules_used, index_selected);
-        let valid = app_replace_rule_valid(rule2, index3, start);
-      }
       refresh_sb();
       object_merge_set(sb, {
         refresh_sb,

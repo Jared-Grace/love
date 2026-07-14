@@ -109,6 +109,8 @@ export async function webpack_watch() {
     list_map(affected, build_schedule);
   }
   watcher.on("change", on_change).on("add", on_change);
+  ("on startup rebuild every app, so a watcher (re)start refreshes all bundles and edits made while it was down are never left stale");
+  list_map(a_names, build_schedule);
   log(webpack_watch.name, {
     watching: folders,
   });
