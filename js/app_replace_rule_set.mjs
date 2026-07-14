@@ -15,6 +15,7 @@ import { emoji_target } from "./emoji_target.mjs";
 import { emoji_restart } from "./emoji_restart.mjs";
 import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
+import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
@@ -134,14 +135,7 @@ export async function app_replace_rule_set(context) {
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
   let div_refresh = html_div(root);
-  let label_goal = app_shared_text_body(root, "Goal:");
-  let p_goal = html_p(root);
-  let goal_list_symbols = app_replace_button_side(p_goal, end);
-  let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(
-    false,
-    false,
-  );
-  each(goal_list_symbols, lambda4);
+  let goal_list_symbols = app_replace_rule_set_goal_show(root, end);
   let div_below = html_div(root);
   let success = false;
   let sbs = null;
