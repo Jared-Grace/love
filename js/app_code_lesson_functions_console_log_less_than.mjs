@@ -17,8 +17,8 @@ export function app_code_lesson_functions_console_log_less_than() {
   }
   let explanation = [
     ["We answer that question with yes or no"],
-    ["Yes is written ", js_keyword_true()],
-    ["No is written ", js_keyword_false()],
+    ["Yes is written as ", js_keyword_true()],
+    ["No is written as ", js_keyword_false()],
   ];
   let lesson = app_code_lesson_functions_console_log_comparison({
     operator,
