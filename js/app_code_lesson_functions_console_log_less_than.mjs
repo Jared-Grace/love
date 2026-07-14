@@ -26,13 +26,13 @@ export function app_code_lesson_functions_console_log_less_than() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  var r = app_code_lesson_functions_console_log_generic(
+  var r = app_code_lesson_functions_console_log_generic({
     above,
-    js_code_statement,
-    [" less than"],
+    lambda$code: js_code_statement,
+    name_id_rights: [" less than"],
     next_arg,
-    null,
-  );
+    quiz_backwards_answer_count_override: null,
+  });
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
   return lesson;
