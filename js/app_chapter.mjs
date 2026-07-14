@@ -23,6 +23,7 @@ import { property_get } from "./property_get.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
+import { app_shared_margin_y_set } from "./app_shared_margin_y_set.mjs";
 import { app_chapter_change } from "./app_chapter_change.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
 import { list_next_wrap } from "./list_next_wrap.mjs";
@@ -43,6 +44,7 @@ export async function app_chapter(context) {
       " verses. That will copy all the verses in between (inclusive).",
     ]),
   );
+  app_shared_margin_y_set(p2);
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
   let verse_number = property_get(hash, "v");
