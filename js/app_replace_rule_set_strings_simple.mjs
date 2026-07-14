@@ -48,12 +48,12 @@ export function app_replace_rule_set_strings_simple() {
         end: '" t 3 "',
       },
       {
-        start: '" ida ida ida "',
-        end: '" l u v "',
-      },
-      {
         start: "st",
         end: '" ida ida ida "',
+      },
+      {
+        start: '" ida ida ida "',
+        end: '" l u v "',
       },
       {
         start: "st",

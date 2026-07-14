@@ -28,6 +28,7 @@ import { app_replace_rule_set_binary_numbers } from "./app_replace_rule_set_bina
 import { app_replace_rule_set_swap_3 } from "./app_replace_rule_set_swap_3.mjs";
 import { app_replace_rule_set_swap_2 } from "./app_replace_rule_set_swap_2.mjs";
 import { app_replace_rule_set_unary_to_binary_equations } from "./app_replace_rule_set_unary_to_binary_equations.mjs";
+import { app_replace_rule_set_exponent_part } from "./app_replace_rule_set_exponent_part.mjs";
 import { app_replace_rule_set_unary_to_binary_equations_preparation } from "./app_replace_rule_set_unary_to_binary_equations_preparation.mjs";
 import { app_replace_rule_set_marker_convert } from "./app_replace_rule_set_marker_convert.mjs";
 import { app_replace_rule_set_two_different_grow_same } from "./app_replace_rule_set_two_different_grow_same.mjs";
@@ -122,6 +123,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_integer_digits,
     app_replace_rule_set_integers,
     app_replace_rule_set_decimals,
+    app_replace_rule_set_exponent_part,
     app_replace_rule_set_scientific_notation_numbers,
     app_replace_rule_set_identifiers_simple,
     app_replace_rule_set_strings_simple,

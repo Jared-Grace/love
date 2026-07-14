@@ -6,8 +6,6 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
-import { js_keyword_true } from "./js_keyword_true.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
