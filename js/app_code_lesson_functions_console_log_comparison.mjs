@@ -19,6 +19,7 @@ export function app_code_lesson_functions_console_log_comparison(
   operator,
   compare_word,
   name_id_rights,
+  answer_intro,
 ) {
   let symbol = property_get(operator, "operator");
   let compare = property_get(operator, "fn");
@@ -74,7 +75,7 @@ export function app_code_lesson_functions_console_log_comparison(
     show(true);
     show(false);
     app_code_container_light_blue_cycle_code(root, [
-      "Before, the answer was always a number. Now ",
+      answer_intro,
       fn_name,
       " will write out ",
       js_keyword_true(),
