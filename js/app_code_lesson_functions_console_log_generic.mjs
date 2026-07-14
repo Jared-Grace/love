@@ -7,13 +7,16 @@ import { js_code_call_arg } from "../../love/js/js_code_call_arg.mjs";
 import { range_1_next } from "../../love/js/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../love/js/app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_name_id_function } from "../../love/js/app_code_lesson_name_id_function.mjs";
-export function app_code_lesson_functions_console_log_generic(
-  above,
-  lambda$code,
-  name_id_rights,
-  next_arg,
-  quiz_backwards_answer_count_override,
-) {
+import { property_get } from "../../love/js/property_get.mjs";
+export function app_code_lesson_functions_console_log_generic(params) {
+  let above = property_get(params, "above");
+  let lambda$code = property_get(params, "lambda$code");
+  let name_id_rights = property_get(params, "name_id_rights");
+  let next_arg = property_get(params, "next_arg");
+  let quiz_backwards_answer_count_override = property_get(
+    params,
+    "quiz_backwards_answer_count_override",
+  );
   let name = "console.log";
   function batch_get() {
     let arg = next_arg();

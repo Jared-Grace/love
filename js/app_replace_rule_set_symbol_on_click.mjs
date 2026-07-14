@@ -44,7 +44,7 @@ export async function app_replace_rule_set_symbol_on_click(
   let eq = app_replace_rule_valid(rule, index, start);
   if (eq) {
     symbols_invalid_chosen = {};
-    app_replace_button_symbol_style_valid_if_multiple(sbs, true);
+    app_replace_button_symbol_style_valid_if_multiple(sbs, true, false);
     start = app_replace_rule_apply(rule, index, start);
     start_indices = list_size_range(start);
     log(app_replace_rule_set_symbol_on_click.name, {

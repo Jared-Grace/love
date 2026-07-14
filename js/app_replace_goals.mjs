@@ -41,7 +41,7 @@ export function app_replace_goals(context) {
     let start = property_get(r4, "start");
     let end = property_get(r4, "end");
     let r2 = app_replace_button_rule_content(title, start, end);
-    app_replace_lefts_rights_style(r2, completed);
+    app_replace_lefts_rights_style(r2, completed, completed);
     function lambda() {
       on_click(index);
     }

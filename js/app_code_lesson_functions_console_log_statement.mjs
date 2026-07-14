@@ -9,13 +9,13 @@ import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson
 import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function app_code_lesson_functions_console_log_statement() {
-  var r = app_code_lesson_functions_console_log_generic(
+  var r = app_code_lesson_functions_console_log_generic({
     above,
-    js_code_statement,
-    [" statement"],
-    digits_3_random_next(),
-    null,
-  );
+    lambda$code: js_code_statement,
+    name_id_rights: [" statement"],
+    next_arg: digits_3_random_next(),
+    quiz_backwards_answer_count_override: null,
+  });
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
   return lesson;
