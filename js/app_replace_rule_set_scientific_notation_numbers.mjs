@@ -75,28 +75,8 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         start: "3 . 1 di E 0",
         end: "3 . 1 4 E 0",
       },
-      {
-        start: "sn",
-        end: "pi ig e ig",
-      },
-      {
-        start: "pi ig e ig",
-        end: "pi di e di di di di",
-      },
-      {
-        start: "pi di e di di di di",
-        end: "7 7 e di di di di",
-      },
-      {
-        start: "7 7 e di di di di",
-        end: "7 7 e 4 6 di di",
-      },
-      {
-        start: "7 7 e 4 6 di di",
-        end: "7 7 e 4 6 0 7",
-      },
     ],
-    why: "The replacement rules define a grammar for parsing and generating numbers in scientific notation, including integers, decimals, and exponent parts with optional signs, demonstrating how such numbers are constructed from digits and symbols according to standard scientific notation conventions.",
+    why: "Now the mantissa in front of the exponent may itself be a decimal: the production 'sn > de se' is the single new idea here, since the exponent part with its e/E and optional sign was already learned in Exponent Part.",
   };
   return r;
 }
