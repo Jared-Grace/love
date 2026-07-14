@@ -42,18 +42,25 @@ export function app_code_lesson_functions_arithmetic() {
   let quiz_backwards_label_answer =
     "Rewrite this function call using a math symbol: ";
   let quiz_backwards_answer_count_override = null;
-  let quizzes_get = app_code_lesson_quizzes_unscramble_both(
+  let forwards = {
+    question_label: example_question_label,
+    on_question: html_text_set_code_dark,
+    answer_label: quiz_label,
+    answer_on_button: html_style_code_dark,
+    answer_count_override: null,
+  };
+  let backwards = {
+    question_label: "Function call: ",
+    on_question: html_text_set_code_dark,
+    answer_label: quiz_backwards_label_answer,
+    answer_on_button: html_style_code_dark,
+    answer_count_override: quiz_backwards_answer_count_override,
+  };
+  let quizzes_get = app_code_lesson_quizzes_unscramble_both({
     batch_get,
-    example_question_label,
-    html_text_set_code_dark,
-    quiz_label,
-    html_style_code_dark,
-    "Function call: ",
-    html_text_set_code_dark,
-    quiz_backwards_label_answer,
-    html_style_code_dark,
-    quiz_backwards_answer_count_override,
-  );
+    forwards,
+    backwards,
+  });
   let lesson = app_code_lesson_base(
     name_id,
     above,
