@@ -14,6 +14,9 @@ import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { html_p_text } from "./html_p_text.mjs";
+import { html_p } from "./html_p.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
@@ -84,10 +87,10 @@ export async function app_chapter(context) {
       async function lambda(v) {
         let verse_number_v = property_get(v, "verse_number");
         let text = property_get(v, "text");
-        let p = html_p_text(
-          content,
-          text_combine_multiple([verse_number_v, " ", text]),
-        );
+        let p = html_p(content);
+        let number = html_span_text(p, verse_number_v);
+        app_shared_text_deemphasized(number);
+        html_span_text(p, text_combine_multiple([" ", text]));
         html_margin_0(p);
         html_style_padding_y(p, app_shared_spaced_tiny_gap());
         html_style_padding_x(p, app_shared_spaced_tiny_gap());
