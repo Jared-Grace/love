@@ -330,7 +330,7 @@ export async function app_replace_rule_set(context) {
     }
   }
   let left = emoji_restart();
-  let combined = text_combine(left, "Start over");
+  let combined = text_combine(left, " Start over");
   start_over = app_replace_button_screen(
     context,
     app_replace_rule_set,
