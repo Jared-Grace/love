@@ -31,6 +31,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     name_id_rights: [" arithmetic"],
     next_arg,
     quiz_backwards_answer_count_override: null,
+    forwards_answer_count_override: null,
   });
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
