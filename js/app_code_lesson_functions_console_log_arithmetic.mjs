@@ -41,7 +41,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     let call = js_code_call_arg(fn_name, expression);
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["Before, we put a single number inside ", fn_name]);
-    html_div_cycle_code(c, ["We can also use ", fn_name, " instead: ", call]);
+    html_div_cycle_code(c, ["We can also use ", fn_name, " like this: ", call]);
     app_code_container_light_blue_cycle_code(root, [
       "",
       fn_name,
