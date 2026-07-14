@@ -1,6 +1,6 @@
 import { html_div_code } from "./html_div_code.mjs";
 import { each } from "./each.mjs";
-import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
+import { app_code_lesson_operators_value_max_random_next } from "./app_code_lesson_operators_value_max_random_next.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
@@ -15,7 +15,7 @@ import { app_code_container_light_blue_cycle_code } from "./app_code_container_l
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_less_than() {
   let operators = [js_operator_less_than()];
-  let number_next = app_code_lesson_operators_value_max_range_1_next();
+  let number_next = app_code_lesson_operators_value_max_random_next();
   function refill() {
     function mapper(o) {
       let expression = js_operator_to_expression_only(o, number_next);
