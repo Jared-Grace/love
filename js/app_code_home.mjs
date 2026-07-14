@@ -6,11 +6,16 @@ import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
+import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
-  let div = html_div_text(root, "Lessons:");
+  let g = app_code_container_padded_x(root);
+  let div = html_div_text(g, "Lessons:");
+  html_style_margin_y(div, app_shared_spaced_gap());
   let lessons = app_code_lessons();
   function lambda(item, index) {
     let name = property_get(item, "name");
@@ -20,7 +25,7 @@ export function app_code_home(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     let text = add_1_period(index);
-    let r = app_replace_button_wide_text_left_centered(root, lambda3, text, "");
+    let r = app_replace_button_wide_text_left_centered(g, lambda3, text, "");
     let title = property_get(r, "title");
     name(title);
   }
