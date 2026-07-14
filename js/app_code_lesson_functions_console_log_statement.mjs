@@ -15,6 +15,7 @@ export function app_code_lesson_functions_console_log_statement() {
     name_id_rights: [" statement"],
     next_arg: digits_3_random_next(),
     quiz_backwards_answer_count_override: null,
+    forwards_answer_count_override: null,
   });
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
