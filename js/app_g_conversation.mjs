@@ -20,7 +20,6 @@ export async function app_g_conversation(
   overlay,
   overlay_close,
   div_map,
-  refresh,
 ) {
   let player = await app_g_player_get();
   property_set(player, "conversed", true);
@@ -72,7 +71,7 @@ export async function app_g_conversation(
   ]);
   app_g_npc_says(npc, overlay, npc_says);
   async function npc_gospel() {
-    await app_g_gospel(overlay, npc, overlay_close, player, div_map, refresh);
+    await app_g_gospel(overlay, npc, overlay_close, player, div_map);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc = property_get(npc, "name");
