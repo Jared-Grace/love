@@ -57,5 +57,6 @@ export function app_code_quiz(context) {
     app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_home);
   }
-  let b3 = app_replace_button_wide(root, text, lambda2);
+  let g = app_code_container_padded_x(root);
+  let b3 = app_replace_button_wide(g, text, lambda2);
 }

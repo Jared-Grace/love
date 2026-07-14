@@ -20,6 +20,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_text_example_another } from "./app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
@@ -97,6 +98,7 @@ export function app_code_examples(context) {
     app_code_go_back(root, "to the previous lesson", backs);
   }
   let text = app_replace_button_home_text();
-  let b2 = app_replace_button_screen_wide(context, app_code_home, root, text);
+  let g = app_code_container_padded_x(root);
+  let b2 = app_replace_button_screen_wide(context, app_code_home, g, text);
   return;
 }
