@@ -30,9 +30,8 @@ export function app_code_lesson_functions_console_log_less_than() {
     above,
     js_code_statement,
     [" less than"],
-    
     next_arg,
-    2,
+    null,
   );
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
