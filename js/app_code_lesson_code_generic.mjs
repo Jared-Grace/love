@@ -36,7 +36,7 @@ export function app_code_lesson_code_generic(params) {
   ]);
   let backwards_question_label = text_first_upper_to(text_combine(value, ": "));
   let example_question_label = app_code_label_code_question();
-  let example_count = 1;
+  let example_count = property_get(params, "example_count");
   let on_question = html_text_set_code_dark;
   let forwards = {
     question_label: example_question_label,

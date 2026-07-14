@@ -1,7 +1,6 @@
 import { html_div_code } from "./html_div_code.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
-import { boolean_random } from "./boolean_random.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -18,8 +17,7 @@ export function app_code_lesson_functions_console_log_less_than() {
   let operator = js_operator_less_than();
   let symbol = property_get(operator, "operator");
   let max = app_code_lesson_operators_value_max();
-  function expression() {
-    let left_smaller = boolean_random();
+  function expression(left_smaller) {
     let small = integer_random(1, max - 1);
     let large = integer_random(small + 1, max);
     let left = large;
@@ -32,8 +30,9 @@ export function app_code_lesson_functions_console_log_less_than() {
     return e;
   }
   function refill() {
-    let e = expression();
-    let list = [e];
+    let true_case = expression(true);
+    let false_case = expression(false);
+    let list = [true_case, false_case];
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -42,6 +41,7 @@ export function app_code_lesson_functions_console_log_less_than() {
     lambda$code: js_code_statement,
     name_id_rights: [" less than"],
     next_arg,
+    example_count: 2,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: 2,
   });
@@ -56,10 +56,14 @@ export function app_code_lesson_functions_console_log_less_than() {
       " asks a question: is the left number smaller than the right number?",
     ]);
     html_div_cycle_code(c, ["For example: "]);
-    let e = expression();
-    let call = js_code_call_arg(fn_name, e);
-    let s = js_code_statement(call);
-    html_div_code(c, s);
+    function show(left_smaller) {
+      let e = expression(left_smaller);
+      let call = js_code_call_arg(fn_name, e);
+      let s = js_code_statement(call);
+      html_div_code(c, s);
+    }
+    show(true);
+    show(false);
     app_code_container_light_blue_cycle_code(root, [
       "Before, the answer was always a number. Now ",
       fn_name,
