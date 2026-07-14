@@ -312,6 +312,7 @@ export async function app_replace_rule_set(context) {
           goal_index,
           goals,
         );
+        list_map_property_invoke(rbs, "refresh_rb");
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);

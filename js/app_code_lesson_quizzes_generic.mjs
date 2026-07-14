@@ -32,6 +32,10 @@ export function app_code_lesson_quizzes_generic(params) {
   let backwards_code = property_get(params, "backwards_code");
   let batch_get = property_get(params, "batch_get");
   let forwards_code = property_get(params, "forwards_code");
+  let forwards_answer_count_override = property_get(
+    params,
+    "forwards_answer_count_override",
+  );
   let backwards = {
     question_label: backwards_question_label,
     on_question: backwards_on_question,
@@ -46,7 +50,7 @@ export function app_code_lesson_quizzes_generic(params) {
     on_question: forwards_on_question,
     answer_label: forwards_answer_label,
     answer_on_button: forwards_answer_on_button,
-    answer_count_override: null,
+    answer_count_override: forwards_answer_count_override,
     answer_property: "answer",
     on_answer: app_code_lesson_quiz_multiple_choice,
   };
