@@ -37,6 +37,7 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { app_bible_search_word_path } from "./app_bible_search_word_path.mjs";
 import { text_to_words } from "./text_to_words.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { emoji_book_open } from "./emoji_book_open.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
@@ -121,7 +122,8 @@ export async function app_search_results(context, div_results) {
         function lambda3() {
           app_chapter_open(languages_chosen, chapter_code, verse_number);
         }
-        let oc = app_replace_button_wide(div_verse, "Open chapter", lambda3);
+        let oc_text = text_combine(emoji_book_open(), " Open chapter");
+        let oc = app_replace_button_wide(div_verse, oc_text, lambda3);
         html_style_margin_y(oc, "0.2em");
         let bible_texts = [];
         await app_reply_verses_add(
