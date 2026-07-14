@@ -14,7 +14,10 @@ import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
+import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
+import { html_style_padding_y } from "./html_style_padding_y.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
+import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { list_first_last } from "./list_first_last.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
@@ -32,7 +35,7 @@ export async function app_chapter(context) {
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
-  app_shared_spaced_small(content);
+  html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
   let max = app_chapter_chosen_max();
@@ -73,6 +76,8 @@ export async function app_chapter(context) {
       );
       let reference_p = html_p_text(content, reference);
       html_margin_0(reference_p);
+      html_style_margin_bottom(reference_p, "0.45em");
+      html_style_padding_x(reference_p, "0.4em");
       let updates = [];
       async function lambda(v) {
         let verse_number_v = property_get(v, "verse_number");
@@ -82,6 +87,8 @@ export async function app_chapter(context) {
           text_combine_multiple([verse_number_v, " ", text]),
         );
         html_margin_0(p);
+        html_style_padding_y(p, "0.22em");
+        html_style_padding_x(p, "0.4em");
         let r = app_chapter_toggle_update(
           updates,
           p,
