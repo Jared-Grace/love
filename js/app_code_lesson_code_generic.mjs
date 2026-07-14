@@ -17,6 +17,10 @@ export function app_code_lesson_code_generic(params) {
     params,
     "quiz_backwards_answer_count_override",
   );
+  let forwards_answer_count_override = property_get(
+    params,
+    "forwards_answer_count_override",
+  );
   let example_answer_label = text_first_upper_to(
     text_combine(value, " of code: "),
   );
@@ -45,6 +49,7 @@ export function app_code_lesson_code_generic(params) {
     backwards_answer_label: quiz_backwards_label_answer,
     backwards_answer_on_button: on_question,
     backwards_answer_count_override: quiz_backwards_answer_count_override,
+    forwards_answer_count_override,
   });
   let lesson = app_code_lesson_base(
     name_id,
