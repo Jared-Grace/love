@@ -5,6 +5,10 @@ import { app_code_examples } from "./app_code_examples.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -28,6 +32,12 @@ export function app_code_home(context) {
     let r = app_replace_button_wide_text_left_centered(g, lambda3, text, "");
     let title = property_get(r, "title");
     name(title);
+    let symbol = property_get_or_null(item, "symbol");
+    let has_symbol = null_not_is(symbol);
+    if (has_symbol) {
+      let symbol_text = text_combine(" ", symbol);
+      html_span_text_code_dark(title, symbol_text);
+    }
   }
   each_index(lessons, lambda);
 }
