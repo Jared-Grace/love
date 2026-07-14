@@ -88,7 +88,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /home/j/repos/love; for i in $(seq 1 30); do pgrep -f \"ai_git\" >/dev/null || break; sleep 2; done; node scripts/r.mjs ai_git 2>&1 | tail -8",
+            "command": "cd /home/j/repos/love; node scripts/r.mjs ai_git 2>&1 | tail -8",
             "timeout": 90,
             "statusMessage": "Auto-committing"
           },
