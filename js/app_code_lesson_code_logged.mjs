@@ -8,6 +8,10 @@ export function app_code_lesson_code_logged(params) {
     params,
     "quiz_backwards_answer_count_override",
   );
+  let forwards_answer_count_override = property_get(
+    params,
+    "forwards_answer_count_override",
+  );
   let value = "logged output";
   let lesson = app_code_lesson_code_generic({
     value,
@@ -15,6 +19,7 @@ export function app_code_lesson_code_logged(params) {
     name_id,
     above,
     quiz_backwards_answer_count_override,
+    forwards_answer_count_override,
   });
   return lesson;
 }

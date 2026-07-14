@@ -24,6 +24,7 @@ export function app_code_lesson_quizzes_unscramble_both(
     forwards_question_label,
     backwards_code,
     batch_get,
+    forwards_answer_count_override: null,
     forwards_code: true,
   });
   return quizzes_get;
