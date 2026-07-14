@@ -10,6 +10,7 @@ import { list_map_squash } from "./list_map_squash.mjs";
 import { object_merge_multiple } from "./object_merge_multiple.mjs";
 import { object_wrap_multiple } from "./object_wrap_multiple.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_replace_tests_parallel_count } from "./app_replace_tests_parallel_count.mjs";
 export async function app_replace_tests_run_e2e_all(url_prefix, e2e_inner_fns) {
   let rule_sets = app_replace_rule_sets();
   let r = app_replace_rule_set_binary_counting();
@@ -23,7 +24,7 @@ export async function app_replace_tests_run_e2e_all(url_prefix, e2e_inner_fns) {
     return mapped;
   }
   let remaining = list_map_squash(rule_sets, lambda2);
-  let parallel_count = 1;
+  let parallel_count = app_replace_tests_parallel_count();
   async function lambda(index) {
     async function on_page(page) {
       async function while_non_empty() {
