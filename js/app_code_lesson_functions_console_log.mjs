@@ -17,13 +17,13 @@ import { app_code_container_light_blue_cycle_code } from "./app_code_container_l
 import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
 import { html_div_cycle_code_multiple } from "./html_div_cycle_code_multiple.mjs";
 export function app_code_lesson_functions_console_log() {
-  var r = app_code_lesson_functions_console_log_generic(
+  var r = app_code_lesson_functions_console_log_generic({
     above,
-    identity,
-    [],
-    digits_3_random_next(),
-    null,
-  );
+    lambda$code: identity,
+    name_id_rights: [],
+    next_arg: digits_3_random_next(),
+    quiz_backwards_answer_count_override: null,
+  });
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");
   let next_operator = property_get(r, "next_operator");
