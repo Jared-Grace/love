@@ -22,6 +22,11 @@ import { app_next_hash_to_languages_chosen } from "./app_next_hash_to_languages_
 import { property_get } from "./property_get.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.mjs";
+import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
+import { app_chapter_change } from "./app_chapter_change.mjs";
+import { list_previous_wrap } from "./list_previous_wrap.mjs";
+import { list_next_wrap } from "./list_next_wrap.mjs";
 export async function app_chapter(context) {
   let root = html_mobile_default(context);
   html_margin_0(root);
@@ -43,6 +48,14 @@ export async function app_chapter(context) {
   let chapter_code = property_get(hash, "c");
   let verse_number = property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
+  async function chapter_previous() {
+    await app_chapter_change(chapter_code, languages_chosen, list_previous_wrap);
+  }
+  app_replace_button_arrow_left(bar, chapter_previous);
+  async function chapter_next() {
+    await app_chapter_change(chapter_code, languages_chosen, list_next_wrap);
+  }
+  app_replace_button_arrow_right(bar, chapter_next);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   async function lambda2(lc) {
