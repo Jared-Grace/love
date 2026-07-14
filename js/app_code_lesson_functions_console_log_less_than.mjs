@@ -1,3 +1,4 @@
+import { fn_name } from "../../love/js/fn_name.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { each } from "./each.mjs";
 import { app_code_lesson_operators_value_max_random_next } from "./app_code_lesson_operators_value_max_random_next.mjs";
@@ -27,9 +28,10 @@ export function app_code_lesson_functions_console_log_less_than() {
   let next_arg = list_iterator_refillable(refill);
   var r = app_code_lesson_functions_console_log_generic(
     above,
-    identity,
+    js_code_statement,
     [" less than"],
     next_arg,
+    2,
   );
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
