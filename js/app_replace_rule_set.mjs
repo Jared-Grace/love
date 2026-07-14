@@ -15,6 +15,7 @@ import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbre
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
 import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
 import { app_replace_rule_set_refresh_rb } from "./app_replace_rule_set_refresh_rb.mjs";
+import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
@@ -214,12 +215,12 @@ export async function app_replace_rule_set(context) {
       }
       return sb;
       function refresh_sb() {
-        let includes = list_includes(start_indices, index);
-        app_replace_button_symbol_style_valid_if(
-          sb,
-          index_selected !== null && includes,
+        let state = {
+          start_indices,
+          index_selected,
           success,
-        );
+        };
+        app_replace_rule_set_refresh_sb(sb, index, state);
       }
     }
     sbs = list_map_index(start, symbols_mapper);
