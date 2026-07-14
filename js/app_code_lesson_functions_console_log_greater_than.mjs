@@ -10,11 +10,12 @@ export function app_code_lesson_functions_console_log_greater_than() {
     let parts = ["", symbol, " is like ", less_symbol];
     return parts;
   }
-  let lesson = app_code_lesson_functions_console_log_comparison(
+  let lesson = app_code_lesson_functions_console_log_comparison({
     operator,
-    "bigger",
-    [" greater than"],
+    compare_word: "bigger",
+    name_id_rights: [" greater than"],
     closing,
-  );
+    explanation: null,
+  });
   return lesson;
 }
