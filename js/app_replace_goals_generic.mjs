@@ -4,7 +4,7 @@ import { add_1_period } from "./add_1_period.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
-import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
+import { app_replace_button_rule_selected_background_color } from "./app_replace_button_rule_selected_background_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { emoji_point_right } from "./emoji_point_right.mjs";
@@ -43,7 +43,7 @@ export function app_replace_goals_generic(
     html_style_background_color_set(button, green);
   } else {
     if (choose_this_next) {
-      let blue_strong = app_shared_button_selected_background_color();
+      let blue_strong = app_replace_button_rule_selected_background_color();
       html_style_background_color_set(button, blue_strong);
       let white = app_shared_button_font_color();
       html_font_color_set(button, white);
