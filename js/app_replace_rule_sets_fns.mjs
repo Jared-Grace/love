@@ -36,6 +36,7 @@ import { app_replace_rule_set_three_different_grow_same } from "./app_replace_ru
 import { app_replace_rule_set_binary_counting } from "./app_replace_rule_set_binary_counting.mjs";
 import { app_replace_rule_set_binary_counting_prepare_2 } from "./app_replace_rule_set_binary_counting_prepare_2.mjs";
 import { app_replace_rule_set_binary_counting_prepare_1 } from "./app_replace_rule_set_binary_counting_prepare_1.mjs";
+import { app_replace_rule_set_slide } from "./app_replace_rule_set_slide.mjs";
 import { app_replace_rule_set_unary_equations_adding } from "./app_replace_rule_set_unary_equations_adding.mjs";
 import { app_replace_rule_set_shrink_left_pair_replace_right_same } from "./app_replace_rule_set_shrink_left_pair_replace_right_same.mjs";
 import { app_replace_rule_set_grow_left_pair_change_right } from "./app_replace_rule_set_grow_left_pair_change_right.mjs";
@@ -102,6 +103,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_grow_left_pair_change_right,
     app_replace_rule_set_shrink_left_pair_replace_right_same,
     app_replace_rule_set_unary_equations_adding,
+    app_replace_rule_set_slide,
     app_replace_rule_set_binary_counting_prepare_1,
     app_replace_rule_set_binary_counting_prepare_2,
     app_replace_rule_set_binary_counting,
