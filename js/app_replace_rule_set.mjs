@@ -1,5 +1,5 @@
 import { null_is } from "./null_is.mjs";
-import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
+import { app_replace_button_rule_selected_background_color } from "./app_replace_button_rule_selected_background_color.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
@@ -228,7 +228,7 @@ export async function app_replace_rule_set(context) {
         app_replace_lefts_rights_style(rb, selected || success, success);
         let button_background_color =
           app_replace_button_rule_background_color();
-        let blue_strong = app_shared_button_selected_background_color();
+        let blue_strong = app_replace_button_rule_selected_background_color();
         let c = ternary_nested(
           selected,
           blue_strong,
