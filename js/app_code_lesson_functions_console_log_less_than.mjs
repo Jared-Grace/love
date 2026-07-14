@@ -15,11 +15,17 @@ export function app_code_lesson_functions_console_log_less_than() {
     ];
     return parts;
   }
-  let lesson = app_code_lesson_functions_console_log_comparison(
+  let explanation = [
+    ["We answer that question with yes or no."],
+    ["Yes is written ", js_keyword_true()],
+    ["No is written ", js_keyword_false()],
+  ];
+  let lesson = app_code_lesson_functions_console_log_comparison({
     operator,
-    "smaller",
-    [" less than"],
+    compare_word: "smaller",
+    name_id_rights: [" less than"],
     closing,
-  );
+    explanation,
+  });
   return lesson;
 }

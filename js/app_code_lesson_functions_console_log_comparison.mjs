@@ -12,14 +12,16 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
+import { each } from "./each.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_comparison(
-  operator,
-  compare_word,
-  name_id_rights,
-  closing,
-) {
+export function app_code_lesson_functions_console_log_comparison(params) {
+  let operator = property_get(params, "operator");
+  let compare_word = property_get(params, "compare_word");
+  let name_id_rights = property_get(params, "name_id_rights");
+  let closing = property_get(params, "closing");
+  let explanation = property_get(params, "explanation");
   let symbol = property_get(operator, "operator");
   let compare = property_get(operator, "fn");
   let max = app_code_lesson_operators_value_max();
@@ -65,6 +67,13 @@ export function app_code_lesson_functions_console_log_comparison(
       " than the right number?",
     ]);
     html_div_cycle_code(c, ["The symbol ", symbol, tail]);
+    let has_explanation = null_not_is(explanation);
+    if (has_explanation) {
+      function render_line(line) {
+        html_div_cycle_code(c, line);
+      }
+      each(explanation, render_line);
+    }
     html_div_cycle_code(c, ["For example: "]);
     function show(want_true) {
       let e = expression(want_true);
