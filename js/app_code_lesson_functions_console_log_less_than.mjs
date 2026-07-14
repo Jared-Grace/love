@@ -10,6 +10,8 @@ import { js_operator_to_expression_only } from "./js_operator_to_expression_only
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
+import { js_keyword_true } from "./js_keyword_true.mjs";
+import { js_keyword_false } from "./js_keyword_false.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
@@ -58,9 +60,9 @@ export function app_code_lesson_functions_console_log_less_than() {
       "Before, the answer was always a number. Now ",
       fn_name,
       " will write out ",
-      "true",
+      js_keyword_true(),
       " or ",
-      "false",
+      js_keyword_false(),
     ]);
   }
 }
