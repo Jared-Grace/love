@@ -13,7 +13,7 @@ export function app_code_lesson_functions_console_log_statement() {
     above,
     js_code_statement,
     [" statement"],
-    digits_3_random_next,
+    digits_3_random_next(),
   );
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
