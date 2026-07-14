@@ -12,6 +12,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
+import { object_copy_assign } from "./object_copy_assign.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_comparison(
   operator,
@@ -54,7 +55,8 @@ export function app_code_lesson_functions_console_log_comparison(
   });
   let fn_name = property_get(r, "fn_name");
   let lesson = property_get(r, "lesson");
-  return lesson;
+  let lesson_symbol = object_copy_assign(lesson, { symbol });
+  return lesson_symbol;
   function above(root) {
     let c = app_code_container_light_blue(root);
     let tail = text_combine_multiple([
