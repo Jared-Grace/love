@@ -89,8 +89,8 @@ export async function app_chapter(context) {
           text_combine_multiple([verse_number_v, " ", text]),
         );
         html_margin_0(p);
-        html_style_padding_y(p, "0.22em");
-        html_style_padding_x(p, "0.4em");
+        html_style_padding_y(p, app_shared_spaced_tiny_gap());
+        html_style_padding_x(p, app_shared_spaced_tiny_gap());
         let r = app_chapter_toggle_update(
           updates,
           p,
