@@ -75,10 +75,10 @@ export async function app_replace_rule_set(context) {
   let index_selected = null;
   let start_over = null;
   let rules_used = null;
-  let r4 = app_replace_start_end_get(goal);
-  let start = property_get(r4, "start");
+  let start_end = app_replace_start_end_get(goal);
+  let start = property_get(start_end, "start");
   let start_indices = list_size_range(start);
-  let end = property_get(r4, "end");
+  let end = property_get(start_end, "end");
   async function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
@@ -104,8 +104,8 @@ export async function app_replace_rule_set(context) {
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   app_replace_rule_set_title(context);
-  let r3 = html_progress_bar(root, goal_index, goals_count, "goal");
-  let container = property_get(r3, "container");
+  let progress = html_progress_bar(root, goal_index, goals_count, "goal");
+  let container = property_get(progress, "container");
   html_style_margin_top(container, "0");
   let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
@@ -117,8 +117,8 @@ export async function app_replace_rule_set(context) {
   let goal_list_symbols = app_replace_rule_set_goal_show(root, end);
   let div_below = html_div(root);
   let success = false;
-  let sbs = null;
-  let rbs = null;
+  let symbol_buttons = null;
+  let rule_buttons = null;
   let duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
   let rules_useds = app_replace_rule_sets_fns_rules_used();
@@ -138,28 +138,28 @@ export async function app_replace_rule_set(context) {
         start_indices = list_size_range(start);
         button_rule_on_click_inner(index);
       }
-      let r2 = app_replace_button_rule(
+      let rule_result = app_replace_button_rule(
         div_rules_buttons,
         rule,
         button_rule_on_click,
       );
-      let arrow = property_get(r2, "arrow");
-      let rights = property_get(r2, "rights");
-      let lefts = property_get(r2, "lefts");
-      let rb = property_get(r2, "b");
-      html_disable(rb);
-      object_merge_set(rb, {
+      let arrow = property_get(rule_result, "arrow");
+      let rights = property_get(rule_result, "rights");
+      let lefts = property_get(rule_result, "lefts");
+      let rule_button = property_get(rule_result, "b");
+      html_disable(rule_button);
+      object_merge_set(rule_button, {
         rule,
         lefts,
         rights,
         arrow,
       });
-      return rb;
+      return rule_button;
     }
-    rbs = list_map_index(rules_used, each_rule);
-    function rbs_each(rb, index2) {
+    rule_buttons = list_map_index(rules_used, each_rule);
+    function rbs_each(rule_button, rule_index) {
       refresh_rb();
-      object_merge_set(rb, {
+      object_merge_set(rule_button, {
         refresh_rb,
       });
       function refresh_rb() {
@@ -167,14 +167,14 @@ export async function app_replace_rule_set(context) {
           index_selected,
           success,
         };
-        app_replace_rule_set_refresh_rb(rb, index2, state);
+        app_replace_rule_set_refresh_rb(rule_button, rule_index, state);
       }
     }
-    each_index(rbs, rbs_each);
+    each_index(rule_buttons, rbs_each);
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
-      let sb = null;
+      let symbol_button = null;
       async function symbol_on_click() {
         ({ start, symbols_invalid_chosen, start_indices } =
           await app_replace_rule_set_symbol_on_click(
@@ -183,60 +183,60 @@ export async function app_replace_rule_set(context) {
             index,
             start,
             symbols_invalid_chosen,
-            sbs,
+            symbol_buttons,
             start_indices,
-            rbs,
+            rule_buttons,
             duration,
             div_symbols,
           ));
         await refresh();
       }
-      sb = html_button(div_symbols, symbol, symbol_on_click);
+      symbol_button = html_button(div_symbols, symbol, symbol_on_click);
       let value = app_replace_rule_set_attribute_symbol(index);
-      html_data_set_test(sb, value);
-      app_replace_button_symbol_style(sb);
-      property_set_exists_not(sb, "index", index);
+      html_data_set_test(symbol_button, value);
+      app_replace_button_symbol_style(symbol_button);
+      property_set_exists_not(symbol_button, "index", index);
       refresh_sb();
-      object_merge_set(sb, {
+      object_merge_set(symbol_button, {
         refresh_sb,
       });
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
-        app_replace_button_symbol_style_invalid(sb);
+        app_replace_button_symbol_style_invalid(symbol_button);
       }
-      return sb;
+      return symbol_button;
       function refresh_sb() {
         let state = {
           start_indices,
           index_selected,
           success,
         };
-        app_replace_rule_set_refresh_sb(sb, index, state);
+        app_replace_rule_set_refresh_sb(symbol_button, index, state);
       }
     }
-    sbs = list_map_index(start, symbols_mapper);
+    symbol_buttons = list_map_index(start, symbols_mapper);
     ("no success yet?");
     if (not(success)) {
       ("goal satisfied?");
       let eq = json_equal(start, end);
       if (eq) {
         success = true;
-        list_map_property_invoke(rbs, "refresh_rb");
+        list_map_property_invoke(rule_buttons, "refresh_rb");
         await app_replace_rule_set_success(
           rule_set_name,
           goal,
           context,
           goal_list_symbols,
-          sbs,
+          symbol_buttons,
           duration,
           div_below,
           goal_index,
           goals,
         );
       }
-      let nn = null_not_is(index_selected);
-      html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
-      html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
+      let has_selection = null_not_is(index_selected);
+      html_text_set_if(has_selection, "Rules:", "Choose a rule:", label_rules);
+      html_text_set_if(has_selection, "Choose a symbol:", "Symbols:", label_symbols);
     }
     if (success) {
       html_visibility_hidden(div_symbols);
@@ -244,10 +244,10 @@ export async function app_replace_rule_set(context) {
     let t = app_replace_rule_set_verify_from_try(rules_used, start, end);
     let found = property_get(t, "found");
     if (not(found)) {
-      function symbol_dead(sb) {
-        app_replace_button_symbol_style_dead(sb);
+      function symbol_dead(symbol_button) {
+        app_replace_button_symbol_style_dead(symbol_button);
       }
-      each(sbs, symbol_dead);
+      each(symbol_buttons, symbol_dead);
       let green = app_replace_rule_set_highlight();
       html_style_background_color_set(start_over, green);
       await html_scroll_center(start_over);
@@ -269,8 +269,8 @@ export async function app_replace_rule_set(context) {
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
-    list_map_property_invoke(sbs, "refresh_sb");
-    list_map_property_invoke(rbs, "refresh_rb");
+    list_map_property_invoke(symbol_buttons, "refresh_sb");
+    list_map_property_invoke(rule_buttons, "refresh_rb");
     refresh_count_increase();
   }
 }
