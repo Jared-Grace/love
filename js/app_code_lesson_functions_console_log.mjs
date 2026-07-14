@@ -22,6 +22,7 @@ export function app_code_lesson_functions_console_log() {
     identity,
     [],
     digits_3_random_next(),
+    null,
   );
   let next = property_get(r, "next");
   let fn_name = property_get(r, "fn_name");
