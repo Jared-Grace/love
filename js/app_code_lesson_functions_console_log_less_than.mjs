@@ -6,7 +6,7 @@ export function app_code_lesson_functions_console_log_less_than() {
   let operator = js_operator_less_than();
   function closing(fn_name) {
     let parts = [
-      "Before, the answer was always a number. Now ",
+      "Before, the answer was always a number, but now ",
       fn_name,
       " will write out ",
       js_keyword_true(),
@@ -16,7 +16,7 @@ export function app_code_lesson_functions_console_log_less_than() {
     return parts;
   }
   let explanation = [
-    ["We answer that question with yes or no."],
+    ["We answer that question with yes or no"],
     ["Yes is written ", js_keyword_true()],
     ["No is written ", js_keyword_false()],
   ];
