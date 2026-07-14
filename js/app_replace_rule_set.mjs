@@ -166,7 +166,6 @@ export async function app_replace_rule_set(context) {
       });
       function refresh_rb() {
         let state = {
-          start,
           index_selected,
           success,
         };
