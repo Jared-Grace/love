@@ -18,6 +18,8 @@ import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { list_first_last } from "./list_first_last.mjs";
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
@@ -76,8 +78,8 @@ export async function app_chapter(context) {
       );
       let reference_p = html_p_text(content, reference);
       html_margin_0(reference_p);
-      html_style_margin_bottom(reference_p, "0.45em");
-      html_style_padding_x(reference_p, "0.4em");
+      html_style_margin_bottom(reference_p, app_shared_spaced_small_gap());
+      html_style_padding_x(reference_p, app_shared_spaced_tiny_gap());
       let updates = [];
       async function lambda(v) {
         let verse_number_v = property_get(v, "verse_number");
