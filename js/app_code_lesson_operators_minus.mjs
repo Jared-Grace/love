@@ -22,5 +22,5 @@ export function app_code_lesson_operators_minus() {
     math_name,
     digit_positive_random,
   );
-  return r;
+  return app_code_lesson_symbol_set(r, operator);
 }
