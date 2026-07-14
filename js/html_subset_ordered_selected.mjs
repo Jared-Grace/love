@@ -1,7 +1,6 @@
 import { list_size } from "./list_size.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_display_inline_block } from "./html_display_inline_block.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_width_full } from "./html_width_full.mjs";
 import { html_subset_ordered_row } from "./html_subset_ordered_row.mjs";
 export function html_subset_ordered_selected(
   parent,
@@ -9,10 +8,9 @@ export function html_subset_ordered_selected(
   name_property,
   changed,
 ) {
-  ("center the list as a block but keep rows left-aligned so the up and down arrows line up in columns");
+  ("full-width list so each row's center is the card's center; the arrows sit just left of that line and the names just right, so name length never moves the arrows");
   let container = html_div(parent);
-  html_display_inline_block(container);
-  html_style_set(container, "text-align", "left");
+  html_width_full(container);
   let size = list_size(chosen);
   for (let i = 0; i < size; i++) {
     html_subset_ordered_row(container, chosen, i, name_property, changed);
