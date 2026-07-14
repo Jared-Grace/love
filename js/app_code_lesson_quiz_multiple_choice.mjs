@@ -1,6 +1,8 @@
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
 import { not } from "./not.mjs";
+import { or } from "./or.mjs";
+import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -34,6 +36,9 @@ export function app_code_lesson_quiz_multiple_choice(
   let answer_property = property_get(info, "answer_property");
   let quiz_answer = property_get(qa, answer_property);
   let quiz_answer_text = text_to(quiz_answer);
+  let question_property = app_code_lesson_quiz_qa_property_other(answer_property);
+  let quiz_question = property_get(qa, question_property);
+  let quiz_question_text = text_to(quiz_question);
   let answer_count_max = app_code_answer_count_max();
   let nn2 = null_not_is(answer_count_override);
   if (nn2) {
@@ -55,8 +60,12 @@ export function app_code_lesson_quiz_multiple_choice(
     let item = next_get();
     let answer_batch = property_get(item, answer_property);
     let answer_text = text_to(answer_batch);
+    let question_batch = property_get(item, question_property);
+    let question_text = text_to(question_batch);
+    let ambiguous = equal(question_text, quiz_question_text);
     let already = list_includes(seen, answer_text);
-    if (not(already)) {
+    let skip = or(already, ambiguous);
+    if (not(skip)) {
       list_add(seen, answer_text);
       list_add(distractors, answer_text);
     }
