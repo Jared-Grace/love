@@ -141,7 +141,10 @@ export async function app_replace_rule_set(context) {
   let label_goal = app_shared_text_body(root, "Goal:");
   let p_goal = html_p(root);
   let goal_list_symbols = app_replace_button_side(p_goal, end);
-  let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(false);
+  let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(
+    false,
+    false,
+  );
   each(goal_list_symbols, lambda4);
   let div_below = html_div(root);
   let success = false;
@@ -222,7 +225,7 @@ export async function app_replace_rule_set(context) {
         enabled = index_selected === null || selected;
         enabled = true;
         html_enable_if(rb, enabled);
-        app_replace_lefts_rights_style(rb, enabled);
+        app_replace_lefts_rights_style(rb, enabled, success);
         let button_background_color =
           app_replace_button_rule_background_color();
         let blue_strong = app_shared_button_selected_background_color();
@@ -287,6 +290,7 @@ export async function app_replace_rule_set(context) {
         app_replace_button_symbol_style_valid_if(
           sb,
           index_selected !== null && includes,
+          success,
         );
       }
     }
