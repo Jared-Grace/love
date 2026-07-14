@@ -233,6 +233,9 @@ export async function app_replace_rule_set(context) {
           button_background_color,
           "#a8a8a8ff",
         );
+        if (success) {
+          c = highlight;
+        }
         html_style_background_color_set(rb, c);
         let arrow2 = property_get(rb, "arrow");
         html_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
