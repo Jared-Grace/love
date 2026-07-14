@@ -1,6 +1,7 @@
 import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { identity } from "./identity.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { app_bible_verse_open_curried } from "./app_bible_verse_open_curried.mjs";

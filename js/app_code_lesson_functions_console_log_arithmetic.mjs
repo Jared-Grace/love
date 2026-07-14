@@ -1,3 +1,4 @@
+import { html_div_code } from "../../love/js/html_div_code.mjs";
 import { each } from "../../love/js/each.mjs";
 import { fn_name } from "../../love/js/fn_name.mjs";
 import { app_code_lesson_operators_value_max_range_1_next } from "../../love/js/app_code_lesson_operators_value_max_range_1_next.mjs";
@@ -7,8 +8,6 @@ import { js_operators_arithmetic } from "../../love/js/js_operators_arithmetic.m
 import { list_map } from "../../love/js/list_map.mjs";
 import { js_operator_to_expression_only } from "../../love/js/js_operator_to_expression_only.mjs";
 import { list_iterator_refillable } from "../../love/js/list_iterator_refillable.mjs";
-import { list_first } from "../../love/js/list_first.mjs";
-import { js_operator_to_expression } from "../../love/js/js_operator_to_expression.mjs";
 import { js_code_call_arg } from "../../love/js/js_code_call_arg.mjs";
 import { html_div_cycle_code } from "../../love/js/html_div_cycle_code.mjs";
 import { app_code_container_light_blue } from "../../love/js/app_code_container_light_blue.mjs";
@@ -36,15 +35,15 @@ export function app_code_lesson_functions_console_log_arithmetic() {
   let lesson = property_get(r, "lesson");
   return lesson;
   function above(root) {
-    let first = list_first(operators);
-    function lambda(item) {}
-    each(list2, lambda);
-    let e = js_operator_to_expression(first, number_next);
-    let expression = property_get(e, "expression");
-    let call = js_code_call_arg(fn_name, expression);
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["Before, we put a single number inside ", fn_name]);
-    html_div_cycle_code(c, ["We can also use ", fn_name, " like this: ", call]);
+    html_div_cycle_code(c, ["We can also use ", fn_name, " like this: "]);
+    function lambda(o) {
+      let e = js_operator_to_expression_only(o, number_next);
+      let call = js_code_call_arg(fn_name, e);
+      html_div_code(c, call);
+    }
+    each(operators, lambda);
     app_code_container_light_blue_cycle_code(root, [
       "",
       fn_name,
