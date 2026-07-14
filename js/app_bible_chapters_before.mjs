@@ -1,5 +1,6 @@
 import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
@@ -16,7 +17,8 @@ export async function app_bible_chapters_before(context) {
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  html_div_text_centered(root, book_name);
+  let book_div = html_div_text_centered(root, book_name);
+  app_shared_text_deemphasized(book_div);
   let r = {
     book_code,
     root,
