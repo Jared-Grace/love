@@ -26,6 +26,7 @@ export function app_replace_home(context) {
     text_combine(emoji_gear(), " Settings"),
     lambda4,
   );
+  app_shared_text_body(root, "Choose a rule set");
   let d = app_replace_rule_sets_data_initialize(context);
   let rule_sets = app_replace_rule_sets();
   let completed_previous = true;
