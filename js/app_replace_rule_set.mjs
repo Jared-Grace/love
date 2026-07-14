@@ -241,7 +241,7 @@ export async function app_replace_rule_set(context) {
         }
         html_style_background_color_set(rb, c);
         let arrow2 = property_get(rb, "arrow");
-        html_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
+        html_font_color_set_if(selected && not(success), arrow2, "white", "black");
       }
     }
     each_index(rbs, rbs_each);
