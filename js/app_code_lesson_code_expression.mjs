@@ -6,6 +6,7 @@ export function app_code_lesson_code_expression(batch_get, name_id, above) {
     batch_get,
     name_id,
     above,
+    example_count: 1,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });

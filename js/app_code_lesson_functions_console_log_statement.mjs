@@ -14,6 +14,7 @@ export function app_code_lesson_functions_console_log_statement() {
     lambda$code: js_code_statement,
     name_id_rights: [" statement"],
     next_arg: digits_3_random_next(),
+    example_count: 1,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
