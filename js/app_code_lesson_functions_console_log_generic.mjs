@@ -1,3 +1,4 @@
+import { fn_name } from "../../love/js/fn_name.mjs";
 import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
 import { app_code_lesson_code_logged } from "../../love/js/app_code_lesson_code_logged.mjs";
 import { eval_console_log_to_list } from "../../love/js/eval_console_log_to_list.mjs";
@@ -11,6 +12,7 @@ export function app_code_lesson_functions_console_log_generic(
   lambda$code,
   name_id_rights,
   next_arg,
+  quiz_backwards_answer_count_override,
 ) {
   let name = "console.log";
   function batch_get() {
@@ -27,7 +29,12 @@ export function app_code_lesson_functions_console_log_generic(
   let rights = [name];
   list_add_multiple(rights, name_id_rights);
   let name_id = app_code_lesson_name_id_function("function", rights);
-  let lesson = app_code_lesson_code_logged(b, name_id, above);
+  let lesson = app_code_lesson_code_logged(
+    b,
+    name_id,
+    above,
+    quiz_backwards_answer_count_override,
+  );
   let m = app_code_lesson_operators_value_max();
   let next_operator = range_1_next(m);
   let r3 = {
