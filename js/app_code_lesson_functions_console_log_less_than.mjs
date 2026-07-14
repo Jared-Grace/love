@@ -1,12 +1,10 @@
-import { fn_name } from "../../love/js/fn_name.mjs";
 import { html_div_code } from "./html_div_code.mjs";
-import { each } from "./each.mjs";
-import { app_code_lesson_operators_value_max_random_next } from "./app_code_lesson_operators_value_max_random_next.mjs";
-import { identity } from "./identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
-import { list_map } from "./list_map.mjs";
-import { js_operator_to_expression_only } from "./js_operator_to_expression_only.mjs";
+import { boolean_random } from "./boolean_random.mjs";
+import { integer_random } from "./integer_random.mjs";
+import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
@@ -18,15 +16,24 @@ import { app_code_container_light_blue_cycle_code } from "./app_code_container_l
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_less_than() {
   let operator = js_operator_less_than();
-  let operators = [operator];
   let symbol = property_get(operator, "operator");
-  let number_next = app_code_lesson_operators_value_max_random_next();
-  function refill() {
-    function mapper(o) {
-      let expression = js_operator_to_expression_only(o, number_next);
-      return expression;
+  let max = app_code_lesson_operators_value_max();
+  function expression() {
+    let left_smaller = boolean_random();
+    let small = integer_random(1, max - 1);
+    let large = integer_random(small + 1, max);
+    let left = large;
+    let right = small;
+    if (left_smaller) {
+      left = small;
+      right = large;
     }
-    let list = list_map(operators, mapper);
+    let e = js_code_binary_spaced_nb(left, symbol, right);
+    return e;
+  }
+  function refill() {
+    let e = expression();
+    let list = [e];
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -49,13 +56,10 @@ export function app_code_lesson_functions_console_log_less_than() {
       " asks a question: is the left number smaller than the right number?",
     ]);
     html_div_cycle_code(c, ["For example: "]);
-    function lambda(o) {
-      let e = js_operator_to_expression_only(o, number_next);
-      let call = js_code_call_arg(fn_name, e);
-      let s = js_code_statement(call);
-      html_div_code(c, s);
-    }
-    each(operators, lambda);
+    let e = expression();
+    let call = js_code_call_arg(fn_name, e);
+    let s = js_code_statement(call);
+    html_div_code(c, s);
     app_code_container_light_blue_cycle_code(root, [
       "Before, the answer was always a number. Now ",
       fn_name,
