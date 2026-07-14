@@ -48,7 +48,7 @@ export function app_code_lesson_functions_console_log_arithmetic() {
     app_code_container_light_blue_cycle_code(root, [
       "",
       fn_name,
-      " will write out the answer to the math expression",
+      " will do the math and write out the answer",
     ]);
   }
 }
