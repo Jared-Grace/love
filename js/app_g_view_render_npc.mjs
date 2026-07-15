@@ -10,6 +10,7 @@ import { app_g_overlay } from "./app_g_overlay.mjs";
 import { app_g_click_npc_study } from "./app_g_click_npc_study.mjs";
 import { app_g_click_npc_pray } from "./app_g_click_npc_pray.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
+import { list_single } from "./list_single.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
@@ -17,10 +18,11 @@ export async function app_g_view_render_npc(div_map) {
   let y = property_get(view, "y");
   let phase = property_get(view, "phase");
   let npcs = await app_g_npcs_get();
-  let npcs_matched = list_filter_object_includes(npcs, {
+  let matched = list_filter_object_includes(npcs, {
     x,
     y,
   });
+  let npc = list_single(matched);
   let player = await app_g_player_get();
   let overlay = app_g_overlay(div_map);
   async function overlay_close() {
@@ -40,7 +42,7 @@ export async function app_g_view_render_npc(div_map) {
     let prayer = property_get(player, "prayer");
     await app_g_conversation(
       prayer,
-      npcs_matched,
+      npc,
       overlay,
       overlay_close,
       div_map,

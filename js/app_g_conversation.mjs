@@ -10,13 +10,12 @@ import { text_random_or_empty } from "./text_random_or_empty.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_single } from "./list_single.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function app_g_conversation(
   prayer,
-  npcs_matched,
+  npc,
   overlay,
   overlay_close,
   div_map,
@@ -24,7 +23,6 @@ export async function app_g_conversation(
   let player = await app_g_player_get();
   property_set(player, "conversed", true);
   property_set(prayer, "conversation", false);
-  let npc = list_single(npcs_matched);
   let greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = text_first_upper_to(greet);
   let s = list_random_item(["nice", "great", "good"]);
