@@ -109,7 +109,9 @@ export function app_code_review(context) {
     html_progress_bar(progress, passed, total, "quiz");
     let seed = list_first(queue);
     let exercise = app_code_review_seed_to_exercise(seed);
-    async function on_complete(clean) {
+    async function on_correct(clean) {
+      show_success();
+      await sleep_success_color();
       let index_front = 0;
       list_remove_at(queue, index_front);
       if (clean) {
@@ -120,7 +122,10 @@ export function app_code_review(context) {
       persist();
       present();
     }
-    app_code_review_exercise(c, exercise, on_complete);
+    function on_incorrect() {
+      hide_success();
+    }
+    app_code_review_exercise(c, exercise, on_correct, on_incorrect);
   }
   present();
   let back = app_shared_button_back_text();
