@@ -57,9 +57,9 @@ export async function app_chapter(context) {
   let p2 = html_p_text(
     bar,
     text_combine_multiple([
-      "Choose ",
+      "Tap up to ",
       number_to_words(max),
-      " verses. That will copy all the verses in between (inclusive).",
+      " verse numbers, then Copy to save that passage",
     ]),
   );
   app_shared_margin_y_set(p2);
