@@ -96,6 +96,11 @@ export function app_code_lesson_operators_minus_generic(
     let combined5 = text_combine("invalid", operator);
     html_div_code(c4, combined5);
   }
-  let lesson = app_code_lesson_validity_operator(math_name, batch, above);
+  let lesson = app_code_lesson_validity_operator(
+    math_name,
+    operator,
+    batch,
+    above,
+  );
   return lesson;
 }

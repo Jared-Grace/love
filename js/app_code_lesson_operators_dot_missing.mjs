@@ -40,6 +40,11 @@ export function app_code_lesson_operators_dot_missing() {
     );
     return;
   }
-  let lesson = app_code_lesson_validity_operator(math_name, batch, above);
+  let lesson = app_code_lesson_validity_operator(
+    math_name,
+    operator,
+    batch,
+    above,
+  );
   return app_code_lesson_symbol_set(lesson, operator);
 }
