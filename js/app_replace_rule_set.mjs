@@ -141,7 +141,6 @@ export async function app_replace_rule_set(context) {
     rules_used = list_get(rules_used_all, goal_index);
   }
   app_replace_rule_set_abbreviations(rs, rules_used, div_abbreviations);
-  await refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
     refresh_count_increase();
@@ -280,6 +279,8 @@ export async function app_replace_rule_set(context) {
     combined,
   );
   div_proof = html_div(root);
+  ("first render happens here, after start_over and div_proof exist, so a resumed goal's success flow can draw the proof into them");
+  await refresh();
   function refresh_count_increase() {
     refresh_count++;
     let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
