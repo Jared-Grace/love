@@ -1,5 +1,6 @@
 import { list_random_item } from "./list_random_item.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_space_nb } from "./text_space_nb.mjs";
 import { emoji_party_popper } from "./emoji_party_popper.mjs";
 import { emoji_party_face } from "./emoji_party_face.mjs";
 import { emoji_trophy } from "./emoji_trophy.mjs";
@@ -25,6 +26,7 @@ export function app_code_review_complete_message() {
   ];
   let emoji_get = list_random_item(emojis);
   let emoji = emoji_get();
-  let text = text_combine_multiple([emoji, " ", message, " ", emoji]);
+  let nb = text_space_nb();
+  let text = text_combine_multiple([emoji, nb, message, nb, emoji]);
   return text;
 }
