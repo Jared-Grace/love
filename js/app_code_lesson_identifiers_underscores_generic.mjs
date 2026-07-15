@@ -7,7 +7,7 @@ import { invoke_multiple } from "./invoke_multiple.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
 import { app_code_lesson_identifiers_valid } from "./app_code_lesson_identifiers_valid.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -118,10 +118,14 @@ export function app_code_lesson_identifiers_underscores_generic(
     let mapped3 = list_map_index(list, lambda);
     return mapped3;
   }
-  let name_id = app_code_lesson_name_id("identifiers", [
-    text_combine(separator_valid_name, "s allowed"),
-    text_combine(separator_invalid_name, "s not"),
-  ]);
+  let name_id = app_code_lesson_name_id_symbol(
+    "identifiers",
+    [
+      text_combine(separator_valid_name, "s allowed"),
+      text_combine(separator_invalid_name, "s not"),
+    ],
+    separator_valid,
+  );
   let r5 = app_code_lesson_identifiers_valid(
     name_id,
     above,
