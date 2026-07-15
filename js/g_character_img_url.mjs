@@ -1,14 +1,5 @@
-import { g_game_prefix } from "./g_game_prefix.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { g_character_img_url_direction } from "./g_character_img_url_direction.mjs";
 export function g_character_img_url(c) {
-  let game_prefix = g_game_prefix();
-  let img = property_get(c, "img");
-  let c_src = text_combine_multiple([
-    game_prefix,
-    "characters\\",
-    img,
-    "\\rotations\\south.png",
-  ]);
+  let c_src = g_character_img_url_direction(c, "south");
   return c_src;
 }
