@@ -62,7 +62,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_centered(bar);
   let e = ebible_folder_english();
   if (app_bible_chapter_set_default(context)) {
-    return;
+    return null;
   }
   let hash = html_hash_object_get();
   let verse_number_hash = app_bible_hash_v_get(hash);
