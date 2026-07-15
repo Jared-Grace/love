@@ -7,6 +7,8 @@ import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { emoji_point_up } from "./emoji_point_up.mjs";
+import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs";
@@ -61,7 +63,11 @@ export function app_code_lesson_quiz(
   let parent_container = html_div(parent);
   let container_success_message = html_div(parent_container);
   let quiz_new_message = app_code_container_light_blue(parent_container);
-  html_div_text(quiz_new_message, "Above is a new quiz, if you want");
+  let new_quiz_text = text_combine_middle_space_nb(
+    emoji_point_up(),
+    "Above is a new quiz, if you want",
+  );
+  html_div_text(quiz_new_message, new_quiz_text);
   let lcli = app_code_lesson_current_last_is(context);
   if (not(lcli)) {
     let nt = app_shared_button_next_text();
