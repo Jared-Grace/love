@@ -4,7 +4,6 @@ import { app_g_menu_new } from "./app_g_menu_new.mjs";
 import { g_distance_0 } from "./g_distance_0.mjs";
 import { app_g_event_target_closest_tile_coordinates } from "./app_g_event_target_closest_tile_coordinates.mjs";
 import { g_tutorials_each_remove_try } from "./g_tutorials_each_remove_try.mjs";
-import { app_g_player_save } from "./app_g_player_save.mjs";
 export async function app_g_click(e, div_map, player_img_c) {
   let clicked_coordinates = app_g_event_target_closest_tile_coordinates(e);
   g_tutorials_each_remove_try();
@@ -15,5 +14,4 @@ export async function app_g_click(e, div_map, player_img_c) {
   } else {
     await app_g_click_map(clicked_coordinates, player_img_c, div_map);
   }
-  await app_g_player_save(player);
 }
