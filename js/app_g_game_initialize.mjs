@@ -1,10 +1,7 @@
-import { global_function_property_set_curried_specify_1_3 } from "../../love/js/global_function_property_set_curried_specify_1_3.mjs";
 import { g_player_initialize } from "../../love/js/g_player_initialize.mjs";
 import { g_npcs_initialize } from "../../love/js/g_npcs_initialize.mjs";
 import { g_player_img_get } from "../../love/js/g_player_img_get.mjs";
 import { g_coordinates_land_get } from "../../love/js/g_coordinates_land_get.mjs";
-import { g_tutorials_each } from "../../love/js/g_tutorials_each.mjs";
-import { app_g } from "../../love/js/app_g.mjs";
 import { app_g_game_save } from "../../love/js/app_g_game_save.mjs";
 import { g_coordinates } from "../../love/js/g_coordinates.mjs";
 import { app_g_map_generate } from "../../love/js/app_g_map_generate.mjs";
@@ -22,6 +19,4 @@ export async function app_g_game_initialize() {
     rows,
     view: null,
   });
-  let lambda = global_function_property_set_curried_specify_1_3(app_g, null);
-  g_tutorials_each(lambda);
 }
