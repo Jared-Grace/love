@@ -68,7 +68,21 @@ export function app_code_lesson_quizzes_generic(params) {
       return r;
     }
     let quizzes = list_map(infos, each_info);
-    return quizzes;
+    function each_exercise(info) {
+      let exercise = {
+        info,
+        question,
+        answer,
+        batch_get,
+      };
+      return exercise;
+    }
+    let exercises = list_map([forwards, backwards], each_exercise);
+    let quizzes_exercises = {
+      quizzes,
+      exercises,
+    };
+    return quizzes_exercises;
   };
   return quizzes_get;
 }
