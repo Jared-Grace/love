@@ -1,6 +1,6 @@
 import { app_replace_button_wide_text_left_centered } from "./app_replace_button_wide_text_left_centered.mjs";
 import { add_1_period } from "./add_1_period.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
@@ -22,7 +22,7 @@ import { each_index } from "./each_index.mjs";
 export function app_code_home(context) {
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
-  let div = html_div_text(g, "Lessons:");
+  let div = html_div_text_centered(g, "Lessons:");
   html_style_margin_y(div, app_shared_spaced_gap());
   let lessons = app_code_lessons();
   function lambda(item, index) {
