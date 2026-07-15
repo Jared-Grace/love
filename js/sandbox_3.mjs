@@ -1,7 +1,5 @@
-import { list_power_set } from "./list_power_set.mjs";
-import { range_1 } from "./range_1.mjs";
+import { g_sermon_write_coverage } from "../../love/js/g_sermon_write_coverage.mjs";
 export async function sandbox_3() {
-  let list = range_1(3);
-  let r = list_power_set(list);
+  let r = await g_sermon_write_coverage("1JN01", ["1"]);
   return r;
 }
