@@ -1,13 +1,16 @@
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
-import { app_replace_success_message } from "./app_replace_success_message.mjs";
-import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_div } from "./html_div.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_review_exercise(parent, exercise, on_complete) {
-  "render one review question; on_complete(clean) fires when answered correctly, clean is false if any wrong attempt happened first";
+export function app_code_review_exercise(
+  parent,
+  exercise,
+  on_correct,
+  on_incorrect,
+) {
+  "render one review question; on_incorrect fires on a wrong answer, on_correct(clean) fires when finally answered correctly (clean is false if any wrong attempt happened first)";
   let info = property_get(exercise, "info");
   let question = property_get(exercise, "question");
   let answer = property_get(exercise, "answer");
@@ -34,12 +37,11 @@ export function app_code_review_exercise(parent, exercise, on_complete) {
   let failed = false;
   function on_wrong() {
     failed = true;
+    on_incorrect();
   }
   async function on_success() {
-    app_replace_success_message(parent);
-    await sleep_success_color();
     let clean = not(failed);
-    await on_complete(clean);
+    await on_correct(clean);
   }
   on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
 }
