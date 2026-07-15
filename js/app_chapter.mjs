@@ -115,16 +115,25 @@ export async function app_chapter(context) {
         let update = property_get(r, "update");
         let toggle = property_get(r, "toggle");
         let copy = property_get(r, "copy");
+        let actions = html_div(content);
+        html_centered(actions);
+        html_display_none(actions);
+        app_replace_button(actions, t, copy);
+        function row_update() {
+          update();
+          let selected = list_includes(verse_numbers_chosen, verse_number_v);
+          html_display_none_or_block(not(selected), actions);
+        }
         if (verse_number_v === verse_number) {
           async function lambda4() {
             await html_scroll_center_now(p);
             toggle();
-            update();
+            row_update();
             await copy();
           }
           promise_later(lambda4);
         }
-        return update;
+        return row_update;
       }
       await list_map_add_async(verses, lambda, updates);
     }
