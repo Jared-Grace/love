@@ -1,8 +1,6 @@
-import { html_div_code } from "./html_div_code.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { js_code_call_arg } from "./js_code_call_arg.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,7 +18,6 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   let closing = property_get(params, "closing");
   let preamble = property_get(params, "preamble");
   let explanation = property_get(params, "explanation");
-  let example_cases = property_get(params, "example_cases");
   let symbol = property_get(operator, "operator");
   function expression(want_true) {
     let coordinates = pair(want_true);
@@ -72,14 +69,6 @@ export function app_code_lesson_functions_console_log_comparison(params) {
     ]);
     html_div_cycle_code(c, ["The symbol ", symbol, tail]);
     render_lines(c, explanation);
-    html_div_cycle_code(c, ["For example: "]);
-    function show(want_true) {
-      let e = expression(want_true);
-      let call = js_code_call_arg(fn_name, e);
-      let s = js_code_statement(call);
-      html_div_code(c, s);
-    }
-    each(example_cases, show);
     let parts = closing(fn_name);
     app_code_container_light_blue_cycle_code(root, parts);
   }
