@@ -35,7 +35,7 @@ export function app_code_lesson_operators_asterisk_generic(
     app_code_symbols_eval_valid_expression,
   );
   let lesson = app_code_lesson_validity_operator(
-    lesson_name,
+    [lesson_name],
     operator,
     batch_get,
     above,
