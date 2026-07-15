@@ -2,6 +2,10 @@ import { app_replace_button_wide_text_left_centered } from "./app_replace_button
 import { add_1_period } from "./add_1_period.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
+import { app_code_review } from "./app_code_review.mjs";
+import { app_code_review_scope } from "./app_code_review_scope.mjs";
+import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
+import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { property_get } from "./property_get.mjs";
@@ -48,6 +52,22 @@ export function app_code_home(context) {
       html_span_space(title);
       html_span_text_code_dark(title, symbol);
     }
+    let lesson_number = add_1(index);
+    let scope = app_code_review_scope(lesson_number);
+    let has_review = null_not_is(scope);
+    if (has_review) {
+      review_row(lesson_number, scope);
+    }
+  }
+  function review_row(lesson_number, scope) {
+    let label = app_code_review_range_label(lesson_number, scope);
+    async function on_click() {
+      storage_local_set_context(context, "review_number", lesson_number);
+      await app_shared_screen_set(context, app_code_review);
+    }
+    let r = app_replace_button_wide_text_left_centered(g, on_click, label, "Review");
+    let number = property_get(r, "left");
+    app_shared_text_deemphasized(number);
   }
   each_index(lessons, lambda);
 }
