@@ -7,4 +7,8 @@ export function html_on(component, name_event, lambda) {
   });
   let element = html_component_element_get(component);
   element.addEventListener(name_event, lambda);
+  function remove() {
+    element.removeEventListener(name_event, lambda);
+  }
+  return remove;
 }
