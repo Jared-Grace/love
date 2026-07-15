@@ -11,7 +11,7 @@ import { text_replace } from "./text_replace.mjs";
 import { newline_windows } from "./newline_windows.mjs";
 import { newline } from "./newline.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { html_button } from "./html_button.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
 import { html_mobile_default_font_size } from "./html_mobile_default_font_size.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { list_size } from "./list_size.mjs";
@@ -65,5 +65,5 @@ export async function app_g_bible_home(context) {
     let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed_browser(destination, downloaded);
   }
-  let component = html_button(bar, "Update", lambda4);
+  let component = app_replace_button(bar, "Update", lambda4);
 }
