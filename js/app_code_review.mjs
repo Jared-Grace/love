@@ -46,7 +46,7 @@ export function app_code_review(context) {
   let loaded = app_code_review_load(context, number);
   let queue = property_get(loaded, "queue");
   let passed = property_get(loaded, "passed");
-  let key = app_code_review_state_key();
+  let key = app_code_review_state_key(number);
   let g = app_code_container_padded_x(root);
   let progress = html_div(g);
   let success_container = html_div(g);
@@ -84,7 +84,6 @@ export function app_code_review(context) {
   }
   function persist() {
     let state = {
-      number,
       passed,
       seeds: queue,
     };
