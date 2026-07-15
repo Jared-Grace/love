@@ -17,6 +17,8 @@ import { html_p } from "./html_p.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
 import { noop } from "./noop.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { app_chapter_copy } from "./app_chapter_copy.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
@@ -81,6 +83,10 @@ export async function app_chapter(context) {
   app_chapter_languages_gear(bar, content, languages_chosen);
   let verse_numbers_chosen = [];
   let languages_verses = [];
+  async function copy_selection() {
+    await app_chapter_copy(verse_numbers_chosen, languages_verses, chapter_code);
+  }
+  app_replace_button(bar, t, copy_selection);
   async function lambda2(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
@@ -104,13 +110,14 @@ export async function app_chapter(context) {
         html_style_padding_x(p, app_shared_spaced_tiny_gap());
         let r = app_chapter_toggle_update(
           updates,
-          number,
           verse_numbers_chosen,
           verse_number_v,
           chapter_code,
           languages_verses,
           p,
         );
+        let select = property_get(r, "select");
+        html_on_click(number, select);
         let update = property_get(r, "update");
         let toggle = property_get(r, "toggle");
         let copy = property_get(r, "copy");
