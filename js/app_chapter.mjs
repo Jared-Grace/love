@@ -31,6 +31,10 @@ import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right
 import { app_chapter_languages_gear } from "./app_chapter_languages_gear.mjs";
 import { app_chapter_book_chapter } from "./app_chapter_book_chapter.mjs";
 import { app_bible_open } from "./app_bible_open.mjs";
+import { html_display_grid } from "./html_display_grid.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_margin_y_set } from "./app_shared_margin_y_set.mjs";
@@ -87,11 +91,15 @@ export async function app_chapter(context) {
         let verse_number_v = property_get(v, "verse_number");
         let text = property_get(v, "text");
         let p = html_p(content);
+        html_display_grid(p);
+        let columns = text_combine(app_shared_number_gutter(), " 1fr");
+        html_style_set(p, "grid-template-columns", columns);
         function open_bible(e) {
           e.stopPropagation();
           app_bible_open(chapter_code, verse_number_v);
         }
-        app_replace_button(p, verse_number_v, open_bible);
+        let number = app_replace_button(p, verse_number_v, open_bible);
+        html_style_set(number, "justify-self", "end");
         html_span_text(p, text_combine_multiple([" ", text]));
         html_margin_0(p);
         html_style_padding_y(p, app_shared_spaced_tiny_gap());
