@@ -58,6 +58,9 @@ import { app_chapter_book_chapter } from "./app_chapter_book_chapter.mjs";
 import { app_chapter_choose_chapter } from "./app_chapter_choose_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { text_split } from "./text_split.mjs";
+import { list_join } from "./list_join.mjs";
+import { html_hash_property_set } from "./html_hash_property_set.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
@@ -138,6 +141,7 @@ export async function app_chapter(context) {
     let row = list_get(verse_rows, target_index);
     list_empty(verse_numbers_chosen);
     list_add(verse_numbers_chosen, property_get(row, "verse_number"));
+    persist_selection();
     invoke_multiple(updates);
     await html_scroll_center_now(property_get(row, "p"));
   }
@@ -185,9 +189,12 @@ export async function app_chapter(context) {
           p,
         );
         let select = property_get(r, "select");
-        html_on_click(number, select);
+        function select_persist() {
+          select();
+          persist_selection();
+        }
+        html_on_click(number, select_persist);
         let update = property_get(r, "update");
-        let toggle = property_get(r, "toggle");
         let copy = property_get(r, "copy");
         let actions = html_div(content);
         html_centered(actions);
@@ -219,15 +226,6 @@ export async function app_chapter(context) {
           let single = selected && not(list_multiple_is(verse_numbers_chosen));
           html_display_none_or_block(not(single), verse_buttons);
         }
-        if (verse_number_v === verse_number) {
-          async function lambda4() {
-            await html_scroll_center_now(p);
-            toggle();
-            row_update();
-            await copy();
-          }
-          promise_later(lambda4);
-        }
         list_add(verse_rows, {
           verse_number: verse_number_v,
           p,
@@ -247,4 +245,17 @@ export async function app_chapter(context) {
     lambda2,
     languages_verses,
   );
+  function resume() {
+    if (list_empty_is(verse_numbers_chosen)) {
+      return;
+    }
+    invoke_multiple(updates);
+    let ordered = list_map_property(verse_rows, "verse_number");
+    let index = list_index_of(ordered, list_first(verse_numbers_chosen));
+    if (index >= 0) {
+      let row = list_get(verse_rows, index);
+      html_scroll_center_now(property_get(row, "p"));
+    }
+  }
+  promise_later(resume);
 }

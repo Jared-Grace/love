@@ -12,7 +12,10 @@ import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_margin_em } from "./html_margin_em.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
-import { app_g_verify_sermon } from "./app_g_verify_sermon.mjs";
+import { g_sermon_write_download } from "./g_sermon_write_download.mjs";
+import { list_find } from "./list_find.mjs";
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
 import { app_shared_container_base } from "./app_shared_container_base.mjs";
 import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
 import { app_shared_text_deemphasized_color } from "./app_shared_text_deemphasized_color.mjs";
@@ -25,9 +28,17 @@ import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let sermon = app_g_verify_sermon();
-  let passage = property_get(sermon, "passage");
-  let lines = property_get(sermon, "lines");
+  let chapter_code = "1JN01";
+  let verse_numbers = ["1"];
+  let downloaded = await g_sermon_write_download(chapter_code);
+  let passages = property_get(downloaded, "passages");
+  let key = list_join_comma(verse_numbers);
+  function passage_match(p) {
+    return g_sermon_passage_verses_key(p) === key;
+  }
+  let passage_obj = list_find(passages, passage_match);
+  let passage = property_get(passage_obj, "english");
+  let lines = property_get(passage_obj, "lines");
   let tokens = g_sermon_passage_words(passage);
 
   let highlight = app_shared_verse_selected_background_color();
