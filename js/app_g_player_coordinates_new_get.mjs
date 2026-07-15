@@ -7,7 +7,6 @@ export async function app_g_player_coordinates_new_get(
   if (npc_clicked) {
     coordinates_move_to = await g_coordinates_clicked_adjascent_nearest_player(
       clicked_coordinates,
-      coordinates_move_to,
     );
   }
   return coordinates_move_to;
