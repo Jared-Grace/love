@@ -5,7 +5,7 @@ import { graph_neighbor_dataless } from "./graph_neighbor_dataless.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_adder } from "./list_adder.mjs";
-export function g_coordinates_neighbors_land_get(g) {
+export function g_coordinates_neighbors_walkable_get(g) {
   let coordinates = property_get(g, "coordinates");
   let npcs = property_get(g, "npcs");
   let index = g_coordinates_walkable_index(coordinates, npcs);
