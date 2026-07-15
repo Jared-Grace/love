@@ -2,7 +2,6 @@ import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
-import { html_flex_grow_1 } from "./html_flex_grow_1.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_deemphasized } from "./html_span_text_deemphasized.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -20,8 +19,9 @@ export function app_replace_rule_set_proof_connector(parent, index, rule, gap) {
   html_display_flex(connector);
   html_style_set(connector, "align-items", "center");
   html_style_margin_y(connector, gap);
+  ("both sides get flex:1 with a zero basis so they are equal halves regardless of their content width; that keeps the arrow on the exact center axis the states sit on (plain flex-grow only splits leftover space, so the wider rule side would drag the arrow off-center)");
   let number_side = html_div(connector);
-  html_flex_grow_1(number_side);
+  html_style_set(number_side, "flex", "1");
   html_style_set(number_side, "text-align", "right");
   html_style_set(number_side, "padding-right", gap);
   html_span_text_deemphasized(number_side, text_combine_multiple([index, "."]));
@@ -29,7 +29,7 @@ export function app_replace_rule_set_proof_connector(parent, index, rule, gap) {
   html_bold(arrow);
   html_style_font_size(arrow, "1.5em");
   let rule_side = html_div(connector);
-  html_flex_grow_1(rule_side);
+  html_style_set(rule_side, "flex", "1");
   html_style_set(rule_side, "padding-left", gap);
   let left = property_get(rule, "left");
   let right = property_get(rule, "right");
