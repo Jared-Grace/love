@@ -1,7 +1,6 @@
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_npc_phase_get } from "./app_g_npc_phase_get.mjs";
-import { app_g_view_set } from "./app_g_view_set.mjs";
-import { app_g_view_render } from "./app_g_view_render.mjs";
+import { app_g_view_set_render } from "./app_g_view_set_render.mjs";
 import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
 import { list_single } from "./list_single.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,11 +16,13 @@ export async function app_g_click_npc(div_map, npcs_matched) {
   let npc_img = app_g_npc_img_get(npc);
   app_g_character_face(npc, npc_img, direction);
   let phase = app_g_npc_phase_get(player);
-  await app_g_view_set({
-    kind: app_g_view_kind_npc(),
-    x,
-    y,
-    phase,
-  });
-  await app_g_view_render(div_map);
+  await app_g_view_set_render(
+    {
+      kind: app_g_view_kind_npc(),
+      x,
+      y,
+      phase,
+    },
+    div_map,
+  );
 }
