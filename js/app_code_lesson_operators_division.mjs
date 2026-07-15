@@ -3,7 +3,6 @@ import { js_operator_division_verb } from "./js_operator_division_verb.mjs";
 import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_code_lesson_operators_generic } from "./app_code_lesson_operators_generic.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 export function app_code_lesson_operators_division() {
   let operator = js_operator_division_symbol();
   let operator_name = js_operator_division_name();
@@ -18,5 +17,5 @@ export function app_code_lesson_operators_division() {
     math_name,
     multiply,
   );
-  return app_code_lesson_symbol_set(r, operator);
+  return r;
 }
