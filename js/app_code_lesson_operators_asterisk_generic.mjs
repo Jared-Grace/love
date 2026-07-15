@@ -34,6 +34,11 @@ export function app_code_lesson_operators_asterisk_generic(
     batch,
     app_code_symbols_eval_valid_expression,
   );
-  let lesson = app_code_lesson_validity_operator(lesson_name, batch_get, above);
+  let lesson = app_code_lesson_validity_operator(
+    lesson_name,
+    operator,
+    batch_get,
+    above,
+  );
   return lesson;
 }
