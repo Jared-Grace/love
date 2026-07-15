@@ -78,12 +78,18 @@ export async function app_replace_rule_set(context) {
   let index_selected = null;
   let start_over = null;
   let rules_used = null;
+  let rule_set_name = property_get(rs, "name");
   let start_end = app_replace_start_end_get(goal);
-  let start = property_get(start_end, "start");
-  let history = [start];
+  let end = property_get(start_end, "end");
+  let data = app_replace_rule_sets_data_initialize(context);
+  let g_saved = app_replace_rule_sets_data_goal(data, rule_set_name, goal);
+  let history_saved = property_get_or_null(g_saved, "history");
+  let resumed = null_not_is(history_saved);
+  ("a goal solved in a past session resumes solved: start at the goal so success fires, and reuse the saved steps so the green proof survives a browser refresh");
+  let start = ternary(resumed, end, property_get(start_end, "start"));
+  let history = ternary(resumed, history_saved, [start]);
   let div_proof = null;
   let start_indices = list_size_range(start);
-  let end = property_get(start_end, "end");
   async function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
