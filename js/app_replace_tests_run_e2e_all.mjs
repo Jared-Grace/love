@@ -1,6 +1,5 @@
 import { playwright_test_url } from "./playwright_test_url.mjs";
 import { app_replace_rule_sets } from "./app_replace_rule_sets.mjs";
-import { app_replace_rule_set_binary_counting } from "./app_replace_rule_set_binary_counting.mjs";
 import { each_async } from "./each_async.mjs";
 import { each_range_unordered_async } from "./each_range_unordered_async.mjs";
 import { list_empty_not_is_while_async } from "./list_empty_not_is_while_async.mjs";
@@ -13,7 +12,6 @@ import { property_get } from "./property_get.mjs";
 import { app_replace_tests_parallel_count } from "./app_replace_tests_parallel_count.mjs";
 export async function app_replace_tests_run_e2e_all(url_prefix, e2e_inner_fns) {
   let rule_sets = app_replace_rule_sets();
-  let r = app_replace_rule_set_binary_counting();
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
     let mapped = object_wrap_multiple(goals, "goal");
