@@ -16,7 +16,7 @@ import { storage_local_remove_context } from "./storage_local_remove_context.mjs
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_div_text } from "./html_div_text.mjs";
+import { app_code_review_complete } from "./app_code_review_complete.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
@@ -148,20 +148,4 @@ export function app_code_review(context) {
     app_code_review_exercise(c, exercise, on_correct, on_incorrect);
   }
   present();
-  let back = app_shared_button_back_text();
-  let back_text = text_combine(back, " to the previous lesson");
-  app_replace_button_wide(g, back_text, go_previous);
-  if (has_next) {
-    let arrow = emoji_arrow_right();
-    let next_text = text_combine(
-      "Skip this review and go to the next lesson ",
-      arrow,
-    );
-    app_replace_button_wide(g, next_text, go_next);
-  }
-  let home_text = app_replace_button_home_text();
-  async function go_home() {
-    await app_shared_screen_set(context, app_code_home);
-  }
-  app_replace_button_wide(g, home_text, go_home);
 }
