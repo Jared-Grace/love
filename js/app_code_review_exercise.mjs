@@ -1,6 +1,7 @@
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
+import { app_replace_success_message } from "./app_replace_success_message.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { html_div } from "./html_div.mjs";
 import { not } from "./not.mjs";
@@ -35,6 +36,7 @@ export function app_code_review_exercise(parent, exercise, on_complete) {
     failed = true;
   }
   async function on_success() {
+    app_replace_success_message(parent);
     await sleep_success_color();
     let clean = not(failed);
     await on_complete(clean);
