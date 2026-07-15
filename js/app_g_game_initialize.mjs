@@ -3,6 +3,7 @@ import { g_npcs_initialize } from "../../love/js/g_npcs_initialize.mjs";
 import { g_player_img_get } from "../../love/js/g_player_img_get.mjs";
 import { g_coordinates_land_reachable_get } from "./g_coordinates_land_reachable_get.mjs";
 import { app_g_game_save } from "../../love/js/app_g_game_save.mjs";
+import { app_g_map_save } from "../../love/js/app_g_map_save.mjs";
 import { g_coordinates } from "../../love/js/g_coordinates.mjs";
 import { app_g_map_generate } from "../../love/js/app_g_map_generate.mjs";
 export async function app_g_game_initialize() {
@@ -12,6 +13,7 @@ export async function app_g_game_initialize() {
   let player_img = g_player_img_get();
   let npcs = g_npcs_initialize(player_img, coordinates_land);
   let player = g_player_initialize(player_img, coordinates_land);
+  await app_g_map_save(rows);
   await app_g_game_save({
     player,
     npcs,
