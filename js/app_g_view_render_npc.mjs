@@ -11,6 +11,9 @@ import { app_g_click_npc_study } from "./app_g_click_npc_study.mjs";
 import { app_g_click_npc_pray } from "./app_g_click_npc_pray.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { list_single } from "./list_single.mjs";
+import { app_g_view_phase_study } from "./app_g_view_phase_study.mjs";
+import { app_g_view_phase_pray } from "./app_g_view_phase_pray.mjs";
+import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
@@ -30,15 +33,15 @@ export async function app_g_view_render_npc(div_map) {
     await app_g_view_set(null);
     html_remove(overlay);
   }
-  if (phase === "study") {
+  if (phase === app_g_view_phase_study()) {
     await app_g_click_npc_study(player, overlay, overlay_close, div_map);
     return;
   }
-  if (phase === "pray") {
+  if (phase === app_g_view_phase_pray()) {
     await app_g_click_npc_pray(player, overlay, overlay_close, div_map);
     return;
   }
-  if (phase === "conversation") {
+  if (phase === app_g_view_phase_conversation()) {
     let prayer = property_get(player, "prayer");
     await app_g_conversation(
       prayer,
