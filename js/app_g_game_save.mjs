@@ -8,6 +8,7 @@ export async function app_g_game_save(g) {
   let p = app_g_game_save_path();
   let g_persisted = object_copy(g);
   property_delete_if_exists(g_persisted, "coordinates");
+  property_delete_if_exists(g_persisted, "rows");
   await file_overwrite_json(p, g_persisted);
   global_function_property_set(app_g_game_save_get, p, g);
 }
