@@ -1,4 +1,4 @@
-import { app_g_game_initialize } from "./app_g_game_initialize.mjs";
+import { app_g_game_initialize_if_absent } from "./app_g_game_initialize_if_absent.mjs";
 import { app_g_html_initialize } from "./app_g_html_initialize.mjs";
 import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
@@ -10,6 +10,6 @@ export async function app_g(context) {
   global_function_property_set(app_g, "books", books);
   global_function_property_set(app_g, "chapter_code", "JAS01");
   let div_map_container = app_g_html_initialize(context);
-  await app_g_game_initialize();
+  await app_g_game_initialize_if_absent();
   await app_g_refresh(context, div_map_container);
 }
