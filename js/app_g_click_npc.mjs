@@ -1,3 +1,5 @@
+import { app_g_player_get } from "./app_g_player_get.mjs";
+import { app_g_npc_phase_get } from "./app_g_npc_phase_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_render } from "./app_g_view_render.mjs";
 import { list_single } from "./list_single.mjs";
@@ -6,10 +8,13 @@ export async function app_g_click_npc(div_map, npcs_matched) {
   let npc = list_single(npcs_matched);
   let x = property_get(npc, "x");
   let y = property_get(npc, "y");
+  let player = await app_g_player_get();
+  let phase = app_g_npc_phase_get(player);
   await app_g_view_set({
     kind: "npc",
     x,
     y,
+    phase,
   });
   await app_g_view_render(div_map);
 }
