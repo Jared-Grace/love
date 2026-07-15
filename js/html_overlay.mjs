@@ -24,7 +24,12 @@ export function html_overlay(container, z_index) {
     html_style_assign(overlay, s);
   }
   update();
-  html_on_scroll(container, update);
-  html_on_resize(update);
+  let remove_scroll = html_on_scroll(container, update);
+  let remove_resize = html_on_resize(update);
+  let overlay_element = html_component_element_get(overlay);
+  overlay_element.remove_listeners = function remove_listeners() {
+    remove_scroll();
+    remove_resize();
+  };
   return overlay;
 }
