@@ -30,7 +30,9 @@ export function app_code_lesson_functions_console_log_less_than() {
     pair,
     name_id_rights: [" less than"],
     closing,
+    preamble: null,
     explanation,
+    example_cases: [true, false],
   });
   return lesson;
 }
