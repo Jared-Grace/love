@@ -2,12 +2,11 @@ import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_style_remove } from "./html_style_remove.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_span_text_deemphasized } from "./html_span_text_deemphasized.mjs";
 import { app_replace_button_side } from "./app_replace_button_side.mjs";
-import { app_replace_button_symbol_style_valid_if_curried_right } from "./app_replace_button_symbol_style_valid_if_curried_right.mjs";
+import { app_replace_button_symbol_style_valid_if } from "./app_replace_button_symbol_style_valid_if.mjs";
 import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
 import { app_replace_rule_set_rule_background_color } from "./app_replace_rule_set_rule_background_color.mjs";
 import { app_replace_rule_set_proof_connector } from "./app_replace_rule_set_proof_connector.mjs";
@@ -16,7 +15,6 @@ import { emoji_check } from "./emoji_check.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { not } from "./not.mjs";
 import { and } from "./and.mjs";
 import { or } from "./or.mjs";
 import { equal } from "./equal.mjs";
@@ -59,10 +57,6 @@ export function app_replace_rule_set_proof_show(parent, history) {
     let header = app_shared_text_body(parent, "Your steps:");
     html_centered(header);
     let gap = app_shared_spaced_small_gap();
-    let style = app_replace_button_symbol_style_valid_if_curried_right(
-      true,
-      true,
-    );
     let goal_entry = list_last(history);
     let nothing_selected = null_is(selected);
     function draw(entry, position) {
@@ -100,10 +94,9 @@ export function app_replace_rule_set_proof_show(parent, history) {
       html_centered(row);
       let symbols = app_replace_button_side(row, state);
       function style_symbol(symbol, j) {
-        style(symbol);
-        if (not(highlighted_is(position, j))) {
-          html_style_remove(symbol, "box-shadow");
-        }
+        ("highlighted symbols get the green solved style; the rest get the plain invalid/dark style already used in the derivation and for dimmed rules - no new style, just valid off");
+        let highlighted = highlighted_is(position, j);
+        app_replace_button_symbol_style_valid_if(symbol, highlighted, true);
       }
       each_index(symbols, style_symbol);
       if (equal(entry, goal_entry)) {
