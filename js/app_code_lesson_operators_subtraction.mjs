@@ -3,7 +3,6 @@ import { js_operator_minus_name } from "./js_operator_minus_name.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { add } from "./add.mjs";
 import { app_code_lesson_operators_generic } from "./app_code_lesson_operators_generic.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 export function app_code_lesson_operators_subtraction() {
   let operator = js_operator_minus_symbol();
   let operator_name = js_operator_minus_name();
@@ -18,5 +17,5 @@ export function app_code_lesson_operators_subtraction() {
     math_name,
     add,
   );
-  return app_code_lesson_symbol_set(r, operator);
+  return r;
 }

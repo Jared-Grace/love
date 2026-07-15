@@ -3,7 +3,6 @@ import { js_operator_minus_verb } from "./js_operator_minus_verb.mjs";
 import { js_operator_minus_name } from "./js_operator_minus_name.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
 import { app_code_lesson_operators_minus_generic } from "./app_code_lesson_operators_minus_generic.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { js_operator_minus_symbol } from "./js_operator_minus_symbol.mjs";
 import { add } from "./add.mjs";
 export function app_code_lesson_operators_minus() {
@@ -22,5 +21,5 @@ export function app_code_lesson_operators_minus() {
     math_name,
     digit_positive_random,
   );
-  return app_code_lesson_symbol_set(r, operator);
+  return r;
 }

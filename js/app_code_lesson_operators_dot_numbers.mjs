@@ -7,7 +7,6 @@ import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "./number_pi_truncated_text.mjs";
 import { digit_random } from "./digit_random.mjs";
 import { app_code_lesson_operators_asterisk_generic_invalid } from "./app_code_lesson_operators_asterisk_generic_invalid.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { app_code_lesson_operators_asterisk_generic_minus } from "./app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "./app_code_lesson_operators_minus_generic_container_both_sides.mjs";
@@ -94,5 +93,5 @@ export function app_code_lesson_operators_dot_numbers() {
     batch,
     above,
   );
-  return app_code_lesson_symbol_set(lesson, operator);
+  return lesson;
 }
