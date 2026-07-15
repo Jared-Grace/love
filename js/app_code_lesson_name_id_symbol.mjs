@@ -6,7 +6,6 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text_deemphasized } from "./html_span_text_deemphasized.mjs";
 import { each } from "./each.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_name_id_symbol(left, rights, symbol) {
   let name_get = function app_code_lesson_name_id_symbol_name_get(
@@ -14,6 +13,9 @@ export function app_code_lesson_name_id_symbol(left, rights, symbol) {
     left_upper,
   ) {
     let render = function app_code_lesson_name_id_symbol_render(parent) {
+      let category = text_combine(left_upper, ":");
+      html_span_text_deemphasized(parent, category);
+      html_span_space(parent);
       let r = list_first_remaining(rights);
       let first = property_get(r, "first");
       let remaining = property_get(r, "remaining");
@@ -25,9 +27,6 @@ export function app_code_lesson_name_id_symbol(left, rights, symbol) {
         html_span_text(parent, combined);
       }
       each(remaining, each_remaining);
-      html_span_space(parent);
-      let category = text_combine_multiple(["(", left_upper, ")"]);
-      html_span_text_deemphasized(parent, category);
     };
     return render;
   };
