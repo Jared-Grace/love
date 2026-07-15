@@ -37,7 +37,6 @@ export function app_code_lesson_functions_console_log_equals() {
     closing,
     preamble,
     explanation,
-    example_cases: [true, true],
   });
   return lesson;
 }
