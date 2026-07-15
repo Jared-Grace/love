@@ -5,6 +5,7 @@ import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_review } from "./app_code_review.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
+import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
@@ -65,9 +66,7 @@ export function app_code_home(context) {
       storage_local_set_context(context, "review_number", lesson_number);
       await app_shared_screen_set(context, app_code_review);
     }
-    let r = app_replace_button_wide_text_left_centered(g, on_click, label, "Review");
-    let number = property_get(r, "left");
-    app_shared_text_deemphasized(number);
+    app_code_review_button(g, label, on_click);
   }
   each_index(lessons, lambda);
 }
