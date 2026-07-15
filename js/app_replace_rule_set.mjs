@@ -91,7 +91,12 @@ export async function app_replace_rule_set(context) {
   let resumed = null_not_is(history_saved);
   ("a goal solved in a past session resumes solved: start at the goal so success fires, and reuse the saved steps so the green proof survives a browser refresh");
   let start = ternary(resumed, end, property_get(start_end, "start"));
-  let history = ternary(resumed, history_saved, [start]);
+  let history = ternary(resumed, history_saved, [
+    {
+      state: start,
+      rule: null,
+    },
+  ]);
   let div_proof = null;
   let start_indices = list_size_range(start);
   async function on_hint() {
@@ -202,9 +207,13 @@ export async function app_replace_rule_set(context) {
             duration,
             div_symbols,
           ));
-        let last = list_last(history);
-        if (not(json_equal(start, last))) {
-          list_add(history, start);
+        let last_state = property_get(list_last(history), "state");
+        if (not(json_equal(start, last_state))) {
+          let rule_used = list_get(rules_used, index_selected);
+          list_add(history, {
+            state: start,
+            rule: rule_used,
+          });
         }
         await refresh();
       }
