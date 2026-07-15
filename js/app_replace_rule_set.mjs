@@ -9,7 +9,7 @@ import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_ver
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "./app_replace_animation_duration_get.mjs";
-import { emoji_restart } from "./emoji_restart.mjs";
+import { app_shared_button_start_over_text } from "./app_shared_button_start_over_text.mjs";
 import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
@@ -270,8 +270,7 @@ export async function app_replace_rule_set(context) {
       await html_scroll_center(start_over);
     }
   }
-  let left = emoji_restart();
-  let combined = text_combine(left, " Start over");
+  let combined = app_shared_button_start_over_text();
   start_over = app_replace_button_screen(
     context,
     app_replace_rule_set,
