@@ -80,10 +80,6 @@ export async function app_chapter(context) {
   app_chapter_languages_gear(bar, content, languages_chosen);
   let verse_numbers_chosen = [];
   let languages_verses = [];
-  async function copy_selection() {
-    await app_chapter_copy(verse_numbers_chosen, languages_verses, chapter_code);
-  }
-  app_replace_button(bar, t, copy_selection);
   async function lambda2(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
