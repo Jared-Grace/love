@@ -1,7 +1,5 @@
 import { html_div_code } from "./html_div_code.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
-import { integer_random } from "./integer_random.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_code_call_arg } from "./js_code_call_arg.mjs";
@@ -10,32 +8,22 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_comparison(params) {
   let operator = property_get(params, "operator");
-  let compare_word = property_get(params, "compare_word");
+  let question_middle = property_get(params, "question_middle");
+  let pair = property_get(params, "pair");
   let name_id_rights = property_get(params, "name_id_rights");
   let closing = property_get(params, "closing");
   let explanation = property_get(params, "explanation");
   let symbol = property_get(operator, "operator");
-  let compare = property_get(operator, "fn");
-  let max = app_code_lesson_operators_value_max();
   function expression(want_true) {
-    let small = integer_random(1, max - 1);
-    let large = integer_random(small + 1, max);
-    let left = small;
-    let right = large;
-    let is_true = compare(left, right);
-    let matches = equal(is_true, want_true);
-    if (not(matches)) {
-      left = large;
-      right = small;
-    }
+    let coordinates = pair(want_true);
+    let left = property_get(coordinates, "left");
+    let right = property_get(coordinates, "right");
     let e = js_code_binary_spaced_nb(left, symbol, right);
     return e;
   }
@@ -63,8 +51,8 @@ export function app_code_lesson_functions_console_log_comparison(params) {
     let c = app_code_container_light_blue(root);
     let tail = text_combine_multiple([
       " asks a question: is the left number ",
-      compare_word,
-      " than the right number?",
+      question_middle,
+      " the right number?",
     ]);
     html_div_cycle_code(c, ["The symbol ", symbol, tail]);
     let has_explanation = null_not_is(explanation);
