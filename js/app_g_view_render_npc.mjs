@@ -1,7 +1,6 @@
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
-import { app_g_player_save } from "./app_g_player_save.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_conversation } from "./app_g_conversation.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -29,9 +28,8 @@ export async function app_g_view_render_npc(div_map) {
   let player = await app_g_player_get();
   let overlay = app_g_overlay(div_map);
   async function overlay_close() {
-    await app_g_player_save(player);
-    await app_g_view_set(null);
     html_remove(overlay);
+    await app_g_view_set(null);
   }
   if (phase === app_g_view_phase_study()) {
     await app_g_click_npc_study(player, overlay, overlay_close, div_map);
