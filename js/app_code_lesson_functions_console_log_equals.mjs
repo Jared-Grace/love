@@ -13,8 +13,8 @@ export function app_code_lesson_functions_console_log_equals() {
   let math_line = js_code_binary_spaced_nb(sum, "=", 3);
   let code_line = js_code_binary_spaced_nb(sum, symbol, 3);
   let preamble = [
-    ["In math, we write ", math_line],
-    ["In code, we write ", code_line],
+    ["In math, we write: ", math_line],
+    ["In code, we write: ", code_line],
   ];
   let explanation = [
     ["It is ", js_keyword_true(), " only when both sides are the same number"],
