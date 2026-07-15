@@ -3,7 +3,6 @@ import { js_operator_asterisk_verb } from "./js_operator_asterisk_verb.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_operators_generic } from "./app_code_lesson_operators_generic.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_operators_multiplication() {
   let operator_js = js_operator_asterisk_symbol();
@@ -21,5 +20,5 @@ export function app_code_lesson_operators_multiplication() {
     math_name,
     identity,
   );
-  return app_code_lesson_symbol_set(r, operator_js);
+  return r;
 }
