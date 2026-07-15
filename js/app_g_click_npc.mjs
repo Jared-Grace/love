@@ -6,7 +6,7 @@ import { app_g_player_save } from "./app_g_player_save.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { not } from "./not.mjs";
 import { app_g_conversation } from "./app_g_conversation.mjs";
-import { app_g_container } from "./app_g_container.mjs";
+import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -24,9 +24,8 @@ export async function app_g_click_npc(div_map, npcs_matched) {
   let review = property_get(player, "review");
   let ne = list_empty_not_is(review);
   if (ne) {
-    let container = app_g_container(overlay);
-    app_g_p_text(
-      container,
+    app_g_container_text(
+      overlay,
       text_combine(emoji_book_open(), " You remember that you need to study!"),
     );
     app_g_button_back(overlay, overlay_close);
@@ -38,9 +37,8 @@ export async function app_g_click_npc(div_map, npcs_matched) {
     let prayer = property_get(player, "prayer");
     let conversation = property_get(prayer, "conversation");
     if (not(conversation)) {
-      let container = app_g_container(overlay);
-      app_g_p_text(
-        container,
+      let container = app_g_container_text(
+        overlay,
         text_combine(
           emoji_pray(),
           " You remember that you have not prayed, yet, before your next conversation!",
