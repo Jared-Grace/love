@@ -30,5 +30,7 @@ export function html_scroll_animate(element, target_left, target_top) {
     }
     requestAnimationFrame(step);
   }
-  return new Promise(animate);
+  let promise = new Promise(animate);
+  element.scroll_animation_settle = promise;
+  return promise;
 }
