@@ -31,8 +31,8 @@ import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_g_study(player, overlay, close) {
   let review = property_get(player, "review");
-  let ne = list_empty_not_is(review);
-  if (ne) {
+  let has_review = list_empty_not_is(review);
+  if (has_review) {
     let text2 = text_combine(emoji_book_open(), " Study");
     async function lambda() {
       app_g_menu_clear_back(overlay, player);
