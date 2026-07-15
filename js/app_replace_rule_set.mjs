@@ -27,6 +27,9 @@ import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs
 import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
 import { app_replace_rule_sets_data_initialize } from "./app_replace_rule_sets_data_initialize.mjs";
 import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
+import { storage_local_transform_empty_context } from "./storage_local_transform_empty_context.mjs";
+import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
+import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
@@ -271,12 +274,17 @@ export async function app_replace_rule_set(context) {
     }
   }
   let combined = app_shared_button_restart_text("Start over");
-  start_over = app_replace_button_screen(
-    context,
-    app_replace_rule_set,
-    root,
-    combined,
-  );
+  async function on_start_over() {
+    ("start over is an explicit redo: forget this goal's saved steps so it opens unsolved again, unlike a browser refresh which keeps them");
+    function forget(value) {
+      let g = app_replace_rule_sets_data_goal(value, rule_set_name, goal);
+      property_delete_if_exists(g, "history");
+      return value;
+    }
+    storage_local_transform_empty_context(context, "rule_sets_data", forget);
+    await app_shared_screen_set(context, app_replace_rule_set);
+  }
+  start_over = app_replace_button(root, combined, on_start_over);
   div_proof = html_div(root);
   ("first render happens here, after start_over and div_proof exist, so a resumed goal's success flow can draw the proof into them");
   await refresh();

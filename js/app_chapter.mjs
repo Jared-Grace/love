@@ -22,6 +22,16 @@ import { html_display_none } from "./html_display_none.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_empty } from "./list_empty.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_index_of } from "./list_index_of.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { invoke_multiple } from "./invoke_multiple.mjs";
+import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
@@ -95,23 +105,58 @@ export async function app_chapter(context) {
   async function chapter_next() {
     await app_chapter_change(chapter_code, languages_chosen, list_next_wrap);
   }
+  let verse_numbers_chosen = [];
+  let languages_verses = [];
+  let updates = [];
+  let verse_rows = [];
+  function selected_single() {
+    let empty = list_empty_is(verse_numbers_chosen);
+    let multiple = list_multiple_is(verse_numbers_chosen);
+    if (not(empty) && not(multiple)) {
+      return list_first(verse_numbers_chosen);
+    }
+    return null;
+  }
+  async function verse_move(delta, chapter_move) {
+    let current = selected_single();
+    if (null_is(current)) {
+      await chapter_move();
+      return;
+    }
+    let ordered = list_map_property(verse_rows, "verse_number");
+    let index = list_index_of(ordered, current);
+    let target_index = index + delta;
+    let inside = target_index >= 0 && target_index < list_size(verse_rows);
+    if (not(inside)) {
+      await chapter_move();
+      return;
+    }
+    let row = list_get(verse_rows, target_index);
+    list_empty(verse_numbers_chosen);
+    list_add(verse_numbers_chosen, property_get(row, "verse_number"));
+    invoke_multiple(updates);
+    await html_scroll_center_now(property_get(row, "p"));
+  }
+  async function arrow_left() {
+    await verse_move(-1, chapter_previous);
+  }
+  async function arrow_right() {
+    await verse_move(1, chapter_next);
+  }
   let books_en = await ebible_version_books_browser(ebible_folder_english());
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let book_name = ebible_book_code_to_name(books_en, book_code);
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
-  app_replace_button_arrow_left(bar, chapter_previous);
+  app_replace_button_arrow_left(bar, arrow_left);
   app_chapter_book_chapter(bar, content, chapter_code, books);
-  app_replace_button_arrow_right(bar, chapter_next);
+  app_replace_button_arrow_right(bar, arrow_right);
   app_chapter_languages_gear(bar, content, languages_chosen);
-  let verse_numbers_chosen = [];
-  let languages_verses = [];
   async function lambda2(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     let books = await ebible_version_books_browser(bible_folder);
     let li = list_last_is(languages_chosen, lc);
     if (li) {
-      let updates = [];
       async function lambda(v) {
         let verse_number_v = property_get(v, "verse_number");
         let text = property_get(v, "text");
@@ -179,6 +224,10 @@ export async function app_chapter(context) {
           }
           promise_later(lambda4);
         }
+        list_add(verse_rows, {
+          verse_number: verse_number_v,
+          p,
+        });
         return row_update;
       }
       await list_map_add_async(verses, lambda, updates);
