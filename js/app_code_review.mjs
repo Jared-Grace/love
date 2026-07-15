@@ -21,8 +21,7 @@ import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { app_replace_button_home_text } from "./app_replace_button_home_text.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_to } from "./text_to.mjs";
+import { html_progress_bar } from "./html_progress_bar.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
   let number = app_code_review_number_get(context);
@@ -36,26 +35,15 @@ export function app_code_review(context) {
   let g = app_code_container_padded_x(root);
   let progress = html_div(g);
   let c = app_code_container_light_blue(g);
-  function progress_render() {
-    html_clear(progress);
-    let passed_text = text_to(passed);
-    let total_text = text_to(total);
-    let text = text_combine_multiple([
-      passed_text,
-      " of ",
-      total_text,
-      " passed",
-    ]);
-    html_div_text(progress, text);
-  }
   function present() {
-    progress_render();
+    html_clear(progress);
     html_clear(c);
     let done = list_empty_is(queue);
     if (done) {
       html_div_text(c, "You passed every quiz in this review — beautiful work");
       return;
     }
+    html_progress_bar(progress, passed, total, "quiz");
     let current = list_first(queue);
     async function on_complete(clean) {
       let index_front = 0;
