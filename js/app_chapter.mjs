@@ -98,14 +98,14 @@ export async function app_chapter(context) {
   }
   app_shared_dismissable_message(context, bar, "chapter_help_dismissed", help_text);
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
-  let verse_number = property_get_or(hash, "v", "");
+  let v_hash = property_get_or(hash, "v", "");
   async function chapter_previous() {
     await app_chapter_change(chapter_code, languages_chosen, list_previous_wrap);
   }
   async function chapter_next() {
     await app_chapter_change(chapter_code, languages_chosen, list_next_wrap);
   }
-  let verse_numbers_chosen = [];
+  let verse_numbers_chosen = text_empty_is(v_hash) ? [] : text_split(v_hash, "-");
   let languages_verses = [];
   let updates = [];
   let verse_rows = [];
@@ -116,6 +116,10 @@ export async function app_chapter(context) {
       return list_first(verse_numbers_chosen);
     }
     return null;
+  }
+  function persist_selection() {
+    let v = list_join(verse_numbers_chosen, "-");
+    html_hash_property_set("v", v);
   }
   async function verse_move(delta, chapter_move) {
     let current = selected_single();
