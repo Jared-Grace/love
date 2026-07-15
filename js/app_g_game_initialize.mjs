@@ -20,6 +20,7 @@ export async function app_g_game_initialize() {
     npcs,
     coordinates,
     rows,
+    view: null,
   });
   let lambda = global_function_property_set_curried_specify_1_3(app_g, null);
   g_tutorials_each(lambda);
