@@ -17,5 +17,5 @@ export async function app_g_click_map(
     player_img_c,
     div_map,
   );
-  await app_g_click_npc_if(npc_clicked, div_map, npcs_matched);
+  await app_g_click_npc_if(npc_clicked, div_map, npcs_matched, player_img_c);
 }
