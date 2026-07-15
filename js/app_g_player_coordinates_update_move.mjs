@@ -1,5 +1,8 @@
 import { app_g_player_move } from "./app_g_player_move.mjs";
 import { app_g_player_coordinates_new_get } from "./app_g_player_coordinates_new_get.mjs";
+import { app_g_player_get } from "./app_g_player_get.mjs";
+import { app_g_player_save } from "./app_g_player_save.mjs";
+import { not } from "./not.mjs";
 export async function app_g_player_coordinates_update_move(
   npc_clicked,
   clicked_coordinates,
@@ -10,5 +13,14 @@ export async function app_g_player_coordinates_update_move(
     npc_clicked,
     clicked_coordinates,
   );
-  await app_g_player_move(coordinates_move_to, player_img_c, div_map);
+  let moved = await app_g_player_move(
+    coordinates_move_to,
+    player_img_c,
+    div_map,
+  );
+  let persist_here = moved && not(npc_clicked);
+  if (persist_here) {
+    let player = await app_g_player_get();
+    await app_g_player_save(player);
+  }
 }
