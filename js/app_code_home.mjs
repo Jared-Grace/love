@@ -8,6 +8,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
@@ -30,6 +31,8 @@ export function app_code_home(context) {
     }
     let text = add_1_period(index);
     let r = app_replace_button_wide_text_left_centered(g, lambda3, text, "");
+    let number = property_get(r, "left");
+    app_shared_text_deemphasized(number);
     let title = property_get(r, "title");
     name(title);
     let symbol = property_get_or_null(item, "symbol");
