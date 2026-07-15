@@ -30,10 +30,12 @@ export async function app_replace_rule_set_success(
   div_below,
   goal_index,
   goals,
+  history,
 ) {
   function lambda5(value) {
     let g = app_replace_rule_sets_data_goal(value, rule_name, goal);
     property_set(g, "completed", true);
+    property_set(g, "history", history);
     return value;
   }
   storage_local_transform_empty_context(context, "rule_sets_data", lambda5);
