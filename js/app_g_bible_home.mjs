@@ -20,6 +20,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { html_textarea } from "./html_textarea.mjs";
 import { app_g_openai_split } from "./app_g_openai_split.mjs";
+import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_bible_home(context) {
   let downloaded = null;
@@ -55,6 +56,9 @@ export async function app_g_bible_home(context) {
     each(passages, on_passage);
   }
   let updates = await list_adder_async(lambda5);
+  if (null_is(r)) {
+    return;
+  }
   let bar = property_get(r, "bar");
   async function lambda4() {
     invoke_multiple(updates);
