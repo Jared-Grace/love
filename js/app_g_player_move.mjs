@@ -1,7 +1,6 @@
 import { object_assign } from "./object_assign.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
-import { app_g_player_save } from "./app_g_player_save.mjs";
 import { g_coordinates_path_shortest } from "./g_coordinates_path_shortest.mjs";
 import { app_g_player_path_animate } from "./app_g_player_path_animate.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -17,6 +16,6 @@ export async function app_g_player_move(
   if (reachable) {
     await app_g_player_path_animate(player, path, player_img_c, div_map);
     object_assign(player, coordinates_move_to);
-    await app_g_player_save(player);
   }
+  return reachable;
 }
