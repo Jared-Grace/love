@@ -124,6 +124,14 @@ export async function app_chapter(context) {
     let v = list_join(verse_numbers_chosen, "-");
     html_hash_property_set("v", v);
   }
+  function selection_last() {
+    if (list_empty_is(verse_numbers_chosen)) {
+      return null;
+    }
+    let sorted = list_copy(verse_numbers_chosen);
+    list_sort_number_mapper(sorted, integer_to_try);
+    return list_last(sorted);
+  }
   async function verse_move(delta, chapter_move) {
     let current = selected_single();
     if (null_is(current)) {
@@ -172,14 +180,7 @@ export async function app_chapter(context) {
         html_display_grid(p);
         let columns = text_combine(app_shared_number_gutter(), " 1fr");
         html_style_set(p, "grid-template-columns", columns);
-        let number = html_span_text(p, verse_number_v);
-        app_shared_text_deemphasized(number);
-        html_style_set(number, "justify-self", "end");
-        let text_cell = html_div(p);
-        app_bible_on_click_google_define(text_cell, text);
-        html_margin_0(p);
-        html_style_padding_y(p, app_shared_spaced_tiny_gap());
-        html_style_padding_x(p, app_shared_spaced_tiny_gap());
+        html_style_set(p, "column-gap", app_shared_spaced_small_gap());
         let r = app_chapter_toggle_update(
           updates,
           verse_numbers_chosen,
@@ -193,7 +194,13 @@ export async function app_chapter(context) {
           select();
           persist_selection();
         }
-        html_on_click(number, select_persist);
+        let number = app_replace_button(p, verse_number_v, select_persist);
+        html_style_set(number, "justify-self", "end");
+        let text_cell = html_div(p);
+        app_bible_on_click_google_define(text_cell, text);
+        html_margin_0(p);
+        html_style_padding_y(p, app_shared_spaced_tiny_gap());
+        html_style_padding_x(p, app_shared_spaced_tiny_gap());
         let update = property_get(r, "update");
         let copy = property_get(r, "copy");
         let actions = html_div(content);
@@ -221,9 +228,9 @@ export async function app_chapter(context) {
         app_replace_button(actions, t, copy);
         function row_update() {
           update();
-          let selected = list_includes(verse_numbers_chosen, verse_number_v);
-          html_display_none_or_block(not(selected), actions);
-          let single = selected && not(list_multiple_is(verse_numbers_chosen));
+          let is_last = verse_number_v === selection_last();
+          html_display_none_or_block(not(is_last), actions);
+          let single = is_last && not(list_multiple_is(verse_numbers_chosen));
           html_display_none_or_block(not(single), verse_buttons);
         }
         list_add(verse_rows, {
