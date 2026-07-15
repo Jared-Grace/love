@@ -77,6 +77,8 @@ export async function app_replace_rule_set(context) {
   let rules_used = null;
   let start_end = app_replace_start_end_get(goal);
   let start = property_get(start_end, "start");
+  let history = [start];
+  let div_proof = null;
   let start_indices = list_size_range(start);
   let end = property_get(start_end, "end");
   async function on_hint() {
