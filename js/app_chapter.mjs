@@ -18,7 +18,10 @@ import { app_bible_on_click_google_define } from "./app_bible_on_click_google_de
 import { html_span_text } from "./html_span_text.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { app_chapter_copy } from "./app_chapter_copy.mjs";
+import { html_display_none } from "./html_display_none.mjs";
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
