@@ -1,0 +1,28 @@
+import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_code_lesson_find_by_id } from "./app_code_lesson_find_by_id.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_get } from "./list_get.mjs";
+import { property_get } from "./property_get.mjs";
+export function app_code_review_seed_to_exercise(seed) {
+  "rebuild a live exercise {info, question, answer, batch_get} from a persisted seed; info and batch_get are stable per lesson+kind, so a fresh batch item supplies them while the seed keeps the exact question and answer";
+  let lesson_id = property_get(seed, "lesson_id");
+  let kind_index = property_get(seed, "kind_index");
+  let question = property_get(seed, "question");
+  let answer = property_get(seed, "answer");
+  let lessons = app_code_lessons();
+  let lesson = app_code_lesson_find_by_id(lessons, lesson_id);
+  let batch = property_get(lesson, "batch");
+  let items = batch();
+  let first = list_first(items);
+  let exercises = property_get(first, "exercises");
+  let template = list_get(exercises, kind_index);
+  let info = property_get(template, "info");
+  let batch_get = property_get(template, "batch_get");
+  let exercise = {
+    info,
+    question,
+    answer,
+    batch_get,
+  };
+  return exercise;
+}
