@@ -84,11 +84,15 @@ export async function app_g_verify_home(context) {
     try {
       let fresh = await g_sermon_write_download_fresh(chapter_code);
       let fresh_json = json_to(fresh);
-      if (fresh_json !== shown_json) {
+      let changed = fresh_json !== shown_json;
+      console.log(
+        "POLL fresh=" + fresh_json.length + " shown=" + shown_json.length + " changed=" + changed,
+      );
+      if (changed) {
         render_chapter(fresh);
       }
-    } catch (ignore) {
-      ignore;
+    } catch (e) {
+      console.log("POLL ERROR " + e.message);
     }
     poll();
   }

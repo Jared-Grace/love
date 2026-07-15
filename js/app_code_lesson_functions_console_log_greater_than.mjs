@@ -21,7 +21,6 @@ export function app_code_lesson_functions_console_log_greater_than() {
     closing,
     preamble: null,
     explanation: null,
-    example_cases: [true, false],
   });
   return lesson;
 }
