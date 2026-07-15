@@ -4,6 +4,7 @@ import { app_bible_button_chapter_previous } from "./app_bible_button_chapter_pr
 import { app_bible_button_chapter_next } from "./app_bible_button_chapter_next.mjs";
 import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
 import { noop } from "./noop.mjs";
+import { html_on_click } from "./html_on_click.mjs";
 import { app_bible_verse_previous } from "./app_bible_verse_previous.mjs";
 import { app_bible_verse_next } from "./app_bible_verse_next.mjs";
 import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
@@ -211,13 +212,14 @@ export async function app_bible_home_generic(context, lambda$a) {
   let component = app_replace_button(bottom, text4, noop);
   let v3 = app_chapter_toggle_update(
     updates,
-    component,
     verse_numbers_chosen,
     verse_number,
     chapter_code,
     languages_verses,
     p_verse,
   );
+  let choose = property_get(v3, "choose");
+  html_on_click(component, choose);
   let update = property_get(v3, "update");
   list_add(updates, update);
   function toggle() {

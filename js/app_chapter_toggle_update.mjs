@@ -2,31 +2,29 @@ import { list_last } from "./list_last.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
 import { list_size_max_skip_replace } from "./list_size_max_skip_replace.mjs";
-import { log } from "./log.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_chapter_copy } from "./app_chapter_copy.mjs";
 import { app_chapter_verse_highlight } from "./app_chapter_verse_highlight.mjs";
 import { app_chapter_chosen_max } from "./app_chapter_chosen_max.mjs";
 import { list_toggle } from "./list_toggle.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { invoke_multiple } from "./invoke_multiple.mjs";
 export function app_chapter_toggle_update(
   updates,
-  component_clicked,
   verse_numbers_chosen,
   verse_number,
   chapter_code,
   languages_verses,
   component_highlighted,
 ) {
-  async function choose() {
-    log(app_chapter_toggle_update.name, "message");
+  function select() {
     toggle();
     invoke_multiple(updates);
+  }
+  async function choose() {
+    select();
     await copy();
   }
-  html_on_click(component_clicked, choose);
   let toggle = function lambda5() {
     list_toggle(verse_numbers_chosen, verse_number);
     let max = app_chapter_chosen_max();
@@ -50,6 +48,8 @@ export function app_chapter_toggle_update(
     toggle,
     update,
     copy,
+    select,
+    choose,
   };
   async function copy() {
     await app_chapter_copy(verse_numbers_chosen, languages_verses, chapter_code);
