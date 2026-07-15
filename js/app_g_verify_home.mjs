@@ -1,122 +1,24 @@
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
+import { html_margin_em } from "./html_margin_em.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { html_margin_em } from "./html_margin_em.mjs";
 import { property_get } from "./property_get.mjs";
-import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
-import { g_sermon_write_download } from "./g_sermon_write_download.mjs";
-import { list_find } from "./list_find.mjs";
-import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
-import { app_shared_container_base } from "./app_shared_container_base.mjs";
-import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
+import { list_first } from "./list_first.mjs";
+import { g_sermon_write_download } from "./g_sermon_write_download.mjs";
+import { app_replace_button_list_centered } from "./app_replace_button_list_centered.mjs";
+import { app_g_verify_view } from "./app_g_verify_view.mjs";
 import { app_shared_text_deemphasized_color } from "./app_shared_text_deemphasized_color.mjs";
-import { app_shared_text_category_color } from "./app_shared_text_category_color.mjs";
-import { app_shared_text_warning_color } from "./app_shared_text_warning_color.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
-import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
-import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
-import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let chapter_code = "1JN01";
-  let verse_numbers = ["1"];
   let downloaded = await g_sermon_write_download(chapter_code);
   let passages = property_get(downloaded, "passages");
-  let key = list_join_comma(verse_numbers);
-  function passage_match(p) {
-    return g_sermon_passage_verses_key(p) === key;
-  }
-  let passage_obj = list_find(passages, passage_match);
-  let passage = property_get(passage_obj, "english");
-  let lines = property_get(passage_obj, "lines");
-  let tokens = g_sermon_passage_words(passage);
-
-  let highlight = app_shared_verse_selected_background_color();
-  let muted = app_shared_text_deemphasized_color();
-  let border = app_shared_container_blue_border_color();
-  let serif = app_shared_font_serif();
-  let small_gap = app_shared_spaced_small_gap();
-  let tiny_gap = app_shared_spaced_tiny_gap();
-
-  let covered = {};
-  lines.forEach(function (l) {
-    property_get(l, "indices").forEach(function (i) {
-      covered[i] = true;
-    });
-  });
-
-  let token_spans = [];
-  let row_comps = [];
-  let order_comps = [];
-
-  function background_clear(component) {
-    html_style_background_color_set(component, "");
-  }
-  function clear_all() {
-    token_spans.forEach(background_clear);
-    row_comps.forEach(function (r) {
-      if (r) {
-        background_clear(r);
-      }
-    });
-    order_comps.forEach(function (r) {
-      if (r) {
-        background_clear(r);
-      }
-    });
-  }
-  function highlight_lines(li_list) {
-    clear_all();
-    li_list.forEach(function (li) {
-      property_get(lines[li], "indices").forEach(function (i) {
-        html_style_background_color_set(token_spans[i], highlight);
-      });
-      if (row_comps[li]) {
-        html_style_background_color_set(row_comps[li], highlight);
-      }
-      if (order_comps[li]) {
-        html_style_background_color_set(order_comps[li], highlight);
-      }
-    });
-  }
-  function panel_flush(parent) {
-    let p = app_shared_container_base(parent);
-    html_style_padding_x(p, "0");
-    html_style_padding_y(p, "0");
-    html_style_set(p, "overflow", "hidden");
-    return p;
-  }
-  function row_new(panel, first) {
-    let row = html_div(panel);
-    html_style_set(row, "display", "flex");
-    html_style_set(row, "gap", small_gap);
-    html_style_padding_x(row, small_gap);
-    html_style_padding_y(row, small_gap);
-    if (!first) {
-      html_style_set(row, "border-top", "1px solid " + border);
-    }
-    html_style_set(row, "transition", "background-color .12s");
-    return row;
-  }
-  function label_new(caption) {
-    let l = html_p_text(wrap, caption);
-    html_font_color_set(l, app_shared_text_category_color());
-    html_style_set(l, "font-size", "0.72em");
-    html_style_set(l, "letter-spacing", "0.11em");
-    html_style_set(l, "font-weight", "600");
-    html_margin_em(l, "0");
-    html_style_set(l, "margin-top", small_gap);
-  }
 
   let wrap = html_div(root);
   html_style_set(wrap, "max-width", "48em");
@@ -124,97 +26,30 @@ export async function app_g_verify_home(context) {
   html_style_padding_x(wrap, "1.2em");
   html_style_padding_y(wrap, "2em");
 
-  let title = html_p_text(wrap, "Sermon coverage &mdash; 1 John 1:1");
-  html_style_set(title, "font-family", serif);
+  let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
+  html_style_set(title, "font-family", app_shared_font_serif());
   html_style_set(title, "font-size", "1.5em");
   html_style_set(title, "font-weight", "600");
   html_margin_em(title, "0");
 
   let hint = html_p_text(
     wrap,
-    "Hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.",
+    "Pick a passage, then hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.",
   );
-  html_font_color_set(hint, muted);
+  html_font_color_set(hint, app_shared_text_deemphasized_color());
   html_style_set(hint, "font-size", "0.9em");
   html_margin_em(hint, "0");
-  html_style_set(hint, "margin-top", tiny_gap);
-  html_style_set(hint, "margin-bottom", small_gap);
 
-  let passage_panel = app_shared_container_base(wrap);
-  html_style_set(passage_panel, "font-family", serif);
-  html_style_set(passage_panel, "font-size", "1.3em");
-  html_style_set(passage_panel, "line-height", "1.95");
-
-  tokens.forEach(function (t, i) {
-    let span = html_span_text(passage_panel, t);
-    html_border_radius(span, app_shared_border_radius());
-    html_style_set(span, "padding", "0 0.06em");
-    html_style_set(span, "margin-right", tiny_gap);
-    html_style_set(span, "transition", "background-color .12s");
-    if (!covered[i]) {
-      html_style_set(
-        span,
-        "text-decoration",
-        "underline dashed " + app_shared_text_warning_color(),
-      );
-      html_style_set(span, "text-underline-offset", "0.2em");
-    }
-    html_on(span, "mouseenter", function () {
-      let lis = [];
-      lines.forEach(function (l, li) {
-        if (property_get(l, "indices").indexOf(i) >= 0) {
-          lis.push(li);
-        }
-      });
-      highlight_lines(lis);
-    });
-    html_on(span, "mouseleave", clear_all);
-    token_spans[i] = span;
-  });
-
-  label_new("BY PASSAGE ORDER");
-  let cov = panel_flush(wrap);
-  let order = lines.map(function (l, li) {
-    return li;
-  });
-  order.sort(function (a, b) {
-    let ma = Math.min.apply(null, property_get(lines[a], "indices"));
-    let mb = Math.min.apply(null, property_get(lines[b], "indices"));
-    return ma - mb || a - b;
-  });
-  order.forEach(function (li, k) {
-    let l = lines[li];
-    let row = row_new(cov, k === 0);
-    let words = property_get(l, "indices")
-      .map(function (i) {
-        return tokens[i];
-      })
-      .join(" ");
-    let words_el = html_span_text(row, words);
-    html_style_set(words_el, "font-family", serif);
-    html_style_set(words_el, "flex", "0 0 42%");
-    html_font_color_set(words_el, muted);
-    html_span_text(row, property_get(l, "text"));
-    html_on(row, "mouseenter", function () {
-      highlight_lines([li]);
-    });
-    html_on(row, "mouseleave", clear_all);
-    row_comps[li] = row;
-  });
-
-  label_new("IN SERMON ORDER");
-  let ord = panel_flush(wrap);
-  lines.forEach(function (l, li) {
-    let row = row_new(ord, li === 0);
-    let n = html_span_text(row, String(li + 1));
-    html_font_color_set(n, muted);
-    html_style_set(n, "flex", "0 0 1.2em");
-    html_style_set(n, "font-variant-numeric", "tabular-nums");
-    html_span_text(row, property_get(l, "text"));
-    html_on(row, "mouseenter", function () {
-      highlight_lines([li]);
-    });
-    html_on(row, "mouseleave", clear_all);
-    order_comps[li] = row;
-  });
+  function passage_label(passage) {
+    let verse_numbers = property_get(passage, "verse_numbers");
+    return "v" + list_join_comma(verse_numbers);
+  }
+  function open_passage(passage) {
+    let english = property_get(passage, "english");
+    let lines = property_get(passage, "lines");
+    app_g_verify_view(view, english, lines);
+  }
+  app_replace_button_list_centered(wrap, passages, passage_label, open_passage);
+  let view = html_div(wrap);
+  open_passage(list_first(passages));
 }
