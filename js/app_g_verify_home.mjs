@@ -32,6 +32,11 @@ export async function app_g_verify_home(context) {
     shown_json = json_to(chapter);
     html_clear(root);
     let passages = property_get(chapter, "passages");
+    passages = passages.slice().sort(function (a, b) {
+      let na = Number(property_get(a, "verse_numbers")[0]);
+      let nb = Number(property_get(b, "verse_numbers")[0]);
+      return na - nb;
+    });
 
     let wrap = html_div(root);
     html_style_set(wrap, "max-width", "48em");
@@ -84,15 +89,11 @@ export async function app_g_verify_home(context) {
     try {
       let fresh = await g_sermon_write_download_fresh(chapter_code);
       let fresh_json = json_to(fresh);
-      let changed = fresh_json !== shown_json;
-      console.log(
-        "POLL fresh=" + fresh_json.length + " shown=" + shown_json.length + " changed=" + changed,
-      );
-      if (changed) {
+      if (fresh_json !== shown_json) {
         render_chapter(fresh);
       }
-    } catch (e) {
-      console.log("POLL ERROR " + e.message);
+    } catch (ignore) {
+      ignore;
     }
     poll();
   }
