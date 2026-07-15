@@ -27,7 +27,7 @@ import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
-import { emoji_arrows_counterclockwise } from "./emoji_arrows_counterclockwise.mjs";
+import { app_shared_button_start_over_text } from "./app_shared_button_start_over_text.mjs";
 import { not } from "./not.mjs";
 import { app_replace_success_message } from "./app_replace_success_message.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
