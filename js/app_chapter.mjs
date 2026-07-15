@@ -51,6 +51,7 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.mjs";
 import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
 import { app_chapter_languages_gear } from "./app_chapter_languages_gear.mjs";
@@ -83,7 +84,9 @@ export async function app_chapter(context) {
   let help_text = text_combine_multiple([
     "Tap up to ",
     number_to_words(max),
-    " verse numbers, then Copy to save that passage",
+    " verse numbers, then ",
+    text_pad_space_quote_double(t),
+    " to save that passage",
   ]);
   let hash = html_hash_object_get();
   let c = property_get_or(hash, "c", "");
