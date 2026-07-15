@@ -10,6 +10,7 @@ import { app_g_overlay } from "./app_g_overlay.mjs";
 import { app_g_click_npc_study } from "./app_g_click_npc_study.mjs";
 import { app_g_click_npc_pray } from "./app_g_click_npc_pray.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
+import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
   let x = property_get(view, "x");
@@ -29,9 +30,11 @@ export async function app_g_view_render_npc(div_map) {
   }
   if (phase === "study") {
     await app_g_click_npc_study(player, overlay, overlay_close, div_map);
+    return;
   }
   if (phase === "pray") {
     await app_g_click_npc_pray(player, overlay, overlay_close, div_map);
+    return;
   }
   if (phase === "conversation") {
     let prayer = property_get(player, "prayer");
@@ -42,5 +45,11 @@ export async function app_g_view_render_npc(div_map) {
       overlay_close,
       div_map,
     );
+    return;
   }
+  error_json({
+    hint: "the saved conversation could not be reopened because its phase is not recognized",
+    phase,
+    view,
+  });
 }
