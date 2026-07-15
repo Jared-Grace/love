@@ -18,7 +18,9 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   let pair = property_get(params, "pair");
   let name_id_rights = property_get(params, "name_id_rights");
   let closing = property_get(params, "closing");
+  let preamble = property_get(params, "preamble");
   let explanation = property_get(params, "explanation");
+  let example_cases = property_get(params, "example_cases");
   let symbol = property_get(operator, "operator");
   function expression(want_true) {
     let coordinates = pair(want_true);
@@ -49,19 +51,23 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   return lesson_symbol;
   function above(root) {
     let c = app_code_container_light_blue(root);
+    function render_line(line) {
+      html_div_cycle_code(c, line);
+    }
+    function render_lines(lines) {
+      let present = null_not_is(lines);
+      if (present) {
+        each(lines, render_line);
+      }
+    }
+    render_lines(preamble);
     let tail = text_combine_multiple([
       " asks a question: is the left number ",
       question_middle,
       " the right number?",
     ]);
     html_div_cycle_code(c, ["The symbol ", symbol, tail]);
-    let has_explanation = null_not_is(explanation);
-    if (has_explanation) {
-      function render_line(line) {
-        html_div_cycle_code(c, line);
-      }
-      each(explanation, render_line);
-    }
+    render_lines(explanation);
     html_div_cycle_code(c, ["For example: "]);
     function show(want_true) {
       let e = expression(want_true);
@@ -69,8 +75,7 @@ export function app_code_lesson_functions_console_log_comparison(params) {
       let s = js_code_statement(call);
       html_div_code(c, s);
     }
-    show(true);
-    show(false);
+    each(example_cases, show);
     let parts = closing(fn_name);
     app_code_container_light_blue_cycle_code(root, parts);
   }
