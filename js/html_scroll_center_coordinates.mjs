@@ -25,5 +25,5 @@ export function html_scroll_center_coordinates(
     add(multiply(y, tile_size), half_tile),
     divide(container_e.clientHeight, 2),
   );
-  html_scroll_animate(container_e, left, top);
+  return html_scroll_animate(container_e, left, top);
 }

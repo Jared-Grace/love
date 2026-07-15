@@ -18,7 +18,7 @@ export async function app_g_player_move(
   if (reachable) {
     await app_g_player_path_animate(path, player_img_c, div_map);
     object_assign(player, coordinates_move_to);
-    app_g_player_center(coordinates_move_to, player_img_c, div_map);
+    await app_g_player_center(coordinates_move_to, player_img_c, div_map);
     await app_g_player_save(player);
   }
 }
