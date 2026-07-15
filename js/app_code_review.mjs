@@ -46,7 +46,18 @@ export function app_code_review(context) {
   let key = app_code_review_state_key();
   let g = app_code_container_padded_x(root);
   let progress = html_div(g);
+  let success_container = html_div(g);
   let c = app_code_container_light_blue(g);
+  function show_success() {
+    html_clear(success_container);
+    app_replace_success_message(success_container);
+    html_visibility_visible(success_container);
+  }
+  function hide_success() {
+    html_visibility_hidden(success_container);
+  }
+  app_replace_success_message(success_container);
+  hide_success();
   let lessons = app_code_lessons();
   let lessons_count = list_size(lessons);
   async function go_to_lesson(lesson) {
