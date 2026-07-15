@@ -10,6 +10,9 @@ import { null_not_is } from "./null_not_is.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_span_space } from "./html_span_space.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -31,7 +34,11 @@ export function app_code_home(context) {
     }
     let text = add_1_period(index);
     let r = app_replace_button_wide_text_left_centered(g, lambda3, text, "");
+    let button = property_get(r, "button");
+    let columns = text_combine(app_shared_number_gutter(), " 1fr");
+    html_style_set(button, "grid-template-columns", columns);
     let number = property_get(r, "left");
+    html_style_set(number, "justify-self", "end");
     app_shared_text_deemphasized(number);
     let title = property_get(r, "title");
     name(title);
