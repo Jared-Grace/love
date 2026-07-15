@@ -8,7 +8,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
-export async function g_sermon_write(chapter_code, verse_numbers, lines) {
+export async function g_sermon_write(chapter_code, verse_numbers, english, lines) {
   let path = local_function_path_json(chapter_code, g_sermon_write);
   let exists = await file_exists(path);
   let chapter = exists
@@ -20,7 +20,7 @@ export async function g_sermon_write(chapter_code, verse_numbers, lines) {
     return g_sermon_passage_verses_key(passage) !== key;
   }
   let others = list_filter(passages, passage_other);
-  list_add(others, { verse_numbers, lines });
+  list_add(others, { verse_numbers, english, lines });
   await file_overwrite_uncached(path, json_format_to({ chapter_code, passages: others }));
   return path;
 }
