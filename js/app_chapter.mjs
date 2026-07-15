@@ -31,7 +31,10 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
+import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.mjs";
+import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
+import { app_chapter_languages_gear } from "./app_chapter_languages_gear.mjs";
+import { html_centered } from "./html_centered.mjs";
 import { app_shared_margin_y_set } from "./app_shared_margin_y_set.mjs";
 import { app_chapter_change } from "./app_chapter_change.mjs";
 import { list_previous_wrap } from "./list_previous_wrap.mjs";
@@ -58,13 +61,16 @@ export async function app_chapter(context) {
   let chapter_code = property_get_or(hash, "c", "JHN01");
   let verse_number = property_get_or(hash, "v", "");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
+  html_centered(bar);
   async function chapter_previous() {
     await app_chapter_change(chapter_code, languages_chosen, list_previous_wrap);
   }
   async function chapter_next() {
     await app_chapter_change(chapter_code, languages_chosen, list_next_wrap);
   }
-  app_shared_arrows_wide(bar, chapter_previous, chapter_next);
+  app_replace_button_arrow_left(bar, chapter_previous);
+  app_replace_button_arrow_right(bar, chapter_next);
+  app_chapter_languages_gear(bar, content, languages_chosen);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   async function lambda2(lc) {
