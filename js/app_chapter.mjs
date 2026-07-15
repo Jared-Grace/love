@@ -99,7 +99,7 @@ export async function app_chapter(context) {
     app_chapter_languages_gear(bar, content, languages_chosen);
     return;
   }
-  app_shared_dismissable_message(context, bar, "chapter_help_dismissed", help_text);
+  app_shared_dismissable_message(app_chapter, bar, "chapter_help_dismissed", help_text);
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
   let v_hash = property_get_or(hash, "v", "");
   async function chapter_previous() {
