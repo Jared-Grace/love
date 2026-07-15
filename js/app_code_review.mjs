@@ -22,8 +22,16 @@ import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { app_replace_button_home_text } from "./app_replace_button_home_text.mjs";
 import { app_code_home } from "./app_code_home.mjs";
+import { app_code_examples } from "./app_code_examples.mjs";
+import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { app_replace_success_message } from "./app_replace_success_message.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
+import { list_get } from "./list_get.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { text_combine } from "./text_combine.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
   let number = app_code_review_number_get(context);
@@ -49,6 +57,7 @@ export function app_code_review(context) {
     let done = list_empty_is(queue);
     if (done) {
       storage_local_remove_context(context, key);
+      app_replace_success_message(c);
       html_div_text(c, "You passed every quiz in this review — beautiful work");
       return;
     }
@@ -71,9 +80,35 @@ export function app_code_review(context) {
     app_code_review_exercise(c, exercise, on_complete);
   }
   present();
+  let lessons = app_code_lessons();
+  let lessons_count = list_size(lessons);
+  async function go_to_lesson(lesson) {
+    let id = property_get(lesson, "id");
+    storage_local_set_context(context, "lesson_id", id);
+    await app_shared_screen_set(context, app_code_examples);
+  }
+  let previous_index = subtract(number, 1);
+  let previous_lesson = list_get(lessons, previous_index);
+  async function go_previous() {
+    await go_to_lesson(previous_lesson);
+  }
+  let back = app_shared_button_back_text();
+  let back_text = text_combine(back, " to the previous lesson");
+  app_replace_button_wide(g, back_text, go_previous);
+  let next_index = number;
+  let has_next = less_than(next_index, lessons_count);
+  if (has_next) {
+    let next_lesson = list_get(lessons, next_index);
+    async function go_next() {
+      await go_to_lesson(next_lesson);
+    }
+    let next_text = "Skip this review and go to the next lesson";
+    app_replace_button_wide(g, next_text, go_next);
+  }
   let home_text = app_replace_button_home_text();
   async function go_home() {
     await app_shared_screen_set(context, app_code_home);
   }
   app_replace_button_wide(g, home_text, go_home);
 }
+
