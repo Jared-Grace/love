@@ -27,6 +27,8 @@ import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
+import { emoji_arrows_counterclockwise } from "./emoji_arrows_counterclockwise.mjs";
+import { not } from "./not.mjs";
 import { app_replace_success_message } from "./app_replace_success_message.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
@@ -100,6 +102,13 @@ export function app_code_review(context) {
     );
     skip_button = app_replace_button_wide(g, next_text, go_next);
   }
+  async function go_restart() {
+    storage_local_remove_context(context, key);
+    await app_shared_screen_set(context, app_code_review);
+  }
+  let restart = emoji_arrows_counterclockwise();
+  let restart_text = text_combine("Restart this review ", restart);
+  let restart_button = app_replace_button_wide(g, restart_text, go_restart);
   let home_text = app_replace_button_home_text();
   async function go_home() {
     await app_shared_screen_set(context, app_code_home);
@@ -112,6 +121,7 @@ export function app_code_review(context) {
     if (done) {
       html_remove(success_container);
       html_remove(back_button);
+      html_remove(restart_button);
       if (has_next) {
         html_remove(skip_button);
       }
@@ -134,9 +144,8 @@ export function app_code_review(context) {
       await sleep_success_color();
       let index_front = 0;
       list_remove_at(queue, index_front);
-      if (clean) {
-        passed = add_1(passed);
-      } else {
+      passed = add_1(passed);
+      if (not(clean)) {
         list_add(queue, seed);
       }
       persist();

@@ -1,10 +1,10 @@
-import { g_path_steps } from "./g_path_steps.mjs";
-import { each_async } from "./each_async.mjs";
-import { property_get } from "./property_get.mjs";
-import { g_direction } from "./g_direction.mjs";
-import { app_g_player_face } from "./app_g_player_face.mjs";
-import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
-import { app_g_player_center } from "./app_g_player_center.mjs";
+import { g_path_steps } from "../../love/js/g_path_steps.mjs";
+import { each_async } from "../../love/js/each_async.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { g_direction } from "../../love/js/g_direction.mjs";
+import { app_g_character_face } from "../../love/js/app_g_character_face.mjs";
+import { app_g_player_move_animate } from "../../love/js/app_g_player_move_animate.mjs";
+import { app_g_player_center } from "../../love/js/app_g_player_center.mjs";
 export async function app_g_player_path_animate(
   player,
   path,
@@ -16,7 +16,7 @@ export async function app_g_player_path_animate(
     let from = property_get(step, "from");
     let to = property_get(step, "to");
     let direction = g_direction(from, to);
-    app_g_player_face(player, player_img_c, direction);
+    app_g_character_face(player, player_img_c, direction);
     await app_g_player_move_animate(to, player_img_c);
     app_g_player_center(to, player_img_c, div_map);
   }
