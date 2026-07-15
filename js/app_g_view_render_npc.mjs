@@ -3,8 +3,6 @@ import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_player_save } from "./app_g_player_save.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { not } from "./not.mjs";
 import { app_g_conversation } from "./app_g_conversation.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,6 +14,7 @@ export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
   let x = property_get(view, "x");
   let y = property_get(view, "y");
+  let phase = property_get(view, "phase");
   let npcs = await app_g_npcs_get();
   let npcs_matched = list_filter_object_includes(npcs, {
     x,
@@ -28,23 +27,20 @@ export async function app_g_view_render_npc(div_map) {
     await app_g_view_set(null);
     html_remove(overlay);
   }
-  let review = property_get(player, "review");
-  let needs_study = list_empty_not_is(review);
-  if (needs_study) {
+  if (phase === "study") {
     await app_g_click_npc_study(player, overlay, overlay_close, div_map);
-  } else {
+  }
+  if (phase === "pray") {
+    await app_g_click_npc_pray(player, overlay, overlay_close, div_map);
+  }
+  if (phase === "conversation") {
     let prayer = property_get(player, "prayer");
-    let conversation = property_get(prayer, "conversation");
-    if (not(conversation)) {
-      await app_g_click_npc_pray(player, overlay, overlay_close, div_map);
-    } else {
-      await app_g_conversation(
-        prayer,
-        npcs_matched,
-        overlay,
-        overlay_close,
-        div_map,
-      );
-    }
+    await app_g_conversation(
+      prayer,
+      npcs_matched,
+      overlay,
+      overlay_close,
+      div_map,
+    );
   }
 }
