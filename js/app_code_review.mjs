@@ -88,15 +88,35 @@ export function app_code_review(context) {
     storage_local_set_context(context, key, state);
   }
   persist();
+  let back = app_shared_button_back_text();
+  let back_text = text_combine(back, " to the previous lesson");
+  let back_button = app_replace_button_wide(g, back_text, go_previous);
+  let skip_button = null;
+  if (has_next) {
+    let arrow = emoji_arrow_right();
+    let next_text = text_combine(
+      "Skip this review and go to the next lesson ",
+      arrow,
+    );
+    skip_button = app_replace_button_wide(g, next_text, go_next);
+  }
+  let home_text = app_replace_button_home_text();
+  async function go_home() {
+    await app_shared_screen_set(context, app_code_home);
+  }
+  app_replace_button_wide(g, home_text, go_home);
   function present() {
     html_clear(progress);
     html_clear(c);
     let done = list_empty_is(queue);
     if (done) {
       html_remove(success_container);
+      html_remove(back_button);
+      if (has_next) {
+        html_remove(skip_button);
+      }
       storage_local_remove_context(context, key);
-      app_replace_success_message(c);
-      html_div_text(c, "You passed every quiz in this review — beautiful work");
+      app_code_review_complete(c);
       if (has_next) {
         let arrow = emoji_arrow_right();
         let continue_text = text_combine("Continue to the next lesson ", arrow);
