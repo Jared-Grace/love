@@ -77,6 +77,10 @@ export async function app_chapter(context) {
     list_last(languages_chosen),
   );
   let books = await ebible_version_books_browser(primary_folder);
+  let books_en = await ebible_version_books_browser(ebible_folder_english());
+  let book_code = ebible_chapter_code_to_book(chapter_code);
+  let book_name = ebible_book_code_to_name(books_en, book_code);
+  let chapter_name = ebible_chapter_code_to_name(chapter_code);
   app_replace_button_arrow_left(bar, chapter_previous);
   app_chapter_book_chapter(bar, content, chapter_code, books, primary_folder);
   app_replace_button_arrow_right(bar, chapter_next);
