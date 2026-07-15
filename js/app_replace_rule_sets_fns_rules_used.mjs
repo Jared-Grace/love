@@ -1,5 +1,109 @@
 export function app_replace_rule_sets_fns_rules_used() {
-  let r = {
+  return {
+    "Binary Numbers Simple 2": [
+      [
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+      ],
+    ],
     "Binary Numbers Simple": [
       [
         {
@@ -40,25 +144,25 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["0"],
-          right: ["0", "0"],
-          original: "0 > 0 0",
+          right: ["1"],
+          original: "0 > 1",
         },
         {
           left: ["0"],
-          right: ["1"],
-          original: "0 > 1",
+          right: ["0", "0"],
+          original: "0 > 0 0",
         },
       ],
       [
         {
           left: ["0"],
-          right: ["0", "0"],
-          original: "0 > 0 0",
+          right: ["1"],
+          original: "0 > 1",
         },
         {
           left: ["0"],
-          right: ["1"],
-          original: "0 > 1",
+          right: ["0", "0"],
+          original: "0 > 0 0",
         },
       ],
       [
@@ -74,7 +178,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Grow Same Three Different": [
+    "Three Different Grow Same": [
       [
         {
           left: ["e", "=", "b"],
@@ -106,64 +210,6 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Binary Counting Prepare 1": [
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
-        },
-      ],
-      [
-        {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-    ],
-    "Two Different Grow Same": [
-      [
-        {
-          left: ["e", "b"],
-          right: ["c", "e", "b", "c"],
-          original: "e b > c e b c",
-        },
-      ],
-      [
-        {
-          left: ["e", "b"],
-          right: ["c", "e", "b", "c"],
-          original: "e b > c e b c",
-        },
-      ],
-    ],
-    "Three Different Grow Same": [
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-    ],
     "Boolean Literal": [
       [
         {
@@ -190,26 +236,19 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Grow Different": [
+    "Two Different Grow Same": [
       [
         {
-          left: ["a"],
-          right: ["b", "c"],
-          original: "a > b c",
+          left: ["e", "b"],
+          right: ["c", "e", "b", "c"],
+          original: "e b > c e b c",
         },
       ],
       [
         {
-          left: ["a"],
-          right: ["b", "c"],
-          original: "a > b c",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b", "c"],
-          original: "a > b c",
+          left: ["e", "b"],
+          right: ["c", "e", "b", "c"],
+          original: "e b > c e b c",
         },
       ],
     ],
@@ -221,18 +260,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "g > b g",
         },
         {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-          original: "g > b",
-        },
-      ],
-      [
-        {
           left: ["g"],
           right: ["b"],
           original: "g > b",
@@ -241,50 +268,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["b"],
           right: ["0"],
           original: "b > 0",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["g"],
-          right: ["b", "g"],
-          original: "g > b g",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-          original: "g > b",
-        },
-      ],
-      [
-        {
-          left: ["g"],
-          right: ["b", "g"],
-          original: "g > b g",
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-          original: "g > b",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
         },
       ],
       [
@@ -299,9 +282,43 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b > 1",
         },
         {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
           left: ["b"],
           right: ["0"],
           original: "b > 0",
+        },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
         },
         {
           left: ["g"],
@@ -311,10 +328,27 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
           left: ["b"],
           right: ["0"],
           original: "b > 0",
         },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
+        },
+      ],
+      [
         {
           left: ["g"],
           right: ["b"],
@@ -330,28 +364,10 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["b", "g"],
           original: "g > b g",
         },
-      ],
-    ],
-    Double: [
-      [
         {
-          left: ["a"],
-          right: ["a", "a"],
-          original: "a > a a",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["a", "a"],
-          original: "a > a a",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["a", "a"],
-          original: "a > a a",
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
         },
       ],
     ],
@@ -378,153 +394,49 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Binary Numbers Simple 2": [
+    "Grow Different": [
       [
         {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
+          left: ["a"],
+          right: ["b", "c"],
+          original: "a > b c",
         },
       ],
       [
         {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
+          left: ["a"],
+          right: ["b", "c"],
+          original: "a > b c",
         },
       ],
       [
         {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["1"],
-          original: "b > 1",
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-          original: "b > 0",
-        },
-        {
-          left: ["b"],
-          right: ["b", "b"],
-          original: "b > b b",
+          left: ["a"],
+          right: ["b", "c"],
+          original: "a > b c",
         },
       ],
     ],
-    Half: [
+    Double: [
       [
         {
-          left: ["a", "a"],
-          right: ["a"],
-          original: "a a > a",
+          left: ["a"],
+          right: ["a", "a"],
+          original: "a > a a",
         },
       ],
       [
         {
-          left: ["a", "a"],
-          right: ["a"],
-          original: "a a > a",
+          left: ["a"],
+          right: ["a", "a"],
+          original: "a > a a",
         },
       ],
       [
         {
-          left: ["a", "a"],
-          right: ["a"],
-          original: "a a > a",
-        },
-      ],
-    ],
-    "Same Replace Left": [
-      [
-        {
-          left: ["a", "a"],
-          right: ["b", "a"],
-          original: "a a > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["b", "a"],
-          original: "a a > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["b", "a"],
-          original: "a a > b a",
+          left: ["a"],
+          right: ["a", "a"],
+          original: "a > a a",
         },
       ],
     ],
@@ -551,118 +463,26 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Grow Triple": [
+    "Same Replace Left": [
       [
         {
-          left: ["a"],
-          right: ["a", "a", "a"],
-          original: "a > a a a",
+          left: ["a", "a"],
+          right: ["b", "a"],
+          original: "a a > b a",
         },
       ],
       [
         {
-          left: ["a"],
-          right: ["a", "a", "a"],
-          original: "a > a a a",
+          left: ["a", "a"],
+          right: ["b", "a"],
+          original: "a a > b a",
         },
       ],
       [
         {
-          left: ["a"],
-          right: ["a", "a", "a"],
-          original: "a > a a a",
-        },
-      ],
-    ],
-    "Replace Left Same": [
-      [
-        {
-          left: ["b", "a"],
-          right: ["a", "a"],
-          original: "b a > a a",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["a", "a"],
-          original: "b a > a a",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["a", "a"],
-          original: "b a > a a",
-        },
-      ],
-    ],
-    "Shrink Triple": [
-      [
-        {
-          left: ["a", "a", "a"],
-          right: ["a"],
-          original: "a a a > a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a", "a"],
-          right: ["a"],
-          original: "a a a > a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a", "a"],
-          right: ["a"],
-          original: "a a a > a",
-        },
-      ],
-    ],
-    "Right Change": [
-      [
-        {
-          left: ["a", "b"],
-          right: ["a", "c"],
-          original: "a b > a c",
-        },
-      ],
-      [
-        {
-          left: ["a", "b"],
-          right: ["a", "c"],
-          original: "a b > a c",
-        },
-      ],
-      [
-        {
-          left: ["a", "b"],
-          right: ["a", "c"],
-          original: "a b > a c",
-        },
-      ],
-    ],
-    "Unary Equations": [
-      [
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-      [
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-      [
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
+          left: ["a", "a"],
+          right: ["b", "a"],
+          original: "a a > b a",
         },
       ],
     ],
@@ -689,64 +509,118 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Grow Between": [
+    "Replace Left Same": [
       [
         {
-          left: ["a", "a"],
-          right: ["a", "b", "a"],
-          original: "a a > a b a",
+          left: ["b", "a"],
+          right: ["a", "a"],
+          original: "b a > a a",
         },
       ],
       [
         {
-          left: ["a", "a"],
-          right: ["a", "b", "a"],
-          original: "a a > a b a",
+          left: ["b", "a"],
+          right: ["a", "a"],
+          original: "b a > a a",
         },
       ],
       [
         {
-          left: ["a", "a"],
-          right: ["a", "b", "a"],
-          original: "a a > a b a",
+          left: ["b", "a"],
+          right: ["a", "a"],
+          original: "b a > a a",
         },
       ],
     ],
-    "Shrink Different 2": [
+    "Right Change": [
       [
         {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
-        },
-        {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
+          left: ["a", "b"],
+          right: ["a", "c"],
+          original: "a b > a c",
         },
       ],
       [
         {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
-        },
-        {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
+          left: ["a", "b"],
+          right: ["a", "c"],
+          original: "a b > a c",
         },
       ],
       [
         {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
+          left: ["a", "b"],
+          right: ["a", "c"],
+          original: "a b > a c",
         },
+      ],
+    ],
+    "Grow Triple": [
+      [
         {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
+          left: ["a"],
+          right: ["a", "a", "a"],
+          original: "a > a a a",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["a", "a", "a"],
+          original: "a > a a a",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["a", "a", "a"],
+          original: "a > a a a",
+        },
+      ],
+    ],
+    Half: [
+      [
+        {
+          left: ["a", "a"],
+          right: ["a"],
+          original: "a a > a",
+        },
+      ],
+      [
+        {
+          left: ["a", "a"],
+          right: ["a"],
+          original: "a a > a",
+        },
+      ],
+      [
+        {
+          left: ["a", "a"],
+          right: ["a"],
+          original: "a a > a",
+        },
+      ],
+    ],
+    "Shrink Triple": [
+      [
+        {
+          left: ["a", "a", "a"],
+          right: ["a"],
+          original: "a a a > a",
+        },
+      ],
+      [
+        {
+          left: ["a", "a", "a"],
+          right: ["a"],
+          original: "a a a > a",
+        },
+      ],
+      [
+        {
+          left: ["a", "a", "a"],
+          right: ["a"],
+          original: "a a a > a",
         },
       ],
     ],
@@ -770,6 +644,52 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["a", "b", "a"],
           right: ["b"],
           original: "a b a > b",
+        },
+      ],
+    ],
+    "Unary Equations": [
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+      ],
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+      ],
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+      ],
+    ],
+    "Shrink Between": [
+      [
+        {
+          left: ["a", "b", "a"],
+          right: ["a", "a"],
+          original: "a b a > a a",
+        },
+      ],
+      [
+        {
+          left: ["a", "b", "a"],
+          right: ["a", "a"],
+          original: "a b a > a a",
+        },
+      ],
+      [
+        {
+          left: ["a", "b", "a"],
+          right: ["a", "a"],
+          original: "a b a > a a",
         },
       ],
     ],
@@ -811,79 +731,41 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Binary Counting Prepare 2": [
+    "Shrink Different 2": [
       [
         {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
+          left: ["b", "c"],
+          right: ["a"],
+          original: "b c > a",
         },
         {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
       ],
       [
         {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
         {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
+          left: ["b", "c"],
+          right: ["a"],
+          original: "b c > a",
         },
       ],
       [
         {
-          left: ["1"],
-          right: ["1", "1"],
-          original: "1 > 1 1",
+          left: ["b", "c"],
+          right: ["a"],
+          original: "b c > a",
         },
         {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-    ],
-    "Shrink Between": [
-      [
-        {
-          left: ["a", "b", "a"],
-          right: ["a", "a"],
-          original: "a b a > a a",
-        },
-      ],
-      [
-        {
-          left: ["a", "b", "a"],
-          right: ["a", "a"],
-          original: "a b a > a a",
-        },
-      ],
-      [
-        {
-          left: ["a", "b", "a"],
-          right: ["a", "a"],
-          original: "a b a > a a",
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
       ],
     ],
@@ -902,14 +784,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-        {
           left: ["a", "c"],
           right: ["c", "a"],
           original: "a c > c a",
+        },
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
@@ -928,6 +810,23 @@ export function app_replace_rule_sets_fns_rules_used() {
     "Swap 3": [
       [
         {
+          left: ["a", "d"],
+          right: ["d", "a"],
+          original: "a d > d a",
+        },
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+          original: "a c > c a",
+        },
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
+        },
+      ],
+      [
+        {
           left: ["a", "b"],
           right: ["b", "a"],
           original: "a b > b a",
@@ -945,22 +844,10 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["a", "d"],
-          right: ["d", "a"],
-          original: "a d > d a",
-        },
-        {
           left: ["a", "b"],
           right: ["b", "a"],
           original: "a b > b a",
         },
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-          original: "a c > c a",
-        },
-      ],
-      [
         {
           left: ["a", "d"],
           right: ["d", "a"],
@@ -970,41 +857,82 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["a", "c"],
           right: ["c", "a"],
           original: "a c > c a",
-        },
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
         },
       ],
     ],
-    "Grow Right": [
+    "Grow Between": [
       [
         {
-          left: ["g"],
-          right: ["g", "s"],
-          original: "g > g s",
+          left: ["a", "a"],
+          right: ["a", "b", "a"],
+          original: "a a > a b a",
         },
       ],
       [
         {
-          left: ["g"],
-          right: ["g", "s"],
-          original: "g > g s",
+          left: ["a", "a"],
+          right: ["a", "b", "a"],
+          original: "a a > a b a",
         },
       ],
       [
         {
-          left: ["g"],
-          right: ["g", "s"],
-          original: "g > g s",
+          left: ["a", "a"],
+          right: ["a", "b", "a"],
+          original: "a a > a b a",
+        },
+      ],
+    ],
+    "Binary Counting Prepare 2": [
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
         },
       ],
       [
         {
-          left: ["g"],
-          right: ["g", "s"],
-          original: "g > g s",
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
         },
       ],
     ],
@@ -1038,6 +966,36 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
+    "Grow Right": [
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+          original: "g > g s",
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+          original: "g > g s",
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+          original: "g > g s",
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+          original: "g > g s",
+        },
+      ],
+    ],
     "Shrink Left": [
       [
         {
@@ -1065,86 +1023,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["b", "a"],
           right: ["a"],
           original: "b a > a",
-        },
-      ],
-    ],
-    Swap: [
-      [
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-      ],
-    ],
-    "Replace Flow": [
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
-          left: ["b"],
-          right: ["c"],
-          original: "b > c",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
-          left: ["b"],
-          right: ["c"],
-          original: "b > c",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["c"],
-          original: "b > c",
-        },
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["c"],
-          original: "b > c",
-        },
-        {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
         },
       ],
     ],
@@ -1178,40 +1056,33 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Swap Change Left": [
+    Swap: [
       [
         {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
         {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
         {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
         {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a", "b"],
-          original: "b c > a b",
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
     ],
@@ -1230,18 +1101,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["a"],
-          right: ["b"],
-          original: "a > b",
-        },
-        {
-          left: ["c"],
-          right: ["d"],
-          original: "c > d",
-        },
-      ],
-      [
-        {
           left: ["c"],
           right: ["d"],
           original: "c > d",
@@ -1262,6 +1121,173 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["c"],
           right: ["d"],
           original: "c > d",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
+        },
+      ],
+    ],
+    "Replace Flow": [
+      [
+        {
+          left: ["b"],
+          right: ["c"],
+          original: "b > c",
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["b"],
+          right: ["c"],
+          original: "b > c",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["c"],
+          original: "b > c",
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["b"],
+          right: ["c"],
+          original: "b > c",
+        },
+      ],
+    ],
+    Slide: [
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+    ],
+    "Binary Counting": [
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
         },
       ],
     ],
@@ -1302,6 +1328,175 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
+    "Swap Change Left": [
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+          original: "b c > a b",
+        },
+      ],
+    ],
+    "Binary Counting Prepare 1": [
+      [
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+      ],
+      [
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1"],
+          right: ["1", "1"],
+          original: "1 > 1 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+    ],
+    "Add One": [
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+          original: "c > a c",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+    ],
     Replace: [
       [
         {
@@ -1339,34 +1534,12 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Statements For": [
+    "Statements Simple": [
       [
         {
-          left: ["fs"],
-          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
-          original: "fs > for ( ex ; ex ; ex ) sm",
-        },
-        {
-          left: ["ex"],
-          right: ["i", "<", "12"],
-          original: "ex > i < 12",
-        },
-        {
-          left: ["ex"],
-          right: ["i", "=", "i", "+", "1"],
-          original: "ex > i = i + 1",
-        },
-        {
-          left: ["ex"],
-          right: ["i", "=", "0"],
-          original: "ex > i = 0",
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["log", "(", "apostle", "[", "i", "]", ")"],
-          original: "ex > log ( apostle [ i ] )",
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
         {
           left: ["sm"],
@@ -1374,44 +1547,82 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sm > ex ;",
         },
         {
-          left: ["vk"],
-          right: ["let"],
-          original: "vk > let",
+          left: ["sm"],
+          right: [";"],
+          original: "sm > ;",
         },
       ],
       [
         {
-          left: ["fs"],
-          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
-          original: "fs > for ( ex ; ex ; ex ) sm",
+          left: ["sm"],
+          right: ["return", ";"],
+          original: "sm > return ;",
         },
         {
           left: ["ex"],
-          right: ["i", "=", "i", "+", "1"],
-          original: "ex > i = i + 1",
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
         },
         {
-          left: ["ex"],
-          right: ["i", "<", "list", ".", "length"],
-          original: "ex > i < list . length",
-        },
-        {
-          left: ["ex"],
-          right: ["i", "=", "0"],
-          original: "ex > i = 0",
+          left: ["sm"],
+          right: [";"],
+          original: "sm > ;",
         },
       ],
+      [
+        {
+          left: ["ex"],
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
+        },
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
+        },
+        {
+          left: ["sm"],
+          right: [";"],
+          original: "sm > ;",
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
+        },
+      ],
+    ],
+    "Statements Block": [
       [
         {
           left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
+          right: ["{", "}"],
+          original: "bs > { }",
+        },
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
         },
         {
           left: ["sm"],
           right: ["bs"],
           original: "sm > bs",
         },
+      ],
+      [
         {
           left: ["smg"],
           right: ["sm"],
@@ -1419,8 +1630,42 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["sm"],
+          right: [";"],
+          original: "sm > ;",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+      ],
+      [
+        {
+          left: ["sm"],
           right: ["ex", ";"],
           original: "sm > ex ;",
+        },
+        {
+          left: ["ex"],
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
         {
           left: ["smg"],
@@ -1429,18 +1674,38 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["ex"],
-          right: ["copy", "[", "i", "]", "=", "list", "[", "i", "]"],
-          original: "ex > copy [ i ] = list [ i ]",
+          right: ["true"],
+          original: "ex > true",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
         {
           left: ["ex"],
-          right: ["log", "(", "i", ")"],
-          original: "ex > log ( i )",
+          right: ["update", "(", ")"],
+          original: "ex > update ( )",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
         },
       ],
     ],
     "Statements While": [
       [
+        {
+          left: ["ex"],
+          right: ["x", "<", "3"],
+          original: "ex > x < 3",
+        },
         {
           left: ["ex"],
           right: ["x", "=", "x", "+", "1"],
@@ -1456,28 +1721,8 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["while", "(", "ex", ")", "sm"],
           original: "ws > while ( ex ) sm",
         },
-        {
-          left: ["ex"],
-          right: ["x", "<", "3"],
-          original: "ex > x < 3",
-        },
       ],
       [
-        {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
         {
           left: ["ex"],
           right: ["y", ">", "0"],
@@ -1487,6 +1732,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["sm"],
           right: ["bs"],
           original: "sm > bs",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
         {
           left: ["ws"],
@@ -1501,9 +1761,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
+          left: ["ws"],
+          right: ["while", "(", "ex", ")", "sm"],
+          original: "ws > while ( ex ) sm",
         },
         {
           left: ["bs"],
@@ -1516,9 +1776,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "sm > bs",
         },
         {
-          left: ["ws"],
-          right: ["while", "(", "ex", ")", "sm"],
-          original: "ws > while ( ex ) sm",
+          left: ["smg"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
         },
         {
           left: ["ex"],
@@ -1527,15 +1787,15 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["smg"],
-          right: ["smg", "sm"],
-          original: "smg > smg sm",
+          right: ["sm"],
+          original: "smg > sm",
         },
       ],
       [
         {
-          left: ["ex"],
-          right: ["seek", "(", ")"],
-          original: "ex > seek ( )",
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
         {
           left: ["ex"],
@@ -1543,79 +1803,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ex > ask ( )",
         },
         {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-      ],
-    ],
-    "Statements Simple": [
-      [
-        {
           left: ["ex"],
-          right: ["update", "(", ")"],
-          original: "ex > update ( )",
-        },
-        {
-          left: ["sm"],
-          right: [";"],
-          original: "sm > ;",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-      ],
-      [
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
-          left: ["sm"],
-          right: [";"],
-          original: "sm > ;",
-        },
-      ],
-      [
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
-          left: ["ex"],
-          right: ["update", "(", ")"],
-          original: "ex > update ( )",
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["true"],
-          original: "ex > true",
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
-        },
-        {
-          left: ["sm"],
-          right: [";"],
-          original: "sm > ;",
+          right: ["seek", "(", ")"],
+          original: "ex > seek ( )",
         },
       ],
     ],
@@ -1646,30 +1836,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["a"],
-          right: ["b", "b"],
-          original: "a > b b",
-        },
-        {
-          left: ["b", "b"],
-          right: ["c"],
-          original: "b b > c",
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["c"],
-          original: "b b > c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "b"],
-          original: "a > b b",
-        },
-      ],
-      [
-        {
           left: ["b", "b"],
           right: ["c"],
           original: "b b > c",
@@ -1692,105 +1858,58 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b b > c",
         },
       ],
-    ],
-    "Statements Block": [
       [
         {
-          left: ["sm"],
-          right: [";"],
-          original: "sm > ;",
+          left: ["a"],
+          right: ["b", "b"],
+          original: "a > b b",
         },
         {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
-        },
-        {
-          left: ["bs"],
-          right: ["{", "}"],
-          original: "bs > { }",
+          left: ["b", "b"],
+          right: ["c"],
+          original: "b b > c",
         },
       ],
       [
         {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
+          left: ["a"],
+          right: ["b", "b"],
+          original: "a > b b",
         },
         {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["sm"],
-          right: [";"],
-          original: "sm > ;",
-        },
-      ],
-      [
-        {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-        {
-          left: ["ex"],
-          right: ["update", "(", ")"],
-          original: "ex > update ( )",
-        },
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-      ],
-      [
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["ex"],
-          right: ["update", "(", ")"],
-          original: "ex > update ( )",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
-          left: ["smg"],
-          right: ["smg", "sm"],
-          original: "smg > smg sm",
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-        {
-          left: ["ex"],
-          right: ["true"],
-          original: "ex > true",
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-          original: "sm > return ex ;",
+          left: ["b", "b"],
+          right: ["c"],
+          original: "b b > c",
         },
       ],
     ],
     "Grow Left Pair Change Right": [
       [
         {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
+        },
+      ],
+      [
+        {
           left: ["b", "b"],
           right: ["b", "c"],
           original: "b b > b c",
@@ -1835,441 +1954,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["b", "b"],
           right: ["b", "c"],
           original: "b b > b c",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
-        },
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-          original: "b b > b c",
-        },
-        {
-          left: ["a"],
-          right: ["b", "a"],
-          original: "a > b a",
-        },
-      ],
-    ],
-    "Unary Equations Adding": [
-      [
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-        {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-      ],
-      [
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-        {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "1"],
-          right: ["1", "+", "1"],
-          original: "1 1 > 1 + 1",
-        },
-        {
-          left: ["="],
-          right: ["1", "=", "1"],
-          original: "= > 1 = 1",
-        },
-      ],
-    ],
-    "Binary Counting": [
-      [
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["c"],
-          right: ["a", "c"],
-          original: "c > a c",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-    ],
-    "Statements Variable": [
-      [
-        {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
-        },
-        {
-          left: ["vk"],
-          right: ["let"],
-          original: "vk > let",
-        },
-        {
-          left: ["id"],
-          right: ["i"],
-          original: "id > i",
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
-        },
-      ],
-      [
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
-        },
-        {
-          left: ["ex"],
-          right: ["0"],
-          original: "ex > 0",
-        },
-        {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-          original: "vd > id = ex",
-        },
-        {
-          left: ["id"],
-          right: ["j"],
-          original: "id > j",
-        },
-        {
-          left: ["vk"],
-          right: ["let"],
-          original: "vk > let",
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
-      ],
-      [
-        {
-          left: ["vk"],
-          right: ["var"],
-          original: "vk > var",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
-        },
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
-        },
-        {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
-          original: "vdg > vdg , vd",
-        },
-      ],
-      [
-        {
-          left: ["vk"],
-          right: ["var"],
-          original: "vk > var",
-        },
-        {
-          left: ["id"],
-          right: ["a"],
-          original: "id > a",
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
-        },
-        {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
-        },
-        {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
-          original: "vdg > vdg , vd",
-        },
-      ],
-      [
-        {
-          left: ["vd"],
-          right: ["id"],
-          original: "vd > id",
-        },
-        {
-          left: ["id"],
-          right: ["b"],
-          original: "id > b",
-        },
-        {
-          left: ["id"],
-          right: ["c"],
-          original: "id > c",
-        },
-      ],
-      [
-        {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
-          original: "vdg > vdg , vd",
-        },
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-          original: "vs > vk vdg ;",
-        },
-        {
-          left: ["ex"],
-          right: ["2"],
-          original: "ex > 2",
-        },
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-          original: "vd > id = ex",
-        },
-        {
-          left: ["vk"],
-          right: ["const"],
-          original: "vk > const",
-        },
-      ],
-      [
-        {
-          left: ["vdg"],
-          right: ["vd"],
-          original: "vdg > vd",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-          original: "vd > id = ex",
-        },
-        {
-          left: ["ex"],
-          right: ["1"],
-          original: "ex > 1",
         },
       ],
     ],
@@ -2300,14 +1984,14 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["b", "a"],
-          right: ["a"],
-          original: "b a > a",
-        },
-        {
           left: ["b", "c"],
           right: ["b", "b"],
           original: "b c > b b",
+        },
+        {
+          left: ["b", "a"],
+          right: ["a"],
+          original: "b a > a",
         },
       ],
       [
@@ -2324,6 +2008,18 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
+          left: ["b", "c"],
+          right: ["b", "b"],
+          original: "b c > b b",
+        },
+        {
+          left: ["b", "a"],
+          right: ["a"],
+          original: "b a > a",
+        },
+      ],
+      [
+        {
           left: ["b", "a"],
           right: ["a"],
           original: "b a > a",
@@ -2334,26 +2030,556 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "b c > b b",
         },
       ],
+    ],
+    "Unary Equations Adding": [
       [
         {
-          left: ["b", "c"],
-          right: ["b", "b"],
-          original: "b c > b b",
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
         },
         {
-          left: ["b", "a"],
-          right: ["a"],
-          original: "b a > a",
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
+        },
+      ],
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+        {
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
+        },
+      ],
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+        {
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
+        },
+      ],
+      [
+        {
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
+        },
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+      ],
+      [
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+        {
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
+        },
+      ],
+      [
+        {
+          left: ["1", "1"],
+          right: ["1", "+", "1"],
+          original: "1 1 > 1 + 1",
+        },
+        {
+          left: ["="],
+          right: ["1", "=", "1"],
+          original: "= > 1 = 1",
+        },
+      ],
+    ],
+    "Statements For": [
+      [
+        {
+          left: ["ex"],
+          right: ["i", "=", "0"],
+          original: "ex > i = 0",
+        },
+        {
+          left: ["ex"],
+          right: ["i", "<", "12"],
+          original: "ex > i < 12",
+        },
+        {
+          left: ["ex"],
+          right: ["i", "=", "i", "+", "1"],
+          original: "ex > i = i + 1",
+        },
+        {
+          left: ["fs"],
+          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+          original: "fs > for ( ex ; ex ; ex ) sm",
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
+        },
+        {
+          left: ["ex"],
+          right: ["log", "(", "apostle", "[", "i", "]", ")"],
+          original: "ex > log ( apostle [ i ] )",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["i", "=", "0"],
+          original: "ex > i = 0",
+        },
+        {
+          left: ["ex"],
+          right: ["i", "<", "list", ".", "length"],
+          original: "ex > i < list . length",
+        },
+        {
+          left: ["fs"],
+          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+          original: "fs > for ( ex ; ex ; ex ) sm",
+        },
+        {
+          left: ["ex"],
+          right: ["i", "=", "i", "+", "1"],
+          original: "ex > i = i + 1",
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["ex"],
+          right: ["log", "(", "i", ")"],
+          original: "ex > log ( i )",
+        },
+        {
+          left: ["ex"],
+          right: ["copy", "[", "i", "]", "=", "list", "[", "i", "]"],
+          original: "ex > copy [ i ] = list [ i ]",
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
+        },
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+      ],
+    ],
+    "Marker Convert": [
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+    ],
+    "Unary To Binary Equations Preparation": [
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+      ],
+      [
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+      ],
+      [
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+          original: "e d > e =",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+      ],
+      [
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+          original: "e d > e =",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+      ],
+      [
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+          original: "e d > e =",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+      ],
+    ],
+    "Exponent Part": [
+      [
+        {
+          left: ["eE"],
+          right: ["e"],
+          original: "eE > e",
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+          original: "ex > ig",
+        },
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+      ],
+      [
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
+        {
+          left: ["pi"],
+          right: ["2"],
+          original: "pi > 2",
+        },
+      ],
+      [
+        {
+          left: ["eE"],
+          right: ["e"],
+          original: "eE > e",
+        },
+        {
+          left: ["ex"],
+          right: ["+", "ig"],
+          original: "ex > + ig",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
+        },
+      ],
+      [
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
+        },
+        {
+          left: ["ex"],
+          right: ["-", "ig"],
+          original: "ex > - ig",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+          original: "pi > 6",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
       ],
     ],
     "Statements If": [
       [
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-          original: "sm > return ;",
-        },
         {
           left: ["ex"],
           right: ["y", "===", "null"],
@@ -2364,34 +2590,39 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["if", "(", "ex", ")", "sm"],
           original: "is > if ( ex ) sm",
         },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+          original: "sm > return ;",
+        },
       ],
       [
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["ex"],
-          right: ["x", "<", "0"],
-          original: "ex > x < 0",
-        },
         {
           left: ["is"],
           right: ["if", "(", "ex", ")", "sm"],
           original: "is > if ( ex ) sm",
         },
         {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
           left: ["sm"],
           right: ["bs"],
           original: "sm > bs",
         },
+        {
+          left: ["ex"],
+          right: ["x", "<", "0"],
+          original: "ex > x < 0",
+        },
       ],
       [
         {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
+          left: ["ex"],
+          right: ["x", "=", "1"],
+          original: "ex > x = 1",
         },
         {
           left: ["smg"],
@@ -2399,48 +2630,38 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "smg > sm",
         },
         {
-          left: ["ex"],
-          right: ["x", "=", "1"],
-          original: "ex > x = 1",
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
       ],
       [
-        {
-          left: ["sm"],
-          right: ["bs"],
-          original: "sm > bs",
-        },
         {
           left: ["ex"],
           right: ["y", ">", "max"],
           original: "ex > y >> max",
         },
         {
-          left: ["is"],
-          right: ["if", "(", "ex", ")", "sm"],
-          original: "is > if ( ex ) sm",
-        },
-        {
           left: ["bs"],
           right: ["{", "smg", "}"],
           original: "bs > { smg }",
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+          original: "is > if ( ex ) sm",
         },
       ],
       [
         {
           left: ["ex"],
-          right: ["log", "(", '"reset"', ")"],
-          original: 'ex > log ( "reset" )',
-        },
-        {
-          left: ["ex"],
           right: ["y", "=", "0"],
           original: "ex > y = 0",
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
         },
         {
           left: ["smg"],
@@ -2448,38 +2669,48 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "smg > sm",
         },
         {
+          left: ["ex"],
+          right: ["log", "(", '"reset"', ")"],
+          original: 'ex > log ( "reset" )',
+        },
+        {
           left: ["smg"],
           right: ["smg", "sm"],
           original: "smg > smg sm",
         },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
       ],
       [
-        {
-          left: ["is"],
-          right: ["if", "(", "ex", ")", "sm", "else", "sm"],
-          original: "is > if ( ex ) sm else sm",
-        },
         {
           left: ["ex"],
           right: ["x", ">", "0"],
           original: "ex > x > 0",
         },
         {
-          left: ["ex"],
-          right: ["x", "<", "0"],
-          original: "ex > x < 0",
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm", "else", "sm"],
+          original: "is > if ( ex ) sm else sm",
         },
       ],
       [
         {
-          left: ["sm"],
-          right: ["ex", ";"],
-          original: "sm > ex ;",
-        },
-        {
           left: ["ex"],
           right: ["positive", "=", "false"],
           original: "ex > positive = false",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
         {
           left: ["ex"],
@@ -2488,156 +2719,204 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
     ],
-    "Unary To Binary Equations Preparation": [
+    "Statements Variable": [
       [
         {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
+          left: ["vk"],
+          right: ["let"],
+          original: "vk > let",
         },
         {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
         },
         {
-          left: ["e", "d"],
-          right: ["e", "="],
-          original: "e d > e =",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
+        },
+        {
+          left: ["id"],
+          right: ["i"],
+          original: "id > i",
+        },
+        {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
       ],
       [
         {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
         },
         {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
+          left: ["vk"],
+          right: ["let"],
+          original: "vk > let",
         },
         {
-          left: ["e", "d"],
-          right: ["e", "="],
-          original: "e d > e =",
-        },
-      ],
-      [
-        {
-          left: ["e", "d"],
-          right: ["e", "="],
-          original: "e d > e =",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
         },
         {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
+          left: ["id"],
+          right: ["j"],
+          original: "id > j",
+        },
+        {
+          left: ["ex"],
+          right: ["0"],
+          original: "ex > 0",
         },
       ],
       [
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
         },
         {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
         },
         {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
-        },
-      ],
-      [
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
+          left: ["vk"],
+          right: ["var"],
+          original: "vk > var",
         },
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
         {
-          left: ["e", "d"],
-          right: ["e", "="],
-          original: "e d > e =",
-        },
-      ],
-      [
-        {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
         },
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
       ],
       [
         {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
+          left: ["id"],
+          right: ["a"],
+          original: "id > a",
         },
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
         },
         {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
+        },
+        {
+          left: ["vk"],
+          right: ["var"],
+          original: "vk > var",
+        },
+        {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
       ],
       [
         {
-          left: ["d"],
-          right: ["d", "d"],
-          original: "d > d d",
+          left: ["id"],
+          right: ["b"],
+          original: "id > b",
         },
         {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-          original: "d d > d e d",
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
         {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-          original: "= d > d f =",
+          left: ["id"],
+          right: ["c"],
+          original: "id > c",
+        },
+      ],
+      [
+        {
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
         },
         {
-          left: ["e", "d"],
-          right: ["e", "="],
-          original: "e d > e =",
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+        {
+          left: ["ex"],
+          right: ["2"],
+          original: "ex > 2",
+        },
+        {
+          left: ["vk"],
+          right: ["const"],
+          original: "vk > const",
+        },
+        {
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["1"],
+          original: "ex > 1",
+        },
+        {
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
         },
       ],
     ],
@@ -2655,8 +2934,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["9"],
-          original: "di > 9",
+          right: ["6"],
+          original: "di > 6",
         },
       ],
       [
@@ -2666,21 +2945,82 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > 1",
         },
         {
+          left: ["g"],
+          right: ["di"],
+          original: "g > di",
+        },
+        {
           left: ["di"],
           right: ["2"],
           original: "di > 2",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["3"],
+          original: "di > 3",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
         {
           left: ["g"],
           right: ["di"],
           original: "g > di",
         },
-      ],
-      [
         {
           left: ["g"],
           right: ["di", "g"],
           original: "g > di g",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["9"],
+          original: "di > 9",
+        },
+        {
+          left: ["g"],
+          right: ["di", "g"],
+          original: "g > di g",
+        },
+        {
+          left: ["g"],
+          right: ["di"],
+          original: "g > di",
+        },
+        {
+          left: ["di"],
+          right: ["8"],
+          original: "di > 8",
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["di"],
+          original: "g > di",
+        },
+        {
+          left: ["g"],
+          right: ["di", "g"],
+          original: "g > di g",
+        },
+        {
+          left: ["di"],
+          right: ["4"],
+          original: "di > 4",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["7"],
+          original: "di > 7",
         },
         {
           left: ["di"],
@@ -2689,69 +3029,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["3"],
-          original: "di > 3",
-        },
-        {
-          left: ["g"],
-          right: ["di"],
-          original: "g > di",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["9"],
-          original: "di > 9",
-        },
-        {
-          left: ["g"],
-          right: ["di"],
-          original: "g > di",
-        },
-        {
-          left: ["di"],
-          right: ["8"],
-          original: "di > 8",
-        },
-        {
-          left: ["g"],
-          right: ["di", "g"],
-          original: "g > di g",
-        },
-      ],
-      [
-        {
-          left: ["g"],
-          right: ["di"],
-          original: "g > di",
-        },
-        {
-          left: ["di"],
           right: ["1"],
           original: "di > 1",
-        },
-        {
-          left: ["g"],
-          right: ["di", "g"],
-          original: "g > di g",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["8"],
-          original: "di > 8",
-        },
-        {
-          left: ["di"],
-          right: ["7"],
-          original: "di > 7",
-        },
-        {
-          left: ["di"],
-          right: ["5"],
-          original: "di > 5",
         },
       ],
       [
@@ -2762,30 +3041,30 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["5"],
-          original: "di > 5",
+          right: ["4"],
+          original: "di > 4",
         },
         {
           left: ["di"],
-          right: ["4"],
-          original: "di > 4",
+          right: ["5"],
+          original: "di > 5",
         },
       ],
       [
         {
+          left: ["g"],
+          right: ["di", "g"],
+          original: "g > di g",
+        },
+        {
           left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          right: ["5"],
+          original: "di > 5",
         },
         {
           left: ["g"],
           right: ["di"],
           original: "g > di",
-        },
-        {
-          left: ["g"],
-          right: ["di", "g"],
-          original: "g > di g",
         },
       ],
       [
@@ -2796,13 +3075,13 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          right: ["1"],
+          original: "di > 1",
         },
         {
           left: ["di"],
-          right: ["1"],
-          original: "di > 1",
+          right: ["0"],
+          original: "di > 0",
         },
       ],
       [
@@ -2813,32 +3092,225 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["di"],
-          right: ["7"],
-          original: "di > 7",
+          right: ["3"],
+          original: "di > 3",
         },
         {
           left: ["di"],
-          right: ["3"],
-          original: "di > 3",
+          right: ["7"],
+          original: "di > 7",
+        },
+      ],
+    ],
+    "Expressions Unary": [
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+          original: "ue > uo ue",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+          original: "uo > -",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
+        {
+          left: ["uo"],
+          right: ["!"],
+          original: "uo > !",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["uo"],
+          right: ["+"],
+          original: "uo > +",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+      ],
+      [
+        {
+          left: ["uo"],
+          right: ["typeof"],
+          original: "uo > typeof",
+        },
+        {
+          left: ["li"],
+          right: ["null"],
+          original: "li > null",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+          original: "uo > -",
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+          original: "ue > uo ue",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+          original: "ue > uo ue",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ex"],
+          right: ["ue"],
+          original: "ex > ue",
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+          original: "uo > -",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
         },
       ],
     ],
     Integers: [
       [
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
-        {
           left: ["in"],
           right: ["di"],
           original: "in > di",
         },
         {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
       ],
       [
@@ -2861,21 +3333,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["pi"],
-          right: ["1"],
-          original: "pi > 1",
-        },
-        {
-          left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
           right: ["3"],
           original: "pi > 3",
         },
@@ -2884,8 +3341,28 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["di"],
           original: "ig > di",
         },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
       ],
       [
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
         {
           left: ["pi"],
           right: ["7"],
@@ -2901,17 +3378,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["pi"],
           original: "di > pi",
         },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
+        },
         {
           left: ["in"],
           right: ["pi", "ig"],
           original: "in > pi ig",
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
         },
         {
           left: ["di"],
@@ -2919,17 +3396,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > 0",
         },
         {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+      ],
+      [
+        {
           left: ["in"],
           right: ["pi", "ig"],
           original: "in > pi ig",
         },
-        {
-          left: ["pi"],
-          right: ["4"],
-          original: "pi > 4",
-        },
-      ],
-      [
         {
           left: ["ig"],
           right: ["di", "ig"],
@@ -2940,13 +3417,13 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["di"],
           original: "ig > di",
         },
-        {
-          left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
-        },
       ],
       [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
         {
           left: ["pi"],
           right: ["6"],
@@ -2957,18 +3434,8 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["9"],
           original: "pi > 9",
         },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
       ],
       [
-        {
-          left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
-        },
         {
           left: ["ig"],
           right: ["di", "ig"],
@@ -2979,12 +3446,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["di"],
           original: "ig > di",
         },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
       ],
       [
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
         },
         {
           left: ["pi"],
@@ -2992,17 +3464,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pi > 6",
         },
         {
-          left: ["pi"],
-          right: ["5"],
-          original: "pi > 5",
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
       ],
       [
-        {
-          left: ["pi"],
-          right: ["8"],
-          original: "pi > 8",
-        },
         {
           left: ["di"],
           right: ["pi"],
@@ -3013,208 +3480,15 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["7"],
           original: "pi > 7",
         },
-      ],
-    ],
-    "Expressions Unary": [
-      [
         {
-          left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["uo"],
-          right: ["-"],
-          original: "uo > -",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-        {
-          left: ["uo"],
-          right: ["!"],
-          original: "uo > !",
-        },
-      ],
-      [
-        {
-          left: ["uo"],
-          right: ["+"],
-          original: "uo > +",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["door"],
-          original: "id > door",
-        },
-        {
-          left: ["uo"],
-          right: ["typeof"],
-          original: "uo > typeof",
-        },
-        {
-          left: ["li"],
-          right: ["null"],
-          original: "li > null",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
-        {
-          left: ["uo"],
-          right: ["-"],
-          original: "uo > -",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
-        {
-          left: ["uo"],
-          right: ["-"],
-          original: "uo > -",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ex"],
-          right: ["ue"],
-          original: "ex > ue",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["pi"],
+          right: ["8"],
+          original: "pi > 8",
         },
       ],
     ],
     "Identifiers Simple": [
       [
-        {
-          left: ["idf"],
-          right: ["t"],
-          original: "idf > t",
-        },
         {
           left: ["id"],
           right: ["idf"],
@@ -3225,8 +3499,18 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["_"],
           original: "idf > _",
         },
+        {
+          left: ["idf"],
+          right: ["h"],
+          original: "idf > h",
+        },
       ],
       [
+        {
+          left: ["id"],
+          right: ["idf"],
+          original: "id > idf",
+        },
         {
           left: ["idg"],
           right: ["ida"],
@@ -3237,22 +3521,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["idf", "idg"],
           original: "id > idf idg",
         },
+      ],
+      [
         {
           left: ["idf"],
           right: ["$"],
           original: "idf > $",
         },
-      ],
-      [
         {
           left: ["di"],
           right: ["1"],
           original: "di > 1",
-        },
-        {
-          left: ["idf"],
-          right: ["$"],
-          original: "idf > $",
         },
         {
           left: ["ida"],
@@ -3267,9 +3546,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idf > t",
         },
         {
-          left: ["ida"],
-          right: ["di"],
-          original: "ida > di",
+          left: ["idg"],
+          right: ["ida"],
+          original: "idg > ida",
         },
         {
           left: ["di"],
@@ -3277,21 +3556,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "di > 3",
         },
         {
-          left: ["idg"],
-          right: ["ida"],
-          original: "idg > ida",
-        },
-        {
           left: ["id"],
           right: ["idf", "idg"],
           original: "id > idf idg",
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
         },
       ],
       [
         {
           left: ["idg"],
-          right: ["ida"],
-          original: "idg > ida",
+          right: ["ida", "idg"],
+          original: "idg > ida idg",
         },
         {
           left: ["id"],
@@ -3300,8 +3579,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idg"],
-          right: ["ida", "idg"],
-          original: "idg > ida idg",
+          right: ["ida"],
+          original: "idg > ida",
         },
       ],
       [
@@ -3316,21 +3595,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idf > v",
         },
         {
-          left: ["idf"],
-          right: ["l"],
-          original: "idf > l",
-        },
-        {
           left: ["ida"],
           right: ["idf"],
           original: "ida > idf",
         },
+        {
+          left: ["idf"],
+          right: ["l"],
+          original: "idf > l",
+        },
       ],
       [
         {
-          left: ["id"],
-          right: ["idf", "idg"],
-          original: "id > idf idg",
+          left: ["idg"],
+          right: ["ida", "idg"],
+          original: "idg > ida idg",
         },
         {
           left: ["idg"],
@@ -3338,21 +3617,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idg > ida",
         },
         {
-          left: ["idg"],
-          right: ["ida", "idg"],
-          original: "idg > ida idg",
+          left: ["id"],
+          right: ["idf", "idg"],
+          original: "id > idf idg",
         },
       ],
       [
         {
           left: ["idf"],
-          right: ["B"],
-          original: "idf > B",
+          right: ["$"],
+          original: "idf > $",
         },
         {
           left: ["idf"],
-          right: ["v"],
-          original: "idf > v",
+          right: ["t"],
+          original: "idf > t",
         },
         {
           left: ["ida"],
@@ -3361,6 +3640,11 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
       [
+        {
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
+        },
         {
           left: ["idf"],
           right: ["B"],
@@ -3371,22 +3655,17 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["A"],
           original: "idf > A",
         },
-        {
-          left: ["id"],
-          right: ["idf"],
-          original: "id > idf",
-        },
       ],
       [
-        {
-          left: ["idg"],
-          right: ["ida"],
-          original: "idg > ida",
-        },
         {
           left: ["ida"],
           right: ["idf"],
           original: "ida > idf",
+        },
+        {
+          left: ["di"],
+          right: ["1"],
+          original: "di > 1",
         },
         {
           left: ["ida"],
@@ -3395,11 +3674,6 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
       ],
       [
-        {
-          left: ["idf"],
-          right: ["$"],
-          original: "idf > $",
-        },
         {
           left: ["idf"],
           right: ["h"],
@@ -3411,257 +3685,23 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idf > J",
         },
         {
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
+        },
+        {
           left: ["di"],
           right: ["0"],
           original: "di > 0",
-        },
-      ],
-    ],
-    "Expressions Multiplicative": [
-      [
-        {
-          left: ["mue"],
-          right: ["mue", "mo", "ue"],
-          original: "mue > mue mo ue",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["mo"],
-          right: ["/"],
-          original: "mo > /",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["mo"],
-          right: ["*"],
-          original: "mo > *",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["add"],
-          original: "id > add",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
-        },
-        {
-          left: ["mue"],
-          right: ["mue", "mo", "ue"],
-          original: "mue > mue mo ue",
-        },
-        {
-          left: ["ex"],
-          right: ["mue"],
-          original: "ex > mue",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["id"],
-          right: ["love"],
-          original: "id > love",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-      ],
-      [
-        {
-          left: ["mo"],
-          right: ["*"],
-          original: "mo > *",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["mo"],
-          right: ["/"],
-          original: "mo > /",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
         },
       ],
     ],
     Decimals: [
       [
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          left: ["de"],
+          right: ["in", "."],
+          original: "de > in .",
         },
         {
           left: ["in"],
@@ -3669,9 +3709,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "in > di",
         },
         {
-          left: ["de"],
-          right: ["in", "."],
-          original: "de > in .",
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
         },
       ],
       [
@@ -3679,11 +3719,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["pi"],
           right: ["5"],
           original: "pi > 5",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
         },
         {
           left: ["di"],
@@ -3695,6 +3730,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: [".", "ig"],
           original: "de > . ig",
         },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
       ],
       [
         {
@@ -3703,9 +3743,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "de > in .",
         },
         {
-          left: ["pi"],
-          right: ["2"],
-          original: "pi > 2",
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["in"],
@@ -3713,9 +3753,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "in > di",
         },
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
+          left: ["pi"],
+          right: ["2"],
+          original: "pi > 2",
         },
       ],
       [
@@ -3725,9 +3765,531 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ig > di ig",
         },
         {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
           left: ["de"],
           right: ["in", ".", "ig"],
           original: "de > in . ig",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+          original: "de > in . ig",
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["9"],
+          original: "pi > 9",
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+          original: "pi > 7",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["8"],
+          original: "pi > 8",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+          original: "pi > 7",
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+          original: "pi > 6",
+        },
+      ],
+    ],
+    "Expressions Multiplicative": [
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mue"],
+          right: ["mue", "mo", "ue"],
+          original: "mue > mue mo ue",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["mo"],
+          right: ["/"],
+          original: "mo > /",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["mo"],
+          right: ["*"],
+          original: "mo > *",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["id"],
+          right: ["love"],
+          original: "id > love",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["mue", "mo", "ue"],
+          original: "mue > mue mo ue",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["ex"],
+          right: ["mue"],
+          original: "ex > mue",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["mo"],
+          right: ["*"],
+          original: "mo > *",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+        {
+          left: ["mo"],
+          right: ["/"],
+          original: "mo > /",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+      ],
+    ],
+    "Scientific Notation Numbers": [
+      [
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+          original: "de > in .",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+          original: "ex > ig",
+        },
+        {
+          left: ["eE"],
+          right: ["e"],
+          original: "eE > e",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+      ],
+      [
+        {
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
+        },
+        {
+          left: ["ex"],
+          right: ["+", "ig"],
+          original: "ex > + ig",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+          original: "de > in .",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["2"],
+          original: "pi > 2",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
+        },
+        {
+          left: ["pi"],
+          right: ["9"],
+          original: "pi > 9",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: [".", "ig"],
+          original: "de > . ig",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["eE"],
+          right: ["e"],
+          original: "eE > e",
+        },
+        {
+          left: ["ex"],
+          right: ["-", "ig"],
+          original: "ex > - ig",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
         },
         {
           left: ["ig"],
@@ -3738,8 +4300,79 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["pi"],
-          right: ["3"],
-          original: "pi > 3",
+          right: ["8"],
+          original: "pi > 8",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["ig"],
+          original: "ex > ig",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+          original: "de > in . ig",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
         },
         {
           left: ["pi"],
@@ -3753,348 +4386,34 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
           right: ["4"],
           original: "pi > 4",
         },
-      ],
-      [
         {
-          left: ["pi"],
-          right: ["7"],
-          original: "pi > 7",
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["in"],
-          right: ["pi", "ig"],
-          original: "in > pi ig",
-        },
-        {
-          left: ["de"],
-          right: ["in", ".", "ig"],
-          original: "de > in . ig",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["ig"],
           right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["7"],
-          original: "pi > 7",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
-          right: ["9"],
-          original: "pi > 9",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["5"],
-          original: "pi > 5",
-        },
-        {
-          left: ["pi"],
-          right: ["8"],
-          original: "pi > 8",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["6"],
-          original: "pi > 6",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
-          right: ["7"],
-          original: "pi > 7",
-        },
-      ],
-    ],
-    "Expressions Logical": [
-      [
-        {
-          left: ["le"],
-          right: ["le", "lo", "ee"],
-          original: "le > le lo ee",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-      ],
-      [
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["le"],
-          right: ["le", "lo", "ee"],
-          original: "le > le lo ee",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["le"],
-          right: ["le", "lo", "ee"],
-          original: "le > le lo ee",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["lo"],
-          right: ["&&"],
-          original: "lo > &&",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
-        {
-          left: ["lo"],
-          right: ["||"],
-          original: "lo > ||",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["lo"],
-          right: ["&&"],
-          original: "lo > &&",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
-        {
-          left: ["ex"],
-          right: ["le"],
-          original: "ex > le",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["lo"],
-          right: ["||"],
-          original: "lo > ||",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-        {
-          left: ["le"],
-          right: ["le", "lo", "ee"],
-          original: "le > le lo ee",
-        },
-      ],
-      [
-        {
-          left: ["ee"],
-          right: ["ee", "===", "re"],
-          original: "ee > ee === re",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
+          original: "in > di",
         },
       ],
     ],
     "Function Declarations": [
       [
         {
-          left: ["bs"],
-          right: ["{", "}"],
-          original: "bs > { }",
+          left: ["fdm"],
+          right: [")"],
+          original: "fdm > )",
         },
         {
           left: ["fd"],
@@ -4107,26 +4426,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > empty",
         },
         {
-          left: ["fdm"],
-          right: [")"],
-          original: "fdm > )",
+          left: ["bs"],
+          right: ["{", "}"],
+          original: "bs > { }",
         },
       ],
       [
         {
-          left: ["fd"],
-          right: ["function", "id", "(", "fdm", "bs"],
-          original: "fd > function id ( fdm bs",
-        },
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
-        },
-        {
-          left: ["fdm"],
-          right: [")"],
-          original: "fdm > )",
+          left: ["id"],
+          right: ["tautology"],
+          original: "id > tautology",
         },
         {
           left: ["ex"],
@@ -4134,22 +4443,37 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ex > true",
         },
         {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
+          left: ["fdm"],
+          right: [")"],
+          original: "fdm > )",
         },
         {
-          left: ["id"],
-          right: ["tautology"],
-          original: "id > tautology",
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
         },
         {
           left: ["sm"],
           right: ["return", "ex", ";"],
           original: "sm > return ex ;",
         },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["fd"],
+          right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
+        },
       ],
       [
+        {
+          left: ["fdm"],
+          right: ["fpg", ")"],
+          original: "fdm > fpg )",
+        },
         {
           left: ["fd"],
           right: ["function", "id", "(", "fdm", "bs"],
@@ -4159,11 +4483,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["fpg"],
           right: ["id"],
           original: "fpg > id",
-        },
-        {
-          left: ["fdm"],
-          right: ["fpg", ")"],
-          original: "fdm > fpg )",
         },
       ],
       [
@@ -4202,9 +4521,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-          original: "bs > { smg }",
+          left: ["fd"],
+          right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
         },
         {
           left: ["fdm"],
@@ -4212,22 +4531,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "fdm > fpg )",
         },
         {
-          left: ["fd"],
-          right: ["function", "id", "(", "fdm", "bs"],
-          original: "fd > function id ( fdm bs",
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
         },
       ],
       [
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["fpg"],
-          right: ["id"],
-          original: "fpg > id",
-        },
         {
           left: ["id"],
           right: ["y"],
@@ -4235,20 +4544,30 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["fpg"],
+          right: ["id"],
+          original: "fpg > id",
+        },
+        {
+          left: ["fpg"],
           right: ["fpg", ",", "id"],
           original: "fpg > fpg , id",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
         },
       ],
       [
         {
-          left: ["ex"],
-          right: ["x", "+", "y"],
-          original: "ex > x + y",
-        },
-        {
           left: ["sm"],
           right: ["return", "ex", ";"],
           original: "sm > return ex ;",
+        },
+        {
+          left: ["ex"],
+          right: ["x", "+", "y"],
+          original: "ex > x + y",
         },
         {
           left: ["smg"],
@@ -4263,11 +4582,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["smg"],
-          right: ["sm"],
-          original: "smg > sm",
-        },
-        {
           left: ["sm"],
           right: ["return", "ex", ";"],
           original: "sm > return ex ;",
@@ -4276,6 +4590,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["sm"],
           right: ["vs"],
           original: "sm > vs",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
         },
         {
           left: ["smg"],
@@ -4307,16 +4626,6 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["ex"],
-          right: ["sum", "/", "2"],
-          original: "ex > sum / 2",
-        },
-        {
-          left: ["ex"],
-          right: ["add", "(", "x", ",", "y", ")"],
-          original: "ex > add ( x , y )",
-        },
-        {
           left: ["id"],
           right: ["average"],
           original: "id > average",
@@ -4326,36 +4635,107 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["sum"],
           original: "id > sum",
         },
+        {
+          left: ["ex"],
+          right: ["sum", "/", "2"],
+          original: "ex > sum / 2",
+        },
+        {
+          left: ["ex"],
+          right: ["add", "(", "x", ",", "y", ")"],
+          original: "ex > add ( x , y )",
+        },
       ],
     ],
-    "Expressions Primary": [
+    "Expressions Logical": [
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["le"],
+          right: ["le", "lo", "ee"],
+          original: "le > le lo ee",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
       [
         {
           left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
+          right: ["li"],
+          original: "pe > li",
         },
         {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
           left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
         },
         {
           left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
+          right: ["bo"],
+          original: "li > bo",
         },
         {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
+          left: ["lo"],
+          right: ["&&"],
+          original: "lo > &&",
         },
         {
           left: ["bo"],
@@ -4370,6 +4750,11 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > li",
         },
         {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
+        {
           left: ["li"],
           right: ["bo"],
           original: "li > bo",
@@ -4378,6 +4763,65 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["bo"],
           right: ["true"],
           original: "bo > true",
+        },
+        {
+          left: ["lo"],
+          right: ["||"],
+          original: "lo > ||",
+        },
+      ],
+      [
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["ex"],
+          right: ["le"],
+          original: "ex > le",
+        },
+        {
+          left: ["lo"],
+          right: ["&&"],
+          original: "lo > &&",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
+      ],
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["le"],
+          right: ["le", "lo", "ee"],
+          original: "le > le lo ee",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
+        {
+          left: ["lo"],
+          right: ["||"],
+          original: "lo > ||",
         },
       ],
       [
@@ -4387,9 +4831,60 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "bo > false",
         },
         {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
           left: ["pe"],
           right: ["li"],
           original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
         },
         {
           left: ["li"],
@@ -4397,1205 +4892,42 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > bo",
         },
       ],
-      [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["st"],
-          right: ['"luv"'],
-          original: 'st > "luv"',
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["null"],
-          original: "li > null",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["ex"],
-          right: ["pe"],
-          original: "ex > pe",
-        },
-        {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["ex"],
-          right: ["pe"],
-          original: "ex > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["ex"],
-          right: ["pe"],
-          original: "ex > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["ex"],
-          right: ["pe"],
-          original: "ex > pe",
-        },
-      ],
-    ],
-    "Expressions Member And Access": [
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["prop"],
-          original: "id > prop",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-      ],
-      [
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["ex"],
-          right: ["mae"],
-          original: "ex > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["human"],
-          original: "id > human",
-        },
-        {
-          left: ["id"],
-          right: ["last"],
-          original: "id > last",
-        },
-        {
-          left: ["id"],
-          right: ["name"],
-          original: "id > name",
-        },
-      ],
-      [
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["human"],
-          original: "id > human",
-        },
-        {
-          left: ["id"],
-          right: ["birthdate"],
-          original: "id > birthdate",
-        },
-        {
-          left: ["id"],
-          right: ["year"],
-          original: "id > year",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-        {
-          left: ["ex"],
-          right: ["mae"],
-          original: "ex > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["li"],
-          right: ["st"],
-          original: "li > st",
-        },
-        {
-          left: ["st"],
-          right: ['"luv"'],
-          original: 'st > "luv"',
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ex"],
-          right: ["mae"],
-          original: "ex > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["ex"],
-          right: ["mae"],
-          original: "ex > mae",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-    ],
-    "Expressions Equality": [
-      [
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["ee"],
-          right: ["ee", "===", "re"],
-          original: "ee > ee === re",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["love"],
-          original: "id > love",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["ro"],
-          right: [">"],
-          original: "ro > >>",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
-        {
-          left: ["ex"],
-          right: ["ee"],
-          original: "ex > ee",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["uo", "ue"],
-          original: "ue > uo ue",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-        {
-          left: ["id"],
-          right: ["add"],
-          original: "id > add",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", "ag", ")"],
-          original: "ce > ce ( ag )",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-      ],
-      [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-    ],
-    "Expressions Assignment": [
-      [
-        {
-          left: ["ase"],
-          right: ["lh", "=", "ase"],
-          original: "ase > lh = ase",
-        },
-        {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["lh"],
-          right: ["id"],
-          original: "lh > id",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-      ],
-      [
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-      ],
-      [
-        {
-          left: ["lh"],
-          right: ["mle"],
-          original: "lh > mle",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["ase"],
-          right: ["lh", "=", "ase"],
-          original: "ase > lh = ase",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-      ],
-      [
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-      [
-        {
-          left: ["mle"],
-          right: ["mae", "[", "ex", "]"],
-          original: "mle > mae [ ex ]",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-        {
-          left: ["ex"],
-          right: ["ase"],
-          original: "ex > ase",
-        },
-        {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
-        },
-      ],
-      [
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-      ],
-      [
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["id"],
-          right: ["list"],
-          original: "id > list",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["mo"],
-          right: ["/"],
-          original: "mo > /",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["z"],
-          original: "id > z",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["id"],
-          right: ["z"],
-          original: "id > z",
-        },
-        {
-          left: ["in"],
-          right: ["0"],
-          original: "in > 0",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["double"],
-          original: "id > double",
-        },
-        {
-          left: ["ase"],
-          right: ["lh", "=", "ase"],
-          original: "ase > lh = ase",
-        },
-        {
-          left: ["lh"],
-          right: ["id"],
-          original: "lh > id",
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["id"],
-          right: ["all"],
-          original: "id > all",
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-          original: "id > x",
-        },
-      ],
-      [
-        {
-          left: ["ee"],
-          right: ["re"],
-          original: "ee > re",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-        {
-          left: ["le"],
-          right: ["ee"],
-          original: "le > ee",
-        },
-        {
-          left: ["ase"],
-          right: ["le"],
-          original: "ase > le",
-        },
-      ],
-      [
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["0"],
-          original: "in > 0",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
     ],
     "Strings Simple": [
+      [
+        {
+          left: ["stg"],
+          right: ["ida"],
+          original: "stg > ida",
+        },
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+          original: 'st > " stg "',
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["idf"],
+          right: ["_"],
+          original: "idf > _",
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
+        },
+      ],
       [
         {
           left: ["st"],
@@ -5603,14 +4935,114 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: 'st > " stg "',
         },
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          left: ["stg"],
+          right: ["ida", "stg"],
+          original: "stg > ida stg",
         },
         {
           left: ["stg"],
           right: ["ida"],
           original: "stg > ida",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["1"],
+          original: "di > 1",
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["t"],
+          original: "idf > t",
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+          original: "di > 3",
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
+        },
+      ],
+      [
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+          original: 'st > " stg "',
+        },
+        {
+          left: ["stg"],
+          right: ["ida"],
+          original: "stg > ida",
+        },
+        {
+          left: ["stg"],
+          right: ["ida", "stg"],
+          original: "stg > ida stg",
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
+        },
+        {
+          left: ["idf"],
+          right: ["v"],
+          original: "idf > v",
+        },
+        {
+          left: ["idf"],
+          right: ["u"],
+          original: "idf > u",
+        },
+        {
+          left: ["idf"],
+          right: ["l"],
+          original: "idf > l",
+        },
+      ],
+      [
+        {
+          left: ["stg"],
+          right: ["ida", "stg"],
+          original: "stg > ida stg",
+        },
+        {
+          left: ["stg"],
+          right: ["ida"],
+          original: "stg > ida",
+        },
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+          original: 'st > " stg "',
         },
       ],
       [
@@ -5626,142 +5058,8 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["l"],
-          original: "idf > l",
-        },
-      ],
-      [
-        {
-          left: ["st"],
-          right: ['"', "stg", '"'],
-          original: 'st > " stg "',
-        },
-        {
-          left: ["stg"],
-          right: ["ida"],
-          original: "stg > ida",
-        },
-        {
-          left: ["stg"],
-          right: ["ida", "stg"],
-          original: "stg > ida stg",
-        },
-      ],
-      [
-        {
-          left: ["ida"],
-          right: ["di"],
-          original: "ida > di",
-        },
-        {
-          left: ["di"],
-          right: ["1"],
-          original: "di > 1",
-        },
-        {
-          left: ["idf"],
           right: ["$"],
           original: "idf > $",
-        },
-        {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
-        },
-      ],
-      [
-        {
-          left: ["ida"],
-          right: ["di"],
-          original: "ida > di",
-        },
-        {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
-        },
-        {
-          left: ["idf"],
-          right: ["t"],
-          original: "idf > t",
-        },
-        {
-          left: ["di"],
-          right: ["3"],
-          original: "di > 3",
-        },
-      ],
-      [
-        {
-          left: ["idf"],
-          right: ["v"],
-          original: "idf > v",
-        },
-        {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
-        },
-        {
-          left: ["idf"],
-          right: ["l"],
-          original: "idf > l",
-        },
-        {
-          left: ["idf"],
-          right: ["u"],
-          original: "idf > u",
-        },
-      ],
-      [
-        {
-          left: ["stg"],
-          right: ["ida", "stg"],
-          original: "stg > ida stg",
-        },
-        {
-          left: ["st"],
-          right: ['"', "stg", '"'],
-          original: 'st > " stg "',
-        },
-        {
-          left: ["stg"],
-          right: ["ida"],
-          original: "stg > ida",
-        },
-      ],
-      [
-        {
-          left: ["stg"],
-          right: ["ida"],
-          original: "stg > ida",
-        },
-        {
-          left: ["stg"],
-          right: ["ida", "stg"],
-          original: "stg > ida stg",
-        },
-        {
-          left: ["st"],
-          right: ['"', "stg", '"'],
-          original: 'st > " stg "',
-        },
-      ],
-      [
-        {
-          left: ["idf"],
-          right: ["A"],
-          original: "idf > A",
-        },
-        {
-          left: ["ida"],
-          right: ["idf"],
-          original: "ida > idf",
-        },
-        {
-          left: ["idf"],
-          right: ["l"],
-          original: "idf > l",
         },
       ],
       [
@@ -5771,14 +5069,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "idf > B",
         },
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
-        {
           left: ["idf"],
           right: ["A"],
           original: "idf > A",
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+          original: "idf > t",
         },
       ],
       [
@@ -5794,20 +5092,20 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["A"],
-          original: "idf > A",
+          right: ["J"],
+          original: "idf > J",
         },
       ],
       [
         {
+          left: ["idf"],
+          right: ["J"],
+          original: "idf > J",
+        },
+        {
           left: ["di"],
           right: ["0"],
           original: "di > 0",
-        },
-        {
-          left: ["idf"],
-          right: ["h"],
-          original: "idf > h",
         },
         {
           left: ["idf"],
@@ -5816,426 +5114,571 @@ export function app_replace_rule_sets_fns_rules_used() {
         },
         {
           left: ["idf"],
-          right: ["J"],
-          original: "idf > J",
+          right: ["h"],
+          original: "idf > h",
         },
       ],
     ],
-    "Scientific Notation Numbers": [
+    "Expressions Primary": [
       [
         {
-          left: ["eE"],
-          right: ["e"],
-          original: "eE > e",
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
         {
           left: ["de"],
-          right: ["in", "."],
-          original: "de > in .",
+          right: ["3.14"],
+          original: "de > 3.14",
         },
         {
-          left: ["ex"],
-          right: ["ig"],
-          original: "ex > ig",
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
-          left: ["sn"],
-          right: ["de", "se"],
-          original: "sn > de se",
+          left: ["st"],
+          right: ['"luv"'],
+          original: 'st > "luv"',
         },
         {
-          left: ["se"],
-          right: ["eE", "ex"],
-          original: "se > eE ex",
+          left: ["li"],
+          right: ["st"],
+          original: "li > st",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["null"],
+          original: "li > null",
         },
         {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
       ],
       [
         {
           left: ["in"],
-          right: ["di"],
-          original: "in > di",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
           right: ["1"],
-          original: "pi > 1",
+          original: "in > 1",
         },
         {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
       ],
       [
         {
-          left: ["eE"],
-          right: ["E"],
-          original: "eE > E",
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
         },
         {
-          left: ["se"],
-          right: ["eE", "ex"],
-          original: "se > eE ex",
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
         },
         {
-          left: ["de"],
-          right: ["in", "."],
-          original: "de > in .",
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
+      ],
+      [
         {
-          left: ["sn"],
-          right: ["de", "se"],
-          original: "sn > de se",
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
         {
           left: ["ex"],
-          right: ["+", "ig"],
-          original: "ex > + ig",
+          right: ["pe"],
+          original: "ex > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
         },
       ],
       [
         {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
         {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
         },
         {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
         },
         {
-          left: ["pi"],
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
+        },
+      ],
+    ],
+    "Expressions Member And Access": [
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["id"],
+          right: ["prop"],
+          original: "id > prop",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["mae"],
+          original: "ex > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["last"],
+          original: "id > last",
+        },
+        {
+          left: ["id"],
+          right: ["human"],
+          original: "id > human",
+        },
+        {
+          left: ["id"],
+          right: ["name"],
+          original: "id > name",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["year"],
+          original: "id > year",
+        },
+        {
+          left: ["id"],
+          right: ["human"],
+          original: "id > human",
+        },
+        {
+          left: ["id"],
+          right: ["birthdate"],
+          original: "id > birthdate",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ex"],
+          right: ["mae"],
+          original: "ex > mae",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["st"],
+          original: "li > st",
+        },
+        {
+          left: ["st"],
+          right: ['"luv"'],
+          original: 'st > "luv"',
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["mae"],
+          original: "ex > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["mae"],
+          original: "ex > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["in"],
           right: ["2"],
-          original: "pi > 2",
+          original: "in > 2",
         },
         {
-          left: ["in"],
-          right: ["di"],
-          original: "in > di",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["3"],
-          original: "pi > 3",
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
         {
-          left: ["pi"],
-          right: ["9"],
-          original: "pi > 9",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["se"],
-          right: ["eE", "ex"],
-          original: "se > eE ex",
-        },
-        {
-          left: ["ex"],
-          right: ["-", "ig"],
-          original: "ex > - ig",
-        },
-        {
-          left: ["sn"],
-          right: ["de", "se"],
-          original: "sn > de se",
-        },
-        {
-          left: ["eE"],
-          right: ["e"],
-          original: "eE > e",
-        },
-        {
-          left: ["de"],
-          right: [".", "ig"],
-          original: "de > . ig",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["4"],
-          original: "pi > 4",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["5"],
-          original: "pi > 5",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
-          right: ["8"],
-          original: "pi > 8",
-        },
-        {
-          left: ["pi"],
-          right: ["1"],
-          original: "pi > 1",
-        },
-      ],
-      [
-        {
-          left: ["eE"],
-          right: ["E"],
-          original: "eE > E",
-        },
-        {
-          left: ["ex"],
-          right: ["ig"],
-          original: "ex > ig",
-        },
-        {
-          left: ["de"],
-          right: ["in", ".", "ig"],
-          original: "de > in . ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["sn"],
-          right: ["de", "se"],
-          original: "sn > de se",
-        },
-        {
-          left: ["se"],
-          right: ["eE", "ex"],
-          original: "se > eE ex",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["1"],
-          original: "pi > 1",
-        },
-        {
-          left: ["pi"],
-          right: ["3"],
-          original: "pi > 3",
-        },
-        {
-          left: ["in"],
-          right: ["di"],
-          original: "in > di",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-        {
-          left: ["pi"],
-          right: ["4"],
-          original: "pi > 4",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["eE"],
-          right: ["e"],
-          original: "eE > e",
-        },
-        {
-          left: ["ex"],
-          right: ["ig"],
-          original: "ex > ig",
-        },
-        {
-          left: ["sn"],
-          right: ["ig", "se"],
-          original: "sn > ig se",
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-        {
-          left: ["se"],
-          right: ["eE", "ex"],
-          original: "se > eE ex",
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-          original: "ig > di ig",
-        },
-        {
-          left: ["ex"],
-          right: ["-", "ig"],
-          original: "ex > - ig",
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-          original: "ig > di",
-        },
-      ],
-      [
-        {
-          left: ["eE"],
-          right: ["e"],
-          original: "eE > e",
-        },
-        {
-          left: ["pi"],
-          right: ["7"],
-          original: "pi > 7",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["6"],
-          original: "pi > 6",
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["pi"],
-          right: ["4"],
-          original: "pi > 4",
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["pi"],
-          original: "di > pi",
-        },
-        {
-          left: ["di"],
-          right: ["0"],
-          original: "di > 0",
-        },
-        {
-          left: ["pi"],
-          right: ["7"],
-          original: "pi > 7",
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
         },
       ],
     ],
-    "Expressions Relational": [
+    "Expressions Equality": [
       [
         {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ro"],
-          right: ["<"],
-          original: "ro > <",
-        },
-        {
-          left: ["re"],
-          right: ["re", "ro", "ade"],
-          original: "re > re ro ade",
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
         },
         {
           left: ["re"],
           right: ["ade"],
           original: "re > ade",
         },
+        {
+          left: ["ee"],
+          right: ["ee", "===", "re"],
+          original: "ee > ee === re",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
       ],
       [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
         {
           left: ["ce"],
           right: ["mae"],
@@ -6246,22 +5689,44 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["ce"],
           original: "ue > ce",
         },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
       ],
       [
         {
-          left: ["id"],
-          right: ["knock"],
-          original: "id > knock",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
+          left: ["ce"],
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
         },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
+        },
+        {
+          left: ["mo"],
+          right: ["*"],
+          original: "mo > *",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["st"],
+          original: "li > st",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
       ],
       [
@@ -6271,14 +5736,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ao > +",
         },
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
         },
         {
           left: ["li"],
-          right: ["null"],
-          original: "li > null",
+          right: ["nu"],
+          original: "li > nu",
         },
       ],
       [
@@ -6293,9 +5758,257 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "nu > in",
         },
         {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["ee"],
+          original: "ex > ee",
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["st"],
+          right: ['"luv"'],
+          original: 'st > "luv"',
+        },
+      ],
+      [
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+      ],
+      [
+        {
+          left: ["ag"],
+          right: ["ex", ",", "ag"],
+          original: "ag > ex , ag",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
+      ],
+      [
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["ao"],
+          right: ["+"],
+          original: "ao > +",
+        },
+        {
           left: ["in"],
           right: ["2"],
           original: "in > 2",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["ao"],
+          right: ["-"],
+          original: "ao > -",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+      ],
+    ],
+    "Expressions Relational": [
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["re"],
+          right: ["re", "ro", "ade"],
+          original: "re > re ro ade",
+        },
+        {
+          left: ["ro"],
+          right: ["<"],
+          original: "ro > <",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["bo"],
+          right: ["false"],
+          original: "bo > false",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
         },
       ],
       [
@@ -6327,14 +6040,14 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mue > ue",
         },
         {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
       ],
       [
@@ -6349,16 +6062,60 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
         },
       ],
       [
         {
           left: ["li"],
-          right: ["bo"],
-          original: "li > bo",
+          right: ["st"],
+          original: "li > st",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["pe"],
@@ -6366,9 +6123,9 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > ( ex )",
         },
         {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
       ],
       [
@@ -6377,45 +6134,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["1"],
           original: "in > 1",
         },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-      ],
-      [
         {
           left: ["ex"],
           right: ["re"],
@@ -6436,202 +6154,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["in"],
           original: "nu > in",
         },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
       ],
       [
         {
           left: ["mue"],
           right: ["ue"],
           original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["y"],
-          original: "id > y",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["ro"],
-          right: [">"],
-          original: "ro > >>",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["re"],
-          right: ["ade"],
-          original: "re > ade",
-        },
-      ],
-      [
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-      ],
-    ],
-    "Expressions Additive": [
-      [
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-      ],
-      [
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
         },
         {
           left: ["ao"],
@@ -6639,170 +6167,6 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "ao > +",
         },
         {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-          original: "pe > ( ex )",
-        },
-      ],
-      [
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
-        {
-          left: ["ex"],
-          right: ["ade"],
-          original: "ex > ade",
-        },
-        {
-          left: ["id"],
-          right: ["page"],
-          original: "id > page",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-      ],
-      [
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["mue"],
-          right: ["mue", "mo", "ue"],
-          original: "mue > mue mo ue",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
           left: ["ade"],
           right: ["mue"],
           original: "ade > mue",
@@ -6810,943 +6174,9 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
       [
         {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
           left: ["ue"],
           right: ["ce"],
           original: "ue > ce",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["ao"],
-          right: ["-"],
-          original: "ao > -",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mo"],
-          right: ["/"],
-          original: "mo > /",
-        },
-        {
-          left: ["li"],
-          right: ["null"],
-          original: "li > null",
-        },
-      ],
-      [
-        {
-          left: ["de"],
-          right: ["3.14"],
-          original: "de > 3.14",
-        },
-        {
-          left: ["nu"],
-          right: ["de"],
-          original: "nu > de",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["ade"],
-          original: "ex > ade",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", "ag", ")"],
-          original: "ce > ce ( ag )",
-        },
-        {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["mue"],
-          right: ["ue"],
-          original: "mue > ue",
-        },
-        {
-          left: ["ade"],
-          right: ["mue"],
-          original: "ade > mue",
-        },
-        {
-          left: ["ade"],
-          right: ["ade", "ao", "mue"],
-          original: "ade > ade ao mue",
-        },
-      ],
-      [
-        {
-          left: ["ue"],
-          right: ["ce"],
-          original: "ue > ce",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mo"],
-          right: ["*"],
-          original: "mo > *",
-        },
-      ],
-      [
-        {
-          left: ["uo"],
-          right: ["!"],
-          original: "uo > !",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["id"],
-          right: ["all"],
-          original: "id > all",
-        },
-      ],
-      [
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["uo"],
-          right: ["typeof"],
-          original: "uo > typeof",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["2"],
-          original: "in > 2",
-        },
-        {
-          left: ["id"],
-          right: ["double"],
-          original: "id > double",
-        },
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-          original: "nu > in",
-        },
-        {
-          left: ["ao"],
-          right: ["+"],
-          original: "ao > +",
-        },
-      ],
-    ],
-    "Unary To Binary Equations": [
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-      ],
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-      ],
-      [
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-          original: "d b > b d",
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-          original: "d e = > = d",
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-          original: "d c > a d",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-          original: "d + > + d",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-          original: "b a > b 1",
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-      ],
-      [
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
-          original: "c c > c + b c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-          original: "1 a > a 0",
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-          original: "e = b > c e = b c",
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-          original: "0 a > 1",
-        },
-      ],
-    ],
-    "Expressions Function Calls": [
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
         },
         {
           left: ["id"],
@@ -7754,102 +6184,21 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "id > fn",
         },
         {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["mle"],
-          right: ["mae", ".", "id"],
-          original: "mle > mae . id",
-        },
-        {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
         },
+      ],
+      [
         {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
         },
         {
           left: ["mae"],
           right: ["pe"],
           original: "mae > pe",
-        },
-      ],
-      [
-        {
-          left: ["ag"],
-          right: ["ex", ",", "ag"],
-          original: "ag > ex , ag",
-        },
-        {
-          left: ["id"],
-          right: ["refresh"],
-          original: "id > refresh",
-        },
-        {
-          left: ["id"],
-          right: ["page"],
-          original: "id > page",
-        },
-      ],
-      [
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
-        },
-        {
-          left: ["ce"],
-          right: ["ce", "(", "ag", ")"],
-          original: "ce > ce ( ag )",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
         },
         {
           left: ["pe"],
@@ -7869,92 +6218,16 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "li > bo",
         },
         {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+      ],
+      [
+        {
           left: ["nu"],
           right: ["de"],
           original: "nu > de",
-        },
-      ],
-      [
-        {
-          left: ["ag"],
-          right: ["ex"],
-          original: "ag > ex",
-        },
-        {
-          left: ["id"],
-          right: ["double"],
-          original: "id > double",
-        },
-        {
-          left: ["ag"],
-          right: ["ex", ",", "ag"],
-          original: "ag > ex , ag",
-        },
-      ],
-      [
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
-          original: "pe > li",
-        },
-        {
-          left: ["li"],
-          right: ["nu"],
-          original: "li > nu",
-        },
-        {
-          left: ["mae"],
-          right: ["pe"],
-          original: "mae > pe",
-        },
-        {
-          left: ["ce"],
-          right: ["mae"],
-          original: "ce > mae",
-        },
-      ],
-      [
-        {
-          left: ["in"],
-          right: ["1"],
-          original: "in > 1",
-        },
-        {
-          left: ["id"],
-          right: ["add"],
-          original: "id > add",
         },
         {
           left: ["nu"],
@@ -7966,8 +6239,79 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["2"],
           original: "in > 2",
         },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+      ],
+    ],
+    "Expressions Assignment": [
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["ase"],
+          right: ["lh", "=", "ase"],
+          original: "ase > lh = ase",
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
+        },
+        {
+          left: ["lh"],
+          right: ["id"],
+          original: "lh > id",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
       ],
       [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
         {
           left: ["ce"],
           right: ["mae"],
@@ -7978,10 +6322,71 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["pe"],
           original: "mae > pe",
         },
+      ],
+      [
         {
-          left: ["pe"],
-          right: ["id"],
-          original: "pe > id",
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["ase"],
+          right: ["lh", "=", "ase"],
+          original: "ase > lh = ase",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
+        {
+          left: ["lh"],
+          right: ["mle"],
+          original: "lh > mle",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
         {
           left: ["mle"],
@@ -7989,31 +6394,65 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mle > mae . id",
         },
         {
-          left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
-        },
-        {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
         },
       ],
       [
         {
           left: ["id"],
-          right: ["knock"],
-          original: "id > knock",
+          right: ["page"],
+          original: "id > page",
         },
         {
-          left: ["id"],
-          right: ["door"],
-          original: "id > door",
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
         },
         {
-          left: ["id"],
-          right: ["building"],
-          original: "id > building",
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
         },
       ],
       [
@@ -8023,15 +6462,258 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mle > mae [ ex ]",
         },
         {
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
+        },
+        {
+          left: ["ex"],
+          right: ["ase"],
+          original: "ex > ase",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
+      ],
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["z"],
+          original: "id > z",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["0"],
+          original: "in > 0",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+      ],
+      [
+        {
+          left: ["uo"],
+          right: ["typeof"],
+          original: "uo > typeof",
+        },
+        {
+          left: ["lh"],
+          right: ["id"],
+          original: "lh > id",
+        },
+        {
+          left: ["ase"],
+          right: ["lh", "=", "ase"],
+          original: "ase > lh = ase",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+        {
+          left: ["mo"],
+          right: ["/"],
+          original: "mo > /",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+      ],
+      [
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+          original: "ase > le",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+      ],
+      [
+        {
           left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
         },
         {
           left: ["mae"],
-          right: ["mle"],
-          original: "mae > mle",
+          right: ["pe"],
+          original: "mae > pe",
         },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["0"],
+          original: "in > 0",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+    ],
+    "Expressions Function Calls": [
+      [
         {
           left: ["mae"],
           right: ["pe"],
@@ -8043,17 +6725,198 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "pe > id",
         },
         {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["id"],
+          right: ["fn"],
+          original: "id > fn",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ce"],
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
+        },
+      ],
+      [
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["ce"],
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
       ],
       [
         {
           left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["id"],
+          right: ["page"],
+          original: "id > page",
+        },
+        {
+          left: ["id"],
+          right: ["refresh"],
+          original: "id > refresh",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["ce"],
+          right: ["ce", "(", "ag", ")"],
+          original: "ce > ce ( ag )",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
           right: ["li"],
           original: "pe > li",
         },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["ag"],
+          right: ["ex", ",", "ag"],
+          original: "ag > ex , ag",
+        },
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
         {
           left: ["ce"],
           right: ["mae"],
@@ -8073,6 +6936,141 @@ export function app_replace_rule_sets_fns_rules_used() {
           left: ["ex"],
           right: ["ce"],
           original: "ex > ce",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["id"],
+          right: ["add"],
+          original: "id > add",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+          original: "mle > mae . id",
+        },
+        {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["door"],
+          original: "id > door",
+        },
+        {
+          left: ["id"],
+          right: ["knock"],
+          original: "id > knock",
+        },
+        {
+          left: ["id"],
+          right: ["building"],
+          original: "id > building",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+          original: "mae > mle",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
       ],
       [
@@ -8100,6 +7098,16 @@ export function app_replace_rule_sets_fns_rules_used() {
       [
         {
           left: ["ce"],
+          right: ["ce", "(", ")"],
+          original: "ce > ce ( )",
+        },
+        {
+          left: ["ex"],
+          right: ["ce"],
+          original: "ex > ce",
+        },
+        {
+          left: ["ce"],
           right: ["mae"],
           original: "ce > mae",
         },
@@ -8109,27 +7117,12 @@ export function app_replace_rule_sets_fns_rules_used() {
           original: "mae > pe",
         },
         {
-          left: ["ce"],
-          right: ["ce", "(", ")"],
-          original: "ce > ce ( )",
-        },
-        {
           left: ["pe"],
           right: ["id"],
           original: "pe > id",
         },
-        {
-          left: ["ex"],
-          right: ["ce"],
-          original: "ex > ce",
-        },
       ],
       [
-        {
-          left: ["id"],
-          right: ["add"],
-          original: "id > add",
-        },
         {
           left: ["id"],
           right: ["all"],
@@ -8140,8 +7133,1193 @@ export function app_replace_rule_sets_fns_rules_used() {
           right: ["love"],
           original: "id > love",
         },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+      ],
+    ],
+    "Expressions Additive": [
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["-"],
+          original: "ao > -",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["ao"],
+          right: ["+"],
+          original: "ao > +",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["ex"],
+          right: ["ade"],
+          original: "ex > ade",
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+        {
+          left: ["ao"],
+          right: ["+"],
+          original: "ao > +",
+        },
+        {
+          left: ["ao"],
+          right: ["-"],
+          original: "ao > -",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["mue"],
+          right: ["mue", "mo", "ue"],
+          original: "mue > mue mo ue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["mue", "mo", "ue"],
+          original: "mue > mue mo ue",
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["-"],
+          original: "ao > -",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["mo"],
+          right: ["/"],
+          original: "mo > /",
+        },
+        {
+          left: ["in"],
+          right: ["0"],
+          original: "in > 0",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+      ],
+      [
+        {
+          left: ["ag"],
+          right: ["ex"],
+          original: "ag > ex",
+        },
+        {
+          left: ["ce"],
+          right: ["ce", "(", "ag", ")"],
+          original: "ce > ce ( ag )",
+        },
+        {
+          left: ["ex"],
+          right: ["ade"],
+          original: "ex > ade",
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+          original: "mue > ue",
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+      ],
+      [
+        {
+          left: ["uo"],
+          right: ["!"],
+          original: "uo > !",
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["id"],
+          right: ["page"],
+          original: "id > page",
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+          original: "ade > ade ao mue",
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+          original: "nu > de",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["de"],
+          right: ["3.14"],
+          original: "de > 3.14",
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["0"],
+          original: "in > 0",
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+          original: "mle > mae [ ex ]",
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["+"],
+          original: "ao > +",
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+          original: "nu > in",
+        },
+        {
+          left: ["id"],
+          right: ["double"],
+          original: "id > double",
+        },
+      ],
+    ],
+    "Unary To Binary Equations": [
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
       ],
     ],
   };
-  return r;
 }
