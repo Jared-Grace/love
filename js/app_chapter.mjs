@@ -94,19 +94,16 @@ export async function app_chapter(context) {
         html_display_grid(p);
         let columns = text_combine(app_shared_number_gutter(), " 1fr");
         html_style_set(p, "grid-template-columns", columns);
-        function open_bible(e) {
-          e.stopPropagation();
-          app_bible_open(chapter_code, verse_number_v);
-        }
-        let number = app_replace_button(p, verse_number_v, open_bible);
+        let number = app_replace_button(p, verse_number_v, noop);
         html_style_set(number, "justify-self", "end");
-        html_span_text(p, text_combine_multiple([" ", text]));
+        let text_cell = html_div(p);
+        app_bible_on_click_google_define(text_cell, text);
         html_margin_0(p);
         html_style_padding_y(p, app_shared_spaced_tiny_gap());
         html_style_padding_x(p, app_shared_spaced_tiny_gap());
         let r = app_chapter_toggle_update(
           updates,
-          p,
+          number,
           verse_numbers_chosen,
           verse_number_v,
           chapter_code,
