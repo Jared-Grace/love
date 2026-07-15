@@ -51,12 +51,15 @@ export function app_code_lesson_base(
           };
           return r;
         }
-        let quizzes = quizzes_get(question, answer);
+        let quizzes_exercises = quizzes_get(question, answer);
+        let quizzes = property_get(quizzes_exercises, "quizzes");
+        let exercises = property_get(quizzes_exercises, "exercises");
         let mapped = {
           question,
           answer,
           example,
           quizzes,
+          exercises,
         };
         return mapped;
       }
