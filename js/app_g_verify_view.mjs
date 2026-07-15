@@ -1,6 +1,7 @@
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { html_span_space } from "./html_span_space.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -20,7 +21,6 @@ import { app_shared_text_warning_color } from "./app_shared_text_warning_color.m
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
-import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export function app_g_verify_view(container, english, lines) {
   html_clear(container);
@@ -31,7 +31,6 @@ export function app_g_verify_view(container, english, lines) {
   let border = app_shared_container_blue_border_color();
   let serif = app_shared_font_serif();
   let small_gap = app_shared_spaced_small_gap();
-  let tiny_gap = app_shared_spaced_tiny_gap();
 
   let covered = {};
   lines.forEach(function (l) {
@@ -112,7 +111,6 @@ export function app_g_verify_view(container, english, lines) {
     let span = html_span_text(passage_panel, t);
     html_border_radius(span, app_shared_border_radius());
     html_style_set(span, "padding", "0 0.06em");
-    html_style_set(span, "margin-right", tiny_gap);
     html_style_set(span, "transition", "background-color .12s");
     if (!covered[i]) {
       html_style_set(
@@ -133,6 +131,7 @@ export function app_g_verify_view(container, english, lines) {
     });
     html_on(span, "mouseleave", clear_all);
     token_spans[i] = span;
+    html_span_space(passage_panel);
   });
 
   label_new("BY PASSAGE ORDER");
