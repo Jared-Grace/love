@@ -9,6 +9,7 @@ export function g_player_initialize(player_img, coordinates_land) {
   let names_men = bible_names_men();
   object_merge_set(player, {
     img: player_img,
+    direction: "south",
     prayer: {
       conversation: false,
       study: false,
