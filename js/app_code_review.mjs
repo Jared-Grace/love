@@ -27,7 +27,8 @@ import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
-import { app_shared_button_start_over_text } from "./app_shared_button_start_over_text.mjs";
+import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
+import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { not } from "./not.mjs";
 import { app_replace_success_message } from "./app_replace_success_message.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -96,9 +97,9 @@ export function app_code_review(context) {
   let skip_button = null;
   if (has_next) {
     let arrow = emoji_arrow_right();
-    let next_text = text_combine(
-      "Skip this review and go to the next lesson ",
+    let next_text = text_combine_middle_space_nb(
       arrow,
+      "Skip this review and go to the next lesson",
     );
     skip_button = app_replace_button_wide(g, next_text, go_next);
   }
@@ -106,7 +107,7 @@ export function app_code_review(context) {
     storage_local_remove_context(context, key);
     await app_shared_screen_set(context, app_code_review);
   }
-  let restart_text = app_shared_button_start_over_text();
+  let restart_text = app_shared_button_restart_text("Restart review");
   let restart_button = app_replace_button_wide(g, restart_text, go_restart);
   let home_text = app_replace_button_home_text();
   async function go_home() {
@@ -128,7 +129,10 @@ export function app_code_review(context) {
       app_code_review_complete(c);
       if (has_next) {
         let arrow = emoji_arrow_right();
-        let continue_text = text_combine("Continue to the next lesson ", arrow);
+        let continue_text = text_combine_middle_space_nb(
+          arrow,
+          "Continue to the next lesson",
+        );
         app_replace_button_wide(c, continue_text, go_next);
       }
       return;
