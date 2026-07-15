@@ -32,7 +32,6 @@ export function app_code_lesson_functions_console_log_less_than() {
     closing,
     preamble: null,
     explanation,
-    example_cases: [true, false],
   });
   return lesson;
 }

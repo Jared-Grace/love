@@ -90,8 +90,8 @@ export async function app_replace_rule_set(context) {
   let history_saved = property_get_or_null(g_saved, "history");
   let resumed = false;
   if (null_not_is(history_saved)) {
-    ("only resume history saved in the current {state, rule} shape; an older saved shape is ignored so a format change never crashes an existing player - the goal reopens unsolved and re-saves on the next solve");
-    resumed = property_exists(list_get(history_saved, 0), "state");
+    ("only resume history saved in the current {state, rule, index} shape; an older saved shape (no index) is ignored so a format change never crashes an existing player - the goal reopens unsolved and re-saves on the next solve");
+    resumed = property_exists(list_get(history_saved, 0), "index");
   }
   ("a goal solved in a past session resumes solved: start at the goal so success fires, and reuse the saved steps so the green proof survives a browser refresh");
   let start = ternary(resumed, end, property_get(start_end, "start"));
@@ -99,6 +99,7 @@ export async function app_replace_rule_set(context) {
     {
       state: start,
       rule: null,
+      index: null,
     },
   ]);
   let div_proof = null;
@@ -214,9 +215,11 @@ export async function app_replace_rule_set(context) {
         let last_state = property_get(list_last(history), "state");
         if (not(json_equal(start, last_state))) {
           let rule_used = list_get(rules_used, index_selected);
+          ("index is where the rule's left matched (the position passed to app_replace_rule_apply); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
           list_add(history, {
             state: start,
             rule: rule_used,
+            index,
           });
         }
         await refresh();
