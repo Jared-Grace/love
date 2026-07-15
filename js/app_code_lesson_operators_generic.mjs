@@ -6,7 +6,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { list_first } from "./list_first.mjs";
 import { equal_not } from "./equal_not.mjs";
-import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
+import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_operators_generic(
     ]);
     html_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
-  let name_id = app_code_lesson_name_id("operators", [math_name]);
+  let name_id = app_code_lesson_name_id_symbol("operators", [math_name], operator_js);
   let lesson = app_code_lesson_code_expression(batch, name_id, above);
   return lesson;
 }
