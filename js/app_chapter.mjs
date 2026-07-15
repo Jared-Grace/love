@@ -83,6 +83,7 @@ export async function app_chapter(context) {
   html_centered(bar);
   if (text_empty_is(c) && text_empty_not_is(b)) {
     await app_chapter_choose_chapter(bar, content, b, books, primary_folder);
+    app_chapter_languages_gear(bar, content, languages_chosen);
     return;
   }
   app_shared_dismissable_message(context, bar, "chapter_help_dismissed", help_text);
