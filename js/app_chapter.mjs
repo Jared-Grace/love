@@ -30,7 +30,7 @@ import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.m
 import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
 import { app_chapter_languages_gear } from "./app_chapter_languages_gear.mjs";
 import { app_chapter_book_chapter } from "./app_chapter_book_chapter.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_margin_y_set } from "./app_shared_margin_y_set.mjs";
 import { app_chapter_change } from "./app_chapter_change.mjs";
@@ -65,9 +65,12 @@ export async function app_chapter(context) {
   async function chapter_next() {
     await app_chapter_change(chapter_code, languages_chosen, list_next_wrap);
   }
-  let books_en = await ebible_version_books_browser(ebible_folder_english());
+  let primary_folder = ebible_language_to_bible_folder(
+    list_last(languages_chosen),
+  );
+  let books = await ebible_version_books_browser(primary_folder);
   app_replace_button_arrow_left(bar, chapter_previous);
-  app_chapter_book_chapter(bar, content, chapter_code, books_en);
+  app_chapter_book_chapter(bar, content, chapter_code, books, primary_folder);
   app_replace_button_arrow_right(bar, chapter_next);
   app_chapter_languages_gear(bar, content, languages_chosen);
   let verse_numbers_chosen = [];
