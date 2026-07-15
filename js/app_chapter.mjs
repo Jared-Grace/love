@@ -28,6 +28,7 @@ import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_c
 import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
 import { app_next_hash_to_languages_chosen } from "./app_next_hash_to_languages_chosen.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_arrows_wide } from "./app_shared_arrows_wide.mjs";
@@ -54,8 +55,8 @@ export async function app_chapter(context) {
   );
   app_shared_margin_y_set(p2);
   let hash = html_hash_object_get();
-  let chapter_code = property_get(hash, "c");
-  let verse_number = property_get(hash, "v");
+  let chapter_code = property_get_or(hash, "c", "JHN01");
+  let verse_number = property_get_or(hash, "v", "");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   async function chapter_previous() {
     await app_chapter_change(chapter_code, languages_chosen, list_previous_wrap);
