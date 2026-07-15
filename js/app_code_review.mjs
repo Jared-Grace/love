@@ -26,6 +26,7 @@ import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { app_replace_success_message } from "./app_replace_success_message.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { list_get } from "./list_get.mjs";
@@ -102,7 +103,8 @@ export function app_code_review(context) {
     async function go_next() {
       await go_to_lesson(next_lesson);
     }
-    let next_text = "Skip this review and go to the next lesson";
+    let arrow = emoji_arrow_right();
+    let next_text = text_combine("Skip this review and go to the next lesson ", arrow);
     app_replace_button_wide(g, next_text, go_next);
   }
   let home_text = app_replace_button_home_text();
