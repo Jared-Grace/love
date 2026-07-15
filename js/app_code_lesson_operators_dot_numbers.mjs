@@ -23,7 +23,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_operators_dot_numbers() {
   let operator = js_operator_dot();
   let operator_name = js_operator_dot_name();
-  let math_name = "property access, numbers";
+  let name_rights = ["property access", "numbers"];
   let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root) {
     let operator_name_math_articled = text_articled_pad_space(operator_name);
@@ -88,7 +88,7 @@ export function app_code_lesson_operators_dot_numbers() {
     );
   }
   let lesson = app_code_lesson_validity_operator(
-    math_name,
+    name_rights,
     operator,
     batch,
     above,

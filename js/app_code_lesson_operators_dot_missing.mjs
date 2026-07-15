@@ -11,7 +11,7 @@ import { app_code_lesson_operators_minus_generic_container_both_sides } from "./
 import { js_operator_dot } from "./js_operator_dot.mjs";
 export function app_code_lesson_operators_dot_missing() {
   let operator = js_operator_dot();
-  let math_name = "property access, missing";
+  let name_rights = ["property access", "missing"];
   let batch = app_code_lesson_operators_dot_batch_numbers(operator);
   function above(root) {
     app_code_container_light_blue_cycle_code(root, [
@@ -40,7 +40,7 @@ export function app_code_lesson_operators_dot_missing() {
     return;
   }
   let lesson = app_code_lesson_validity_operator(
-    math_name,
+    name_rights,
     operator,
     batch,
     above,
