@@ -88,7 +88,11 @@ export async function app_replace_rule_set(context) {
   let data = app_replace_rule_sets_data_initialize(context);
   let g_saved = app_replace_rule_sets_data_goal(data, rule_set_name, goal);
   let history_saved = property_get_or_null(g_saved, "history");
-  let resumed = null_not_is(history_saved);
+  let resumed = false;
+  if (null_not_is(history_saved)) {
+    ("only resume history saved in the current {state, rule} shape; an older saved shape is ignored so a format change never crashes an existing player - the goal reopens unsolved and re-saves on the next solve");
+    resumed = property_exists(list_get(history_saved, 0), "state");
+  }
   ("a goal solved in a past session resumes solved: start at the goal so success fires, and reuse the saved steps so the green proof survives a browser refresh");
   let start = ternary(resumed, end, property_get(start_end, "start"));
   let history = ternary(resumed, history_saved, [
