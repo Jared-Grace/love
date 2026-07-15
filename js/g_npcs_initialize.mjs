@@ -23,6 +23,7 @@ export function g_npcs_initialize(player_img, coordinates_land) {
     property_set(npc, "name", r5);
     let name = property_get(gender, "name");
     property_set(npc, "gender", name);
+    property_set(npc, "direction", "south");
     property_set(npc, "meet", false);
     property_set(npc, "christian", false);
     property_set(npc, "objections", 2);
