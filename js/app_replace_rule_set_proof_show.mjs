@@ -35,11 +35,13 @@ export function app_replace_rule_set_proof_show(parent, history) {
       let right = property_get(rule, "right");
       app_replace_button_rule_content(connector, left, right);
     }
+    if (equal(index, 0)) {
+      ("Start is a caption on its own line above the first state, not inline before it, so every state row still begins at the same left edge and the rail stays aligned");
+      let caption = html_div(parent);
+      html_span_text_deemphasized(caption, "Start");
+    }
     let state = property_get(entry, "state");
     let row = html_div(parent);
-    if (equal(index, 0)) {
-      html_span_text_deemphasized(row, "Start:  ");
-    }
     let symbols = app_replace_button_side(row, state);
     each(symbols, style);
     if (equal(entry, goal_entry)) {
