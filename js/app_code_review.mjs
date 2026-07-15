@@ -106,8 +106,7 @@ export function app_code_review(context) {
     storage_local_remove_context(context, key);
     await app_shared_screen_set(context, app_code_review);
   }
-  let restart = emoji_arrows_counterclockwise();
-  let restart_text = text_combine("Restart this review ", restart);
+  let restart_text = app_shared_button_start_over_text();
   let restart_button = app_replace_button_wide(g, restart_text, go_restart);
   let home_text = app_replace_button_home_text();
   async function go_home() {
