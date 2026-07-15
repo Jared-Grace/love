@@ -29,7 +29,7 @@ export function app_code_lesson_validity_base(
     question_label: backwards_question_label,
     on_question: app_code_style_normal_text,
     answer_label: quiz_backwards_label_answer,
-    answer_on_button: on_question,
+    answer_on_button: backwards_answer_on_button,
     answer_count_override: 2,
   };
   let quizzes_get = app_code_lesson_quizzes({

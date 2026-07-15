@@ -24,6 +24,9 @@ import { html_data_set_test } from "./html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
 import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
+import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
+import { list_last } from "./list_last.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
 import { list_swap_first } from "./list_swap_first.mjs";
 import { list_take } from "./list_take.mjs";
@@ -191,6 +194,10 @@ export async function app_replace_rule_set(context) {
             duration,
             div_symbols,
           ));
+        let last = list_last(history);
+        if (not(json_equal(start, last))) {
+          list_add(history, start);
+        }
         await refresh();
       }
       symbol_button = html_button(div_symbols, symbol, symbol_on_click);
@@ -235,6 +242,7 @@ export async function app_replace_rule_set(context) {
           goal_index,
           goals,
         );
+        app_replace_rule_set_proof_show(div_proof, history);
       }
       let has_selection = null_not_is(index_selected);
       html_text_set_if(has_selection, "Rules:", "Choose a rule:", label_rules);
@@ -263,6 +271,7 @@ export async function app_replace_rule_set(context) {
     root,
     combined,
   );
+  div_proof = html_div(root);
   function refresh_count_increase() {
     refresh_count++;
     let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
