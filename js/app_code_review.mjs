@@ -93,6 +93,7 @@ export function app_code_review(context) {
     html_clear(c);
     let done = list_empty_is(queue);
     if (done) {
+      html_remove(success_container);
       storage_local_remove_context(context, key);
       app_replace_success_message(c);
       html_div_text(c, "You passed every quiz in this review — beautiful work");
