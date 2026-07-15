@@ -54,15 +54,12 @@ export async function app_chapter(context) {
   let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
   let max = app_chapter_chosen_max();
-  let p2 = html_p_text(
-    bar,
-    text_combine_multiple([
-      "Tap up to ",
-      number_to_words(max),
-      " verse numbers, then Copy to save that passage",
-    ]),
-  );
-  app_shared_margin_y_set(p2);
+  let help_text = text_combine_multiple([
+    "Tap up to ",
+    number_to_words(max),
+    " verse numbers, then Copy to save that passage",
+  ]);
+  app_shared_dismissable_message(context, bar, "chapter_help_dismissed", help_text);
   let hash = html_hash_object_get();
   let chapter_code = property_get_or(hash, "c", "JHN01");
   let verse_number = property_get_or(hash, "v", "");
