@@ -45,6 +45,9 @@ import { app_replace_button_arrow_left } from "./app_replace_button_arrow_left.m
 import { app_replace_button_arrow_right } from "./app_replace_button_arrow_right.mjs";
 import { app_chapter_languages_gear } from "./app_chapter_languages_gear.mjs";
 import { app_chapter_book_chapter } from "./app_chapter_book_chapter.mjs";
+import { app_chapter_choose_chapter } from "./app_chapter_choose_chapter.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { html_display_grid } from "./html_display_grid.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
@@ -69,28 +72,34 @@ export async function app_chapter(context) {
     number_to_words(max),
     " verse numbers, then Copy to save that passage",
   ]);
-  app_shared_dismissable_message(context, bar, "chapter_help_dismissed", help_text);
   let hash = html_hash_object_get();
-  let chapter_code = property_get_or(hash, "c", "JHN01");
-  let verse_number = property_get_or(hash, "v", "");
+  let c = property_get_or(hash, "c", "");
+  let b = property_get_or(hash, "b", "");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
+  let primary_folder = ebible_language_to_bible_folder(
+    list_last(languages_chosen),
+  );
+  let books = await ebible_version_books_browser(primary_folder);
   html_centered(bar);
+  if (text_empty_is(c) && text_empty_not_is(b)) {
+    await app_chapter_choose_chapter(bar, content, b, books, primary_folder);
+    return;
+  }
+  app_shared_dismissable_message(context, bar, "chapter_help_dismissed", help_text);
+  let chapter_code = text_empty_is(c) ? "JHN01" : c;
+  let verse_number = property_get_or(hash, "v", "");
   async function chapter_previous() {
     await app_chapter_change(chapter_code, languages_chosen, list_previous_wrap);
   }
   async function chapter_next() {
     await app_chapter_change(chapter_code, languages_chosen, list_next_wrap);
   }
-  let primary_folder = ebible_language_to_bible_folder(
-    list_last(languages_chosen),
-  );
-  let books = await ebible_version_books_browser(primary_folder);
   let books_en = await ebible_version_books_browser(ebible_folder_english());
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let book_name = ebible_book_code_to_name(books_en, book_code);
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
   app_replace_button_arrow_left(bar, chapter_previous);
-  app_chapter_book_chapter(bar, content, chapter_code, books, primary_folder);
+  app_chapter_book_chapter(bar, content, chapter_code, books);
   app_replace_button_arrow_right(bar, chapter_next);
   app_chapter_languages_gear(bar, content, languages_chosen);
   let verse_numbers_chosen = [];
