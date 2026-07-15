@@ -3,7 +3,6 @@ import { js_operator_plus_name } from "./js_operator_plus_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_operators_generic } from "./app_code_lesson_operators_generic.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 export function app_code_lesson_operators_addition() {
   let operator = js_operator_plus_symbol();
   let operator_name = js_operator_plus_name();
@@ -18,5 +17,5 @@ export function app_code_lesson_operators_addition() {
     math_name,
     identity,
   );
-  return app_code_lesson_symbol_set(r, operator);
+  return r;
 }
