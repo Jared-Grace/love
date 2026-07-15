@@ -43,6 +43,27 @@ export function app_code_review(context) {
   let g = app_code_container_padded_x(root);
   let progress = html_div(g);
   let c = app_code_container_light_blue(g);
+  let lessons = app_code_lessons();
+  let lessons_count = list_size(lessons);
+  async function go_to_lesson(lesson) {
+    let id = property_get(lesson, "id");
+    storage_local_set_context(context, "lesson_id", id);
+    await app_shared_screen_set(context, app_code_examples);
+  }
+  let previous_index = subtract(number, 1);
+  let previous_lesson = list_get(lessons, previous_index);
+  async function go_previous() {
+    await go_to_lesson(previous_lesson);
+  }
+  let next_index = number;
+  let has_next = less_than(next_index, lessons_count);
+  let next_lesson = null;
+  if (has_next) {
+    next_lesson = list_get(lessons, next_index);
+  }
+  async function go_next() {
+    await go_to_lesson(next_lesson);
+  }
   function persist() {
     let state = {
       number,
@@ -60,6 +81,11 @@ export function app_code_review(context) {
       storage_local_remove_context(context, key);
       app_replace_success_message(c);
       html_div_text(c, "You passed every quiz in this review — beautiful work");
+      if (has_next) {
+        let arrow = emoji_arrow_right();
+        let continue_text = text_combine("Continue to the next lesson ", arrow);
+        app_replace_button_wide(c, continue_text, go_next);
+      }
       return;
     }
     let remaining = list_size(queue);
@@ -81,30 +107,15 @@ export function app_code_review(context) {
     app_code_review_exercise(c, exercise, on_complete);
   }
   present();
-  let lessons = app_code_lessons();
-  let lessons_count = list_size(lessons);
-  async function go_to_lesson(lesson) {
-    let id = property_get(lesson, "id");
-    storage_local_set_context(context, "lesson_id", id);
-    await app_shared_screen_set(context, app_code_examples);
-  }
-  let previous_index = subtract(number, 1);
-  let previous_lesson = list_get(lessons, previous_index);
-  async function go_previous() {
-    await go_to_lesson(previous_lesson);
-  }
   let back = app_shared_button_back_text();
   let back_text = text_combine(back, " to the previous lesson");
   app_replace_button_wide(g, back_text, go_previous);
-  let next_index = number;
-  let has_next = less_than(next_index, lessons_count);
   if (has_next) {
-    let next_lesson = list_get(lessons, next_index);
-    async function go_next() {
-      await go_to_lesson(next_lesson);
-    }
     let arrow = emoji_arrow_right();
-    let next_text = text_combine("Skip this review and go to the next lesson ", arrow);
+    let next_text = text_combine(
+      "Skip this review and go to the next lesson ",
+      arrow,
+    );
     app_replace_button_wide(g, next_text, go_next);
   }
   let home_text = app_replace_button_home_text();
@@ -113,4 +124,3 @@ export function app_code_review(context) {
   }
   app_replace_button_wide(g, home_text, go_home);
 }
-
