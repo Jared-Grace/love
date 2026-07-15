@@ -25,6 +25,8 @@ import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_ve
 import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
 import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
+import { app_replace_rule_sets_data_initialize } from "./app_replace_rule_sets_data_initialize.mjs";
+import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
@@ -118,7 +120,6 @@ export async function app_replace_rule_set(context) {
   let progress = html_progress_bar(root, goal_index, goals_count, "goal");
   let container = property_get(progress, "container");
   html_style_margin_top(container, "0");
-  let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
   let label_rules = html_p(root);
   let symbols_invalid_chosen = {};
@@ -247,6 +248,7 @@ export async function app_replace_rule_set(context) {
           div_below,
           goal_index,
           goals,
+          history,
         );
         app_replace_rule_set_proof_show(div_proof, history);
       }
