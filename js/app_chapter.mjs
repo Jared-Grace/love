@@ -125,11 +125,32 @@ export async function app_chapter(context) {
         let actions = html_div(content);
         html_centered(actions);
         html_display_none(actions);
+        let verse_buttons = html_div(actions);
+        html_button_biblehub_open_interlinear(
+          verse_buttons,
+          chapter_name,
+          book_name,
+          verse_number_v,
+        );
+        html_button_biblehub_open_parallel(
+          verse_buttons,
+          book_name,
+          chapter_name,
+          verse_number_v,
+        );
+        html_button_biblehub_open_commentary(
+          verse_buttons,
+          chapter_name,
+          book_name,
+          verse_number_v,
+        );
         app_replace_button(actions, t, copy);
         function row_update() {
           update();
           let selected = list_includes(verse_numbers_chosen, verse_number_v);
           html_display_none_or_block(not(selected), actions);
+          let single = selected && not(list_multiple_is(verse_numbers_chosen));
+          html_display_none_or_block(not(single), verse_buttons);
         }
         if (verse_number_v === verse_number) {
           async function lambda4() {
