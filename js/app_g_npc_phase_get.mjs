@@ -8,12 +8,12 @@ export function app_g_npc_phase_get(player) {
   let review = property_get(player, "review");
   let needs_study = list_empty_not_is(review);
   if (needs_study) {
-    return "study";
+    return app_g_view_phase_study();
   }
   let prayer = property_get(player, "prayer");
   let conversation = property_get(prayer, "conversation");
   if (not(conversation)) {
-    return "pray";
+    return app_g_view_phase_pray();
   }
-  return "conversation";
+  return app_g_view_phase_conversation();
 }
