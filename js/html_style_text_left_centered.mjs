@@ -17,6 +17,7 @@ export function html_style_text_left_centered(
   html_style_set(title, "justify-self", "center");
   let r = {
     title,
+    left,
   };
   return r;
 }
