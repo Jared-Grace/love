@@ -18,12 +18,10 @@ import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.m
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { html_visibility_hidden_multiple } from "./html_visibility_hidden_multiple.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { storage_local_transform_context } from "./storage_local_transform_context.mjs";
-import { app_code_lesson_first_id } from "./app_code_lesson_first_id.mjs";
-import { list_property_next_value } from "./list_property_next_value.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
+import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
+import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
+import { app_code_review_scope } from "./app_code_review_scope.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -76,26 +74,18 @@ export function app_code_lesson_quiz(
   async function on_next() {
     app_code_quiz_index_transform(context, quizzes, add_1);
     if (qli) {
-      ("next lesson");
       app_code_quiz_index_reset(context);
-      function lesson_id_transform(value) {
-        let lessons = app_code_lessons();
-        let value_next = list_property_next_value(lessons, "id", value);
-        return value_next;
-      }
-      let value_initial = app_code_lesson_first_id();
-      storage_local_transform_context(
-        context,
-        "lesson_id",
-        value_initial,
-        lesson_id_transform,
-      );
-      await app_shared_screen_set(context, app_code_examples);
+      await app_code_after_lesson(context);
     } else {
       refresh();
     }
   }
-  if (lcli && qli) {
+  let number = app_code_lesson_current_number(context);
+  let review_scope = app_code_review_scope(number);
+  let has_review = null_not_is(review_scope);
+  let after_none = lcli && not(has_review);
+  let show_none = after_none && qli;
+  if (show_none) {
     app_code_container_light_blue_text(
       parent_container,
       "Next: There are no more lessons available at this time",
