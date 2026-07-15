@@ -77,7 +77,7 @@ export function app_code_lesson_quizzes_generic(params) {
       };
       return exercise;
     }
-    let exercises = list_map([forwards, backwards], each_exercise);
+    let exercises = list_map(infos, each_exercise);
     let quizzes_exercises = {
       quizzes,
       exercises,
