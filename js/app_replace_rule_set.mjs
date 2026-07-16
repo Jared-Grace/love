@@ -255,13 +255,15 @@ export async function app_replace_rule_set(context) {
       if (eq) {
         success = true;
         list_map_property_invoke(rule_buttons, "refresh_rb");
+        ("a resumed goal snaps straight to solved (duration 0): the win animation is feedback for the act of solving, so on a refresh - where nothing was just done - it is skipped and only the message and proof appear");
+        let success_duration = ternary(resumed, 0, duration);
         await app_replace_rule_set_success(
           rule_set_name,
           goal,
           context,
           goal_list_symbols,
           symbol_buttons,
-          duration,
+          success_duration,
           div_below,
           goal_index,
           goals,
