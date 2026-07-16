@@ -1,18 +1,18 @@
-import { each_range_async } from "./each_range_async.mjs";
-import { list_single } from "./list_single.mjs";
-import { list_size_1 } from "./list_size_1.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { html_attribute_get_unwrapped_curried_right } from "./html_attribute_get_unwrapped_curried_right.mjs";
-import { html_data_set_test_attribute } from "./html_data_set_test_attribute.mjs";
-import { playwright_by_attribute } from "./playwright_by_attribute.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { html_attribute_data_prefix } from "./html_attribute_data_prefix.mjs";
-import { html_data_set_test_suffixes_attribute } from "./html_data_set_test_suffixes_attribute.mjs";
-import { app_replace_button_symbol_style_valid_if_attribute } from "./app_replace_button_symbol_style_valid_if_attribute.mjs";
-import { app_replace_rule_set_attribute_refresh_click } from "./app_replace_rule_set_attribute_refresh_click.mjs";
-import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
-import { app_replace_rule_set_verify_goal_depth_max } from "./app_replace_rule_set_verify_goal_depth_max.mjs";
+import { each_range_async } from "../../love/js/each_range_async.mjs";
+import { list_single } from "../../love/js/list_single.mjs";
+import { list_size_1 } from "../../love/js/list_size_1.mjs";
+import { list_filter_null_not_is } from "../../love/js/list_filter_null_not_is.mjs";
+import { list_map_unordered_async } from "../../love/js/list_map_unordered_async.mjs";
+import { html_attribute_get_unwrapped_curried_right } from "../../love/js/html_attribute_get_unwrapped_curried_right.mjs";
+import { html_data_set_test_attribute } from "../../love/js/html_data_set_test_attribute.mjs";
+import { playwright_by_attribute } from "../../love/js/playwright_by_attribute.mjs";
+import { text_combine } from "../../love/js/text_combine.mjs";
+import { html_attribute_data_prefix } from "../../love/js/html_attribute_data_prefix.mjs";
+import { html_data_set_test_suffixes_attribute } from "../../love/js/html_data_set_test_suffixes_attribute.mjs";
+import { app_replace_symbol_tile_valid_if_attribute } from "../../love/js/app_replace_symbol_tile_valid_if_attribute.mjs";
+import { app_replace_rule_set_attribute_refresh_click } from "../../love/js/app_replace_rule_set_attribute_refresh_click.mjs";
+import { app_replace_rule_set_attribute_hint } from "../../love/js/app_replace_rule_set_attribute_hint.mjs";
+import { app_replace_rule_set_verify_goal_depth_max } from "../../love/js/app_replace_rule_set_verify_goal_depth_max.mjs";
 export async function app_replace_tests_run_e2e_hinted_fn(
   p,
   refresh_count,
@@ -28,7 +28,7 @@ export async function app_replace_tests_run_e2e_hinted_fn(
       hint,
       refresh_count,
     );
-    let suffix = app_replace_button_symbol_style_valid_if_attribute();
+    let suffix = app_replace_symbol_tile_valid_if_attribute();
     let combined = html_data_set_test_suffixes_attribute([suffix]);
     let left = html_attribute_data_prefix();
     let name = text_combine(left, combined);
