@@ -5,9 +5,11 @@ import { app_g_player_scroll_center } from "./app_g_player_scroll_center.mjs";
 import { app_g_div_map_new } from "./app_g_div_map_new.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { null_is } from "./null_is.mjs";
+import { app_g_reset_if } from "./app_g_reset_if.mjs";
 import { app_g_dev_if } from "./app_g_dev_if.mjs";
 import { app_g_view_render } from "./app_g_view_render.mjs";
 export async function app_g_refresh(context, div_map_container) {
+  await app_g_reset_if();
   let g = await app_g_game_save_get_or_refresh(context);
   if (null_is(g)) {
     return;
