@@ -61,6 +61,7 @@ export function app_code_lesson_quiz(
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
   let parent_container = html_div(parent);
+  let container_correction = html_div(parent_container);
   let container_success_message = html_div(parent_container);
   let quiz_new_message = app_code_container_light_blue(parent_container);
   let new_quiz_text = text_combine_middle_space_nb(
@@ -117,12 +118,26 @@ export function app_code_lesson_quiz(
     html_clear(container_question);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
+    hide_correction();
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
+  }
+  function hide_correction() {
+    html_clear(container_correction);
+  }
+  function show_correction() {
+    "reveal the correct example (the code and what it writes) so a wrong answer teaches the concept; qa.question is always the code and qa.answer always the output, so this works for every quiz kind";
+    html_clear(container_correction);
+    let box = app_code_container_light_blue(container_correction);
+    let code = property_get(qa, "question");
+    let output = text_to(property_get(qa, "answer"));
+    html_div_cycle_code(box, ["", code, " writes ", output]);
   }
   function on_wrong() {
     html_visibility_hidden(container_success_message);
+    show_correction();
   }
   async function on_success() {
+    hide_correction();
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_hidden(quiz_new_message);
