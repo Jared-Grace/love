@@ -32,7 +32,11 @@ export async function app_g_view_render_study(div_map) {
   let green = text_combine(app_shared_button_background(), "dd");
   let blue = text_combine(app_shared_button_selected_background_color(), "dd");
   let font = app_shared_button_font_color();
-  let outline_current = text_combine("0.15em solid ", font);
+  let ring = text_combine_multiple([
+    "0 0 0 0.12em ",
+    font,
+    ", 0 0 0 0.24em black",
+  ]);
   let save_pending = null;
   async function persist() {
     save_pending = null;
@@ -65,7 +69,7 @@ export async function app_g_view_render_study(div_map) {
       "background-color": blue,
       color: font,
       "font-weight": "normal",
-      outline: "none",
+      "box-shadow": "none",
     });
   }
   function style_upcoming(b) {
@@ -73,7 +77,7 @@ export async function app_g_view_render_study(div_map) {
       "background-color": green,
       color: font,
       "font-weight": "normal",
-      outline: "none",
+      "box-shadow": "none",
     });
   }
   function style_next(b) {
@@ -81,7 +85,7 @@ export async function app_g_view_render_study(div_map) {
       "background-color": green,
       color: font,
       "font-weight": "bold",
-      outline: outline_current,
+      "box-shadow": ring,
     });
   }
   let word_bs = [];
