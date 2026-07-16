@@ -29,7 +29,11 @@ export function app_code_lesson_quiz_token_select_variations(code) {
         la(swap);
       }
     }
-    js_visit_type_node(ast, "BinaryExpression", lambda2);
+    let swappable_types = ["BinaryExpression", "LogicalExpression"];
+    function visit_type(type) {
+      js_visit_type_node(ast, type, lambda2);
+    }
+    each(swappable_types, visit_type);
   }
   let variation_fns = list_adder(lambda4);
   function lambda5(la) {
