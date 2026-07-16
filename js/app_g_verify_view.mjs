@@ -25,7 +25,7 @@ import { app_shared_container_blue_border_color } from "./app_shared_container_b
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
-export function app_g_verify_view(container, english, lines, chapter_code, verse) {
+export function app_g_verify_view(container, english, lines, chapter_code, verse, on_approved) {
   html_clear(container);
   let tokens = g_sermon_passage_words(english);
 
@@ -193,6 +193,7 @@ export function app_g_verify_view(container, english, lines, chapter_code, verse
       html_clear(approve_bar);
       let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
       html_font_color_set(done, muted);
+      on_approved(verse);
     } catch (failed) {
       html_clear(approve_bar);
       let msg = html_p_text(approve_bar, "Couldn't save — please try again.");
