@@ -7,8 +7,7 @@ import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { text_to } from "./text_to.mjs";
+import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { emoji_point_up } from "./emoji_point_up.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -127,12 +126,8 @@ export function app_code_lesson_quiz(
     html_clear(container_correction);
   }
   function show_correction() {
-    "reveal the correct example (the code and what it writes) so a wrong answer teaches the concept; qa.question is always the code and qa.answer always the output, so this works for every quiz kind";
     html_clear(container_correction);
-    let box = app_code_container_light_blue(container_correction);
-    let code = property_get(qa, "question");
-    let output = text_to(property_get(qa, "answer"));
-    html_div_cycle_code(box, ["", code, " writes ", output]);
+    app_code_quiz_correction(container_correction, qa);
   }
   function on_wrong() {
     html_visibility_hidden(container_success_message);

@@ -1,7 +1,9 @@
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
+import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_review_exercise(
@@ -34,12 +36,16 @@ export function app_code_review_exercise(
   let a_container = property_get(a, "container");
   app_code_example_answer_label(a_container, answer_label);
   let answers_div = html_div(a_container);
+  let container_correction = html_div(parent);
   let failed = false;
   function on_wrong() {
     failed = true;
+    html_clear(container_correction);
+    app_code_quiz_correction(container_correction, qa);
     on_incorrect();
   }
   async function on_success() {
+    html_clear(container_correction);
     let clean = not(failed);
     await on_correct(clean);
   }
