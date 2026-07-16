@@ -3,7 +3,7 @@ import { app_replace_symbol_tile_background_color_invalid } from "../../love/js/
 import { app_replace_symbol_tile_font_color_invalid } from "../../love/js/app_replace_symbol_tile_font_color_invalid.mjs";
 import { app_replace_symbol_tile_valid_if_attribute } from "../../love/js/app_replace_symbol_tile_valid_if_attribute.mjs";
 import { html_data_set_test_suffix } from "../../love/js/html_data_set_test_suffix.mjs";
-import { app_replace_button_symbol_style_box_shadow } from "../../love/js/app_replace_button_symbol_style_box_shadow.mjs";
+import { app_shared_symbol_tile_style_box_shadow } from "../../love/js/app_shared_symbol_tile_style_box_shadow.mjs";
 import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
 import { app_replace_symbol_tile_background_color_valid_unsolved } from "../../love/js/app_replace_symbol_tile_background_color_valid_unsolved.mjs";
 import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
@@ -26,5 +26,5 @@ export function app_replace_symbol_tile_valid_if(sb, valid, solved) {
   let glow_solved = app_replace_rule_set_highlight();
   let glow_unsolved = app_shared_container_blue_border_color();
   let glow = ternary(solved, glow_solved, glow_unsolved);
-  app_replace_button_symbol_style_box_shadow(valid, sb, glow);
+  app_shared_symbol_tile_style_box_shadow(valid, sb, glow);
 }
