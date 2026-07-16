@@ -54,7 +54,7 @@ export async function app_g_view_render_study(div_map) {
   }
   function persist_soon() {
     persist_cancel();
-    save_pending = setTimeout(persist, 400);
+    save_pending = setTimeout(persist, 1500);
   }
   async function close() {
     persist_cancel();
