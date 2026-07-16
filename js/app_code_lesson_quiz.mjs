@@ -139,11 +139,12 @@ export function app_code_lesson_quiz(
     show_correction();
   }
   async function on_success() {
-    "on ANY correct answer — first try, or after seeing the correction on a wrong try — flash success, then auto-advance to the next quiz (on a wrong try the learner has already seen the correction and chosen the right answer)";
+    "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_visible(container_success_message);
     await sleep_success_color();
-    on_next();
+    qa = next_get();
+    on_qa_change();
   }
 }
