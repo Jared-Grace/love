@@ -8,6 +8,7 @@ export function app_g_container(overlay) {
   app_shared_style_control(container);
   html_style_assign(container, {
     padding: "0.25em",
+    "font-size": "inherit",
     "background-color": text_combine(
       app_shared_container_background_color(),
       "bc",

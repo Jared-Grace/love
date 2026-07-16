@@ -9,6 +9,7 @@ import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
+import { app_shared_style_control_font_size } from "./app_shared_style_control_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -123,6 +124,7 @@ export async function app_g_view_render_study(div_map) {
     html_style_assign(b, {
       "padding-left": "0.4em",
       "padding-right": "0.4em",
+      "font-size": app_shared_style_control_font_size(),
     });
     word_bs.push(b);
     style_word(i);
