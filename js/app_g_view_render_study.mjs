@@ -84,7 +84,7 @@ export async function app_g_view_render_study(div_map) {
     html_style_assign(b, {
       "background-color": green,
       color: font,
-      "font-weight": "bold",
+      "font-weight": "normal",
       "box-shadow": ring,
     });
   }
