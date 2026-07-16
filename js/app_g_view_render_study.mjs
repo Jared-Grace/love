@@ -38,6 +38,7 @@ export async function app_g_view_render_study(div_map) {
   let current = word_index;
   let green = text_combine(app_shared_button_background(), "dd");
   let blue = text_combine(app_shared_button_selected_background_color(), "dd");
+  let neutral = text_combine(app_shared_button_uncolored_background_color(), "dd");
   let font = app_shared_button_font_color();
   async function persist() {
     await app_g_view_set({
@@ -55,8 +56,8 @@ export async function app_g_view_render_study(div_map) {
   }
   function style_upcoming(b) {
     html_style_assign(b, {
-      "background-color": green,
-      color: font,
+      "background-color": neutral,
+      color: "black",
       "font-weight": "normal",
     });
   }
