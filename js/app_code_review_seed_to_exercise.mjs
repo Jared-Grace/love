@@ -1,5 +1,4 @@
-import { app_code_lessons } from "./app_code_lessons.mjs";
-import { app_code_lesson_find_by_id } from "./app_code_lesson_find_by_id.mjs";
+import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,10 +8,7 @@ export function app_code_review_seed_to_exercise(seed) {
   let kind_index = property_get(seed, "kind_index");
   let question = property_get(seed, "question");
   let answer = property_get(seed, "answer");
-  let lessons = app_code_lessons();
-  let lesson = app_code_lesson_find_by_id(lessons, lesson_id);
-  let batch = property_get(lesson, "batch");
-  let items = batch();
+  let items = app_code_review_items_by_id(lesson_id);
   let first = list_first(items);
   let exercises = property_get(first, "exercises");
   let template = list_get(exercises, kind_index);
