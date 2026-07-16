@@ -200,9 +200,6 @@ export async function app_shared_bible_read(context) {
     await verse_move(1, chapter_next);
   }
   let books_en = await ebible_version_books_browser(ebible_folder_english());
-  let book_code = ebible_chapter_code_to_book(chapter_code);
-  let book_name = ebible_book_code_to_name(books_en, book_code);
-  let chapter_name = ebible_chapter_code_to_name(chapter_code);
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
@@ -235,6 +232,10 @@ export async function app_shared_bible_read(context) {
   let primary_verses = property_get(primary_entry, "verses");
   async function render_verse(v) {
     let verse_number_v = property_get(v, "verse_number");
+    let verse_chapter_code = property_get_or(v, "chapter_code", chapter_code);
+    let verse_book_code = ebible_chapter_code_to_book(verse_chapter_code);
+    let verse_book_name = ebible_book_code_to_name(books_en, verse_book_code);
+    let verse_chapter_name = ebible_chapter_code_to_name(verse_chapter_code);
     let p = html_p(content);
     html_display_grid(p);
     let columns = text_combine(app_shared_number_gutter(), " 1fr");
@@ -244,7 +245,7 @@ export async function app_shared_bible_read(context) {
       updates,
       verse_numbers_chosen,
       verse_number_v,
-      chapter_code,
+      verse_chapter_code,
       languages_verses,
       p,
     );
