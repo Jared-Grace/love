@@ -7,6 +7,7 @@ import { app_code_lesson_text_example_another } from "../../love/js/app_code_les
 import { app_code_example_answer_gap } from "../../love/js/app_code_example_answer_gap.mjs";
 import { list_single } from "../../love/js/list_single.mjs";
 import { list_shuffle } from "../../love/js/list_shuffle.mjs";
+import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
 import { html_div_text } from "../../love/js/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../love/js/app_code_container_light_blue.mjs";
 import { app_code_container_padded_x } from "../../love/js/app_code_container_padded_x.mjs";
@@ -26,7 +27,7 @@ export function app_code_quiz(context) {
     root,
     lesson,
     on_batch_item,
-    list_shuffle,
+    app_code_batch_on_refill(list_shuffle),
     true,
   );
   function on_batch_item(container, bs, refresh, next_get) {
