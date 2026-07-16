@@ -1,4 +1,7 @@
 import { html_hash_get } from "./html_hash_get.mjs";
+import { html_hash_set } from "./html_hash_set.mjs";
+import { window_reload } from "./window_reload.mjs";
+import { app_g_game_initialize } from "./app_g_game_initialize.mjs";
 import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
@@ -8,6 +11,12 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_dev_if() {
   let hash = html_hash_get();
+  if (hash === "#reset") {
+    await app_g_game_initialize();
+    html_hash_set("#");
+    window_reload();
+    return;
+  }
   let view = null;
   if (hash === "#study") {
     view = {
