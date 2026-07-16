@@ -18,6 +18,7 @@ import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_review_complete } from "./app_code_review_complete.mjs";
+import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
@@ -134,6 +135,8 @@ export function app_code_review(context) {
           "Continue to the next lesson",
         );
         app_replace_button_wide(c, continue_text, go_next);
+      } else {
+        app_code_no_more_lessons(c);
       }
       return;
     }

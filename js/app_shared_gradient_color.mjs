@@ -3,7 +3,7 @@ import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { round } from "./round.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_supper_verse_color(index, count) {
+export function app_shared_gradient_color(index, count) {
   let last = subtract(count, 1);
   let t = 1;
   if (last > 0) {
