@@ -9,9 +9,12 @@ import { app_code_quiz_correction } from "../../love/js/app_code_quiz_correction
 import { html_clear } from "../../love/js/html_clear.mjs";
 import { app_replace_button_wide_next } from "../../love/js/app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
-import { app_code_quiz_index_shuffle } from "../../love/js/app_code_quiz_index_shuffle.mjs";
-import { app_code_quiz_index_back } from "../../love/js/app_code_quiz_index_back.mjs";
-import { app_code_quiz_index_back_available } from "../../love/js/app_code_quiz_index_back_available.mjs";
+import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
+import { list_index_last_is } from "./list_index_last_is.mjs";
+import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
+import { add_1 } from "./add_1.mjs";
+import { subtract_1 } from "./subtract_1.mjs";
+import { at_least_1 } from "./at_least_1.mjs";
 import { app_code_lesson_above } from "../../love/js/app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { html_visibility_hidden_multiple } from "../../love/js/html_visibility_hidden_multiple.mjs";
@@ -61,36 +64,36 @@ export function app_code_lesson_quiz(
   let container_correction = html_div(parent_container);
   let container_success_message = html_div(parent_container);
   let success = app_replace_success_message(container_success_message);
-  function on_next() {
-    "advance to a DIFFERENT quiz kind (interleaved), fresh question — never the same kind back-to-back; loops forever";
-    app_code_quiz_index_shuffle(context, quizzes);
-    refresh();
-  }
-  let next_button = app_replace_button_wide_next(parent_container, on_next);
-  html_style_margin_top(next_button, app_shared_spaced_gap());
-  let back_available = app_code_quiz_index_back_available(context);
-  if (back_available) {
-    let on_back = function lambda() {
-      app_code_quiz_index_back(context);
-      refresh();
-    };
-    let left = app_shared_button_back_text();
-    let back_text = text_combine(left, " to the previous quiz");
-    app_shared_button_wide(parent_container, back_text, on_back);
-  }
+  let quiz_index = app_code_quiz_index_get(context);
+  let qli = list_index_last_is(quizzes, quiz_index);
   let number = app_code_lesson_current_number(context);
   let review_scope = app_code_review_scope(number);
   let has_review = null_not_is(review_scope);
   let lcli = app_code_lesson_current_last_is(context);
   let no_more = lcli && not(has_review);
   async function on_move_on() {
-    "leave the quiz loop for the review (at a checkpoint) or the next lesson";
+    "go to the review (at a checkpoint) or the next lesson";
     app_code_quiz_index_reset(context);
     await app_code_after_lesson(context);
   }
-  if (no_more) {
+  async function on_next() {
+    "Next moves to the next quiz KIND (forwards, backwards, unscramble...); on the last kind it goes to the next lesson, same as Skip";
+    if (qli) {
+      await on_move_on();
+    } else {
+      app_code_quiz_index_transform(context, quizzes, add_1);
+      refresh();
+    }
+  }
+  let last_lesson_end = qli && no_more;
+  if (last_lesson_end) {
     app_code_no_more_lessons(parent_container);
   } else {
+    let next_button = app_replace_button_wide_next(parent_container, on_next);
+    html_style_margin_top(next_button, app_shared_spaced_gap());
+  }
+  let show_skip = not(qli) && not(no_more);
+  if (show_skip) {
     let skip_text = text_combine_middle_space_nb(
       emoji_arrow_right(),
       "Skip to the next lesson",
@@ -101,6 +104,15 @@ export function app_code_lesson_quiz(
       on_move_on,
     );
     html_style_margin_top(skip_button, app_shared_spaced_large_gap());
+  }
+  if (at_least_1(quiz_index)) {
+    let on_back = function lambda() {
+      app_code_quiz_index_transform(context, quizzes, subtract_1);
+      refresh();
+    };
+    let left = app_shared_button_back_text();
+    let back_text = text_combine(left, " to the previous quiz");
+    app_shared_button_wide(parent_container, back_text, on_back);
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
