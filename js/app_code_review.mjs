@@ -1,47 +1,47 @@
-import { html_clear_context } from "./html_clear_context.mjs";
-import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
-import { app_code_review_load } from "./app_code_review_load.mjs";
-import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
-import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
-import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
-import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_remove_at } from "./list_remove_at.mjs";
-import { list_add } from "./list_add.mjs";
-import { add } from "./add.mjs";
-import { add_1 } from "./add_1.mjs";
-import { storage_local_set_context } from "./storage_local_set_context.mjs";
-import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { app_code_review_complete } from "./app_code_review_complete.mjs";
-import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
-import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
-import { app_replace_button_home_text } from "./app_replace_button_home_text.mjs";
-import { app_code_home } from "./app_code_home.mjs";
-import { app_code_examples } from "./app_code_examples.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
-import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
-import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
-import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
-import { not } from "./not.mjs";
-import { app_replace_success_message } from "./app_replace_success_message.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { html_remove } from "./html_remove.mjs";
-import { sleep_success_color } from "./sleep_success_color.mjs";
-import { html_progress_bar } from "./html_progress_bar.mjs";
-import { list_get } from "./list_get.mjs";
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { html_clear_context } from "../../love/js/html_clear_context.mjs";
+import { app_code_review_number_get } from "../../love/js/app_code_review_number_get.mjs";
+import { app_code_review_load } from "../../love/js/app_code_review_load.mjs";
+import { app_code_review_state_key } from "../../love/js/app_code_review_state_key.mjs";
+import { app_code_review_seed_to_exercise } from "../../love/js/app_code_review_seed_to_exercise.mjs";
+import { app_code_review_seed_fresh } from "../../love/js/app_code_review_seed_fresh.mjs";
+import { app_code_review_exercise } from "../../love/js/app_code_review_exercise.mjs";
+import { list_size } from "../../love/js/list_size.mjs";
+import { list_empty_is } from "../../love/js/list_empty_is.mjs";
+import { list_first } from "../../love/js/list_first.mjs";
+import { list_remove_at } from "../../love/js/list_remove_at.mjs";
+import { list_add } from "../../love/js/list_add.mjs";
+import { add } from "../../love/js/add.mjs";
+import { add_1 } from "../../love/js/add_1.mjs";
+import { storage_local_set_context } from "../../love/js/storage_local_set_context.mjs";
+import { storage_local_remove_context } from "../../love/js/storage_local_remove_context.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { html_div } from "../../love/js/html_div.mjs";
+import { html_clear } from "../../love/js/html_clear.mjs";
+import { app_code_review_complete } from "../../love/js/app_code_review_complete.mjs";
+import { app_code_no_more_lessons } from "../../love/js/app_code_no_more_lessons.mjs";
+import { app_code_container_light_blue } from "../../love/js/app_code_container_light_blue.mjs";
+import { app_code_container_padded_x } from "../../love/js/app_code_container_padded_x.mjs";
+import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
+import { app_replace_button_home_text } from "../../love/js/app_replace_button_home_text.mjs";
+import { app_code_home } from "../../love/js/app_code_home.mjs";
+import { app_code_examples } from "../../love/js/app_code_examples.mjs";
+import { app_code_lessons } from "../../love/js/app_code_lessons.mjs";
+import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
+import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
+import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
+import { text_combine_middle_space_nb } from "../../love/js/text_combine_middle_space_nb.mjs";
+import { app_shared_button_restart_text } from "../../love/js/app_shared_button_restart_text.mjs";
+import { not } from "../../love/js/not.mjs";
+import { app_replace_success_message } from "../../love/js/app_replace_success_message.mjs";
+import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
+import { html_visibility_visible } from "../../love/js/html_visibility_visible.mjs";
+import { html_remove } from "../../love/js/html_remove.mjs";
+import { sleep_success_color } from "../../love/js/sleep_success_color.mjs";
+import { html_progress_bar } from "../../love/js/html_progress_bar.mjs";
+import { list_get } from "../../love/js/list_get.mjs";
+import { subtract } from "../../love/js/subtract.mjs";
+import { less_than } from "../../love/js/less_than.mjs";
+import { text_combine } from "../../love/js/text_combine.mjs";
 export function app_code_review(context) {
   let root = html_clear_context(context);
   let number = app_code_review_number_get(context);
@@ -94,7 +94,7 @@ export function app_code_review(context) {
   persist();
   let back = app_shared_button_back_text();
   let back_text = text_combine(back, " to the previous lesson");
-  let back_button = app_replace_button_wide(g, back_text, go_previous);
+  let back_button = app_shared_button_wide(g, back_text, go_previous);
   let skip_button = null;
   if (has_next) {
     let arrow = emoji_arrow_right();
@@ -102,19 +102,19 @@ export function app_code_review(context) {
       arrow,
       "Skip this review and go to the next lesson",
     );
-    skip_button = app_replace_button_wide(g, next_text, go_next);
+    skip_button = app_shared_button_wide(g, next_text, go_next);
   }
   async function go_restart() {
     storage_local_remove_context(context, key);
     await app_shared_screen_set(context, app_code_review);
   }
   let restart_text = app_shared_button_restart_text("Restart review");
-  let restart_button = app_replace_button_wide(g, restart_text, go_restart);
+  let restart_button = app_shared_button_wide(g, restart_text, go_restart);
   let home_text = app_replace_button_home_text();
   async function go_home() {
     await app_shared_screen_set(context, app_code_home);
   }
-  app_replace_button_wide(g, home_text, go_home);
+  app_shared_button_wide(g, home_text, go_home);
   function present() {
     html_clear(progress);
     html_clear(c);
@@ -134,7 +134,7 @@ export function app_code_review(context) {
           arrow,
           "Continue to the next lesson",
         );
-        app_replace_button_wide(c, continue_text, go_next);
+        app_shared_button_wide(c, continue_text, go_next);
       } else {
         app_code_no_more_lessons(c);
       }
