@@ -3,8 +3,10 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_view_render_menu } from "./app_g_view_render_menu.mjs";
 import { app_g_view_render_npc } from "./app_g_view_render_npc.mjs";
+import { app_g_view_render_study } from "./app_g_view_render_study.mjs";
 import { app_g_view_kind_menu } from "./app_g_view_kind_menu.mjs";
 import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
+import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render(div_map) {
   let view = await app_g_view_get();
@@ -18,6 +20,10 @@ export async function app_g_view_render(div_map) {
   }
   if (kind === app_g_view_kind_npc()) {
     await app_g_view_render_npc(div_map);
+    return;
+  }
+  if (kind === app_g_view_kind_study()) {
+    await app_g_view_render_study(div_map);
     return;
   }
   error_json({
