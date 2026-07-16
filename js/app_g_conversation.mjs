@@ -13,6 +13,8 @@ import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { each } from "./each.mjs";
+import { html_on } from "./html_on.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_conversation(
