@@ -1,4 +1,4 @@
-import { app_chapter } from "../../love/js/app_chapter.mjs";
+import { app_shared_bible_read } from "../../love/js/app_shared_bible_read.mjs";
 import { window_open_app_fn } from "../../love/js/window_open_app_fn.mjs";
 import { list_join_plus } from "../../love/js/list_join_plus.mjs";
 import { list_reverse } from "../../love/js/list_reverse.mjs";
@@ -11,7 +11,7 @@ export function app_shared_bible_open(
   let mapped4 = list_map_property(languages_chosen, "language_code");
   list_reverse(mapped4);
   let joined = list_join_plus(mapped4);
-  window_open_app_fn(app_chapter, {
+  window_open_app_fn(app_shared_bible_read, {
     c: chapter_code,
     v: verse_number,
     l: joined,

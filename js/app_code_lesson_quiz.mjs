@@ -26,7 +26,6 @@ import { html_div } from "./html_div.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
