@@ -1,5 +1,5 @@
 import { html_clear } from "./html_clear.mjs";
-import { app_replace_button_back } from "./app_replace_button_back.mjs";
+import { app_shared_button_back } from "./app_shared_button_back.mjs";
 import { window_reload } from "./window_reload.mjs";
 import { html_subset_ordered_choose } from "./html_subset_ordered_choose.mjs";
 import { app_shared_languages_prompt_text } from "./app_shared_languages_prompt_text.mjs";
@@ -34,7 +34,7 @@ export function app_shared_bible_languages_choose(
     }
     html_hash_transform(transform);
   }
-  app_replace_button_back(content, window_reload);
+  app_shared_button_back(content, window_reload);
   html_subset_ordered_choose(
     content,
     languages,
