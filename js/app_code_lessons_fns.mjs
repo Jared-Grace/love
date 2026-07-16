@@ -2,6 +2,7 @@ import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_les
 import { app_code_lesson_functions_console_log_less_than } from "./app_code_lesson_functions_console_log_less_than.mjs";
 import { app_code_lesson_functions_console_log_greater_than } from "./app_code_lesson_functions_console_log_greater_than.mjs";
 import { app_code_lesson_functions_console_log_equals } from "./app_code_lesson_functions_console_log_equals.mjs";
+import { app_code_lesson_functions_console_log_not_equal } from "./app_code_lesson_functions_console_log_not_equal.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
@@ -52,6 +53,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_less_than,
     app_code_lesson_functions_console_log_greater_than,
     app_code_lesson_functions_console_log_equals,
+    app_code_lesson_functions_console_log_not_equal,
   ];
   return fns;
 }
