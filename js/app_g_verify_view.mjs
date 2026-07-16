@@ -2,6 +2,8 @@ import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
+import { app_replace_button } from "./app_replace_button.mjs";
+import { g_verify_approval_set_browser } from "./g_verify_approval_set_browser.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -22,7 +24,7 @@ import { app_shared_container_blue_border_color } from "./app_shared_container_b
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
-export function app_g_verify_view(container, english, lines) {
+export function app_g_verify_view(container, english, lines, chapter_code, verse) {
   html_clear(container);
   let tokens = g_sermon_passage_words(english);
 
@@ -179,4 +181,15 @@ export function app_g_verify_view(container, english, lines) {
     html_on(row, "mouseleave", clear_all);
     order_comps[li] = row;
   });
+
+  let approve_bar = html_div(container);
+  html_style_set(approve_bar, "margin-top", small_gap);
+  html_style_set(approve_bar, "text-align", "center");
+  async function on_approve() {
+    await g_verify_approval_set_browser(chapter_code, verse);
+    html_clear(approve_bar);
+    let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
+    html_font_color_set(done, muted);
+  }
+  app_replace_button(approve_bar, "Approve v" + verse, on_approve);
 }
