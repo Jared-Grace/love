@@ -9,6 +9,8 @@ import { app_chapter_chosen_max } from "./app_chapter_chosen_max.mjs";
 import { number_to_words } from "./number_to_words.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { list_find_property } from "./list_find_property.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { each_index } from "./each_index.mjs";
@@ -210,11 +212,7 @@ export async function app_chapter(context) {
   let language_colors = list_interleave_halves(
     list_map_index(languages_verses, language_color),
   );
-  let primary_entry = list_find_property(
-    languages_verses,
-    "language_code",
-    list_last(languages_chosen),
-  );
+  let primary_entry = list_last(languages_verses);
   let primary_verses = property_get(primary_entry, "verses");
   async function render_verse(v) {
     let verse_number_v = property_get(v, "verse_number");
