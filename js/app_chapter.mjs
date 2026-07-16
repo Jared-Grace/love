@@ -180,10 +180,9 @@ export async function app_chapter(context) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     let books = await ebible_version_books_browser(bible_folder);
     let language = list_find_property(ebible_languages(), "language_code", lc);
-    let language_name = property_get(language, "name");
     let v2 = {
       language_code: lc,
-      language_name,
+      language,
       books,
       verses,
     };
@@ -236,7 +235,8 @@ export async function app_chapter(context) {
         let text_l = property_get(verse_l, "text");
         let line = html_div(text_cell);
         if (show_language_names) {
-          let name = property_get(entry, "language_name");
+          let language = property_get(entry, "language");
+          let name = property_get(language, "name");
           html_span_text_bold(line, text_combine(name, ": "));
         }
         app_bible_on_click_google_define(line, text_l);
