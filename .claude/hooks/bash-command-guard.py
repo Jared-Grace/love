@@ -1528,17 +1528,16 @@ def main():
         print(json.dumps({
             "hookSpecificOutput": {
                 "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
+                "permissionDecision": "ask",
                 "permissionDecisionReason": (
                     f"This starts with the allowed verb {verb!r} but also "
                     "carries chained or unparsed content (a pipe, ';', "
                     "'$(...)', redirection, or a not-yet-trusted verb) that "
-                    "can't inherit that verb's trust. Please don't widen the "
-                    "guard for a one-off - reword instead: split it into "
-                    "separate Bash calls with one already-allowed verb each, "
-                    "or chain only allow-listed verbs with '&&'/';'. If the "
-                    "compound form is genuinely needed, the human can re-send "
-                    "it with a leading 'p ' to review allow-listing it."
+                    "can't inherit that verb's trust, so it needs a real "
+                    "look. If it splits cleanly, prefer rewording into "
+                    "separate Bash calls with one already-allowed verb each "
+                    "(or chain only allow-listed verbs with '&&'/';'); "
+                    "otherwise it's fine to approve."
                 ),
             }
         }))
