@@ -15,8 +15,21 @@ import { property_get } from "./property_get.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { app_supper_verses_get } from "./app_supper_verses_get.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { app_supper_choices } from "./app_supper_choices.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_map } from "./list_map.mjs";
 export async function app_supper_verses_render(root, folders) {
   let waited = await list_map_unordered_async(folders, app_supper_verses_get);
+  let choices = await app_supper_choices();
+  function folder_name(folder) {
+    let choice = list_find_property_or_null(choices, "bible_folder", folder);
+    if (null_is(choice)) {
+      return folder;
+    }
+    return property_get(choice, "name");
+  }
+  let names = list_map(folders, folder_name);
   let r = list_first_remaining(waited);
   let remaining = property_get(r, "remaining");
   let verses_first = property_get(r, "first");
@@ -29,7 +42,7 @@ export async function app_supper_verses_render(root, folders) {
     html_clear(passage_area);
     let passage = list_get(passages, index);
     let card = app_shared_container_blue(passage_area);
-    app_supper_passage_render(card, passage, remaining);
+    app_supper_passage_render(card, passage, remaining, names);
     app_shared_arrows_wide(passage_area, go_left, go_right);
   }
   function go(new_index) {
