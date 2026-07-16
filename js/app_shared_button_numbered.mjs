@@ -14,6 +14,7 @@ export function app_shared_button_numbered(root, index, on_click) {
   html_style_set(button, "grid-template-columns", columns);
   let number = property_get(r, "left");
   html_style_set(number, "justify-self", "end");
+  html_style_set(number, "white-space", "nowrap");
   app_shared_text_deemphasized(number);
   let title = property_get(r, "title");
   let result = {
