@@ -28,10 +28,17 @@ export async function app_g_view_render_opener(div_map) {
   let choices = app_g_container_player(overlay);
   app_g_p_text(choices, "What would you like to say?");
   function stub() {}
-  app_g_button_green(choices, "Share the gospel", stub);
+  app_g_button_green(
+    choices,
+    "Tell them that Jesus died, was buried and rose to life",
+    stub,
+  );
   app_g_button_green(choices, "How are you?", stub);
   app_g_button_green(choices, "What do you believe?", stub);
-  let pray = text_combine(emoji_pray(), " Pray for discernment");
+  let pray = text_combine(
+    emoji_pray(),
+    " Pray to God for discernment for what to say",
+  );
   app_g_button_green(choices, pray, stub);
   app_g_button_conversation_end(overlay, close);
 }
