@@ -20,9 +20,14 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let game_prefix = g_game_prefix();
   let c_src = g_character_img_url_direction(npc, "south");
   let component = html_img(container, c_src);
+  let name_map = {
+    [g_gender_female()]: "#a3006e",
+    [g_gender_male()]: "#1a3aa0",
+  };
+  let name_color = property_get(name_map, gender);
   let name_npc = property_get(npc, "name");
   let label = app_g_p_text(container, text_combine(name_npc, " says:"));
-  html_style_set(label, "color", color_background);
+  html_style_set(label, "color", name_color);
   let speech = app_g_p_text(container, npc_says);
   html_bold_mild(speech);
 }
