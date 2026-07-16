@@ -1,14 +1,14 @@
-import { list_last } from "./list_last.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
-import { list_first_last_slice } from "./list_first_last_slice.mjs";
-import { list_size_max_skip_replace } from "./list_size_max_skip_replace.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_chapter_copy } from "./app_chapter_copy.mjs";
-import { app_chapter_verse_highlight } from "./app_chapter_verse_highlight.mjs";
-import { app_chapter_chosen_max } from "./app_chapter_chosen_max.mjs";
-import { list_toggle } from "./list_toggle.mjs";
-import { invoke_multiple } from "./invoke_multiple.mjs";
+import { list_last } from "../../love/js/list_last.mjs";
+import { list_multiple_is } from "../../love/js/list_multiple_is.mjs";
+import { list_first_last_slice } from "../../love/js/list_first_last_slice.mjs";
+import { list_size_max_skip_replace } from "../../love/js/list_size_max_skip_replace.mjs";
+import { list_map_property } from "../../love/js/list_map_property.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { app_chapter_copy } from "../../love/js/app_chapter_copy.mjs";
+import { app_shared_bible_verse_highlight } from "../../love/js/app_shared_bible_verse_highlight.mjs";
+import { app_chapter_chosen_max } from "../../love/js/app_chapter_chosen_max.mjs";
+import { list_toggle } from "../../love/js/list_toggle.mjs";
+import { invoke_multiple } from "../../love/js/invoke_multiple.mjs";
 export function app_chapter_toggle_update(
   updates,
   verse_numbers_chosen,
@@ -42,7 +42,11 @@ export function app_chapter_toggle_update(
     } else {
       sliced = verse_numbers_chosen;
     }
-    app_chapter_verse_highlight(component_highlighted, sliced, verse_number);
+    app_shared_bible_verse_highlight(
+      component_highlighted,
+      sliced,
+      verse_number,
+    );
   };
   let r = {
     toggle,
@@ -52,7 +56,11 @@ export function app_chapter_toggle_update(
     choose,
   };
   async function copy() {
-    await app_chapter_copy(verse_numbers_chosen, languages_verses, chapter_code);
+    await app_chapter_copy(
+      verse_numbers_chosen,
+      languages_verses,
+      chapter_code,
+    );
   }
   return r;
 }
