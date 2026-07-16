@@ -1,5 +1,5 @@
 import { sleep_success_color } from "./sleep_success_color.mjs";
-import { app_code_container_light_blue_text } from "./app_code_container_light_blue_text.mjs";
+import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
@@ -92,10 +92,7 @@ export function app_code_lesson_quiz(
   let after_none = lcli && not(has_review);
   let show_none = after_none && qli;
   if (show_none) {
-    app_code_container_light_blue_text(
-      parent_container,
-      "Next: There are no more lessons available at this time",
-    );
+    app_code_no_more_lessons(parent_container);
   } else {
     app_replace_button_wide_next(parent_container, on_next);
   }
