@@ -60,11 +60,10 @@ export function app_code_lesson_functions_console_log_less_than_equal() {
       return code;
     }
     function refill() {
-      let equal_first = code_of(equal_pair());
-      let greater = code_of(ordering(false));
-      let equal_second = code_of(equal_pair());
+      let equal = code_of(equal_pair());
       let less = code_of(ordering(true));
-      let list = [equal_first, greater, equal_second, less];
+      let greater = code_of(ordering(false));
+      let list = [equal, less, greater];
       return list;
     }
     let next_arg = list_iterator_refillable(refill);
