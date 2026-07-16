@@ -19,25 +19,19 @@ export function app_replace_goals_generic(
   lambda,
 ) {
   let choose_this_next = not(completed) && completed_previous;
-  let text_left = add_1_period(index);
+  let r = app_shared_button_numbered(root, index, lambda);
+  let number = property_get(r, "number");
+  let title = property_get(r, "title");
+  let button = property_get(r, "button");
   if (completed) {
     let e = emoji_check();
-    text_left += string_pad_left_space(e);
+    html_span_text(number, string_pad_left_space(e));
   } else {
     if (choose_this_next) {
       let e = emoji_point_right();
-      text_left += string_pad_left_space(e);
+      html_span_text(number, string_pad_left_space(e));
     }
   }
-  let text_centered = "";
-  let r = app_replace_button_wide_text_left_centered(
-    root,
-    lambda,
-    text_left,
-    text_centered,
-  );
-  let title = property_get(r, "title");
-  let button = property_get(r, "button");
   if (completed) {
     let green = app_replace_rule_set_highlight();
     html_style_background_color_set(button, green);
