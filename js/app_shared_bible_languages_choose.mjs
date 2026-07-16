@@ -12,7 +12,11 @@ import { list_join_plus } from "./list_join_plus.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { html_hash_transform } from "./html_hash_transform.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_chapter_languages_choose(content, languages, languages_chosen) {
+export function app_shared_bible_languages_choose(
+  content,
+  languages,
+  languages_chosen,
+) {
   html_clear(content);
   function to_language(code) {
     return list_find_property_or_null(languages, "language_code", code);
