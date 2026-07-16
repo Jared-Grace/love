@@ -28,7 +28,7 @@ export function app_replace_rule_set_proof_connector(
   html_span_text_deemphasized(number_side, text_combine_multiple([index, "."]));
   let arrow = html_span_text(connector, text_arrow_down());
   html_bold(arrow);
-  html_style_font_size(arrow, "1.5em");
+  html_style_font_size(arrow, "2.2em");
   let rule_side = html_div(connector);
   html_style_set(rule_side, "flex", "1");
   html_style_set(rule_side, "padding-left", gap);
