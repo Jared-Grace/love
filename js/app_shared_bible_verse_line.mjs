@@ -4,7 +4,7 @@ import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
-export function app_shared_verse_line(parent, name, text, color) {
+export function app_shared_bible_verse_line(parent, name, text, color) {
   let line = html_div(parent);
   html_font_color_set(line, color);
   let has_name = text_empty_not_is(name);
