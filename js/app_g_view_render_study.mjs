@@ -9,7 +9,6 @@ import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -28,37 +27,52 @@ export async function app_g_view_render_study(div_map) {
     overlay,
     text_combine(emoji_book_open(), " Study: Tap each word in order"),
   );
-  async function close() {
-    await app_g_view_set(null);
-    html_remove(overlay);
-  }
-  app_g_button_back(overlay, close);
-  let container = app_g_container(overlay);
-  let words_div = html_div(container);
   let current = word_index;
   let green = text_combine(app_shared_button_background(), "dd");
   let blue = text_combine(app_shared_button_selected_background_color(), "dd");
-  let neutral = text_combine(app_shared_button_uncolored_background_color(), "dd");
   let font = app_shared_button_font_color();
+  let outline_current = text_combine("0.15em solid ", font);
+  let save_pending = null;
   async function persist() {
+    save_pending = null;
     await app_g_view_set({
       kind: app_g_view_kind_study(),
       text,
       word_index: current,
     });
   }
+  function persist_cancel() {
+    if (save_pending !== null) {
+      clearTimeout(save_pending);
+      save_pending = null;
+    }
+  }
+  function persist_soon() {
+    persist_cancel();
+    save_pending = setTimeout(persist, 400);
+  }
+  async function close() {
+    persist_cancel();
+    await app_g_view_set(null);
+    html_remove(overlay);
+  }
+  app_g_button_back(overlay, close);
+  let container = app_g_container(overlay);
+  let words_div = html_div(container);
   function style_completed(b) {
     html_style_assign(b, {
       "background-color": blue,
       color: font,
       "font-weight": "normal",
+      outline: "none",
     });
   }
   function style_upcoming(b) {
     html_style_assign(b, {
-      "background-color": neutral,
-      color: "black",
+      "background-color": green,
+      color: font,
       "font-weight": "normal",
+      outline: "none",
     });
   }
   function style_next(b) {
@@ -66,6 +80,7 @@ export async function app_g_view_render_study(div_map) {
       "background-color": green,
       color: font,
       "font-weight": "bold",
+      outline: outline_current,
     });
   }
   let word_bs = [];
@@ -93,7 +108,7 @@ export async function app_g_view_render_study(div_map) {
         return;
       }
       style_next(word_bs[current]);
-      await persist();
+      persist_soon();
     }
     return on_tap;
   }
