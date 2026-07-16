@@ -1,5 +1,5 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_replace_button_symbol_style_box_shadow_value_width(
+export function app_shared_symbol_tile_style_box_shadow_value_width(
   color,
   width,
 ) {
