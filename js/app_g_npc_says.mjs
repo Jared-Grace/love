@@ -5,8 +5,9 @@ import { g_character_img_url_direction } from "./g_character_img_url_direction.m
 import { g_gender_male } from "./g_gender_male.mjs";
 import { g_gender_female } from "./g_gender_female.mjs";
 import { app_g_container_color } from "./app_g_container_color.mjs";
+import { html_bold_mild } from "./html_bold_mild.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_combine } from "./text_combine.mjs";
 export function app_g_npc_says(npc, overlay, npc_says) {
   let gender = property_get(npc, "gender");
   let map = {
@@ -19,8 +20,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let c_src = g_character_img_url_direction(npc, "south");
   let component = html_img(container, c_src);
   let name_npc = property_get(npc, "name");
-  app_g_p_text(
-    container,
-    text_combine_multiple([name_npc, " says: ", npc_says]),
-  );
+  let label = app_g_p_text(container, text_combine(name_npc, " says:"));
+  html_bold_mild(label);
+  app_g_p_text(container, npc_says);
 }
