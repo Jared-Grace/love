@@ -9,7 +9,7 @@ import { integer_to_try } from "./integer_to_try.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
-import { clipboard_copy } from "./clipboard_copy.mjs";
+import { window_share } from "./window_share.mjs";
 export async function app_shared_bible_share(
   book_name,
   chapter_name,
@@ -36,5 +36,5 @@ export async function app_shared_bible_share(
   let languages = list_join(languages_chosen, "+");
   let base = html_url_without_hash();
   let url = text_combine_multiple([base, "#ref=", reference, ",l=", languages]);
-  await clipboard_copy(url);
+  await window_share(url);
 }
