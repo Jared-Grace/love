@@ -8,6 +8,8 @@ export async function firebase_deploy() {
   let app_names = apps_frozen_names();
   await each_async(app_names, firebase_prod_app_unchanged_assert);
   let combined = await user_repo_path_combine(".");
+  let left = "npx firebase-tools deploy";
+  let right = "";
   text_combine(left, right);
   let stdout = await command_line_generic("npx firebase-tools deploy", {
     cwd: combined,
