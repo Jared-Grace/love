@@ -1,15 +1,15 @@
-import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
-import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
-import { identity } from "./identity.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { app_bible_verse_open_curried } from "./app_bible_verse_open_curried.mjs";
-import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_bible_chapters_before } from "./app_bible_chapters_before.mjs";
-import { app_replace_button_list_centered } from "./app_replace_button_list_centered.mjs";
+import { app_bible_chapter_set_default } from "../../love/js/app_bible_chapter_set_default.mjs";
+import { ebible_chapter_code_to_name } from "../../love/js/ebible_chapter_code_to_name.mjs";
+import { html_div_text_centered } from "../../love/js/html_div_text_centered.mjs";
+import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
+import { identity } from "../../love/js/identity.mjs";
+import { list_map_property } from "../../love/js/list_map_property.mjs";
+import { app_bible_verse_open_curried } from "../../love/js/app_bible_verse_open_curried.mjs";
+import { ebible_verses_browser } from "../../love/js/ebible_verses_browser.mjs";
+import { ebible_folder_english } from "../../love/js/ebible_folder_english.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { app_bible_chapters_before } from "../../love/js/app_bible_chapters_before.mjs";
+import { app_shared_button_list_centered } from "../../love/js/app_shared_button_list_centered.mjs";
 export async function app_bible_verses(context) {
   let n = app_bible_chapter_set_default(context);
   if (n) {
@@ -25,5 +25,5 @@ export async function app_bible_verses(context) {
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, "verse_number");
   let oc = app_bible_verse_open_curried(context);
-  app_replace_button_list_centered(root, items, identity, oc);
+  app_shared_button_list_centered(root, items, identity, oc);
 }
