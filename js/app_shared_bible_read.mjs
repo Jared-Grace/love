@@ -1,5 +1,3 @@
-import { ebible_verses_browser } from "../../love/js/ebible_verses_browser.mjs";
-import { ebible_references_parse_lines_browser } from "../../love/js/ebible_references_parse_lines_browser.mjs";
 import { app_shared_bible_share } from "../../love/js/app_shared_bible_share.mjs";
 import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
 import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
@@ -14,19 +12,13 @@ import { app_shared_bible_toggle_update } from "../../love/js/app_shared_bible_t
 import { app_shared_bible_chosen_max } from "../../love/js/app_shared_bible_chosen_max.mjs";
 import { number_to_words } from "../../love/js/number_to_words.mjs";
 import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
-import { list_find_property } from "../../love/js/list_find_property.mjs";
 import { list_filter_null_not_is } from "../../love/js/list_filter_null_not_is.mjs";
-import { catch_null_async } from "../../love/js/catch_null_async.mjs";
-import { list_find_property_or_null } from "../../love/js/list_find_property_or_null.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
-import { each } from "../../love/js/each.mjs";
 import { app_shared_bible_verse_texts } from "../../love/js/app_shared_bible_verse_texts.mjs";
 import { html_margin_0 } from "../../love/js/html_margin_0.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { html_mobile_default } from "../../love/js/html_mobile_default.mjs";
 import { html_p } from "../../love/js/html_p.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
-import { ebible_languages } from "../../love/js/ebible_languages.mjs";
 import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
 import { html_display_none } from "../../love/js/html_display_none.mjs";
 import { html_display_none_or_block } from "../../love/js/html_display_none_or_block.mjs";
