@@ -38,8 +38,8 @@ export function app_replace_rule_set_proof_show(parent, history) {
   }
   function highlighted_is(position, j) {
     if (null_is(selected)) {
-      ("nothing chosen means nothing highlighted: the green marks the single usage of a chosen rule, so by default no symbol glows - otherwise every step glows and it reads as if the rule is highlighted at all its usages at once");
-      return false;
+      ("with nothing chosen every step symbol glows green (the whole solved proof); choosing a rule narrows the green to just that rule's single usage and darkens the rest");
+      return true;
     }
     let entry = list_get(history, selected);
     let rule = property_get(entry, "rule");
