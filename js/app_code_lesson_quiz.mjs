@@ -121,15 +121,10 @@ export function app_code_lesson_quiz(
     html_visibility_hidden(container_success_message);
     show_correction();
   }
-  async function on_success() {
-    hide_correction();
+  function on_success() {
+    "on a correct answer, show the success message and STOP — the choices are locked and the correction (if any) stays visible, so the learner ponders and advances with Next at their own pace, not auto-advanced";
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
-    html_visibility_hidden(quiz_new_message);
     html_visibility_visible(container_success_message);
-    await sleep_success_color();
-    qa = next_get();
-    on_qa_change();
-    html_visibility_visible(quiz_new_message);
   }
 }
