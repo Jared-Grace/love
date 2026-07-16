@@ -49,18 +49,33 @@ export async function app_g_conversation(
     );
     let how_b = app_g_button_green(choices, "How are you?", stub);
     let believe_b = app_g_button_green(choices, "What do you believe?", stub);
-    let correct = list_random_item([gospel_b, how_b, believe_b]);
-    function on_pray() {
-      html_style_assign(pray_b, {
+    let openers = [gospel_b, how_b, believe_b];
+    function disable(b) {
+      html_style_assign(b, {
         opacity: "0.5",
         "pointer-events": "none",
       });
+    }
+    function enable(b) {
+      html_style_assign(b, {
+        opacity: "1",
+        "pointer-events": "auto",
+      });
+    }
+    each(openers, disable);
+    let correct = list_random_item(openers);
+    function on_reveal() {
+      each(openers, enable);
+    }
+    function on_pray() {
+      disable(pray_b);
       let delay = list_random_item(["1s", "2s", "3s", "4s"]);
       let animation = text_combine_multiple([
         "correctPulse 1s ",
         delay,
         " infinite alternate",
       ]);
+      html_on(correct, "animationstart", on_reveal);
       html_style_set(correct, "animation", animation);
     }
     let pray = text_combine(
