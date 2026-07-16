@@ -53,7 +53,7 @@ import { app_replace_button_rule } from "../../love/js/app_replace_button_rule.m
 import { app_replace_rule_set_get } from "../../love/js/app_replace_rule_set_get.mjs";
 import { ternary } from "../../love/js/ternary.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
-import { app_replace_button_symbol_style } from "../../love/js/app_replace_button_symbol_style.mjs";
+import { app_shared_symbol_tile_style } from "../../love/js/app_shared_symbol_tile_style.mjs";
 import { property_set_exists_not } from "../../love/js/property_set_exists_not.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
 import { list_size } from "../../love/js/list_size.mjs";
@@ -227,7 +227,7 @@ export async function app_replace_rule_set(context) {
       symbol_button = html_button(div_symbols, symbol, symbol_on_click);
       let value = app_replace_rule_set_attribute_symbol(index);
       html_data_set_test(symbol_button, value);
-      app_replace_button_symbol_style(symbol_button);
+      app_shared_symbol_tile_style(symbol_button);
       property_set_exists_not(symbol_button, "index", index);
       refresh_sb();
       object_merge_set(symbol_button, {
