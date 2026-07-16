@@ -4,7 +4,7 @@ import { list_first_last_slice } from "../../love/js/list_first_last_slice.mjs";
 import { list_size_max_skip_replace } from "../../love/js/list_size_max_skip_replace.mjs";
 import { list_map_property } from "../../love/js/list_map_property.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
-import { app_chapter_copy } from "../../love/js/app_chapter_copy.mjs";
+import { app_shared_bible_copy } from "../../love/js/app_shared_bible_copy.mjs";
 import { app_shared_bible_verse_highlight } from "../../love/js/app_shared_bible_verse_highlight.mjs";
 import { app_shared_bible_chosen_max } from "../../love/js/app_shared_bible_chosen_max.mjs";
 import { list_toggle } from "../../love/js/list_toggle.mjs";
@@ -56,7 +56,7 @@ export function app_chapter_toggle_update(
     choose,
   };
   async function copy() {
-    await app_chapter_copy(
+    await app_shared_bible_copy(
       verse_numbers_chosen,
       languages_verses,
       chapter_code,
