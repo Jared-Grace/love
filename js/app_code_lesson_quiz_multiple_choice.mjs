@@ -1,28 +1,28 @@
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { not } from "./not.mjs";
-import { or } from "./or.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_sort_text_to } from "./list_sort_text_to.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { app_code_answer_count_max } from "./app_code_answer_count_max.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
-import { and } from "./and.mjs";
-import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
-import { text_to } from "./text_to.mjs";
-import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
+import { list_iterator_refillable } from "../../love/js/list_iterator_refillable.mjs";
+import { app_code_lesson_quiz_wrong_set } from "../../love/js/app_code_lesson_quiz_wrong_set.mjs";
+import { not } from "../../love/js/not.mjs";
+import { or } from "../../love/js/or.mjs";
+import { app_code_lesson_quiz_qa_property_other } from "../../love/js/app_code_lesson_quiz_qa_property_other.mjs";
+import { app_shared_button_screen_green_style_assign } from "../../love/js/app_shared_button_screen_green_style_assign.mjs";
+import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
+import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
+import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
+import { list_map } from "../../love/js/list_map.mjs";
+import { list_sort_text_to } from "../../love/js/list_sort_text_to.mjs";
+import { list_concat } from "../../love/js/list_concat.mjs";
+import { null_not_is } from "../../love/js/null_not_is.mjs";
+import { app_code_answer_count_max } from "../../love/js/app_code_answer_count_max.mjs";
+import { list_includes } from "../../love/js/list_includes.mjs";
+import { list_add } from "../../love/js/list_add.mjs";
+import { list_size } from "../../love/js/list_size.mjs";
+import { and } from "../../love/js/and.mjs";
+import { add } from "../../love/js/add.mjs";
+import { multiply } from "../../love/js/multiply.mjs";
+import { less_than } from "../../love/js/less_than.mjs";
+import { equal } from "../../love/js/equal.mjs";
+import { text_to } from "../../love/js/text_to.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { subtract } from "../../love/js/subtract.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   parent,
   info,
@@ -36,7 +36,8 @@ export function app_code_lesson_quiz_multiple_choice(
   let answer_property = property_get(info, "answer_property");
   let quiz_answer = property_get(qa, answer_property);
   let quiz_answer_text = text_to(quiz_answer);
-  let question_property = app_code_lesson_quiz_qa_property_other(answer_property);
+  let question_property =
+    app_code_lesson_quiz_qa_property_other(answer_property);
   let quiz_question = property_get(qa, question_property);
   let quiz_question_text = text_to(quiz_question);
   let answer_count_max = app_code_answer_count_max();
@@ -76,12 +77,12 @@ export function app_code_lesson_quiz_multiple_choice(
   let buttons = list_map(choices, each_button);
   let answered = false;
   function each_button(quiz_choice) {
-    let b = app_replace_button_wide(parent, quiz_choice, on_click);
+    let b = app_shared_button_wide(parent, quiz_choice, on_click);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
       if (answered) {
-        "once answered correctly the choices are locked, so the learner can ponder and advance with Next at their own pace";
+        ("once answered correctly the choices are locked, so the learner can ponder and advance with Next at their own pace");
         return;
       }
       let eq = equal(quiz_choice, quiz_answer_text);

@@ -1,6 +1,9 @@
 import { ebible_verses_browser } from "../../love/js/ebible_verses_browser.mjs";
 import { ebible_references_parse_lines_browser } from "../../love/js/ebible_references_parse_lines_browser.mjs";
 import { app_shared_bible_share } from "../../love/js/app_shared_bible_share.mjs";
+import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
+import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
+import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapter_code.mjs";
 import { html_button_share_text } from "../../love/js/html_button_share_text.mjs";
 import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
 import { promise_later } from "../../love/js/promise_later.mjs";
@@ -129,14 +132,11 @@ export async function app_shared_bible_read(context) {
   );
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
   if (ref_mode) {
-    let ref_verses_en = await ebible_references_parse_lines_browser(
-      [ebible_folder_english()],
-      [ref_line],
-    );
-    if (list_empty_is(ref_verses_en)) {
+    let ref_chapter = await app_shared_bible_ref_chapter_code(ref_line);
+    if (null_is(ref_chapter)) {
       ref_mode = false;
     } else {
-      chapter_code = property_get(list_first(ref_verses_en), "chapter_code");
+      chapter_code = ref_chapter;
     }
   }
   let v_hash = property_get_or(hash, "v", "");
@@ -224,32 +224,12 @@ export async function app_shared_bible_read(context) {
   }
   app_shared_bible_languages_gear(bar, content, languages_chosen);
   async function fetch_language(lc) {
-    async function get() {
-      let bible_folder = ebible_language_to_bible_folder(lc);
-      let verses = null;
-      if (ref_mode) {
-        verses = await ebible_references_parse_lines_browser(
-          [bible_folder],
-          [ref_line],
-        );
-      } else {
-        verses = await ebible_verses_browser(bible_folder, chapter_code);
-      }
-      let books = await ebible_version_books_browser(bible_folder);
-      let language = list_find_property(
-        ebible_languages(),
-        "language_code",
-        lc,
-      );
-      let v2 = {
-        language_code: lc,
-        language,
-        books,
-        verses,
-      };
-      return v2;
-    }
-    let r = await catch_null_async(get);
+    let r = await app_shared_bible_fetch_language(
+      lc,
+      ref_mode,
+      ref_line,
+      chapter_code,
+    );
     return r;
   }
   await list_map_unordered_add_async(
@@ -284,29 +264,11 @@ export async function app_shared_bible_read(context) {
     let number = app_shared_button(p, verse_number_v, select_persist);
     html_style_set(number, "justify-self", "end");
     let text_cell = html_div(p);
-    let entries = [];
-    function collect_language(entry) {
-      let verses_l = property_get(entry, "verses");
-      let verse_l = list_find_property_or_null(
-        verses_l,
-        "verse_number",
-        verse_number_v,
-      );
-      let nn = null_not_is(verse_l);
-      if (nn) {
-        let text_l = property_get(verse_l, "text");
-        let name = "";
-        if (show_language_names) {
-          let language = property_get(entry, "language");
-          name = property_get(language, "name");
-        }
-        list_add(entries, {
-          name,
-          text: text_l,
-        });
-      }
-    }
-    each(languages_verses, collect_language);
+    let entries = app_shared_bible_verse_entries(
+      languages_verses,
+      verse_number_v,
+      show_language_names,
+    );
     app_shared_bible_verse_texts(text_cell, entries);
     html_margin_0(p);
     html_style_padding_y(p, app_shared_spaced_tiny_gap());

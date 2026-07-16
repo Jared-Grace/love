@@ -1,30 +1,30 @@
-import { sleep_success_color } from "./sleep_success_color.mjs";
-import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
-import { not } from "./not.mjs";
-import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs";
-import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
-import { app_code_quiz_index_shuffle } from "./app_code_quiz_index_shuffle.mjs";
-import { app_code_quiz_index_back } from "./app_code_quiz_index_back.mjs";
-import { app_code_quiz_index_back_available } from "./app_code_quiz_index_back_available.mjs";
-import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
-import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
-import { html_visibility_hidden_multiple } from "./html_visibility_hidden_multiple.mjs";
-import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
-import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
-import { app_code_review_scope } from "./app_code_review_scope.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
-import { app_replace_success_message } from "./app_replace_success_message.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { sleep_success_color } from "../../love/js/sleep_success_color.mjs";
+import { app_code_no_more_lessons } from "../../love/js/app_code_no_more_lessons.mjs";
+import { not } from "../../love/js/not.mjs";
+import { app_code_lesson_current_last_is } from "../../love/js/app_code_lesson_current_last_is.mjs";
+import { app_code_lesson_quiz_qa_question } from "../../love/js/app_code_lesson_quiz_qa_question.mjs";
+import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
+import { html_visibility_visible } from "../../love/js/html_visibility_visible.mjs";
+import { app_code_quiz_correction } from "../../love/js/app_code_quiz_correction.mjs";
+import { html_clear } from "../../love/js/html_clear.mjs";
+import { app_replace_button_wide_next } from "../../love/js/app_replace_button_wide_next.mjs";
+import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
+import { app_code_quiz_index_shuffle } from "../../love/js/app_code_quiz_index_shuffle.mjs";
+import { app_code_quiz_index_back } from "../../love/js/app_code_quiz_index_back.mjs";
+import { app_code_quiz_index_back_available } from "../../love/js/app_code_quiz_index_back_available.mjs";
+import { app_code_lesson_above } from "../../love/js/app_code_lesson_above.mjs";
+import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
+import { html_visibility_hidden_multiple } from "../../love/js/html_visibility_hidden_multiple.mjs";
+import { app_code_after_lesson } from "../../love/js/app_code_after_lesson.mjs";
+import { app_code_lesson_current_number } from "../../love/js/app_code_lesson_current_number.mjs";
+import { app_code_review_scope } from "../../love/js/app_code_review_scope.mjs";
+import { null_not_is } from "../../love/js/null_not_is.mjs";
+import { app_code_quiz_index_reset } from "../../love/js/app_code_quiz_index_reset.mjs";
+import { app_replace_success_message } from "../../love/js/app_replace_success_message.mjs";
+import { html_div } from "../../love/js/html_div.mjs";
+import { app_code_example_answer_label } from "../../love/js/app_code_example_answer_label.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { text_combine } from "../../love/js/text_combine.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -70,7 +70,7 @@ export function app_code_lesson_quiz(
     };
     let left = app_shared_button_back_text();
     let back_text = text_combine(left, " to the previous quiz");
-    app_replace_button_wide(parent_container, back_text, on_back);
+    app_shared_button_wide(parent_container, back_text, on_back);
   }
   let number = app_code_lesson_current_number(context);
   let review_scope = app_code_review_scope(number);
@@ -85,7 +85,7 @@ export function app_code_lesson_quiz(
   if (no_more) {
     app_code_no_more_lessons(parent_container);
   } else {
-    app_replace_button_wide(parent_container, "next lesson", on_move_on);
+    app_shared_button_wide(parent_container, "next lesson", on_move_on);
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
