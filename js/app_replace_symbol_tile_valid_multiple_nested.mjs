@@ -1,4 +1,4 @@
 import { app_replace_symbol_tile_valid_if_multiple_nested } from "../../love/js/app_replace_symbol_tile_valid_if_multiple_nested.mjs";
-export function app_replace_button_symbol_style_valid_multiple_nested(list) {
+export function app_replace_symbol_tile_valid_multiple_nested(list) {
   app_replace_symbol_tile_valid_if_multiple_nested(list, true, true);
 }
