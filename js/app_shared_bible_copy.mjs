@@ -14,7 +14,7 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-export async function app_chapter_copy(
+export async function app_shared_bible_copy(
   verse_numbers_chosen,
   languages_verses,
   chapter_code,
@@ -35,10 +35,11 @@ export async function app_chapter_copy(
   let first = property_get(slice, "first");
   let last = property_get(slice, "last");
   let sliced = property_get(slice, "sliced");
-  let reference = ebible_parts_chapter_code_to_reference(chapter_code, primary_books, [
-    first,
-    last,
-  ]);
+  let reference = ebible_parts_chapter_code_to_reference(
+    chapter_code,
+    primary_books,
+    [first, last],
+  );
   let lines = [];
   list_add(lines, reference);
   function per_verse(verse_number) {
