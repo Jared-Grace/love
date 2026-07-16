@@ -1,13 +1,13 @@
 import { ebible_verses_browser } from "../../love/js/ebible_verses_browser.mjs";
 import { ebible_references_parse_lines_browser } from "../../love/js/ebible_references_parse_lines_browser.mjs";
-import { app_chapter_share } from "../../love/js/app_chapter_share.mjs";
+import { app_shared_bible_share } from "../../love/js/app_shared_bible_share.mjs";
 import { html_button_share_text } from "../../love/js/html_button_share_text.mjs";
 import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
 import { promise_later } from "../../love/js/promise_later.mjs";
 import { html_scroll_center_now } from "../../love/js/html_scroll_center_now.mjs";
 import { list_map_add_async } from "../../love/js/list_map_add_async.mjs";
 import { list_map_unordered_add_async } from "../../love/js/list_map_unordered_add_async.mjs";
-import { app_chapter_toggle_update } from "../../love/js/app_chapter_toggle_update.mjs";
+import { app_shared_bible_toggle_update } from "../../love/js/app_shared_bible_toggle_update.mjs";
 import { app_shared_bible_chosen_max } from "../../love/js/app_shared_bible_chosen_max.mjs";
 import { number_to_words } from "../../love/js/number_to_words.mjs";
 import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
@@ -259,7 +259,7 @@ export async function app_chapter(context) {
     let columns = text_combine(app_shared_number_gutter(), " 1fr");
     html_style_set(p, "grid-template-columns", columns);
     html_style_set(p, "column-gap", app_shared_spaced_small_gap());
-    let r = app_chapter_toggle_update(
+    let r = app_shared_bible_toggle_update(
       updates,
       verse_numbers_chosen,
       verse_number_v,
@@ -328,7 +328,7 @@ export async function app_chapter(context) {
     );
     app_replace_button(actions, t, copy);
     async function share() {
-      await app_chapter_share(
+      await app_shared_bible_share(
         book_name,
         chapter_name,
         verse_numbers_chosen,
