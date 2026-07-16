@@ -10,6 +10,8 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
 import { emoji_sunrise } from "./emoji_sunrise.mjs";
+import { emoji_smile } from "./emoji_smile.mjs";
+import { emoji_thinking } from "./emoji_thinking.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -55,8 +57,16 @@ export async function app_g_conversation(
       ]),
       npc_gospel,
     );
-    let how_b = app_g_button_green(choices, "How are you?", stub);
-    let believe_b = app_g_button_green(choices, "What do you believe?", stub);
+    let how_b = app_g_button_green(
+      choices,
+      text_combine(emoji_smile(), " How are you?"),
+      stub,
+    );
+    let believe_b = app_g_button_green(
+      choices,
+      text_combine(emoji_thinking(), " What do you believe?"),
+      stub,
+    );
     let correct = list_random_item([gospel_b, how_b, believe_b]);
     function on_pray() {
       html_style_assign(pray_b, {
