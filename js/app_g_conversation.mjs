@@ -7,6 +7,9 @@ import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
+import { emoji_cross } from "./emoji_cross.mjs";
+import { emoji_rock } from "./emoji_rock.mjs";
+import { emoji_sunrise } from "./emoji_sunrise.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -42,7 +45,14 @@ export async function app_g_conversation(
     app_g_p_text(choices, "What would you like to say?");
     let gospel_b = app_g_button_green(
       choices,
-      "Tell them that Jesus died, was buried and rose to life",
+      text_combine_multiple([
+        "Tell them that Jesus died ",
+        emoji_cross(),
+        ", was buried ",
+        emoji_rock(),
+        " and rose to life ",
+        emoji_sunrise(),
+      ]),
       npc_gospel,
     );
     let how_b = app_g_button_green(choices, "How are you?", stub);
