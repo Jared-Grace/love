@@ -3,6 +3,7 @@ let value = {
   overlay: null,
   timer: null,
   styled: false,
+  suppressed: false,
 };
 export function html_loading_state() {
   return value;

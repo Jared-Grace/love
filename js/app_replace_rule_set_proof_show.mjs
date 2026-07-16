@@ -79,9 +79,11 @@ export function app_replace_rule_set_proof_show(parent, history) {
         let glowing = or(nothing_selected, selected_this);
         app_replace_lefts_rights_style(result, glowing, false);
         let button = property_get(result, "b");
+        let enabled = true;
+        ("proof rules are always clickable, so a non-selected one takes the derivation's plain uncolored background (enabled), not a grey disabled background that appears nowhere else - keeping the rule styles to the two the derivation already uses");
         let bg = app_replace_rule_set_rule_background_color(
           selected_this,
-          glowing,
+          enabled,
           false,
         );
         html_style_background_color_set(button, bg);
