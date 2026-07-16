@@ -14,6 +14,7 @@ import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
