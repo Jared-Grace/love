@@ -10,7 +10,7 @@ import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_url_without_hash } from "./html_url_without_hash.mjs";
 import { clipboard_copy } from "./clipboard_copy.mjs";
-export async function app_chapter_share(
+export async function app_shared_bible_share(
   book_name,
   chapter_name,
   verse_numbers_chosen,
