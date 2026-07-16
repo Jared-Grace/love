@@ -7,7 +7,7 @@ import { firebase_storage_url_project_jg } from "../../love/js/firebase_storage_
 import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
 import { list_single } from "../../love/js/list_single.mjs";
 import { list_size_1 } from "../../love/js/list_size_1.mjs";
-import { app_replace_button_wide } from "../../love/js/app_replace_button_wide.mjs";
+import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { firebase_storage_download_json_decompress } from "../../love/js/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../love/js/list_filter.mjs";
 import { null_not_is } from "../../love/js/null_not_is.mjs";
@@ -92,9 +92,9 @@ export async function app_search_results(context, div_results) {
       await list_join_newline_2_copy(squashed);
     }
     let text2 = text_combine(c, " all");
-    let component = app_replace_button_wide(expand_all_div, text2, lambda6);
+    let component = app_shared_button_wide(expand_all_div, text2, lambda6);
   }
-  expand_all = app_replace_button_wide(
+  expand_all = app_shared_button_wide(
     div_results,
     "Expand all",
     expand_all_lambda,
@@ -120,13 +120,13 @@ export async function app_search_results(context, div_results) {
       async function click() {
         html_remove(b);
         let cb_text = html_button_copy_text();
-        let cb = app_replace_button_wide(div_verse, cb_text, copy);
+        let cb = app_shared_button_wide(div_verse, cb_text, copy);
         html_style_margin_y(cb, "0.2em");
         function lambda3() {
           app_shared_bible_open(languages_chosen, chapter_code, verse_number);
         }
         let oc_text = text_combine(emoji_book_open(), " Open chapter");
-        let oc = app_replace_button_wide(div_verse, oc_text, lambda3);
+        let oc = app_shared_button_wide(div_verse, oc_text, lambda3);
         html_style_margin_y(oc, "0.2em");
         let bible_texts = [];
         await app_reply_verses_add(
@@ -150,7 +150,7 @@ export async function app_search_results(context, div_results) {
           await list_join_newline_2_copy(bible_texts);
         }
       }
-      b = app_replace_button_wide(div_verse, reference, click);
+      b = app_shared_button_wide(div_verse, reference, click);
       html_style_margin_y(b, "0.2em");
       property_set_exists_not(b, "click", click);
       return b;
