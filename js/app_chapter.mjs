@@ -1,4 +1,5 @@
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
+import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { promise_later } from "./promise_later.mjs";
 import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
@@ -193,7 +194,15 @@ export async function app_chapter(context) {
   async function fetch_language(lc) {
     async function get() {
       let bible_folder = ebible_language_to_bible_folder(lc);
-      let verses = await ebible_verses_browser(bible_folder, chapter_code);
+      let verses = null;
+      if (ref_mode) {
+        verses = await ebible_references_parse_lines_browser(
+          [bible_folder],
+          [ref_line],
+        );
+      } else {
+        verses = await ebible_verses_browser(bible_folder, chapter_code);
+      }
       let books = await ebible_version_books_browser(bible_folder);
       let language = list_find_property(ebible_languages(), "language_code", lc);
       let v2 = {
