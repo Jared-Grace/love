@@ -126,6 +126,7 @@ export async function app_g_verify_home(context) {
     passages.forEach(function (passage) {
       let key = g_sermon_passage_verses_key(passage);
       app_replace_button(bar, "v" + key, function () {
+        localStorage.removeItem(advance_key);
         open_passage(passage);
       });
     });
@@ -138,6 +139,12 @@ export async function app_g_verify_home(context) {
 
     view = html_div(wrap);
 
+    let advance_target = localStorage.getItem(advance_key);
+    if (advance_target !== null && list_includes(real_keys, advance_target)) {
+      selected_key = advance_target;
+      localStorage.setItem(storage_key, selected_key);
+      localStorage.removeItem(advance_key);
+    }
     let initial = null;
     passages.forEach(function (passage) {
       if (g_sermon_passage_verses_key(passage) === selected_key) {
