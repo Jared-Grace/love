@@ -87,6 +87,10 @@ export async function app_g_conversation(
     function reveal() {
       app_shared_glow_correct(correct);
       app_shared_correct_gold(correct);
+      html_style_assign(correct, {
+        position: "relative",
+        "z-index": "1",
+      });
     }
     function on_pray() {
       html_style_assign(pray_b, {
