@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
-import { app_replace_button_wide_text_left_centered } from "./app_replace_button_wide_text_left_centered.mjs";
-import { add_1_period } from "./add_1_period.mjs";
+import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
