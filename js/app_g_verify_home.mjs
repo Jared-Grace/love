@@ -15,9 +15,8 @@ import { list_join_comma } from "../../love/js/list_join_comma.mjs";
 import { list_first } from "../../love/js/list_first.mjs";
 import { list_includes } from "../../love/js/list_includes.mjs";
 import { json_to } from "../../love/js/json_to.mjs";
-import { g_sermon_write_download } from "../../love/js/g_sermon_write_download.mjs";
-import { g_sermon_write_download_fresh } from "../../love/js/g_sermon_write_download_fresh.mjs";
-import { g_verify_status_download_fresh } from "../../love/js/g_verify_status_download_fresh.mjs";
+import { app_api } from "../../love/js/app_api.mjs";
+import { fn_name } from "../../love/js/fn_name.mjs";
 import { g_sermon_passage_verses_key } from "../../love/js/g_sermon_passage_verses_key.mjs";
 import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { app_g_verify_view } from "../../love/js/app_g_verify_view.mjs";
@@ -36,14 +35,25 @@ export async function app_g_verify_home(context) {
   let shown_json = null;
   let chapter;
   try {
-    chapter = await g_sermon_write_download(chapter_code);
+    chapter = await app_api({
+      f_name: fn_name("g_sermon_write_read"),
+      args: [chapter_code],
+    });
   } catch (missing) {
     chapter = {
       chapter_code,
       passages: [],
     };
   }
-  let status = await g_verify_status_download_fresh(chapter_code);
+  let status;
+  try {
+    status = await app_api({
+      f_name: fn_name("g_verify_status_read"),
+      args: [chapter_code],
+    });
+  } catch (missing) {
+    status = { busy: false, verse: "", note: "" };
+  }
   render(chapter, status);
   poll();
   function render(chapter, status) {
@@ -122,7 +132,7 @@ export async function app_g_verify_home(context) {
     }
     let view = null;
     function on_approved(v) {
-      localStorage.setItem(advance_key, String(Number(v) + 1));
+      localStorage.setItem(advance_key, v);
     }
     function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
@@ -174,11 +184,14 @@ export async function app_g_verify_home(context) {
       }
       return;
     }
-    let advance_target = localStorage.getItem(advance_key);
-    if (advance_target !== null && list_includes(real_keys, advance_target)) {
-      selected_key = advance_target;
-      localStorage.setItem(storage_key, selected_key);
-      localStorage.removeItem(advance_key);
+    let advance_after = localStorage.getItem(advance_key);
+    if (advance_after !== null) {
+      let approved_index = real_keys.indexOf(advance_after);
+      if (approved_index >= 0 && approved_index + 1 < real_keys.length) {
+        selected_key = real_keys[approved_index + 1];
+        localStorage.setItem(storage_key, selected_key);
+        localStorage.removeItem(advance_key);
+      }
     }
     let initial = null;
     passages.forEach(function (passage) {
@@ -199,8 +212,14 @@ export async function app_g_verify_home(context) {
   }
   async function refresh() {
     try {
-      let fresh_chapter = await g_sermon_write_download_fresh(chapter_code);
-      let fresh_status = await g_verify_status_download_fresh(chapter_code);
+      let fresh_chapter = await app_api({
+        f_name: fn_name("g_sermon_write_read"),
+        args: [chapter_code],
+      });
+      let fresh_status = await app_api({
+        f_name: fn_name("g_verify_status_read"),
+        args: [chapter_code],
+      });
       let fresh_json = json_to({
         chapter: fresh_chapter,
         status: fresh_status,
