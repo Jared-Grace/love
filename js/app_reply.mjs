@@ -1,42 +1,42 @@
-import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
-import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
-import { clipboard_copy } from "./clipboard_copy.mjs";
-import { log } from "./log.mjs";
-import { list_map_existing } from "./list_map_existing.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
-import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
-import { text_alphabet_includes } from "./text_alphabet_includes.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
-import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
-import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
-import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
-import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
-import { text_take_less_1 } from "./text_take_less_1.mjs";
-import { equal } from "./equal.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
-import { each_async } from "./each_async.mjs";
-import { list_copy_reverse } from "./list_copy_reverse.mjs";
-import { list_empty } from "./list_empty.mjs";
-import { each_range_from } from "./each_range_from.mjs";
-import { each } from "./each.mjs";
-import { app_replace_button } from "./app_replace_button.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
-import { app_reply_love } from "./app_reply_love.mjs";
-import { list_add } from "./list_add.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_reply_initialize } from "./app_reply_initialize.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { multiply } from "./multiply.mjs";
+import { list_filter_text_includes_not } from "../../love/js/list_filter_text_includes_not.mjs";
+import { ebible_versions_english_choices_browser } from "../../love/js/ebible_versions_english_choices_browser.mjs";
+import { clipboard_copy } from "../../love/js/clipboard_copy.mjs";
+import { log } from "../../love/js/log.mjs";
+import { list_map_existing } from "../../love/js/list_map_existing.mjs";
+import { text_lower_to } from "../../love/js/text_lower_to.mjs";
+import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
+import { app_reply_main_shortcuts } from "../../love/js/app_reply_main_shortcuts.mjs";
+import { object_merge_set } from "../../love/js/object_merge_set.mjs";
+import { text_alphabet_includes } from "../../love/js/text_alphabet_includes.mjs";
+import { text_empty_not_is } from "../../love/js/text_empty_not_is.mjs";
+import { list_shuffle_take } from "../../love/js/list_shuffle_take.mjs";
+import { app_reply_verses_add } from "../../love/js/app_reply_verses_add.mjs";
+import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_languages_chosen_reset.mjs";
+import { app_reply_buttons_languages } from "../../love/js/app_reply_buttons_languages.mjs";
+import { app_reply_languages_prompt } from "../../love/js/app_reply_languages_prompt.mjs";
+import { app_reply_buttons_refresh } from "../../love/js/app_reply_buttons_refresh.mjs";
+import { html_on_keydown_body } from "../../love/js/html_on_keydown_body.mjs";
+import { text_take_less_1 } from "../../love/js/text_take_less_1.mjs";
+import { equal } from "../../love/js/equal.mjs";
+import { list_join_newline_2_copy } from "../../love/js/list_join_newline_2_copy.mjs";
+import { list_concat_multiple } from "../../love/js/list_concat_multiple.mjs";
+import { list_join_comma } from "../../love/js/list_join_comma.mjs";
+import { list_map_property } from "../../love/js/list_map_property.mjs";
+import { prayer_blessing_expand } from "../../love/js/prayer_blessing_expand.mjs";
+import { each_async } from "../../love/js/each_async.mjs";
+import { list_copy_reverse } from "../../love/js/list_copy_reverse.mjs";
+import { list_empty } from "../../love/js/list_empty.mjs";
+import { each_range_from } from "../../love/js/each_range_from.mjs";
+import { each } from "../../love/js/each.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
+import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
+import { app_reply_love } from "../../love/js/app_reply_love.mjs";
+import { list_add } from "../../love/js/list_add.mjs";
+import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { app_reply_initialize } from "../../love/js/app_reply_initialize.mjs";
+import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
+import { multiply } from "../../love/js/multiply.mjs";
 export async function app_reply(context) {
   let r = await app_reply_initialize(context);
   let choices = property_get(r, "choices");
@@ -74,7 +74,7 @@ export async function app_reply(context) {
     await update(3);
     languages_chosen = languages_chosen_before;
   }
-  let component4 = app_replace_button(card1, "❤️", love);
+  let component4 = app_shared_button(card1, "❤️", love);
   let buttons_languages = app_reply_buttons_languages(
     languages_chosen,
     card1,
@@ -101,7 +101,7 @@ export async function app_reply(context) {
     async function lambda3() {
       await update(c);
     }
-    let component = app_replace_button(card2, c, lambda3);
+    let component = app_shared_button(card2, c, lambda3);
   }
   each(choices_verse_count, lambda2);
   let visible_count = null;
@@ -130,7 +130,11 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let component3 = app_replace_button(card2, html_button_copy_text(), copy_refresh);
+  let component3 = app_shared_button(
+    card2,
+    html_button_copy_text(),
+    copy_refresh,
+  );
   let card3 = app_shared_container_blue(root);
   app_reply_main_shortcuts(
     card3,
@@ -147,7 +151,7 @@ export async function app_reply(context) {
       "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
     );
   }
-  let component2 = app_replace_button(card4, "Meeting requested", lambda5);
+  let component2 = app_shared_button(card4, "Meeting requested", lambda5);
   let card5 = app_shared_container_blue(root);
   app_shared_text_body(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
@@ -164,7 +168,7 @@ export async function app_reply(context) {
       typed_reset();
       visible_count = buttons_refresh();
     }
-    b = app_replace_button(card5, text, click);
+    b = app_shared_button(card5, text, click);
     object_merge_set(b, choice);
     object_merge_set(b, {
       click,
