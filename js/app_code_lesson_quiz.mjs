@@ -1,16 +1,9 @@
-import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
 import { not } from "./not.mjs";
-import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
-import { emoji_point_up } from "./emoji_point_up.mjs";
-import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
