@@ -3,6 +3,7 @@ import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
 import { app_code_review_load } from "./app_code_review_load.mjs";
 import { app_code_review_state_key } from "./app_code_review_state_key.mjs";
 import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
+import { app_code_review_seed_fresh } from "./app_code_review_seed_fresh.mjs";
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -148,7 +149,10 @@ export function app_code_review(context) {
       list_remove_at(queue, index_front);
       passed = add_1(passed);
       if (not(clean)) {
-        list_add(queue, seed);
+        let lesson_id = property_get(seed, "lesson_id");
+        let kind_index = property_get(seed, "kind_index");
+        let requeued = app_code_review_seed_fresh(lesson_id, kind_index);
+        list_add(queue, requeued);
       }
       persist();
       present();
