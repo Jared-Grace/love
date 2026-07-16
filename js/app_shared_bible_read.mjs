@@ -45,7 +45,7 @@ import { not } from "../../love/js/not.mjs";
 import { html_button_biblehub_open_interlinear } from "../../love/js/html_button_biblehub_open_interlinear.mjs";
 import { html_button_biblehub_open_parallel } from "../../love/js/html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_commentary } from "../../love/js/html_button_biblehub_open_commentary.mjs";
-import { app_replace_button } from "../../love/js/app_replace_button.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { html_flex_column_gap } from "../../love/js/html_flex_column_gap.mjs";
 import { html_style_padding_y } from "../../love/js/html_style_padding_y.mjs";
 import { html_style_padding_x } from "../../love/js/html_style_padding_x.mjs";
@@ -65,6 +65,7 @@ import { app_replace_button_arrow_left } from "../../love/js/app_replace_button_
 import { app_replace_button_arrow_right } from "../../love/js/app_replace_button_arrow_right.mjs";
 import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
 import { app_shared_bible_book_chapter } from "../../love/js/app_shared_bible_book_chapter.mjs";
+import { app_shared_bible_code_open } from "../../love/js/app_shared_bible_code_open.mjs";
 import { app_shared_bible_choose_chapter } from "../../love/js/app_shared_bible_choose_chapter.mjs";
 import { text_empty_is } from "../../love/js/text_empty_is.mjs";
 import { text_empty_not_is } from "../../love/js/text_empty_not_is.mjs";
@@ -210,9 +211,17 @@ export async function app_shared_bible_read(context) {
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let book_name = ebible_book_code_to_name(books_en, book_code);
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
-  app_replace_button_arrow_left(bar, arrow_left);
-  app_shared_bible_book_chapter(bar, content, chapter_code, books);
-  app_replace_button_arrow_right(bar, arrow_right);
+  if (ref_mode) {
+    app_shared_bible_book_chapter(bar, content, chapter_code, books);
+    function view_whole_chapter() {
+      app_shared_bible_code_open(chapter_code);
+    }
+    app_shared_button(bar, "View whole chapter", view_whole_chapter);
+  } else {
+    app_replace_button_arrow_left(bar, arrow_left);
+    app_shared_bible_book_chapter(bar, content, chapter_code, books);
+    app_replace_button_arrow_right(bar, arrow_right);
+  }
   app_shared_bible_languages_gear(bar, content, languages_chosen);
   async function fetch_language(lc) {
     async function get() {
@@ -272,7 +281,7 @@ export async function app_shared_bible_read(context) {
       select();
       persist_selection();
     }
-    let number = app_replace_button(p, verse_number_v, select_persist);
+    let number = app_shared_button(p, verse_number_v, select_persist);
     html_style_set(number, "justify-self", "end");
     let text_cell = html_div(p);
     let entries = [];
@@ -326,7 +335,7 @@ export async function app_shared_bible_read(context) {
       book_name,
       verse_number_v,
     );
-    app_replace_button(actions, t, copy);
+    app_shared_button(actions, t, copy);
     async function share() {
       await app_shared_bible_share(
         book_name,
@@ -335,7 +344,7 @@ export async function app_shared_bible_read(context) {
         languages_chosen,
       );
     }
-    app_replace_button(actions, html_button_share_text(), share);
+    app_shared_button(actions, html_button_share_text(), share);
     function row_update() {
       update();
       let is_last = verse_number_v === selection_last();

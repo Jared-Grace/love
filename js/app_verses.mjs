@@ -1,27 +1,27 @@
-import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
-import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
-import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
-import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
-import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
-import { app_reply_initialize } from "./app_reply_initialize.mjs";
-import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { app_replace_button } from "./app_replace_button.mjs";
-import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { list_empty } from "./list_empty.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
-import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
+import { list_filter_text_includes_not } from "../../love/js/list_filter_text_includes_not.mjs";
+import { ebible_versions_english_choices_browser } from "../../love/js/ebible_versions_english_choices_browser.mjs";
+import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
+import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_languages_chosen_reset.mjs";
+import { app_reply_buttons_languages } from "../../love/js/app_reply_buttons_languages.mjs";
+import { app_reply_languages_prompt } from "../../love/js/app_reply_languages_prompt.mjs";
+import { app_reply_verses_add } from "../../love/js/app_reply_verses_add.mjs";
+import { app_reply_initialize } from "../../love/js/app_reply_initialize.mjs";
+import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
+import { app_shared_button_toggle_style } from "../../love/js/app_shared_button_toggle_style.mjs";
+import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
+import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
+import { html_clear } from "../../love/js/html_clear.mjs";
+import { html_display_none_or_block } from "../../love/js/html_display_none_or_block.mjs";
+import { list_shuffle_take } from "../../love/js/list_shuffle_take.mjs";
+import { list_join_newline_2_copy } from "../../love/js/list_join_newline_2_copy.mjs";
+import { list_empty } from "../../love/js/list_empty.mjs";
+import { list_empty_is } from "../../love/js/list_empty_is.mjs";
+import { list_add } from "../../love/js/list_add.mjs";
+import { each } from "../../love/js/each.mjs";
+import { each_async } from "../../love/js/each_async.mjs";
+import { equal } from "../../love/js/equal.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
 export async function app_verses(context) {
   let r = await app_reply_initialize(context);
   let languages = property_get(r, "languages");
@@ -52,7 +52,7 @@ export async function app_verses(context) {
       verse_count = c;
       counts_refresh();
     }
-    component = app_replace_button(card2, c, on_click);
+    component = app_shared_button(card2, c, on_click);
     function update() {
       let chosen = equal(verse_count, c);
       app_shared_button_toggle_style(chosen, component);
@@ -66,12 +66,12 @@ export async function app_verses(context) {
     card3,
     "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.",
   );
-  let generate_button = app_replace_button(card3, "✨ Generate", generate);
+  let generate_button = app_shared_button(card3, "✨ Generate", generate);
   app_shared_text_body(
     card3,
     "If the copy did not work, this button will gently copy them again.",
   );
-  let copy_button = app_replace_button(card3, html_button_copy_text(), copy);
+  let copy_button = app_shared_button(card3, html_button_copy_text(), copy);
   let card4 = app_shared_container_blue(root);
   card4_refresh();
   function counts_refresh() {

@@ -1,11 +1,15 @@
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import { firebase_app_initialize } from "./firebase_app_initialize.mjs";
-import { html_input_email } from "./html_input_email.mjs";
-import { html_input_password } from "./html_input_password.mjs";
-import { html_placeholder } from "./html_placeholder.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { app_replace_button } from "./app_replace_button.mjs";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { firebase_app_initialize } from "../../love/js/firebase_app_initialize.mjs";
+import { html_input_email } from "../../love/js/html_input_email.mjs";
+import { html_input_password } from "../../love/js/html_input_password.mjs";
+import { html_placeholder } from "../../love/js/html_placeholder.mjs";
+import { html_value_get } from "../../love/js/html_value_get.mjs";
+import { html_clear } from "../../love/js/html_clear.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 export async function firebase_auth_ensure(container) {
   "resolve the logged-in user; if none, render an inline email/password login into container and resolve after sign-in";
   let app = await firebase_app_initialize();
@@ -34,6 +38,6 @@ export async function firebase_auth_ensure(container) {
       html_clear(container);
       resolve(v.user);
     }
-    app_replace_button(container, "Login", login);
+    app_shared_button(container, "Login", login);
   });
 }

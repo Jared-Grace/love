@@ -1,27 +1,27 @@
-import { firebase_upload_object_compressed_browser } from "./firebase_upload_object_compressed_browser.mjs";
-import { each } from "./each.mjs";
-import { list_last } from "./list_last.mjs";
-import { g_sermon_generate_download } from "./g_sermon_generate_download.mjs";
-import { app_g_bible_home_inner } from "./app_g_bible_home_inner.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { invoke_multiple } from "./invoke_multiple.mjs";
-import { g_sermon_generate_upload_path } from "./g_sermon_generate_upload_path.mjs";
-import { property_set } from "./property_set.mjs";
-import { text_replace } from "./text_replace.mjs";
-import { newline_windows } from "./newline_windows.mjs";
-import { newline } from "./newline.mjs";
-import { html_value_get } from "./html_value_get.mjs";
-import { app_replace_button } from "./app_replace_button.mjs";
-import { html_mobile_default_font_size } from "./html_mobile_default_font_size.mjs";
-import { html_width_full } from "./html_width_full.mjs";
-import { list_size } from "./list_size.mjs";
-import { html_rows_set } from "./html_rows_set.mjs";
-import { list_join_newline } from "./list_join_newline.mjs";
-import { html_value_set } from "./html_value_set.mjs";
-import { html_textarea } from "./html_textarea.mjs";
-import { app_g_openai_split } from "./app_g_openai_split.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_get } from "./property_get.mjs";
+import { firebase_upload_object_compressed_browser } from "../../love/js/firebase_upload_object_compressed_browser.mjs";
+import { each } from "../../love/js/each.mjs";
+import { list_last } from "../../love/js/list_last.mjs";
+import { g_sermon_generate_download } from "../../love/js/g_sermon_generate_download.mjs";
+import { app_g_bible_home_inner } from "../../love/js/app_g_bible_home_inner.mjs";
+import { list_adder_async } from "../../love/js/list_adder_async.mjs";
+import { invoke_multiple } from "../../love/js/invoke_multiple.mjs";
+import { g_sermon_generate_upload_path } from "../../love/js/g_sermon_generate_upload_path.mjs";
+import { property_set } from "../../love/js/property_set.mjs";
+import { text_replace } from "../../love/js/text_replace.mjs";
+import { newline_windows } from "../../love/js/newline_windows.mjs";
+import { newline } from "../../love/js/newline.mjs";
+import { html_value_get } from "../../love/js/html_value_get.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
+import { html_mobile_default_font_size } from "../../love/js/html_mobile_default_font_size.mjs";
+import { html_width_full } from "../../love/js/html_width_full.mjs";
+import { list_size } from "../../love/js/list_size.mjs";
+import { html_rows_set } from "../../love/js/html_rows_set.mjs";
+import { list_join_newline } from "../../love/js/list_join_newline.mjs";
+import { html_value_set } from "../../love/js/html_value_set.mjs";
+import { html_textarea } from "../../love/js/html_textarea.mjs";
+import { app_g_openai_split } from "../../love/js/app_g_openai_split.mjs";
+import { null_is } from "../../love/js/null_is.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
 export async function app_g_bible_home(context) {
   let downloaded = null;
   let chapter_code = null;
@@ -65,5 +65,5 @@ export async function app_g_bible_home(context) {
     let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed_browser(destination, downloaded);
   }
-  let component = app_replace_button(bar, "Update", lambda4);
+  let component = app_shared_button(bar, "Update", lambda4);
 }
