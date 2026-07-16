@@ -34,7 +34,7 @@ export function app_code_lesson_functions_console_log_true_false() {
   let lesson = property_get(r, "lesson");
   return lesson;
   function title_name_id() {
-    "the home title code-styles the literal keywords true and false (and console.log), separated by a comma like other lessons list multiple items (app_code_lesson_name_id_remaining)";
+    "the home title code-styles the literal keywords true and false (and console.log), separated by a COMMA — a plain list of two concepts. NOT 'or' (implies exclusive choice, but we teach both) and NOT 'and' (a beginner reads it as the && operator). Matches how other lessons list items (app_code_lesson_name_id_remaining).";
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
