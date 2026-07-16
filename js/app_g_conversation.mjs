@@ -48,6 +48,18 @@ export async function app_g_conversation(
   if (not(christian)) {
     let choices = app_g_container_player(overlay);
     app_g_p_text(choices, "What would you like to say?");
+    let correct_index = integer_random_0(2);
+    function choice(index, action) {
+      function on_choice() {
+        let is_correct = index === correct_index;
+        if (is_correct) {
+          action();
+        } else {
+          app_g_npc_says(npc, overlay, g_boundary());
+        }
+      }
+      return on_choice;
+    }
     let gospel_b = app_g_button_green(
       choices,
       text_combine_multiple([
@@ -58,19 +70,19 @@ export async function app_g_conversation(
         " and rose to life ",
         emoji_sunrise(),
       ]),
-      npc_gospel,
+      choice(0, npc_gospel),
     );
     let how_b = app_g_button_green(
       choices,
       text_combine(emoji_smile(), " How are you?"),
-      stub,
+      choice(1, stub),
     );
     let believe_b = app_g_button_green(
       choices,
       text_combine(emoji_thinking(), " What do you believe?"),
-      stub,
+      choice(2, stub),
     );
-    let correct = list_random_item([gospel_b, how_b, believe_b]);
+    let correct = list_get([gospel_b, how_b, believe_b], correct_index);
     function on_pray() {
       html_style_assign(pray_b, {
         opacity: "0.5",
