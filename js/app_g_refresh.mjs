@@ -5,6 +5,7 @@ import { app_g_player_scroll_center } from "./app_g_player_scroll_center.mjs";
 import { app_g_div_map_new } from "./app_g_div_map_new.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { null_is } from "./null_is.mjs";
+import { app_g_dev_study_if } from "./app_g_dev_study_if.mjs";
 import { app_g_view_render } from "./app_g_view_render.mjs";
 export async function app_g_refresh(context, div_map_container) {
   let g = await app_g_game_save_get_or_refresh(context);
@@ -16,5 +17,6 @@ export async function app_g_refresh(context, div_map_container) {
   let player_img_c = await app_g_player_img(div_map);
   app_g_div_map_on_click(div_map, player_img_c);
   await app_g_player_scroll_center(div_map, player_img_c);
+  await app_g_dev_study_if();
   await app_g_view_render(div_map);
 }
