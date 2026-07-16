@@ -33,7 +33,11 @@ export function app_code_lesson_functions_console_log_or() {
       symbol,
       " is ",
       js_keyword_true(),
-      " when at least one side is ",
+      " when the left side is ",
+      js_keyword_true(),
+      ", or the right side is ",
+      js_keyword_true(),
+      ", or both sides are ",
       js_keyword_true(),
     ]);
     html_div_cycle_code(c, [
