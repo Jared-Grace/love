@@ -8,7 +8,7 @@ import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "../../love/js/list_map.mjs";
 import { list_sort_text_to } from "../../love/js/list_sort_text_to.mjs";
@@ -118,20 +118,23 @@ export function app_code_lesson_quiz_multiple_choice(
     return b;
   }
   let buttons = list_map(choices, each_button);
-  function reveal() {
-    "after a wrong answer: glow the correct choice (app_g's discernment glow) and lock the others, so the learner sees the answer and can only choose it";
+  function reveal(wrong_button) {
+    "after a wrong answer: mark the correct choice with a distinct soft-gold background plus app_g's discernment glow, lock every other choice, and DIM only the UNCHOSEN ones — the chosen-wrong stays clearly marked (not dimmed) so the learner sees what they picked";
     if (revealed) {
       return;
     }
     revealed = true;
     app_shared_glow_correct(correct_button);
+    html_style_background_color_set(correct_button, "#fff3cd");
     function lock_other(b) {
-      let other = not(equal(b, correct_button));
-      if (other) {
-        html_style_assign(b, {
-          opacity: "0.5",
-          "pointer-events": "none",
-        });
+      let is_correct = equal(b, correct_button);
+      if (is_correct) {
+        return;
+      }
+      html_style_set(b, "pointer-events", "none");
+      let chosen_wrong = equal(b, wrong_button);
+      if (not(chosen_wrong)) {
+        html_style_set(b, "opacity", "0.5");
       }
     }
     each(buttons, lock_other);
