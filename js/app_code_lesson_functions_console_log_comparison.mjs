@@ -9,16 +9,22 @@ import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 export function app_code_lesson_functions_console_log_comparison(params) {
   let operator = property_get(params, "operator");
   let question_middle = property_get(params, "question_middle");
-  let pair = property_get(params, "pair");
+  let pair = property_get_or_null(params, "pair");
   let name_id_rights = property_get(params, "name_id_rights");
   let closing = property_get(params, "closing");
   let preamble = property_get(params, "preamble");
   let explanation = property_get(params, "explanation");
   let symbol = property_get(operator, "operator");
-  let next_arg = app_code_binary_next_arg(symbol, pair);
+  let next_arg = property_get_or_null(params, "next_arg");
+  let next_arg_missing = null_is(next_arg);
+  if (next_arg_missing) {
+    next_arg = app_code_binary_next_arg(symbol, pair);
+  }
   var r = app_code_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
