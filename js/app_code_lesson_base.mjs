@@ -6,6 +6,7 @@ import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
+import { app_code_batch_avoid_repeat } from "./app_code_batch_avoid_repeat.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_base(
   name_id,
@@ -23,6 +24,7 @@ export function app_code_lesson_base(
   let lesson_unique_id =
     text_adjascent_duplicates_remove_underscore(t_underscored);
   let lesson_name = property_get(name_id, "name");
+  let last_question = null;
   let lesson = {
     name: lesson_name,
     id: lesson_unique_id,
@@ -64,6 +66,7 @@ export function app_code_lesson_base(
         return mapped;
       }
       let mapped_items = list_map(batch_items, each_batch_item);
+      last_question = app_code_batch_avoid_repeat(mapped_items, last_question);
       return mapped_items;
     },
   };
