@@ -11,7 +11,7 @@ import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_code_quiz_index_shuffle } from "./app_code_quiz_index_shuffle.mjs";
 import { app_code_quiz_index_back } from "./app_code_quiz_index_back.mjs";
-import { app_code_quiz_index_back_available } from "./app_code_quiz_index_back.mjs";
+import { app_code_quiz_index_back_available } from "./app_code_quiz_index_back_available.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
 import { html_visibility_hidden_multiple } from "./html_visibility_hidden_multiple.mjs";
