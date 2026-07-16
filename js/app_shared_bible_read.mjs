@@ -2,6 +2,8 @@ import { app_shared_bible_share } from "../../love/js/app_shared_bible_share.mjs
 import { app_shared_bible_fetch_language } from "../../love/js/app_shared_bible_fetch_language.mjs";
 import { app_shared_bible_verse_entries } from "../../love/js/app_shared_bible_verse_entries.mjs";
 import { app_shared_bible_ref_chapter_code } from "../../love/js/app_shared_bible_ref_chapter_code.mjs";
+import { app_shared_bible_ref_chapter_codes } from "../../love/js/app_shared_bible_ref_chapter_codes.mjs";
+import { app_shared_bible_ref_chapters_guard } from "../../love/js/app_shared_bible_ref_chapters_guard.mjs";
 import { html_button_share_text } from "../../love/js/html_button_share_text.mjs";
 import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
 import { promise_later } from "../../love/js/promise_later.mjs";
@@ -116,6 +118,15 @@ export async function app_shared_bible_read(context) {
     app_shared_bible_languages_gear(bar, content, languages_chosen);
     return;
   }
+  let books_en = await ebible_version_books_browser(ebible_folder_english());
+  if (ref_mode) {
+    let ref_chapters = app_shared_bible_ref_chapter_codes(ref_line, books_en);
+    if (list_multiple_is(ref_chapters)) {
+      app_shared_bible_ref_chapters_guard(content, ref_chapters, books_en);
+      app_shared_bible_languages_gear(bar, content, languages_chosen);
+      return;
+    }
+  }
   app_shared_dismissable_message(
     app_shared_bible_read,
     bar,
@@ -199,7 +210,6 @@ export async function app_shared_bible_read(context) {
   async function arrow_right() {
     await verse_move(1, chapter_next);
   }
-  let books_en = await ebible_version_books_browser(ebible_folder_english());
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     function view_whole_chapter() {
