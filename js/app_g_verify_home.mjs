@@ -21,7 +21,8 @@ import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let chapter_code = "1JN01";
-  let selected_key = null;
+  let storage_key = "g_verify_selected_" + chapter_code;
+  let selected_key = localStorage.getItem(storage_key);
   let shown_json = null;
 
   let downloaded = await g_sermon_write_download(chapter_code);
@@ -64,6 +65,7 @@ export async function app_g_verify_home(context) {
     }
     function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
+      localStorage.setItem(storage_key, selected_key);
       let english = property_get(passage, "english");
       let lines = property_get(passage, "lines");
       app_g_verify_view(view, english, lines);
