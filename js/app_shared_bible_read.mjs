@@ -57,7 +57,7 @@ import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
 import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { text_pad_space_quote_double } from "../../love/js/text_pad_space_quote_double.mjs";
 import { app_shared_button_arrow_left } from "../../love/js/app_shared_button_arrow_left.mjs";
-import { app_replace_button_arrow_right } from "../../love/js/app_replace_button_arrow_right.mjs";
+import { app_shared_button_arrow_right } from "../../love/js/app_shared_button_arrow_right.mjs";
 import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
 import { app_shared_bible_book_chapter } from "../../love/js/app_shared_bible_book_chapter.mjs";
 import { app_shared_bible_code_open } from "../../love/js/app_shared_bible_code_open.mjs";
@@ -209,7 +209,7 @@ export async function app_shared_bible_read(context) {
   } else {
     app_shared_button_arrow_left(bar, arrow_left);
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
-    app_replace_button_arrow_right(bar, arrow_right);
+    app_shared_button_arrow_right(bar, arrow_right);
   }
   app_shared_bible_languages_gear(bar, content, languages_chosen);
   async function fetch_language(lc) {
