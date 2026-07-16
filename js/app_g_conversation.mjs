@@ -1,7 +1,8 @@
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "./app_g_gospel.mjs";
-import { app_g_container_text } from "./app_g_container_text.mjs";
+import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { g_greeting } from "./g_greeting.mjs";
@@ -29,12 +30,13 @@ export async function app_g_conversation(
   async function npc_gospel() {
     await app_g_gospel(overlay, npc, overlay_close, player, div_map);
   }
-  app_g_container_text(overlay, "What would you like to do?");
+  let choices = app_g_container_player(overlay);
+  app_g_p_text(choices, "What would you like to do?");
   let name_npc = property_get(npc, "name");
   let christian = property_get(npc, "christian");
   if (not(christian)) {
     app_g_button_green(
-      overlay,
+      choices,
       text_combine_multiple([
         "Tell ",
         name_npc,
@@ -43,5 +45,5 @@ export async function app_g_conversation(
       npc_gospel,
     );
   }
-  app_g_button_conversation_end(overlay, overlay_close);
+  app_g_button_conversation_end(choices, overlay_close);
 }
