@@ -3,6 +3,7 @@ import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_overlay } from "./app_g_overlay.mjs";
@@ -25,6 +26,7 @@ export async function app_g_view_render_opener(div_map) {
   }
   app_g_npc_says(npc, overlay, greeting);
   let choices = app_g_container_player(overlay);
+  app_g_p_text(choices, "What would you like to say?");
   function stub() {}
   app_g_button_green(choices, "Share the gospel", stub);
   app_g_button_green(choices, "How are you?", stub);
