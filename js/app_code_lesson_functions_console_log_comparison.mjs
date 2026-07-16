@@ -39,28 +39,25 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
   return lesson_symbol;
   function above(root) {
-    function render_lines(container, lines) {
+    function render_section(lines) {
       let present = null_not_is(lines);
       if (present) {
+        let container = app_code_container_light_blue(root);
         function render_line(line) {
           html_div_cycle_code(container, line);
         }
         each(lines, render_line);
       }
     }
-    let has_preamble = null_not_is(preamble);
-    if (has_preamble) {
-      let preamble_container = app_code_container_light_blue(root);
-      render_lines(preamble_container, preamble);
-    }
-    let c = app_code_container_light_blue(root);
+    render_section(preamble);
+    let question_container = app_code_container_light_blue(root);
     let tail = text_combine_multiple([
       " asks a question: is the left number ",
       question_middle,
       " the right number?",
     ]);
-    html_div_cycle_code(c, ["The symbol ", symbol, tail]);
-    render_lines(c, explanation);
+    html_div_cycle_code(question_container, ["The symbol ", symbol, tail]);
+    render_section(explanation);
     let parts = closing(fn_name);
     app_code_container_light_blue_cycle_code(root, parts);
   }
