@@ -1,7 +1,7 @@
 import { app_shared_bible_share } from "../../love/js/app_shared_bible_share.mjs";
-import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
-import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
-import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapter_code.mjs";
+import { app_shared_bible_fetch_language } from "../../love/js/app_shared_bible_fetch_language.mjs";
+import { app_shared_bible_verse_entries } from "../../love/js/app_shared_bible_verse_entries.mjs";
+import { app_shared_bible_ref_chapter_code } from "../../love/js/app_shared_bible_ref_chapter_code.mjs";
 import { html_button_share_text } from "../../love/js/html_button_share_text.mjs";
 import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
 import { promise_later } from "../../love/js/promise_later.mjs";
@@ -56,7 +56,7 @@ import { property_get_or } from "../../love/js/property_get_or.mjs";
 import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
 import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { text_pad_space_quote_double } from "../../love/js/text_pad_space_quote_double.mjs";
-import { app_replace_button_arrow_left } from "../../love/js/app_replace_button_arrow_left.mjs";
+import { app_shared_button_arrow_left } from "../../love/js/app_shared_button_arrow_left.mjs";
 import { app_replace_button_arrow_right } from "../../love/js/app_replace_button_arrow_right.mjs";
 import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
 import { app_shared_bible_book_chapter } from "../../love/js/app_shared_bible_book_chapter.mjs";
@@ -207,7 +207,7 @@ export async function app_shared_bible_read(context) {
     }
     app_shared_button(bar, "View whole chapter", view_whole_chapter);
   } else {
-    app_replace_button_arrow_left(bar, arrow_left);
+    app_shared_button_arrow_left(bar, arrow_left);
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
     app_replace_button_arrow_right(bar, arrow_right);
   }
