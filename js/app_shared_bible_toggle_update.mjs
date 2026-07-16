@@ -9,7 +9,7 @@ import { app_shared_bible_verse_highlight } from "../../love/js/app_shared_bible
 import { app_shared_bible_chosen_max } from "../../love/js/app_shared_bible_chosen_max.mjs";
 import { list_toggle } from "../../love/js/list_toggle.mjs";
 import { invoke_multiple } from "../../love/js/invoke_multiple.mjs";
-export function app_chapter_toggle_update(
+export function app_shared_bible_toggle_update(
   updates,
   verse_numbers_chosen,
   verse_number,
