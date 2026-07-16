@@ -14,6 +14,7 @@ import { app_code_quiz } from "./app_code_quiz.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { each } from "./each.mjs";
 import { noop } from "./noop.mjs";
+import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
 import { app_code_batch_item_get } from "./app_code_batch_item_get.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -44,7 +45,13 @@ export function app_code_examples(context) {
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
-  let refresh = app_code_batch_item_get(c, lesson, on_batch_item, noop, false);
+  let refresh = app_code_batch_item_get(
+    c,
+    lesson,
+    on_batch_item,
+    app_code_batch_on_refill(noop),
+    false,
+  );
   function on_batch_item(container, bs) {
     function lambda2(b) {
       let ex = property_get(b, "example");
