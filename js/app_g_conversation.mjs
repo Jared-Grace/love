@@ -21,6 +21,7 @@ import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_conversation(
@@ -88,13 +89,9 @@ export async function app_g_conversation(
         opacity: "0.5",
         "pointer-events": "none",
       });
+      app_shared_glow_correct(correct);
       let delay = list_random_item(["1s", "2s", "3s", "4s"]);
-      let animation = text_combine_multiple([
-        "correctPulse 1s ",
-        delay,
-        " infinite alternate",
-      ]);
-      html_style_set(correct, "animation", animation);
+      html_style_set(correct, "animation-delay", delay);
     }
     let pray = text_combine(
       emoji_pray(),
