@@ -104,10 +104,8 @@ export function app_code_lesson_quiz(
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
-  let failed = false;
   on_qa_change();
   function on_qa_change() {
-    failed = false;
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
     on_question(container_question, quiz_question);
@@ -125,19 +123,15 @@ export function app_code_lesson_quiz(
     html_visibility_visible(container_correction);
   }
   function on_wrong() {
-    failed = true;
     html_visibility_hidden(container_success_message);
     show_correction();
   }
   async function on_success() {
-    "clean first-try correct auto-advances to a fresh question (saves the learner time); but if they got it wrong first, STOP — keep the correction visible and the choices locked so they can ponder and advance with Next at their own pace";
+    "on ANY correct answer — first try, or after seeing the correction on a wrong try — flash success, then auto-advance to the next quiz (on a wrong try the learner has already seen the correction and chosen the right answer)";
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_visible(container_success_message);
-    let clean = not(failed);
-    if (clean) {
-      await sleep_success_color();
-      on_next();
-    }
+    await sleep_success_color();
+    on_next();
   }
 }

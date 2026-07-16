@@ -28,6 +28,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let name_npc = property_get(npc, "name");
   let label = app_g_p_text(container, text_combine(name_npc, " says:"));
   html_style_set(label, "color", name_color);
+  html_bold_mild(label);
   let speech = app_g_p_text(container, npc_says);
   html_bold_mild(speech);
 }
