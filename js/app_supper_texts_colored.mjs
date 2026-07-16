@@ -6,11 +6,11 @@ import { each_index } from "./each_index.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_supper_verse_color } from "./app_supper_verse_color.mjs";
+import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
 export function app_supper_texts_colored(parent, texts) {
   let count = list_size(texts);
   function color_get(text, index) {
-    let color = app_supper_verse_color(index, count);
+    let color = app_shared_gradient_color(index, count);
     return color;
   }
   let colors = list_map_index(texts, color_get);
