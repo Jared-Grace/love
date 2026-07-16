@@ -13,18 +13,13 @@ import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { each_index } from "./each_index.mjs";
-import { list_map_index } from "./list_map_index.mjs";
-import { list_interleave_halves } from "./list_interleave_halves.mjs";
-import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
+import { each } from "./each.mjs";
+import { app_shared_verse_texts } from "./app_shared_verse_texts.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
-import { html_span_text_bold } from "./html_span_text_bold.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { ebible_languages } from "./ebible_languages.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_display_none } from "./html_display_none.mjs";
@@ -205,13 +200,6 @@ export async function app_chapter(context) {
   );
   languages_verses = list_filter_null_not_is(languages_verses);
   let show_language_names = list_multiple_is(languages_verses);
-  let language_count = list_size(languages_verses);
-  function language_color(entry, index) {
-    return app_shared_gradient_color(index, language_count);
-  }
-  let language_colors = list_interleave_halves(
-    list_map_index(languages_verses, language_color),
-  );
   let primary_entry = list_last(languages_verses);
   let primary_verses = property_get(primary_entry, "verses");
   async function render_verse(v) {
@@ -237,7 +225,8 @@ export async function app_chapter(context) {
     let number = app_replace_button(p, verse_number_v, select_persist);
     html_style_set(number, "justify-self", "end");
     let text_cell = html_div(p);
-    function render_language_line(entry, index) {
+    let entries = [];
+    function collect_language(entry) {
       let verses_l = property_get(entry, "verses");
       let verse_l = list_find_property_or_null(
         verses_l,
@@ -247,17 +236,19 @@ export async function app_chapter(context) {
       let nn = null_not_is(verse_l);
       if (nn) {
         let text_l = property_get(verse_l, "text");
-        let line = html_div(text_cell);
+        let name = "";
         if (show_language_names) {
           let language = property_get(entry, "language");
-          let name = property_get(language, "name");
-          html_span_text_bold(line, text_combine(name, ": "));
-          html_font_color_set(line, list_get(language_colors, index));
+          name = property_get(language, "name");
         }
-        app_bible_on_click_google_define(line, text_l);
+        list_add(entries, {
+          name,
+          text: text_l,
+        });
       }
     }
-    each_index(languages_verses, render_language_line);
+    each(languages_verses, collect_language);
+    app_shared_verse_texts(text_cell, entries);
     html_margin_0(p);
     html_style_padding_y(p, app_shared_spaced_tiny_gap());
     html_style_padding_x(p, app_shared_spaced_tiny_gap());
