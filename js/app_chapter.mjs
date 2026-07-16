@@ -8,13 +8,18 @@ import { app_chapter_toggle_update } from "./app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "./app_chapter_chosen_max.mjs";
 import { number_to_words } from "./number_to_words.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
-import { list_last_is } from "./list_last_is.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { each } from "./each.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { html_p } from "./html_p.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
+import { html_span_text_bold } from "./html_span_text_bold.mjs";
+import { ebible_languages } from "./ebible_languages.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
@@ -170,81 +175,15 @@ export async function app_chapter(context) {
   app_chapter_book_chapter(bar, content, chapter_code, books);
   app_replace_button_arrow_right(bar, arrow_right);
   app_chapter_languages_gear(bar, content, languages_chosen);
-  async function lambda2(lc) {
+  async function fetch_language(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     let books = await ebible_version_books_browser(bible_folder);
-    let li = list_last_is(languages_chosen, lc);
-    if (li) {
-      async function lambda(v) {
-        let verse_number_v = property_get(v, "verse_number");
-        let text = property_get(v, "text");
-        let p = html_p(content);
-        html_display_grid(p);
-        let columns = text_combine(app_shared_number_gutter(), " 1fr");
-        html_style_set(p, "grid-template-columns", columns);
-        html_style_set(p, "column-gap", app_shared_spaced_small_gap());
-        let r = app_chapter_toggle_update(
-          updates,
-          verse_numbers_chosen,
-          verse_number_v,
-          chapter_code,
-          languages_verses,
-          p,
-        );
-        let select = property_get(r, "select");
-        function select_persist() {
-          select();
-          persist_selection();
-        }
-        let number = app_replace_button(p, verse_number_v, select_persist);
-        html_style_set(number, "justify-self", "end");
-        let text_cell = html_div(p);
-        app_bible_on_click_google_define(text_cell, text);
-        html_margin_0(p);
-        html_style_padding_y(p, app_shared_spaced_tiny_gap());
-        html_style_padding_x(p, app_shared_spaced_tiny_gap());
-        let update = property_get(r, "update");
-        let copy = property_get(r, "copy");
-        let actions = html_div(content);
-        html_centered(actions);
-        html_display_none(actions);
-        let verse_buttons = html_div(actions);
-        html_button_biblehub_open_interlinear(
-          verse_buttons,
-          chapter_name,
-          book_name,
-          verse_number_v,
-        );
-        html_button_biblehub_open_parallel(
-          verse_buttons,
-          book_name,
-          chapter_name,
-          verse_number_v,
-        );
-        html_button_biblehub_open_commentary(
-          verse_buttons,
-          chapter_name,
-          book_name,
-          verse_number_v,
-        );
-        app_replace_button(actions, t, copy);
-        function row_update() {
-          update();
-          let is_last = verse_number_v === selection_last();
-          html_display_none_or_block(not(is_last), actions);
-          let single = is_last && not(list_multiple_is(verse_numbers_chosen));
-          html_display_none_or_block(not(single), verse_buttons);
-        }
-        list_add(verse_rows, {
-          verse_number: verse_number_v,
-          p,
-        });
-        return row_update;
-      }
-      await list_map_add_async(verses, lambda, updates);
-    }
+    let language = list_find_property(ebible_languages(), "language_code", lc);
+    let language_name = property_get(language, "name");
     let v2 = {
+      language_code: lc,
+      language_name,
       books,
       verses,
     };
@@ -252,9 +191,100 @@ export async function app_chapter(context) {
   }
   await list_map_unordered_add_async(
     languages_chosen,
-    lambda2,
+    fetch_language,
     languages_verses,
   );
+  let show_language_names = list_multiple_is(languages_chosen);
+  let primary_entry = list_find_property(
+    languages_verses,
+    "language_code",
+    list_last(languages_chosen),
+  );
+  let primary_verses = property_get(primary_entry, "verses");
+  async function render_verse(v) {
+    let verse_number_v = property_get(v, "verse_number");
+    let p = html_p(content);
+    html_display_grid(p);
+    let columns = text_combine(app_shared_number_gutter(), " 1fr");
+    html_style_set(p, "grid-template-columns", columns);
+    html_style_set(p, "column-gap", app_shared_spaced_small_gap());
+    let r = app_chapter_toggle_update(
+      updates,
+      verse_numbers_chosen,
+      verse_number_v,
+      chapter_code,
+      languages_verses,
+      p,
+    );
+    let select = property_get(r, "select");
+    function select_persist() {
+      select();
+      persist_selection();
+    }
+    let number = app_replace_button(p, verse_number_v, select_persist);
+    html_style_set(number, "justify-self", "end");
+    let text_cell = html_div(p);
+    function render_language_line(entry) {
+      let verses_l = property_get(entry, "verses");
+      let verse_l = list_find_property_or_null(
+        verses_l,
+        "verse_number",
+        verse_number_v,
+      );
+      let nn = null_not_is(verse_l);
+      if (nn) {
+        let text_l = property_get(verse_l, "text");
+        let line = html_div(text_cell);
+        if (show_language_names) {
+          let name = property_get(entry, "language_name");
+          html_span_text_bold(line, text_combine(name, ": "));
+        }
+        app_bible_on_click_google_define(line, text_l);
+      }
+    }
+    each(languages_verses, render_language_line);
+    html_margin_0(p);
+    html_style_padding_y(p, app_shared_spaced_tiny_gap());
+    html_style_padding_x(p, app_shared_spaced_tiny_gap());
+    let update = property_get(r, "update");
+    let copy = property_get(r, "copy");
+    let actions = html_div(content);
+    html_centered(actions);
+    html_display_none(actions);
+    let verse_buttons = html_div(actions);
+    html_button_biblehub_open_interlinear(
+      verse_buttons,
+      chapter_name,
+      book_name,
+      verse_number_v,
+    );
+    html_button_biblehub_open_parallel(
+      verse_buttons,
+      book_name,
+      chapter_name,
+      verse_number_v,
+    );
+    html_button_biblehub_open_commentary(
+      verse_buttons,
+      chapter_name,
+      book_name,
+      verse_number_v,
+    );
+    app_replace_button(actions, t, copy);
+    function row_update() {
+      update();
+      let is_last = verse_number_v === selection_last();
+      html_display_none_or_block(not(is_last), actions);
+      let single = is_last && not(list_multiple_is(verse_numbers_chosen));
+      html_display_none_or_block(not(single), verse_buttons);
+    }
+    list_add(verse_rows, {
+      verse_number: verse_number_v,
+      p,
+    });
+    return row_update;
+  }
+  await list_map_add_async(primary_verses, render_verse, updates);
   function resume() {
     if (list_empty_is(verse_numbers_chosen)) {
       return;
