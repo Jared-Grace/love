@@ -25,6 +25,11 @@ import { html_div } from "../../love/js/html_div.mjs";
 import { app_code_example_answer_label } from "../../love/js/app_code_example_answer_label.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
+import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
+import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
+import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -61,7 +66,8 @@ export function app_code_lesson_quiz(
     app_code_quiz_index_shuffle(context, quizzes);
     refresh();
   }
-  app_replace_button_wide_next(parent_container, on_next);
+  let next_button = app_replace_button_wide_next(parent_container, on_next);
+  html_style_margin_top(next_button, app_shared_spaced_gap());
   let back_available = app_code_quiz_index_back_available(context);
   if (back_available) {
     let on_back = function lambda() {
@@ -85,7 +91,16 @@ export function app_code_lesson_quiz(
   if (no_more) {
     app_code_no_more_lessons(parent_container);
   } else {
-    app_shared_button_wide(parent_container, "next lesson", on_move_on);
+    let skip_text = text_combine_middle_space_nb(
+      emoji_arrow_right(),
+      "Skip to the next lesson",
+    );
+    let skip_button = app_shared_button_wide(
+      parent_container,
+      skip_text,
+      on_move_on,
+    );
+    html_style_margin_top(skip_button, app_shared_spaced_large_gap());
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
@@ -97,15 +112,17 @@ export function app_code_lesson_quiz(
     html_clear(container_question);
     on_question(container_question, quiz_question);
     html_clear(answers_div);
-    hide_correction();
+    render_correction();
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
   }
-  function hide_correction() {
-    html_clear(container_correction);
-  }
-  function show_correction() {
+  function render_correction() {
+    "render the correction for the current question but keep it INVISIBLE, so it reserves its space and the layout does not jump; on_wrong reveals it";
     html_clear(container_correction);
     app_code_quiz_correction(container_correction, qa);
+    html_visibility_hidden(container_correction);
+  }
+  function show_correction() {
+    html_visibility_visible(container_correction);
   }
   function on_wrong() {
     failed = true;
