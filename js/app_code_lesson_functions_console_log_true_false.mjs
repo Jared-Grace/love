@@ -1,22 +1,31 @@
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
+import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
+import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_span_space } from "./html_span_space.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_true_false() {
+  let name = js_console_log_name();
   function refill() {
     let list = [js_keyword_true(), js_keyword_false()];
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
+  let name_id = title_name_id();
   var r = app_code_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
-    name_id_rights: [" true or false"],
+    name_id_rights: [],
+    name_id,
     next_arg,
     example_count: 2,
     quiz_backwards_answer_count_override: null,
@@ -24,6 +33,23 @@ export function app_code_lesson_functions_console_log_true_false() {
   });
   let lesson = property_get(r, "lesson");
   return lesson;
+  function title_name_id() {
+    "the home title code-styles the literal keywords true and false (and console.log), keeping the connecting word 'or' as plain prose";
+    function title_get(lesson_name, left_upper) {
+      function render(parent) {
+        app_code_lesson_name_id_category(parent, left_upper);
+        html_span_text_code_dark(parent, name);
+        html_span_space(parent);
+        html_span_text_code_dark(parent, js_keyword_true());
+        html_span_text(parent, " or ");
+        html_span_text_code_dark(parent, js_keyword_false());
+      }
+      return render;
+    }
+    let rights = [name, " true or false"];
+    let built = app_code_lesson_name_id_generic(rights, "function", title_get);
+    return built;
+  }
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
