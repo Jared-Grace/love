@@ -38,10 +38,11 @@ export function app_code_lesson_functions_console_log_less_than_equal() {
     preamble: null,
     explanation,
     next_arg,
+    example_count: 3,
   });
   return lesson;
   function examples() {
-    "lead with the EQUAL case (the new concept), then interleave the two not-equal outcomes: [equal (true), greater (false), equal (true), less (true)]";
+    "show all THREE relations together on every screen so the distinguishing case (less -> true, which === would make false) is never hidden: [equal (true), less (true), greater (false)]";
     let ordering = app_code_comparison_pair_ordering(less_than);
     let max = app_code_lesson_operators_value_max();
     function equal_pair() {
