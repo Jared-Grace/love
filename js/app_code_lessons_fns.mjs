@@ -67,6 +67,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_and,
     app_code_lesson_functions_console_log_less_than_equal,
     app_code_lesson_functions_console_log_greater_than_equal,
+    app_code_lesson_functions_console_log_remainder_2,
   ];
   return fns;
 }
