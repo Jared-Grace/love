@@ -29,13 +29,14 @@ export async function app_g_view_render_study(div_map) {
     text_combine(emoji_book_open(), " Study: Tap each word in order"),
   );
   let current = word_index;
-  let green = text_combine(app_shared_button_background(), "dd");
-  let blue = text_combine(app_shared_button_selected_background_color(), "dd");
-  let font = app_shared_button_font_color();
+  let green_vivid = text_combine(app_shared_button_background(), "ee");
+  let green_pale = text_combine(app_shared_button_background(), "66");
+  let blue_pale = text_combine(app_shared_button_selected_background_color(), "66");
+  let white = app_shared_button_font_color();
   let ring = text_combine_multiple([
     "0 0 0 0.12em ",
-    font,
-    ", 0 0 0 0.16em #00000080",
+    white,
+    ", 0 0 0 0.2em #00000080",
   ]);
   let save_pending = null;
   async function persist() {
@@ -66,24 +67,24 @@ export async function app_g_view_render_study(div_map) {
   let words_div = html_div(container);
   function style_completed(b) {
     html_style_assign(b, {
-      "background-color": blue,
-      color: font,
+      "background-color": blue_pale,
+      color: "black",
       "font-weight": "normal",
       "box-shadow": "none",
     });
   }
   function style_upcoming(b) {
     html_style_assign(b, {
-      "background-color": green,
-      color: font,
+      "background-color": green_pale,
+      color: "black",
       "font-weight": "normal",
       "box-shadow": "none",
     });
   }
   function style_next(b) {
     html_style_assign(b, {
-      "background-color": green,
-      color: font,
+      "background-color": green_vivid,
+      color: white,
       "font-weight": "normal",
       "box-shadow": ring,
     });
