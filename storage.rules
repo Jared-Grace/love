@@ -1,0 +1,36 @@
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if firestore.get(
+//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+    match /function/{allPaths=**} {
+      allow read;
+    }
+    match /function/g_sermon_generate_upload/uploads/{allPaths=**} {
+      allow write: if request.auth != null && request.auth.token.email == "christrosetolife@gmail.com";
+    }
+    match /function/g_verify_approval/uploads/{allPaths=**} {
+      allow write: if request.auth != null && request.auth.token.email == "christrosetolife@gmail.com";
+    }
+    match /bible/{allPaths=**} {
+      allow read;
+    }
+    match /bibles/{allPaths=**} {
+      allow read;
+    }
+    match /bible_search/{allPaths=**} {
+      allow read;
+    }
+    match /http/{allPaths=**} {
+      allow read;
+    }
+    match /user/uuid/{allPaths=**} {
+      allow write;
+    }
+  }
+}
