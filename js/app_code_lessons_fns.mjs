@@ -57,6 +57,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_equals,
     app_code_lesson_functions_console_log_not_equal,
     app_code_lesson_functions_console_log_true_false,
+    app_code_lesson_functions_console_log_not,
   ];
   return fns;
 }
