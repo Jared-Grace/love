@@ -11,7 +11,7 @@ import { ternary } from "../../love/js/ternary.mjs";
 import { html_style_background_color_set_if_else } from "../../love/js/html_style_background_color_set_if_else.mjs";
 import { html_font_color_set_if } from "../../love/js/html_font_color_set_if.mjs";
 import { html_enable_if } from "../../love/js/html_enable_if.mjs";
-export function app_replace_button_symbol_style_valid_if(sb, valid, solved) {
+export function app_replace_symbol_tile_valid_if(sb, valid, solved) {
   html_enable_if(sb, valid);
   let color_else = app_replace_button_symbol_style_background_color_invalid();
   let color_valid_solved =
