@@ -97,19 +97,33 @@ export async function app_chapter(context) {
   let hash = html_hash_object_get();
   let c = property_get_or(hash, "c", "");
   let b = property_get_or(hash, "b", "");
+  let ref = property_get_or(hash, "ref", "");
+  let ref_line = list_join(text_split(ref, "+"), " ");
+  let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let primary_folder = ebible_language_to_bible_folder(
     list_last(languages_chosen),
   );
   let books = await ebible_version_books_browser(primary_folder);
   html_centered(bar);
-  if (text_empty_is(c) && text_empty_not_is(b)) {
+  if (text_empty_is(c) && text_empty_is(ref) && text_empty_not_is(b)) {
     await app_chapter_choose_chapter(bar, content, b, books, primary_folder);
     app_chapter_languages_gear(bar, content, languages_chosen);
     return;
   }
   app_shared_dismissable_message(app_chapter, bar, "chapter_help_dismissed", help_text);
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
+  if (ref_mode) {
+    let ref_verses_en = await ebible_references_parse_lines_browser(
+      [ebible_folder_english()],
+      [ref_line],
+    );
+    if (list_empty_is(ref_verses_en)) {
+      ref_mode = false;
+    } else {
+      chapter_code = property_get(list_first(ref_verses_en), "chapter_code");
+    }
+  }
   let v_hash = property_get_or(hash, "v", "");
   async function chapter_previous() {
     await app_chapter_change(chapter_code, languages_chosen, list_previous_wrap);
