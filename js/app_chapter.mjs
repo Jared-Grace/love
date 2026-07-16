@@ -1,5 +1,7 @@
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
+import { app_chapter_share } from "./app_chapter_share.mjs";
+import { html_button_share_text } from "./html_button_share_text.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { promise_later } from "./promise_later.mjs";
 import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
@@ -300,6 +302,15 @@ export async function app_chapter(context) {
       verse_number_v,
     );
     app_replace_button(actions, t, copy);
+    async function share() {
+      await app_chapter_share(
+        book_name,
+        chapter_name,
+        verse_numbers_chosen,
+        languages_chosen,
+      );
+    }
+    app_replace_button(actions, html_button_share_text(), share);
     function row_update() {
       update();
       let is_last = verse_number_v === selection_last();
