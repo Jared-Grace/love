@@ -30,6 +30,7 @@ export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let chapter_code = "1JN01";
   let storage_key = "g_verify_selected_" + chapter_code;
+  let advance_key = "g_verify_advance_" + chapter_code;
   let selected_key = localStorage.getItem(storage_key);
   let shown_json = null;
 
@@ -95,6 +96,9 @@ export async function app_g_verify_home(context) {
     }
 
     let view = null;
+    function on_approved(v) {
+      localStorage.setItem(advance_key, String(Number(v) + 1));
+    }
     function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
       localStorage.setItem(storage_key, selected_key);
@@ -104,6 +108,7 @@ export async function app_g_verify_home(context) {
         property_get(passage, "lines"),
         chapter_code,
         selected_key,
+        on_approved,
       );
     }
     function open_pending(verse) {
