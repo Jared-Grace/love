@@ -38,10 +38,11 @@ export function app_code_lesson_functions_console_log_greater_than_equal() {
     preamble: null,
     explanation,
     next_arg,
+    example_count: 3,
   });
   return lesson;
   function examples() {
-    "lead with the EQUAL case (the new concept), then interleave the two not-equal outcomes: [equal (true), less (false), equal (true), greater (true)]";
+    "show all THREE relations together on every screen so the distinguishing case (greater -> true, which === would make false) is never hidden: [equal (true), greater (true), less (false)]";
     let ordering = app_code_comparison_pair_ordering(less_than);
     let max = app_code_lesson_operators_value_max();
     function equal_pair() {
@@ -59,11 +60,10 @@ export function app_code_lesson_functions_console_log_greater_than_equal() {
       return code;
     }
     function refill() {
-      let equal_first = code_of(equal_pair());
-      let less = code_of(ordering(true));
-      let equal_second = code_of(equal_pair());
+      let equal = code_of(equal_pair());
       let greater = code_of(ordering(false));
-      let list = [equal_first, less, equal_second, greater];
+      let less = code_of(ordering(true));
+      let list = [equal, greater, less];
       return list;
     }
     let next_arg = list_iterator_refillable(refill);
