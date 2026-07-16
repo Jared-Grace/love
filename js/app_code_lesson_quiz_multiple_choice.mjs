@@ -108,7 +108,7 @@ export function app_code_lesson_quiz_multiple_choice(
       } else {
         on_wrong();
         app_code_lesson_quiz_wrong_set(b);
-        reveal();
+        reveal(b);
       }
     }
     let nn = null_not_is(answer_on_button);
