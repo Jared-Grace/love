@@ -25,12 +25,17 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   if (next_arg_missing) {
     next_arg = app_code_binary_next_arg(symbol, pair);
   }
+  let example_count = property_get_or_null(params, "example_count");
+  let example_count_missing = null_is(example_count);
+  if (example_count_missing) {
+    example_count = 2;
+  }
   var r = app_code_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
     name_id_rights,
     next_arg,
-    example_count: 2,
+    example_count,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: 2,
   });
