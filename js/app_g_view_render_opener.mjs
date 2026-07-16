@@ -20,6 +20,8 @@ export async function app_g_view_render_opener(div_map) {
   let player = await app_g_player_get();
   let name_player = property_get(player, "name");
   let greeting = g_greeting(false, name_player);
+  let npcs = await app_g_npcs_get();
+  let npc = list_random_item(npcs);
   let overlay = app_g_overlay(div_map);
   async function close() {
     await app_g_view_set(null);
