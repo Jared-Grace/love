@@ -31,7 +31,7 @@ export function app_code_lesson_functions_console_log_equals() {
   }
   let lesson = app_code_lesson_functions_console_log_comparison({
     operator,
-    question_middle: "exactly equal to",
+    question_middle: "the same as",
     pair,
     name_id_rights: [" equal to"],
     closing,

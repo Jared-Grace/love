@@ -14,13 +14,13 @@ export function app_code_lesson_functions_console_log_not_equal() {
       symbol,
       " is like ",
       equal_symbol,
-      ", but asks if the two sides are NOT equal",
+      ", but asks if the two sides are different",
     ];
     return parts;
   }
   let lesson = app_code_lesson_functions_console_log_comparison({
     operator,
-    question_middle: "not equal to",
+    question_middle: "different from",
     pair,
     name_id_rights: [" not equal to"],
     closing,
