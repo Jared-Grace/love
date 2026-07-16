@@ -40,7 +40,6 @@
       "Bash(node scripts/r.mjs ai_git)",
       "Bash(node scripts/r.mjs app_shared_dev_build:*)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
-      "Write(/tmp/claude-1000/-home-j-repos-love/**)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
       "Read(/tmp/claude-1000/-home-j-repos-love/**)",
       "Bash(mkdir /tmp/claude-1000/-home-j-repos-love/:*)",
