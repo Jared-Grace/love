@@ -46,7 +46,7 @@ export async function app_g_view_render_opener(div_map) {
   function draw_choices() {
     html_clear(content);
     app_g_button_back(content, close);
-    app_g_p_text(content, greeting);
+    app_g_npc_says(npc, content, greeting);
     opener("Share the gospel");
     opener("How are you?");
     opener("What do you believe?");
