@@ -102,6 +102,7 @@ export function app_replace_rule_set_proof_show(parent, history) {
       if (equal(entry, goal_entry)) {
         let goal_caption = html_div(parent);
         html_centered(goal_caption);
+        html_style_margin_top(goal_caption, app_shared_spaced_gap());
         let goal_text = text_combine_multiple([emoji_check(), " Goal"]);
         html_span_text_deemphasized(goal_caption, goal_text);
       }
