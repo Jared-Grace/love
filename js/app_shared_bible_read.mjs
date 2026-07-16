@@ -17,7 +17,7 @@ import { catch_null_async } from "../../love/js/catch_null_async.mjs";
 import { list_find_property_or_null } from "../../love/js/list_find_property_or_null.mjs";
 import { null_not_is } from "../../love/js/null_not_is.mjs";
 import { each } from "../../love/js/each.mjs";
-import { app_shared_verse_texts } from "../../love/js/app_shared_verse_texts.mjs";
+import { app_shared_bible_verse_texts } from "../../love/js/app_shared_bible_verse_texts.mjs";
 import { html_margin_0 } from "../../love/js/html_margin_0.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { html_mobile_default } from "../../love/js/html_mobile_default.mjs";
@@ -298,7 +298,7 @@ export async function app_shared_bible_read(context) {
       }
     }
     each(languages_verses, collect_language);
-    app_shared_verse_texts(text_cell, entries);
+    app_shared_bible_verse_texts(text_cell, entries);
     html_margin_0(p);
     html_style_padding_y(p, app_shared_spaced_tiny_gap());
     html_style_padding_x(p, app_shared_spaced_tiny_gap());

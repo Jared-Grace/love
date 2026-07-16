@@ -6,7 +6,7 @@ import { each_index } from "./each_index.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
 import { app_shared_verse_line } from "./app_shared_verse_line.mjs";
-export function app_shared_verse_texts(parent, entries) {
+export function app_shared_bible_verse_texts(parent, entries) {
   let count = list_size(entries);
   function color_get(entry, index) {
     return app_shared_gradient_color(index, count);
