@@ -40,8 +40,9 @@ export async function app_g_conversation(
     app_g_p_text(choices, "What would you like to say?");
     function opener_button(label, lambda) {
       let b = app_g_button_green(choices, label, lambda);
+      let duration = list_random_item(["1s", "2s", "3s", "4s", "5s"]);
       html_style_assign(b, {
-        transition: "box-shadow 1.5s ease",
+        transition: text_combine("box-shadow ", duration),
       });
       return b;
     }
@@ -58,7 +59,7 @@ export async function app_g_conversation(
         "pointer-events": "none",
       });
       html_style_assign(correct, {
-        "box-shadow": "0 0 0.6em 0.2em #ffe066",
+        "box-shadow": "0 0 1.2em 0.5em #ffd633",
       });
     }
     let pray = text_combine(
