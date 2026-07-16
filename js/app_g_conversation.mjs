@@ -11,8 +11,10 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_conversation(
   prayer,
   npc,
@@ -38,29 +40,26 @@ export async function app_g_conversation(
   if (not(christian)) {
     let choices = app_g_container_player(overlay);
     app_g_p_text(choices, "What would you like to say?");
-    function opener_button(label, lambda) {
-      let b = app_g_button_green(choices, label, lambda);
-      let duration = list_random_item(["1s", "2s", "3s", "4s", "5s"]);
-      html_style_assign(b, {
-        transition: text_combine("box-shadow ", duration),
-      });
-      return b;
-    }
-    let gospel_b = opener_button(
+    let gospel_b = app_g_button_green(
+      choices,
       "Tell them that Jesus died, was buried and rose to life",
       npc_gospel,
     );
-    let how_b = opener_button("How are you?", stub);
-    let believe_b = opener_button("What do you believe?", stub);
+    let how_b = app_g_button_green(choices, "How are you?", stub);
+    let believe_b = app_g_button_green(choices, "What do you believe?", stub);
     let correct = list_random_item([gospel_b, how_b, believe_b]);
     function on_pray() {
       html_style_assign(pray_b, {
         opacity: "0.5",
         "pointer-events": "none",
       });
-      html_style_assign(correct, {
-        "box-shadow": "0 0 1.2em 0.5em #ffd633",
-      });
+      let delay = list_random_item(["1s", "2s", "3s", "4s"]);
+      let animation = text_combine_multiple([
+        "correctPulse 1s ",
+        delay,
+        " infinite alternate",
+      ]);
+      html_style_set(correct, "animation", animation);
     }
     let pray = text_combine(
       emoji_pray(),
