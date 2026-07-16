@@ -8,12 +8,15 @@ import { range_1_next } from "../../love/js/range_1_next.mjs";
 import { app_code_lesson_operators_value_max } from "../../love/js/app_code_lesson_operators_value_max.mjs";
 import { app_code_lesson_name_id_function } from "../../love/js/app_code_lesson_name_id_function.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_console_log_name } from "./js_console_log_name.mjs";
 import { object_copy_assign } from "../../love/js/object_copy_assign.mjs";
 export function app_code_lesson_functions_console_log_generic(params) {
   let lambda$code = property_get(params, "lambda$code");
   let name_id_rights = property_get(params, "name_id_rights");
   let next_arg = property_get(params, "next_arg");
-  let name = "console.log";
+  let name = js_console_log_name();
   function batch_get() {
     let arg = next_arg();
     let code = js_code_call_arg(name, arg);
@@ -25,9 +28,13 @@ export function app_code_lesson_functions_console_log_generic(params) {
     batch_get,
     eval_console_log_to_list,
   );
-  let rights = [name];
-  list_add_multiple(rights, name_id_rights);
-  let name_id = app_code_lesson_name_id_function("function", rights);
+  let name_id = property_get_or_null(params, "name_id");
+  let name_id_missing = null_is(name_id);
+  if (name_id_missing) {
+    let rights = [name];
+    list_add_multiple(rights, name_id_rights);
+    name_id = app_code_lesson_name_id_function("function", rights);
+  }
   let logged_params = object_copy_assign(params, {
     batch_get: b,
     name_id,
