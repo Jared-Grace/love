@@ -85,15 +85,17 @@ export async function app_g_conversation(
       choice(2, stub),
     );
     let correct = list_get([gospel_b, how_b, believe_b], correct_index);
+    function reveal() {
+      app_shared_glow_correct(correct);
+      app_shared_correct_gold(correct);
+    }
     function on_pray() {
       html_style_assign(pray_b, {
         opacity: "0.5",
         "pointer-events": "none",
       });
-      app_shared_glow_correct(correct);
-      app_shared_correct_gold(correct);
-      let delay = list_random_item(["1s", "2s", "3s", "4s"]);
-      html_style_set(correct, "animation-delay", delay);
+      let delay = list_random_item([1000, 2000, 3000, 4000]);
+      setTimeout(reveal, delay);
     }
     let pray = text_combine(
       emoji_pray(),
