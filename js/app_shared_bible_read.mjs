@@ -81,7 +81,7 @@ import { app_shared_dismissable_message } from "../../love/js/app_shared_dismiss
 import { app_shared_bible_change } from "../../love/js/app_shared_bible_change.mjs";
 import { list_previous_wrap } from "../../love/js/list_previous_wrap.mjs";
 import { list_next_wrap } from "../../love/js/list_next_wrap.mjs";
-export async function app_chapter(context) {
+export async function app_shared_bible_read(context) {
   let root = html_mobile_default(context);
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
@@ -121,7 +121,7 @@ export async function app_chapter(context) {
     return;
   }
   app_shared_dismissable_message(
-    app_chapter,
+    app_shared_bible_read,
     bar,
     "chapter_help_dismissed",
     help_text,
