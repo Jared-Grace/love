@@ -16,7 +16,7 @@ import { null_not_is } from "./null_not_is.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_interleave_halves } from "./list_interleave_halves.mjs";
-import { app_supper_verse_color } from "./app_supper_verse_color.mjs";
+import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
@@ -207,7 +207,7 @@ export async function app_chapter(context) {
   let show_language_names = list_multiple_is(languages_verses);
   let language_count = list_size(languages_verses);
   function language_color(entry, index) {
-    return app_supper_verse_color(index, language_count);
+    return app_shared_gradient_color(index, language_count);
   }
   let language_colors = list_interleave_halves(
     list_map_index(languages_verses, language_color),
