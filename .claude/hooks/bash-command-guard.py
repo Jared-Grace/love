@@ -1528,13 +1528,17 @@ def main():
         print(json.dumps({
             "hookSpecificOutput": {
                 "hookEventName": "PreToolUse",
-                "permissionDecision": "ask",
+                "permissionDecision": "deny",
                 "permissionDecisionReason": (
-                    f"This command starts with the allowed verb {verb!r}, but "
-                    "contains additional chained/unparsed content (&&, |, "
-                    "`, $(...), redirection, etc.) that permissions.allow's "
-                    "prefix match would otherwise let ride through unchecked. "
-                    "Forcing a real prompt."
+                    f"This starts with the allowed verb {verb!r} but also "
+                    "carries chained or unparsed content (a pipe, ';', "
+                    "'$(...)', redirection, or a not-yet-trusted verb) that "
+                    "can't inherit that verb's trust. Please don't widen the "
+                    "guard for a one-off - reword instead: split it into "
+                    "separate Bash calls with one already-allowed verb each, "
+                    "or chain only allow-listed verbs with '&&'/';'. If the "
+                    "compound form is genuinely needed, the human can re-send "
+                    "it with a leading 'p ' to review allow-listing it."
                 ),
             }
         }))
