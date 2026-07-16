@@ -7,6 +7,9 @@ import { app_shared_button_screen_green_style_assign } from "../../love/js/app_s
 import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
+import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { each } from "./each.mjs";
 import { list_map } from "../../love/js/list_map.mjs";
 import { list_sort_text_to } from "../../love/js/list_sort_text_to.mjs";
 import { list_concat } from "../../love/js/list_concat.mjs";
@@ -74,16 +77,28 @@ export function app_code_lesson_quiz_multiple_choice(
   }
   let choices = list_concat(distractors, [quiz_answer_text]);
   list_sort_text_to(choices);
-  let buttons = list_map(choices, each_button);
   let answered = false;
+  let revealed = false;
+  let correct_button = null;
   function each_button(quiz_choice) {
     let b = app_shared_button_wide(parent, quiz_choice, on_click);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
+    let is_correct = equal(quiz_choice, quiz_answer_text);
+    if (is_correct) {
+      correct_button = b;
+    }
     async function on_click() {
       if (answered) {
-        ("once answered correctly the choices are locked, so the learner can ponder and advance with Next at their own pace");
+        ("locked after the answer is chosen; advance with Next at their own pace");
         return;
+      }
+      if (revealed) {
+        let other = not(is_correct);
+        if (other) {
+          ("after a wrong answer only the glowing correct choice is clickable");
+          return;
+        }
       }
       let eq = equal(quiz_choice, quiz_answer_text);
       if (eq) {
@@ -93,6 +108,7 @@ export function app_code_lesson_quiz_multiple_choice(
       } else {
         on_wrong();
         app_code_lesson_quiz_wrong_set(b);
+        reveal();
       }
     }
     let nn = null_not_is(answer_on_button);
@@ -100,5 +116,24 @@ export function app_code_lesson_quiz_multiple_choice(
       answer_on_button(b, quiz_choice);
     }
     return b;
+  }
+  let buttons = list_map(choices, each_button);
+  function reveal() {
+    "after a wrong answer: glow the correct choice (app_g's discernment glow) and lock the others, so the learner sees the answer and can only choose it";
+    if (revealed) {
+      return;
+    }
+    revealed = true;
+    app_shared_glow_correct(correct_button);
+    function lock_other(b) {
+      let other = not(equal(b, correct_button));
+      if (other) {
+        html_style_assign(b, {
+          opacity: "0.5",
+          "pointer-events": "none",
+        });
+      }
+    }
+    each(buttons, lock_other);
   }
 }
