@@ -1,6 +1,5 @@
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_binary_next_arg } from "./app_code_binary_next_arg.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -19,20 +18,7 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   let preamble = property_get(params, "preamble");
   let explanation = property_get(params, "explanation");
   let symbol = property_get(operator, "operator");
-  function expression(want_true) {
-    let coordinates = pair(want_true);
-    let left = property_get(coordinates, "left");
-    let right = property_get(coordinates, "right");
-    let e = js_code_binary_spaced_nb(left, symbol, right);
-    return e;
-  }
-  function refill() {
-    let true_case = expression(true);
-    let false_case = expression(false);
-    let list = [true_case, false_case];
-    return list;
-  }
-  let next_arg = list_iterator_refillable(refill);
+  let next_arg = app_code_binary_next_arg(symbol, pair);
   var r = app_code_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
