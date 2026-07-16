@@ -1,4 +1,4 @@
-import { app_replace_button } from "../../love/js/app_replace_button.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { ebible_chapter_code_to_book } from "../../love/js/ebible_chapter_code_to_book.mjs";
 import { ebible_chapter_code_to_name } from "../../love/js/ebible_chapter_code_to_name.mjs";
 import { ebible_book_code_to_name } from "../../love/js/ebible_book_code_to_name.mjs";
@@ -19,6 +19,6 @@ export function app_shared_bible_book_chapter(
   function on_chapter() {
     app_shared_bible_book_open(book_code);
   }
-  app_replace_button(bar, book_name, on_book);
-  app_replace_button(bar, chapter_name, on_chapter);
+  app_shared_button(bar, book_name, on_book);
+  app_shared_button(bar, chapter_name, on_chapter);
 }

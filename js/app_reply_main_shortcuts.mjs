@@ -1,33 +1,33 @@
-import { app_reply_choices_whatsapp } from "./app_reply_choices_whatsapp.mjs";
-import { emoji_fire } from "./emoji_fire.mjs";
-import { app_reply_glory } from "./app_reply_glory.mjs";
-import { ebible_language_arabic } from "./ebible_language_arabic.mjs";
-import { ebible_language_bengali } from "./ebible_language_bengali.mjs";
-import { app_reply_give } from "./app_reply_give.mjs";
-import { ebible_language_english } from "./ebible_language_english.mjs";
-import { app_reply_called_why } from "./app_reply_called_why.mjs";
-import { ebible_language_telugu } from "./ebible_language_telugu.mjs";
-import { property_combine } from "./property_combine.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
-import { app_replace_button } from "./app_replace_button.mjs";
-import { each } from "./each.mjs";
-import { property_get_invoke } from "./property_get_invoke.mjs";
-import { list_find_property } from "./list_find_property.mjs";
-import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
-import { property_get } from "./property_get.mjs";
-import { json_copy } from "./json_copy.mjs";
-import { property_get_add } from "./property_get_add.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { app_reply_how_r_u } from "./app_reply_how_r_u.mjs";
-import { app_reply_greetings } from "./app_reply_greetings.mjs";
-import { ebible_language_kenya } from "./ebible_language_kenya.mjs";
-import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
-import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
-import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
-import { app_reply_greetings_live } from "./app_reply_greetings_live.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { app_reply_choices_whatsapp } from "../../love/js/app_reply_choices_whatsapp.mjs";
+import { emoji_fire } from "../../love/js/emoji_fire.mjs";
+import { app_reply_glory } from "../../love/js/app_reply_glory.mjs";
+import { ebible_language_arabic } from "../../love/js/ebible_language_arabic.mjs";
+import { ebible_language_bengali } from "../../love/js/ebible_language_bengali.mjs";
+import { app_reply_give } from "../../love/js/app_reply_give.mjs";
+import { ebible_language_english } from "../../love/js/ebible_language_english.mjs";
+import { app_reply_called_why } from "../../love/js/app_reply_called_why.mjs";
+import { ebible_language_telugu } from "../../love/js/ebible_language_telugu.mjs";
+import { property_combine } from "../../love/js/property_combine.mjs";
+import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
+import { each } from "../../love/js/each.mjs";
+import { property_get_invoke } from "../../love/js/property_get_invoke.mjs";
+import { list_find_property } from "../../love/js/list_find_property.mjs";
+import { list_map_property_invoke } from "../../love/js/list_map_property_invoke.mjs";
+import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_languages_chosen_reset.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { json_copy } from "../../love/js/json_copy.mjs";
+import { property_get_add } from "../../love/js/property_get_add.mjs";
+import { property_set } from "../../love/js/property_set.mjs";
+import { list_concat } from "../../love/js/list_concat.mjs";
+import { app_reply_how_r_u } from "../../love/js/app_reply_how_r_u.mjs";
+import { app_reply_greetings } from "../../love/js/app_reply_greetings.mjs";
+import { ebible_language_kenya } from "../../love/js/ebible_language_kenya.mjs";
+import { ebible_language_luganda } from "../../love/js/ebible_language_luganda.mjs";
+import { ebible_language_punjabi } from "../../love/js/ebible_language_punjabi.mjs";
+import { ebible_language_urdu } from "../../love/js/ebible_language_urdu.mjs";
+import { app_reply_greetings_live } from "../../love/js/app_reply_greetings_live.mjs";
+import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
 export function app_reply_main_shortcuts(
   root,
   languages_chosen,
@@ -37,7 +37,10 @@ export function app_reply_main_shortcuts(
   buttons_responses,
 ) {
   let languages_chosen_default = app_reply_languages_chosen_default();
-  app_shared_text_body(root, "3. (Optional) Or, instead of 1 or 2, choose shortcuts:");
+  app_shared_text_body(
+    root,
+    "3. (Optional) Or, instead of 1 or 2, choose shortcuts:",
+  );
   let gl = app_reply_greetings_live();
   let ur = ebible_language_urdu();
   let pa = ebible_language_punjabi();
@@ -187,7 +190,7 @@ export function app_reply_main_shortcuts(
       }
       each(responses, lambda7);
     }
-    let component = app_replace_button(root, name, lambda5);
+    let component = app_shared_button(root, name, lambda5);
   }
   each(shortcuts, shortcut_each);
 }
