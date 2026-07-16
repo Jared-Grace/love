@@ -7,7 +7,6 @@ export function app_apps_all_main_fns() {
     "app_calendar",
     "app_calendar_paste",
     "app_ceb_bible",
-    "app_chapter",
     "app_code",
     "app_designs_universal",
     "app_g",
