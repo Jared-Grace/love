@@ -274,27 +274,27 @@ export async function app_shared_bible_read(context) {
     let verse_buttons = html_div(actions);
     html_button_biblehub_open_interlinear(
       verse_buttons,
-      chapter_name,
-      book_name,
+      verse_chapter_name,
+      verse_book_name,
       verse_number_v,
     );
     html_button_biblehub_open_parallel(
       verse_buttons,
-      book_name,
-      chapter_name,
+      verse_book_name,
+      verse_chapter_name,
       verse_number_v,
     );
     html_button_biblehub_open_commentary(
       verse_buttons,
-      chapter_name,
-      book_name,
+      verse_chapter_name,
+      verse_book_name,
       verse_number_v,
     );
     app_shared_button(actions, t, copy);
     async function share() {
       await app_shared_bible_share(
-        book_name,
-        chapter_name,
+        verse_book_name,
+        verse_chapter_name,
         verse_numbers_chosen,
         languages_chosen,
       );
