@@ -7,7 +7,7 @@ import { app_shared_button_screen_green_style_assign } from "../../love/js/app_s
 import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
-import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
+import { app_code_glow_correct } from "./app_code_glow_correct.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "../../love/js/list_map.mjs";
@@ -124,9 +124,9 @@ export function app_code_lesson_quiz_multiple_choice(
       return;
     }
     revealed = true;
-    app_shared_glow_correct(correct_button);
+    app_code_glow_correct(correct_button);
     html_style_background_color_set(correct_button, "#fff3cd");
-    html_style_set(correct_button, "outline", "0.1em solid #d9a400");
+    html_style_set(correct_button, "outline", "0.06em solid #e0be5c");
     function lock_other(b) {
       let is_correct = equal(b, correct_button);
       if (is_correct) {
