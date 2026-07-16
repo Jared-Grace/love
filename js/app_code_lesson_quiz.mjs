@@ -1,5 +1,7 @@
+import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
 import { not } from "./not.mjs";
+import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
@@ -71,6 +73,7 @@ export function app_code_lesson_quiz(
   let number = app_code_lesson_current_number(context);
   let review_scope = app_code_review_scope(number);
   let has_review = null_not_is(review_scope);
+  let lcli = app_code_lesson_current_last_is(context);
   let after_none = lcli && not(has_review);
   let show_none = after_none && qli;
   if (show_none) {
@@ -93,8 +96,10 @@ export function app_code_lesson_quiz(
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
+  let failed = false;
   on_qa_change();
   function on_qa_change() {
+    failed = false;
     quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
     html_clear(container_question);
     on_question(container_question, quiz_question);
@@ -110,13 +115,20 @@ export function app_code_lesson_quiz(
     app_code_quiz_correction(container_correction, qa);
   }
   function on_wrong() {
+    failed = true;
     html_visibility_hidden(container_success_message);
     show_correction();
   }
-  function on_success() {
-    "on a correct answer, show the success message and STOP — the choices are locked and the correction (if any) stays visible, so the learner ponders and advances with Next at their own pace, not auto-advanced";
+  async function on_success() {
+    "clean first-try correct auto-advances to a fresh question (saves the learner time); but if they got it wrong first, STOP — keep the correction visible and the choices locked so they can ponder and advance with Next at their own pace";
     html_clear(container_success_message);
     app_replace_success_message(container_success_message);
     html_visibility_visible(container_success_message);
+    let clean = not(failed);
+    if (clean) {
+      await sleep_success_color();
+      qa = next_get();
+      on_qa_change();
+    }
   }
 }
