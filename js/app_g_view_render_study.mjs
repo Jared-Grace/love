@@ -7,9 +7,12 @@ import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_g_button_green_style } from "./app_g_button_green_style.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
+import { app_shared_button_selected_background_color } from "./app_shared_button_selected_background_color.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_remove } from "./html_remove.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
@@ -39,6 +42,26 @@ export async function app_g_view_render_study(div_map) {
       word_index: index,
     });
   }
+  function word_button(word, lambda) {
+    let b = app_shared_button_inline(words_div, word, lambda);
+    html_style_assign(b, {
+      "padding-left": "0.4em",
+      "padding-right": "0.4em",
+    });
+    return b;
+  }
+  function word_completed(word) {
+    let b = word_button(word, ignore);
+    html_style_set(
+      b,
+      "background-color",
+      text_combine(app_shared_button_selected_background_color(), "dd"),
+    );
+  }
+  function word_upcoming(word) {
+    let b = word_button(word, ignore);
+    app_g_button_green_style(b);
+  }
   function word_next(word, index) {
     async function on_tap() {
       let next = index + 1;
@@ -50,17 +73,20 @@ export async function app_g_view_render_study(div_map) {
         draw(next);
       }
     }
-    let b = app_shared_button_inline(words_div, word, on_tap);
+    let b = word_button(word, on_tap);
     app_g_button_green_style(b);
+    html_style_set(b, "font-weight", "bold");
   }
   function draw(index) {
     html_clear(words_div);
     for (let i = 0; i < words.length; i++) {
       let word = words[i];
-      if (i === index) {
+      if (i < index) {
+        word_completed(word);
+      } else if (i === index) {
         word_next(word, index);
       } else {
-        app_shared_button_inline(words_div, word, ignore);
+        word_upcoming(word);
       }
     }
   }
