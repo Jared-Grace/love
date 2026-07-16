@@ -64,18 +64,6 @@ export function app_code_lesson_quiz(
   let parent_container = html_div(parent);
   let container_correction = html_div(parent_container);
   let container_success_message = html_div(parent_container);
-  let quiz_new_message = app_code_container_light_blue(parent_container);
-  let new_quiz_text = text_combine_middle_space_nb(
-    emoji_point_up(),
-    "Above is a new quiz, if you want",
-  );
-  html_div_text(quiz_new_message, new_quiz_text);
-  let lcli = app_code_lesson_current_last_is(context);
-  if (not(lcli)) {
-    let nt = app_shared_button_next_text();
-    let text = text_combine_multiple(['Otherwise, choose: "', nt, '"']);
-    html_div_text(quiz_new_message, text);
-  }
   let success = app_replace_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
@@ -111,7 +99,7 @@ export function app_code_lesson_quiz(
     let back_text = text_combine(left, " to the previous quiz");
     let bb = app_replace_button_wide(parent_container, back_text, on_back);
   }
-  let hides = [success, quiz_new_message];
+  let hides = [success];
   html_visibility_hidden_multiple(hides);
   on_qa_change();
   function on_qa_change() {

@@ -80,6 +80,10 @@ export function app_code_lesson_quiz_multiple_choice(
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
+      if (answered) {
+        "once answered correctly the choices are locked, so the learner can ponder and advance with Next at their own pace";
+        return;
+      }
       let eq = equal(quiz_choice, quiz_answer_text);
       if (eq) {
         answered = true;
@@ -87,9 +91,7 @@ export function app_code_lesson_quiz_multiple_choice(
         await on_success();
       } else {
         on_wrong();
-        if (not(answered)) {
-          app_code_lesson_quiz_wrong_set(b);
-        }
+        app_code_lesson_quiz_wrong_set(b);
       }
     }
     let nn = null_not_is(answer_on_button);
