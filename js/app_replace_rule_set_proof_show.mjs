@@ -18,7 +18,6 @@ import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { and } from "./and.mjs";
-import { or } from "./or.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 import { add } from "./add.mjs";
@@ -39,7 +38,8 @@ export function app_replace_rule_set_proof_show(parent, history) {
   }
   function highlighted_is(position, j) {
     if (null_is(selected)) {
-      return true;
+      ("nothing chosen means nothing highlighted: the green marks the single usage of a chosen rule, so by default no symbol glows - otherwise every step glows and it reads as if the rule is highlighted at all its usages at once");
+      return false;
     }
     let entry = list_get(history, selected);
     let rule = property_get(entry, "rule");
@@ -60,7 +60,6 @@ export function app_replace_rule_set_proof_show(parent, history) {
     html_centered(header);
     let gap = app_shared_spaced_small_gap();
     let goal_entry = list_last(history);
-    let nothing_selected = null_is(selected);
     function draw(entry, position) {
       let rule = property_get(entry, "rule");
       if (null_not_is(rule)) {
@@ -76,7 +75,7 @@ export function app_replace_rule_set_proof_show(parent, history) {
           gap,
           on_click,
         );
-        let glowing = or(nothing_selected, selected_this);
+        let glowing = selected_this;
         app_replace_lefts_rights_style(result, glowing, false);
         let button = property_get(result, "b");
         let enabled = true;
