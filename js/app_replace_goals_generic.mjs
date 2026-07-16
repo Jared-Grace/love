@@ -8,7 +8,6 @@ import { app_replace_button_rule_selected_background_color } from "./app_replace
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { emoji_point_right } from "./emoji_point_right.mjs";
-import { string_pad_left_space } from "./string_pad_left_space.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { not } from "./not.mjs";
 export function app_replace_goals_generic(
@@ -20,16 +19,16 @@ export function app_replace_goals_generic(
 ) {
   let choose_this_next = not(completed) && completed_previous;
   let r = app_shared_button_numbered(root, index, lambda);
-  let number = property_get(r, "number");
+  let marker = property_get(r, "marker");
   let title = property_get(r, "title");
   let button = property_get(r, "button");
   if (completed) {
     let e = emoji_check();
-    html_span_text(number, string_pad_left_space(e));
+    html_span_text(marker, e);
   } else {
     if (choose_this_next) {
       let e = emoji_point_right();
-      html_span_text(number, string_pad_left_space(e));
+      html_span_text(marker, e);
     }
   }
   if (completed) {
