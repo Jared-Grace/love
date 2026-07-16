@@ -35,7 +35,7 @@ export async function app_g_view_render_study(div_map) {
   let ring = text_combine_multiple([
     "0 0 0 0.12em ",
     font,
-    ", 0 0 0 0.16em black",
+    ", 0 0 0 0.16em #00000080",
   ]);
   let save_pending = null;
   async function persist() {
