@@ -3,7 +3,11 @@ import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
+import { js_console_log_name } from "./js_console_log_name.mjs";
+import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
+import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
@@ -40,18 +44,37 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
+  let name_id = title_name_id();
   var r = app_code_lesson_functions_console_log_generic({
     above,
     lambda$code: js_code_statement,
-    name_id_rights: [name_right],
+    name_id_rights: [],
+    name_id,
     next_arg,
     example_count: 2,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
   let lesson = property_get(r, "lesson");
-  let lesson_symbol = app_code_lesson_symbol_set(lesson, percent);
-  return lesson_symbol;
+  return lesson;
+  function title_name_id() {
+    "the home title puts the operator glyph % right after the operator name 'remainder', before the 'by <divisor>' qualifier: console.log remainder % by 2";
+    let console_name = js_console_log_name();
+    function title_get(lesson_name, left_upper) {
+      function render(parent) {
+        app_code_lesson_name_id_category(parent, left_upper);
+        html_span_text_code_dark(parent, console_name);
+        html_span_text(parent, " remainder ");
+        html_span_text_code_dark(parent, percent);
+        let by = text_combine(" by ", divisor_text);
+        html_span_text(parent, by);
+      }
+      return render;
+    }
+    let rights = [console_name, name_right];
+    let built = app_code_lesson_name_id_generic(rights, "function", title_get);
+    return built;
+  }
   function above(root) {
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, [
