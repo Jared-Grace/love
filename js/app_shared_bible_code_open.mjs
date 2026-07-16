@@ -6,6 +6,7 @@ export function app_shared_bible_code_open(chapter_code) {
     property_set(hash, "c", chapter_code);
     property_set(hash, "v", "");
     property_set(hash, "b", "");
+    property_set(hash, "ref", "");
   }
   html_hash_transform(transform);
   window_reload();

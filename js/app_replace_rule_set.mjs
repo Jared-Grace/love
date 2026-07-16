@@ -1,75 +1,75 @@
-import { null_is } from "./null_is.mjs";
-import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
-import { list_index_of_json } from "./list_index_of_json.mjs";
-import { html_scroll_center } from "./html_scroll_center.mjs";
-import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
-import { app_replace_button_symbol_style_dead } from "./app_replace_button_symbol_style_dead.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
-import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_replace_animation_duration_get } from "./app_replace_animation_duration_get.mjs";
-import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
-import { app_replace_rule_set_title } from "./app_replace_rule_set_title.mjs";
-import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
-import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show.mjs";
-import { app_replace_rule_set_nav } from "./app_replace_rule_set_nav.mjs";
-import { app_replace_rule_set_refresh_rb } from "./app_replace_rule_set_refresh_rb.mjs";
-import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
-import { html_progress_bar } from "./html_progress_bar.mjs";
-import { app_replace_rule_set_attribute_hint } from "./app_replace_rule_set_attribute_hint.mjs";
-import { app_replace_rule_set_attribute_refresh_count } from "./app_replace_rule_set_attribute_refresh_count.mjs";
-import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
-import { html_data_set_test } from "./html_data_set_test.mjs";
-import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
-import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
-import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
-import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
-import { app_replace_rule_sets_data_initialize } from "./app_replace_rule_sets_data_initialize.mjs";
-import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
-import { storage_local_transform_empty_context } from "./storage_local_transform_empty_context.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
-import { list_last } from "./list_last.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
-import { list_swap_first } from "./list_swap_first.mjs";
-import { list_take } from "./list_take.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
-import { list_size_range } from "./list_size_range.mjs";
-import { equal } from "./equal.mjs";
-import { emoji_question } from "./emoji_question.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_replace_rule_set_rules_get } from "./app_replace_rule_set_rules_get.mjs";
-import { app_replace_start_end_get } from "./app_replace_start_end_get.mjs";
-import { app_replace_button_symbol_style_invalid } from "./app_replace_button_symbol_style_invalid.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { json_equal } from "./json_equal.mjs";
-import { each } from "./each.mjs";
-import { app_replace_button } from "./app_replace_button.mjs";
-import { storage_local_get_context } from "./storage_local_get_context.mjs";
-import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
-import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
-import { ternary } from "./ternary.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_replace_button_symbol_style } from "./app_replace_button_symbol_style.mjs";
-import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { html_div } from "./html_div.mjs";
-import { list_size } from "./list_size.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
-import { not } from "./not.mjs";
-import { html_text_set_if } from "./html_text_set_if.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { each_index } from "./each_index.mjs";
-import { list_map_index } from "./list_map_index.mjs";
-import { html_p } from "./html_p.mjs";
-import { html_disable } from "./html_disable.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_button } from "./html_button.mjs";
-import { list_get } from "./list_get.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "../../love/js/null_is.mjs";
+import { app_replace_rule_sets_fns_rules_used } from "../../love/js/app_replace_rule_sets_fns_rules_used.mjs";
+import { list_index_of_json } from "../../love/js/list_index_of_json.mjs";
+import { html_scroll_center } from "../../love/js/html_scroll_center.mjs";
+import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
+import { app_replace_button_symbol_style_dead } from "../../love/js/app_replace_button_symbol_style_dead.mjs";
+import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
+import { app_replace_rule_set_verify_from_try } from "../../love/js/app_replace_rule_set_verify_from_try.mjs";
+import { list_map_property_invoke } from "../../love/js/list_map_property_invoke.mjs";
+import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
+import { app_replace_animation_duration_get } from "../../love/js/app_replace_animation_duration_get.mjs";
+import { app_shared_button_restart_text } from "../../love/js/app_shared_button_restart_text.mjs";
+import { app_replace_rule_set_title } from "../../love/js/app_replace_rule_set_title.mjs";
+import { app_replace_rule_set_abbreviations } from "../../love/js/app_replace_rule_set_abbreviations.mjs";
+import { app_replace_rule_set_goal_show } from "../../love/js/app_replace_rule_set_goal_show.mjs";
+import { app_replace_rule_set_nav } from "../../love/js/app_replace_rule_set_nav.mjs";
+import { app_replace_rule_set_refresh_rb } from "../../love/js/app_replace_rule_set_refresh_rb.mjs";
+import { app_replace_rule_set_refresh_sb } from "../../love/js/app_replace_rule_set_refresh_sb.mjs";
+import { html_progress_bar } from "../../love/js/html_progress_bar.mjs";
+import { app_replace_rule_set_attribute_hint } from "../../love/js/app_replace_rule_set_attribute_hint.mjs";
+import { app_replace_rule_set_attribute_refresh_count } from "../../love/js/app_replace_rule_set_attribute_refresh_count.mjs";
+import { app_replace_rule_set_attribute_symbol } from "../../love/js/app_replace_rule_set_attribute_symbol.mjs";
+import { html_data_set_test } from "../../love/js/html_data_set_test.mjs";
+import { app_replace_rule_set_verify_goal_next } from "../../love/js/app_replace_rule_set_verify_goal_next.mjs";
+import { app_replace_rule_set_symbol_on_click } from "../../love/js/app_replace_rule_set_symbol_on_click.mjs";
+import { app_replace_rule_set_success } from "../../love/js/app_replace_rule_set_success.mjs";
+import { app_replace_rule_set_proof_show } from "../../love/js/app_replace_rule_set_proof_show.mjs";
+import { app_replace_rule_sets_data_initialize } from "../../love/js/app_replace_rule_sets_data_initialize.mjs";
+import { app_replace_rule_sets_data_goal } from "../../love/js/app_replace_rule_sets_data_goal.mjs";
+import { storage_local_transform_empty_context } from "../../love/js/storage_local_transform_empty_context.mjs";
+import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
+import { property_delete_if_exists } from "../../love/js/property_delete_if_exists.mjs";
+import { list_last } from "../../love/js/list_last.mjs";
+import { list_add } from "../../love/js/list_add.mjs";
+import { list_size_half_ceil } from "../../love/js/list_size_half_ceil.mjs";
+import { list_swap_first } from "../../love/js/list_swap_first.mjs";
+import { list_take } from "../../love/js/list_take.mjs";
+import { list_shuffle } from "../../love/js/list_shuffle.mjs";
+import { list_size_range } from "../../love/js/list_size_range.mjs";
+import { equal } from "../../love/js/equal.mjs";
+import { emoji_question } from "../../love/js/emoji_question.mjs";
+import { text_combine } from "../../love/js/text_combine.mjs";
+import { app_replace_rule_set_rules_get } from "../../love/js/app_replace_rule_set_rules_get.mjs";
+import { app_replace_start_end_get } from "../../love/js/app_replace_start_end_get.mjs";
+import { app_replace_button_symbol_style_invalid } from "../../love/js/app_replace_button_symbol_style_invalid.mjs";
+import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
+import { property_exists } from "../../love/js/property_exists.mjs";
+import { json_equal } from "../../love/js/json_equal.mjs";
+import { each } from "../../love/js/each.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
+import { storage_local_get_context } from "../../love/js/storage_local_get_context.mjs";
+import { app_replace_button_rule } from "../../love/js/app_replace_button_rule.mjs";
+import { app_replace_rule_set_get } from "../../love/js/app_replace_rule_set_get.mjs";
+import { ternary } from "../../love/js/ternary.mjs";
+import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
+import { app_replace_button_symbol_style } from "../../love/js/app_replace_button_symbol_style.mjs";
+import { property_set_exists_not } from "../../love/js/property_set_exists_not.mjs";
+import { html_div } from "../../love/js/html_div.mjs";
+import { list_size } from "../../love/js/list_size.mjs";
+import { object_merge_set } from "../../love/js/object_merge_set.mjs";
+import { not } from "../../love/js/not.mjs";
+import { html_text_set_if } from "../../love/js/html_text_set_if.mjs";
+import { null_not_is } from "../../love/js/null_not_is.mjs";
+import { each_index } from "../../love/js/each_index.mjs";
+import { list_map_index } from "../../love/js/list_map_index.mjs";
+import { html_p } from "../../love/js/html_p.mjs";
+import { html_disable } from "../../love/js/html_disable.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { html_button } from "../../love/js/html_button.mjs";
+import { list_get } from "../../love/js/list_get.mjs";
+import { html_clear } from "../../love/js/html_clear.mjs";
+import { property_get_or_null } from "../../love/js/property_get_or_null.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_rule_set_nav(context, root);
@@ -125,7 +125,7 @@ export async function app_replace_rule_set(context) {
   }
   let left2 = emoji_question();
   let hint_text = text_combine(left2, "Hint");
-  let hint_button = app_replace_button(root, hint_text, on_hint);
+  let hint_button = app_shared_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   app_replace_rule_set_title(context);
@@ -273,7 +273,12 @@ export async function app_replace_rule_set(context) {
       }
       let has_selection = null_not_is(index_selected);
       html_text_set_if(has_selection, "Rules:", "Choose a rule:", label_rules);
-      html_text_set_if(has_selection, "Choose a symbol:", "Symbols:", label_symbols);
+      html_text_set_if(
+        has_selection,
+        "Choose a symbol:",
+        "Symbols:",
+        label_symbols,
+      );
     }
     if (success) {
       html_visibility_hidden(div_symbols);
@@ -292,7 +297,7 @@ export async function app_replace_rule_set(context) {
   }
   let combined = app_shared_button_restart_text("Start over");
   async function on_start_over() {
-    ("start over is an explicit redo: forget this goal's saved steps so it opens unsolved again, unlike a browser refresh which keeps them");
+    "start over is an explicit redo: forget this goal's saved steps so it opens unsolved again, unlike a browser refresh which keeps them";
     function forget(value) {
       let g = app_replace_rule_sets_data_goal(value, rule_set_name, goal);
       property_delete_if_exists(g, "history");
@@ -301,7 +306,7 @@ export async function app_replace_rule_set(context) {
     storage_local_transform_empty_context(context, "rule_sets_data", forget);
     await app_shared_screen_set(context, app_replace_rule_set);
   }
-  start_over = app_replace_button(root, combined, on_start_over);
+  start_over = app_shared_button(root, combined, on_start_over);
   div_proof = html_div(root);
   ("first render happens here, after start_over and div_proof exist, so a resumed goal's success flow can draw the proof into them");
   await refresh();

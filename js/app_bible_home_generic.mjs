@@ -28,7 +28,7 @@ import { html_div } from "../../love/js/html_div.mjs";
 import { html_p } from "../../love/js/html_p.mjs";
 import { app_bible_chapters } from "../../love/js/app_bible_chapters.mjs";
 import { app_bible_books } from "../../love/js/app_bible_books.mjs";
-import { app_replace_button } from "../../love/js/app_replace_button.mjs";
+import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { ebible_book_code_to_name } from "../../love/js/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../love/js/ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
@@ -207,9 +207,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda3() {
     app_shared_bible_open_en(chapter_code, verse_number);
   }
-  let component2 = app_replace_button(bottom, "Chapter", lambda3);
+  let component2 = app_shared_button(bottom, "Chapter", lambda3);
   let text4 = html_button_copy_text();
-  let component = app_replace_button(bottom, text4, noop);
+  let component = app_shared_button(bottom, text4, noop);
   let v3 = app_shared_bible_toggle_update(
     updates,
     verse_numbers_chosen,
