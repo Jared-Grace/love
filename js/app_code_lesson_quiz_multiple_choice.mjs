@@ -126,6 +126,7 @@ export function app_code_lesson_quiz_multiple_choice(
     revealed = true;
     app_shared_glow_correct(correct_button);
     html_style_background_color_set(correct_button, "#fff3cd");
+    html_style_set(correct_button, "outline", "0.1em solid #d9a400");
     function lock_other(b) {
       let is_correct = equal(b, correct_button);
       if (is_correct) {
