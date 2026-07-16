@@ -1,9 +1,9 @@
-import { app_replace_font_size_adjust } from "./app_replace_font_size_adjust.mjs";
+import { app_shared_font_size_adjust } from "../../love/js/app_shared_font_size_adjust.mjs";
 export function app_replace_font_size_adjust_curried(context) {
   let r2 = async function app_replace_font_size_adjust_curried_result(
     value_get,
   ) {
-    let r = await app_replace_font_size_adjust(context, value_get);
+    let r = await app_shared_font_size_adjust(context, value_get);
     return r;
   };
   return r2;
