@@ -4,6 +4,8 @@ import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_span_text_deemphasized } from "./html_span_text_deemphasized.mjs";
 import { app_replace_button_side } from "./app_replace_button_side.mjs";
 import { app_replace_button_symbol_style_valid_if } from "./app_replace_button_symbol_style_valid_if.mjs";
