@@ -4,6 +4,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { app_replace_button } from "./app_replace_button.mjs";
 import { g_verify_approval_set_browser } from "./g_verify_approval_set_browser.mjs";
+import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -187,16 +188,14 @@ export function app_g_verify_view(container, english, lines, chapter_code, verse
   html_style_set(approve_bar, "text-align", "center");
   async function on_approve() {
     try {
+      await firebase_auth_ensure(approve_bar);
       await g_verify_approval_set_browser(chapter_code, verse);
       html_clear(approve_bar);
       let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
       html_font_color_set(done, muted);
-    } catch (unauthorized) {
+    } catch (failed) {
       html_clear(approve_bar);
-      let msg = html_p_text(
-        approve_bar,
-        "Couldn't save — log in via the g bible app, then retry.",
-      );
+      let msg = html_p_text(approve_bar, "Couldn't save — please try again.");
       html_font_color_set(msg, muted);
       app_replace_button(approve_bar, "Approve v" + verse, on_approve);
     }
