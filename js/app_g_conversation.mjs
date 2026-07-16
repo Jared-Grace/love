@@ -24,7 +24,6 @@ import { list_random_item } from "./list_random_item.mjs";
 import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
 import { app_shared_correct_gold } from "./app_shared_correct_gold.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_conversation(
   prayer,
   npc,

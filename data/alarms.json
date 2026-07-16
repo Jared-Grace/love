@@ -1,0 +1,7 @@
+{
+  "alarms": [
+    { "label": "Morning prayer", "hour": 6, "minute": 0, "days": ["mon", "tue", "wed", "thu", "fri"] },
+    { "label": "Sabbath rest", "hour": 9, "minute": 30, "days": ["sat"] },
+    { "label": "Call with Sam", "hour": 14, "minute": 30, "date": "2026-07-20" }
+  ]
+}
