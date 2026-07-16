@@ -34,14 +34,14 @@ export function app_code_lesson_functions_console_log_true_false() {
   let lesson = property_get(r, "lesson");
   return lesson;
   function title_name_id() {
-    "the home title code-styles the literal keywords true and false (and console.log), keeping the connecting word 'or' as plain prose";
+    "the home title code-styles the literal keywords true and false (and console.log), separated by a comma like other lessons list multiple items (app_code_lesson_name_id_remaining)";
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
         html_span_text_code_dark(parent, name);
         html_span_space(parent);
         html_span_text_code_dark(parent, js_keyword_true());
-        html_span_text(parent, " or ");
+        html_span_text(parent, ", ");
         html_span_text_code_dark(parent, js_keyword_false());
       }
       return render;
