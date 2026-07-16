@@ -23,9 +23,9 @@ export function app_code_lesson_functions_console_log_equals() {
     let parts = [
       "",
       symbol,
-      " means exactly equal — a single ",
+      " means the same — a single ",
       "=",
-      " means something different you will learn later",
+      " means something else you will learn later",
     ];
     return parts;
   }
