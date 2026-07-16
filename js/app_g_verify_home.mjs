@@ -102,6 +102,8 @@ export async function app_g_verify_home(context) {
         view,
         property_get(passage, "english"),
         property_get(passage, "lines"),
+        chapter_code,
+        selected_key,
       );
     }
     function open_pending(verse) {
