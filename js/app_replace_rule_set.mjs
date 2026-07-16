@@ -3,7 +3,7 @@ import { app_replace_rule_sets_fns_rules_used } from "../../love/js/app_replace_
 import { list_index_of_json } from "../../love/js/list_index_of_json.mjs";
 import { html_scroll_center } from "../../love/js/html_scroll_center.mjs";
 import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
-import { app_replace_button_symbol_style_dead } from "../../love/js/app_replace_button_symbol_style_dead.mjs";
+import { app_replace_symbol_tile_dead } from "../../love/js/app_replace_symbol_tile_dead.mjs";
 import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../love/js/app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "../../love/js/list_map_property_invoke.mjs";
@@ -42,7 +42,7 @@ import { emoji_question } from "../../love/js/emoji_question.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../love/js/app_replace_rule_set_rules_get.mjs";
 import { app_replace_start_end_get } from "../../love/js/app_replace_start_end_get.mjs";
-import { app_replace_button_symbol_style_invalid } from "../../love/js/app_replace_button_symbol_style_invalid.mjs";
+import { app_replace_symbol_tile_invalid } from "../../love/js/app_replace_symbol_tile_invalid.mjs";
 import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
 import { property_exists } from "../../love/js/property_exists.mjs";
 import { json_equal } from "../../love/js/json_equal.mjs";
@@ -235,7 +235,7 @@ export async function app_replace_rule_set(context) {
       });
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
-        app_replace_button_symbol_style_invalid(symbol_button);
+        app_replace_symbol_tile_invalid(symbol_button);
       }
       return symbol_button;
       function refresh_sb() {
@@ -287,7 +287,7 @@ export async function app_replace_rule_set(context) {
     let found = property_get(t, "found");
     if (not(found)) {
       function symbol_dead(symbol_button) {
-        app_replace_button_symbol_style_dead(symbol_button);
+        app_replace_symbol_tile_dead(symbol_button);
       }
       each(symbol_buttons, symbol_dead);
       let green = app_replace_rule_set_highlight();

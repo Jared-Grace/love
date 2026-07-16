@@ -15,7 +15,7 @@ import { storage_local_get_context } from "../../love/js/storage_local_get_conte
 import { list_index_is } from "../../love/js/list_index_is.mjs";
 import { html_p } from "../../love/js/html_p.mjs";
 import { html_move_animate_multiple } from "../../love/js/html_move_animate_multiple.mjs";
-import { app_replace_button_symbol_style_valid_multiple_nested } from "../../love/js/app_replace_button_symbol_style_valid_multiple_nested.mjs";
+import { app_replace_symbol_tile_valid_multiple_nested } from "../../love/js/app_replace_symbol_tile_valid_multiple_nested.mjs";
 import { storage_local_transform_empty_context } from "../../love/js/storage_local_transform_empty_context.mjs";
 import { property_set } from "../../love/js/property_set.mjs";
 import { app_replace_rule_sets_data_goal } from "../../love/js/app_replace_rule_sets_data_goal.mjs";
@@ -40,7 +40,7 @@ export async function app_replace_rule_set_success(
   }
   storage_local_transform_empty_context(context, "rule_sets_data", lambda5);
   let list = [goal_list_symbols, sbs];
-  app_replace_button_symbol_style_valid_multiple_nested(list);
+  app_replace_symbol_tile_valid_multiple_nested(list);
   await html_move_animate_multiple(sbs, goal_list_symbols, duration);
   app_replace_success_message(div_below);
   let p_next = html_p(div_below);
