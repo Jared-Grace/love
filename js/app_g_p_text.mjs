@@ -10,4 +10,5 @@ export function app_g_p_text(container, name) {
     "margin-bottom": "0.5em",
     "font-size": app_shared_style_control_font_size(),
   });
+  return p;
 }
