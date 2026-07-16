@@ -13,9 +13,3 @@ export function app_code_quiz_index_back(context) {
     app_code_quiz_index_set(context, previous);
   }
 }
-export function app_code_quiz_index_back_available(context) {
-  "whether a previous quiz kind exists to go Back to";
-  let previous = storage_local_get_context(context, "quiz_index_previous");
-  let available = null_not_is(previous);
-  return available;
-}
