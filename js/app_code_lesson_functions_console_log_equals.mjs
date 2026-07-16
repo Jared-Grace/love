@@ -17,7 +17,7 @@ export function app_code_lesson_functions_console_log_equals() {
     ["In code, we write: ", code_line],
   ];
   let explanation = [
-    ["It is ", js_keyword_true(), " only when both sides are the same number"],
+    ["", symbol, " is ", js_keyword_true(), " only when both sides are the same number"],
   ];
   function closing(fn_name) {
     let parts = [
