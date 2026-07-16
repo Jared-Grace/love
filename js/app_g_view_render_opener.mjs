@@ -1,6 +1,9 @@
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
+import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
+import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { g_greeting } from "./g_greeting.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_overlay } from "./app_g_overlay.mjs";
 import { app_g_container } from "./app_g_container.mjs";
