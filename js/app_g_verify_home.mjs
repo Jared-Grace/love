@@ -24,17 +24,23 @@ import { app_g_verify_view } from "./app_g_verify_view.mjs";
 import { app_shared_text_deemphasized_color } from "./app_shared_text_deemphasized_color.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 import { app_shared_milestone_background_color } from "./app_shared_milestone_background_color.mjs";
+import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let chapter_code = "1JN01";
+  let chapter_code = localStorage.getItem("g_verify_chapter") || "1JN01";
   let storage_key = "g_verify_selected_" + chapter_code;
   let advance_key = "g_verify_advance_" + chapter_code;
   let selected_key = localStorage.getItem(storage_key);
   let shown_json = null;
 
-  let chapter = await g_sermon_write_download(chapter_code);
+  let chapter;
+  try {
+    chapter = await g_sermon_write_download(chapter_code);
+  } catch (missing) {
+    chapter = { chapter_code, passages: [] };
+  }
   let status = await g_verify_status_download_fresh(chapter_code);
   render(chapter, status);
   poll();
@@ -63,6 +69,24 @@ export async function app_g_verify_home(context) {
     html_style_set(wrap, "margin", "0 auto");
     html_style_padding_x(wrap, "1.2em");
     html_style_padding_y(wrap, "2em");
+
+    let cbar = html_div_centered(wrap);
+    html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
+    ["1JN01", "1JN02", "1JN03", "1JN04", "1JN05"].forEach(function (code) {
+      let number = String(Number(code.slice(3)));
+      let cb = app_replace_button(cbar, "1 John " + number, function () {
+        if (code !== chapter_code) {
+          localStorage.setItem("g_verify_chapter", code);
+          location.reload();
+        }
+      });
+      if (code === chapter_code) {
+        html_style_background_color_set(
+          cb,
+          app_shared_verse_selected_background_color(),
+        );
+      }
+    });
 
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     html_style_set(title, "font-family", app_shared_font_serif());
@@ -138,6 +162,17 @@ export async function app_g_verify_home(context) {
     }
 
     view = html_div(wrap);
+
+    if (passages.length === 0) {
+      if (pending !== null) {
+        open_pending(pending);
+      } else {
+        let empty = html_p_text(view, "No verses written yet for this chapter.");
+        html_font_color_set(empty, app_shared_text_deemphasized_color());
+        html_style_set(empty, "margin-top", "1em");
+      }
+      return;
+    }
 
     let advance_target = localStorage.getItem(advance_key);
     if (advance_target !== null && list_includes(real_keys, advance_target)) {
