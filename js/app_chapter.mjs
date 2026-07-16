@@ -180,24 +180,29 @@ export async function app_chapter(context) {
   app_replace_button_arrow_right(bar, arrow_right);
   app_chapter_languages_gear(bar, content, languages_chosen);
   async function fetch_language(lc) {
-    let bible_folder = ebible_language_to_bible_folder(lc);
-    let verses = await ebible_verses_browser(bible_folder, chapter_code);
-    let books = await ebible_version_books_browser(bible_folder);
-    let language = list_find_property(ebible_languages(), "language_code", lc);
-    let v2 = {
-      language_code: lc,
-      language,
-      books,
-      verses,
-    };
-    return v2;
+    async function get() {
+      let bible_folder = ebible_language_to_bible_folder(lc);
+      let verses = await ebible_verses_browser(bible_folder, chapter_code);
+      let books = await ebible_version_books_browser(bible_folder);
+      let language = list_find_property(ebible_languages(), "language_code", lc);
+      let v2 = {
+        language_code: lc,
+        language,
+        books,
+        verses,
+      };
+      return v2;
+    }
+    let r = await catch_null_async(get);
+    return r;
   }
   await list_map_unordered_add_async(
     languages_chosen,
     fetch_language,
     languages_verses,
   );
-  let show_language_names = list_multiple_is(languages_chosen);
+  languages_verses = list_filter_null_not_is(languages_verses);
+  let show_language_names = list_multiple_is(languages_verses);
   let language_count = list_size(languages_verses);
   function language_color(entry, index) {
     return app_supper_verse_color(index, language_count);
