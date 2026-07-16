@@ -27,6 +27,11 @@ import { app_shared_milestone_background_color } from "../../love/js/app_shared_
 import { app_shared_verse_selected_background_color } from "../../love/js/app_shared_verse_selected_background_color.mjs";
 import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
+function api_read(name, args) {
+  return html_loading_suppressed(function read() {
+    return app_api({ f_name: fn_name(name), args });
+  });
+}
 export async function app_g_verify_home(context) {
   let root = html_clear_context(context);
   let chapter_code = localStorage.getItem("g_verify_chapter") || "1JN01";
@@ -36,10 +41,7 @@ export async function app_g_verify_home(context) {
   let shown_json = null;
   let chapter;
   try {
-    chapter = await app_api({
-      f_name: fn_name("g_sermon_write_read"),
-      args: [chapter_code],
-    });
+    chapter = await api_read("g_sermon_write_read", [chapter_code]);
   } catch (missing) {
     chapter = {
       chapter_code,
@@ -48,10 +50,7 @@ export async function app_g_verify_home(context) {
   }
   let status;
   try {
-    status = await app_api({
-      f_name: fn_name("g_verify_status_read"),
-      args: [chapter_code],
-    });
+    status = await api_read("g_verify_status_read", [chapter_code]);
   } catch (missing) {
     status = { busy: false, verse: "", note: "" };
   }
@@ -213,14 +212,8 @@ export async function app_g_verify_home(context) {
   }
   async function refresh() {
     try {
-      let fresh_chapter = await app_api({
-        f_name: fn_name("g_sermon_write_read"),
-        args: [chapter_code],
-      });
-      let fresh_status = await app_api({
-        f_name: fn_name("g_verify_status_read"),
-        args: [chapter_code],
-      });
+      let fresh_chapter = await api_read("g_sermon_write_read", [chapter_code]);
+      let fresh_status = await api_read("g_verify_status_read", [chapter_code]);
       let fresh_json = json_to({
         chapter: fresh_chapter,
         status: fresh_status,
