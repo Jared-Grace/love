@@ -186,10 +186,20 @@ export function app_g_verify_view(container, english, lines, chapter_code, verse
   html_style_set(approve_bar, "margin-top", small_gap);
   html_style_set(approve_bar, "text-align", "center");
   async function on_approve() {
-    await g_verify_approval_set_browser(chapter_code, verse);
-    html_clear(approve_bar);
-    let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
-    html_font_color_set(done, muted);
+    try {
+      await g_verify_approval_set_browser(chapter_code, verse);
+      html_clear(approve_bar);
+      let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
+      html_font_color_set(done, muted);
+    } catch (unauthorized) {
+      html_clear(approve_bar);
+      let msg = html_p_text(
+        approve_bar,
+        "Couldn't save — log in via the g bible app, then retry.",
+      );
+      html_font_color_set(msg, muted);
+      app_replace_button(approve_bar, "Approve v" + verse, on_approve);
+    }
   }
   app_replace_button(approve_bar, "Approve v" + verse, on_approve);
 }
