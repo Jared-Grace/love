@@ -1,15 +1,15 @@
-import { app_replace_button_wide_next } from "./app_replace_button_wide_next.mjs";
-import { app_code_padding_x } from "./app_code_padding_x.mjs";
-import { html_div } from "./html_div.mjs";
-import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
-import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
-import { app_replace_button_wide } from "./app_replace_button_wide.mjs";
-import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
+import { app_replace_button_wide_next } from "../../love/js/app_replace_button_wide_next.mjs";
+import { app_code_padding_x } from "../../love/js/app_code_padding_x.mjs";
+import { html_div } from "../../love/js/html_div.mjs";
+import { text_combine_middle_space } from "../../love/js/text_combine_middle_space.mjs";
+import { null_not_is } from "../../love/js/null_not_is.mjs";
+import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
+import { text_pad_space_quote_double } from "../../love/js/text_pad_space_quote_double.mjs";
+import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
+import { emoji_repeat_1 } from "../../love/js/emoji_repeat_1.mjs";
+import { html_div_text } from "../../love/js/html_div_text.mjs";
+import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
+import { app_shared_button_next_text } from "../../love/js/app_shared_button_next_text.mjs";
 export function app_code_next(
   context,
   parent_question,
@@ -33,7 +33,7 @@ export function app_code_next(
   html_div_text(container_question, question);
   let left = emoji_repeat_1();
   let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
-  app_replace_button_wide(container_question, answer_yes, refresh);
+  app_shared_button_wide(container_question, answer_yes, refresh);
   let container_buttons = html_div(parent_next_back);
   app_code_padding_x(container_buttons);
   let bn = app_replace_button_wide_next(container_buttons, on_next);
@@ -42,7 +42,7 @@ export function app_code_next(
     if (null_not_is(back_text)) {
       bt = text_combine_middle_space(bt, back_text);
     }
-    let bb = app_replace_button_wide(container_buttons, bt, on_back);
+    let bb = app_shared_button_wide(container_buttons, bt, on_back);
   }
   let r = {
     containers: [container_question, container_buttons],
