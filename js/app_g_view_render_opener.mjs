@@ -1,4 +1,7 @@
 import { app_g_view_set } from "./app_g_view_set.mjs";
+import { app_g_player_get } from "./app_g_player_get.mjs";
+import { g_greeting } from "./g_greeting.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_g_overlay } from "./app_g_overlay.mjs";
 import { app_g_container } from "./app_g_container.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
@@ -11,6 +14,9 @@ import { html_remove } from "./html_remove.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 export async function app_g_view_render_opener(div_map) {
+  let player = await app_g_player_get();
+  let name_player = property_get(player, "name");
+  let greeting = g_greeting(false, name_player);
   let overlay = app_g_overlay(div_map);
   async function close() {
     await app_g_view_set(null);
@@ -35,7 +41,7 @@ export async function app_g_view_render_opener(div_map) {
   function draw_choices() {
     html_clear(content);
     app_g_button_back(content, close);
-    app_g_p_text(content, "You meet someone new. How will you begin?");
+    app_g_p_text(content, greeting);
     opener("Share the gospel");
     opener("How are you?");
     opener("What do you believe?");
