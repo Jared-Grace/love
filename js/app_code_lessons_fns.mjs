@@ -9,6 +9,7 @@ import { app_code_lesson_functions_console_log_or } from "./app_code_lesson_func
 import { app_code_lesson_functions_console_log_and } from "./app_code_lesson_functions_console_log_and.mjs";
 import { app_code_lesson_functions_console_log_less_than_equal } from "./app_code_lesson_functions_console_log_less_than_equal.mjs";
 import { app_code_lesson_functions_console_log_greater_than_equal } from "./app_code_lesson_functions_console_log_greater_than_equal.mjs";
+import { app_code_lesson_functions_console_log_remainder_2 } from "./app_code_lesson_functions_console_log_remainder_2.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
