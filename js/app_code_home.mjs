@@ -1,5 +1,4 @@
-import { app_replace_button_wide_text_left_centered } from "./app_replace_button_wide_text_left_centered.mjs";
-import { add_1_period } from "./add_1_period.mjs";
+import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_review } from "./app_code_review.mjs";
@@ -37,14 +36,7 @@ export function app_code_home(context) {
       storage_local_set_context(context, "lesson_id", id);
       await app_shared_screen_set(context, app_code_examples);
     }
-    let text = add_1_period(index);
-    let r = app_replace_button_wide_text_left_centered(g, lambda3, text, "");
-    let button = property_get(r, "button");
-    let columns = text_combine(app_shared_number_gutter(), " 1fr");
-    html_style_set(button, "grid-template-columns", columns);
-    let number = property_get(r, "left");
-    html_style_set(number, "justify-self", "end");
-    app_shared_text_deemphasized(number);
+    let r = app_shared_button_numbered(g, index, lambda3);
     let title = property_get(r, "title");
     name(title);
     let symbol = property_get_or_null(item, "symbol");
