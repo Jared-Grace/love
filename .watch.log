@@ -3129,3 +3129,15 @@ app_shared_name_search_info
 { search: 'g_bible', a_name: 'g_bible' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/g_bible.html' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../karate_code/public/dev/karate.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
