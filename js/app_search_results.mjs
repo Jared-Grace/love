@@ -8,7 +8,6 @@ import { html_div_text_bold } from "../../love/js/html_div_text_bold.mjs";
 import { html_style_margin_bottom } from "../../love/js/html_style_margin_bottom.mjs";
 import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
 import { html_span_text } from "../../love/js/html_span_text.mjs";
-import { html_bold_mild } from "../../love/js/html_bold_mild.mjs";
 import { html_border_radius } from "../../love/js/html_border_radius.mjs";
 import { html_style_padding_em } from "../../love/js/html_style_padding_em.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
@@ -167,7 +166,6 @@ export async function app_search_results(context, div_results) {
     html_style_margin_y(div_chapter, "0.15em");
     let chapter_label_text = text_combine(chapter_name, ":");
     let chapter_label = html_span_text(div_chapter, chapter_label_text);
-    html_bold_mild(chapter_label);
     html_font_color_set(chapter_label, app_shared_container_blue_dark_font_color());
     html_style_margin_x(chapter_label, "0.3em");
     function each_verse_number(verse_number) {
