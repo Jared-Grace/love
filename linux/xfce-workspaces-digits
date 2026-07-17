@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Ensure at least 10 XFCE workspaces, and wire the first 10 to the digit row:
+#   Super+1..9,0        -> switch to workspace 1..10
+#   Shift+Super+1..9,0  -> move the active window to workspace 1..10
+# Idempotent: re-running changes nothing. Never reduces an existing higher count.
+set -euo pipefail
+
+readonly MINIMUM_WORKSPACES=10
+readonly DIGITS="1 2 3 4 5 6 7 8 9 0"
+
+workspace_count_get() {
+  xfconf-query -c xfwm4 -p /general/workspace_count
+}
+
+workspace_count_ensure_minimum() {
+  local current
+  current=$(workspace_count_get)
+  if [ "$current" -lt "$MINIMUM_WORKSPACES" ]; then
+    xfconf-query -c xfwm4 -p /general/workspace_count -s "$MINIMUM_WORKSPACES"
+  fi
+}
+
+# shortcut_set <accelerator-path> <xfwm4-action>
+# Creates the property if absent, overwrites it if present.
+shortcut_set() {
+  local path=$1 action=$2
+  if xfconf-query -c xfce4-keyboard-shortcuts -p "$path" >/dev/null 2>&1; then
+    xfconf-query -c xfce4-keyboard-shortcuts -p "$path" -s "$action"
+  else
+    xfconf-query -c xfce4-keyboard-shortcuts -p "$path" -n -t string -s "$action"
+  fi
+}
+
+digits_wire_to_workspaces() {
+  local digit workspace=1
+  for digit in $DIGITS; do
+    shortcut_set "/xfwm4/custom/<Super>${digit}" "workspace_${workspace}_key"
+    shortcut_set "/xfwm4/custom/<Shift><Super>${digit}" "move_window_workspace_${workspace}_key"
+    workspace=$((workspace + 1))
+  done
+}
+
+workspace_count_ensure_minimum
+digits_wire_to_workspaces
+echo "OK: $(workspace_count_get) workspaces; Super+1..9,0 switch, Shift+Super+1..9,0 move window."
