@@ -857,3 +857,46 @@ webpack_watch
 app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 { search: 'replace', a_name: 'replace' }
+{ search: 'code', a_name: 'code' }
+{ search: 'replace', a_name: 'replace' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_replace_main_run.mjs',
+    output: { filename: 'replace.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 191 KiB [cached] 1 asset
+orphan modules 459 KiB [orphan] 640 modules
+./scripts/temp/app_replace_main_run.mjs + 640 modules 459 KiB [built] [code generated]
+
+ERROR in ./js/app_replace_rule_set_success.mjs 1:0-92
+Module not found: Error: Can't resolve '../../love/js/app_replace_success_message.mjs' in '/home/j/repos/love/js'
+resolve '../../love/js/app_replace_success_message.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_replace_success_message.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_replace_success_message.mjs doesn't exist
+ @ ./js/app_replace_rule_set.mjs 26:0-94 260:14-42
+ @ ./js/app_replace_screens.mjs 3:0-66 8:4-24
+ @ ./js/app_replace_main.mjs 2:0-64 5:16-35
+ @ ./scripts/temp/app_replace_main_run.mjs 1:0-70 3:23-39
+
+webpack 5.105.2 compiled with 1 error in 2506 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
