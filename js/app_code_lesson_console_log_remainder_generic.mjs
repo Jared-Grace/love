@@ -146,7 +146,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       " groups",
     ]);
     html_div_cycle_code(parent, [
-      "Each group gets ",
+      "Then each group gets ",
       text_to(each_group),
       " loaves - that is ",
       grouped_equation,
