@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "JESUS rose to life Search"
+rootProject.name = "JESUS rose to life Alarms"
 include(":app")

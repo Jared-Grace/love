@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.jesusrosetolife.search"
+    namespace = "com.jesusrosetolife.alarm"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.jesusrosetolife.search"
+        applicationId = "com.jesusrosetolife.alarm"
         minSdk = 21
         targetSdk = 36
         versionCode = 1
