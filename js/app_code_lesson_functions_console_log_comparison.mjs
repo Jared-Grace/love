@@ -34,7 +34,7 @@ export function app_code_lesson_functions_console_log_comparison(params) {
     above,
     lambda$code: js_code_statement,
     name_id_rights,
-    category: "operator",
+    category: "operators",
     next_arg,
     example_count,
     quiz_backwards_answer_count_override: null,
