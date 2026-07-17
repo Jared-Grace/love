@@ -89,7 +89,7 @@ export async function app_g_conversation(
       app_shared_correct_gold(correct);
       html_style_assign(correct, {
         position: "relative",
-        "z-index": "1",
+        "z-index": g_z("raised"),
       });
     }
     function on_pray() {
