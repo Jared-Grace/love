@@ -1,24 +1,21 @@
-import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
-import { ebible_languages } from "./ebible_languages.mjs";
-import { list_filter_includes_not } from "./list_filter_includes_not.mjs";
+import { ebible_languages_versions } from "./ebible_languages_versions.mjs";
+import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { list_filter_property_not } from "./list_filter_property_not.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map_squash } from "./list_map_squash.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { list_map } from "./list_map.mjs";
 export async function ebible_choices() {
-  let english = await ebible_versions_english_choices_browser();
-  function lambda(code) {
-    let choice = {
-      name: code,
-      bible_folder: code,
-    };
-    return choice;
+  let languages = await ebible_languages_versions();
+  let en = ebible_language_en_code();
+  let english = list_find_property(languages, "language_code", en);
+  let english_versions = property_get(english, "versions");
+  let others = list_filter_property_not(languages, "language_code", en);
+  function versions_get(language) {
+    let versions = property_get(language, "versions");
+    return versions;
   }
-  let english_choices = list_map(english, lambda);
-  let languages = ebible_languages();
-  let languages_extra = list_filter_includes_not(
-    languages,
-    "bible_folder",
-    english,
-  );
-  let choices = list_concat(english_choices, languages_extra);
+  let other_versions = list_map_squash(others, versions_get);
+  let choices = list_concat(english_versions, other_versions);
   return choices;
 }
