@@ -2381,3 +2381,39 @@ app_shared_name_search_info
 { search: 'next', a_name: 'next' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/next.html' }
+webpack_watch
+{ rebuild: 'karate' }
+{ rebuild: 'a' }
+{ rebuild: 'g' }
+{ rebuild: 'next' }
+{ rebuild: 'reply_local' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+{ search: 'a', a_name: 'a' }
+{ search: 'g', a_name: 'g' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'karate', a_name: 'karate' }
+{ search: 'a', a_name: 'a' }
+{ search: 'g', a_name: 'g' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'karate', a_name: 'karate' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../karate_code/public/dev/karate.html' }
+app_shared_name_search_info
+{ search: 'a', a_name: 'a' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/a.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
+app_shared_name_search_info
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
