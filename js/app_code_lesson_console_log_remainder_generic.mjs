@@ -22,6 +22,8 @@ import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
+import { app_code_padding_x } from "./app_code_padding_x.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range } from "./range.mjs";
 import { range_map } from "./range_map.mjs";
@@ -206,13 +208,15 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     each_index(or_parts, legend_part);
     let table = app_code_container_light_blue(root);
     html_style_set(table, "gap", "0");
+    html_style_padding_x(table, "0");
     function row(n) {
       let expr = code_of(n);
       let remainder = modulo(n, divisor);
       let line = html_div(table);
       let band = app_code_remainder_color_light(remainder, divisor);
       html_style_background_color_set(line, band);
-      html_style_padding_y(line, "0.1em");
+      app_code_padding_x(line);
+      html_style_padding_y(line, "0.35em");
       html_span_text_code_dark(line, expr);
       html_span_text(line, " is ");
       remainder_chip(line, remainder);
