@@ -7,7 +7,7 @@ import { html_style_padding_y } from "../../love/js/html_style_padding_y.mjs";
 import { html_centered } from "../../love/js/html_centered.mjs";
 import { html_style_assign } from "../../love/js/html_style_assign.mjs";
 import { app_replace_symbol_tile_background_color_valid } from "../../love/js/app_replace_symbol_tile_background_color_valid.mjs";
-import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
+import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
 import { html_p } from "../../love/js/html_p.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
@@ -21,7 +21,7 @@ export function html_progress_bar(
 ) {
   let progress_container_text = html_p(root);
   let progress_container = html_div(progress_container_text);
-  let track_color = app_replace_rule_set_highlight();
+  let track_color = app_shared_color_light_green();
   let color_valid = app_replace_symbol_tile_background_color_valid();
   html_style_assign(progress_container, {
     "border-radius": "9999px",

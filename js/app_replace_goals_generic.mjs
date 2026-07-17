@@ -1,15 +1,15 @@
-import { property_get } from "./property_get.mjs";
-import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_replace_rule_set_highlight } from "./app_replace_rule_set_highlight.mjs";
-import { app_replace_button_rule_selected_background_color } from "./app_replace_button_rule_selected_background_color.mjs";
-import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
-import { emoji_point_right } from "./emoji_point_right.mjs";
-import { emoji_check } from "./emoji_check.mjs";
-import { not } from "./not.mjs";
+import { property_get } from "../../love/js/property_get.mjs";
+import { app_shared_button_numbered } from "../../love/js/app_shared_button_numbered.mjs";
+import { html_span_text } from "../../love/js/html_span_text.mjs";
+import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
+import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
+import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
+import { app_replace_button_rule_selected_background_color } from "../../love/js/app_replace_button_rule_selected_background_color.mjs";
+import { app_shared_button_font_color } from "../../love/js/app_shared_button_font_color.mjs";
+import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
+import { emoji_point_right } from "../../love/js/emoji_point_right.mjs";
+import { emoji_check } from "../../love/js/emoji_check.mjs";
+import { not } from "../../love/js/not.mjs";
 export function app_replace_goals_generic(
   root,
   completed,
@@ -32,7 +32,7 @@ export function app_replace_goals_generic(
     }
   }
   if (completed) {
-    let green = app_replace_rule_set_highlight();
+    let green = app_shared_color_light_green();
     html_style_background_color_set(button, green);
   } else {
     if (choose_this_next) {
