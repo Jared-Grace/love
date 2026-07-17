@@ -37,7 +37,7 @@ export function app_code_lesson_functions_console_log_plus_minus() {
     html_span_text_code_dark(intro, plus);
     html_span_text(intro, " and ");
     html_span_text_code_dark(intro, minus);
-    html_span_text(intro, " in one expression");
+    html_span_text(intro, " together");
     html_div_cycle_code(box, ["They are the same strength, so work from left to right"]);
     html_div_cycle_code(box, ["", "5 + 2 - 3", " is ", "7 - 3", ", then ", "4"]);
   }
