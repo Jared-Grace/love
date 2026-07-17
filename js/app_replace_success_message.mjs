@@ -1,4 +1,4 @@
-import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
+import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
 import { each } from "../../love/js/each.mjs";
 import { html_bold } from "../../love/js/html_bold.mjs";
 import { html_style_font_size } from "../../love/js/html_style_font_size.mjs";
@@ -38,7 +38,7 @@ export function app_replace_success_message(parent) {
   let mapped = invoke_multiple(taken);
   let joined = list_join_empty(mapped);
   let p = html_p(parent);
-  let highlight = app_replace_rule_set_highlight();
+  let highlight = app_shared_color_light_green();
   html_style_background_color_set(p, highlight);
   app_shared_symbol_tile_style_inner(p);
   let value_em = "0.3";
