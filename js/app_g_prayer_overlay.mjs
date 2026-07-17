@@ -31,14 +31,14 @@ export function app_g_prayer_overlay() {
   );
   let emoji = html_p_text(div, emoji_pray());
   html_style_assign(emoji, {
-    "font-size": "5rem",
+    "font-size": "7rem",
     margin: "0",
     animation: "prayerGlow 1.6s ease-in-out infinite alternate",
   });
   let waiting_text = html_p_text(div, "Waiting on the Lord");
   html_style_assign(waiting_text, {
     color: "white",
-    "font-size": "1.5rem",
+    "font-size": "2.25rem",
     margin: "0",
     "text-align": "center",
     "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
@@ -49,7 +49,7 @@ export function app_g_prayer_overlay() {
   );
   html_style_assign(verse, {
     color: "white",
-    "font-size": "1rem",
+    "font-size": "1.5rem",
     "font-style": "italic",
     margin: "0",
     "max-width": "80vw",
