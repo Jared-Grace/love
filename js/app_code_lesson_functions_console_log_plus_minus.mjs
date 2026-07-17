@@ -7,10 +7,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 export function app_code_lesson_functions_console_log_plus_minus() {
   "mixing + and - in one expression: console.log(a + b - c) and console.log(a - b + c); + and - are the same strength, so it just works from left to right; the first number is 5..9 and the others 2..4 so the answer never drops below 0";
   let plus = js_operator_plus_symbol();
@@ -32,14 +29,18 @@ export function app_code_lesson_functions_console_log_plus_minus() {
   }
   function above(root) {
     let box = app_code_container_light_blue(root);
-    let intro = html_div(box);
-    html_span_text(intro, "We can mix ");
-    html_span_text_code_dark(intro, plus);
-    html_span_text(intro, " and ");
-    html_span_text_code_dark(intro, minus);
-    html_span_text(intro, " together");
-    html_div_cycle_code(box, ["They are the same strength, so work from left to right"]);
-    html_div_cycle_code(box, ["", "5 + 2 - 3", " is ", "7 - 3", ", then ", "4"]);
+    html_div_cycle_code(box, ["We can mix ", plus, " and ", minus, " together"]);
+    html_div_cycle_code(box, ["Whichever one comes first, we do first"]);
+    html_div_cycle_code(box, [
+      "For example, for ",
+      "5 + 2 - 3",
+      ", we do ",
+      "5 + 2",
+      " first, which is ",
+      "7",
+    ]);
+    html_div_cycle_code(box, ["Now we have ", "7 - 3", ", which is ", "4"]);
+    html_div_cycle_code(box, ["So ", "5 + 2 - 3", " is ", "4"]);
   }
   let lesson = app_code_lesson_console_log_pair_generic({
     symbol1: plus,
