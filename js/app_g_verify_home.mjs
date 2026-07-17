@@ -54,12 +54,19 @@ export async function app_g_verify_home(context) {
   } catch (missing) {
     status = { busy: false, verse: "", note: "" };
   }
-  render(chapter, status);
+  let approval;
+  try {
+    approval = await api_read(fn_name("g_verify_approval_read"), [chapter_code]);
+  } catch (missing) {
+    approval = { approved: null };
+  }
+  render(chapter, status, approval);
   poll();
-  function render(chapter, status) {
+  function render(chapter, status, approval) {
     shown_json = json_to({
       chapter,
       status,
+      approval,
     });
     html_clear(root);
     let passages = property_get(chapter, "passages");
@@ -73,6 +80,8 @@ export async function app_g_verify_home(context) {
     let real_keys = passages.map(function (p) {
       return g_sermon_passage_verses_key(p);
     });
+    let approved_key = property_get(approval, "approved");
+    let approved_index = approved_key === null ? -1 : real_keys.indexOf(approved_key);
     let pending = null;
     if (busy && !list_includes(real_keys, status_verse)) {
       pending = status_verse;
@@ -168,7 +177,9 @@ export async function app_g_verify_home(context) {
     html_style_set(bar, "margin-top", app_shared_spaced_small_gap());
     passages.forEach(function (passage) {
       let key = g_sermon_passage_verses_key(passage);
-      verse_buttons[key] = app_shared_button(bar, "v" + key, function () {
+      let is_approved = approved_index >= 0 && real_keys.indexOf(key) <= approved_index;
+      let label = is_approved ? "v" + key + " ✓" : "v" + key;
+      verse_buttons[key] = app_shared_button(bar, label, function () {
         localStorage.removeItem(advance_key);
         open_passage(passage);
       });
@@ -224,12 +235,14 @@ export async function app_g_verify_home(context) {
     try {
       let fresh_chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
       let fresh_status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
+      let fresh_approval = await api_read(fn_name("g_verify_approval_read"), [chapter_code]);
       let fresh_json = json_to({
         chapter: fresh_chapter,
         status: fresh_status,
+        approval: fresh_approval,
       });
       if (fresh_json !== shown_json) {
-        render(fresh_chapter, fresh_status);
+        render(fresh_chapter, fresh_status, fresh_approval);
       }
     } catch (ignore) {
       ignore;
