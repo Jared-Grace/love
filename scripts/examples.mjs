@@ -38,7 +38,7 @@ function tokens(command) {
   return out;
 }
 
-// tools emit canonical ./ imports in natural order (js_imports_missing_add_all_at);
+// tools emit canonical ./ imports in natural order (js_imports_auto_relative);
 // run both sides through js_format (the same pass the real file-write applies) and compare byte-exact
 async function canonical(code) {
   let formatted = await js_format(code);
