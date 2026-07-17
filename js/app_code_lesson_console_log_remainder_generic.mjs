@@ -14,10 +14,6 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_span } from "./html_span.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -102,17 +98,13 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text_code_background(parent, text_to(remainder), color);
   }
   function equation_with_remainder(parent, prefix_expr, remainder, result) {
-    "one dark code tile 'prefix + remainder === result' with just the remainder digit highlighted in its blue remainder color, so the left over in the sum is tied to the remainder concept and its color";
+    "the sum equation with the remainder as its normal colored chip sitting inside the equation: a dark code tile for the sum, then the remainder chip, then a dark code tile for === result";
     let triple_equal = js_operator_triple_equal_symbol();
-    let chip = html_span(parent);
-    html_style_code_dark(chip);
-    let before = text_combine(prefix_expr, " + ");
-    html_span_text(chip, before);
-    let highlight = html_span(chip);
-    html_text_set(highlight, text_to(remainder));
-    html_style_background_color_set(highlight, remainder_color(remainder));
-    let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
-    html_span_text(chip, after);
+    let before = text_combine(prefix_expr, " +");
+    html_span_text_code_dark(parent, before);
+    remainder_chip(parent, remainder);
+    let after = text_combine_multiple([triple_equal, " ", text_to(result)]);
+    html_span_text_code_dark(parent, after);
   }
   function example(parent) {
     "a concrete grouping story: share (5*divisor - 1) pieces of bread into divisor groups; each group gets 4 pieces, so 4 added divisor times is 4*divisor, and divisor-1 pieces are left over (the largest remainder). for divisor 3 this is the familiar 14 pieces into 3 groups of 4 with 2 left over";
