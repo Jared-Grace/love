@@ -59,7 +59,7 @@ export function app_code_lesson_console_log_nested_generic(params) {
       return render;
     }
     let rights = [console_name, word];
-    let built = app_code_lesson_name_id_generic(rights, "expression", title_get);
+    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
     return built;
   }
   function above(root) {

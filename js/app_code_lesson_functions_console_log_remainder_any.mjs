@@ -64,7 +64,7 @@ export function app_code_lesson_functions_console_log_remainder_any() {
       return render;
     }
     let rights = [console_name, " remainder"];
-    let built = app_code_lesson_name_id_generic(rights, "operator", title_get);
+    let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
     return built;
   }
   function above(root) {
