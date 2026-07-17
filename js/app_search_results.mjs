@@ -2,6 +2,9 @@ import { app_shared_bible_open } from "../../love/js/app_shared_bible_open.mjs";
 import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
 import { html_style_margin_y } from "../../love/js/html_style_margin_y.mjs";
 import { app_shared_button_inline } from "../../love/js/app_shared_button_inline.mjs";
+import { ebible_book_code_to_name } from "../../love/js/ebible_book_code_to_name.mjs";
+import { html_div_text_bold } from "../../love/js/html_div_text_bold.mjs";
+import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
 import { html_display_block } from "../../love/js/html_display_block.mjs";
 import { html_br_2 } from "../../love/js/html_br_2.mjs";
@@ -123,9 +126,22 @@ export async function app_search_results(context, div_results) {
     return key;
   }
   list_sort_text_mapper(results, bible_order_key);
+  let book_code_shown = null;
+  function book_header_add(book_code) {
+    let same = equal(book_code, book_code_shown);
+    if (same) {
+      return;
+    }
+    book_code_shown = book_code;
+    let book_name = ebible_book_code_to_name(books, book_code);
+    let header = html_div_text_bold(div_results, book_name);
+    html_style_margin_top(header, "0.5em");
+  }
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
     let chapter_code = property_get(vk, "key");
+    let book_code = ebible_chapter_code_to_book(chapter_code);
+    book_header_add(book_code);
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);
       html_display_inline_block(div_verse);
