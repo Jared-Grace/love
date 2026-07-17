@@ -1,6 +1,5 @@
 import { js_function_declaration_name_to_path } from "./js_function_declaration_name_to_path.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_imports_fix } from "./js_imports_fix.mjs";
 import { each } from "./each.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_remove } from "./list_remove.mjs";
@@ -25,5 +24,4 @@ export async function js_outside_move(ast) {
     list_remove(body, fd);
   }
   each(fds, lambda3);
-  await js_imports_fix(ast);
 }

@@ -6,7 +6,7 @@ import { list_add } from "./list_add.mjs";
 import { js_array_expression_single_elements } from "./js_array_expression_single_elements.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { functions_names } from "./functions_names.mjs";
-export async function app_replace_rule_set_add_generic(fn_base_name, fns_list) {
+export async function function_copy_list_add(fn_base_name, fns_list) {
   let f_names = await functions_names();
   let f = fn_base_name;
   let name_new = text_unique_underscore(f_names, f);
