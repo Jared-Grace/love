@@ -9,9 +9,13 @@ import { file_read } from "../js/file_read.mjs";
 import { file_js_transform } from "../js/file_js_transform.mjs";
 import { js_format } from "../js/js_format.mjs";
 import { folder_src } from "../js/folder_src.mjs";
-import { js_imports_missing_add_all_program_at } from "../js/js_imports_missing_add_all_program_at.mjs";
-import { js_imports_unused_remove } from "../js/js_imports_unused_remove.mjs";
-import { js_imports_paths_fix_at } from "../js/js_imports_paths_fix_at.mjs";
+import { folder_previous } from "../js/folder_previous.mjs";
+import { repo_current_name } from "../js/repo_current_name.mjs";
+import { path_join } from "../js/path_join.mjs";
+import { functions_names_to_paths } from "../js/functions_names_to_paths.mjs";
+import { js_imports_missing_all_program } from "../js/js_imports_missing_all_program.mjs";
+import { function_imports_add_relative } from "../js/function_imports_add_relative.mjs";
+import { js_imports_auto_relative } from "../js/js_imports_auto_relative.mjs";
 import { function_arguments_assert_each_add_lambda } from "../js/function_arguments_assert_each_add_lambda.mjs";
 import { js_node_type_is_new_lambda } from "../js/js_node_type_is_new_lambda.mjs";
 
@@ -49,13 +53,18 @@ function transform_lambda(t) {
     return js_node_type_is_new_lambda(t[1], t[2]);
   }
   if (t[0] === "imports") {
-    return (ast) => js_imports_missing_add_all_program_at(ast, folder_src());
+    return async (ast) => {
+      let dict = await functions_names_to_paths();
+      let from_dir = path_join([folder_previous(), repo_current_name(), folder_src()]);
+      let missing = await js_imports_missing_all_program(ast);
+      await function_imports_add_relative(ast, missing, dict, from_dir);
+    };
   }
   if (t[0] === "auto") {
     return async (ast) => {
-      await js_imports_missing_add_all_program_at(ast, folder_src());
-      js_imports_unused_remove(ast);
-      js_imports_paths_fix_at(ast, folder_src());
+      let dict = await functions_names_to_paths();
+      let from_dir = path_join([folder_previous(), repo_current_name(), folder_src()]);
+      await js_imports_auto_relative(ast, dict, from_dir);
     };
   }
   return null;
