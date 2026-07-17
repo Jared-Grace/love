@@ -25,6 +25,8 @@ import { app_code_lesson_quiz_wrong_set } from "../../love/js/app_code_lesson_qu
 import { list_empty_is } from "../../love/js/list_empty_is.mjs";
 import { list_starts_with_curried_right } from "../../love/js/list_starts_with_curried_right.mjs";
 import { list_filter } from "../../love/js/list_filter.mjs";
+import { list_all } from "../../love/js/list_all.mjs";
+import { list_includes } from "../../love/js/list_includes.mjs";
 import { list_concat_single_right } from "../../love/js/list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "../../love/js/app_code_lesson_quiz_token_select_variations.mjs";
 import { js_tokenizer_normalized } from "../../love/js/js_tokenizer_normalized.mjs";
@@ -53,6 +55,14 @@ export function app_code_lesson_quiz_token_select(
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
   let tokens_unique = list_unique(normalized);
+  function variation_buildable(variation) {
+    "keep only variations whose every token is an available button; a commutative swap across a non-commutative neighbour introduces parentheses (e.g. 9 - 4 + 4 gives 4 + (9 - 4)) that the answer never had, so there is no ( or ) button - that would be an unbuildable trap that accepts the first token then dead-ends";
+    function is_button(token) {
+      return list_includes(tokens_unique, token);
+    }
+    return list_all(variation, is_button);
+  }
+  variations = list_filter(variations, variation_buildable);
   list_sort_text(tokens_unique);
   let buttons = null;
   let chosen = [];
