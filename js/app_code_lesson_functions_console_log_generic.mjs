@@ -9,6 +9,7 @@ import { app_code_lesson_operators_value_max } from "../../love/js/app_code_less
 import { app_code_lesson_name_id_function } from "../../love/js/app_code_lesson_name_id_function.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { object_copy_assign } from "../../love/js/object_copy_assign.mjs";
@@ -31,9 +32,10 @@ export function app_code_lesson_functions_console_log_generic(params) {
   let name_id = property_get_or_null(params, "name_id");
   let name_id_missing = null_is(name_id);
   if (name_id_missing) {
+    let category = property_get_or(params, "category", "function");
     let rights = [name];
     list_add_multiple(rights, name_id_rights);
-    name_id = app_code_lesson_name_id_function("function", rights);
+    name_id = app_code_lesson_name_id_function(category, rights);
   }
   let logged_params = object_copy_assign(params, {
     batch_get: b,
