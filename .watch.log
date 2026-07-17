@@ -1200,3 +1200,5 @@ webpack_watch
 app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 { search: 'replace', a_name: 'replace' }
+{ search: 'code', a_name: 'code' }
+{ search: 'replace', a_name: 'replace' }
