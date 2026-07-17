@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">JESUS rose to life Search</string>
+    <string name="app_name">JESUS rose to life Alarms</string>
+    <string name="sync_button">Sync alarms</string>
+    <string name="sync_result">Synced %1$d recurring alarms to your Clock app</string>
 </resources>
