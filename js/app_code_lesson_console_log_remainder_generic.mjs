@@ -11,11 +11,11 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_span } from "./html_span.mjs";
+import { equal } from "./equal.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
@@ -231,13 +231,26 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     if (has_insight) {
       let insight_box = app_code_container_light_blue(root);
       function insight_line(line) {
-        html_div_cycle_code(insight_box, line);
+        let row = html_div(insight_box);
+        html_span_text(row, property_get(line, "text"));
+        remainder_chip(row, property_get(line, "remainder"));
       }
       each(insight, insight_line);
     }
-    app_code_container_light_blue_cycle_code(root, [
-      "The remainder counts up, then starts over at ",
-      "0",
-    ]);
+    let closing = app_code_container_light_blue(root);
+    let closing_line = html_div(closing);
+    let alternates = equal(divisor, 2);
+    if (alternates) {
+      html_span_text(closing_line, "The remainder alternates between ");
+      remainder_chip(closing_line, 0);
+      html_span_text(closing_line, " and ");
+      remainder_chip(closing_line, 1);
+    } else {
+      html_span_text(
+        closing_line,
+        "The remainder counts up, then starts over at ",
+      );
+      remainder_chip(closing_line, 0);
+    }
   }
 }

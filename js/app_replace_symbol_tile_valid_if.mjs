@@ -1,4 +1,4 @@
-import { app_replace_symbol_tile_background_color_valid } from "../../love/js/app_replace_symbol_tile_background_color_valid.mjs";
+import { app_shared_color_green } from "../../love/js/app_shared_color_green.mjs";
 import { app_replace_symbol_tile_background_color_invalid } from "../../love/js/app_replace_symbol_tile_background_color_invalid.mjs";
 import { app_replace_symbol_tile_font_color_invalid } from "../../love/js/app_replace_symbol_tile_font_color_invalid.mjs";
 import { app_replace_symbol_tile_valid_if_attribute } from "../../love/js/app_replace_symbol_tile_valid_if_attribute.mjs";
@@ -14,7 +14,7 @@ import { html_enable_if } from "../../love/js/html_enable_if.mjs";
 export function app_replace_symbol_tile_valid_if(sb, valid, solved) {
   html_enable_if(sb, valid);
   let color_else = app_replace_symbol_tile_background_color_invalid();
-  let color_valid_solved = app_replace_symbol_tile_background_color_valid();
+  let color_valid_solved = app_shared_color_green();
   let color_valid_unsolved =
     app_replace_symbol_tile_background_color_valid_unsolved();
   let color_if = ternary(solved, color_valid_solved, color_valid_unsolved);
