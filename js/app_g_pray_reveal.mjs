@@ -21,8 +21,13 @@ export function app_g_pray_reveal(container, correct, label) {
       opacity: "0.5",
       "pointer-events": "none",
     });
+    let waiting = app_g_prayer_overlay();
+    function answered() {
+      html_remove(waiting);
+      reveal();
+    }
     let delay = list_random_item([1000, 2000, 3000, 4000]);
-    setTimeout(reveal, delay);
+    setTimeout(answered, delay);
   }
   let pray_b = app_g_button_green(container, label, on_pray);
   return pray_b;
