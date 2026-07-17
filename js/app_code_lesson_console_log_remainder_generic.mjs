@@ -115,7 +115,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
     let chip = remainder_chip(tile, remainder);
-    let rings = "0 0 0 0.045em rgb(224, 238, 255), 0 0 0 0.09em rgb(8, 12, 28)";
+    let rings = "0 0 0 0.075em rgb(224, 238, 255), 0 0 0 0.15em rgb(8, 12, 28)";
     html_style_set(chip, "box-shadow", rings);
     let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
     html_span_text(tile, after);
@@ -174,9 +174,16 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
   }
   function above(root) {
     let intro = app_code_container_light_blue(root);
-    html_div_cycle_code(intro, [
-      "When we divide, sometimes the numbers divide evenly",
-    ]);
+    let review = greater_than(divisor, 2);
+    let opener = "When";
+    if (review) {
+      opener = "Remember: when";
+    }
+    let first_line = text_combine(
+      opener,
+      " we divide, sometimes the numbers divide evenly",
+    );
+    html_div_cycle_code(intro, [first_line]);
     html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
     let example_box = app_code_container_light_blue(root);
     example(example_box);
