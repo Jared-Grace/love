@@ -72,12 +72,12 @@ export async function app_g_conversation(
         " and rose to life ",
         emoji_sunrise(),
       ]),
-      choice(0, npc_gospel),
+      choice(0, npc_gospel, "faith"),
     );
     let how_b = app_g_button_green(
       choices,
       text_combine(emoji_smile(), " How are you?"),
-      choice(1, stub),
+      choice(1, stub, "how I'm doing"),
     );
     let believe_b = app_g_button_green(
       choices,
