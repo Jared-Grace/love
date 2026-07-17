@@ -82,7 +82,7 @@ export async function app_g_conversation(
     let believe_b = app_g_button_green(
       choices,
       text_combine(emoji_thinking(), " What do you believe?"),
-      choice(2, stub),
+      choice(2, stub, "what I believe"),
     );
     let correct = list_get([gospel_b, how_b, believe_b], correct_index);
     function reveal() {
