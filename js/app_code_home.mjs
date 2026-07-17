@@ -8,6 +8,9 @@ import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
+import { storage_local_get_context } from "./storage_local_get_context.mjs";
+import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
+import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -19,12 +22,15 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_home(context) {
+export async function app_code_home(context) {
+  "on returning home the lesson just left (its id is remembered in lesson_id) is scrolled to the vertical center, so the learner lands back where they were";
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
   let div = html_div_text_centered(g, "Lessons:");
   html_style_margin_y(div, app_shared_spaced_gap());
   let lessons = app_code_lessons();
+  let current_id = storage_local_get_context(context, "lesson_id");
+  let just_left = null;
   function lambda(item, index) {
     let name = property_get(item, "name");
     let id = property_get(item, "id");
@@ -40,6 +46,10 @@ export function app_code_home(context) {
     if (has_symbol) {
       html_span_space(title);
       html_span_text_code_dark(title, symbol);
+    }
+    let is_current = equal(id, current_id);
+    if (is_current) {
+      just_left = property_get(r, "button");
     }
     let lesson_number = add_1(index);
     let scope = app_code_review_scope(lesson_number);
@@ -57,4 +67,8 @@ export function app_code_home(context) {
     app_code_review_button(g, label, on_click);
   }
   each_index(lessons, lambda);
+  let found = null_not_is(just_left);
+  if (found) {
+    await html_scroll_center_now(just_left);
+  }
 }
