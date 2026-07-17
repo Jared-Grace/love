@@ -14,7 +14,8 @@ import { app_code_container_light_blue_cycle_code } from "./app_code_container_l
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
-import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
+import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range } from "./range.mjs";
 import { range_map } from "./range_map.mjs";
@@ -81,8 +82,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     return built;
   }
   function remainder_color(remainder) {
-    "each remainder 0..divisor-1 gets an evenly spaced point on the shared blue->black spectrum (reused from the bible passage colors), so the remainder's value is visible as a color that resets to blue when the cycle starts over";
-    let color = app_shared_gradient_color(remainder, divisor);
+    let color = app_code_remainder_color(remainder, divisor);
     return color;
   }
   function remainder_chip(parent, remainder) {
@@ -101,6 +101,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     }
     let fours = range_map(divisor, group_size_of);
     let sum_expr = list_join(fours, " + ");
+    let all_parts = list_concat(fours, [text_to(left)]);
+    let full_expr = list_join(all_parts, " + ");
     html_div_cycle_code(parent, [
       "For example, we share ",
       text_to(total),
@@ -111,13 +113,18 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_div_cycle_code(parent, [
       "each group gets ",
       text_to(each_group),
-      ", that is ",
+      " - that is ",
       sum_expr,
       " = ",
       text_to(group_total),
-      ", with ",
+    ]);
+    html_div_cycle_code(parent, [
+      "",
       text_to(left),
-      " left over",
+      " loaves are left over, so ",
+      full_expr,
+      " = ",
+      text_to(total),
     ]);
     let conclusion = html_div(parent);
     html_span_text(conclusion, "so the remainder is ");
@@ -146,8 +153,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       divisor_text,
     ]);
     let legend = html_div(meaning);
-    let lead = text_combine("So if we divide by ", divisor_text);
-    html_span_text(legend, lead);
+    html_span_text(legend, "So if we divide by ");
+    html_span_text_code_dark(legend, divisor_text);
     html_span_text(legend, ", the remainder is one of these: ");
     function legend_chip(remainder) {
       remainder_chip(legend, remainder);
