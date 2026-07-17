@@ -6,14 +6,7 @@
   <title>g_verify</title>
 </head>
 <body>
-  <script type="importmap"> 
-    {
- "imports": {
-  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
- }
-}
-  </script>
-<script type="module"> 
+  <script type="module"> 
     let global = {} ;
 async function app_g_verify(context) {
   let app_fn = app_g_verify;
@@ -32,11 +25,11 @@ function app_shared_initialize(context, app_fn, screens) {
     screens
   });
   html_mobile_default(context);
-  app_replace_font_size_refresh(context);
+  app_shared_font_size_refresh(context);
 }
-function app_replace_font_size_refresh(context) {
+function app_shared_font_size_refresh(context) {
   let root = property_get(context, "root");
-  let value = app_replace_font_size(context);
+  let value = app_shared_font_size(context);
   html_style_font_size(root, text_combine(value, "px"));
 }
 function property_get(object, property_name) {
@@ -81,7 +74,7 @@ function not(b) {
   let n = !b;
   return n;
 }
-function app_replace_font_size(context) {
+function app_shared_font_size(context) {
   let value = storage_local_initialize_context(context, "font_size", 20);
   return value;
 }
@@ -161,7 +154,7 @@ function property_initialize_lambda(object, property_name, lambda) {
   return value;
 }
 function property_exists(object, property_name) {
-  let exists = object && Object.hasOwn(object, property_name);
+  let exists = object ? Object.hasOwn(object, property_name) : false;
   return exists;
 }
 function arguments_assert(args, count) {
@@ -502,10 +495,17 @@ function html_document_root() {
   return html;
 }
 function html_meta_viewport() {
+  "TODO: redundant — html_code now emits this tag statically into every generated page, so this runtime copy does nothing new";
+  "Injecting it here races the browser's first layout, which was the Firefox Android random zoom-in bug (intermittent because it is a race)";
+  "Kept only until that zoom is confirmed gone in the wild; then delete this function and its call in html_mobile_default";
   let head = html_document_head();
   let component = html_element(head, "meta");
   html_attribute_set(component, "name", "viewport");
-  html_attribute_set(component, "content", "width=device-width, initial-scale=1.0");
+  html_attribute_set(component, "content", html_meta_viewport_content());
+}
+function html_meta_viewport_content() {
+  let v = "width=device-width, initial-scale=1.0";
+  return v;
 }
 function object_merge(to, from) {
   object_merge_generic("strict", to, from);
@@ -709,175 +709,208 @@ function app_g_verify_screens() {
 }
 async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let chapter_code = "1JN01";
-  let verse_numbers = ["1"];
-  let downloaded = await g_sermon_write_download(chapter_code);
-  let passages = property_get(downloaded, "passages");
-  let key = list_join_comma(verse_numbers);
-  function passage_match(p) {
-    return g_sermon_passage_verses_key(p) === key;
+  let chapter_code = localStorage.getItem("g_verify_chapter") || "1JN01";
+  let storage_key = "g_verify_selected_" + chapter_code;
+  let advance_key = "g_verify_advance_" + chapter_code;
+  let selected_key = localStorage.getItem(storage_key);
+  let shown_json = null;
+  let chapter;
+  try {
+    chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
+  } catch (missing) {
+    chapter = {
+      chapter_code,
+      passages: []
+    };
   }
-  let passage_obj = list_find(passages, passage_match);
-  let passage = property_get(passage_obj, "english");
-  let lines = property_get(passage_obj, "lines");
-  let tokens = g_sermon_passage_words(passage);
-  let highlight = app_shared_verse_selected_background_color();
-  let muted = app_shared_text_deemphasized_color();
-  let border = app_shared_container_blue_border_color();
-  let serif = app_shared_font_serif();
-  let small_gap = app_shared_spaced_small_gap();
-  let tiny_gap = app_shared_spaced_tiny_gap();
-  let covered = {};
-  lines.forEach(function (l) {
-    property_get(l, "indices").forEach(function (i) {
-      covered[i] = true;
+  let status;
+  try {
+    status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
+  } catch (missing) {
+    status = {
+      busy: false,
+      verse: "",
+      note: ""
+    };
+  }
+  let approval;
+  try {
+    approval = await api_read(fn_name("g_verify_approval_read"), [chapter_code]);
+  } catch (missing) {
+    approval = {
+      approved: null
+    };
+  }
+  render(chapter, status, approval);
+  poll();
+  function render(chapter, status, approval) {
+    shown_json = json_to({
+      chapter,
+      status,
+      approval
     });
-  });
-  let token_spans = [];
-  let row_comps = [];
-  let order_comps = [];
-  function background_clear(component) {
-    html_style_background_color_set(component, "");
-  }
-  function clear_all() {
-    token_spans.forEach(background_clear);
-    row_comps.forEach(function (r) {
-      if (r) {
-        background_clear(r);
-      }
+    html_clear(root);
+    let passages = property_get(chapter, "passages");
+    passages = passages.slice().sort(function (a, b) {
+      let na = Number(property_get(a, "verse_numbers")[0]);
+      let nb = Number(property_get(b, "verse_numbers")[0]);
+      return na - nb;
     });
-    order_comps.forEach(function (r) {
-      if (r) {
-        background_clear(r);
-      }
+    let busy = property_get(status, "busy");
+    let status_verse = property_get(status, "verse");
+    let real_keys = passages.map(function (p) {
+      return g_sermon_passage_verses_key(p);
     });
-  }
-  function highlight_lines(li_list) {
-    clear_all();
-    li_list.forEach(function (li) {
-      property_get(lines[li], "indices").forEach(function (i) {
-        html_style_background_color_set(token_spans[i], highlight);
-      });
-      if (row_comps[li]) {
-        html_style_background_color_set(row_comps[li], highlight);
-      }
-      if (order_comps[li]) {
-        html_style_background_color_set(order_comps[li], highlight);
-      }
-    });
-  }
-  function panel_flush(parent) {
-    let p = app_shared_container_base(parent);
-    html_style_padding_x(p, "0");
-    html_style_padding_y(p, "0");
-    html_style_set(p, "overflow", "hidden");
-    return p;
-  }
-  function row_new(panel, first) {
-    let row = html_div(panel);
-    html_style_set(row, "display", "flex");
-    html_style_set(row, "gap", small_gap);
-    html_style_padding_x(row, small_gap);
-    html_style_padding_y(row, small_gap);
-    if (!first) {
-      html_style_set(row, "border-top", "1px solid " + border);
+    let approved_key = property_get(approval, "approved");
+    let approved_index = approved_key === null ? -1 : real_keys.indexOf(approved_key);
+    let pending = null;
+    if (busy && !list_includes(real_keys, status_verse)) {
+      pending = status_verse;
     }
-    html_style_set(row, "transition", "background-color .12s");
-    return row;
-  }
-  function label_new(caption) {
-    let l = html_p_text(wrap, caption);
-    html_font_color_set(l, app_shared_text_category_color());
-    html_style_set(l, "font-size", "0.72em");
-    html_style_set(l, "letter-spacing", "0.11em");
-    html_style_set(l, "font-weight", "600");
-    html_margin_em(l, "0");
-    html_style_set(l, "margin-top", small_gap);
-  }
-  let wrap = html_div(root);
-  html_style_set(wrap, "max-width", "48em");
-  html_style_set(wrap, "margin", "0 auto");
-  html_style_padding_x(wrap, "1.2em");
-  html_style_padding_y(wrap, "2em");
-  let title = html_p_text(wrap, "Sermon coverage &mdash; 1 John 1:1");
-  html_style_set(title, "font-family", serif);
-  html_style_set(title, "font-size", "1.5em");
-  html_style_set(title, "font-weight", "600");
-  html_margin_em(title, "0");
-  let hint = html_p_text(wrap, "Hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.");
-  html_font_color_set(hint, muted);
-  html_style_set(hint, "font-size", "0.9em");
-  html_margin_em(hint, "0");
-  html_style_set(hint, "margin-top", tiny_gap);
-  html_style_set(hint, "margin-bottom", small_gap);
-  let passage_panel = app_shared_container_base(wrap);
-  html_style_set(passage_panel, "font-family", serif);
-  html_style_set(passage_panel, "font-size", "1.3em");
-  html_style_set(passage_panel, "line-height", "1.95");
-  tokens.forEach(function (t, i) {
-    let span = html_span_text(passage_panel, t);
-    html_border_radius(span, app_shared_border_radius());
-    html_style_set(span, "padding", "0 0.06em");
-    html_style_set(span, "margin-right", tiny_gap);
-    html_style_set(span, "transition", "background-color .12s");
-    if (!covered[i]) {
-      html_style_set(span, "text-decoration", "underline dashed " + app_shared_text_warning_color());
-      html_style_set(span, "text-underline-offset", "0.2em");
-    }
-    html_on(span, "mouseenter", function () {
-      let lis = [];
-      lines.forEach(function (l, li) {
-        if (property_get(l, "indices").indexOf(i) >= 0) {
-          lis.push(li);
+    let wrap = html_div(root);
+    html_style_set(wrap, "max-width", "48em");
+    html_style_set(wrap, "margin", "0 auto");
+    html_style_padding_x(wrap, "1.2em");
+    html_style_padding_y(wrap, "2em");
+    let cbar = html_div_centered(wrap);
+    html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
+    ["1JN01", "1JN02", "1JN03", "1JN04", "1JN05"].forEach(function (code) {
+      let number = String(Number(code.slice(3)));
+      let cb = app_shared_button(cbar, "1 John " + number, function () {
+        if (code !== chapter_code) {
+          localStorage.setItem("g_verify_chapter", code);
+          location.reload();
         }
       });
-      highlight_lines(lis);
+      if (code === chapter_code) {
+        html_style_background_color_set(cb, app_shared_verse_selected_background_color());
+      }
     });
-    html_on(span, "mouseleave", clear_all);
-    token_spans[i] = span;
-  });
-  label_new("BY PASSAGE ORDER");
-  let cov = panel_flush(wrap);
-  let order = lines.map(function (l, li) {
-    return li;
-  });
-  order.sort(function (a, b) {
-    let ma = Math.min.apply(null, property_get(lines[a], "indices"));
-    let mb = Math.min.apply(null, property_get(lines[b], "indices"));
-    return ma - mb || a - b;
-  });
-  order.forEach(function (li, k) {
-    let l = lines[li];
-    let row = row_new(cov, k === 0);
-    let words = property_get(l, "indices").map(function (i) {
-      return tokens[i];
-    }).join(" ");
-    let words_el = html_span_text(row, words);
-    html_style_set(words_el, "font-family", serif);
-    html_style_set(words_el, "flex", "0 0 42%");
-    html_font_color_set(words_el, muted);
-    html_span_text(row, property_get(l, "text"));
-    html_on(row, "mouseenter", function () {
-      highlight_lines([li]);
+    let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
+    html_style_set(title, "font-family", app_shared_font_serif());
+    html_style_set(title, "font-size", "1.5em");
+    html_style_set(title, "font-weight", "600");
+    html_margin_em(title, "0");
+    let hint = html_p_text(wrap, "Pick a passage, then hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.");
+    html_font_color_set(hint, app_shared_text_deemphasized_color());
+    html_style_set(hint, "font-size", "0.9em");
+    html_margin_em(hint, "0");
+    if (busy) {
+      let note = property_get(status, "note");
+      let text = "Claude is writing v" + status_verse + "…";
+      if (note) {
+        text = text + "  " + note;
+      }
+      let banner = html_p_text(wrap, text);
+      html_style_background_color_set(banner, app_shared_milestone_background_color());
+      html_font_color_set(banner, "white");
+      html_border_radius(banner, app_shared_border_radius());
+      html_style_padding_x(banner, "0.7em");
+      html_style_padding_y(banner, "0.5em");
+      html_margin_em(banner, "0");
+      html_style_set(banner, "margin-top", app_shared_spaced_small_gap());
+      html_style_set(banner, "font-size", "0.95em");
+    }
+    let view = null;
+    let verse_buttons = {};
+    function highlight_selected() {
+      Object.keys(verse_buttons).forEach(function (k) {
+        let bg = k === selected_key ? app_shared_verse_selected_background_color() : "";
+        html_style_background_color_set(verse_buttons[k], bg);
+      });
+    }
+    function on_approved(v) {
+      localStorage.setItem(advance_key, v);
+    }
+    function open_passage(passage) {
+      selected_key = g_sermon_passage_verses_key(passage);
+      localStorage.setItem(storage_key, selected_key);
+      highlight_selected();
+      app_g_verify_view(view, property_get(passage, "english"), property_get(passage, "lines"), chapter_code, selected_key, on_approved);
+    }
+    function open_pending(verse) {
+      selected_key = verse;
+      localStorage.setItem(storage_key, verse);
+      highlight_selected();
+      html_clear(view);
+      let msg = html_p_text(view, "Claude is writing v" + verse + "…");
+      html_font_color_set(msg, app_shared_text_deemphasized_color());
+      html_style_set(msg, "font-size", "1.1em");
+      html_style_set(msg, "margin-top", "1em");
+    }
+    let bar = html_div_centered(wrap);
+    html_style_set(bar, "margin-top", app_shared_spaced_small_gap());
+    passages.forEach(function (passage) {
+      let key = g_sermon_passage_verses_key(passage);
+      let is_approved = approved_index >= 0 && real_keys.indexOf(key) <= approved_index;
+      let label = is_approved ? "v" + key + " ✓" : "v" + key;
+      verse_buttons[key] = app_shared_button(bar, label, function () {
+        localStorage.removeItem(advance_key);
+        open_passage(passage);
+      });
     });
-    html_on(row, "mouseleave", clear_all);
-    row_comps[li] = row;
-  });
-  label_new("IN SERMON ORDER");
-  let ord = panel_flush(wrap);
-  lines.forEach(function (l, li) {
-    let row = row_new(ord, li === 0);
-    let n = html_span_text(row, String(li + 1));
-    html_font_color_set(n, muted);
-    html_style_set(n, "flex", "0 0 1.2em");
-    html_style_set(n, "font-variant-numeric", "tabular-nums");
-    html_span_text(row, property_get(l, "text"));
-    html_on(row, "mouseenter", function () {
-      highlight_lines([li]);
+    if (pending !== null) {
+      let pb = app_shared_button(bar, "v" + pending, function () {
+        open_pending(pending);
+      });
+      html_style_set(pb, "opacity", "0.5");
+      verse_buttons[pending] = pb;
+    }
+    view = html_div(wrap);
+    if (passages.length === 0) {
+      if (pending !== null) {
+        open_pending(pending);
+      } else {
+        let empty = html_p_text(view, "No verses written yet for this chapter.");
+        html_font_color_set(empty, app_shared_text_deemphasized_color());
+        html_style_set(empty, "margin-top", "1em");
+      }
+      return;
+    }
+    let advance_after = localStorage.getItem(advance_key);
+    if (advance_after !== null) {
+      let approved_index = real_keys.indexOf(advance_after);
+      if (approved_index >= 0 && approved_index + 1 < real_keys.length) {
+        selected_key = real_keys[approved_index + 1];
+        localStorage.setItem(storage_key, selected_key);
+        localStorage.removeItem(advance_key);
+      }
+    }
+    let initial = null;
+    passages.forEach(function (passage) {
+      if (g_sermon_passage_verses_key(passage) === selected_key) {
+        initial = passage;
+      }
     });
-    html_on(row, "mouseleave", clear_all);
-    order_comps[li] = row;
-  });
+    if (initial !== null) {
+      open_passage(initial);
+    } else if (pending !== null && selected_key === pending) {
+      open_pending(pending);
+    } else {
+      open_passage(list_first(passages));
+    }
+  }
+  function poll() {
+    setTimeout(refresh, 4000);
+  }
+  async function refresh() {
+    try {
+      let fresh_chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
+      let fresh_status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
+      let fresh_approval = await api_read(fn_name("g_verify_approval_read"), [chapter_code]);
+      let fresh_json = json_to({
+        chapter: fresh_chapter,
+        status: fresh_status,
+        approval: fresh_approval
+      });
+      if (fresh_json !== shown_json) {
+        render(fresh_chapter, fresh_status, fresh_approval);
+      }
+    } catch (ignore) {
+      ignore;
+    }
+    poll();
+  }
 }
 function html_clear_context(context) {
   let root = property_get(context, "root");
@@ -888,14 +921,13 @@ function html_div(parent) {
   let div = html_element(parent, "div");
   return div;
 }
-function html_span_text(parent, text) {
-  let span = html_span(parent);
-  html_text_set(span, text);
-  return span;
+function html_div_centered(p) {
+  let d = html_div(p);
+  html_centered(d);
+  return d;
 }
-function html_span(parent) {
-  let component = html_element(parent, "span");
-  return component;
+function html_centered(div) {
+  html_style_set(div, "text-align", "center");
 }
 function html_p_text(root, text) {
   let p = html_p(root);
@@ -905,29 +937,6 @@ function html_p_text(root, text) {
 function html_p(root) {
   let p = html_element(root, "p");
   return p;
-}
-function html_on(component, name_event, lambda) {
-  function_is_assert_json(lambda, {
-    hint: "the event handler should be a function to attach to the element",
-    name_event
-  });
-  let element = html_component_element_get(component);
-  element.addEventListener(name_event, lambda);
-  function remove() {
-    element.removeEventListener(name_event, lambda);
-  }
-  return remove;
-}
-function function_is_assert_json(lambda, json) {
-  let fi = function_is(lambda);
-  assert_json(fi, {
-    lambda,
-    json
-  });
-}
-function function_is(f) {
-  let fi = typeof f === "function";
-  return fi;
 }
 function html_font_color_set(component, color) {
   arguments_assert(arguments, 2);
@@ -982,74 +991,168 @@ function html_style_margin_x(component, value) {
     "margin-right": value
   });
 }
-function g_sermon_passage_words(text) {
-  let spaced = text.replace(/[-–—]+/g, " ");
-  let split = text_split_space(spaced);
-  function nonempty(word) {
-    return word.length > 0;
+function list_join_comma(list) {
+  let result = list_join(list, ",");
+  return result;
+}
+function list_includes(list, item) {
+  let includes = list.includes(item);
+  return includes;
+}
+async function app_api(a) {
+  arguments_assert(arguments, 1);
+  let f_name = property_get(a, "f_name");
+  text_is_assert_json(f_name, {
+    hint: "the request should carry a text f_name to call — is f_name present on the request?",
+    a
+  });
+  let fn_http = http_post_json;
+  property_set_exists_not(a, "fn_http", fn_http);
+  let result = await app_api_generic(a);
+  return result;
+}
+function property_set_exists_not(object, property_name, value) {
+  property_exists_not_assert_json(object, property_name, {
+    hint: "this property should not already exist before setting it fresh — was it already set?"
+  });
+  property_set(object, property_name, value);
+}
+function property_exists_not_assert_json(object, property_name, json) {
+  let e = property_exists(object, property_name);
+  if (e) {
+    let value = property_get(object, property_name);
+    log_keep(property_exists_not_assert_json.name, property_name);
+    error_json({
+      value,
+      property_name,
+      object,
+      json
+    });
   }
-  return list_filter(split, nonempty);
 }
-function text_split_space(s) {
-  let split = text_split(s, " ");
-  return split;
+function log_keep(f_name, message) {
+  log_inner(f_name, message);
 }
-function text_split(s, separator) {
-  let split = s.split(separator);
-  return split;
+function log_inner(f_name, message) {
+  let list = [message];
+  let value = global_function_initialize_null(log_inner);
+  if (equal_not(value, f_name)) {
+    global_function_set(log_inner, f_name);
+    list_add_first(list, f_name);
+  }
+  each(list, console.log);
+  return;
 }
-async function g_sermon_write_download(chapter_code) {
-  let destination_get = g_sermon_write_upload_path;
-  let fn = g_sermon_write_download;
-  let project_url = firebase_storage_url_project_jg();
-  let value = await global_firebase_storage_download_json_decompress(fn, destination_get, chapter_code, project_url);
+function list_add_first(list, item) {
+  list_insert(list, 0, item);
+}
+function list_insert(list, index, value) {
+  let delete_count = 0;
+  list_insert_generic(index, list, delete_count, value);
+}
+function list_insert_generic(index, list, delete_count, value) {
+  let b = number_is(index);
+  assert(b);
+  list_splice(list, index, delete_count, value);
+}
+function list_splice(list, index, delete_count, value) {
+  list.splice(index, delete_count, value);
+}
+function assert(b) {
+  if (not(b)) {
+    error();
+  }
+}
+function number_is(value) {
+  let v = typeof value === "number" && isFinite(value);
+  return v;
+}
+function global_function_initialize_null(fn) {
+  let value = global_function_initialize(fn, null);
   return value;
 }
-function firebase_storage_url_project_jg() {
-  let project_name = firebase_project_name_jg();
-  let project_url = firebase_storage_url_project(project_name);
-  return project_url;
+function log(f_name, message) {
+  log_inner(f_name, message);
 }
-function firebase_storage_url_project(project_name) {
-  let url = text_combine(project_name, ".firebasestorage.app");
+function text_is_assert_json(value, o) {
+  function lambda() {
+    let message = json_to(o);
+    return message;
+  }
+  text_is_assert_message_get(value, lambda);
+}
+function text_is_assert_message_get(value, lambda) {
+  let b = text_is(value);
+  assert_message_get(b, lambda);
+}
+function text_is(value) {
+  let ti = typeof value === "string";
+  return ti;
+}
+async function app_api_generic(a) {
+  arguments_assert(arguments, 1);
+  let f_name = property_get(a, "f_name");
+  let args = property_initialize(a, "args", []);
+  let fn_http = property_get(a, "fn_http");
+  var v = app_api_generic_url_body(f_name, args);
+  let body = property_get(v, "body");
+  let url = property_get(v, "url");
+  let o = await fn_http(url, body);
+  let result = property_get(o, "result");
+  return result;
+}
+function app_api_generic_url_body(f_name, args) {
+  let body = app_api_generic_f_name_args(f_name, args);
+  let url = server_url_get();
+  let v = {
+    url,
+    body
+  };
+  return v;
+}
+function server_url_get() {
+  let url = null;
+  url = ternary(browser_is(), "", server_url());
+  url += server_url_api();
   return url;
 }
-function firebase_project_name_jg() {
-  let r = "jared-grace";
-  return r;
-}
-async function global_firebase_storage_download_json_decompress(fn, destination_get, property_name, project_url) {
-  async function get() {
-    let destination = destination_get(property_name);
-    let o = await firebase_storage_download_json_decompress(project_url, destination);
-    return o;
+function ternary(condition, on_true, on_false) {
+  let result = null;
+  if (condition) {
+    result = on_true;
+  } else {
+    result = on_false;
   }
-  let value = await global_function_property_initialize_async(fn, property_name, get);
-  return value;
+  return result;
 }
-async function global_function_property_initialize_async(fn, property_name, lambda) {
-  let global = global_get();
-  let fn_object = property_initialize(global, fn.name, {});
-  let value = await property_initialize_lambda_async(fn_object, property_name, lambda);
-  return value;
+function server_url_api() {
+  let a = "/api";
+  return a;
 }
-async function property_initialize_lambda_async(object, property_name, lambda) {
-  let r = await property_initialize_lambda_info_async(object, property_name, lambda);
-  let value = property_get(r, "value");
-  return value;
+function server_url() {
+  let port = server_port();
+  let url = text_combine("http://localhost:", port);
+  return url;
 }
-async function property_initialize_lambda_info_async(object, property_name, lambda) {
-  let exists = property_exists(object, property_name);
-  if (not(exists)) {
-    let value_set = lambda();
-    property_set(object, property_name, value_set);
-  }
-  let value = await property_get(object, property_name);
-  let r = {
-    value,
-    exists
+function server_port() {
+  let v = 8080;
+  return v;
+}
+function browser_is() {
+  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
+  return b;
+}
+function app_api_generic_f_name_args(f_name, args) {
+  let args_list = list_to(args);
+  let v = {
+    f_name: f_name,
+    args: args_list
   };
-  return r;
+  return v;
+}
+function list_to(a) {
+  let l = Array.from(a);
+  return l;
 }
 function property_initialize(object, property_name, value_initial) {
   property_set_if_exists_not(object, property_name, value_initial);
@@ -1067,229 +1170,23 @@ function property_exists_not(object, property_name) {
   let ne = not(e);
   return ne;
 }
-async function firebase_storage_download_json_decompress(project_url, destination) {
-  let c = await firebase_storage_download_json(project_url, destination);
-  let o = await json_decompress_object(c);
+async function http_post_json(url, body) {
+  let buffer = await http_post(url, body);
+  let o = buffer_to_json(buffer);
   return o;
 }
-async function json_decompress_object(c) {
-  let compressed = property_get(c, "compressed");
-  let o = await json_decompress(compressed);
-  return o;
-}
-async function json_decompress(compressed) {
-  let json = await text_decompress(compressed);
-  let text = json_from(json);
-  return text;
-}
-async function text_decompress(compressed) {
-  let imported = await import("lz-string");
-  let l = imported.default ?? imported;
-  let decompressed = l.decompressFromUTF16(compressed);
-  return decompressed;
-}
-async function firebase_storage_download_json(project_url, destination) {
-  let s = await firebase_storage_download_text(project_url, destination);
-  let o = json_from(s);
-  return o;
-}
-async function firebase_storage_download_text(project_url, destination) {
-  let buffer = await firebase_storage_download(project_url, destination);
-  let s = buffer_text_to(buffer);
-  return s;
-}
-function buffer_text_to(buffer) {
-  let s = null;
-  let b = browser_is();
-  if (b) {
-    if (buffer instanceof ArrayBuffer) {
-      s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
-    } else if (buffer instanceof Uint8Array) {
-      s = new TextDecoder("utf-8").decode(buffer);
-    } else {
-      throw new Error("Unsupported buffer type");
-    }
-  } else {
-    s = buffer.toString("utf8");
-  }
-  return s;
-}
-function browser_is() {
-  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
-  return b;
-}
-async function firebase_storage_download(project_url, destination) {
-  let fn = http;
-  let result = await firebase_storage_download_generic(project_url, destination, fn);
-  return result;
-}
-async function firebase_storage_download_generic(project_url, destination, http_fn) {
-  destination = firebase_path_fix(destination);
-  async function lambda() {
-    let url = firebase_storage_url(destination, project_url);
-    let buffer = await http_fn(url);
-    return buffer;
-  }
-  let result = await html_loading(lambda);
-  return result;
-}
-async function html_loading(lambda) {
-  let b = browser_is();
-  if (b) {
-    html_loading_show();
-  }
-  let result = null;
-  try {
-    result = await lambda();
-  } finally {
-    if (b) {
-      html_loading_hide();
-    }
-  }
-  return result;
-}
-function html_loading_show() {
-  let state = html_loading_state();
-  let timer = state.timer;
-  if (timer !== null) {
-    clearTimeout(timer);
-    state.timer = null;
-  }
-  state.count = state.count + 1;
-  let overlay = state.overlay;
-  if (overlay === null) {
-    state.overlay = html_loading_overlay();
-    return;
-  }
-  html_style_set(overlay, "opacity", "1");
-}
-function html_loading_state() {
-  return value;
-}
-function html_loading_overlay() {
-  let body = html_document_body();
-  let div = html_div(body);
-  let s = {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    background: "rgba(0, 0, 0, 0.8)",
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "center",
-    "align-items": "center",
-    gap: "1.5rem",
-    "z-index": "1000",
-    opacity: "0",
-    transition: "opacity 0.15s ease"
-  };
-  html_style_assign(div, s);
-  html_loading_spinner(div);
-  let message = html_p_text(div, "One moment, please 🙏");
-  html_style_assign(message, {
-    color: "white",
-    "font-size": "1.5rem",
-    "font-family": "sans-serif",
-    "text-align": "center",
-    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)"
-  });
-  html_reflow_force(div);
-  html_style_set(div, "opacity", "1");
-  return div;
-}
-function html_reflow_force(component) {
-  let element = html_component_element_get(component);
-  let v = element.offsetHeight;
+async function http_post(url, body) {
+  let options_extra = {};
+  let v = await http_post_options(url, body, options_extra);
   return v;
 }
-function html_loading_spinner(parent) {
-  html_loading_spinner_style();
-  let spinner = html_div(parent);
-  html_style_assign(spinner, {
-    width: "48px",
-    height: "48px",
-    border: "5px solid rgba(255, 255, 255, 0.25)",
-    "border-top-color": "white",
-    "border-radius": "50%",
-    animation: "html_loading_spin 0.8s linear infinite"
-  });
-  return spinner;
-}
-function html_loading_spinner_style() {
-  let state = html_loading_state();
-  if (state.styled) {
-    return;
-  }
-  state.styled = true;
-  html_style_head("@keyframes html_loading_spin {\n  to { transform: rotate(360deg); }\n}");
-}
-function html_loading_hide() {
-  let state = html_loading_state();
-  state.count = state.count - 1;
-  if (state.count > 0) {
-    return;
-  }
-  state.count = 0;
-  function remove() {
-    state.timer = null;
-    if (state.count > 0) {
-      return;
-    }
-    let overlay = state.overlay;
-    if (overlay === null) {
-      return;
-    }
-    html_remove(overlay);
-    state.overlay = null;
-  }
-  function fade_out() {
-    state.timer = null;
-    if (state.count > 0) {
-      return;
-    }
-    let overlay = state.overlay;
-    if (overlay === null) {
-      return;
-    }
-    html_style_set(overlay, "opacity", "0");
-    state.timer = setTimeout(remove, 150);
-  }
-  state.timer = setTimeout(fade_out, 150);
-}
-function html_remove(component) {
-  let element = html_component_element_get(component);
-  let remove_listeners = element.remove_listeners;
-  let has_listeners = remove_listeners !== undefined;
-  if (has_listeners) {
-    remove_listeners();
-  }
-  element.remove();
-}
-function firebase_storage_url(storage_path, project_url) {
-  let replaced = text_replace(storage_path, "/", "%2F");
-  let url = text_combine_multiple(["https://firebasestorage.googleapis.com/v0/b/", project_url, "/o/", replaced, "?alt=media"]);
-  return url;
-}
-function text_replace(t, from, to) {
-  let split = text_split(t, from);
-  let replaced = list_join(split, to);
-  return replaced;
-}
-function firebase_path_fix(path) {
-  let replaced = text_replace(path, "\\", "/");
-  return replaced;
-}
-async function http(url) {
-  let options = http_get_options();
+async function http_post_options(url, body, options_extra) {
+  let options = {
+    method: "POST",
+    body: body
+  };
+  object_merge_set(options, options_extra);
   let v = await http_generic(url, options);
-  return v;
-}
-function http_get_options() {
-  let v = {
-    method: "GET"
-  };
   return v;
 }
 async function http_generic(url, options) {
@@ -1397,15 +1294,6 @@ function https_prefix() {
   let p = "https://";
   return p;
 }
-function ternary(condition, on_true, on_false) {
-  let result = null;
-  if (condition) {
-    result = on_true;
-  } else {
-    result = on_false;
-  }
-  return result;
-}
 function round(n) {
   let rounded = Math.round(n);
   return rounded;
@@ -1460,11 +1348,6 @@ function assert_multiple(fn, list) {
   }
   each(list, lambda);
 }
-function assert(b) {
-  if (not(b)) {
-    error();
-  }
-}
 function random() {
   let r = Math.random();
   return r;
@@ -1477,78 +1360,485 @@ function subtract(left, right) {
   let difference = left - right;
   return difference;
 }
+async function html_loading(lambda) {
+  let suppressed = html_loading_state().suppressed;
+  let show = browser_is() && not(suppressed);
+  if (show) {
+    html_loading_show();
+  }
+  let result = null;
+  try {
+    result = await lambda();
+  } finally {
+    if (show) {
+      html_loading_hide();
+    }
+  }
+  return result;
+}
+function html_loading_state() {
+  return value;
+}
+function html_loading_show() {
+  let state = html_loading_state();
+  let timer = state.timer;
+  if (timer !== null) {
+    clearTimeout(timer);
+    state.timer = null;
+  }
+  state.count = state.count + 1;
+  let overlay = state.overlay;
+  if (overlay === null) {
+    state.overlay = html_loading_overlay();
+    return;
+  }
+  html_style_set(overlay, "opacity", "1");
+}
+function html_loading_overlay() {
+  let body = html_document_body();
+  let div = html_div(body);
+  let s = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+    background: "rgba(0, 0, 0, 0.8)",
+    display: "flex",
+    "flex-direction": "column",
+    "justify-content": "center",
+    "align-items": "center",
+    gap: "1.5rem",
+    "z-index": "1000",
+    opacity: "0",
+    transition: "opacity 0.15s ease"
+  };
+  html_style_assign(div, s);
+  html_loading_spinner(div);
+  let message = html_p_text(div, "One moment, please 🙏");
+  html_style_assign(message, {
+    color: "white",
+    "font-size": "1.5rem",
+    "font-family": "sans-serif",
+    "text-align": "center",
+    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)"
+  });
+  html_reflow_force(div);
+  html_style_set(div, "opacity", "1");
+  return div;
+}
+function html_reflow_force(component) {
+  let element = html_component_element_get(component);
+  let v = element.offsetHeight;
+  return v;
+}
+function html_loading_spinner(parent) {
+  html_loading_spinner_style();
+  let spinner = html_div(parent);
+  html_style_assign(spinner, {
+    width: "48px",
+    height: "48px",
+    border: "5px solid rgba(255, 255, 255, 0.25)",
+    "border-top-color": "white",
+    "border-radius": "50%",
+    animation: "html_loading_spin 0.8s linear infinite"
+  });
+  return spinner;
+}
+function html_loading_spinner_style() {
+  let state = html_loading_state();
+  if (state.styled) {
+    return;
+  }
+  state.styled = true;
+  html_style_head("@keyframes html_loading_spin {\n  to { transform: rotate(360deg); }\n}");
+}
+function html_loading_hide() {
+  let state = html_loading_state();
+  state.count = state.count - 1;
+  if (state.count > 0) {
+    return;
+  }
+  state.count = 0;
+  function remove() {
+    state.timer = null;
+    if (state.count > 0) {
+      return;
+    }
+    let overlay = state.overlay;
+    if (overlay === null) {
+      return;
+    }
+    html_remove(overlay);
+    state.overlay = null;
+  }
+  function fade_out() {
+    state.timer = null;
+    if (state.count > 0) {
+      return;
+    }
+    let overlay = state.overlay;
+    if (overlay === null) {
+      return;
+    }
+    html_style_set(overlay, "opacity", "0");
+    state.timer = setTimeout(remove, 150);
+  }
+  state.timer = setTimeout(fade_out, 150);
+}
+function html_remove(component) {
+  let element = html_component_element_get(component);
+  let remove_listeners = element.remove_listeners;
+  let has_listeners = remove_listeners !== undefined;
+  if (has_listeners) {
+    remove_listeners();
+  }
+  element.remove();
+}
 function divide(top, bottom) {
   let divided = top / bottom;
   return divided;
 }
-function g_sermon_write_upload_path(chapter_code) {
-  let f_name = fn_name("g_sermon_write_upload");
-  let destination = g_objection_generate_upload_path_generic(f_name, chapter_code);
-  return destination;
+function object_merge_set(to, from) {
+  object_merge(to, from);
+  return to;
 }
-function g_objection_generate_upload_path_generic(f_name, chapter_code) {
-  let file_name = file_name_json(chapter_code);
-  let joined = path_join(["uploads", file_name]);
-  let destination = firebase_deploy_function_destination(f_name, joined);
-  return destination;
+function buffer_to_json(buffer) {
+  let text = buffer_text_to(buffer);
+  let parsed = json_from(text);
+  return parsed;
 }
-function firebase_deploy_function_destination(f_name, file_name) {
-  let list = ["function", f_name, file_name];
-  let destination = list_join_slash_forward(list);
-  return destination;
-}
-function list_join_slash_forward(list) {
-  let joined = list_join(list, "/");
-  return joined;
-}
-function path_join(segments) {
-  if (!segments || !segments.length) throw new Error("Missing segments");
-  let parts = [];
-  let isAbsolute = false;
-  for (let i = 0; i < segments.length; i++) {
-    let seg = segments[i];
-    if (!seg) continue;
-    if (i === 0) {
-      if (seg.startsWith("/") || (/^[a-zA-Z]:[\\/]/).test(seg)) {
-        isAbsolute = true;
-      }
+function buffer_text_to(buffer) {
+  let s = null;
+  let b = browser_is();
+  if (b) {
+    if (buffer instanceof ArrayBuffer) {
+      s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
+    } else if (buffer instanceof Uint8Array) {
+      s = new TextDecoder("utf-8").decode(buffer);
+    } else {
+      throw new Error("Unsupported buffer type");
     }
-    let split = seg.split(/[\\/]+/);
-    for (let s of split) {
-      if (s === "" || s === ".") continue;
-      if (s === "..") {
-        if (parts.length && parts[subtract(parts.length, 1)] !== "..") {
-          parts.pop();
-        } else {
-          parts.push("..");
-        }
-      } else {
-        parts.push(s);
-      }
-    }
+  } else {
+    s = buffer.toString("utf8");
   }
-  let joined = parts.join("/");
-  return isAbsolute ? text_combine("/", joined) : joined;
-}
-function file_name_json(name) {
-  let file_name = text_combine(name, json_extension());
-  return file_name;
-}
-function json_extension() {
-  let ext_j = ".json";
-  return ext_j;
+  return s;
 }
 function fn_name(f_name) {
   return f_name;
+}
+async function html_loading_suppressed(lambda) {
+  "run lambda without showing the loading overlay (e.g. a background poll)";
+  let state = html_loading_state();
+  let previous = state.suppressed;
+  state.suppressed = true;
+  let result = null;
+  try {
+    result = await lambda();
+  } finally {
+    state.suppressed = previous;
+  }
+  return result;
 }
 function g_sermon_passage_verses_key(passage) {
   let verse_numbers = property_get(passage, "verse_numbers");
   let key = list_join_comma(verse_numbers);
   return key;
 }
-function list_join_comma(list) {
-  let result = list_join(list, ",");
-  return result;
+function app_shared_button(parent, text, lambda) {
+  let b = html_button(parent, text, lambda);
+  app_shared_button_style(b);
+  html_style_padding_em(b, "0.3");
+  return b;
+}
+function html_style_padding_em(p, value_em) {
+  html_style_padding(p, text_combine(value_em, "em"));
+}
+function html_style_padding(component, value) {
+  html_style_set(component, "padding", value);
+}
+function app_shared_button_style(b) {
+  app_shared_symbol_tile_style(b);
+  let c = app_shared_button_background_color();
+  html_style_background_color_set(b, c);
+}
+function app_shared_button_background_color() {
+  let c = app_shared_button_uncolored_background_color();
+  return c;
+}
+function app_shared_button_uncolored_background_color() {
+  let v = app_shared_container_blue_border_color();
+  return v;
+}
+function app_shared_container_blue_border_color() {
+  let c = "rgb(152, 203, 255)";
+  return c;
+}
+function app_shared_symbol_tile_style(b) {
+  app_shared_symbol_tile_style_inner(b);
+  html_display_inline_block(b);
+  html_style_set(b, "line-height", 1);
+}
+function app_shared_symbol_tile_style_inner(b) {
+  html_border_radius(b, app_shared_border_radius());
+  html_border_none(b);
+  html_style_padding_x(b, "0.37em");
+  html_style_padding_y(b, "0.1em");
+  html_margin_em(b, 0.09);
+}
+function html_border_none(b) {
+  html_style_set(b, "border", "none");
+}
+function app_shared_border_radius() {
+  let v = "0.5em";
+  return v;
+}
+function html_display_inline_block(item) {
+  html_style_set(item, "display", "inline-block");
+}
+function html_button(parent, text, lambda) {
+  arguments_assert(arguments, 3);
+  let component = html_button_notext(parent, lambda);
+  html_text_set(component, text);
+  return component;
+}
+function html_button_notext(parent, lambda) {
+  let component = html_button_element(parent);
+  html_on_click(component, lambda);
+  return component;
+}
+function html_on_click(component, lambda) {
+  let name_event = "click";
+  html_on(component, name_event, lambda);
+  html_cursor_pointer(component);
+}
+function html_on(component, name_event, lambda) {
+  function_is_assert_json(lambda, {
+    hint: "the event handler should be a function to attach to the element",
+    name_event
+  });
+  let element = html_component_element_get(component);
+  element.addEventListener(name_event, lambda);
+  function remove() {
+    element.removeEventListener(name_event, lambda);
+  }
+  return remove;
+}
+function function_is_assert_json(lambda, json) {
+  let fi = function_is(lambda);
+  assert_json(fi, {
+    lambda,
+    json
+  });
+}
+function function_is(f) {
+  let fi = typeof f === "function";
+  return fi;
+}
+function html_cursor_pointer(component) {
+  html_style_set(component, "cursor", "pointer");
+}
+function html_button_element(parent) {
+  let tag_name = "button";
+  let b = html_element(parent, tag_name);
+  html_style_font_size_inherit(b);
+  return b;
+}
+function html_style_font_size_inherit(component) {
+  html_style_font_size(component, "inherit");
+}
+function app_g_verify_view(container, english, lines, chapter_code, verse, on_approved) {
+  html_clear(container);
+  let tokens = g_sermon_passage_words(english);
+  let highlight = app_shared_verse_selected_background_color();
+  let muted = app_shared_text_deemphasized_color();
+  let border = app_shared_container_blue_border_color();
+  let serif = app_shared_font_serif();
+  let small_gap = app_shared_spaced_small_gap();
+  let covered = {};
+  lines.forEach(function (l) {
+    property_get(l, "indices").forEach(function (i) {
+      covered[i] = true;
+    });
+  });
+  let token_spans = [];
+  let row_comps = [];
+  let order_comps = [];
+  function background_clear(component) {
+    html_style_background_color_set(component, "");
+  }
+  function clear_all() {
+    token_spans.forEach(background_clear);
+    row_comps.forEach(function (r) {
+      if (r) {
+        background_clear(r);
+      }
+    });
+    order_comps.forEach(function (r) {
+      if (r) {
+        background_clear(r);
+      }
+    });
+  }
+  function highlight_lines(li_list) {
+    clear_all();
+    li_list.forEach(function (li) {
+      property_get(lines[li], "indices").forEach(function (i) {
+        html_style_background_color_set(token_spans[i], highlight);
+      });
+      if (row_comps[li]) {
+        html_style_background_color_set(row_comps[li], highlight);
+      }
+      if (order_comps[li]) {
+        html_style_background_color_set(order_comps[li], highlight);
+      }
+    });
+  }
+  function panel_flush() {
+    let p = app_shared_container_base(container);
+    html_style_padding_x(p, "0");
+    html_style_padding_y(p, "0");
+    html_style_set(p, "overflow", "hidden");
+    return p;
+  }
+  function row_new(panel, first) {
+    let row = html_div(panel);
+    html_style_set(row, "display", "flex");
+    html_style_set(row, "gap", small_gap);
+    html_style_padding_x(row, small_gap);
+    html_style_padding_y(row, small_gap);
+    if (!first) {
+      html_style_set(row, "border-top", "1px solid " + border);
+    }
+    html_style_set(row, "transition", "background-color .12s");
+    return row;
+  }
+  function label_new(caption) {
+    let l = html_p_text(container, caption);
+    html_font_color_set(l, app_shared_text_category_color());
+    html_style_set(l, "font-size", "0.72em");
+    html_style_set(l, "letter-spacing", "0.11em");
+    html_style_set(l, "font-weight", "600");
+    html_margin_em(l, "0");
+    html_style_set(l, "margin-top", small_gap);
+  }
+  let passage_panel = app_shared_container_base(container);
+  html_style_set(passage_panel, "font-family", serif);
+  html_style_set(passage_panel, "font-size", "1.3em");
+  html_style_set(passage_panel, "line-height", "1.95");
+  tokens.forEach(function (t, i) {
+    let span = html_span_text(passage_panel, t);
+    html_border_radius(span, app_shared_border_radius());
+    html_style_set(span, "padding", "0 0.06em");
+    html_style_set(span, "transition", "background-color .12s");
+    if (!covered[i]) {
+      html_style_set(span, "text-decoration", "underline dashed " + app_shared_text_warning_color());
+      html_style_set(span, "text-underline-offset", "0.2em");
+    }
+    html_on(span, "mouseenter", function () {
+      let lis = [];
+      lines.forEach(function (l, li) {
+        if (property_get(l, "indices").indexOf(i) >= 0) {
+          lis.push(li);
+        }
+      });
+      highlight_lines(lis);
+    });
+    html_on(span, "mouseleave", clear_all);
+    token_spans[i] = span;
+    html_span_space(passage_panel);
+  });
+  label_new("BY PASSAGE ORDER");
+  let cov = panel_flush();
+  let order = lines.map(function (l, li) {
+    return li;
+  });
+  order.sort(function (a, b) {
+    let ma = Math.min.apply(null, property_get(lines[a], "indices"));
+    let mb = Math.min.apply(null, property_get(lines[b], "indices"));
+    return ma - mb || a - b;
+  });
+  order.forEach(function (li, k) {
+    let l = lines[li];
+    let row = row_new(cov, k === 0);
+    let words = property_get(l, "indices").map(function (i) {
+      return tokens[i];
+    }).join(" ");
+    let words_el = html_span_text(row, words);
+    html_style_set(words_el, "font-family", serif);
+    html_style_set(words_el, "flex", "0 0 42%");
+    html_font_color_set(words_el, muted);
+    html_span_text(row, property_get(l, "text"));
+    html_on(row, "mouseenter", function () {
+      highlight_lines([li]);
+    });
+    html_on(row, "mouseleave", clear_all);
+    row_comps[li] = row;
+  });
+  label_new("IN SERMON ORDER");
+  let ord = panel_flush();
+  lines.forEach(function (l, li) {
+    let row = row_new(ord, li === 0);
+    let n = html_span_text(row, String(li + 1));
+    html_font_color_set(n, muted);
+    html_style_set(n, "flex", "0 0 1.2em");
+    html_style_set(n, "font-variant-numeric", "tabular-nums");
+    html_span_text(row, property_get(l, "text"));
+    html_on(row, "mouseenter", function () {
+      highlight_lines([li]);
+    });
+    html_on(row, "mouseleave", clear_all);
+    order_comps[li] = row;
+  });
+  let approve_bar = html_div(container);
+  html_style_set(approve_bar, "margin-top", small_gap);
+  html_style_set(approve_bar, "text-align", "center");
+  async function on_approve() {
+    try {
+      await app_api({
+        f_name: fn_name("g_verify_approval_set"),
+        args: [chapter_code, verse]
+      });
+      html_clear(approve_bar);
+      let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
+      html_font_color_set(done, muted);
+      on_approved(verse);
+    } catch (failed) {
+      html_clear(approve_bar);
+      let msg = html_p_text(approve_bar, "Couldn't save — please try again.");
+      html_font_color_set(msg, muted);
+      app_shared_button(approve_bar, "Approve v" + verse, on_approve);
+    }
+  }
+  app_shared_button(approve_bar, "Approve v" + verse, on_approve);
+}
+function html_span_text(parent, text) {
+  let span = html_span(parent);
+  html_text_set(span, text);
+  return span;
+}
+function html_span(parent) {
+  let component = html_element(parent, "span");
+  return component;
+}
+function html_span_space(parent) {
+  html_span_text(parent, " ");
+}
+function g_sermon_passage_words(text) {
+  let spaced = text.replace(/[-–—]+/g, " ");
+  let split = text_split_space(spaced);
+  function nonempty(word) {
+    return word.length > 0;
+  }
+  return list_filter(split, nonempty);
+}
+function text_split_space(s) {
+  let split = text_split(s, " ");
+  return split;
+}
+function text_split(s, separator) {
+  let split = s.split(separator);
+  return split;
 }
 function app_shared_container_base(parent) {
   let div = html_div(parent);
@@ -1560,12 +1850,6 @@ function html_card(component) {
   html_border_radius(component, "1.2em");
   html_style_padding_em(component, "0.6");
   html_box_shadow_set(component, "0 2px 6px rgba(0, 0, 0, 0.12)");
-}
-function html_style_padding_em(p, value_em) {
-  html_style_padding(p, text_combine(value_em, "em"));
-}
-function html_style_padding(component, value) {
-  html_style_set(component, "padding", value);
 }
 function html_box_shadow_set(component, style_value) {
   html_style_set(component, "box-shadow", style_value);
@@ -1586,25 +1870,18 @@ function app_shared_text_warning_color() {
   let c = "rgb(197, 0, 0)";
   return c;
 }
-function app_shared_container_blue_border_color() {
-  let c = "rgb(152, 203, 255)";
-  return c;
-}
-function app_shared_border_radius() {
-  let v = "0.5em";
-  return v;
-}
 function app_shared_spaced_small_gap() {
   let v = "0.45em";
-  return v;
-}
-function app_shared_spaced_tiny_gap() {
-  let v = "0.25em";
   return v;
 }
 function app_shared_font_serif() {
   let f = "Georgia, 'Times New Roman', serif";
   return f;
+}
+function app_shared_milestone_background_color() {
+  "deep blue for milestone banners like review checkpoints, distinct from the light-blue lesson buttons";
+  let c = "#1e3a8a";
+  return c;
 }
 function html_margin_0(root) {
   html_style_set(root, "margin", 0);
