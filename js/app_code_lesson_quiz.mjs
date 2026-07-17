@@ -7,14 +7,14 @@ import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs
 import { html_visibility_visible } from "../../love/js/html_visibility_visible.mjs";
 import { app_code_quiz_correction } from "../../love/js/app_code_quiz_correction.mjs";
 import { html_clear } from "../../love/js/html_clear.mjs";
-import { app_replace_button_wide_next } from "../../love/js/app_replace_button_wide_next.mjs";
+import { app_shared_button_wide_next } from "../../love/js/app_shared_button_wide_next.mjs";
 import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
-import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
-import { list_index_last_is } from "./list_index_last_is.mjs";
-import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
-import { add_1 } from "./add_1.mjs";
-import { subtract_1 } from "./subtract_1.mjs";
-import { at_least_1 } from "./at_least_1.mjs";
+import { app_code_quiz_index_get } from "../../love/js/app_code_quiz_index_get.mjs";
+import { list_index_last_is } from "../../love/js/list_index_last_is.mjs";
+import { app_code_quiz_index_transform } from "../../love/js/app_code_quiz_index_transform.mjs";
+import { add_1 } from "../../love/js/add_1.mjs";
+import { subtract_1 } from "../../love/js/subtract_1.mjs";
+import { at_least_1 } from "../../love/js/at_least_1.mjs";
 import { app_code_lesson_above } from "../../love/js/app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { html_visibility_hidden_multiple } from "../../love/js/html_visibility_hidden_multiple.mjs";
@@ -28,11 +28,11 @@ import { html_div } from "../../love/js/html_div.mjs";
 import { app_code_example_answer_label } from "../../love/js/app_code_example_answer_label.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
-import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
-import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
+import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
+import { text_combine_middle_space_nb } from "../../love/js/text_combine_middle_space_nb.mjs";
+import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
+import { app_shared_spaced_gap } from "../../love/js/app_shared_spaced_gap.mjs";
+import { app_shared_spaced_large_gap } from "../../love/js/app_shared_spaced_large_gap.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -89,7 +89,7 @@ export function app_code_lesson_quiz(
   if (last_lesson_end) {
     app_code_no_more_lessons(parent_container);
   } else {
-    let next_button = app_replace_button_wide_next(parent_container, on_next);
+    let next_button = app_shared_button_wide_next(parent_container, on_next);
     html_style_margin_top(next_button, app_shared_spaced_gap());
   }
   let show_skip = not(qli) && not(no_more);
