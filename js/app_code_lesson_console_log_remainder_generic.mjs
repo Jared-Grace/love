@@ -28,6 +28,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range } from "./range.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { list_join } from "./list_join.mjs";
@@ -120,8 +121,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text(tile, after);
   }
   function example(parent) {
-    "a concrete grouping story: share (5*divisor - 1) loaves of bread into divisor groups; each group gets 4 loaves, so 4 added divisor times is 4*divisor, and divisor-1 loaves are left over (the largest remainder). for divisor 3 this is the familiar 14 loaves into 3 groups of 4 with 2 left over";
-    let each_group = 4;
+    "a concrete grouping story: share (divisor+1)*divisor + (divisor-1) loaves of bread into divisor groups; each group gets divisor+1 loaves (deliberately not the group count, so every number in the story is used in only one place), and divisor-1 loaves are left over (the largest remainder). for divisor 3 this is the familiar 14 loaves into 3 groups of 4 with 2 left over";
+    let each_group = add(divisor, 1);
     let group_total = multiply(each_group, divisor);
     let left = subtract(divisor, 1);
     let total = add(group_total, left);
