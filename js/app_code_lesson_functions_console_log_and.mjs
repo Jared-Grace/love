@@ -18,7 +18,7 @@ export function app_code_lesson_functions_console_log_and() {
     above,
     lambda$code: js_code_statement,
     name_id_rights: [" and"],
-    category: "operator",
+    category: "operators",
     next_arg,
     example_count: 2,
     quiz_backwards_answer_count_override: null,
