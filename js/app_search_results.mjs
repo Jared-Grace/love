@@ -129,24 +129,28 @@ export async function app_search_results(context, div_results) {
   }
   list_sort_text_mapper(results, bible_order_key);
   let book_code_shown = null;
-  function book_header_add(book_code) {
+  let div_book = null;
+  function book_card_add(book_code) {
     let same = equal(book_code, book_code_shown);
     if (same) {
       return;
     }
     book_code_shown = book_code;
+    div_book = app_shared_container_blue(div_results);
     let book_name = ebible_book_code_to_name(books, book_code);
-    let header = html_div_text_bold(div_results, book_name);
-    html_style_margin_top(header, "0.5em");
+    let header = html_div_text_bold(div_book, book_name);
+    html_style_margin_bottom(header, "0.3em");
   }
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
     let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
-    book_header_add(book_code);
+    book_card_add(book_code);
+    let chapter_name = ebible_chapter_code_to_name(chapter_code);
     function each_verse_number(verse_number) {
-      let div_verse = html_div(div_results);
+      let div_verse = html_div(div_book);
       html_display_inline_block(div_verse);
+      let label = text_combine_multiple([chapter_name, ":", verse_number]);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
