@@ -9,7 +9,6 @@ import { g_greeting } from "./g_greeting.mjs";
 import { g_boundary } from "./g_boundary.mjs";
 import { integer_random_0 } from "./integer_random_0.mjs";
 import { list_get } from "./list_get.mjs";
-import { each_index } from "./each_index.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
@@ -92,17 +91,7 @@ export async function app_g_conversation(
       text_combine(emoji_thinking(), " What do you believe?"),
       choice(2, stub, "what I believe"),
     );
-    let openers = [gospel_b, how_b, believe_b];
-    let correct = list_get(openers, correct_index);
-    function disable_far(opener, index) {
-      let far = index > correct_index + 1 || index < correct_index - 1;
-      if (far) {
-        html_style_assign(opener, {
-          opacity: "0.5",
-          "pointer-events": "none",
-        });
-      }
-    }
+    let correct = list_get([gospel_b, how_b, believe_b], correct_index);
     function reveal() {
       app_shared_glow_correct(correct);
       app_shared_correct_gold(correct);
@@ -110,7 +99,6 @@ export async function app_g_conversation(
         position: "relative",
         "z-index": g_z("raised"),
       });
-      each_index(openers, disable_far);
     }
     function on_pray() {
       html_style_assign(pray_b, {
