@@ -1555,3 +1555,9 @@ app_shared_name_search_info
 { search: 'next', a_name: 'next' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/next.html' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
