@@ -36,6 +36,12 @@ import { properties_from_empty } from "../../love/js/properties_from_empty.mjs";
 import { list_intersect_multiple } from "../../love/js/list_intersect_multiple.mjs";
 import { properties_get } from "../../love/js/properties_get.mjs";
 import { list_map } from "../../love/js/list_map.mjs";
+import { list_sort_text_mapper } from "../../love/js/list_sort_text_mapper.mjs";
+import { list_sort_number_mapper } from "../../love/js/list_sort_number_mapper.mjs";
+import { list_index_of_property } from "../../love/js/list_index_of_property.mjs";
+import { number_pad } from "../../love/js/number_pad.mjs";
+import { integer_to_try } from "../../love/js/integer_to_try.mjs";
+import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { list_map_unordered_async } from "../../love/js/list_map_unordered_async.mjs";
 import { app_bible_search_word_path } from "../../love/js/app_bible_search_word_path.mjs";
 import { text_to_words } from "../../love/js/text_to_words.mjs";
@@ -101,6 +107,15 @@ export async function app_search_results(context, div_results) {
   );
   html_br_2(div_results);
   let results = object_to_list(dictionary);
+  function bible_order_key(vk) {
+    let chapter_code = property_get(vk, "key");
+    let book_code = ebible_chapter_code_to_book(chapter_code);
+    let book_index = list_index_of_property(books, "book_code", book_code);
+    let book_index_padded = number_pad(book_index, 2);
+    let key = text_combine_multiple([book_index_padded, "-", chapter_code]);
+    return key;
+  }
+  list_sort_text_mapper(results, bible_order_key);
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
     let chapter_code = property_get(vk, "key");
@@ -155,6 +170,7 @@ export async function app_search_results(context, div_results) {
       property_set_exists_not(b, "click", click);
       return b;
     }
+    list_sort_number_mapper(verse_numbers, integer_to_try);
     let bs = list_map(verse_numbers, each_verse_number);
     return bs;
   }
