@@ -10,6 +10,8 @@ import { file_js_transform } from "../js/file_js_transform.mjs";
 import { js_format } from "../js/js_format.mjs";
 import { folder_src } from "../js/folder_src.mjs";
 import { js_imports_missing_add_all_program_at } from "../js/js_imports_missing_add_all_program_at.mjs";
+import { js_imports_unused_remove } from "../js/js_imports_unused_remove.mjs";
+import { js_imports_paths_fix_at } from "../js/js_imports_paths_fix_at.mjs";
 import { function_arguments_assert_each_add_lambda } from "../js/function_arguments_assert_each_add_lambda.mjs";
 import { js_node_type_is_new_lambda } from "../js/js_node_type_is_new_lambda.mjs";
 
@@ -48,6 +50,13 @@ function transform_lambda(t) {
   }
   if (t[0] === "imports") {
     return (ast) => js_imports_missing_add_all_program_at(ast, folder_src());
+  }
+  if (t[0] === "auto") {
+    return async (ast) => {
+      await js_imports_missing_add_all_program_at(ast, folder_src());
+      js_imports_unused_remove(ast);
+      js_imports_paths_fix_at(ast, folder_src());
+    };
   }
   return null;
 }
