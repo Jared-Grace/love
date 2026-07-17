@@ -12,7 +12,7 @@ import { html_border_radius } from "../../love/js/html_border_radius.mjs";
 import { html_style_padding_em } from "../../love/js/html_style_padding_em.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
-import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
+import { app_shared_border_radius_extra_large } from "../../love/js/app_shared_border_radius_extra_large.mjs";
 import { app_shared_container_blue_dark_background_color } from "../../love/js/app_shared_container_blue_dark_background_color.mjs";
 import { app_shared_container_blue_dark_font_color } from "../../love/js/app_shared_container_blue_dark_font_color.mjs";
 import { html_style_margin_x } from "../../love/js/html_style_margin_x.mjs";
@@ -160,7 +160,7 @@ export async function app_search_results(context, div_results) {
     html_display_inline_block(div_chapter);
     let color_background = app_shared_container_blue_dark_background_color();
     html_style_background_color_set(div_chapter, color_background);
-    html_border_radius(div_chapter, app_shared_border_radius());
+    html_border_radius(div_chapter, app_shared_border_radius_extra_large());
     html_style_padding_em(div_chapter, "0.2");
     html_style_margin_x(div_chapter, "0.15em");
     html_style_margin_y(div_chapter, "0.15em");
