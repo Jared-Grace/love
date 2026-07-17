@@ -95,7 +95,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       return render;
     }
     let rights = [console_name, name_right];
-    let built = app_code_lesson_name_id_generic(rights, "function", title_get);
+    let built = app_code_lesson_name_id_generic(rights, "operator", title_get);
     return built;
   }
   function remainder_color(remainder) {
