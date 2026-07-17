@@ -3,8 +3,8 @@ export function app_code_lesson_functions_console_log_remainder_2() {
   "remainder by 2 is the even/odd test: even numbers give 0, odd numbers give 1";
   let divisor = 2;
   let insight = [
-    ["if the number is even, then the remainder is ", "0"],
-    ["if the number is odd, then the remainder is ", "1"],
+    { text: "If the number is even, then the remainder is ", remainder: 0 },
+    { text: "If the number is odd, then the remainder is ", remainder: 1 },
   ];
   let lesson = app_code_lesson_console_log_remainder_generic(divisor, insight);
   return lesson;
