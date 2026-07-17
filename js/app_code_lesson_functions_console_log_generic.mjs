@@ -32,7 +32,7 @@ export function app_code_lesson_functions_console_log_generic(params) {
   let name_id = property_get_or_null(params, "name_id");
   let name_id_missing = null_is(name_id);
   if (name_id_missing) {
-    let category = property_get_or(params, "category", "function");
+    let category = property_get_or(params, "category", "functions");
     let rights = [name];
     list_add_multiple(rights, name_id_rights);
     name_id = app_code_lesson_name_id_function(category, rights);
