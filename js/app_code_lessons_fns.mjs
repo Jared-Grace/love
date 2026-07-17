@@ -76,7 +76,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_remainder_3,
     app_code_lesson_functions_console_log_remainder_4,
     app_code_lesson_functions_console_log_remainder_any,
-    app_code_lesson_functions_console_log_add_three,
+    app_code_lesson_functions_console_log_nested_add,
     app_code_lesson_functions_console_log_exponent,
   ];
   return fns;

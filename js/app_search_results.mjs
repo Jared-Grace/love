@@ -9,11 +9,13 @@ import { html_style_margin_bottom } from "../../love/js/html_style_margin_bottom
 import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
 import { html_span_text } from "../../love/js/html_span_text.mjs";
 import { html_bold_mild } from "../../love/js/html_bold_mild.mjs";
-import { html_border } from "../../love/js/html_border.mjs";
 import { html_border_radius } from "../../love/js/html_border_radius.mjs";
 import { html_style_padding_em } from "../../love/js/html_style_padding_em.mjs";
+import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
+import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
 import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
-import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
+import { app_shared_container_blue_dark_background_color } from "../../love/js/app_shared_container_blue_dark_background_color.mjs";
+import { app_shared_container_blue_dark_font_color } from "../../love/js/app_shared_container_blue_dark_font_color.mjs";
 import { html_style_margin_x } from "../../love/js/html_style_margin_x.mjs";
 import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
 import { html_display_block } from "../../love/js/html_display_block.mjs";
