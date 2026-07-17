@@ -27,6 +27,11 @@ import { list_join } from "./list_join.mjs";
 import { word_pluralize } from "./word_pluralize.mjs";
 import { word_is_are } from "./word_is_are.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_span_text_bold } from "./html_span_text_bold.mjs";
+import { list_to_or_list_generic } from "./list_to_or_list_generic.mjs";
+import { each_index } from "./each_index.mjs";
+import { equal_0 } from "./equal_0.mjs";
+import { divide } from "./divide.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -139,6 +144,9 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       " left over, so ",
     ]);
     html_div_cycle_code(parent, ["", text_to(left), leftover_middle, total_equation]);
+    let definition = html_div(parent);
+    html_span_text(definition, "The left over is called the ");
+    html_span_text_bold(definition, "remainder");
     let conclusion = html_div(parent);
     html_span_text(conclusion, "So the remainder is ");
     remainder_chip(conclusion, left);
@@ -148,9 +156,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_div_cycle_code(intro, [
       "When we divide, sometimes the numbers divide evenly",
     ]);
-    html_div_cycle_code(intro, ["Sometimes the numbers do not divide evenly"]);
+    html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
     example(intro);
-    html_div_cycle_code(intro, ["The remainder is how many are left over"]);
     let evenly = html_div(intro);
     html_span_text(
       evenly,
@@ -169,11 +176,19 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text(legend, "So if we divide by ");
     html_span_text_code_dark(legend, divisor_text);
     html_span_text(legend, ", the remainder is one of these: ");
-    function legend_chip(remainder) {
-      remainder_chip(legend, remainder);
-      html_span_text(legend, " ");
+    let remainder_texts = range_map(divisor, text_to);
+    let or_parts = list_to_or_list_generic(remainder_texts, "or");
+    function legend_part(part, index) {
+      "list_to_or_list_generic interleaves item, separator, item, ...; the items land on even indices, so render those as colored chips and the odd separators (', ' and ' or ') as plain text";
+      let is_item = equal_0(modulo(index, 2));
+      if (is_item) {
+        let remainder = divide(index, 2);
+        remainder_chip(legend, remainder);
+      } else {
+        html_span_text(legend, part);
+      }
     }
-    each(range(divisor), legend_chip);
+    each_index(or_parts, legend_part);
     let table = app_code_container_light_blue(root);
     function row(n) {
       let expr = code_of(n);
