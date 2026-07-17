@@ -4,7 +4,7 @@ import { app_code_quiz_index_set } from "../../love/js/app_code_quiz_index_set.m
 import { list_index_last } from "../../love/js/list_index_last.mjs";
 import { app_code_lesson_previous_set } from "../../love/js/app_code_lesson_previous_set.mjs";
 import { app_code_home } from "../../love/js/app_code_home.mjs";
-import { app_replace_button_screen_wide } from "../../love/js/app_replace_button_screen_wide.mjs";
+import { app_shared_button_screen_wide } from "../../love/js/app_shared_button_screen_wide.mjs";
 import { app_shared_button_home_text } from "../../love/js/app_shared_button_home_text.mjs";
 import { app_code_go_back } from "../../love/js/app_code_go_back.mjs";
 import { equal_not } from "../../love/js/equal_not.mjs";
@@ -106,6 +106,6 @@ export function app_code_examples(context) {
   }
   let text = app_shared_button_home_text();
   let g = app_code_container_padded_x(root);
-  let b2 = app_replace_button_screen_wide(context, app_code_home, g, text);
+  let b2 = app_shared_button_screen_wide(context, app_code_home, g, text);
   return;
 }
