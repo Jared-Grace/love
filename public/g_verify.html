@@ -741,6 +741,15 @@ async function app_g_verify_home(context) {
       approved: null
     };
   }
+  let chapter_codes;
+  try {
+    chapter_codes = property_get(await api_read(fn_name("g_verify_chapters_available"), []), "chapters");
+  } catch (missing) {
+    chapter_codes = [];
+  }
+  if (!list_includes(chapter_codes, chapter_code)) {
+    chapter_codes = chapter_codes.concat([chapter_code]).sort();
+  }
   render(chapter, status, approval);
   poll();
   function render(chapter, status, approval) {
@@ -774,9 +783,9 @@ async function app_g_verify_home(context) {
     html_style_padding_y(wrap, "2em");
     let cbar = html_div_centered(wrap);
     html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
-    ["1JN01", "1JN02", "1JN03", "1JN04", "1JN05"].forEach(function (code) {
-      let number = String(Number(code.slice(3)));
-      let cb = app_shared_button(cbar, "1 John " + number, function () {
+    chapter_codes.forEach(function (code) {
+      let label = g_verify_book_name(code.slice(0, 3)) + " " + String(Number(code.slice(3)));
+      let cb = app_shared_button(cbar, label, function () {
         if (code !== chapter_code) {
           localStorage.setItem("g_verify_chapter", code);
           location.reload();
@@ -1882,6 +1891,41 @@ function app_shared_milestone_background_color() {
   "deep blue for milestone banners like review checkpoints, distinct from the light-blue lesson buttons";
   let c = "#1e3a8a";
   return c;
+}
+function g_verify_book_name(book_code) {
+  let names = {
+    MAT: "Matthew",
+    MRK: "Mark",
+    LUK: "Luke",
+    JHN: "John",
+    ACT: "Acts",
+    ROM: "Romans",
+    "1CO": "1 Corinthians",
+    "2CO": "2 Corinthians",
+    GAL: "Galatians",
+    EPH: "Ephesians",
+    PHP: "Philippians",
+    COL: "Colossians",
+    "1TH": "1 Thessalonians",
+    "2TH": "2 Thessalonians",
+    "1TI": "1 Timothy",
+    "2TI": "2 Timothy",
+    TIT: "Titus",
+    PHM: "Philemon",
+    HEB: "Hebrews",
+    JAS: "James",
+    "1PE": "1 Peter",
+    "2PE": "2 Peter",
+    "1JN": "1 John",
+    "2JN": "2 John",
+    "3JN": "3 John",
+    JUD: "Jude",
+    REV: "Revelation"
+  };
+  if (names[book_code]) {
+    return names[book_code];
+  }
+  return book_code;
 }
 function html_margin_0(root) {
   html_style_set(root, "margin", 0);
