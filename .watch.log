@@ -2804,3 +2804,8 @@ html_update_latest_webpack_generic
 webpack_watch
 { rebuild: 'supper_tl' }
 { rebuild: 'supper' }
+app_shared_name_search_info
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
