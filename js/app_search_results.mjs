@@ -191,7 +191,7 @@ export async function app_search_results(context, div_results) {
           await list_join_newline_2_copy(bible_texts);
         }
       }
-      b = app_shared_button_inline(div_verse, reference, click);
+      b = app_shared_button_inline(div_verse, label, click);
       property_set_exists_not(b, "click", click);
       return b;
     }
