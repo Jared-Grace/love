@@ -350,3 +350,8 @@ app_shared_name_search_info
 { search: 'search', a_name: 'search' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/search.html' }
+webpack_watch
+{ rebuild: 'calendar_paste' }
+{ rebuild: 'calendar' }
+{ rebuild: 'code' }
+{ rebuild: 'g' }
