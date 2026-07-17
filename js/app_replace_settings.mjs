@@ -3,7 +3,7 @@ import { app_replace_animation_duration_get } from "../../love/js/app_replace_an
 import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { equal } from "../../love/js/equal.mjs";
-import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
+import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
 import { app_replace_animation_duration_default } from "../../love/js/app_replace_animation_duration_default.mjs";
 import { each } from "../../love/js/each.mjs";
 import { storage_local_set_context } from "../../love/js/storage_local_set_context.mjs";
@@ -45,7 +45,7 @@ export function app_replace_settings(context) {
   );
   let div2 = html_div(root);
   let left = emoji_clock();
-  let highlight = app_replace_rule_set_highlight();
+  let highlight = app_shared_color_light_green();
   let duration = app_replace_animation_duration_get(context);
   ("if not null then speed is being overwritten by hash so don't show choices");
   if (null_is(duration)) {
