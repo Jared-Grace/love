@@ -57,7 +57,7 @@ export async function app_g_conversation(
         if (is_correct) {
           action();
         } else {
-          app_g_npc_says(npc, overlay, g_boundary());
+          app_g_npc_says(npc, overlay, g_boundary(meet));
         }
       }
       return on_choice;
