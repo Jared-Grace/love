@@ -14,6 +14,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
@@ -152,7 +153,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       " left over, so ",
     ]);
     let leftover_line = html_div(parent);
-    html_span_text_code_dark(leftover_line, text_to(left));
+    remainder_chip(leftover_line, left);
     html_span_text(leftover_line, leftover_middle);
     equation_with_remainder(leftover_line, sum_expr, left, total);
     let definition = html_div(parent);
@@ -204,6 +205,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     }
     each_index(or_parts, legend_part);
     let table = app_code_container_light_blue(root);
+    html_style_set(table, "gap", "0");
     function row(n) {
       let expr = code_of(n);
       let remainder = modulo(n, divisor);
