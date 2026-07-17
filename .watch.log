@@ -900,3 +900,5 @@ STDERR:
     at ChildProcess.emit (node:events:509:28)
     at maybeClose (node:internal/child_process:1124:16)
     at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'replace' }
