@@ -1068,3 +1068,27 @@ app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'bible' }
+{ rebuild: 'ceb_bible' }
+{ rebuild: 'g_bible' }
+{ rebuild: 'next' }
+{ rebuild: 'original_bible' }
+{ rebuild: 'reply_local' }
+{ rebuild: 'reply' }
+{ rebuild: 'search' }
+{ rebuild: 'supper_tl' }
+{ rebuild: 'supper' }
+{ rebuild: 'verses' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'next', a_name: 'next' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'search', a_name: 'search' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
