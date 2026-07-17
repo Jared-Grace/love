@@ -181,7 +181,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     }
     let first_line = text_combine(
       opener,
-      " we divide, sometimes the numbers divide evenly",
+      " we divide two numbers, sometimes the numbers divide evenly",
     );
     html_div_cycle_code(intro, [first_line]);
     html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
