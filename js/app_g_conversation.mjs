@@ -52,7 +52,12 @@ export async function app_g_conversation(
   async function npc_gospel() {
     await app_g_gospel(overlay, npc, overlay_close, player, div_map);
   }
-  function stub() {}
+  function npc_how() {
+    say("Honestly? Some days are hard, but I'm getting by — thank you for asking.");
+  }
+  function npc_believe() {
+    say("I've never really been sure. I suppose I'm still figuring that out.");
+  }
   let christian = property_get(npc, "christian");
   if (not(christian)) {
     let choices = app_g_container_player(overlay);
@@ -84,12 +89,12 @@ export async function app_g_conversation(
     let how_b = app_g_button_green(
       choices,
       text_combine(emoji_smile(), " How are you?"),
-      choice(1, stub, "how I'm doing"),
+      choice(1, npc_how, "how I'm doing"),
     );
     let believe_b = app_g_button_green(
       choices,
       text_combine(emoji_thinking(), " What do you believe?"),
-      choice(2, stub, "what I believe"),
+      choice(2, npc_believe, "what I believe"),
     );
     let correct = list_get([gospel_b, how_b, believe_b], correct_index);
     function reveal() {
