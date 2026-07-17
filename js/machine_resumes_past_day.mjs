@@ -7,14 +7,12 @@ import { list_map } from "./list_map.mjs";
 export async function machine_resumes_past_day() {
   arguments_assert(arguments, 0);
   let result = await command_line(
-    'journalctl -k --since "1 day ago" -o short-iso',
+    'journalctl --since "1 day ago" -o short-iso',
   );
   let stdout = property_get(result, "stdout");
   let lines = text_split(stdout, "\n");
   function line_is_resume(line) {
-    let is_suspend_resume = line.includes("PM: suspend exit");
-    let is_hibernate_resume = line.includes("PM: hibernation exit");
-    let is_resume = is_suspend_resume || is_hibernate_resume;
+    let is_resume = line.includes("System returned from sleep");
     return is_resume;
   }
   let resume_lines = list_filter(lines, line_is_resume);
