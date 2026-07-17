@@ -2,7 +2,7 @@ import { null_is } from "../../love/js/null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "../../love/js/app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "../../love/js/list_index_of_json.mjs";
 import { html_scroll_center } from "../../love/js/html_scroll_center.mjs";
-import { app_replace_rule_set_highlight } from "../../love/js/app_replace_rule_set_highlight.mjs";
+import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
 import { app_replace_symbol_tile_dead } from "../../love/js/app_replace_symbol_tile_dead.mjs";
 import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../love/js/app_replace_rule_set_verify_from_try.mjs";
@@ -290,7 +290,7 @@ export async function app_replace_rule_set(context) {
         app_replace_symbol_tile_dead(symbol_button);
       }
       each(symbol_buttons, symbol_dead);
-      let green = app_replace_rule_set_highlight();
+      let green = app_shared_color_light_green();
       html_style_background_color_set(start_over, green);
       await html_scroll_center(start_over);
     }
