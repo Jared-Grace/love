@@ -13,6 +13,7 @@ import { app_code_lesson_functions_console_log_remainder_2 } from "./app_code_le
 import { app_code_lesson_functions_console_log_remainder_3 } from "./app_code_lesson_functions_console_log_remainder_3.mjs";
 import { app_code_lesson_functions_console_log_remainder_4 } from "./app_code_lesson_functions_console_log_remainder_4.mjs";
 import { app_code_lesson_functions_console_log_remainder_any } from "./app_code_lesson_functions_console_log_remainder_any.mjs";
+import { app_code_lesson_functions_console_log_add_three } from "./app_code_lesson_functions_console_log_add_three.mjs";
 import { app_code_lesson_functions_console_log_exponent } from "./app_code_lesson_functions_console_log_exponent.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
@@ -75,6 +76,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_remainder_3,
     app_code_lesson_functions_console_log_remainder_4,
     app_code_lesson_functions_console_log_remainder_any,
+    app_code_lesson_functions_console_log_add_three,
     app_code_lesson_functions_console_log_exponent,
   ];
   return fns;
