@@ -371,3 +371,35 @@ app_shared_name_search_info
 { search: 'calendar', a_name: 'calendar' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/calendar.html' }
+webpack_watch
+{ rebuild: 'calendar' }
+{ rebuild: 'replace' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'replace', a_name: 'replace' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'replace', a_name: 'replace' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'replace', a_name: 'replace' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/replace.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/calendar.html' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
