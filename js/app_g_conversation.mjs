@@ -20,11 +20,7 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_random_item } from "./list_random_item.mjs";
-import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
-import { app_shared_correct_gold } from "./app_shared_correct_gold.mjs";
-import { g_z } from "./g_z.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { app_g_pray_reveal } from "./app_g_pray_reveal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_g_conversation(
@@ -97,27 +93,11 @@ export async function app_g_conversation(
       choice(2, npc_believe, "what I believe"),
     );
     let correct = list_get([gospel_b, how_b, believe_b], correct_index);
-    function reveal() {
-      app_shared_glow_correct(correct);
-      app_shared_correct_gold(correct);
-      html_style_assign(correct, {
-        position: "relative",
-        "z-index": g_z("raised"),
-      });
-    }
-    function on_pray() {
-      html_style_assign(pray_b, {
-        opacity: "0.5",
-        "pointer-events": "none",
-      });
-      let delay = list_random_item([1000, 2000, 3000, 4000]);
-      setTimeout(reveal, delay);
-    }
     let pray = text_combine(
       emoji_pray(),
       " Pray to God for discernment for what to say",
     );
-    let pray_b = app_g_button_green(choices, pray, on_pray);
+    app_g_pray_reveal(choices, correct, pray);
   }
   app_g_button_conversation_end(overlay, overlay_close);
 }
