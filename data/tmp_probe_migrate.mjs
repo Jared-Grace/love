@@ -1,3 +1,4 @@
+import { list_size } from "../js/list_size.mjs";
 export function alpha(x) {
   return list_size(x);
 }
