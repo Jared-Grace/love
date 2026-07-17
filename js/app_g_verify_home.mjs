@@ -27,6 +27,7 @@ import { app_shared_milestone_background_color } from "../../love/js/app_shared_
 import { app_shared_verse_selected_background_color } from "../../love/js/app_shared_verse_selected_background_color.mjs";
 import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
+import { g_verify_book_name } from "../../love/js/g_verify_book_name.mjs";
 function api_read(f_name, args) {
   return html_loading_suppressed(function read() {
     return app_api({ f_name, args });
@@ -59,6 +60,18 @@ export async function app_g_verify_home(context) {
     approval = await api_read(fn_name("g_verify_approval_read"), [chapter_code]);
   } catch (missing) {
     approval = { approved: null };
+  }
+  let chapter_codes;
+  try {
+    chapter_codes = property_get(
+      await api_read(fn_name("g_verify_chapters_available"), []),
+      "chapters",
+    );
+  } catch (missing) {
+    chapter_codes = [];
+  }
+  if (!list_includes(chapter_codes, chapter_code)) {
+    chapter_codes = chapter_codes.concat([chapter_code]).sort();
   }
   render(chapter, status, approval);
   poll();
@@ -93,9 +106,9 @@ export async function app_g_verify_home(context) {
     html_style_padding_y(wrap, "2em");
     let cbar = html_div_centered(wrap);
     html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
-    ["1JN01", "1JN02", "1JN03", "1JN04", "1JN05"].forEach(function (code) {
-      let number = String(Number(code.slice(3)));
-      let cb = app_shared_button(cbar, "1 John " + number, function () {
+    chapter_codes.forEach(function (code) {
+      let label = g_verify_book_name(code.slice(0, 3)) + " " + String(Number(code.slice(3)));
+      let cb = app_shared_button(cbar, label, function () {
         if (code !== chapter_code) {
           localStorage.setItem("g_verify_chapter", code);
           location.reload();
