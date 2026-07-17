@@ -5,6 +5,9 @@ import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { list_map } from "./list_map.mjs";
+import { add } from "./add.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
@@ -17,15 +20,21 @@ export function app_code_lesson_functions_console_log_remainder_any() {
   "practice the remainder % with a mix of divisors, after learning it for 2, 3, 4 one at a time; both the number and the divisor vary each question";
   let operator = js_operator_percent();
   let percent = property_get(operator, "operator");
-  function make(index) {
-    "one random n % d, with the divisor from 2 to 9 and the number from 0 to 20";
-    let divisor = integer_random(2, 9);
-    let number = integer_random(0, 20);
+  function make(divisor) {
+    "n % d for the given divisor, with the number from 5 to 20 so it is a real division rather than a tiny one";
+    let number = integer_random(5, 20);
     let code = js_code_binary_spaced_nb(number, percent, divisor);
     return code;
   }
+  function divisor_of(index) {
+    "the divisors 2 through 9";
+    return add(index, 2);
+  }
   function refill() {
-    let list = range_map(4, make);
+    "four questions, each with a DIFFERENT divisor, so two examples (or answer choices) never come out identical";
+    let divisors = range_map(8, divisor_of);
+    let chosen = list_shuffle_take(divisors, 4);
+    let list = list_map(chosen, make);
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
