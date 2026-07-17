@@ -32,7 +32,7 @@ import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "../../love/js/text_combine_middle_space_nb.mjs";
 import { app_shared_button_restart_text } from "../../love/js/app_shared_button_restart_text.mjs";
 import { not } from "../../love/js/not.mjs";
-import { app_replace_success_message } from "../../love/js/app_replace_success_message.mjs";
+import { app_shared_success_message } from "../../love/js/app_shared_success_message.mjs";
 import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
 import { html_visibility_visible } from "../../love/js/html_visibility_visible.mjs";
 import { html_remove } from "../../love/js/html_remove.mjs";
@@ -55,13 +55,13 @@ export function app_code_review(context) {
   let c = app_code_container_light_blue(g);
   function show_success() {
     html_clear(success_container);
-    app_replace_success_message(success_container);
+    app_shared_success_message(success_container);
     html_visibility_visible(success_container);
   }
   function hide_success() {
     html_visibility_hidden(success_container);
   }
-  app_replace_success_message(success_container);
+  app_shared_success_message(success_container);
   hide_success();
   let lessons = app_code_lessons();
   let lessons_count = list_size(lessons);
