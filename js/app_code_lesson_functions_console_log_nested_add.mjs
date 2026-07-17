@@ -1,5 +1,6 @@
 import { app_code_lesson_console_log_nested_generic } from "./app_code_lesson_console_log_nested_generic.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { js_operator_plus_verb } from "./js_operator_plus_verb.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -26,7 +27,9 @@ export function app_code_lesson_functions_console_log_nested_add() {
   let lesson = app_code_lesson_console_log_nested_generic({
     symbol,
     word: " nested add",
-    example_triple: [2, 3, 4],
+    verb: js_operator_plus_verb(),
+    pair: [1, 2],
+    example_triple: [3, 4, 5],
     triples_get,
   });
   return lesson;
