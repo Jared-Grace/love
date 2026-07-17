@@ -20,7 +20,6 @@ import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range } from "./range.mjs";
 import { range_map } from "./range_map.mjs";
