@@ -103,16 +103,19 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
   }
   function remainder_chip(parent, remainder) {
     let color = remainder_color(remainder);
-    html_span_text_code_background(parent, text_to(remainder), color);
+    let chip = html_span_text_code_background(parent, text_to(remainder), color);
+    return chip;
   }
   function equation_with_remainder(parent, prefix_expr, remainder, result) {
     "the whole sum as one continuous dark code tile, with the remainder as its blue chip sitting on top inside the tile (not splitting it in three): before text, the remainder chip, then === result";
+    "the equation's remainder is always the darkest one (divisor-1), so a thin light-blue outline lifts the near-navy chip off the black tile";
     let triple_equal = js_operator_triple_equal_symbol();
     let tile = html_span(parent);
     html_style_code_dark(tile);
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
-    remainder_chip(tile, remainder);
+    let chip = remainder_chip(tile, remainder);
+    html_style_set(chip, "outline", "0.08em solid rgb(130, 165, 235)");
     let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
     html_span_text(tile, after);
   }
@@ -209,6 +212,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let table = app_code_container_light_blue(root);
     html_style_set(table, "gap", "0");
     html_style_padding_x(table, "0");
+    html_style_padding_y(table, "0");
     function row(n) {
       let expr = code_of(n);
       let remainder = modulo(n, divisor);
