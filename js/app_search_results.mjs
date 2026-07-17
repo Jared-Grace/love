@@ -8,6 +8,7 @@ import { html_div_text_bold } from "../../love/js/html_div_text_bold.mjs";
 import { html_style_margin_bottom } from "../../love/js/html_style_margin_bottom.mjs";
 import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
 import { html_span_text } from "../../love/js/html_span_text.mjs";
+import { html_bold_mild } from "../../love/js/html_bold_mild.mjs";
 import { html_style_margin_x } from "../../love/js/html_style_margin_x.mjs";
 import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
 import { html_display_block } from "../../love/js/html_display_block.mjs";
@@ -150,8 +151,10 @@ export async function app_search_results(context, div_results) {
     book_card_add(book_code);
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     let div_chapter = html_div(div_book);
-    let chapter_label = html_span_text(div_chapter, chapter_name);
-    app_shared_text_deemphasized(chapter_label);
+    html_display_inline_block(div_chapter);
+    let chapter_label_text = text_combine(chapter_name, ":");
+    let chapter_label = html_span_text(div_chapter, chapter_label_text);
+    html_bold_mild(chapter_label);
     html_style_margin_x(chapter_label, "0.3em");
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_chapter);
