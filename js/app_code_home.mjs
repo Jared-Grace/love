@@ -9,7 +9,7 @@ import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
-import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
+import { app_code_scroll_center_covered } from "./app_code_scroll_center_covered.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -69,7 +69,7 @@ export function app_code_home(context) {
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
   if (found) {
-    "not awaited on purpose: app_shared_refresh scrolls the window to the top right after this screen returns, so we let the centering (which waits a couple of animation frames internally) fire AFTER that top-scroll instead of being overridden by it";
-    html_scroll_center_now(just_left);
+    "not awaited on purpose: the white cover goes up synchronously now, then the centering fires a couple of animation frames later (after app_shared_refresh scrolls the window to the top), and the cover fades to reveal the already-centered list - so the top-to-center jump is hidden";
+    app_code_scroll_center_covered(just_left);
   }
 }
