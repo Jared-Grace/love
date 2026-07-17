@@ -80,6 +80,8 @@ export function app_code_lesson_console_log_nested_generic(params) {
     ]);
     html_span_text(line_more, more_text);
     html_span_text_code_dark(line_more, triple_to_code(example_triple));
+    let line_name = html_div(c);
+    html_span_text(line_name, "Code like this is called an expression");
     let line_between = html_div(c);
     html_span_text(line_between, "Put one ");
     html_span_text_code_dark(line_between, symbol);
