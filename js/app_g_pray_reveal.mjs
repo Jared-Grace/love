@@ -26,7 +26,7 @@ export function app_g_pray_reveal(container, correct, label) {
       html_remove(waiting);
       reveal();
     }
-    let delay = list_random_item([1000, 2000, 3000, 4000]);
+    let delay = list_random_item([4000, 5000, 6000, 7000]);
     setTimeout(answered, delay);
   }
   let pray_b = app_g_button_green(container, label, on_pray);
