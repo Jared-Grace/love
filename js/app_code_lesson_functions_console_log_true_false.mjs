@@ -47,7 +47,7 @@ export function app_code_lesson_functions_console_log_true_false() {
       return render;
     }
     let rights = [name, " true or false"];
-    let built = app_code_lesson_name_id_generic(rights, "value", title_get);
+    let built = app_code_lesson_name_id_generic(rights, "values", title_get);
     return built;
   }
   function above(root) {
