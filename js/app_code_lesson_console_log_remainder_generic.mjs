@@ -107,7 +107,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text_code_dark(parent, after);
   }
   function example(parent) {
-    "a concrete grouping story: share (5*divisor - 1) pieces of bread into divisor groups; each group gets 4 pieces, so 4 added divisor times is 4*divisor, and divisor-1 pieces are left over (the largest remainder). for divisor 3 this is the familiar 14 pieces into 3 groups of 4 with 2 left over";
+    "a concrete grouping story: share (5*divisor - 1) loaves of bread into divisor groups; each group gets 4 loaves, so 4 added divisor times is 4*divisor, and divisor-1 loaves are left over (the largest remainder). for divisor 3 this is the familiar 14 loaves into 3 groups of 4 with 2 left over";
     let each_group = 4;
     let group_total = multiply(each_group, divisor);
     let left = subtract(divisor, 1);
@@ -127,19 +127,19 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_div_cycle_code(parent, [
       "Suppose we share ",
       text_to(total),
-      " pieces of bread into ",
+      " loaves of bread into ",
       divisor_text,
       " groups",
     ]);
     html_div_cycle_code(parent, [
       "Each group gets ",
       text_to(each_group),
-      " pieces - that is ",
+      " loaves - that is ",
       grouped_equation,
     ]);
     let leftover_middle = text_combine_multiple([
       " ",
-      word_pluralize(left, "piece"),
+      word_pluralize(left, "loaf"),
       " ",
       word_is_are(left),
       " left over, so ",
@@ -149,7 +149,10 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text(leftover_line, leftover_middle);
     equation_with_remainder(leftover_line, sum_expr, left, total);
     let definition = html_div(parent);
-    html_span_text(definition, "The left over is called the ");
+    html_span_text(
+      definition,
+      "When we divide two numbers, the left over is called the ",
+    );
     html_span_text_bold(definition, "remainder");
     let conclusion = html_div(parent);
     html_span_text(conclusion, "So the remainder is ");
