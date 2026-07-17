@@ -9,6 +9,7 @@ import { g_greeting } from "./g_greeting.mjs";
 import { g_boundary } from "./g_boundary.mjs";
 import { integer_random_0 } from "./integer_random_0.mjs";
 import { list_get } from "./list_get.mjs";
+import { each_index } from "./each_index.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
