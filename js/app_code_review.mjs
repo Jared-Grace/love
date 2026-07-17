@@ -22,7 +22,7 @@ import { app_code_no_more_lessons } from "../../love/js/app_code_no_more_lessons
 import { app_code_container_light_blue } from "../../love/js/app_code_container_light_blue.mjs";
 import { app_code_container_padded_x } from "../../love/js/app_code_container_padded_x.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
-import { app_replace_button_home_text } from "../../love/js/app_replace_button_home_text.mjs";
+import { app_shared_button_home_text } from "../../love/js/app_shared_button_home_text.mjs";
 import { app_code_home } from "../../love/js/app_code_home.mjs";
 import { app_code_examples } from "../../love/js/app_code_examples.mjs";
 import { app_code_lessons } from "../../love/js/app_code_lessons.mjs";
@@ -110,7 +110,7 @@ export function app_code_review(context) {
   }
   let restart_text = app_shared_button_restart_text("Restart review");
   let restart_button = app_shared_button_wide(g, restart_text, go_restart);
-  let home_text = app_replace_button_home_text();
+  let home_text = app_shared_button_home_text();
   async function go_home() {
     await app_shared_screen_set(context, app_code_home);
   }
