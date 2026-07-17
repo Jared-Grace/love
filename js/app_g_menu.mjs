@@ -2,6 +2,7 @@ import { html_remove } from "./html_remove.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_study } from "./app_g_study.mjs";
+import { app_g_new_game } from "./app_g_new_game.mjs";
 import { app_g_menu_clear_back } from "./app_g_menu_clear_back.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_button_uncolored } from "./app_g_button_uncolored.mjs";
@@ -40,4 +41,5 @@ export function app_g_menu(overlay, player) {
   }
   app_g_button_uncolored(overlay, text, lambda7);
   app_g_study(player, overlay, close);
+  app_g_new_game(overlay, player);
 }
