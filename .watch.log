@@ -2322,3 +2322,15 @@ app_shared_name_search_info
 { search: 'g', a_name: 'g' }
 { search: 'index', a_name: 'index' }
 { search: 'next', a_name: 'next' }
+{ search: 'karate', a_name: 'karate' }
+{ search: 'a', a_name: 'a' }
+{ search: 'apps_all', a_name: 'apps_all' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'code', a_name: 'code' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g', a_name: 'g' }
+{ search: 'index', a_name: 'index' }
+{ search: 'next', a_name: 'next' }
