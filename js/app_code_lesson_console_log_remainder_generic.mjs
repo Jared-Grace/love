@@ -19,7 +19,9 @@ import { integer_random } from "./integer_random.mjs";
 import { range } from "./range.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
+import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
+import { list_join } from "./list_join.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -87,15 +89,47 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let color = remainder_color(remainder);
     html_span_text_code_background(parent, text_to(remainder), color);
   }
+  function example(parent) {
+    "a concrete grouping story: share (5*divisor - 1) loaves into divisor groups; each group gets 4, so 4 added divisor times is 4*divisor, and divisor-1 loaves are left over (the largest remainder). for divisor 3 this is the familiar 14 loaves into 3 groups of 4 with 2 left over";
+    let each_group = 4;
+    let group_total = multiply(each_group, divisor);
+    let left = subtract(divisor, 1);
+    let total = add(group_total, left);
+    function group_size_of(index) {
+      "the size of each group (ignores which group), so the sum reads 4 + 4 + 4";
+      return text_to(each_group);
+    }
+    let fours = range_map(divisor, group_size_of);
+    let sum_expr = list_join(fours, " + ");
+    html_div_cycle_code(parent, [
+      "For example, we share ",
+      text_to(total),
+      " loaves of bread into ",
+      divisor_text,
+      " groups",
+    ]);
+    html_div_cycle_code(parent, [
+      "each group gets ",
+      text_to(each_group),
+      ", that is ",
+      sum_expr,
+      " = ",
+      text_to(group_total),
+      ", with ",
+      text_to(left),
+      " left over",
+    ]);
+    let conclusion = html_div(parent);
+    html_span_text(conclusion, "so the remainder is ");
+    remainder_chip(conclusion, left);
+  }
   function above(root) {
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, [
       "When we divide, sometimes the numbers divide evenly",
     ]);
     html_div_cycle_code(intro, ["Sometimes the numbers do not divide evenly"]);
-    html_div_cycle_code(intro, [
-      "When the numbers do not divide evenly, some are left over",
-    ]);
+    example(intro);
     html_div_cycle_code(intro, ["The remainder is how many are left over"]);
     let evenly = html_div(intro);
     html_span_text(
