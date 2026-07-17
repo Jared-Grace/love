@@ -6,6 +6,9 @@ import { text_trim } from "./text_trim.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { not } from "./not.mjs";
 import { error } from "./error.mjs";
+import { date_time_zone_from_iso } from "./date_time_zone_from_iso.mjs";
+import { date_time_zone_format_to } from "./date_time_zone_format_to.mjs";
+import { date_time_zone_format_day_first } from "./date_time_zone_format_day_first.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 export async function machine_resumes_past_day() {
@@ -40,18 +43,25 @@ export async function machine_resumes_past_day() {
       );
     }
   }
-  let stdout = await journal_stdout("--since=-1d -o short-iso", wrap);
+  let stdout = await journal_stdout("--since=-1d -o short-iso --reverse", wrap);
   let lines = text_split(stdout, "\n");
   function line_is_resume(line) {
     let is_resume = line.includes("System returned from sleep");
     return is_resume;
   }
   let resume_lines = list_filter(lines, line_is_resume);
-  function line_timestamp(line) {
+  function line_iso(line) {
     let words = text_split(line, " ");
-    let timestamp = property_get(words, "0");
-    return timestamp;
+    let iso = property_get(words, "0");
+    return iso;
   }
-  let timestamps = list_map(resume_lines, line_timestamp);
-  return timestamps;
+  let isos = list_map(resume_lines, line_iso);
+  function iso_human(iso) {
+    let dt = date_time_zone_from_iso(iso);
+    let format = date_time_zone_format_day_first();
+    let human = date_time_zone_format_to(dt, format);
+    return human;
+  }
+  let humans = list_map(isos, iso_human);
+  return humans;
 }
