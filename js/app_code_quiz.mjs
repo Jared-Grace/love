@@ -1,13 +1,13 @@
 import { app_code_quiz_index_reset } from "../../love/js/app_code_quiz_index_reset.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { app_code_home } from "../../love/js/app_code_home.mjs";
-import { app_replace_button_home_text } from "../../love/js/app_replace_button_home_text.mjs";
+import { app_shared_button_home_text } from "../../love/js/app_shared_button_home_text.mjs";
 import { app_code_examples } from "../../love/js/app_code_examples.mjs";
 import { app_code_lesson_text_example_another } from "../../love/js/app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "../../love/js/app_code_example_answer_gap.mjs";
 import { list_single } from "../../love/js/list_single.mjs";
 import { list_shuffle } from "../../love/js/list_shuffle.mjs";
-import { app_code_batch_on_refill } from "./app_code_batch_on_refill.mjs";
+import { app_code_batch_on_refill } from "../../love/js/app_code_batch_on_refill.mjs";
 import { html_div_text } from "../../love/js/html_div_text.mjs";
 import { app_code_container_light_blue } from "../../love/js/app_code_container_light_blue.mjs";
 import { app_code_container_padded_x } from "../../love/js/app_code_container_padded_x.mjs";
@@ -54,7 +54,7 @@ export function app_code_quiz(context) {
       on_click: lambda,
     },
   ]);
-  let text = app_replace_button_home_text();
+  let text = app_shared_button_home_text();
   async function lambda2() {
     app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_home);
