@@ -1,0 +1,21 @@
+import { html_code_element } from "./html_code_element.mjs";
+import { app_shared_color_green } from "./app_shared_color_green.mjs";
+export function examples_style() {
+  let green = app_shared_color_green();
+  let css = `
+    body { font-family: system-ui, sans-serif; max-width: 62rem; margin: 0 auto; padding: 2rem; color: #1a1a1a; background: #fafafa; }
+    h1 { font-size: 1.6rem; }
+    .example { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0; }
+    .example h2 { font-size: 1.15rem; margin: 0 0 .35rem; }
+    .note { color: #555; margin: 0 0 .75rem; line-height: 1.5; }
+    .command code { background: #f0f0f0; padding: .3rem .5rem; border-radius: 4px; font-family: ui-monospace, monospace; font-size: .9rem; }
+    .io { display: grid; grid-template-columns: 1fr auto 1fr; gap: .75rem; align-items: center; margin-top: .75rem; }
+    pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
+    .arrow { font-size: 1.5rem; color: ${green}; text-align: center; }
+    .rejection pre.call { border-left: 3px solid #d33; }
+    .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
+    @media (max-width: 44rem) { .io { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); } }
+  `;
+  let r = html_code_element("style", {}, css);
+  return r;
+}
