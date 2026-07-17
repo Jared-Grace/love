@@ -10,7 +10,6 @@ import { list_size_1 } from "../../love/js/list_size_1.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { firebase_storage_download_json_decompress } from "../../love/js/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../love/js/list_filter.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
 import { property_set_exists_not } from "../../love/js/property_set_exists_not.mjs";
 import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
 import { list_squash } from "../../love/js/list_squash.mjs";
@@ -25,7 +24,6 @@ import { app_reply_verses_add } from "../../love/js/app_reply_verses_add.mjs";
 import { html_remove } from "../../love/js/html_remove.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../love/js/ebible_parts_chapter_code_to_reference.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
-import { not } from "../../love/js/not.mjs";
 import { ebible_book_exists } from "../../love/js/ebible_book_exists.mjs";
 import { ebible_chapter_code_to_book } from "../../love/js/ebible_chapter_code_to_book.mjs";
 import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
@@ -106,7 +104,14 @@ export async function app_search_results(context, div_results) {
     expand_all_lambda,
   );
   html_br_2(div_results);
-  let results = object_to_list(dictionary);
+  let results_all = object_to_list(dictionary);
+  function result_book_exists(vk) {
+    let chapter_code = property_get(vk, "key");
+    let book_code = ebible_chapter_code_to_book(chapter_code);
+    let e = ebible_book_exists(books, book_code);
+    return e;
+  }
+  let results = list_filter(results_all, result_book_exists);
   function bible_order_key(vk) {
     let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
@@ -119,11 +124,6 @@ export async function app_search_results(context, div_results) {
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
     let chapter_code = property_get(vk, "key");
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let e = ebible_book_exists(books, book_code);
-    if (not(e)) {
-      return null;
-    }
     function each_verse_number(verse_number) {
       let div_verse = app_shared_container_blue(div_results);
       let reference = ebible_parts_chapter_code_to_reference(
@@ -175,8 +175,7 @@ export async function app_search_results(context, div_results) {
     return bs;
   }
   let button_lists = list_map(results, each_result);
-  let mapped2 = list_filter(button_lists, null_not_is);
-  button_list = list_squash(mapped2);
+  button_list = list_squash(button_lists);
   let s = list_size_1(button_list);
   if (s) {
     let only = list_single(button_list);
