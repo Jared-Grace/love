@@ -2,6 +2,7 @@ import { js_code_call_args_await_maybe_parse_statement } from "./js_code_call_ar
 import { list_min } from "./list_min.mjs";
 import { list_slice_from_indices } from "./list_slice_from_indices.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
+import { js_imports_fix } from "./js_imports_fix.mjs";
 import { list_insert } from "./list_insert.mjs";
 import { list_remove_multiple } from "./list_remove_multiple.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
@@ -79,4 +80,5 @@ export async function js_functionize(
   let m = list_min(indices);
   list_insert(stack_2, m, parsed);
   await js_outside_move(ast);
+  await js_imports_fix(ast);
 }
