@@ -1,7 +1,9 @@
 import { app_shared_bible_open } from "../../love/js/app_shared_bible_open.mjs";
 import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
 import { html_style_margin_y } from "../../love/js/html_style_margin_y.mjs";
-import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
+import { app_shared_button_inline } from "../../love/js/app_shared_button_inline.mjs";
+import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
+import { html_display_block } from "../../love/js/html_display_block.mjs";
 import { html_br_2 } from "../../love/js/html_br_2.mjs";
 import { firebase_storage_url_project_jg } from "../../love/js/firebase_storage_url_project_jg.mjs";
 import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
@@ -125,7 +127,8 @@ export async function app_search_results(context, div_results) {
     let verse_numbers = property_get(vk, "value");
     let chapter_code = property_get(vk, "key");
     function each_verse_number(verse_number) {
-      let div_verse = app_shared_container_blue(div_results);
+      let div_verse = html_div(div_results);
+      html_display_inline_block(div_verse);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
@@ -133,6 +136,7 @@ export async function app_search_results(context, div_results) {
       );
       let b = null;
       async function click() {
+        html_display_block(div_verse);
         html_remove(b);
         let cb_text = html_button_copy_text();
         let cb = app_shared_button_wide(div_verse, cb_text, copy);
@@ -165,8 +169,7 @@ export async function app_search_results(context, div_results) {
           await list_join_newline_2_copy(bible_texts);
         }
       }
-      b = app_shared_button_wide(div_verse, reference, click);
-      html_style_margin_y(b, "0.2em");
+      b = app_shared_button_inline(div_verse, reference, click);
       property_set_exists_not(b, "click", click);
       return b;
     }
