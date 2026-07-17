@@ -23,6 +23,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
 import { app_shared_correct_gold } from "./app_shared_correct_gold.mjs";
+import { g_z } from "./g_z.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 export async function app_g_conversation(
   prayer,
