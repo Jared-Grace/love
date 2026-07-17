@@ -20,6 +20,7 @@ import { js_await_add } from "./js_await_add.mjs";
 import { js_operators_to_calls } from "./js_operators_to_calls.mjs";
 import { js_identifiers_rename_unused_number_suffixes } from "./js_identifiers_rename_unused_number_suffixes.mjs";
 import { js_strings_add_reference_to_fn_names_if_underscore } from "./js_strings_add_reference_to_fn_names_if_underscore.mjs";
+import { js_imports_fix } from "./js_imports_fix.mjs";
 export function js_auto_transforms() {
   let transforms = [
     js_operators_to_calls,
@@ -44,6 +45,7 @@ export function js_auto_transforms() {
     js_identifiers_rename_unused_number_suffixes,
     js_log_f_name_add,
     js_strings_add_reference_to_fn_names_if_underscore,
+    js_imports_fix,
   ];
   return transforms;
   return;
