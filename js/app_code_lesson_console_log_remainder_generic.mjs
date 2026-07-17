@@ -78,6 +78,10 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
   function above(root) {
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, [
+      "the remainder is how many are left over after making groups of ",
+      divisor_text,
+    ]);
+    html_div_cycle_code(intro, [
       "",
       percent,
       " gives the remainder after dividing by ",
