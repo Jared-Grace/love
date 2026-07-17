@@ -115,7 +115,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
     let chip = remainder_chip(tile, remainder);
-    let rings = "0 0 0 0.1em rgb(147, 197, 253), 0 0 0 0.22em rgb(8, 12, 28)";
+    let rings = "0 0 0 0.1em rgb(178, 214, 255), 0 0 0 0.22em rgb(8, 12, 28)";
     html_style_set(chip, "box-shadow", rings);
     let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
     html_span_text(tile, after);
