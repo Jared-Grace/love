@@ -355,3 +355,15 @@ webpack_watch
 { rebuild: 'calendar' }
 { rebuild: 'code' }
 { rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'calendar_paste', a_name: 'calendar_paste' }
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'code', a_name: 'code' }
+{ search: 'g', a_name: 'g' }
+{ search: 'calendar_paste', a_name: 'calendar_paste' }
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'code', a_name: 'code' }
+{ search: 'g', a_name: 'g' }
+{ search: 'calendar_paste', a_name: 'calendar_paste' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/calendar_paste.html' }
