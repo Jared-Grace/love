@@ -107,14 +107,15 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     return chip;
   }
   function equation_with_remainder(parent, prefix_expr, remainder, result) {
-    "the whole sum as one continuous dark code tile, with the remainder as its blue chip sitting on top inside the tile (not splitting it in three): before text, the remainder chip, then === result; the remainder here is the largest one (divisor-1), which the reversed spectrum makes the lightest blue, and a soft light-blue glow lifts it further off the black tile";
+    "the whole sum as one continuous dark code tile, with the remainder as its blue chip sitting on top inside the tile (not splitting it in three): before text, the remainder chip, then === result; the remainder here is the largest one (divisor-1), which the reversed spectrum makes the lightest blue, and two box-shadow rings (a light ring hugging the chip, then a dark ring beyond it) lift it off the black tile";
     let triple_equal = js_operator_triple_equal_symbol();
     let tile = html_span(parent);
     html_style_code_dark(tile);
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
     let chip = remainder_chip(tile, remainder);
-    html_style_set(chip, "box-shadow", "0 0 0.3em 0.05em rgb(147, 197, 253)");
+    let rings = "0 0 0 0.045em rgb(224, 238, 255), 0 0 0 0.09em rgb(8, 12, 28)";
+    html_style_set(chip, "box-shadow", rings);
     let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
     html_span_text(tile, after);
   }
