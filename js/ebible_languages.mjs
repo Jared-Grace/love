@@ -164,11 +164,6 @@ export function ebible_languages() {
       language_code: "mni",
     },
     {
-      name: "Dutch",
-      bible_folder: "nldnbg",
-      language_code: "nld",
-    },
-    {
       name: "Italian",
       bible_folder: "ita1927",
       language_code: "ita",
