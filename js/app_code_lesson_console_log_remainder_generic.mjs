@@ -14,6 +14,10 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -98,6 +102,19 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let color = remainder_color(remainder);
     html_span_text_code_background(parent, text_to(remainder), color);
   }
+  function equation_with_remainder(parent, prefix_expr, remainder, result) {
+    "one dark code tile 'prefix + remainder === result' with just the remainder digit highlighted in its blue remainder color, so the left over in the sum is tied to the remainder concept and its color";
+    let triple_equal = js_operator_triple_equal_symbol();
+    let chip = html_span(parent);
+    html_style_code_dark(chip);
+    let before = text_combine(prefix_expr, " + ");
+    html_span_text(chip, before);
+    let highlight = html_span(chip);
+    html_text_set(highlight, text_to(remainder));
+    html_style_background_color_set(highlight, remainder_color(remainder));
+    let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
+    html_span_text(chip, after);
+  }
   function example(parent) {
     "a concrete grouping story: share (5*divisor - 1) pieces of bread into divisor groups; each group gets 4 pieces, so 4 added divisor times is 4*divisor, and divisor-1 pieces are left over (the largest remainder). for divisor 3 this is the familiar 14 pieces into 3 groups of 4 with 2 left over";
     let each_group = 4;
@@ -110,18 +127,11 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     }
     let fours = range_map(divisor, group_size_of);
     let sum_expr = list_join(fours, " + ");
-    let all_parts = list_concat(fours, [text_to(left)]);
-    let full_expr = list_join(all_parts, " + ");
     let triple_equal = js_operator_triple_equal_symbol();
     let grouped_equation = js_code_binary_spaced_nb(
       sum_expr,
       triple_equal,
       text_to(group_total),
-    );
-    let total_equation = js_code_binary_spaced_nb(
-      full_expr,
-      triple_equal,
-      text_to(total),
     );
     html_div_cycle_code(parent, [
       "Suppose we share ",
@@ -143,7 +153,10 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       word_is_are(left),
       " left over, so ",
     ]);
-    html_div_cycle_code(parent, ["", text_to(left), leftover_middle, total_equation]);
+    let leftover_line = html_div(parent);
+    html_span_text_code_dark(leftover_line, text_to(left));
+    html_span_text(leftover_line, leftover_middle);
+    equation_with_remainder(leftover_line, sum_expr, left, total);
     let definition = html_div(parent);
     html_span_text(definition, "The left over is called the ");
     html_span_text_bold(definition, "remainder");
