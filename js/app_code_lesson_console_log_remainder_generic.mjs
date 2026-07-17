@@ -1,6 +1,7 @@
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_code_statement } from "./js_code_statement.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
@@ -103,6 +104,17 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let sum_expr = list_join(fours, " + ");
     let all_parts = list_concat(fours, [text_to(left)]);
     let full_expr = list_join(all_parts, " + ");
+    let triple_equal = js_operator_triple_equal_symbol();
+    let grouped_equation = js_code_binary_spaced_nb(
+      sum_expr,
+      triple_equal,
+      text_to(group_total),
+    );
+    let total_equation = js_code_binary_spaced_nb(
+      full_expr,
+      triple_equal,
+      text_to(total),
+    );
     html_div_cycle_code(parent, [
       "For example, we share ",
       text_to(total),
@@ -114,17 +126,13 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       "each group gets ",
       text_to(each_group),
       " - that is ",
-      sum_expr,
-      " = ",
-      text_to(group_total),
+      grouped_equation,
     ]);
     html_div_cycle_code(parent, [
       "",
       text_to(left),
       " loaves are left over, so ",
-      full_expr,
-      " = ",
-      text_to(total),
+      total_equation,
     ]);
     let conclusion = html_div(parent);
     html_span_text(conclusion, "so the remainder is ");

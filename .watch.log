@@ -1,0 +1,81 @@
+webpack_watch
+{
+  apps: [
+    'karate',         'a',
+    'apps_all',       'autopray',
+    'bible',          'calendar_paste',
+    'calendar',       'ceb_bible',
+    'code',           'designs_universal',
+    'g_bible',        'g_verify',
+    'g',              'index',
+    'message',        'next',
+    'original_bible', 'replace',
+    'reply_local',    'reply',
+    'sandbox',        'search',
+    'supper_tl',      'supper',
+    'verses'
+  ],
+  indexed: 25
+}
+{
+  watching: [
+    '../karate_code/js',
+    '../love/js',
+    '../p_np/js',
+    '../portfolio_qa/js'
+  ]
+}
+r.mjs result:
+undefined
+webpack_watch
+{ rebuild: 'karate' }
+{ rebuild: 'reply_local' }
+{ rebuild: 'sandbox' }
+{ rebuild: 'supper' }
+{ rebuild: 'verses' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'sandbox', a_name: 'sandbox' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
+{ search: 'karate', a_name: 'karate' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'sandbox', a_name: 'sandbox' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
+{ search: 'verses', a_name: 'verses' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/verses.html' }
+app_shared_name_search_info
+{ search: 'sandbox', a_name: 'sandbox' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/sandbox.html' }
+app_shared_name_search_info
+{ search: 'supper', a_name: 'supper' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper.html' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../karate_code/public/dev/karate.html' }
+app_shared_name_search_info
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
