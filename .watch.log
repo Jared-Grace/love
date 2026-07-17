@@ -459,3 +459,52 @@ app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'search' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
+webpack_watch
+{ rebuild: 'search' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
+webpack_watch
+{ rebuild: 'search' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
