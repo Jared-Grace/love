@@ -157,7 +157,8 @@ export async function app_search_results(context, div_results) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     let div_chapter = html_div(div_book);
     html_display_inline_block(div_chapter);
-    html_border(div_chapter, "0.1em", app_shared_container_blue_border_color());
+    let color_background = app_shared_container_blue_dark_background_color();
+    html_style_background_color_set(div_chapter, color_background);
     html_border_radius(div_chapter, app_shared_border_radius());
     html_style_padding_em(div_chapter, "0.2");
     html_style_margin_x(div_chapter, "0.15em");
@@ -165,6 +166,7 @@ export async function app_search_results(context, div_results) {
     let chapter_label_text = text_combine(chapter_name, ":");
     let chapter_label = html_span_text(div_chapter, chapter_label_text);
     html_bold_mild(chapter_label);
+    html_font_color_set(chapter_label, app_shared_container_blue_dark_font_color());
     html_style_margin_x(chapter_label, "0.3em");
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_chapter);
