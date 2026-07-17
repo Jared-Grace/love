@@ -15,13 +15,13 @@ import { property_get } from "./property_get.mjs";
 import { list_first_remaining } from "./list_first_remaining.mjs";
 import { app_supper_verses_get } from "./app_supper_verses_get.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { app_supper_choices } from "./app_supper_choices.mjs";
+import { ebible_choices } from "./ebible_choices.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_map } from "./list_map.mjs";
 export async function app_supper_verses_render(root, folders) {
   let waited = await list_map_unordered_async(folders, app_supper_verses_get);
-  let choices = await app_supper_choices();
+  let choices = await ebible_choices();
   function folder_name(folder) {
     let choice = list_find_property_or_null(choices, "bible_folder", folder);
     if (null_is(choice)) {
