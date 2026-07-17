@@ -1,4 +1,4 @@
-import { app_replace_button_wide_next } from "../../love/js/app_replace_button_wide_next.mjs";
+import { app_shared_button_wide_next } from "../../love/js/app_shared_button_wide_next.mjs";
 import { app_code_padding_x } from "../../love/js/app_code_padding_x.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
 import { text_combine_middle_space } from "../../love/js/text_combine_middle_space.mjs";
@@ -36,7 +36,7 @@ export function app_code_next(
   app_shared_button_wide(container_question, answer_yes, refresh);
   let container_buttons = html_div(parent_next_back);
   app_code_padding_x(container_buttons);
-  let bn = app_replace_button_wide_next(container_buttons, on_next);
+  let bn = app_shared_button_wide_next(container_buttons, on_next);
   if (null_not_is(on_back)) {
     let bt = app_shared_button_back_text();
     if (null_not_is(back_text)) {
