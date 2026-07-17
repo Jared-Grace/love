@@ -131,12 +131,20 @@ export async function app_g_verify_home(context) {
       html_style_set(banner, "font-size", "0.95em");
     }
     let view = null;
+    let verse_buttons = {};
+    function highlight_selected() {
+      Object.keys(verse_buttons).forEach(function (k) {
+        let bg = k === selected_key ? app_shared_verse_selected_background_color() : "";
+        html_style_background_color_set(verse_buttons[k], bg);
+      });
+    }
     function on_approved(v) {
       localStorage.setItem(advance_key, v);
     }
     function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
       localStorage.setItem(storage_key, selected_key);
+      highlight_selected();
       app_g_verify_view(
         view,
         property_get(passage, "english"),
@@ -149,6 +157,7 @@ export async function app_g_verify_home(context) {
     function open_pending(verse) {
       selected_key = verse;
       localStorage.setItem(storage_key, verse);
+      highlight_selected();
       html_clear(view);
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
       html_font_color_set(msg, app_shared_text_deemphasized_color());
@@ -159,7 +168,7 @@ export async function app_g_verify_home(context) {
     html_style_set(bar, "margin-top", app_shared_spaced_small_gap());
     passages.forEach(function (passage) {
       let key = g_sermon_passage_verses_key(passage);
-      app_shared_button(bar, "v" + key, function () {
+      verse_buttons[key] = app_shared_button(bar, "v" + key, function () {
         localStorage.removeItem(advance_key);
         open_passage(passage);
       });
@@ -169,6 +178,7 @@ export async function app_g_verify_home(context) {
         open_pending(pending);
       });
       html_style_set(pb, "opacity", "0.5");
+      verse_buttons[pending] = pb;
     }
     view = html_div(wrap);
     if (passages.length === 0) {
