@@ -12,6 +12,9 @@ import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
+import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range } from "./range.mjs";
 import { range_map } from "./range_map.mjs";
@@ -75,23 +78,58 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let built = app_code_lesson_name_id_generic(rights, "function", title_get);
     return built;
   }
+  function remainder_color(remainder) {
+    "each remainder 0..divisor-1 gets an evenly spaced point on the shared blue->black spectrum (reused from the bible passage colors), so the remainder's value is visible as a color that resets to blue when the cycle starts over";
+    let color = app_shared_gradient_color(remainder, divisor);
+    return color;
+  }
+  function remainder_chip(parent, remainder) {
+    let color = remainder_color(remainder);
+    html_span_text_code_background(parent, text_to(remainder), color);
+  }
   function above(root) {
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, [
-      "the remainder is how many are left over after making groups of ",
-      divisor_text,
-    ]);
-    html_div_cycle_code(intro, [
       "",
       percent,
-      " gives the remainder after dividing by ",
+      " gives the remainder after we divide",
+    ]);
+    html_div_cycle_code(intro, [
+      "When we divide, sometimes the numbers divide evenly",
+    ]);
+    html_div_cycle_code(intro, ["Sometimes the numbers do not divide evenly"]);
+    let meaning = app_code_container_light_blue(root);
+    html_div_cycle_code(meaning, [
+      "When a number divides evenly, its remainder is ",
+      "0",
+    ]);
+    html_div_cycle_code(meaning, [
+      "a remainder of ",
+      "0",
+      " means nothing is left over",
+    ]);
+    html_div_cycle_code(meaning, [
+      "When a number does not divide evenly, the remainder is how many are left over",
+    ]);
+    html_div_cycle_code(meaning, [
+      "the leftover is always smaller than ",
       divisor_text,
     ]);
+    let legend = html_div(meaning);
+    html_span_text(legend, "so the remainder is one of these: ");
+    function legend_chip(remainder) {
+      remainder_chip(legend, remainder);
+      html_span_text(legend, " ");
+    }
+    each(range(divisor), legend_chip);
     let table = app_code_container_light_blue(root);
     function row(n) {
       let expr = code_of(n);
       let remainder = modulo(n, divisor);
-      html_div_cycle_code(table, ["", expr, " is ", text_to(remainder)]);
+      let line = html_div(table);
+      html_span_text_code_dark(line, expr);
+      html_span_text(line, " is ");
+      remainder_chip(line, remainder);
     }
     let row_count = add(multiply(2, divisor), 1);
     each(range(row_count), row);
