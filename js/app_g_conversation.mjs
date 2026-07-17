@@ -51,13 +51,13 @@ export async function app_g_conversation(
     let choices = app_g_container_player(overlay);
     app_g_p_text(choices, "What would you like to say?");
     let correct_index = integer_random_0(2);
-    function choice(index, action) {
+    function choice(index, action, topic) {
       function on_choice() {
         let is_correct = index === correct_index;
         if (is_correct) {
           action();
         } else {
-          app_g_npc_says(npc, overlay, g_boundary(meet));
+          app_g_npc_says(npc, overlay, g_boundary(meet, topic));
         }
       }
       return on_choice;
