@@ -107,15 +107,13 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     return chip;
   }
   function equation_with_remainder(parent, prefix_expr, remainder, result) {
-    "the whole sum as one continuous dark code tile, with the remainder as its blue chip sitting on top inside the tile (not splitting it in three): before text, the remainder chip, then === result";
-    "the equation's remainder is always the darkest one (divisor-1), so a thin light-blue outline lifts the near-navy chip off the black tile";
+    "the whole sum as one continuous dark code tile, with the remainder as its blue chip sitting on top inside the tile (not splitting it in three): before text, the remainder chip, then === result; the remainder here is the largest one (divisor-1), which the reversed spectrum makes the lightest blue so it stands out on the black tile without needing an outline";
     let triple_equal = js_operator_triple_equal_symbol();
     let tile = html_span(parent);
     html_style_code_dark(tile);
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
-    let chip = remainder_chip(tile, remainder);
-    html_style_set(chip, "outline", "0.08em solid rgb(130, 165, 235)");
+    remainder_chip(tile, remainder);
     let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
     html_span_text(tile, after);
   }
@@ -177,14 +175,16 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       "When we divide, sometimes the numbers divide evenly",
     ]);
     html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
-    example(intro);
-    let evenly = html_div(intro);
+    let example_box = app_code_container_light_blue(root);
+    example(example_box);
+    let evenly_box = app_code_container_light_blue(root);
+    let evenly = html_div(evenly_box);
     html_span_text(
       evenly,
       "When the numbers divide evenly, nothing is left over, so the remainder is ",
     );
     remainder_chip(evenly, 0);
-    html_div_cycle_code(intro, ["", percent, " gives the remainder"]);
+    html_div_cycle_code(evenly_box, ["", percent, " gives the remainder"]);
     let meaning = app_code_container_light_blue(root);
     html_div_cycle_code(meaning, [
       "When we divide by ",
