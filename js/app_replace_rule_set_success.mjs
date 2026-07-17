@@ -1,4 +1,4 @@
-import { app_replace_success_message } from "../../love/js/app_replace_success_message.mjs";
+import { app_shared_success_message } from "../../love/js/app_shared_success_message.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "../../love/js/app_replace_rule_set_success_attribute_completed.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../love/js/app_replace_rule_set_success_attribute_next.mjs";
 import { html_data_set_test } from "../../love/js/html_data_set_test.mjs";
@@ -42,7 +42,7 @@ export async function app_replace_rule_set_success(
   let list = [goal_list_symbols, sbs];
   app_replace_symbol_tile_valid_multiple_nested(list);
   await html_move_animate_multiple(sbs, goal_list_symbols, duration);
-  app_replace_success_message(div_below);
+  app_shared_success_message(div_below);
   let p_next = html_p(div_below);
   let goal_index_next = text_combine(goal_index, 1);
   let ii = list_index_is(goals, goal_index_next);
