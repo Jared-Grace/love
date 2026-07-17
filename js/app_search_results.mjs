@@ -9,6 +9,11 @@ import { html_style_margin_bottom } from "../../love/js/html_style_margin_bottom
 import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
 import { html_span_text } from "../../love/js/html_span_text.mjs";
 import { html_bold_mild } from "../../love/js/html_bold_mild.mjs";
+import { html_border } from "../../love/js/html_border.mjs";
+import { html_border_radius } from "../../love/js/html_border_radius.mjs";
+import { html_style_padding_em } from "../../love/js/html_style_padding_em.mjs";
+import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
+import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
 import { html_style_margin_x } from "../../love/js/html_style_margin_x.mjs";
 import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
 import { html_display_block } from "../../love/js/html_display_block.mjs";
@@ -152,6 +157,11 @@ export async function app_search_results(context, div_results) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     let div_chapter = html_div(div_book);
     html_display_inline_block(div_chapter);
+    html_border(div_chapter, "0.1em", app_shared_container_blue_border_color());
+    html_border_radius(div_chapter, app_shared_border_radius());
+    html_style_padding_em(div_chapter, "0.2");
+    html_style_margin_x(div_chapter, "0.15em");
+    html_style_margin_y(div_chapter, "0.15em");
     let chapter_label_text = text_combine(chapter_name, ":");
     let chapter_label = html_span_text(div_chapter, chapter_label_text);
     html_bold_mild(chapter_label);
