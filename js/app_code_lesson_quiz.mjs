@@ -23,7 +23,7 @@ import { app_code_lesson_current_number } from "../../love/js/app_code_lesson_cu
 import { app_code_review_scope } from "../../love/js/app_code_review_scope.mjs";
 import { null_not_is } from "../../love/js/null_not_is.mjs";
 import { app_code_quiz_index_reset } from "../../love/js/app_code_quiz_index_reset.mjs";
-import { app_replace_success_message } from "../../love/js/app_replace_success_message.mjs";
+import { app_shared_success_message } from "../../love/js/app_shared_success_message.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
 import { app_code_example_answer_label } from "../../love/js/app_code_example_answer_label.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
@@ -63,7 +63,7 @@ export function app_code_lesson_quiz(
   let parent_container = html_div(parent);
   let container_correction = html_div(parent_container);
   let container_success_message = html_div(parent_container);
-  let success = app_replace_success_message(container_success_message);
+  let success = app_shared_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
   let number = app_code_lesson_current_number(context);
@@ -141,7 +141,7 @@ export function app_code_lesson_quiz(
   async function on_success() {
     "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
     html_clear(container_success_message);
-    app_replace_success_message(container_success_message);
+    app_shared_success_message(container_success_message);
     html_visibility_visible(container_success_message);
     await sleep_success_color();
     qa = next_get();
