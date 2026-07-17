@@ -1,7 +1,8 @@
 import { arguments_assert_each } from "./arguments_assert_each.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_flo_body_add_first } from "./js_flo_body_add_first.mjs";
-import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
+import { js_imports_missing_add_all_at } from "./js_imports_missing_add_all_at.mjs";
+import { folder_src } from "./folder_src.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
@@ -20,7 +21,7 @@ export function function_arguments_assert_each_add_lambda(predicates_comma) {
       arguments_assert_each.name + "(arguments, [" + predicates_comma + "]);";
     let statement = js_parse_statement(code);
     js_flo_body_add_first(ast, statement);
-    await js_imports_missing_add_all(ast);
+    await js_imports_missing_add_all_at(ast, folder_src());
   }
   return lambda;
 }

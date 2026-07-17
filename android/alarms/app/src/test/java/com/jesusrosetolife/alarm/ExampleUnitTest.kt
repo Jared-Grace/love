@@ -1,4 +1,4 @@
-package com.jesusrosetolife.search
+package com.jesusrosetolife.alarm
 
 import org.junit.Test
 

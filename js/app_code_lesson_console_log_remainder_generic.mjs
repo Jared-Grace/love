@@ -90,33 +90,31 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
   function above(root) {
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, [
-      "",
-      percent,
-      " gives the remainder after we divide",
-    ]);
-    html_div_cycle_code(intro, [
       "When we divide, sometimes the numbers divide evenly",
     ]);
     html_div_cycle_code(intro, ["Sometimes the numbers do not divide evenly"]);
+    html_div_cycle_code(intro, [
+      "When the numbers do not divide evenly, some are left over",
+    ]);
+    html_div_cycle_code(intro, ["The remainder is how many are left over"]);
+    let evenly = html_div(intro);
+    html_span_text(
+      evenly,
+      "When the numbers divide evenly, nothing is left over, so the remainder is ",
+    );
+    remainder_chip(evenly, 0);
+    html_div_cycle_code(intro, ["", percent, " gives the remainder"]);
     let meaning = app_code_container_light_blue(root);
     html_div_cycle_code(meaning, [
-      "When a number divides evenly, its remainder is ",
-      "0",
-    ]);
-    html_div_cycle_code(meaning, [
-      "a remainder of ",
-      "0",
-      " means nothing is left over",
-    ]);
-    html_div_cycle_code(meaning, [
-      "When a number does not divide evenly, the remainder is how many are left over",
-    ]);
-    html_div_cycle_code(meaning, [
-      "the leftover is always smaller than ",
+      "When we divide by ",
+      divisor_text,
+      ", the remainder is always smaller than ",
       divisor_text,
     ]);
     let legend = html_div(meaning);
-    html_span_text(legend, "so the remainder is one of these: ");
+    let lead = text_combine("So if we divide by ", divisor_text);
+    html_span_text(legend, lead);
+    html_span_text(legend, ", the remainder is one of these: ");
     function legend_chip(remainder) {
       remainder_chip(legend, remainder);
       html_span_text(legend, " ");

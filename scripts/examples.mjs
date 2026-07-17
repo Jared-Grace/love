@@ -7,6 +7,7 @@ import { file_temp } from "../js/file_temp.mjs";
 import { file_overwrite } from "../js/file_overwrite.mjs";
 import { file_read } from "../js/file_read.mjs";
 import { file_js_transform } from "../js/file_js_transform.mjs";
+import { js_format } from "../js/js_format.mjs";
 import { function_arguments_assert_each_add_lambda } from "../js/function_arguments_assert_each_add_lambda.mjs";
 import { js_node_type_is_new_lambda } from "../js/js_node_type_is_new_lambda.mjs";
 
@@ -29,13 +30,11 @@ function tokens(command) {
   return out;
 }
 
-// import order and path-prefix are not semantic: compare sorted+basename-normalized imports + exact body
-function normalize(code) {
-  let base = code.replace(/from "([^"]*\/)?([^"\/]+\.mjs)"/g, 'from "$2"').trim();
-  let lines = base.split("\n");
-  let imports = lines.filter((l) => l.startsWith("import ")).sort();
-  let rest = lines.filter((l) => !l.startsWith("import "));
-  return imports.join("\n") + "\n" + rest.join("\n");
+// tools emit canonical ./ imports in natural order (js_imports_missing_add_all_at);
+// run both sides through js_format (the same pass the real file-write applies) and compare byte-exact
+async function canonical(code) {
+  let formatted = await js_format(code);
+  return formatted.trim();
 }
 
 function transform_lambda(t) {
@@ -67,7 +66,7 @@ async function run_transform(e) {
     await file_js_transform(p, lambda);
     return await file_read(p);
   });
-  return normalize(out) === normalize(e.after) ? "pass" : "fail";
+  return (await canonical(out)) === (await canonical(e.after)) ? "pass" : "fail";
 }
 
 async function run_rejection(e) {
