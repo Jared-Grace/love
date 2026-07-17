@@ -24,6 +24,9 @@ import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { list_join } from "./list_join.mjs";
+import { word_pluralize } from "./word_pluralize.mjs";
+import { word_is_are } from "./word_is_are.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -91,7 +94,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text_code_background(parent, text_to(remainder), color);
   }
   function example(parent) {
-    "a concrete grouping story: share (5*divisor - 1) loaves into divisor groups; each group gets 4, so 4 added divisor times is 4*divisor, and divisor-1 loaves are left over (the largest remainder). for divisor 3 this is the familiar 14 loaves into 3 groups of 4 with 2 left over";
+    "a concrete grouping story: share (5*divisor - 1) pieces of bread into divisor groups; each group gets 4 pieces, so 4 added divisor times is 4*divisor, and divisor-1 pieces are left over (the largest remainder). for divisor 3 this is the familiar 14 pieces into 3 groups of 4 with 2 left over";
     let each_group = 4;
     let group_total = multiply(each_group, divisor);
     let left = subtract(divisor, 1);
@@ -116,26 +119,28 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       text_to(total),
     );
     html_div_cycle_code(parent, [
-      "For example, we share ",
+      "Suppose we share ",
       text_to(total),
-      " loaves of bread into ",
+      " pieces of bread into ",
       divisor_text,
       " groups",
     ]);
     html_div_cycle_code(parent, [
-      "each group gets ",
+      "Each group gets ",
       text_to(each_group),
-      " - that is ",
+      " pieces - that is ",
       grouped_equation,
     ]);
-    html_div_cycle_code(parent, [
-      "",
-      text_to(left),
-      " loaves are left over, so ",
-      total_equation,
+    let leftover_middle = text_combine_multiple([
+      " ",
+      word_pluralize(left, "piece"),
+      " ",
+      word_is_are(left),
+      " left over, so ",
     ]);
+    html_div_cycle_code(parent, ["", text_to(left), leftover_middle, total_equation]);
     let conclusion = html_div(parent);
-    html_span_text(conclusion, "so the remainder is ");
+    html_span_text(conclusion, "So the remainder is ");
     remainder_chip(conclusion, left);
   }
   function above(root) {
