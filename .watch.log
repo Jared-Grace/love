@@ -367,3 +367,7 @@ app_shared_name_search_info
 { search: 'calendar_paste', a_name: 'calendar_paste' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/calendar_paste.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/calendar.html' }
