@@ -22,7 +22,7 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { each_index } from "./each_index.mjs";
-export async function app_code_home(context) {
+export function app_code_home(context) {
   "on returning home the lesson just left (its id is remembered in lesson_id) is scrolled to the vertical center, so the learner lands back where they were";
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
@@ -69,6 +69,7 @@ export async function app_code_home(context) {
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
   if (found) {
-    await html_scroll_center_now(just_left);
+    "not awaited on purpose: app_shared_refresh scrolls the window to the top right after this screen returns, so we let the centering (which waits a couple of animation frames internally) fire AFTER that top-scroll instead of being overridden by it";
+    html_scroll_center_now(just_left);
   }
 }
