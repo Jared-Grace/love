@@ -92,7 +92,17 @@ export async function app_g_conversation(
       text_combine(emoji_thinking(), " What do you believe?"),
       choice(2, stub, "what I believe"),
     );
-    let correct = list_get([gospel_b, how_b, believe_b], correct_index);
+    let openers = [gospel_b, how_b, believe_b];
+    let correct = list_get(openers, correct_index);
+    function disable_far(opener, index) {
+      let far = index > correct_index + 1 || index < correct_index - 1;
+      if (far) {
+        html_style_assign(opener, {
+          opacity: "0.5",
+          "pointer-events": "none",
+        });
+      }
+    }
     function reveal() {
       app_shared_glow_correct(correct);
       app_shared_correct_gold(correct);
@@ -100,6 +110,7 @@ export async function app_g_conversation(
         position: "relative",
         "z-index": g_z("raised"),
       });
+      each_index(openers, disable_far);
     }
     function on_pray() {
       html_style_assign(pray_b, {
