@@ -31,7 +31,8 @@ export function app_code_lesson_functions_console_log_plus_minus() {
     let box = app_code_container_light_blue(root);
     html_div_cycle_code(box, ["We can mix ", plus, " and ", minus, " together"]);
     html_div_cycle_code(box, ["Whichever one comes first, we do first"]);
-    html_div_cycle_code(box, [
+    let example_box = app_code_container_light_blue(root);
+    html_div_cycle_code(example_box, [
       "For example, for ",
       "5 + 2 - 3",
       ", we do ",
@@ -39,8 +40,8 @@ export function app_code_lesson_functions_console_log_plus_minus() {
       " first, which is ",
       "7",
     ]);
-    html_div_cycle_code(box, ["Now we have ", "7 - 3", ", which is ", "4"]);
-    html_div_cycle_code(box, ["So ", "5 + 2 - 3", " is ", "4"]);
+    html_div_cycle_code(example_box, ["Now we have ", "7 - 3", ", which is ", "4"]);
+    html_div_cycle_code(example_box, ["So ", "5 + 2 - 3", " is ", "4"]);
   }
   let lesson = app_code_lesson_console_log_pair_generic({
     symbol1: plus,

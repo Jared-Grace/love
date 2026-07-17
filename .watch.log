@@ -2896,3 +2896,236 @@ app_shared_name_search_info
 { search: 'g', a_name: 'g' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'karate' }
+{ rebuild: 'apps_all' }
+{ rebuild: 'bible' }
+{ rebuild: 'ceb_bible' }
+{ rebuild: 'g_bible' }
+{ rebuild: 'g_verify' }
+{ rebuild: 'g' }
+{ rebuild: 'index' }
+{ rebuild: 'message' }
+{ rebuild: 'original_bible' }
+{ rebuild: 'reply_local' }
+{ rebuild: 'reply' }
+{ rebuild: 'sandbox' }
+{ rebuild: 'search' }
+{ rebuild: 'supper_tl' }
+{ rebuild: 'supper' }
+{ rebuild: 'verses' }
+catch_log_async
+Error: EMFILE: too many open files, scandir '../karate_code/js'
+    at Module.readdirSync (node:fs:1570:26)
+    at folder_read_files (file:///home/j/repos/love/js/folder_read_files.mjs:36:16)
+    at async functions_names_from_path (file:///home/j/repos/love/js/functions_names_from_path.mjs:5:15)
+    at async mapper (file:///home/j/repos/love/js/functions_paths.mjs:9:19)
+    at async lambda (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:8:18)
+    at async Promise.all (index 0)
+    at async list_wait (file:///home/j/repos/love/js/list_wait.mjs:2:11)
+    at async list_map_unordered_async (file:///home/j/repos/love/js/list_map_unordered_async.mjs:5:16)
+    at async repos_paths_map_unordered (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:11:16)
+    at async repos_paths_map_unordered_combine (file:///home/j/repos/love/js/repos_paths_map_unordered_combine.mjs:4:16)
+    at async repos_paths_map_unordered_combine_squash (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash.mjs:7:16)
+    at async repos_paths_map_unordered_combine_squash_functions (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash_functions.mjs:9:18)
+    at async functions_paths (file:///home/j/repos/love/js/functions_paths.mjs:18:5)
+    at async data_generate (file:///home/j/repos/love/js/data_generate.mjs:7:17)
+    at async data_all (file:///home/j/repos/love/js/data_all.mjs:10:5)
+    at async data_get (file:///home/j/repos/love/js/data_get.mjs:5:11)
+    at async data_property_get_generic (file:///home/j/repos/love/js/data_property_get_generic.mjs:4:11)
+    at async data_property_get (file:///home/j/repos/love/js/data_property_get.mjs:5:11)
+    at async data_identifiers_get (file:///home/j/repos/love/js/data_identifiers_get.mjs:4:11)
+    at async app_shared_name_main (file:///home/j/repos/love/js/app_shared_name_main.mjs:7:21)
+    at async app_shared_name_search_info (file:///home/j/repos/love/js/app_shared_name_search_info.mjs:16:16)
+    at async webpack_build_dev (file:///home/j/repos/love/js/webpack_build_dev.mjs:9:14)
+    at async app_shared_dev_build (file:///home/j/repos/love/js/app_shared_dev_build.mjs:4:3)
+    at async lambda (file:///home/j/repos/love/js/webpack_watch.mjs:94:7)
+    at async catch_log_async (file:///home/j/repos/love/js/catch_log_async.mjs:6:5)
+    at async build_run (file:///home/j/repos/love/js/webpack_watch.mjs:97:7) {
+  errno: -24,
+  code: 'EMFILE',
+  syscall: 'scandir',
+  path: '../karate_code/js'
+}
+Error: EMFILE: too many open files, scandir '../karate_code/js'
+    at Module.readdirSync (node:fs:1570:26)
+    at folder_read_files (file:///home/j/repos/love/js/folder_read_files.mjs:36:16)
+    at async functions_names_from_path (file:///home/j/repos/love/js/functions_names_from_path.mjs:5:15)
+    at async mapper (file:///home/j/repos/love/js/functions_paths.mjs:9:19)
+    at async lambda (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:8:18)
+    at async Promise.all (index 0)
+    at async list_wait (file:///home/j/repos/love/js/list_wait.mjs:2:11)
+    at async list_map_unordered_async (file:///home/j/repos/love/js/list_map_unordered_async.mjs:5:16)
+    at async repos_paths_map_unordered (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:11:16)
+    at async repos_paths_map_unordered_combine (file:///home/j/repos/love/js/repos_paths_map_unordered_combine.mjs:4:16)
+    at async repos_paths_map_unordered_combine_squash (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash.mjs:7:16)
+    at async repos_paths_map_unordered_combine_squash_functions (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash_functions.mjs:9:18)
+    at async functions_paths (file:///home/j/repos/love/js/functions_paths.mjs:18:5)
+    at async data_generate (file:///home/j/repos/love/js/data_generate.mjs:7:17)
+    at async data_all (file:///home/j/repos/love/js/data_all.mjs:10:5)
+    at async data_get (file:///home/j/repos/love/js/data_get.mjs:5:11)
+    at async data_property_get_generic (file:///home/j/repos/love/js/data_property_get_generic.mjs:4:11)
+    at async data_property_get (file:///home/j/repos/love/js/data_property_get.mjs:5:11)
+    at async data_identifiers_get (file:///home/j/repos/love/js/data_identifiers_get.mjs:4:11)
+    at async app_shared_name_main (file:///home/j/repos/love/js/app_shared_name_main.mjs:7:21)
+    at async app_shared_name_search_info (file:///home/j/repos/love/js/app_shared_name_search_info.mjs:16:16)
+    at async webpack_build_dev (file:///home/j/repos/love/js/webpack_build_dev.mjs:9:14)
+    at async app_shared_dev_build (file:///home/j/repos/love/js/app_shared_dev_build.mjs:4:3)
+    at async lambda (file:///home/j/repos/love/js/webpack_watch.mjs:94:7)
+    at async catch_log_async (file:///home/j/repos/love/js/catch_log_async.mjs:6:5)
+    at async build_run (file:///home/j/repos/love/js/webpack_watch.mjs:97:7) {
+  errno: -24,
+  code: 'EMFILE',
+  syscall: 'scandir',
+  path: '../karate_code/js'
+}
+Error: EMFILE: too many open files, scandir '../karate_code/js'
+    at Module.readdirSync (node:fs:1570:26)
+    at folder_read_files (file:///home/j/repos/love/js/folder_read_files.mjs:36:16)
+    at async functions_names_from_path (file:///home/j/repos/love/js/functions_names_from_path.mjs:5:15)
+    at async mapper (file:///home/j/repos/love/js/functions_paths.mjs:9:19)
+    at async lambda (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:8:18)
+    at async Promise.all (index 0)
+    at async list_wait (file:///home/j/repos/love/js/list_wait.mjs:2:11)
+    at async list_map_unordered_async (file:///home/j/repos/love/js/list_map_unordered_async.mjs:5:16)
+    at async repos_paths_map_unordered (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:11:16)
+    at async repos_paths_map_unordered_combine (file:///home/j/repos/love/js/repos_paths_map_unordered_combine.mjs:4:16)
+    at async repos_paths_map_unordered_combine_squash (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash.mjs:7:16)
+    at async repos_paths_map_unordered_combine_squash_functions (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash_functions.mjs:9:18)
+    at async functions_paths (file:///home/j/repos/love/js/functions_paths.mjs:18:5)
+    at async data_generate (file:///home/j/repos/love/js/data_generate.mjs:7:17)
+    at async data_all (file:///home/j/repos/love/js/data_all.mjs:10:5)
+    at async data_get (file:///home/j/repos/love/js/data_get.mjs:5:11)
+    at async data_property_get_generic (file:///home/j/repos/love/js/data_property_get_generic.mjs:4:11)
+    at async data_property_get (file:///home/j/repos/love/js/data_property_get.mjs:5:11)
+    at async data_identifiers_get (file:///home/j/repos/love/js/data_identifiers_get.mjs:4:11)
+    at async app_shared_name_main (file:///home/j/repos/love/js/app_shared_name_main.mjs:7:21)
+    at async app_shared_name_search_info (file:///home/j/repos/love/js/app_shared_name_search_info.mjs:16:16)
+    at async webpack_build_dev (file:///home/j/repos/love/js/webpack_build_dev.mjs:9:14)
+    at async app_shared_dev_build (file:///home/j/repos/love/js/app_shared_dev_build.mjs:4:3)
+    at async lambda (file:///home/j/repos/love/js/webpack_watch.mjs:94:7)
+    at async catch_log_async (file:///home/j/repos/love/js/catch_log_async.mjs:6:5)
+    at async build_run (file:///home/j/repos/love/js/webpack_watch.mjs:97:7) {
+  errno: -24,
+  code: 'EMFILE',
+  syscall: 'scandir',
+  path: '../karate_code/js'
+}
+Error: EMFILE: too many open files, scandir '../karate_code/js'
+    at Module.readdirSync (node:fs:1570:26)
+    at folder_read_files (file:///home/j/repos/love/js/folder_read_files.mjs:36:16)
+    at async functions_names_from_path (file:///home/j/repos/love/js/functions_names_from_path.mjs:5:15)
+    at async mapper (file:///home/j/repos/love/js/functions_paths.mjs:9:19)
+    at async lambda (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:8:18)
+    at async Promise.all (index 0)
+    at async list_wait (file:///home/j/repos/love/js/list_wait.mjs:2:11)
+    at async list_map_unordered_async (file:///home/j/repos/love/js/list_map_unordered_async.mjs:5:16)
+    at async repos_paths_map_unordered (file:///home/j/repos/love/js/repos_paths_map_unordered.mjs:11:16)
+    at async repos_paths_map_unordered_combine (file:///home/j/repos/love/js/repos_paths_map_unordered_combine.mjs:4:16)
+    at async repos_paths_map_unordered_combine_squash (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash.mjs:7:16)
+    at async repos_paths_map_unordered_combine_squash_functions (file:///home/j/repos/love/js/repos_paths_map_unordered_combine_squash_functions.mjs:9:18)
+    at async functions_paths (file:///home/j/repos/love/js/functions_paths.mjs:18:5)
+    at async data_generate (file:///home/j/repos/love/js/data_generate.mjs:7:17)
+    at async data_all (file:///home/j/repos/love/js/data_all.mjs:10:5)
+    at async data_get (file:///home/j/repos/love/js/data_get.mjs:5:11)
+    at async data_property_get_generic (file:///home/j/repos/love/js/data_property_get_generic.mjs:4:11)
+    at async data_property_get (file:///home/j/repos/love/js/data_property_get.mjs:5:11)
+    at async data_identifiers_get (file:///home/j/repos/love/js/data_identifiers_get.mjs:4:11)
+    at async app_shared_name_main (file:///home/j/repos/love/js/app_shared_name_main.mjs:7:21)
+    at async app_shared_name_search_info (file:///home/j/repos/love/js/app_shared_name_search_info.mjs:16:16)
+    at async webpack_build_dev (file:///home/j/repos/love/js/webpack_build_dev.mjs:9:14)
+    at async app_shared_dev_build (file:///home/j/repos/love/js/app_shared_dev_build.mjs:4:3)
+    at async lambda (file:///home/j/repos/love/js/webpack_watch.mjs:94:7)
+    at async catch_log_async (file:///home/j/repos/love/js/catch_log_async.mjs:6:5)
+    at async build_run (file:///home/j/repos/love/js/webpack_watch.mjs:97:7) {
+  errno: -24,
+  code: 'EMFILE',
+  syscall: 'scandir',
+  path: '../karate_code/js'
+}
+Error: EMFILE: too many open files, open '../love/js/g_coordinates_clicked_adjascent_nearest_player.mjs'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.readFile (node:internal/fs/promises:1290:14)
+    at async file_read (file:///home/j/repos/love/js/file_read.mjs:41:18)
+    at async file_js_parse (file:///home/j/repos/love/js/file_js_parse.mjs:4:14)
+    at async Promise.all (index 2369)
+    at async list_wait (file:///home/j/repos/love/js/list_wait.mjs:2:11)
+    at async list_map_unordered_async (file:///home/j/repos/love/js/list_map_unordered_async.mjs:5:16)
+    at async data_generate (file:///home/j/repos/love/js/data_generate.mjs:8:17)
+    at async data_all (file:///home/j/repos/love/js/data_all.mjs:10:5)
+    at async data_get (file:///home/j/repos/love/js/data_get.mjs:5:11)
+    at async data_property_get_generic (file:///home/j/repos/love/js/data_property_get_generic.mjs:4:11)
+    at async data_property_get (file:///home/j/repos/love/js/data_property_get.mjs:5:11)
+    at async data_identifiers_get (file:///home/j/repos/love/js/data_identifiers_get.mjs:4:11)
+    at async app_shared_name_main (file:///home/j/repos/love/js/app_shared_name_main.mjs:7:21)
+    at async app_shared_name_search_info (file:///home/j/repos/love/js/app_shared_name_search_info.mjs:16:16)
+    at async webpack_build_dev (file:///home/j/repos/love/js/webpack_build_dev.mjs:9:14)
+    at async app_shared_dev_build (file:///home/j/repos/love/js/app_shared_dev_build.mjs:4:3)
+    at async lambda (file:///home/j/repos/love/js/webpack_watch.mjs:94:7)
+    at async catch_log_async (file:///home/j/repos/love/js/catch_log_async.mjs:6:5)
+    at async build_run (file:///home/j/repos/love/js/webpack_watch.mjs:97:7) {
+  errno: -24,
+  code: 'EMFILE',
+  syscall: 'open',
+  path: '../love/js/g_coordinates_clicked_adjascent_nearest_player.mjs'
+}
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+{ search: 'apps_all', a_name: 'apps_all' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g', a_name: 'g' }
+{ search: 'index', a_name: 'index' }
+{ search: 'message', a_name: 'message' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'karate', a_name: 'karate' }
+{ search: 'apps_all', a_name: 'apps_all' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g', a_name: 'g' }
+{ search: 'index', a_name: 'index' }
+{ search: 'message', a_name: 'message' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'index', a_name: 'index' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/index.html' }
+app_shared_name_search_info
+{ search: 'apps_all', a_name: 'apps_all' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/apps_all.html' }
+app_shared_name_search_info
+{ search: 'message', a_name: 'message' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/message.html' }
+app_shared_name_search_info
+{ search: 'reply', a_name: 'reply' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply.html' }
+app_shared_name_search_info
+{ search: 'original_bible', a_name: 'original_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/original_bible.html' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/bible.html' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/ceb_bible.html' }
+app_shared_name_search_info
+{ search: 'g_bible', a_name: 'g_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_bible.html' }
