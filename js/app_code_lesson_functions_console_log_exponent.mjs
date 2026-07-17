@@ -8,6 +8,7 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { range_map } from "./range_map.mjs";
 import { list_join } from "./list_join.mjs";
+import { each } from "./each.mjs";
 import { text_to } from "./text_to.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -68,21 +69,24 @@ export function app_code_lesson_functions_console_log_exponent() {
     html_div_cycle_code(c, ["", symbol, " means multiply a number by itself"]);
     html_div_cycle_code(c, ["The second number is how many to multiply together"]);
     let base = 2;
-    let exponent = 3;
-    let expr = js_code_binary_spaced_nb(base, symbol, exponent);
     function base_text(index) {
       return text_to(base);
     }
-    let factors = range_map(exponent, base_text);
-    let product = list_join(factors, " * ");
-    let result = power(base, exponent);
-    html_div_cycle_code(c, [
-      "",
-      expr,
-      " means ",
-      product,
-      ", which is ",
-      text_to(result),
-    ]);
+    function row(exponent) {
+      "one line: base ** exponent means base * base ... , which is the result - shown for exponents 2, 3, 4 so the pattern of adding one more factor is visible";
+      let expr = js_code_binary_spaced_nb(base, symbol, exponent);
+      let factors = range_map(exponent, base_text);
+      let product = list_join(factors, " * ");
+      let result = power(base, exponent);
+      html_div_cycle_code(c, [
+        "",
+        expr,
+        " means ",
+        product,
+        ", which is ",
+        text_to(result),
+      ]);
+    }
+    each([2, 3, 4], row);
   }
 }
