@@ -1,10 +1,10 @@
-import { app_supper_choices } from "./app_supper_choices.mjs";
+import { ebible_choices } from "./ebible_choices.mjs";
 import { app_supper_folders_get } from "./app_supper_folders_get.mjs";
 import { app_supper_chosen_from_options } from "./app_supper_chosen_from_options.mjs";
 import { app_supper_versions_hash_set } from "./app_supper_versions_hash_set.mjs";
 import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_generic.mjs";
 export async function app_supper_versions(context) {
-  let options = await app_supper_choices();
+  let options = await ebible_choices();
   let folders = app_supper_folders_get(context);
   let chosen = app_supper_chosen_from_options(folders, options);
   function on_change() {
