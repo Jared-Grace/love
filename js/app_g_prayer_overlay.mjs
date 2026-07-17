@@ -35,7 +35,7 @@ export function app_g_prayer_overlay() {
     margin: "0",
     animation: "prayerGlow 1.6s ease-in-out infinite alternate",
   });
-  let waiting_text = html_p_text(div, "Waiting on the Lord");
+  let waiting_text = html_p_text(div, "Waiting on the Lord...");
   html_style_assign(waiting_text, {
     color: "white",
     "font-size": "2.25rem",
@@ -45,14 +45,22 @@ export function app_g_prayer_overlay() {
   });
   let verse = html_p_text(
     div,
-    "“Those who wait on the Lord shall renew their strength.” — Isaiah 40:31",
+    "“Those who wait on the Lord shall renew their strength.”",
   );
   html_style_assign(verse, {
     color: "white",
     "font-size": "1.5rem",
-    "font-style": "italic",
     margin: "0",
     "max-width": "80vw",
+    "text-align": "center",
+    opacity: "0.85",
+    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
+  });
+  let reference = html_p_text(div, "Isaiah 40:31");
+  html_style_assign(reference, {
+    color: "white",
+    "font-size": "1.25rem",
+    margin: "0",
     "text-align": "center",
     opacity: "0.85",
     "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
