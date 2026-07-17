@@ -25,6 +25,8 @@ import { app_shared_glow_correct } from "./app_shared_glow_correct.mjs";
 import { app_shared_correct_gold } from "./app_shared_correct_gold.mjs";
 import { g_z } from "./g_z.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_clear } from "./html_clear.mjs";
 export async function app_g_conversation(
   prayer,
   npc,
@@ -41,7 +43,12 @@ export async function app_g_conversation(
   }
   let name_player = property_get(player, "name");
   let npc_says = g_greeting(meet, name_player);
-  app_g_npc_says(npc, overlay, npc_says);
+  let says_div = html_div(overlay);
+  function say(text) {
+    html_clear(says_div);
+    app_g_npc_says(npc, says_div, text);
+  }
+  say(npc_says);
   async function npc_gospel() {
     await app_g_gospel(overlay, npc, overlay_close, player, div_map);
   }
@@ -57,7 +64,7 @@ export async function app_g_conversation(
         if (is_correct) {
           action();
         } else {
-          app_g_npc_says(npc, overlay, g_boundary(meet, topic));
+          say(g_boundary(meet, topic));
         }
       }
       return on_choice;
