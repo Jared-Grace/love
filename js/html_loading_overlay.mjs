@@ -34,7 +34,7 @@ export function html_loading_overlay() {
     "text-align": "center",
     "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
     background:
-      "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 75%)",
+      "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%)",
     padding: "2.5rem 3.5rem",
   });
   html_reflow_force(div);
