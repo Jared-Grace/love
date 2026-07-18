@@ -31,27 +31,30 @@ import { text_replace_to_space } from "../../love/js/text_replace_to_space.mjs";
 export async function app_search_home(context) {
   let root = property_get(context, "root");
   html_clear(root);
-  let languages_chosen = property_get(context, "languages_chosen");
+  let bc = html_bar_content_padded(root);
+  let bar = property_get(bc, "bar");
+  let content = property_get(bc, "content");
+  html_centered(bar);
+  let hash = html_hash_object_get();
+  let language_codes = app_next_hash_to_languages_chosen(hash);
   let languages = ebible_languages();
-  let en_l = ebible_language_english();
-  let languages_chosen_default = [en_l];
-  app_reply_languages_chosen_reset(
-    languages_chosen,
-    languages_chosen_default,
-    languages,
-  );
-  let p = app_reply_languages_prompt(root);
-  app_reply_buttons_languages(languages_chosen, root, languages);
+  function code_to_language(code) {
+    return list_find_property_or_null(languages, "language_code", code);
+  }
+  let mapped = list_map(language_codes, code_to_language);
+  let languages_chosen = list_filter_null_not_is(mapped);
+  property_set(context, "languages_chosen", languages_chosen);
+  app_shared_bible_languages_gear(bar, content, language_codes);
   let search_instructions =
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
-  let p2 = app_shared_text_body(root, text_combine("2. ", search_instructions));
-  let input = html_input_text(root, search_instructions);
+  let p2 = app_shared_text_body(content, search_instructions);
+  let input = html_input_text(content, search_instructions);
   app_shared_input_style(input);
   html_on_enter(input, search);
   let text = text_combine(emoji_search(), " Search");
-  app_shared_button_wide(root, text, search);
-  html_br_2(root);
-  let div_results = html_div(root);
+  app_shared_button_wide(content, text, search);
+  html_br_2(content);
+  let div_results = html_div(content);
   async function search() {
     let query = html_value_get(input);
     property_set(context, "query", query);
@@ -61,7 +64,6 @@ export async function app_search_home(context) {
     html_hash_object_property_set(key, query_hash);
     await app_search_results(context, div_results);
   }
-  let hash = html_hash_object_get();
   let query_hash = property_get_or_null(hash, app_search_query_hash_key());
   if (query_hash != null) {
     let plus = app_search_query_hash_word_gap();

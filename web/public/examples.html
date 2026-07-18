@@ -17,60 +17,64 @@
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
     pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
     .arrow { width: 2rem; height: 2rem; border-radius: 50%; background: #00b400ff; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+    .t-kw { color: #d73a49; }
+    .t-str { color: #0a7d3c; }
+    .t-num { color: #6f42c1; }
+    .t-punct { color: #6a737d; }
     .rejection pre.call { border-left: 3px solid #d33; }
     .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
     @media (max-width: 44rem) { .io { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); } }
-  </style><h1>Transform examples</h1><article class="example"><h2>Add a two-sided guard to a slot setter</h2><p class="note">aea prepends arguments_assert_each and repairs imports; one predicate per parameter.</p><div class="command"><code>aea js_return_argument_set "js_return_is, js_expression_node_is"</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">import { property_set } from "./property_set.mjs";
-export function js_return_argument_set(r, a) {
-  property_set(r, "argument", a);
-}</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after">import { arguments_assert_each } from "./arguments_assert_each.mjs";
-import { js_return_is } from "./js_return_is.mjs";
-import { js_expression_node_is } from "./js_expression_node_is.mjs";
-import { property_set } from "./property_set.mjs";
-export function js_return_argument_set(r, a) {
-  arguments_assert_each(arguments, [js_return_is, js_expression_node_is]);
-  property_set(r, "argument", a);
-}</pre></div></div></article><article class="example"><h2>Flatten a nested call into a named local</h2><p class="note">atomize lifts each inner call out of its argument slot into a let, so every call reads on its own line. Simplicity is AST depth — one nested expression becomes two shallow statements.</p><div class="command"><code>atomize</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">export function f(a) {
-  return g(h(a));
-}</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after">export function f(a) {
-  let v = h(a);
-  return g(v);
-}</pre></div></div></article><article class="example"><h2>Auto-imports: add missing, remove unused, canonicalize paths</h2><p class="note">auto composes all three import verbs — list_last (used, unimported) is added, list_first (imported, unused) is removed, list_size (wrong ../../js/ path) is canonicalized to ./. Provably auto-safe: idempotent, total, state-independent.</p><div class="command"><code>auto js/mixed_imports.mjs</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">import { list_first } from "./list_first.mjs";
-import { list_size } from "../../js/list_size.mjs";
-export function alpha(x) {
-  return list_size(x);
-}
-export function beta(y) {
-  return list_last(y);
-}</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after">import { list_last } from "./list_last.mjs";
-import { list_size } from "./list_size.mjs";
-export function alpha(x) {
-  return list_size(x);
-}
-export function beta(y) {
-  return list_last(y);
-}</pre></div></div></article><article class="example"><h2>Repair imports across a whole multi-function file</h2><p class="note">A migration file can hold many declarations; program-wide repair adds every missing repo import — single-export js_flo would fail here. Locally-declared names (alpha, beta) are never self-imported.</p><div class="command"><code>imports js/two_sizes.mjs</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">export function alpha(x) {
-  return list_size(x);
-}
-export function beta(y) {
-  return list_size(y);
-}</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after">import { list_size } from "./list_size.mjs";
-export function alpha(x) {
-  return list_size(x);
-}
-export function beta(y) {
-  return list_size(y);
-}</pre></div></div></article><article class="example"><h2>Generate a node-type predicate from scratch</h2><p class="note">ntp creates a new js_&lt;X&gt;_is predicate; 'before' is empty because nothing existed. Runs file-side (sandboxed) — see the app or the temp-file runner.</p><div class="command"><code>ntp js_return_is ReturnStatement</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">(nothing yet — new file)</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after">import { js_node_type_is } from "./js_node_type_is.mjs";
-export function js_return_is(node) {
-  let is = js_node_type_is(node, "ReturnStatement");
-  return is;
-}</pre></div></div></article><article class="example"><h2>Remove an unused import</h2><p class="note">prune drops only imports no code references — list_first is imported but never called, so its line goes; list_size stays because alpha uses it. This is the remove-only third of what auto does.</p><div class="command"><code>prune</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">import { list_first } from "./list_first.mjs";
-import { list_size } from "./list_size.mjs";
-export function alpha(x) {
-  return list_size(x);
-}</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after">import { list_size } from "./list_size.mjs";
-export function alpha(x) {
-  return list_size(x);
-}</pre></div></div></article><article class="example rejection"><h2>A slot setter refuses a statement in an expression slot</h2><p class="note">The if-test slot holds an expression; a statement in it is refused by the two-sided guard (js_expression_node_is fails on arg 1).</p><pre class="call">js_statement_if_test_set( parse("if (a) {}"), parseStatement("b();") )</pre><div class="expect">throws — arg 1 is not an expression node</div></article>
+  </style><h1>Transform examples</h1><article class="example"><h2>Add a two-sided guard to a slot setter</h2><p class="note">aea prepends arguments_assert_each and repairs imports; one predicate per parameter.</p><div class="command"><code>aea js_return_argument_set "js_return_is, js_expression_node_is"</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">property_set</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./property_set.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">js_return_argument_set</span><span class="t-punct">(</span><span class="t-name">r</span><span class="t-punct">,</span> <span class="t-name">a</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-name">property_set</span><span class="t-punct">(</span><span class="t-name">r</span><span class="t-punct">,</span> <span class="t-str">"argument"</span><span class="t-punct">,</span> <span class="t-name">a</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">arguments_assert_each</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./arguments_assert_each.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">js_return_is</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./js_return_is.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">js_expression_node_is</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./js_expression_node_is.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">property_set</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./property_set.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">js_return_argument_set</span><span class="t-punct">(</span><span class="t-name">r</span><span class="t-punct">,</span> <span class="t-name">a</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-name">arguments_assert_each</span><span class="t-punct">(</span><span class="t-name">arguments</span><span class="t-punct">,</span> <span class="t-punct">[</span><span class="t-name">js_return_is</span><span class="t-punct">,</span> <span class="t-name">js_expression_node_is</span><span class="t-punct">]</span><span class="t-punct">)</span><span class="t-punct">;</span>
+  <span class="t-name">property_set</span><span class="t-punct">(</span><span class="t-name">r</span><span class="t-punct">,</span> <span class="t-str">"argument"</span><span class="t-punct">,</span> <span class="t-name">a</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div></div></article><article class="example"><h2>Flatten a nested call into a named local</h2><p class="note">atomize lifts each inner call out of its argument slot into a let, so every call reads on its own line. Simplicity is AST depth — one nested expression becomes two shallow statements.</p><div class="command"><code>atomize</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before"><span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">f</span><span class="t-punct">(</span><span class="t-name">a</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">g</span><span class="t-punct">(</span><span class="t-name">h</span><span class="t-punct">(</span><span class="t-name">a</span><span class="t-punct">)</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after"><span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">f</span><span class="t-punct">(</span><span class="t-name">a</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">let</span> <span class="t-name">v</span> <span class="t-punct">=</span> <span class="t-name">h</span><span class="t-punct">(</span><span class="t-name">a</span><span class="t-punct">)</span><span class="t-punct">;</span>
+  <span class="t-kw">return</span> <span class="t-name">g</span><span class="t-punct">(</span><span class="t-name">v</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div></div></article><article class="example"><h2>Auto-imports: add missing, remove unused, canonicalize paths</h2><p class="note">auto composes all three import verbs — list_last (used, unimported) is added, list_first (imported, unused) is removed, list_size (wrong ../../js/ path) is canonicalized to ./. Provably auto-safe: idempotent, total, state-independent.</p><div class="command"><code>auto js/mixed_imports.mjs</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_first</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_first.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_size</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"../../js/list_size.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">alpha</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">beta</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_last</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_last</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_last.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_size</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_size.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">alpha</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">beta</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_last</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div></div></article><article class="example"><h2>Repair imports across a whole multi-function file</h2><p class="note">A migration file can hold many declarations; program-wide repair adds every missing repo import — single-export js_flo would fail here. Locally-declared names (alpha, beta) are never self-imported.</p><div class="command"><code>imports js/two_sizes.mjs</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before"><span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">alpha</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">beta</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_size</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_size.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">alpha</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">beta</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">y</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div></div></article><article class="example"><h2>Generate a node-type predicate from scratch</h2><p class="note">ntp creates a new js_&lt;X&gt;_is predicate; 'before' is empty because nothing existed. Runs file-side (sandboxed) — see the app or the temp-file runner.</p><div class="command"><code>ntp js_return_is ReturnStatement</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before">(nothing yet — new file)</pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">js_node_type_is</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./js_node_type_is.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">js_return_is</span><span class="t-punct">(</span><span class="t-name">node</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">let</span> <span class="t-name">is</span> <span class="t-punct">=</span> <span class="t-name">js_node_type_is</span><span class="t-punct">(</span><span class="t-name">node</span><span class="t-punct">,</span> <span class="t-str">"ReturnStatement"</span><span class="t-punct">)</span><span class="t-punct">;</span>
+  <span class="t-kw">return</span> <span class="t-name">is</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div></div></article><article class="example"><h2>Remove an unused import</h2><p class="note">prune drops only imports no code references — list_first is imported but never called, so its line goes; list_size stays because alpha uses it. This is the remove-only third of what auto does.</p><div class="command"><code>prune</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_first</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_first.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_size</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_size.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">alpha</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div><div class="arrow">→</div><div class="io-col"><div class="io-label">after</div><pre class="after"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">list_size</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./list_size.mjs"</span><span class="t-punct">;</span>
+<span class="t-kw">export</span> <span class="t-kw">function</span> <span class="t-name">alpha</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span> <span class="t-punct">{</span>
+  <span class="t-kw">return</span> <span class="t-name">list_size</span><span class="t-punct">(</span><span class="t-name">x</span><span class="t-punct">)</span><span class="t-punct">;</span>
+<span class="t-punct">}</span></pre></div></div></article><article class="example rejection"><h2>A slot setter refuses a statement in an expression slot</h2><p class="note">The if-test slot holds an expression; a statement in it is refused by the two-sided guard (js_expression_node_is fails on arg 1).</p><pre class="call"><span class="t-name">js_statement_if_test_set</span><span class="t-punct">(</span> <span class="t-name">parse</span><span class="t-punct">(</span><span class="t-str">"if (a) {}"</span><span class="t-punct">)</span><span class="t-punct">,</span> <span class="t-name">parseStatement</span><span class="t-punct">(</span><span class="t-str">"b();"</span><span class="t-punct">)</span> <span class="t-punct">)</span></pre><div class="expect">throws — arg 1 is not an expression node</div></article>
 </body>
 </html>
