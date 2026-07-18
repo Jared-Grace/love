@@ -1,4 +1,4 @@
-import { app_code_lesson_functions_console_log_comparison } from "./app_code_lesson_functions_console_log_comparison.mjs";
+import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
 import { app_code_comparison_pair_ordering } from "./app_code_comparison_pair_ordering.mjs";
 import { js_operator_greater_than_equal } from "./js_operator_greater_than_equal.mjs";
 import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
@@ -66,7 +66,7 @@ export function app_code_lesson_expression_greater_than_equal() {
     return parts;
   }
   let next_arg = examples();
-  let lesson = app_code_lesson_functions_console_log_comparison({
+  let lesson = app_code_lesson_expression_comparison({
     operator,
     question_middle: "greater than or equal to",
     name_id_rights: [" greater than or equal to"],
