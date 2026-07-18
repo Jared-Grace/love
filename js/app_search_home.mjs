@@ -18,7 +18,12 @@ import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_langua
 import { list_sort_text_property } from "../../love/js/list_sort_text_property.mjs";
 import { emoji_search } from "../../love/js/emoji_search.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
-export function app_search_home(context) {
+import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
+import { html_hash_object_property_set } from "../../love/js/html_hash_object_property_set.mjs";
+import { property_get_or_null } from "../../love/js/property_get_or_null.mjs";
+import { html_value_set } from "../../love/js/html_value_set.mjs";
+import { app_search_query_hash_key } from "../../love/js/app_search_query_hash_key.mjs";
+export async function app_search_home(context) {
   let root = property_get(context, "root");
   html_clear(root);
   let languages_chosen = property_get(context, "languages_chosen");
@@ -46,6 +51,14 @@ export function app_search_home(context) {
   async function search() {
     let query = html_value_get(input);
     property_set(context, "query", query);
+    let key = app_search_query_hash_key();
+    html_hash_object_property_set(key, query);
     await app_search_results(context, div_results);
+  }
+  let hash = html_hash_object_get();
+  let query_from_hash = property_get_or_null(hash, app_search_query_hash_key());
+  if (query_from_hash != null) {
+    html_value_set(input, query_from_hash);
+    await search();
   }
 }
