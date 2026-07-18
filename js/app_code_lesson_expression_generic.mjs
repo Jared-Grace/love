@@ -23,14 +23,24 @@ export function app_code_lesson_expression_generic(params) {
     return r;
   }
   let b = app_code_batch_code_eval(batch_get);
+  let forwards_answer_count_override = property_get_or(
+    params,
+    "forwards_answer_count_override",
+    null,
+  );
+  let quiz_backwards_answer_count_override = property_get_or(
+    params,
+    "quiz_backwards_answer_count_override",
+    null,
+  );
   let lesson = app_code_lesson_code_generic({
     value: "value",
     batch_get: b,
     name_id,
     above,
     example_count,
-    quiz_backwards_answer_count_override: null,
-    forwards_answer_count_override: null,
+    quiz_backwards_answer_count_override,
+    forwards_answer_count_override,
   });
   return lesson;
 }
