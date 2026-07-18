@@ -92,6 +92,7 @@ export async function app_g_gospel(
       }
       return b;
     }
+    let discern = { prayed: false, warnings: 0 };
     app_g_turn_quiz(
       overlay,
       npc,
@@ -99,6 +100,7 @@ export async function app_g_gospel(
       "What would you like to say?",
       build_correct,
       build_wrong,
+      discern,
     );
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
