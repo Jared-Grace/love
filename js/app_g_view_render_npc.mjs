@@ -3,6 +3,7 @@ import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_conversation } from "./app_g_conversation.mjs";
+import { app_g_gospel } from "./app_g_gospel.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_overlay } from "./app_g_overlay.mjs";
@@ -13,6 +14,7 @@ import { list_single } from "./list_single.mjs";
 import { app_g_view_phase_study } from "./app_g_view_phase_study.mjs";
 import { app_g_view_phase_pray } from "./app_g_view_phase_pray.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
+import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
@@ -48,6 +50,10 @@ export async function app_g_view_render_npc(div_map) {
       overlay_close,
       div_map,
     );
+    return;
+  }
+  if (phase === app_g_view_phase_gospel()) {
+    await app_g_gospel(overlay, npc, overlay_close, player, div_map);
     return;
   }
   error_json({

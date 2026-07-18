@@ -1,0 +1,15 @@
+import { app_language_sort_get } from "./app_language_sort_get.mjs";
+import { app_language_sort_set } from "./app_language_sort_set.mjs";
+import { app_language_sort_by_speakers } from "./app_language_sort_by_speakers.mjs";
+import { app_language_sort_by_name } from "./app_language_sort_by_name.mjs";
+import { equal } from "./equal.mjs";
+export function app_language_sort_toggle() {
+  let mode = app_language_sort_get();
+  let by_name = equal(mode, app_language_sort_by_name());
+  let next = app_language_sort_by_name();
+  if (by_name) {
+    next = app_language_sort_by_speakers();
+  }
+  app_language_sort_set(next);
+  return next;
+}
