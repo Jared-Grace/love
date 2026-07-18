@@ -6,6 +6,7 @@ import { html_style_head } from "./html_style_head.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
+import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
 export function app_g_prayer_overlay() {
   "full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered";
   let body = html_document_body();
@@ -59,7 +60,7 @@ export function app_g_prayer_overlay() {
     "Those who wait on the Lord shall renew their strength.",
   );
   html_style_assign(verse, {
-    color: "#ffe680",
+    color: app_shared_color_gold_text(),
     "font-size": "1.75rem",
     margin: "0",
     "text-align": "center",
