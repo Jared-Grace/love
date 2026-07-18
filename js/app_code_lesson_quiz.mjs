@@ -92,6 +92,17 @@ export function app_code_lesson_quiz(
     let next_button = app_shared_button_wide_next(parent_container, on_next);
     html_style_margin_top(next_button, app_shared_spaced_gap());
   }
+  function on_reveal() {
+    "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
+    html_visibility_hidden(container_success_message);
+    show_correction();
+  }
+  let reveal_button = app_shared_button_wide(
+    parent_container,
+    "Show me the answer",
+    on_reveal,
+  );
+  html_style_margin_top(reveal_button, app_shared_spaced_gap());
   let show_skip = not(qli) && not(no_more);
   if (show_skip) {
     let skip_text = text_combine_middle_space_nb(
@@ -135,8 +146,8 @@ export function app_code_lesson_quiz(
     html_visibility_visible(container_correction);
   }
   function on_wrong() {
+    "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";
     html_visibility_hidden(container_success_message);
-    show_correction();
   }
   async function on_success() {
     "on any correct answer, flash success then auto-advance to the NEXT QUESTION of the SAME kind (the player loops through as many questions as they want; Next changes the kind, Skip leaves)";
