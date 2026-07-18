@@ -7,7 +7,7 @@ import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 export function app_g_prayer_overlay() {
-  "full-screen prayer-wait overlay: dims the world + shows a large praying emoji while waiting on God for discernment; fades in; caller removes it when the prayer is answered";
+  "full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered";
   let body = html_document_body();
   let div = html_div(body);
   html_style_assign(div, {
@@ -21,7 +21,7 @@ export function app_g_prayer_overlay() {
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
-    gap: "1rem",
+    gap: "1.5rem",
     "z-index": "1000",
     opacity: "0",
     transition: "opacity 0.3s ease",
@@ -35,33 +35,42 @@ export function app_g_prayer_overlay() {
     margin: "0",
     animation: "prayerGlow 1.6s ease-in-out infinite alternate",
   });
-  let waiting_text = html_p_text(div, "Waiting on the Lord...");
+  let card = html_div(div);
+  html_style_assign(card, {
+    background: "rgba(0, 0, 0, 0.88)",
+    border: "1px solid rgba(255, 255, 255, 0.15)",
+    "border-radius": "1rem",
+    padding: "1.5rem 2rem",
+    "max-width": "88vw",
+    display: "flex",
+    "flex-direction": "column",
+    "align-items": "center",
+    gap: "0.85rem",
+    "box-shadow": "0 0.5rem 1.5rem rgba(0, 0, 0, 0.5)",
+  });
+  let waiting_text = html_p_text(card, "Waiting on the Lord...");
   html_style_assign(waiting_text, {
     color: "white",
     "font-size": "2.25rem",
     margin: "0",
     "text-align": "center",
-    "text-shadow": "0 0 0.3em #000, 0 0 0.6em #000, 0 2px 4px #000",
   });
   let verse = html_p_text(
-    div,
+    card,
     "“Those who wait on the Lord shall renew their strength.”",
   );
   html_style_assign(verse, {
     color: "white",
     "font-size": "1.75rem",
     margin: "0",
-    "max-width": "80vw",
     "text-align": "center",
-    "text-shadow": "0 0 0.3em #000, 0 0 0.6em #000, 0 2px 4px #000",
   });
-  let reference = html_p_text(div, "Isaiah 40:31");
+  let reference = html_p_text(card, "Isaiah 40:31");
   html_style_assign(reference, {
     color: "white",
     "font-size": "1.25rem",
     margin: "0",
     "text-align": "center",
-    "text-shadow": "0 0 0.3em #000, 0 0 0.6em #000, 0 2px 4px #000",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
