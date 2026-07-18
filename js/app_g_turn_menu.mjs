@@ -21,5 +21,5 @@ export function app_g_turn_menu(overlay, prompt, choices, discern) {
     }
   }
   each(choices, render_choice);
-  app_g_pray_discern(container, correct, app_g_reveal_word);
+  app_g_pray_discern(container, correct, app_g_reveal_word, discern);
 }
