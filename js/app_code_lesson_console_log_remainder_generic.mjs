@@ -15,7 +15,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_span } from "./html_span.mjs";
 import { equal } from "./equal.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
+import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -95,7 +95,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
   }
   function remainder_chip(parent, remainder) {
     let color = remainder_color(remainder);
-    let chip = html_span_text_code_background(parent, text_to(remainder), color);
+    let chip = app_code_lesson_number_chip(parent, remainder, color);
     return chip;
   }
   function equation_with_remainder(parent, prefix_expr, remainder, result) {
