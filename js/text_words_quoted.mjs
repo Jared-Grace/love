@@ -1,4 +1,4 @@
-export function example_command_tokens(command) {
+export function text_words_quoted(command) {
   let re = /"([^"]*)"|(\S+)/g;
   let out = [];
   let m = re.exec(command);
