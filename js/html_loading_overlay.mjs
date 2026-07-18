@@ -19,7 +19,7 @@ export function html_loading_overlay() {
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
-    gap: "1.5rem",
+    gap: "0.25rem",
     "z-index": "1000",
     opacity: "0",
     transition: "opacity 0.15s ease",
@@ -35,7 +35,7 @@ export function html_loading_overlay() {
     "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
     background:
       "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%)",
-    padding: "2.5rem 3.5rem",
+    padding: "1.25rem 3.5rem",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
