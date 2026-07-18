@@ -6,6 +6,6 @@ export function app_frozen_assert(name) {
   let allowed = list_includes_not(names, name);
   assert_message(
     allowed,
-    "This app is on the frozen list, so it's kept safe from deletion (it shouldn't change in production). Would you like to remove it from apps_frozen() first, or delete a different app?",
+    "This app is on the frozen list, so its production assets are kept unchanged — no prod build, promote, or deletion. Would you like to remove it from apps_frozen() first, or act on a different app?",
   );
 }
