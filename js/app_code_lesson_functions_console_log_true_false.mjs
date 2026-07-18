@@ -6,11 +6,9 @@ import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_gener
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span_space } from "./html_span_space.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_console_log_true_false() {
   function refill() {
     let list = [js_keyword_true(), js_keyword_false()];
