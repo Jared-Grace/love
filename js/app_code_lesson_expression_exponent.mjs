@@ -56,29 +56,43 @@ export function app_code_lesson_expression_exponent() {
   }
   function above(root) {
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["", symbol, " means multiply a number by itself"]);
+    let triple_equal = js_operator_triple_equal_symbol();
+    function repeat_product(base, count) {
+      "count copies of base joined with *, so repeat_product(2, 3) is the code 2 * 2 * 2";
+      function base_text(index) {
+        return text_to(base);
+      }
+      let factors = range_map(count, base_text);
+      let product = list_join(factors, " * ");
+      return product;
+    }
+    function short_of(base, count) {
+      "the exponent shorthand for count copies of base, so short_of(2, 3) is the code 2 ** 3";
+      let code = js_code_binary_spaced_nb(base, symbol, count);
+      return code;
+    }
+    function same_equation(base, count) {
+      "the long product and its shorthand are equal, so same_equation(2, 3) is 2 * 2 * 2 === 2 ** 3";
+      let long = repeat_product(base, count);
+      let short = short_of(base, count);
+      let code = js_code_binary_spaced_nb(long, triple_equal, short);
+      return code;
+    }
+    html_div_cycle_code(c, [
+      "You already know how to multiply numbers like ",
+      "2 * 3 * 4",
+    ]);
+    html_div_cycle_code(c, ["What if the numbers are all the same number?"]);
+    html_div_cycle_code(c, ["Like ", repeat_product(2, 3)]);
+    html_div_cycle_code(c, [
+      "There are three 2's, so we can write ",
+      short_of(2, 3),
+      " for short",
+    ]);
+    html_div_cycle_code(c, ["", same_equation(2, 3)]);
+    html_div_cycle_code(c, ["Likewise ", same_equation(3, 4)]);
     html_div_cycle_code(c, [
       "The second number is how many to multiply together",
     ]);
-    let base = 2;
-    function base_text(index) {
-      return text_to(base);
-    }
-    function row(exponent) {
-      "one line: base ** exponent means base * base ... , which is the result - shown for exponents 2, 3, 4 so the pattern of adding one more factor is visible";
-      let expr = js_code_binary_spaced_nb(base, symbol, exponent);
-      let factors = range_map(exponent, base_text);
-      let product = list_join(factors, " * ");
-      let result = power(base, exponent);
-      html_div_cycle_code(c, [
-        "",
-        expr,
-        " means ",
-        product,
-        ", which is ",
-        text_to(result),
-      ]);
-    }
-    each([2, 3, 4], row);
   }
 }
