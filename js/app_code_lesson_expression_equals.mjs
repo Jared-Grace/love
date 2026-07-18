@@ -1,4 +1,4 @@
-import { app_code_lesson_functions_console_log_comparison } from "./app_code_lesson_functions_console_log_comparison.mjs";
+import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
 import { app_code_comparison_pair_equality } from "./app_code_comparison_pair_equality.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -35,7 +35,7 @@ export function app_code_lesson_expression_equals() {
     ];
     return parts;
   }
-  let lesson = app_code_lesson_functions_console_log_comparison({
+  let lesson = app_code_lesson_expression_comparison({
     operator,
     question_middle: "the same as",
     pair,

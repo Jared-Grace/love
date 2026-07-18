@@ -12,7 +12,7 @@ import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-export function app_code_lesson_functions_console_log_comparison(params) {
+export function app_code_lesson_expression_comparison(params) {
   let operator = property_get(params, "operator");
   let question_middle = property_get(params, "question_middle");
   let pair = property_get_or_null(params, "pair");

@@ -1,4 +1,4 @@
-import { app_code_lesson_functions_console_log_comparison } from "./app_code_lesson_functions_console_log_comparison.mjs";
+import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
 import { app_code_comparison_pair_ordering } from "./app_code_comparison_pair_ordering.mjs";
 import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_greater_than() {
     let parts = ["", symbol, " is like ", less_symbol];
     return parts;
   }
-  let lesson = app_code_lesson_functions_console_log_comparison({
+  let lesson = app_code_lesson_expression_comparison({
     operator,
     question_middle: "bigger than",
     pair,

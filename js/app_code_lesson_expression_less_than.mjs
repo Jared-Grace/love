@@ -1,4 +1,4 @@
-import { app_code_lesson_functions_console_log_comparison } from "./app_code_lesson_functions_console_log_comparison.mjs";
+import { app_code_lesson_expression_comparison } from "./app_code_lesson_expression_comparison.mjs";
 import { app_code_comparison_pair_ordering } from "./app_code_comparison_pair_ordering.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
@@ -24,7 +24,7 @@ export function app_code_lesson_expression_less_than() {
     ["Yes is written as ", js_keyword_true()],
     ["No is written as ", js_keyword_false()],
   ];
-  let lesson = app_code_lesson_functions_console_log_comparison({
+  let lesson = app_code_lesson_expression_comparison({
     operator,
     question_middle: "smaller than",
     pair,
