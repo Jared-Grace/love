@@ -25,6 +25,7 @@ export function app_g_bible_passage_button(
   html_style_set(reference_span, "color", "#a0eaa0");
   let separator = html_span_text(b, "📖");
   html_style_set(separator, "margin", "0 0.6em");
+  html_style_set(separator, "filter", "sepia(1) saturate(4) brightness(1.1) hue-rotate(5deg)");
   let verse_span = html_span_text(b, verse_text);
   html_style_set(verse_span, "color", "#ffe680");
   html_bold_mild(verse_span);
