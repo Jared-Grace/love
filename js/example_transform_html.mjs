@@ -4,6 +4,7 @@ import { html_code_element } from "./html_code_element.mjs";
 import { example_code_block_html } from "./example_code_block_html.mjs";
 import { example_before_shown } from "./example_before_shown.mjs";
 import { example_io_column_html } from "./example_io_column_html.mjs";
+import { example_arrow_svg } from "./example_arrow_svg.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function example_transform_html(example) {
   let title = property_get(example, "title");
