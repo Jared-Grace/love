@@ -7,5 +7,9 @@ export function app_g_pray_discern(container, correct, effect, discern) {
     emoji_pray(),
     " Pray to God for discernment for what to say",
   );
-  app_g_pray_reveal(container, correct, pray, effect, discern);
+  let thanks = text_combine(
+    emoji_pray(),
+    " Pray to God and thank Him for the discernment",
+  );
+  app_g_pray_reveal(container, correct, pray, thanks, effect, discern);
 }
