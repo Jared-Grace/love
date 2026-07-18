@@ -7,6 +7,8 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { emoji_dove } from "./emoji_dove.mjs";
 import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
+import { html_style_head } from "./html_style_head.mjs";
+import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
 export function app_g_discern_prevented_overlay() {
   "the Holy Spirit gently preventing the FIRST disregard of discernment: full-screen 🕊️ + gold message (God's leading = His word); fades in, then auto-dismisses after a fixed time (enough to read)";
   let body = html_document_body();
@@ -27,10 +29,12 @@ export function app_g_discern_prevented_overlay() {
     opacity: "0",
     transition: "opacity 0.3s ease",
   });
+  html_style_head(app_g_emoji_glow_keyframe());
   let emoji = html_p_text(div, emoji_dove());
   html_style_assign(emoji, {
     "font-size": "9rem",
     margin: "0",
+    animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
   let message = html_p_text(
     div,
@@ -43,6 +47,10 @@ export function app_g_discern_prevented_overlay() {
     "max-width": "85vw",
     "text-align": "center",
     "text-shadow": "0 0 0.2em rgba(255, 255, 255, 0.7)",
+    background: "rgba(0, 0, 0, 0.55)",
+    padding: "1.5rem 2rem",
+    "border-radius": "3rem",
+    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
