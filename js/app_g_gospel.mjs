@@ -3,7 +3,6 @@ import { property_set } from "./property_set.mjs";
 import { invoke_once } from "./invoke_once.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { app_g_doxology } from "./app_g_doxology.mjs";
-import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "./g_objection_generate_property.mjs";
 import { app_g_wrong } from "./app_g_wrong.mjs";
 import { app_g_main_books } from "./app_g_main_books.mjs";
@@ -14,7 +13,7 @@ import { app_g_button_conversation_end } from "./app_g_button_conversation_end.m
 import { app_g_bible_passage_button } from "./app_g_bible_passage_button.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { property_transform } from "./property_transform.mjs";
-import { app_g_container_text } from "./app_g_container_text.mjs";
+import { app_g_turn_quiz } from "./app_g_turn_quiz.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -54,8 +53,6 @@ export async function app_g_gospel(
     let v = app_g_wrong(passage, passages, property);
     let passage_wrong = property_get(v, "passage_wrong");
     let ob = property_get(v, "ob");
-    app_g_npc_says(npc, overlay, ob);
-    app_g_container_text(overlay, "What would you like to say?");
     function correct() {
       async function lambda() {
         property_transform(npc, "objections", subtract_1);
@@ -88,7 +85,7 @@ export async function app_g_gospel(
         });
       }
     }
-    invoke_multiple_shuffle_2(correct, wrong);
+    app_g_turn_quiz(overlay, npc, ob, "What would you like to say?", correct, wrong);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     let doxology = app_g_doxology();
