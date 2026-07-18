@@ -5,5 +5,5 @@ export async function app_search(context) {
   html_mobile_default(context);
   let languages_chosen = [];
   property_set_exists_not(context, "languages_chosen", languages_chosen);
-  app_search_home(context);
+  await app_search_home(context);
 }
