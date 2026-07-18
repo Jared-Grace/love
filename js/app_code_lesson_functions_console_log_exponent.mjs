@@ -1,7 +1,6 @@
-import { js_code_statement } from "./js_code_statement.mjs";
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -10,7 +9,6 @@ import { range_map } from "./range_map.mjs";
 import { list_join } from "./list_join.mjs";
 import { each } from "./each.mjs";
 import { text_to } from "./text_to.mjs";
-import { js_console_log_name } from "./js_console_log_name.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -36,31 +34,24 @@ export function app_code_lesson_functions_console_log_exponent() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  var r = app_code_lesson_functions_console_log_generic({
+  let lesson = app_code_lesson_expression_generic({
     above,
-    lambda$code: js_code_statement,
-    name_id_rights: [],
     name_id,
     next_arg,
     example_count: 2,
-    quiz_backwards_answer_count_override: null,
-    forwards_answer_count_override: null,
   });
-  let lesson = property_get(r, "lesson");
   return lesson;
   function title_name_id() {
     "the home title is console.log exponent **";
-    let console_name = js_console_log_name();
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text_code_dark(parent, console_name);
-        html_span_text(parent, " exponent ");
+        html_span_text(parent, "exponent ");
         html_span_text_code_dark(parent, symbol);
       }
       return render;
     }
-    let rights = [console_name, " exponent"];
+    let rights = [" exponent"];
     let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
     return built;
   }

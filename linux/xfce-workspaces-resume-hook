@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# systemd system-sleep hook: re-assert the XFCE workspace digit shortcuts when
+# the machine resumes from suspend/hibernate.
+#
+# STATUS: committed but UNVERIFIED / NOT YET INSTALLED. Written before a real
+# hibernate proved the new xfsettingsd-based shortcuts (see
+# xfce-workspaces-digits) actually break on resume. The whole reason we moved
+# off xfwm4's native keys was that xfsettingsd survived the last hibernate --
+# so this hook may never be needed. Install it only if a resume is observed to
+# break Super+digit.
+#
+# Install (root; the activation lives outside git by necessity -- systemd only
+# runs hooks owned by root under /usr/lib/systemd/system-sleep/):
+#   sudo ln -sfn /home/j/repos/love/linux/xfce-workspaces-resume-hook \
+#        /usr/lib/systemd/system-sleep/xfce-workspaces-resume-hook
+# Uninstall:
+#   sudo rm /usr/lib/systemd/system-sleep/xfce-workspaces-resume-hook
+#
+# systemd calls this as root with: $1 = pre|post, $2 = suspend|hibernate|...
+# We act only on 'post' (resume) and re-run the per-user setup inside that
+# user's graphical session. Re-running re-asserts the xfconf command shortcuts;
+# if a future hibernate shows the grab ALSO needs an xfsettingsd restart, add
+# `xfsettingsd --replace` to run_in_user_session below.
+set -euo pipefail
+
+[ "${1:-}" = post ] || exit 0   # only on resume, not on the way down
+
+# The user whose X session owns the graphical seat (display :0).
+graphical_user() {
+  who | awk '/\(:0\)/ {print $1; exit}'
+}
+
+run_in_user_session() {  # <username>
+  local user=$1 uid setup
+  uid=$(id -u "$user") || return 0
+  setup="/home/${user}/repos/love/linux/xfce-workspaces-digits"
+  [ -x "$setup" ] || return 0
+  runuser -u "$user" -- env \
+    DISPLAY=:0 \
+    XAUTHORITY="/home/${user}/.Xauthority" \
+    DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${uid}/bus" \
+    "$setup" >/dev/null 2>&1 || true
+}
+
+user=$(graphical_user || true)
+if [ -n "${user:-}" ]; then
+  run_in_user_session "$user"
+fi
