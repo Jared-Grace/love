@@ -78,32 +78,39 @@ export function app_code_lesson_expression_exponent() {
       let chip = app_code_lesson_number_chip(parent, number, power_color);
       return chip;
     }
-    function nowrap_box(parent) {
-      "keeps a chip expression from breaking across lines mid-way";
-      let box = html_span(parent);
-      html_style_set(box, "white-space", "nowrap");
-      return box;
+    function dark_tile(parent) {
+      "one continuous black code tile that holds a whole expression, so it reads as a single unit instead of being chopped into separate pieces (matching how the % lesson renders its code)";
+      let tile = html_span(parent);
+      html_style_code_dark(tile);
+      html_style_set(tile, "white-space", "nowrap");
+      return tile;
     }
-    function product_chips(parent, base, count) {
-      "count base-color chips joined by a dark *, so product_chips(2, 3) reads 2 * 2 * 2 with three purple 2's";
-      let box = nowrap_box(parent);
+    function lifted_chip(tile, number, color) {
+      "a color chip embedded INSIDE a dark tile, lifted off the black by rings - the same way the % lesson embeds its remainder chip in a code tile";
+      let chip = app_code_lesson_number_chip(tile, number, color);
+      app_code_lesson_chip_lift(chip);
+      return chip;
+    }
+    function product_expression(parent, base, count) {
+      "one dark tile reading base * base * ... , each base a lifted color chip, so product_expression(2, 3) is 2 * 2 * 2";
+      let tile = dark_tile(parent);
       function factor(index) {
         let first = equal_0(index);
         if (first) {
-          base_chip(box, base);
+          lifted_chip(tile, base, base_color);
         } else {
-          html_span_text_code_dark(box, star_separator);
-          base_chip(box, base);
+          html_span_text(tile, star_separator);
+          lifted_chip(tile, base, base_color);
         }
       }
       each(range(count), factor);
     }
-    function power_chips(parent, base, power) {
-      "the shorthand: a purple base, a dark **, an orange power - so power_chips(2, 3) reads 2 ** 3";
-      let box = nowrap_box(parent);
-      base_chip(box, base);
-      html_span_text_code_dark(box, power_separator);
-      power_chip(box, power);
+    function power_expression(parent, base, power) {
+      "one dark tile reading base ** power, base and power as lifted color chips, so power_expression(2, 3) is 2 ** 3";
+      let tile = dark_tile(parent);
+      lifted_chip(tile, base, base_color);
+      html_span_text(tile, power_separator);
+      lifted_chip(tile, power, power_color);
     }
     html_div_cycle_code(c, [
       "You already know how to multiply numbers like ",
