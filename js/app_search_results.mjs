@@ -12,6 +12,8 @@ import { html_style_padding_em } from "../../love/js/html_style_padding_em.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { app_shared_border_radius_extra_large } from "../../love/js/app_shared_border_radius_extra_large.mjs";
 import { app_shared_container_blue_medium_background_color } from "../../love/js/app_shared_container_blue_medium_background_color.mjs";
+import { html_border } from "../../love/js/html_border.mjs";
+import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
 import { html_style_margin_x } from "../../love/js/html_style_margin_x.mjs";
 import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
 import { html_display_block } from "../../love/js/html_display_block.mjs";
