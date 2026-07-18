@@ -2,6 +2,7 @@ import { html_hash_get } from "./html_hash_get.mjs";
 import { text_skip } from "./text_skip.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { app_g_dev_index } from "./app_g_dev_index.mjs";
+import { app_g_dev_back_link } from "./app_g_dev_back_link.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_dev_if() {
