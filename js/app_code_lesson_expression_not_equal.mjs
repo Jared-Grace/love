@@ -8,7 +8,7 @@ export function app_code_lesson_expression_not_equal() {
   let symbol = property_get(operator, "operator");
   let pair = app_code_comparison_pair_inequality();
   let equal_symbol = js_operator_triple_equal_symbol();
-  function closing(fn_name) {
+  function closing() {
     let parts = [
       "",
       symbol,

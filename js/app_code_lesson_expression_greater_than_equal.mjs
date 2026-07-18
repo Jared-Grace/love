@@ -52,7 +52,7 @@ export function app_code_lesson_expression_greater_than_equal() {
       js_keyword_false(),
     ],
   ];
-  function closing(fn_name) {
+  function closing() {
     let parts = [
       "",
       symbol,
