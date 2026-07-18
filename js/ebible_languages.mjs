@@ -7,7 +7,7 @@ import { ebible_language_luganda } from "./ebible_language_luganda.mjs";
 import { ebible_language_punjabi } from "./ebible_language_punjabi.mjs";
 import { ebible_language_urdu } from "./ebible_language_urdu.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { list_sort_text_property } from "./list_sort_text_property.mjs";
+import { ebible_languages_sort_speakers } from "./ebible_languages_sort_speakers.mjs";
 import { ebible_language_original } from "./ebible_language_original.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -193,6 +193,6 @@ export function ebible_languages() {
   fn_name("ebible_languages_add");
   ("if you modify the above list, then run:");
   fn_name("ebible_languages_chapters_cache_refresh");
-  list_sort_text_property(languages, "name");
+  ebible_languages_sort_speakers(languages);
   return languages;
 }

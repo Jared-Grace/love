@@ -3197,3 +3197,164 @@ app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'bible' }
+{ rebuild: 'ceb_bible' }
+{ rebuild: 'g_bible' }
+{ rebuild: 'next' }
+{ rebuild: 'original_bible' }
+{ rebuild: 'reply_local' }
+{ rebuild: 'reply' }
+{ rebuild: 'search' }
+{ rebuild: 'supper_tl' }
+{ rebuild: 'supper' }
+{ rebuild: 'verses' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'next', a_name: 'next' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'search', a_name: 'search' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'next', a_name: 'next' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'search', a_name: 'search' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
+app_shared_name_search_info
+{ search: 'supper', a_name: 'supper' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper.html' }
+app_shared_name_search_info
+{ search: 'supper_tl', a_name: 'supper_tl' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper_tl.html' }
+app_shared_name_search_info
+{ search: 'reply', a_name: 'reply' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply.html' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/bible.html' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/ceb_bible.html' }
+app_shared_name_search_info
+{ search: 'verses', a_name: 'verses' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/verses.html' }
+app_shared_name_search_info
+{ search: 'original_bible', a_name: 'original_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/original_bible.html' }
+webpack_watch
+{ rebuild: 'search' }
+app_shared_name_search_info
+{ search: 'g_bible', a_name: 'g_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_bible.html' }
+webpack_watch
+{ rebuild: 'bible' }
+{ rebuild: 'ceb_bible' }
+{ rebuild: 'original_bible' }
+{ rebuild: 'reply' }
+{ rebuild: 'supper_tl' }
+{ rebuild: 'supper' }
+{ rebuild: 'verses' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
+app_shared_name_search_info
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+webpack_watch
+{ rebuild: 'g_bible' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
+webpack_watch
+{ rebuild: 'next' }
+{ rebuild: 'reply_local' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'reply', a_name: 'reply' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'verses', a_name: 'verses' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
+app_shared_name_search_info
+{ search: 'verses', a_name: 'verses' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/verses.html' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/ceb_bible.html' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/bible.html' }
+app_shared_name_search_info
+{ search: 'supper', a_name: 'supper' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper.html' }
+app_shared_name_search_info
+{ search: 'reply', a_name: 'reply' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply.html' }
+app_shared_name_search_info
+{ search: 'supper_tl', a_name: 'supper_tl' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper_tl.html' }
+app_shared_name_search_info
+{ search: 'original_bible', a_name: 'original_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/original_bible.html' }
+app_shared_name_search_info
+{ search: 'g_bible', a_name: 'g_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_bible.html' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
+app_shared_name_search_info
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
