@@ -21,7 +21,7 @@ export function app_g_prayer_overlay() {
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
-    gap: "1.5rem",
+    gap: "3rem",
     "z-index": "1000",
     opacity: "0",
     transition: "opacity 0.3s ease",
