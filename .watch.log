@@ -3855,3 +3855,99 @@ app_shared_name_search_info
 { search: 'g', a_name: 'g' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g_verify' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
