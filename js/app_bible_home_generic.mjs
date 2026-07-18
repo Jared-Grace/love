@@ -37,7 +37,7 @@ import { html_centered } from "../../love/js/html_centered.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { app_bible_languages } from "../../love/js/app_bible_languages.mjs";
-import { emoji_gear } from "../../love/js/emoji_gear.mjs";
+import { app_shared_gear_languages_text } from "../../love/js/app_shared_gear_languages_text.mjs";
 import { app_bible_languages_chosen_get } from "../../love/js/app_bible_languages_chosen_get.mjs";
 import { list_map_unordered_add_async } from "../../love/js/list_map_unordered_add_async.mjs";
 import { invoke_multiple_unordered_async } from "../../love/js/invoke_multiple_unordered_async.mjs";
