@@ -35,8 +35,7 @@ export function app_code_home(context) {
     let name = property_get(item, "name");
     let id = property_get(item, "id");
     async function lambda3() {
-      storage_local_set_context(context, "lesson_id", id);
-      await app_shared_screen_set(context, app_code_examples);
+      await app_shared_screen_go(context, "lesson_id", id, app_code_examples);
     }
     let r = app_shared_button_numbered(g, index, lambda3);
     let title = property_get(r, "title");
@@ -61,8 +60,7 @@ export function app_code_home(context) {
   function review_row(lesson_number, scope) {
     let label = app_code_review_range_label(lesson_number, scope);
     async function on_click() {
-      storage_local_set_context(context, "review_number", lesson_number);
-      await app_shared_screen_set(context, app_code_review);
+      await app_shared_screen_go(context, "review_number", lesson_number, app_code_review);
     }
     app_code_review_button(g, label, on_click);
   }
