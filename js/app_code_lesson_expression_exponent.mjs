@@ -11,6 +11,8 @@ import { each } from "./each.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -94,47 +96,65 @@ export function app_code_lesson_expression_exponent() {
       app_code_lesson_chip_lift(made);
       return made;
     }
-    function count_numeral(tile, number, color) {
-      "the small count label under a factor - dim white for the running count, or the exponent's colour on the FINAL factor so the last count visibly becomes the exponent";
-      let label = html_span_text_smaller(tile, text_to(number));
+    function count_numeral(grid, number, color) {
+      "the small count label BELOW a factor, on the light background - a faint dark grey for the running count, or the exponent's colour on the FINAL factor so the last count visibly becomes the exponent";
+      let label = html_span_text_smaller(grid, text_to(number));
       html_font_color_set(label, color);
       return label;
     }
+    function cell_at(node, row, column) {
+      "place a node in a specific grid row and column";
+      html_style_set(node, "grid-row", text_to(row));
+      html_style_set(node, "grid-column", text_to(column));
+    }
     function product_expression(parent, base, base_color, power_color, count) {
-      "base * base * ... as a two-row grid: the top row is the lifted base chips joined by *, the bottom row counts 1..count under each chip (blank under each *), the last count coloured like the power so the eye sees how-many becomes the exponent";
-      let tile = dark_tile(parent);
-      html_style_set(tile, "display", "inline-grid");
-      html_style_set(tile, "grid-auto-flow", "column");
-      html_style_set(tile, "grid-template-rows", "auto auto");
-      html_style_set(tile, "align-items", "center");
-      html_style_set(tile, "justify-items", "center");
-      html_style_set(tile, "column-gap", "0.15em");
-      let dim = "rgba(255, 255, 255, 0.5)";
-      function place_operator() {
-        "a * on the top row with an empty cell under it, so the grid columns stay paired";
-        html_span_text(tile, star);
-        html_span_text(tile, "");
+      "base * base * ... with the running count 1..count OUTSIDE the code, on the light background below each factor: row 1 is one continuous black pill (base chips joined by *), row 2 holds the counts (no black behind them), the last count in the power colour so how-many visibly becomes the exponent";
+      let grid = html_span(parent);
+      html_style_set(grid, "display", "inline-grid");
+      html_style_set(grid, "grid-template-rows", "auto auto");
+      html_style_set(grid, "align-items", "center");
+      html_style_set(grid, "justify-items", "center");
+      html_style_set(grid, "column-gap", "0.35em");
+      html_style_set(grid, "row-gap", "0.2em");
+      html_style_set(grid, "vertical-align", "middle");
+      let pill = html_span(grid);
+      html_style_set(pill, "grid-row", "1");
+      html_style_set(pill, "grid-column", "1 / -1");
+      html_style_set(pill, "background", "black");
+      html_style_set(pill, "border-radius", "0.5em");
+      html_style_set(pill, "align-self", "stretch");
+      let end_column = add(multiply(2, count), 1);
+      function spacer(column) {
+        "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
+        let s = html_span(grid);
+        html_style_set(s, "width", "0.3em");
+        cell_at(s, 1, column);
       }
-      function place_factor(position) {
-        "a base chip on the top row with its count below; the final count takes the power colour";
-        lifted_chip(tile, base, base_color);
+      let dim = "rgba(0, 0, 0, 0.4)";
+      function place_factor(index) {
+        let position = add(index, 1);
+        let column = add(multiply(2, index), 2);
+        let chip = lifted_chip(grid, base, base_color);
+        html_style_set(chip, "margin-block", "0.22em");
+        cell_at(chip, 1, column);
         let last = equal(position, count);
         let numeral_color = dim;
         if (last) {
           numeral_color = power_color;
         }
-        count_numeral(tile, position, numeral_color);
+        let numeral = count_numeral(grid, position, numeral_color);
+        cell_at(numeral, 2, column);
       }
-      function factor(index) {
-        let first = equal_0(index);
-        if (first) {
-          place_factor(1);
-        } else {
-          place_operator();
-          place_factor(add(index, 1));
-        }
+      function place_operator(gap) {
+        let column = add(multiply(2, gap), 3);
+        let op = html_span_text(grid, star);
+        html_font_color_set(op, "white");
+        cell_at(op, 1, column);
       }
-      each(range(count), factor);
+      spacer(1);
+      spacer(end_column);
+      each(range(count), place_factor);
+      each(range(subtract(count, 1)), place_operator);
     }
     function power_expression(parent, base, power, base_color, power_color) {
       "one dark tile reading base ** power, base and power as lifted color chips, so power_expression(2, 3, ...) is 2 ** 3";
