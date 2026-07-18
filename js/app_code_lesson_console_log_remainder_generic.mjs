@@ -78,7 +78,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "remainder ");
+        html_span_text(parent, "Remainder ");
         html_span_text_code_dark(parent, percent);
         let by = text_combine(" by ", divisor_text);
         html_span_text(parent, by);
