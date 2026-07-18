@@ -16,5 +16,6 @@ export async function app_g_dev_if() {
   if (property_exists(routes, name)) {
     let route = property_get(routes, name);
     await route();
+    app_g_dev_back_link();
   }
 }
