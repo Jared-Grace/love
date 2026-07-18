@@ -15,8 +15,10 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
+import { app_code_lesson_chip_lift } from "./app_code_lesson_chip_lift.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_code_exponent_base_color } from "./app_code_exponent_base_color.mjs";
 import { app_code_exponent_power_color } from "./app_code_exponent_power_color.mjs";
@@ -119,20 +121,20 @@ export function app_code_lesson_expression_exponent() {
     html_div_cycle_code(c, ["What if the numbers are all the same number?"]);
     let like = html_div(c);
     html_span_text(like, "Like ");
-    product_chips(like, 2, 3);
+    product_expression(like, 2, 3);
     let map = html_div(c);
     html_span_text(map, "The ");
     base_chip(map, 2);
     html_span_text(map, " appears ");
     power_chip(map, 3);
     html_span_text(map, " times, so we can write ");
-    power_chips(map, 2, 3);
+    power_expression(map, 2, 3);
     html_span_text(map, " for short");
     let likewise = html_div(c);
     html_span_text(likewise, "Likewise ");
-    product_chips(likewise, 3, 4);
+    product_expression(likewise, 3, 4);
     html_span_text(likewise, " is ");
-    power_chips(likewise, 3, 4);
+    power_expression(likewise, 3, 4);
     html_div_cycle_code(c, [
       "The second number is how many to multiply together",
     ]);
