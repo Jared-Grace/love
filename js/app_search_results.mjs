@@ -158,16 +158,15 @@ export async function app_search_results(context, div_results) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     let div_chapter = html_div(div_book);
     html_display_inline_block(div_chapter);
-    let color_background = app_shared_container_blue_dark_background_color();
+    let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
     html_border_radius(div_chapter, app_shared_border_radius_extra_large());
     html_style_padding_em(div_chapter, "0.2");
     html_style_margin_x(div_chapter, "0.15em");
     html_style_margin_y(div_chapter, "0.15em");
-    let chapter_label_text = text_combine(chapter_name, ":");
-    let chapter_label = html_span_text(div_chapter, chapter_label_text);
-    html_font_color_set(chapter_label, app_shared_container_blue_dark_font_color());
-    html_style_margin_x(chapter_label, "0.3em");
+    let chapter_header_text = text_combine("Chapter ", chapter_name);
+    let chapter_header = html_div_text_bold(div_chapter, chapter_header_text);
+    html_style_margin_bottom(chapter_header, "0.3em");
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_chapter);
       html_display_inline_block(div_verse);
@@ -179,7 +178,6 @@ export async function app_search_results(context, div_results) {
       let b = null;
       async function click() {
         html_display_block(div_verse);
-        html_remove(chapter_label);
         html_remove(b);
         let cb_text = html_button_copy_text();
         let cb = app_shared_button_wide(div_verse, cb_text, copy);
