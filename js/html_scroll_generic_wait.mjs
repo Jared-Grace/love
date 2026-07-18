@@ -1,12 +1,9 @@
-import { not } from "./not.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_img_load_wait } from "./html_img_load_wait.mjs";
 export async function html_scroll_generic_wait(player_img_c) {
   let el = html_component_element_get(player_img_c);
-  if (el.tagName === "IMG" && not(el.complete)) {
-    await new Promise(function lambda(r) {
-      let v = (el.onload = r);
-      return v;
-    });
+  if (el.tagName === "IMG") {
+    await html_img_load_wait(player_img_c);
   }
   await new Promise(function lambda4(r) {
     function lambda3() {
