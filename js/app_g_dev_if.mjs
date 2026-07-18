@@ -7,7 +7,6 @@ import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.m
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_dev_if() {
   let hash = html_hash_get();
