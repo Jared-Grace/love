@@ -709,7 +709,8 @@ function app_g_verify_screens() {
 }
 async function app_g_verify_home(context) {
   let root = html_clear_context(context);
-  let chapter_code = localStorage.getItem("g_verify_chapter") || "1JN01";
+  let chapter_code = new URLSearchParams(location.search).get("chapter") || localStorage.getItem("g_verify_chapter") || "1JN01";
+  document.title = g_verify_book_name(chapter_code.slice(0, 3)) + " " + String(Number(chapter_code.slice(3)));
   let storage_key = "g_verify_selected_" + chapter_code;
   let advance_key = "g_verify_advance_" + chapter_code;
   let selected_key = localStorage.getItem(storage_key);
@@ -792,8 +793,7 @@ async function app_g_verify_home(context) {
       let label = g_verify_book_name(code.slice(0, 3)) + " " + String(Number(code.slice(3)));
       let cb = app_shared_button(cbar, label, function () {
         if (code !== chapter_code) {
-          localStorage.setItem("g_verify_chapter", code);
-          location.reload();
+          location.href = location.pathname + "?chapter=" + code;
         }
       });
       if (code === chapter_code) {
