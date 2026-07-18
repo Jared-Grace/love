@@ -21,7 +21,7 @@ export function app_g_prayer_overlay() {
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
-    gap: "3rem",
+    gap: "1.5rem",
     "z-index": "1000",
     opacity: "0",
     transition: "opacity 0.3s ease",
@@ -31,7 +31,7 @@ export function app_g_prayer_overlay() {
   );
   let emoji = html_p_text(div, emoji_pray());
   html_style_assign(emoji, {
-    "font-size": "9rem",
+    "font-size": "12rem",
     margin: "0",
     animation: "prayerGlow 1.6s ease-in-out infinite alternate",
   });
