@@ -2,6 +2,7 @@ import { js_imports_unused_remove } from "../../js/js_imports_unused_remove.mjs"
 export const example = {
   tool: "prune",
   fn: js_imports_unused_remove.name,
+  args: [],
   kind: "transform",
   title: "Remove an unused import",
   note: "prune drops only imports no code references — list_first is imported but never called, so its line goes; list_size stays because alpha uses it. This is the remove-only third of what auto does.",
