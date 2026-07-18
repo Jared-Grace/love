@@ -2,6 +2,7 @@ import { function_arguments_assert_each_add } from "../../js/function_arguments_
 export const example = {
   tool: "aea",
   fn: function_arguments_assert_each_add.name,
+  args: ["js_return_argument_set", "js_return_is, js_expression_node_is"],
   kind: "transform",
   title: "Add a two-sided guard to a slot setter",
   note: "aea prepends arguments_assert_each and repairs imports; one predicate per parameter.",

@@ -1,4 +1,3 @@
-import { text_words_quoted } from "./text_words_quoted.mjs";
 import { example_command_lambda } from "./example_command_lambda.mjs";
 import { example_transform_before } from "./example_transform_before.mjs";
 import { file_temp } from "./file_temp.mjs";
@@ -7,12 +6,11 @@ import { file_js_transform } from "./file_js_transform.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_format_trim } from "./js_format_trim.mjs";
 export async function example_transform_run(e) {
-  let t = text_words_quoted(e.command);
-  let lambda = example_command_lambda(t);
+  let lambda = example_command_lambda(e.fn, e.args);
   if (!lambda) {
     return "skip";
   }
-  let before = example_transform_before(t, e);
+  let before = example_transform_before(e.fn, e);
   async function sandbox(p) {
     await file_overwrite(p, before);
     await file_js_transform(p, lambda);
