@@ -2,6 +2,7 @@ import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_pray_discern } from "./app_g_pray_discern.mjs";
+import { app_g_reveal_word } from "./app_g_reveal_word.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_turn_menu(overlay, prompt, choices) {
@@ -20,5 +21,5 @@ export function app_g_turn_menu(overlay, prompt, choices) {
     }
   }
   each(choices, render_choice);
-  app_g_pray_discern(container, correct);
+  app_g_pray_discern(container, correct, app_g_reveal_word);
 }
