@@ -1,4 +1,5 @@
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
+import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -7,7 +8,6 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { range_map } from "./range_map.mjs";
 import { list_join } from "./list_join.mjs";
-import { each } from "./each.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
@@ -20,7 +20,6 @@ export function app_code_lesson_expression_exponent() {
   "practice a ** b (exponent): multiply the base by itself; the second number is how many to multiply together; kept small (base 2..5, exponent 2..3) so outputs stay <= 125";
   let operator = js_operator_double_asterisk();
   let symbol = property_get(operator, "operator");
-  let power = property_get(operator, "fn");
   function refill() {
     "one exponent (2 or 3) with the four bases 2,3,4,5 shuffled, so the four questions are all distinct";
     let exponent = integer_random(2, 3);
