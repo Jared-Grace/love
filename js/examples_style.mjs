@@ -1,7 +1,11 @@
 import { html_code_element } from "./html_code_element.mjs";
 import { app_shared_color_green } from "./app_shared_color_green.mjs";
+import { app_shared_color_keyword } from "./app_shared_color_keyword.mjs";
+import { app_shared_color_literal } from "./app_shared_color_literal.mjs";
 export function examples_style() {
   let green = app_shared_color_green();
+  let keyword = app_shared_color_keyword();
+  let literal = app_shared_color_literal();
   let css = `
     body { font-family: system-ui, sans-serif; max-width: 62rem; margin: 0 auto; padding: 2rem; color: #1a1a1a; background: #fafafa; }
     h1 { font-size: 1.6rem; }
@@ -14,9 +18,9 @@ export function examples_style() {
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
     pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
     .arrow { width: 2rem; height: 2rem; border-radius: 50%; background: ${green}; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: .1rem auto; transform: rotate(90deg); }
-    .t-kw { color: #d73a49; }
-    .t-str { color: #0a7d3c; }
-    .t-num { color: #6f42c1; }
+    .t-kw { color: ${keyword}; }
+    .t-str { color: ${literal}; }
+    .t-num { color: ${literal}; }
     .t-punct { color: #6a737d; }
     .rejection pre.call { border-left: 3px solid #d33; }
     .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
