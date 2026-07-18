@@ -75,6 +75,11 @@ export async function app_g_verify_home(context) {
   }
   render(chapter, status, approval);
   poll();
+  document.addEventListener("visibilitychange", function on_visible() {
+    if (!document.hidden) {
+      refresh();
+    }
+  });
   function render(chapter, status, approval) {
     shown_json = json_to({
       chapter,
