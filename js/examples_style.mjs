@@ -2,10 +2,12 @@ import { html_code_element } from "./html_code_element.mjs";
 import { app_shared_color_green } from "./app_shared_color_green.mjs";
 import { app_shared_color_keyword } from "./app_shared_color_keyword.mjs";
 import { app_shared_color_literal } from "./app_shared_color_literal.mjs";
+import { app_shared_color_punctuation } from "./app_shared_color_punctuation.mjs";
 export function examples_style() {
   let green = app_shared_color_green();
   let keyword = app_shared_color_keyword();
   let literal = app_shared_color_literal();
+  let punctuation = app_shared_color_punctuation();
   let css = `
     body { font-family: system-ui, sans-serif; max-width: 62rem; margin: 0 auto; padding: 2rem; color: #1a1a1a; background: #fafafa; }
     h1 { font-size: 1.6rem; }
@@ -21,7 +23,7 @@ export function examples_style() {
     .t-kw { color: ${keyword}; }
     .t-str { color: ${literal}; }
     .t-num { color: ${literal}; }
-    .t-punct { color: #6a737d; }
+    .t-punct { color: ${punctuation}; }
     .rejection pre.call { border-left: 3px solid #d33; }
     .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
   `;
