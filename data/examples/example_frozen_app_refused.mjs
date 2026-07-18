@@ -6,7 +6,6 @@ import { app_frozen_assert } from "../../js/app_frozen_assert.mjs";
 // strings.
 let name = app_prefix_without_fn(app_g);
 export const example = {
-  tool: app_frozen_assert.name,
   kind: "rejection",
   title: "A frozen app is refused for prod build, promote, and delete",
   note: "app_frozen_assert throws for any app on apps_frozen() (g, replace), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
