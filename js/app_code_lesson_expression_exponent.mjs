@@ -20,8 +20,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_code_exponent_base_color } from "./app_code_exponent_base_color.mjs";
-import { app_code_exponent_power_color } from "./app_code_exponent_power_color.mjs";
+import { app_code_lesson_color_wheel } from "./app_code_lesson_color_wheel.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
@@ -66,19 +65,18 @@ export function app_code_lesson_expression_exponent() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     let star = js_operator_asterisk_symbol();
-    let base_color = app_code_exponent_base_color();
-    let power_color = app_code_exponent_power_color();
     let star_separator = text_combine_multiple([" ", star, " "]);
     let power_separator = text_combine_multiple([" ", symbol, " "]);
-    function base_chip(parent, number) {
-      "the repeated number, as a purple base-color chip";
-      let chip = app_code_lesson_number_chip(parent, number, base_color);
-      return chip;
-    }
-    function power_chip(parent, number) {
-      "how-many-times, as an orange power-color chip";
-      let chip = app_code_lesson_number_chip(parent, number, power_color);
-      return chip;
+    "two worked examples, each a base and a power - four colored numbers in all - so four hues spaced equally round the wheel keep every number distinct and stop one number wearing a colour here and another colour there";
+    let color_count = 4;
+    let base_one = app_code_lesson_color_wheel(0, color_count);
+    let power_one = app_code_lesson_color_wheel(1, color_count);
+    let base_two = app_code_lesson_color_wheel(2, color_count);
+    let power_two = app_code_lesson_color_wheel(3, color_count);
+    function chip(parent, number, color) {
+      "a standalone color chip sitting in the sentence on the light background, matching a number inside the code";
+      let made = app_code_lesson_number_chip(parent, number, color);
+      return made;
     }
     function dark_tile(parent) {
       "one continuous black code tile that holds a whole expression, so it reads as a single unit instead of being chopped into separate pieces (matching how the % lesson renders its code)";
@@ -89,26 +87,26 @@ export function app_code_lesson_expression_exponent() {
     }
     function lifted_chip(tile, number, color) {
       "a color chip embedded INSIDE a dark tile, lifted off the black by rings - the same way the % lesson embeds its remainder chip in a code tile";
-      let chip = app_code_lesson_number_chip(tile, number, color);
-      app_code_lesson_chip_lift(chip);
-      return chip;
+      let made = app_code_lesson_number_chip(tile, number, color);
+      app_code_lesson_chip_lift(made);
+      return made;
     }
-    function product_expression(parent, base, count) {
-      "one dark tile reading base * base * ... , each base a lifted color chip, so product_expression(2, 3) is 2 * 2 * 2";
+    function product_expression(parent, base, count, color) {
+      "one dark tile reading base * base * ... , each base a lifted color chip, so product_expression(2, 3, color) is 2 * 2 * 2";
       let tile = dark_tile(parent);
       function factor(index) {
         let first = equal_0(index);
         if (first) {
-          lifted_chip(tile, base, base_color);
+          lifted_chip(tile, base, color);
         } else {
           html_span_text(tile, star_separator);
-          lifted_chip(tile, base, base_color);
+          lifted_chip(tile, base, color);
         }
       }
       each(range(count), factor);
     }
-    function power_expression(parent, base, power) {
-      "one dark tile reading base ** power, base and power as lifted color chips, so power_expression(2, 3) is 2 ** 3";
+    function power_expression(parent, base, power, base_color, power_color) {
+      "one dark tile reading base ** power, base and power as lifted color chips, so power_expression(2, 3, ...) is 2 ** 3";
       let tile = dark_tile(parent);
       lifted_chip(tile, base, base_color);
       html_span_text(tile, power_separator);
@@ -121,20 +119,20 @@ export function app_code_lesson_expression_exponent() {
     html_div_cycle_code(c, ["What if the numbers are all the same number?"]);
     let like = html_div(c);
     html_span_text(like, "Like ");
-    product_expression(like, 2, 3);
+    product_expression(like, 2, 3, base_one);
     let map = html_div(c);
     html_span_text(map, "The ");
-    base_chip(map, 2);
+    chip(map, 2, base_one);
     html_span_text(map, " appears ");
-    power_chip(map, 3);
+    chip(map, 3, power_one);
     html_span_text(map, " times, so we can write ");
-    power_expression(map, 2, 3);
+    power_expression(map, 2, 3, base_one, power_one);
     html_span_text(map, " for short");
     let likewise = html_div(c);
     html_span_text(likewise, "Likewise ");
-    product_expression(likewise, 3, 4);
+    product_expression(likewise, 3, 4, base_two);
     html_span_text(likewise, " is ");
-    power_expression(likewise, 3, 4);
+    power_expression(likewise, 3, 4, base_two, power_two);
     html_div_cycle_code(c, [
       "The second number is how many to multiply together",
     ]);
