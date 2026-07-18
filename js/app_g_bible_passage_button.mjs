@@ -24,6 +24,7 @@ export function app_g_bible_passage_button(
   let verse_text = property_get(passage, "text");
   let b = app_g_button_green(overlay, "", lambda);
   app_shared_scripture_gold(b);
+  html_style_set(b, "background", "rgba(255, 243, 205, 0.8)");
   let reference_span = html_span_text(b, reference);
   html_style_set(reference_span, "color", app_shared_color_green());
   html_span_space(b);
