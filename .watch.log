@@ -5927,3 +5927,6 @@ app_shared_name_search_info
 { search: 'message', a_name: 'message' }
 { search: 'next', a_name: 'next' }
 { search: 'reply_local', a_name: 'reply_local' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/ceb_bible.html' }
