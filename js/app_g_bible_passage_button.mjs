@@ -23,8 +23,7 @@ export function app_g_bible_passage_button(
   html_style_set(b, "background", "rgba(0, 0, 0, 0.8)");
   let reference_span = html_span_text(b, reference);
   html_style_set(reference_span, "color", "#a0eaa0");
-  let separator = html_span_text(b, "◆");
-  html_style_set(separator, "color", "rgba(255, 255, 255, 0.4)");
+  let separator = html_span_text(b, "📖");
   html_style_set(separator, "margin", "0 0.6em");
   let verse_span = html_span_text(b, verse_text);
   html_style_set(verse_span, "color", "#ffe680");
