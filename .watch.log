@@ -6387,3 +6387,6 @@ webpack_watch
 app_shared_name_search_info
 { search: 'original_bible', a_name: 'original_bible' }
 { search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
