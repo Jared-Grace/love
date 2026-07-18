@@ -16,6 +16,5 @@ export async function app_shared_bible_change(
     property_set(hash, "c", next);
     property_set(hash, "v", "");
   }
-  html_hash_transform(transform);
-  window_reload();
+  html_hash_transform_reload(transform);
 }
