@@ -1,4 +1,5 @@
-import { app_shared_bible_open_en } from "../../love/js/app_shared_bible_open_en.mjs";
+import { app_bible_mode_switch } from "../../love/js/app_bible_mode_switch.mjs";
+import { app_bible_mode_chapter } from "../../love/js/app_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "../../love/js/app_shared_arrows_wide_unit.mjs";
 import { app_bible_button_chapter_previous } from "../../love/js/app_bible_button_chapter_previous.mjs";
 import { app_bible_button_chapter_next } from "../../love/js/app_bible_button_chapter_next.mjs";
@@ -211,9 +212,9 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     verse_number,
   );
   function lambda3() {
-    app_shared_bible_open_en(chapter_code, verse_number);
+    app_bible_mode_switch(app_bible_mode_chapter());
   }
-  let component2 = app_shared_button(bottom, "Chapter", lambda3);
+  let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let text4 = html_button_copy_text();
   let component = app_shared_button(bottom, text4, noop);
   let v3 = app_shared_bible_toggle_update(
