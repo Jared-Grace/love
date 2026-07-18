@@ -2,7 +2,6 @@ import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_c
 import { property_get } from "./property_get.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_shared_scripture_gold } from "./app_shared_scripture_gold.mjs";
-import { app_shared_color_green } from "./app_shared_color_green.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -26,7 +25,7 @@ export function app_g_bible_passage_button(
   app_shared_scripture_gold(b);
   html_style_set(b, "background", "rgba(255, 243, 205, 0.8)");
   let reference_span = html_span_text(b, reference);
-  html_style_set(reference_span, "color", app_shared_color_green());
+  html_style_set(reference_span, "color", "darkgreen");
   html_span_space(b);
   let verse_span = html_span_text(b, verse_text);
   html_bold_mild(verse_span);
