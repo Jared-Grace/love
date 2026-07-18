@@ -7,6 +7,6 @@ export function html_loading_spinner_style() {
   }
   state.styled = true;
   html_style_head(
-    "@keyframes html_loading_spin {\n  to { transform: rotate(360deg); }\n}",
+    "@keyframes html_loading_spin {\n  0% { transform: rotate(0deg) scale(1); }\n  50% { transform: rotate(180deg) scale(1.15); }\n  100% { transform: rotate(360deg) scale(1); }\n}",
   );
 }
