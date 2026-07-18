@@ -14,6 +14,7 @@ import { app_g_bible_passage_button } from "./app_g_bible_passage_button.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
 import { property_transform } from "./property_transform.mjs";
 import { app_g_turn_quiz } from "./app_g_turn_quiz.mjs";
+import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -53,6 +54,7 @@ export async function app_g_gospel(
     let v = app_g_wrong(passage, passages, property);
     let passage_wrong = property_get(v, "passage_wrong");
     let ob = property_get(v, "ob");
+    let discern = { prayed: false };
     function build_correct(container) {
       async function lambda() {
         property_transform(npc, "objections", subtract_1);
@@ -74,12 +76,18 @@ export async function app_g_gospel(
     }
     function build_wrong(container) {
       let lambda2 = invoke_once(lambda3);
+      function on_wrong() {
+        if (app_g_discern_prevent(discern)) {
+          return;
+        }
+        lambda2();
+      }
       let b = app_g_bible_passage_button(
         passage_wrong,
         chapter_code,
         books,
         container,
-        lambda2,
+        on_wrong,
       );
       function lambda3() {
         app_g_button_wrong(b);
