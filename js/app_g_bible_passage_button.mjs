@@ -29,5 +29,6 @@ export function app_g_bible_passage_button(
   html_span_space(b);
   let verse_span = html_span_text(b, verse_text);
   html_bold_mild(verse_span);
+  html_style_set(verse_span, "text-shadow", "0 0 0.2em rgba(255, 255, 255, 0.9)");
   return b;
 }
