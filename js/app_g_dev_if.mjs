@@ -5,11 +5,16 @@ import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
+import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_g_dev_if() {
   let hash = html_hash_get();
+  if (hash === "#prayer") {
+    app_g_prayer_overlay();
+    return;
+  }
   let view = null;
   if (hash === "#study") {
     view = {
