@@ -28,6 +28,7 @@ import { app_shared_verse_selected_background_color } from "../../love/js/app_sh
 import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "../../love/js/g_verify_book_name.mjs";
+import { app_shared_button_list_centered } from "../../love/js/app_shared_button_list_centered.mjs";
 function api_read(f_name, args) {
   return html_loading_suppressed(function read() {
     return app_api({ f_name, args });
@@ -116,21 +117,44 @@ export async function app_g_verify_home(context) {
     html_style_set(wrap, "margin", "0 auto");
     html_style_padding_x(wrap, "1.2em");
     html_style_padding_y(wrap, "2em");
-    let cbar = html_div_centered(wrap);
+    let cbar = html_div(wrap);
     html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
+    let book_order = [];
+    let book_chapters = {};
     chapter_codes.forEach(function (code) {
-      let label = g_verify_book_name(code.slice(0, 3)) + " " + String(Number(code.slice(3)));
-      let cb = app_shared_button(cbar, label, function () {
-        if (code !== chapter_code) {
-          location.href = location.pathname + "?chapter=" + code;
+      let book = code.slice(0, 3);
+      if (!book_chapters[book]) {
+        book_chapters[book] = [];
+        book_order.push(book);
+      }
+      book_chapters[book].push(code);
+    });
+    book_order.forEach(function (book) {
+      let row = html_div_centered(cbar);
+      let book_label = html_p_text(row, g_verify_book_name(book));
+      html_font_color_set(book_label, app_shared_text_deemphasized_color());
+      html_style_set(book_label, "font-size", "0.85em");
+      html_margin_em(book_label, "0");
+      let buttons = app_shared_button_list_centered(
+        row,
+        book_chapters[book],
+        function (code) {
+          return String(Number(code.slice(3)));
+        },
+        function (code) {
+          if (code !== chapter_code) {
+            location.href = location.pathname + "?chapter=" + code;
+          }
+        },
+      );
+      book_chapters[book].forEach(function (code, i) {
+        if (code === chapter_code) {
+          html_style_background_color_set(
+            buttons[i],
+            app_shared_verse_selected_background_color(),
+          );
         }
       });
-      if (code === chapter_code) {
-        html_style_background_color_set(
-          cb,
-          app_shared_verse_selected_background_color(),
-        );
-      }
     });
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     html_style_set(title, "font-family", app_shared_font_serif());
