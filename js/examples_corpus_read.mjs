@@ -10,12 +10,12 @@ export async function examples_corpus_read() {
     return text_ends_with(name, ".mjs");
   }
   let mjs = list_filter(names, is_mjs);
-  let sorted = list_sort_text(mjs);
+  list_sort_text(mjs);
   async function to_example(name) {
     let mod = await import("../data/examples/" + name);
     let example = property_get(mod, "example");
     return example;
   }
-  let examples = await list_map_unordered_async(sorted, to_example);
+  let examples = await list_map_unordered_async(mjs, to_example);
   return examples;
 }
