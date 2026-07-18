@@ -20,7 +20,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_code_lesson_color_wheel } from "./app_code_lesson_color_wheel.mjs";
+import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
@@ -67,12 +67,11 @@ export function app_code_lesson_expression_exponent() {
     let star = js_operator_asterisk_symbol();
     let star_separator = text_combine_multiple([" ", star, " "]);
     let power_separator = text_combine_multiple([" ", symbol, " "]);
-    "two worked examples, each a base and a power - four colored numbers in all - so four hues spaced equally round the wheel keep every number distinct and stop one number wearing a colour here and another colour there";
-    let color_count = 4;
-    let base_one = app_code_lesson_color_wheel(0, color_count);
-    let power_one = app_code_lesson_color_wheel(1, color_count);
-    let base_two = app_code_lesson_color_wheel(2, color_count);
-    let power_two = app_code_lesson_color_wheel(3, color_count);
+    "two worked examples, each a base and a power - four colored numbers in all - given four distinct familiar colours (red, green, blue, amber) so every number is easy to tell apart and no number wears a colour here and another colour there";
+    let base_one = app_code_lesson_chip_color(0);
+    let power_one = app_code_lesson_chip_color(1);
+    let base_two = app_code_lesson_chip_color(2);
+    let power_two = app_code_lesson_chip_color(3);
     function chip(parent, number, color) {
       "a standalone color chip sitting in the sentence on the light background, matching a number inside the code";
       let made = app_code_lesson_number_chip(parent, number, color);
