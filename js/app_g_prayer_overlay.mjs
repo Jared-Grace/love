@@ -38,7 +38,7 @@ export function app_g_prayer_overlay() {
   let card = html_div(div);
   html_style_assign(card, {
     background: "rgba(0, 0, 0, 0.55)",
-    "border-radius": "1.5rem",
+    "border-radius": "3rem",
     padding: "1.75rem 2.25rem",
     "max-width": "88vw",
     display: "flex",
