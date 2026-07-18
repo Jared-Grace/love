@@ -10,7 +10,7 @@ export function html_loading_spinner(parent) {
     border: "9px solid rgba(255, 255, 255, 0.25)",
     "border-top-color": "white",
     "border-radius": "50%",
-    animation: "html_loading_spin 1.2s ease-in-out infinite",
+    animation: "html_loading_spin 2s ease-in-out infinite",
   });
   return spinner;
 }
