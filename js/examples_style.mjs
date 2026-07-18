@@ -19,7 +19,7 @@ export function examples_style() {
     .io-col { min-width: 0; }
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
     pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
-    .arrow { width: 2rem; height: 2rem; border-radius: 50%; background: ${green}; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: .1rem auto; transform: rotate(90deg); }
+    .arrow { color: ${green}; font-size: 2.2rem; font-weight: 900; line-height: 1; text-align: center; margin: .1rem 0; transform: rotate(90deg); }
     .t-kw { color: ${keyword}; }
     .t-str { color: ${literal}; }
     .t-num { color: ${literal}; }
