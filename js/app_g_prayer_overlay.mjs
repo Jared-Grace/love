@@ -49,7 +49,7 @@ export function app_g_prayer_overlay() {
   });
   let waiting_text = html_p_text(card, "Waiting on the Lord...");
   html_style_assign(waiting_text, {
-    color: "#ffe680",
+    color: "white",
     "font-size": "2.25rem",
     margin: "0",
     "text-align": "center",
@@ -59,7 +59,7 @@ export function app_g_prayer_overlay() {
     "“Those who wait on the Lord shall renew their strength.”",
   );
   html_style_assign(verse, {
-    color: "white",
+    color: "#ffe680",
     "font-size": "1.75rem",
     margin: "0",
     "text-align": "center",
