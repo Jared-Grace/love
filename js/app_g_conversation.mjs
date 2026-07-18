@@ -50,12 +50,16 @@ export async function app_g_conversation(
   function npc_believe() {
     say("I've never really been sure. I suppose I'm still figuring that out.");
   }
+  let discern = { prayed: false, warnings: 0 };
   let christian = property_get(npc, "christian");
   if (not(christian)) {
     let correct_index = integer_random_0(2);
     function choice_make(index, action, topic, label) {
       let is_correct = index === correct_index;
       function on_click() {
+        if (not(is_correct) && app_g_discern_prevent(discern)) {
+          return;
+        }
         if (is_correct) {
           action();
         } else {
@@ -79,7 +83,13 @@ export async function app_g_conversation(
       choice_make(1, npc_how, "how I'm doing", how_label),
       choice_make(2, npc_believe, "what I believe", believe_label),
     ];
-    app_g_turn_menu(overlay, "What would you like to say?", choices);
+    app_g_turn_menu(overlay, "What would you like to say?", choices, discern);
   }
-  app_g_button_conversation_end(overlay, overlay_close);
+  function on_end() {
+    if (app_g_discern_prevent(discern)) {
+      return;
+    }
+    overlay_close();
+  }
+  app_g_button_conversation_end(overlay, on_end);
 }
