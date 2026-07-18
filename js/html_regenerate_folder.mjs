@@ -8,6 +8,7 @@ import { each_async } from "./each_async.mjs";
 import { file_read } from "./file_read.mjs";
 import { html_code_is } from "./html_code_is.mjs";
 import { html_regenerate } from "./html_regenerate.mjs";
+import { html_regenerate_frozen_is } from "./html_regenerate_frozen_is.mjs";
 export async function html_regenerate_folder(folder) {
   let files = await folder_read_files(folder);
   let names = list_filter_ends_with(files, html_extension());
@@ -18,6 +19,10 @@ export async function html_regenerate_folder(folder) {
   let paths = list_map(names, lambda);
   async function lambda2(la) {
     async function lambda3(file_path) {
+      let frozen = html_regenerate_frozen_is(file_path);
+      if (frozen) {
+        return;
+      }
       let contents = await file_read(file_path);
       let generated = html_code_is(contents);
       if (generated) {
