@@ -790,18 +790,36 @@ async function app_g_verify_home(context) {
     html_style_set(wrap, "margin", "0 auto");
     html_style_padding_x(wrap, "1.2em");
     html_style_padding_y(wrap, "2em");
-    let cbar = html_div_centered(wrap);
+    let cbar = html_div(wrap);
     html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
+    let book_order = [];
+    let book_chapters = {};
     chapter_codes.forEach(function (code) {
-      let label = g_verify_book_name(code.slice(0, 3)) + " " + String(Number(code.slice(3)));
-      let cb = app_shared_button(cbar, label, function () {
+      let book = code.slice(0, 3);
+      if (!book_chapters[book]) {
+        book_chapters[book] = [];
+        book_order.push(book);
+      }
+      book_chapters[book].push(code);
+    });
+    book_order.forEach(function (book) {
+      let row = html_div_centered(cbar);
+      let book_label = html_p_text(row, g_verify_book_name(book));
+      html_font_color_set(book_label, app_shared_text_deemphasized_color());
+      html_style_set(book_label, "font-size", "0.85em");
+      html_margin_em(book_label, "0");
+      let buttons = app_shared_button_list_centered(row, book_chapters[book], function (code) {
+        return String(Number(code.slice(3)));
+      }, function (code) {
         if (code !== chapter_code) {
           location.href = location.pathname + "?chapter=" + code;
         }
       });
-      if (code === chapter_code) {
-        html_style_background_color_set(cb, app_shared_verse_selected_background_color());
-      }
+      book_chapters[book].forEach(function (code, i) {
+        if (code === chapter_code) {
+          html_style_background_color_set(buttons[i], app_shared_verse_selected_background_color());
+        }
+      });
     });
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     html_style_set(title, "font-family", app_shared_font_serif());
@@ -1435,7 +1453,11 @@ function html_loading_overlay() {
     "font-size": "1.5rem",
     "font-family": "sans-serif",
     "text-align": "center",
-    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)"
+    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
+    background: "rgba(0, 0, 0, 0.55)",
+    padding: "1.5rem 2rem",
+    "border-radius": "3rem",
+    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)"
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
@@ -1935,6 +1957,35 @@ function g_verify_book_name(book_code) {
     return names[book_code];
   }
   return book_code;
+}
+function app_shared_button_list_centered(root, items, item_to_button_text, on_click) {
+  let div = html_div_centered(root);
+  let mapped = app_shared_button_list(div, items, item_to_button_text, on_click);
+  return mapped;
+}
+function app_shared_button_list(parent, items, item_to_text, on_click) {
+  function lambda(item) {
+    let text = item_to_text(item);
+    function lambda2() {
+      on_click(item);
+    }
+    let component = app_shared_button(parent, text, lambda2);
+    return component;
+  }
+  let mapped = list_map(items, lambda);
+  return mapped;
+}
+function list_map(list, lambda$item) {
+  list_is_assert_json(list, {
+    hint: "list_map expects a list to map over"
+  });
+  text_combine_multiple([fn_name("data_identifiers_search_multiple"), " needed this wrapping ", lambda]);
+  function lambda(item) {
+    let r = lambda$item(item);
+    return r;
+  }
+  let mapped = list.map(lambda);
+  return mapped;
 }
 function html_margin_0(root) {
   html_style_set(root, "margin", 0);
