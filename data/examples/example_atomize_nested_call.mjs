@@ -1,6 +1,5 @@
 import { js_atomize } from "../../js/js_atomize.mjs";
 export const example = {
-  tool: "atomize",
   fn: js_atomize.name,
   args: [],
   kind: "transform",
@@ -9,7 +8,6 @@ export const example = {
   before: `export function f(a) {
   return g(h(a));
 }`,
-  command: `atomize`,
   after: `export function f(a) {
   let v = h(a);
   return g(v);
