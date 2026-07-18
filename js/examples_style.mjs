@@ -14,7 +14,9 @@ export function examples_style() {
     .example { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0; }
     .example h2 { font-size: 1.15rem; margin: 0 0 .35rem; }
     .note { color: #555; margin: 0 0 .75rem; line-height: 1.5; }
-    .command code { background: #f0f0f0; padding: .3rem .5rem; border-radius: 4px; font-family: ui-monospace, monospace; font-size: .9rem; }
+    .command code, .function-name code { background: #f0f0f0; padding: .3rem .5rem; border-radius: 4px; font-family: ui-monospace, monospace; font-size: .9rem; }
+    .function-name { margin: 0 0 .4rem; }
+    .function-name::before { content: "function"; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-right: .5rem; }
     .io { display: flex; flex-direction: column; gap: .6rem; margin-top: .75rem; }
     .io-col { min-width: 0; }
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
