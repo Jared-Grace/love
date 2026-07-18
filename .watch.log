@@ -3741,3 +3741,64 @@ app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'ceb_bible' }
+{ rebuild: 'g_bible' }
+{ rebuild: 'original_bible' }
+{ rebuild: 'supper_tl' }
+{ rebuild: 'supper' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'supper_tl', a_name: 'supper_tl' }
+{ search: 'supper', a_name: 'supper' }
+webpack_watch
+{ rebuild: 'bible' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'g_bible', a_name: 'g_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_bible.html' }
+app_shared_name_search_info
+{ search: 'supper', a_name: 'supper' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper.html' }
+app_shared_name_search_info
+{ search: 'supper_tl', a_name: 'supper_tl' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/supper_tl.html' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/ceb_bible.html' }
+app_shared_name_search_info
+{ search: 'original_bible', a_name: 'original_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/original_bible.html' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/bible.html' }
+webpack_watch
+{ rebuild: 'bible' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'bible', a_name: 'bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/bible.html' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
