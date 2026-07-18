@@ -21,7 +21,7 @@ export function app_g_bible_passage_button(
   );
   let verse_text = property_get(passage, "text");
   let b = app_g_button_green(overlay, "", lambda);
-  html_style_set(b, "background", "rgba(0, 0, 0, 0.6)");
+  html_style_set(b, "background", "rgba(0, 0, 0, 0.85)");
   let reference_span = html_span_text(b, reference);
   html_style_set(reference_span, "color", "#ffffff");
   html_span_space(b);
