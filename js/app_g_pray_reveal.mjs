@@ -9,7 +9,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_g_pray_reveal(container, correct, label, label_thanks, effect, discern) {
-  "a pray button that walks the discernment prayer full circle: the first click ASKS God for discernment (marks `discern` prayed, waits on God, then effect(correct) reveals the discerned choice); the button then re-enables and relabels to a thanksgiving, so the next click THANKS God for the discernment He gave (1 Thess 5:18) and closes the button";
+  "a pray button that walks the discernment prayer full circle: the first click ASKS God for discernment (marks `discern` prayed, waits on God, then effect(correct) reveals the discerned choice); the button then re-enables and relabels to a thanksgiving, so EACH later click THANKS God for the discernment He gave (1 Thess 5:18) with a freshly-varied prayer — thank as often as you like (gratitude is inexhaustible)";
   function disable() {
     html_style_assign(pray_b, {
       opacity: "0.5",
@@ -33,7 +33,6 @@ export function app_g_pray_reveal(container, correct, label, label_thanks, effec
     setTimeout(answered, delay);
   }
   function on_thanks() {
-    disable();
     app_g_message_overlay(emoji_pray(), g_thanks_discernment(), "white", 3500);
   }
   function on_click() {
