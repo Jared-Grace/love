@@ -7,9 +7,7 @@ import { app_shared_button_screen_green_style_assign } from "../../love/js/app_s
 import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
-import { app_code_glow_correct } from "./app_code_glow_correct.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { each } from "./each.mjs";
 import { list_map } from "../../love/js/list_map.mjs";
 import { list_sort_text_to } from "../../love/js/list_sort_text_to.mjs";
 import { list_concat } from "../../love/js/list_concat.mjs";
@@ -78,27 +76,14 @@ export function app_code_lesson_quiz_multiple_choice(
   let choices = list_concat(distractors, [quiz_answer_text]);
   list_sort_text_to(choices);
   let answered = false;
-  let revealed = false;
-  let correct_button = null;
   function each_button(quiz_choice) {
     let b = app_shared_button_wide(parent, quiz_choice, on_click);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
-    let is_correct = equal(quiz_choice, quiz_answer_text);
-    if (is_correct) {
-      correct_button = b;
-    }
     async function on_click() {
       if (answered) {
-        ("locked after the answer is chosen; advance with Next at their own pace");
+        ("locked once the correct choice is chosen");
         return;
-      }
-      if (revealed) {
-        let other = not(is_correct);
-        if (other) {
-          ("after a wrong answer only the glowing correct choice is clickable");
-          return;
-        }
       }
       let eq = equal(quiz_choice, quiz_answer_text);
       if (eq) {
@@ -106,9 +91,11 @@ export function app_code_lesson_quiz_multiple_choice(
         app_shared_button_screen_green_style_assign(b);
         await on_success();
       } else {
+        "a wrong pick disables just THIS choice (dimmed) and leaves the others live, so the learner narrows down to the answer without it being revealed; on_wrong marks the attempt so the review requeues it";
         on_wrong();
         app_code_lesson_quiz_wrong_set(b);
-        reveal(b);
+        html_style_set(b, "pointer-events", "none");
+        html_style_set(b, "opacity", "0.5");
       }
     }
     let nn = null_not_is(answer_on_button);
@@ -117,27 +104,5 @@ export function app_code_lesson_quiz_multiple_choice(
     }
     return b;
   }
-  let buttons = list_map(choices, each_button);
-  function reveal(wrong_button) {
-    "after a wrong answer: mark the correct choice with a distinct soft-gold background plus app_g's discernment glow, lock every other choice, and DIM only the UNCHOSEN ones — the chosen-wrong stays clearly marked (not dimmed) so the learner sees what they picked";
-    if (revealed) {
-      return;
-    }
-    revealed = true;
-    app_code_glow_correct(correct_button);
-    html_style_background_color_set(correct_button, "#fff3cd");
-    html_style_set(correct_button, "outline", "0.06em solid #d6b95c");
-    function lock_other(b) {
-      let is_correct = equal(b, correct_button);
-      if (is_correct) {
-        return;
-      }
-      html_style_set(b, "pointer-events", "none");
-      let chosen_wrong = equal(b, wrong_button);
-      if (not(chosen_wrong)) {
-        html_style_set(b, "opacity", "0.5");
-      }
-    }
-    each(buttons, lock_other);
-  }
+  list_map(choices, each_button);
 }
