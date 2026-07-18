@@ -1,5 +1,7 @@
+import { function_arguments_assert_each_add } from "../../js/function_arguments_assert_each_add.mjs";
 export const example = {
   tool: "aea",
+  fn: function_arguments_assert_each_add.name,
   kind: "transform",
   title: "Add a two-sided guard to a slot setter",
   note: "aea prepends arguments_assert_each and repairs imports; one predicate per parameter.",
