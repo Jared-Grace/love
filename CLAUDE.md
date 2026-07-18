@@ -43,6 +43,8 @@ Raw `node -e '...'` **always prompts the human** (arbitrary JS can shell out / h
 
 If the task genuinely needs to **write** or **persist** (not just read+print), it isn't a throwaway — add a named alias/function in the `r.mjs` system and commit it (in git = reviewable, reusable, DRY), rather than reaching for raw `node -e`.
 
+**Allow-listing an `r.mjs` function** (so `node scripts/r.mjs <fn> <args>` stops prompting) is a *per-function* grant — `Bash(node scripts/r.mjs <fn>:*)` — never a blanket `node scripts/r.mjs:*` (which wouldn't work anyway; the guard folds the function name into the verb on purpose). Only grant it to a function whose behavior is **fixed regardless of its args** (builds a bundle, runs a named transform, commits). **Never allow-list a function that runs arbitrary code or commands from its arguments** — `command_line_generic`, `eval_console_log_replace`, `firebase_storage_function_run_generic`, or any `*_generic` taking a command/code string. Those are `node -e` wearing a function name; allow-listing one silently reopens the hole the `node -e` deny just closed. Un-allow-listed they already prompt — keep it that way.
+
 ## Tests (gap)
 
 There is **no repo-wide test gate yet** — the `q` / `portfolio_qa_tests_run` alias is dangling (no such function). The real automated tests are app-scoped e2e for app_replace: `are` (single), `rv` (verify named), `rva` (verify all). A universal correctness gate is a TODO; until it exists, reasoning in step 4 is the main guard.
