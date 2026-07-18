@@ -5982,3 +5982,18 @@ app_shared_name_search_info
 { search: 'original_bible', a_name: 'original_bible' }
 webpack_watch
 { rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/ceb_bible.html' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
+app_shared_name_search_info
+{ search: 'original_bible', a_name: 'original_bible' }
