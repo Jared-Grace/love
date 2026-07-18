@@ -5930,3 +5930,8 @@ app_shared_name_search_info
 { search: 'ceb_bible', a_name: 'ceb_bible' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/ceb_bible.html' }
+webpack_watch
+{ rebuild: 'ceb_bible' }
+app_shared_name_search_info
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'ceb_bible', a_name: 'ceb_bible' }
