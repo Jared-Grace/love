@@ -90,6 +90,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_plus_times,
     app_code_lesson_expression_plus_divide,
     app_code_lesson_expression_minus_times,
+    app_code_lesson_expression_minus_divide,
     app_code_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
     app_code_lesson_functions_console_log,
