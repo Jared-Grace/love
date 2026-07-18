@@ -56,7 +56,7 @@ export function app_g_prayer_overlay() {
   });
   let verse = html_p_text(
     card,
-    "“Those who wait on the Lord shall renew their strength.”",
+    "Those who wait on the Lord shall renew their strength.",
   );
   html_style_assign(verse, {
     color: "#ffe680",
