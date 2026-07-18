@@ -1,12 +1,11 @@
 import { null_is } from "../../love/js/null_is.mjs";
 import { app_replace_animation_duration_get } from "../../love/js/app_replace_animation_duration_get.mjs";
-import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
+import { app_shared_screen_go } from "../../love/js/app_shared_screen_go.mjs";
 import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
 import { equal } from "../../love/js/equal.mjs";
 import { app_shared_color_light_green } from "../../love/js/app_shared_color_light_green.mjs";
 import { app_replace_animation_duration_default } from "../../love/js/app_replace_animation_duration_default.mjs";
 import { each } from "../../love/js/each.mjs";
-import { storage_local_set_context } from "../../love/js/storage_local_set_context.mjs";
 import { emoji_clock } from "../../love/js/emoji_clock.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
@@ -73,12 +72,12 @@ export function app_replace_settings(context) {
       let combined2 = text_combine("Animations ", ending);
       let combined = text_combine(left, combined2);
       function lambda4() {
-        storage_local_set_context(
+        app_shared_screen_go(
           context,
           "animation_duration",
           animation_duration,
+          app_replace_settings,
         );
-        app_shared_screen_set(context, app_replace_settings);
       }
       let b = app_shared_button(div2, combined, lambda4);
       if (equal(animation_duration, duration)) {

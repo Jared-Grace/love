@@ -12,8 +12,7 @@ import { app_replace_button_rule_content } from "./app_replace_button_rule_conte
 import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
 import { app_replace_rule_set } from "./app_replace_rule_set.mjs";
 import { each_index } from "./each_index.mjs";
-import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-import { storage_local_set_context } from "./storage_local_set_context.mjs";
+import { app_shared_screen_go } from "./app_shared_screen_go.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { html_font_color_set_if } from "./html_font_color_set_if.mjs";
@@ -54,7 +53,6 @@ export function app_replace_goals(context) {
   }
   each_index(goals, each_goal);
   function on_click(index) {
-    storage_local_set_context(context, "goal_index", index);
-    app_shared_screen_set(context, app_replace_rule_set);
+    app_shared_screen_go(context, "goal_index", index, app_replace_rule_set);
   }
 }
