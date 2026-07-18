@@ -10,10 +10,17 @@ export function example_transform_html(example) {
   let title = property_get(example, "title");
   let note = property_get(example, "note");
   let command = property_get(example, "command");
+  let function_name = property_get(example, "fn");
   let before = property_get(example, "before");
   let after = property_get(example, "after");
   let heading = html_code_element("h2", {}, html_escape(title));
   let note_html = html_code_element("p", { class: "note" }, html_escape(note));
+  let function_code = html_code_element("code", {}, html_escape(function_name));
+  let function_html = html_code_element(
+    "div",
+    { class: "function-name" },
+    function_code,
+  );
   let command_code = html_code_element("code", {}, html_escape(command));
   let command_html = html_code_element(
     "div",
@@ -30,7 +37,13 @@ export function example_transform_html(example) {
   let after_col = example_io_column_html("after", after_block);
   let io_inner = text_combine_multiple([before_col, arrow, after_col]);
   let io = html_code_element("div", { class: "io" }, io_inner);
-  let inner = text_combine_multiple([heading, note_html, command_html, io]);
+  let inner = text_combine_multiple([
+    heading,
+    note_html,
+    function_html,
+    command_html,
+    io,
+  ]);
   let r = html_code_element("article", { class: "example" }, inner);
   return r;
 }
