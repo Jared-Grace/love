@@ -4,6 +4,7 @@ import { list_copy } from "./list_copy.mjs";
 import { list_empty } from "./list_empty.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_bible_home_generic } from "./app_bible_home_generic.mjs";
+import { noop } from "./noop.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -33,7 +34,7 @@ export async function app_g_bible_home_inner(context, download) {
       }
       each(passages, lambda2);
     }
-    r = await app_bible_home_generic(context, lambda);
+    r = await app_bible_home_generic(context, lambda, noop);
   }
   let passages = await list_adder_async(lambda3);
   let v = {
