@@ -1,82 +1,60 @@
-import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
-import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
-import { eval_console_log_to_list } from "./eval_console_log_to_list.mjs";
-import { list_permutations } from "./list_permutations.mjs";
+import { js_expression_is } from "./js_expression_is.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { each } from "./each.mjs";
-import { each_index } from "./each_index.mjs";
-import { range } from "./range.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_first } from "./list_first.mjs";
+import { list_remove_last_equal } from "./list_remove_last_equal.mjs";
+import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_adder_unique } from "./list_adder_unique.mjs";
+import { list_single } from "./list_single.mjs";
+import { js_unparse } from "./js_unparse.mjs";
+import { list_adder } from "./list_adder.mjs";
+import { js_visit_type_node } from "./js_visit_type_node.mjs";
+import { property_swap } from "./property_swap.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { equal } from "./equal.mjs";
-import { equal_0 } from "./equal_0.mjs";
-import { modulo } from "./modulo.mjs";
-import { less_than } from "./less_than.mjs";
-import { and } from "./and.mjs";
-import { not } from "./not.mjs";
-import { text_to } from "./text_to.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_code_binary_expression_commutative } from "./js_code_binary_expression_commutative.mjs";
+import { js_parse } from "./js_parse.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
-  "every arrangement of the code's tokens that produces the SAME output - the unscramble asks the learner to build code for a given output, so any rearrangement that prints the same value is a correct answer; the expression is flat (number operator number operator ...), so numbers sit on even token positions and operators on odd, and we permute each group into its own positions, then keep the arrangements whose output matches";
-  let raw_tokens = js_tokenizer_normalized(code);
-  function keep_token(token) {
-    "drop a trailing statement semicolon - the learner builds only the expression, and it must not land inside the console.log(...) we evaluate";
-    let is_semicolon = equal(token, ";");
-    return not(is_semicolon);
-  }
-  let tokens = list_filter(raw_tokens, keep_token);
-  let numbers = [];
-  let operators = [];
-  function classify(token, index) {
-    let is_number = equal_0(modulo(index, 2));
-    if (is_number) {
-      list_add(numbers, token);
-    } else {
-      list_add(operators, token);
-    }
-  }
-  each_index(tokens, classify);
-  function interleave(number_order, operator_order) {
-    "rebuild a flat expression: number, operator, number, operator, ..., number";
-    let result = [];
-    function add_pair(index) {
-      list_add(result, list_get(number_order, index));
-      let has_operator = less_than(index, list_size(operator_order));
-      if (has_operator) {
-        list_add(result, list_get(operator_order, index));
+  let expression_is = js_expression_is(code);
+  let ast = js_parse(code);
+  function lambda4(la) {
+    let commutatives = js_code_binary_expression_commutative();
+    function lambda2(node) {
+      let operator = property_get(node, "operator");
+      let includes = list_includes(commutatives, operator);
+      if (includes) {
+        function swap() {
+          property_swap(node, "left", "right");
+        }
+        la(swap);
       }
     }
-    each(range(list_size(number_order)), add_pair);
-    return result;
-  }
-  function output_text(expression) {
-    let call = text_combine_multiple(["console.log(", expression, ")"]);
-    let logs = eval_console_log_to_list(call);
-    let first = list_first(logs);
-    return text_to(first);
-  }
-  let target = output_text(js_tokens_to_code(tokens));
-  let number_orders = list_permutations(numbers);
-  let operator_orders = list_permutations(operators);
-  let seen = [];
-  let variations = [];
-  function for_number_order(number_order) {
-    function for_operator_order(operator_order) {
-      let arrangement = interleave(number_order, operator_order);
-      let arrangement_code = js_tokens_to_code(arrangement);
-      let same_output = equal(output_text(arrangement_code), target);
-      let already = list_includes(seen, arrangement_code);
-      let keep = and(same_output, not(already));
-      if (keep) {
-        list_add(seen, arrangement_code);
-        list_add(variations, arrangement);
-      }
+    let swappable_types = ["BinaryExpression", "LogicalExpression"];
+    function visit_type(type) {
+      js_visit_type_node(ast, type, lambda2);
     }
-    each(operator_orders, for_operator_order);
+    each(swappable_types, visit_type);
   }
-  each(number_orders, for_number_order);
+  let variation_fns = list_adder(lambda4);
+  function lambda5(la) {
+    let code_without_variation = js_unparse(ast);
+    la(code_without_variation);
+    let ne = list_empty_not_is(variation_fns);
+    if (ne) {
+      let variation = list_single(variation_fns);
+      variation();
+      let code_with_variation = js_unparse(ast);
+      la(code_with_variation);
+    }
+  }
+  let codes = list_adder_unique(lambda5);
+  let variations = list_map(codes, js_tokenizer_normalized);
+  if (expression_is) {
+    function lambda6(item) {
+      let expected_last = ";";
+      list_remove_last_equal(item, expected_last);
+    }
+    each(variations, lambda6);
+  }
   return variations;
 }
