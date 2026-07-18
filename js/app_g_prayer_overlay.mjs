@@ -41,7 +41,7 @@ export function app_g_prayer_overlay() {
     "font-size": "2.25rem",
     margin: "0",
     "text-align": "center",
-    "text-shadow": "0 0 0.25em #000, 0 0 0.5em #000, 0 2px 3px #000",
+    "text-shadow": "0 0 0.3em #000, 0 0 0.6em #000, 0 2px 4px #000",
   });
   let verse = html_p_text(
     div,
@@ -49,12 +49,11 @@ export function app_g_prayer_overlay() {
   );
   html_style_assign(verse, {
     color: "white",
-    "font-size": "1.5rem",
+    "font-size": "1.75rem",
     margin: "0",
     "max-width": "80vw",
     "text-align": "center",
-    opacity: "0.85",
-    "text-shadow": "0 0 0.25em #000, 0 0 0.5em #000, 0 2px 3px #000",
+    "text-shadow": "0 0 0.3em #000, 0 0 0.6em #000, 0 2px 4px #000",
   });
   let reference = html_p_text(div, "Isaiah 40:31");
   html_style_assign(reference, {
@@ -62,8 +61,7 @@ export function app_g_prayer_overlay() {
     "font-size": "1.25rem",
     margin: "0",
     "text-align": "center",
-    opacity: "0.85",
-    "text-shadow": "0 0 0.25em #000, 0 0 0.5em #000, 0 2px 3px #000",
+    "text-shadow": "0 0 0.3em #000, 0 0 0.6em #000, 0 2px 4px #000",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
