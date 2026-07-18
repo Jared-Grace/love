@@ -100,7 +100,6 @@ export async function app_g_gospel(
       }
       return b;
     }
-    let discern = { prayed: false, warnings: 0 };
     app_g_turn_quiz(
       overlay,
       npc,
@@ -110,7 +109,13 @@ export async function app_g_gospel(
       build_wrong,
       discern,
     );
-    app_g_button_conversation_end(overlay, overlay_close);
+    function on_end() {
+      if (app_g_discern_prevent(discern)) {
+        return;
+      }
+      overlay_close();
+    }
+    app_g_button_conversation_end(overlay, on_end);
   } else {
     let doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, doxology);
