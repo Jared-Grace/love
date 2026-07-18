@@ -2,7 +2,6 @@ import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_c
 import { property_get } from "./property_get.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span_space } from "./html_span_space.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 export function app_g_bible_passage_button(
@@ -24,10 +23,12 @@ export function app_g_bible_passage_button(
   html_style_set(b, "background", "rgba(0, 0, 0, 0.8)");
   let reference_span = html_span_text(b, reference);
   html_style_set(reference_span, "color", "#a0eaa0");
-  html_span_space(b);
+  let separator = html_span_text(b, "◆");
+  html_style_set(separator, "color", "rgba(255, 255, 255, 0.4)");
+  html_style_set(separator, "margin", "0 0.6em");
   let verse_span = html_span_text(b, verse_text);
   html_style_set(verse_span, "color", "#ffe680");
   html_bold_mild(verse_span);
-  html_style_set(verse_span, "text-shadow", "0 0 0.15em rgba(255, 255, 255, 0.55)");
+  html_style_set(verse_span, "text-shadow", "0 0 0.2em rgba(255, 255, 255, 0.7)");
   return b;
 }
