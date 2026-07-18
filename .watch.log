@@ -5335,3 +5335,109 @@ app_shared_name_search_info
 { search: 'a', a_name: 'a' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/a.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+webpack_watch
+{ rebuild: 'a' }
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+webpack_watch
+{ rebuild: 'calendar' }
+app_shared_name_search_info
+{ search: 'a', a_name: 'a' }
+{ search: 'g', a_name: 'g' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'a', a_name: 'a' }
+{ search: 'g', a_name: 'g' }
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
+webpack_watch
+{ rebuild: 'code' }
+{ rebuild: 'replace' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'karate', a_name: 'karate' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../karate_code/public/dev/karate.html' }
+webpack_watch
+{ rebuild: 'next' }
+{ rebuild: 'reply_local' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'replace', a_name: 'replace' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'code', a_name: 'code' }
+{ search: 'replace', a_name: 'replace' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'a', a_name: 'a' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/a.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/calendar.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'calendar' }
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'g', a_name: 'g' }
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'replace', a_name: 'replace' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/replace.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+webpack_watch
+{ rebuild: 'replace' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+app_shared_name_search_info
+{ search: 'replace', a_name: 'replace' }
+{ search: 'replace', a_name: 'replace' }
+{ search: 'calendar', a_name: 'calendar' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/calendar.html' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'replace', a_name: 'replace' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/replace.html' }
+app_shared_name_search_info
+{ search: 'reply_local', a_name: 'reply_local' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/reply_local.html' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
