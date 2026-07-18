@@ -17,7 +17,6 @@ import { html_text_set } from "../../love/js/html_text_set.mjs";
 import { list_first } from "../../love/js/list_first.mjs";
 import { lists_equal_pair } from "../../love/js/lists_equal_pair.mjs";
 import { equal } from "../../love/js/equal.mjs";
-import { not } from "../../love/js/not.mjs";
 import { list_any } from "../../love/js/list_any.mjs";
 import { each } from "../../love/js/each.mjs";
 import { list_add } from "../../love/js/list_add.mjs";
@@ -55,12 +54,7 @@ export function app_code_lesson_quiz_token_select(
   html_text_set(answer_div, text);
   let variations = app_code_lesson_quiz_token_select_variations(code);
   let normalized = js_tokenizer_normalized(code);
-  function not_semicolon(token) {
-    "the answer code ends in a statement semicolon; it is not a token the learner arranges, so keep it out of the buttons";
-    return not(equal(token, ";"));
-  }
-  let tokens = list_filter(normalized, not_semicolon);
-  let tokens_unique = list_unique(tokens);
+  let tokens_unique = list_unique(normalized);
   function variation_buildable(variation) {
     "keep only variations whose every token is an available button; a commutative swap across a non-commutative neighbour introduces parentheses (e.g. 9 - 4 + 4 gives 4 + (9 - 4)) that the answer never had, so there is no ( or ) button - that would be an unbuildable trap that accepts the first token then dead-ends";
     function is_button(token) {
