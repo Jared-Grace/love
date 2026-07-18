@@ -14,6 +14,12 @@ import { app_shared_border_radius_extra_large } from "../../love/js/app_shared_b
 import { app_shared_container_blue_medium_background_color } from "../../love/js/app_shared_container_blue_medium_background_color.mjs";
 import { html_border } from "../../love/js/html_border.mjs";
 import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
+import { html_cursor_pointer } from "../../love/js/html_cursor_pointer.mjs";
+import { html_display_none } from "../../love/js/html_display_none.mjs";
+import { html_on_click } from "../../love/js/html_on_click.mjs";
+import { html_page_scrolls } from "../../love/js/html_page_scrolls.mjs";
+import { not } from "../../love/js/not.mjs";
+import { list_add } from "../../love/js/list_add.mjs";
 import { html_style_margin_x } from "../../love/js/html_style_margin_x.mjs";
 import { html_display_inline_block } from "../../love/js/html_display_inline_block.mjs";
 import { html_display_block } from "../../love/js/html_display_block.mjs";
@@ -137,17 +143,40 @@ export async function app_search_results(context, div_results) {
   }
   list_sort_text_mapper(results, bible_order_key);
   let book_code_shown = null;
-  let div_book = null;
+  let div_book_body = null;
+  let book_collapse_setters = [];
   function book_card_add(book_code) {
     let same = equal(book_code, book_code_shown);
     if (same) {
       return;
     }
     book_code_shown = book_code;
-    div_book = app_shared_container_blue(div_results);
+    let div_book = app_shared_container_blue(div_results);
     let book_name = ebible_book_code_to_name(books, book_code);
     let header = html_div_text_bold(div_book, book_name);
-    html_style_margin_bottom(header, "0.3em");
+    html_cursor_pointer(header);
+    let div_body = html_div(div_book);
+    div_book_body = div_body;
+    let collapsed = false;
+    function collapsed_set(value) {
+      collapsed = value;
+      if (collapsed) {
+        html_display_none(div_body);
+        html_display_inline_block(div_book);
+        html_style_margin_bottom(header, "0");
+      } else {
+        html_display_block(div_body);
+        html_display_block(div_book);
+        html_style_margin_bottom(header, "0.3em");
+      }
+    }
+    function toggle() {
+      let next = not(collapsed);
+      collapsed_set(next);
+    }
+    html_on_click(header, toggle);
+    collapsed_set(false);
+    list_add(book_collapse_setters, collapsed_set);
   }
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
@@ -155,7 +184,7 @@ export async function app_search_results(context, div_results) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     book_card_add(book_code);
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
-    let div_chapter = html_div(div_book);
+    let div_chapter = html_div(div_book_body);
     html_display_inline_block(div_chapter);
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
@@ -220,6 +249,13 @@ export async function app_search_results(context, div_results) {
   }
   let button_lists = list_map(results, each_result);
   button_list = list_squash(button_lists);
+  let scrolls = html_page_scrolls();
+  if (scrolls) {
+    function collapse_book(collapsed_set) {
+      collapsed_set(true);
+    }
+    each(book_collapse_setters, collapse_book);
+  }
   let s = list_size_1(button_list);
   if (s) {
     let only = list_single(button_list);
