@@ -194,8 +194,8 @@ export async function app_bible_home_generic(context, lambda$a) {
   );
   html_button_biblehub_open_parallel(
     bottom,
-    book_name,
     chapter_name,
+    book_name,
     verse_number,
   );
   html_button_biblehub_open_commentary(
