@@ -1,12 +1,29 @@
 #!/usr/bin/env bash
-# Ensure at least 10 XFCE workspaces, and wire the first 10 to the digit row:
+# Ensure at least 10 XFCE workspaces, and wire the digit row to them:
 #   Super+1..9,0        -> switch to workspace 1..10
 #   Shift+Super+1..9,0  -> move the active window to workspace 1..10
+#
+# Why command shortcuts (wmctrl) instead of xfwm4's built-in workspace keys:
+# xfwm4's own /xfwm4/ keyboard grabs proved fragile here -- after a hibernate
+# (and a live workspace-count change) they stopped firing, and neither
+# `xfwm4 --replace` nor re-writing the bindings revived them. The /commands/
+# shortcuts are grabbed by a different daemon (xfsettingsd), which kept working
+# across the same hibernate. So we route through xfsettingsd + wmctrl for
+# durability. Requires: wmctrl (apt install wmctrl).
+#
 # Idempotent: re-running changes nothing. Never reduces an existing higher count.
 set -euo pipefail
 
 readonly MINIMUM_WORKSPACES=10
 readonly DIGITS="1 2 3 4 5 6 7 8 9 0"
+readonly KB=xfce4-keyboard-shortcuts
+
+require_wmctrl() {
+  if ! command -v wmctrl >/dev/null 2>&1; then
+    echo "error: wmctrl not found -- install it with:  sudo apt install -y wmctrl" >&2
+    exit 1
+  fi
+}
 
 workspace_count_get() {
   xfconf-query -c xfwm4 -p /general/workspace_count
@@ -20,26 +37,36 @@ workspace_count_ensure_minimum() {
   fi
 }
 
-# shortcut_set <accelerator-path> <xfwm4-action>
-# Creates the property if absent, overwrites it if present.
-shortcut_set() {
-  local path=$1 action=$2
-  if xfconf-query -c xfce4-keyboard-shortcuts -p "$path" >/dev/null 2>&1; then
-    xfconf-query -c xfce4-keyboard-shortcuts -p "$path" -s "$action"
+# command_shortcut_set <accelerator> <command>
+# Creates the /commands/custom property if absent, overwrites it if present.
+command_shortcut_set() {
+  local path="/commands/custom/$1" command=$2
+  if xfconf-query -c "$KB" -p "$path" >/dev/null 2>&1; then
+    xfconf-query -c "$KB" -p "$path" -s "$command"
   else
-    xfconf-query -c xfce4-keyboard-shortcuts -p "$path" -n -t string -s "$action"
+    xfconf-query -c "$KB" -p "$path" -n -t string -s "$command"
   fi
 }
 
+# Remove any stale xfwm4-native digit binding this script used to create, so a
+# single daemon (xfsettingsd) owns each accelerator -- no double-grab if xfwm4
+# ever starts honoring them again.
+xfwm4_digit_binding_remove() {
+  xfconf-query -c "$KB" -p "/xfwm4/custom/$1" -r 2>/dev/null || true
+}
+
 digits_wire_to_workspaces() {
-  local digit workspace=1
+  local digit index=0
   for digit in $DIGITS; do
-    shortcut_set "/xfwm4/custom/<Super>${digit}" "workspace_${workspace}_key"
-    shortcut_set "/xfwm4/custom/<Shift><Super>${digit}" "move_window_workspace_${workspace}_key"
-    workspace=$((workspace + 1))
+    xfwm4_digit_binding_remove "<Super>${digit}"
+    xfwm4_digit_binding_remove "<Shift><Super>${digit}"
+    command_shortcut_set "<Super>${digit}" "wmctrl -s ${index}"
+    command_shortcut_set "<Shift><Super>${digit}" "wmctrl -r :ACTIVE: -t ${index}"
+    index=$((index + 1))
   done
 }
 
+require_wmctrl
 workspace_count_ensure_minimum
 digits_wire_to_workspaces
 echo "OK: $(workspace_count_get) workspaces; Super+1..9,0 switch, Shift+Super+1..9,0 move window."
