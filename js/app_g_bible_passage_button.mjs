@@ -4,6 +4,7 @@ import { app_g_button_green } from "./app_g_button_green.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 export function app_g_bible_passage_button(
   passage,
