@@ -32,7 +32,7 @@ export function app_g_bible_passage_button(
     opacity: "0.7",
   });
   let verse_span = html_span_text(b, verse_text);
-  html_style_set(verse_span, "color", "#ffe680");
+  html_style_set(verse_span, "color", app_shared_color_gold_text());
   html_bold_mild(verse_span);
   html_style_set(verse_span, "text-shadow", "0 0 0.2em rgba(255, 255, 255, 0.7)");
   return b;
