@@ -9,13 +9,12 @@ import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { equal_0 } from "./equal_0.mjs";
-import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
+import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -71,12 +70,12 @@ export function app_code_lesson_expression_exponent() {
     let power_separator = text_combine_multiple([" ", symbol, " "]);
     function base_chip(parent, number) {
       "the repeated number, as a purple base-color chip";
-      let chip = html_span_text_code_background(parent, text_to(number), base_color);
+      let chip = app_code_lesson_number_chip(parent, number, base_color);
       return chip;
     }
     function power_chip(parent, number) {
       "how-many-times, as an orange power-color chip";
-      let chip = html_span_text_code_background(parent, text_to(number), power_color);
+      let chip = app_code_lesson_number_chip(parent, number, power_color);
       return chip;
     }
     function nowrap_box(parent) {

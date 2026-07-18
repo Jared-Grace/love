@@ -79,13 +79,14 @@ import { app_shared_dismissable_message } from "../../love/js/app_shared_dismiss
 import { app_shared_bible_change } from "../../love/js/app_shared_bible_change.mjs";
 import { list_previous_wrap } from "../../love/js/list_previous_wrap.mjs";
 import { list_next_wrap } from "../../love/js/list_next_wrap.mjs";
-export async function app_shared_bible_read(context) {
+export async function app_shared_bible_read(context, bar_extra) {
   let root = html_mobile_default(context);
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
+  bar_extra(bar);
   let t = html_button_copy_text();
   let max = app_shared_bible_chosen_max();
   let help_text = text_combine_multiple([
