@@ -5326,3 +5326,8 @@ webpack_watch
 app_shared_name_search_info
 { search: 'code', a_name: 'code' }
 { search: 'code', a_name: 'code' }
+{ search: 'karate', a_name: 'karate' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../karate_code/public/dev/karate.html' }
+webpack_watch
+{ rebuild: 'karate' }
