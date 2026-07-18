@@ -23,7 +23,7 @@ export function app_g_bible_passage_button(
   let b = app_g_button_green(overlay, "", lambda);
   html_style_set(b, "background", "rgba(0, 0, 0, 0.8)");
   let reference_span = html_span_text(b, reference);
-  html_style_set(reference_span, "color", "#ccffcc");
+  html_style_set(reference_span, "color", "#a0eaa0");
   html_span_space(b);
   let verse_span = html_span_text(b, verse_text);
   html_style_set(verse_span, "color", "#ffe680");
