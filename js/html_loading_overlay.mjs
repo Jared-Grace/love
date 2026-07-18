@@ -25,26 +25,18 @@ export function html_loading_overlay() {
     transition: "opacity 0.15s ease",
   };
   html_style_assign(div, s);
-  let card = html_div(div);
-  html_style_assign(card, {
-    background: "rgba(0, 0, 0, 0.55)",
-    "border-radius": "5rem",
-    padding: "2.25rem 2.75rem",
-    "max-width": "88vw",
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    gap: "1.5rem",
-    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
-  });
-  html_loading_spinner(card);
-  let message = html_p_text(card, "One moment, please 🙏");
+  html_loading_spinner(div);
+  let message = html_p_text(div, "One moment, please 🙏");
   html_style_assign(message, {
     color: "white",
     "font-size": "1.5rem",
     "font-family": "sans-serif",
     "text-align": "center",
     "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
+    background: "rgba(0, 0, 0, 0.55)",
+    padding: "1.5rem 2rem",
+    "border-radius": "3rem",
+    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
