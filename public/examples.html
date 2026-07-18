@@ -29,6 +29,11 @@ import { property_set } from "./property_set.mjs";
 export function js_return_argument_set(r, a) {
   arguments_assert_each(arguments, [js_return_is, js_expression_node_is]);
   property_set(r, "argument", a);
+}</pre></div></article><article class="example"><h2>Flatten a nested call into a named local</h2><p class="note">atomize lifts each inner call out of its argument slot into a let, so every call reads on its own line. Simplicity is AST depth — one nested expression becomes two shallow statements.</p><div class="command"><code>atomize</code></div><div class="io"><pre class="before">export function f(a) {
+  return g(h(a));
+}</pre><div class="arrow">→</div><pre class="after">export function f(a) {
+  let v = h(a);
+  return g(v);
 }</pre></div></article><article class="example"><h2>Auto-imports: add missing, remove unused, canonicalize paths</h2><p class="note">auto composes all three import verbs — list_last (used, unimported) is added, list_first (imported, unused) is removed, list_size (wrong ../../js/ path) is canonicalized to ./. Provably auto-safe: idempotent, total, state-independent.</p><div class="command"><code>auto js/mixed_imports.mjs</code></div><div class="io"><pre class="before">import { list_first } from "./list_first.mjs";
 import { list_size } from "../../js/list_size.mjs";
 export function alpha(x) {
