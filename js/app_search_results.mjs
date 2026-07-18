@@ -157,11 +157,12 @@ export async function app_search_results(context, div_results) {
     html_display_inline_block(div_chapter);
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
+    html_border(div_chapter, "0.1em", app_shared_container_blue_border_color());
     html_border_radius(div_chapter, app_shared_border_radius_extra_large());
-    html_style_padding_em(div_chapter, "0.2");
+    html_style_padding_em(div_chapter, "0.5");
     html_style_margin_x(div_chapter, "0.15em");
     html_style_margin_y(div_chapter, "0.15em");
-    let chapter_header_text = text_combine("Chapter ", chapter_name);
+    let chapter_header_text = text_combine_multiple(["Chapter ", chapter_name, ":"]);
     let chapter_header = html_div_text_bold(div_chapter, chapter_header_text);
     html_style_margin_bottom(chapter_header, "0.3em");
     function each_verse_number(verse_number) {
