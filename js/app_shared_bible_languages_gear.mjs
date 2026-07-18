@@ -1,4 +1,4 @@
-import { emoji_gear } from "../../love/js/emoji_gear.mjs";
+import { app_shared_gear_languages_text } from "../../love/js/app_shared_gear_languages_text.mjs";
 import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { ebible_languages } from "../../love/js/ebible_languages.mjs";
 import { list_multiple_is } from "../../love/js/list_multiple_is.mjs";
@@ -15,6 +15,6 @@ export function app_shared_bible_languages_gear(
     function on_gear() {
       app_shared_bible_languages_choose(content, languages, languages_chosen);
     }
-    app_shared_button(bar, emoji_gear(), on_gear);
+    app_shared_button(bar, app_shared_gear_languages_text(), on_gear);
   }
 }

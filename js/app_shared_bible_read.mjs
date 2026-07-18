@@ -290,8 +290,8 @@ export async function app_shared_bible_read(context) {
     );
     html_button_biblehub_open_parallel(
       verse_buttons,
-      verse_book_name,
       verse_chapter_name,
+      verse_book_name,
       verse_number_v,
     );
     html_button_biblehub_open_commentary(
