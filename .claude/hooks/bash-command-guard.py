@@ -169,6 +169,23 @@ permissions.allow - that would let the native prefix matcher wave
 through `unshare ... -- rm -rf ~` or `node -e '<anything>'` unrelated to
 this template.
 
+Beyond merely not auto-approving it, a raw `node -e`/`--eval`/`-p`/`--print`
+that is NOT this exact sandboxed template is actively DENIED (see
+find_raw_node_eval / main), rather than left to fall through to a human
+approval prompt. The reasoning: with several agents sharing one human
+approver, a stream of un-vettable `node -e` prompts (often referencing a
+script the prompt text doesn't even show) has negative value - the human
+can't realistically review each one, so a rubber-stamped prompt is just
+cost. The guard therefore refuses it outright and points the caller at the
+two supported paths instead: the sandboxed read-only template above, or a
+committed `scripts/r.mjs` function invoked as `node scripts/r.mjs <fn>
+<args>` (allow-listed once per function via a `Bash(node scripts/r.mjs
+<fn>:*)` rule, after which args flow through freely). Detection is
+tokenizer-based and quote-aware, so a literal `node -e` inside a quoted
+argument (`grep 'node -e' file`) is never mistaken for an actual
+invocation, and any command the tokenizer can't parse falls through to
+normal handling rather than being force-denied on a guess.
+
 A second exact template, `is_safe_sandboxed_node_script`, extends the
 same idea to running a *file* instead of an inline `-e` string:
 `unshare --net --map-root-user -- node --permission
@@ -1488,6 +1505,67 @@ def matched_leading_verb(command, safe_verbs):
     return None
 
 
+NODE_EVAL_FLAGS = ("-e", "--eval", "-p", "--print")
+
+
+def is_node_eval_flag(word):
+    """True iff `word` is a node flag that evaluates a script string given on
+    the command line (`-e`/`--eval`) or evaluates-and-prints one
+    (`-p`/`--print`), including the glued `--eval=CODE`/`--print=CODE` forms.
+    This is the arbitrary-code surface `node` exposes with no script file -
+    see find_raw_node_eval."""
+    return word in NODE_EVAL_FLAGS or word.startswith("--eval=") or word.startswith("--print=")
+
+
+def find_raw_node_eval(command):
+    """True iff `command` runs a raw (un-sandboxed) `node` with an eval flag,
+    so main() can DENY it with an instructive message instead of letting it
+    fall through to a human approval prompt. The one sandboxed template that
+    IS allowed (is_safe_sandboxed_node_eval) never reaches here - is_safe()
+    has already returned "allow" for it before main() calls this.
+
+    Detection reuses the same quote-aware tokenizer, so a literal 'node -e'
+    inside a quoted argument (e.g. `grep 'node -e' file`) is NOT matched -
+    only an actual `node` command word carrying an eval flag is. Leading
+    `VAR=...` assignments and transparent `xargs`/`timeout <dur>` prefixes are
+    unwrapped the same way verb_of does. Any command the tokenizer can't parse
+    (redirection, subshells, `$(...)`, backgrounding) raises Unsupported and is
+    reported as "not detected" - it falls through to normal handling rather
+    than being force-denied on a guess."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return False
+    for words in split_statements(tokens):
+        while words:
+            if ASSIGN_RE.match(words[0]):
+                words = words[1:]
+            elif words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
+                words = words[1:]
+            elif words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
+                words = words[2:]
+            else:
+                break
+        if words and words[0] == "node" and any(is_node_eval_flag(w) for w in words[1:]):
+            return True
+    return False
+
+
+NODE_EVAL_DENY_REASON = (
+    "Raw `node -e` can't be approved here - please don't hand the human a "
+    "prompt to rubber-stamp. Two supported paths instead:\n"
+    "  - read-only one-off (auto-approved, no prompt):\n"
+    "    unshare --net --map-root-user -- node --permission "
+    f"--allow-fs-read={REPO_ROOT} -e '<script>'\n"
+    "  - anything that writes, or that you'd run more than once: add a "
+    "committed function to scripts/r.mjs and run it as `node scripts/r.mjs "
+    "<fn> <args>` (ask the human to allow-list that one function once via a "
+    "Bash(node scripts/r.mjs <fn>:*) rule; after that, any args flow through "
+    "with no prompt).\n"
+    "See CLAUDE.md - 'Throwaway node - never raw `node -e`'."
+)
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
@@ -1519,6 +1597,16 @@ def main():
                     "Auto-approved: every command in this sequence/for-loop "
                     "uses a verb already in permissions.allow."
                 ),
+            }
+        }))
+        return
+
+    if find_raw_node_eval(command):
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": NODE_EVAL_DENY_REASON,
             }
         }))
         return
