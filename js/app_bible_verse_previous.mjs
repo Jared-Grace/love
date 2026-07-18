@@ -1,5 +1,5 @@
 import { app_bible_verse_change } from "./app_bible_verse_change.mjs";
-import { app_bible_chapter_previous } from "./app_bible_chapter_previous.mjs";
+import { app_bible_chapter_previous_last_verse } from "./app_bible_chapter_previous_last_verse.mjs";
 import { list_previous_try } from "./list_previous_try.mjs";
 export async function app_bible_verse_previous(
   context,
@@ -7,7 +7,7 @@ export async function app_bible_verse_previous(
   verse_current,
 ) {
   let verse_get = list_previous_try;
-  let chapter_change = app_bible_chapter_previous;
+  let chapter_change = app_bible_chapter_previous_last_verse;
   await app_bible_verse_change(
     context,
     chapter_code,
