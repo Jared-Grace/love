@@ -6011,3 +6011,23 @@ app_shared_name_search_info
 { search: 'g', a_name: 'g' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'karate' }
+{ rebuild: 'a' }
+{ rebuild: 'autopray' }
+{ rebuild: 'bible' }
+{ rebuild: 'calendar' }
+{ rebuild: 'ceb_bible' }
+{ rebuild: 'g_bible' }
+{ rebuild: 'g_verify' }
+{ rebuild: 'g' }
+{ rebuild: 'message' }
+{ rebuild: 'next' }
+{ rebuild: 'original_bible' }
+{ rebuild: 'reply_local' }
+{ rebuild: 'reply' }
+{ rebuild: 'sandbox' }
+{ rebuild: 'search' }
+{ rebuild: 'supper_tl' }
+{ rebuild: 'supper' }
+{ rebuild: 'verses' }
