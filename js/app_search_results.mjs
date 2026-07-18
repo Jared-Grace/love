@@ -163,10 +163,12 @@ export async function app_search_results(context, div_results) {
       if (collapsed) {
         html_display_none(div_body);
         html_display_inline_block(div_book);
+        html_style_margin_x(div_book, "0.15em");
         html_style_margin_bottom(header, "0");
       } else {
         html_display_block(div_body);
         html_display_block(div_book);
+        html_style_margin_x(div_book, "0");
         html_style_margin_bottom(header, "0.3em");
       }
     }
