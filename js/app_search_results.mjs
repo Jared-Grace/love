@@ -32,6 +32,7 @@ import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs
 import { firebase_storage_download_json_decompress } from "../../love/js/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../love/js/list_filter.mjs";
 import { property_set_exists_not } from "../../love/js/property_set_exists_not.mjs";
+import { property_exists } from "../../love/js/property_exists.mjs";
 import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
 import { list_squash } from "../../love/js/list_squash.mjs";
 import { object_to_list } from "../../love/js/object_to_list.mjs";
@@ -208,6 +209,12 @@ export async function app_search_results(context, div_results) {
       );
       let b = null;
       async function click() {
+        let already_expanded = property_exists(b, "bible_texts");
+        if (already_expanded) {
+          return;
+        }
+        let bible_texts = [];
+        property_set_exists_not(b, "bible_texts", bible_texts);
         html_display_block(div_verse);
         html_remove(b);
         let cb_text = html_button_copy_text();
@@ -219,7 +226,6 @@ export async function app_search_results(context, div_results) {
         let oc_text = text_combine(emoji_book_open(), " Open chapter");
         let oc = app_shared_button_wide(div_verse, oc_text, lambda3);
         html_style_margin_y(oc, "0.2em");
-        let bible_texts = [];
         await app_reply_verses_add(
           en,
           reference,
@@ -236,7 +242,6 @@ export async function app_search_results(context, div_results) {
           }
         }
         each(bible_texts, each_bible_text);
-        property_set_exists_not(b, "bible_texts", bible_texts);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
         }
