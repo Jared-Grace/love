@@ -5,6 +5,7 @@ import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
+import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -19,15 +20,21 @@ export async function app_g_dev_if() {
       word_index: 0,
     };
   }
-  if (hash === "#conversation") {
+  async function npc_view(phase) {
     let npcs = await app_g_npcs_get();
     let npc = list_random_item(npcs);
-    view = {
+    return {
       kind: app_g_view_kind_npc(),
       x: property_get(npc, "x"),
       y: property_get(npc, "y"),
-      phase: app_g_view_phase_conversation(),
+      phase,
     };
+  }
+  if (hash === "#conversation") {
+    view = await npc_view(app_g_view_phase_conversation());
+  }
+  if (hash === "#gospel-share") {
+    view = await npc_view(app_g_view_phase_gospel());
   }
   if (null_is(view)) {
     return;
