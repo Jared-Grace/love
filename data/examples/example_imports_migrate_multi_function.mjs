@@ -1,6 +1,5 @@
 import { file_imports_repair } from "../../js/file_imports_repair.mjs";
 export const example = {
-  tool: "imports",
   fn: file_imports_repair.name,
   args: ["js/two_sizes.mjs"],
   kind: "transform",
@@ -12,7 +11,6 @@ export const example = {
 export function beta(y) {
   return list_size(y);
 }`,
-  command: `imports js/two_sizes.mjs`,
   after: `import { list_size } from "./list_size.mjs";
 export function alpha(x) {
   return list_size(x);
