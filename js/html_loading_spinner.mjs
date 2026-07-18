@@ -5,9 +5,9 @@ export function html_loading_spinner(parent) {
   html_loading_spinner_style();
   let spinner = html_div(parent);
   html_style_assign(spinner, {
-    width: "48px",
-    height: "48px",
-    border: "5px solid rgba(255, 255, 255, 0.25)",
+    width: "72px",
+    height: "72px",
+    border: "7px solid rgba(255, 255, 255, 0.25)",
     "border-top-color": "white",
     "border-radius": "50%",
     animation: "html_loading_spin 0.8s linear infinite",

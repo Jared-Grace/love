@@ -16,6 +16,7 @@ import { html_span } from "./html_span.mjs";
 import { equal } from "./equal.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
+import { app_code_lesson_chip_lift } from "./app_code_lesson_chip_lift.mjs";
 import { app_code_remainder_color } from "./app_code_remainder_color.mjs";
 import { app_code_remainder_color_light } from "./app_code_remainder_color_light.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -106,8 +107,7 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let before = text_combine(prefix_expr, " + ");
     html_span_text(tile, before);
     let chip = remainder_chip(tile, remainder);
-    let rings = "0 0 0 0.1em rgb(178, 214, 255), 0 0 0 0.22em rgb(8, 12, 28)";
-    html_style_set(chip, "box-shadow", rings);
+    app_code_lesson_chip_lift(chip);
     let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
     html_span_text(tile, after);
   }
