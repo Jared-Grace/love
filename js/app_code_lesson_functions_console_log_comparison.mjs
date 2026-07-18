@@ -1,6 +1,7 @@
-import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_binary_next_arg } from "./app_code_binary_next_arg.mjs";
-import { js_code_statement } from "./js_code_statement.mjs";
+import { js_keyword_true } from "./js_keyword_true.mjs";
+import { js_keyword_false } from "./js_keyword_false.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -16,7 +17,6 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   let question_middle = property_get(params, "question_middle");
   let pair = property_get_or_null(params, "pair");
   let name_id_rights = property_get(params, "name_id_rights");
-  let closing = property_get(params, "closing");
   let preamble = property_get(params, "preamble");
   let explanation = property_get(params, "explanation");
   let symbol = property_get(operator, "operator");
@@ -30,18 +30,14 @@ export function app_code_lesson_functions_console_log_comparison(params) {
   if (example_count_missing) {
     example_count = 2;
   }
-  var r = app_code_lesson_functions_console_log_generic({
+  let lesson = app_code_lesson_expression_generic({
     above,
-    lambda$code: js_code_statement,
     name_id_rights,
     category: "operators",
     next_arg,
     example_count,
-    quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: 2,
   });
-  let fn_name = property_get(r, "fn_name");
-  let lesson = property_get(r, "lesson");
   let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol);
   return lesson_symbol;
   function above(root) {
@@ -64,7 +60,12 @@ export function app_code_lesson_functions_console_log_comparison(params) {
     ]);
     html_div_cycle_code(question_container, ["The symbol ", symbol, tail]);
     render_section(explanation);
-    let parts = closing(fn_name);
+    let parts = [
+      "Before, the value was always a number, but now it is ",
+      js_keyword_true(),
+      " or ",
+      js_keyword_false(),
+    ];
     app_code_container_light_blue_cycle_code(root, parts);
   }
 }
