@@ -5,7 +5,14 @@ import { html_code_is } from "./html_code_is.mjs";
 import { html_code_parse } from "./html_code_parse.mjs";
 import { property_get } from "./property_get.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
+import { false_is_assert_json } from "./false_is_assert_json.mjs";
+import { html_regenerate_frozen_is } from "./html_regenerate_frozen_is.mjs";
 export async function html_regenerate(file_path) {
+  let frozen = html_regenerate_frozen_is(file_path);
+  false_is_assert_json(frozen, {
+    hint: "this page belongs to a frozen app (its prod copy must not change and it has its own build) — regenerate a different page, or take it off apps_frozen() first",
+    file_path,
+  });
   let contents = await file_read(file_path);
   let generated = html_code_is(contents);
   true_is_assert_json(generated, {
