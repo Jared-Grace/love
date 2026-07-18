@@ -29,7 +29,6 @@ export function app_g_bible_passage_button(
     margin: "0 0.6em",
     "font-size": "0.8em",
     opacity: "0.7",
-    filter: "sepia(0.85) saturate(4) brightness(1.2)",
   });
   let verse_span = html_span_text(b, verse_text);
   html_style_set(verse_span, "color", "#ffe680");
