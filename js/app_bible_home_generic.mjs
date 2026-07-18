@@ -258,7 +258,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   async function lambda7() {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
-  app_shared_arrows_wide(content, lambda, lambda7);
+  app_shared_arrows_wide_unit(content, "verse", lambda, lambda7);
   list_add_multiple(languages_verses, languages_available);
   let v4 = {
     bar,
