@@ -7,6 +7,8 @@ import { global_function_property_set } from "./global_function_property_set.mjs
 import { app_g_refresh } from "./app_g_refresh.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
+import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 export async function app_g(context) {
   async function lambda() {
     await app_a_indexeddb_initialize();
@@ -20,4 +22,5 @@ export async function app_g(context) {
   }
   await html_loading(lambda);
   html_reload_on_hash_change();
+  catch_ignore_async(g_verses_waiting_prepare);
 }
