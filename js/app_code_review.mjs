@@ -27,6 +27,7 @@ import { app_code_home } from "../../love/js/app_code_home.mjs";
 import { app_code_examples } from "../../love/js/app_code_examples.mjs";
 import { app_code_lessons } from "../../love/js/app_code_lessons.mjs";
 import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
+import { app_shared_screen_go } from "../../love/js/app_shared_screen_go.mjs";
 import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
 import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "../../love/js/text_combine_middle_space_nb.mjs";
@@ -67,8 +68,7 @@ export function app_code_review(context) {
   let lessons_count = list_size(lessons);
   async function go_to_lesson(lesson) {
     let id = property_get(lesson, "id");
-    storage_local_set_context(context, "lesson_id", id);
-    await app_shared_screen_set(context, app_code_examples);
+    await app_shared_screen_go(context, "lesson_id", id, app_code_examples);
   }
   let previous_index = subtract(number, 1);
   let previous_lesson = list_get(lessons, previous_index);
