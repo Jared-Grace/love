@@ -32,7 +32,7 @@ export function html_loading_overlay() {
     "font-size": "1.5rem",
     "font-family": "sans-serif",
     "text-align": "center",
-    "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
+    "text-shadow": "0 0.05em 0.15em rgba(0, 0, 0, 0.8)",
     background:
       "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%)",
     padding: "1.25rem 3.5rem",
