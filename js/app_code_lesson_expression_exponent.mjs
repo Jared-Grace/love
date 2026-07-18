@@ -16,7 +16,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_exponent() {
+export function app_code_lesson_expression_exponent() {
   "practice a ** b (exponent): multiply the base by itself; the second number is how many to multiply together; kept small (base 2..5, exponent 2..3) so outputs stay <= 125";
   let operator = js_operator_double_asterisk();
   let symbol = property_get(operator, "operator");
@@ -58,7 +58,9 @@ export function app_code_lesson_functions_console_log_exponent() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, ["", symbol, " means multiply a number by itself"]);
-    html_div_cycle_code(c, ["The second number is how many to multiply together"]);
+    html_div_cycle_code(c, [
+      "The second number is how many to multiply together",
+    ]);
     let base = 2;
     function base_text(index) {
       return text_to(base);

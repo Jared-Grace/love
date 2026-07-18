@@ -4,7 +4,7 @@ import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_less_than() {
+export function app_code_lesson_expression_less_than() {
   let operator = js_operator_less_than();
   let compare = property_get(operator, "fn");
   let pair = app_code_comparison_pair_ordering(compare);

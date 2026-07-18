@@ -8,7 +8,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_not() {
+export function app_code_lesson_expression_not() {
   let operator = js_operator_bang();
   let symbol = property_get(operator, "operator");
   function not_of(keyword) {

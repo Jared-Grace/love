@@ -5,7 +5,7 @@ import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_equals() {
+export function app_code_lesson_expression_equals() {
   let operator = js_operator_triple_equal();
   let symbol = property_get(operator, "operator");
   let pair = app_code_comparison_pair_equality();
@@ -17,7 +17,13 @@ export function app_code_lesson_functions_console_log_equals() {
     ["In code, we write: ", code_line],
   ];
   let explanation = [
-    ["", symbol, " is ", js_keyword_true(), " only when both sides are the same number"],
+    [
+      "",
+      symbol,
+      " is ",
+      js_keyword_true(),
+      " only when both sides are the same number",
+    ],
   ];
   function closing(fn_name) {
     let parts = [

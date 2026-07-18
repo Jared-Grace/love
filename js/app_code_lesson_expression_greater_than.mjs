@@ -3,7 +3,7 @@ import { app_code_comparison_pair_ordering } from "./app_code_comparison_pair_or
 import { js_operator_greater_than } from "./js_operator_greater_than.mjs";
 import { js_operator_less_than } from "./js_operator_less_than.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_greater_than() {
+export function app_code_lesson_expression_greater_than() {
   let operator = js_operator_greater_than();
   let symbol = property_get(operator, "operator");
   let compare = property_get(operator, "fn");

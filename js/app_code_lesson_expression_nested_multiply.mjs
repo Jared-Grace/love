@@ -6,7 +6,7 @@ import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
-export function app_code_lesson_functions_console_log_nested_multiply() {
+export function app_code_lesson_expression_nested_multiply() {
   "a nested expression that multiplies three numbers: console.log(x * y * z); the first is 2..5 and the other two are small (2..4 and 2..3), so the product stays at or below 60 and can be worked out step by step";
   let symbol = js_operator_asterisk_symbol();
   function first_of(index) {
