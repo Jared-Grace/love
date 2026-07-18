@@ -1,5 +1,5 @@
 import { app_shared_bible_open } from "../../love/js/app_shared_bible_open.mjs";
-import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
+import { app_shared_container_blue_dark_reference_color } from "../../love/js/app_shared_container_blue_dark_reference_color.mjs";
 import { html_style_margin_y } from "../../love/js/html_style_margin_y.mjs";
 import { app_shared_button_inline } from "../../love/js/app_shared_button_inline.mjs";
 import { ebible_book_code_to_name } from "../../love/js/ebible_book_code_to_name.mjs";
@@ -179,6 +179,7 @@ export async function app_search_results(context, div_results) {
       let b = null;
       async function click() {
         html_display_block(div_verse);
+        html_remove(chapter_label);
         html_remove(b);
         let cb_text = html_button_copy_text();
         let cb = app_shared_button_wide(div_verse, cb_text, copy);
@@ -202,7 +203,9 @@ export async function app_search_results(context, div_results) {
           let p = html_p_text(div_verse, bible_text);
           let is_reference = equal(bible_text, reference);
           if (is_reference) {
-            app_shared_text_deemphasized(p);
+            html_font_color_set(p, app_shared_container_blue_dark_reference_color());
+          } else {
+            html_font_color_set(p, app_shared_container_blue_dark_font_color());
           }
         }
         each(bible_texts, each_bible_text);
