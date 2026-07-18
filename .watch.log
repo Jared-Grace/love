@@ -6786,3 +6786,25 @@ Error: EMFILE: too many open files, open '../love/js/app_shared_initialize_refre
   syscall: 'open',
   path: '../love/js/app_shared_initialize_refresh.mjs'
 }
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EMFILE: too many open files, scandir '../love/js'
+    at async readdir (node:internal/fs/promises:956:18)
+    at async ReaddirpStream._exploreDir (file:///home/j/repos/love/node_modules/readdirp/esm/index.js:148:21)
+    at async ReaddirpStream._read (file:///home/j/repos/love/node_modules/readdirp/esm/index.js:132:35)
+Emitted 'error' event on FSWatcher instance at:
+    at FSWatcher._handleError (file:///home/j/repos/love/node_modules/chokidar/esm/index.js:534:18)
+    at NodeFsHandler._boundHandleError (file:///home/j/repos/love/node_modules/chokidar/esm/handler.js:295:49)
+    at ReaddirpStream.emit (node:events:509:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -24,
+  code: 'EMFILE',
+  syscall: 'scandir',
+  path: '../love/js'
+}
+
+Node.js v24.18.0
