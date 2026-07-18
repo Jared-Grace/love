@@ -63,6 +63,13 @@ export function beta(y) {
 export function js_return_is(node) {
   let is = js_node_type_is(node, "ReturnStatement");
   return is;
+}</pre></div></article><article class="example"><h2>Remove an unused import</h2><p class="note">prune drops only imports no code references — list_first is imported but never called, so its line goes; list_size stays because alpha uses it. This is the remove-only third of what auto does.</p><div class="command"><code>prune</code></div><div class="io"><pre class="before">import { list_first } from "./list_first.mjs";
+import { list_size } from "./list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
+}</pre><div class="arrow">→</div><pre class="after">import { list_size } from "./list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
 }</pre></div></article><article class="example rejection"><h2>A slot setter refuses a statement in an expression slot</h2><p class="note">The if-test slot holds an expression; a statement in it is refused by the two-sided guard (js_expression_node_is fails on arg 1).</p><pre class="call">js_statement_if_test_set( parse("if (a) {}"), parseStatement("b();") )</pre><div class="expect">throws — arg 1 is not an expression node</div></article>
 </body>
 </html>
