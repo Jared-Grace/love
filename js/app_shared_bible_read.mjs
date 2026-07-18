@@ -33,7 +33,6 @@ import { integer_to_try } from "../../love/js/integer_to_try.mjs";
 import { list_add } from "../../love/js/list_add.mjs";
 import { list_empty } from "../../love/js/list_empty.mjs";
 import { list_get } from "../../love/js/list_get.mjs";
-import { list_size } from "../../love/js/list_size.mjs";
 import { list_index_of } from "../../love/js/list_index_of.mjs";
 import { list_map_property } from "../../love/js/list_map_property.mjs";
 import { invoke_multiple } from "../../love/js/invoke_multiple.mjs";
