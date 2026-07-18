@@ -57,8 +57,8 @@ import { property_get_or } from "../../love/js/property_get_or.mjs";
 import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
 import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { text_pad_space_quote_double } from "../../love/js/text_pad_space_quote_double.mjs";
-import { app_shared_button_arrow_previous } from "../../love/js/app_shared_button_arrow_previous.mjs";
-import { app_shared_button_arrow_next } from "../../love/js/app_shared_button_arrow_next.mjs";
+import { app_shared_button_arrow_left } from "../../love/js/app_shared_button_arrow_left.mjs";
+import { app_shared_button_arrow_right } from "../../love/js/app_shared_button_arrow_right.mjs";
 import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
 import { app_shared_bible_book_chapter } from "../../love/js/app_shared_bible_book_chapter.mjs";
 import { app_shared_bible_code_open } from "../../love/js/app_shared_bible_code_open.mjs";
@@ -195,9 +195,9 @@ export async function app_shared_bible_read(context, bar_extra) {
     }
     app_shared_button(bar, "View whole chapter", view_whole_chapter);
   } else {
-    app_shared_button_arrow_previous(bar, "chapter", chapter_previous);
+    app_shared_button_arrow_left(bar, chapter_previous);
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
-    app_shared_button_arrow_next(bar, "chapter", chapter_next);
+    app_shared_button_arrow_right(bar, chapter_next);
   }
   app_shared_bible_languages_gear(bar, content, languages_chosen);
   async function fetch_language(lc) {
