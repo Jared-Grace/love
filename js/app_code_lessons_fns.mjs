@@ -1,24 +1,24 @@
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
-import { app_code_lesson_functions_console_log_less_than } from "./app_code_lesson_functions_console_log_less_than.mjs";
-import { app_code_lesson_functions_console_log_greater_than } from "./app_code_lesson_functions_console_log_greater_than.mjs";
-import { app_code_lesson_functions_console_log_equals } from "./app_code_lesson_functions_console_log_equals.mjs";
-import { app_code_lesson_functions_console_log_not_equal } from "./app_code_lesson_functions_console_log_not_equal.mjs";
-import { app_code_lesson_functions_console_log_true_false } from "./app_code_lesson_functions_console_log_true_false.mjs";
-import { app_code_lesson_functions_console_log_not } from "./app_code_lesson_functions_console_log_not.mjs";
-import { app_code_lesson_functions_console_log_or } from "./app_code_lesson_functions_console_log_or.mjs";
-import { app_code_lesson_functions_console_log_and } from "./app_code_lesson_functions_console_log_and.mjs";
-import { app_code_lesson_functions_console_log_less_than_equal } from "./app_code_lesson_functions_console_log_less_than_equal.mjs";
-import { app_code_lesson_functions_console_log_greater_than_equal } from "./app_code_lesson_functions_console_log_greater_than_equal.mjs";
-import { app_code_lesson_functions_console_log_remainder_2 } from "./app_code_lesson_functions_console_log_remainder_2.mjs";
-import { app_code_lesson_functions_console_log_remainder_3 } from "./app_code_lesson_functions_console_log_remainder_3.mjs";
-import { app_code_lesson_functions_console_log_remainder_4 } from "./app_code_lesson_functions_console_log_remainder_4.mjs";
-import { app_code_lesson_functions_console_log_remainder_any } from "./app_code_lesson_functions_console_log_remainder_any.mjs";
-import { app_code_lesson_functions_console_log_nested_add } from "./app_code_lesson_functions_console_log_nested_add.mjs";
-import { app_code_lesson_functions_console_log_nested_subtract } from "./app_code_lesson_functions_console_log_nested_subtract.mjs";
-import { app_code_lesson_functions_console_log_nested_multiply } from "./app_code_lesson_functions_console_log_nested_multiply.mjs";
-import { app_code_lesson_functions_console_log_nested_divide } from "./app_code_lesson_functions_console_log_nested_divide.mjs";
-import { app_code_lesson_functions_console_log_plus_minus } from "./app_code_lesson_functions_console_log_plus_minus.mjs";
-import { app_code_lesson_functions_console_log_exponent } from "./app_code_lesson_functions_console_log_exponent.mjs";
+import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
+import { app_code_lesson_expression_greater_than } from "./app_code_lesson_expression_greater_than.mjs";
+import { app_code_lesson_expression_equals } from "./app_code_lesson_expression_equals.mjs";
+import { app_code_lesson_expression_not_equal } from "./app_code_lesson_expression_not_equal.mjs";
+import { app_code_lesson_expression_true_false } from "./app_code_lesson_expression_true_false.mjs";
+import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
+import { app_code_lesson_expression_or } from "./app_code_lesson_expression_or.mjs";
+import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and.mjs";
+import { app_code_lesson_expression_less_than_equal } from "./app_code_lesson_expression_less_than_equal.mjs";
+import { app_code_lesson_expression_greater_than_equal } from "./app_code_lesson_expression_greater_than_equal.mjs";
+import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
+import { app_code_lesson_expression_remainder_3 } from "./app_code_lesson_expression_remainder_3.mjs";
+import { app_code_lesson_expression_remainder_4 } from "./app_code_lesson_expression_remainder_4.mjs";
+import { app_code_lesson_expression_remainder_any } from "./app_code_lesson_expression_remainder_any.mjs";
+import { app_code_lesson_expression_nested_add } from "./app_code_lesson_expression_nested_add.mjs";
+import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
+import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
+import { app_code_lesson_expression_nested_divide } from "./app_code_lesson_expression_nested_divide.mjs";
+import { app_code_lesson_expression_plus_minus } from "./app_code_lesson_expression_plus_minus.mjs";
+import { app_code_lesson_expression_exponent } from "./app_code_lesson_expression_exponent.mjs";
 import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { app_code_lesson_functions_console_log } from "./app_code_lesson_functions_console_log.mjs";
 import { app_code_lesson_functions_invalid } from "./app_code_lesson_functions_invalid.mjs";
@@ -61,26 +61,26 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_slash_forward,
     app_code_lesson_operators_dot_numbers,
     app_code_lesson_operators_dot_missing,
-    app_code_lesson_functions_console_log_remainder_2,
-    app_code_lesson_functions_console_log_remainder_3,
-    app_code_lesson_functions_console_log_remainder_4,
-    app_code_lesson_functions_console_log_remainder_any,
-    app_code_lesson_functions_console_log_exponent,
-    app_code_lesson_functions_console_log_less_than,
-    app_code_lesson_functions_console_log_greater_than,
-    app_code_lesson_functions_console_log_less_than_equal,
-    app_code_lesson_functions_console_log_greater_than_equal,
-    app_code_lesson_functions_console_log_equals,
-    app_code_lesson_functions_console_log_not_equal,
-    app_code_lesson_functions_console_log_true_false,
-    app_code_lesson_functions_console_log_not,
-    app_code_lesson_functions_console_log_or,
-    app_code_lesson_functions_console_log_and,
-    app_code_lesson_functions_console_log_nested_add,
-    app_code_lesson_functions_console_log_nested_subtract,
-    app_code_lesson_functions_console_log_nested_multiply,
-    app_code_lesson_functions_console_log_nested_divide,
-    app_code_lesson_functions_console_log_plus_minus,
+    app_code_lesson_expression_remainder_2,
+    app_code_lesson_expression_remainder_3,
+    app_code_lesson_expression_remainder_4,
+    app_code_lesson_expression_remainder_any,
+    app_code_lesson_expression_exponent,
+    app_code_lesson_expression_less_than,
+    app_code_lesson_expression_greater_than,
+    app_code_lesson_expression_less_than_equal,
+    app_code_lesson_expression_greater_than_equal,
+    app_code_lesson_expression_equals,
+    app_code_lesson_expression_not_equal,
+    app_code_lesson_expression_true_false,
+    app_code_lesson_expression_not,
+    app_code_lesson_expression_or,
+    app_code_lesson_expression_and,
+    app_code_lesson_expression_nested_add,
+    app_code_lesson_expression_nested_subtract,
+    app_code_lesson_expression_nested_multiply,
+    app_code_lesson_expression_nested_divide,
+    app_code_lesson_expression_plus_minus,
     app_code_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
     app_code_lesson_functions_console_log,

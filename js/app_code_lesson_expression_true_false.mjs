@@ -9,7 +9,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function app_code_lesson_functions_console_log_true_false() {
+export function app_code_lesson_expression_true_false() {
   function refill() {
     let list = [js_keyword_true(), js_keyword_false()];
     return list;

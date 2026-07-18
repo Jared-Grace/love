@@ -14,7 +14,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_functions_console_log_remainder_any() {
+export function app_code_lesson_expression_remainder_any() {
   "practice the remainder % with a mix of divisors, after learning it for 2, 3, 4 one at a time; both the number and the divisor vary each question";
   let operator = js_operator_percent();
   let percent = property_get(operator, "operator");
@@ -60,8 +60,14 @@ export function app_code_lesson_functions_console_log_remainder_any() {
   }
   function above(root) {
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["We found the remainder ", percent, " for 2, 3, and 4"]);
-    html_div_cycle_code(c, ["It works the same way for any number we divide by"]);
+    html_div_cycle_code(c, [
+      "We found the remainder ",
+      percent,
+      " for 2, 3, and 4",
+    ]);
+    html_div_cycle_code(c, [
+      "It works the same way for any number we divide by",
+    ]);
     html_div_cycle_code(c, ["The remainder is still what is left over"]);
   }
 }
