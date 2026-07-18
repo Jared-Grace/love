@@ -5331,3 +5331,7 @@ html_update_latest_webpack_generic
 { f_path_latest: '../karate_code/public/dev/karate.html' }
 webpack_watch
 { rebuild: 'karate' }
+app_shared_name_search_info
+{ search: 'a', a_name: 'a' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/a.html' }
