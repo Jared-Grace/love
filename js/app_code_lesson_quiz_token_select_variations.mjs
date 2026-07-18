@@ -10,6 +10,7 @@ import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { modulo } from "./modulo.mjs";
@@ -20,7 +21,13 @@ import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
   "every arrangement of the code's tokens that produces the SAME output - the unscramble asks the learner to build code for a given output, so any rearrangement that prints the same value is a correct answer; the expression is flat (number operator number operator ...), so numbers sit on even token positions and operators on odd, and we permute each group into its own positions, then keep the arrangements whose output matches";
-  let tokens = js_tokenizer_normalized(code);
+  let raw_tokens = js_tokenizer_normalized(code);
+  function keep_token(token) {
+    "drop a trailing statement semicolon - the learner builds only the expression, and it must not land inside the console.log(...) we evaluate";
+    let is_semicolon = equal(token, ";");
+    return not(is_semicolon);
+  }
+  let tokens = list_filter(raw_tokens, keep_token);
   let numbers = [];
   let operators = [];
   function classify(token, index) {
@@ -51,7 +58,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     let first = list_first(logs);
     return text_to(first);
   }
-  let target = output_text(code);
+  let target = output_text(js_tokens_to_code(tokens));
   let number_orders = list_permutations(numbers);
   let operator_orders = list_permutations(operators);
   let seen = [];
