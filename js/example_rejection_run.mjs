@@ -4,6 +4,9 @@ export async function example_rejection_run(e) {
   let fn_mod = await import("./" + e.fn + ".mjs");
   let fn = fn_mod[e.fn];
   function arg_parse(a) {
+    if (a.parse === "value") {
+      return a.value;
+    }
     if (a.parse === "statement") {
       return js_parse_statement(a.code);
     }
