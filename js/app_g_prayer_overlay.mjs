@@ -6,7 +6,7 @@ import { html_style_head } from "./html_style_head.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
-import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
+import { app_g_scripture } from "./app_g_scripture.mjs";
 export function app_g_prayer_overlay() {
   "full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered";
   let body = html_document_body();
@@ -55,23 +55,17 @@ export function app_g_prayer_overlay() {
     margin: "0",
     "text-align": "center",
   });
-  let verse = html_p_text(
-    card,
+  let scripture = html_div(card);
+  html_style_assign(scripture, {
+    "font-size": "1.5rem",
+    "text-align": "center",
+    "max-width": "80vw",
+  });
+  app_g_scripture(
+    scripture,
+    "Isaiah 40:31",
     "Those who wait on the Lord shall renew their strength.",
   );
-  html_style_assign(verse, {
-    color: app_shared_color_gold_text(),
-    "font-size": "1.75rem",
-    margin: "0",
-    "text-align": "center",
-  });
-  let reference = html_p_text(card, "Isaiah 40:31");
-  html_style_assign(reference, {
-    color: "white",
-    "font-size": "1.25rem",
-    margin: "0",
-    "text-align": "center",
-  });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
   return div;
