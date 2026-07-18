@@ -22,6 +22,9 @@ import { html_hash_object_property_set } from "../../love/js/html_hash_object_pr
 import { property_get_or_null } from "../../love/js/property_get_or_null.mjs";
 import { html_value_set } from "../../love/js/html_value_set.mjs";
 import { app_search_query_hash_key } from "../../love/js/app_search_query_hash_key.mjs";
+import { app_search_query_hash_word_gap } from "../../love/js/app_search_query_hash_word_gap.mjs";
+import { text_replace_space_to } from "../../love/js/text_replace_space_to.mjs";
+import { text_replace_to_space } from "../../love/js/text_replace_to_space.mjs";
 export async function app_search_home(context) {
   let root = property_get(context, "root");
   html_clear(root);
