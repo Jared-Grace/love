@@ -6310,3 +6310,15 @@ app_shared_name_search_info
 { search: 'karate', a_name: 'karate' }
 html_update_latest_webpack_generic
 { f_path_latest: '../karate_code/public/dev/karate.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'a', a_name: 'a' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/a.html' }
+app_shared_name_search_info
+{ search: 'next', a_name: 'next' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/next.html' }
