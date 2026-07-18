@@ -55,12 +55,13 @@ import { text_combine } from "../../love/js/text_combine.mjs";
 import { ebible_language_english } from "../../love/js/ebible_language_english.mjs";
 import { html_span_text_bold } from "../../love/js/html_span_text_bold.mjs";
 import { list_multiple_is } from "../../love/js/list_multiple_is.mjs";
-export async function app_bible_home_generic(context, lambda$a) {
+export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
   html_centered(bar);
+  bar_extra(bar);
   let e = ebible_folder_english();
   if (app_bible_chapter_set_default(context)) {
     return null;
