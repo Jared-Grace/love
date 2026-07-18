@@ -1,5 +1,7 @@
+import { js_imports_auto_relative } from "../../js/js_imports_auto_relative.mjs";
 export const example = {
   tool: "auto",
+  fn: js_imports_auto_relative.name,
   kind: "transform",
   title: "Auto-imports: add missing, remove unused, canonicalize paths",
   note: "auto composes all three import verbs — list_last (used, unimported) is added, list_first (imported, unused) is removed, list_size (wrong ../../js/ path) is canonicalized to ./. Provably auto-safe: idempotent, total, state-independent.",
