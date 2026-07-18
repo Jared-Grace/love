@@ -266,6 +266,7 @@ export async function app_search_results(context, div_results) {
   let s = list_size_1(button_list);
   if (s) {
     let only = list_single(button_list);
-    only();
+    let only_click = property_get(only, "click");
+    await only_click();
   }
 }
