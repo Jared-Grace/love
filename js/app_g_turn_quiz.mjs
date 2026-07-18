@@ -17,5 +17,5 @@ export function app_g_turn_quiz(overlay, npc, npc_text, prompt, build_correct, b
     build_wrong(container);
   }
   invoke_multiple_shuffle_2(place_correct, place_wrong);
-  app_g_pray_discern(container, correct, app_g_reveal);
+  app_g_pray_discern(container, correct, app_g_reveal, discern);
 }
