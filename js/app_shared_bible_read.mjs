@@ -75,6 +75,9 @@ import { text_combine } from "../../love/js/text_combine.mjs";
 import { list_last } from "../../love/js/list_last.mjs";
 import { html_centered } from "../../love/js/html_centered.mjs";
 import { app_shared_dismissable_message } from "../../love/js/app_shared_dismissable_message.mjs";
+import { list_size } from "../../love/js/list_size.mjs";
+import { html_text_set } from "../../love/js/html_text_set.mjs";
+import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
 import { app_shared_bible_change } from "../../love/js/app_shared_bible_change.mjs";
 import { list_previous_wrap } from "../../love/js/list_previous_wrap.mjs";
 import { list_next_wrap } from "../../love/js/list_next_wrap.mjs";
@@ -127,12 +130,22 @@ export async function app_shared_bible_read(context, bar_extra) {
       return;
     }
   }
-  app_shared_dismissable_message(
+  let dismiss_help = app_shared_dismissable_message(
     app_shared_bible_read,
     bar,
     "chapter_help_dismissed",
     help_text,
   );
+  let count_status = html_p(bar);
+  app_shared_text_deemphasized(count_status);
+  function count_refresh() {
+    let n = list_size(verse_numbers_chosen);
+    let text = "";
+    if (n > 0) {
+      text = text_combine_multiple([n, " of ", max, " selected"]);
+    }
+    html_text_set(count_status, text);
+  }
   let chapter_code = text_empty_is(c) ? "JHN01" : c;
   if (ref_mode) {
     let ref_chapter = await app_shared_bible_ref_chapter_code(ref_line);
@@ -228,6 +241,8 @@ export async function app_shared_bible_read(context, bar_extra) {
     function select_persist() {
       select();
       persist_selection();
+      dismiss_help();
+      count_refresh();
     }
     let number = app_shared_button(p, verse_number_v, select_persist);
     html_style_set(number, "justify-self", "end");
@@ -289,6 +304,7 @@ export async function app_shared_bible_read(context, bar_extra) {
     return row_update;
   }
   await list_map_add_async(primary_verses, render_verse, updates);
+  count_refresh();
   function resume() {
     if (list_empty_is(verse_numbers_chosen)) {
       return;

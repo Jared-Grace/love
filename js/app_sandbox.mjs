@@ -6,10 +6,14 @@ import { app_message } from "../../love/js/app_message.mjs";
 import { app_message_provide_travel } from "../../love/js/app_message_provide_travel.mjs";
 import { app_message_provide_food } from "../../love/js/app_message_provide_food.mjs";
 import { html_clear } from "../../love/js/html_clear.mjs";
+import { html_hash_get } from "../../love/js/html_hash_get.mjs";
+import { text_skip } from "../../love/js/text_skip.mjs";
+import { app_sandbox_choose } from "../../love/js/app_sandbox_choose.mjs";
 export async function app_sandbox(context) {
   let root = property_get(context, "root");
   html_clear(root);
-  let p = html_p_text(root, "text");
+  let name = text_skip(html_hash_get(), 1);
+  app_sandbox_choose(root, name);
   return;
   let app_fn = app_message;
   object_merge_set(context, {
