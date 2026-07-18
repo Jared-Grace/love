@@ -1,12 +1,16 @@
 import { command_line_generic } from "../../love/js/command_line_generic.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 import { user_repo_path_combine } from "../../love/js/user_repo_path_combine.mjs";
+import { retry } from "../../love/js/retry.mjs";
 export async function firebase_deploy_generic(suffix) {
   let combined = await user_repo_path_combine(".");
   let left = "npx firebase-tools deploy ";
   let c = text_combine(left, suffix);
-  let stdout = await command_line_generic(c, {
-    cwd: combined,
-  });
+  async function lambda() {
+    return await command_line_generic(c, {
+      cwd: combined,
+    });
+  }
+  let stdout = await retry(5, lambda);
   return stdout;
 }
