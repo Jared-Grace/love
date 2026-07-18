@@ -9,6 +9,9 @@ import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { equal_0 } from "./equal_0.mjs";
+import { equal } from "./equal.mjs";
+import { add } from "./add.mjs";
+import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
@@ -16,6 +19,8 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { app_code_lesson_chip_lift } from "./app_code_lesson_chip_lift.mjs";
+import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -65,7 +70,6 @@ export function app_code_lesson_expression_exponent() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     let star = js_operator_asterisk_symbol();
-    let star_separator = text_combine_multiple([" ", star, " "]);
     let power_separator = text_combine_multiple([" ", symbol, " "]);
     "two worked examples, each a base and a power - four colored numbers in all - given four distinct familiar colours (red, green, blue, amber) so every number is easy to tell apart and no number wears a colour here and another colour there";
     let base_one = app_code_lesson_chip_color(0);
@@ -90,16 +94,44 @@ export function app_code_lesson_expression_exponent() {
       app_code_lesson_chip_lift(made);
       return made;
     }
-    function product_expression(parent, base, count, color) {
-      "one dark tile reading base * base * ... , each base a lifted color chip, so product_expression(2, 3, color) is 2 * 2 * 2";
+    function count_numeral(tile, number, color) {
+      "the small count label under a factor - dim white for the running count, or the exponent's colour on the FINAL factor so the last count visibly becomes the exponent";
+      let label = html_span_text_smaller(tile, text_to(number));
+      html_font_color_set(label, color);
+      return label;
+    }
+    function product_expression(parent, base, base_color, power_color, count) {
+      "base * base * ... as a two-row grid: the top row is the lifted base chips joined by *, the bottom row counts 1..count under each chip (blank under each *), the last count coloured like the power so the eye sees how-many becomes the exponent";
       let tile = dark_tile(parent);
+      html_style_set(tile, "display", "inline-grid");
+      html_style_set(tile, "grid-auto-flow", "column");
+      html_style_set(tile, "grid-template-rows", "auto auto");
+      html_style_set(tile, "align-items", "center");
+      html_style_set(tile, "justify-items", "center");
+      html_style_set(tile, "column-gap", "0.15em");
+      let dim = "rgba(255, 255, 255, 0.5)";
+      function place_operator() {
+        "a * on the top row with an empty cell under it, so the grid columns stay paired";
+        html_span_text(tile, star);
+        html_span_text(tile, "");
+      }
+      function place_factor(position) {
+        "a base chip on the top row with its count below; the final count takes the power colour";
+        lifted_chip(tile, base, base_color);
+        let last = equal(position, count);
+        let numeral_color = dim;
+        if (last) {
+          numeral_color = power_color;
+        }
+        count_numeral(tile, position, numeral_color);
+      }
       function factor(index) {
         let first = equal_0(index);
         if (first) {
-          lifted_chip(tile, base, color);
+          place_factor(1);
         } else {
-          html_span_text(tile, star_separator);
-          lifted_chip(tile, base, color);
+          place_operator();
+          place_factor(add(index, 1));
         }
       }
       each(range(count), factor);
@@ -118,7 +150,7 @@ export function app_code_lesson_expression_exponent() {
     html_div_cycle_code(c, ["What if the numbers are all the same number?"]);
     let like = html_div(c);
     html_span_text(like, "Like ");
-    product_expression(like, 2, 3, base_one);
+    product_expression(like, 2, base_one, power_one, 3);
     let map = html_div(c);
     html_span_text(map, "The ");
     chip(map, 2, base_one);
@@ -129,7 +161,7 @@ export function app_code_lesson_expression_exponent() {
     html_span_text(map, " for short");
     let likewise = html_div(c);
     html_span_text(likewise, "Likewise ");
-    product_expression(likewise, 3, 4, base_two);
+    product_expression(likewise, 3, base_two, power_two, 4);
     html_span_text(likewise, " is ");
     power_expression(likewise, 3, 4, base_two, power_two);
     html_div_cycle_code(c, [
