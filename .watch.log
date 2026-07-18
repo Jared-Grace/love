@@ -5905,3 +5905,25 @@ Error: EMFILE: too many open files, open '../love/js/boolean_random_n.mjs'
 }
 app_shared_name_search_info
 { search: 'g_bible', a_name: 'g_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+{ search: 'karate', a_name: 'karate' }
+{ search: 'a', a_name: 'a' }
+{ search: 'autopray', a_name: 'autopray' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g', a_name: 'g' }
+{ search: 'message', a_name: 'message' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'karate', a_name: 'karate' }
+{ search: 'a', a_name: 'a' }
+{ search: 'autopray', a_name: 'autopray' }
+{ search: 'bible', a_name: 'bible' }
+{ search: 'calendar', a_name: 'calendar' }
+{ search: 'g_verify', a_name: 'g_verify' }
+{ search: 'g', a_name: 'g' }
+{ search: 'message', a_name: 'message' }
+{ search: 'next', a_name: 'next' }
+{ search: 'reply_local', a_name: 'reply_local' }
