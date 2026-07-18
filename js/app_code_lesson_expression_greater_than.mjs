@@ -9,7 +9,7 @@ export function app_code_lesson_expression_greater_than() {
   let compare = property_get(operator, "fn");
   let pair = app_code_comparison_pair_ordering(compare);
   let less_symbol = property_get(js_operator_less_than(), "operator");
-  function closing(fn_name) {
+  function closing() {
     let parts = ["", symbol, " is like ", less_symbol];
     return parts;
   }
