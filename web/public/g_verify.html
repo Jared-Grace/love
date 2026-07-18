@@ -752,6 +752,11 @@ async function app_g_verify_home(context) {
   }
   render(chapter, status, approval);
   poll();
+  document.addEventListener("visibilitychange", function on_visible() {
+    if (!document.hidden) {
+      refresh();
+    }
+  });
   function render(chapter, status, approval) {
     shown_json = json_to({
       chapter,
@@ -1856,12 +1861,16 @@ function app_shared_container_base(parent) {
   return div;
 }
 function html_card(component) {
-  html_border_radius(component, "1.2em");
+  html_border_radius(component, app_shared_border_radius_card());
   html_style_padding_em(component, "0.6");
   html_box_shadow_set(component, "0 2px 6px rgba(0, 0, 0, 0.12)");
 }
 function html_box_shadow_set(component, style_value) {
   html_style_set(component, "box-shadow", style_value);
+}
+function app_shared_border_radius_card() {
+  let v = "1.2em";
+  return v;
 }
 function app_shared_verse_selected_background_color() {
   let c = "#bfdbfe";
