@@ -13,7 +13,7 @@ import { emoji_gear } from "../../love/js/emoji_gear.mjs";
 import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
 import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
 import { app_replace_rule_sets } from "../../love/js/app_replace_rule_sets.mjs";
-import { storage_local_set_context } from "../../love/js/storage_local_set_context.mjs";
+import { app_shared_screen_go } from "../../love/js/app_shared_screen_go.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 export function app_replace_home(context) {
@@ -55,7 +55,6 @@ export function app_replace_home(context) {
   }
   each_index(rule_sets, each_item);
   function on_click(index) {
-    storage_local_set_context(context, "rule_set_index", index);
-    app_shared_screen_set(context, app_replace_goals);
+    app_shared_screen_go(context, "rule_set_index", index, app_replace_goals);
   }
 }
