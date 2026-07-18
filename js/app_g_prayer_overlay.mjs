@@ -31,7 +31,7 @@ export function app_g_prayer_overlay() {
   );
   let emoji = html_p_text(div, emoji_pray());
   html_style_assign(emoji, {
-    "font-size": "7rem",
+    "font-size": "9rem",
     margin: "0",
     animation: "prayerGlow 1.6s ease-in-out infinite alternate",
   });
