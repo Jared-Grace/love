@@ -1,5 +1,5 @@
 import { app_shared_bible_open_en } from "../../love/js/app_shared_bible_open_en.mjs";
-import { app_shared_arrows_wide } from "../../love/js/app_shared_arrows_wide.mjs";
+import { app_shared_arrows_wide_unit } from "../../love/js/app_shared_arrows_wide_unit.mjs";
 import { app_bible_button_chapter_previous } from "../../love/js/app_bible_button_chapter_previous.mjs";
 import { app_bible_button_chapter_next } from "../../love/js/app_bible_button_chapter_next.mjs";
 import { app_bible_chapter_set_default } from "../../love/js/app_bible_chapter_set_default.mjs";
