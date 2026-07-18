@@ -96,7 +96,12 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_verses,
     verse_number_hash,
   );
-  app_shared_screen_set_button(bar, context, app_bible_languages, emoji_gear());
+  app_shared_screen_set_button(
+    bar,
+    context,
+    app_bible_languages,
+    app_shared_gear_languages_text(),
+  );
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
