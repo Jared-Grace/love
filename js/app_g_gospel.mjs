@@ -53,7 +53,7 @@ export async function app_g_gospel(
     let v = app_g_wrong(passage, passages, property);
     let passage_wrong = property_get(v, "passage_wrong");
     let ob = property_get(v, "ob");
-    function correct() {
+    function build_correct(container) {
       async function lambda() {
         property_transform(npc, "objections", subtract_1);
         await app_g_gospel(
@@ -64,15 +64,21 @@ export async function app_g_gospel(
           div_map,
         );
       }
-      app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
+      return app_g_bible_passage_button(
+        passage,
+        chapter_code,
+        books,
+        container,
+        lambda,
+      );
     }
-    function wrong() {
+    function build_wrong(container) {
       let lambda2 = invoke_once(lambda3);
       let b = app_g_bible_passage_button(
         passage_wrong,
         chapter_code,
         books,
-        overlay,
+        container,
         lambda2,
       );
       function lambda3() {
@@ -84,8 +90,16 @@ export async function app_g_gospel(
           verse_numbers,
         });
       }
+      return b;
     }
-    app_g_turn_quiz(overlay, npc, ob, "What would you like to say?", correct, wrong);
+    app_g_turn_quiz(
+      overlay,
+      npc,
+      ob,
+      "What would you like to say?",
+      build_correct,
+      build_wrong,
+    );
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     let doxology = app_g_doxology();
