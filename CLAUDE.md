@@ -27,6 +27,22 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 - **Commit message is always exactly `ai`.**
 - **Run `node scripts/r.mjs ai_git` yourself** after a batch of edits (from the repo root). Don't rely on a background watcher to commit — it may be down.
 
+## Throwaway node — never raw `node -e`
+
+Raw `node -e '...'` **always prompts the human** (arbitrary JS can shell out / hit the network / write any file, so the bash guard deliberately never auto-approves it). With many Claudes running in parallel, that's a flood of approval clicks for the human — don't create it. Two zero-prompt alternatives, both auto-approved by the guard because they're sandboxed read-only by construction:
+
+- **One-off computation / inspection** — wrap it:
+  ```
+  unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e '<script>'
+  ```
+  (`--net` blocks network, `--permission --allow-fs-read=<repo>` gives read-only repo access and blocks fs-write + child_process. The read path must be this exact absolute repo path.)
+- **Anything bigger, or that you'd rerun** — write `scripts/temp/<name>.mjs` and run it the same sandboxed way:
+  ```
+  unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love scripts/temp/<name>.mjs
+  ```
+
+If the task genuinely needs to **write** or **persist** (not just read+print), it isn't a throwaway — add a named alias/function in the `r.mjs` system and commit it (in git = reviewable, reusable, DRY), rather than reaching for raw `node -e`.
+
 ## Tests (gap)
 
 There is **no repo-wide test gate yet** — the `q` / `portfolio_qa_tests_run` alias is dangling (no such function). The real automated tests are app-scoped e2e for app_replace: `are` (single), `rv` (verify named), `rva` (verify all). A universal correctness gate is a TODO; until it exists, reasoning in step 4 is the main guard.

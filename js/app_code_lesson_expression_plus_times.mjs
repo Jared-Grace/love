@@ -34,7 +34,9 @@ export function app_code_lesson_expression_plus_times() {
       times,
       " before ",
       plus,
-      ", even if it comes later",
+      ", even if ",
+      times,
+      " appears later",
     ]);
     let later_box = app_code_container_light_blue(root);
     html_div_cycle_code(later_box, [
