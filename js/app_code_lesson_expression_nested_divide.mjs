@@ -7,7 +7,7 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_code_lesson_functions_console_log_nested_divide() {
+export function app_code_lesson_expression_nested_divide() {
   "a nested expression that divides three numbers: console.log(x / y / z); built BACKWARDS from a small answer so it always divides evenly with no decimals - pick the middle number y, an answer r (2..4) and z (2..3), then x = r * y * z, so x / y / z is exactly r";
   let symbol = js_operator_division_symbol();
   function middle_of(index) {

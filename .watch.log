@@ -4167,3 +4167,672 @@ app_shared_name_search_info
 { search: 'g', a_name: 'g' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 601 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 716 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 15:0-128
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_remainder_any.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_remainder_any.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_remainder_any.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_remainder_any.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3926 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 718 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 2:0-120
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_less_than.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_less_than.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_less_than.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_less_than.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_review.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3563 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 600 KiB [orphan] 645 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 715 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 10:0-132
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_less_than_equal.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_less_than_equal.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_less_than_equal.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_less_than_equal.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3536 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 718 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 4:0-114
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_equals.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_equals.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_equals.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_equals.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3540 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 645 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 717 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 313 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 5:0-120
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_not_equal.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_not_equal.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_not_equal.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_not_equal.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3794 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 601 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 717 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 6:0-122
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_true_false.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_true_false.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_true_false.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_true_false.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 4199 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 645 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 717 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 7:0-108
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_not.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_not.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_not.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_not.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3436 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/code.html' }
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 717 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 17:0-132
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_nested_subtract.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_nested_subtract.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_nested_subtract.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_nested_subtract.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3570 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 717 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 18:0-132
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_nested_multiply.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_nested_multiply.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_nested_multiply.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_nested_multiply.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_home.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 3483 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
+catch_log_async
+Error: Command exited with code 1
+
+STDOUT:
+webpack_config
+{
+  r: {
+    mode: 'production',
+    entry: './scripts/temp/app_code_run.mjs',
+    output: { filename: 'code.js', path: '/home/j/repos/love/public/dev' },
+    resolve: { fallback: [Object] },
+    optimization: { minimize: true, minimizer: [Array] },
+    plugins: [ [IgnorePlugin], [NormalModuleReplacementPlugin] ]
+  }
+}
+assets by status 288 KiB [cached] 1 asset
+orphan modules 602 KiB [orphan] 647 modules
+runtime modules 670 bytes 3 modules
+cacheable modules 717 KiB
+  ./scripts/temp/app_code_run.mjs + 21 modules 6.83 KiB [built] [code generated]
+  ./js/html_document_body.mjs 205 bytes [built] [code generated]
+  ./js/app_code_examples.mjs + 10 modules 9.52 KiB [built] [code generated]
+  ./js/property_get.mjs 700 bytes [built] [code generated]
+  ./js/html_component_wrap.mjs 91 bytes [built] [code generated]
+  ./js/app_shared_refresh.mjs + 5 modules 1.87 KiB [built] [code generated]
+  ./js/app_code_review.mjs + 18 modules 22.1 KiB [built] [code generated]
+  ./js/app_code_home.mjs + 13 modules 10.5 KiB [built] [code generated]
+  ./js/app_code_quiz.mjs 3.13 KiB [built] [code generated]
+  ./js/list_add.mjs 60 bytes [built] [code generated]
+  ./js/list_first.mjs 150 bytes [built] [code generated]
+  + 314 modules
+
+ERROR in ./js/app_code_lessons_fns.mjs 19:0-128
+Module not found: Error: Can't resolve './app_code_lesson_functions_console_log_nested_divide.mjs' in '/home/j/repos/love/js'
+resolve './app_code_lesson_functions_console_log_nested_divide.mjs' in '/home/j/repos/love/js'
+  using description file: /home/j/repos/love/package.json (relative path: ./js)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/j/repos/love/package.json (relative path: ./js/app_code_lesson_functions_console_log_nested_divide.mjs)
+      Field 'browser' doesn't contain a valid alias configuration
+      /home/j/repos/love/js/app_code_lesson_functions_console_log_nested_divide.mjs doesn't exist
+ @ ./js/app_code_lessons.mjs 2:0-66 4:35-55
+ @ ./js/app_code_review.mjs
+ @ ./js/app_code_screens.mjs
+ @ ./js/app_code.mjs 1:0-58 7:16-32
+ @ ./scripts/temp/app_code_run.mjs 1:0-54 3:23-31
+
+webpack 5.105.2 compiled with 1 error in 4370 ms
+
+
+STDERR:
+
+    at ChildProcess.lambda4 (file:///home/j/repos/love/js/command_line_generic.mjs:51:11)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+webpack_watch
+{ rebuild: 'code' }
+app_shared_name_search_info
+{ search: 'code', a_name: 'code' }
+{ search: 'code', a_name: 'code' }
