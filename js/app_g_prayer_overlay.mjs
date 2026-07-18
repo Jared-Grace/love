@@ -7,6 +7,7 @@ import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { app_g_scripture_verse } from "./app_g_scripture_verse.mjs";
+import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
 export function app_g_prayer_overlay() {
   "full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered";
   let body = html_document_body();
@@ -27,14 +28,12 @@ export function app_g_prayer_overlay() {
     opacity: "0",
     transition: "opacity 0.3s ease",
   });
-  html_style_head(
-    "@keyframes prayerGlow { 0% { text-shadow: 0 0 0.15em #ffd633; transform: scale(1); } 100% { text-shadow: 0 0 0.4em #ffffff; transform: scale(1.08); } }",
-  );
+  html_style_head(app_g_emoji_glow_keyframe());
   let emoji = html_p_text(div, emoji_pray());
   html_style_assign(emoji, {
     "font-size": "12rem",
     margin: "0",
-    animation: "prayerGlow 1.6s ease-in-out infinite alternate",
+    animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
   let card = html_div(div);
   html_style_assign(card, {
