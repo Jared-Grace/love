@@ -1,3 +1,4 @@
+import { log } from "./log.mjs";
 import { each_object } from "./each_object.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
@@ -29,6 +30,9 @@ export async function bible_interlinear_chapters() {
   let chapters = {};
   async function lambda(verse_words, v_number) {
     let first = list_first(verse_words);
+    log(bible_interlinear_chapters.name, {
+      first,
+    });
     let vid = property_get(first, "VerseId");
     function lambda3(sort) {
       function lambda2(item) {
