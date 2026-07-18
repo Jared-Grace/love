@@ -5,7 +5,9 @@ import { file_open } from "./file_open.mjs";
 import { html_overwrite } from "./html_overwrite.mjs";
 import { html_code_script_module } from "./html_code_script_module.mjs";
 import { function_name_repo_path_combine } from "./function_name_repo_path_combine.mjs";
+import { app_frozen_assert } from "./app_frozen_assert.mjs";
 export async function html_update_public_generic(app_name, file_path, name) {
+  app_frozen_assert(app_name);
   let joined = await function_name_repo_path_combine(app_name, file_path);
   var v = await html_update_externals(app_name);
   let scripts = property_get(v, "scripts");
