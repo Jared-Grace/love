@@ -8,16 +8,18 @@ import { object_copy } from "./object_copy.mjs";
 import { object_merge } from "./object_merge.mjs";
 export async function ebible_languages_versions() {
   let english = await ebible_versions_english_choices_browser();
+  let en = ebible_language_en_code();
   function english_version(code) {
+    ("tag each English version with the English language code so it groups with English when sorted");
     let version = {
       name: code,
       bible_folder: code,
+      language_code: en,
     };
     return version;
   }
   let english_versions = list_map(english, english_version);
   let languages = ebible_languages();
-  let en = ebible_language_en_code();
   function versions_for(language) {
     let code = property_get(language, "language_code");
     let is_english = equal(code, en);
