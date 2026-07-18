@@ -15,7 +15,6 @@ import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
 import { app_reply_buttons_languages } from "../../love/js/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../love/js/app_reply_languages_prompt.mjs";
 import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_languages_chosen_reset.mjs";
-import { list_sort_text_property } from "../../love/js/list_sort_text_property.mjs";
 import { emoji_search } from "../../love/js/emoji_search.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
@@ -30,7 +29,6 @@ export async function app_search_home(context) {
   let languages = ebible_languages();
   let en_l = ebible_language_english();
   let languages_chosen_default = [en_l];
-  list_sort_text_property(languages, "name");
   app_reply_languages_chosen_reset(
     languages_chosen,
     languages_chosen_default,
