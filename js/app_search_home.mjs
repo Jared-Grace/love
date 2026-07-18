@@ -50,12 +50,16 @@ export async function app_search_home(context) {
     let query = html_value_get(input);
     property_set(context, "query", query);
     let key = app_search_query_hash_key();
-    html_hash_object_property_set(key, query);
+    let plus = app_search_query_hash_word_gap();
+    let query_hash = text_replace_space_to(query, plus);
+    html_hash_object_property_set(key, query_hash);
     await app_search_results(context, div_results);
   }
   let hash = html_hash_object_get();
-  let query_from_hash = property_get_or_null(hash, app_search_query_hash_key());
-  if (query_from_hash != null) {
+  let query_hash = property_get_or_null(hash, app_search_query_hash_key());
+  if (query_hash != null) {
+    let plus = app_search_query_hash_word_gap();
+    let query_from_hash = text_replace_to_space(query_hash, plus);
     html_value_set(input, query_from_hash);
     await search();
   }
