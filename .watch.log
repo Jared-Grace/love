@@ -5935,3 +5935,50 @@ webpack_watch
 app_shared_name_search_info
 { search: 'ceb_bible', a_name: 'ceb_bible' }
 { search: 'ceb_bible', a_name: 'ceb_bible' }
+{ search: 'original_bible', a_name: 'original_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/original_bible.html' }
+app_shared_name_search_info
+{ search: 'autopray', a_name: 'autopray' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/autopray.html' }
+app_shared_name_search_info
+{ search: 'g_verify', a_name: 'g_verify' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_verify.html' }
+webpack_watch
+{ rebuild: 'original_bible' }
+app_shared_name_search_info
+{ search: 'g_bible', a_name: 'g_bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g_bible.html' }
+app_shared_name_search_info
+{ search: 'calendar', a_name: 'calendar' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/calendar.html' }
+app_shared_name_search_info
+{ search: 'bible', a_name: 'bible' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/bible.html' }
+app_shared_name_search_info
+{ search: 'message', a_name: 'message' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/message.html' }
+app_shared_name_search_info
+{ search: 'karate', a_name: 'karate' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../karate_code/public/dev/karate.html' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
+app_shared_name_search_info
+{ search: 'a', a_name: 'a' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/a.html' }
+webpack_watch
+{ rebuild: 'g_bible' }
+app_shared_name_search_info
+{ search: 'original_bible', a_name: 'original_bible' }
+webpack_watch
+{ rebuild: 'g' }
