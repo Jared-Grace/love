@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform examples</title>
+</head>
+<body>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 62rem; margin: 0 auto; padding: 2rem; color: #1a1a1a; background: #fafafa; }
+    h1 { font-size: 1.6rem; }
+    .example { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0; }
+    .example h2 { font-size: 1.15rem; margin: 0 0 .35rem; }
+    .note { color: #555; margin: 0 0 .75rem; line-height: 1.5; }
+    .command code { background: #f0f0f0; padding: .3rem .5rem; border-radius: 4px; font-family: ui-monospace, monospace; font-size: .9rem; }
+    .io { display: grid; grid-template-columns: 1fr auto 1fr; gap: .75rem; align-items: center; margin-top: .75rem; }
+    pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
+    .arrow { font-size: 1.5rem; color: #00b400ff; text-align: center; }
+    .rejection pre.call { border-left: 3px solid #d33; }
+    .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
+    @media (max-width: 44rem) { .io { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); } }
+  </style><h1>Transform examples</h1><article class="example"><h2>Add a two-sided guard to a slot setter</h2><p class="note">aea prepends arguments_assert_each and repairs imports; one predicate per parameter.</p><div class="command"><code>aea js_return_argument_set "js_return_is, js_expression_node_is"</code></div><div class="io"><pre class="before">import { property_set } from "./property_set.mjs";
+export function js_return_argument_set(r, a) {
+  property_set(r, "argument", a);
+}</pre><div class="arrow">→</div><pre class="after">import { arguments_assert_each } from "./arguments_assert_each.mjs";
+import { js_return_is } from "./js_return_is.mjs";
+import { js_expression_node_is } from "./js_expression_node_is.mjs";
+import { property_set } from "./property_set.mjs";
+export function js_return_argument_set(r, a) {
+  arguments_assert_each(arguments, [js_return_is, js_expression_node_is]);
+  property_set(r, "argument", a);
+}</pre></div></article><article class="example"><h2>Flatten a nested call into a named local</h2><p class="note">atomize lifts each inner call out of its argument slot into a let, so every call reads on its own line. Simplicity is AST depth — one nested expression becomes two shallow statements.</p><div class="command"><code>atomize</code></div><div class="io"><pre class="before">export function f(a) {
+  return g(h(a));
+}</pre><div class="arrow">→</div><pre class="after">export function f(a) {
+  let v = h(a);
+  return g(v);
+}</pre></div></article><article class="example"><h2>Auto-imports: add missing, remove unused, canonicalize paths</h2><p class="note">auto composes all three import verbs — list_last (used, unimported) is added, list_first (imported, unused) is removed, list_size (wrong ../../js/ path) is canonicalized to ./. Provably auto-safe: idempotent, total, state-independent.</p><div class="command"><code>auto js/mixed_imports.mjs</code></div><div class="io"><pre class="before">import { list_first } from "./list_first.mjs";
+import { list_size } from "../../js/list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
+}
+export function beta(y) {
+  return list_last(y);
+}</pre><div class="arrow">→</div><pre class="after">import { list_last } from "./list_last.mjs";
+import { list_size } from "./list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
+}
+export function beta(y) {
+  return list_last(y);
+}</pre></div></article><article class="example"><h2>Repair imports across a whole multi-function file</h2><p class="note">A migration file can hold many declarations; program-wide repair adds every missing repo import — single-export js_flo would fail here. Locally-declared names (alpha, beta) are never self-imported.</p><div class="command"><code>imports js/two_sizes.mjs</code></div><div class="io"><pre class="before">export function alpha(x) {
+  return list_size(x);
+}
+export function beta(y) {
+  return list_size(y);
+}</pre><div class="arrow">→</div><pre class="after">import { list_size } from "./list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
+}
+export function beta(y) {
+  return list_size(y);
+}</pre></div></article><article class="example"><h2>Generate a node-type predicate from scratch</h2><p class="note">ntp creates a new js_&lt;X&gt;_is predicate; 'before' is empty because nothing existed. Runs file-side (sandboxed) — see the app or the temp-file runner.</p><div class="command"><code>ntp js_return_is ReturnStatement</code></div><div class="io"><pre class="before">(nothing yet — new file)</pre><div class="arrow">→</div><pre class="after">import { js_node_type_is } from "./js_node_type_is.mjs";
+export function js_return_is(node) {
+  let is = js_node_type_is(node, "ReturnStatement");
+  return is;
+}</pre></div></article><article class="example"><h2>Remove an unused import</h2><p class="note">prune drops only imports no code references — list_first is imported but never called, so its line goes; list_size stays because alpha uses it. This is the remove-only third of what auto does.</p><div class="command"><code>prune</code></div><div class="io"><pre class="before">import { list_first } from "./list_first.mjs";
+import { list_size } from "./list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
+}</pre><div class="arrow">→</div><pre class="after">import { list_size } from "./list_size.mjs";
+export function alpha(x) {
+  return list_size(x);
+}</pre></div></article><article class="example rejection"><h2>A slot setter refuses a statement in an expression slot</h2><p class="note">The if-test slot holds an expression; a statement in it is refused by the two-sided guard (js_expression_node_is fails on arg 1).</p><pre class="call">js_statement_if_test_set( parse("if (a) {}"), parseStatement("b();") )</pre><div class="expect">throws — arg 1 is not an expression node</div></article>
+</body>
+</html>
