@@ -4,6 +4,7 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { properties_get } from "./properties_get.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { html_hash_links } from "./html_hash_links.mjs";
 export function app_g_dev_index() {
   "the #index dev directory: a plain full-screen list of every app_g dev route as a clickable link (from the app_g_dev_routes registry, so it never drifts). light background so the default link color reads; a click + reload-on-hash-change jumps to that screen";
@@ -32,5 +33,6 @@ export function app_g_dev_index() {
   });
   let routes = app_g_dev_routes();
   let names = properties_get(routes);
-  html_hash_links(div, names);
+  let all = list_concat(names, ["reset", "index"]);
+  html_hash_links(div, all);
 }
