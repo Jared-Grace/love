@@ -40,7 +40,9 @@ export function app_code_lesson_expression_plus_divide() {
       divide_symbol,
       " before ",
       plus,
-      ", even if it comes later",
+      ", even if ",
+      divide_symbol,
+      " appears later",
     ]);
     let later_box = app_code_container_light_blue(root);
     html_div_cycle_code(later_box, [
