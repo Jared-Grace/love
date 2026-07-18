@@ -1,6 +1,5 @@
 import { js_imports_unused_remove } from "../../js/js_imports_unused_remove.mjs";
 export const example = {
-  tool: "prune",
   fn: js_imports_unused_remove.name,
   args: [],
   kind: "transform",
@@ -11,7 +10,6 @@ import { list_size } from "./list_size.mjs";
 export function alpha(x) {
   return list_size(x);
 }`,
-  command: `prune`,
   after: `import { list_size } from "./list_size.mjs";
 export function alpha(x) {
   return list_size(x);
