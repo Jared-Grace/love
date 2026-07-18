@@ -1574,6 +1574,56 @@ NODE_EVAL_DENY_REASON = (
 )
 
 
+# r.mjs library functions that run arbitrary code/commands from their own
+# arguments - shell-out (command_line_generic), `new Function` eval
+# (eval_console_log_replace), or download-and-run remote code
+# (firebase_storage_function_run_generic). Invoked *directly* as
+# `node scripts/r.mjs <fn> <args>` they're `node -e` by another name, so they
+# get the same floor treatment: denied even if allow-listed (the check runs
+# before the allow decision in main). This does NOT touch internal use - a
+# committed function that imports one and calls it with fixed arguments never
+# reaches the command line, so it's unaffected.
+DENIED_RMJS_FUNCTIONS = {
+    "command_line_generic",
+    "eval_console_log_replace",
+    "firebase_storage_function_run_generic",
+}
+
+
+def find_denied_rmjs_function(command):
+    """If `command` directly invokes `node scripts/r.mjs <fn>` (relative or
+    absolute path) with <fn> in DENIED_RMJS_FUNCTIONS, return that fn name so
+    main() can DENY it; else None. Quote-aware like find_raw_node_eval, and
+    leading assignments / xargs / timeout prefixes are unwrapped the same way;
+    an unparseable command returns None and falls through to normal handling."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if (
+            len(words) >= 3
+            and words[0] == "node"
+            and (words[1] == "scripts/r.mjs" or words[1].endswith("/scripts/r.mjs"))
+            and words[2] in DENIED_RMJS_FUNCTIONS
+        ):
+            return words[2]
+    return None
+
+
+def rmjs_deny_reason(fn):
+    return (
+        f"`node scripts/r.mjs {fn}` is refused: {fn} runs arbitrary "
+        "code/commands from its arguments - it's `node -e` wearing a function "
+        "name, so it's denied even if allow-listed. Internal use (a committed "
+        "function that calls it with fixed arguments) is fine; what's blocked "
+        "is invoking it directly as a command-line escape hatch. If you need a "
+        "shell/eval step, put it inside reviewed, committed repo code. See "
+        "CLAUDE.md - 'Throwaway node - never raw `node -e`'."
+    )
+
+
 def main():
     try:
         payload = json.load(sys.stdin)
@@ -1585,6 +1635,26 @@ def main():
     if not raw_command or not raw_command.strip():
         return
     command = raw_command.strip()
+
+    # Hard floor, evaluated BEFORE any allow decision so that no allow-list
+    # rule (mistaken or deliberate) can re-enable it: un-sandboxed
+    # arbitrary-code execution. Two shapes, both `node -e` by another name - a
+    # raw `node -e`/`--eval`/`-p`/`--print`, and a direct `node scripts/r.mjs
+    # <fn>` to a function that runs arbitrary code/commands from its args. Deny
+    # with a redirect message rather than prompting (a flood of un-vettable
+    # prompts) or, worse, auto-approving.
+    denied_fn = find_denied_rmjs_function(command)
+    if denied_fn or find_raw_node_eval(command):
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": (
+                    rmjs_deny_reason(denied_fn) if denied_fn else NODE_EVAL_DENY_REASON
+                ),
+            }
+        }))
+        return
 
     safe_verbs = load_safe_verbs()
     safe_exact_commands = load_safe_exact_commands()
