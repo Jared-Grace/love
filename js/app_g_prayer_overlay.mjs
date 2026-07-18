@@ -37,16 +37,15 @@ export function app_g_prayer_overlay() {
   });
   let card = html_div(div);
   html_style_assign(card, {
-    background: "rgba(0, 0, 0, 0.88)",
-    border: "1px solid rgba(255, 255, 255, 0.15)",
-    "border-radius": "1rem",
-    padding: "1.5rem 2rem",
+    background: "rgba(0, 0, 0, 0.55)",
+    "border-radius": "1.5rem",
+    padding: "1.75rem 2.25rem",
     "max-width": "88vw",
     display: "flex",
     "flex-direction": "column",
     "align-items": "center",
     gap: "0.85rem",
-    "box-shadow": "0 0.5rem 1.5rem rgba(0, 0, 0, 0.5)",
+    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
   });
   let waiting_text = html_p_text(card, "Waiting on the Lord...");
   html_style_assign(waiting_text, {
