@@ -34,7 +34,7 @@ export function app_g_pray_reveal(container, correct, label, label_thanks, effec
     setTimeout(answered, delay);
   }
   function on_thanks() {
-    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), "white", 3500);
+    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), app_shared_color_green(), 3500);
   }
   function on_click() {
     if (discern.prayed) {
