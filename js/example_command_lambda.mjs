@@ -2,7 +2,11 @@ import { function_arguments_assert_each_add_lambda } from "./function_arguments_
 import { js_node_type_is_new_lambda } from "./js_node_type_is_new_lambda.mjs";
 import { example_imports_lambda } from "./example_imports_lambda.mjs";
 import { example_auto_lambda } from "./example_auto_lambda.mjs";
+import { js_atomize } from "./js_atomize.mjs";
 export function example_command_lambda(t) {
+  if (t[0] === "atomize") {
+    return js_atomize;
+  }
   if (t[0] === "aea") {
     return function_arguments_assert_each_add_lambda(t[2]);
   }
