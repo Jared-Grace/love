@@ -1679,16 +1679,6 @@ def main():
         }))
         return
 
-    if find_raw_node_eval(command):
-        print(json.dumps({
-            "hookSpecificOutput": {
-                "hookEventName": "PreToolUse",
-                "permissionDecision": "deny",
-                "permissionDecisionReason": NODE_EVAL_DENY_REASON,
-            }
-        }))
-        return
-
     verb = matched_leading_verb(command, safe_verbs)
     if verb is not None:
         print(json.dumps({
