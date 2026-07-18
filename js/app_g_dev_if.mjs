@@ -1,5 +1,4 @@
 import { html_hash_get } from "./html_hash_get.mjs";
-import { app_g_view_get } from "./app_g_view_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
