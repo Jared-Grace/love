@@ -5997,3 +5997,6 @@ html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/next.html' }
 app_shared_name_search_info
 { search: 'original_bible', a_name: 'original_bible' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g_bible', a_name: 'g_bible' }
+{ search: 'g', a_name: 'g' }
