@@ -50,7 +50,7 @@ export async function app_g_conversation(
   function npc_believe() {
     say("I've never really been sure. I suppose I'm still figuring that out.");
   }
-  let discern = { prayed: false, warnings: 0 };
+  let discern = { prayed: false };
   let christian = property_get(npc, "christian");
   if (not(christian)) {
     let correct_index = integer_random_0(2);

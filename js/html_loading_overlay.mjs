@@ -33,10 +33,9 @@ export function html_loading_overlay() {
     "font-family": "sans-serif",
     "text-align": "center",
     "text-shadow": "0 1px 3px rgba(0, 0, 0, 0.8)",
-    background: "rgba(0, 0, 0, 0.55)",
-    padding: "1.5rem 2rem",
-    "border-radius": "3rem",
-    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
+    background:
+      "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 75%)",
+    padding: "2.5rem 3.5rem",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
