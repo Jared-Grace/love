@@ -25,7 +25,7 @@ export function app_code_lesson_expression_equals() {
       " only when both sides are the same number",
     ],
   ];
-  function closing(fn_name) {
+  function closing() {
     let parts = [
       "",
       symbol,
