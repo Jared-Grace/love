@@ -23,7 +23,7 @@ export function example_transform_html(example) {
     example_before_shown(before),
     "before",
   );
-  let arrow = html_code_element("div", { class: "arrow" }, "→");
+  let arrow = html_code_element("div", { class: "arrow" }, example_arrow_svg());
   let after_block = example_code_block_html(after, "after");
   let before_col = example_io_column_html("before", before_block);
   let after_col = example_io_column_html("after", after_block);
