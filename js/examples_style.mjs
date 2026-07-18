@@ -13,6 +13,10 @@ export function examples_style() {
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
     pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
     .arrow { width: 2rem; height: 2rem; border-radius: 50%; background: ${green}; color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+    .t-kw { color: #d73a49; }
+    .t-str { color: #0a7d3c; }
+    .t-num { color: #6f42c1; }
+    .t-punct { color: #6a737d; }
     .rejection pre.call { border-left: 3px solid #d33; }
     .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
     @media (max-width: 44rem) { .io { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); } }
