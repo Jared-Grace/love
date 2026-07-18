@@ -8,11 +8,9 @@ export function app_code_lesson_expression_less_than() {
   let operator = js_operator_less_than();
   let compare = property_get(operator, "fn");
   let pair = app_code_comparison_pair_ordering(compare);
-  function closing(fn_name) {
+  function closing() {
     let parts = [
-      "Before, the answer was always a number, but now ",
-      fn_name,
-      " will write out ",
+      "Before, the value was always a number, but now it is ",
       js_keyword_true(),
       " or ",
       js_keyword_false(),
