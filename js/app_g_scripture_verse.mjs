@@ -5,5 +5,5 @@ export function app_g_scripture_verse(element) {
   "style an element as a Scripture verse: softly glowing GOLD text (gold = God's word) — the ref-less DRY piece, shared by the passage-button verse and the prayer-wait verse";
   html_style_set(element, "color", app_shared_color_gold_text());
   html_bold_mild(element);
-  html_style_set(element, "text-shadow", "0 0 0.2em rgba(255, 255, 255, 0.7)");
+  html_style_set(element, "text-shadow", "0 0 0.12em rgba(255, 255, 255, 0.45)");
 }
