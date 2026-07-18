@@ -3631,3 +3631,73 @@ app_shared_name_search_info
 { search: 'g', a_name: 'g' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/g.html' }
+webpack_watch
+{ rebuild: 'search' }
+catch_log_async
+SyntaxError: Cannot use keyword 'await' outside an async function (57:4)
+    at pp$4.raise (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:3731:13)
+    at pp$5.checkUnreserved (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:3626:14)
+    at pp$5.parseIdent (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:3640:10)
+    at pp$5.parseExprAtom (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2989:19)
+    at pp$5.parseExprSubscripts (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2849:19)
+    at pp$5.parseMaybeUnary (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2807:17)
+    at pp$5.parseExprOps (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2735:19)
+    at pp$5.parseMaybeConditional (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2718:19)
+    at pp$5.parseMaybeAssign (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2685:19)
+    at pp$5.parseExpression (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:2648:19)
+    at pp$8.parseStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1020:45)
+    at pp$8.parseBlock (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1333:21)
+    at pp$8.parseStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:971:36)
+    at pp$8.parseIfStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1156:26)
+    at pp$8.parseStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:960:33)
+    at pp$8.parseBlock (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1333:21)
+    at pp$5.parseFunctionBody (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:3546:22)
+    at pp$8.parseFunction (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1460:8)
+    at pp$8.parseFunctionStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1149:15)
+    at pp$8.parseStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:956:17)
+    at pp$8.parseExportDeclaration (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1817:15)
+    at pp$8.parseExport (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:1776:29)
+    at pp$8.parseStatement (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:989:74)
+    at pp$8.parseTopLevel (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:827:21)
+    at Parser.parse (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:596:15)
+    at Parser.parse (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:649:35)
+    at Module.parse (file:///home/j/repos/love/node_modules/acorn/dist/acorn.mjs:6215:17)
+    at js_parse_generic (file:///home/j/repos/love/js/js_parse_generic.mjs:4:19)
+    at js_parse_async (file:///home/j/repos/love/js/js_parse_async.mjs:4:11)
+    at async file_js_parse (file:///home/j/repos/love/js/file_js_parse.mjs:5:13)
+    at async Promise.all (index 1004)
+    at async list_wait (file:///home/j/repos/love/js/list_wait.mjs:2:11)
+    at async list_map_unordered_async (file:///home/j/repos/love/js/list_map_unordered_async.mjs:5:16)
+    at async data_generate (file:///home/j/repos/love/js/data_generate.mjs:8:17)
+    at async data_all (file:///home/j/repos/love/js/data_all.mjs:10:5)
+    at async data_get (file:///home/j/repos/love/js/data_get.mjs:5:11)
+    at async data_property_get_generic (file:///home/j/repos/love/js/data_property_get_generic.mjs:4:11)
+    at async data_property_get (file:///home/j/repos/love/js/data_property_get.mjs:5:11)
+    at async data_identifiers_get (file:///home/j/repos/love/js/data_identifiers_get.mjs:4:11)
+    at async app_shared_name_main (file:///home/j/repos/love/js/app_shared_name_main.mjs:7:21)
+    at async app_shared_name_search_info (file:///home/j/repos/love/js/app_shared_name_search_info.mjs:16:16)
+    at async webpack_build_dev (file:///home/j/repos/love/js/webpack_build_dev.mjs:9:14)
+    at async app_shared_dev_build (file:///home/j/repos/love/js/app_shared_dev_build.mjs:4:3)
+    at async lambda (file:///home/j/repos/love/js/webpack_watch.mjs:94:7)
+    at async catch_log_async (file:///home/j/repos/love/js/catch_log_async.mjs:6:5)
+    at async build_run (file:///home/j/repos/love/js/webpack_watch.mjs:97:7) {
+  pos: 3017,
+  loc: Position { line: 57, column: 4 },
+  raisedAt: 3029
+}
+webpack_watch
+{ rebuild: 'search' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
+webpack_watch
+{ rebuild: 'search' }
+app_shared_name_search_info
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+{ search: 'search', a_name: 'search' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/search.html' }
