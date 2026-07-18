@@ -5,7 +5,7 @@ import { app_g_pray_discern } from "./app_g_pray_discern.mjs";
 import { app_g_reveal_word } from "./app_g_reveal_word.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_g_turn_menu(overlay, prompt, choices) {
+export function app_g_turn_menu(overlay, prompt, choices, discern) {
   "render a menu turn — a prompt + one green button per choice (the player's OWN words); a pray-for-discernment button reveals the correct choice. choices: [{label, on_click, correct}]";
   let container = app_g_container_player(overlay);
   app_g_p_text(container, prompt);
