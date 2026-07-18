@@ -3,6 +3,7 @@ import { app_g_button_conversation_end } from "./app_g_button_conversation_end.m
 import { app_g_gospel } from "./app_g_gospel.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_turn_menu } from "./app_g_turn_menu.mjs";
+import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_boundary } from "./g_boundary.mjs";
 import { integer_random_0 } from "./integer_random_0.mjs";
