@@ -1517,6 +1517,22 @@ def is_node_eval_flag(word):
     return word in NODE_EVAL_FLAGS or word.startswith("--eval=") or word.startswith("--print=")
 
 
+def _strip_command_prefixes(words):
+    """Drop leading `VAR=...` assignments and transparent `xargs`/`timeout
+    <dur>` wrappers from a simple command's word list - the same unwrapping
+    verb_of applies - so the real command word lands at words[0]."""
+    while words:
+        if ASSIGN_RE.match(words[0]):
+            words = words[1:]
+        elif words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
+            words = words[1:]
+        elif words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
+            words = words[2:]
+        else:
+            break
+    return words
+
+
 def find_raw_node_eval(command):
     """True iff `command` runs a raw (un-sandboxed) `node` with an eval flag,
     so main() can DENY it with an instructive message instead of letting it
@@ -1537,15 +1553,7 @@ def find_raw_node_eval(command):
     except Unsupported:
         return False
     for words in split_statements(tokens):
-        while words:
-            if ASSIGN_RE.match(words[0]):
-                words = words[1:]
-            elif words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
-                words = words[1:]
-            elif words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
-                words = words[2:]
-            else:
-                break
+        words = _strip_command_prefixes(words)
         if words and words[0] == "node" and any(is_node_eval_flag(w) for w in words[1:]):
             return True
     return False

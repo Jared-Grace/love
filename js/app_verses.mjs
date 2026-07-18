@@ -39,18 +39,31 @@ export async function app_verses(context) {
   let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
   let english_choices = await ebible_versions_english_choices_browser();
   let languages_chosen_default = app_reply_languages_chosen_default();
-  let languages_chosen = [];
-  languages_chosen_reset();
+  let default_codes = list_map_property(
+    languages_chosen_default,
+    "language_code",
+  );
+  let default_l = list_join_plus(default_codes);
+  let hash = html_hash_object_get();
+  let l = property_get_or(hash, "l", default_l);
+  let language_codes = text_split_plus(l);
+  function code_to_language(code) {
+    return list_find_property_or_null(languages, "language_code", code);
+  }
+  let mapped = list_map(language_codes, code_to_language);
+  let languages_chosen = list_filter_null_not_is(mapped);
   let bible_texts = [];
   let verse_count = 1;
-  let card1 = app_shared_container_blue(root);
-  let p = app_reply_languages_prompt(card1);
-  let buttons_languages = app_reply_buttons_languages(
-    languages_chosen,
-    card1,
-    languages,
+  let bc = html_bar_content_padded(root);
+  let bar = property_get(bc, "bar");
+  let content = property_get(bc, "content");
+  html_centered(bar);
+  app_shared_bible_languages_gear(bar, content, language_codes);
+  app_shared_text_body(
+    content,
+    "1. Tap the ⚙️ button above to choose which language or languages your verses appear in.",
   );
-  let card2 = app_shared_container_blue(root);
+  let card2 = app_shared_container_blue(content);
   app_shared_text_body(card2, "2. How many Bible verses would you like?");
   let counts = [1, 2, 3, 4, 6, 8, 10, 20, 40];
   let count_updates = [];
@@ -69,7 +82,7 @@ export async function app_verses(context) {
     update();
   }
   each(counts, count_each);
-  let card3 = app_shared_container_blue(root);
+  let card3 = app_shared_container_blue(content);
   app_shared_text_body(
     card3,
     "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.",
@@ -80,7 +93,7 @@ export async function app_verses(context) {
     "If the copy did not work, this button will gently copy them again.",
   );
   let copy_button = app_shared_button(card3, html_button_copy_text(), copy);
-  let card4 = app_shared_container_blue(root);
+  let card4 = app_shared_container_blue(content);
   card4_refresh();
   function counts_refresh() {
     each(count_updates, count_update_invoke);
@@ -124,12 +137,5 @@ export async function app_verses(context) {
   }
   async function copy() {
     let joined = await list_join_newline_2_copy(bible_texts);
-  }
-  function languages_chosen_reset() {
-    app_reply_languages_chosen_reset(
-      languages_chosen,
-      languages_chosen_default,
-      languages,
-    );
   }
 }
