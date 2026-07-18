@@ -5014,3 +5014,11 @@ app_shared_name_search_info
 { search: 'reply_local', a_name: 'reply_local' }
 html_update_latest_webpack_generic
 { f_path_latest: '../love/public/dev/reply_local.html' }
+webpack_watch
+{ rebuild: 'g' }
+app_shared_name_search_info
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+{ search: 'g', a_name: 'g' }
+html_update_latest_webpack_generic
+{ f_path_latest: '../love/public/dev/g.html' }
