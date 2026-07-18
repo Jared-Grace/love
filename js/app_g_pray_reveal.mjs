@@ -3,6 +3,7 @@ import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
 import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { app_g_discern_prayed } from "./app_g_discern_prayed.mjs";
 import { g_thanks_discernment } from "./g_thanks_discernment.mjs";
+import { app_shared_color_green } from "./app_shared_color_green.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_text_set } from "./html_text_set.mjs";
