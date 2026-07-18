@@ -1,7 +1,5 @@
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_binary_next_arg } from "./app_code_binary_next_arg.mjs";
-import { js_keyword_true } from "./js_keyword_true.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -19,6 +17,7 @@ export function app_code_lesson_expression_comparison(params) {
   let name_id_rights = property_get(params, "name_id_rights");
   let preamble = property_get(params, "preamble");
   let explanation = property_get(params, "explanation");
+  let closing = property_get(params, "closing");
   let symbol = property_get(operator, "operator");
   let next_arg = property_get_or_null(params, "next_arg");
   let next_arg_missing = null_is(next_arg);
@@ -60,12 +59,7 @@ export function app_code_lesson_expression_comparison(params) {
     ]);
     html_div_cycle_code(question_container, ["The symbol ", symbol, tail]);
     render_section(explanation);
-    let parts = [
-      "Before, the value was always a number, but now it is ",
-      js_keyword_true(),
-      " or ",
-      js_keyword_false(),
-    ];
+    let parts = closing();
     app_code_container_light_blue_cycle_code(root, parts);
   }
 }
