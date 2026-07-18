@@ -33,18 +33,11 @@ export async function app_g_dev_if() {
   if (hash === "#conversation") {
     view = await npc_view(app_g_view_phase_conversation());
   }
-  if (hash === "#gospel-share") {
+  if (hash === "#gospel_share") {
     view = await npc_view(app_g_view_phase_gospel());
   }
   if (null_is(view)) {
     return;
   }
-  let current = await app_g_view_get();
-  let already = false;
-  if (not(null_is(current))) {
-    already = property_get(current, "kind") === property_get(view, "kind");
-  }
-  if (not(already)) {
-    await app_g_view_set(view);
-  }
+  await app_g_view_set(view);
 }
