@@ -2,12 +2,11 @@
 # systemd system-sleep hook: re-assert the XFCE workspace digit shortcuts when
 # the machine resumes from suspend/hibernate.
 #
-# STATUS: committed but UNVERIFIED / NOT YET INSTALLED. Written before a real
-# hibernate proved the new xfsettingsd-based shortcuts (see
-# xfce-workspaces-digits) actually break on resume. The whole reason we moved
-# off xfwm4's native keys was that xfsettingsd survived the last hibernate --
-# so this hook may never be needed. Install it only if a resume is observed to
-# break Super+digit.
+# STATUS: committed, NOT INSTALLED -- and confirmed UNNECESSARY so far. On
+# 2026-07-19 a real hibernate -> resume left Super+digit working with nothing
+# re-run, proving the xfsettingsd-based shortcuts (see xfce-workspaces-digits)
+# survive hibernate on their own. This hook is kept only as a dormant fallback:
+# install it if some future resume is ever observed to break Super+digit.
 #
 # Install (root; the activation lives outside git by necessity -- systemd only
 # runs hooks owned by root under /usr/lib/systemd/system-sleep/):
