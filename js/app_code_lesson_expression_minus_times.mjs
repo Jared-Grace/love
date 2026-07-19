@@ -35,40 +35,19 @@ export function app_code_lesson_expression_minus_times() {
     return triples;
   }
   function above(root) {
-    let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, [
-      "We always do ",
-      times,
-      " before ",
-      minus_symbol,
-      ", even if ",
-      times,
-      " appears later",
-    ]);
-    let later_box = app_code_container_light_blue(root);
-    html_div_cycle_code(later_box, [
-      "For ",
-      "10 - 2 * 3",
-      ", we do ",
-      "2 * 3",
-      " first, which is ",
-      "6",
-    ]);
-    html_div_cycle_code(later_box, ["Now we have ", "10 - 6", ", which is ", "4"]);
-    let first_box = app_code_container_light_blue(root);
-    html_div_cycle_code(first_box, [
-      "For ",
-      "2 * 3 - 4",
-      ", we do ",
-      "2 * 3",
-      " first, which is ",
-      "6",
-    ]);
-    html_div_cycle_code(first_box, ["Now we have ", "6 - 4", ", which is ", "2"]);
+    app_code_lesson_cross_precedence_intro({
+      root,
+      weak: minus,
+      strong: times,
+      inner_left: 2,
+      inner_right: 3,
+      later_outer: 10,
+      first_outer: 4,
+    });
   }
   let lesson = app_code_lesson_expression_pair_generic({
     symbol1: minus_symbol,
-    symbol2: times,
+    symbol2: times_symbol,
     word: " minus times",
     above,
     triples_get,
