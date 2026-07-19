@@ -89,7 +89,11 @@ export async function app_verses(context) {
     card3,
     "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.",
   );
-  let generate_button = app_shared_button(card3, "✨ Generate", generate);
+  let generate_button = app_shared_button(
+    card3,
+    text_combine(emoji_book_open(), " Generate"),
+    generate,
+  );
   app_shared_text_body(
     card3,
     "If the copy did not work, this button will gently copy them again.",
