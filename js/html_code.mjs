@@ -7,7 +7,7 @@ import { html_code_doctype } from "./html_code_doctype.mjs";
 import { html_code_meta_charset } from "./html_code_meta_charset.mjs";
 import { html_code_meta_viewport } from "./html_code_meta_viewport.mjs";
 import { html_code_favicon_emoji } from "./html_code_favicon_emoji.mjs";
-import { emoji_pray } from "./emoji_pray.mjs";
+import { pwa_icon_emoji } from "./pwa_icon_emoji.mjs";
 import { html_code_attributes_html } from "./html_code_attributes_html.mjs";
 import { html_code_manifest_link } from "./html_code_manifest_link.mjs";
 import { html_code_service_worker_register } from "./html_code_service_worker_register.mjs";
@@ -15,7 +15,7 @@ export function html_code(name, body) {
   let attributes_none = {};
   let indent = html_code_indent();
   let title = html_code_element("title", attributes_none, name);
-  let favicon = html_code_favicon_emoji(emoji_pray());
+  let favicon = html_code_favicon_emoji(pwa_icon_emoji(name));
   let manifest_link = html_code_manifest_link(name);
   let head_items = [
     html_code_meta_charset(),
