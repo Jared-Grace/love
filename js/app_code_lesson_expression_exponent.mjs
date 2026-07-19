@@ -127,7 +127,7 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(grid, "row-gap", "0.2em");
       html_style_set(grid, "vertical-align", "middle");
       let pill = html_span(grid);
-      html_style_set(pill, "grid-row", "1");
+      html_style_set(pill, "grid-row", "2");
       html_style_set(pill, "grid-column", "1 / -1");
       html_style_set(pill, "background", "black");
       html_style_set(pill, "border-radius", "0.5em");
@@ -143,8 +143,7 @@ export function app_code_lesson_expression_exponent() {
         let position = add(index, 1);
         let column = add(multiply(2, index), 2);
         let chip = lifted_chip(grid, base, base_color);
-        html_style_set(chip, "margin-block", "0.22em");
-        cell_at(chip, 1, column);
+        cell_at(chip, 2, column);
         let last = equal(position, count);
         let numeral;
         if (last) {
@@ -152,13 +151,13 @@ export function app_code_lesson_expression_exponent() {
         } else {
           numeral = running_count(grid, position);
         }
-        cell_at(numeral, 2, column);
+        cell_at(numeral, 1, column);
       }
       function place_operator(gap) {
         let column = add(multiply(2, gap), 3);
         let op = html_span_text(grid, star);
         html_font_color_set(op, "white");
-        cell_at(op, 1, column);
+        cell_at(op, 2, column);
       }
       spacer(1);
       spacer(end_column);
