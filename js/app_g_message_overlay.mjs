@@ -7,9 +7,11 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_style_head } from "./html_style_head.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
 import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
 export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
   "a full-screen prayer moment: dims the world, floats a glowing emoji above a message on a dark CARD, fades in, then auto-dismisses after dismiss_ms. `color` sets the message color — GOLD when the words are God's leading (His word), white when they are the player's own prayer. RETURNS the card (a flex column) so a caller can add more onto the same black surface — e.g. the dove appends a verse + reference. dismiss_ms null = stays until removed (used by the #dove dev route to inspect it). shared by the discernment-prevented dove and the thanksgiving prayer";
+  let fonts = app_g_overlay_fonts();
   let body = html_document_body();
   let div = html_div(body);
   html_style_assign(div, {
