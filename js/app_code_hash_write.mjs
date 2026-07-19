@@ -18,7 +18,7 @@ export function app_code_hash_write(context) {
   }
   add_part("lesson", storage_local_get_context(context, "lesson_id"));
   add_part("screen", storage_local_get_context(context, "screen"));
-  add_part("q", storage_local_get_context(context, "quiz_index"));
+  add_part("quiz", storage_local_get_context(context, "quiz_index"));
   let query = list_join(parts, "&");
   let hash = text_combine("#", query);
   html_hash_set(hash);
