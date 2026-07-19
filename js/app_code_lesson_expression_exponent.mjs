@@ -1,8 +1,12 @@
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
+import { app_code_lesson_quizzes_unscramble_both } from "./app_code_lesson_quizzes_unscramble_both.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { html_div_text_code_dark } from "./html_div_text_code_dark.mjs";
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
+import { list_join } from "./list_join.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -32,28 +36,68 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_exponent() {
-  "practice a ** b (exponent): multiply the base by itself; the second number is how many to multiply together; kept small (base 2..5, exponent 2..3) so outputs stay <= 125";
+  "practice a ** b (exponent) by writing it out as repeated multiplication (2 ** 3 becomes 2 * 2 * 2): the quiz matches the ** form with its expansion, because this lesson teaches what ** MEANS - repeated multiplication - not the arithmetic value; base 2..5, exponent 2..3";
   let operator = js_operator_double_asterisk();
   let symbol = property_get(operator, "operator");
-  function refill() {
-    "one exponent (2 or 3) with the four bases 2,3,4,5 shuffled, so the four questions are all distinct";
-    let exponent = integer_random(2, 3);
-    let bases = list_shuffle_take([2, 3, 4, 5], 4);
-    function to_code(base) {
-      let code = js_code_binary_spaced_nb(base, symbol, exponent);
-      return code;
+  function product_code(base, exponent) {
+    "the exponent written out as repeated multiplication - product_code(2, 3) is 2 * 2 * 2";
+    let star = js_operator_asterisk_symbol();
+    function base_text(index) {
+      return text_to(base);
     }
-    let list = list_map(bases, to_code);
-    return list;
+    let factors = list_map(range(exponent), base_text);
+    let separator = text_combine_multiple([" ", star, " "]);
+    let product = list_join(factors, separator);
+    return product;
   }
-  let next_arg = list_iterator_refillable(refill);
+  function batch_get() {
+    "four questions - four distinct bases (so the expansions never collide), each with its own random exponent 2 or 3 so the length of the written-out multiplication varies; the ANSWER is the expansion, not the value";
+    let bases = list_shuffle_take([2, 3, 4, 5], 4);
+    function to_pair(base) {
+      let exponent = integer_random(2, 3);
+      let question = js_code_binary_spaced_nb(base, symbol, exponent);
+      let answer = product_code(base, exponent);
+      let pair = {
+        question,
+        answer,
+      };
+      return pair;
+    }
+    let pairs = list_map(bases, to_pair);
+    return pairs;
+  }
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_generic({
-    above,
-    name_id,
-    next_arg,
-    example_count: 2,
+  let example_question_label = app_code_label_code_question();
+  let forwards = {
+    question_label: example_question_label,
+    on_question: html_text_set_code_dark,
+    answer_label: "What is this written out as multiplication? ",
+    answer_on_button: html_style_code_dark,
+    answer_count_override: null,
+  };
+  let backwards = {
+    question_label: "Multiplication: ",
+    on_question: html_text_set_code_dark,
+    answer_label: "Which code uses ** for this? ",
+    answer_on_button: html_style_code_dark,
+    answer_count_override: null,
+  };
+  let quizzes_get = app_code_lesson_quizzes_unscramble_both({
+    batch_get,
+    forwards,
+    backwards,
   });
+  let lesson = app_code_lesson_base(
+    name_id,
+    above,
+    2,
+    batch_get,
+    html_text_set_code_dark,
+    "Expansion: ",
+    quizzes_get,
+    example_question_label,
+    html_div_text_code_dark,
+  );
   return lesson;
   function title_name_id() {
     "the home title is console.log exponent **";
