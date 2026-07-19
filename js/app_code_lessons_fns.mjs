@@ -78,10 +78,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not,
     app_code_lesson_expression_or,
     app_code_lesson_expression_and,
-    app_code_lesson_expression_remainder_2,
-    app_code_lesson_expression_remainder_3,
-    app_code_lesson_expression_remainder_4,
-    app_code_lesson_expression_remainder_any,
     app_code_lesson_expression_nested_add,
     app_code_lesson_expression_nested_subtract,
     app_code_lesson_expression_multiply,
@@ -100,6 +96,10 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_statement,
     app_code_lesson_functions_console_log_arithmetic,
     app_code_lesson_expression_remainder_subtract,
+    app_code_lesson_expression_remainder_2,
+    app_code_lesson_expression_remainder_3,
+    app_code_lesson_expression_remainder_4,
+    app_code_lesson_expression_remainder_any,
   ];
   return fns;
 }
