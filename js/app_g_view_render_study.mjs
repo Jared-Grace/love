@@ -8,6 +8,7 @@ import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
+import { app_shared_color_blue_light } from "./app_shared_color_blue_light.mjs";
 import { app_shared_style_control_font_size } from "./app_shared_style_control_font_size.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -31,7 +32,7 @@ export async function app_g_view_render_study(div_map) {
   let current = word_index;
   let green_vivid = text_combine(app_shared_button_background(), "ee");
   let green_pale = text_combine(app_shared_button_background(), "66");
-  let blue_pale = "rgb(95 145 255 / 59%)";
+  let blue_pale = app_shared_color_blue_light();
   let white = app_shared_button_font_color();
   let ring = text_combine_multiple([
     "0 0 0 0.12em ",
