@@ -14,6 +14,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { each } from "./each.mjs";
 import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
+import { g_name_jesus } from "./g_name_jesus.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -37,12 +38,13 @@ export function app_g_gratitude_overlay() {
     "box-sizing": "border-box",
     "z-index": "1000",
   });
+  let all = g_thanks_gratitude();
+  let amen_name = g_name_jesus();
   let previous_texts = [];
   function render() {
     html_clear(overlay);
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What would you like to pray to God?");
-    let all = g_thanks_gratitude();
     let candidates = list_filter_includes_not(all, "text", previous_texts);
     list_shuffle(candidates);
     let some = list_take(candidates, 4);
@@ -61,7 +63,7 @@ export function app_g_gratitude_overlay() {
     function done() {
       html_remove(overlay);
     }
-    let amen = text_combine_multiple([emoji_pray(), " In the name of Jesus, Amen"]);
+    let amen = text_combine_multiple([emoji_pray(), " In the name of ", amen_name, ", Amen"]);
     app_g_button_green(overlay, amen, done);
   }
   render();
