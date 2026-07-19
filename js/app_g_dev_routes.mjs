@@ -35,7 +35,7 @@ export function app_g_dev_routes() {
   async function gospel_share() {
     await npc_view(app_g_view_phase_gospel());
   }
-  async function prayer() {
+  async function discern() {
     await app_g_view_set(null);
     app_g_prayer_overlay();
   }
@@ -48,7 +48,7 @@ export function app_g_dev_routes() {
     study,
     conversation,
     gospel_share,
-    prayer,
+    discern,
     dove,
   };
   return routes;
