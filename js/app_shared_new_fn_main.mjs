@@ -4,7 +4,7 @@ import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { function_unalias_exists } from "./function_unalias_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
-export async function app_new_fn_main(name) {
+export async function app_shared_new_fn_main(name) {
   text_and_empty_not_is_assert_json(name, {
     hint: "the app name should be non-empty text — was it blank?",
   });

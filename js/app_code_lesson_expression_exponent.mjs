@@ -97,9 +97,10 @@ export function app_code_lesson_expression_exponent() {
       return made;
     }
     function count_numeral(grid, number, color) {
-      "the small count label BELOW a factor, on the light background - a faint dark grey for the running count, or the exponent's colour on the FINAL factor so the last count visibly becomes the exponent";
+      "the count label BELOW a factor, on the light background - bold so the small digit stays legible - a readable dark grey for the running count, or the exponent's colour on the FINAL factor so the last count visibly becomes the exponent";
       let label = html_span_text_smaller(grid, text_to(number));
       html_font_color_set(label, color);
+      html_style_set(label, "font-weight", "bold");
       return label;
     }
     function cell_at(node, row, column) {
@@ -133,7 +134,7 @@ export function app_code_lesson_expression_exponent() {
         html_style_set(s, "width", "0.3em");
         cell_at(s, 1, column);
       }
-      let dim = "rgba(0, 0, 0, 0.4)";
+      let dim = "rgb(70, 70, 70)";
       function place_factor(index) {
         let position = add(index, 1);
         let column = add(multiply(2, index), 2);
