@@ -1,38 +1,41 @@
-import { html_clear_context } from "../../love/js/html_clear_context.mjs";
-import { html_clear } from "../../love/js/html_clear.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { html_div_centered } from "../../love/js/html_div_centered.mjs";
-import { html_p_text } from "../../love/js/html_p_text.mjs";
-import { html_style_set } from "../../love/js/html_style_set.mjs";
-import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
-import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
-import { html_border_radius } from "../../love/js/html_border_radius.mjs";
-import { html_style_padding_x } from "../../love/js/html_style_padding_x.mjs";
-import { html_style_padding_y } from "../../love/js/html_style_padding_y.mjs";
-import { html_margin_em } from "../../love/js/html_margin_em.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { list_join_comma } from "../../love/js/list_join_comma.mjs";
-import { list_first } from "../../love/js/list_first.mjs";
-import { list_includes } from "../../love/js/list_includes.mjs";
-import { json_to } from "../../love/js/json_to.mjs";
-import { app_api } from "../../love/js/app_api.mjs";
-import { fn_name } from "../../love/js/fn_name.mjs";
-import { html_loading_suppressed } from "../../love/js/html_loading_suppressed.mjs";
-import { html_loading } from "../../love/js/html_loading.mjs";
-import { g_sermon_passage_verses_key } from "../../love/js/g_sermon_passage_verses_key.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { app_g_verify_view } from "../../love/js/app_g_verify_view.mjs";
-import { app_shared_text_deemphasized_color } from "../../love/js/app_shared_text_deemphasized_color.mjs";
-import { app_shared_font_serif } from "../../love/js/app_shared_font_serif.mjs";
-import { app_shared_milestone_background_color } from "../../love/js/app_shared_milestone_background_color.mjs";
-import { app_shared_verse_selected_background_color } from "../../love/js/app_shared_verse_selected_background_color.mjs";
-import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
-import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
-import { g_verify_book_name } from "../../love/js/g_verify_book_name.mjs";
-import { app_shared_button_list_centered } from "../../love/js/app_shared_button_list_centered.mjs";
+import { html_clear_context } from "./html_clear_context.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_div_centered } from "./html_div_centered.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
+import { html_style_padding_y } from "./html_style_padding_y.mjs";
+import { html_margin_em } from "./html_margin_em.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { json_to } from "./json_to.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { html_loading_suppressed } from "./html_loading_suppressed.mjs";
+import { html_loading } from "./html_loading.mjs";
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { app_g_verify_view } from "./app_g_verify_view.mjs";
+import { app_shared_text_deemphasized_color } from "./app_shared_text_deemphasized_color.mjs";
+import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
+import { app_shared_milestone_background_color } from "./app_shared_milestone_background_color.mjs";
+import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
+import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { g_verify_book_name } from "./g_verify_book_name.mjs";
+import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 function api_read(f_name, args) {
   return html_loading_suppressed(function read() {
-    return app_api({ f_name, args });
+    return app_shared_api({
+      f_name,
+      args,
+    });
   });
 }
 export async function app_g_verify_home(context) {
@@ -65,12 +68,23 @@ export async function app_g_verify_home(context) {
     try {
       status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
     } catch (missing) {
-      status = { busy: false, verse: "", note: "" };
+      status = {
+        busy: false,
+        verse: "",
+        note: "",
+      };
     }
     try {
-      chapter_state = await api_read(fn_name("g_verify_chapter_next"), [chapter_code]);
+      chapter_state = await api_read(fn_name("g_verify_chapter_next"), [
+        chapter_code,
+      ]);
     } catch (missing) {
-      chapter_state = { approved: "", latest: null, next: null, action: "wait" };
+      chapter_state = {
+        approved: "",
+        latest: null,
+        next: null,
+        action: "wait",
+      };
     }
     try {
       chapter_codes = property_get(
@@ -194,7 +208,10 @@ export async function app_g_verify_home(context) {
     let verse_buttons = {};
     function highlight_selected() {
       Object.keys(verse_buttons).forEach(function (k) {
-        let bg = k === selected_key ? app_shared_verse_selected_background_color() : "";
+        let bg =
+          k === selected_key
+            ? app_shared_verse_selected_background_color()
+            : "";
         html_style_background_color_set(verse_buttons[k], bg);
       });
     }
@@ -229,7 +246,8 @@ export async function app_g_verify_home(context) {
     html_style_set(bar, "margin-top", app_shared_spaced_small_gap());
     passages.forEach(function (passage) {
       let key = g_sermon_passage_verses_key(passage);
-      let is_approved = approved_index >= 0 && real_keys.indexOf(key) <= approved_index;
+      let is_approved =
+        approved_index >= 0 && real_keys.indexOf(key) <= approved_index;
       let label = is_approved ? "v" + key + " ✓" : "v" + key;
       verse_buttons[key] = app_shared_button(bar, label, function () {
         open_passage(passage);
@@ -281,9 +299,15 @@ export async function app_g_verify_home(context) {
   }
   async function refresh() {
     try {
-      let fresh_chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
-      let fresh_status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
-      let fresh_state = await api_read(fn_name("g_verify_chapter_next"), [chapter_code]);
+      let fresh_chapter = await api_read(fn_name("g_sermon_write_read"), [
+        chapter_code,
+      ]);
+      let fresh_status = await api_read(fn_name("g_verify_status_read"), [
+        chapter_code,
+      ]);
+      let fresh_state = await api_read(fn_name("g_verify_chapter_next"), [
+        chapter_code,
+      ]);
       let fresh_json = json_to({
         chapter: fresh_chapter,
         status: fresh_status,
