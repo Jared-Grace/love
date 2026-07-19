@@ -18,7 +18,7 @@ export function app_replace_goals_generic(
   lambda,
 ) {
   let choose_this_next = not(completed) && completed_previous;
-  let r = app_shared_button_numbered(root, index, lambda);
+  let r = app_shared_button_numbered(root, index, lambda, true);
   let marker = property_get(r, "marker");
   let title = property_get(r, "title");
   let button = property_get(r, "button");

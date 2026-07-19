@@ -36,7 +36,7 @@ export function app_code_home(context) {
     async function lambda3() {
       await app_shared_screen_go(context, "lesson_id", id, app_code_examples);
     }
-    let r = app_shared_button_numbered(g, index, lambda3);
+    let r = app_shared_button_numbered(g, index, lambda3, false);
     let title = property_get(r, "title");
     name(title);
     let symbol = property_get_or_null(item, "symbol");
