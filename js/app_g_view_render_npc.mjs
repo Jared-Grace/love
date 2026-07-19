@@ -18,7 +18,7 @@ import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
 import { app_g_view_phase_believe } from "./app_g_view_phase_believe.mjs";
 import { app_g_conversation_say } from "./app_g_conversation_say.mjs";
-import { g_response_how } from "./g_response_how.mjs";
+import { app_g_how } from "./app_g_how.mjs";
 import { g_response_believe } from "./g_response_believe.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
@@ -62,7 +62,7 @@ export async function app_g_view_render_npc(div_map) {
     return;
   }
   if (phase === app_g_view_phase_how()) {
-    app_g_conversation_say(npc, overlay, overlay_close, g_response_how());
+    app_g_how(overlay, npc, overlay_close);
     return;
   }
   if (phase === app_g_view_phase_believe()) {
