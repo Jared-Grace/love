@@ -1,6 +1,6 @@
 import { app_shared_name_latest } from "./app_shared_name_latest.mjs";
 import { function_new_open } from "./function_new_open.mjs";
-export async function app_new_fn_latest(name) {
+export async function app_shared_new_fn_latest(name) {
   let combined = app_shared_name_latest(name);
   await function_new_open(combined);
 }
