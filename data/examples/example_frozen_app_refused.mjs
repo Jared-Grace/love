@@ -1,6 +1,6 @@
 import { apps_frozen } from "../../js/apps_frozen.mjs";
 import { list_first } from "../../js/list_first.mjs";
-import { app_prefix_without_fn } from "../../js/app_prefix_without_fn.mjs";
+import { app_shared_name_prefix_without_fn } from "../../js/app_shared_name_prefix_without_fn.mjs";
 import { app_shared_frozen_assert } from "../../js/app_shared_frozen_assert.mjs";
 import { js_code_call_args } from "../../js/js_code_call_args.mjs";
 import { json_to } from "../../js/json_to.mjs";
