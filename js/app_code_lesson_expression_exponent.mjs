@@ -146,9 +146,11 @@ export function app_code_lesson_expression_exponent() {
         html_style_set(chip, "margin-block", "0.22em");
         cell_at(chip, 1, column);
         let last = equal(position, count);
-        let numeral = running_count(grid, position);
+        let numeral;
         if (last) {
           numeral = final_count(grid, position, power_color);
+        } else {
+          numeral = running_count(grid, position);
         }
         cell_at(numeral, 2, column);
       }
