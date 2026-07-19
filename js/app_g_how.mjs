@@ -5,6 +5,7 @@ import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { g_struggles } from "./g_struggles.mjs";
+import { g_verses_off_topic } from "./g_verses_off_topic.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -15,17 +16,18 @@ export function app_g_how(overlay, npc, overlay_close) {
   "the 'how are you?' interaction as 2 quiz turns (unifies hru with the gospel-share passage quiz): each turn the NPC voices a STRUGGLE and the player chooses the on-topic COMFORT verse over an off-topic one — pray-for-discernment reveals the right one. after both turns the NPC is comforted and the conversation can end";
   let all = g_struggles();
   list_shuffle(all);
-  function turn_spec(correct_index, wrong_index) {
-    let c = list_get(all, correct_index);
-    let w = list_get(all, wrong_index);
+  let off = g_verses_off_topic();
+  list_shuffle(off);
+  function turn_spec(index) {
+    let c = list_get(all, index);
     let spec = {
       struggle: property_get(c, "struggle"),
       correct: property_get(c, "correct"),
-      wrong: property_get(w, "correct"),
+      wrong: list_get(off, index),
     };
     return spec;
   }
-  let specs = [turn_spec(0, 2), turn_spec(1, 3)];
+  let specs = [turn_spec(0), turn_spec(1)];
   function turn(index) {
     html_clear(overlay);
     let done = index >= list_size(specs);
