@@ -41,6 +41,7 @@
       "Bash(node scripts/r.mjs app_shared_dev_build:*)",
       "Bash(node scripts/r.mjs fb)",
       "Bash(node scripts/r.mjs guard_check:*)",
+      "Bash(node scripts/r.mjs webpack_watch)",
       "Bash(node scripts/r.mjs xp:*)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
