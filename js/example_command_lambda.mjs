@@ -10,6 +10,7 @@ import { js_node_type_is_new_lambda } from "./js_node_type_is_new_lambda.mjs";
 import { example_imports_lambda } from "./example_imports_lambda.mjs";
 import { example_auto_lambda } from "./example_auto_lambda.mjs";
 import { js_statement_if_test_set } from "./js_statement_if_test_set.mjs";
+import { js_return_argument_set } from "./js_return_argument_set.mjs";
 import { example_slot_expression_set_lambda } from "./example_slot_expression_set_lambda.mjs";
 // Dispatch on the demonstrated fn's name (a strong reference), NOT an alias
 // string — so renaming an alias can never break which transform an example runs.
@@ -39,6 +40,13 @@ export function example_command_lambda(fn_name, args) {
     return example_slot_expression_set_lambda(
       "IfStatement",
       js_statement_if_test_set,
+      args[0],
+    );
+  }
+  if (fn_name === js_return_argument_set.name) {
+    return example_slot_expression_set_lambda(
+      "ReturnStatement",
+      js_return_argument_set,
       args[0],
     );
   }
