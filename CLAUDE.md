@@ -49,4 +49,6 @@ If the task genuinely needs to **write** or **persist** (not just read+print), i
 
 ## Tests (gap)
 
-There is **no repo-wide test gate yet** — the `q` / `portfolio_qa_tests_run` alias is dangling (no such function). The real automated tests are app-scoped e2e for app_replace: `are` (single), `rv` (verify named), `rva` (verify all). A universal correctness gate is a TODO; until it exists, reasoning in step 4 is the main guard.
+`q` (`qa_gate_run`) is the repo-wide gate. It runs every gate listed in `qa_gates()` — currently `guard_gate_run` (the bash-guard corpus in `data/guard_cases.json`, checked through the real hook) and `examples_gate_run` (the `data/examples` corpus) — and exits nonzero if any fail. Add a new gate by adding its function to `qa_gates()`.
+
+Coverage is still partial: most code has no gate, so reasoning in step 4 remains the main guard. The app-scoped e2e tests for app_replace stay separate: `are` (single), `rv` (verify named), `rva` (verify all).
