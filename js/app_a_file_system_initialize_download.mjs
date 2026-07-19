@@ -1,19 +1,19 @@
-import { app_api_fn } from "../../love/js/app_api_fn.mjs";
-import { indexeddb_get_all } from "../../love/js/indexeddb_get_all.mjs";
-import { list_property_exists_not_error } from "../../love/js/list_property_exists_not_error.mjs";
-import { list_to_dictionary_property } from "../../love/js/list_to_dictionary_property.mjs";
-import { indexeddb_put_multiple } from "../../love/js/indexeddb_put_multiple.mjs";
-import { app_a_file_system_initialize } from "../../love/js/app_a_file_system_initialize.mjs";
-import { app_a } from "../../love/js/app_a.mjs";
-import { storage_local_set } from "../../love/js/storage_local_set.mjs";
-import { app_a_file_system_store } from "../../love/js/app_a_file_system_store.mjs";
-import { app_a_download } from "../../love/js/app_a_download.mjs";
-import { lambda_get } from "../../love/js/lambda_get.mjs";
-import { app_a_indexeddb_initialize } from "../../love/js/app_a_indexeddb_initialize.mjs";
+import { app_shared_api_fn } from "./app_shared_api_fn.mjs";
+import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
+import { list_property_exists_not_error } from "./list_property_exists_not_error.mjs";
+import { list_to_dictionary_property } from "./list_to_dictionary_property.mjs";
+import { indexeddb_put_multiple } from "./indexeddb_put_multiple.mjs";
+import { app_a_file_system_initialize } from "./app_a_file_system_initialize.mjs";
+import { app_a } from "./app_a.mjs";
+import { storage_local_set } from "./storage_local_set.mjs";
+import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
+import { app_a_download } from "./app_a_download.mjs";
+import { lambda_get } from "./lambda_get.mjs";
+import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
-  let r = await app_api_fn({
+  let r = await app_shared_api_fn({
     fn: app_a_download,
   });
   list_property_exists_not_error(r, "key");
