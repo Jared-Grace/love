@@ -1,4 +1,5 @@
 var CACHE_NAME = 'love-cache-v1';
+var SHELL_TIMEOUT_MS = 4000;
 self.addEventListener('install', function () {
   self.skipWaiting();
 });
@@ -46,7 +47,7 @@ async function stale_while_revalidate(request) {
 async function network_first(request) {
   var cache = await caches.open(CACHE_NAME);
   try {
-    var response = await fetch(request);
+    var response = await fetch_timeout(request, SHELL_TIMEOUT_MS);
     put_ok(cache, request, response);
     return response;
   } catch (error) {
@@ -56,6 +57,20 @@ async function network_first(request) {
     }
     throw error;
   }
+}
+function fetch_timeout(request, ms) {
+  return new Promise(function (resolve, reject) {
+    var timer = setTimeout(function () {
+      reject(new Error('timeout'));
+    }, ms);
+    function settled(callback) {
+      return function (value) {
+        clearTimeout(timer);
+        callback(value);
+      };
+    }
+    fetch(request).then(settled(resolve), settled(reject));
+  });
 }
 function put_ok(cache, request, response) {
   if (response && response.ok) {
