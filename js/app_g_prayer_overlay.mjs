@@ -10,6 +10,7 @@ import { app_g_scripture_verse } from "./app_g_scripture_verse.mjs";
 import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
 import { g_verse_waiting_next } from "./g_verse_waiting_next.mjs";
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
+import { app_g_overlay_card_style } from "./app_g_overlay_card_style.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_prayer_overlay() {
   "full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered. font sizes from app_g_overlay_fonts (shared with the dove)";
@@ -40,17 +41,7 @@ export function app_g_prayer_overlay() {
     animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
   let card = html_div(div);
-  html_style_assign(card, {
-    background: "rgba(0, 0, 0, 0.55)",
-    "border-radius": "5rem",
-    padding: "1.75rem 2.25rem",
-    "max-width": "88vw",
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    gap: "0.85rem",
-    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
-  });
+  app_g_overlay_card_style(card);
   let waiting_text = html_p_text(card, "Waiting on the Lord...");
   html_style_assign(waiting_text, {
     color: "white",
