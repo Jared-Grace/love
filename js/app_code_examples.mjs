@@ -30,7 +30,7 @@ import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 export function app_code_examples(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
-  app_code_lesson_title_strip(root, lesson);
+  app_code_lesson_title_strip(root, context, lesson);
   let above = property_get(lesson, "above");
   above(root);
   let c = app_code_container_light_blue(root);
