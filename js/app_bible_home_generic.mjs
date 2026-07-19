@@ -211,8 +211,8 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     book_name,
     verse_number,
   );
-  function lambda3() {
-    app_bible_mode_switch(app_bible_mode_chapter());
+  async function lambda3() {
+    await app_bible_mode_switch(context, app_bible_mode_chapter());
   }
   let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let text4 = html_button_copy_text();
