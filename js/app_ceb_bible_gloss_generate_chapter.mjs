@@ -1,7 +1,7 @@
 import { app_ceb_bible_gloss_generate_chapter_language } from "./app_ceb_bible_gloss_generate_chapter_language.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { app_gloss_bible_generate_generic } from "./app_gloss_bible_generate_generic.mjs";
+import { app_shared_gloss_bible_generate_generic } from "./app_shared_gloss_bible_generate_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_generate_chapter(
   chapter_code_specified,
@@ -11,7 +11,7 @@ export async function app_ceb_bible_gloss_generate_chapter(
   let fn = app_ceb_bible_gloss_generate;
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let last = "original language and English are";
-  await app_gloss_bible_generate_generic(
+  await app_shared_gloss_bible_generate_generic(
     language,
     last,
     bible_folders,
