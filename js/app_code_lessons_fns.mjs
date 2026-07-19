@@ -14,6 +14,7 @@ import { app_code_lesson_expression_remainder_3 } from "./app_code_lesson_expres
 import { app_code_lesson_expression_remainder_4 } from "./app_code_lesson_expression_remainder_4.mjs";
 import { app_code_lesson_expression_remainder_any } from "./app_code_lesson_expression_remainder_any.mjs";
 import { app_code_lesson_expression_remainder_subtract } from "./app_code_lesson_expression_remainder_subtract.mjs";
+import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
 import { app_code_lesson_expression_nested_add } from "./app_code_lesson_expression_nested_add.mjs";
 import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
 import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
@@ -96,6 +97,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_functions_console_log_statement,
     app_code_lesson_functions_console_log_arithmetic,
     app_code_lesson_expression_remainder_subtract,
+    app_code_lesson_expression_integer_division,
     app_code_lesson_expression_remainder_2,
     app_code_lesson_expression_remainder_3,
     app_code_lesson_expression_remainder_4,

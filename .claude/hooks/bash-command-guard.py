@@ -1527,8 +1527,8 @@ def is_node_eval_flag(word):
 
 def _strip_command_prefixes(words):
     """Drop leading `VAR=...` assignments and transparent `xargs`/`timeout
-    <dur>` wrappers from a simple command's word list - the same unwrapping
-    verb_of applies - so the real command word lands at words[0]."""
+    <dur>`/`time` wrappers from a simple command's word list - the same
+    unwrapping verb_of applies - so the real command word lands at words[0]."""
     while words:
         if ASSIGN_RE.match(words[0]):
             words = words[1:]
