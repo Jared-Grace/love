@@ -226,7 +226,13 @@ export async function app_search_results(context, div_results) {
         let cb = app_shared_button_wide(div_verse, cb_text, copy);
         html_style_margin_y(cb, "0.2em");
         function lambda3() {
-          app_shared_bible_open(languages_chosen, chapter_code, verse_number);
+          ("this button offers the whole chapter, so land in the chapter reader with this verse in view");
+          app_shared_bible_open(
+            languages_chosen,
+            chapter_code,
+            verse_number,
+            app_bible_mode_chapter(),
+          );
         }
         let oc_text = text_combine(emoji_book_open(), " Open chapter");
         let oc = app_shared_button_wide(div_verse, oc_text, lambda3);
