@@ -19,7 +19,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { function_dependencies } from "./function_dependencies.mjs";
-import { app_context_initialize } from "./app_context_initialize.mjs";
+import { app_shared_context_initialize } from "./app_shared_context_initialize.mjs";
 import { property_exists_equals } from "./property_exists_equals.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -39,7 +39,7 @@ export async function webpack_watch() {
       let main = await app_shared_name_main(a_name);
       let deps = await function_dependencies([
         main,
-        app_context_initialize.name,
+        app_shared_context_initialize.name,
       ]);
       let r = {
         a_name,
@@ -101,7 +101,7 @@ export async function webpack_watch() {
     }
   }
   async function deps_refresh(a_name) {
-    ("re-index the app that just built: the index was made at startup, so a function written since then belongs to no app and editing it alone would rebuild nothing until a restart");
+    "re-index the app that just built: the index was made at startup, so a function written since then belongs to no app and editing it alone would rebuild nothing until a restart";
     let ad = list_find_property_or_null(app_deps, "a_name", a_name);
     let known_not = null_is(ad);
     if (known_not) {
@@ -115,7 +115,7 @@ export async function webpack_watch() {
     property_set(ad, "deps", property_get(fresh, "deps"));
   }
   async function apps_discover() {
-    ("an app written since startup is in no index, so nothing would ever rebuild it; the app list is a folder read, so look again whenever we are already doing work");
+    "an app written since startup is in no index, so nothing would ever rebuild it; the app list is a folder read, so look again whenever we are already doing work";
     let names = await apps_names_dev();
     async function lambda(a_name) {
       let known = list_find_property_or_null(app_deps, "a_name", a_name);

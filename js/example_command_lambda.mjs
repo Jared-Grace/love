@@ -4,6 +4,7 @@ import { file_imports_repair } from "./file_imports_repair.mjs";
 import { js_imports_auto_relative } from "./js_imports_auto_relative.mjs";
 import { js_atomize } from "./js_atomize.mjs";
 import { js_imports_unused_remove } from "./js_imports_unused_remove.mjs";
+import { js_imports_paths_fix } from "./js_imports_paths_fix.mjs";
 import { function_arguments_assert_each_add_lambda } from "./function_arguments_assert_each_add_lambda.mjs";
 import { js_node_type_is_new_lambda } from "./js_node_type_is_new_lambda.mjs";
 import { example_imports_lambda } from "./example_imports_lambda.mjs";
@@ -18,6 +19,9 @@ export function example_command_lambda(fn_name, args) {
   }
   if (fn_name === js_imports_unused_remove.name) {
     return js_imports_unused_remove;
+  }
+  if (fn_name === js_imports_paths_fix.name) {
+    return js_imports_paths_fix;
   }
   if (fn_name === function_arguments_assert_each_add.name) {
     return function_arguments_assert_each_add_lambda(args[1]);
