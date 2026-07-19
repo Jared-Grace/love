@@ -4,7 +4,14 @@ export const example = {
   args: ["js_return_is", "ReturnStatement"],
   kind: "transform",
   title: "Generate a node-type predicate from scratch",
-  note: "ntp creates a new js_<X>_is predicate; 'before' is empty because nothing existed. Runs file-side (sandboxed) — see the app or the temp-file runner.",
+  note: [
+    { alias: true },
+    " creates a new ",
+    { code: "js_<X>_is" },
+    " predicate; ",
+    { code: "before" },
+    " is empty because nothing existed. Runs file-side (sandboxed) — see the app or the temp-file runner.",
+  ],
   before: ``,
   after: `import { js_node_type_is } from "./js_node_type_is.mjs";
 export function js_return_is(node) {

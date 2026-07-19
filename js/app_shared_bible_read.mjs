@@ -19,6 +19,7 @@ import { app_shared_bible_verse_texts } from "../../love/js/app_shared_bible_ver
 import { html_margin_0 } from "../../love/js/html_margin_0.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { html_mobile_default } from "../../love/js/html_mobile_default.mjs";
+import { html_clear } from "../../love/js/html_clear.mjs";
 import { html_p } from "../../love/js/html_p.mjs";
 import { html_div } from "../../love/js/html_div.mjs";
 import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
@@ -83,6 +84,8 @@ import { list_previous_wrap } from "../../love/js/list_previous_wrap.mjs";
 import { list_next_wrap } from "../../love/js/list_next_wrap.mjs";
 export async function app_shared_bible_read(context, verse_action) {
   let root = html_mobile_default(context);
+  ("clear first so this reader can re-render in place (mode switch) instead of only on a fresh page load");
+  html_clear(root);
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
