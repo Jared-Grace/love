@@ -49,41 +49,38 @@ export async function app_g_verify_home(context) {
   let selected_key = localStorage.getItem(storage_key);
   let advanced_for = null;
   let shown_json = null;
-  let loading = html_div_centered(root);
-  html_style_set(loading, "padding-top", "4em");
-  let loading_text = html_p_text(loading, "Loading " + document.title + "…");
-  html_font_color_set(loading_text, app_shared_text_deemphasized_color());
-  html_style_set(loading_text, "font-size", "1.1em");
   let chapter;
-  try {
-    chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
-  } catch (missing) {
-    chapter = {
-      chapter_code,
-      passages: [],
-    };
-  }
   let status;
-  try {
-    status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
-  } catch (missing) {
-    status = { busy: false, verse: "", note: "" };
-  }
   let chapter_state;
-  try {
-    chapter_state = await api_read(fn_name("g_verify_chapter_next"), [chapter_code]);
-  } catch (missing) {
-    chapter_state = { approved: "", latest: null, next: null, action: "wait" };
-  }
   let chapter_codes;
-  try {
-    chapter_codes = property_get(
-      await api_read(fn_name("g_verify_chapters_available"), []),
-      "chapters",
-    );
-  } catch (missing) {
-    chapter_codes = [];
-  }
+  await html_loading(async function initial_load() {
+    try {
+      chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
+    } catch (missing) {
+      chapter = {
+        chapter_code,
+        passages: [],
+      };
+    }
+    try {
+      status = await api_read(fn_name("g_verify_status_read"), [chapter_code]);
+    } catch (missing) {
+      status = { busy: false, verse: "", note: "" };
+    }
+    try {
+      chapter_state = await api_read(fn_name("g_verify_chapter_next"), [chapter_code]);
+    } catch (missing) {
+      chapter_state = { approved: "", latest: null, next: null, action: "wait" };
+    }
+    try {
+      chapter_codes = property_get(
+        await api_read(fn_name("g_verify_chapters_available"), []),
+        "chapters",
+      );
+    } catch (missing) {
+      chapter_codes = [];
+    }
+  });
   if (!list_includes(chapter_codes, chapter_code)) {
     chapter_codes = chapter_codes.concat([chapter_code]).sort();
   }

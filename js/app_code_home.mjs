@@ -38,13 +38,7 @@ export function app_code_home(context) {
     }
     let r = app_shared_button_numbered(g, index, lambda3, false);
     let title = property_get(r, "title");
-    name(title);
-    let symbol = property_get_or_null(item, "symbol");
-    let has_symbol = null_not_is(symbol);
-    if (has_symbol) {
-      html_span_space(title);
-      html_span_text_code_dark(title, symbol);
-    }
+    app_code_lesson_title_render(title, item);
     let is_current = equal(id, current_id);
     if (is_current) {
       just_left = property_get(r, "button");
