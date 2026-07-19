@@ -62,7 +62,7 @@ export function app_g_gratitude_overlay() {
     function done() {
       html_remove(overlay);
     }
-    let amen = text_combine_multiple([emoji_pray(), " Amen"]);
+    let amen = text_combine_multiple([emoji_pray(), " In the name of Jesus, Amen"]);
     app_g_button_green(overlay, amen, done);
   }
   render();
