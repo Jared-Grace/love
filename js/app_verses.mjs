@@ -1,4 +1,6 @@
 import { list_filter_text_includes_not } from "../../love/js/list_filter_text_includes_not.mjs";
+import { emoji_book_open } from "../../love/js/emoji_book_open.mjs";
+import { text_combine } from "../../love/js/text_combine.mjs";
 import { ebible_versions_english_choices_browser } from "../../love/js/ebible_versions_english_choices_browser.mjs";
 import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
 import { app_reply_verses_add } from "../../love/js/app_reply_verses_add.mjs";

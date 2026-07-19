@@ -1,11 +1,16 @@
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { pwa_icon_data_uri } from "./pwa_icon_data_uri.mjs";
 export function pwa_manifest_object(name) {
   let start_url = text_combine_multiple(["/", name, ".html"]);
-  let icon = {
-    src: pwa_icon_data_uri("🙏"),
-    sizes: "any",
-    type: "image/svg+xml",
+  let icon_192 = {
+    src: text_combine_multiple(["/", name, "-192.png"]),
+    sizes: "192x192",
+    type: "image/png",
+    purpose: "any",
+  };
+  let icon_512 = {
+    src: text_combine_multiple(["/", name, "-512.png"]),
+    sizes: "512x512",
+    type: "image/png",
     purpose: "any maskable",
   };
   let r = {
@@ -16,7 +21,7 @@ export function pwa_manifest_object(name) {
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",
-    icons: [icon],
+    icons: [icon_192, icon_512],
   };
   return r;
 }
