@@ -37,13 +37,16 @@ export function app_g_gratitude_overlay() {
     "box-sizing": "border-box",
     "z-index": "1000",
   });
+  let previous_texts = [];
   function render() {
     html_clear(overlay);
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What would you like to pray to God?");
     let all = g_thanks_gratitude();
-    list_shuffle(all);
-    let some = list_take(all, 4);
+    let candidates = list_filter_includes_not(all, "text", previous_texts);
+    list_shuffle(candidates);
+    let some = list_take(candidates, 4);
+    previous_texts = list_map_property(some, "text");
     function add(thanks) {
       let emoji = property_get(thanks, "emoji");
       let text = property_get(thanks, "text");
