@@ -1,10 +1,19 @@
 import { file_imports_repair } from "../../js/file_imports_repair.mjs";
+import { js_flo } from "../../js/js_flo.mjs";
 export const example = {
   fn: file_imports_repair.name,
   args: ["js/two_sizes.mjs"],
   kind: "transform",
   title: "Repair imports across a whole multi-function file",
-  note: "A migration file can hold many declarations; program-wide repair adds every missing repo import — single-export js_flo would fail here. Locally-declared names (alpha, beta) are never self-imported.",
+  note: [
+    "A migration file can hold many declarations; program-wide repair adds every missing repo import — single-export ",
+    { code: js_flo.name },
+    " would fail here. Locally-declared names (",
+    { code: "alpha" },
+    ", ",
+    { code: "beta" },
+    ") are never self-imported.",
+  ],
   before: `export function alpha(x) {
   return list_size(x);
 }
