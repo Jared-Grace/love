@@ -48,6 +48,11 @@ export async function app_g_verify_home(context) {
   let selected_key = localStorage.getItem(storage_key);
   let advanced_for = null;
   let shown_json = null;
+  let loading = html_div_centered(root);
+  html_style_set(loading, "padding-top", "4em");
+  let loading_text = html_p_text(loading, "Loading " + document.title + "…");
+  html_font_color_set(loading_text, app_shared_text_deemphasized_color());
+  html_style_set(loading_text, "font-size", "1.1em");
   let chapter;
   try {
     chapter = await api_read(fn_name("g_sermon_write_read"), [chapter_code]);
