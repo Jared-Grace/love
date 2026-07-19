@@ -96,12 +96,17 @@ export function app_code_lesson_expression_exponent() {
       app_code_lesson_chip_lift(made);
       return made;
     }
-    function count_numeral(grid, number, color) {
-      "the count label BELOW a factor, on the light background - bold so the small digit stays legible - a readable dark grey for the running count, or the exponent's colour on the FINAL factor so the last count visibly becomes the exponent";
+    function running_count(grid, number) {
+      "a quiet, small grey count for the intermediate factors - deliberately subtle so the final count is what draws the eye";
       let label = html_span_text_smaller(grid, text_to(number));
-      html_font_color_set(label, color);
-      html_style_set(label, "font-weight", "bold");
+      html_font_color_set(label, "rgb(160, 160, 160)");
       return label;
+    }
+    function final_count(grid, number, color) {
+      "the FINAL count as a coloured chip with white text - it IS the exponent, so it echoes the exponent chip in the shorthand and stands out clearly from the quiet running counts";
+      let made = app_code_lesson_number_chip(grid, number, color);
+      html_style_set(made, "font-size", "0.85em");
+      return made;
     }
     function cell_at(node, row, column) {
       "place a node in a specific grid row and column";
@@ -134,7 +139,6 @@ export function app_code_lesson_expression_exponent() {
         html_style_set(s, "width", "0.3em");
         cell_at(s, 1, column);
       }
-      let dim = "rgb(70, 70, 70)";
       function place_factor(index) {
         let position = add(index, 1);
         let column = add(multiply(2, index), 2);
@@ -142,11 +146,10 @@ export function app_code_lesson_expression_exponent() {
         html_style_set(chip, "margin-block", "0.22em");
         cell_at(chip, 1, column);
         let last = equal(position, count);
-        let numeral_color = dim;
+        let numeral = running_count(grid, position);
         if (last) {
-          numeral_color = power_color;
+          numeral = final_count(grid, position, power_color);
         }
-        let numeral = count_numeral(grid, position, numeral_color);
         cell_at(numeral, 2, column);
       }
       function place_operator(gap) {
