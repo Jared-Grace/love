@@ -85,6 +85,7 @@ export async function http_generic(url, options) {
       port: urlObj.port || (swHttps ? 443 : 80),
       path: text_combine(urlObj.pathname, urlObj.search),
       method,
+      family: 4,
       headers: {
         ...(options.headers || {}),
         ...(body

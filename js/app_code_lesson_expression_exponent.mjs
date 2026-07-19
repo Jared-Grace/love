@@ -126,6 +126,7 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(pill, "background", "black");
       html_style_set(pill, "border-radius", "0.5em");
       html_style_set(pill, "align-self", "stretch");
+      html_style_set(pill, "justify-self", "stretch");
       function spacer(column) {
         "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
         let s = html_span(grid);
