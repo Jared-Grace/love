@@ -1,5 +1,5 @@
 export function app_shared_color_gold_text_light() {
-  "a LIGHTER, paler gold text — for God's-leading PROSE (e.g. the Holy-Spirit-warning message) so it reads distinct from the richer app_shared_color_gold_text used for Scripture VERSES on the same dark card";
-  let v = "#fff0b3";
+  "a LIGHTER gold text for Scripture VERSES on a dark background (app_g_scripture_verse) — lighter than the base app_shared_color_gold_text, which the dove's God's-LEADING PROSE now uses, so the verse and the leading message read distinct on the same card";
+  let v = "#ffeca0";
   return v;
 }
