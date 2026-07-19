@@ -7,7 +7,7 @@ import { example_label_dom } from "./example_label_dom.mjs";
 import { example_chip_dom } from "./example_chip_dom.mjs";
 import { example_code_block_dom } from "./example_code_block_dom.mjs";
 import { example_arrow_dom } from "./example_arrow_dom.mjs";
-import { example_before_shown } from "./example_before_shown.mjs";
+import { example_before_dom } from "./example_before_dom.mjs";
 import { example_command_text } from "./example_command_text.mjs";
 // A transform example as DOM: title, note, function chip, (derived) command
 // chip, then before -> arrow -> after stacked. Built with shared style fns.
@@ -35,7 +35,7 @@ export function example_transform_card_dom(parent, example) {
   let before_column = html_div(io);
   html_style_set(before_column, "min-width", "0");
   example_label_dom(before_column, "before");
-  example_code_block_dom(before_column, example_before_shown(before));
+  example_before_dom(before_column, before);
   example_arrow_dom(io);
   let after_column = html_div(io);
   html_style_set(after_column, "min-width", "0");
