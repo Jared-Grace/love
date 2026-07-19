@@ -15,6 +15,11 @@ import { app_g_view_phase_study } from "./app_g_view_phase_study.mjs";
 import { app_g_view_phase_pray } from "./app_g_view_phase_pray.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
+import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
+import { app_g_view_phase_believe } from "./app_g_view_phase_believe.mjs";
+import { app_g_conversation_say } from "./app_g_conversation_say.mjs";
+import { g_response_how } from "./g_response_how.mjs";
+import { g_response_believe } from "./g_response_believe.mjs";
 import { error_json } from "./error_json.mjs";
 export async function app_g_view_render_npc(div_map) {
   let view = await app_g_view_get();
@@ -54,6 +59,14 @@ export async function app_g_view_render_npc(div_map) {
   }
   if (phase === app_g_view_phase_gospel()) {
     await app_g_gospel(overlay, npc, overlay_close, player, div_map);
+    return;
+  }
+  if (phase === app_g_view_phase_how()) {
+    app_g_conversation_say(npc, overlay, overlay_close, g_response_how());
+    return;
+  }
+  if (phase === app_g_view_phase_believe()) {
+    app_g_conversation_say(npc, overlay, overlay_close, g_response_believe());
     return;
   }
   error_json({
