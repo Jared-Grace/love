@@ -17,9 +17,28 @@ import { property_exists } from "./property_exists.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { null_is } from "./null_is.mjs";
 import { each_async } from "./each_async.mjs";
+import { each } from "./each.mjs";
+import { each_object } from "./each_object.mjs";
+import { text_to } from "./text_to.mjs";
+import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
+import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function bible_verses_uplifting_package_write(bible_folder) {
   let lines = bible_verses_uplifting();
+  let interlinear_folder = bible_interlinear_verses_upload_folder();
+  let is_interlinear = bible_folder === interlinear_folder;
+  let interlinear_chapters = null;
+  if (is_interlinear) {
+    interlinear_chapters = await bible_interlinear_chapters();
+    function chapter_normalize(chapter_verses) {
+      function verse_normalize(verse) {
+        let number = property_get(verse, "verse_number");
+        property_set(verse, "verse_number", text_to(number));
+      }
+      each(chapter_verses, verse_normalize);
+    }
+    each_object(interlinear_chapters, chapter_normalize);
+  }
   let books_cache = {};
   async function books_get(folder) {
     let cached = property_get_or_null(books_cache, folder);
@@ -31,13 +50,20 @@ export async function bible_verses_uplifting_package_write(bible_folder) {
   }
   let chapter_cache = {};
   async function verse_get(folder, chapter_code, verse_number) {
-    let exists = property_exists(chapter_cache, chapter_code);
     let chapter_verses = null;
-    if (exists) {
-      chapter_verses = property_get(chapter_cache, chapter_code);
+    if (is_interlinear) {
+      chapter_verses = property_get_or_null(interlinear_chapters, chapter_code);
+      if (null_is(chapter_verses)) {
+        return null;
+      }
     } else {
-      chapter_verses = await ebible_verses(folder, chapter_code);
-      property_set(chapter_cache, chapter_code, chapter_verses);
+      let exists = property_exists(chapter_cache, chapter_code);
+      if (exists) {
+        chapter_verses = property_get(chapter_cache, chapter_code);
+      } else {
+        chapter_verses = await ebible_verses(folder, chapter_code);
+        property_set(chapter_cache, chapter_code, chapter_verses);
+      }
     }
     let found = list_find_property_or_null(
       chapter_verses,
