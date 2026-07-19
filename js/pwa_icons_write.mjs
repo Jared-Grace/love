@@ -4,9 +4,9 @@ import { folder_public_join } from "./folder_public_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_to } from "./text_to.mjs";
 import { each_async } from "./each_async.mjs";
-import { pwa_icon_emoji } from "./pwa_icon_emoji.mjs";
+import { app_shared_icon_emoji } from "./app_shared_icon_emoji.mjs";
 export async function pwa_icons_write(app_name) {
-  let emoji = pwa_icon_emoji(app_name);
+  let emoji = app_shared_icon_emoji(app_name);
   let sizes = [192, 512];
   let html = text_combine_multiple([
     "<!DOCTYPE html><html><head><meta charset='utf-8'><style>",
