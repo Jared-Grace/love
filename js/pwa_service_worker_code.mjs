@@ -7,7 +7,6 @@ export function pwa_service_worker_code() {
     "self.addEventListener('activate', function (event) {\n",
     "  event.waitUntil(self.clients.claim());\n",
     "});\n",
-    "self.addEventListener('fetch', function () {});\n",
   ]);
   return r;
 }
