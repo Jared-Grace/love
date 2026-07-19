@@ -834,8 +834,6 @@ def verb_of(words):
         return verb_of(words[1:])
     if words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
         return verb_of(words[2:])
-    if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
-        return verb_of(words[1:])
     if words[0] == "git":
         idx = 1
         # Skip git's value-less global options before reading the subcommand,
