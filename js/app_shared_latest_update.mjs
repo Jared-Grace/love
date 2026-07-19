@@ -1,7 +1,7 @@
-import { app_main_latest } from "./app_main_latest.mjs";
+import { app_shared_main_latest } from "./app_shared_main_latest.mjs";
 import { app_shared_name_latest } from "./app_shared_name_latest.mjs";
 import { app_shared_update_generic } from "./app_shared_update_generic.mjs";
 export async function app_shared_latest_update(name) {
   let combined = app_shared_name_latest(name);
-  await app_shared_update_generic(name, app_main_latest, combined);
+  await app_shared_update_generic(name, app_shared_main_latest, combined);
 }
