@@ -127,6 +127,13 @@ export function app_code_lesson_expression_remainder_subtract() {
       " is smaller than ",
       "5",
     ]);
+    html_div_cycle_code(c, [
+      "If we subtracted ",
+      "5",
+      " again we would have ",
+      "-3",
+    ]);
+    html_div_cycle_code(c, ["A remainder is never negative"]);
     html_div_cycle_code(c, ["What is left over is the remainder"]);
     html_div_cycle_code(c, [
       "We write ",
