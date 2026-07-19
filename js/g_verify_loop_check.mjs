@@ -1,10 +1,16 @@
 import { readFileSync } from "fs";
 import { g_verify_next_across } from "./g_verify_next_across.mjs";
+import { file_exists } from "./file_exists.mjs";
 // Multi-book loop state: read the active-chapter list (one chapter code per line)
 // and return { books:[{chapter,approved,latest,next,state}], action } via the shared
 // g_verify_next_across. action = "write:CHAPTER:KEY" | "wait" | "done".
 const ACTIVE_CHAPTERS_PATH = "/media/j/JPM/user/storage/sermon_loop/chapters.txt";
 export async function g_verify_loop_check() {
+  // The chapter list lives on a removable data disk. If it isn't mounted, report
+  // "wait" instead of throwing — a stack trace would make the Monitor's grep miss
+  // and the loop would go silently dead rather than resuming once the disk is back.
+  let listed = await file_exists(ACTIVE_CHAPTERS_PATH);
+  if (!listed) return { books: [], action: "wait" };
   let chapters = readFileSync(ACTIVE_CHAPTERS_PATH, "utf8")
     .trim()
     .split("\n")
