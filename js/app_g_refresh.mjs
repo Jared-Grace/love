@@ -12,23 +12,15 @@ import { app_g_view_render } from "./app_g_view_render.mjs";
 export async function app_g_refresh(context, div_map_container) {
   await app_g_reset_if();
   app_g_title_hash();
-  console.time("g:game_save");
   let g = await app_g_game_save_get_or_refresh(context);
-  console.timeEnd("g:game_save");
   if (null_is(g)) {
     return;
   }
   html_clear(div_map_container);
-  console.time("g:map_new(625 tiles+npcs)");
   let div_map = await app_g_div_map_new(div_map_container);
-  console.timeEnd("g:map_new(625 tiles+npcs)");
   let player_img_c = await app_g_player_img(div_map);
   app_g_div_map_on_click(div_map, player_img_c);
-  console.time("g:scroll_center");
   await app_g_player_scroll_center(div_map, player_img_c);
-  console.timeEnd("g:scroll_center");
   await app_g_dev_if();
-  console.time("g:view_render");
   await app_g_view_render(div_map);
-  console.timeEnd("g:view_render");
 }
