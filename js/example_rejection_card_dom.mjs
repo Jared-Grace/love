@@ -12,8 +12,9 @@ export function example_rejection_card_dom(parent, example) {
   let note = property_get(example, "note");
   let call = property_get(example, "call");
   let expect_text = property_get(example, "expectText");
+  let alias = property_get(example, "alias");
   let card = example_card_container_dom(parent);
-  example_card_title_note_dom(card, title, note);
+  example_card_title_note_dom(card, title, note, alias);
   let block = example_code_block_dom(card, call);
   html_style_set(block, "border-left", "3px solid #d33");
   html_style_set(block, "margin-top", "0.75rem");
