@@ -21,13 +21,13 @@
     .io { display: flex; flex-direction: column; gap: .6rem; margin-top: .75rem; }
     .io-col { min-width: 0; }
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
-    pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
+    pre { background: black; color: white; border: 1px solid #30363d; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
     .arrow { color: #00b400ff; }
     .arrow svg { display: block; width: 2.6rem; height: 2.6rem; margin: 0 auto; }
-    .t-kw { color: purple; }
-    .t-str { color: #d07200ff; }
-    .t-num { color: #d07200ff; }
-    .t-punct { color: #6a737d; }
+    .t-kw { color: #c586c0; }
+    .t-str { color: #ce9178; }
+    .t-num { color: #ce9178; }
+    .t-punct { color: #8b949e; }
     .rejection pre.call { border-left: 3px solid #d33; }
     .expect { color: #d33; font-weight: 600; margin-top: .5rem; }
   </style><h1>Transform examples</h1><article class="example"><h2>Add a two-sided guard to a slot setter</h2><p class="note">aea prepends arguments_assert_each and repairs imports; one predicate per parameter.</p><div class="function-name"><code>function_arguments_assert_each_add</code></div><div class="command"><code>aea js_return_argument_set "js_return_is, js_expression_node_is"</code></div><div class="io"><div class="io-col"><div class="io-label">before</div><pre class="before"><span class="t-kw">import</span> <span class="t-punct">{</span> <span class="t-name">property_set</span> <span class="t-punct">}</span> <span class="t-kw">from</span> <span class="t-str">"./property_set.mjs"</span><span class="t-punct">;</span>
