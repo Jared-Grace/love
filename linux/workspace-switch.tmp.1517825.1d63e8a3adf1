@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Switch to the previous/next workspace, wrapping around the ends
+# (prev from workspace 1 -> last; next from last -> workspace 1).
+# Usage: workspace-switch prev | next
+#
+# Exists because wmctrl has no relative "prev/next" -- only absolute `-s N`.
+# We compute the target index from the live desktop count so it stays correct
+# no matter how many workspaces exist. Routed through wmctrl (not xfwm4's own
+# prev/next keys) for the same hibernate durability as the digit shortcuts;
+# see xfce-workspace-shortcuts.
+set -euo pipefail
+
+readonly DIRECTION=${1:?usage: workspace-switch prev|next}
+
+desktop_property() {  # <property-name> -> its trailing integer
+  xprop -root "$1" | grep -oE '[0-9]+$'
+}
+
+total=$(desktop_property _NET_NUMBER_OF_DESKTOPS)
+current=$(desktop_property _NET_CURRENT_DESKTOP)
+
+if [ "$DIRECTION" = next ]; then
+  target=$(( (current + 1) % total ))
+elif [ "$DIRECTION" = prev ]; then
+  target=$(( (current - 1 + total) % total ))
+else
+  echo "usage: workspace-switch prev|next" >&2
+  exit 1
+fi
+
+wmctrl -s "$target"
