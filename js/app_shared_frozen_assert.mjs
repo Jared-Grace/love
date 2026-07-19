@@ -1,7 +1,7 @@
 import { apps_frozen_names_all } from "./apps_frozen_names_all.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { assert_message } from "./assert_message.mjs";
-export function app_frozen_assert(name) {
+export function app_shared_frozen_assert(name) {
   let names = apps_frozen_names_all();
   let allowed = list_includes_not(names, name);
   assert_message(
