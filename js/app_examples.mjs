@@ -2,6 +2,7 @@ import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_card } from "./html_card.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { mod } from "./mod.mjs";
@@ -30,8 +31,10 @@ export async function app_examples(context) {
   function render() {
     html_clear(root);
     let page = html_div(root);
+    html_card(page);
+    html_style_set(page, "background", "#fff");
     html_style_set(page, "max-width", "62rem");
-    html_style_set(page, "margin", "0 auto");
+    html_style_set(page, "margin", "2rem auto");
     html_style_set(page, "padding", "2rem");
     html_style_set(page, "font-family", "system-ui, sans-serif");
     html_style_set(page, "color", "#1a1a1a");
