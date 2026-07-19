@@ -4,7 +4,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { js_code_global_init } from "./js_code_global_init.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_document_body } from "./html_document_body.mjs";
-import { app_context_initialize_root } from "./app_context_initialize_root.mjs";
+import { app_shared_context_initialize_root } from "./app_shared_context_initialize_root.mjs";
 import { function_dependencies_code_unaliased } from "./function_dependencies_code_unaliased.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
@@ -25,5 +25,5 @@ export async function app_shared_component(a_name, on_click, button_text) {
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
   let component = html_button_wide(bar, button_text, on_click);
-  await app_context_initialize_root(content, fn);
+  await app_shared_context_initialize_root(content, fn);
 }
