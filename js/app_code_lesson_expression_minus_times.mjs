@@ -1,6 +1,7 @@
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
+import { app_code_lesson_cross_precedence_intro } from "./app_code_lesson_cross_precedence_intro.mjs";
 import { js_operator_minus } from "./js_operator_minus.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
+import { js_operator_asterisk } from "./js_operator_asterisk.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -8,14 +9,13 @@ import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_minus_times() {
   "mixing - and * in one expression: a - b * c and a * b - c; * is stronger than -, so we always do it first, even when it comes later; the hazard here is going below 0, so we use the minus operator's left_transform (add) to build a = result + b * c - then a - b * c is a chosen result that never drops under 0";
   let minus = js_operator_minus();
   let minus_symbol = property_get(minus, "operator");
   let left_transform = property_get(minus, "left_transform");
-  let times = js_operator_asterisk_symbol();
+  let times = js_operator_asterisk();
+  let times_symbol = property_get(times, "operator");
   function result_of(index) {
     "the possible results 2 through 5 (distinct across the four questions, so they never repeat)";
     return add(index, 2);
