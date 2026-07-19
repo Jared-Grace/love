@@ -1,0 +1,41 @@
+{
+  "comment": [
+    "Regression corpus for .claude/hooks/bash-command-guard.py, checked through",
+    "the real hook via guard_check (see reference_guard_check_tester memory).",
+    "Every case uses `ls` / `git status` as the trusted inner verb, so the",
+    "expected verdicts test the guard's STRUCTURE, not this project's allow",
+    "list. Removing `ls` from permissions.allow would invalidate the corpus.",
+    "decision: allow = auto-approved, deny = hard floor, silent = guard",
+    "abstains so the native permission engine prompts."
+  ],
+  "cases": [
+    { "command": "ls", "decision": "allow", "why": "trusted verb, bare" },
+    { "command": "ls && ls", "decision": "allow", "why": "chain of trusted verbs" },
+    { "command": "ls | tail -4", "decision": "allow", "why": "pipe of trusted verbs" },
+    { "command": "FOO=bar ls", "decision": "allow", "why": "inert assignment is stripped" },
+    { "command": "PATH=/tmp ls", "decision": "silent", "why": "execution-influencing assignment fails closed" },
+
+    { "command": "time ls", "decision": "allow", "why": "time unwraps to inner verb" },
+    { "command": "time git status", "decision": "allow", "why": "time unwraps to a 2-word verb" },
+    { "command": "timeout 30 ls", "decision": "allow", "why": "timeout <dur> unwraps" },
+    { "command": "xargs ls", "decision": "allow", "why": "flagless xargs unwraps" },
+    { "command": "time timeout 30 ls", "decision": "allow", "why": "wrappers stack" },
+
+    { "command": "time -p ls", "decision": "silent", "why": "flag form is not the transparent shape" },
+    { "command": "timeout -k 5 30 ls", "decision": "silent", "why": "flag form is not the transparent shape" },
+    { "command": "xargs -I{} ls", "decision": "silent", "why": "flag form is not the transparent shape" },
+    { "command": "time", "decision": "silent", "why": "wrapper with no inner command" },
+
+    { "command": "time rm -rf /", "decision": "silent", "why": "wrapper launders no trust" },
+    { "command": "timeout 30 rm -rf /", "decision": "silent", "why": "wrapper launders no trust" },
+    { "command": "time notaverb_xyz", "decision": "silent", "why": "unknown inner verb still prompts" },
+
+    { "command": "node -e 1", "decision": "deny", "why": "raw node -e hard floor" },
+    { "command": "time node -e 1", "decision": "deny", "why": "hard floor survives a wrapper" },
+    { "command": "node scripts/r.mjs command_line_generic ls", "decision": "deny", "why": "denied r.mjs eval entry point" },
+
+    { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
+    { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
+    { "command": "while true; do ls; done", "decision": "silent", "why": "unmodelled keyword stays unparsed" }
+  ]
+}
