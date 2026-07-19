@@ -58,7 +58,8 @@ export async function bible_verses_uplifting_package_write(bible_folder) {
       [line],
       verse_get,
     );
-    let texts = list_map_property(verses, "text");
+    let present_verses = list_filter_null_not_is(verses);
+    let texts = list_map_property(present_verses, "text");
     let present = list_filter_null_not_is(texts);
     let joined = list_join_space(present);
     property_set(map, line, joined);
