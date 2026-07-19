@@ -97,9 +97,10 @@ export function app_code_lesson_expression_exponent() {
       return made;
     }
     function running_count(grid, number) {
-      "a quiet, small grey count for the intermediate factors - deliberately subtle so the final count is what draws the eye";
+      "the count under an intermediate factor - bold and dark so the counting reads clearly; it does not compete with the final count, which stands apart by its coloured chip rather than by weight";
       let label = html_span_text_smaller(grid, text_to(number));
-      html_font_color_set(label, "rgb(115, 115, 115)");
+      html_font_color_set(label, "rgb(55, 55, 55)");
+      html_style_set(label, "font-weight", "bold");
       return label;
     }
     function final_count(grid, number, color) {
