@@ -1,21 +1,24 @@
 export function examples_order() {
-  // Curriculum order — a reader going Next → Next from the top should get an easy
-  // learning curve: simplest self-contained transform first, then the guard idea
-  // (a positive slot edit, then the same setter REFUSING, then more guards), then
-  // the import operations smallest-first building to the all-in-one, then the
-  // advanced combinations, then code-generation-from-nothing as the capstone.
+  // Curriculum order: SIMPLE → COMPLEX (monotonic, no complexity dips) with every
+  // PREREQUISITE before what builds on it — a reader going Next → Next meets each
+  // concept only after the ones it depends on. Rough complexity climb:
+  //   structural rewrite < single slot edit < remove-an-import / one-item invariant
+  //   < slot guard < domain guard < add-imports-across-a-file < all-three-at-once
+  //   < generate-a-guard + repair-imports < generate-a-whole-fn-from-nothing.
+  // Prereq edges honored: if_test (setter working) → slot_set (same setter guarding);
+  //   prune + migrate → auto (auto composes remove + add); guards + imports → aea.
   // Files not listed here are appended at the end (a new example still shows up).
   let order = [
-    "example_atomize_nested_call", // simplest transform: flatten a nested call
-    "example_if_test_set_positive", // simple slot edit: set an if-condition
-    "example_slot_set_rejects_statement", // same setter, now guarding its input
-    "example_single_rejects_two", // a general invariant guard
+    "example_atomize_nested_call", // flatten a nested call — simplest transform
+    "example_if_test_set_positive", // set an if-condition — a single slot edit
+    "example_prune_unused_import", // remove one unused import — simplest import op
+    "example_single_rejects_two", // refuse a 2-item list — a simple invariant guard
+    "example_slot_set_rejects_statement", // the slot setter guarding its input (needs if_test)
     "example_frozen_app_refused", // a guard in the deployment domain
-    "example_prune_unused_import", // imports: remove one unused
-    "example_imports_migrate_multi_function", // imports: add missing across a file
-    "example_auto_imports_all_three", // imports: add + remove + canonicalize at once
-    "example_aea_slot_setter_guard", // advanced: generate a guard + repair imports
-    "example_ntp_node_type_predicate", // capstone: generate a whole fn from scratch
+    "example_imports_migrate_multi_function", // add missing imports across a file
+    "example_auto_imports_all_three", // add + remove + canonicalize at once (needs prune + migrate)
+    "example_aea_slot_setter_guard", // generate a guard + repair imports — combines both threads
+    "example_ntp_node_type_predicate", // generate a whole fn from an empty file — capstone
   ];
   return order;
 }
