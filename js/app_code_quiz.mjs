@@ -24,7 +24,7 @@ import { text_combine } from "../../love/js/text_combine.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
-  app_code_lesson_title_strip(root, lesson);
+  app_code_lesson_title_strip(root, context, lesson);
   let refresh = app_code_batch_item_get(
     root,
     lesson,
