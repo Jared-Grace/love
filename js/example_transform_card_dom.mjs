@@ -5,6 +5,7 @@ import { example_card_container_dom } from "./example_card_container_dom.mjs";
 import { example_card_title_note_dom } from "./example_card_title_note_dom.mjs";
 import { example_label_dom } from "./example_label_dom.mjs";
 import { example_chip_dom } from "./example_chip_dom.mjs";
+import { example_function_chip_dom } from "./example_function_chip_dom.mjs";
 import { example_code_block_dom } from "./example_code_block_dom.mjs";
 import { example_arrow_dom } from "./example_arrow_dom.mjs";
 import { example_before_dom } from "./example_before_dom.mjs";
@@ -22,7 +23,7 @@ export function example_transform_card_dom(parent, example) {
   let card = example_card_container_dom(parent);
   example_card_title_note_dom(card, title, note, alias);
   example_label_dom(card, "function");
-  example_chip_dom(card, fn);
+  example_function_chip_dom(card, fn);
   if (alias) {
     example_label_dom(card, "command");
     example_chip_dom(card, example_command_text(alias, args));
@@ -30,8 +31,7 @@ export function example_transform_card_dom(parent, example) {
   let io = html_div(card);
   html_style_set(io, "display", "flex");
   html_style_set(io, "flex-direction", "column");
-  html_style_set(io, "gap", "0.6rem");
-  html_style_set(io, "margin-top", "0.75rem");
+  html_style_set(io, "gap", "0.3rem");
   let before_column = html_div(io);
   html_style_set(before_column, "min-width", "0");
   example_label_dom(before_column, "before");
