@@ -221,7 +221,7 @@ export function app_code_lesson_expression_exponent() {
       "You already know how to multiply numbers like ",
       "2 * 3 * 4",
     ]);
-    html_div_cycle_code(c, ["What if the numbers are all the same number?"]);
+    html_div_cycle_code(c, ["What if the numbers you multiply together are all the same number?"]);
     let like = html_div(c);
     html_span_text(like, "Like ");
     product_expression(like, 2, base_one, power_one, 3);
