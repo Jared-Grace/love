@@ -8,6 +8,12 @@ import { g_sermon_generate_chapter_exists } from "./g_sermon_generate_chapter_ex
 export async function g_verify_book_active_chapter(chapter_code) {
   let state = await g_verify_chapter_next(chapter_code);
   while (state.action === "done") {
+    // "done" = all passages WRITTEN. Cross to the next chapter only once the last
+    // passage is also APPROVED — the same approval gate the loop applies within a
+    // chapter — so we never write the next chapter ahead of the reviewer.
+    if (state.approved !== state.latest) {
+      return { chapter: state.chapter, approved: state.approved, latest: state.latest, next: state.next, action: "wait" };
+    }
     let next_code = g_chapter_code_next(state.chapter);
     let exists = await g_sermon_generate_chapter_exists(next_code);
     if (!exists) return state;
