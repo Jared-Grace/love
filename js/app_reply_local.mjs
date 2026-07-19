@@ -1,13 +1,13 @@
-import { ebible_verse_browser } from "../../love/js/ebible_verse_browser.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { ebible_verse_merge } from "../../love/js/ebible_verse_merge.mjs";
-import { global_function_set } from "../../love/js/global_function_set.mjs";
-import { app_reply } from "../../love/js/app_reply.mjs";
-import { list_find_property } from "../../love/js/list_find_property.mjs";
-import { ebible_languages_chapters } from "../../love/js/ebible_languages_chapters.mjs";
-import { app_api } from "../../love/js/app_api.mjs";
+import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
+import { property_get } from "./property_get.mjs";
+import { ebible_verse_merge } from "./ebible_verse_merge.mjs";
+import { global_function_set } from "./global_function_set.mjs";
+import { app_reply } from "./app_reply.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { ebible_languages_chapters } from "./ebible_languages_chapters.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
 export async function app_reply_local(context) {
-  let result = await app_api({
+  let result = await app_shared_api({
     f_name: ebible_languages_chapters.name,
     args: [],
   });

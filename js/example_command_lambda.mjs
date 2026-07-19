@@ -8,6 +8,8 @@ import { function_arguments_assert_each_add_lambda } from "./function_arguments_
 import { js_node_type_is_new_lambda } from "./js_node_type_is_new_lambda.mjs";
 import { example_imports_lambda } from "./example_imports_lambda.mjs";
 import { example_auto_lambda } from "./example_auto_lambda.mjs";
+import { js_statement_if_test_set } from "./js_statement_if_test_set.mjs";
+import { example_if_test_set_lambda } from "./example_if_test_set_lambda.mjs";
 // Dispatch on the demonstrated fn's name (a strong reference), NOT an alias
 // string — so renaming an alias can never break which transform an example runs.
 export function example_command_lambda(fn_name, args) {
@@ -28,6 +30,9 @@ export function example_command_lambda(fn_name, args) {
   }
   if (fn_name === js_imports_auto_relative.name) {
     return example_auto_lambda();
+  }
+  if (fn_name === js_statement_if_test_set.name) {
+    return example_if_test_set_lambda(args[0]);
   }
   return null;
 }
