@@ -1,16 +1,16 @@
 import { html_code_element } from "./html_code_element.mjs";
 import { app_shared_color_green } from "./app_shared_color_green.mjs";
-import { app_shared_color_keyword } from "./app_shared_color_keyword.mjs";
-import { app_shared_color_literal } from "./app_shared_color_literal.mjs";
-import { app_shared_color_punctuation } from "./app_shared_color_punctuation.mjs";
+import { app_shared_color_keyword_dark } from "./app_shared_color_keyword_dark.mjs";
+import { app_shared_color_literal_dark } from "./app_shared_color_literal_dark.mjs";
+import { app_shared_color_punctuation_dark } from "./app_shared_color_punctuation_dark.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { app_shared_color_code_font } from "./app_shared_color_code_font.mjs";
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 export function examples_style() {
   let green = app_shared_color_green();
-  let keyword = app_shared_color_keyword();
-  let literal = app_shared_color_literal();
-  let punctuation = app_shared_color_punctuation();
+  let keyword = app_shared_color_keyword_dark();
+  let literal = app_shared_color_literal_dark();
+  let punctuation = app_shared_color_punctuation_dark();
   let code_background = app_shared_color_code_background();
   let code_font = app_shared_color_code_font();
   let radius = app_shared_border_radius();
@@ -28,7 +28,7 @@ export function examples_style() {
     .io { display: flex; flex-direction: column; gap: .6rem; margin-top: .75rem; }
     .io-col { min-width: 0; }
     .io-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: #888; font-weight: 600; margin-bottom: .3rem; }
-    pre { background: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
+    pre { background: ${code_background}; color: ${code_font}; border: 1px solid #30363d; border-radius: 6px; padding: .75rem; overflow-x: auto; font-family: ui-monospace, monospace; font-size: .82rem; margin: 0; }
     .arrow { color: ${green}; }
     .arrow svg { display: block; width: 2.6rem; height: 2.6rem; margin: 0 auto; }
     .t-kw { color: ${keyword}; }
