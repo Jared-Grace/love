@@ -96,9 +96,17 @@ export async function bible_verses_uplifting_package_write(bible_folder) {
     property_set(map, line, joined);
   }
   await each_async(lines, line_each);
+  let values = object_values(map);
+  let present = list_filter(values, text_empty_not_is);
+  let count = list_size(present);
+  let empty = list_empty_is(present);
+  if (empty) {
+    return count;
+  }
   let name = text_combine_multiple(["bible/uplifting/", bible_folder, ".json"]);
   let joined_path = folder_public_join(name);
   let path = await user_repo_path_combine(joined_path);
   let json = json_to(map);
   await file_overwrite(path, json);
+  return count;
 }
