@@ -18,8 +18,8 @@ import { text_combine } from "./text_combine.mjs";
 import { function_name_separator } from "./function_name_separator.mjs";
 export async function app_shared_prefixes_invalid() {
   "audit: every app_<part>_ function whose <part> is neither a real app nor reserved — grouped by part, so each group is a squatter to migrate";
-  ("shared is the one sanctioned cross-app bucket; gloss is an app-like feature with no standalone public page yet — both count as owned though neither is a listed app");
-  let reserved = ["shared", "gloss"];
+  ("shared is the one sanctioned bucket, so it counts as owned even though it is not an app");
+  let reserved = ["shared"];
   let ans = await apps_names();
   let owned = list_concat(ans, reserved);
   let prefix = function_name_separator_trail(app_shared_name_prefix());

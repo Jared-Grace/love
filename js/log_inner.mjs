@@ -1,8 +1,8 @@
+import { log_console } from "./log_console.mjs";
 import { global_function_set } from "./global_function_set.mjs";
 import { list_add_first } from "./list_add_first.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { global_function_initialize_null } from "./global_function_initialize_null.mjs";
-import { log } from "./log.mjs";
 import { each } from "./each.mjs";
 export function log_inner(f_name, message) {
   let list = [message];
@@ -11,6 +11,6 @@ export function log_inner(f_name, message) {
     global_function_set(log_inner, f_name);
     list_add_first(list, f_name);
   }
-  each(list, console.log);
+  each(list, log_console);
   return;
 }
