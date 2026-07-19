@@ -6,11 +6,11 @@ export const example = {
   title: "A single-item helper refuses a two-item list",
   note: [
     "Exactly-one is an invariant, not a hope: ",
-    { code: list_single.name },
+    { fn: list_single.name },
     " asserts its list has one item (via ",
-    { code: list_size_1_assert.name },
+    { fn: list_size_1_assert.name },
     ") before returning it, so a two-item list is refused at the boundary — the same guard ",
-    { code: js_flo.name },
+    { fn: js_flo.name },
     " leans on to require a single-export file.",
   ],
   // human-readable form

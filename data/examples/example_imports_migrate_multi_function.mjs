@@ -7,7 +7,7 @@ export const example = {
   title: "Repair imports across a whole multi-function file",
   note: [
     "A migration file can hold many declarations; program-wide repair adds every missing repo import — single-export ",
-    { code: js_flo.name },
+    { fn: js_flo.name },
     " would fail here. Locally-declared names (",
     { code: "alpha" },
     ", ",
