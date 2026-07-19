@@ -1,6 +1,6 @@
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { app_gloss_bible_generate_generic } from "./app_gloss_bible_generate_generic.mjs";
+import { app_shared_gloss_bible_generate_generic } from "./app_shared_gloss_bible_generate_generic.mjs";
 export async function app_original_bible_gloss_generate_chapter(
   chapter_code_specified,
 ) {
@@ -10,7 +10,7 @@ export async function app_original_bible_gloss_generate_chapter(
   let fn = app_original_bible_gloss_generate;
   let bible_folders = [bible_folder];
   let last = "English is";
-  await app_gloss_bible_generate_generic(
+  await app_shared_gloss_bible_generate_generic(
     language,
     last,
     bible_folders,

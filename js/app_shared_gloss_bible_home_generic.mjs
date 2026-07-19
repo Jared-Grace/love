@@ -1,29 +1,29 @@
-import { json_from_try } from "../../love/js/json_from_try.mjs";
-import { app_gloss_bible_generate_generic_word } from "../../love/js/app_gloss_bible_generate_generic_word.mjs";
-import { g_sermon_generate_book_generic_property } from "../../love/js/g_sermon_generate_book_generic_property.mjs";
-import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
-import { html_scroll_top_now } from "../../love/js/html_scroll_top_now.mjs";
-import { emoji_arrow_up } from "../../love/js/emoji_arrow_up.mjs";
-import { list_last } from "../../love/js/list_last.mjs";
-import { html_span_text } from "../../love/js/html_span_text.mjs";
-import { html_span_text_nbsp_replace_property_from } from "../../love/js/html_span_text_nbsp_replace_property_from.mjs";
-import { html_span_nbsp } from "../../love/js/html_span_nbsp.mjs";
-import { log } from "../../love/js/log.mjs";
-import { html_font_color_set_white } from "../../love/js/html_font_color_set_white.mjs";
-import { html_span_colon_2 } from "../../love/js/html_span_colon_2.mjs";
-import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
-import { html_bold_mild } from "../../love/js/html_bold_mild.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { html_hr } from "../../love/js/html_hr.mjs";
-import { each } from "../../love/js/each.mjs";
-import { html_font_color_set_green } from "../../love/js/html_font_color_set_green.mjs";
-import { html_div_text } from "../../love/js/html_div_text.mjs";
-import { list_first } from "../../love/js/list_first.mjs";
-import { list_empty_is } from "../../love/js/list_empty_is.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { app_g_bible_home_inner } from "../../love/js/app_g_bible_home_inner.mjs";
-import { html_span_space } from "../../love/js/html_span_space.mjs";
-export async function app_gloss_bible_home_generic(
+import { json_from_try } from "./json_from_try.mjs";
+import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
+import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { html_scroll_top_now } from "./html_scroll_top_now.mjs";
+import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
+import { list_last } from "./list_last.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_span_text_nbsp_replace_property_from } from "./html_span_text_nbsp_replace_property_from.mjs";
+import { html_span_nbsp } from "./html_span_nbsp.mjs";
+import { log } from "./log.mjs";
+import { html_font_color_set_white } from "./html_font_color_set_white.mjs";
+import { html_span_colon_2 } from "./html_span_colon_2.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_bold_mild } from "./html_bold_mild.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_hr } from "./html_hr.mjs";
+import { each } from "./each.mjs";
+import { html_font_color_set_green } from "./html_font_color_set_green.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_g_bible_home_inner } from "./app_g_bible_home_inner.mjs";
+import { html_span_space } from "./html_span_space.mjs";
+export async function app_shared_gloss_bible_home_generic(
   context,
   download,
   text_use,
@@ -68,7 +68,7 @@ export async function app_gloss_bible_home_generic(
     }
     each(explains, lambda2);
   }
-  let word_property = app_gloss_bible_generate_generic_word();
+  let word_property = app_shared_gloss_bible_generate_generic_word();
   function lambda(e) {
     let component2 = html_hr(p);
     let div2 = html_div(p);
@@ -98,7 +98,7 @@ export async function app_gloss_bible_home_generic(
   async function scroll(verses) {
     let f = list_first(verses);
     let p = property_get(f, "p_verse");
-    log(app_gloss_bible_home_generic.name, {
+    log(app_shared_gloss_bible_home_generic.name, {
       p,
       verses,
     });
