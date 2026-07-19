@@ -26,7 +26,7 @@ export function app_code_hash_restore(context) {
     if (is_screen) {
       storage_local_set_context(context, "screen", value);
     }
-    let is_quiz = equal(key, "q");
+    let is_quiz = equal(key, "quiz");
     if (is_quiz) {
       storage_local_set_context(context, "quiz_index", Number(value));
     }
