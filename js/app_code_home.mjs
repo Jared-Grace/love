@@ -11,10 +11,8 @@ import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { app_code_scroll_center_covered } from "./app_code_scroll_center_covered.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { html_span_space } from "./html_span_space.mjs";
+import { app_code_lesson_title_render } from "./app_code_lesson_title_render.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -31,7 +29,6 @@ export function app_code_home(context) {
   let current_id = storage_local_get_context(context, "lesson_id");
   let just_left = null;
   function lambda(item, index) {
-    let name = property_get(item, "name");
     let id = property_get(item, "id");
     async function lambda3() {
       await app_shared_screen_go(context, "lesson_id", id, app_code_examples);
