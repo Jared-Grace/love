@@ -9,7 +9,12 @@ let name = app_prefix_without_fn(list_first(apps_frozen()));
 export const example = {
   kind: "rejection",
   title: "A frozen app is refused for prod build, promote, and delete",
-  note: "app_frozen_assert throws for any app on apps_frozen(), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
+  note: [
+    { code: app_frozen_assert.name },
+    " throws for any app on ",
+    { code: apps_frozen.name },
+    "(), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
+  ],
   // human-readable form
   call: `${app_frozen_assert.name}(${JSON.stringify(name)})`,
   expectText: `throws — ${name} is on the frozen list`,

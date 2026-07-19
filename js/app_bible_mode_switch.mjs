@@ -1,7 +1,11 @@
 import { app_bible_mode_set } from "./app_bible_mode_set.mjs";
-import { window_reload } from "./window_reload.mjs";
-export function app_bible_mode_switch(mode) {
-  ("switch reader by persisting the mode then reloading; the hash keeps chapter and verse so you stay on the same spot");
+import { app_bible } from "./app_bible.mjs";
+import { html_loading } from "./html_loading.mjs";
+export async function app_bible_mode_switch(context, mode) {
+  ("switch reader in place: persist the mode, then re-render behind one loading overlay instead of reloading the page; the hash keeps chapter and verse, and the shared chapter data stays cached in memory so the switch is instant");
   app_bible_mode_set(mode);
-  window_reload();
+  async function rerender() {
+    await app_bible(context);
+  }
+  await html_loading(rerender);
 }
