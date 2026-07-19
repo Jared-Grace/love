@@ -8,7 +8,6 @@ import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
-import { equal_0 } from "./equal_0.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
