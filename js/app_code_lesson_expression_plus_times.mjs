@@ -30,40 +30,19 @@ export function app_code_lesson_expression_plus_times() {
     return triples;
   }
   function above(root) {
-    let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, [
-      "We always do ",
-      times,
-      " before ",
-      plus,
-      ", even if ",
-      times,
-      " appears later",
-    ]);
-    let later_box = app_code_container_light_blue(root);
-    html_div_cycle_code(later_box, [
-      "For ",
-      "2 + 3 * 4",
-      ", we do ",
-      "3 * 4",
-      " first, which is ",
-      "12",
-    ]);
-    html_div_cycle_code(later_box, ["Now we have ", "2 + 12", ", which is ", "14"]);
-    let first_box = app_code_container_light_blue(root);
-    html_div_cycle_code(first_box, [
-      "For ",
-      "3 * 4 + 2",
-      ", we do ",
-      "3 * 4",
-      " first, which is ",
-      "12",
-    ]);
-    html_div_cycle_code(first_box, ["Now we have ", "12 + 2", ", which is ", "14"]);
+    app_code_lesson_cross_precedence_intro({
+      root,
+      weak: plus,
+      strong: times,
+      inner_left: 3,
+      inner_right: 4,
+      later_outer: 2,
+      first_outer: 2,
+    });
   }
   let lesson = app_code_lesson_expression_pair_generic({
-    symbol1: plus,
-    symbol2: times,
+    symbol1: plus_symbol,
+    symbol2: times_symbol,
     word: " plus times",
     above,
     triples_get,
