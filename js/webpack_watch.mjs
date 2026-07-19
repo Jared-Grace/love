@@ -9,7 +9,7 @@ import { property_set } from "./property_set.mjs";
 import { import_install } from "./import_install.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
-import { folder_read_htmls } from "./folder_read_htmls.mjs";
+import { apps_names_dev } from "./apps_names_dev.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 import { app_shared_dev_build } from "./app_shared_dev_build.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
@@ -32,11 +32,7 @@ import { repos_paths_map_unordered_combine_squash } from "./repos_paths_map_unor
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 export async function webpack_watch() {
   let dev_relative = folder_public_join(app_shared_name_dev_text());
-  let htmls = await repos_paths_map_unordered_combine_squash(
-    dev_relative,
-    folder_read_htmls,
-  );
-  let a_names = list_map(htmls, path_name);
+  let a_names = await apps_names_dev();
   async function app_deps_get(a_name) {
     async function lambda() {
       let main = await app_shared_name_main(a_name);
