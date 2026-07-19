@@ -1536,6 +1536,8 @@ def _strip_command_prefixes(words):
             words = words[1:]
         elif words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
             words = words[2:]
+        elif words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
+            words = words[1:]
         else:
             break
     return words
