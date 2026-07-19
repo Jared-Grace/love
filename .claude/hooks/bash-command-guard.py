@@ -380,8 +380,14 @@ CLAUDE_TEMP_RM_PREFIXES = (
 
 RESERVED_WORDS = {
     "for", "in", "do", "done", "if", "then", "elif", "else", "fi",
-    "while", "until", "case", "esac", "function", "select", "time",
+    "while", "until", "case", "esac", "function", "select",
 }
+# `time` is deliberately NOT reserved here. Alone among bash's keywords it
+# introduces no structure - `time CMD` runs exactly CMD and prints a duration
+# to stderr - so it gets the same transparent unwrapping as xargs/timeout in
+# verb_of, and the inner command is still checked entirely on its own merits.
+# Leaving it in RESERVED_WORDS would make check_simple_commands raise
+# Unsupported at the reserved-word floor before verb_of ever saw it.
 
 # Loop-control builtins. They run no external command and touch nothing on
 # disk or the network - `break`/`continue` only alter control flow within an
