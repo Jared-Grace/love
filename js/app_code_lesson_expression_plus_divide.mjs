@@ -1,5 +1,6 @@
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { app_code_lesson_cross_precedence_intro } from "./app_code_lesson_cross_precedence_intro.mjs";
+import { js_operator_plus } from "./js_operator_plus.mjs";
 import { js_operator_division } from "./js_operator_division.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -7,11 +8,10 @@ import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_plus_divide() {
   "mixing + and / in one expression: a + b / c and a / b + c; / is stronger than +, so we always do it first, even when it comes later; / needs whole-number answers, so we use the division operator's left_transform (multiply) to build a divisibility chain a = outer * b, b = inner * c - then b / c and a / b are both whole, keeping BOTH arrangements clean";
-  let plus = js_operator_plus_symbol();
+  let plus = js_operator_plus();
+  let plus_symbol = property_get(plus, "operator");
   let divide = js_operator_division();
   let divide_symbol = property_get(divide, "operator");
   let left_transform = property_get(divide, "left_transform");
@@ -34,39 +34,18 @@ export function app_code_lesson_expression_plus_divide() {
     return triples;
   }
   function above(root) {
-    let box = app_code_container_light_blue(root);
-    html_div_cycle_code(box, [
-      "We always do ",
-      divide_symbol,
-      " before ",
-      plus,
-      ", even if ",
-      divide_symbol,
-      " appears later",
-    ]);
-    let later_box = app_code_container_light_blue(root);
-    html_div_cycle_code(later_box, [
-      "For ",
-      "2 + 6 / 3",
-      ", we do ",
-      "6 / 3",
-      " first, which is ",
-      "2",
-    ]);
-    html_div_cycle_code(later_box, ["Now we have ", "2 + 2", ", which is ", "4"]);
-    let first_box = app_code_container_light_blue(root);
-    html_div_cycle_code(first_box, [
-      "For ",
-      "6 / 3 + 2",
-      ", we do ",
-      "6 / 3",
-      " first, which is ",
-      "2",
-    ]);
-    html_div_cycle_code(first_box, ["Now we have ", "2 + 2", ", which is ", "4"]);
+    app_code_lesson_cross_precedence_intro({
+      root,
+      weak: plus,
+      strong: divide,
+      inner_left: 6,
+      inner_right: 3,
+      later_outer: 2,
+      first_outer: 2,
+    });
   }
   let lesson = app_code_lesson_expression_pair_generic({
-    symbol1: plus,
+    symbol1: plus_symbol,
     symbol2: divide_symbol,
     word: " plus divide",
     above,
