@@ -8,6 +8,7 @@ import { each } from "./each.mjs";
 import { uplifting_package_get } from "./uplifting_package_get.mjs";
 import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 export async function app_reply_verses_add_uplifting(
   reference,
   languages_chosen,
@@ -29,7 +30,8 @@ export async function app_reply_verses_add_uplifting(
       [bible_folder],
       [reference],
     );
-    let texts = list_map_property(verses, "text");
+    let present_verses = list_filter_null_not_is(verses);
+    let texts = list_map_property(present_verses, "text");
     function text_each(text) {
       if (null_not_is(text)) {
         list_add(bible_texts, text);
