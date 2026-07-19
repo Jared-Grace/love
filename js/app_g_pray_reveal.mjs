@@ -5,6 +5,7 @@ import { app_g_discern_prayed } from "./app_g_discern_prayed.mjs";
 import { g_thanks_discernment } from "./g_thanks_discernment.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
+import { noop } from "./noop.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -35,7 +36,7 @@ export function app_g_pray_reveal(container, correct, label, label_thanks, effec
   }
   function on_thanks() {
     let color = app_shared_color_green_light();
-    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), color, 3500);
+    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), color, 3500, noop);
   }
   function on_click() {
     if (discern.prayed) {
