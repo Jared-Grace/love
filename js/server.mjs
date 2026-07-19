@@ -20,6 +20,9 @@ export async function server() {
   let port = server_port();
   let result = await module_repos_resolve(import.meta);
   let v = express.static(result);
+  "serve the public folder at the root too, so absolute asset urls like /bible/uplifting/engbsb.json resolve in dev exactly as they do in prod, where firebase hosting serves public as the site root";
+  let folder_public_resolved = await module_public_resolve(import.meta);
+  let v_public = express.static(folder_public_resolved);
   let u = server_url_api();
   async function api_generic(req, res) {
     let body = property_get(req, "body");
@@ -42,6 +45,7 @@ export async function server() {
   }
   server_data_endpoints(app);
   app.use(v);
+  app.use(v_public);
   function lambda() {
     log_keep(
       server.name,
