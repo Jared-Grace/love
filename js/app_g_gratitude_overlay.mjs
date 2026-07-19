@@ -53,8 +53,7 @@ export function app_g_gratitude_overlay() {
       let label = text_combine_multiple([emoji, " ", text]);
       function on_pick() {
         let color = app_shared_color_green_light();
-        app_g_message_overlay(emoji_pray(), text, color, 3500);
-        render();
+        app_g_message_overlay(emoji_pray(), text, color, 3500, render);
       }
       app_g_button_green(container, label, on_pick);
     }
