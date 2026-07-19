@@ -24,7 +24,8 @@ export function app_g_need_quiz(overlay, npc, overlay_close, needs, off, closing
     };
     return spec;
   }
-  let specs = [turn_spec(0), turn_spec(1)];
+  let turn_count = 2;
+  let specs = range_map(turn_count, turn_spec);
   function turn(index) {
     html_clear(overlay);
     let done = index >= list_size(specs);
