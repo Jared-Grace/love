@@ -6,10 +6,12 @@ import { text_is } from "./text_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { example_note_code_dom } from "./example_note_code_dom.mjs";
+import { example_note_link_dom } from "./example_note_link_dom.mjs";
 // A note is either a plain string, or a list of segments: plain-text strings plus
-// inline-code parts — { code } (a fn name, derived via .name in the example) or
-// { alias: true } (the example's own derived alias). Code parts render as inline
-// code so alias/fn references stand out and aren't hardcoded prose.
+// inline-code parts — { fn: X.name } (a real fn, derived via .name → renders as a
+// GitHub source link), { code: "literal" } (a genuine literal like `let` — plain,
+// nothing to link to), or { alias: true } (the example's own derived alias). Code
+// parts render as inline code so alias/fn references stand out and aren't hardcoded.
 export function example_note_dom(parent, note, alias) {
   let paragraph = html_element(parent, "p");
   html_style_set(paragraph, "color", "#555");
@@ -25,6 +27,8 @@ export function example_note_dom(parent, note, alias) {
       html_text_content_set(span, segment);
     } else if (property_get_or_null(segment, "alias")) {
       example_note_code_dom(paragraph, alias);
+    } else if (property_get_or_null(segment, "fn")) {
+      example_note_link_dom(paragraph, property_get(segment, "fn"));
     } else {
       example_note_code_dom(paragraph, property_get(segment, "code"));
     }

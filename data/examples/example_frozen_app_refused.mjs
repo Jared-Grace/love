@@ -10,9 +10,9 @@ export const example = {
   kind: "rejection",
   title: "A frozen app is refused for prod build, promote, and delete",
   note: [
-    { code: app_shared_frozen_assert.name },
+    { fn: app_shared_frozen_assert.name },
     " throws for any app on ",
-    { code: apps_frozen.name },
+    { fn: apps_frozen.name },
     "(), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
   ],
   // human-readable form
