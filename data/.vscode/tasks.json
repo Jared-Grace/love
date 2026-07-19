@@ -2,7 +2,7 @@
   /* 
   This file is in love/data/.vscode/tasks.json
   Edit there
-  Then run love_initialize
+  Then run love_repo_initialize, which copies it here
   */
   "version": "2.0.0",
   "tasks": [
