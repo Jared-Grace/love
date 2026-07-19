@@ -1,4 +1,4 @@
-import { app_new_html_update } from "./app_new_html_update.mjs";
+import { app_shared_html_update } from "./app_shared_html_update.mjs";
 import { html_name_to_path } from "./html_name_to_path.mjs";
 import { file_exists_not_assert_json } from "./file_exists_not_assert_json.mjs";
 export async function html_new(name) {
@@ -7,5 +7,5 @@ export async function html_new(name) {
     hint: "an html file with this name already exists — pick a new name?",
     name,
   });
-  await app_new_html_update(name);
+  await app_shared_html_update(name);
 }
