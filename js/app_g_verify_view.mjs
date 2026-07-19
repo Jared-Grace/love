@@ -4,6 +4,7 @@ import { html_span_text } from "../../love/js/html_span_text.mjs";
 import { html_span_space } from "../../love/js/html_span_space.mjs";
 import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { html_button_biblehub_open_commentary } from "../../love/js/html_button_biblehub_open_commentary.mjs";
+import { html_button_biblehub_open_parallel } from "../../love/js/html_button_biblehub_open_parallel.mjs";
 import { g_verify_book_name } from "../../love/js/g_verify_book_name.mjs";
 import { app_api } from "../../love/js/app_api.mjs";
 import { fn_name } from "../../love/js/fn_name.mjs";
@@ -186,12 +187,11 @@ export function app_g_verify_view(
   let links_bar = html_div(container);
   html_style_set(links_bar, "margin-top", small_gap);
   html_style_set(links_bar, "text-align", "center");
-  html_button_biblehub_open_commentary(
-    links_bar,
-    String(Number(chapter_code.slice(3))),
-    g_verify_book_name(chapter_code.slice(0, 3)),
-    verse.split(",")[0],
-  );
+  let bh_chapter = String(Number(chapter_code.slice(3)));
+  let bh_book = g_verify_book_name(chapter_code.slice(0, 3));
+  let bh_verse = verse.split(",")[0];
+  html_button_biblehub_open_commentary(links_bar, bh_chapter, bh_book, bh_verse);
+  html_button_biblehub_open_parallel(links_bar, bh_chapter, bh_book, bh_verse);
   let approve_bar = html_div(container);
   html_style_set(approve_bar, "margin-top", small_gap);
   html_style_set(approve_bar, "text-align", "center");
