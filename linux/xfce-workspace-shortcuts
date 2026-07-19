@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# Ensure at least 10 XFCE workspaces, and wire the digit row to them:
+# Ensure at least 10 XFCE workspaces, and wire the workspace keys to them:
 #   Super+1..9,0        -> switch to workspace 1..10
 #   Shift+Super+1..9,0  -> move the active window to workspace 1..10
+#   Super+Left/Right    -> previous / next workspace (wraps at the ends)
+#   Ctrl+Alt+Left/Right -> previous / next workspace (wraps at the ends)
 #
 # Why command shortcuts (wmctrl) instead of xfwm4's built-in workspace keys:
 # xfwm4's own /xfwm4/ keyboard grabs proved fragile here -- after a hibernate
@@ -17,6 +19,13 @@ set -euo pipefail
 readonly MINIMUM_WORKSPACES=10
 readonly DIGITS="1 2 3 4 5 6 7 8 9 0"
 readonly KB=xfce4-keyboard-shortcuts
+
+# Absolute path to the prev/next helper that sits beside this script in the repo.
+# xfsettingsd runs command shortcuts with no useful PATH, and the ~/.local/bin
+# symlink dir holds only THIS script -- so the shortcut must name the helper by
+# full path. readlink -f resolves the invoking symlink back to the real repo
+# file, whose directory also contains workspace-switch.
+readonly WORKSPACE_SWITCH="$(dirname "$(readlink -f "$0")")/workspace-switch"
 
 require_wmctrl() {
   if ! command -v wmctrl >/dev/null 2>&1; then
@@ -66,7 +75,37 @@ digits_wire_to_workspaces() {
   done
 }
 
+# Disable an xfwm4-native shortcut by writing an empty custom value. Unlike -r
+# (which reverts to any /xfwm4/default action, leaving the grab alive), an empty
+# override tells xfwm4 "no action" -- freeing the accelerator for xfsettingsd to
+# grab as a command shortcut. This is exactly what the Settings GUI's "Clear"
+# does. Idempotent: creating vs overwriting the same empty string is a no-op.
+xfwm4_shortcut_disable() {
+  local path="/xfwm4/custom/$1"
+  if xfconf-query -c "$KB" -p "$path" >/dev/null 2>&1; then
+    xfconf-query -c "$KB" -p "$path" -s ""
+  else
+    xfconf-query -c "$KB" -p "$path" -n -t string -s ""
+  fi
+}
+
+# Wire the arrow-key prev/next switchers through the same durable command-shortcut
+# path as the digits. Super+Left/Right and Ctrl+Alt+Left/Right were xfwm4-native
+# (fragile across hibernate); disable them there and rebind via wmctrl.
+arrows_wire_to_workspaces() {
+  local accel
+  for accel in "<Super>Left" "<Super>Right" "<Primary><Alt>Left" "<Primary><Alt>Right"; do
+    xfwm4_shortcut_disable "$accel"
+  done
+  command_shortcut_set "<Super>Left"          "${WORKSPACE_SWITCH} prev"
+  command_shortcut_set "<Super>Right"         "${WORKSPACE_SWITCH} next"
+  command_shortcut_set "<Primary><Alt>Left"   "${WORKSPACE_SWITCH} prev"
+  command_shortcut_set "<Primary><Alt>Right"  "${WORKSPACE_SWITCH} next"
+}
+
 require_wmctrl
 workspace_count_ensure_minimum
 digits_wire_to_workspaces
-echo "OK: $(workspace_count_get) workspaces; Super+1..9,0 switch, Shift+Super+1..9,0 move window."
+arrows_wire_to_workspaces
+echo "OK: $(workspace_count_get) workspaces; Super+1..9,0 & Shift+Super+1..9,0 wired;" \
+     "Super+Left/Right & Ctrl+Alt+Left/Right switch prev/next."
