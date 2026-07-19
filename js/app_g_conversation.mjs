@@ -6,7 +6,7 @@ import { app_g_turn_menu } from "./app_g_turn_menu.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_boundary } from "./g_boundary.mjs";
-import { g_response_how } from "./g_response_how.mjs";
+import { app_g_how } from "./app_g_how.mjs";
 import { g_response_believe } from "./g_response_believe.mjs";
 import { integer_random_0 } from "./integer_random_0.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
@@ -47,7 +47,7 @@ export async function app_g_conversation(
     await app_g_gospel(overlay, npc, overlay_close, player, div_map);
   }
   function npc_how() {
-    say(g_response_how());
+    app_g_how(overlay, npc, overlay_close);
   }
   function npc_believe() {
     say(g_response_believe());
