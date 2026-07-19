@@ -1,10 +1,16 @@
 import { function_arguments_assert_each_add } from "../../js/function_arguments_assert_each_add.mjs";
+import { arguments_assert_each } from "../../js/arguments_assert_each.mjs";
 export const example = {
   fn: function_arguments_assert_each_add.name,
   args: ["js_return_argument_set", "js_return_is, js_expression_node_is"],
   kind: "transform",
   title: "Add a two-sided guard to a slot setter",
-  note: "aea prepends arguments_assert_each and repairs imports; one predicate per parameter.",
+  note: [
+    { alias: true },
+    " prepends ",
+    { code: arguments_assert_each.name },
+    " and repairs imports; one predicate per parameter.",
+  ],
   before: `import { property_set } from "./property_set.mjs";
 export function js_return_argument_set(r, a) {
   property_set(r, "argument", a);
