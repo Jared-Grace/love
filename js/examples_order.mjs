@@ -12,6 +12,7 @@ export function examples_order() {
     "example_atomize_nested_call", // flatten a nested call — simplest transform
     "example_if_test_set_positive", // set an if-condition — a single slot edit
     "example_prune_unused_import", // remove one unused import — simplest import op
+    "example_imports_paths_canonicalize", // rewrite one import to its canonical path
     "example_single_rejects_two", // refuse a 2-item list — a simple invariant guard
     "example_slot_set_rejects_statement", // the slot setter guarding its input (needs if_test)
     "example_frozen_app_refused", // a guard in the deployment domain
