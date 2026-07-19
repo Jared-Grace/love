@@ -1,14 +1,15 @@
-import { app_g } from "../../js/app_g.mjs";
+import { apps_frozen } from "../../js/apps_frozen.mjs";
+import { list_first } from "../../js/list_first.mjs";
 import { app_prefix_without_fn } from "../../js/app_prefix_without_fn.mjs";
 import { app_frozen_assert } from "../../js/app_frozen_assert.mjs";
-// Derive both the app name (app_g -> "g") and the guard fn name from strong
-// references, so renaming either carries through — one source of truth, no magic
-// strings.
-let name = app_prefix_without_fn(app_g);
+// Subject = whatever app is currently frozen (first in apps_frozen()), derived
+// from the source of truth — so this example survives changes to the frozen list
+// (a peer removing one, etc.) instead of hard-picking a specific app.
+let name = app_prefix_without_fn(list_first(apps_frozen()));
 export const example = {
   kind: "rejection",
   title: "A frozen app is refused for prod build, promote, and delete",
-  note: "app_frozen_assert throws for any app on apps_frozen() (g, replace), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
+  note: "app_frozen_assert throws for any app on apps_frozen(), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
   // human-readable form
   call: `${app_frozen_assert.name}(${JSON.stringify(name)})`,
   expectText: `throws — ${name} is on the frozen list`,
