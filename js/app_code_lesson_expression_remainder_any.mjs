@@ -54,7 +54,7 @@ export function app_code_lesson_expression_remainder_any() {
       }
       return render;
     }
-    let rights = [" remainder"];
+    let rights = ["remainder"];
     let built = app_code_lesson_name_id_generic(rights, "operators", title_get);
     return built;
   }
