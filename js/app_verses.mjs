@@ -13,6 +13,7 @@ import { list_copy } from "../../love/js/list_copy.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { html_centered } from "../../love/js/html_centered.mjs";
 import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
+import { app_shared_language_codes_saved_or } from "../../love/js/app_shared_language_codes_saved_or.mjs";
 import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
 import { property_get_or } from "../../love/js/property_get_or.mjs";
 import { text_split_plus } from "../../love/js/text_split_plus.mjs";
@@ -49,8 +50,10 @@ export async function app_verses(context) {
     "language_code",
   );
   let default_l = list_join_plus(default_codes);
+  let remembered_l = app_shared_language_codes_saved_or(default_l);
   let hash = html_hash_object_get();
-  let l = property_get_or(hash, "l", default_l);
+  "a url hash wins over the remembered choice, so a shared link still opens in the languages it names";
+  let l = property_get_or(hash, "l", remembered_l);
   let language_codes = text_split_plus(l);
   function code_to_language(code) {
     return list_find_property_or_null(languages, "language_code", code);

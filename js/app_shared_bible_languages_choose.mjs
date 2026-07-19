@@ -12,6 +12,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
+import { app_shared_language_codes_save } from "./app_shared_language_codes_save.mjs";
 import { html_hash_transform } from "./html_hash_transform.mjs";
 import { property_set } from "./property_set.mjs";
 export function app_shared_bible_languages_choose(
@@ -31,6 +32,7 @@ export function app_shared_bible_languages_choose(
       codes = [ebible_language_en_code()];
     }
     let l = list_join_plus(codes);
+    app_shared_language_codes_save(l);
     function transform(hash) {
       property_set(hash, "l", l);
     }
