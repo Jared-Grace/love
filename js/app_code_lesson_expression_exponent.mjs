@@ -109,9 +109,12 @@ export function app_code_lesson_expression_exponent() {
     }
     function product_expression(parent, base, base_color, power_color, count) {
       "base * base * ... with the running count 1..count OUTSIDE the code, on the light background below each factor: row 1 is one continuous black pill (base chips joined by *), row 2 holds the counts (no black behind them), the last count in the power colour so how-many visibly becomes the exponent";
+      let column_count = add(multiply(2, count), 1);
+      let end_column = column_count;
       let grid = html_span(parent);
       html_style_set(grid, "display", "inline-grid");
       html_style_set(grid, "grid-template-rows", "auto auto");
+      html_style_set(grid, "grid-template-columns", text_combine_multiple(["repeat(", text_to(column_count), ", auto)"]));
       html_style_set(grid, "align-items", "center");
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
@@ -123,7 +126,6 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(pill, "background", "black");
       html_style_set(pill, "border-radius", "0.5em");
       html_style_set(pill, "align-self", "stretch");
-      let end_column = add(multiply(2, count), 1);
       function spacer(column) {
         "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
         let s = html_span(grid);
