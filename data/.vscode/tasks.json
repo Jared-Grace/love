@@ -6,42 +6,16 @@
   */
   "version": "2.0.0",
   "tasks": [
-    {
-      "label": "Server",
-      "type": "shell",
-      "command": "cd love && node scripts/r.mjs v",
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-    },
-    {
-      "label": "Watcher",
-      "type": "shell",
-      "command": "cd love && node scripts/r.mjs wh",
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-    },
-    {
-      "label": "Webpack Watcher",
-      "type": "shell",
-      "command": "cd love && node scripts/r.mjs webpack_watch",
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-    },
+    /*
+    Server, Watcher, Webpack Watcher and Git Push Auto used to start here.
+    They now run as systemd user units, created and started by daemons_ensure.
+    Two owners would mean two of each racing over the same port and bundles,
+    so they are deliberately absent — only interactive things belong here.
+    */
     {
       "label": "Terminal",
       "type": "shell",
       "command": "cd love && bash scripts/p.sh",
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-    },
-    {
-      "label": "Git Push Auto",
-      "type": "shell",
-      "command": "cd love && node scripts/r.mjs git_push_auto",
       "runOptions": {
         "runOn": "folderOpen"
       },
