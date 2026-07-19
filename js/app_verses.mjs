@@ -110,8 +110,30 @@ export async function app_verses(context) {
   function count_update_invoke(update) {
     update();
   }
+  async function offline_guard() {
+    let online = browser_online_is();
+    if (online) {
+      return false;
+    }
+    let folders = list_map_property(languages_chosen, "bible_folder");
+    let packages = await list_map_unordered_async(folders, uplifting_package_get);
+    let loaded = list_filter_null_not_is(packages);
+    let nothing_loaded = list_empty_is(loaded);
+    if (nothing_loaded) {
+      app_shared_message_overlay(
+        emoji_pray(),
+        "It looks like you are not connected to the internet right now. Please reconnect, then tap Generate again — your verses will be waiting for you.",
+      );
+      return true;
+    }
+    return false;
+  }
   async function generate() {
     list_empty(bible_texts);
+    let handled = await offline_guard();
+    if (handled) {
+      return;
+    }
     let unique = list_unique(encouragement);
     let e = unique;
     if (verse_count === 1) {
