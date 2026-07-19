@@ -32,7 +32,7 @@ graphical_user() {
 run_in_user_session() {  # <username>
   local user=$1 uid setup
   uid=$(id -u "$user") || return 0
-  setup="/home/${user}/repos/love/linux/xfce-workspaces-digits"
+  setup="/home/${user}/repos/love/linux/xfce-workspace-shortcuts"
   [ -x "$setup" ] || return 0
   runuser -u "$user" -- env \
     DISPLAY=:0 \
