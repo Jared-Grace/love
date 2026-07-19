@@ -18,7 +18,7 @@ export const example = {
     ", guarding every path that would change or remove its production assets. Non-frozen apps pass.",
   ],
   // human-readable form
-  call: `${app_shared_frozen_assert.name}(${JSON.stringify(name)})`,
+  call: js_code_call_args(app_shared_frozen_assert.name, [json_to(name)]),
   expectText: `throws — ${name} is on the frozen list`,
   // machine-runnable form: import fn, pass the literal app name, call, assert
   fn: app_shared_frozen_assert.name,
