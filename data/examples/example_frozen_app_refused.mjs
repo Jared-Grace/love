@@ -12,8 +12,8 @@ export const example = {
   note: [
     { fn: app_shared_frozen_assert.name },
     " throws for any app on ",
-    { fn: apps_frozen.name },
-    "(), guarding every path that would change or remove its production assets. Non-frozen apps pass.",
+    { fn: apps_frozen.name, call: true },
+    ", guarding every path that would change or remove its production assets. Non-frozen apps pass.",
   ],
   // human-readable form
   call: `${app_shared_frozen_assert.name}(${JSON.stringify(name)})`,
