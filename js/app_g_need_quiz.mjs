@@ -12,7 +12,7 @@ import { property_get } from "./property_get.mjs";
 import { invoke_once } from "./invoke_once.mjs";
 import { html_clear } from "./html_clear.mjs";
 export function app_g_need_quiz(overlay, npc, overlay_close, needs, off, closing) {
-  "the shared 2-turn need→Scripture quiz: each turn the NPC voices a CONCERN (a struggle for app_g_how, a doubt for app_g_believe) and the player picks the on-topic verse over an OFF-topic one — pray-for-discernment reveals the right one. after both turns the NPC responds with `closing` and can end. needs=[{concern, correct:{reference,text}}], off=[{reference,text}]";
+  "the shared need→Scripture quiz: each turn the NPC voices a CONCERN (a struggle for app_g_how, a doubt for app_g_believe) and the player picks the on-topic verse over an OFF-topic one — pray-for-discernment reveals the right one. after the turns the NPC responds with `closing` and can end. needs=[{concern, correct:{reference,text}}], off=[{reference,text}]. NOTE: turn_count=2 is a STUB — meant to grow (change the one variable; needs/off pools must be at least that long)";
   list_shuffle(needs);
   list_shuffle(off);
   function turn_spec(index) {
