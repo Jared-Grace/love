@@ -29,9 +29,7 @@ export async function app_examples(context) {
   }
   function render() {
     html_clear(root);
-    let page = html_div(root);
-    html_card(page);
-    html_style_set(page, "background", "#fff");
+    let page = app_shared_container_blue(root);
     html_style_set(page, "max-width", "62rem");
     html_style_set(page, "margin", "2rem auto");
     html_style_set(page, "padding", "2rem");
