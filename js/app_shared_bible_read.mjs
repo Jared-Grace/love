@@ -292,7 +292,7 @@ export async function app_shared_bible_read(context, verse_action) {
       );
     }
     app_shared_button(actions, html_button_share_text(), share);
-    verse_action(actions, verse_chapter_code, verse_number_v);
+    verse_action(context, actions, verse_chapter_code, verse_number_v);
     function row_update() {
       update();
       let is_last = verse_number_v === selection_last();
