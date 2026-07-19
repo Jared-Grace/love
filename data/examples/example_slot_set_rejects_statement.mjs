@@ -5,7 +5,7 @@ export const example = {
   title: "A slot setter refuses a statement in an expression slot",
   note: [
     "The if-test slot holds an expression; a statement in it is refused by the two-sided guard (",
-    { code: js_expression_node_is.name },
+    { fn: js_expression_node_is.name },
     " fails on arg 1).",
   ],
   // human-readable form

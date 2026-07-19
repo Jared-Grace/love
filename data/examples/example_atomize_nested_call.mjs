@@ -5,7 +5,7 @@ export const example = {
   kind: "transform",
   title: "Flatten a nested call into a named local",
   note: [
-    { code: js_atomize.name },
+    { fn: js_atomize.name },
     " lifts each inner call out of its argument slot into a ",
     { code: "let" },
     ", so every call reads on its own line. Simplicity is AST depth — one nested expression becomes two shallow statements.",

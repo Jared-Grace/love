@@ -8,7 +8,7 @@ export const example = {
   note: [
     { alias: true },
     " prepends ",
-    { code: arguments_assert_each.name },
+    { fn: arguments_assert_each.name },
     " and repairs imports; one predicate per parameter.",
   ],
   before: `import { property_set } from "./property_set.mjs";
