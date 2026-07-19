@@ -9,6 +9,7 @@ import { property_get } from "../../love/js/property_get.mjs";
 import { log_keep } from "../../love/js/log_keep.mjs";
 import express from "express";
 import { module_repos_resolve } from "./module_repos_resolve.mjs";
+import { module_public_resolve } from "./module_public_resolve.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 export async function server() {
   let app = express();
