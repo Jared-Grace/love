@@ -33,7 +33,7 @@ export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
   html_style_head(app_g_emoji_glow_keyframe());
   let emoji = html_p_text(div, emoji_text);
   html_style_assign(emoji, {
-    "font-size": "9rem",
+    "font-size": fonts.emoji,
     margin: "0",
     animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
@@ -52,7 +52,7 @@ export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
   let message_p = html_p_text(card, message);
   html_style_assign(message_p, {
     color,
-    "font-size": "1.75rem",
+    "font-size": fonts.statement,
     margin: "0",
     "max-width": "85vw",
     "text-align": "center",
