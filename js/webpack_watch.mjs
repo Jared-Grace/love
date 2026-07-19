@@ -14,6 +14,8 @@ import { folder_public_join } from "./folder_public_join.mjs";
 import { app_shared_dev_build } from "./app_shared_dev_build.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { function_dependencies } from "./function_dependencies.mjs";
 import { app_context_initialize } from "./app_context_initialize.mjs";
 import { property_exists_equals } from "./property_exists_equals.mjs";
@@ -92,12 +94,27 @@ export async function webpack_watch() {
         rebuild: a_name,
       });
       await app_shared_dev_build(a_name);
+      await deps_refresh(a_name);
     }
     try {
       await catch_log_async(lambda);
     } finally {
       property_set(building, a_name, false);
     }
+  }
+  async function deps_refresh(a_name) {
+    ("re-index the app that just built: the index was made at startup, so a function written since then belongs to no app and editing it alone would rebuild nothing until a restart");
+    let ad = list_find_property_or_null(app_deps, "a_name", a_name);
+    let known_not = null_is(ad);
+    if (known_not) {
+      return;
+    }
+    let fresh = await app_deps_get(a_name);
+    let failed = null_is(fresh);
+    if (failed) {
+      return;
+    }
+    property_set(ad, "deps", property_get(fresh, "deps"));
   }
   function build_schedule(a_name) {
     let existing = property_get_or_null(pending, a_name);
