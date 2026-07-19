@@ -18,11 +18,13 @@ import { list_get } from "../../love/js/list_get.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { storage_local_initialize_context } from "../../love/js/storage_local_initialize_context.mjs";
 import { app_code_lesson_current } from "../../love/js/app_code_lesson_current.mjs";
+import { app_code_lesson_title_strip } from "../../love/js/app_code_lesson_title_strip.mjs";
 import { html_clear_context } from "../../love/js/html_clear_context.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
+  app_code_lesson_title_strip(root, lesson);
   let refresh = app_code_batch_item_get(
     root,
     lesson,
