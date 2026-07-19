@@ -35,6 +35,7 @@ export function app_g_dev_routes() {
     await npc_view(app_g_view_phase_gospel());
   }
   async function prayer() {
+    await app_g_view_set(null);
     app_g_prayer_overlay();
   }
   let routes = {
