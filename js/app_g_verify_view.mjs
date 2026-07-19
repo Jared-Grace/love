@@ -1,33 +1,33 @@
-import { html_clear } from "../../love/js/html_clear.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { html_span_text } from "../../love/js/html_span_text.mjs";
-import { html_span_space } from "../../love/js/html_span_space.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { html_button_biblehub_open_commentary } from "../../love/js/html_button_biblehub_open_commentary.mjs";
-import { html_button_biblehub_open_parallel } from "../../love/js/html_button_biblehub_open_parallel.mjs";
-import { g_verify_book_name } from "../../love/js/g_verify_book_name.mjs";
-import { app_api } from "../../love/js/app_api.mjs";
-import { fn_name } from "../../love/js/fn_name.mjs";
-import { html_p_text } from "../../love/js/html_p_text.mjs";
-import { html_on } from "../../love/js/html_on.mjs";
-import { html_style_set } from "../../love/js/html_style_set.mjs";
-import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
-import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
-import { html_border_radius } from "../../love/js/html_border_radius.mjs";
-import { html_style_padding_x } from "../../love/js/html_style_padding_x.mjs";
-import { html_style_padding_y } from "../../love/js/html_style_padding_y.mjs";
-import { html_margin_em } from "../../love/js/html_margin_em.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { g_sermon_passage_words } from "../../love/js/g_sermon_passage_words.mjs";
-import { app_shared_container_base } from "../../love/js/app_shared_container_base.mjs";
-import { app_shared_verse_selected_background_color } from "../../love/js/app_shared_verse_selected_background_color.mjs";
-import { app_shared_text_deemphasized_color } from "../../love/js/app_shared_text_deemphasized_color.mjs";
-import { app_shared_text_category_color } from "../../love/js/app_shared_text_category_color.mjs";
-import { app_shared_text_warning_color } from "../../love/js/app_shared_text_warning_color.mjs";
-import { app_shared_container_blue_border_color } from "../../love/js/app_shared_container_blue_border_color.mjs";
-import { app_shared_border_radius } from "../../love/js/app_shared_border_radius.mjs";
-import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
-import { app_shared_font_serif } from "../../love/js/app_shared_font_serif.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_span_space } from "./html_span_space.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
+import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
+import { g_verify_book_name } from "./g_verify_book_name.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { html_on } from "./html_on.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_border_radius } from "./html_border_radius.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
+import { html_style_padding_y } from "./html_style_padding_y.mjs";
+import { html_margin_em } from "./html_margin_em.mjs";
+import { property_get } from "./property_get.mjs";
+import { g_sermon_passage_words } from "./g_sermon_passage_words.mjs";
+import { app_shared_container_base } from "./app_shared_container_base.mjs";
+import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
+import { app_shared_text_deemphasized_color } from "./app_shared_text_deemphasized_color.mjs";
+import { app_shared_text_category_color } from "./app_shared_text_category_color.mjs";
+import { app_shared_text_warning_color } from "./app_shared_text_warning_color.mjs";
+import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
+import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 export function app_g_verify_view(
   container,
   english,
@@ -190,14 +190,19 @@ export function app_g_verify_view(
   let bh_chapter = String(Number(chapter_code.slice(3)));
   let bh_book = g_verify_book_name(chapter_code.slice(0, 3));
   let bh_verse = verse.split(",")[0];
-  html_button_biblehub_open_commentary(links_bar, bh_chapter, bh_book, bh_verse);
+  html_button_biblehub_open_commentary(
+    links_bar,
+    bh_chapter,
+    bh_book,
+    bh_verse,
+  );
   html_button_biblehub_open_parallel(links_bar, bh_chapter, bh_book, bh_verse);
   let approve_bar = html_div(container);
   html_style_set(approve_bar, "margin-top", small_gap);
   html_style_set(approve_bar, "text-align", "center");
   async function on_approve() {
     try {
-      await app_api({
+      await app_shared_api({
         f_name: fn_name("g_verify_approval_set"),
         args: [chapter_code, verse],
       });

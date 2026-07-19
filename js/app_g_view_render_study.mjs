@@ -32,7 +32,7 @@ export async function app_g_view_render_study(div_map) {
   let current = word_index;
   let green_vivid = text_combine(app_shared_button_background(), "ee");
   let green_pale = text_combine(app_shared_button_background(), "66");
-  let blue_pale = text_combine(app_shared_button_selected_background_color(), "4d");
+  let blue_pale = "rgb(95 145 255 / 59%)";
   let white = app_shared_button_font_color();
   let ring = text_combine_multiple([
     "0 0 0 0.12em ",
