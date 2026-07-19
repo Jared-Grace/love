@@ -5,6 +5,7 @@ import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
+import { range_map } from "./range_map.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
