@@ -6,6 +6,7 @@ import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.m
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
 import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
+import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -48,12 +49,17 @@ export function app_g_dev_routes() {
     let stays = null;
     app_g_discern_prevented_overlay(stays);
   }
+  async function gratitude() {
+    await app_g_view_set(null);
+    app_g_gratitude_overlay();
+  }
   let routes = {
     study,
     conversation,
     gospel_share,
     discern,
     dove,
+    gratitude,
   };
   return routes;
 }
