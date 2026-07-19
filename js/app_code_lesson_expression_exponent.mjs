@@ -22,6 +22,7 @@ import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { app_code_lesson_chip_lift } from "./app_code_lesson_chip_lift.mjs";
 import { html_span_text_smaller } from "./html_span_text_smaller.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -157,6 +158,7 @@ export function app_code_lesson_expression_exponent() {
         let column = add(multiply(2, gap), 3);
         let op = html_span_text(grid, star);
         html_font_color_set(op, "white");
+        html_font_jetbrains_mono(op);
         cell_at(op, 2, column);
       }
       spacer(1);
