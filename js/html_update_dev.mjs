@@ -6,7 +6,7 @@ import { list_join_newline } from "./list_join_newline.mjs";
 import { list_add } from "./list_add.mjs";
 import { function_name_to_path_import_code_root_multiple_map } from "./function_name_to_path_import_code_root_multiple_map.mjs";
 import { app_shared_context_initialize } from "./app_shared_context_initialize.mjs";
-import { js_code_call_app_context_initialize } from "./js_code_call_app_context_initialize.mjs";
+import { js_code_call_app_shared_context_initialize } from "./js_code_call_app_shared_context_initialize.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { function_name_repo_path_combine } from "./function_name_repo_path_combine.mjs";
 import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
@@ -20,7 +20,7 @@ export async function html_update_dev(name) {
   let a_name = app_shared_name_prefixed(name);
   let path = await function_name_repo_path_combine(a_name, file_path);
   let name_prefixed = await app_shared_name_main(name);
-  let call = js_code_call_app_context_initialize(name_prefixed);
+  let call = js_code_call_app_shared_context_initialize(name_prefixed);
   let imports = [name_prefixed, app_shared_context_initialize.name];
   let mapped =
     await function_name_to_path_import_code_root_multiple_map(imports);
