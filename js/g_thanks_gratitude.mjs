@@ -2,6 +2,8 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { emoji_sunrise } from "./emoji_sunrise.mjs";
 import { emoji_heart } from "./emoji_heart.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { g_name_jesus } from "./g_name_jesus.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { emoji_family } from "./emoji_family.mjs";
@@ -24,13 +26,13 @@ export function g_thanks_gratitude() {
     { emoji: emoji_bread(), text: "God, thank You for the harvest that comes from the earth" },
     { emoji: emoji_bread(), text: "God, thank You for warmth when the days are cold" },
     { emoji: emoji_bread(), text: "God, thank You for provision I did not earn" },
-    { emoji: emoji_cross(), text: "God, thank You for saving me through Jesus" },
-    { emoji: emoji_cross(), text: "God, thank You for the cross where Jesus died in my place" },
+    { emoji: emoji_cross(), text: text_combine_multiple(["God, thank You for saving me through ", g_name_jesus()]) },
+    { emoji: emoji_cross(), text: text_combine_multiple(["God, thank You for the cross where ", g_name_jesus(), " died in my place"]) },
     { emoji: emoji_cross(), text: "God, thank You for forgiving all my sins" },
     { emoji: emoji_cross(), text: "God, thank You for grace I could never earn" },
     { emoji: emoji_cross(), text: "God, thank You for adopting me as Your own child" },
-    { emoji: emoji_cross(), text: "God, thank You for the blood of Jesus that makes me clean" },
-    { emoji: emoji_cross(), text: "God, thank You for raising Jesus from the dead" },
+    { emoji: emoji_cross(), text: text_combine_multiple(["God, thank You for the blood of ", g_name_jesus(), " that makes me clean"]) },
+    { emoji: emoji_cross(), text: text_combine_multiple(["God, thank You for raising ", g_name_jesus(), " from the dead"]) },
     { emoji: emoji_cross(), text: "God, thank You that there is no condemnation for those in Christ" },
     { emoji: emoji_cross(), text: "God, thank You for rescuing me out of the darkness" },
     { emoji: emoji_cross(), text: "God, thank You for writing my name in the book of life" },
@@ -40,7 +42,7 @@ export function g_thanks_gratitude() {
     { emoji: emoji_book_open(), text: "God, thank You for the truth that sets me free" },
     { emoji: emoji_book_open(), text: "God, thank You for Scripture to light my path" },
     { emoji: emoji_book_open(), text: "God, thank You for Your commands, which are for my good" },
-    { emoji: emoji_book_open(), text: "God, thank You for the good news of Jesus" },
+    { emoji: emoji_book_open(), text: text_combine_multiple(["God, thank You for the good news of ", g_name_jesus()]) },
     { emoji: emoji_book_open(), text: "God, thank You that I can read Your word" },
     { emoji: emoji_book_open(), text: "God, thank You for Your word that stands forever" },
     { emoji: emoji_book_open(), text: "God, thank You for the wisdom You give when I ask" },
@@ -99,10 +101,10 @@ export function g_thanks_gratitude() {
     { emoji: emoji_rainbow(), text: "God, thank You for the home You are preparing" },
     { emoji: emoji_rainbow(), text: "God, thank You for the promise of no more tears" },
     { emoji: emoji_rainbow(), text: "God, thank You for the resurrection to come" },
-    { emoji: emoji_rainbow(), text: "God, thank You that I will see Jesus face to face one day" },
+    { emoji: emoji_rainbow(), text: text_combine_multiple(["God, thank You that I will see ", g_name_jesus(), " face to face one day"]) },
     { emoji: emoji_rainbow(), text: "God, thank You that death is not the end" },
     { emoji: emoji_rainbow(), text: "God, thank You for an inheritance that never fades" },
-    { emoji: emoji_rainbow(), text: "God, thank You for the day Jesus returns" },
+    { emoji: emoji_rainbow(), text: text_combine_multiple(["God, thank You for the day ", g_name_jesus(), " returns"]) },
     { emoji: emoji_rainbow(), text: "God, thank You for joy that will never end" },
     { emoji: emoji_rainbow(), text: "God, thank You for Your promises kept into forever" },
     { emoji: emoji_home(), text: "God, thank You for a place to rest" },
