@@ -7,7 +7,7 @@ import { json_to } from "../../js/json_to.mjs";
 // Subject = whatever app is currently frozen (first in apps_frozen()), derived
 // from the source of truth — so this example survives changes to the frozen list
 // (a peer removing one, etc.) instead of hard-picking a specific app.
-let name = app_prefix_without_fn(list_first(apps_frozen()));
+let name = app_shared_name_prefix_without_fn(list_first(apps_frozen()));
 export const example = {
   kind: "rejection",
   title: "A frozen app is refused for prod build, promote, and delete",
