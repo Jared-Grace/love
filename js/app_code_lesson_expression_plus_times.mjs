@@ -1,17 +1,19 @@
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
+import { app_code_lesson_cross_precedence_intro } from "./app_code_lesson_cross_precedence_intro.mjs";
+import { js_operator_plus } from "./js_operator_plus.mjs";
+import { js_operator_asterisk } from "./js_operator_asterisk.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_plus_times() {
   "mixing + and * in one expression: a + b * c and a * b + c; unlike + and -, these are NOT the same strength - * is stronger, so we always do it first, even when it comes later in the line; the intro shows the SAME multiplication in both positions to prove position does not change what we do first; only + and * here, so every value is a whole number";
-  let plus = js_operator_plus_symbol();
-  let times = js_operator_asterisk_symbol();
+  let plus = js_operator_plus();
+  let times = js_operator_asterisk();
+  let plus_symbol = property_get(plus, "operator");
+  let times_symbol = property_get(times, "operator");
   function first_of(index) {
     "the possible first numbers 2 through 5 (distinct across the four questions, so they never repeat)";
     return add(index, 2);
