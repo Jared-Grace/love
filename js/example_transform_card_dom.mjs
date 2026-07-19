@@ -20,7 +20,7 @@ export function example_transform_card_dom(parent, example) {
   let before = property_get(example, "before");
   let after = property_get(example, "after");
   let card = example_card_container_dom(parent);
-  example_card_title_note_dom(card, title, note);
+  example_card_title_note_dom(card, title, note, alias);
   example_label_dom(card, "function");
   example_chip_dom(card, fn);
   if (alias) {
