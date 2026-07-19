@@ -4,7 +4,7 @@
 #
 # STATUS: committed, NOT INSTALLED -- and confirmed UNNECESSARY so far. On
 # 2026-07-19 a real hibernate -> resume left Super+digit working with nothing
-# re-run, proving the xfsettingsd-based shortcuts (see xfce-workspaces-digits)
+# re-run, proving the xfsettingsd-based shortcuts (see xfce-workspace-shortcuts)
 # survive hibernate on their own. This hook is kept only as a dormant fallback:
 # install it if some future resume is ever observed to break Super+digit.
 #
