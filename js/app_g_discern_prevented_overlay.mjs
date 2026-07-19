@@ -10,9 +10,9 @@ export function app_g_discern_prevented_overlay() {
   "the Holy Spirit gently preventing the FIRST disregard of discernment: full-screen glowing 🕊️ + GOLD message (God's leading = His word) + a ROTATING Scripture about the Spirit's leading (gold, since it's God's word; reference white), auto-dismissing after enough time to read";
   let color = app_shared_color_gold_text();
   let message = "The Holy Spirit is leading you to follow the discernment God gave you";
-  let div = app_g_message_overlay(emoji_dove(), message, color, 5000);
+  let card = app_g_message_overlay(emoji_dove(), message, color, 5000);
   let drawn = g_verse_hs_warning_next();
-  let verse = html_p_text(div, property_get(drawn, "text"));
+  let verse = html_p_text(card, property_get(drawn, "text"));
   html_style_assign(verse, {
     "font-size": "1.5rem",
     margin: "0",
@@ -20,12 +20,12 @@ export function app_g_discern_prevented_overlay() {
     "text-align": "center",
   });
   app_g_scripture_verse(verse);
-  let reference = html_p_text(div, property_get(drawn, "reference"));
+  let reference = html_p_text(card, property_get(drawn, "reference"));
   html_style_assign(reference, {
     color: "white",
     "font-size": "1.1rem",
     margin: "0",
     "text-align": "center",
   });
-  return div;
+  return card;
 }

@@ -8,7 +8,7 @@ import { html_remove } from "./html_remove.mjs";
 import { html_style_head } from "./html_style_head.mjs";
 import { app_g_emoji_glow_keyframe } from "./app_g_emoji_glow_keyframe.mjs";
 export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
-  "a full-screen prayer moment: dims the world, floats a glowing emoji above a single message on a dark card, fades in, then auto-dismisses after dismiss_ms. `color` sets the message color — GOLD when the words are God's leading (His word), white when they are the player's own prayer. shared by the discernment-prevented dove and the thanksgiving prayer";
+  "a full-screen prayer moment: dims the world, floats a glowing emoji above a message on a dark CARD, fades in, then auto-dismisses after dismiss_ms. `color` sets the message color — GOLD when the words are God's leading (His word), white when they are the player's own prayer. RETURNS the card (a flex column) so a caller can add more onto the same black surface — e.g. the dove appends a verse + reference. shared by the discernment-prevented dove and the thanksgiving prayer";
   let body = html_document_body();
   let div = html_div(body);
   html_style_assign(div, {
@@ -34,7 +34,19 @@ export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
     margin: "0",
     animation: "emojiGlow 1.6s ease-in-out infinite alternate",
   });
-  let message_p = html_p_text(div, message);
+  let card = html_div(div);
+  html_style_assign(card, {
+    background: "rgba(0, 0, 0, 0.55)",
+    padding: "1.5rem 2rem",
+    "border-radius": "3rem",
+    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
+    "max-width": "88vw",
+    display: "flex",
+    "flex-direction": "column",
+    "align-items": "center",
+    gap: "0.85rem",
+  });
+  let message_p = html_p_text(card, message);
   html_style_assign(message_p, {
     color,
     "font-size": "1.75rem",
@@ -42,10 +54,6 @@ export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
     "max-width": "85vw",
     "text-align": "center",
     "text-shadow": "0 0 0.2em rgba(255, 255, 255, 0.7)",
-    background: "rgba(0, 0, 0, 0.55)",
-    padding: "1.5rem 2rem",
-    "border-radius": "3rem",
-    "box-shadow": "0 0 2.5rem 1.75rem rgba(0, 0, 0, 0.55)",
   });
   html_reflow_force(div);
   html_style_set(div, "opacity", "1");
@@ -53,5 +61,5 @@ export function app_g_message_overlay(emoji_text, message, color, dismiss_ms) {
     html_remove(div);
   }
   setTimeout(dismiss, dismiss_ms);
-  return div;
+  return card;
 }
