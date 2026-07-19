@@ -1,8 +1,9 @@
 import { list_join_newline } from "./list_join_newline.mjs";
 export function pwa_service_worker_code() {
-  "the service worker source (a plain browser-JS string, runs in the SW context). Strategy: SHELL (html/js/etc) = network-first so online stays fresh (the code bundle is deliberately no-cache) and offline falls back to the cached copy; SAME-ORIGIN /bible/ DATA = stale-while-revalidate so packages load instantly, refresh in the background, and work offline. One versioned cache, old versions cleaned on activate. Bump CACHE_NAME to invalidate everything.";
+  "the service worker source (a plain browser-JS string, runs in the SW context). Strategy: SHELL (html/js/etc) = network-first so online stays fresh (the code bundle is deliberately no-cache) and offline falls back to the cached copy; SAME-ORIGIN /bible/ DATA = stale-while-revalidate so packages load instantly, refresh in the background, and work offline. One versioned cache, old versions cleaned on activate. Bump CACHE_NAME to invalidate everything. The shell fetch is bounded by SHELL_TIMEOUT_MS because a captive portal or flaky signal leaves fetch pending rather than failing, which would hang the page instead of falling back to the cached copy.";
   let lines = [
     "var CACHE_NAME = 'love-cache-v1';",
+    "var SHELL_TIMEOUT_MS = 4000;",
     "self.addEventListener('install', function () {",
     "  self.skipWaiting();",
     "});",
@@ -50,7 +51,7 @@ export function pwa_service_worker_code() {
     "async function network_first(request) {",
     "  var cache = await caches.open(CACHE_NAME);",
     "  try {",
-    "    var response = await fetch(request);",
+    "    var response = await fetch_timeout(request, SHELL_TIMEOUT_MS);",
     "    put_ok(cache, request, response);",
     "    return response;",
     "  } catch (error) {",
@@ -60,6 +61,20 @@ export function pwa_service_worker_code() {
     "    }",
     "    throw error;",
     "  }",
+    "}",
+    "function fetch_timeout(request, ms) {",
+    "  return new Promise(function (resolve, reject) {",
+    "    var timer = setTimeout(function () {",
+    "      reject(new Error('timeout'));",
+    "    }, ms);",
+    "    function settled(callback) {",
+    "      return function (value) {",
+    "        clearTimeout(timer);",
+    "        callback(value);",
+    "      };",
+    "    }",
+    "    fetch(request).then(settled(resolve), settled(reject));",
+    "  });",
     "}",
     "function put_ok(cache, request, response) {",
     "  if (response && response.ok) {",

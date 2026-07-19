@@ -3,6 +3,8 @@ import { identity } from "./identity.mjs";
 import { path_name } from "./path_name.mjs";
 import { list_map } from "./list_map.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { each_async } from "./each_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -90,6 +92,7 @@ export async function webpack_watch() {
       });
       await app_shared_dev_build(a_name);
       await deps_refresh(a_name);
+      await apps_discover();
     }
     try {
       await catch_log_async(lambda);
@@ -110,6 +113,28 @@ export async function webpack_watch() {
       return;
     }
     property_set(ad, "deps", property_get(fresh, "deps"));
+  }
+  async function apps_discover() {
+    ("an app written since startup is in no index, so nothing would ever rebuild it; the app list is a folder read, so look again whenever we are already doing work");
+    let names = await apps_names_dev();
+    async function lambda(a_name) {
+      let known = list_find_property_or_null(app_deps, "a_name", a_name);
+      let known_already = null_not_is(known);
+      if (known_already) {
+        return;
+      }
+      let ad = await app_deps_get(a_name);
+      let failed = null_is(ad);
+      if (failed) {
+        return;
+      }
+      list_add(app_deps, ad);
+      log(webpack_watch.name, {
+        discovered: a_name,
+      });
+      build_schedule(a_name);
+    }
+    await each_async(names, lambda);
   }
   function build_schedule(a_name) {
     let existing = property_get_or_null(pending, a_name);

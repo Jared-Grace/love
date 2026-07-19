@@ -29,6 +29,7 @@ import { app_shared_verse_selected_background_color } from "./app_shared_verse_s
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
+import { g_chapter_code_next } from "./g_chapter_code_next.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 function api_read(f_name, args) {
   return html_loading_suppressed(function read() {
@@ -51,6 +52,7 @@ export async function app_g_verify_home(context) {
   let storage_key = "g_verify_selected_" + chapter_code;
   let selected_key = localStorage.getItem(storage_key);
   let advanced_for = null;
+  let chapter_advance_armed = false;
   let shown_json = null;
   let chapter;
   let status;
@@ -217,6 +219,7 @@ export async function app_g_verify_home(context) {
     }
     function on_approved(v) {
       v;
+      chapter_advance_armed = true;
       refresh();
     }
     function open_passage(passage) {
@@ -308,6 +311,24 @@ export async function app_g_verify_home(context) {
       let fresh_state = await api_read(fn_name("g_verify_chapter_next"), [
         chapter_code,
       ]);
+      if (chapter_advance_armed) {
+        let latest_key = property_get(fresh_state, "latest");
+        let fully_approved =
+          property_get(fresh_state, "action") === "done" &&
+          latest_key !== null &&
+          property_get(fresh_state, "approved") === latest_key;
+        if (fully_approved) {
+          let next_chapter = g_chapter_code_next(chapter_code);
+          let codes = property_get(
+            await api_read(fn_name("g_verify_chapters_available"), []),
+            "chapters",
+          );
+          if (list_includes(codes, next_chapter)) {
+            location.href = location.pathname + "?chapter=" + next_chapter;
+            return;
+          }
+        }
+      }
       let fresh_json = json_to({
         chapter: fresh_chapter,
         status: fresh_status,
