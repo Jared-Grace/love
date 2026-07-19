@@ -62,5 +62,7 @@ export function app_code_lesson_expression_round_down() {
       " not ",
       "4",
     ]);
+    html_div_cycle_code(c, ["A number that is already whole does not change"]);
+    html_div_cycle_code(c, ["", "Math.floor(6)", " is ", "6"]);
   }
 }
