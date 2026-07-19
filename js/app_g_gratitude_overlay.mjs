@@ -29,8 +29,10 @@ export function app_g_gratitude_overlay() {
     display: "flex",
     "flex-direction": "column",
     "justify-content": "center",
-    "align-items": "center",
+    "align-items": "stretch",
     gap: "1rem",
+    padding: "1vw",
+    "box-sizing": "border-box",
     "z-index": "1000",
   });
   function render() {
