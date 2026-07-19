@@ -14,6 +14,12 @@
 # durability. Requires: wmctrl (apt install wmctrl).
 #
 # Idempotent: re-running changes nothing. Never reduces an existing higher count.
+#
+# Install (symlinks point at this repo file, the single source of truth):
+#   ln -sfn "$PWD/xfce-workspace-shortcuts" ~/.local/bin/xfce-workspace-shortcuts
+#   ln -sfn "$PWD/xfce-workspace-shortcuts.desktop" \
+#           ~/.config/autostart/xfce-workspace-shortcuts.desktop
+# The autostart entry re-runs this at every login so a fresh session self-applies.
 set -euo pipefail
 
 readonly MINIMUM_WORKSPACES=10
