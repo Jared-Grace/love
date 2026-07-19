@@ -9,6 +9,7 @@ import { html_loading } from "./html_loading.mjs";
 import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
+import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 export async function app_g(context) {
   async function lambda() {
     await app_a_indexeddb_initialize();
@@ -23,4 +24,5 @@ export async function app_g(context) {
   await html_loading(lambda);
   html_reload_on_hash_change();
   catch_ignore_async(g_verses_waiting_prepare);
+  catch_ignore_async(g_verses_hs_warning_prepare);
 }
