@@ -41,7 +41,8 @@ export function app_g_dev_routes() {
   }
   async function dove() {
     await app_g_view_set(null);
-    app_g_discern_prevented_overlay();
+    let stays = null;
+    app_g_discern_prevented_overlay(stays);
   }
   let routes = {
     study,
