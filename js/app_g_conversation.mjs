@@ -7,7 +7,7 @@ import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_boundary } from "./g_boundary.mjs";
 import { app_g_how } from "./app_g_how.mjs";
-import { g_response_believe } from "./g_response_believe.mjs";
+import { app_g_believe } from "./app_g_believe.mjs";
 import { integer_random_0 } from "./integer_random_0.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
@@ -50,7 +50,7 @@ export async function app_g_conversation(
     app_g_how(overlay, npc, overlay_close);
   }
   function npc_believe() {
-    say(g_response_believe());
+    app_g_believe(overlay, npc, overlay_close);
   }
   let discern = { prayed: false };
   let christian = property_get(npc, "christian");
