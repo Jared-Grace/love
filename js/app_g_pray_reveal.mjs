@@ -3,6 +3,7 @@ import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
 import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { app_g_discern_prayed } from "./app_g_discern_prayed.mjs";
 import { g_thanks_discernment } from "./g_thanks_discernment.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -33,7 +34,8 @@ export function app_g_pray_reveal(container, correct, label, label_thanks, effec
     setTimeout(answered, delay);
   }
   function on_thanks() {
-    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), "#90ee90", 3500);
+    let color = app_shared_color_green_light();
+    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), color, 3500);
   }
   function on_click() {
     if (discern.prayed) {
