@@ -99,7 +99,7 @@ export function app_code_lesson_expression_exponent() {
     function running_count(grid, number) {
       "a quiet, small grey count for the intermediate factors - deliberately subtle so the final count is what draws the eye";
       let label = html_span_text_smaller(grid, text_to(number));
-      html_font_color_set(label, "rgb(160, 160, 160)");
+      html_font_color_set(label, "rgb(115, 115, 115)");
       return label;
     }
     function final_count(grid, number, color) {
