@@ -1,9 +1,10 @@
 import { list_filter_text_includes_not } from "../../love/js/list_filter_text_includes_not.mjs";
 import { emoji_book_open } from "../../love/js/emoji_book_open.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
-import { ebible_versions_english_choices_browser } from "../../love/js/ebible_versions_english_choices_browser.mjs";
 import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
-import { app_reply_verses_add } from "../../love/js/app_reply_verses_add.mjs";
+import { app_reply_verses_add_uplifting } from "../../love/js/app_reply_verses_add_uplifting.mjs";
+import { list_unique } from "../../love/js/list_unique.mjs";
+import { list_copy } from "../../love/js/list_copy.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { html_centered } from "../../love/js/html_centered.mjs";
 import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
@@ -35,11 +36,8 @@ import { property_get } from "../../love/js/property_get.mjs";
 export async function app_verses(context) {
   let r = await app_reply_initialize(context);
   let languages = property_get(r, "languages");
-  let en = property_get(r, "en");
   let root = property_get(r, "root");
   let encouragement = property_get(r, "encouragement");
-  let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
-  let english_choices = await ebible_versions_english_choices_browser();
   let languages_chosen_default = app_reply_languages_chosen_default();
   let default_codes = list_map_property(
     languages_chosen_default,
@@ -109,23 +107,21 @@ export async function app_verses(context) {
   }
   async function generate() {
     list_empty(bible_texts);
-    let e = encouragement;
+    let unique = list_unique(encouragement);
+    let e = unique;
     if (verse_count === 1) {
-      e = encouragement_singles;
+      e = list_filter_text_includes_not(unique, "-");
     }
-    let taken = list_shuffle_take(e, verse_count);
-    let reference_current = null;
-    async function verse_each(reference) {
-      reference_current = await app_reply_verses_add(
-        en,
+    let shuffled = list_copy(e);
+    let taken = list_shuffle_take(shuffled, verse_count);
+    async function reference_each(reference) {
+      await app_reply_verses_add_uplifting(
         reference,
-        english_choices,
-        reference_current,
-        bible_texts,
         languages_chosen,
+        bible_texts,
       );
     }
-    await each_async(taken, verse_each);
+    await each_async(taken, reference_each);
     display();
     await copy();
   }

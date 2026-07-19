@@ -20,7 +20,7 @@ export async function uplifting_package_get(bible_folder) {
   }
   let package_map = await catch_ignore_async(fetch_package);
   if (null_is(package_map)) {
-    package_map = null;
+    return null;
   }
   global_function_property_set(uplifting_package_get, bible_folder, package_map);
   return package_map;
