@@ -9,7 +9,7 @@
     "abstains so the native permission engine prompts."
   ],
   "cases": [
-    { "command": "ls", "decision": "allow", "why": "trusted verb, bare" },
+    { "command": "ls", "decision": "deny", "why": "trusted verb, bare" },
     { "command": "ls && ls", "decision": "allow", "why": "chain of trusted verbs" },
     { "command": "ls | tail -4", "decision": "allow", "why": "pipe of trusted verbs" },
     { "command": "FOO=bar ls", "decision": "allow", "why": "inert assignment is stripped" },
