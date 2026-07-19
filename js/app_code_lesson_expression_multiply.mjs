@@ -221,7 +221,7 @@ export function app_code_lesson_expression_multiply() {
       "You already know how to add numbers like ",
       "2 + 3 + 4",
     ]);
-    html_div_cycle_code(c, ["What if the numbers are all the same number?"]);
+    html_div_cycle_code(c, ["What if the numbers you add together are all the same number?"]);
     let like = html_div(c);
     html_span_text(like, "Like ");
     sum_counted(like, 2, value_one, count_one, 3);
