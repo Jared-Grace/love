@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=XFCE workspace shortcuts
+Comment=Ensure 10 workspaces and (re)wire the durable workspace keybindings at login
+# Absolute path required: .desktop Exec does not expand ~ or $HOME, and autostart
+# runs with a bare PATH. This is the repo file itself -- single source of truth.
+# Installed by symlinking this file into ~/.config/autostart/ (see the header of
+# xfce-workspace-shortcuts). Re-running at every login is safe: the script is
+# idempotent and never lowers an already-higher workspace count.
+Exec=/home/j/repos/love/linux/xfce-workspace-shortcuts
+Terminal=false
+OnlyShowIn=XFCE;
+X-XFCE-Autostart-Override=true
