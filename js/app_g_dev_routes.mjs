@@ -5,6 +5,7 @@ import { app_g_view_kind_npc } from "./app_g_view_kind_npc.mjs";
 import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.mjs";
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
+import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_dev_routes() {
@@ -38,11 +39,16 @@ export function app_g_dev_routes() {
     await app_g_view_set(null);
     app_g_prayer_overlay();
   }
+  async function dove() {
+    await app_g_view_set(null);
+    app_g_discern_prevented_overlay();
+  }
   let routes = {
     study,
     conversation,
     gospel_share,
     prayer,
+    dove,
   };
   return routes;
 }
