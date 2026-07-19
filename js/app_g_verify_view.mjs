@@ -5,6 +5,7 @@ import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
+import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
 import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -197,6 +198,7 @@ export function app_g_verify_view(
     bh_verse,
   );
   html_button_biblehub_open_parallel(links_bar, bh_chapter, bh_book, bh_verse);
+  html_button_biblehub_open_interlinear(links_bar, bh_chapter, bh_book, bh_verse);
   let approve_bar = html_div(container);
   html_style_set(approve_bar, "margin-top", small_gap);
   html_style_set(approve_bar, "text-align", "center");
