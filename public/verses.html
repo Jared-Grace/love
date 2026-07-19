@@ -5,10 +5,3819 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🙏</text></svg>">
   <title>verses</title>
+  <link rel="manifest" href="/verses.webmanifest">
 </head>
 <body>
-  <script src="verses.js"> 
-    
+  <script type="module"> 
+    let global = {} ;
+async function app_verses(context) {
+  let r = await app_reply_initialize(context);
+  let languages = property_get(r, "languages");
+  let en = property_get(r, "en");
+  let root = property_get(r, "root");
+  let encouragement = property_get(r, "encouragement");
+  let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
+  let english_choices = await ebible_versions_english_choices_browser();
+  let languages_chosen_default = app_reply_languages_chosen_default();
+  let default_codes = list_map_property(languages_chosen_default, "language_code");
+  let default_l = list_join_plus(default_codes);
+  let hash = html_hash_object_get();
+  let l = property_get_or(hash, "l", default_l);
+  let language_codes = text_split_plus(l);
+  function code_to_language(code) {
+    return list_find_property_or_null(languages, "language_code", code);
+  }
+  let mapped = list_map(language_codes, code_to_language);
+  let languages_chosen = list_filter_null_not_is(mapped);
+  let bible_texts = [];
+  let verse_count = 1;
+  let bc = html_bar_content_padded(root);
+  let bar = property_get(bc, "bar");
+  let content = property_get(bc, "content");
+  html_centered(bar);
+  app_shared_bible_languages_gear(bar, content, language_codes);
+  app_shared_text_body(content, "1. Tap the ⚙️ button above to choose which language or languages your verses appear in.");
+  let card2 = app_shared_container_blue(content);
+  app_shared_text_body(card2, "2. How many Bible verses would you like?");
+  let counts = [1, 2, 3, 4, 6, 8, 10, 20, 40];
+  let count_updates = [];
+  function count_each(c) {
+    let component = null;
+    function on_click() {
+      verse_count = c;
+      counts_refresh();
+    }
+    component = app_shared_button(card2, c, on_click);
+    function update() {
+      let chosen = equal(verse_count, c);
+      app_shared_button_toggle_style(chosen, component);
+    }
+    list_add(count_updates, update);
+    update();
+  }
+  each(counts, count_each);
+  let card3 = app_shared_container_blue(content);
+  app_shared_text_body(card3, "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.");
+  let generate_button = app_shared_button(card3, "✨ Generate", generate);
+  app_shared_text_body(card3, "If the copy did not work, this button will gently copy them again.");
+  let copy_button = app_shared_button(card3, html_button_copy_text(), copy);
+  let card4 = app_shared_container_blue(content);
+  card4_refresh();
+  function counts_refresh() {
+    each(count_updates, count_update_invoke);
+  }
+  function count_update_invoke(update) {
+    update();
+  }
+  async function generate() {
+    list_empty(bible_texts);
+    let e = encouragement;
+    if (verse_count === 1) {
+      e = encouragement_singles;
+    }
+    let taken = list_shuffle_take(e, verse_count);
+    let reference_current = null;
+    async function verse_each(reference) {
+      reference_current = await app_reply_verses_add(en, reference, english_choices, reference_current, bible_texts, languages_chosen);
+    }
+    await each_async(taken, verse_each);
+    display();
+    await copy();
+  }
+  function display() {
+    html_clear(card4);
+    each(bible_texts, display_line);
+    card4_refresh();
+  }
+  function display_line(line) {
+    app_shared_text_body(card4, line);
+  }
+  function card4_refresh() {
+    let empty = list_empty_is(bible_texts);
+    html_display_none_or_block(empty, card4);
+  }
+  async function copy() {
+    let joined = await list_join_newline_2_copy(bible_texts);
+  }
+}
+function list_filter_text_includes_not(mapped, part) {
+  function lambda(item) {
+    let n = text_includes_not(item, part);
+    return n;
+  }
+  let filtered = list_filter(mapped, lambda);
+  return filtered;
+}
+function text_includes_not(item, part) {
+  let v = text_includes(item, part);
+  let n = not(v);
+  return n;
+}
+function not(b) {
+  let n = !b;
+  return n;
+}
+function text_includes(input, part) {
+  let o = {
+    input,
+    part
+  };
+  text_is_assert_json(input, o);
+  text_is_assert_json(part, o);
+  let i = input.includes(part);
+  return i;
+}
+function text_is_assert_json(value, o) {
+  function lambda() {
+    let message = json_to(o);
+    return message;
+  }
+  text_is_assert_message_get(value, lambda);
+}
+function text_is_assert_message_get(value, lambda) {
+  let b = text_is(value);
+  assert_message_get(b, lambda);
+}
+function text_is(value) {
+  let ti = typeof value === "string";
+  return ti;
+}
+function assert_message_get(b, lambda) {
+  if (not(b)) {
+    let message = lambda();
+    error(message);
+  }
+}
+function error(message) {
+  throw new Error(message);
+}
+function json_to(object) {
+  let json = JSON.stringify(object);
+  return json;
+}
+function list_filter(list, lambda$item) {
+  list_is_assert_json(list, {
+    hint: "list_filter expects a list to filter"
+  });
+  function list_filter_lambda(item) {
+    let match = lambda$item(item);
+    return match;
+  }
+  let filtered = list.filter(list_filter_lambda);
+  return filtered;
+}
+function list_is_assert_json(list, json) {
+  let result = list_is(list);
+  assert_json(result, {
+    list,
+    json
+  });
+}
+function assert_json(b, o) {
+  function lambda() {
+    return o;
+  }
+  assert_json_get(b, lambda);
+}
+function assert_json_get(b, lambda) {
+  function json_get() {
+    let object = lambda();
+    let json = json_to(object);
+    return json;
+  }
+  assert_message_get(b, json_get);
+}
+function list_is(value) {
+  let l = Array.isArray(value);
+  return l;
+}
+async function ebible_versions_english_choices_browser() {
+  async function lambda() {
+    let destination = ebible_versions_english_choices_upload_path();
+    let choices = await firebase_storage_download_json_jg(destination);
+    return choices;
+  }
+  let english_choices = await global_function_initialize_lambda_async(ebible_versions_english_choices_browser, lambda);
+  return english_choices;
+}
+async function firebase_storage_download_json_jg(destination) {
+  let project_url = firebase_storage_url_project_jg();
+  let o = await firebase_storage_download_json(project_url, destination);
+  return o;
+}
+async function firebase_storage_download_json(project_url, destination) {
+  let s = await firebase_storage_download_text(project_url, destination);
+  let o = json_from(s);
+  return o;
+}
+async function firebase_storage_download_text(project_url, destination) {
+  let buffer = await firebase_storage_download(project_url, destination);
+  let s = buffer_text_to(buffer);
+  return s;
+}
+function buffer_text_to(buffer) {
+  let s = null;
+  let b = browser_is();
+  if (b) {
+    if (buffer instanceof ArrayBuffer) {
+      s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
+    } else if (buffer instanceof Uint8Array) {
+      s = new TextDecoder("utf-8").decode(buffer);
+    } else {
+      throw new Error("Unsupported buffer type");
+    }
+  } else {
+    s = buffer.toString("utf8");
+  }
+  return s;
+}
+function browser_is() {
+  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
+  return b;
+}
+async function firebase_storage_download(project_url, destination) {
+  let fn = http;
+  let result = await firebase_storage_download_generic(project_url, destination, fn);
+  return result;
+}
+async function firebase_storage_download_generic(project_url, destination, http_fn) {
+  destination = firebase_path_fix(destination);
+  async function lambda() {
+    let url = firebase_storage_url(destination, project_url);
+    let buffer = await http_fn(url);
+    return buffer;
+  }
+  let result = await html_loading(lambda);
+  return result;
+}
+async function html_loading(lambda) {
+  let suppressed = html_loading_state().suppressed;
+  let show = browser_is() && not(suppressed);
+  if (show) {
+    html_loading_show();
+  }
+  let result = null;
+  try {
+    result = await lambda();
+  } finally {
+    if (show) {
+      html_loading_hide();
+    }
+  }
+  return result;
+}
+function html_loading_state() {
+  return value;
+}
+function html_loading_show() {
+  let state = html_loading_state();
+  let timer = state.timer;
+  if (timer !== null) {
+    clearTimeout(timer);
+    state.timer = null;
+  }
+  state.count = state.count + 1;
+  let overlay = state.overlay;
+  if (overlay === null) {
+    state.overlay = html_loading_overlay();
+    return;
+  }
+  html_style_set(overlay, "opacity", "1");
+}
+function html_loading_overlay() {
+  let body = html_document_body();
+  let div = html_div(body);
+  let s = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+    background: "rgba(0, 0, 0, 0.8)",
+    display: "flex",
+    "flex-direction": "column",
+    "justify-content": "center",
+    "align-items": "center",
+    gap: "0.25rem",
+    "z-index": "1000",
+    opacity: "0",
+    transition: "opacity 0.15s ease"
+  };
+  html_style_assign(div, s);
+  html_loading_spinner(div);
+  let message = html_p_text(div, "One moment, please 🙏");
+  html_style_assign(message, {
+    color: "white",
+    "font-size": "1.5rem",
+    "font-family": "sans-serif",
+    "text-align": "center",
+    "text-shadow": "0 0.05em 0.15em rgba(0, 0, 0, 0.8)",
+    background: "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%)",
+    padding: "1.25rem 3.5rem"
+  });
+  html_reflow_force(div);
+  html_style_set(div, "opacity", "1");
+  return div;
+}
+function html_div(parent) {
+  let div = html_element(parent, "div");
+  return div;
+}
+function html_element(parent, tag_name) {
+  let e = document.createElement(tag_name);
+  let component = html_component_wrap(e);
+  html_parent_append(parent, component);
+  html_style_set(component, "box-sizing", "border-box");
+  return component;
+}
+function html_parent_append(parent, child) {
+  let parent_element = html_component_element_get(parent);
+  let child_element = html_component_element_get(child);
+  parent_element.appendChild(child_element);
+}
+function html_component_element_get(component) {
+  let element = property_get(component, "element");
+  return element;
+}
+function property_get(object, property_name) {
+  if (not((property_name in object))) {
+    function object_get() {
+      let properties = properties_get(object);
+      ("this way you see ", property_name, " if you receive truncated beginning or ending");
+      let v = {
+        property_name,
+        properties,
+        object,
+        properties_end: properties,
+        property_name_end: property_name
+      };
+      return v;
+    }
+    error_json_lamba(object_get);
+  }
+  let value = object[property_name];
+  return value;
+}
+function error_json_lamba(lambda) {
+  let message = lambda();
+  error_json(message);
+}
+function error_json(o) {
+  let message = json_format_to(o);
+  error(message);
+}
+function json_format_to(object) {
+  let json = JSON.stringify(object, null, 1);
+  return json;
+}
+function properties_get(obj) {
+  let properties = Object.getOwnPropertyNames(obj);
+  return properties;
+}
+function html_style_set(b, style_key, style_value) {
+  let b_element = html_component_element_get(b);
+  b_element.style[style_key] = style_value;
+}
+function html_component_wrap(element) {
+  let c = {
+    element
+  };
+  return c;
+}
+function html_document_body() {
+  let body_element = document.body;
+  let body = html_component_wrap(body_element);
+  return body;
+}
+function html_style_assign(b, s) {
+  let b_element = html_component_element_get(b);
+  object_assign(b_element.style, s);
+}
+function object_assign(to, from) {
+  Object.assign(to, from);
+}
+function html_reflow_force(component) {
+  let element = html_component_element_get(component);
+  let v = element.offsetHeight;
+  return v;
+}
+function html_p_text(root, text) {
+  let p = html_p(root);
+  html_text_set(p, text);
+  return p;
+}
+function html_text_set(component, text) {
+  let element = html_component_element_get(component);
+  element.innerHTML = text;
+}
+function html_p(root) {
+  let p = html_element(root, "p");
+  return p;
+}
+function html_loading_spinner(parent) {
+  html_loading_spinner_style();
+  let spinner = html_div(parent);
+  html_style_assign(spinner, {
+    width: "6rem",
+    height: "6rem",
+    border: "0.5rem solid rgba(255, 255, 255, 0.25)",
+    "border-top-color": "white",
+    "border-radius": "50%",
+    animation: "html_loading_spin 2s ease-in-out infinite"
+  });
+  return spinner;
+}
+function html_loading_spinner_style() {
+  let state = html_loading_state();
+  if (state.styled) {
+    return;
+  }
+  state.styled = true;
+  html_style_head("@keyframes html_loading_spin {\n  0% { transform: rotate(0deg) scale(1); }\n  50% { transform: rotate(180deg) scale(1.15); }\n  100% { transform: rotate(360deg) scale(1); }\n}");
+}
+function html_style_head(style_text) {
+  let parent = html_document_head();
+  let component = html_element(parent, "style");
+  html_text_set(component, style_text);
+}
+function html_document_head() {
+  let head_e = document.head;
+  let head = html_component_wrap(head_e);
+  return head;
+}
+function html_loading_hide() {
+  let state = html_loading_state();
+  state.count = state.count - 1;
+  if (state.count > 0) {
+    return;
+  }
+  state.count = 0;
+  function remove() {
+    state.timer = null;
+    if (state.count > 0) {
+      return;
+    }
+    let overlay = state.overlay;
+    if (overlay === null) {
+      return;
+    }
+    html_remove(overlay);
+    state.overlay = null;
+  }
+  function fade_out() {
+    state.timer = null;
+    if (state.count > 0) {
+      return;
+    }
+    let overlay = state.overlay;
+    if (overlay === null) {
+      return;
+    }
+    html_style_set(overlay, "opacity", "0");
+    state.timer = setTimeout(remove, 150);
+  }
+  state.timer = setTimeout(fade_out, 150);
+}
+function html_remove(component) {
+  let element = html_component_element_get(component);
+  let remove_listeners = element.remove_listeners;
+  let has_listeners = remove_listeners !== undefined;
+  if (has_listeners) {
+    remove_listeners();
+  }
+  element.remove();
+}
+function firebase_storage_url(storage_path, project_url) {
+  let replaced = text_replace(storage_path, "/", "%2F");
+  let url = text_combine_multiple(["https://firebasestorage.googleapis.com/v0/b/", project_url, "/o/", replaced, "?alt=media"]);
+  return url;
+}
+function text_replace(t, from, to) {
+  let split = text_split(t, from);
+  let replaced = list_join(split, to);
+  return replaced;
+}
+function list_join(list, separator) {
+  let l = list_is(list);
+  if (not(l)) {
+    error_json({
+      list
+    });
+  }
+  let joined = list.join(separator);
+  return joined;
+}
+function text_split(s, separator) {
+  let split = s.split(separator);
+  return split;
+}
+function text_combine_multiple(list) {
+  arguments_assert(arguments, 1);
+  let combined = list_reduce(list, text_combine, "");
+  return combined;
+}
+function arguments_assert(args, count) {
+  let length = property_get(args, "length");
+  equal_assert_json(length, count, {
+    hint: "this function was called with a different number of arguments than it expects — check the call site's argument count"
+  });
+}
+function equal_assert_json(left, right, json) {
+  let eq = equal(left, right);
+  assert_json(eq, {
+    left,
+    right,
+    json
+  });
+}
+function equal(left, right) {
+  let eq = left === right;
+  return eq;
+}
+function list_reduce(list, lambda$value$item, inital) {
+  function lambda(value, item, index) {
+    let v = lambda$value$item(value, item);
+    return v;
+  }
+  let reduced = list_reduce_index(list, lambda, inital);
+  return reduced;
+}
+function list_reduce_index(list, lambda$value$item$index, inital) {
+  let value = inital;
+  function lambda(item, index) {
+    value = lambda$value$item$index(value, item, index);
+  }
+  each_index(list, lambda);
+  return value;
+}
+function each_index(list, lambda$item$index) {
+  let index = 0;
+  function lambda_each_index(item) {
+    lambda$item$index(item, index);
+    index++;
+  }
+  each(list, lambda_each_index);
+}
+function each(list, lambda$item) {
+  for (let item of list) {
+    let result = lambda$item(item);
+    if (result === true) {
+      return;
+    }
+  }
+}
+function text_combine(left, right) {
+  let combined = left + right;
+  return combined;
+}
+function firebase_path_fix(path) {
+  let replaced = text_replace(path, "\\", "/");
+  return replaced;
+}
+async function http(url) {
+  let options = http_get_options();
+  let v = await http_generic(url, options);
+  return v;
+}
+function http_get_options() {
+  let v = {
+    method: "GET"
+  };
+  return v;
+}
+async function http_generic(url, options) {
+  let method = options.method || "GET";
+  let body = options.body || null;
+  let b = browser_is();
+  if (b) {
+    async function lambda3() {
+      let r = {
+        method
+      };
+      let exists = property_exists(options, "body");
+      if (exists) {
+        object_assign(r, {
+          headers: {
+            "Content-Type": "application/json",
+            ...options.headers || ({})
+          },
+          body: json_to(body)
+        });
+      }
+      let response = await fetch(url, r);
+      if (not(response.ok)) {
+        error("Failed to fetch file");
+      }
+      let buf = await response.arrayBuffer();
+      return buf;
+    }
+    let v = await html_loading(lambda3);
+    return v;
+  }
+  let sleep = true;
+  let e = property_exists(options, "sleep");
+  if (e) {
+    sleep = property_get(options, "sleep");
+  }
+  if (sleep) {
+    await http_sleep();
+  }
+  let swHttps = text_starts_with_https_prefix(url);
+  let h_name = ternary(swHttps, "s", "");
+  let h = await import(text_combine("http", h_name));
+  let buffer = await promise_wrap(lambda);
+  function lambda(resolve, reject) {
+    let urlObj = new URL(url);
+    function lambda5(res) {
+      let chunks = [];
+      function lambda2(chunk) {
+        chunks.push(chunk);
+      }
+      let i = catch_call_later(reject, lambda2);
+      res.on("data", i);
+      function on_end() {
+        let statusCode = property_get(res, "statusCode");
+        let d = divide(statusCode, 100);
+        let rounded = round(d);
+        assert_json(rounded === 2, {
+          url,
+          statusCode
+        });
+        let v2 = Buffer.concat(chunks);
+        resolve(v2);
+      }
+      let i2 = catch_call_later(reject, on_end);
+      res.on("end", i2);
+    }
+    let a = {
+      hostname: urlObj.hostname,
+      port: urlObj.port || (swHttps ? 443 : 80),
+      path: text_combine(urlObj.pathname, urlObj.search),
+      method,
+      family: 4,
+      headers: {
+        ...options.headers || ({}),
+        ...body ? {
+          "Content-Type": "application/json"
+        } : {}
+      }
+    };
+    let req = h.request(a, lambda5);
+    req.on("error", reject);
+    if (body) {
+      let json = json_to(body);
+      req.write(json);
+    }
+    req.end();
+  }
+  return buffer;
+}
+async function sleep(ms) {
+  await new Promise(function lambda(resolve) {
+    let v = setTimeout(resolve, ms);
+    return v;
+  });
+}
+function text_starts_with_https_prefix(url) {
+  let prefix = https_prefix();
+  let swHttps = text_starts_with(url, prefix);
+  return swHttps;
+}
+function text_starts_with(t, prefix) {
+  let sw = t.startsWith(prefix);
+  return sw;
+}
+function https_prefix() {
+  let p = "https://";
+  return p;
+}
+function ternary(condition, on_true, on_false) {
+  let result = null;
+  if (condition) {
+    result = on_true;
+  } else {
+    result = on_false;
+  }
+  return result;
+}
+function property_exists(object, property_name) {
+  let exists = object ? Object.hasOwn(object, property_name) : false;
+  return exists;
+}
+function round(n) {
+  let rounded = Math.round(n);
+  return rounded;
+}
+function catch_call_later(lambda$e, lambda) {
+  let i = function inner() {
+    let result = null;
+    try {
+      result = lambda(...arguments);
+    } catch (e) {
+      lambda$e(e);
+    }
+    return result;
+  };
+  return i;
+}
+async function promise_wrap(lambda$resolve$reject) {
+  let p = await promise_wrap_unawait(lambda$resolve$reject);
+  return p;
+}
+function promise_wrap_unawait(lambda$resolve$reject) {
+  let r = new Promise(function promise_wrap_inner(resolve, reject) {
+    try {
+      lambda$resolve$reject(resolve, reject);
+    } catch (e) {
+      reject(e);
+    }
+  });
+  return r;
+}
+async function http_sleep() {
+  let seconds = integer_random(5, 8);
+  await sleep_seconds(seconds);
+}
+async function sleep_seconds(seconds) {
+  await sleep(multiply(seconds, 1000));
+}
+function multiply(left, right) {
+  let p = left * right;
+  return p;
+}
+function integer_random(min, max) {
+  let list = [min, max];
+  assert_multiple(integer_is, list);
+  let r = text_combine(floor(multiply(random(), text_combine(subtract(max, min), 1))), min);
+  return r;
+}
+function assert_multiple(fn, list) {
+  function lambda(l) {
+    let ii = fn(l);
+    assert(ii);
+  }
+  each(list, lambda);
+}
+function assert(b) {
+  if (not(b)) {
+    error();
+  }
+}
+function integer_is(value) {
+  let ii = Number.isInteger(value);
+  return ii;
+}
+function random() {
+  let r = Math.random();
+  return r;
+}
+function floor(p) {
+  let floored = Math.floor(p);
+  return floored;
+}
+function subtract(left, right) {
+  let difference = left - right;
+  return difference;
+}
+function divide(top, bottom) {
+  let divided = top / bottom;
+  return divided;
+}
+function json_from(json) {
+  let parsed = JSON.parse(json);
+  return parsed;
+}
+function firebase_storage_url_project_jg() {
+  let project_name = firebase_project_name_jg();
+  let project_url = firebase_storage_url_project(project_name);
+  return project_url;
+}
+function firebase_storage_url_project(project_name) {
+  let url = text_combine(project_name, ".firebasestorage.app");
+  return url;
+}
+function firebase_project_name_jg() {
+  let r = "jared-grace";
+  return r;
+}
+function ebible_versions_english_choices_upload_path() {
+  let file_name = "choices";
+  let file_name_with_extension = file_name_json(file_name);
+  let destination = list_join_slash_forward(["bibles", "en", file_name_with_extension]);
+  return destination;
+}
+function list_join_slash_forward(list) {
+  let joined = list_join(list, "/");
+  return joined;
+}
+function file_name_json(name) {
+  let file_name = text_combine(name, json_extension());
+  return file_name;
+}
+function json_extension() {
+  let ext_j = ".json";
+  return ext_j;
+}
+async function global_function_initialize_lambda_async(fn, lambda) {
+  arguments_assert(arguments, 2);
+  let global = global_get();
+  let value = await property_initialize_lambda_async(global, fn.name, lambda);
+  return value;
+}
+async function property_initialize_lambda_async(object, property_name, lambda) {
+  let r = await property_initialize_lambda_info_async(object, property_name, lambda);
+  let value = property_get(r, "value");
+  return value;
+}
+async function property_initialize_lambda_info_async(object, property_name, lambda) {
+  let exists = property_exists(object, property_name);
+  if (not(exists)) {
+    let value_set = lambda();
+    property_set(object, property_name, value_set);
+  }
+  let value = await property_get(object, property_name);
+  let r = {
+    value,
+    exists
+  };
+  return r;
+}
+function property_set(object, property_name, value) {
+  undefined_not_is_assert_object_property_json(value, object, property_name, {
+    hint: "the value being set shouldn't be undefined — did it fail to compute?"
+  });
+  object[property_name] = value;
+}
+function undefined_not_is_assert_object_property_json(value, object, property_name, json) {
+  function object_get() {
+    let properties = properties_get(object);
+    let v = {
+      property_name,
+      properties,
+      object,
+      json
+    };
+    return v;
+  }
+  undefined_not_is_assert_lambda(value, object_get);
+}
+function undefined_not_is_assert_lambda(value, lambda) {
+  if (undefined_is(value)) {
+    error_json_lamba(lambda);
+  }
+}
+function undefined_is(value) {
+  let u = typeof value === "undefined";
+  return u;
+}
+function global_get() {
+  let exists = property_exists(global, global_alternate_set.name);
+  if (exists) {
+    let value = property_get(global, global_alternate_set.name);
+    return value;
+  }
+  return global;
+}
+function global_alternate_set(global_alternate) {
+  let global = global_get();
+  global_function_set(global_alternate_set, global_alternate);
+  let unset = function lambda() {
+    property_delete(global, global_alternate_set.name);
+  };
+  return unset;
+}
+function property_delete(object, property_name) {
+  property_exists_assert_json(object, property_name, {
+    hint: "the property should exist before it can be deleted"
+  });
+  delete object[property_name];
+}
+function property_exists_assert_json(object, property_name, json) {
+  let result = property_exists(object, property_name);
+  assert_json(result, {
+    object,
+    property_name,
+    json
+  });
+}
+function global_function_set(fn, value) {
+  undefined_not_is_assert_json(value, {
+    hint: "the value to store on the global shouldn't be undefined — did it fail to compute?"
+  });
+  let global = global_get();
+  property_set(global, fn.name, value);
+}
+function undefined_not_is_assert_json(value, json) {
+  if (undefined_is(value)) {
+    error_json(json);
+  }
+}
+function app_reply_languages_chosen_default() {
+  let en_l = ebible_language_english();
+  let o = ebible_language_original();
+  let languages_chosen_default = [o, en_l];
+  return languages_chosen_default;
+}
+function ebible_language_original() {
+  let v = {
+    name: ebible_language_original_name(),
+    bible_folder: bible_interlinear_verses_upload_folder(),
+    language_code: ebible_language_original_code()
+  };
+  return v;
+}
+function ebible_language_original_code() {
+  let v = "original";
+  return v;
+}
+function bible_interlinear_verses_upload_folder() {
+  let v = "original";
+  return v;
+}
+function ebible_language_original_name() {
+  let v = "Original";
+  return v;
+}
+function ebible_language_english() {
+  let v = {
+    name: ebible_language_en_name(),
+    bible_folder: ebible_folder_english(),
+    language_code: ebible_language_en_code()
+  };
+  return v;
+}
+function ebible_language_en_code() {
+  let v = "en";
+  return v;
+}
+function ebible_folder_english() {
+  let e = "engbsb";
+  return e;
+}
+function ebible_language_en_name() {
+  let v = "English";
+  return v;
+}
+async function app_reply_verses_add(en, reference, english_choices, reference_current, bible_texts, languages_chosen) {
+  let copy = list_copy_reverse(languages_chosen);
+  let mapped = list_map_property(copy, "bible_folder");
+  let verses = await ebible_references_parse_lines_browser(mapped, [reference]);
+  function lambda(v) {
+    if (null_is(v)) {
+      return;
+    }
+    if (equal_not(reference, reference_current)) {
+      list_add(bible_texts, reference);
+      reference_current = reference;
+    }
+    let text = property_get(v, "text");
+    list_add(bible_texts, text);
+  }
+  each(verses, lambda);
+  return reference_current;
+}
+async function ebible_references_parse_lines_browser(bible_folders, lines) {
+  let books_get = ebible_version_books_browser;
+  let waited = await ebible_references_parse_lines_generic(books_get, bible_folders, lines, ebible_verse_browser);
+  return waited;
+}
+async function ebible_verse_browser(bible_folder, chapter_code, verse_number) {
+  let verse_get = global_function_initialize(ebible_verse_browser, ebible_verse_download);
+  let verse = await verse_get(bible_folder, chapter_code, verse_number);
+  return verse;
+}
+function global_function_initialize(fn, initial) {
+  arguments_assert(arguments, 2);
+  let value_get = lambda_get(initial);
+  let value = global_function_initialize_lambda(fn, value_get);
+  return value;
+}
+function global_function_initialize_lambda(fn, lambda) {
+  arguments_assert(arguments, 2);
+  let global = global_get();
+  let value = property_initialize_lambda(global, fn.name, lambda);
+  return value;
+}
+function property_initialize_lambda(object, property_name, lambda) {
+  let exists = property_exists(object, property_name);
+  if (not(exists)) {
+    let value_set = lambda();
+    property_set(object, property_name, value_set);
+  }
+  let value = property_get(object, property_name);
+  return value;
+}
+function lambda_get(value) {
+  function value_get() {
+    return value;
+  }
+  return value_get;
+}
+async function ebible_verse_download(bible_folder, chapter_code, verse_number) {
+  let n = ebible_verses_upload_name(chapter_code, verse_number);
+  let verse = await firebase_storage_download_ebible(bible_folder, n);
+  return verse;
+}
+async function firebase_storage_download_ebible(en, file_name) {
+  let destination = ebible_firebase_upload_path(en, file_name);
+  let o = await firebase_storage_download_json_jg(destination);
+  return o;
+}
+function ebible_firebase_upload_path(bible_folder, file_name) {
+  let file_name_with_extension = ebible_firebase_upload_path_name(file_name);
+  let joined = list_join_slash_forward(["bible", bible_folder]);
+  let destination = list_join_slash_forward([joined, file_name_with_extension]);
+  return destination;
+}
+function ebible_firebase_upload_path_name(file_name) {
+  let file_name2 = file_name_json(file_name);
+  return file_name2;
+}
+function ebible_verses_upload_name(chapter_code, verse_number) {
+  let joined = list_join_slash_forward([chapter_code, verse_number]);
+  return joined;
+}
+async function ebible_version_books_browser(bible_folder) {
+  let result = await ebible_version_books_original_check(bible_folder);
+  if (null_not_is(result)) {
+    return result;
+  }
+  let file_name = ebible_version_books_upload_name();
+  let v = await firebase_storage_download_ebible_cache(ebible_version_books_browser, bible_folder, file_name);
+  let books = property_get(v, "books");
+  return books;
+}
+async function ebible_version_books_original_check(bible_folder) {
+  let result = null;
+  let right = ebible_language_original_code();
+  if (equal(bible_folder, right)) {
+    let bible_folder2 = ebible_folder_english();
+    result = await ebible_version_books_browser(bible_folder2);
+  }
+  return result;
+}
+function null_not_is(value) {
+  let nn = value !== null;
+  return nn;
+}
+async function firebase_storage_download_ebible_cache(fn, bible_folder, file_name) {
+  async function get() {
+    let v = await firebase_storage_download_ebible(bible_folder, file_name);
+    return v;
+  }
+  let value = await global_function_property_initialize_async(fn, bible_folder, get);
+  return value;
+}
+async function global_function_property_initialize_async(fn, property_name, lambda) {
+  let global = global_get();
+  let fn_object = property_initialize(global, fn.name, {});
+  let value = await property_initialize_lambda_async(fn_object, property_name, lambda);
+  return value;
+}
+function property_initialize(object, property_name, value_initial) {
+  property_set_if_exists_not(object, property_name, value_initial);
+  let value = property_get(object, property_name);
+  return value;
+}
+function property_set_if_exists_not(object, property_name, value) {
+  let n = property_exists_not(object, property_name);
+  if (n) {
+    property_set(object, property_name, value);
+  }
+}
+function property_exists_not(object, property_name) {
+  let e = property_exists(object, property_name);
+  let ne = not(e);
+  return ne;
+}
+function ebible_version_books_upload_name() {
+  let v = "books";
+  return v;
+}
+async function ebible_references_parse_lines_generic(books_get, bible_folders, lines, verse_get) {
+  let bible_folder = ebible_folder_english();
+  let books_all = await list_map_unordered_async(bible_folders, books_get);
+  let books = await books_get(bible_folder);
+  let v = ebible_references_names(books, lines);
+  let book_names = property_get(v, "book_names");
+  let chapter_verses_list = property_get(v, "chapter_verses_list");
+  function lambda2(la) {
+    function lambda(book_name, chapter_verses) {
+      let v2 = ebible_reference_parts(books, book_name, chapter_verses);
+      let verse_end = property_get(v2, "verse_end");
+      let verse_start = property_get(v2, "verse_start");
+      let chapter_code = property_get(v2, "chapter_code");
+      let book_code = property_get(v2, "book_code");
+      function each_version(bible_folder, books) {
+        function lambda4(verse_number) {
+          verse_number = text_to(verse_number);
+          la({
+            bible_folder,
+            chapter_code,
+            verse_number
+          });
+        }
+        each_range_from(verse_start, verse_end, lambda4);
+      }
+      each_pair(bible_folders, books_all, each_version);
+    }
+    each_pair(book_names, chapter_verses_list, lambda);
+  }
+  let list = list_adder(lambda2);
+  async function lambda3(v) {
+    let verse_number = property_get(v, "verse_number");
+    let chapter_code = property_get(v, "chapter_code");
+    let bible_folder = property_get(v, "bible_folder");
+    let v3 = await catch_ignore_async(verse_get_lambda);
+    async function verse_get_lambda() {
+      let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [verse_number]);
+      let result = await verse_get(bible_folder, chapter_code, verse_number);
+      object_merge_set(result, {
+        reference
+      });
+      object_assign(result, {
+        chapter_code
+      });
+      return result;
+    }
+    return v3;
+  }
+  let waited = await list_map_unordered_async(list, lambda3);
+  return waited;
+}
+function object_merge_set(to, from) {
+  object_merge(to, from);
+  return to;
+}
+function object_merge(to, from) {
+  object_merge_generic("strict", to, from);
+}
+function object_merge_generic(mode, to, from) {
+  function lambda(property_name) {
+    let value_new = property_get(from, property_name);
+    if (property_exists(to, property_name)) {
+      if (mode === "strict") {
+        error_json({
+          to,
+          from,
+          property_name
+        });
+      } else {
+        if (mode === "match") {
+          let existing = property_get(to, property_name);
+          if (equal_not(existing, value_new)) {
+            error_json({
+              message: object_merge_generic_message_match(),
+              to,
+              from,
+              property_name
+            });
+          }
+        }
+      }
+    }
+    property_set(to, property_name, value_new);
+  }
+  let list = properties_get(from);
+  each(list, lambda);
+}
+function object_merge_generic_message_match() {
+  let r = "value does not match";
+  return r;
+}
+function equal_not(left, right) {
+  let a = equal(left, right);
+  let ne = not(a);
+  return ne;
+}
+async function catch_ignore_async(lambda) {
+  let r = null;
+  try {
+    r = await lambda();
+  } catch (e) {}
+  return r;
+}
+function list_adder(lambda$la) {
+  let fn = list_add;
+  let list = list_adder_generic(lambda$la, fn);
+  return list;
+}
+function list_adder_generic(lambda, fn) {
+  let list = [];
+  function list_adder_inner(item) {
+    fn(list, item);
+    return list;
+  }
+  let result = lambda(list_adder_inner);
+  promise_not_is_assert_json(result, {
+    hint: "the adder lambda should be synchronous — did it return a promise? use list_adder_async for async work"
+  });
+  return list;
+}
+function promise_not_is_assert_json(object, json) {
+  let n = promise_not_is(object);
+  assert_json(n, {
+    object,
+    json
+  });
+}
+function promise_not_is(object) {
+  let a = promise_is(object);
+  let n = not(a);
+  return n;
+}
+function promise_is(value) {
+  let v = value !== null && typeof value === "object" && typeof value.then === "function" && typeof value.catch === "function";
+  return v;
+}
+function list_add(list, item) {
+  list.push(item);
+}
+function each_pair(list_a, list_b, lambda$a$b) {
+  let each_fn = each_multiple;
+  each_pair_generic(list_a, list_b, each_fn, lambda$a$b);
+}
+function each_pair_generic(list_a, list_b, each_fn, lambda$a$b) {
+  let lists = [list_a, list_b];
+  each_fn(lists, lambda);
+  function lambda(items) {
+    let [a, b] = items;
+    lambda$a$b(a, b);
+  }
+}
+function each_multiple(lists, lambda) {
+  let getter = lists_get;
+  each_multiple_generic(lists, getter, lists_size_max, lambda);
+}
+function lists_size_max(lists) {
+  let mapped = list_map_size(lists);
+  let max = list_max(mapped);
+  return max;
+}
+function list_map_size(lists) {
+  let mapped = list_map(lists, list_size);
+  return mapped;
+}
+function list_size(list) {
+  list_is_assert_json(list, {
+    hint: "list_size expects a list to measure"
+  });
+  let size = list.length;
+  return size;
+}
+function list_map(list, lambda$item) {
+  list_is_assert_json(list, {
+    hint: "list_map expects a list to map over"
+  });
+  text_combine_multiple([fn_name("data_identifiers_search_multiple"), " needed this wrapping ", lambda]);
+  function lambda(item) {
+    let r = lambda$item(item);
+    return r;
+  }
+  let mapped = list.map(lambda);
+  return mapped;
+}
+function fn_name(f_name) {
+  return f_name;
+}
+function list_max(list) {
+  function lambda(a, b) {
+    let v = a > b ? a : b;
+    return v;
+  }
+  let max = list_reduce(list, lambda, -Infinity);
+  return max;
+}
+function lists_get(lists, index) {
+  let getter = list_get;
+  let items = lists_get_generic(getter, index, lists);
+  return items;
+}
+function lists_get_generic(getter, index, lists) {
+  function lambda(list) {
+    let item = getter(list, index);
+    return item;
+  }
+  let items = list_map(lists, lambda);
+  return items;
+}
+function list_get(list, index) {
+  integer_is_assert_json(index, {
+    hint: "a list index should be a whole number — did a non-integer index arrive?"
+  });
+  let item = list[index];
+  undefined_not_is_assert_lambda(item, object_get);
+  function object_get() {
+    let v = {
+      list,
+      index
+    };
+    return v;
+  }
+  return item;
+}
+function integer_is_assert_json(i, json) {
+  let ii = integer_is(i);
+  assert_json(ii, {
+    i,
+    json
+  });
+}
+function each_multiple_generic(lists, getter, size_get, lambda) {
+  let max = size_get(lists);
+  function lambda_each_range(index) {
+    let items = getter(lists, index);
+    lambda(items);
+  }
+  each_range(max, lambda_each_range);
+}
+function each_range(count, lambda$i) {
+  let list = range(count);
+  each(list, lambda$i);
+}
+function range(count) {
+  let r = [];
+  for (let i = 0; i < count; i++) {
+    list_add(r, i);
+  }
+  return r;
+}
+function each_range_from(from, to, lambda$item) {
+  let list = range_from(from, to);
+  each(list, lambda$item);
+}
+function range_from(from, to) {
+  from = integer_to_try(from);
+  to = integer_to_try(to);
+  let count = text_combine(subtract(to, from), 1);
+  let r = range(count);
+  function lambda(item) {
+    let s = add(from, item);
+    return s;
+  }
+  let mapped = list_map(r, lambda);
+  return mapped;
+}
+function integer_to_try(input) {
+  let i = integer_from_base_try(input, 10);
+  return i;
+}
+function integer_from_base_try(input, base) {
+  let i = parseInt(input, base);
+  if (number_nan_is(i)) {
+    i = null;
+  }
+  return i;
+}
+function number_nan_is(i) {
+  let r = Number.isNaN(i);
+  return r;
+}
+function add(left, right) {
+  let sum = left + right;
+  return sum;
+}
+function ebible_parts_chapter_code_to_reference(chapter_code, books, verse_numbers) {
+  let {book_code, chapter_name} = ebible_chapter_code_parse(chapter_code);
+  let reference = ebible_parts_to_reference(books, book_code, verse_numbers, chapter_name);
+  return reference;
+}
+function ebible_parts_to_reference(books, book_code, verse_numbers, chapter_name) {
+  let book_name = ebible_book_code_to_name(books, book_code);
+  let verse_numbers_s = null;
+  let unique = list_unique(verse_numbers);
+  let s = list_size_1(unique);
+  let first = list_first(unique);
+  if (s) {
+    verse_numbers_s = first;
+  } else {
+    let last = list_last(unique);
+    verse_numbers_s = text_combine_multiple([first, "-", last]);
+  }
+  let reference = text_combine_multiple([book_name, " ", chapter_name, ":", verse_numbers_s]);
+  return reference;
+}
+function list_unique(list) {
+  let found = list_unique_set(list);
+  let unique = [...found];
+  return unique;
+}
+function list_unique_set(list) {
+  let set = set_new();
+  function lambda(item) {
+    set_add(set, item);
+  }
+  each(list, lambda);
+  return set;
+}
+function set_add(s, item) {
+  s.add(item);
+}
+function set_new() {
+  let s = new Set();
+  return s;
+}
+function list_last(list) {
+  list_empty_not_is_assert_json(list, {
+    hint: "the list should have at least one item to take its last — was it empty?"
+  });
+  let last = list_get_end(list, 0);
+  return last;
+}
+function list_empty_not_is_assert_json(list, json) {
+  let ne = list_empty_not_is(list);
+  assert_json(ne, {
+    list,
+    json
+  });
+}
+function list_empty_not_is(list) {
+  let a = list_empty_is(list);
+  let ne = not(a);
+  return ne;
+}
+function list_empty_is(list) {
+  let e = list_size(list) === 0;
+  return e;
+}
+function list_get_end(list, index_from_end) {
+  let difference = list_index_end(list, index_from_end);
+  let item = list_get(list, difference);
+  return item;
+}
+function list_index_end(list, index_from_end) {
+  let v = subtract(subtract(list_size(list), 1), index_from_end);
+  return v;
+}
+function list_first(list) {
+  let index = 0;
+  let first = list_get(list, index);
+  return first;
+}
+function list_size_1(list) {
+  let s = list_size(list) === 1;
+  return s;
+}
+function ebible_book_code_to_name(books, book_code) {
+  let book = list_find_property(books, "book_code", book_code);
+  let book_name = property_get(book, "text");
+  return book_name;
+}
+function list_find_property(list, property_name, property_value) {
+  let filter = property_equals_curried_right_2(property_name, property_value);
+  let item = list_find(list, filter);
+  return item;
+}
+function property_equals_curried_right_2(property_name, property_value) {
+  let c = function object_property_equals_lambda_result(item) {
+    let r = property_equals(item, property_name, property_value);
+    return r;
+  };
+  return c;
+}
+function property_equals(item, property_name, property_value) {
+  let left = property_get(item, property_name);
+  let eq = equal(left, property_value);
+  return eq;
+}
+function list_find(list, lambda$item) {
+  let filtered = list_filter(list, lambda$item);
+  let found = list_single(filtered);
+  return found;
+}
+function list_single(list) {
+  list_size_1_assert(list);
+  let only = list_first(list);
+  return only;
+}
+function list_size_1_assert(list) {
+  list_size_1_assert_message(list, {});
+}
+function list_size_1_assert_message(list, message) {
+  list_size_assert_message(list, 1, message);
+}
+function list_size_assert_message(list, size, message) {
+  let a = list_size(list) === size;
+  if (not(a)) {
+    error_json({
+      message,
+      list,
+      size
+    });
+  }
+}
+function ebible_chapter_code_parse(chapter_code) {
+  let book_code = ebible_chapter_code_to_book(chapter_code);
+  let chapter_name = ebible_chapter_code_to_name(chapter_code);
+  let v = {
+    book_code,
+    chapter_name
+  };
+  return v;
+}
+function ebible_chapter_code_to_name(chapter_code) {
+  let s = ebible_chapter_code_to_name_code(chapter_code);
+  let i = integer_to_try(s);
+  let chapter_name = text_to(i);
+  return chapter_name;
+}
+function ebible_chapter_code_to_name_code(chapter_code) {
+  let count = ebible_book_code_size();
+  let name_code = text_skip(chapter_code, count);
+  return name_code;
+}
+function text_skip(s, skip_count) {
+  let b = text_size(s);
+  let skipped = text_slice(s, skip_count, b);
+  return skipped;
+}
+function text_slice(s, from, to) {
+  let sliced = s.slice(from, to);
+  return sliced;
+}
+function text_size(s) {
+  let size = s.length;
+  return size;
+}
+function ebible_book_code_size() {
+  let v = 3;
+  return v;
+}
+function text_to(input) {
+  let t = input.toString();
+  return t;
+}
+function ebible_chapter_code_to_book(chapter_code) {
+  let count = ebible_book_code_size();
+  let book_code = text_take(chapter_code, count);
+  return book_code;
+}
+function text_take(s, count) {
+  let taken = text_slice(s, 0, count);
+  return taken;
+}
+function ebible_reference_parts(books, book_name, chapter_verses) {
+  let book = list_find_property(books, "text", book_name);
+  let book_code = property_get(book, "book_code");
+  let split = text_split_colon(chapter_verses);
+  let v2 = list_first_second(split);
+  let second = property_get(v2, "second");
+  let chapter_name = property_get(v2, "first");
+  let chapter_code = ebible_chapter_code_pad(book_code, chapter_name);
+  let verse_range = text_split_dash(second);
+  let verse_start = list_first(verse_range);
+  let verse_end = null;
+  let m = list_multiple_is(verse_range);
+  let result = null;
+  if (m) {
+    result = list_second(verse_range);
+  } else {
+    result = verse_start;
+  }
+  verse_end = result;
+  let index = list_index_of(books, book);
+  let v = {
+    index,
+    chapter_code,
+    verse_start,
+    verse_end,
+    book_code
+  };
+  return v;
+}
+function ebible_chapter_code_pad(book_code, chapter_name) {
+  let pad_count = 2;
+  if (equal(book_code, "PSA")) {
+    pad_count = 3;
+  }
+  let chapter_padded = number_pad(chapter_name, pad_count);
+  let chapter_code = text_combine(book_code, chapter_padded);
+  return chapter_code;
+}
+function number_pad(num, count) {
+  let v = String(num).padStart(count, "0");
+  return v;
+}
+function list_index_of(list, item) {
+  let index = list.indexOf(item);
+  if (index <= -1) {
+    error_json({
+      list,
+      item,
+      index
+    });
+  }
+  return index;
+}
+function list_second(list) {
+  let index = 1;
+  let second = list_get(list, index);
+  return second;
+}
+function list_multiple_is(list) {
+  let m = list_size(list) >= 2;
+  return m;
+}
+function text_split_dash(second) {
+  let split = text_split(second, "-");
+  return split;
+}
+function list_first_second(list) {
+  let property_name = "second";
+  let value_get = list_second;
+  let result = list_first_second_generic(list, value_get, property_name);
+  if (false) {
+    let copy_paste = {
+      first,
+      second
+    };
+  }
+  return result;
+}
+function list_first_second_generic(list, other_get, property_name_second) {
+  let property_name_first = "first";
+  let one_get = list_first;
+  let result = list_one_other(list, one_get, other_get, property_name_first, property_name_second);
+  return result;
+}
+function list_one_other(list, one_get, other_get, property_name_one, property_name_other) {
+  let one = null;
+  let other = [];
+  if (list_empty_not_is(list)) {
+    one = one_get(list);
+    if (list_multiple_is(list)) {
+      other = other_get(list);
+    }
+  }
+  let result = {
+    [property_name_one]: one,
+    [property_name_other]: other
+  };
+  return result;
+}
+function text_split_colon(chapter_verses) {
+  let split = text_split(chapter_verses, ":");
+  return split;
+}
+function ebible_references_names(books, lines) {
+  function lambda(item) {
+    let replacements = {
+      Psalms: ["Psalm"],
+      Song: ["Song of Solomon"]
+    };
+    function lambda2(froms, to) {
+      function lambda3(from) {
+        item = text_replace_if_starts_with(item, text_combine(from, " "), text_combine(to, " "));
+      }
+      each(froms, lambda3);
+    }
+    each_object(replacements, lambda2);
+    return item;
+  }
+  let mapped = list_map(lines, lambda);
+  let books_names = list_map_property(books, "text");
+  let verse_references = list_filter_starts_with_any(mapped, books_names);
+  let book_names = list_map_prefix_any(verse_references, books_names);
+  let mapped2 = list_map_prefix_without_any(verse_references, books_names);
+  let mapped3 = list_map_split_space(mapped2);
+  let mapped4 = list_map_filter_text_empty_not_is(mapped3);
+  let chapter_verses_list = list_map_first(mapped4);
+  let v = {
+    chapter_verses_list,
+    book_names
+  };
+  return v;
+}
+function each_object(object, lambda$value$property) {
+  function lambda(property) {
+    let value = property_get(object, property);
+    lambda$value$property(value, property);
+  }
+  let properties = properties_get(object);
+  each(properties, lambda);
+}
+function text_replace_if_starts_with(item, prefix, replacement) {
+  let sw = text_starts_with(item, prefix);
+  if (sw) {
+    item = text_replace(item, prefix, replacement);
+  }
+  return item;
+}
+function list_map_first(mapped4) {
+  let mapped = list_map(mapped4, list_first);
+  return mapped;
+}
+function list_map_filter_text_empty_not_is(list) {
+  let mapped = list_map(list, list_filter_text_empty_not_is);
+  return mapped;
+}
+function list_filter_text_empty_not_is(list) {
+  let filtered = list_filter(list, text_empty_not_is);
+  return filtered;
+}
+function text_empty_not_is(name) {
+  let a = text_empty_is(name);
+  let ne = not(a);
+  return ne;
+}
+function text_empty_is(s) {
+  let e = s === "";
+  return e;
+}
+function list_map_split_space(mapped2) {
+  function lambda(item) {
+    let split = text_split_space(item);
+    return split;
+  }
+  let mapped3 = list_map(mapped2, lambda);
+  return mapped3;
+}
+function text_split_space(s) {
+  let split = text_split(s, " ");
+  return split;
+}
+function list_map_prefix_without_any(list, prefixes) {
+  function lambda(item) {
+    let prefix = list_find_starts_with_prefixes(prefixes, item);
+    let result = text_prefix_without(item, prefix);
+    return result;
+  }
+  let mapped = list_map(list, lambda);
+  return mapped;
+}
+function list_find_starts_with_prefixes(prefixes, item) {
+  function lambda(item2) {
+    let sw = text_starts_with(item, item2);
+    return sw;
+  }
+  let any = list_find(prefixes, lambda);
+  return any;
+}
+function text_prefix_without(t, prefix) {
+  let a = text_starts_with(t, prefix);
+  function lambda() {
+    let r = {
+      t,
+      prefix
+    };
+    return r;
+  }
+  assert_json_get(a, lambda);
+  let without = text_prefix_without_inner(t, prefix);
+  return without;
+}
+function text_prefix_without_inner(s, prefix) {
+  let skipped = text_size(prefix);
+  let without = text_skip(s, skipped);
+  return without;
+}
+function list_map_prefix_any(list, prefixes) {
+  function lambda(item) {
+    let prefix = list_find_starts_with_prefixes(prefixes, item);
+    return prefix;
+  }
+  let mapped = list_map(list, lambda);
+  return mapped;
+}
+function list_filter_starts_with_any(list, prefixes) {
+  function lambda(item) {
+    let any = list_any_starts_with(item, prefixes);
+    return any;
+  }
+  let verse_references = list_filter(list, lambda);
+  return verse_references;
+}
+function list_any_starts_with(item, prefixes) {
+  function lambda(item2) {
+    let sw = text_starts_with(item, item2);
+    return sw;
+  }
+  let any = list_any(prefixes, lambda);
+  return any;
+}
+function list_any(list, lambda$item) {
+  let filtered = list_filter(list, lambda$item);
+  let any = list_empty_not_is(filtered);
+  return any;
+}
+function list_map_property(list, property_name) {
+  let r = property_get_curried_right(property_name);
+  let mapped = list_map(list, r);
+  return mapped;
+}
+function property_get_curried_right(property_name) {
+  let r = function property_get_curried_right_result(object) {
+    let value = property_get(object, property_name);
+    return value;
+  };
+  return r;
+}
+async function list_map_unordered_async(list, lambda$item) {
+  let mapped = list_map(list, lambda$item);
+  let waited = await list_wait(mapped);
+  return waited;
+}
+async function list_wait(list) {
+  let v = await Promise.all(list);
+  return v;
+}
+function null_is(value) {
+  let n = value === null;
+  return n;
+}
+function list_copy_reverse(previous) {
+  let copy = list_copy(previous);
+  list_reverse(copy);
+  return copy;
+}
+function list_reverse(list) {
+  list.reverse();
+}
+function list_copy(original) {
+  let copy = [...original];
+  return copy;
+}
+function html_bar_content_padded(root) {
+  let bc = html_bar_content(root);
+  let content = property_get(bc, "content");
+  html_page_padding_x(content);
+  return bc;
+}
+function html_bar_content(root) {
+  let shell = html_div(root);
+  html_style_assign(shell, {
+    display: "flex",
+    "flex-direction": "column",
+    height: "100dvh",
+    "box-sizing": "border-box"
+  });
+  let bar = html_div(shell);
+  html_style_set(bar, "flex", "0 0 auto");
+  let content = html_div(shell);
+  html_style_assign(content, {
+    flex: "1 1 auto",
+    "min-height": "0",
+    position: "relative",
+    "overflow-y": "scroll",
+    "overflow-x": "auto"
+  });
+  let v = {
+    bar,
+    content
+  };
+  return v;
+}
+function html_page_padding_x(element) {
+  "a breath of space on the left and right so content near the screen edges stays easy to see and easy to tap on small screens; 5dvw scales the gap with the phone's width, and the min() caps it at the phone-ish value so it stops growing on tablets and desktop where the extra room isn't needed";
+  html_style_padding_x(element, "min(5dvw, 20px)");
+}
+function html_style_padding_x(component, value) {
+  html_style_assign(component, {
+    "padding-left": value,
+    "padding-right": value
+  });
+}
+function html_centered(div) {
+  html_style_set(div, "text-align", "center");
+}
+function app_shared_bible_languages_gear(bar, content, languages_chosen) {
+  let languages = ebible_languages();
+  "only offer the gear when the chapter can be shown in more than one language";
+  let multiple = list_multiple_is(languages);
+  if (multiple) {
+    function on_gear() {
+      app_shared_bible_languages_choose(content, languages, languages_chosen);
+    }
+    app_shared_button(bar, app_shared_gear_languages_text(), on_gear);
+  }
+}
+function app_shared_gear_languages_text() {
+  let text = text_combine(emoji_gear(), " Languages");
+  return text;
+}
+function emoji_gear() {
+  let v = "⚙️";
+  return v;
+}
+function app_shared_button(parent, text, lambda) {
+  let b = html_button(parent, text, lambda);
+  app_shared_button_style(b);
+  html_style_padding_em(b, "0.3");
+  return b;
+}
+function html_style_padding_em(p, value_em) {
+  html_style_padding(p, text_combine(value_em, "em"));
+}
+function html_style_padding(component, value) {
+  html_style_set(component, "padding", value);
+}
+function app_shared_button_style(b) {
+  app_shared_symbol_tile_style(b);
+  let c = app_shared_button_background_color();
+  html_style_background_color_set(b, c);
+}
+function html_style_background_color_set(component, background) {
+  html_style_set(component, "background-color", background);
+}
+function app_shared_button_background_color() {
+  let c = app_shared_button_uncolored_background_color();
+  return c;
+}
+function app_shared_button_uncolored_background_color() {
+  let v = app_shared_container_blue_border_color();
+  return v;
+}
+function app_shared_container_blue_border_color() {
+  let c = "rgb(152, 203, 255)";
+  return c;
+}
+function app_shared_symbol_tile_style(b) {
+  app_shared_symbol_tile_style_inner(b);
+  html_display_inline_block(b);
+  html_style_set(b, "line-height", 1);
+}
+function app_shared_symbol_tile_style_inner(b) {
+  html_border_radius(b, app_shared_border_radius());
+  html_border_none(b);
+  html_style_padding_x(b, "0.37em");
+  html_style_padding_y(b, "0.1em");
+  html_margin_em(b, 0.09);
+}
+function html_style_padding_y(component, value) {
+  html_style_assign(component, {
+    "padding-top": value,
+    "padding-bottom": value
+  });
+}
+function html_border_none(b) {
+  html_style_set(b, "border", "none");
+}
+function html_margin_em(component, margin) {
+  let margin_em = text_combine(margin, "em");
+  html_margin(component, margin_em);
+}
+function html_margin(b, value) {
+  html_style_margin_x(b, value);
+  html_style_margin_y(b, value);
+}
+function html_style_margin_y(component, value) {
+  html_style_margin_top(component, value);
+  html_style_margin_bottom(component, value);
+}
+function html_style_margin_top(component, value) {
+  html_style_set(component, "margin-top", value);
+}
+function html_style_margin_bottom(component, value) {
+  html_style_set(component, "margin-bottom", value);
+}
+function html_style_margin_x(component, value) {
+  html_style_assign(component, {
+    "margin-left": value,
+    "margin-right": value
+  });
+}
+function html_border_radius(component, border_radius) {
+  html_style_set(component, "border-radius", border_radius);
+}
+function app_shared_border_radius() {
+  let v = "0.5em";
+  return v;
+}
+function html_display_inline_block(item) {
+  html_style_set(item, "display", "inline-block");
+}
+function html_button(parent, text, lambda) {
+  arguments_assert(arguments, 3);
+  let component = html_button_notext(parent, lambda);
+  html_text_set(component, text);
+  return component;
+}
+function html_button_notext(parent, lambda) {
+  let component = html_button_element(parent);
+  html_on_click(component, lambda);
+  return component;
+}
+function html_on_click(component, lambda) {
+  let name_event = "click";
+  html_on(component, name_event, lambda);
+  html_cursor_pointer(component);
+}
+function html_on(component, name_event, lambda) {
+  function_is_assert_json(lambda, {
+    hint: "the event handler should be a function to attach to the element",
+    name_event
+  });
+  let element = html_component_element_get(component);
+  element.addEventListener(name_event, lambda);
+  function remove() {
+    element.removeEventListener(name_event, lambda);
+  }
+  return remove;
+}
+function function_is_assert_json(lambda, json) {
+  let fi = function_is(lambda);
+  assert_json(fi, {
+    lambda,
+    json
+  });
+}
+function function_is(f) {
+  let fi = typeof f === "function";
+  return fi;
+}
+function html_cursor_pointer(component) {
+  html_style_set(component, "cursor", "pointer");
+}
+function html_button_element(parent) {
+  let tag_name = "button";
+  let b = html_element(parent, tag_name);
+  html_style_font_size_inherit(b);
+  return b;
+}
+function html_style_font_size_inherit(component) {
+  html_style_font_size(component, "inherit");
+}
+function html_style_font_size(parent, value) {
+  html_style_set(parent, "font-size", value);
+}
+function ebible_languages() {
+  text_combine("to add an entry, run: ", fn_name("ebible_languages_add"));
+  let en = ebible_language_english();
+  let o = ebible_language_original();
+  let ur = ebible_language_urdu();
+  let pa = ebible_language_punjabi();
+  let lug = ebible_language_luganda();
+  let ke = ebible_language_kenya();
+  let te = ebible_language_telugu();
+  let bn = ebible_language_bengali();
+  let ar = ebible_language_arabic();
+  let languages = [o, en, ur, ke, lug, bn, te, {
+    name: "Hindi",
+    bible_folder: "hin2017",
+    language_code: "hin"
+  }, ar, {
+    name: "Ekegusii",
+    bible_folder: "guz",
+    language_code: "guz"
+  }, {
+    name: "Cebuano",
+    bible_folder: ebible_folder_cebuano(),
+    language_code: "ceb"
+  }, {
+    name: "Tagalog",
+    bible_folder: ebible_folder_tagalog(),
+    language_code: "tgl"
+  }, {
+    name: "Spanish",
+    bible_folder: "spablm",
+    language_code: "es"
+  }, {
+    name: "French",
+    bible_folder: "frasbl",
+    language_code: "fr"
+  }, {
+    name: "Amharic",
+    bible_folder: "amh",
+    language_code: "am"
+  }, {
+    name: "Chinese (Simplified)",
+    bible_folder: "cmn-cu89s",
+    language_code: "zh"
+  }, {
+    name: "Dutch",
+    bible_folder: "nldnbg",
+    language_code: "nl"
+  }, {
+    name: "Igbo",
+    bible_folder: "ibo",
+    language_code: "ig"
+  }, {
+    name: "Hausa",
+    bible_folder: "hausa",
+    language_code: "ha"
+  }, {
+    name: "Yoruba",
+    bible_folder: "yor",
+    language_code: "yor"
+  }, pa, {
+    name: "Chichewa",
+    bible_folder: "nya",
+    language_code: "ny"
+  }, {
+    name: "Portuguese",
+    bible_folder: "porbrbsl",
+    language_code: "pt"
+  }, {
+    name: "Wolof",
+    bible_folder: "wolmbs",
+    language_code: "wo"
+  }, {
+    name: "Gujarati",
+    bible_folder: "guj2017",
+    language_code: "gu"
+  }, {
+    name: "Afaan Oromoo",
+    bible_folder: "gaz",
+    language_code: "om"
+  }, {
+    name: "Persian",
+    bible_folder: "pesopcb",
+    language_code: "fas"
+  }, {
+    name: "Turkish",
+    bible_folder: "turytc",
+    language_code: "tr"
+  }, {
+    name: "Oriya",
+    bible_folder: "ory",
+    language_code: "or"
+  }, {
+    name: "Marathi",
+    bible_folder: "mar",
+    language_code: "mr"
+  }, {
+    name: "Kannada",
+    bible_folder: "kanirv",
+    language_code: "kn"
+  }, {
+    name: "Twi",
+    bible_folder: "twiasante",
+    language_code: "twi"
+  }, {
+    name: "eʋegbe",
+    bible_folder: "ewe",
+    language_code: "ewe"
+  }, {
+    name: "Tamil",
+    bible_folder: "tamtcv",
+    language_code: "tam"
+  }, {
+    name: "Meitei",
+    bible_folder: "mni",
+    language_code: "mni"
+  }, {
+    name: "Italian",
+    bible_folder: "ita1927",
+    language_code: "ita"
+  }, {
+    name: "chiShona",
+    bible_folder: "sna",
+    language_code: "sna"
+  }, {
+    name: "Thai",
+    bible_folder: "thaKJV",
+    language_code: "tha"
+  }, {
+    name: "Polish",
+    bible_folder: "polubg",
+    language_code: "pol"
+  }, {
+    name: "Malay",
+    bible_folder: "zlmKSZI",
+    language_code: "zlm"
+  }];
+  "Rather than modifying this list, use: ";
+  fn_name("ebible_languages_add");
+  "if you modify the above list, then run:";
+  fn_name("ebible_languages_chapters_cache_refresh");
+  ebible_languages_sort_speakers(languages);
+  return languages;
+}
+function ebible_folder_tagalog() {
+  let r = "tglulb";
+  return r;
+}
+function ebible_language_arabic() {
+  let ar = {
+    name: "Arabic",
+    bible_folder: "arbnav",
+    language_code: "arb"
+  };
+  return ar;
+}
+function ebible_language_bengali() {
+  let bn = {
+    name: "Bengali",
+    bible_folder: "benirv",
+    language_code: "ben"
+  };
+  return bn;
+}
+function ebible_language_telugu() {
+  let r = {
+    name: "Telugu",
+    bible_folder: "tel2017",
+    language_code: "tel"
+  };
+  return r;
+}
+function ebible_language_kenya() {
+  let r = {
+    name: "Swahili",
+    bible_folder: ebible_folder_swahili(),
+    language_code: "swh"
+  };
+  return r;
+}
+function ebible_folder_swahili() {
+  let v = "swhonen";
+  return v;
+}
+function ebible_language_luganda() {
+  let lug = {
+    name: "Luganda",
+    bible_folder: "lug",
+    language_code: "lug"
+  };
+  return lug;
+}
+function ebible_language_punjabi() {
+  let r = {
+    name: "Punjabi",
+    bible_folder: "pan",
+    language_code: "pa"
+  };
+  return r;
+}
+function ebible_language_urdu() {
+  let r = {
+    name: "Urdu",
+    bible_folder: ebible_folder_urdu(),
+    language_code: "ur"
+  };
+  return r;
+}
+function ebible_folder_urdu() {
+  let u = "urdoucv";
+  return u;
+}
+function ebible_folder_cebuano() {
+  let c = "cebulb";
+  return c;
+}
+function ebible_languages_sort_speakers(languages) {
+  let speakers = ebible_language_speakers_millions();
+  let original_code = ebible_language_original_code();
+  function sort_weight(language) {
+    let code = property_get(language, "language_code");
+    let original = equal(code, original_code);
+    if (original) {
+      "the source text sorts before every spoken language";
+      return -Infinity;
+    }
+    let millions = property_get_or(speakers, code, 0);
+    "more speakers sorts earlier, so a larger count is a smaller weight";
+    return -millions;
+  }
+  list_sort_number_mapper(languages, sort_weight);
+}
+function list_sort_number_mapper(list, lambda$item) {
+  function lambda(a, b) {
+    let va = lambda$item(a);
+    let vb = lambda$item(b);
+    if (va < vb) return -1;
+    if (va > vb) return 1;
+    return 0;
+  }
+  list.sort(lambda);
+}
+function ebible_language_speakers_millions() {
+  let speakers = {
+    en: 1500,
+    zh: 1100,
+    hin: 610,
+    es: 560,
+    arb: 400,
+    fr: 310,
+    ben: 270,
+    pt: 260,
+    ur: 230,
+    swh: 200,
+    pa: 150,
+    fas: 130,
+    mr: 99,
+    tel: 95,
+    tr: 90,
+    tam: 86,
+    tgl: 83,
+    ha: 80,
+    zlm: 80,
+    ita: 67,
+    gu: 62,
+    tha: 61,
+    kn: 59,
+    am: 57,
+    yor: 46,
+    pol: 45,
+    or: 38,
+    om: 37,
+    ig: 31,
+    ceb: 28,
+    nl: 25,
+    twi: 22,
+    sna: 15,
+    ny: 14,
+    wo: 12,
+    lug: 11,
+    ewe: 7,
+    mni: 3.5,
+    guz: 2.8
+  };
+  return speakers;
+}
+function property_get_or(obj, key, value_not) {
+  let value = value_not;
+  let exists = property_exists(obj, key);
+  if (exists) {
+    value = property_get(obj, key);
+  }
+  return value;
+}
+function app_shared_bible_languages_choose(content, languages, languages_chosen) {
+  html_clear(content);
+  function to_language(code) {
+    return list_find_property_or_null(languages, "language_code", code);
+  }
+  let mapped = list_map(languages_chosen, to_language);
+  let chosen = list_filter_null_not_is(mapped);
+  function on_change() {
+    let codes = list_map_property(chosen, "language_code");
+    if (list_empty_is(codes)) {
+      codes = [ebible_language_en_code()];
+    }
+    let l = list_join_plus(codes);
+    function transform(hash) {
+      property_set(hash, "l", l);
+    }
+    html_hash_transform(transform);
+  }
+  app_shared_button_back(content, window_reload);
+  ebible_languages_sort_mode(languages);
+  function on_sort_change() {
+    app_shared_bible_languages_choose(content, languages, languages_chosen);
+  }
+  app_shared_language_sort_button(content, on_sort_change);
+  html_subset_ordered_choose(content, languages, chosen, "name", "language_code", on_change, app_shared_languages_prompt_text());
+}
+function html_clear(element) {
+  html_text_set(element, "");
+}
+function app_shared_button_back(container, lambda) {
+  let text = app_shared_button_back_text();
+  let button = app_shared_button_uncolored(container, text, lambda);
+  return button;
+}
+function app_shared_button_back_text() {
+  let bt = text_combine(emoji_arrow_left(), " Back");
+  return bt;
+}
+function emoji_arrow_left() {
+  let v = "⬅️";
+  return v;
+}
+function app_shared_button_uncolored(div, text, lambda) {
+  arguments_assert(arguments, 3);
+  let component = html_button(div, text, lambda);
+  app_shared_style_control(component);
+  app_shared_button_uncolored_style_assign(component);
+  return component;
+}
+function app_shared_button_uncolored_style_assign(component) {
+  html_style_assign(component, {
+    color: "black",
+    "background-color": app_shared_button_uncolored_background_color()
+  });
+}
+function app_shared_style_control(component) {
+  html_style_assign(component, {
+    "border-radius": "0.8em",
+    padding: "0.55em",
+    width: "100%",
+    "border-width": "0px",
+    "font-size": app_shared_style_control_font_size()
+  });
+  app_shared_margin_y_set(component);
+}
+function app_shared_style_control_font_size() {
+  let v = "1.2em";
+  return v;
+}
+function app_shared_margin_y_set(component) {
+  let margin_y = app_shared_margin_y();
+  html_style_margin_y(component, margin_y);
+}
+function app_shared_margin_y() {
+  let v = "5px";
+  return v;
+}
+function window_reload() {
+  window.location.reload();
+}
+function ebible_languages_sort_mode(languages) {
+  "sorts in place; every entry (language or version choice) carries name and language_code";
+  let mode = app_language_sort_get();
+  let by_name = equal(mode, app_language_sort_by_name());
+  if (by_name) {
+    list_sort_text_property(languages, "name");
+    return;
+  }
+  ebible_languages_sort_speakers(languages);
+}
+function app_language_sort_get() {
+  let mode = storage_local_get(app_language_sort_get, "mode");
+  let missing = null_is(mode);
+  if (missing) {
+    return app_language_sort_by_speakers();
+  }
+  return mode;
+}
+function storage_local_get(app_fn, key) {
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    let result = storage_local_specify_get(storage_local_key);
+    return result;
+  }
+  let value = storage_local_get_global(storage_local_key);
+  return value;
+}
+function storage_local_get_global(storage_local_key) {
+  let exists = storage_local_exists_global(storage_local_key);
+  "localStorage has this behavior of null if not exists, so the in-memory version also mirrors api";
+  let value = null;
+  if (exists) {
+    value = global_function_property_get(storage_local_set, storage_local_key);
+  }
+  return value;
+}
+function storage_local_exists_global(storage_local_key) {
+  let exists = global_function_property_exists(storage_local_set, storage_local_key);
+  return exists;
+}
+function storage_local_set(app_fn, key, value) {
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    storage_local_specify_set(storage_local_key, value);
+    return;
+  }
+  global_function_property_set(storage_local_set, storage_local_key, value);
+}
+function global_function_property_set(fn, property_name, value) {
+  let fn_object = global_function_initialize(fn, {});
+  property_set(fn_object, property_name, value);
+}
+function storage_local_specify_set(storage_local_key, value) {
+  value = undefined_is_if_null(value);
+  let j = json_to({
+    value
+  });
+  localStorage.setItem(storage_local_key, j);
+}
+function undefined_is_if_null(result) {
+  if (undefined_is(result)) {
+    result = null;
+  }
+  return result;
+}
+function storage_local_key_get(app_fn, key) {
+  let ley = text_combine_multiple([app_fn.name, " ", key]);
+  return ley;
+}
+function storage_local_enabled() {
+  let set = global_function_exists(storage_local_enabled);
+  let enabled = not(set) || global_function_get(storage_local_enabled) === true;
+  return enabled;
+}
+function global_function_get(fn) {
+  let global = global_get();
+  let value = property_get(global, fn.name);
+  return value;
+}
+function global_function_exists(fn) {
+  let global = global_get();
+  let exists = property_exists(global, fn.name);
+  return exists;
+}
+function global_function_property_exists(fn, property_name) {
+  let fn_object = global_function_initialize_object(fn);
+  let exists = property_exists(fn_object, property_name);
+  return exists;
+}
+function global_function_initialize_object(fn) {
+  let value = global_function_initialize(fn, {});
+  return value;
+}
+function global_function_property_get(fn, property_name) {
+  let fn_object = global_function_initialize(fn, {});
+  let value = property_get(fn_object, property_name);
+  return value;
+}
+function storage_local_specify_get(storage_local_key) {
+  let json = storage_local_specify_get_json(storage_local_key);
+  let nn = null_not_is(json);
+  let result = null;
+  if (nn) {
+    let r = json_from(json);
+    result = property_get(r, "value");
+  }
+  return result;
+}
+function storage_local_specify_get_json(storage_local_key) {
+  let r = localStorage.getItem(storage_local_key);
+  return r;
+}
+function app_language_sort_by_speakers() {
+  let mode = "speakers";
+  return mode;
+}
+function app_language_sort_by_name() {
+  let mode = "name";
+  return mode;
+}
+function list_sort_text_property(languages, property_name) {
+  let f = property_get_curried_right(property_name);
+  list_sort_text_mapper(languages, f);
+}
+function list_sort_text_mapper(list, lambda$item) {
+  "numeric true gives natural ordering (item2 before item10), NOT a numeric sort; keep list_sort_number separate — string collation is wrong for negatives and decimals, and typed transpile targets sort numbers by < rather than by a string collator";
+  function lambda(a, b) {
+    let v = lambda$item(b);
+    let v2 = lambda$item(a);
+    let r = v2.localeCompare(v, undefined, {
+      numeric: true,
+      sensitivity: "base"
+    });
+    return r;
+  }
+  list.sort(lambda);
+}
+function undefined() {
+  "this is to prevent undefined from being created";
+}
+function app_shared_language_sort_button(parent, on_change) {
+  let mode = app_language_sort_get();
+  let label = app_language_sort_label(mode);
+  let button = null;
+  function on_click() {
+    app_language_sort_toggle();
+    let mode_next = app_language_sort_get();
+    let label_next = app_language_sort_label(mode_next);
+    html_text_set(button, label_next);
+    on_change();
+  }
+  button = app_shared_button(parent, label, on_click);
+}
+function app_language_sort_toggle() {
+  let mode = app_language_sort_get();
+  let by_name = equal(mode, app_language_sort_by_name());
+  let next = app_language_sort_by_name();
+  if (by_name) {
+    next = app_language_sort_by_speakers();
+  }
+  app_language_sort_set(next);
+  return next;
+}
+function app_language_sort_set(mode) {
+  "share one storage key with the getter by using its function name as the namespace";
+  storage_local_set(app_language_sort_get, "mode", mode);
+}
+function app_language_sort_label(mode) {
+  let by_name = equal(mode, app_language_sort_by_name());
+  if (by_name) {
+    return "Sorted A to Z";
+  }
+  return "Sorted by most speakers";
+}
+function html_subset_ordered_choose(parent, options, chosen, name_property, key_property, on_change, choices_label) {
+  let container = html_div(parent);
+  function render() {
+    html_clear(container);
+    let choices_card = app_shared_container_blue(container);
+    html_div_text_bold(choices_card, choices_label);
+    html_subset_toggle(choices_card, options, chosen, name_property, key_property, changed);
+    "the reorder card only appears once two or more are chosen; a single verse has nothing to reorder";
+    let multiple = list_multiple_is(chosen);
+    if (multiple) {
+      let order_card = app_shared_container_blue(container);
+      html_div_text_bold(order_card, "What order do you want the verses in?");
+      html_subset_ordered_selected(order_card, chosen, name_property, changed);
+    }
+  }
+  function changed() {
+    on_change();
+    render();
+  }
+  render();
+  return container;
+}
+function html_div_text_bold(parent, text) {
+  let div = html_div_text(parent, text);
+  html_bold_mild(div);
+  return div;
+}
+function html_div_text(parent, text) {
+  let div = html_div(parent);
+  html_text_set(div, text);
+  return div;
+}
+function html_bold_mild(b) {
+  html_style_set(b, "font-weight", "500");
+}
+function html_subset_ordered_selected(parent, chosen, name_property, changed) {
+  "full-width list so each row's center is the card's center; the arrows sit just left of that line and the names just right, so name length never moves the arrows";
+  let container = html_div(parent);
+  html_width_full(container);
+  let size = list_size(chosen);
+  for (let i = 0; i < size; i++) {
+    html_subset_ordered_row(container, chosen, i, name_property, changed);
+  }
+}
+function html_width_full(component) {
+  html_style_set(component, "width", "100%");
+}
+function html_subset_ordered_row(parent, chosen, i, name_property, changed) {
+  let item = list_get(chosen, i);
+  let name = property_get(item, name_property);
+  let last = subtract(list_size(chosen), 1);
+  let row = html_div(parent);
+  html_display_flex(row);
+  html_width_full(row);
+  function up() {
+    list_swap_at(chosen, i, subtract(i, 1));
+    changed();
+  }
+  function down() {
+    list_swap_at(chosen, i, i + 1);
+    changed();
+  }
+  "split each row at the card's horizontal center: the arrows fill the left half and hug the center, the name fills the right half and starts at the center, so adding a longer language name grows rightward and never shifts the arrows";
+  let arrows = html_div(row);
+  html_style_set(arrows, "flex", "1 1 0");
+  html_display_flex(arrows);
+  html_style_set(arrows, "justify-content", "flex-end");
+  let up_button = app_shared_button(arrows, emoji_arrow_up(), up);
+  if (i === 0) {
+    html_visibility_hidden(up_button);
+  }
+  let down_button = app_shared_button(arrows, emoji_arrow_down(), down);
+  if (i === last) {
+    html_visibility_hidden(down_button);
+  }
+  let label = html_div(row);
+  html_style_set(label, "flex", "1 1 0");
+  html_style_set(label, "text-align", "left");
+  html_style_set(label, "padding-left", app_shared_spaced_small_gap());
+  html_span_text(label, name);
+  return row;
+}
+function list_swap_at(list, index_a, index_b) {
+  let a = list_get(list, index_a);
+  let b = list_get(list, index_b);
+  list_swap_inner(list, index_a, b, index_b, a);
+}
+function list_swap_inner(list, ai, b, bi, a) {
+  list_replace(list, ai, b);
+  list_replace(list, bi, a);
+}
+function list_replace(list, index, value) {
+  let delete_count = 1;
+  list_insert_generic(index, list, delete_count, value);
+}
+function list_insert_generic(index, list, delete_count, value) {
+  let b = number_is(index);
+  assert(b);
+  list_splice(list, index, delete_count, value);
+}
+function list_splice(list, index, delete_count, value) {
+  list.splice(index, delete_count, value);
+}
+function number_is(value) {
+  let v = typeof value === "number" && isFinite(value);
+  return v;
+}
+function html_span_text(parent, text) {
+  let span = html_span(parent);
+  html_text_set(span, text);
+  return span;
+}
+function html_span(parent) {
+  let component = html_element(parent, "span");
+  return component;
+}
+function html_display_flex(component) {
+  html_style_set(component, "display", "flex");
+}
+function app_shared_spaced_small_gap() {
+  let v = "0.45em";
+  return v;
+}
+function emoji_arrow_up() {
+  let e = "⬆️";
+  return e;
+}
+function emoji_arrow_down() {
+  let e = "⬇️";
+  return e;
+}
+function html_visibility_hidden(component) {
+  html_style_set(component, "visibility", "hidden");
+}
+function html_subset_toggle(parent, options, chosen, name_property, key_property, changed) {
+  function lambda(option) {
+    let name = property_get(option, name_property);
+    let key = property_get(option, key_property);
+    let found = list_find_property_or_null(chosen, key_property, key);
+    let on = null_not_is(found);
+    function on_click() {
+      if (on) {
+        list_remove_property(chosen, key_property, key);
+      } else {
+        list_add(chosen, option);
+      }
+      changed();
+    }
+    let button = html_button_toggle(parent, name, on, on_click);
+    return button;
+  }
+  let buttons = list_map(options, lambda);
+  return buttons;
+}
+function list_find_property_or_null(list, property_name, property_value) {
+  let filter_get = property_equals_curried_right_2;
+  let r = list_find_property_or_null_generic(filter_get, property_name, property_value, list);
+  return r;
+}
+function list_find_property_or_null_generic(filter_get, property_name, property_value, list) {
+  let filter = filter_get(property_name, property_value);
+  let filtered = list_filter(list, filter);
+  let n = list_empty_not_is(filtered);
+  let only = null;
+  if (n) {
+    only = list_single(filtered);
+  }
+  return only;
+}
+function list_remove_property(languages, property_name, en) {
+  let found = list_find_property(languages, property_name, en);
+  list_remove(languages, found);
+}
+function list_remove(list, item) {
+  let index = list_index_of(list, item);
+  list_remove_at(list, index);
+}
+function list_remove_at(list, index) {
+  let e = list_remove_at_count(list, index, 1);
+  let only = list_single(e);
+  return only;
+}
+function list_remove_at_count(list, index, count) {
+  let e = list.splice(index, count);
+  return e;
+}
+function html_button_toggle(parent, text, on, lambda) {
+  let button = app_shared_button(parent, text, lambda);
+  app_shared_button_toggle_style(on, button);
+  return button;
+}
+function app_shared_button_toggle_style(chosen, component) {
+  let chosen_color = app_shared_button_selected_background_color();
+  let unchosen_color = app_shared_button_uncolored_background_color();
+  html_style_background_color_set_if_else(chosen, component, chosen_color, unchosen_color);
+  let chosen_font = app_shared_button_font_color();
+  html_font_color_set_if(chosen, component, chosen_font, "black");
+}
+function app_shared_button_selected_background_color() {
+  let c = "#2563eb";
+  return c;
+}
+function app_shared_button_font_color() {
+  let c = "white";
+  return c;
+}
+function html_style_background_color_set_if_else(condition, component, color_if, color_else) {
+  let c = ternary(condition, color_if, color_else);
+  html_style_background_color_set(component, c);
+}
+function html_font_color_set_if(condition, component, color_if, color_else) {
+  let c = ternary(condition, color_if, color_else);
+  html_font_color_set(component, c);
+}
+function html_font_color_set(component, color) {
+  arguments_assert(arguments, 2);
+  html_style_set(component, "color", color);
+}
+function app_shared_container_blue(parent) {
+  let div = app_shared_container_base(parent);
+  html_style_background_color_set(div, app_shared_container_blue_background_color());
+  html_border(div, "0.1em", app_shared_container_blue_border_color());
+  return div;
+}
+function app_shared_container_base(parent) {
+  let div = html_div(parent);
+  html_card(div);
+  html_style_margin_y(div, "10px");
+  return div;
+}
+function html_card(component) {
+  html_border_radius(component, app_shared_border_radius_card());
+  html_style_padding_em(component, "0.6");
+  html_box_shadow_set(component, "0 2px 6px rgba(0, 0, 0, 0.12)");
+}
+function html_box_shadow_set(component, style_value) {
+  html_style_set(component, "box-shadow", style_value);
+}
+function app_shared_border_radius_card() {
+  let v = "1.2em";
+  return v;
+}
+function html_border(component, border_width, border_color) {
+  html_style_assign(component, {
+    "border-width": border_width,
+    "border-color": border_color,
+    "border-style": "solid"
+  });
+}
+function app_shared_container_blue_background_color() {
+  let c = "rgb(228, 241, 255)";
+  return c;
+}
+function app_shared_languages_prompt_text() {
+  let text = "What language or languages you want the Bible verses to be translated into?";
+  return text;
+}
+function list_filter_null_not_is(mapped) {
+  let filtered = list_filter(mapped, null_not_is);
+  return filtered;
+}
+function list_join_plus(list) {
+  let joined = list_join(list, "+");
+  return joined;
+}
+function html_hash_transform(transform) {
+  let hash = html_hash_object_get();
+  transform(hash);
+  html_hash_set_object(hash);
+}
+function html_hash_set_object(hash) {
+  let url = hash_to_url(hash);
+  html_hash_set(url);
+}
+function html_hash_set(h) {
+  history.replaceState(null, "", h);
+  return;
+  "if we need to update history, then perhaps make a new function";
+  window.location.hash = h;
+}
+function hash_to_url(hash) {
+  function lambda3(la) {
+    function lambda(value, property) {
+      let part = text_combine_multiple([property, "=", value]);
+      la(part);
+    }
+    each_object(hash, lambda);
+  }
+  let parts = list_adder(lambda3);
+  let result = list_join_comma(parts);
+  let h = html_hash_symbol();
+  let url = text_combine(h, result);
+  return url;
+}
+function html_hash_symbol() {
+  let h = "#";
+  return h;
+}
+function list_join_comma(list) {
+  let result = list_join(list, ",");
+  return result;
+}
+function html_hash_object_get() {
+  function lambda3(oa) {
+    let hash_url = html_hash_get();
+    let prefix = html_hash_symbol();
+    let n = text_includes_not(hash_url, prefix);
+    if (n) {
+      return;
+    }
+    let without = text_prefix_without(hash_url, prefix);
+    let split = text_split_comma(without);
+    function lambda(s) {
+      let split2 = text_split_equal(s);
+      let v = list_first_second(split2);
+      let second = property_get(v, "second");
+      let first = property_get(v, "first");
+      oa(first, second);
+    }
+    each(split, lambda);
+  }
+  let hash = object_adder(lambda3);
+  return hash;
+}
+function object_adder(lambda$oad) {
+  let v = object_adder_generic(property_set_exists_not);
+  let result = property_get(v, "result");
+  let oa = property_get(v, "oa");
+  lambda$oad(oa);
+  return result;
+}
+function property_set_exists_not(object, property_name, value) {
+  property_exists_not_assert_json(object, property_name, {
+    hint: "this property should not already exist before setting it fresh — was it already set?"
+  });
+  property_set(object, property_name, value);
+}
+function property_exists_not_assert_json(object, property_name, json) {
+  let e = property_exists(object, property_name);
+  if (e) {
+    let value = property_get(object, property_name);
+    log_keep(property_exists_not_assert_json.name, property_name);
+    error_json({
+      value,
+      property_name,
+      object,
+      json
+    });
+  }
+}
+function log_keep(f_name, message) {
+  log_inner(f_name, message);
+}
+function log_inner(f_name, message) {
+  let list = [message];
+  let value = global_function_initialize_null(log_inner);
+  if (equal_not(value, f_name)) {
+    global_function_set(log_inner, f_name);
+    list_add_first(list, f_name);
+  }
+  each(list, console.log);
+  return;
+}
+function list_add_first(list, item) {
+  list_insert(list, 0, item);
+}
+function list_insert(list, index, value) {
+  let delete_count = 0;
+  list_insert_generic(index, list, delete_count, value);
+}
+function global_function_initialize_null(fn) {
+  let value = global_function_initialize(fn, null);
+  return value;
+}
+function log(f_name, message) {
+  log_inner(f_name, message);
+}
+function object_adder_generic(fn_set) {
+  let result = {};
+  let oa = function lambda(key, value) {
+    fn_set(result, key, value);
+  };
+  let r = {
+    oa,
+    result
+  };
+  return r;
+}
+function text_split_equal(s) {
+  let split = text_split(s, "=");
+  return split;
+}
+function text_split_comma(t) {
+  let split = text_split(t, ",");
+  return split;
+}
+function html_hash_get() {
+  let h = window.location.hash;
+  return h;
+}
+function text_split_plus(l) {
+  let split = text_split(l, "+");
+  return split;
+}
+async function app_reply_initialize(context) {
+  let root = html_mobile_default(context);
+  let choices = app_reply_choices();
+  let languages = ebible_languages();
+  let encouragement = bible_verses_uplifting();
+  let en = ebible_folder_english();
+  let original = bible_interlinear_verses_upload_folder();
+  let books = await ebible_version_books_browser(en);
+  let r = {
+    encouragement,
+    en,
+    original,
+    root,
+    languages,
+    choices,
+    books
+  };
+  return r;
+}
+function html_mobile_default(context) {
+  let root = html_mobile_default_font_size_context(context);
+  html_meta_viewport();
+  html_font_sans_serif_set_html();
+  return root;
+}
+function html_mobile_default_font_size_context(context) {
+  let root = property_get(context, "root");
+  html_mobile_default_font_size(root);
+  return root;
+}
+function html_mobile_default_font_size(root) {
+  html_style_font_size(root, "20px");
+}
+function html_font_sans_serif_set_html() {
+  let html = html_document_root();
+  html_roboto_include();
+  let style_value = html_font_sans_serif_value();
+  html_font_set(html, style_value);
+  let style = text_combine(":font-family: ", html_font_sans_serif_value());
+  html_style_button(style);
+}
+function html_style_button(style) {
+  html_style_head(text_combine_multiple(["button { ", style, " }"]));
+}
+function html_roboto_include() {
+  let href = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
+  let fn = html_roboto_include;
+  html_font_include(fn, href);
+}
+function html_font_include(fn, href) {
+  global_function_once(fn, lambda);
+  function lambda() {
+    html_stylesheet(href);
+  }
+}
+function html_stylesheet(href) {
+  let l = html_link();
+  html_attribute_set(l, "href", href);
+  html_attribute_set(l, "rel", "stylesheet");
+}
+function html_attribute_set(component, key, value) {
+  let element = html_component_element_get(component);
+  element.setAttribute(key, value);
+}
+function html_link() {
+  let head = html_document_head();
+  let link = html_element(head, "link");
+  return link;
+}
+function global_function_once(fn, lambda) {
+  function value_get() {
+    lambda();
+    return true;
+  }
+  global_function_initialize_lambda(fn, value_get);
+}
+function html_font_set(html, value) {
+  html_style_set(html, "font-family", value);
+}
+function html_font_sans_serif_value() {
+  let v = '"Roboto", Arial, Helvetica, sans-serif';
+  return v;
+}
+function html_document_root() {
+  let html_element = document.documentElement;
+  let html = html_component_wrap(html_element);
+  return html;
+}
+function html_meta_viewport() {
+  "TODO: redundant — html_code now emits this tag statically into every generated page, so this runtime copy does nothing new";
+  "Injecting it here races the browser's first layout, which was the Firefox Android random zoom-in bug (intermittent because it is a race)";
+  "Kept only until that zoom is confirmed gone in the wild; then delete this function and its call in html_mobile_default";
+  let head = html_document_head();
+  let component = html_element(head, "meta");
+  html_attribute_set(component, "name", "viewport");
+  html_attribute_set(component, "content", html_meta_viewport_content());
+}
+function html_meta_viewport_content() {
+  let v = "width=device-width, initial-scale=1.0";
+  return v;
+}
+function bible_verses_uplifting() {
+  ["Exodus 14:14", "Moses said be still, then God said move"];
+  let verses_uplifting = ["Genesis 1:31", "Genesis 12:2-3", "Genesis 28:15", "Exodus 33:14", "Deuteronomy 7:9", "Deuteronomy 20:4", "Deuteronomy 31:6", "Deuteronomy 31:8", "Joshua 1:5", "Joshua 1:9", "1 Samuel 12:24", "2 Samuel 22:31", "1 Chronicles 16:11", "1 Chronicles 29:11-12", "2 Chronicles 7:14", "2 Chronicles 15:7", "Nehemiah 8:10", "Job 19:25", "Psalms 1:1-3", "Psalms 3:3", "Psalms 4:8", "Psalms 5:11-12", "Psalms 9:9-10", "Psalms 16:8-9", "Psalms 18:2", "Psalms 18:28", "Psalms 19:14", "Psalms 23:1-3", "Psalms 23:4-6", "Psalms 25:4-5", "Psalms 27:1", "Psalms 27:13-14", "Psalms 28:7", "Psalms 30:5", "Psalms 31:24", "Psalms 32:7-8", "Psalms 34:4", "Psalms 34:8", "Psalms 34:10", "Psalms 34:17-19", "Psalms 36:7-9", "Psalms 37:3-5", "Psalms 37:7", "Psalms 37:23-24", "Psalms 40:1-3", "Psalms 42:11", "Psalms 46:1", "Psalms 46:10", "Psalms 50:15", "Psalms 55:22", "Psalms 56:3", "Psalms 62:8", "Psalms 63:3-4", "Psalms 68:19", "Psalms 71:5", "Psalms 73:26", "Psalms 84:11", "Psalms 86:5", "Psalms 90:17", "Psalms 91:1-2", "Psalms 91:4", "Psalms 91:11", "Psalms 94:19", "Psalms 100:5", "Psalms 103:2-5", "Psalms 103:8-12", "Psalms 107:1", "Psalms 112:7", "Psalms 116:1-2", "Psalms 118:14", "Psalms 118:24", "Psalms 121:1-2", "Psalms 121:7-8", "Psalms 126:5-6", "Psalms 139:13-14", "Psalms 143:8", "Psalms 145:8-9", "Psalms 145:18-19", "Proverbs 3:3-4", "Proverbs 3:5-6", "Proverbs 3:24", "Proverbs 4:23", "Proverbs 11:25", "Proverbs 12:25", "Proverbs 15:30", "Proverbs 16:3", "Proverbs 17:22", "Proverbs 18:10", "Proverbs 19:21", "Proverbs 22:4", "Proverbs 24:14", "Proverbs 28:20", "Isaiah 12:2", "Isaiah 26:3-4", "Isaiah 30:15", "Isaiah 32:17", "Isaiah 40:29", "Isaiah 40:31", "Isaiah 41:10", "Isaiah 41:13", "Isaiah 43:1-2", "Isaiah 43:4", "Isaiah 46:4", "Isaiah 49:16", "Isaiah 54:10", "Isaiah 55:12", "Isaiah 58:11", "Isaiah 60:1", "Isaiah 61:1", "Isaiah 61:3", "Isaiah 61:7", "Isaiah 65:24", "Jeremiah 17:7-8", "Jeremiah 29:11", "Jeremiah 29:12-13", "Jeremiah 31:3", "Jeremiah 32:27", "Lamentations 3:22-23", "Ezekiel 36:26", "Hosea 6:3", "Joel 2:21", "Micah 6:8", "Nahum 1:7", "Habakkuk 3:18-19", "Zephaniah 3:17", "Zechariah 4:6", "Zechariah 9:12", "Malachi 3:10", "Matthew 5:3-9", "Matthew 5:14-16", "Matthew 6:6", "Matthew 6:19-21", "Matthew 6:25-27", "Matthew 6:33", "Matthew 7:7-8", "Matthew 7:12", "Matthew 11:28-30", "Matthew 17:20", "Matthew 19:26", "Matthew 22:37-39", "Matthew 28:18-20", "Mark 9:23", "Mark 10:27", "Mark 11:24", "Mark 12:30-31", "Mark 16:15", "Luke 1:37", "Luke 1:45", "Luke 6:27-28", "Luke 6:31", "Luke 6:38", "Luke 8:15", "Luke 11:9-10", "Luke 12:6-7", "Luke 12:22-24", "Luke 18:27", "John 1:12", "John 3:16", "John 3:17", "John 4:14", "John 6:35", "John 8:12", "John 10:10", "John 10:27-28", "John 11:25-26", "John 13:34-35", "John 14:1", "John 14:6", "John 14:13-14", "John 14:27", "John 15:4-5", "John 15:7", "John 15:9-11", "John 15:12-13", "John 16:13", "John 16:22", "John 16:33", "John 17:3", "Acts 1:8", "Acts 2:21", "Acts 2:28", "Acts 4:12", "Acts 4:31", "Acts 10:34-35", "Acts 16:31", "Romans 1:16", "Romans 5:1", "Romans 5:5", "Romans 5:8", "Romans 6:4", "Romans 8:1", "Romans 8:14-16", "Romans 8:18", "Romans 8:26", "Romans 8:28", "Romans 8:31", "Romans 8:37", "Romans 8:38-39", "Romans 10:9", "Romans 10:13", "Romans 12:2", "Romans 12:9-10", "Romans 12:12", "Romans 12:21", "Romans 13:10", "Romans 15:4", "Romans 15:13", "1 Corinthians 1:9", "1 Corinthians 1:30", "1 Corinthians 2:9", "1 Corinthians 3:16", "1 Corinthians 10:13", "1 Corinthians 13:4-7", "1 Corinthians 13:13", "1 Corinthians 15:10", "1 Corinthians 15:57", "1 Corinthians 16:13-14", "2 Corinthians 1:3-4", "2 Corinthians 3:17", "2 Corinthians 4:6", "2 Corinthians 4:8-9", "2 Corinthians 4:16-18", "2 Corinthians 5:7", "2 Corinthians 5:17", "2 Corinthians 5:20", "2 Corinthians 9:7-8", "2 Corinthians 12:9-10", "Galatians 2:20", "Galatians 5:22-23", "Galatians 6:9", "Ephesians 1:3", "Ephesians 1:7", "Ephesians 1:18-19", "Ephesians 2:4-5", "Ephesians 2:8-10", "Ephesians 3:16-17", "Ephesians 3:20", "Ephesians 4:2-3", "Ephesians 4:23-24", "Ephesians 4:32", "Ephesians 5:1-2", "Ephesians 6:10-11", "Ephesians 6:13", "Ephesians 6:17", "Philippians 1:6", "Philippians 1:9-10", "Philippians 2:3-4", "Philippians 2:13", "Philippians 2:14-15", "Philippians 3:13-14", "Philippians 4:4", "Philippians 4:6-7", "Philippians 4:8", "Philippians 4:11-13", "Philippians 4:19", "Colossians 1:9-10", "Colossians 1:11-12", "Colossians 1:27", "Colossians 2:6-7", "Colossians 3:1-2", "Colossians 3:12-14", "Colossians 3:15", "Colossians 3:16-17", "Colossians 4:2", "1 Thessalonians 1:3", "1 Thessalonians 3:12-13", "1 Thessalonians 4:16-17", "1 Thessalonians 5:8", "1 Thessalonians 5:11", "1 Thessalonians 5:14-15", "1 Thessalonians 5:16-18", "1 Thessalonians 5:23-24", "2 Thessalonians 1:11-12", "2 Thessalonians 2:16-17", "2 Thessalonians 3:3", "2 Thessalonians 3:16", "1 Timothy 1:14-15", "1 Timothy 2:1-2", "1 Timothy 4:8", "1 Timothy 4:12", "1 Timothy 6:6", "1 Timothy 6:11-12", "2 Timothy 1:7", "2 Timothy 1:9", "2 Timothy 2:1", "2 Timothy 2:13", "2 Timothy 2:15", "2 Timothy 3:16-17", "2 Timothy 4:7-8", "Titus 2:11-12", "Titus 3:4-5", "Philemon 1:4-5", "Hebrews 2:18", "Hebrews 4:12", "Hebrews 4:14-16", "Hebrews 6:10", "Hebrews 6:19", "Hebrews 10:23", "Hebrews 10:24-25", "Hebrews 11:1", "Hebrews 11:6", "Hebrews 12:1-2", "Hebrews 12:11", "Hebrews 12:28", "Hebrews 13:1-2", "Hebrews 13:5-6", "Hebrews 13:8", "Hebrews 13:15-16", "James 1:2-4", "James 1:5", "James 1:12", "James 1:17", "James 1:22", "James 2:17", "James 3:17", "James 4:8", "James 5:16", "1 Peter 1:3-4", "1 Peter 1:8-9", "1 Peter 1:13", "1 Peter 2:2", "1 Peter 2:9", "1 Peter 2:24", "1 Peter 3:8-9", "1 Peter 3:15", "1 Peter 4:8", "1 Peter 4:10", "1 Peter 5:6-7", "1 Peter 5:10", "2 Peter 1:2-3", "2 Peter 1:5-7", "2 Peter 1:19", "2 Peter 3:9", "1 John 1:7", "1 John 1:9", "1 John 2:1", "1 John 2:5", "1 John 2:10", "1 John 2:17", "1 John 3:1", "1 John 3:18", "1 John 3:22-23", "1 John 4:4", "1 John 4:7", "1 John 4:9-10", "1 John 4:12", "1 John 4:16", "1 John 4:18-19", "1 John 5:1", "1 John 5:4", "1 John 5:11-12", "1 John 5:14-15", "2 John 1:6", "3 John 1:2", "Jude 1:20-21", "Revelation 1:3", "Revelation 1:8", "Revelation 2:7", "Revelation 2:10", "Revelation 3:5", "Revelation 3:8", "Revelation 3:11", "Revelation 3:20", "Revelation 7:17", "Revelation 12:11", "Revelation 19:7", "Revelation 21:3-4", "Revelation 21:5", "Revelation 21:7", "Revelation 22:1-2", "Revelation 22:5", "Revelation 22:12-13", "Revelation 22:17", "Ruth 1:16", "1 Samuel 2:1", "2 Samuel 22:33", "1 Kings 8:57", "1 Kings 8:61", "2 Kings 20:5", "1 Chronicles 28:20", "2 Chronicles 20:15", "Ezra 8:22", "Nehemiah 9:17", "Job 11:18", "Job 22:21", "Psalms 9:1", "Psalms 16:11", "Psalms 19:1", "Psalms 27:5", "Psalms 31:19", "Psalms 33:4", "Psalms 33:11", "Psalms 34:1", "Psalms 36:5", "Psalms 37:28", "Psalms 40:4", "Psalms 42:8", "Psalms 51:10", "Psalms 57:2", "Psalms 65:11", "Psalms 66:20", "Psalms 71:14", "Psalms 73:25-26", "Psalms 84:5", "Psalms 85:8", "Psalms 86:11", "Psalms 89:1", "Psalms 90:1-2", "Psalms 91:14-15", "Psalms 92:1-2", "Psalms 94:22", "Psalms 95:1-3", "Psalms 96:1-3", "Psalms 97:11", "Psalms 100:1-2", "Psalms 103:1", "Psalms 107:9", "Psalms 111:2-3", "Psalms 112:1", "Psalms 115:12-13", "Psalms 116:5", "Psalms 119:11", "Psalms 119:50", "Psalms 119:76", "Psalms 119:114", "Psalms 119:130", "Psalms 121:3-4", "Psalms 125:1-2", "Psalms 126:2-3", "Psalms 127:1-2", "Psalms 130:5", "Psalms 133:1", "Psalms 138:8", "Psalms 139:17-18", "Psalms 143:10", "Psalms 145:13", "Psalms 146:5", "Psalms 147:3", "Psalms 147:11", "Proverbs 2:6-7", "Proverbs 8:17", "Proverbs 9:10", "Proverbs 10:11", "Proverbs 10:28", "Proverbs 11:30", "Proverbs 13:9", "Proverbs 14:26", "Proverbs 15:13", "Proverbs 15:23", "Proverbs 16:20", "Proverbs 17:17", "Proverbs 18:24", "Proverbs 19:8", "Proverbs 20:22", "Proverbs 21:21", "Proverbs 22:1", "Proverbs 24:3-4", "Proverbs 27:9", "Proverbs 28:27", "Proverbs 29:18", "Ecclesiastes 3:11", "Ecclesiastes 4:9-10", "Ecclesiastes 7:8", "Ecclesiastes 9:10", "Song of Solomon 2:4", "Song of Solomon 2:10-12", "Song of Solomon 4:7", "Song of Solomon 8:6-7", "Isaiah 12:3", "Isaiah 30:21", "Isaiah 32:2", "Isaiah 35:4", "Isaiah 41:17-18", "Isaiah 42:16", "Isaiah 49:10", "Isaiah 51:12-13", "Isaiah 54:17", "Isaiah 55:1", "Isaiah 57:15", "Isaiah 60:19-20", "Isaiah 61:10", "Isaiah 62:5", "Jeremiah 17:14", "Jeremiah 29:14", "Jeremiah 31:13", "Jeremiah 33:3", "Lamentations 3:31-32", "Ezekiel 11:19", "Ezekiel 36:27", "Hosea 14:4", "Joel 3:16", "Amos 5:14", "Obadiah 1:17", "Jonah 2:2", "Micah 7:7", "Nahum 1:7", "Habakkuk 2:4", "Zephaniah 3:17", "Haggai 2:9", "Zechariah 8:16-17", "Zechariah 8:23", "Malachi 4:2", "Matthew 5:16", "Matthew 6:20-21", "Matthew 6:33", "Matthew 7:7-8", "Matthew 7:12", "Matthew 11:28-30", "Matthew 17:20", "Matthew 19:26", "Matthew 22:37-39", "Matthew 28:18-20", "Mark 10:27", "Mark 11:24", "Mark 12:30-31", "Luke 1:37", "Luke 1:45", "Luke 6:31", "Luke 6:36", "Luke 6:38", "Luke 8:15", "Luke 11:9-10", "Luke 12:6-7", "Luke 12:22-24", "Luke 18:27", "John 3:16", "John 3:17", "John 4:14", "John 6:35", "John 8:12", "John 10:10", "John 10:27-28", "John 11:25-26", "John 13:34-35", "John 14:1", "John 14:6", "John 14:13-14", "John 14:27", "John 15:4-5", "John 15:7", "John 15:9-11", "John 15:12-13", "John 16:13", "John 16:22", "John 16:33", "John 17:3", "Acts 1:8", "Acts 2:21", "Acts 4:12", "Acts 4:31", "Acts 10:34-35", "Acts 16:31", "Romans 1:16", "Romans 5:1", "Romans 5:5", "Romans 5:8", "Romans 6:4", "Romans 8:1", "Romans 8:14-16", "Romans 8:18", "Romans 8:26", "Romans 8:28", "Romans 8:31", "Romans 8:37", "Romans 8:38-39", "Romans 10:9", "Romans 10:13", "Romans 12:2", "Romans 12:9-10", "Romans 12:12", "Romans 12:21", "Romans 13:10", "Romans 15:4", "Romans 15:13", "1 Corinthians 1:9", "1 Corinthians 1:30", "1 Corinthians 2:9", "1 Corinthians 3:16", "1 Corinthians 10:13", "1 Corinthians 13:4-7", "1 Corinthians 13:13", "1 Corinthians 15:57", "1 Corinthians 16:13-14", "2 Corinthians 1:3-4", "2 Corinthians 3:17", "2 Corinthians 4:6", "2 Corinthians 4:8-9", "2 Corinthians 4:16-18", "2 Corinthians 5:7", "2 Corinthians 5:17", "2 Corinthians 5:20", "2 Corinthians 9:7-8", "2 Corinthians 12:9-10", "Galatians 2:20", "Galatians 5:22-23", "Galatians 6:9", "Ephesians 1:3", "Ephesians 1:7", "Ephesians 1:18-19", "Ephesians 2:4-5", "Ephesians 2:8-10", "Ephesians 3:16-17", "Ephesians 3:20", "Ephesians 4:2-3", "Ephesians 4:23-24", "Ephesians 4:32", "Ephesians 5:1-2", "Ephesians 6:10-11", "Ephesians 6:13", "Ephesians 6:17", "Philippians 1:6", "Philippians 1:9-10", "Philippians 2:3-4", "Philippians 2:13", "Philippians 2:14-15", "Philippians 3:13-14", "Philippians 4:4", "Philippians 4:6-7", "Philippians 4:8", "Philippians 4:11-13", "Philippians 4:19", "Colossians 1:9-10", "Colossians 1:11-12", "Colossians 1:27", "Colossians 2:6-7", "Colossians 3:1-2", "Colossians 3:12-14", "Colossians 3:15", "Colossians 3:16-17", "Colossians 4:2", "1 Thessalonians 1:3", "1 Thessalonians 3:12-13", "1 Thessalonians 4:16-17", "1 Thessalonians 5:8", "1 Thessalonians 5:11", "1 Thessalonians 5:14-15", "1 Thessalonians 5:16-18", "1 Thessalonians 5:23-24", "2 Thessalonians 1:11-12", "2 Thessalonians 2:16-17", "2 Thessalonians 3:3", "2 Thessalonians 3:16", "1 Timothy 1:14-15", "1 Timothy 2:1-2", "1 Timothy 4:8", "1 Timothy 4:12", "1 Timothy 6:6", "1 Timothy 6:11-12", "2 Timothy 1:7", "2 Timothy 1:9", "2 Timothy 2:1", "2 Timothy 2:13", "2 Timothy 2:15", "2 Timothy 3:16-17", "2 Timothy 4:7-8", "Titus 2:11-12", "Titus 3:4-5", "Philemon 1:4-5", "Hebrews 2:18", "Hebrews 4:12", "Hebrews 4:14-16", "Hebrews 6:10", "Hebrews 6:19", "Hebrews 10:23", "Hebrews 10:24-25", "Hebrews 11:1", "Hebrews 11:6", "Hebrews 12:1-2", "Hebrews 12:11", "Hebrews 12:28", "Hebrews 13:1-2", "Hebrews 13:5-6", "Hebrews 13:8", "Hebrews 13:15-16", "James 1:2-4", "James 1:5", "James 1:12", "James 1:17", "James 1:22", "James 2:17", "James 3:17", "James 4:8", "James 5:16", "1 Peter 1:3-4", "1 Peter 1:8-9", "1 Peter 1:13", "1 Peter 2:2", "1 Peter 2:9", "1 Peter 2:24", "1 Peter 3:8-9", "1 Peter 3:15", "1 Peter 4:8", "1 Peter 4:10", "1 Peter 5:6-7", "1 Peter 5:10", "2 Peter 1:2-3", "2 Peter 1:5-7", "2 Peter 1:19", "2 Peter 3:9", "1 John 1:7", "1 John 1:9", "1 John 2:1", "1 John 2:5", "1 John 2:10", "1 John 2:17", "1 John 3:1", "1 John 3:18", "1 John 3:22-23", "1 John 4:4", "1 John 4:7", "1 John 4:9-10", "1 John 4:12", "1 John 4:16", "1 John 4:18-19", "1 John 5:1", "1 John 5:4", "1 John 5:11-12", "1 John 5:14-15", "2 John 1:6", "3 John 1:2", "Jude 1:20-21", "Revelation 1:3", "Revelation 1:8", "Revelation 2:7", "Revelation 2:10", "Revelation 3:5", "Revelation 3:8", "Revelation 3:11", "Revelation 3:20", "Revelation 7:17", "Revelation 12:11", "Revelation 19:7", "Revelation 21:3-4", "Revelation 21:5", "Revelation 21:7", "Revelation 22:1-2", "Revelation 22:5", "Revelation 22:12-13", "Revelation 22:17", "Ruth 1:16", "1 Samuel 2:1", "2 Samuel 22:33", "1 Kings 8:57", "1 Kings 8:61", "2 Kings 20:5", "1 Chronicles 28:20", "2 Chronicles 20:15", "Ezra 8:22", "Nehemiah 9:17", "Job 11:18", "Job 22:21", "Psalms 9:1", "Psalms 16:11", "Psalms 19:1", "Psalms 27:5", "Psalms 31:19", "Psalms 33:4", "Psalms 33:11", "Psalms 34:1", "Psalms 36:5", "Psalms 37:28", "Psalms 40:4", "Psalms 42:8", "Psalms 51:10", "Psalms 57:2", "Psalms 65:11", "Psalms 66:20", "Psalms 71:14", "Psalms 73:25-26", "Psalms 84:5", "Psalms 85:8", "Psalms 86:11", "Psalms 89:1", "Psalms 90:1-2", "Psalms 91:14-15", "Psalms 92:1-2", "Psalms 94:22", "Psalms 95:1-3", "Psalms 96:1-3", "Psalms 97:11", "Psalms 100:1-2", "Psalms 103:1", "Psalms 107:9", "Psalms 111:2-3", "Psalms 112:1", "Psalms 115:12-13", "Psalms 116:5", "Psalms 119:11", "Psalms 119:50", "Psalms 119:76", "Psalms 119:114", "Psalms 119:130", "Psalms 121:3-4", "Psalms 125:1-2", "Psalms 126:2-3", "Psalms 127:1-2", "Psalms 130:5", "Psalms 133:1", "Psalms 138:8", "Psalms 139:17-18", "Psalms 143:10", "Psalms 145:13", "Psalms 146:5", "Psalms 147:3", "Psalms 147:11", "Proverbs 2:6-7", "Proverbs 8:17", "Proverbs 9:10", "Proverbs 10:11", "Proverbs 10:28", "Proverbs 11:30", "Proverbs 13:9", "Proverbs 14:26", "Proverbs 15:13", "Proverbs 15:23", "Proverbs 16:20", "Proverbs 17:17", "Proverbs 18:24", "Proverbs 19:8", "Proverbs 20:22", "Proverbs 21:21", "Proverbs 22:1", "Proverbs 24:3-4", "Proverbs 27:9", "Proverbs 28:27", "Proverbs 29:18", "Ecclesiastes 3:11", "Ecclesiastes 4:9-10", "Ecclesiastes 7:8", "Ecclesiastes 9:10", "Song of Solomon 2:4", "Song of Solomon 2:10-12", "Song of Solomon 4:7", "Song of Solomon 8:6-7", "Isaiah 12:3", "Isaiah 30:21", "Isaiah 32:2", "Isaiah 35:4", "Isaiah 41:17-18", "Isaiah 42:16", "Isaiah 49:10", "Isaiah 51:12-13", "Isaiah 54:17", "Isaiah 55:1", "Isaiah 57:15", "Isaiah 60:19-20", "Isaiah 61:10", "Isaiah 62:5", "Jeremiah 17:14", "Jeremiah 29:14", "Jeremiah 31:13", "Jeremiah 33:3", "Lamentations 3:31-32", "Ezekiel 11:19", "Ezekiel 36:27", "Hosea 14:4", "Joel 3:16", "Amos 5:14", "Obadiah 1:17", "Jonah 2:2", "Micah 7:7", "Nahum 1:7", "Habakkuk 2:4", "Zephaniah 3:17", "Haggai 2:9", "Zechariah 8:16-17", "Zechariah 8:23", "Malachi 4:2", "Matthew 5:16", "Matthew 6:20-21", "Matthew 6:33", "Matthew 7:7-8", "Matthew 7:12", "Matthew 11:28-30", "Matthew 17:20", "Matthew 19:26", "Matthew 22:37-39", "Matthew 28:18-20", "Mark 10:27", "Mark 11:24", "Mark 12:30-31", "Luke 1:37", "Luke 1:45", "Luke 6:31", "Luke 6:36", "Luke 6:38", "Luke 8:15", "Luke 11:9-10", "Luke 12:6-7", "Luke 12:22-24", "Luke 18:27", "John 3:16", "John 3:17", "John 4:14", "John 6:35", "John 8:12", "John 10:10", "John 10:27-28", "John 11:25-26", "John 13:34-35", "John 14:1", "John 14:6", "John 14:13-14", "John 14:27", "John 15:4-5", "John 15:7", "John 15:9-11", "John 15:12-13", "John 16:13", "John 16:22", "John 16:33", "John 17:3", "Acts 1:8", "Acts 2:21", "Acts 4:12", "Acts 4:31", "Acts 10:34-35", "Acts 16:31", "Romans 1:16", "Romans 5:1", "Romans 5:5", "Romans 5:8", "Romans 6:4", "Romans 8:1", "Romans 8:14-16", "Romans 8:18", "Romans 8:26", "Romans 8:28", "Romans 8:31", "Romans 8:37", "Romans 8:38-39", "Romans 10:9", "Romans 10:13", "Romans 12:2", "Romans 12:9-10", "Romans 12:12", "Romans 12:21", "Romans 13:10", "Romans 15:4", "Romans 15:13", "1 Corinthians 1:9", "1 Corinthians 1:30", "1 Corinthians 2:9", "1 Corinthians 3:16", "1 Corinthians 10:13", "1 Corinthians 13:4-7", "1 Corinthians 13:13", "1 Corinthians 15:57", "1 Corinthians 16:13-14", "2 Corinthians 1:3-4", "2 Corinthians 3:17", "2 Corinthians 4:6", "2 Corinthians 4:8-9", "2 Corinthians 4:16-18", "2 Corinthians 5:7", "2 Corinthians 5:17", "2 Corinthians 5:20", "2 Corinthians 9:7-8", "2 Corinthians 12:9-10", "Galatians 2:20", "Galatians 5:22-23", "Galatians 6:9", "Ephesians 1:3", "Ephesians 1:7", "Ephesians 1:18-19", "Ephesians 2:4-5", "Ephesians 2:8-10", "Ephesians 3:16-17", "Ephesians 3:20", "Ephesians 4:2-3", "Ephesians 4:23-24", "Ephesians 4:32", "Ephesians 5:1-2", "Ephesians 6:10-11", "Ephesians 6:13", "Ephesians 6:17", "Philippians 1:6", "Philippians 1:9-10", "Philippians 2:3-4", "Philippians 2:13", "Philippians 2:14-15", "Philippians 3:13-14", "Philippians 4:4", "Philippians 4:6-7", "Philippians 4:8", "Philippians 4:11-13", "Philippians 4:19", "Colossians 1:9-10", "Colossians 1:11-12", "Colossians 1:27", "Colossians 2:6-7", "Colossians 3:1-2", "Colossians 3:12-14", "Colossians 3:15", "Colossians 3:16-17", "Colossians 4:2", "1 Thessalonians 1:3", "1 Thessalonians 3:12-13", "1 Thessalonians 4:16-17", "1 Thessalonians 5:8", "1 Thessalonians 5:11", "1 Thessalonians 5:14-15", "1 Thessalonians 5:16-18", "1 Thessalonians 5:23-24", "2 Thessalonians 1:11-12", "2 Thessalonians 2:16-17", "2 Thessalonians 3:3", "2 Thessalonians 3:16", "1 Timothy 1:14-15", "1 Timothy 2:1-2", "1 Timothy 4:8", "1 Timothy 4:12", "1 Timothy 6:6", "1 Timothy 6:11-12", "2 Timothy 1:7", "2 Timothy 1:9", "2 Timothy 2:1", "2 Timothy 2:13", "2 Timothy 2:15", "2 Timothy 3:16-17", "2 Timothy 4:7-8", "Titus 2:11-12", "Titus 3:4-5", "Philemon 1:4-5", "Hebrews 2:18", "Hebrews 4:12", "Hebrews 4:14-16", "Hebrews 6:10", "Hebrews 6:19", "Hebrews 10:23", "Hebrews 10:24-25", "Hebrews 11:1", "Hebrews 11:6", "Hebrews 12:1-2", "Hebrews 12:11", "Hebrews 12:28", "Hebrews 13:1-2", "Hebrews 13:5-6", "Hebrews 13:8", "Hebrews 13:15-16", "James 1:2-4", "James 1:5", "James 1:12", "James 1:17", "James 1:22", "James 2:17", "James 3:17", "James 4:8", "James 5:16", "1 Peter 1:3-4", "1 Peter 1:8-9", "1 Peter 1:13", "1 Peter 2:2", "1 Peter 2:9", "1 Peter 2:24", "1 Peter 3:8-9", "1 Peter 3:15", "1 Peter 4:8", "1 Peter 4:10", "1 Peter 5:6-7", "1 Peter 5:10", "2 Peter 1:2-3", "2 Peter 1:5-7", "2 Peter 1:19", "2 Peter 3:9", "1 John 1:7", "1 John 1:9", "1 John 2:1", "1 John 2:5", "1 John 2:10", "1 John 2:17", "1 John 3:1", "1 John 3:18", "1 John 3:22-23", "1 John 4:4", "1 John 4:7", "1 John 4:9-10", "1 John 4:12", "1 John 4:16", "1 John 4:18-19", "1 John 5:1", "1 John 5:4", "1 John 5:11-12", "1 John 5:14-15", "2 John 1:6", "3 John 1:2", "Jude 1:20-21", "Revelation 1:3", "Revelation 1:8", "Revelation 2:7", "Revelation 2:10", "Revelation 3:5", "Revelation 3:8", "Revelation 3:11", "Revelation 3:20", "Revelation 7:17", "Revelation 12:11", "Revelation 19:7", "Revelation 21:3-4", "Revelation 21:5", "Revelation 21:7", "Revelation 22:1-2", "Revelation 22:5", "Revelation 22:12-13", "Revelation 22:17", "Ruth 1:16", "1 Samuel 2:1", "2 Samuel 22:33", "1 Kings 8:57", "1 Kings 8:61", "2 Kings 20:5", "1 Chronicles 28:20", "2 Chronicles 20:15", "Ezra 8:22", "Nehemiah 9:17", "Job 11:18", "Job 22:21", "Psalms 9:1", "Psalms 16:11", "Psalms 19:1", "Psalms 27:5", "Psalms 31:19", "Psalms 33:4", "Psalms 33:11", "Psalms 34:1", "Psalms 36:5", "Psalms 37:28", "Psalms 40:4", "Psalms 42:8", "Psalms 51:10", "Psalms 57:2", "Psalms 65:11", "Psalms 66:20", "Psalms 71:14", "Psalms 73:25-26", "Psalms 84:5", "Psalms 85:8", "Psalms 86:11", "Psalms 89:1", "Psalms 90:1-2", "Psalms 91:14-15", "Psalms 92:1-2", "Psalms 94:22", "Psalms 95:1-3", "Psalms 96:1-3", "Psalms 97:11", "Psalms 100:1-2", "Psalms 103:1", "Psalms 107:9", "Psalms 111:2-3", "Psalms 112:1", "Psalms 115:12-13", "Psalms 116:5", "Psalms 119:11", "Psalms 119:50", "Psalms 119:76", "Psalms 119:114", "Psalms 119:130", "Psalms 121:3-4", "Psalms 125:1-2", "Psalms 126:2-3", "Psalms 127:1-2", "Psalms 130:5", "Psalms 133:1", "Psalms 138:8", "Psalms 139:17-18", "Psalms 143:10", "Psalms 145:13", "Psalms 146:5", "Psalms 147:3", "Psalms 147:11"];
+  return verses_uplifting;
+}
+function app_reply_choices() {
+  let education = app_reply_pray("Education", "provide education to those in need 🏫");
+  let heal = app_reply_pray("Heal", "heal the sick");
+  let job = app_reply_pray("Job", "provide you with a good job");
+  let provide = app_reply_pray("Provide", "provide what is needed");
+  let travel_pray = app_reply_pray("Travel pray", text_combine("give you safe travels ", emoji_dove()));
+  let pray_request = app_reply_choices_will_done_fragment();
+  let will = app_reply_pray("Will", pray_request);
+  let with2 = app_reply_pray("With", text_combine("always be with you! ", emoji_dove()));
+  let s = app_reply_response_how_r_u_skip_first_upper();
+  let b = {
+    text: text_combine(emoji_pray(), " Bless"),
+    response: prayer_blessing_expand()
+  };
+  let greetings = app_reply_response_greetings();
+  let hru = app_reply_response_how_r_u();
+  let hru_today = app_reply_response_how_r_u_today();
+  let how_family = app_reply_response_how_family();
+  let how_day = app_reply_response_how_day();
+  let live = app_reply_response_live();
+  let called_why = app_reply_call_why_generic("did", "");
+  let how_feel = text_combine(emoji_pray(), " God is helping me be joyful when I suffer");
+  let how_feel_today = text_combine_today(how_feel);
+  let s3 = text_the_servant_of_god_first_upper();
+  let v = [{
+    text: text_combine(emoji_pray(), " Amazing"),
+    response: text_combine(emoji_pray(), " Yet not I, but the grace of God that is with me!")
+  }, {
+    text: text_combine(emoji_pray(), " Amen"),
+    response: prayer_end()
+  }, {
+    text: text_combine(emoji_question(), " Ask"),
+    response: "What are you asking me to do?"
+  }, {
+    text: text_combine(emoji_pray(), " Bless short"),
+    response: text_combine("God bless", prayer_end())
+  }, {
+    text: text_combine(emoji_phone(), " Call want why?"),
+    response: app_reply_call_why_generic("do", "want to ")
+  }, {
+    text: app_reply_called_why(),
+    response: called_why
+  }, {
+    text: text_combine(emoji_phone(), " Call no"),
+    response: text_combine(emoji_phone(), " No video call")
+  }, {
+    text: text_combine(emoji_pray(), " Church"),
+    response: text_combine_multiple([emoji_pray(), text_lord_bless_your(), "church ", emoji_church()])
+  }, education, {
+    text: text_combine(emoji_pray(), " Family"),
+    response: text_combine_multiple([emoji_pray(), text_lord_bless_your(), "family ", emoji_family()])
+  }, {
+    text: text_combine(emoji_pray(), " Friends"),
+    response: text_combine(emoji_pray(), 'Every friend of Jesus is a friend of mine! Jesus says: "You are My friends if you do what I command you." (John 15:14)')
+  }, {
+    text: text_combine(emoji_pray(), " Future"),
+    response: text_combine_multiple([emoji_pray(), "God knows the future. I do not know the future.", emoji_question()])
+  }, {
+    text: app_reply_glory(),
+    response: app_reply_choices_glory()
+  }, {
+    text: app_reply_give(),
+    response: app_reply_choices_give()
+  }, {
+    text: text_combine(emoji_pray(), " Fundraiser"),
+    response: text_combine(emoji_pray(), " Sorry, I cannot create a fundraiser for you")
+  }, {
+    text: app_reply_greetings(),
+    response: greetings
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_called_why()]),
+    response: list_join_newline_2([greetings, called_why])
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_how_day()]),
+    response: list_join_newline_2([greetings, how_day])
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_how_family()]),
+    response: list_join_newline_2([greetings, how_family])
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_how_feel()]),
+    response: list_join_newline_2([greetings, how_feel])
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_how_r_u()]),
+    response: list_join_newline_2([greetings, hru])
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_how_r_u_today()]),
+    response: list_join_newline_2([greetings, hru_today])
+  }, {
+    text: text_combine_multiple([app_reply_greetings(), " ", app_reply_how_r_u(), " ", app_reply_how_family()]),
+    response: list_join_newline_2([greetings, hru, how_family])
+  }, {
+    text: app_reply_greetings_live(),
+    response: list_join_newline_2([greetings, live])
+  }, {
+    text: text_combine(emoji_hands_raising(), " Hallelujah"),
+    response: text_combine_multiple([emoji_hands_raising(), " Hallelujah! Hallelujah! Hallelujah! ", emoji_pray()])
+  }, heal, {
+    text: text_combine(emoji_pray(), " Health"),
+    response: text_combine(emoji_pray(), " The doctors said I had a diagnosis of schizoaffective disorder. Please pray for my health, that I am healed from everything and that those who gave me medicine command me to stop taking medicine.")
+  }, {
+    text: text_combine(emoji_pray(), " Help me"),
+    response: app_reply_pray_help_generic("me")
+  }, {
+    text: text_combine(emoji_pray(), " Help us"),
+    response: app_reply_pray_help_generic("us")
+  }, {
+    text: text_combine(emoji_question(), " Help what"),
+    response: text_combine(emoji_pray(), "What help are you asking for? What are you asking me to do?")
+  }, {
+    text: app_reply_how_day(),
+    response: how_day
+  }, {
+    text: app_reply_how_family(),
+    response: how_family
+  }, {
+    text: app_reply_how_feel(),
+    response: how_feel
+  }, {
+    text: app_reply_how_feel_today(),
+    response: how_feel_today
+  }, {
+    text: app_reply_how_r_u(),
+    response: hru
+  }, {
+    text: app_reply_how_r_u_today(),
+    response: hru_today
+  }, {
+    text: text_combine_multiple([app_reply_how_r_u(), " ", app_reply_how_family()]),
+    response: list_join_newline_2([hru, how_family])
+  }, {
+    text: text_combine_multiple([app_reply_how_r_u(), " ", app_reply_how_day()]),
+    response: list_join_newline_2([hru, how_day])
+  }, {
+    text: text_combine(emoji_pray(), " Invite"),
+    response: text_combine(emoji_pray(), "If the LORD makes a way, then I will travel to you. However at this time I have no money to travel.")
+  }, job, {
+    text: text_combine(emoji_globe_americas(), " Language"),
+    response: text_combine_multiple([emoji_globe_americas(), " ", s3, " speaks English. ", emoji_pray()])
+  }, {
+    text: app_reply_live(),
+    response: live
+  }, {
+    text: text_combine(emoji_globe_americas(), " Location"),
+    response: app_reply_choices_location()
+  }, {
+    text: text_combine(emoji_wave(), " Meet"),
+    response: text_combine_multiple([emoji_pray(), " Nice to meet you! ", emoji_handshake()])
+  }, {
+    text: text_combine(emoji_wave(), " Name"),
+    response: app_reply_choices_name()
+  }, {
+    text: text_combine(emoji_wave(), " Name location"),
+    response: text_combine_multiple([app_reply_choices_name(), newline_2(), app_reply_choices_location()])
+  }, {
+    text: text_combine(emoji_wave(), " Name ministry"),
+    response: text_combine('The name of my ministry is: \"JESUS rose to life\" ', emoji_cross())
+  }, {
+    text: text_combine(emoji_ok(), "Okay"),
+    response: text_combine_multiple([emoji_ok(), " ", text_the_servant_of_god_is_first_upper(), " okay, yes ", emoji_100(), " ", emoji_pray()])
+  }, {
+    text: text_combine(emoji_dove(), " Peace"),
+    response: text_combine_multiple([emoji_dove(), " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with you ", emoji_rainbow()])
+  }, {
+    text: text_combine(emoji_camera(), " Pictures"),
+    response: text_combine(emoji_camera(), " Here are some pictures of my wife and I: https://www.facebook.com/media/set/?set=a.761930266739275&type=3")
+  }, {
+    text: "🎵 Praise",
+    response: app_reply_choices_praise()
+  }, {
+    text: text_combine(emoji_pray(), " Pray"),
+    response: prayer_start()
+  }, {
+    text: text_combine(emoji_pray(), " Preach"),
+    response: text_combine(emoji_pray(), "If God wills, then yes I will preach teach. Do you have a day and time?")
+  }, {
+    text: text_combine_multiple([emoji_pray(), " ", "Prayers"]),
+    response: text_combine(emoji_pray(), "According to the desire of God, may there be prayer")
+  }, {
+    text: text_combine_multiple([emoji_pray(), " ", "Programming"]),
+    response: text_combine(emoji_pray(), "I have been computer programming 💻")
+  }, {
+    text: text_combine_multiple([emoji_pray(), " ", "Replying"]),
+    response: text_combine(emoji_pray(), "I have been replying to messages 📨")
+  }, {
+    text: text_combine(emoji_pray(), " Share"),
+    response: text_combine_multiple([emoji_pray(), " What day and time are you asking me to share the word of God? ", emoji_book_open()])
+  }, provide, {
+    text: text_combine(emoji_pray(), " Sleep"),
+    response: text_combine_multiple([emoji_pray(), emoji_sleep_z(), " ", text_lord_bless_your(), "sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. ", emoji_sleep_face()])
+  }, {
+    text: "Song",
+    response: text_combine_multiple(["https://youtu.be/rNhSoUKPgMQ", newline_2(), " Jesus gave me the grace to write this song"])
+  }, {
+    text: text_combine(emoji_no(), " Sorry"),
+    response: " Sorry, I will not do that"
+  }, {
+    text: "Talk",
+    response: "What do you want to talk about?"
+  }, {
+    text: text_combine(emoji_pray(), " Testimony"),
+    response: text_combine_multiple([emoji_pray(), " Jesus died for my sins. ", emoji_cross(), " Jesus was buried. ", emoji_rock(), " Jesus rose to life. ", emoji_pray(), emoji_church(), " I confessed this truth since I was about 7 years old. But I never decided to fully obey Jesus as LORD until I was about 26 years old. Then eventually God called me to ministry. ", emoji_cross(), emoji_smile()])
+  }, {
+    text: text_combine(emoji_pray(), " Thank God"),
+    response: text_combine_multiple([emoji_pray(), " Thank the LORD, our God! ", emoji_smile()])
+  }, {
+    text: text_combine(emoji_pray(), " Thank you"),
+    response: app_reply_choices_thanks()
+  }, {
+    text: text_combine(emoji_clock(), " Time"),
+    response: text_combine(emoji_pray(), " I have time to reply to messages")
+  }, {
+    text: text_combine(emoji_pray(), " Travel ask"),
+    response: text_combine(emoji_pray(), "No money for travel")
+  }, travel_pray, {
+    text: text_combine(emoji_voice(), " Voice"),
+    response: text_combine_multiple([emojis_sing_wrap("My voice is a gift and miracle from God! "), app_reply_choices_glory(), " ", app_reply_choices_thanks()])
+  }, {
+    text: text_combine(emoji_smile(), " Well"),
+    response: text_combine_multiple([emoji_smile(), " All is well! ", emoji_pray()])
+  }, {
+    text: text_combine(emoji_question(), " What"),
+    response: text_combine(emoji_pray(), " What do you mean?")
+  }, {
+    text: app_reply_choices_whatsapp(),
+    response: text_combine(emoji_phone(), " WhatsApp: +1-904-314-4052")
+  }, will, {
+    text: text_combine(emoji_pray(), " Wills"),
+    response: text_combine(emoji_pray(), " If God wills, yes")
+  }, with2, {
+    text: text_combine(emoji_pray(), " Word"),
+    response: text_combine(emoji_pray(), " Behold, I am an unworthy servant of the LORD. May the word of the LORD come true!")
+  }, {
+    text: text_combine(emoji_pray(), " Work"),
+    response: text_combine(emoji_pray(), " Through the grace of God: Recently, I have only been doing ministry work. I have been preaching at different churches. I have also made Bible singing videos: https://www.youtube.com/@CHRISTrosetolifesinging Also, I have been doing some computer programming.")
+  }];
+  return v;
+}
+function app_reply_choices_whatsapp() {
+  let r = text_combine(emoji_phone(), " WhatsApp");
+  return r;
+}
+function emoji_phone() {
+  let v = "📞";
+  return v;
+}
+function app_reply_glory() {
+  let r = text_combine(emoji_fire(), " Glory");
+  return r;
+}
+function emoji_fire() {
+  let v = "🔥";
+  return v;
+}
+function app_reply_give() {
+  let r = text_combine(emoji_pray(), " Give");
+  return r;
+}
+function emoji_pray() {
+  let v = "🙏";
+  return v;
+}
+function text_combine_today(t2) {
+  let t = text_combine(t2, " today");
+  return t;
+}
+function app_reply_how_feel_today() {
+  let t = app_reply_how_feel();
+  let r = text_combine_today(t);
+  return r;
+}
+function app_reply_how_feel() {
+  let t = text_combine(emoji_pray(), " How feeling");
+  return t;
+}
+function newline_2() {
+  let r = text_combine(newline(), newline());
+  return r;
+}
+function newline() {
+  let v = "\n";
+  return v;
+}
+function app_reply_greetings_live() {
+  let r = text_combine_multiple([app_reply_greetings(), " ", app_reply_live()]);
+  return r;
+}
+function app_reply_live() {
+  let v = text_combine(emoji_question(), " Live");
+  return v;
+}
+function emoji_question() {
+  let v = "❓";
+  return v;
+}
+function app_reply_greetings() {
+  let t = text_combine(emoji_wave(), " Greetings");
+  return t;
+}
+function emoji_wave() {
+  let v = "👋";
+  return v;
+}
+function app_reply_response_how_r_u_today() {
+  let hru = text_combine_multiple([app_reply_response_how_r_u_before(), "Today, ", app_reply_response_how_r_u_skip()]);
+  return hru;
+}
+function app_reply_response_how_r_u_skip() {
+  let before = app_reply_response_how_r_u_skip_before();
+  let t = text_combine_multiple([before, emoji_book_open(), " all things work together for good to them that love God and are called according to the purpose of God! (Romans 8:28) However, please pray that the servant of God will be perfectly loving and healed", emoji_pray()]);
+  return t;
+}
+function emoji_book_open() {
+  let v = "📖";
+  return v;
+}
+function app_reply_response_how_r_u_skip_before() {
+  let r = text_combine_multiple([text_the_servant_of_god_is(), " doing good ", emoji_100(), " through the grace of God, because "]);
+  return r;
+}
+function text_the_servant_of_god_is() {
+  let r = text_combine(text_the_servant_of_god(), " is");
+  return r;
+}
+function text_the_servant_of_god() {
+  let t = "the servant of God";
+  return t;
+}
+function emoji_100() {
+  let v = "💯";
+  return v;
+}
+function app_reply_response_how_r_u_before() {
+  let r = text_combine(emoji_ok(), " ");
+  return r;
+}
+function emoji_ok() {
+  let v = "👌";
+  return v;
+}
+function app_reply_how_r_u_today() {
+  let t = app_reply_how_r_u();
+  let r = text_combine_today(t);
+  return r;
+}
+function app_reply_how_r_u() {
+  let t = text_combine(emoji_ok(), "How r u");
+  return t;
+}
+function text_the_servant_of_god_first_upper() {
+  let s2 = text_the_servant_of_god();
+  let s3 = text_first_upper_to(s2);
+  return s3;
+}
+function text_first_upper_to(s) {
+  let transform = text_upper_to;
+  let t = text_first_transform(s, transform);
+  return t;
+}
+function text_upper_to(s) {
+  let u = s.toUpperCase();
+  return u;
+}
+function text_first_transform(s, transform) {
+  let split = text_split_empty(s);
+  let r = list_first_remaining(split);
+  let remaining = property_get(r, "remaining");
+  let first = property_get(r, "first");
+  let lower = transform(first);
+  if (null_is(remaining)) {
+    remaining = [];
+  }
+  let joined = list_join_empty(remaining);
+  let v = text_combine_multiple([lower, joined]);
+  return v;
+}
+function list_join_empty(list) {
+  let e = text_empty();
+  let joined = list_join(list, e);
+  return joined;
+}
+function text_empty() {
+  let v = "";
+  return v;
+}
+function list_first_remaining(list) {
+  let property_name = "remaining";
+  let value_get = list_skip_1;
+  let r = list_first_second_generic(list, value_get, property_name);
+  if (false) {
+    "this is for copy and pasting";
+    let o = {
+      first,
+      remaining
+    };
+  }
+  return r;
+}
+function list_skip_1(list) {
+  let skipped = list_skip(list, 1);
+  return skipped;
+}
+function list_skip(list, skip_count) {
+  let b = list_size(list);
+  let skipped = list_slice(list, skip_count, b);
+  return skipped;
+}
+function list_slice(list, index_a, index_b) {
+  let sliced = list.slice(index_a, index_b);
+  return sliced;
+}
+function text_split_empty(s) {
+  let split = text_split(s, "");
+  return split;
+}
+function emoji_no() {
+  let r = "🚫";
+  return r;
+}
+function emoji_clock() {
+  let r = "⏰️";
+  return r;
+}
+function app_reply_called_why() {
+  let t = text_combine(emoji_phone(), " Called why?");
+  return t;
+}
+function app_reply_response_live() {
+  let languages = "Where do you live? Where are you from?";
+  return languages;
+}
+function app_reply_response_how_day() {
+  let s = app_reply_response_how_r_u_skip_before_first_upper();
+  let v = text_combine_multiple([emoji_ok(), " The day of the ", text_first_lower_to(s), "today is one day closer to the return of Jesus than yesterday!"]);
+  return v;
+}
+function app_reply_response_how_r_u_skip_before_first_upper() {
+  let t = app_reply_response_how_r_u_skip_before();
+  let u = text_first_upper_to(t);
+  return u;
+}
+function text_first_lower_to(s) {
+  let transform = text_lower_to;
+  let v = text_first_transform(s, transform);
+  return v;
+}
+function text_lower_to(s) {
+  let lower = s.toLowerCase();
+  return lower;
+}
+function app_reply_how_day() {
+  let v = text_combine(emoji_ok(), " How day");
+  return v;
+}
+function app_reply_response_how_family() {
+  let how_family = text_combine_multiple([emoji_pray(), "My family are those who do the will of God! The family of God needs prayer ", emoji_pray(), " - And stretching out his hand toward his disciples, he said, “Here are my mother and my brothers! For whoever does the will of my Father in heaven is my brother and sister and mother.” Matthew 12:49-50"]);
+  return how_family;
+}
+function app_reply_how_family() {
+  let v = text_combine(emoji_pray(), " How family");
+  return v;
+}
+function list_join_newline_2(list) {
+  let separator = newline();
+  let joined = list_join(list, text_combine(separator, separator));
+  return joined;
+}
+function prayer_blessing_expand() {
+  let v = prayer_blessing("you, your family, your church and your country");
+  return v;
+}
+function prayer_blessing(blessed) {
+  let v = text_combine_multiple([prayer_start(), text_lord_bless(), blessed, " exceedingly abundantly more than anyone can ask or think ", prayer_end()]);
+  return v;
+}
+function prayer_end() {
+  let v = text_combine(" Amen! ", emoji_pray());
+  return v;
+}
+function text_lord_bless() {
+  let v = text_combine(text_may_the_lord(), "bless ");
+  return v;
+}
+function text_may_the_lord() {
+  let v = "May the LORD ";
+  return v;
+}
+function prayer_start() {
+  let v = text_combine_multiple([emoji_bow(), " In the name of ", trinity_name_prayer(), " ", emoji_trinity(), " : "]);
+  return v;
+}
+function trinity_name_prayer() {
+  let v = "the Father, and of the Son, and of the Holy Spirit";
+  return v;
+}
+function emoji_bow() {
+  let v = "🙇";
+  return v;
+}
+function emoji_trinity() {
+  let v = text_combine_multiple(["❤️", emoji_cross(), emoji_dove()]);
+  return v;
+}
+function emoji_dove() {
+  let v = "🕊️";
+  return v;
+}
+function emoji_cross() {
+  let v = "✝️";
+  return v;
+}
+function app_reply_pray_help_generic(h) {
+  let v = text_combine_multiple(["God help ", h, prayer_end()]);
+  return v;
+}
+function emoji_camera() {
+  let v = "📸";
+  return v;
+}
+function app_reply_call_why_generic(a, b) {
+  let v = text_combine_multiple([emoji_phone(), " Why ", a, " you ", b, "call me? What did you want to talk about?"]);
+  return v;
+}
+function app_reply_choices_thanks() {
+  let v = text_combine_multiple([emoji_pray(), " Thank you very much! ", emoji_smile()]);
+  return v;
+}
+function emoji_smile() {
+  let v = "😁";
+  return v;
+}
+function emojis_sing_wrap(lyrics) {
+  let v = text_combine_multiple(["🎵 ", emoji_voice(), " ", lyrics, " 🎶"]);
+  return v;
+}
+function emoji_voice() {
+  let v = "🗣️";
+  return v;
+}
+function app_reply_response_how_r_u_skip_first_upper() {
+  let t = app_reply_response_how_r_u_skip();
+  let u = text_first_upper_to(t);
+  return u;
+}
+function app_reply_choices_glory() {
+  let v = text_combine_multiple([emoji_pray(), " All glory to God ", emoji_trinity(), " ! "]);
+  return v;
+}
+function app_reply_choices_will_done_fragment() {
+  let v = text_combine("have His will done! ", emoji_dove());
+  return v;
+}
+function app_reply_choices_name() {
+  let t = text_combine_multiple([emoji_pray(), " ", text_the_servant_of_god_is_first_upper(), ' called Jared Patten Mathis - "When Jared was 162 years old, he became the father of Enoch." Genesis 5:18 ', emoji_handshake()]);
+  return t;
+}
+function emoji_handshake() {
+  let v = "🤝";
+  return v;
+}
+function text_the_servant_of_god_is_first_upper() {
+  let t = text_the_servant_of_god_is();
+  let u = text_first_upper_to(t);
+  return u;
+}
+function app_reply_choices_location() {
+  let t = text_combine_multiple([emoji_globe_americas(), " ", text_the_servant_of_god_is_first_upper(), " from 🇺🇸 the United States of America, state of Florida, city of Jacksonville. ", emoji_pray()]);
+  return t;
+}
+function emoji_globe_americas() {
+  let v = "🌎";
+  return v;
+}
+function app_reply_choices_give() {
+  let t = text_combine(emoji_pray(), " Sorry, I have nothing that I can give you at this time. According to the desire of the LORD: May the LORD provide and may the LORD lead you to someone who will abundantly provide whatever you ask the same day you ask.");
+  return t;
+}
+function app_reply_choices_praise() {
+  let lyrics = "Praise the LORD our God in the name of Jesus Christ!";
+  let v = emojis_sing_wrap(lyrics);
+  return v;
+}
+function app_reply_response_greetings() {
+  let greetings = text_combine_multiple([emoji_wave(), emoji_smile(), " Greetings in the name of our LORD Jesus Christ! ", emoji_cross()]);
+  return greetings;
+}
+function app_reply_response_how_r_u() {
+  let hru = text_combine(app_reply_response_how_r_u_before(), app_reply_response_how_r_u_skip_first_upper());
+  return hru;
+}
+function emoji_rock() {
+  let v = "🪨";
+  return v;
+}
+function emoji_rainbow() {
+  let v = "🌈";
+  return v;
+}
+function app_reply_pray(pray_title, pray_request) {
+  let v = {
+    text: text_combine_multiple([emoji_pray(), " ", pray_title]),
+    response: app_reply_pray_response(pray_request)
+  };
+  return v;
+}
+function app_reply_pray_response(pray_request) {
+  let v = text_combine_multiple([emoji_pray(), " ", text_may_the_lord(), pray_request]);
+  return v;
+}
+function emoji_family() {
+  let v = "👨‍👩‍👧‍👦";
+  return v;
+}
+function emoji_hands_raising() {
+  let v = "🙌";
+  return v;
+}
+function emoji_church() {
+  let v = "⛪";
+  return v;
+}
+function text_lord_bless_your() {
+  let blessing = text_combine(text_lord_bless(), "your ");
+  return blessing;
+}
+function emoji_sleep_face() {
+  let v = "😴";
+  return v;
+}
+function emoji_sleep_z() {
+  let v = "💤";
+  return v;
+}
+function html_button_copy_text() {
+  let c = text_combine(emoji_copy(), " Copy");
+  return c;
+}
+function emoji_copy() {
+  let v = "📋";
+  return v;
+}
+function app_shared_text_body(parent, text) {
+  let p = html_p_text(parent, text);
+  html_style_margin_y(p, "0.25em");
+  return p;
+}
+function html_display_none_or_block(hidden, item) {
+  if (hidden) {
+    html_display_none(item);
+  } else {
+    html_display_block(item);
+  }
+}
+function html_display_block(element) {
+  html_style_set(element, "display", "block");
+}
+function html_display_none(element) {
+  html_style_set(element, "display", "none");
+}
+function list_shuffle_take(list, count) {
+  list_shuffle(list);
+  let taken = list_take(list, count);
+  return taken;
+}
+function list_take(list, count) {
+  let taken = list_slice(list, 0, count);
+  return taken;
+}
+function list_shuffle(list) {
+  let indices = list_to_indices(list);
+  list_shuffle_indices(list, indices);
+}
+function list_shuffle_indices(list, indices) {
+  "only shuffles items at the indices; other items are not shuffled";
+  function lambda(i) {
+    let j = list_random_item(indices);
+    list_swap_at(list, i, j);
+  }
+  each(indices, lambda);
+}
+function list_random_item(list) {
+  let index = list_random_index(list);
+  let r = list_get(list, index);
+  return r;
+}
+function list_random_index(list) {
+  let p = multiply(random(), list_size(list));
+  let index = floor(p);
+  return index;
+}
+function list_to_indices(list) {
+  let size = list_size(list);
+  let indices = range(size);
+  return indices;
+}
+async function list_join_newline_2_copy(concated) {
+  let joined = list_join_newline_2(concated);
+  await clipboard_copy(joined);
+  return joined;
+}
+async function clipboard_copy(text) {
+  let b = browser_is();
+  if (b) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  let clipboard = await import("clipboardy");
+  await clipboard.default.write(text);
+}
+function list_empty(list) {
+  property_set(list, "length", 0);
+}
+async function each_async(list, lambda$item) {
+  for (let item of list) {
+    let result = await lambda$item(item);
+    if (result === true) {
+      break;
+    }
+  }
+}
+app_verses();
   </script>
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/service-worker.js'); }</script>
 </body>
 </html>
