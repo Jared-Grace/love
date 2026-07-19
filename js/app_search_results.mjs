@@ -1,4 +1,5 @@
 import { app_shared_bible_open } from "../../love/js/app_shared_bible_open.mjs";
+import { app_bible_mode_chapter } from "../../love/js/app_bible_mode_chapter.mjs";
 import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
 import { html_style_margin_y } from "../../love/js/html_style_margin_y.mjs";
 import { app_shared_button_inline } from "../../love/js/app_shared_button_inline.mjs";
