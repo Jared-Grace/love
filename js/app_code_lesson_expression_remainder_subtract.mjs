@@ -21,6 +21,8 @@ import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_gener
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -131,17 +133,28 @@ export function app_code_lesson_expression_remainder_subtract() {
       "If we subtracted ",
       "5",
       " again we would have ",
-      "-3",
+      "2 - 5 === -3",
     ]);
-    html_div_cycle_code(c, ["We do not want the remainder to go negative"]);
-    html_div_cycle_code(c, ["What is left over is the remainder"]);
+    html_div_cycle_code(c, ["We do not want to go below zero"]);
     html_div_cycle_code(c, [
-      "We write ",
-      "17 % 5",
-      " for this",
+      "So ",
+      "2",
+      " is what remains after we kept subtracting ",
+      "5",
+      " from ",
+      "17",
     ]);
+    html_div_cycle_code(c, ["So we write ", "17 % 5 === 2"]);
     html_div_cycle_code(c, [
-      "Keep subtracting the second number until what is left is smaller than it",
+      "",
+      percent,
+      " means we keep subtracting the second number from the first number until what remains is smaller than the second number",
     ]);
+    let named = html_div(c);
+    html_span_text(named, "When we ");
+    html_span_text_code_dark(named, percent);
+    html_span_text(named, ", what remains is called the ");
+    let word = html_span_text(named, "remainder");
+    html_style_set(word, "font-weight", "bold");
   }
 }
