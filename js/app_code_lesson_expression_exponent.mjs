@@ -124,7 +124,7 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(grid, "align-items", "center");
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
-      html_style_set(grid, "row-gap", "0.2em");
+      html_style_set(grid, "row-gap", "0.4em");
       html_style_set(grid, "vertical-align", "middle");
       let pill = html_span(grid);
       html_style_set(pill, "grid-row", "2");
