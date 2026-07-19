@@ -37,15 +37,23 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   let variation_fns = list_adder(lambda4);
   function lambda5(la) {
-    let code_without_variation = js_unparse(ast);
-    la(code_without_variation);
-    let ne = list_empty_not_is(variation_fns);
-    if (ne) {
-      let variation = list_single(variation_fns);
-      variation();
-      let code_with_variation = js_unparse(ast);
-      la(code_with_variation);
+    "every commutative node can independently keep or swap its two sides, so the acceptable orderings are ALL combinations of the swaps (2^n, not just one); enumerate them by recursively trying each swap off then on, and since each swap is its own inverse the ast is left back at its original state; list_adder_unique folds identical results (e.g. 2 * 2 * 2 where swapping changes nothing)";
+    function generate(swaps) {
+      let none_left = list_empty_is(swaps);
+      if (none_left) {
+        let code_variation = js_unparse(ast);
+        la(code_variation);
+      } else {
+        let split = list_first_remaining(swaps);
+        let swap = property_get(split, "first");
+        let remaining = property_get(split, "remaining");
+        generate(remaining);
+        swap();
+        generate(remaining);
+        swap();
+      }
     }
+    generate(variation_fns);
   }
   let codes = list_adder_unique(lambda5);
   let variations = list_map(codes, js_tokenizer_normalized);
