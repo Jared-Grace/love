@@ -9,6 +9,8 @@ import { app_g_button_green } from "./app_g_button_green.mjs";
 import { g_thanks_gratitude } from "./g_thanks_gratitude.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_take } from "./list_take.mjs";
+import { list_filter_includes_not } from "./list_filter_includes_not.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { each } from "./each.mjs";
 import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
