@@ -68,6 +68,7 @@ import { text_to_words } from "../../love/js/text_to_words.mjs";
 import { catch_ignore_async } from "../../love/js/catch_ignore_async.mjs";
 import { emoji_book_open } from "../../love/js/emoji_book_open.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
+import { html_scroll_center } from "../../love/js/html_scroll_center.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let en = ebible_folder_english();
@@ -176,6 +177,10 @@ export async function app_search_results(context, div_results) {
     function toggle() {
       let next = not(collapsed);
       collapsed_set(next);
+      let expanded = not(next);
+      if (expanded) {
+        html_scroll_center(div_book);
+      }
     }
     html_on_click(header, toggle);
     collapsed_set(false);
