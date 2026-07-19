@@ -5,13 +5,13 @@ import { openai_responses_cache_args } from "./openai_responses_cache_args.mjs";
 import { list_get_end } from "./list_get_end.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_single } from "./list_single.mjs";
-import { app_gloss_bible_generate_generic_word } from "./app_gloss_bible_generate_generic_word.mjs";
+import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_generate_chapter_language } from "./app_ceb_bible_gloss_generate_chapter_language.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { g_sermon_generate_book_generic_prompts } from "./g_sermon_generate_book_generic_prompts.mjs";
-import { app_gloss_bible_generate_generic_prompt_user_middle } from "./app_gloss_bible_generate_generic_prompt_user_middle.mjs";
-import { app_gloss_bible_generate_generic_prompt_system } from "./app_gloss_bible_generate_generic_prompt_system.mjs";
+import { app_shared_gloss_bible_generate_generic_prompt_user_middle } from "./app_shared_gloss_bible_generate_generic_prompt_user_middle.mjs";
+import { app_shared_gloss_bible_generate_generic_prompt_system } from "./app_shared_gloss_bible_generate_generic_prompt_system.mjs";
 import { log } from "./log.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { file_open } from "./file_open.mjs";
@@ -21,14 +21,14 @@ export async function g_sermon_generate_book_generic_open() {
   let chapter_code = "PRO22";
   let language = app_ceb_bible_gloss_generate_chapter_language();
   let last = "original language and English are";
-  let word = app_gloss_bible_generate_generic_word();
-  let prompt_system = app_gloss_bible_generate_generic_prompt_system(
+  let word = app_shared_gloss_bible_generate_generic_word();
+  let prompt_system = app_shared_gloss_bible_generate_generic_prompt_system(
     language,
     word,
     last,
   );
   let prompt_user_middle =
-    app_gloss_bible_generate_generic_prompt_user_middle(language);
+    app_shared_gloss_bible_generate_generic_prompt_user_middle(language);
   let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let chapters = await g_sermon_generate_book_generic_prompts(
     bible_folders,
