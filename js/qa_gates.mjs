@@ -6,6 +6,11 @@ import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invali
 // Every repo-wide gate qa_gate_run runs. A gate is a zero-argument async
 // function that prints its own detail and throws if anything failed.
 export function qa_gates() {
-  let gates = [guard_gate_run, examples_gate_run, permission_gate_run];
+  let gates = [
+    guard_gate_run,
+    examples_gate_run,
+    permission_gate_run,
+    app_shared_prefixes_invalid_assert,
+  ];
   return gates;
 }
