@@ -4,4 +4,3 @@ self.addEventListener('install', function () {
 self.addEventListener('activate', function (event) {
   event.waitUntil(self.clients.claim());
 });
-self.addEventListener('fetch', function () {});
