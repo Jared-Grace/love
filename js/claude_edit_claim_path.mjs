@@ -1,4 +1,4 @@
-import { path_resolve } from "./path_resolve.mjs";
+import path from "path";
 import { path_join } from "./path_join.mjs";
 import { text_combine } from "./text_combine.mjs";
 // Where the claim marker for one edited source file lives.
