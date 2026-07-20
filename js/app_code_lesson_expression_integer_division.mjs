@@ -87,7 +87,7 @@ export function app_code_lesson_expression_integer_division() {
     html_div_cycle_code(problem, ["For example, ", "14 / 4", " is ", "3.5"]);
     let solution = app_code_container_light_blue(root);
     html_div_cycle_code(solution, [
-      "Now we will divide, and then round down to get a whole number",
+      "Now we will divide, and then round down to get a whole number:",
     ]);
     html_div_cycle_code(solution, ["", "Math.floor(14 / 4)", " is ", "3"]);
     html_div_cycle_code(solution, [
@@ -104,6 +104,7 @@ export function app_code_lesson_expression_integer_division() {
       "4",
       " away from ",
       "14",
+      ":",
     ]);
     html_div_cycle_code(subtracting, ["", "14 - 4 - 4 - 4"]);
   }
