@@ -1,15 +1,21 @@
-import { daemon_property } from "./daemon_property.mjs";
+import { daemon_properties } from "./daemon_properties.mjs";
+import { property_get } from "./property_get.mjs";
 export async function daemon_status(fn_name) {
-  ("the three answers that together mean 'this is fine': running right now, set to come back on its own, and since when");
+  ("the answers that together mean 'this is fine': running right now, set to come back on its own, since when, and how many times it has had to come back");
   ("enabled tells you a stopped daemon is only stopped until the next boot, which is a different problem from one that was never installed");
-  let active = await daemon_property(fn_name, "ActiveState");
-  let enabled = await daemon_property(fn_name, "UnitFileState");
-  let since = await daemon_property(fn_name, "ActiveEnterTimestamp");
+  ("restarts is the one no other answer here can reveal: a daemon dying and coming back every few seconds reads active every single time it is asked");
+  let properties = await daemon_properties(fn_name, [
+    "ActiveState",
+    "UnitFileState",
+    "ActiveEnterTimestamp",
+    "NRestarts",
+  ]);
   let v = {
     daemon: fn_name,
-    active,
-    enabled,
-    since,
+    active: property_get(properties, "ActiveState"),
+    enabled: property_get(properties, "UnitFileState"),
+    since: property_get(properties, "ActiveEnterTimestamp"),
+    restarts: property_get(properties, "NRestarts"),
   };
   return v;
 }
