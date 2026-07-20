@@ -41,6 +41,7 @@
     { "command": "node scripts/ai.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
     { "command": "node scripts/g.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
     { "command": "node scripts/rl.mjs eval_console_log_replace x", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
+    { "command": "node /home/j/repos/love/scripts/r.mjs command_line_generic ls", "decision": "deny", "why": "an absolute dispatcher path does not route around the floor" },
 
     { "command": "ls $(ls)", "decision": "allow", "why": "substitution whose inner command is trusted" },
     { "command": "ls $(git status)", "decision": "allow", "why": "substitution with a trusted 2-word verb" },
