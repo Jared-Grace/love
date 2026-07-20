@@ -27,6 +27,7 @@ import { app_shared_success_message } from "../../love/js/app_shared_success_mes
 import { html_div } from "../../love/js/html_div.mjs";
 import { app_code_example_answer_label } from "../../love/js/app_code_example_answer_label.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
+import { property_get_or } from "../../love/js/property_get_or.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
 import { text_combine_middle_space_nb } from "../../love/js/text_combine_middle_space_nb.mjs";
@@ -48,6 +49,11 @@ export function app_code_lesson_quiz(
   let on_question = property_get(info, "on_question");
   let answer_label = property_get(info, "answer_label");
   let on_answer = property_get(info, "on_answer");
+  let correction_render = property_get_or(
+    info,
+    "correction",
+    app_code_quiz_correction,
+  );
   let answer_property = property_get(info, "answer_property");
   let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let a = app_code_lesson_above(
@@ -139,7 +145,7 @@ export function app_code_lesson_quiz(
   function render_correction() {
     "render the correction for the current question but keep it INVISIBLE, so it reserves its space and the layout does not jump; on_wrong reveals it";
     html_clear(container_correction);
-    app_code_quiz_correction(container_correction, qa);
+    correction_render(container_correction, qa);
     html_visibility_hidden(container_correction);
   }
   function show_correction() {

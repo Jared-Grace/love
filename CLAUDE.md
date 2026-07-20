@@ -17,7 +17,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 
 1. **Baseline:** at the start, note `git rev-parse HEAD`.
 2. **Track your read-set:** remember which files you read to make your decision (not just the ones you'll write — a peer renaming a function you *call*, in a file you never opened, can still break you).
-3. **Make targeted edits, never full-file overwrites of an existing file.** Use `Edit` (exact-snippet replacement): a peer's change elsewhere survives, and a same-region conflict fails *loudly* instead of silently clobbering. Full-file `Write` is fine only for brand-new files.
+3. **For a structural edit, reach for a named transform first (see "Editing with transforms" below); fall back to `Edit` for everything else.** When you do use `Edit`, make targeted edits, never full-file overwrites of an existing file — `Edit` (exact-snippet replacement) means a peer's change elsewhere survives, and a same-region conflict fails *loudly* instead of silently clobbering. Full-file `Write` is fine only for brand-new files.
 4. **Before committing**, run `git log <baseline>..HEAD -- <read-set>` and reason: *do any of these peer changes break mine?* If yes, reconcile before committing.
 5. **Commit** with `node scripts/r.mjs ai_git` (whole tree, message `ai`). This does **add + commit only** — it's local, but since every Claude shares this one repo, your commit is visible to peers immediately. Push to origin is a separate throttled background job (plain fast-forward, ~5-min interval, never force). Peers never diverge from each other (shared repo = linear history); a push only rejects if *origin* diverged externally, which needs a manual pull.
 
