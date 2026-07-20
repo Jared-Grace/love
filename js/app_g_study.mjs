@@ -1,4 +1,4 @@
-import { firebase_storage_download_json_jg } from "./firebase_storage_download_json_jg.mjs";
+import { firebase_storage_download_json_jg_decompress } from "./firebase_storage_download_json_jg_decompress.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_player_save } from "./app_g_player_save.mjs";
@@ -39,7 +39,7 @@ export function app_g_study(player, overlay, close) {
       let chapter_code = app_g_chapter_code();
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
-        let o = await firebase_storage_download_json_jg(destination);
+        let o = await firebase_storage_download_json_jg_decompress(destination);
         return o;
       }
       let sermons = await global_function_property_nested_lambda(
