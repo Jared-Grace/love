@@ -43,7 +43,7 @@ import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
 import { list_filter } from "../../love/js/list_filter.mjs";
 import { list_includes_not } from "../../love/js/list_includes_not.mjs";
 import { list_concat } from "../../love/js/list_concat.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
+import { null_is } from "../../love/js/null_is.mjs";
 import { app_verses_draw_save } from "../../love/js/app_verses_draw_save.mjs";
 import { app_verses_draw_get } from "../../love/js/app_verses_draw_get.mjs";
 import { each } from "../../love/js/each.mjs";
@@ -125,6 +125,20 @@ export async function app_verses(context) {
   let copy_button = app_shared_button(card3, html_button_copy_text(), copy);
   let card4 = app_shared_container_blue(content);
   card4_refresh();
+  await draw_restore();
+  async function draw_restore() {
+    "reopening the app (or changing language, which reloads the page) brings back the last verses, re-rendered in the current languages, until New verses is tapped";
+    let saved = app_verses_draw_get();
+    let missing = null_is(saved);
+    if (missing) {
+      return;
+    }
+    verse_count = property_get(saved, "count");
+    counts_refresh();
+    let saved_references = property_get(saved, "references");
+    order_restore(saved_references);
+    await references_show(saved_references, false);
+  }
   function counts_refresh() {
     each(count_updates, count_update_invoke);
   }
@@ -166,14 +180,17 @@ export async function app_verses(context) {
     }
   }
   async function apply(copy_after) {
+    "the drawn set is a stable prefix of the shuffled pool, so raising the count only appends and lowering it only trims — the verses already shown never change";
+    let references = list_take(order, verse_count);
+    await references_show(references, copy_after);
+  }
+  async function references_show(references, copy_after) {
     apply_seq = apply_seq + 1;
     let my_seq = apply_seq;
     let handled = await offline_guard();
     if (handled) {
       return;
     }
-    "the drawn set is a stable prefix of the shuffled pool, so raising the count only appends and lowering it only trims — the verses already shown never change";
-    let references = list_take(order, verse_count);
     let texts = await references_to_texts(references);
     let superseded = my_seq !== apply_seq;
     if (superseded) {
@@ -184,9 +201,21 @@ export async function app_verses(context) {
     list_empty(bible_texts);
     list_add_multiple(bible_texts, texts);
     display();
+    app_verses_draw_save({
+      count: verse_count,
+      references,
+    });
     if (copy_after) {
       await copy();
     }
+  }
+  function order_restore(saved_references) {
+    "make the remembered verses the stable prefix of the pool, so changing the count stays additive after a reopen; a saved draw always led with a standalone verse, so the single-verse case stays correct too";
+    function not_saved(reference) {
+      return list_includes_not(saved_references, reference);
+    }
+    let rest = list_filter(order, not_saved);
+    order = list_concat(saved_references, rest);
   }
   async function references_to_texts(references) {
     let texts = [];
