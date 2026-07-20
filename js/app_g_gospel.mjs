@@ -50,10 +50,8 @@ export async function app_g_gospel(
     let passages = property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    let property = g_objection_generate_property();
-    let v = app_g_wrong(passage, passages, property);
-    let passage_wrong = property_get(v, "passage_wrong");
-    let ob = property_get(v, "ob");
+    let ob = app_g_objection_random(passage);
+    let verse_wrong = list_random_item(g_verses_off_topic());
     let discern = { prayed: false };
     function build_correct(container) {
       async function lambda() {
