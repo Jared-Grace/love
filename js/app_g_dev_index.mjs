@@ -5,12 +5,15 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { html_hash_links_labeled } from "./html_hash_links_labeled.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_a_href_text } from "./html_a_href_text.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { each } from "./each.mjs";
+import { property_get } from "./property_get.mjs";
 export function app_g_dev_index() {
   "the #index dev directory: a plain full-screen list of every app_g dev route as a clickable link (from the app_g_dev_routes registry, so it never drifts). light background so the default link color reads; a click + reload-on-hash-change jumps to that screen";
   let body = html_document_body();
@@ -39,15 +42,24 @@ export function app_g_dev_index() {
   let routes = app_g_dev_routes();
   let names = properties_get(routes);
   let all = list_concat(names, ["reset", "index"]);
-  let conversation_openers = ["gospel_share", "hru", "believe"];
+  let conversation_openers = ["gospel_share", "hru", "believe", "pray"];
   let conversation_prefix = "conversation: ";
   function entry(name) {
     let opener = list_includes(conversation_openers, name);
-    let label = ternary(opener, text_combine(conversation_prefix, name), name);
-    let e = { hash: name, label };
+    let prefix = ternary(opener, conversation_prefix, "");
+    let hashed = text_combine("#", name);
+    let label = text_combine(prefix, hashed);
+    let e = { hash: name, prefix, label };
     return e;
   }
   let entries = list_map(all, entry);
   list_sort_text_property(entries, "label");
-  html_hash_links_labeled(div, entries);
+  function render_row(e) {
+    let row = html_div(div);
+    html_span_text(row, property_get(e, "prefix"));
+    let name = property_get(e, "hash");
+    let href = text_combine("#", name);
+    html_a_href_text(row, href, href);
+  }
+  each(entries, render_row);
 }

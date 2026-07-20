@@ -29,11 +29,9 @@ import { app_code_example_answer_label } from "../../love/js/app_code_example_an
 import { property_get } from "../../love/js/property_get.mjs";
 import { property_get_or } from "../../love/js/property_get_or.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
-import { emoji_arrow_right } from "../../love/js/emoji_arrow_right.mjs";
-import { text_combine_middle_space_nb } from "../../love/js/text_combine_middle_space_nb.mjs";
+import { app_code_button_skip_lesson } from "../../love/js/app_code_button_skip_lesson.mjs";
 import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "../../love/js/app_shared_spaced_gap.mjs";
-import { app_shared_spaced_large_gap } from "../../love/js/app_shared_spaced_large_gap.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -109,18 +107,8 @@ export function app_code_lesson_quiz(
     on_reveal,
   );
   html_style_margin_top(reveal_button, app_shared_spaced_gap());
-  let show_skip = not(qli) && not(no_more);
-  if (show_skip) {
-    let skip_text = text_combine_middle_space_nb(
-      emoji_arrow_right(),
-      "Skip to the next lesson",
-    );
-    let skip_button = app_shared_button_wide(
-      parent_container,
-      skip_text,
-      on_move_on,
-    );
-    html_style_margin_top(skip_button, app_shared_spaced_large_gap());
+  if (not(qli)) {
+    app_code_button_skip_lesson(context, parent_container);
   }
   if (at_least_1(quiz_index)) {
     let on_back = function lambda() {
