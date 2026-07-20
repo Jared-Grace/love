@@ -6,18 +6,13 @@ import { js_operator_division } from "./js_operator_division.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 export function js_operators_from_calls(ast) {
-  // Denormalize compile step (inverse of js_operators_to_calls): fold the arithmetic operator-fn calls
-  // back to operators for readable output. Reuses the SAME operator descriptors as the forward pass, so
-  // the round-trip is exact. Arithmetic subset for the prototype (subtract/multiply/division/modulo/pow);
-  // `+`/add is intentionally excluded both ways (ambiguous with string concat).
   arguments_assert(arguments, 1);
-  let operators = [
-    js_operator_minus(),
-    js_operator_asterisk(),
-    js_operator_division(),
-    js_operator_percent(),
-    js_operator_double_asterisk(),
-  ];
+  let o = js_operator_minus();
+  let o2 = js_operator_asterisk();
+  let o3 = js_operator_division();
+  let o4 = js_operator_percent();
+  let o5 = js_operator_double_asterisk();
+  let operators = [o, o2, o3, o4, o5];
   js_operators_from_calls_generic(ast, operators);
   return;
 }

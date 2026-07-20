@@ -7,15 +7,13 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_get } from "./list_get.mjs";
 export function js_operator_call_to_node(node, o) {
-  // Denormalize (inverse of js_operator_node_to_call): rewrite a 2-arg call to operator fn `o.fn`
-  // (e.g. subtract(a, b)) back into a BinaryExpression with `o.operator` (a - b), in place. Parse a
-  // throwaway binary template to get a genuine BinaryExpression node, then overwrite its operator and
-  // its two operands with copies of the call's arguments. The unparser re-adds parens by precedence.
   arguments_assert(arguments, 2);
   let operator = property_get(o, "operator");
   let call_arguments = js_call_arguments_get(node);
-  let left = object_copy(list_get(call_arguments, 0));
-  let right = object_copy(list_get(call_arguments, 1));
+  let from2 = list_get(call_arguments, 0);
+  let left = object_copy(from2);
+  let from3 = list_get(call_arguments, 1);
+  let right = object_copy(from3);
   let expression = js_parse_expression("a * b");
   property_set(expression, "operator", operator);
   property_set(expression, "left", left);

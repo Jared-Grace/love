@@ -49,8 +49,8 @@ export async function watch() {
         path,
       });
       try {
-        let who = text_combine_multiple([watch.name, ":", path]);
-        let r = await lock_try_prompt(lambda3, who);
+        "run the transform directly rather than under the repo-wide function_run_prompt lock. That lock made ONE stuck transform wedge the watcher for EVERY file: it is taken per transform, so a child that hung or was killed left it held, and every later save was logged and then dropped with 'is locked, skipping held by watch:<the stuck file>'. Concurrency is already handled per path by in_progress above, and Claude's edits by claude_edit_claim_fresh_is, so the lock was buying nothing that survived its own failure mode";
+        await lambda3();
       } finally {
         property_set(in_progress, path, false);
       }
