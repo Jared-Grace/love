@@ -1680,7 +1680,7 @@ def main():
     # Hard floor, evaluated BEFORE any allow decision so that no allow-list
     # rule (mistaken or deliberate) can re-enable it: un-sandboxed
     # arbitrary-code execution. Two shapes, both `node -e` by another name - a
-    # raw `node -e`/`--eval`/`-p`/`--print`, and a direct `node scripts/r.mjs
+    # raw `node -e`/`--eval`/`-p`/`--print`, and a direct `node <dispatcher>
     # <fn>` to a function that runs arbitrary code/commands from its args. Deny
     # with a redirect message rather than prompting (a flood of un-vettable
     # prompts) or, worse, auto-approving.
