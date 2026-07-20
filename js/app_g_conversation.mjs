@@ -157,7 +157,7 @@ export async function app_g_conversation(
   function render_pray() {
     app_g_npc_says(npc, overlay, greeting);
     let container = app_g_container_player(overlay);
-    app_g_p_text(container, "Before you go, pray to God for this person.");
+    app_g_p_text(container, "What do you want to do?");
     function pray() {
       let prayer_texts = list_map_property(turns, "prayer_text");
       function present(t) {
