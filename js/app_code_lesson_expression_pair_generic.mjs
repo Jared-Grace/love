@@ -36,6 +36,10 @@ export function app_code_lesson_expression_pair_generic(params) {
     let list = list_map_index(triples, to_code);
     return list;
   }
+  function decoys(question, answer) {
+    "the tailored wrong answer is the LEFT-TO-RIGHT value, ignoring precedence - the classic order-of-operations mistake (2 + 3 * 4 read as (2 + 3) * 4 = 20). For same-precedence pairs it equals the real answer, so the multiple choice just drops it as a duplicate";
+    return [js_eval_left_to_right(question)];
+  }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
   let lesson = app_code_lesson_expression_generic({
@@ -43,6 +47,7 @@ export function app_code_lesson_expression_pair_generic(params) {
     name_id,
     next_arg,
     example_count: 2,
+    decoys,
   });
   return lesson;
   function title_name_id() {
