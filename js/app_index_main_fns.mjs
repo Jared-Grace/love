@@ -45,10 +45,6 @@ export function app_index_main_fns() {
       app_fn: fn_name("app_g_bible"),
       text: "App for me",
     },
-    {
-      app_fn: fn_name("app_alarms"),
-      text: "Download the Android alarms app, which sets your recurring alarms for you from your schedule",
-    },
   ];
   return r;
 }
