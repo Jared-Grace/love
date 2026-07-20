@@ -53,12 +53,20 @@ export function app_code_lesson_expression_integer_division() {
     return built;
   }
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["You know ", "Math.floor", " rounds a number down"]);
-    html_div_cycle_code(c, ["Dividing does not always come out even"]);
-    html_div_cycle_code(c, ["", "14 / 4", " is ", "3.5"]);
-    html_div_cycle_code(c, ["Round the division down to get the whole part"]);
-    html_div_cycle_code(c, ["", "Math.floor(14 / 4)", " is ", "3"]);
-    html_div_cycle_code(c, ["That is how many whole 4s fit into 14"]);
+    let recall = app_code_container_light_blue(root);
+    html_div_cycle_code(recall, [
+      "You know ",
+      "Math.floor",
+      " rounds a number down",
+    ]);
+    let problem = app_code_container_light_blue(root);
+    html_div_cycle_code(problem, ["Dividing does not always come out even"]);
+    html_div_cycle_code(problem, ["For example, ", "14 / 4", " is ", "3.5"]);
+    let solution = app_code_container_light_blue(root);
+    html_div_cycle_code(solution, [
+      "Now we will divide, and then round down to get a whole number",
+    ]);
+    html_div_cycle_code(solution, ["", "Math.floor(14 / 4)", " is ", "3"]);
+    html_div_cycle_code(solution, ["That is how many whole 4s fit into 14"]);
   }
 }
