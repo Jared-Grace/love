@@ -7,7 +7,11 @@
     "list. Removing `ls` from permissions.allow would invalidate the corpus.",
     "decision: allow = auto-approved, deny = hard floor, ask = guard actively",
     "prompts with a reason, silent = guard abstains so the native permission",
-    "engine decides (silent is NOT the same as 'will not prompt')."
+    "engine decides (silent is NOT the same as 'will not prompt').",
+    "MACHINE-DEPENDENT: the rm cases hard-code the scratchpad prefix, which",
+    "the hook derives as /tmp/claude-<uid>/<repo-root-with-dashes>/. On a",
+    "different uid or checkout path those three cases go red for an",
+    "environmental reason, not a real regression - update the paths."
   ],
   "cases": [
     { "command": "ls", "decision": "allow", "why": "trusted verb, bare" },
@@ -56,6 +60,26 @@
     { "command": "find . -exec rm {} \\;", "decision": "ask", "why": "-exec running an untrusted verb" },
     { "command": "find . -exec sh -c ls {} \\;", "decision": "ask", "why": "-exec sh -c is arbitrary code" },
     { "command": "find . -name x -delete", "decision": "ask", "why": "-delete is destructive without any exec" },
+
+    { "command": "sed -n 's/a/b/' f.txt", "decision": "allow", "why": "the accepted sed shape: optional -n, one script, then filenames" },
+    { "command": "sed 's/a/b/' f.txt", "decision": "allow", "why": "bare positional script is the other accepted form" },
+    { "command": "sed -i 's/a/b/' f.txt", "decision": "silent", "why": "-i edits in place, outside the accepted shape" },
+    { "command": "sed -f script.sed f.txt", "decision": "silent", "why": "-f hides the real script from the command string" },
+    { "command": "sed -e 's/a/b/' -e 's/c/d/' f.txt", "decision": "silent", "why": "exactly one script is accepted, never a second -e" },
+
+    { "command": "rm /tmp/claude-1000/-home-j-repos-love/x.txt", "decision": "allow", "why": "file-only rm inside the Claude scratchpad (path is uid+repo derived - see note)" },
+    { "command": "rm -f /tmp/claude-1000/-home-j-repos-love/x.txt", "decision": "allow", "why": "-f is one of the two permitted flag chars" },
+    { "command": "rm -r /tmp/claude-1000/-home-j-repos-love/d", "decision": "ask", "why": "recursion is refused even inside the scratchpad" },
+    { "command": "rm /tmp/other/x.txt", "decision": "silent", "why": "outside the scratchpad, rm is never a trusted verb" },
+
+    { "command": "mount", "decision": "allow", "why": "bare mount only lists current mounts" },
+    { "command": "mount /dev/sda1 /mnt", "decision": "silent", "why": "mount with arguments actually mounts" },
+
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "allow", "why": "the sanctioned sandboxed node eval from CLAUDE.md" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love scripts/temp/x.mjs", "decision": "allow", "why": "the sanctioned sandboxed node script form" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/ -e 'ls'", "decision": "silent", "why": "read scope widened past the repo, so the template no longer matches" },
+    { "command": "unshare --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "silent", "why": "no --net, so the network is not actually blocked" },
+    { "command": "node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "deny", "why": "unsandboxed node -e hits the hard floor even with node's own flags" },
 
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
