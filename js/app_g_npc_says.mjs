@@ -20,6 +20,8 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let game_prefix = g_game_prefix();
   let c_src = g_character_img_url_direction(npc, "south");
   let component = html_img_retry(container, c_src);
+  html_style_set(component, "display", "block");
+  html_style_set(component, "margin", "0 auto");
   let name_map = {
     [g_gender_female()]: "#a3006e",
     [g_gender_male()]: "#1a3aa0",
@@ -28,6 +30,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let name_npc = property_get(npc, "name");
   let label = app_g_p_text(container, text_combine(name_npc, " says:"));
   html_style_set(label, "color", name_color);
+  html_style_set(label, "margin-top", "0");
   html_bold_mild(label);
   let speech = app_g_p_text(container, npc_says);
   html_bold_mild(speech);

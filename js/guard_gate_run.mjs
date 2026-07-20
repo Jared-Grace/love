@@ -11,7 +11,8 @@ export async function guard_gate_run() {
   let results = await list_map_unordered_async(cases, guard_case_check);
   for (let r of results) {
     let mark = r.pass ? "pass  " : "FAIL  ";
-    console.log(mark + r.command.padEnd(46) + r.expected + " / " + r.actual);
+    let note = r.note === "" ? "" : "  " + r.note;
+    console.log(mark + r.command.padEnd(46) + r.expected + " / " + r.actual + note);
   }
   function failed(r) {
     return !r.pass;
