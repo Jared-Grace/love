@@ -19,8 +19,7 @@ export function app_g_message_overlay(
 ) {
   "a full-screen prayer moment: dims the world, floats a glowing emoji above a message on a dark CARD, fades in, then auto-dismisses after dismiss_ms. `color` sets the message color — GOLD when the words are God's leading (His word), white when they are the player's own prayer. RETURNS the card (a flex column) so a caller can add more onto the same black surface — e.g. the dove appends a verse + reference. dismiss_ms null = stays until removed (used by the #dove dev route to inspect it). shared by the discernment-prevented dove and the thanksgiving prayer";
   let fonts = app_g_overlay_fonts();
-  let body = html_document_body();
-  let div = html_div(body);
+  let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
     top: "0",
