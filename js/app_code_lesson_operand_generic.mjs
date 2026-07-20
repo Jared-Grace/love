@@ -14,12 +14,14 @@ import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_operand_generic(params) {
   "the shared shape for the identify-an-operand lessons (dividend / divisor / quotient): show a division (or Math.floor(a / b) === c) and let the learner pick which number is the named role, the other numbers standing as decoys (app_code_lesson_quiz_choose_operand) with a role-named 'Show me the answer' (app_code_quiz_correction_operand). The caller passes only what differs: the role word, the define_prose that ends in the bolded term, a batch_get producing {question, answer}, and the name_id. The intro is BUILT here from a random sample of batch_get, so its worked example varies each visit (a different example may be the one that clicks)";
   let role = property_get(params, "role");
   let define_prose = property_get(params, "define_prose");
   let batch_get = property_get(params, "batch_get");
   let name_id = property_get(params, "name_id");
+  let unscramble = property_get_or(params, "unscramble", false);
   let example_question_label = app_code_label_code_question();
   let answer_label = text_combine_multiple(["Choose the ", role, ": "]);
   let example_answer_label = text_combine_multiple(["The ", role, " is: "]);
@@ -49,6 +51,20 @@ export function app_code_lesson_operand_generic(params) {
       correction: app_code_quiz_correction_operand(role),
     };
     let infos = [forwards];
+    if (unscramble) {
+      "the backward direction of the same idea: instead of picking which number is the role, the learner is TOLD the role's number (the prompt shows it) and builds the division from its pieces - answer_property 'question' makes the code to build the division itself (14 / 4), and since / is not commutative only the dividend-first order is accepted, so placing the given number correctly is the whole test";
+      let build = {
+        question_label: example_answer_label,
+        on_question: html_text_set_code_dark,
+        answer_label: "Please build the code: ",
+        answer_on_button: null,
+        answer_count_override: null,
+        answer_property: "question",
+        on_answer: app_code_lesson_quiz_token_select,
+        correction: app_code_quiz_correction_operand(role),
+      };
+      list_add(infos, build);
+    }
     function each_info(info) {
       function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
