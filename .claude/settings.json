@@ -39,6 +39,8 @@
       "Bash(node scripts/g.mjs ai)",
       "Bash(node scripts/r.mjs ai_git)",
       "Bash(node scripts/r.mjs app_shared_dev_build:*)",
+      "Bash(node scripts/r.mjs app_shared_prefixes_invalid)",
+      "Bash(node scripts/r.mjs app_shared_prefixes_invalid_assert)",
       "Bash(node scripts/r.mjs firebase_deploy)",
       "Bash(node scripts/r.mjs guard_check:*)",
       "Bash(node scripts/r.mjs webpack_watch)",
