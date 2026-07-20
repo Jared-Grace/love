@@ -15,8 +15,7 @@ import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 export function app_g_dev_index() {
   "the #index dev directory: a plain full-screen list of every app_g dev route as a clickable link (from the app_g_dev_routes registry, so it never drifts). light background so the default link color reads; a click + reload-on-hash-change jumps to that screen";
-  let body = html_document_body();
-  let div = html_div(body);
+  let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
     top: "0",
