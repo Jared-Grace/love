@@ -109,34 +109,36 @@ export function app_code_lesson_expression_remainder_subtract() {
     return built;
   }
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
+    let setup = app_code_container_light_blue(root);
+    html_div_cycle_code(setup, [
       "You already know how to subtract like ",
       "20 - 5 - 5",
     ]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(setup, [
       "What if you keep subtracting the same number until you can not take it away again?",
     ]);
-    html_div_cycle_code(c, [
+    let work = app_code_container_light_blue(root);
+    html_div_cycle_code(work, [
       "",
       "17 - 5 - 5 - 5",
       " leaves ",
       "2",
     ]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(work, [
       "We stop because ",
       "2",
       " is smaller than ",
       "5",
     ]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(work, [
       "If we subtracted ",
       "5",
       " again we would have ",
       "2 - 5 === -3",
     ]);
-    html_div_cycle_code(c, ["We do not want to go below zero"]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(work, ["We do not want to go below zero"]);
+    let result = app_code_container_light_blue(root);
+    html_div_cycle_code(result, [
       "So ",
       "2",
       " is what remains after we kept subtracting ",
@@ -144,13 +146,14 @@ export function app_code_lesson_expression_remainder_subtract() {
       " from ",
       "17",
     ]);
-    html_div_cycle_code(c, ["So we write ", "17 % 5 === 2"]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(result, ["So we write ", "17 % 5 === 2"]);
+    let define = app_code_container_light_blue(root);
+    html_div_cycle_code(define, [
       "",
       percent,
       " means we keep subtracting the second number from the first number until what remains is smaller than the second number",
     ]);
-    let named = html_div(c);
+    let named = html_div(define);
     html_span_text(named, "When we ");
     html_span_text_code_dark(named, percent);
     html_span_text(named, ", what remains is called the ");
