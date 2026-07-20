@@ -51,6 +51,15 @@
     { "command": "ls $(rm -rf /)", "decision": "ask", "why": "untrusted command hiding inside a trusted-looking one" },
     { "command": "ls `ls`", "decision": "ask", "why": "backticks are not parsed as substitution, so they stay unapproved" },
 
+    { "command": "ls \"$(ls)\"", "decision": "allow", "why": "double quotes do not stop substitution being evaluated" },
+    { "command": "ls \"$(rm -rf /)\"", "decision": "ask", "why": "the inner command is still validated inside double quotes" },
+    { "command": "ls '$(rm -rf /)'", "decision": "allow", "why": "single quotes suppress substitution, so this is an inert argument" },
+    { "command": "ls 'a;rm -rf /'", "decision": "allow", "why": "a quoted semicolon is data, not a statement separator" },
+    { "command": "ls \"; rm -rf /\"", "decision": "allow", "why": "same, in double quotes" },
+    { "command": "ls \"\\$(rm -rf /)\"", "decision": "allow", "why": "backslash-escaped dollar inside double quotes is literal text" },
+    { "command": "ls \\$(rm -rf /)", "decision": "ask", "why": "unquoted, the backslash escapes only the dollar - the parens still open a statement" },
+    { "command": "ls \"a b\"", "decision": "allow", "why": "quoted argument with a space stays one word" },
+
     { "command": "ls 2>&1", "decision": "allow", "why": "fd duplication writes no file" },
     { "command": "ls > /tmp/x", "decision": "ask", "why": "redirection writes a file the verb alone would not" },
     { "command": "ls > /dev/null", "decision": "ask", "why": "no /dev/null carve-out - redirection is judged by shape, not target" },
