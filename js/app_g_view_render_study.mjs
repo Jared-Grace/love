@@ -17,6 +17,7 @@ import { text_split_space } from "./text_split_space.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
+import { app_g_prayer_study_overlay } from "./app_g_prayer_study_overlay.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 export async function app_g_view_render_study(div_map) {
@@ -112,6 +113,7 @@ export async function app_g_view_render_study(div_map) {
       let done = current >= words.length;
       if (done) {
         await close();
+        app_g_prayer_study_overlay();
         return;
       }
       style_next(word_bs[current]);
