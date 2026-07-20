@@ -35,6 +35,7 @@ export function app_code_lesson_expression_dividend() {
     define_prose: "When you divide, the number you divide is the ",
     batch_get,
     name_id,
+    unscramble: true,
   });
   function title_name_id() {
     "the home title is console.log dividend";

@@ -40,9 +40,6 @@ import { list_empty } from "../../love/js/list_empty.mjs";
 import { list_empty_is } from "../../love/js/list_empty_is.mjs";
 import { list_add } from "../../love/js/list_add.mjs";
 import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
-import { list_filter } from "../../love/js/list_filter.mjs";
-import { list_includes_not } from "../../love/js/list_includes_not.mjs";
-import { list_concat } from "../../love/js/list_concat.mjs";
 import { null_is } from "../../love/js/null_is.mjs";
 import { app_verses_draw_save } from "../../love/js/app_verses_draw_save.mjs";
 import { app_verses_draw_get } from "../../love/js/app_verses_draw_get.mjs";
@@ -97,7 +94,7 @@ export async function app_verses(context) {
     async function on_click() {
       verse_count = c;
       counts_refresh();
-      await apply(false);
+      await draw_fresh(false);
     }
     component = app_shared_button(card2, c, on_click);
     function update() {
@@ -136,7 +133,6 @@ export async function app_verses(context) {
     verse_count = property_get(saved, "count");
     counts_refresh();
     let saved_references = property_get(saved, "references");
-    order_restore(saved_references);
     await references_show(saved_references, false);
   }
   function counts_refresh() {
@@ -179,8 +175,10 @@ export async function app_verses(context) {
       list_swap_first(order, single);
     }
   }
-  async function apply(copy_after) {
-    "the drawn set is a stable prefix of the shuffled pool, so raising the count only appends and lowering it only trims — the verses already shown never change";
+  async function draw_fresh(copy_after) {
+    "changing the count — or tapping New verses — draws a brand-new set of that many verses: a fresh shuffle every time, so the verses always refresh rather than the count only adding to or trimming what was already there";
+    list_shuffle(order);
+    order_standalone_first();
     let references = list_take(order, verse_count);
     await references_show(references, copy_after);
   }
@@ -209,14 +207,6 @@ export async function app_verses(context) {
       await copy();
     }
   }
-  function order_restore(saved_references) {
-    "make the remembered verses the stable prefix of the pool, so changing the count stays additive after a reopen; a saved draw always led with a standalone verse, so the single-verse case stays correct too";
-    function not_saved(reference) {
-      return list_includes_not(saved_references, reference);
-    }
-    let rest = list_filter(order, not_saved);
-    order = list_concat(saved_references, rest);
-  }
   async function references_to_texts(references) {
     let texts = [];
     async function reference_each(reference) {
@@ -226,9 +216,7 @@ export async function app_verses(context) {
     return texts;
   }
   async function reroll() {
-    list_shuffle(order);
-    order_standalone_first();
-    await apply(true);
+    await draw_fresh(true);
   }
   function display() {
     html_clear(card4);
