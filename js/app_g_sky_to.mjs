@@ -20,6 +20,7 @@ export async function app_g_sky_to(target) {
   let element = property_get(bag, "element");
   let seed = g_sky_seed_get(g);
   let from = element.sky_phase;
+  console.log("[sky_to] target=", target, "from=", from, "type=", typeof from);
   let duration = 9000;
   let token = add_1(element.sky_token);
   element.sky_token = token;
