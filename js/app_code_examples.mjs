@@ -25,6 +25,7 @@ import { app_code_container_padded_x } from "../../love/js/app_code_container_pa
 import { property_get } from "../../love/js/property_get.mjs";
 import { app_code_lesson_current } from "../../love/js/app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "../../love/js/app_code_lesson_title_strip.mjs";
+import { app_code_button_skip_lesson } from "../../love/js/app_code_button_skip_lesson.mjs";
 import { html_clear_context } from "../../love/js/html_clear_context.mjs";
 import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 export function app_code_examples(context) {
