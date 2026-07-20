@@ -181,7 +181,7 @@ export async function app_g_conversation(
     app_g_button_conversation_end(container, leave);
   }
   function render_pray() {
-    app_g_npc_says(npc, overlay, greeting);
+    app_g_npc_says(npc, overlay, g_anything_else());
     let container = app_g_container_player(overlay);
     app_g_p_text(container, "What do you want to do?");
     function pray() {
