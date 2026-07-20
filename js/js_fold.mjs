@@ -9,18 +9,16 @@ import { js_fold_match_block } from "./js_fold_match_block.mjs";
 import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 import { js_fold_call_statement } from "./js_fold_call_statement.mjs";
 import { js_fold_body_splice } from "./js_fold_body_splice.mjs";
+import { js_fold_plan } from "./js_fold_plan.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_name } from "./property_get_name.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_last } from "./list_last.mjs";
-import { list_slice } from "./list_slice.mjs";
-import { list_without } from "./list_without.mjs";
 import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
 import { subtract } from "./subtract.mjs";
-import { add } from "./add.mjs";
 export function js_fold(x_ast, f_ast) {
   // Brick 5a: fold the first contiguous occurrence of pure fn x's body inside F into a call to x.
   // Pure composition of bricks 1-4: extract x's pattern (params, body-sigs minus the return, and the
