@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";

@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { app_g_game_initialize_if_absent } from "./app_g_game_initialize_if_absent.mjs";
 import { app_g_tutorials_initialize } from "./app_g_tutorials_initialize.mjs";
 import { app_g_html_initialize } from "./app_g_html_initialize.mjs";
