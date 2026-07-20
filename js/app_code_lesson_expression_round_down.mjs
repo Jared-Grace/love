@@ -10,6 +10,9 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_down() {
@@ -64,20 +67,29 @@ export function app_code_lesson_expression_round_down() {
     return built;
   }
   function above(root) {
+    "the worked examples are randomized each visit (a different example may be the one that clicks): a decimal and its whole part for the definitions and the floor, a HIGH decimal (7..9) to show it rounds DOWN not to the nearest, and a separate already-whole number that does not change";
+    let whole = integer_random(2, 7);
+    let whole_text = text_to(whole);
+    let digit = integer_random(1, 9);
+    let decimal = text_combine_multiple([whole_text, ".", text_to(digit)]);
+    let high_digit = integer_random(7, 9);
+    let high_decimal = text_combine_multiple([whole_text, ".", text_to(high_digit)]);
+    let whole_up = text_to(add(whole, 1));
+    let whole_stays = text_to(integer_random(2, 7));
     let define = app_code_container_light_blue(root);
-    html_div_cycle_code(define, ["", "3.5", " is a decimal number"]);
+    html_div_cycle_code(define, ["", decimal, " is a decimal number"]);
+    let no_decimal = html_div(define);
+    html_span_text_code_dark(no_decimal, whole_text);
+    html_span_text(no_decimal, " has no decimal, so ");
+    html_span_text_code_dark(no_decimal, whole_text);
+    html_span_text(no_decimal, " is a ");
+    let term = html_span_text(no_decimal, "whole number");
+    html_style_set(term, "font-weight", "bold");
     html_div_cycle_code(define, [
       "",
-      "3",
-      " has no decimal, so ",
-      "3",
-      " is a whole number",
-    ]);
-    html_div_cycle_code(define, [
-      "",
-      "3.5",
+      decimal,
       " has a decimal, so ",
-      "3.5",
+      decimal,
       " is not a whole number",
     ]);
     let rounds = app_code_container_light_blue(root);
@@ -86,7 +98,12 @@ export function app_code_lesson_expression_round_down() {
       "Math.floor",
       " takes a number and rounds it down to the whole number below it",
     ]);
-    html_div_cycle_code(rounds, ["", "Math.floor(3.5)", " is ", "3"]);
+    html_div_cycle_code(rounds, [
+      "In other words (for these positive numbers) ",
+      "Math.floor",
+      " removes the decimal part, so that only the whole number is left",
+    ]);
+    html_div_cycle_code(rounds, ["", floor_code(decimal), " is ", whole_text]);
     html_div_cycle_code(rounds, [
       "",
       "Math.floor",
@@ -94,14 +111,23 @@ export function app_code_lesson_expression_round_down() {
     ]);
     html_div_cycle_code(rounds, [
       "",
-      "Math.floor(3.9)",
+      floor_code(high_decimal),
       " is also ",
-      "3",
+      whole_text,
       " not ",
-      "4",
+      whole_up,
     ]);
-    let whole = app_code_container_light_blue(root);
-    html_div_cycle_code(whole, ["A number that is already whole does not change"]);
-    html_div_cycle_code(whole, ["For example, ", "Math.floor(6)", " is ", "6"]);
+    let whole_para = app_code_container_light_blue(root);
+    html_div_cycle_code(whole_para, [
+      "",
+      "Math.floor",
+      " does not change a number that is already whole",
+    ]);
+    html_div_cycle_code(whole_para, [
+      "For example, ",
+      floor_code(whole_stays),
+      " is ",
+      whole_stays,
+    ]);
   }
 }
