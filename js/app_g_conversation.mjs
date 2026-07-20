@@ -18,6 +18,7 @@ import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
 import { app_g_time_advance } from "./app_g_time_advance.mjs";
 import { app_g_sky_advance } from "./app_g_sky_advance.mjs";
+import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -90,7 +91,7 @@ export async function app_g_conversation(
     let label = property_get(labels, kind);
     return label;
   }
-  function leave() {
+  async function leave() {
     let openers_remain = positive_is(list_size(remaining));
     if (not(openers_remain)) {
       if (not(prayed.done)) {
@@ -107,6 +108,7 @@ export async function app_g_conversation(
         g_icon_cross(div_map, npc);
       }
     }
+    await app_g_sky_snap();
     overlay_close();
   }
   function run_turn(turn) {
