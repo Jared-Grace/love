@@ -301,6 +301,13 @@ export async function app_g_verify_home(context) {
     setTimeout(refresh, 4000);
   }
   async function refresh() {
+    // Don't poll a hidden/backgrounded tab: skip the API calls (which otherwise
+    // pile up in DevTools' network log and burn dev-API CPU all night) and just
+    // reschedule. The next visible tick picks state back up within one interval.
+    if (document.hidden) {
+      poll();
+      return;
+    }
     try {
       let fresh_chapter = await api_read(fn_name("g_sermon_write_read"), [
         chapter_code,
