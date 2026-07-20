@@ -8,7 +8,7 @@ import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_go } from "./app_shared_screen_go.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
-import { html_scroll_center } from "./html_scroll_center.mjs";
+import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -57,7 +57,7 @@ export function app_code_home(context) {
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
   if (found) {
-    "not awaited on purpose: a few frames after app_shared_refresh scrolls the window to the top, this SMOOTHLY scrolls the just-left lesson to the vertical center - a gentle glide that lands the learner back on their lesson and shows where it sits in the list. No white cover / loading flash, because nothing is actually loading (the list is an instant local render); the cover only ever masked this scroll and read as a jarring white flash instead of fading";
-    html_scroll_center(just_left);
+    "not awaited on purpose: a few frames after app_shared_refresh scrolls the window to the top, this INSTANTLY snaps the just-left lesson to the vertical center so the learner lands back on their lesson. No animation and no white cover - the cover used to mask this same instant scroll but read as a jarring white flash rather than fading, and a smooth glide is unnecessary since the scroll is quick; nothing is actually loading (the list is an instant local render)";
+    html_scroll_center_now(just_left);
   }
 }
