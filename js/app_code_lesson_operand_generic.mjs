@@ -1,11 +1,13 @@
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_choose_operand } from "./app_code_lesson_quiz_choose_operand.mjs";
+import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_quiz_correction_operand } from "./app_code_quiz_correction_operand.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
