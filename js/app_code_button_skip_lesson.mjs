@@ -6,6 +6,7 @@ import { not } from "./not.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -24,9 +25,14 @@ export function app_code_button_skip_lesson(context, parent) {
     app_code_quiz_index_reset(context);
     await app_code_after_lesson(context);
   }
+  "when this lesson is a checkpoint, app_code_after_lesson goes to the REVIEW next, so the button should say review, not lesson";
+  let destination = "lesson";
+  if (has_review) {
+    destination = "review";
+  }
   let skip_text = text_combine_middle_space_nb(
     emoji_arrow_right(),
-    "Skip to the next lesson",
+    text_combine("Skip to the next ", destination),
   );
   let skip_button = app_shared_button_wide(parent, skip_text, skip);
   html_style_margin_top(skip_button, app_shared_spaced_large_gap());
