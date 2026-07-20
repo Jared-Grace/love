@@ -8,7 +8,6 @@ export async function app_g_time_advance() {
   let g = await app_g_game_save_get();
   let current = g_time_of_day_get(g);
   let next = g_time_of_day_next(current);
-  console.log("[time_adv]", current, "->", next);
   property_set(g, "time_of_day", next);
   property_set(g, "sky_seed", integer_random_0(101));
 }

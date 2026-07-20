@@ -22,15 +22,7 @@ export async function app_g_refresh(context, div_map_container) {
   let player_img_c = await app_g_player_img(div_map);
   app_g_div_map_on_click(div_map, player_img_c);
   await app_g_player_scroll_center(div_map, player_img_c);
-  console.log("[dbg] scroll_center done, calling time_tint");
-  try {
-    app_g_time_tint(div_map_container, g);
-    console.log("[dbg] time_tint OK");
-  } catch (e) {
-    console.error("[dbg] time_tint THREW", e);
-  }
+  app_g_time_tint(div_map_container, g);
   await app_g_dev_if();
-  console.log("[dbg] dev_if done");
   await app_g_view_render(div_map);
-  console.log("[dbg] view_render done");
 }
