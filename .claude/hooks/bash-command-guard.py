@@ -1631,8 +1631,9 @@ DENIED_DISPATCHER_FUNCTIONS = {
 
 
 def find_denied_dispatcher_function(command):
-    """If `command` directly invokes `node scripts/r.mjs <fn>` (relative or
-    absolute path) with <fn> in DENIED_DISPATCHER_FUNCTIONS, return that fn name so
+    """If `command` directly invokes `node <dispatcher> <fn>` (any script in
+    NODE_DISPATCHER_SCRIPTS, relative or absolute path) with <fn> in
+    DENIED_DISPATCHER_FUNCTIONS, return that fn name so
     main() can DENY it; else None. Quote-aware like find_raw_node_eval, and
     leading assignments / xargs / timeout prefixes are unwrapped the same way;
     an unparseable command returns None and falls through to normal handling."""

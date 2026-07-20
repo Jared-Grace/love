@@ -11,6 +11,6 @@ export async function git_purge_only(f_path) {
     f_path,
     " --invert-paths",
   ]);
-  let stdout = await command_line(combined);
+  await command_line(combined);
   await git_purge_only_after();
 }

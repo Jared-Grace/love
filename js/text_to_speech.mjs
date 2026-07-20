@@ -14,7 +14,7 @@ export async function text_to_speech(args) {
       " ",
       temp_path,
     ]);
-    let stdout = await command_line(c);
+    await command_line(c);
   }
   let result = await file_temp(lambda);
 }
