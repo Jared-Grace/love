@@ -53,21 +53,10 @@ export function js_fold(x_ast, f_ast) {
   let start = property_get(match, "start");
   let binding = property_get(match, "binding");
 
-  function param_to_key(param) {
-    let key = property_get(binding, param);
-    return key;
-  }
-  let arg_keys = list_map(params, param_to_key);
-  let output_name = property_get(binding, return_local);
-
-  let block_end = add(start, k);
-  let block_sigs = list_slice(target_sigs, start, block_end);
-  function sig_to_name(sig) {
-    let name = property_get(sig, "name");
-    return name;
-  }
-  let block_locals = list_map(block_sigs, sig_to_name);
-  let internal_locals = list_without(block_locals, output_name);
+  let plan = js_fold_plan(binding, params, return_local, target_sigs, start, k);
+  let arg_keys = property_get(plan, "arg_keys");
+  let output_name = property_get(plan, "output_name");
+  let internal_locals = property_get(plan, "internal_locals");
 
   let escapes = js_fold_block_escapes(f_statements, start, k, internal_locals);
   if (escapes) {
