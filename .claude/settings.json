@@ -88,6 +88,22 @@
             "type": "command",
             "command": "node /home/j/repos/love/.claude/hooks/p_prefix_context.mjs",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh ''",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=white,bg=red,bold'",
+            "timeout": 5
           }
         ]
       }
