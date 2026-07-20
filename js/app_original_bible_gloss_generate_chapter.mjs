@@ -5,7 +5,7 @@ export async function app_original_bible_gloss_generate_chapter(
   chapter_code_specified,
 ) {
   let book_code = ebible_chapter_code_to_book(chapter_code_specified);
-  let bible_folder = "engbsb";
+  let bible_folder = ebible_folder_english();
   let language = "Greek";
   let fn = app_original_bible_gloss_generate;
   let bible_folders = [bible_folder];
