@@ -110,7 +110,7 @@ export function app_code_lesson_expression_round_down() {
       " always rounds down, never up",
     ]);
     html_div_cycle_code(rounds, [
-      "",
+      "For example: ",
       floor_code(high_decimal),
       " is also ",
       whole_text,
