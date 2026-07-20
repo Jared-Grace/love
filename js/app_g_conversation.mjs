@@ -7,7 +7,10 @@ import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
 import { app_g_doxology } from "./app_g_doxology.mjs";
-import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
+import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
+import { app_shared_color_gold_text } from "./app_shared_color_gold_text.mjs";
+import { noop } from "./noop.mjs";
+import { emoji_dove } from "./emoji_dove.mjs";
 import { g_icon_cross } from "./g_icon_cross.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
@@ -91,7 +94,10 @@ export async function app_g_conversation(
     let openers_remain = positive_is(list_size(remaining));
     if (not(openers_remain)) {
       if (not(prayed.done)) {
-        app_g_discern_prevented_overlay(5000);
+        let color = app_shared_color_gold_text();
+        let message =
+          "Before you go, the Holy Spirit prompts you to pray for this person.";
+        app_g_message_overlay(emoji_dove(), message, color, 4500, noop);
         return;
       }
     }
