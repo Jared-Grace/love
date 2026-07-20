@@ -31,7 +31,9 @@ export function app_code_lesson_operand_generic(params) {
     let middle = text_combine_multiple([" the ", role, " is "]);
     html_div_cycle_code(intro, ["In ", sample_question, middle, sample_answer]);
     let ask = app_code_container_light_blue(root);
-    html_div_cycle_code(ask, [text_combine_multiple(["Choose the ", role])]);
+    html_div_cycle_code(ask, [
+      text_combine_multiple(["In this lesson you will choose the ", role]),
+    ]);
   }
   function quizzes_get(question, answer) {
     let forwards = {
