@@ -7,6 +7,10 @@ import { range_map } from "./range_map.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
 import { add } from "./add.mjs";
+import { divide } from "./divide.mjs";
+import { floor } from "./floor.mjs";
+import { list_get } from "./list_get.mjs";
+import { text_integers } from "./text_integers.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
@@ -35,6 +39,14 @@ export function app_code_lesson_expression_remainder_any() {
     let list = list_map(chosen, make);
     return list;
   }
+  function decoys(question, answer) {
+    "the classic mistake is giving the QUOTIENT (how many whole times the divisor fits, floor(n / d)) instead of the remainder (what is left over)";
+    let nums = text_integers(question);
+    let number = list_get(nums, 0);
+    let divisor = list_get(nums, 1);
+    let quotient = floor(divide(number, divisor));
+    return [quotient];
+  }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
   let lesson = app_code_lesson_expression_generic({
@@ -42,6 +54,7 @@ export function app_code_lesson_expression_remainder_any() {
     name_id,
     next_arg,
     example_count: 2,
+    decoys,
   });
   return lesson;
   function title_name_id() {
