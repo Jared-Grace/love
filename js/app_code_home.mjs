@@ -57,7 +57,7 @@ export function app_code_home(context) {
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
   if (found) {
-    "not awaited on purpose: a few frames after app_shared_refresh scrolls the window to the top, this INSTANTLY snaps the just-left lesson to the vertical center so the learner lands back on their lesson. No animation and no white cover - the cover used to mask this same instant scroll but read as a jarring white flash rather than fading, and a smooth glide is unnecessary since the scroll is quick; nothing is actually loading (the list is an instant local render)";
-    html_scroll_center_now(just_left);
+    "not awaited on purpose: a white overlay fades IN over the list, the just-left lesson is instantly centered while hidden behind it, then the overlay fades OUT to reveal the already-centered list - a smooth cross-fade that hides the scroll jump without the stark flash the old cover produced (that one jumped straight to full white instead of fading in)";
+    app_code_scroll_center_faded(just_left);
   }
 }
