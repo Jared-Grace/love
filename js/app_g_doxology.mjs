@@ -6,6 +6,7 @@ import { integer_random } from "./integer_random.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { trinity_name_prayer } from "./trinity_name_prayer.mjs";
+import { g_name_jesus } from "./g_name_jesus.mjs";
 import { text_random_or_empty } from "./text_random_or_empty.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -18,24 +19,12 @@ export function app_g_doxology() {
   let believe = list_random_item([
     text_combine_multiple([
       text_random_or_empty("Now "),
-      "I believe",
-      text_random_or_empty(
-        text_combine_multiple([
-          ", in ",
-          jesus_christ(),
-          text_random_or_empty(
-            text_combine_multiple([
-              ", the Son of",
-              text_random_or_empty(" the living"),
-              " God",
-            ]),
-          ),
-        ]),
-      ),
+      "I believe in ",
+      g_name_jesus(),
     ]),
     text_combine_multiple([
       "I ",
-      list_random_item(["confess", "recieve"]),
+      list_random_item(["confess", "receive"]),
       " ",
       jesus_christ(),
       " as my",
