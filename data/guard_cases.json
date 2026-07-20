@@ -34,6 +34,9 @@
     { "command": "node -e 1", "decision": "deny", "why": "raw node -e hard floor" },
     { "command": "time node -e 1", "decision": "deny", "why": "hard floor survives a wrapper" },
     { "command": "node scripts/r.mjs command_line_generic ls", "decision": "deny", "why": "denied r.mjs eval entry point" },
+    { "command": "node scripts/ai.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
+    { "command": "node scripts/g.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
+    { "command": "node scripts/rl.mjs eval_console_log_replace x", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
 
     { "command": "ls $(ls)", "decision": "allow", "why": "substitution whose inner command is trusted" },
     { "command": "ls $(git status)", "decision": "allow", "why": "substitution with a trusted 2-word verb" },
