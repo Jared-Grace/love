@@ -1,25 +1,34 @@
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
-import { app_g_gospel } from "./app_g_gospel.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
-import { app_g_turn_menu } from "./app_g_turn_menu.mjs";
-import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
+import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
+import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
+import { app_g_doxology } from "./app_g_doxology.mjs";
+import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
+import { g_icon_cross } from "./g_icon_cross.mjs";
 import { g_greeting } from "./g_greeting.mjs";
-import { g_boundary } from "./g_boundary.mjs";
-import { app_g_how } from "./app_g_how.mjs";
-import { app_g_believe } from "./app_g_believe.mjs";
-import { integer_random_0 } from "./integer_random_0.mjs";
+import { g_conversation_generate } from "./g_conversation_generate.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { positive_is } from "./positive_is.mjs";
+import { each } from "./each.mjs";
+import { not } from "./not.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_cross } from "./emoji_cross.mjs";
 import { emoji_rock } from "./emoji_rock.mjs";
 import { emoji_sunrise } from "./emoji_sunrise.mjs";
 import { emoji_smile } from "./emoji_smile.mjs";
 import { emoji_thinking } from "./emoji_thinking.mjs";
-import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_div } from "./html_div.mjs";
+import { emoji_pray } from "./emoji_pray.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_g_conversation(
   prayer,
@@ -36,62 +45,125 @@ export async function app_g_conversation(
     property_set(npc, "meet", true);
   }
   let name_player = property_get(player, "name");
-  let npc_says = g_greeting(meet, name_player);
-  let says_div = html_div(overlay);
-  function say(text) {
-    html_clear(says_div);
-    app_g_npc_says(npc, says_div, text);
-  }
-  say(npc_says);
-  async function npc_gospel() {
-    await app_g_gospel(overlay, npc, overlay_close, player, div_map);
-  }
-  function npc_how() {
-    app_g_how(overlay, npc, overlay_close);
-  }
-  function npc_believe() {
-    app_g_believe(overlay, npc, overlay_close);
-  }
-  let discern = { prayed: false };
+  let greeting = g_greeting(meet, name_player);
   let christian = property_get(npc, "christian");
-  if (not(christian)) {
-    let correct_index = integer_random_0(2);
-    function choice_make(index, action, topic, label) {
-      let is_correct = index === correct_index;
-      function on_click() {
-        if (not(is_correct) && app_g_discern_prevent(discern)) {
-          return;
-        }
-        if (is_correct) {
-          action();
-        } else {
-          say(g_boundary(meet, topic));
-        }
+  if (christian) {
+    app_g_npc_says(npc, overlay, greeting);
+    app_g_button_conversation_end(overlay, overlay_close);
+    return;
+  }
+  let has = property_exists(npc, "conversation");
+  if (not(has)) {
+    property_set(npc, "conversation", g_conversation_generate());
+  }
+  let conversation = property_get(npc, "conversation");
+  let turns = property_get(conversation, "turns");
+  let converts = property_get(conversation, "converts");
+  let remaining = list_copy(turns);
+  let prayed = { done: false };
+  function label_for(turn) {
+    let kind = property_get(turn, "kind");
+    let labels = {
+      gospel_share_objection: text_combine_multiple([
+        "Tell them that Jesus died ",
+        emoji_cross(),
+        ", was buried ",
+        emoji_rock(),
+        " and rose to life ",
+        emoji_sunrise(),
+      ]),
+      how_r_u: text_combine(emoji_smile(), " How are you?"),
+      believe: text_combine(emoji_thinking(), " What do you believe?"),
+    };
+    let label = property_get(labels, kind);
+    return label;
+  }
+  function end_button() {
+    function on_end() {
+      if (not(prayed.done)) {
+        app_g_discern_prevented_overlay(5000);
+        return;
       }
-      return { label, on_click, correct: is_correct };
+      if (converts) {
+        property_set(npc, "christian", true);
+        g_icon_cross(div_map, npc);
+      }
+      overlay_close();
     }
-    let gospel_label = text_combine_multiple([
-      "Tell them that Jesus died ",
-      emoji_cross(),
-      ", was buried ",
-      emoji_rock(),
-      " and rose to life ",
-      emoji_sunrise(),
-    ]);
-    let how_label = text_combine(emoji_smile(), " How are you?");
-    let believe_label = text_combine(emoji_thinking(), " What do you believe?");
-    let choices = [
-      choice_make(0, npc_gospel, "faith", gospel_label),
-      choice_make(1, npc_how, "how I'm doing", how_label),
-      choice_make(2, npc_believe, "what I believe", believe_label),
-    ];
-    app_g_turn_menu(overlay, "What would you like to say?", choices, discern);
+    app_g_button_conversation_end(overlay, on_end);
   }
-  function on_end() {
-    if (app_g_discern_prevent(discern)) {
-      return;
+  function run_turn(turn) {
+    html_clear(overlay);
+    let discern = { prayed: false };
+    function keep(t) {
+      return t !== turn;
     }
-    overlay_close();
+    function on_correct() {
+      remaining = list_filter(remaining, keep);
+      render();
+    }
+    app_g_turn_quiz_once(
+      overlay,
+      npc,
+      property_get(turn, "concern"),
+      property_get(turn, "correct"),
+      property_get(turn, "wrong"),
+      on_correct,
+      discern,
+    );
   }
-  app_g_button_conversation_end(overlay, on_end);
+  function render_openers() {
+    app_g_npc_says(npc, overlay, greeting);
+    let container = app_g_container_player(overlay);
+    app_g_p_text(container, "What would you like to say?");
+    function add(turn) {
+      function pick() {
+        run_turn(turn);
+      }
+      app_g_button_green(container, label_for(turn), pick);
+    }
+    each(remaining, add);
+  }
+  function render_pray() {
+    app_g_npc_says(npc, overlay, greeting);
+    let container = app_g_container_player(overlay);
+    app_g_p_text(container, "Before you go, pray to God for this person.");
+    function pray() {
+      let prayer_texts = list_map_property(turns, "prayer_text");
+      function present(t) {
+        return t !== null;
+      }
+      let some = list_filter(prayer_texts, present);
+      function on_prayed() {
+        prayed.done = true;
+        render();
+      }
+      app_g_pray_turn(some, on_prayed);
+    }
+    app_g_button_green(container, text_combine(emoji_pray(), " Pray"), pray);
+  }
+  function render_close() {
+    if (converts) {
+      app_g_npc_says(npc, overlay, app_g_doxology());
+    } else {
+      app_g_npc_says(
+        npc,
+        overlay,
+        "Thank you for talking with me. You've given me a lot to think about.",
+      );
+    }
+  }
+  function render() {
+    html_clear(overlay);
+    let has_openers = positive_is(list_size(remaining));
+    if (has_openers) {
+      render_openers();
+    } else if (not(prayed.done)) {
+      render_pray();
+    } else {
+      render_close();
+    }
+    end_button();
+  }
+  render();
 }
