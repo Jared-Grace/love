@@ -4,8 +4,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
-import { mod } from "./mod.mjs";
-import { list_size } from "./list_size.mjs";
+import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { number_is } from "./number_is.mjs";
 import { examples_menu_dom } from "./examples_menu_dom.mjs";
 import { examples_single_dom } from "./examples_single_dom.mjs";
@@ -18,7 +17,6 @@ export async function app_examples(context) {
   let root = property_get(context, "root");
   html_style_set(root, "margin", "0");
   html_style_set(root, "background", "#fafafa");
-  let count = list_size(examples);
   function select(index) {
     storage_local_set(app_examples, "selected", index);
     render();
@@ -38,10 +36,10 @@ export async function app_examples(context) {
     let selected = storage_local_get(app_examples, "selected");
     if (number_is(selected)) {
       function on_prev() {
-        select(mod(selected - 1, count));
+        select(list_get_wrap_index(examples, selected - 1));
       }
       function on_next() {
-        select(mod(selected + 1, count));
+        select(list_get_wrap_index(examples, selected + 1));
       }
       examples_single_dom(page, examples, selected, on_prev, on_next, to_menu);
     } else {
