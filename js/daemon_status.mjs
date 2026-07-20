@@ -15,7 +15,7 @@ export async function daemon_status(fn_name) {
     active: property_get(properties, "ActiveState"),
     enabled: property_get(properties, "UnitFileState"),
     since: property_get(properties, "ActiveEnterTimestamp"),
-    restarts: property_get(properties, "NRestarts"),
+    restarts: integer_to_try(property_get(properties, "NRestarts")),
   };
   return v;
 }
