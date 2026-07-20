@@ -85,7 +85,13 @@ export function app_code_lesson_expression_integer_division() {
     html_div_cycle_code(solution, [
       "Now we will divide, and then round down to get a whole number:",
     ]);
-    html_div_cycle_code(solution, ["", "Math.floor(14 / 4)", " is ", "3"]);
+    html_div_cycle_code(solution, [
+      "",
+      "Math.floor(14 / 4)",
+      " is ",
+      "Math.floor(3.5)",
+    ]);
+    html_div_cycle_code(solution, ["", "Math.floor(3.5)", " is ", "3"]);
     html_div_cycle_code(solution, [
       "That is how many whole ",
       "4",

@@ -22,6 +22,7 @@ export function app_code_lesson_operand_generic(params) {
   let batch_get = property_get(params, "batch_get");
   let name_id = property_get(params, "name_id");
   let unscramble = property_get_or(params, "unscramble", false);
+  let above_more = property_get_or(params, "above_more", null);
   let example_question_label = app_code_label_code_question();
   let answer_label = text_combine_multiple(["Choose the ", role, ": "]);
   let example_answer_label = text_combine_multiple(["The ", role, " is: "]);
@@ -34,6 +35,10 @@ export function app_code_lesson_operand_generic(params) {
     let sample_answer = property_get(sample, "answer");
     let middle = text_combine_multiple([" the ", role, " is "]);
     html_div_cycle_code(intro, ["In ", sample_question, middle, sample_answer]);
+    if (above_more) {
+      "an optional extra block after the definition (the quotient lesson uses it to remind all three roles, since its question shows the dividend, divisor and quotient at once)";
+      above_more(root);
+    }
     let ask = app_code_container_light_blue(root);
     html_div_cycle_code(ask, [
       text_combine_multiple(["In this lesson you will choose the ", role]),

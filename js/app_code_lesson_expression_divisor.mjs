@@ -29,7 +29,7 @@ export function app_code_lesson_expression_divisor() {
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
     role: "divisor",
-    define_prose: "When you divide, the number you divide by is the ",
+    define_prose: "When you divide, the number you divide by is called the ",
     batch_get,
     name_id,
     unscramble: true,

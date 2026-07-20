@@ -104,6 +104,11 @@
             "type": "command",
             "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=white,bg=red,bold'",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "sh /home/j/repos/love/.claude/hooks/claude_waiting_notify.sh",
+            "timeout": 5
           }
         ]
       }

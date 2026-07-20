@@ -29,7 +29,7 @@ export function app_code_lesson_expression_dividend() {
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
     role: "dividend",
-    define_prose: "When you divide, the number you divide is the ",
+    define_prose: "When you divide, the number you divide is called the ",
     batch_get,
     name_id,
     unscramble: true,

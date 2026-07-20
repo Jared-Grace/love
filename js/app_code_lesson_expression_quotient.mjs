@@ -10,6 +10,8 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_quotient() {
   "identify the QUOTIENT (the whole result of dividing and rounding down) in Math.floor(a / b) === c - the dividend a and divisor b stand as decoys; a thin lesson over app_code_lesson_operand_generic. The question shows the honest Math.floor form (a / b === c alone would be false, since a / b is a decimal) and the quotient c must appear as a number so it can be a choice";
   function make(divisor, quotient) {
@@ -36,10 +38,20 @@ export function app_code_lesson_expression_quotient() {
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
     role: "quotient",
-    define_prose: "When you divide and round down, the whole result is the ",
+    define_prose: "When you divide and round down, the whole result is called the ",
     batch_get,
     name_id,
+    above_more: remember_roles,
   });
+  function remember_roles(root) {
+    "remind all three roles at once, since the quotient question Math.floor(14 / 4) === 3 shows the dividend, divisor and quotient together";
+    let remember = app_code_container_light_blue(root);
+    html_div_cycle_code(remember, ["", "Math.floor(14 / 4) === 3"]);
+    html_div_cycle_code(remember, ["Remember:"]);
+    html_div_cycle_code(remember, ["The ", "14", " is the dividend"]);
+    html_div_cycle_code(remember, ["The ", "4", " is the divisor"]);
+    html_div_cycle_code(remember, ["The ", "3", " is the quotient"]);
+  }
   function title_name_id() {
     "the home title is console.log quotient";
     function title_get(lesson_name, left_upper) {
