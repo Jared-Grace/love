@@ -5,6 +5,7 @@ import { js_flo_body } from "./js_flo_body.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_return_argument_get } from "./js_return_argument_get.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
+import { js_signature_has_callee } from "./js_signature_has_callee.mjs";
 import { js_fold_match_block } from "./js_fold_match_block.mjs";
 import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 import { js_fold_call_statement } from "./js_fold_call_statement.mjs";
@@ -17,7 +18,9 @@ import { list_map } from "./list_map.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { null_is } from "./null_is.mjs";
+import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 export function js_fold(x_ast, f_ast) {
   // Brick 5a: fold the first contiguous occurrence of pure fn x's body inside F into a call to x.
@@ -31,12 +34,21 @@ export function js_fold(x_ast, f_ast) {
   let params = js_function_declaration_params_names(x_declaration);
   let x_statements = js_flo_body(x_ast);
   let statement_count = list_size(x_statements);
-  let k = subtract(statement_count, 1);
-  let pattern_statements = list_take(x_statements, k);
+  let body_count = subtract(statement_count, 1);
+  let body_statements = list_take(x_statements, body_count);
   let return_statement = list_last(x_statements);
   let return_argument = js_return_argument_get(return_statement);
   let return_local = property_get_name(return_argument);
-  let pattern_sigs = list_map(pattern_statements, js_atomic_statement_signature);
+  // Pattern = x's call-declaration statements only; skip ceremony (doc-string comments and the
+  // arguments_assert) so a fn folds into bare sites that carry none of it. Ceremony sigs have a null
+  // callee (they aren't `let y = call(...)`), so filtering on callee keeps just the foldable logic.
+  let body_sigs = list_map(body_statements, js_atomic_statement_signature);
+  let pattern_sigs = list_filter(body_sigs, js_signature_has_callee);
+  let k = list_size(pattern_sigs);
+  let empty = equal(k, 0);
+  if (empty) {
+    return null;
+  }
 
   let f_declaration = js_flo(f_ast);
   let f_block = property_get(f_declaration, "body");
