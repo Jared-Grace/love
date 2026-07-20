@@ -1,6 +1,7 @@
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
+import { add } from "./add.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { integer_even_is } from "./integer_even_is.mjs";
@@ -35,6 +36,10 @@ export function app_code_lesson_expression_round_down() {
     let list = list_map_index(wholes, make);
     return list;
   }
+  function decoys(question, answer) {
+    "the classic Math.floor mistake is rounding UP (or to the nearest) instead of down, so the tailored wrong answer is the whole number just above - answer + 1";
+    return [add(answer, 1)];
+  }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
   let lesson = app_code_lesson_expression_generic({
@@ -42,6 +47,7 @@ export function app_code_lesson_expression_round_down() {
     name_id,
     next_arg,
     example_count: 2,
+    decoys,
   });
   return lesson;
   function title_name_id() {
