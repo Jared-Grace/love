@@ -1,6 +1,7 @@
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_choose_operand } from "./app_code_lesson_quiz_choose_operand.mjs";
+import { app_code_quiz_correction_operand } from "./app_code_quiz_correction_operand.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
@@ -53,6 +54,7 @@ export function app_code_lesson_expression_dividend() {
       answer_count_override: null,
       answer_property: "answer",
       on_answer: app_code_lesson_quiz_choose_operand,
+      correction: app_code_quiz_correction_operand("dividend"),
     };
     let infos = [forwards];
     function each_info(info) {
