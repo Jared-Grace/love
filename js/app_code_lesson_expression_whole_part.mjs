@@ -4,6 +4,11 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map } from "./list_map.mjs";
+import { add } from "./add.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
+import { text_to } from "./text_to.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -12,9 +17,13 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_whole_part() {
   "practice the whole part in finding a remainder: the quotient (how many whole times the number divides) times the divisor gives the biggest multiple of the divisor that fits - 3 whole 4s is 3 * 4 which is 12, and 12 is as much of 14 as splits evenly into 4s; this is the multiply step of the remainder pipeline (integer division gave the quotient, next you subtract this whole part from the number); the answer is the product; quotient 2..3, divisor 3..6";
   function make(divisor) {
-    "quotient * divisor for the given divisor - the quotient is 2 or 3, the count of whole divisors that fit";
+    "Math.floor(dividend / divisor) * divisor for the given divisor - the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division never comes out even; Math.floor gives the quotient and times the divisor gives the whole part (the biggest multiple of the divisor that fits), so the answer is quotient*divisor";
     let quotient = integer_random(2, 3);
-    let code = js_code_binary_spaced_nb(quotient, "*", divisor);
+    let leftover = integer_random(1, subtract(divisor, 1));
+    let dividend = add(multiply(quotient, divisor), leftover);
+    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let floored = text_combine_multiple(["Math.floor(", division, ")"]);
+    let code = text_combine_multiple([floored, " * ", text_to(divisor)]);
     return code;
   }
   function refill() {
@@ -46,29 +55,19 @@ export function app_code_lesson_expression_whole_part() {
     return built;
   }
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
-      "To find a remainder, you first find how many whole times the number divides",
+    let naming = app_code_container_light_blue(root);
+    html_div_cycle_code(naming, ["", "Math.floor(14 / 4) === 3"]);
+    html_div_cycle_code(naming, ["The ", "14", " is called the dividend"]);
+    html_div_cycle_code(naming, ["The ", "4", " is called the divisor"]);
+    html_div_cycle_code(naming, ["The ", "3", " is called the quotient"]);
+    let multiplying = app_code_container_light_blue(root);
+    html_div_cycle_code(multiplying, [
+      "Now we will multiply the quotient and divisor together",
     ]);
-    html_div_cycle_code(c, [
-      "",
-      "14 / 4",
-      " rounds down to ",
-      "3",
-      ", so ",
-      "3",
-      " whole 4s fit",
-    ]);
-    html_div_cycle_code(c, ["Multiply to see how much those whole 4s cover"]);
-    html_div_cycle_code(c, ["", "3 * 4", " is ", "12"]);
-    html_div_cycle_code(c, [
-      "",
-      "12",
-      " is the whole part - all of 14 that splits evenly into 4s",
-    ]);
-    html_div_cycle_code(c, [
-      "The remainder is whatever is left after ",
-      "12",
+    html_div_cycle_code(multiplying, ["", "3 * 4 === 12"]);
+    let plan = app_code_container_light_blue(root);
+    html_div_cycle_code(plan, [
+      "So, given a dividend and a divisor, we will compute this multiplication",
     ]);
   }
 }

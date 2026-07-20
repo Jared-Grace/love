@@ -8,7 +8,7 @@ import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_shared_screen_go } from "./app_shared_screen_go.mjs";
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
-import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
+import { app_code_scroll_center_faded } from "./app_code_scroll_center_faded.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
