@@ -8,14 +8,14 @@ import { list_add } from "./list_add.mjs";
 // somewhere else — the "helper exists, literal remains" shape. Returns
 // [{f_name, literal, files}] sorted by how widely the literal is duplicated.
 export async function literal_duplicates() {
-  let paths = await folder_read_files("js");
+  let names = await folder_read_files("js");
   let codes = {};
-  for (let path of paths) {
-    if (!path.endsWith(".mjs")) {
+  for (let name of names) {
+    if (!name.endsWith(".mjs")) {
       continue;
     }
-    let f_name = path.split("/").pop().slice(0, -4);
-    codes[f_name] = await file_read(path);
+    let f_name = name.slice(0, -4);
+    codes[f_name] = await file_read(path_join(["js", name]));
   }
   let getters = [];
   for (let f_name of Object.keys(codes)) {
