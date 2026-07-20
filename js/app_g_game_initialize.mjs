@@ -20,5 +20,6 @@ export async function app_g_game_initialize() {
     coordinates,
     rows,
     view: null,
+    time_of_day: "morning",
   });
 }
