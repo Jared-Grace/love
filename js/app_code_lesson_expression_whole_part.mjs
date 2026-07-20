@@ -75,7 +75,7 @@ export function app_code_lesson_expression_whole_part() {
     html_div_cycle_code(naming, ["The ", "3", " is called the quotient"]);
     let multiplying = app_code_container_light_blue(root);
     html_div_cycle_code(multiplying, [
-      "Now we will multiply the quotient and divisor together",
+      "Now we will multiply the quotient and divisor together:",
     ]);
     html_div_cycle_code(multiplying, ["", "3 * 4 === 12"]);
     let plan = app_code_container_light_blue(root);
