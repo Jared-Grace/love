@@ -894,8 +894,14 @@ def verb_of(words):
         # leading '-' keeps the 2-word verb so a flag can never masquerade as
         # a trusted subcommand. This only ever makes the verb *more* specific,
         # so it can't widen trust - it just enables a narrower allow rule.
+        # Recognised via dispatcher_script_is, NOT bare set membership, so an
+        # absolute path folds too. Bare membership left `node
+        # /abs/path/scripts/r.mjs <fn>` as the 2-word verb `node
+        # /abs/path/scripts/r.mjs`, which a `:*` rule on that path would have
+        # matched for EVERY function - the opposite of the per-function grant
+        # this fold exists to enable.
         if (
-            words[1] in NODE_DISPATCHER_SCRIPTS
+            dispatcher_script_is(words[1])
             and len(words) >= 3
             and not words[2].startswith("-")
         ):
