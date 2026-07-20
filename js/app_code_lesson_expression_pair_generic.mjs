@@ -6,6 +6,7 @@ import { text_to } from "./text_to.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { modulo } from "./modulo.mjs";
 import { ternary } from "./ternary.mjs";
+import { js_eval_left_to_right } from "./js_eval_left_to_right.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
