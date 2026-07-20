@@ -14,10 +14,12 @@ import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_sky_advance(final) {
   "drift the sky-tint one step forward as the player completes a conversation part — a continuous LINEAR motion of the day phase: quickly finish arriving at the state just entered (~15s; a gentler ~45s on the FINAL part), then keep drifting HALFWAY toward the next state over the rest of ~a minute, so the sky is always gently in motion and never hard-cuts. runs its own rAF loop (only while moving); a fresh call supersedes the prior one via an element token (html_scroll_animate style)";
   let bag = global_function_initialize(app_g_sky_set, {});
+  console.log("[sky_adv] hasEl=", property_exists(bag, "element"), "final=", final);
   if (not(property_exists(bag, "element"))) {
     return;
   }
   let element = property_get(bag, "element");
+  console.log("[sky_adv] from=", element.sky_phase, "token=", element.sky_token);
   let g = await app_g_game_save_get();
   let seed = g_sky_seed_get(g);
   let from = element.sky_phase;
