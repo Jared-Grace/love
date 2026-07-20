@@ -89,12 +89,12 @@ export function app_code_lesson_quiz(
       refresh();
     }
   }
+  let next_button = app_shared_button_wide_next(parent_container, on_next);
+  html_style_margin_top(next_button, app_shared_spaced_gap());
   let last_lesson_end = qli && no_more;
   if (last_lesson_end) {
+    "Next is ALWAYS shown so the learner can always move on; at the very end it wraps back to the first lesson, and this note tells them they have reached the last one";
     app_code_no_more_lessons(parent_container);
-  } else {
-    let next_button = app_shared_button_wide_next(parent_container, on_next);
-    html_style_margin_top(next_button, app_shared_spaced_gap());
   }
   function on_reveal() {
     "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
