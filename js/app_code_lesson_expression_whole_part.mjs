@@ -73,14 +73,17 @@ export function app_code_lesson_expression_whole_part() {
     html_div_cycle_code(naming, ["The ", "14", " is called the dividend"]);
     html_div_cycle_code(naming, ["The ", "4", " is called the divisor"]);
     html_div_cycle_code(naming, ["The ", "3", " is called the quotient"]);
-    let multiplying = app_code_container_light_blue(root);
-    html_div_cycle_code(multiplying, [
-      "Now we will multiply the quotient and divisor together:",
+    let evaluating = app_code_container_light_blue(root);
+    html_div_cycle_code(evaluating, [
+      "Evaluate the formula one step at a time:",
     ]);
-    html_div_cycle_code(multiplying, ["", "3 * 4 === 12"]);
-    let plan = app_code_container_light_blue(root);
-    html_div_cycle_code(plan, [
-      "So, given a dividend and a divisor, we will compute this multiplication",
+    html_div_cycle_code(evaluating, ["", "Math.floor(14 / 4)", " is ", "3"]);
+    html_div_cycle_code(evaluating, [
+      "",
+      "Math.floor(14 / 4) * 4",
+      " is ",
+      "3 * 4",
     ]);
+    html_div_cycle_code(evaluating, ["", "3 * 4", " is ", "12"]);
   }
 }
