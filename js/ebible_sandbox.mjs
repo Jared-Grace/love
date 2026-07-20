@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_last } from "./text_last.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
