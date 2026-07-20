@@ -16,7 +16,12 @@ import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { positive_is } from "./positive_is.mjs";
-import { each } from "./each.mjs";
+import { app_g_turn_menu } from "./app_g_turn_menu.mjs";
+import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
+import { g_boundary } from "./g_boundary.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { html_div } from "./html_div.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -112,17 +117,42 @@ export async function app_g_conversation(
       discern,
     );
   }
+  function topic_for(turn) {
+    let kind = property_get(turn, "kind");
+    let topics = {
+      gospel_share_objection: "faith",
+      how_r_u: "how I'm doing",
+      believe: "what I believe",
+    };
+    let topic = property_get(topics, kind);
+    return topic;
+  }
   function render_openers() {
-    app_g_npc_says(npc, overlay, greeting);
-    let container = app_g_container_player(overlay);
-    app_g_p_text(container, "What would you like to say?");
-    function add(turn) {
-      function pick() {
+    let says_div = html_div(overlay);
+    function say(text) {
+      html_clear(says_div);
+      app_g_npc_says(npc, says_div, text);
+    }
+    say(greeting);
+    let discern = { prayed: false };
+    let correct_turn = list_random_item(remaining);
+    function choice_of(turn) {
+      let is_correct = turn === correct_turn;
+      function on_click() {
+        if (not(is_correct)) {
+          if (app_g_discern_prevent(discern)) {
+            return;
+          }
+          say(g_boundary(meet, topic_for(turn)));
+          return;
+        }
         run_turn(turn);
       }
-      app_g_button_green(container, label_for(turn), pick);
+      let choice = { label: label_for(turn), on_click, correct: is_correct };
+      return choice;
     }
-    each(remaining, add);
+    let choices = list_map(remaining, choice_of);
+    app_g_turn_menu(overlay, "What would you like to say?", choices, discern);
   }
   function render_pray() {
     app_g_npc_says(npc, overlay, greeting);
