@@ -1,4 +1,5 @@
 import { lock_try_prompt } from "../../love/js/lock_try_prompt.mjs";
+import { claude_edit_claim_fresh_is } from "../../love/js/claude_edit_claim_fresh_is.mjs";
 import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { log } from "../../love/js/log.mjs";
 import { data_file_update } from "../../love/js/data_file_update.mjs";
@@ -22,6 +23,10 @@ export async function watch() {
   async function lambda2(path) {
     async function lambda() {
       if (property_exists_equals(in_progress, path, true)) {
+        return;
+      }
+      if (claude_edit_claim_fresh_is(path)) {
+        "Claude is editing this exact file right now, so leave it alone — it will run its own transforms. Only THIS file is skipped: a save by the human, in any other file, still transforms immediately. That is the whole point of claiming per path instead of taking one repo-wide lock for a whole Claude session, which used to drop the human's saves too";
         return;
       }
       property_set(in_progress, path, true);
