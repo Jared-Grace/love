@@ -6,6 +6,13 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/alarms.apk",
+        "destination": "https://firebasestorage.googleapis.com/v0/b/jared-grace.firebasestorage.app/o/http%2Falarms%2Fapp-debug.apk?alt=media",
+        "type": 302
+      }
+    ],
     "headers": [
       {
         "source": "**/*.js",
