@@ -1,7 +1,7 @@
 import { python_code_dispatcher_scripts } from "./python_code_dispatcher_scripts.mjs";
 import { dispatcher_scripts_python_path } from "./dispatcher_scripts_python_path.mjs";
 import { file_read } from "./file_read.mjs";
-import { text_is } from "./text_is.mjs";
+import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 
 // Gate: the generated python mirror must match what JS produces right now.
@@ -12,7 +12,7 @@ export async function dispatcher_scripts_python_assert() {
   let path = dispatcher_scripts_python_path();
   let expected = python_code_dispatcher_scripts();
   let actual = await file_read(path);
-  if (not(text_is(actual, expected))) {
+  if (not(equal(actual, expected))) {
     console.log("STALE  " + path);
     throw new Error(
       "dispatcher scripts gate: " +
