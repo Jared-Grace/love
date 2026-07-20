@@ -4,8 +4,9 @@ import { server_url_api_ordered } from "../../love/js/server_url_api_ordered.mjs
 import { server_url } from "../../love/js/server_url.mjs";
 import { server_port } from "../../love/js/server_port.mjs";
 import { server_url_api } from "../../love/js/server_url_api.mjs";
-import { function_run_io_file_wrapper } from "../../love/js/function_run_io_file_wrapper.mjs";
+import { function_worker_pool_run } from "../../love/js/function_worker_pool_run.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
+import { log } from "../../love/js/log.mjs";
 import { log_keep } from "../../love/js/log_keep.mjs";
 import express from "express";
 import { module_repos_resolve } from "./module_repos_resolve.mjs";
@@ -33,9 +34,19 @@ export async function server() {
   let v_public = express.static(folder_public_resolved, static_options);
   let u = server_url_api();
   async function api_generic(req, res) {
+    "run the call on a warm pooled worker rather than spawning a node process per request: startup was costing ~1.3 CPU-seconds every call, so a single page polling 3 endpoints every 4 seconds burned a whole core. function_worker_pool_run still retires its workers on any file change, so dev hot reload is unchanged";
     let body = property_get(req, "body");
-    let r = await function_run_io_file_wrapper(body);
-    res.json(r);
+    let f_name = property_get(body, "f_name");
+    let args = property_get(body, "args");
+    try {
+      let result = await function_worker_pool_run(f_name, args);
+      res.json({ result });
+    } catch (caught) {
+      "express does not catch a rejection from an async handler, so without this the browser waits forever instead of failing — the page's own catch can only run once a response actually arrives";
+      let failed = String(property_get(caught, "message"));
+      log(api_generic.name, { f_name, failed });
+      res.status(500).json({ result: null, failed });
+    }
   }
   async function api(req, res) {
     await api_generic(req, res);
