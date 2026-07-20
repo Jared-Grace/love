@@ -142,6 +142,13 @@ async function worker_child_start(worker) {
     stdio: ["ignore", "inherit", "inherit", "pipe", "pipe"],
   });
   worker.child = started;
+  // Start unref'd and ref only while a job is in flight (see worker_job_run).
+  // Otherwise idle worker pipes hold the event loop open forever, and a one-shot
+  // CLI run of a pooled function would never exit. The server is unaffected — it
+  // keeps its own HTTP listener ref'd.
+  started.unref();
+  started.stdio[3].unref();
+  started.stdio[4].unref();
   started.stdio[4].on("data", function lambda(chunk) {
     worker_results_read(worker, chunk);
   });
