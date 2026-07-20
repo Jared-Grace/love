@@ -33,6 +33,7 @@ export function app_code_lesson_expression_generic(params) {
     "quiz_backwards_answer_count_override",
     null,
   );
+  let decoys = property_get_or(params, "decoys", null);
   let lesson = app_code_lesson_code_generic({
     value: "value",
     batch_get: b,
@@ -41,6 +42,7 @@ export function app_code_lesson_expression_generic(params) {
     example_count,
     quiz_backwards_answer_count_override,
     forwards_answer_count_override,
+    decoys,
   });
   return lesson;
 }

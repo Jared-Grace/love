@@ -8,6 +8,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_code_generic(params) {
   let value = property_get(params, "value");
   let batch_get = property_get(params, "batch_get");
@@ -38,12 +39,14 @@ export function app_code_lesson_code_generic(params) {
   let example_question_label = app_code_label_code_question();
   let example_count = property_get(params, "example_count");
   let on_question = html_text_set_code_dark;
+  let decoys = property_get_or(params, "decoys", null);
   let forwards = {
     question_label: example_question_label,
     on_question,
     answer_label: quiz_label,
     answer_on_button: noop,
     answer_count_override: forwards_answer_count_override,
+    decoys,
   };
   let backwards = {
     question_label: backwards_question_label,
