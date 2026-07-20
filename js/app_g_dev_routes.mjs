@@ -13,6 +13,7 @@ import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { list_random_item } from "./list_random_item.mjs";
+import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_dev_routes() {
   "registry of dev-only hash routes for app_g (open g.html#<name>): each value sets up that test screen. SINGLE SOURCE OF TRUTH — app_g_dev_if dispatches from it and app_g_dev_index lists its keys, so the #index directory can never drift from the real routes";
@@ -24,9 +25,7 @@ export function app_g_dev_routes() {
     };
     await app_g_view_set(view);
   }
-  async function npc_view(phase) {
-    let npcs = await app_g_npcs_get();
-    let npc = list_random_item(npcs);
+  async function npc_view_of(npc, phase) {
     let view = {
       kind: app_g_view_kind_npc(),
       x: property_get(npc, "x"),
@@ -35,13 +34,21 @@ export function app_g_dev_routes() {
     };
     await app_g_view_set(view);
   }
+  async function npc_view(phase) {
+    let npcs = await app_g_npcs_get();
+    let npc = list_random_item(npcs);
+    await npc_view_of(npc, phase);
+  }
   async function conversation() {
-    await npc_view(app_g_view_phase_conversation());
+    let npcs = await app_g_npcs_get();
+    let unconverted = list_filter_object_includes(npcs, { christian: false });
+    let npc = list_random_item(unconverted);
+    await npc_view_of(npc, app_g_view_phase_conversation());
   }
   async function gospel_share() {
     await npc_view(app_g_view_phase_gospel());
   }
-  async function how() {
+  async function hru() {
     await npc_view(app_g_view_phase_how());
   }
   async function believe() {
@@ -69,7 +76,7 @@ export function app_g_dev_routes() {
     study,
     conversation,
     gospel_share,
-    how,
+    hru,
     believe,
     disciple,
     discern,
