@@ -80,17 +80,18 @@ export async function app_g_gospel(
         }
         lambda2();
       }
-      let b = app_g_bible_passage_button(
-        passage_wrong,
-        chapter_code,
-        books,
+      let reference = property_get(verse_wrong, "reference");
+      let verse_text = property_get(verse_wrong, "text");
+      let b = app_g_bible_passage_button_direct(
+        reference,
+        verse_text,
         container,
         on_wrong,
       );
       function lambda3() {
         app_g_button_wrong(b);
         let review = property_get(player, "review");
-        let verse_numbers = property_get(passage_wrong, "verse_numbers");
+        let verse_numbers = property_get(passage, "verse_numbers");
         list_add(review, {
           chapter_code,
           verse_numbers,
