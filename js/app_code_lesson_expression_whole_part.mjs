@@ -68,11 +68,13 @@ export function app_code_lesson_expression_whole_part() {
     return built;
   }
   function above(root) {
-    let naming = app_code_container_light_blue(root);
-    html_div_cycle_code(naming, ["", "Math.floor(14 / 4) === 3"]);
-    html_div_cycle_code(naming, ["The ", "14", " is called the dividend"]);
-    html_div_cycle_code(naming, ["The ", "4", " is called the divisor"]);
-    html_div_cycle_code(naming, ["The ", "3", " is called the quotient"]);
+    let recall = app_code_container_light_blue(root);
+    html_div_cycle_code(recall, [
+      "The whole part of ",
+      "14 / 4",
+      " is ",
+      "Math.floor(14 / 4) * 4",
+    ]);
     let evaluating = app_code_container_light_blue(root);
     html_div_cycle_code(evaluating, [
       "Evaluate the formula one step at a time:",
