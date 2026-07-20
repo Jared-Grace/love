@@ -1,17 +1,21 @@
 package com.jesusrosetolife.alarm
 
 import org.junit.Test
+import org.junit.Assert.assertEquals
+import java.util.Calendar
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
+/** Offline (JVM) test of the pure alarm logic — no device or emulator needed. */
+class AlarmSyncTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun days_to_calendar_maps_weekday_names() {
+        assertEquals(
+            arrayListOf(Calendar.MONDAY, Calendar.FRIDAY, Calendar.SUNDAY),
+            days_to_calendar(listOf("mon", "fri", "sun"))
+        )
+    }
+
+    @Test
+    fun days_to_calendar_empty_is_empty() {
+        assertEquals(ArrayList<Int>(), days_to_calendar(listOf()))
     }
 }
