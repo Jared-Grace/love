@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 import { list_map } from "./list_map.mjs";
