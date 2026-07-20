@@ -35,5 +35,6 @@ export function app_g_dev_index() {
   let routes = app_g_dev_routes();
   let names = properties_get(routes);
   let all = list_concat(names, ["reset", "index"]);
+  list_sort_text(all);
   html_hash_links(div, all);
 }
