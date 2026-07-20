@@ -30,7 +30,7 @@ export async function app_next(context) {
     let text = property_get(d, "text");
     return text;
   }
-  let version_english = "engbsb";
+  let version_english = ebible_folder_english();
   let books = await ebible_version_books_browser(version_english);
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse_number,
