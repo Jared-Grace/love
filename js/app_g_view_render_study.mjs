@@ -6,6 +6,7 @@ import { app_g_container } from "./app_g_container.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_g_progress_bar } from "./app_g_progress_bar.mjs";
 import { app_g_prayer_study_overlay } from "./app_g_prayer_study_overlay.mjs";
 import { g_prayer_study_before } from "./g_prayer_study_before.mjs";
 import { g_prayer_study_after } from "./g_prayer_study_after.mjs";
