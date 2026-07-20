@@ -116,6 +116,11 @@
             "command": "cd /home/j/repos/love; node scripts/r.mjs ai_git 2>&1 | tail -8",
             "timeout": 90,
             "statusMessage": "Auto-committing"
+          },
+          {
+            "type": "command",
+            "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=black,bg=yellow,bold'",
+            "timeout": 5
           }
         ]
       }
