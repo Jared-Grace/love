@@ -21,7 +21,7 @@ import { ebible_version_books } from "./ebible_version_books.mjs";
 import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
 export async function bible_interlinear_chapters() {
   let bible_folder = bible_interlinear_verses_upload_folder();
-  let books = await ebible_version_books("engbsb");
+  let books = await ebible_version_books(ebible_folder_english());
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
   let vid_property = "Verse";
