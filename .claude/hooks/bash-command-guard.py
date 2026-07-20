@@ -829,13 +829,33 @@ GIT_SAFE_GLOBAL_FLAGS = {
 }
 
 
-def verb_of(words):
+def transparent_wrapper_skip(words):
+    """How many leading words a transparent wrapper occupies, or 0 if this
+    command doesn't start with one.
+
+    A transparent wrapper runs the rest of the word list as its own command
+    and grants no trust of its own, so the inner command is what actually
+    needs checking - both verb_of and _strip_command_prefixes look straight
+    through it. Each shape is deliberately exact: any flag form (`xargs
+    -I{}`, `timeout -k 5 30`, `time -p`) fails the check and falls through
+    to a real prompt, because a flag can change what actually gets run.
+
+    Single source of truth on purpose - these three shapes were previously
+    spelled out in both callers, where they could drift apart and silently
+    widen one path but not the other."""
     if words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
-        return verb_of(words[1:])
+        return 1
     if words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
-        return verb_of(words[2:])
+        return 2
     if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
-        return verb_of(words[1:])
+        return 1
+    return 0
+
+
+def verb_of(words):
+    skip = transparent_wrapper_skip(words)
+    if skip:
+        return verb_of(words[skip:])
     if words[0] == "git":
         idx = 1
         # Skip git's value-less global options before reading the subcommand,
