@@ -17,6 +17,15 @@ val DAY_TO_CALENDAR = mapOf(
     "sat" to Calendar.SATURDAY,
 )
 
+/** Pure: maps the JSON day names to the weekday constants ACTION_SET_ALARM's EXTRA_DAYS expects. */
+fun days_to_calendar(days: List<String>): ArrayList<Int> {
+    val weekdays = ArrayList<Int>()
+    for (day in days) {
+        weekdays.add(DAY_TO_CALENDAR.getValue(day))
+    }
+    return weekdays
+}
+
 /**
  * Reads the alarms contract (data/alarms.json shape) and creates a real repeating
  * Clock-app alarm for each recurring entry. One-off dated entries are skipped here;
@@ -30,10 +39,11 @@ fun alarms_sync_recurring(context: Context, json: String): Int {
         val alarm = alarms.getJSONObject(index)
         if (!alarm.has("days")) continue
         val days = alarm.getJSONArray("days")
-        val weekdays = ArrayList<Int>()
+        val day_names = ArrayList<String>()
         for (day_index in 0 until days.length()) {
-            weekdays.add(DAY_TO_CALENDAR.getValue(days.getString(day_index)))
+            day_names.add(days.getString(day_index))
         }
+        val weekdays = days_to_calendar(day_names)
         context.startActivity(
             Intent(AlarmClock.ACTION_SET_ALARM).apply {
                 putExtra(AlarmClock.EXTRA_MESSAGE, alarm.getString("label"))
@@ -47,6 +57,21 @@ fun alarms_sync_recurring(context: Context, json: String): Int {
         sent++
     }
     return sent
+}
+
+/** Sets a one-time Clock-app alarm one minute from now, so you can watch it actually ring. */
+fun alarm_ring_in_one_minute(context: Context) {
+    val soon = Calendar.getInstance()
+    soon.add(Calendar.MINUTE, 1)
+    context.startActivity(
+        Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_MESSAGE, "Test alarm")
+            putExtra(AlarmClock.EXTRA_HOUR, soon.get(Calendar.HOUR_OF_DAY))
+            putExtra(AlarmClock.EXTRA_MINUTES, soon.get(Calendar.MINUTE))
+            putExtra(AlarmClock.EXTRA_SKIP_UI, true)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+    )
 }
 
 /** Loads the bundled assets/alarms.json. Later steps replace this with a Firebase fetch. */

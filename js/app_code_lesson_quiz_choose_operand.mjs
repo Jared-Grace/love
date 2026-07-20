@@ -6,7 +6,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_sort_text_to } from "./list_sort_text_to.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { equal } from "./equal.mjs";
 import { text_to } from "./text_to.mjs";
@@ -27,7 +27,8 @@ export function app_code_lesson_quiz_choose_operand(
   let quiz_question = property_get(qa, question_property);
   let quiz_question_text = text_to(quiz_question);
   let choices = text_regex_match(quiz_question_text, /[0-9]+/g);
-  list_sort_text_to(choices);
+  "shuffle rather than sort the numbers: value-sorting would always put the dividend (largest) last and the quotient (smallest) first, so the learner could pick by position without knowing the role";
+  list_shuffle(choices);
   let answered = false;
   function each_button(choice) {
     let b = app_shared_button_wide(parent, choice, on_click);
