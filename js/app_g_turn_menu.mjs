@@ -4,9 +4,12 @@ import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_pray_discern } from "./app_g_pray_discern.mjs";
 import { app_g_reveal_word } from "./app_g_reveal_word.mjs";
 import { each } from "./each.mjs";
+import { list_size } from "./list_size.mjs";
+import { positive_is } from "./positive_is.mjs";
+import { subtract_1 } from "./subtract_1.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_turn_menu(overlay, prompt, choices, discern) {
-  "render a menu turn — a prompt + one green button per choice (the player's OWN words); a pray-for-discernment button reveals the correct choice. choices: [{label, on_click, correct}]";
+  "render a menu turn — a prompt + one green button per choice (the player's OWN words); a pray-for-discernment button reveals the correct choice. choices: [{label, on_click, correct}]. the pray-for-discernment button only appears when there are 2+ choices — with a single option there is nothing to discern";
   let container = app_g_container_player(overlay);
   app_g_p_text(container, prompt);
   let correct = null;
@@ -21,5 +24,8 @@ export function app_g_turn_menu(overlay, prompt, choices, discern) {
     }
   }
   each(choices, render_choice);
-  app_g_pray_discern(container, correct, app_g_reveal_word, discern);
+  let multiple = positive_is(subtract_1(list_size(choices)));
+  if (multiple) {
+    app_g_pray_discern(container, correct, app_g_reveal_word, discern);
+  }
 }

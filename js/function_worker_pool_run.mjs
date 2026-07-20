@@ -115,6 +115,7 @@ function pool_start() {
 function worker_start(owner) {
   let worker = {
     child: null,
+    child_starting: null,
     owner,
     waiting: {},
     next_id: 0,
@@ -123,11 +124,16 @@ function worker_start(owner) {
   };
   return worker;
 }
-async function worker_child_ensure(worker) {
-  let child = property_get(worker, "child");
-  if (child !== null) {
-    return child;
+function worker_child_ensure(worker) {
+  // Memoize the PROMISE, not the child: concurrent jobs landing on one worker
+  // must share a single spawn rather than each racing to start their own.
+  let starting = property_get(worker, "child_starting");
+  if (starting === null) {
+    worker.child_starting = worker_child_start(worker);
   }
+  return worker.child_starting;
+}
+async function worker_child_start(worker) {
   let r3 = await import("child_process");
   let spawn = property_get(r3, "spawn");
   // fd 3 = jobs in, fd 4 = results out. stdout/stderr stay inherited so a called
@@ -182,6 +188,7 @@ function worker_exited(worker, code) {
     delete waiting[id];
   });
   worker.child = null;
+  worker.child_starting = null;
   let owner = property_get(worker, "owner");
   let retired = property_get(worker, "retired");
   // A worker that dies with nothing in flight died at BOOT. Mark the whole
@@ -203,12 +210,16 @@ function worker_exit_if_idle(worker) {
   }
 }
 async function worker_job_run(worker, f_name, args) {
-  let child = await worker_child_ensure(worker);
   let id = property_get(worker, "next_id");
   worker.next_id = id + 1;
+  // Register BEFORE awaiting the spawn. A retiring pool decides a worker is
+  // drained by seeing an empty waiting map, so a job registered only after the
+  // await lets its own worker be closed out from under it — and the caller then
+  // waits forever for a reply that can never come.
   let answered = new Promise(function lambda(resolve, reject) {
     worker.waiting[id] = { resolve, reject };
   });
+  let child = await worker_child_ensure(worker);
   let job = { id, f_name, args };
   child.stdio[3].write(text_combine_multiple([JSON.stringify(job), "\n"]));
   let r = await answered;
