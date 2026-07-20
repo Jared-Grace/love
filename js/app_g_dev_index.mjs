@@ -47,13 +47,15 @@ export function app_g_dev_index() {
   function entry(name) {
     let opener = list_includes(conversation_openers, name);
     let prefix = ternary(opener, conversation_prefix, "");
-    let hashed = text_combine("#", name);
-    let label = text_combine(prefix, hashed);
-    let e = { hash: name, prefix, label };
+    let e = { hash: name, prefix };
     return e;
   }
   let entries = list_map(all, entry);
-  list_sort_text_property(entries, "label");
+  function sort_key(e) {
+    let key = text_combine(property_get(e, "prefix"), property_get(e, "hash"));
+    return key;
+  }
+  list_sort_text_mapper(entries, sort_key);
   function render_row(e) {
     let row = html_div(div);
     html_span_text(row, property_get(e, "prefix"));
