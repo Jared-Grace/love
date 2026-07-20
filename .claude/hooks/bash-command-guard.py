@@ -812,7 +812,19 @@ TIMEOUT_DURATION_RE = re.compile(r"^\d+(\.\d+)?[smhd]?$")
 # script itself, so a per-subcommand allow rule
 # (Bash(node scripts/r.mjs app_shared_dev_build:*)) can only match if verb_of
 # carries that third word. Every other node invocation keeps the 2-word verb.
-NODE_DISPATCHER_SCRIPTS = {"scripts/r.mjs", "scripts/g.mjs"}
+NODE_DISPATCHER_SCRIPTS = {"scripts/r.mjs", "scripts/rl.mjs", "scripts/ai.mjs", "scripts/g.mjs"}
+
+
+def dispatcher_script_is(word):
+    """True when `word` (the second word of `node <script> <fn>`) names one of
+    NODE_DISPATCHER_SCRIPTS, given relative or absolute. Every dispatcher takes
+    a function name as its third word, so anything keyed on "which function is
+    being run" must accept all of them - keying on one script only would let
+    the others route around it."""
+    for script in NODE_DISPATCHER_SCRIPTS:
+        if word == script or word.endswith("/" + script):
+            return True
+    return False
 
 # git global options that take NO argument and cannot inject an executable or
 # change how a subcommand is resolved - so skipping them before reading the
