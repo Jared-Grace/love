@@ -8,7 +8,7 @@ import { ebible_chapters_each_verses } from "./ebible_chapters_each_verses.mjs";
 import { ebible_version_download } from "./ebible_version_download.mjs";
 export async function ebible_sandbox() {
   ".”,:?;d—k)m’!frluetysgDnhpazb";
-  let bible_folder = "engbsb";
+  let bible_folder = ebible_folder_english();
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
   async function lambda2(la) {

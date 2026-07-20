@@ -5,7 +5,7 @@ import { list_find } from "./list_find.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 export async function g_sermon_passage_get(chapter_code, verse_number) {
-  let books = await ebible_version_books("engbsb");
+  let books = await ebible_version_books(ebible_folder_english());
   let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
   function lambda(v) {
     let verse_numbers = property_get(v, "verse_numbers");

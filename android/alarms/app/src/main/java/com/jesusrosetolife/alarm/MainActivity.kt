@@ -28,5 +28,9 @@ class MainActivity : AppCompatActivity() {
             val count = alarms_sync_recurring(this, alarms_json_from_assets(this))
             status.text = getString(R.string.sync_result, count)
         }
+        findViewById<Button>(R.id.update_button).setOnClickListener {
+            app_update_download_and_install(this)
+            status.text = getString(R.string.update_result)
+        }
     }
 }
