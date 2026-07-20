@@ -1646,7 +1646,7 @@ def find_denied_dispatcher_function(command):
         if (
             len(words) >= 3
             and words[0] == "node"
-            and (words[1] == "scripts/r.mjs" or words[1].endswith("/scripts/r.mjs"))
+            and dispatcher_script_is(words[1])
             and words[2] in DENIED_DISPATCHER_FUNCTIONS
         ):
             return words[2]
