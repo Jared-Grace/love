@@ -10,11 +10,8 @@ import { text_to } from "./text_to.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
 export function app_code_lesson_expression_dividend() {
-  "identify the DIVIDEND (the number being divided up) in a division a / b - the divisor b stands as the decoy; a thin lesson over app_code_lesson_operand_generic";
+  "identify the DIVIDEND (the number being divided) in a division a / b - the divisor b stands as the decoy; a thin lesson over app_code_lesson_operand_generic";
   function make(divisor) {
     "a division whose dividend is quotient*divisor + a leftover, so it is an uneven division; the answer is the dividend and the divisor is the decoy button";
     let quotient = integer_random(2, 3);
@@ -35,8 +32,8 @@ export function app_code_lesson_expression_dividend() {
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
     role: "dividend",
+    define_prose: "When you divide, the number you divide is the ",
     batch_get,
-    above,
     name_id,
   });
   function title_name_id() {
@@ -49,16 +46,5 @@ export function app_code_lesson_expression_dividend() {
       return render;
     }
     return app_code_lesson_name_id_generic(["dividend"], "operators", title_get);
-  }
-  function above(root) {
-    let intro = app_code_container_light_blue(root);
-    app_code_lesson_bold_term(
-      intro,
-      "When you divide, the number you divide up is the ",
-      "dividend",
-    );
-    html_div_cycle_code(intro, ["In ", "14 / 4", " the dividend is ", "14"]);
-    let ask = app_code_container_light_blue(root);
-    html_div_cycle_code(ask, ["Choose the dividend from the division"]);
   }
 }
