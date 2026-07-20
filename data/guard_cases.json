@@ -5,8 +5,9 @@
     "Every case uses `ls` / `git status` as the trusted inner verb, so the",
     "expected verdicts test the guard's STRUCTURE, not this project's allow",
     "list. Removing `ls` from permissions.allow would invalidate the corpus.",
-    "decision: allow = auto-approved, deny = hard floor, silent = guard",
-    "abstains so the native permission engine prompts."
+    "decision: allow = auto-approved, deny = hard floor, ask = guard actively",
+    "prompts with a reason, silent = guard abstains so the native permission",
+    "engine decides (silent is NOT the same as 'will not prompt')."
   ],
   "cases": [
     { "command": "ls", "decision": "allow", "why": "trusted verb, bare" },
