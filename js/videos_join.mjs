@@ -15,7 +15,7 @@ export async function videos_join(paths_videos, path_output) {
     let contents = list_join_newline(mapped);
     await file_overwrite(temp_path, contents);
     let result2 = await file_parent_exists_ensure(path_output);
-    let stdout = await command_line(
+    await command_line(
       text_combine_multiple([
         "ffmpeg -f concat -safe 0 -i ",
         temp_path,
