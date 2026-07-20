@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_book_chapters_each } from "./ebible_book_chapters_each.mjs";
 import { app_ceb_bible_gloss_generate_chapter_upload } from "./app_ceb_bible_gloss_generate_chapter_upload.mjs";
 export async function app_ceb_bible_gloss_generate_book_upload(book_code) {

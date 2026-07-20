@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { each } from "./each.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_map_property } from "./list_map_property.mjs";
