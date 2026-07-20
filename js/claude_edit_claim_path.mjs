@@ -13,7 +13,10 @@ import { text_combine } from "./text_combine.mjs";
 // path, so it is collision-free and needs no hashing.
 const CLAIMS_FOLDER = "/tmp/claude-code-claims";
 export function claude_edit_claim_path(file_path) {
-  let absolute = path_resolve(file_path);
+  // node's path.resolve, not the repo's path_resolve, because that wrapper is
+  // async — awaiting it would force this and claude_edit_claim_fresh_is to be
+  // async too, for a pure string operation that watch calls on every change.
+  let absolute = path.resolve(file_path);
   let named = Buffer.from(absolute, "utf8").toString("base64url");
   let joined = path_join([CLAIMS_FOLDER, text_combine(named, ".claim")]);
   return joined;
