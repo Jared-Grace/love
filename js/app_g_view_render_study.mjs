@@ -90,6 +90,12 @@ export async function app_g_view_render_study(div_map) {
   }
   function render_words() {
     html_clear(container);
+    let bar_div = html_div(container);
+    function update_bar() {
+      html_clear(bar_div);
+      app_g_progress_bar(bar_div, current, words.length, "word");
+    }
+    update_bar();
     let words_div = html_div(container);
     let word_bs = [];
     function style_completed(b) {
@@ -134,6 +140,7 @@ export async function app_g_view_render_study(div_map) {
         }
         current = i + 1;
         style_completed(word_bs[i]);
+        update_bar();
         let done = current >= words.length;
         if (done) {
           render_thank_gate();
