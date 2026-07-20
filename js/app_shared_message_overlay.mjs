@@ -8,8 +8,7 @@ import { html_remove } from "./html_remove.mjs";
 import { html_on } from "./html_on.mjs";
 export function app_shared_message_overlay(emoji_text, message) {
   "a gentle full-screen overlay: dims the page, floats an emoji above a message on a dark rounded card, fades in, and dismisses when tapped anywhere. a kind way to tell the reader something (e.g. that they are offline) instead of failing silently. returns the overlay element.";
-  let body = html_document_body();
-  let div = html_div(body);
+  let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
     top: "0",

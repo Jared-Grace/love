@@ -15,8 +15,7 @@ import { property_get } from "./property_get.mjs";
 export function app_g_prayer_overlay() {
   "full-screen prayer-wait overlay: dims the world, floats a glowing praying emoji above a dark card holding 'Waiting on the Lord...' and a verse; fades in; caller removes it when the prayer is answered. font sizes from app_g_overlay_fonts (shared with the dove)";
   let fonts = app_g_overlay_fonts();
-  let body = html_document_body();
-  let div = html_div(body);
+  let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
     top: "0",
