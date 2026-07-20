@@ -3,7 +3,8 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
+import { list_map_index } from "./list_map_index.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -21,10 +22,9 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_integer_division() {
-  "practice integer division: how many WHOLE times the divisor fits into the number, written as Math.floor(number / divisor); dividing gives a decimal (14 / 4 is 3.5) and Math.floor throws the decimal away to leave the whole count (3); the answer is that whole number; divisor 3..6, quotient 2..3, leftover 1..divisor-1 so the division never comes out even";
-  function make(divisor) {
-    "one integer-division expression whose divisor does NOT divide evenly - number = quotient*divisor + leftover with a leftover of at least 1 - so discarding a real decimal is always needed";
-    let quotient = integer_random(2, 3);
+  "practice integer division: how many WHOLE times the divisor fits into the number, written as Math.floor(number / divisor); dividing gives a decimal (14 / 4 is 3.5) and Math.floor throws the decimal away to leave the whole count (3); the answer is that whole number; divisor 3..6, quotient 2..3 with one quotient-0 edge case per batch (number smaller than the divisor, e.g. 5 / 6), leftover 1..divisor-1 so the division never comes out even";
+  function make(divisor, quotient) {
+    "one integer-division expression whose divisor does NOT divide evenly - number = quotient*divisor + leftover with a leftover of at least 1 - so discarding a real decimal is always needed. When quotient is 0 the number is SMALLER than the divisor (e.g. 5 / 6), the edge case where the divisor does not fit even once and the whole count is 0";
     let leftover = integer_random(1, subtract(divisor, 1));
     let number = add(multiply(quotient, divisor), leftover);
     let division = js_code_binary_spaced_nb(number, "/", divisor);
@@ -32,9 +32,14 @@ export function app_code_lesson_expression_integer_division() {
     return code;
   }
   function refill() {
-    "four questions, each with a DIFFERENT divisor so two examples never come out identical";
+    "four questions, each with a DIFFERENT divisor so two examples never come out identical; exactly ONE has quotient 0 (the number smaller than the divisor) so the whole-count-0 edge case shows up occasionally, never every question";
     let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    let list = list_map(divisors, make);
+    let quotients = list_shuffle([0, 2, 3, 3]);
+    function pair(divisor, index) {
+      let quotient = list_get(quotients, index);
+      return make(divisor, quotient);
+    }
+    let list = list_map_index(divisors, pair);
     return list;
   }
   function decoys(question, answer) {
