@@ -18,5 +18,5 @@ export async function video_generate(path_image, path_audio, path_output) {
     path_output,
     '"\n',
   ]).replace(/\s+/g, " ");
-  let stdout = await command_line(cmd);
+  await command_line(cmd);
 }
