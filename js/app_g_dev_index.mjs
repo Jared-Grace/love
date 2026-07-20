@@ -7,7 +7,7 @@ import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_a_href_text } from "./html_a_href_text.mjs";
-import { list_sort_text_property } from "./list_sort_text_property.mjs";
+import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { ternary } from "./ternary.mjs";
