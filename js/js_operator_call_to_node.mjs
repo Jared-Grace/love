@@ -8,6 +8,10 @@ import { property_set } from "./property_set.mjs";
 import { list_get } from "./list_get.mjs";
 export function js_operator_call_to_node(node, o) {
   arguments_assert(arguments, 2);
+  "Denormalize one node: rewrite a 2-arg call to an operator fn (e.g. subtract of a and b) back into";
+  "a binary expression with the operator symbol (a minus b), in place. Parse a throwaway binary";
+  "template to get a genuine binary node, then overwrite its operator and its two operands with copies";
+  "of the call arguments. The unparser re-adds parentheses by precedence.";
   let operator = property_get(o, "operator");
   let call_arguments = js_call_arguments_get(node);
   let from2 = list_get(call_arguments, 0);

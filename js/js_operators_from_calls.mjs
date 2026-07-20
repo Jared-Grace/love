@@ -7,6 +7,10 @@ import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 export function js_operators_from_calls(ast) {
   arguments_assert(arguments, 1);
+  "Denormalize compile step: the inverse of the operators-to-calls forward pass. Fold arithmetic";
+  "operator-fn calls back to operators for readable output, reusing the same operator descriptors so";
+  "the round-trip is exact. Arithmetic subset (minus, times, divide, mod, power); plus is excluded";
+  "both ways since it is ambiguous with string concatenation.";
   let o = js_operator_minus();
   let o2 = js_operator_asterisk();
   let o3 = js_operator_division();
