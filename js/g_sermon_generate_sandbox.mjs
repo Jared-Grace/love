@@ -13,5 +13,5 @@ export async function g_sermon_generate_sandbox() {
   let combineds = list_map_combine_left(split, p);
   let concated = list_concat([v], combineds);
   let joined = list_join_space(concated);
-  let stdout = await command_line(joined);
+  await command_line(joined);
 }
