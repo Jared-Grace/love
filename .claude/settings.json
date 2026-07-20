@@ -36,7 +36,7 @@
       "Bash(sort:*)",
       "Bash(uniq:*)",
       "Bash(node --check:*)",
-      "Bash(node scripts/g.mjs ai)",
+      "Bash(node scripts/g.mjs placeholder_for_ai_generated_change)",
       "Bash(node scripts/r.mjs ai_git)",
       "Bash(node scripts/r.mjs app_shared_dev_build:*)",
       "Bash(node scripts/r.mjs app_shared_prefixes_invalid)",
