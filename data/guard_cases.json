@@ -38,7 +38,7 @@
     { "command": "timeout 30 rm -rf /", "decision": "silent", "why": "wrapper launders no trust" },
     { "command": "time notaverb_xyz", "decision": "silent", "why": "unknown inner verb still prompts" },
 
-    { "command": "node -e 1", "decision": "deny", "reason_includes": "THIS TEXT IS NOT THERE", "why": "the deny must hand back the sandboxed alternative, not just refuse" },
+    { "command": "node -e 1", "decision": "deny", "reason_includes": "unshare --net --map-root-user", "why": "the deny must hand back the sandboxed alternative, not just refuse" },
     { "command": "time node -e 1", "decision": "deny", "why": "hard floor survives a wrapper" },
     { "command": "node scripts/r.mjs command_line_generic ls", "decision": "deny", "reason_includes": "denied even if allow-listed", "why": "the deny must explain that an allow rule cannot reopen the floor" },
     { "command": "node scripts/ai.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
