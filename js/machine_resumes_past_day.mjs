@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { command_line } from "./command_line.mjs";
+import { command_line_stdout } from "./command_line_stdout.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -23,8 +23,7 @@ export async function machine_resumes_past_day() {
   async function journal_stdout(journalctl_arguments, wrap) {
     let journalctl_command = "journalctl " + journalctl_arguments;
     let command = wrap(journalctl_command);
-    let result = await command_line(command);
-    let stdout = property_get(result, "stdout");
+    let stdout = await command_line_stdout(command);
     return stdout;
   }
   async function journal_reachable(wrap) {
