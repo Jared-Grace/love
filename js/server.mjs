@@ -19,10 +19,18 @@ export async function server() {
   app.use(v3);
   let port = server_port();
   let result = await module_repos_resolve(import.meta);
-  let v = express.static(result);
+  function cache_headers(res, file_path) {
+    "far-future immutable caching for the game's static art (img/game/**) so a dev RELOAD reuses cached sprites instead of re-requesting them all and starving the HTTP/1.1 6-connection cap; html/js keep default freshness (the dev bundle is already ?v= busted)";
+    let asset = file_path.includes("/img/game/");
+    if (asset) {
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+    }
+  }
+  let static_options = { setHeaders: cache_headers };
+  let v = express.static(result, static_options);
   "serve the public folder at the root too, so absolute asset urls like /bible/uplifting/engbsb.json resolve in dev exactly as they do in prod, where firebase hosting serves public as the site root";
   let folder_public_resolved = await module_public_resolve(import.meta);
-  let v_public = express.static(folder_public_resolved);
+  let v_public = express.static(folder_public_resolved, static_options);
   let u = server_url_api();
   async function api_generic(req, res) {
     let body = property_get(req, "body");
