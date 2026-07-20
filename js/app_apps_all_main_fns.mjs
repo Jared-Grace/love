@@ -1,6 +1,7 @@
 export function app_apps_all_main_fns() {
   return [
     "app_a",
+    "app_alarms",
     "app_apps_all",
     "app_autopray",
     "app_bible",

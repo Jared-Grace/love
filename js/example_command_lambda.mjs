@@ -12,6 +12,8 @@ import { example_auto_lambda } from "./example_auto_lambda.mjs";
 import { js_statement_if_test_set } from "./js_statement_if_test_set.mjs";
 import { js_return_argument_set } from "./js_return_argument_set.mjs";
 import { example_slot_expression_set_lambda } from "./example_slot_expression_set_lambda.mjs";
+import { js_fold } from "./js_fold.mjs";
+import { example_fold_lambda } from "./example_fold_lambda.mjs";
 // Dispatch on the demonstrated fn's name (a strong reference), NOT an alias
 // string — so renaming an alias can never break which transform an example runs.
 export function example_command_lambda(fn_name, args) {
@@ -49,6 +51,9 @@ export function example_command_lambda(fn_name, args) {
       js_return_argument_set,
       args[0],
     );
+  }
+  if (fn_name === js_fold.name) {
+    return example_fold_lambda(args[0]);
   }
   return null;
 }
