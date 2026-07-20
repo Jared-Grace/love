@@ -1548,18 +1548,16 @@ def is_node_eval_flag(word):
 def _strip_command_prefixes(words):
     """Drop leading `VAR=...` assignments and transparent `xargs`/`timeout
     <dur>`/`time` wrappers from a simple command's word list - the same
-    unwrapping verb_of applies - so the real command word lands at words[0]."""
+    unwrapping verb_of applies, via the same transparent_wrapper_skip - so
+    the real command word lands at words[0]."""
     while words:
         if ASSIGN_RE.match(words[0]):
             words = words[1:]
-        elif words[0] == "xargs" and len(words) >= 2 and not words[1].startswith("-"):
-            words = words[1:]
-        elif words[0] == "timeout" and len(words) >= 3 and TIMEOUT_DURATION_RE.match(words[1]):
-            words = words[2:]
-        elif words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
-            words = words[1:]
-        else:
+            continue
+        skip = transparent_wrapper_skip(words)
+        if skip == 0:
             break
+        words = words[skip:]
     return words
 
 
