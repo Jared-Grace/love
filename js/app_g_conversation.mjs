@@ -11,6 +11,7 @@ import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overl
 import { g_icon_cross } from "./g_icon_cross.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
+import { app_g_time_advance } from "./app_g_time_advance.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -103,7 +104,8 @@ export async function app_g_conversation(
     function keep(t) {
       return t !== turn;
     }
-    function on_correct() {
+    async function on_correct() {
+      await app_g_time_advance();
       remaining = list_filter(remaining, keep);
       render();
     }
