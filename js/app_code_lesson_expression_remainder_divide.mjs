@@ -73,7 +73,7 @@ export function app_code_lesson_expression_remainder_divide() {
       "12",
     ]);
     html_div_cycle_code(c, [
-      "Subtract the whole part from the number to find what is left over",
+      "Subtract the whole part from the number to find what is left over:",
     ]);
     html_div_cycle_code(c, ["", "14 - 12", " is ", "2"]);
     html_div_cycle_code(c, ["", "2", " is the remainder"]);
