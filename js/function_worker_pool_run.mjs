@@ -208,11 +208,17 @@ function worker_exited(worker, code) {
   }
 }
 function worker_exit_if_idle(worker) {
-  let retired = property_get(worker, "retired");
   let waiting = property_get(worker, "waiting");
   let idle = Object.keys(waiting).length === 0;
   let child = property_get(worker, "child");
-  if (retired && idle && child !== null) {
+  if (child === null || not(idle)) {
+    return;
+  }
+  // Nothing in flight, so stop holding the event loop open.
+  child.stdio[4].unref();
+  let retired = property_get(worker, "retired");
+  if (retired) {
+    // Closing the job stream is what tells a drained worker it may exit.
     child.stdio[3].end();
   }
 }
@@ -227,6 +233,8 @@ async function worker_job_run(worker, f_name, args) {
     worker.waiting[id] = { resolve, reject };
   });
   let child = await worker_child_ensure(worker);
+  // A reply is now genuinely pending, so the loop must stay alive to receive it.
+  child.stdio[4].ref();
   let job = { id, f_name, args };
   child.stdio[3].write(text_combine_multiple([JSON.stringify(job), "\n"]));
   let r = await answered;
