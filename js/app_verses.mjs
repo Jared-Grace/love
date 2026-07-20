@@ -66,6 +66,11 @@ export async function app_verses(context) {
   let languages_chosen = list_filter_null_not_is(mapped);
   let bible_texts = [];
   let verse_count = 1;
+  let offline_notified = false;
+  let chosen_references = [];
+  let order = list_copy(list_unique(encouragement));
+  list_shuffle(order);
+  order_standalone_first();
   let bc = html_bar_content_padded(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
