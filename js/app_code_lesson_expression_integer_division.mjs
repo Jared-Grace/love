@@ -34,7 +34,8 @@ export function app_code_lesson_expression_integer_division() {
   function refill() {
     "four questions, each with a DIFFERENT divisor so two examples never come out identical; exactly ONE has quotient 0 (the number smaller than the divisor) so the whole-count-0 edge case shows up occasionally, never every question";
     let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    let quotients = list_shuffle([0, 2, 3, 3]);
+    let quotients = [0, 2, 3, 3];
+    list_shuffle(quotients);
     function pair(divisor, index) {
       let quotient = list_get(quotients, index);
       return make(divisor, quotient);
