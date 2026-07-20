@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         val status = findViewById<TextView>(R.id.status_text)
+        findViewById<Button>(R.id.test_alarm_button).setOnClickListener {
+            alarm_ring_in_one_minute(this)
+            status.text = getString(R.string.test_alarm_result)
+        }
         findViewById<Button>(R.id.sync_button).setOnClickListener {
             val count = alarms_sync_recurring(this, alarms_json_from_assets(this))
             status.text = getString(R.string.sync_result, count)
