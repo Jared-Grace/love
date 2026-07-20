@@ -1614,11 +1614,11 @@ NODE_EVAL_DENY_REASON = (
 )
 
 
-# r.mjs library functions that run arbitrary code/commands from their own
+# Library functions that run arbitrary code/commands from their own
 # arguments - shell-out (command_line_generic), `new Function` eval
 # (eval_console_log_replace), or download-and-run remote code
 # (firebase_storage_function_run_generic). Invoked *directly* as
-# `node scripts/r.mjs <fn> <args>` they're `node -e` by another name, so they
+# `node <dispatcher> <fn> <args>` they're `node -e` by another name, so they
 # get the same floor treatment: denied even if allow-listed (the check runs
 # before the allow decision in main). This does NOT touch internal use - a
 # committed function that imports one and calls it with fixed arguments never
