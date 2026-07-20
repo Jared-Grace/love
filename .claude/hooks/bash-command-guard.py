@@ -124,8 +124,8 @@ rejecting `-I{}`/`-0`. Also like xargs, this only ever reaches verb_of's
 safe_verbs lookup - it does not unwrap the leading `timeout <DURATION>`
 before the exact-command check in check_simple_commands or before any of
 the is_safe_* exact-shape templates (is_safe_sed, is_safe_sandboxed_node_*,
-etc.), so e.g. `timeout 60 node scripts/g.mjs ai` still isn't auto-approved
-even though `node scripts/g.mjs ai` alone is - only plain verb-list rules
+etc.), so e.g. `timeout 60 node scripts/r.mjs ai_git` still isn't auto-approved
+even though `node scripts/r.mjs ai_git` alone is - only plain verb-list rules
 (Bash(verb:*)) get the benefit of a timeout wrapper.
 
 A fifth exception, `is_safe_bare_mount`, auto-allows `mount` invoked with
@@ -536,7 +536,7 @@ def load_safe_exact_commands():
     regex only recognizes the "Bash(verb:*)" prefix-wildcard shape - so a
     fully-trusted exact command like this one fails check_simple_commands
     and forces an "ask" the moment it's chained with anything else (e.g.
-    "git status && node scripts/g.mjs ai"), even though the native
+    "git status && node scripts/r.mjs ai_git"), even though the native
     permission engine already runs it unprompted on its own. Loading these
     separately and matching a simple command's full word sequence against
     them (see check_simple_commands) lets that same already-granted trust
