@@ -42,6 +42,7 @@ export function app_code_lesson_expression_quotient() {
     batch_get,
     name_id,
     above_more: remember_roles,
+    unscramble: true,
   });
   function remember_roles(root) {
     "remind all three roles at once, since the quotient question Math.floor(14 / 4) === 3 shows the dividend, divisor and quotient together";
