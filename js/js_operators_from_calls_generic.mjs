@@ -8,9 +8,9 @@ import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 export function js_operators_from_calls_generic(ast, operators) {
   arguments_assert(arguments, 2);
-  "Visit every call; if its callee names an operator fn, rewrite the call back into that operator's";
-  "binary expression. Matching by fn name (not alias) mirrors the forward pass matching by operator";
-  "symbol. Live descent means nested calls denormalize fully as replaced operand subtrees are visited.";
+  ("Visit every call; if its callee names an operator fn, rewrite the call back into that operator's");
+  ("binary expression. Matching by fn name (not alias) mirrors the forward pass matching by operator");
+  ("symbol. Live descent means nested calls denormalize fully as replaced operand subtrees are visited.");
   function lambda(node) {
     let callee_name = js_call_callee_name_try(node);
     function matches_operator(o) {
