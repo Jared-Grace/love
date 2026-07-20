@@ -69,16 +69,6 @@
             "timeout": 5
           }
         ]
-      },
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node /home/j/repos/love/.claude/hooks/claude_edit_claim.mjs",
-            "timeout": 10
-          }
-        ]
       }
     ],
     "UserPromptSubmit": [
