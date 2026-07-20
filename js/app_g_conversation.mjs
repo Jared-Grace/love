@@ -11,6 +11,7 @@ import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overl
 import { g_icon_cross } from "./g_icon_cross.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
+import { g_anything_else } from "./g_anything_else.mjs";
 import { app_g_time_advance } from "./app_g_time_advance.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -140,7 +141,12 @@ export async function app_g_conversation(
       html_clear(says_div);
       app_g_npc_says(npc, says_div, text);
     }
-    say(greeting);
+    let first = list_size(remaining) === list_size(turns);
+    let intro = greeting;
+    if (not(first)) {
+      intro = g_anything_else();
+    }
+    say(intro);
     let discern = { prayed: false };
     let correct_turn = list_random_item(remaining);
     function choice_of(turn) {
