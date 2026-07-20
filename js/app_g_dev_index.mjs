@@ -55,7 +55,10 @@ export function app_g_dev_index() {
     if (property_exists(prefixes, name)) {
       prefix = property_get(prefixes, name);
     }
-    let e = { hash: name, prefix };
+    let e = {
+      hash: name,
+      prefix,
+    };
     return e;
   }
   let entries = list_map(all, entry);
