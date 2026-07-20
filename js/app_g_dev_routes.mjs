@@ -73,7 +73,7 @@ export function app_g_dev_routes() {
     await app_g_view_set(null);
     app_g_gratitude_overlay();
   }
-  async function prayer() {
+  async function pray() {
     await app_g_view_set(null);
     function done() {}
     let prayer_texts = ["comfort them and carry their burden", "settle their doubts and help them trust You"];
@@ -89,7 +89,7 @@ export function app_g_dev_routes() {
     discern,
     dove,
     gratitude,
-    prayer,
+    pray,
   };
   return routes;
 }
