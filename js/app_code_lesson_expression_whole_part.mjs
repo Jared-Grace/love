@@ -7,6 +7,9 @@ import { list_map } from "./list_map.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
+import { list_get } from "./list_get.mjs";
+import { text_integers } from "./text_integers.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -32,6 +35,15 @@ export function app_code_lesson_expression_whole_part() {
     let list = list_map(divisors, make);
     return list;
   }
+  function decoys(question, answer) {
+    "tailored wrong answers: the QUOTIENT alone (answer / divisor - forgot to multiply back by the divisor) and the REMAINDER (dividend - answer - the leftover, confused with the whole part). Both fall out of the question's numbers Math.floor(dividend / divisor) * divisor";
+    let nums = text_integers(question);
+    let dividend = list_get(nums, 0);
+    let divisor = list_get(nums, 1);
+    let quotient = divide(answer, divisor);
+    let remainder = subtract(dividend, answer);
+    return [quotient, remainder];
+  }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
   let lesson = app_code_lesson_expression_generic({
@@ -39,6 +51,7 @@ export function app_code_lesson_expression_whole_part() {
     name_id,
     next_arg,
     example_count: 2,
+    decoys,
   });
   return lesson;
   function title_name_id() {
