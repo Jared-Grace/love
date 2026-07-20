@@ -1655,7 +1655,7 @@ def find_denied_dispatcher_function(command):
 
 def dispatcher_deny_reason(fn):
     return (
-        f"`node scripts/r.mjs {fn}` is refused: {fn} runs arbitrary "
+        f"Running {fn} from the command line is refused: {fn} runs arbitrary "
         "code/commands from its arguments - it's `node -e` wearing a function "
         "name, so it's denied even if allow-listed. Internal use (a committed "
         "function that calls it with fixed arguments) is fine; what's blocked "
