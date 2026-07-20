@@ -23,6 +23,8 @@ import { less_than } from "../../love/js/less_than.mjs";
 import { equal } from "../../love/js/equal.mjs";
 import { text_to } from "../../love/js/text_to.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
+import { property_get_or } from "../../love/js/property_get_or.mjs";
+import { each } from "../../love/js/each.mjs";
 import { subtract } from "../../love/js/subtract.mjs";
 export function app_code_lesson_quiz_multiple_choice(
   parent,
@@ -50,6 +52,21 @@ export function app_code_lesson_quiz_multiple_choice(
   let distractor_count = subtract(answer_count_max, 1);
   let seen = [quiz_answer_text];
   let distractors = [];
+  let decoy_fn = property_get_or(info, "decoys", null);
+  let has_decoys = null_not_is(decoy_fn);
+  if (has_decoys) {
+    "seed the TAILORED wrong answers first (the tempting mistakes for this question, e.g. the rounded-UP value), so they are guaranteed to appear; the loop below then fills any remaining slots with random distractors from other questions. Opt-in via info.decoys - lessons without it behave exactly as before";
+    let tailored = decoy_fn(quiz_question, quiz_answer);
+    function add_decoy(decoy) {
+      let decoy_text = text_to(decoy);
+      let dup = list_includes(seen, decoy_text);
+      if (not(dup)) {
+        list_add(seen, decoy_text);
+        list_add(distractors, decoy_text);
+      }
+    }
+    each(tailored, add_decoy);
+  }
   let attempts = 0;
   let attempts_max = multiply(answer_count_max, 3);
   function need_more() {
