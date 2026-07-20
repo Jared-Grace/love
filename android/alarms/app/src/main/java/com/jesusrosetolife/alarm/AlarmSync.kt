@@ -2,6 +2,8 @@ package com.jesusrosetolife.alarm
 
 import android.content.Context
 import android.content.Intent
+import android.os.Handler
+import android.os.Looper
 import android.provider.AlarmClock
 import org.json.JSONObject
 import java.util.Calendar
@@ -34,6 +36,7 @@ fun days_to_calendar(days: List<String>): ArrayList<Int> {
  */
 fun alarms_sync_recurring(context: Context, json: String): Int {
     val alarms = JSONObject(json).getJSONArray("alarms")
+    val handler = Handler(Looper.getMainLooper())
     var sent = 0
     for (index in 0 until alarms.length()) {
         val alarm = alarms.getJSONObject(index)
@@ -44,16 +47,17 @@ fun alarms_sync_recurring(context: Context, json: String): Int {
             day_names.add(days.getString(day_index))
         }
         val weekdays = days_to_calendar(day_names)
-        context.startActivity(
-            Intent(AlarmClock.ACTION_SET_ALARM).apply {
-                putExtra(AlarmClock.EXTRA_MESSAGE, alarm.getString("label"))
-                putExtra(AlarmClock.EXTRA_HOUR, alarm.getInt("hour"))
-                putExtra(AlarmClock.EXTRA_MINUTES, alarm.getInt("minute"))
-                putExtra(AlarmClock.EXTRA_DAYS, weekdays)
-                putExtra(AlarmClock.EXTRA_SKIP_UI, true)
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            }
-        )
+        val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_MESSAGE, alarm.getString("label"))
+            putExtra(AlarmClock.EXTRA_HOUR, alarm.getInt("hour"))
+            putExtra(AlarmClock.EXTRA_MINUTES, alarm.getInt("minute"))
+            putExtra(AlarmClock.EXTRA_DAYS, weekdays)
+            putExtra(AlarmClock.EXTRA_SKIP_UI, true)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        // Space the intents out: Android drops all but one if several ACTION_SET_ALARM
+        // launches arrive in the same instant, so each alarm gets its own delayed turn.
+        handler.postDelayed({ context.startActivity(intent) }, sent * 1500L)
         sent++
     }
     return sent
