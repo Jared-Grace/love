@@ -7,21 +7,28 @@ import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_to } from "./text_to.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_bold_term } from "./app_code_lesson_bold_term.mjs";
-export function app_code_lesson_expression_dividend() {
-  "identify the DIVIDEND (the number being divided up) in a division a / b - the divisor b stands as the decoy; a thin lesson over app_code_lesson_operand_generic";
+export function app_code_lesson_expression_quotient() {
+  "identify the QUOTIENT (the whole result of dividing and rounding down) in Math.floor(a / b) === c - the dividend a and divisor b stand as decoys; a thin lesson over app_code_lesson_operand_generic. The question shows the honest Math.floor form (a / b === c alone would be false, since a / b is a decimal), and the quotient c must appear as a number so it can be a choice";
   function make(divisor) {
-    "a division whose dividend is quotient*divisor + a leftover, so it is an uneven division; the answer is the dividend and the divisor is the decoy button";
+    "Math.floor(dividend / divisor) === quotient - dividend = quotient*divisor + a leftover so the division is uneven and the quotient is a real rounding-down; the answer is the quotient, with the dividend and divisor as decoys";
     let quotient = integer_random(2, 3);
     let leftover = integer_random(1, subtract(divisor, 1));
     let dividend = add(multiply(quotient, divisor), leftover);
-    let question = js_code_binary_spaced_nb(dividend, "/", divisor);
-    let answer = text_to(dividend);
+    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let question = text_combine_multiple([
+      "Math.floor(",
+      division,
+      ") === ",
+      text_to(quotient),
+    ]);
+    let answer = text_to(quotient);
     return {
       question,
       answer,
@@ -34,31 +41,36 @@ export function app_code_lesson_expression_dividend() {
   }
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
-    role: "dividend",
+    role: "quotient",
     batch_get,
     above,
     name_id,
   });
   function title_name_id() {
-    "the home title is console.log dividend";
+    "the home title is console.log quotient";
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Dividend");
+        html_span_text(parent, "Quotient");
       }
       return render;
     }
-    return app_code_lesson_name_id_generic(["dividend"], "operators", title_get);
+    return app_code_lesson_name_id_generic(["quotient"], "operators", title_get);
   }
   function above(root) {
     let intro = app_code_container_light_blue(root);
     app_code_lesson_bold_term(
       intro,
-      "When you divide, the number you divide up is the ",
-      "dividend",
+      "When you divide and round down, the whole result is the ",
+      "quotient",
     );
-    html_div_cycle_code(intro, ["In ", "14 / 4", " the dividend is ", "14"]);
+    html_div_cycle_code(intro, [
+      "In ",
+      "Math.floor(14 / 4) === 3",
+      " the quotient is ",
+      "3",
+    ]);
     let ask = app_code_container_light_blue(root);
-    html_div_cycle_code(ask, ["Choose the dividend from the division"]);
+    html_div_cycle_code(ask, ["Choose the quotient"]);
   }
 }
