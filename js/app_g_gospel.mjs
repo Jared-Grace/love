@@ -1,4 +1,4 @@
-import { firebase_storage_download_json_jg_decompress } from "./firebase_storage_download_json_jg_decompress.mjs";
+import { firebase_storage_download_json_jg } from "./firebase_storage_download_json_jg.mjs";
 import { property_set } from "./property_set.mjs";
 import { invoke_once } from "./invoke_once.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
@@ -40,7 +40,7 @@ export async function app_g_gospel(
     let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
-      let o = await firebase_storage_download_json_jg_decompress(destination);
+      let o = await firebase_storage_download_json_jg(destination);
       return o;
     }
     let o = await global_function_property_nested_lambda(
