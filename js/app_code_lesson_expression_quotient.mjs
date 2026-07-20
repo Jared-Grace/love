@@ -1,8 +1,7 @@
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -13,9 +12,8 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_quotient() {
   "identify the QUOTIENT (the whole result of dividing and rounding down) in Math.floor(a / b) === c - the dividend a and divisor b stand as decoys; a thin lesson over app_code_lesson_operand_generic. The question shows the honest Math.floor form (a / b === c alone would be false, since a / b is a decimal) and the quotient c must appear as a number so it can be a choice";
-  function make(divisor) {
-    "Math.floor(dividend / divisor) === quotient - dividend = quotient*divisor + a leftover so the division is uneven; the answer is the quotient, with the dividend and divisor as decoys";
-    let quotient = integer_random(2, 3);
+  function make(divisor, quotient) {
+    "Math.floor(dividend / divisor) === quotient - dividend = quotient*divisor + a leftover so the division is uneven; the answer is the quotient, with the dividend and divisor as decoys. When quotient is 0 the dividend is smaller than the divisor (e.g. Math.floor(2 / 3) === 0), the edge case where the answer to pick is 0 itself";
     let leftover = integer_random(1, subtract(divisor, 1));
     let dividend = add(multiply(quotient, divisor), leftover);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
@@ -32,9 +30,8 @@ export function app_code_lesson_expression_quotient() {
     };
   }
   function batch_get() {
-    "four divisions, each with a DIFFERENT divisor so the questions never look alike";
-    let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    return list_map(divisors, make);
+    "the shared integer-division-family batch: four different divisors, one a quotient-0 case where the answer to pick is 0";
+    return app_code_lesson_divisor_quotient_batch(make);
   }
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
