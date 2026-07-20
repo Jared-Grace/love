@@ -55,10 +55,10 @@ export function js_fn_fold_pattern(fn_ast) {
   if (not_all_calls) {
     return null;
   }
-  let fn_name = js_flo_name(fn_ast);
+  let defined_name = js_flo_name(fn_ast);
   let params = js_function_declaration_params_names(declaration);
   let pattern = {
-    fn_name: fn_name,
+    fn_name: defined_name,
     params: params,
     pattern_sigs: pattern_sigs,
   };
