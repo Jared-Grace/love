@@ -2,7 +2,8 @@ import { app_code_lesson_expression_generic } from "./app_code_lesson_expression
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_map_index } from "./list_map_index.mjs";
+import { integer_even_is } from "./integer_even_is.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
@@ -12,17 +13,26 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_down() {
   "practice Math.floor on a decimal number by itself, before it is used on a division: Math.floor rounds a number DOWN to the whole number below it (Math.floor(3.5) is 3, and Math.floor(3.9) is also 3 - always down, never up); the answer is that whole number; whole part 2..7, one decimal digit 1..9 so there is always a real decimal to round off";
-  function make(whole) {
-    "Math.floor of a decimal built as whole.digit (e.g. 3.5), so the answer is always the whole part and there is always a fraction to drop";
-    let digit = integer_random(1, 9);
-    let decimal = text_combine_multiple([text_to(whole), ".", text_to(digit)]);
-    let code = text_combine_multiple(["Math.floor(", decimal, ")"]);
-    return code;
+  function floor_code(inner) {
+    "Math.floor(inner) as a code string";
+    return text_combine_multiple(["Math.floor(", inner, ")"]);
+  }
+  function make(whole, index) {
+    "alternate down the batch: even positions are an already-whole number (Math.floor(6) is 6, nothing to round), odd positions are a decimal to round down (Math.floor(6.5) is 6) - so the batch drills BOTH the no-change case and the rounding case, not just decimals";
+    let whole_question = integer_even_is(index);
+    let inner;
+    if (whole_question) {
+      inner = text_to(whole);
+    } else {
+      let digit = integer_random(1, 9);
+      inner = text_combine_multiple([text_to(whole), ".", text_to(digit)]);
+    }
+    return floor_code(inner);
   }
   function refill() {
-    "four questions, each with a DIFFERENT whole part so two never look alike";
+    "four questions, each with a DIFFERENT whole part so two never look alike, alternating an already-whole number with a decimal to round down";
     let wholes = list_shuffle_take([2, 3, 4, 5, 6, 7], 4);
-    let list = list_map(wholes, make);
+    let list = list_map_index(wholes, make);
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
