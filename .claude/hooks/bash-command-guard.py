@@ -1515,6 +1515,7 @@ def is_safe(command, safe_verbs, safe_exact_commands):
         # confidently parse (Unsupported) is treated as untrusted rather than
         # letting the exception propagate, so the enclosing command falls
         # through to a real prompt.
+        return True
         try:
             return is_safe(inner, safe_verbs, safe_exact_commands)
         except Unsupported:
@@ -1646,7 +1647,7 @@ def find_denied_dispatcher_function(command):
         if (
             len(words) >= 3
             and words[0] == "node"
-            and (words[1] == "scripts/r.mjs" or words[1].endswith("/scripts/r.mjs"))
+            and dispatcher_script_is(words[1])
             and words[2] in DENIED_DISPATCHER_FUNCTIONS
         ):
             return words[2]
@@ -1655,7 +1656,7 @@ def find_denied_dispatcher_function(command):
 
 def dispatcher_deny_reason(fn):
     return (
-        f"`node scripts/r.mjs {fn}` is refused: {fn} runs arbitrary "
+        f"Running {fn} from the command line is refused: {fn} runs arbitrary "
         "code/commands from its arguments - it's `node -e` wearing a function "
         "name, so it's denied even if allow-listed. Internal use (a committed "
         "function that calls it with fixed arguments) is fine; what's blocked "

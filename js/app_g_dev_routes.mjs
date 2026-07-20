@@ -76,7 +76,8 @@ export function app_g_dev_routes() {
   async function prayer() {
     await app_g_view_set(null);
     function done() {}
-    app_g_pray_turn(done);
+    let prayer_texts = ["comfort them and carry their burden", "settle their doubts and help them trust You"];
+    app_g_pray_turn(prayer_texts, done);
   }
   let routes = {
     study,

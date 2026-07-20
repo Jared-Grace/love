@@ -1,5 +1,5 @@
-import { command_line } from "./command_line.mjs";
+import { command_line_stdout } from "./command_line_stdout.mjs";
 export async function python_install() {
-  let v = await command_line("winget install -e --id Python.Python.3.12");
+  let v = await command_line_stdout("winget install -e --id Python.Python.3.12");
   return v;
 }

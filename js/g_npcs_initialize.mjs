@@ -7,6 +7,7 @@ import { mod } from "./mod.mjs";
 import { list_remove_end } from "./list_remove_end.mjs";
 import { list_size } from "./list_size.mjs";
 import { g_genders_get } from "./g_genders_get.mjs";
+import { g_conversation_generate } from "./g_conversation_generate.mjs";
 export function g_npcs_initialize(player_img, coordinates_land) {
   let genders = g_genders_get(player_img);
   let gender_count = list_size(genders);
@@ -27,6 +28,7 @@ export function g_npcs_initialize(player_img, coordinates_land) {
     property_set(npc, "meet", false);
     property_set(npc, "christian", false);
     property_set(npc, "objections", 2);
+    property_set(npc, "conversation", g_conversation_generate());
   }
   each_index(npcs, npc_initialize);
   return npcs;
