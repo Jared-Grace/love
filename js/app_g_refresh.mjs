@@ -9,6 +9,7 @@ import { app_g_reset_if } from "./app_g_reset_if.mjs";
 import { app_g_title_hash } from "./app_g_title_hash.mjs";
 import { app_g_dev_if } from "./app_g_dev_if.mjs";
 import { app_g_view_render } from "./app_g_view_render.mjs";
+import { app_g_time_tint } from "./app_g_time_tint.mjs";
 export async function app_g_refresh(context, div_map_container) {
   await app_g_reset_if();
   app_g_title_hash();
@@ -21,6 +22,7 @@ export async function app_g_refresh(context, div_map_container) {
   let player_img_c = await app_g_player_img(div_map);
   app_g_div_map_on_click(div_map, player_img_c);
   await app_g_player_scroll_center(div_map, player_img_c);
+  app_g_time_tint(div_map_container, g);
   await app_g_dev_if();
   await app_g_view_render(div_map);
 }
