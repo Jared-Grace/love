@@ -11,7 +11,7 @@ import { multiply } from "./multiply.mjs";
 export async function audio_duration(joined_audio) {
   let result = null;
   try {
-    let stdout = await command_line(text_combine("ffmpeg -i ", joined_audio));
+    await command_line(text_combine("ffmpeg -i ", joined_audio));
   } catch (e) {
     let stderr = property_get(e, "stderr");
     let lines = text_split_newline(stderr);
