@@ -15,21 +15,19 @@ import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 export function js_fold_suggest(f_ast, patterns) {
   arguments_assert(arguments, 2);
-  ("Discovery: given F and an index of foldable-fn patterns, report which library fns already match a");
-  ("contiguous block of F — the fn you would have called instead of hand-writing the logic. Advisory:");
-  ("each hit reports fn name, start index, and length; the actual fold (",
-    js_fold.name,
-    ") re-checks soundness");
-  ("before rewriting. Skips a pattern that names F itself so a fn is never suggested to fold into itself.");
+  "Discovery: given F and an index of foldable-fn patterns, report which library fns already match a";
+  "contiguous block of F — the fn you would have called instead of hand-writing the logic. Advisory:";
+  "each hit reports fn name, start index, and length; the real fold pass re-checks soundness before";
+  "rewriting. Skips a pattern that names F itself so a fn is never suggested to fold into itself.";
   let f_declaration = js_flo(f_ast);
   let f_block = property_get(f_declaration, "body");
   let f_statements = property_get(f_block, "body");
   let target_sigs = list_map(f_statements, js_atomic_statement_signature);
   let f_name = js_flo_name(f_ast);
-  function collect(add) {
+  function collect(emit) {
     function consider(pattern) {
-      let fn_name = property_get(pattern, "fn_name");
-      let is_self = equal(fn_name, f_name);
+      let candidate_name = property_get(pattern, "fn_name");
+      let is_self = equal(candidate_name, f_name);
       if (is_self) {
         return;
       }
@@ -43,11 +41,11 @@ export function js_fold_suggest(f_ast, patterns) {
       let start = property_get(match, "start");
       let length = list_size(pattern_sigs);
       let suggestion = {
-        fn_name: fn_name,
+        fn_name: candidate_name,
         start: start,
         length: length,
       };
-      add(suggestion);
+      emit(suggestion);
     }
     each(patterns, consider);
   }
