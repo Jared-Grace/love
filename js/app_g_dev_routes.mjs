@@ -40,7 +40,7 @@ export function app_g_dev_routes() {
     let npc = list_random_item(npcs);
     await npc_view_of(npc, phase);
   }
-  async function conversation() {
+  async function unbeliever() {
     let npcs = await app_g_npcs_get();
     let unconverted = list_filter_object_includes(npcs, { christian: false });
     let npc = list_random_item(unconverted);
