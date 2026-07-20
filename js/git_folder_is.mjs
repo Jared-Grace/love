@@ -1,14 +1,12 @@
 import { catch_only_run_async } from "./catch_only_run_async.mjs";
-import { property_get } from "./property_get.mjs";
 import { command_line_git_folder } from "./command_line_git_folder.mjs";
 export async function git_folder_is(folder) {
   let is = null;
   async function lambda() {
-    let r = await command_line_git_folder(
+    let stdout = await command_line_git_folder(
       folder,
       "rev-parse --is-inside-work-tree",
     );
-    let stdout = property_get(r, "stdout");
     is = stdout === "true\n";
   }
   function lambda2() {
