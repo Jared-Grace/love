@@ -54,9 +54,7 @@
       "Bash(rm -rf /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
       "Edit(.claude/hooks/bash-command-guard.py)",
-      "Edit(.claude/hooks/lock_claude_acquire.mjs)",
-      "Edit(.claude/hooks/lock_claude_daemon.mjs)",
-      "Edit(.claude/hooks/lock_claude_release.mjs)"
+      "Edit(.claude/hooks/claude_edit_claim.mjs)"
     ],
     "defaultMode": "acceptEdits"
   },
