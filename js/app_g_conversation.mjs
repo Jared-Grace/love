@@ -86,13 +86,18 @@ export async function app_g_conversation(
   }
   function end_button() {
     function on_end() {
-      if (not(prayed.done)) {
-        app_g_discern_prevented_overlay(5000);
-        return;
+      let openers_remain = positive_is(list_size(remaining));
+      if (not(openers_remain)) {
+        if (not(prayed.done)) {
+          app_g_discern_prevented_overlay(5000);
+          return;
+        }
       }
       if (converts) {
-        property_set(npc, "christian", true);
-        g_icon_cross(div_map, npc);
+        if (prayed.done) {
+          property_set(npc, "christian", true);
+          g_icon_cross(div_map, npc);
+        }
       }
       overlay_close();
     }
