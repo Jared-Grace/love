@@ -58,15 +58,35 @@ export function app_code_lesson_expression_round_down() {
     return built;
   }
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
+    let define = app_code_container_light_blue(root);
+    html_div_cycle_code(define, ["", "3.5", " is a decimal number"]);
+    html_div_cycle_code(define, [
+      "",
+      "3",
+      " has no decimal, so ",
+      "3",
+      " is a whole number",
+    ]);
+    html_div_cycle_code(define, [
+      "",
+      "3.5",
+      " has a decimal, so ",
+      "3.5",
+      " is not a whole number",
+    ]);
+    let rounds = app_code_container_light_blue(root);
+    html_div_cycle_code(rounds, [
       "",
       "Math.floor",
       " takes a number and rounds it down to the whole number below it",
     ]);
-    html_div_cycle_code(c, ["", "Math.floor(3.5)", " is ", "3"]);
-    html_div_cycle_code(c, ["It always rounds down, never up"]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(rounds, ["", "Math.floor(3.5)", " is ", "3"]);
+    html_div_cycle_code(rounds, [
+      "",
+      "Math.floor",
+      " always rounds down, never up",
+    ]);
+    html_div_cycle_code(rounds, [
       "",
       "Math.floor(3.9)",
       " is also ",
@@ -74,7 +94,8 @@ export function app_code_lesson_expression_round_down() {
       " not ",
       "4",
     ]);
-    html_div_cycle_code(c, ["A number that is already whole does not change"]);
-    html_div_cycle_code(c, ["", "Math.floor(6)", " is ", "6"]);
+    let whole = app_code_container_light_blue(root);
+    html_div_cycle_code(whole, ["A number that is already whole does not change"]);
+    html_div_cycle_code(whole, ["For example, ", "Math.floor(6)", " is ", "6"]);
   }
 }
