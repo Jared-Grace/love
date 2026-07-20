@@ -1,12 +1,9 @@
+import { path_join } from "./path_join.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_code_getter_literal } from "./js_code_getter_literal.mjs";
 import { literal_distinctive_is } from "./literal_distinctive_is.mjs";
 import { list_add } from "./list_add.mjs";
-
-// Every named constant whose value is ALSO written as a bare literal
-// somewhere else — the "helper exists, literal remains" shape. Returns
-// [{f_name, literal, files}] sorted by how widely the literal is duplicated.
 export async function literal_duplicates() {
   let names = await folder_read_files("js");
   let codes = {};
@@ -21,7 +18,10 @@ export async function literal_duplicates() {
   for (let f_name of Object.keys(codes)) {
     let literal = js_code_getter_literal(codes[f_name], f_name);
     if (literal !== "" && literal_distinctive_is(literal)) {
-      list_add(getters, { f_name, literal });
+      list_add(getters, {
+        f_name,
+        literal,
+      });
     }
   }
   let found = [];
@@ -34,7 +34,11 @@ export async function literal_duplicates() {
       }
     }
     if (files.length > 0) {
-      list_add(found, { f_name: getter.f_name, literal: getter.literal, files });
+      list_add(found, {
+        f_name: getter.f_name,
+        literal: getter.literal,
+        files,
+      });
     }
   }
   found.sort(function lambda(a, b) {
