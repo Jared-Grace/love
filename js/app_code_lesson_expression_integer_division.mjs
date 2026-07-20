@@ -67,6 +67,11 @@ export function app_code_lesson_expression_integer_division() {
       "Now we will divide, and then round down to get a whole number",
     ]);
     html_div_cycle_code(solution, ["", "Math.floor(14 / 4)", " is ", "3"]);
-    html_div_cycle_code(solution, ["That is how many whole 4s fit into 14"]);
+    html_div_cycle_code(solution, [
+      "That is how many whole ",
+      "4",
+      "s fit into ",
+      "14",
+    ]);
   }
 }
