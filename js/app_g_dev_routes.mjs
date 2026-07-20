@@ -6,6 +6,7 @@ import { app_g_view_phase_conversation } from "./app_g_view_phase_conversation.m
 import { app_g_view_phase_gospel } from "./app_g_view_phase_gospel.mjs";
 import { app_g_view_phase_how } from "./app_g_view_phase_how.mjs";
 import { app_g_view_phase_believe } from "./app_g_view_phase_believe.mjs";
+import { app_g_view_phase_disciple } from "./app_g_view_phase_disciple.mjs";
 import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
 import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
 import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
@@ -46,6 +47,9 @@ export function app_g_dev_routes() {
   async function believe() {
     await npc_view(app_g_view_phase_believe());
   }
+  async function disciple() {
+    await npc_view(app_g_view_phase_disciple());
+  }
   async function discern() {
     await app_g_view_set(null);
     await g_verses_waiting_prepare();
@@ -67,6 +71,7 @@ export function app_g_dev_routes() {
     gospel_share,
     how,
     believe,
+    disciple,
     discern,
     dove,
     gratitude,

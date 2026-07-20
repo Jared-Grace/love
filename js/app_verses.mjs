@@ -39,6 +39,7 @@ import { list_join_newline_2_copy } from "../../love/js/list_join_newline_2_copy
 import { list_empty } from "../../love/js/list_empty.mjs";
 import { list_empty_is } from "../../love/js/list_empty_is.mjs";
 import { list_add } from "../../love/js/list_add.mjs";
+import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
 import { each } from "../../love/js/each.mjs";
 import { each_async } from "../../love/js/each_async.mjs";
 import { equal } from "../../love/js/equal.mjs";
@@ -67,6 +68,7 @@ export async function app_verses(context) {
   let bible_texts = [];
   let verse_count = 1;
   let offline_notified = false;
+  let apply_seq = 0;
   let chosen_references = [];
   let order = list_copy(list_unique(encouragement));
   list_shuffle(order);
@@ -86,9 +88,10 @@ export async function app_verses(context) {
   let count_updates = [];
   function count_each(c) {
     let component = null;
-    function on_click() {
+    async function on_click() {
       verse_count = c;
       counts_refresh();
+      await apply(false);
     }
     component = app_shared_button(card2, c, on_click);
     function update() {
@@ -102,12 +105,12 @@ export async function app_verses(context) {
   let card3 = app_shared_container_blue(content);
   app_shared_text_body(
     card3,
-    "3. Whenever you are ready, generate your verses. They will be lovingly copied for you.",
+    "3. Whenever you would like a different set, tap the button below. Your verses are lovingly copied for you each time.",
   );
-  let generate_button = app_shared_button(
+  let reroll_button = app_shared_button(
     card3,
-    text_combine(emoji_book_open(), " Generate"),
-    generate,
+    text_combine(emoji_arrows_crossed(), " New verses"),
+    reroll,
   );
   app_shared_text_body(
     card3,
@@ -125,6 +128,7 @@ export async function app_verses(context) {
   async function offline_guard() {
     let online = browser_online_is();
     if (online) {
+      offline_notified = false;
       return false;
     }
     let folders = list_map_property(languages_chosen, "bible_folder");
@@ -132,37 +136,64 @@ export async function app_verses(context) {
     let loaded = list_filter_null_not_is(packages);
     let nothing_loaded = list_empty_is(loaded);
     if (nothing_loaded) {
+      "show the gentle offline message only once per offline stretch, so nudging the count while offline does not stack overlays";
+      if (offline_notified) {
+        return true;
+      }
+      offline_notified = true;
       app_shared_message_overlay(
         emoji_pray(),
-        "It looks like you are not connected to the internet right now. Please reconnect, then tap Generate again — your verses will be waiting for you.",
+        "It looks like you are not connected to the internet right now. Please reconnect, then choose your verses again — they will be waiting for you.",
       );
       return true;
     }
     return false;
   }
-  async function generate() {
-    list_empty(bible_texts);
+  function order_standalone_first() {
+    "asking for a single verse shows the first reference, so keep a standalone verse there, never a multi-verse range";
+    let first_reference = list_first(order);
+    let first_is_range = text_includes(first_reference, "-");
+    if (first_is_range) {
+      let singles = list_filter_text_includes_not(order, "-");
+      let single = list_first(singles);
+      list_swap_first(order, single);
+    }
+  }
+  async function apply(copy_after) {
+    apply_seq = apply_seq + 1;
+    let my_seq = apply_seq;
     let handled = await offline_guard();
     if (handled) {
       return;
     }
-    let unique = list_unique(encouragement);
-    let e = unique;
-    if (verse_count === 1) {
-      e = list_filter_text_includes_not(unique, "-");
+    "the drawn set is a stable prefix of the shuffled pool, so raising the count only appends and lowering it only trims — the verses already shown never change";
+    let references = list_take(order, verse_count);
+    let texts = await references_to_texts(references);
+    let superseded = my_seq !== apply_seq;
+    if (superseded) {
+      "a newer tap started while these verses were being gathered, so drop this stale result rather than let two renders fight over the display";
+      return;
     }
-    let shuffled = list_copy(e);
-    let taken = list_shuffle_take(shuffled, verse_count);
-    async function reference_each(reference) {
-      await app_reply_verses_add_uplifting(
-        reference,
-        languages_chosen,
-        bible_texts,
-      );
-    }
-    await each_async(taken, reference_each);
+    chosen_references = references;
+    list_empty(bible_texts);
+    list_add_multiple(bible_texts, texts);
     display();
-    await copy();
+    if (copy_after) {
+      await copy();
+    }
+  }
+  async function references_to_texts(references) {
+    let texts = [];
+    async function reference_each(reference) {
+      await app_reply_verses_add_uplifting(reference, languages_chosen, texts);
+    }
+    await each_async(references, reference_each);
+    return texts;
+  }
+  async function reroll() {
+    list_shuffle(order);
+    order_standalone_first();
+    await apply(true);
   }
   function display() {
     html_clear(card4);
