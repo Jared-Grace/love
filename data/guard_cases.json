@@ -14,7 +14,7 @@
     "environmental reason, not a real regression - update the paths."
   ],
   "cases": [
-    { "command": "ls", "decision": "allow", "why": "trusted verb, bare" },
+    { "command": "ls", "decision": "allow", "reason_includes": "already in permissions.allow", "why": "trusted verb, bare - and the allow says which rule carried it" },
     { "command": "ls && ls", "decision": "allow", "why": "chain of trusted verbs" },
     { "command": "ls | tail -4", "decision": "allow", "why": "pipe of trusted verbs" },
     { "command": "FOO=bar ls", "decision": "allow", "why": "inert assignment is stripped" },
@@ -35,9 +35,9 @@
     { "command": "timeout 30 rm -rf /", "decision": "silent", "why": "wrapper launders no trust" },
     { "command": "time notaverb_xyz", "decision": "silent", "why": "unknown inner verb still prompts" },
 
-    { "command": "node -e 1", "decision": "deny", "why": "raw node -e hard floor" },
+    { "command": "node -e 1", "decision": "deny", "reason_includes": "unshare --net --map-root-user", "why": "the deny must hand back the sandboxed alternative, not just refuse" },
     { "command": "time node -e 1", "decision": "deny", "why": "hard floor survives a wrapper" },
-    { "command": "node scripts/r.mjs command_line_generic ls", "decision": "deny", "why": "denied r.mjs eval entry point" },
+    { "command": "node scripts/r.mjs command_line_generic ls", "decision": "deny", "reason_includes": "denied even if allow-listed", "why": "the deny must explain that an allow rule cannot reopen the floor" },
     { "command": "node scripts/ai.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
     { "command": "node scripts/g.mjs command_line_generic ls", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
     { "command": "node scripts/rl.mjs eval_console_log_replace x", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
@@ -61,7 +61,7 @@
     { "command": "ls \"a b\"", "decision": "allow", "why": "quoted argument with a space stays one word" },
 
     { "command": "ls 2>&1", "decision": "allow", "why": "fd duplication writes no file" },
-    { "command": "ls > /tmp/x", "decision": "ask", "why": "redirection writes a file the verb alone would not" },
+    { "command": "ls > /tmp/x", "decision": "ask", "reason_includes": "prefer rewording into separate Bash calls", "why": "the ask must teach the reword, which is the whole point of asking instead of denying" },
     { "command": "ls > /dev/null", "decision": "ask", "why": "no /dev/null carve-out - redirection is judged by shape, not target" },
     { "command": "ls >> /home/j/.bashrc", "decision": "ask", "why": "append to a startup file" },
 
