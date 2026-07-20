@@ -812,7 +812,12 @@ TIMEOUT_DURATION_RE = re.compile(r"^\d+(\.\d+)?[smhd]?$")
 # script itself, so a per-subcommand allow rule
 # (Bash(node scripts/r.mjs app_shared_dev_build:*)) can only match if verb_of
 # carries that third word. Every other node invocation keeps the 2-word verb.
-NODE_DISPATCHER_SCRIPTS = {"scripts/r.mjs", "scripts/rl.mjs", "scripts/ai.mjs", "scripts/g.mjs"}
+# Imported, not duplicated: dispatcher_scripts.py is GENERATED from
+# js/dispatcher_scripts.mjs (the source of truth), and dispatcher_scripts_python_assert
+# fails `q` if the two drift. Deliberately an import of a literal rather than a
+# runtime JSON read - the deny floor below is keyed on this set, so a read that
+# could fail would fail OPEN. A missing module raises here instead, loudly.
+from dispatcher_scripts import NODE_DISPATCHER_SCRIPTS
 
 
 def dispatcher_script_is(word):
