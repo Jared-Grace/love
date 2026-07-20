@@ -6,6 +6,7 @@ import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { html_hash_links } from "./html_hash_links.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
 export function app_g_dev_index() {
   "the #index dev directory: a plain full-screen list of every app_g dev route as a clickable link (from the app_g_dev_routes registry, so it never drifts). light background so the default link color reads; a click + reload-on-hash-change jumps to that screen";
   let body = html_document_body();
