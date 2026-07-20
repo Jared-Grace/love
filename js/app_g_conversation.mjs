@@ -12,6 +12,7 @@ import { g_icon_cross } from "./g_icon_cross.mjs";
 import { g_greeting } from "./g_greeting.mjs";
 import { g_conversation_generate } from "./g_conversation_generate.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
+import { g_response } from "./g_response.mjs";
 import { app_g_time_advance } from "./app_g_time_advance.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -189,11 +190,7 @@ export async function app_g_conversation(
     if (converts) {
       app_g_npc_says(npc, overlay, app_g_doxology());
     } else {
-      app_g_npc_says(
-        npc,
-        overlay,
-        "Thank you for talking with me. You've given me a lot to think about.",
-      );
+      app_g_npc_says(npc, overlay, g_response("ponder"));
     }
   }
   function render() {
