@@ -21,6 +21,29 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 4. **Before committing**, run `git log <baseline>..HEAD -- <read-set>` and reason: *do any of these peer changes break mine?* If yes, reconcile before committing.
 5. **Commit** with `node scripts/r.mjs ai_git` (whole tree, message `ai`). This does **add + commit only** — it's local, but since every Claude shares this one repo, your commit is visible to peers immediately. Push to origin is a separate throttled background job (plain fast-forward, ~5-min interval, never force). Peers never diverge from each other (shared repo = linear history); a push only rejects if *origin* diverged externally, which needs a manual pull.
 
+## Editing with transforms (prefer over text `Edit`)
+
+**Why.** A named transform edits the *AST* — it moves a symbol's definition, every import of it, every caller, and its aliases together, in one operation. That makes it **provable by construction** (a rename can't change behavior) and **auto-mergeable** under parallel-Claudes-on-`main` (it touches whole named units, not one text region a peer may have shifted). Text `Edit` sees only the bytes in front of it; it can't follow a symbol across the files you never opened. So for the shapes below, a transform is faster *and* safer. This isn't a global switch — `Edit` stays the right tool for edits no transform covers (logic inside a body, prose, data, one-off tweaks). Adoption grows per-shape.
+
+**How to run one.** `node scripts/r.mjs <fn-or-alias> <arg> <arg> …` — args are positional strings; a list is one comma-joined arg (`a,b,c`). Aliases below are for typing; the **full function name** is the stable identity (aliases can be repointed).
+
+**Find a transform / who-calls-what.** `s <substrings>` (`functions_search`, AND-of-substrings over fn *names* — e.g. `s rename`, `s import`) · `i <name>` (`data_identifiers_search`, find callers of a symbol).
+
+| When you want to… | Use | Full function |
+|---|---|---|
+| Rename a function everywhere (def + imports + callers + aliases) | `function_rename <before> <after>` | `function_rename` |
+| Bulk-rename every fn under a name prefix (namespace migration) | `ri <prefix_before> <prefix_after>` | `functions_rename_if_starts_with` |
+| Replace an identifier *inside the current fn* with an expression | `ir <name> <expr>` | `function_identifier_replace` |
+| Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
+| Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new_open` / `function_new_js` |
+| Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic_args` |
+| Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic_args` |
+| Extract statements between two markers into a new fn | `mf <marker_from> <marker_to> <new_fn>` | `marker_functionize` |
+| Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
+| Delete a fn **only if** proven unused (else refuses) | `du <name>` | `function_delete_unused` |
+
+**Don't run `ao` / `js_auto` / the auto-transforms by hand** — the watcher runs the canonicalizer on save; running it manually rewrites imports non-canonically. (See memory `project_do_not_run_auto_or_transforms_manually`.)
+
 ## Conventions
 
 - **Refactors get their own commit.** A symbol rename (via `ri` / `function_rename`) is behavior-preserving, so isolate it — a peer can then verify it trivially and it won't entangle with logic changes. Do the refactor first, then build on top.
