@@ -9,6 +9,7 @@ import { examples_groups } from "./examples_groups.mjs";
 import { app_shared_text_category } from "./app_shared_text_category.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 // The chooser screen: a heading, then the examples as numbered wide buttons drawn
 // under complexity-tier headers (examples_groups is the source of both order and
 // grouping). Numbering runs continuously 1..N across groups so the intended reading
@@ -17,6 +18,10 @@ export function examples_menu_dom(parent, examples, on_select) {
   let heading = html_element(parent, "h1");
   html_text_set(heading, "Transform examples");
   html_style_set(heading, "font-size", "1.6rem");
+  app_shared_text_body(
+    parent,
+    "Each example is one code transform — the same file shown before and after. They run easiest first; pick any to see it in full.",
+  );
   function group_header(name) {
     let header = html_element(parent, "h2");
     html_text_set(header, name);
