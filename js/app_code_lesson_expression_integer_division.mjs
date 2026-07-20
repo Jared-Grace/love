@@ -2,9 +2,7 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
-import { list_map_index } from "./list_map_index.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -32,16 +30,8 @@ export function app_code_lesson_expression_integer_division() {
     return code;
   }
   function refill() {
-    "four questions, each with a DIFFERENT divisor so two examples never come out identical; exactly ONE has quotient 0 (the number smaller than the divisor) so the whole-count-0 edge case shows up occasionally, never every question";
-    let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    let quotients = [0, 2, 3, 3];
-    list_shuffle(quotients);
-    function pair(divisor, index) {
-      let quotient = list_get(quotients, index);
-      return make(divisor, quotient);
-    }
-    let list = list_map_index(divisors, pair);
-    return list;
+    "the shared integer-division-family batch: four different divisors, one a quotient-0 edge case";
+    return app_code_lesson_divisor_quotient_batch(make);
   }
   function decoys(question, answer) {
     "tailored wrong answers: the rounded-UP value (answer + 1, 'rounded up not down'), and the UN-FLOORED result dividend / divisor ('forgot to round down at all', e.g. 14 / 4 -> 3.5) when it displays as a short clean decimal - skipped for long repeating ones like 13 / 6";
