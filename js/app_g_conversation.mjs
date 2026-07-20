@@ -86,24 +86,21 @@ export async function app_g_conversation(
     let label = property_get(labels, kind);
     return label;
   }
-  function end_button() {
-    function on_end() {
-      let openers_remain = positive_is(list_size(remaining));
-      if (not(openers_remain)) {
-        if (not(prayed.done)) {
-          app_g_discern_prevented_overlay(5000);
-          return;
-        }
+  function leave() {
+    let openers_remain = positive_is(list_size(remaining));
+    if (not(openers_remain)) {
+      if (not(prayed.done)) {
+        app_g_discern_prevented_overlay(5000);
+        return;
       }
-      if (converts) {
-        if (prayed.done) {
-          property_set(npc, "christian", true);
-          g_icon_cross(div_map, npc);
-        }
-      }
-      overlay_close();
     }
-    app_g_button_conversation_end(overlay, on_end);
+    if (converts) {
+      if (prayed.done) {
+        property_set(npc, "christian", true);
+        g_icon_cross(div_map, npc);
+      }
+    }
+    overlay_close();
   }
   function run_turn(turn) {
     html_clear(overlay);
@@ -166,7 +163,13 @@ export async function app_g_conversation(
       return choice;
     }
     let choices = list_map(remaining, choice_of);
-    app_g_turn_menu(overlay, "What would you like to say?", choices, discern);
+    let container = app_g_turn_menu(
+      overlay,
+      "What would you like to say?",
+      choices,
+      discern,
+    );
+    app_g_button_conversation_end(container, leave);
   }
   function render_pray() {
     app_g_npc_says(npc, overlay, greeting);
@@ -200,10 +203,11 @@ export async function app_g_conversation(
       render_openers();
     } else if (not(prayed.done)) {
       render_pray();
+      app_g_button_conversation_end(overlay, leave);
     } else {
       render_close();
+      app_g_button_conversation_end(overlay, leave);
     }
-    end_button();
   }
   render();
 }

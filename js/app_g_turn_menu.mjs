@@ -28,4 +28,5 @@ export function app_g_turn_menu(overlay, prompt, choices, discern) {
   if (multiple) {
     app_g_pray_discern(container, correct, app_g_reveal_word, discern);
   }
+  return container;
 }
