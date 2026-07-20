@@ -1,8 +1,7 @@
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { list_map } from "./list_map.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
@@ -12,9 +11,8 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_divisor() {
   "identify the DIVISOR (the number you divide by) in a division a / b - the dividend a stands as the decoy; a thin lesson over app_code_lesson_operand_generic";
-  function make(divisor) {
-    "a division whose divisor is the answer; the dividend (quotient*divisor + a leftover) is the decoy button";
-    let quotient = integer_random(2, 3);
+  function make(divisor, quotient) {
+    "a division whose divisor is the answer; the dividend (quotient*divisor + a leftover) is the decoy button. When quotient is 0 the dividend is the smaller number (e.g. 2 / 3), so the divisor is still the number you divide BY, even when it is the larger one";
     let leftover = integer_random(1, subtract(divisor, 1));
     let dividend = add(multiply(quotient, divisor), leftover);
     let question = js_code_binary_spaced_nb(dividend, "/", divisor);
@@ -25,9 +23,8 @@ export function app_code_lesson_expression_divisor() {
     };
   }
   function batch_get() {
-    "four divisions, each with a DIFFERENT divisor so the questions never look alike";
-    let divisors = list_shuffle_take([3, 4, 5, 6], 4);
-    return list_map(divisors, make);
+    "the shared integer-division-family batch: four different divisors, one a quotient-0 case where the divisor is the larger number";
+    return app_code_lesson_divisor_quotient_batch(make);
   }
   let name_id = title_name_id();
   return app_code_lesson_operand_generic({
