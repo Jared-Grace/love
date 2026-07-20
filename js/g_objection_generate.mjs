@@ -3,7 +3,7 @@ import { g_objection_generate_property } from "./g_objection_generate_property.m
 import { g_sermon_generate_book_generic } from "./g_sermon_generate_book_generic.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function g_objection_generate() {
-  let bible_folder = "engbsb";
+  let bible_folder = ebible_folder_english();
   let book_code = "JAS";
   let prompt_system = text_combine_multiple([
     "You will be given a Bible passage and its context. Your task is to generate objections, misunderstandings, or arguments that the given Bible passage would refute.\n\nRules:\n- Output ONLY objections.\n- Each objection must be 1–2 sentences.\n- Objections must be phrased as natural dialogue from an NPC in a Christian RPG.\n- Do NOT quote any Scripture.\n- Do NOT mention the verse or passage.\n- Do NOT provide explanations, commentary, rebuttals, or meta-text.\n- Produce 5–10 distinct objections.\n- Keep tone simple and conversational.\n- Every output must be a plain list of objections, nothing else.\n\nOutput each objection separated by ",

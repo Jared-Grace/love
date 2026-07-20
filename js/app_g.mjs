@@ -13,7 +13,7 @@ import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 export async function app_g(context) {
   async function lambda() {
     await app_a_indexeddb_initialize();
-    let books = await ebible_version_books_browser("engbsb");
+    let books = await ebible_version_books_browser(ebible_folder_english());
     global_function_property_set(app_g, "books", books);
     global_function_property_set(app_g, "chapter_code", "JAS01");
     let div_map_container = app_g_html_initialize(context);

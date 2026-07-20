@@ -5,7 +5,7 @@ import { g_sermon_generate_chapter_get } from "./g_sermon_generate_chapter_get.m
 import { g_sermon_verse_to_text } from "./g_sermon_verse_to_text.mjs";
 import { property_get } from "./property_get.mjs";
 export async function g_sermon_chapter_get(chapter_code) {
-  let books = await ebible_version_books("engbsb");
+  let books = await ebible_version_books(ebible_folder_english());
   let chapter = await g_sermon_generate_chapter_get(chapter_code);
   let passages = property_get(chapter, "passages");
   function lambda(v) {
