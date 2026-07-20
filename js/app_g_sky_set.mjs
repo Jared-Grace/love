@@ -9,6 +9,7 @@ export function app_g_sky_set(element, g) {
   "register the freshly-rendered sky-tint `element` and paint it at the CURRENT time of day with NO motion — called each map refresh. it stashes the day PHASE, seed, and an animation token ON the element (html_scroll_animate style) and records the element globally so app_g_sky_advance can drift THIS element as the day advances during a conversation";
   let phase = list_index_of(g_times(), g_time_of_day_get(g));
   let seed = g_sky_seed_get(g);
+  console.log("[sky_set] phase=", phase, "time=", g_time_of_day_get(g));
   element.sky_phase = phase;
   element.sky_seed = seed;
   element.sky_token = 0;
