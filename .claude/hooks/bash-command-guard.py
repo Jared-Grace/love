@@ -1611,16 +1611,16 @@ NODE_EVAL_DENY_REASON = (
 # before the allow decision in main). This does NOT touch internal use - a
 # committed function that imports one and calls it with fixed arguments never
 # reaches the command line, so it's unaffected.
-DENIED_RMJS_FUNCTIONS = {
+DENIED_DISPATCHER_FUNCTIONS = {
     "command_line_generic",
     "eval_console_log_replace",
     "firebase_storage_function_run_generic",
 }
 
 
-def find_denied_rmjs_function(command):
+def find_denied_dispatcher_function(command):
     """If `command` directly invokes `node scripts/r.mjs <fn>` (relative or
-    absolute path) with <fn> in DENIED_RMJS_FUNCTIONS, return that fn name so
+    absolute path) with <fn> in DENIED_DISPATCHER_FUNCTIONS, return that fn name so
     main() can DENY it; else None. Quote-aware like find_raw_node_eval, and
     leading assignments / xargs / timeout prefixes are unwrapped the same way;
     an unparseable command returns None and falls through to normal handling."""
@@ -1634,13 +1634,13 @@ def find_denied_rmjs_function(command):
             len(words) >= 3
             and words[0] == "node"
             and (words[1] == "scripts/r.mjs" or words[1].endswith("/scripts/r.mjs"))
-            and words[2] in DENIED_RMJS_FUNCTIONS
+            and words[2] in DENIED_DISPATCHER_FUNCTIONS
         ):
             return words[2]
     return None
 
 
-def rmjs_deny_reason(fn):
+def dispatcher_deny_reason(fn):
     return (
         f"`node scripts/r.mjs {fn}` is refused: {fn} runs arbitrary "
         "code/commands from its arguments - it's `node -e` wearing a function "
@@ -1671,14 +1671,14 @@ def main():
     # <fn>` to a function that runs arbitrary code/commands from its args. Deny
     # with a redirect message rather than prompting (a flood of un-vettable
     # prompts) or, worse, auto-approving.
-    denied_fn = find_denied_rmjs_function(command)
+    denied_fn = find_denied_dispatcher_function(command)
     if denied_fn or find_raw_node_eval(command):
         print(json.dumps({
             "hookSpecificOutput": {
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
                 "permissionDecisionReason": (
-                    rmjs_deny_reason(denied_fn) if denied_fn else NODE_EVAL_DENY_REASON
+                    dispatcher_deny_reason(denied_fn) if denied_fn else NODE_EVAL_DENY_REASON
                 ),
             }
         }))
