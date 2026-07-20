@@ -18,14 +18,14 @@ export function app_code_lesson_expression_round_down() {
     return text_combine_multiple(["Math.floor(", inner, ")"]);
   }
   function make(whole, index) {
-    "alternate down the batch: even positions are an already-whole number (Math.floor(6) is 6, nothing to round), odd positions are a decimal to round down (Math.floor(6.5) is 6) - so the batch drills BOTH the no-change case and the rounding case, not just decimals";
-    let whole_question = integer_even_is(index);
+    "alternate down the batch, the DECIMAL first because rounding is the main use of Math.floor: even positions are a decimal to round down (Math.floor(6.5) is 6), odd positions are an already-whole number (Math.floor(6) is 6, nothing to round) - so the batch leads with the main rounding case and still drills the no-change edge case";
+    let decimal_question = integer_even_is(index);
     let inner;
-    if (whole_question) {
-      inner = text_to(whole);
-    } else {
+    if (decimal_question) {
       let digit = integer_random(1, 9);
       inner = text_combine_multiple([text_to(whole), ".", text_to(digit)]);
+    } else {
+      inner = text_to(whole);
     }
     return floor_code(inner);
   }
@@ -60,7 +60,9 @@ export function app_code_lesson_expression_round_down() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
-      "Math.floor takes a number and rounds it down to the whole number below it",
+      "",
+      "Math.floor",
+      " takes a number and rounds it down to the whole number below it",
     ]);
     html_div_cycle_code(c, ["", "Math.floor(3.5)", " is ", "3"]);
     html_div_cycle_code(c, ["It always rounds down, never up"]);
