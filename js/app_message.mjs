@@ -9,6 +9,9 @@ import { html_div_text_multiple } from "../../love/js/html_div_text_multiple.mjs
 import { list_first } from "../../love/js/list_first.mjs";
 import { reply_messages_matches } from "../../love/js/reply_messages_matches.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
+import { property_get_or } from "../../love/js/property_get_or.mjs";
+import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
+import { null_not_is } from "../../love/js/null_not_is.mjs";
 import { app_message_reply_choices } from "../../love/js/app_message_reply_choices.mjs";
 import { app_message_firebase_path } from "../../love/js/app_message_firebase_path.mjs";
 import { app_shared_button_uncolored_background_color } from "../../love/js/app_shared_button_uncolored_background_color.mjs";
@@ -57,6 +60,13 @@ export async function app_message(context) {
   let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
   app_shared_input_style(textarea);
+  let hash = html_hash_object_get();
+  let from = property_get_or(hash, "from", null);
+  let from_given = null_not_is(from);
+  if (from_given) {
+    "opened from another app's Contact button, so pre-fill '<app> app: ' — that way a reply knows which app the person is writing about, and they just add their message after it";
+    html_value_set(textarea, text_combine(from, " app: "));
+  }
   html_focus(textarea);
   let div_checks = html_div(div);
   let button_send = app_shared_button_green(
