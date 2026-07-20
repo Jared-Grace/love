@@ -10,7 +10,7 @@ export async function function_run_io_file_wrapper(body) {
   async function lambda2(temp_path_input) {
     let result5 = await file_overwrite_json(temp_path_input, body);
     async function lambda3(temp_path_output) {
-      let stdout = await command_line(
+      await command_line(
         text_combine_multiple([
           "node scripts/r.mjs ",
           fn_name("function_run_io_file"),

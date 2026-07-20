@@ -10,5 +10,5 @@ export async function py_script_run(script_name, concated) {
   log(py_script_run.name, {
     joined,
   });
-  let stdout = await command_line(joined);
+  await command_line(joined);
 }
