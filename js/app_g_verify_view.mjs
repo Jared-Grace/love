@@ -10,6 +10,9 @@ import { g_verify_book_name } from "./g_verify_book_name.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_p_text } from "./html_p_text.mjs";
+import { html_textarea } from "./html_textarea.mjs";
+import { html_value_set } from "./html_value_set.mjs";
+import { html_value_get } from "./html_value_get.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
@@ -220,4 +223,42 @@ export function app_g_verify_view(
     }
   }
   app_shared_button(approve_bar, "Approve v" + verse, on_approve);
+
+  label_new("SUGGEST AN EDIT");
+  let suggest_area = html_textarea(container);
+  html_value_set(
+    suggest_area,
+    lines
+      .map(function (l) {
+        return property_get(l, "text");
+      })
+      .join("\n"),
+  );
+  html_style_set(suggest_area, "width", "100%");
+  html_style_set(suggest_area, "min-height", "6em");
+  html_style_set(suggest_area, "box-sizing", "border-box");
+  html_style_set(suggest_area, "font-family", serif);
+  html_style_set(suggest_area, "font-size", "1em");
+  html_style_set(suggest_area, "line-height", "1.5");
+  html_style_set(suggest_area, "margin-top", small_gap);
+  let suggest_bar = html_div(container);
+  html_style_set(suggest_bar, "margin-top", small_gap);
+  html_style_set(suggest_bar, "text-align", "center");
+  async function on_suggest() {
+    try {
+      await app_shared_api({
+        f_name: fn_name("g_verify_suggest_set"),
+        args: [chapter_code, verse, html_value_get(suggest_area)],
+      });
+      html_clear(suggest_bar);
+      let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
+      html_font_color_set(sent, muted);
+    } catch (failed) {
+      html_clear(suggest_bar);
+      let msg = html_p_text(suggest_bar, "Couldn't send — please try again.");
+      html_font_color_set(msg, muted);
+      app_shared_button(suggest_bar, "Send suggestion", on_suggest);
+    }
+  }
+  app_shared_button(suggest_bar, "Send suggestion", on_suggest);
 }

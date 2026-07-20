@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import { g_verify_next_across } from "./g_verify_next_across.mjs";
 import { file_exists } from "./file_exists.mjs";
+import { g_verify_suggest_read } from "./g_verify_suggest_read.mjs";
 // Multi-book loop state: read the active-chapter list (one chapter code per line)
 // and return { books:[{chapter,approved,latest,next,state}], action } via the shared
 // g_verify_next_across. action = "write:CHAPTER:KEY" | "wait" | "done".
@@ -16,5 +17,18 @@ export async function g_verify_loop_check() {
     .split("\n")
     .map((s) => s.trim())
     .filter(Boolean);
-  return await g_verify_next_across(chapters);
+  let result = await g_verify_next_across(chapters);
+  // A pending in-app suggestion on any active chapter takes priority over drafting
+  // new verses — the reviewer's feedback leads. Surface it as suggest:CHAPTER:KEY so
+  // the Monitor wakes the loop to judge + apply (or reply) before writing ahead.
+  for (let book of result.books) {
+    let suggestion = await g_verify_suggest_read(book.chapter);
+    if (suggestion.text) {
+      return {
+        books: result.books,
+        action: "suggest:" + book.chapter + ":" + suggestion.key,
+      };
+    }
+  }
+  return result;
 }
