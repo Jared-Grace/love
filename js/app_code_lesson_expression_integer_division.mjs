@@ -78,7 +78,7 @@ export function app_code_lesson_expression_integer_division() {
   function above(root) {
     let recall = app_code_container_light_blue(root);
     html_div_cycle_code(recall, [
-      "You know ",
+      "You know that ",
       "Math.floor",
       " rounds a number down",
     ]);
@@ -96,5 +96,15 @@ export function app_code_lesson_expression_integer_division() {
       "s fit into ",
       "14",
     ]);
+    let subtracting = app_code_container_light_blue(root);
+    html_div_cycle_code(subtracting, [
+      "The ",
+      "3",
+      " is also how many times you can take ",
+      "4",
+      " away from ",
+      "14",
+    ]);
+    html_div_cycle_code(subtracting, ["", "14 - 4 - 4 - 4"]);
   }
 }
