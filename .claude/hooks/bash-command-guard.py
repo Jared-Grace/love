@@ -532,7 +532,7 @@ def load_safe_verbs():
 
 def load_safe_exact_commands():
     """Exact Bash allow rules with no trailing ':*' verb wildcard, e.g.
-    "Bash(node scripts/g.mjs ai)". load_safe_verbs() can't see these - its
+    "Bash(node scripts/r.mjs ai_git)". load_safe_verbs() can't see these - its
     regex only recognizes the "Bash(verb:*)" prefix-wildcard shape - so a
     fully-trusted exact command like this one fails check_simple_commands
     and forces an "ask" the moment it's chained with anything else (e.g.
