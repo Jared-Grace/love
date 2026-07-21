@@ -1,6 +1,5 @@
 import { equal } from "./equal.mjs";
 import { assert_message } from "./assert_message.mjs";
-import { log } from "./log.mjs";
 import { bind_property } from "./bind_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -46,7 +45,8 @@ export async function messenger_reply_playwright() {
     b,
     "Expected to find 4 unread conversations, but the count came out different. Has the inbox changed?",
   );
-  console.log(text_combine_multiple(["Found ", count, " matches"]));
+  let combined = text_combine_multiple(["Found ", count, " matches"]);
+  console.log(combined);
   await locator.nth(0).click();
   if (false) {
   }
