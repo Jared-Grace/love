@@ -17,6 +17,7 @@ import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_gener
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
@@ -90,6 +91,11 @@ export function app_code_lesson_expression_whole_part_formula() {
     };
     return quizzes_exercises;
   }
+  function example_answer(parent, text) {
+    "render the formula as a code chip on its OWN fresh div - passing html_text_set_code_dark straight to app_code_lesson_base would clear the shared example container (wiping the Code label and the division question already rendered there) and leave only the formula";
+    let div = html_div(parent);
+    html_text_set_code_dark(div, text);
+  }
   let name_id = title_name_id();
   let lesson = app_code_lesson_base(
     name_id,
@@ -100,7 +106,7 @@ export function app_code_lesson_expression_whole_part_formula() {
     example_answer_label,
     quizzes_get,
     example_question_label,
-    html_text_set_code_dark,
+    example_answer,
   );
   return lesson;
   function title_name_id() {
