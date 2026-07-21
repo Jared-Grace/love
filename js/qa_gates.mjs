@@ -15,6 +15,7 @@ export function qa_gates() {
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
     dispatcher_scripts_python_assert,
+    function_worker_pool_run_try,
   ];
   return gates;
 }
