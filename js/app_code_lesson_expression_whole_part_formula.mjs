@@ -123,26 +123,30 @@ export function app_code_lesson_expression_whole_part_formula() {
     return built;
   }
   function above(root) {
-    let intro = app_code_container_light_blue(root);
-    html_div_cycle_code(intro, [
-      "To find the whole part of a division, rewrite it with this formula:",
+    let setup = app_code_container_light_blue(root);
+    html_div_cycle_code(setup, ["Suppose we are dividing two numbers:"]);
+    html_div_cycle_code(setup, ["", "14 / 4"]);
+    html_div_cycle_code(setup, ["Remember, ", "4", " is the divisor"]);
+    html_div_cycle_code(setup, [
+      "And remember, ",
+      "Math.floor(14 / 4)",
+      " is the quotient",
     ]);
-    html_div_cycle_code(intro, [
-      "",
+    let derivation = app_code_container_light_blue(root);
+    html_div_cycle_code(derivation, [
+      "The ",
+      "quotient * divisor",
+      " is called the whole part",
+    ]);
+    html_div_cycle_code(derivation, ["", "quotient * divisor"]);
+    html_div_cycle_code(derivation, ["-> ", "Math.floor(14 / 4) * divisor"]);
+    html_div_cycle_code(derivation, ["-> ", "Math.floor(14 / 4) * 4"]);
+    let conclusion = app_code_container_light_blue(root);
+    html_div_cycle_code(conclusion, [
+      "So, ",
       "14 / 4",
-      " => ",
+      " -> ",
       "Math.floor(14 / 4) * 4",
     ]);
-    let why = app_code_container_light_blue(root);
-    html_div_cycle_code(why, [
-      "",
-      "Math.floor(14 / 4)",
-      " is the quotient ",
-      "3",
-    ]);
-    html_div_cycle_code(why, [
-      "Multiply the quotient by the divisor to get the whole part:",
-    ]);
-    html_div_cycle_code(why, ["", "3 * 4", " is ", "12"]);
   }
 }
