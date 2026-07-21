@@ -4,12 +4,12 @@ import { json_from } from "./json_from.mjs";
 import { buffer_text_to } from "./buffer_text_to.mjs";
 import { property_get } from "./property_get.mjs";
 import { firebase_storage_download } from "./firebase_storage_download.mjs";
-import { app_message_firebase_path } from "./app_message_firebase_path.mjs";
+import { messages_firebase_path } from "./messages_firebase_path.mjs";
 import { firebase_bucket } from "./firebase_bucket.mjs";
 export async function app_message_download() {
   let bucket = await firebase_bucket();
   let [files] = await bucket.getFiles({
-    prefix: app_message_firebase_path(),
+    prefix: messages_firebase_path(),
   });
   async function lambda(item) {
     let name = property_get(item, "name");
