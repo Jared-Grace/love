@@ -13,6 +13,7 @@ import { app_g_gratitude_overlay } from "./app_g_gratitude_overlay.mjs";
 import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
+import { app_g_sky_demo_enable } from "./app_g_sky_demo_enable.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
