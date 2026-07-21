@@ -1,5 +1,4 @@
-import { html_document_body } from "./html_document_body.mjs";
-import { html_div } from "./html_div.mjs";
+import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -21,14 +20,16 @@ export async function app_code_scroll_center_faded(component) {
   });
   function frame() {
     "one animation frame, so the fully-white state is committed before we start fading it out - otherwise the browser may coalesce and skip the transition (which read as 'no fade')";
-    return new Promise(function lambda(resolve) {
+    let r = new Promise(function lambda(resolve) {
       requestAnimationFrame(resolve);
     });
+    return r;
   }
   function wait(ms) {
-    return new Promise(function lambda(resolve) {
+    let r2 = new Promise(function lambda(resolve) {
       setTimeout(resolve, ms);
     });
+    return r2;
   }
   await html_scroll_center_now(component);
   await frame();
