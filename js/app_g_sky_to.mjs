@@ -9,7 +9,7 @@ import { property_set } from "./property_set.mjs";
 import { not } from "./not.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_sky_to(target) {
-  "set the day to a target PHASE (0 = morning … 3 = evening) and PERSIST it (g.sky_phase) so the map keeps it — a conversation calls this as each part completes, so the sky steps morning→evening in step with progress. sets the tint instantly (the same html_style_set path app_g_sky_set uses, which reliably paints; a smooth drift can be layered on later)";
+  "smoothly DRIFT the sky to a target continuous PHASE (0=morning … 3=evening; values past 3 keep going, wrapping night→morning) and persist it (g.sky_phase). a CSS gradient can't be transitioned, so this recomputes g_phase_color EVERY animation frame (html_scroll_animate style). an element-attached token cancels a superseded drift (e.g. a conversation-end snap); `from` is the element's LIVE phase, so a step fired mid-drift chains smoothly instead of jumping";
   let g = await app_g_game_save_get();
   property_set(g, "sky_phase", target);
   let bag = global_function_initialize(app_g_sky_set, {});
@@ -18,6 +18,30 @@ export async function app_g_sky_to(target) {
   }
   let element = property_get(bag, "element");
   let seed = g_sky_seed_get(g);
-  element.sky_phase = target;
-  html_style_set(element, "background", g_phase_color(target, seed));
+  let from = element.sky_phase;
+  let duration = 600;
+  let token = element.sky_token + 1;
+  element.sky_token = token;
+  let start = null;
+  function step(now) {
+    let cancelled = element.sky_token !== token;
+    if (cancelled) {
+      return;
+    }
+    if (start === null) {
+      start = now;
+    }
+    let fraction = (now - start) / duration;
+    if (fraction > 1) {
+      fraction = 1;
+    }
+    let ease = fraction * fraction * (3 - 2 * fraction);
+    let phase = from + (target - from) * ease;
+    element.sky_phase = phase;
+    html_style_set(element, "background", g_phase_color(phase, seed));
+    if (fraction < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+  requestAnimationFrame(step);
 }
