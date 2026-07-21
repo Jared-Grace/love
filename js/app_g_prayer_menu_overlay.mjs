@@ -1,5 +1,4 @@
-import { html_document_body } from "./html_document_body.mjs";
-import { html_div } from "./html_div.mjs";
+import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 export function app_g_prayer_menu_overlay() {
   "the full-screen dark overlay that holds a prayer MENU laid out like a conversation turn — shared (DRY) by the spontaneous gratitude menu and the conversation-closing prayer turn: dim backdrop, centered stretch column";
