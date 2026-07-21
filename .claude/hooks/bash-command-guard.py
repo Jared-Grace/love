@@ -1430,6 +1430,55 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
     return check_statements(tokens[body_start:i], safe_verbs, safe_exact_commands)
 
 
+def check_while(tokens, safe_verbs, safe_exact_commands):
+    """Validate a single `while COND ; do BODY done` loop (`until` too - the
+    shapes are identical and only the exit sense differs, which is irrelevant
+    to whether the commands inside are trusted).
+
+    COND is checked exactly like BODY: it is a command list that really runs,
+    so `while rm -rf /; do ls; done` must not ride in on a trusted body. Both
+    are handed to check_statements, which recurses, so nested blocks work the
+    same as inside a for-loop."""
+    i = 1
+    depth = 1  # the open 'while'/'until'
+    cond_start = i
+    while i < len(tokens):
+        t = tokens[i]
+        if t in BLOCK_OPENERS:
+            depth += 1
+        elif t in BLOCK_CLOSERS:
+            depth -= 1
+        elif t == "do" and depth == 1:
+            break
+        i += 1
+    if i >= len(tokens) or tokens[i] != "do":
+        raise Unsupported("malformed while-loop: expected 'do'")
+    cond = tokens[cond_start:i]
+    while cond and cond[-1] == ";":
+        cond = cond[:-1]
+    if not cond:
+        raise Unsupported("malformed while-loop: empty condition")
+    i += 1
+    body_start = i
+    depth = 1
+    while i < len(tokens):
+        t = tokens[i]
+        if t in BLOCK_OPENERS:
+            depth += 1
+        elif t in BLOCK_CLOSERS:
+            depth -= 1
+            if depth == 0:
+                break
+        i += 1
+    if i >= len(tokens) or tokens[i] != "done":
+        raise Unsupported("malformed while-loop: missing 'done'")
+    if i + 1 != len(tokens):
+        raise Unsupported("trailing content after 'done'")
+    if not check_statements(cond, safe_verbs, safe_exact_commands):
+        return False
+    return check_statements(tokens[body_start:i], safe_verbs, safe_exact_commands)
+
+
 def check_if(tokens, safe_verbs, safe_exact_commands):
     """Validate an `if … fi` conditional:
         if COND ; then BODY [ elif COND ; then BODY ]* [ else BODY ] fi
