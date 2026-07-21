@@ -80,6 +80,11 @@ export function app_g_dev_routes() {
     let prayer_texts = ["comfort them and carry their burden", "settle their doubts and help them trust You"];
     app_g_pray_turn(prayer_texts, done);
   }
+  async function sky() {
+    ("walk the map and watch the day drift: enable the sky demo (each MOVE steps the sky one colour, smoothly) and show the plain walkable map (no overlay). a live testbed for the smooth drift the real conversation uses");
+    app_g_sky_demo_enable();
+    await app_g_view_set(null);
+  }
   let routes = {
     study,
     unbeliever,
@@ -91,6 +96,7 @@ export function app_g_dev_routes() {
     dove,
     gratitude,
     pray,
+    sky,
   };
   return routes;
 }
