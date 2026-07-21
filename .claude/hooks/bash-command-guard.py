@@ -1562,6 +1562,9 @@ def check_statements(tokens, safe_verbs, safe_exact_commands):
         if group[0] == "for":
             if not check_for_loop(group, safe_verbs, safe_exact_commands):
                 return False
+        elif group[0] in ("while", "until"):
+            if not check_while(group, safe_verbs, safe_exact_commands):
+                return False
         elif group[0] == "if":
             if not check_if(group, safe_verbs, safe_exact_commands):
                 return False
