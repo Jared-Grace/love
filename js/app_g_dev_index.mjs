@@ -1,4 +1,5 @@
-import { html_document_body } from "./html_document_body.mjs";
+import { app_g } from "./app_g.mjs";
+import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -14,7 +15,11 @@ import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 export function app_g_dev_index() {
-  "the #index dev directory: a plain full-screen list of every app_g dev route as a clickable link (from the app_g_dev_routes registry, so it never drifts). light background so the default link color reads; a click + reload-on-hash-change jumps to that screen";
+  ("the #index dev directory: a plain full-screen list of every ",
+    app_g.name,
+    " dev route as a clickable link (from the ",
+    app_g_dev_routes.name,
+    " registry, so it never drifts). light background so the default link color reads; a click + reload-on-hash-change jumps to that screen");
   let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
@@ -62,13 +67,16 @@ export function app_g_dev_index() {
   }
   let entries = list_map(all, entry);
   function sort_key(e) {
-    let key = text_combine(property_get(e, "prefix"), property_get(e, "hash"));
+    let left2 = property_get(e, "prefix");
+    let right = property_get(e, "hash");
+    let key = text_combine(left2, right);
     return key;
   }
   list_sort_text_mapper(entries, sort_key);
   function render_row(e) {
     let row = html_div(div);
-    html_span_text(row, property_get(e, "prefix"));
+    let text = property_get(e, "prefix");
+    html_span_text(row, text);
     let name = property_get(e, "hash");
     let href = text_combine("#", name);
     html_a_href_text(row, href, href);
