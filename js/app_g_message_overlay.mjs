@@ -1,5 +1,5 @@
+import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_document_body } from "./html_document_body.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
@@ -36,7 +36,8 @@ export function app_g_message_overlay(
     opacity: "0",
     transition: "opacity 0.3s ease",
   });
-  html_style_head(app_g_emoji_glow_keyframe());
+  let style_text = app_g_emoji_glow_keyframe();
+  html_style_head(style_text);
   let emoji = html_p_text(div, emoji_text);
   html_style_assign(emoji, {
     "font-size": fonts.emoji,
