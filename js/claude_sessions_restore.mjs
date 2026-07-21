@@ -3,6 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { claude_sessions_recent } from "./claude_sessions_recent.mjs";
 import { claude_session_title } from "./claude_session_title.mjs";
+import { claude_running_count } from "./claude_running_count.mjs";
 // Reopen every Claude that was running when the machine went down, one tmux
 // window each, named after the prompt that started it.
 //
@@ -12,6 +13,18 @@ import { claude_session_title } from "./claude_session_title.mjs";
 // .claude/hooks/tmux_window_mark.sh from the Stop and Notification hooks.
 const TMUX_SESSION = "claude";
 export async function claude_sessions_restore(minutes) {
+  // Recency identifies the open-set correctly after a reboot and WRONGLY while
+  // sessions are alive — a live session has the freshest transcript of all, so
+  // resuming it would put a second process on the same file. Refuse rather than
+  // guess which of the recent ids are safe.
+  let running = await claude_running_count();
+  if (running > 0) {
+    return text_combine_multiple([
+      "Nothing was changed: ",
+      running,
+      " Claude sessions are already running, and resuming one that is still alive would put two processes on a single transcript. Restore after a restart, when none are running?",
+    ]);
+  }
   let sessions = await claude_sessions_recent(minutes);
   if (!sessions.length) {
     return text_combine_multiple([
