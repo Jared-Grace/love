@@ -25,5 +25,6 @@ export async function app_g_player_coordinates_update_move(
     await app_g_map_scroll_settled(div_map);
     let player = await app_g_player_get();
     await app_g_player_save(player);
+    await app_g_sky_step_if_demo();
   }
 }
