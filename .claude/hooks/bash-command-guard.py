@@ -399,13 +399,18 @@ RESERVED_WORDS = {
 SAFE_BUILTINS = {"break", "continue"}
 
 # Block-structure keywords this hook parses (in addition to plain simple
-# commands): `for … done` loops and `if … fi` conditionals, which may nest
-# freely inside one another's bodies. split_blocks() keeps each such block
-# together as one statement via opener/closer depth tracking; check_for_loop /
-# check_if then validate its exact shape and recurse into its body via
-# check_statements. Every other RESERVED_WORDS opener (while/until/case/…)
-# stays unparsed and falls through to a real prompt.
-BLOCK_OPENERS = {"for", "if"}
+# commands): `for … done` / `while … done` / `until … done` loops and
+# `if … fi` conditionals, which may nest freely inside one another's bodies.
+# split_blocks() keeps each such block together as one statement via
+# opener/closer depth tracking; check_for_loop / check_while / check_if then
+# validate its exact shape and recurse into its body via check_statements.
+#
+# `case … esac` is deliberately NOT modelled: its patterns need `)` and `;;`,
+# and `(`/`)` are in DANGEROUS_CHARS, so a case statement is rejected during
+# tokenize before any block parsing could see it. Supporting it means
+# loosening the tokenizer on a fail-closed path - a much larger change than
+# adding a block shape. It keeps falling through to a real prompt.
+BLOCK_OPENERS = {"for", "while", "until", "if"}
 BLOCK_CLOSERS = {"done", "fi"}
 
 DANGEROUS_CHARS = set("`<{}()")
