@@ -9,16 +9,9 @@ import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
 import { list_first } from "./list_first.mjs";
 import { reply_messages_matches } from "./reply_messages_matches.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or } from "./property_get_or.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { app_message_reply_choices } from "./app_message_reply_choices.mjs";
-import { messages_firebase_path } from "./messages_firebase_path.mjs";
+import { app_shared_contact_send } from "./app_shared_contact_send.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
-import { date_now_iso } from "./date_now_iso.mjs";
-import { file_name_json } from "./file_name_json.mjs";
-import { firebase_upload_object_browser } from "./firebase_upload_object_browser.mjs";
-import { uuid } from "./uuid.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -39,17 +32,13 @@ import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs
 import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function app_message(context) {
   let messages_property = "messages";
-  let u = await uuid();
-  let user_id_property = "user_id";
   let app_fn = app_message;
   let root = property_get(context, "root");
   object_merge_set(context, {
     app_fn,
   });
-  storage_local_initialize_context(context, user_id_property, u);
   app_shared_font_size_refresh(context);
   html_font_sans_serif_set_html();
   let div_messages = html_div(root);
@@ -60,13 +49,6 @@ export async function app_message(context) {
   let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
   app_shared_input_style(textarea);
-  let hash = html_hash_object_get();
-  let from = property_get_or(hash, "from", null);
-  let from_given = null_not_is(from);
-  if (from_given) {
-    ("opened from another app's Contact button, so pre-fill '<app> app: ' — that way a reply knows which app the person is writing about, and they just add their message after it");
-    html_value_set(textarea, text_combine(from, " app: "));
-  }
   html_focus(textarea);
   let div_checks = html_div(div);
   let button_send = app_shared_button_green(
@@ -132,18 +114,8 @@ export async function app_message(context) {
     let results = await reply_messages_matches([message], start);
     let ei = list_empty_is(results);
     if (ei) {
-      let message_id = await uuid();
-      let file_name = text_combine_multiple([
-        messages_firebase_path(),
-        u,
-        "/",
-        message_id,
-      ]);
-      let file_path = file_name_json(file_name);
-      await firebase_upload_object_browser(file_path, {
-        message,
-        when: date_now_iso(),
-      });
+      "no canned reply matched, so this is something for the developer to read — send it to the inbox tagged as coming from the message app";
+      await app_shared_contact_send("message", message);
     }
     let messages = messages_get();
     list_add(messages, message);
