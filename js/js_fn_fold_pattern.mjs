@@ -9,13 +9,12 @@ import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { js_return_argument_get } from "./js_return_argument_get.mjs";
 import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { js_atomic_statement_signature } from "./js_atomic_statement_signature.mjs";
-import { property_get } from "./property_get.mjs";
+import { js_signature_has_callee } from "./js_signature_has_callee.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_any } from "./list_any.mjs";
-import { null_is } from "./null_is.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { subtract } from "./subtract.mjs";
 export function js_fn_fold_pattern(fn_ast) {
   arguments_assert(arguments, 1);
@@ -26,8 +25,8 @@ export function js_fn_fold_pattern(fn_ast) {
   let declaration = js_flo(fn_ast);
   let statements = js_flo_body(fn_ast);
   let statement_count = list_size(statements);
-  let too_small = less_than(statement_count, 3);
-  if (too_small) {
+  let no_statements = less_than(statement_count, 1);
+  if (no_statements) {
     return null;
   }
   let return_statement = list_last(statements);
@@ -40,19 +39,13 @@ export function js_fn_fold_pattern(fn_ast) {
   if (not_identifier) {
     return null;
   }
-  let k = subtract(statement_count, 1);
-  let pattern_statements = list_take(statements, k);
-  let pattern_sigs = list_map(
-    pattern_statements,
-    js_atomic_statement_signature,
-  );
-  function callee_missing(sig) {
-    let callee = property_get(sig, "callee");
-    let missing = null_is(callee);
-    return missing;
-  }
-  let not_all_calls = list_any(pattern_sigs, callee_missing);
-  if (not_all_calls) {
+  let body_count = subtract(statement_count, 1);
+  let body_statements = list_take(statements, body_count);
+  let body_sigs = list_map(body_statements, js_atomic_statement_signature);
+  let pattern_sigs = list_filter(body_sigs, js_signature_has_callee);
+  let call_count = list_size(pattern_sigs);
+  let too_few = less_than(call_count, 2);
+  if (too_few) {
     return null;
   }
   let defined_name = js_flo_name(fn_ast);
