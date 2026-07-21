@@ -2,6 +2,8 @@ import { sleep } from "./sleep.mjs";
 import { text_starts_with_https_prefix } from "./text_starts_with_https_prefix.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { retry } from "./retry.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -35,12 +37,27 @@ export async function http_generic(url, options) {
           body: json_to(body),
         });
       }
-      let response = await fetch(url, r);
-      if (not(response.ok)) {
-        error("Failed to fetch file");
+      async function attempt() {
+        ("a stalled dev HTTP/1.1 connection must not hang forever: a fetch with no ceiling never settles, so html_loading's finally never runs and the shared loading overlay stays up permanently. abort after a ceiling (covering both the fetch and the body read) so the socket frees and rejects; retry lets a fresh connection succeed — which is exactly why a manual reload 'fixes' it today");
+        let controller = new AbortController();
+        property_set(r, "signal", controller.signal);
+        function abort() {
+          controller.abort();
+        }
+        let timer = setTimeout(abort, 8000);
+        try {
+          let response = await fetch(url, r);
+          if (not(response.ok)) {
+            error("Failed to fetch file");
+          }
+          let buf = await response.arrayBuffer();
+          return buf;
+        } finally {
+          clearTimeout(timer);
+        }
       }
-      let buf = await response.arrayBuffer();
-      return buf;
+      let attempted = await retry(3, attempt);
+      return attempted;
     }
     let v = await html_loading(lambda3);
     return v;
