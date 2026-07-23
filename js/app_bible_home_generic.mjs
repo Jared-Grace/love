@@ -261,6 +261,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     await app_bible_verse_next(context, chapter_code, verse_current);
   }
   app_shared_arrows_wide_unit(content, "verse", lambda, lambda7);
+  html_page_bottom_space(content);
   list_add_multiple(languages_verses, languages_available);
   let v4 = {
     bar,
