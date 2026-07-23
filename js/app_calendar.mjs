@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
@@ -33,7 +34,10 @@ export function app_calendar(context) {
   let time = html_input_time(card);
   app_shared_input_style(time);
   html_div_text(card, "Your WhatsApp or Facebook link");
-  let link = html_input_text(card, "wa.me/15551234567 or facebook.com/yourname");
+  let link = html_input_text(
+    card,
+    "wa.me/15551234567 or facebook.com/yourname",
+  );
   app_shared_input_style(link);
   let status = html_div_text(card, "");
   app_shared_button_green(card, "Book preaching", on_book);
@@ -47,7 +51,7 @@ export function app_calendar(context) {
     let timed = text_empty_not_is(time_value);
     let linked = text_empty_not_is(link_value);
     let ready = named && dayed && timed && linked;
-    if (!ready) {
+    if (not(ready)) {
       html_text_set(
         status,
         "Please fill in your name, the day, the time, and your link",
@@ -55,11 +59,13 @@ export function app_calendar(context) {
       return;
     }
     let parts = text_split(time_value, ":");
+    let first = list_first(parts);
+    let second = list_second(parts);
     let booking = {
       label: text_combine_multiple(["Preaching with ", name_value]),
       date: day_value,
-      hour: Number(list_first(parts)),
-      minute: Number(list_second(parts)),
+      hour: Number(first),
+      minute: Number(second),
       link: link_value,
       when: date_now_iso(),
     };
@@ -68,16 +74,14 @@ export function app_calendar(context) {
     html_value_set(day, "");
     html_value_set(time, "");
     html_value_set(link, "");
-    html_text_set(
-      status,
-      text_combine_multiple([
-        "Thank you, ",
-        name_value,
-        " — you are booked for ",
-        day_value,
-        " at ",
-        time_value,
-      ]),
-    );
+    let text = text_combine_multiple([
+      "Thank you, ",
+      name_value,
+      " — you are booked for ",
+      day_value,
+      " at ",
+      time_value,
+    ]);
+    html_text_set(status, text);
   }
 }
