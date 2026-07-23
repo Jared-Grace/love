@@ -5,7 +5,7 @@ export function app_code_arrow(parent) {
   let arrow = html_span_text(parent, "→");
   html_style_set(arrow, "font-size", "2.8em");
   html_style_set(arrow, "font-weight", "bold");
-  "line-height 0 collapses the arrow's line BOX to nothing so a big glyph does not grow the row (which added dead space, mostly above it); the glyph still draws full size, overflowing the collapsed box, and align-items centre puts that box - and so the glyph - at the middle of the chips";
+  ("line-height 0 collapses the arrow's line BOX to nothing so a big glyph does not grow the row (which added dead space, mostly above it); the glyph still draws full size, overflowing the collapsed box, and align-items centre puts that box - and so the glyph - at the middle of the chips");
   html_style_set(arrow, "line-height", "0");
   return arrow;
 }
