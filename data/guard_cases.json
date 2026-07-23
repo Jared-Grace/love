@@ -96,6 +96,15 @@
 
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
-    { "command": "while true; do ls; done", "decision": "silent", "why": "unmodelled keyword stays unparsed" }
+    { "command": "while true; do ls; done", "decision": "allow", "why": "while blocks are modelled like for/if" },
+    { "command": "until false; do ls; done", "decision": "allow", "why": "until has the same shape as while" },
+    { "command": "while ls; do ls; done", "decision": "allow", "why": "a real command as the loop condition" },
+    { "command": "while rm -rf /; do ls; done", "decision": "silent", "why": "the CONDITION is verb-checked too - a trusted body cannot carry it" },
+    { "command": "while true; do rm -rf /; done", "decision": "silent", "why": "untrusted body" },
+    { "command": "while true; do for i in 1 2; do ls; done; done", "decision": "allow", "why": "for nests inside while" },
+    { "command": "for i in 1 2; do while true; do ls; done; done", "decision": "allow", "why": "and while nests inside for" },
+    { "command": "while true; do ls; done; rm -rf /", "decision": "silent", "why": "an untrusted statement after the loop still counts" },
+    { "command": "true", "decision": "allow", "why": "inert builtin, like break/continue" },
+    { "command": "case x in a) ls ;; esac", "decision": "silent", "why": "case stays unmodelled - its patterns need ) which tokenize rejects" }
   ]
 }
