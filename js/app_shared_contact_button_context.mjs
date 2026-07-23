@@ -1,4 +1,4 @@
-import { object_merge_set } from "./object_merge_set.mjs";
+import { property_set } from "./property_set.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -15,8 +15,6 @@ export function app_shared_contact_button_context(context) {
     html_remove(previous);
   }
   let button = app_shared_contact_button(root, app_fn);
-  object_merge_set(context, {
-    contact_button: button,
-  });
+  property_set(context, "contact_button", button);
   return button;
 }
