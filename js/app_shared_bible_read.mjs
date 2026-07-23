@@ -307,6 +307,7 @@ export async function app_shared_bible_read(context, verse_action) {
     return row_update;
   }
   await list_map_add_async(primary_verses, render_verse, updates);
+  html_page_bottom_space(content);
   count_refresh();
   function resume() {
     if (list_empty_is(verse_numbers_chosen)) {
