@@ -108,7 +108,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /home/j/repos/love; node scripts/r.mjs ai_git 2>&1 | tail -8",
+            "command": "cd /home/j/repos/love; node scripts/ai.mjs ai_git 2>&1 | tail -8",
             "timeout": 90,
             "statusMessage": "Auto-committing"
           },
