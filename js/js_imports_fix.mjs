@@ -5,6 +5,8 @@ import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { js_imports_unused } from "./js_imports_unused.mjs";
 import { each } from "./each.mjs";
 export async function js_imports_fix(ast) {
+  ("add missing BEFORE removing unused, so a wrongly-added import is caught in the same pass rather than surviving forever — matches js_imports_auto_relative");
+  let v = await js_imports_missing_add_all(ast);
   let unuseds = js_imports_unused(ast);
   let body = property_get(ast, "body");
   function lambda(unused) {
@@ -12,7 +14,6 @@ export async function js_imports_fix(ast) {
     list_remove(body, declaration);
   }
   each(unuseds, lambda);
-  let v = await js_imports_missing_add_all(ast);
   await js_imports_paths_fix(ast);
   return v;
 }
