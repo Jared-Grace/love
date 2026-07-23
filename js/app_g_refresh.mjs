@@ -22,7 +22,11 @@ export async function app_g_refresh(context, div_map_container) {
   let player_img_c = await app_g_player_img(div_map);
   app_g_div_map_on_click(div_map, player_img_c);
   await app_g_player_scroll_center(div_map, player_img_c);
-  app_g_time_tint(div_map_container, g);
-  await app_g_dev_if();
-  await app_g_view_render(div_map);
+  try {
+    app_g_time_tint(div_map_container, g);
+    await app_g_dev_if();
+    await app_g_view_render(div_map);
+  } catch (e) {
+    localStorage.setItem("dbg_err", (e && e.message) + " @@ " + (e && e.stack));
+  }
 }
