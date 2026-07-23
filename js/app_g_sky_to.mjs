@@ -23,6 +23,10 @@ export async function app_g_sky_to(target) {
   let token = element.sky_token + 1;
   element.sky_token = token;
   let start = null;
+  function paint(phase) {
+    element.sky_phase = phase;
+    html_style_set(element, "background", g_phase_color(phase, seed));
+  }
   function step(now) {
     let cancelled = element.sky_token !== token;
     if (cancelled) {
@@ -36,12 +40,18 @@ export async function app_g_sky_to(target) {
       fraction = 1;
     }
     let ease = fraction * fraction * (3 - 2 * fraction);
-    let phase = from + (target - from) * ease;
-    element.sky_phase = phase;
-    html_style_set(element, "background", g_phase_color(phase, seed));
+    paint(from + (target - from) * ease);
     if (fraction < 1) {
       requestAnimationFrame(step);
     }
   }
+  function settle() {
+    let superseded = element.sky_token !== token;
+    if (superseded) {
+      return;
+    }
+    paint(target);
+  }
   requestAnimationFrame(step);
+  setTimeout(settle, duration + 150);
 }
