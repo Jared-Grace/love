@@ -19,7 +19,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 2. **Track your read-set:** remember which files you read to make your decision (not just the ones you'll write — a peer renaming a function you *call*, in a file you never opened, can still break you).
 3. **For a structural edit, reach for a named transform first (see "Editing with transforms" below); fall back to `Edit` for everything else.** When you do use `Edit`, make targeted edits, never full-file overwrites of an existing file — `Edit` (exact-snippet replacement) means a peer's change elsewhere survives, and a same-region conflict fails *loudly* instead of silently clobbering. Full-file `Write` is fine only for brand-new files.
 4. **Before committing**, run `git log <baseline>..HEAD -- <read-set>` and reason: *do any of these peer changes break mine?* If yes, reconcile before committing.
-5. **Commit** with `node scripts/r.mjs ai_git` (whole tree, message `ai`). This does **add + commit only** — it's local, but since every Claude shares this one repo, your commit is visible to peers immediately. Push to origin is a separate throttled background job (plain fast-forward, ~5-min interval, never force). Peers never diverge from each other (shared repo = linear history); a push only rejects if *origin* diverged externally, which needs a manual pull.
+5. **Commit** with `node scripts/ai.mjs ai_git` (whole tree, message `ai`). This does **add + commit only** — it's local, but since every Claude shares this one repo, your commit is visible to peers immediately. Push to origin is a separate throttled background job (plain fast-forward, ~5-min interval, never force). Peers never diverge from each other (shared repo = linear history); a push only rejects if *origin* diverged externally, which needs a manual pull.
 
 ## Editing with transforms (prefer over text `Edit`)
 
@@ -42,7 +42,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
 | Delete a fn **only if** proven unused (else refuses) | `du <name>` | `function_delete_unused` |
 
-**Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/r.mjs ao <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts) and **auto-commits the whole tree**, so you don't need a separate `ai_git` after it. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
+**Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/ai.mjs function_auto <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts) and **auto-commits the whole tree**, so you don't need a separate `ai_git` after it. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
 
 Two `ao` gotchas, both worth designing around:
 
@@ -55,7 +55,7 @@ Two `ao` gotchas, both worth designing around:
 
 - **Refactors get their own commit.** A symbol rename (via `ri` / `function_rename`) is behavior-preserving, so isolate it — a peer can then verify it trivially and it won't entangle with logic changes. Do the refactor first, then build on top.
 - **Commit message is always exactly `ai`.**
-- **Run `node scripts/r.mjs ai_git` yourself** after a batch of edits (from the repo root) — unless you just ran `ao`, which already committed the whole tree. Don't rely on a background watcher to commit: the save-time watcher is retired.
+- **Run `node scripts/ai.mjs ai_git` yourself** after a batch of edits (from the repo root) — unless you just ran `ao`, which already committed the whole tree. Don't rely on a background watcher to commit: the save-time watcher is retired.
 
 ## Two seams: `ai.mjs` for Claude, `r.mjs` for the human
 
@@ -84,7 +84,7 @@ If the task genuinely needs to **write** or **persist** (not just read+print), i
 
 **Always name the full function, never an alias** — in the rule *and* in the command you run. A rule is matched as **literal text**, so `Bash(node scripts/r.mjs fb:*)` grants whatever `fb` points to *later*: repoint the alias and the auto-approval silently follows it to a different function, and a freed alias key is claimable by anyone with `a`. (This already happened — `xp` was granted on 2026-07-18 pointing at `examples_page_write`; a day later that function was gone and the grant sat there on an unclaimed name.) Function names are the stable identity — and `function_rename` repoints aliases automatically, so a rename never invalidates a full-name rule. Aliases stay for the human at the keyboard; Claude has no keystroke cost. `permission_gate_run` (part of `q`) fails the build on any rule that names an alias or a dead name.
 
-**To check whether a command would prompt, ask the guard directly:** `node scripts/r.mjs guard_check "<command>"` returns its verdict — `allow` (auto-approved) / `ask` / `deny` / `silent` (guard abstains → native permission engine decides, so `silent` ≠ "won't prompt"). It's the ground truth (runs the real hook on the command as an inert string — never executes it), so prefer it over hand-grepping the allow-list and reasoning about verb-folding yourself.
+**To check whether a command would prompt, ask the guard directly:** `node scripts/ai.mjs guard_check "<command>"` returns its verdict — `allow` (auto-approved) / `ask` / `deny` / `silent` (guard abstains → native permission engine decides, so `silent` ≠ "won't prompt"). It's the ground truth (runs the real hook on the command as an inert string — never executes it), so prefer it over hand-grepping the allow-list and reasoning about verb-folding yourself.
 
 ## Tests (gap)
 
