@@ -22,7 +22,8 @@ export function js_block_canonical(sigs, input_names, output_name) {
     if (has) {
       return;
     }
-    let slot = list_join_empty(["$", integer_to(next)]);
+    let i = integer_to(next);
+    let slot = list_join_empty(["$", i]);
     property_set(map, name, slot);
     next = add_1(next);
   }
