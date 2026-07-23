@@ -30,6 +30,6 @@ if [ -n "$TMUX_PANE" ]; then
 fi
 last=$(cat "$ID_FILE" 2>/dev/null)
 [ -n "$last" ] || last=0
-id=$(notify-send -p -e -r "$last" -t "$EXPIRE_MS" -u critical "Claude needs permission" "$where")
+id=$(notify-send -p -e -r "$last" -t "$EXPIRE_MS" -u normal "Claude needs permission" "$where")
 echo "$id" >"$ID_FILE" 2>/dev/null
 exit 0
