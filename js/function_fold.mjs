@@ -10,7 +10,7 @@ export async function function_fold(x_name, f_name) {
   // place — fold EVERY contiguous occurrence of x's body inside F into a call to x. When no sound fold
   // applies js_fold_all mutates nothing (returns null) and F is written back unchanged.
   // Run: `node scripts/r.mjs function_fold <x_name> <f_name>`. Both should already be atomized (the
-  // watcher keeps repo files atomized); the match is on the atomized dataflow DAG.
+  // `ao` keeps repo files atomized); the match is on the atomized dataflow DAG.
   arguments_assert(arguments, 2);
   let x_ast = await function_ast(x_name);
   async function lambda(f_ast) {

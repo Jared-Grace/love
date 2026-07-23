@@ -42,13 +42,20 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
 | Delete a fn **only if** proven unused (else refuses) | `du <name>` | `function_delete_unused` |
 
-**Don't run `ao` / `js_auto` / the auto-transforms by hand** — the watcher runs the canonicalizer on save; running it manually rewrites imports non-canonically. (See memory `project_do_not_run_auto_or_transforms_manually`.)
+**Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/r.mjs ao <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts) and **auto-commits the whole tree**, so you don't need a separate `ai_git` after it. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
+
+Two `ao` gotchas, both worth designing around:
+
+- **`ao` strips `//` comments.** The AST round-trip drops them. Use **bare string-literal statements** as comments instead — they're real AST nodes and survive (`ao` renders them as `("...")`). This is why the codebase comments that way.
+- **Keep underscore fn-name tokens OUT of string-literal comments.** A bare `js_fold` inside a comment string gets rewritten to `js_fold.name`, mangling the prose into a sequence expression. Say "the fold pass" instead.
+
+`+` is intentionally **not** converted to `add(...)` (ambiguous with string concat).
 
 ## Conventions
 
 - **Refactors get their own commit.** A symbol rename (via `ri` / `function_rename`) is behavior-preserving, so isolate it — a peer can then verify it trivially and it won't entangle with logic changes. Do the refactor first, then build on top.
 - **Commit message is always exactly `ai`.**
-- **Run `node scripts/r.mjs ai_git` yourself** after a batch of edits (from the repo root). Don't rely on a background watcher to commit — it may be down.
+- **Run `node scripts/r.mjs ai_git` yourself** after a batch of edits (from the repo root) — unless you just ran `ao`, which already committed the whole tree. Don't rely on a background watcher to commit: the save-time watcher is retired.
 
 ## Throwaway node — never raw `node -e`
 
