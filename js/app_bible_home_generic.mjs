@@ -1,3 +1,4 @@
+import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_bible_mode_switch } from "./app_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_arrows_wide_unit } from "./app_shared_arrows_wide_unit.mjs";
@@ -95,12 +96,8 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     app_bible_verses,
     verse_number_hash,
   );
-  app_shared_screen_set_button(
-    bar,
-    context,
-    app_bible_languages,
-    app_shared_gear_languages_text(),
-  );
+  let text2 = app_shared_gear_languages_text();
+  app_shared_screen_set_button(bar, context, app_bible_languages, text2);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
@@ -209,7 +206,8 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     verse_number,
   );
   async function lambda3() {
-    await app_bible_mode_switch(context, app_shared_bible_mode_chapter());
+    let mode = app_shared_bible_mode_chapter();
+    await app_bible_mode_switch(context, mode);
   }
   let component2 = app_shared_button(bottom, "📖 Whole chapter", lambda3);
   let text4 = html_button_copy_text();
