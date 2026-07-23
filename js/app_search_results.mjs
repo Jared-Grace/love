@@ -1,3 +1,6 @@
+import { list_empty_is } from "./list_empty_is.mjs";
+import { app_search_none_found_text } from "./app_search_none_found_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_shared_bible_open } from "./app_shared_bible_open.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -50,7 +53,6 @@ import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_c
 import { html_div } from "./html_div.mjs";
 import { ebible_book_exists } from "./ebible_book_exists.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -135,8 +137,8 @@ export async function app_search_results(context, div_results) {
       let squashed = list_squash(waited);
       await list_join_newline_2_copy(squashed);
     }
-    let text2 = text_combine(c, " all");
-    let component = app_shared_button_wide(expand_all_div, text2, lambda6);
+    let text = text_combine(c, " all");
+    let component = app_shared_button_wide(expand_all_div, text, lambda6);
   }
   expand_all = app_shared_button_wide(
     div_results,
@@ -183,12 +185,12 @@ export async function app_search_results(context, div_results) {
         html_style_margin_bottom(header, "0.3em");
       }
     }
-    function toggle() {
+    async function toggle() {
       let next = not(collapsed);
       collapsed_set(next);
       let expanded = not(next);
       if (expanded) {
-        html_scroll_center(div_book);
+        await html_scroll_center(div_book);
       }
     }
     html_on_click(header, toggle);
@@ -205,8 +207,10 @@ export async function app_search_results(context, div_results) {
     html_display_inline_block(div_chapter);
     let color_background = app_shared_container_blue_medium_background_color();
     html_style_background_color_set(div_chapter, color_background);
-    html_border(div_chapter, "0.1em", app_shared_container_blue_border_color());
-    html_border_radius(div_chapter, app_shared_border_radius_extra_large());
+    let border_color = app_shared_container_blue_border_color();
+    html_border(div_chapter, "0.1em", border_color);
+    let border_radius = app_shared_border_radius_extra_large();
+    html_border_radius(div_chapter, border_radius);
     html_style_padding_em(div_chapter, "0.5");
     html_style_margin_x(div_chapter, "0.15em");
     html_style_margin_y(div_chapter, "0.15em");
@@ -240,14 +244,16 @@ export async function app_search_results(context, div_results) {
         html_style_margin_y(cb, "0.2em");
         function lambda3() {
           "this button offers the whole chapter, so land in the chapter reader with this verse in view";
+          let mode = app_shared_bible_mode_chapter();
           app_shared_bible_open(
             languages_chosen,
             chapter_code,
             verse_number,
-            app_shared_bible_mode_chapter(),
+            mode,
           );
         }
-        let oc_text = text_combine(emoji_book_open(), " Open chapter");
+        let left = emoji_book_open();
+        let oc_text = text_combine(left, " Open chapter");
         let oc = app_shared_button_wide(div_verse, oc_text, lambda3);
         html_style_margin_y(oc, "0.2em");
         await app_reply_verses_add(
