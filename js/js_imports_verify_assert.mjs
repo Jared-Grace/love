@@ -2,9 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_imports_missing_all } from "./js_imports_missing_all.mjs";
 import { js_imports_unused } from "./js_imports_unused.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { list_empty } from "./list_empty.mjs";
-import { not } from "./not.mjs";
-import { error_json } from "./error_json.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function js_imports_verify_assert(ast) {
   "Gate 1: after a transform rewrites a fn, verify its imports still bind every referenced repo fn";
   "(nothing resolvable left unimported) and carry nothing dead (no unused import). Throws with the";
@@ -12,23 +10,13 @@ export async function js_imports_verify_assert(ast) {
   "committed. Verifies the repair worked rather than trusting it.";
   arguments_assert(arguments, 1);
   let missing = await js_imports_missing_all(ast);
-  let b = list_empty(missing);
-  let missing_bad = not(b);
-  if (missing_bad) {
-    error_json({
-      missing: missing,
-      hint: "transform left references unimported",
-    });
-  }
+  list_empty_is_assert_json(missing, {
+    hint: "transform left references unimported",
+  });
   let unused_records = js_imports_unused(ast);
   let unused = list_map_property(unused_records, "name");
-  let b2 = list_empty(unused);
-  let unused_bad = not(b2);
-  if (unused_bad) {
-    error_json({
-      unused: unused,
-      hint: "transform left dead imports",
-    });
-  }
+  list_empty_is_assert_json(unused, {
+    hint: "transform left dead imports",
+  });
   return;
 }
