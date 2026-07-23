@@ -6,4 +6,5 @@
     <string name="test_alarm_result">A test alarm is set for one minute from now — watch your Clock app ring</string>
     <string name="update_button">Update app</string>
     <string name="update_result">Downloading the latest version — the install prompt will pop up when it finishes</string>
+    <string name="version_label">version %1$s</string>
 </resources>
