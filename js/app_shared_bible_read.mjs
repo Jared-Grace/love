@@ -1,87 +1,90 @@
-import { app_shared_bible_share } from "../../love/js/app_shared_bible_share.mjs";
-import { app_shared_bible_fetch_language } from "../../love/js/app_shared_bible_fetch_language.mjs";
-import { app_shared_bible_verse_entries } from "../../love/js/app_shared_bible_verse_entries.mjs";
-import { app_shared_bible_ref_chapter_code } from "../../love/js/app_shared_bible_ref_chapter_code.mjs";
-import { app_shared_bible_ref_chapter_codes } from "../../love/js/app_shared_bible_ref_chapter_codes.mjs";
-import { app_shared_bible_ref_chapters_guard } from "../../love/js/app_shared_bible_ref_chapters_guard.mjs";
-import { html_button_share_text } from "../../love/js/html_button_share_text.mjs";
-import { ebible_version_books_browser } from "../../love/js/ebible_version_books_browser.mjs";
-import { promise_later } from "../../love/js/promise_later.mjs";
-import { html_scroll_center_now } from "../../love/js/html_scroll_center_now.mjs";
-import { list_map_add_async } from "../../love/js/list_map_add_async.mjs";
-import { list_map_unordered_add_async } from "../../love/js/list_map_unordered_add_async.mjs";
-import { app_shared_bible_toggle_update } from "../../love/js/app_shared_bible_toggle_update.mjs";
-import { app_shared_bible_chosen_max } from "../../love/js/app_shared_bible_chosen_max.mjs";
-import { number_to_words } from "../../love/js/number_to_words.mjs";
-import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
-import { list_filter_null_not_is } from "../../love/js/list_filter_null_not_is.mjs";
-import { app_shared_bible_verse_texts } from "../../love/js/app_shared_bible_verse_texts.mjs";
-import { html_margin_0 } from "../../love/js/html_margin_0.mjs";
-import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
-import { html_mobile_default } from "../../love/js/html_mobile_default.mjs";
-import { html_clear } from "../../love/js/html_clear.mjs";
-import { html_p } from "../../love/js/html_p.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
-import { html_display_none } from "../../love/js/html_display_none.mjs";
-import { html_display_none_or_block } from "../../love/js/html_display_none_or_block.mjs";
-import { list_multiple_is } from "../../love/js/list_multiple_is.mjs";
-import { list_empty_is } from "../../love/js/list_empty_is.mjs";
-import { list_first } from "../../love/js/list_first.mjs";
-import { list_copy } from "../../love/js/list_copy.mjs";
-import { list_sort_number_mapper } from "../../love/js/list_sort_number_mapper.mjs";
-import { integer_to_try } from "../../love/js/integer_to_try.mjs";
-import { list_add } from "../../love/js/list_add.mjs";
-import { list_empty } from "../../love/js/list_empty.mjs";
-import { list_get } from "../../love/js/list_get.mjs";
-import { list_index_of } from "../../love/js/list_index_of.mjs";
-import { list_map_property } from "../../love/js/list_map_property.mjs";
-import { invoke_multiple } from "../../love/js/invoke_multiple.mjs";
-import { null_is } from "../../love/js/null_is.mjs";
-import { not } from "../../love/js/not.mjs";
-import { html_button_biblehub_open_interlinear } from "../../love/js/html_button_biblehub_open_interlinear.mjs";
-import { html_button_biblehub_open_parallel } from "../../love/js/html_button_biblehub_open_parallel.mjs";
-import { html_button_biblehub_open_commentary } from "../../love/js/html_button_biblehub_open_commentary.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { html_flex_column_gap } from "../../love/js/html_flex_column_gap.mjs";
-import { html_style_padding_y } from "../../love/js/html_style_padding_y.mjs";
-import { html_style_padding_x } from "../../love/js/html_style_padding_x.mjs";
-import { app_shared_spaced_tiny_gap } from "../../love/js/app_shared_spaced_tiny_gap.mjs";
-import { ebible_language_to_bible_folder } from "../../love/js/ebible_language_to_bible_folder.mjs";
-import { ebible_folder_english } from "../../love/js/ebible_folder_english.mjs";
-import { ebible_chapter_code_to_book } from "../../love/js/ebible_chapter_code_to_book.mjs";
-import { ebible_book_code_to_name } from "../../love/js/ebible_book_code_to_name.mjs";
-import { ebible_chapter_code_to_name } from "../../love/js/ebible_chapter_code_to_name.mjs";
-import { app_next_hash_to_languages_chosen } from "../../love/js/app_next_hash_to_languages_chosen.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { property_get_or } from "../../love/js/property_get_or.mjs";
-import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
-import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
-import { text_pad_space_quote_double } from "../../love/js/text_pad_space_quote_double.mjs";
-import { app_shared_button_arrow_left } from "../../love/js/app_shared_button_arrow_left.mjs";
-import { app_shared_button_arrow_right } from "../../love/js/app_shared_button_arrow_right.mjs";
-import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
-import { app_shared_bible_book_chapter } from "../../love/js/app_shared_bible_book_chapter.mjs";
-import { app_shared_bible_code_open } from "../../love/js/app_shared_bible_code_open.mjs";
-import { app_shared_bible_choose_chapter } from "../../love/js/app_shared_bible_choose_chapter.mjs";
-import { text_empty_is } from "../../love/js/text_empty_is.mjs";
-import { text_empty_not_is } from "../../love/js/text_empty_not_is.mjs";
-import { text_split } from "../../love/js/text_split.mjs";
-import { list_join } from "../../love/js/list_join.mjs";
-import { html_hash_property_set } from "../../love/js/html_hash_property_set.mjs";
-import { html_display_grid } from "../../love/js/html_display_grid.mjs";
-import { html_style_set } from "../../love/js/html_style_set.mjs";
-import { app_shared_number_gutter } from "../../love/js/app_shared_number_gutter.mjs";
-import { text_combine } from "../../love/js/text_combine.mjs";
-import { list_last } from "../../love/js/list_last.mjs";
-import { html_centered } from "../../love/js/html_centered.mjs";
-import { app_shared_dismissable_message } from "../../love/js/app_shared_dismissable_message.mjs";
-import { list_size } from "../../love/js/list_size.mjs";
-import { html_text_set } from "../../love/js/html_text_set.mjs";
-import { app_shared_text_deemphasized } from "../../love/js/app_shared_text_deemphasized.mjs";
-import { app_shared_bible_change } from "../../love/js/app_shared_bible_change.mjs";
-import { list_previous_wrap } from "../../love/js/list_previous_wrap.mjs";
-import { list_next_wrap } from "../../love/js/list_next_wrap.mjs";
+import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
+import { app_shared_bible_fetch_language } from "./app_shared_bible_fetch_language.mjs";
+import { app_shared_bible_verse_entries } from "./app_shared_bible_verse_entries.mjs";
+import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapter_code.mjs";
+import { app_shared_bible_ref_chapter_codes } from "./app_shared_bible_ref_chapter_codes.mjs";
+import { app_shared_bible_ref_chapters_guard } from "./app_shared_bible_ref_chapters_guard.mjs";
+import { html_button_share_text } from "./html_button_share_text.mjs";
+import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
+import { promise_later } from "./promise_later.mjs";
+import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
+import { list_map_add_async } from "./list_map_add_async.mjs";
+import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
+import { app_shared_bible_toggle_update } from "./app_shared_bible_toggle_update.mjs";
+import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
+import { number_to_words } from "./number_to_words.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
+import { html_margin_0 } from "./html_margin_0.mjs";
+import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
+import { html_mobile_default } from "./html_mobile_default.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_p } from "./html_p.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { html_display_none } from "./html_display_none.mjs";
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { integer_to_try } from "./integer_to_try.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_index_of } from "./list_index_of.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { invoke_multiple } from "./invoke_multiple.mjs";
+import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
+import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
+import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
+import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
+import { html_style_padding_y } from "./html_style_padding_y.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
+import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
+import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
+import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
+import { app_next_hash_to_languages_chosen } from "./app_next_hash_to_languages_chosen.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
+import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
+import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
+import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
+import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
+import { app_shared_bible_code_open } from "./app_shared_bible_code_open.mjs";
+import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { text_split } from "./text_split.mjs";
+import { list_join } from "./list_join.mjs";
+import { html_hash_property_set } from "./html_hash_property_set.mjs";
+import { html_display_grid } from "./html_display_grid.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { list_last } from "./list_last.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { app_shared_dismissable_message } from "./app_shared_dismissable_message.mjs";
+import { list_size } from "./list_size.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_bible_change } from "./app_shared_bible_change.mjs";
+import { list_previous_wrap } from "./list_previous_wrap.mjs";
+import { list_next_wrap } from "./list_next_wrap.mjs";
 export async function app_shared_bible_read(context, verse_action) {
   let root = html_mobile_default(context);
   ("clear first so this reader can re-render in place (mode switch) instead of only on a fresh page load");
@@ -93,23 +96,25 @@ export async function app_shared_bible_read(context, verse_action) {
   let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
   let max = app_shared_bible_chosen_max();
+  let v2 = number_to_words(max);
+  let padded = text_pad_space_quote_double(t);
   let help_text = text_combine_multiple([
     "Tap up to ",
-    number_to_words(max),
+    v2,
     " verse numbers, then ",
-    text_pad_space_quote_double(t),
+    padded,
     " to save that passage",
   ]);
   let hash = html_hash_object_get();
   let c = property_get_or(hash, "c", "");
   let b = property_get_or(hash, "b", "");
   let ref = property_get_or(hash, "ref", "");
-  let ref_line = list_join(text_split(ref, "+"), " ");
+  let list = text_split(ref, "+");
+  let ref_line = list_join(list, " ");
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
-  let primary_folder = ebible_language_to_bible_folder(
-    list_last(languages_chosen),
-  );
+  let language = list_last(languages_chosen);
+  let primary_folder = ebible_language_to_bible_folder(language);
   let books = await ebible_version_books_browser(primary_folder);
   html_centered(bar);
   if (text_empty_is(c) && text_empty_is(ref) && text_empty_not_is(b)) {
@@ -123,7 +128,8 @@ export async function app_shared_bible_read(context, verse_action) {
     app_shared_bible_languages_gear(bar, content, languages_chosen);
     return;
   }
-  let books_en = await ebible_version_books_browser(ebible_folder_english());
+  let bible_folder = ebible_folder_english();
+  let books_en = await ebible_version_books_browser(bible_folder);
   if (ref_mode) {
     let ref_chapters = app_shared_bible_ref_chapter_codes(ref_line, books_en);
     if (list_multiple_is(ref_chapters)) {
@@ -143,7 +149,7 @@ export async function app_shared_bible_read(context, verse_action) {
   function count_refresh() {
     let n = list_size(verse_numbers_chosen);
     let text = "";
-    if (n > 0) {
+    if (greater_than(n, 0)) {
       text = text_combine_multiple([n, " of ", max, " selected"]);
     }
     html_text_set(count_status, text);
@@ -188,7 +194,8 @@ export async function app_shared_bible_read(context, verse_action) {
     }
     let sorted = list_copy(verse_numbers_chosen);
     list_sort_number_mapper(sorted, integer_to_try);
-    return list_last(sorted);
+    let last = list_last(sorted);
+    return last;
   }
   if (ref_mode) {
     app_shared_bible_book_chapter(bar, content, chapter_code, books);
@@ -228,9 +235,11 @@ export async function app_shared_bible_read(context, verse_action) {
     let verse_chapter_name = ebible_chapter_code_to_name(verse_chapter_code);
     let p = html_p(content);
     html_display_grid(p);
-    let columns = text_combine(app_shared_number_gutter(), " 1fr");
+    let left = app_shared_number_gutter();
+    let columns = text_combine(left, " 1fr");
     html_style_set(p, "grid-template-columns", columns);
-    html_style_set(p, "column-gap", app_shared_spaced_small_gap());
+    let style_value = app_shared_spaced_small_gap();
+    html_style_set(p, "column-gap", style_value);
     let r = app_shared_bible_toggle_update(
       updates,
       verse_numbers_chosen,
@@ -256,8 +265,10 @@ export async function app_shared_bible_read(context, verse_action) {
     );
     app_shared_bible_verse_texts(text_cell, entries);
     html_margin_0(p);
-    html_style_padding_y(p, app_shared_spaced_tiny_gap());
-    html_style_padding_x(p, app_shared_spaced_tiny_gap());
+    let value = app_shared_spaced_tiny_gap();
+    html_style_padding_y(p, value);
+    let value2 = app_shared_spaced_tiny_gap();
+    html_style_padding_x(p, value2);
     let update = property_get(r, "update");
     let copy = property_get(r, "copy");
     let actions = html_div(content);
@@ -291,14 +302,19 @@ export async function app_shared_bible_read(context, verse_action) {
         languages_chosen,
       );
     }
-    app_shared_button(actions, html_button_share_text(), share);
+    let text2 = html_button_share_text();
+    app_shared_button(actions, text2, share);
     verse_action(context, actions, verse_chapter_code, verse_number_v);
     function row_update() {
       update();
-      let is_last = verse_number_v === selection_last();
-      html_display_none_or_block(not(is_last), actions);
-      let single = is_last && not(list_multiple_is(verse_numbers_chosen));
-      html_display_none_or_block(not(single), verse_buttons);
+      let right = selection_last();
+      let is_last = equal(verse_number_v, right);
+      let hidden = not(is_last);
+      html_display_none_or_block(hidden, actions);
+      let b2 = list_multiple_is(verse_numbers_chosen);
+      let single = is_last && not(b2);
+      let hidden2 = not(single);
+      html_display_none_or_block(hidden2, verse_buttons);
     }
     list_add(verse_rows, {
       verse_number: verse_number_v,
@@ -309,16 +325,18 @@ export async function app_shared_bible_read(context, verse_action) {
   await list_map_add_async(primary_verses, render_verse, updates);
   html_page_bottom_space(content);
   count_refresh();
-  function resume() {
+  async function resume() {
     if (list_empty_is(verse_numbers_chosen)) {
       return;
     }
     invoke_multiple(updates);
     let ordered = list_map_property(verse_rows, "verse_number");
-    let index = list_index_of(ordered, list_first(verse_numbers_chosen));
-    if (index >= 0) {
+    let item = list_first(verse_numbers_chosen);
+    let index = list_index_of(ordered, item);
+    if (greater_than_equal(index, 0)) {
       let row = list_get(verse_rows, index);
-      html_scroll_center_now(property_get(row, "p"));
+      let component = property_get(row, "p");
+      await html_scroll_center_now(component);
     }
   }
   promise_later(resume);
