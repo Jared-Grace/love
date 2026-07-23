@@ -33,7 +33,17 @@ export function g_phase_color(phase, seed) {
   let a = lerp("a");
   let a_horizon = multiply(a, 0.4);
   let top = text_combine_multiple(["rgba(", r, ",", g, ",", b, ",", a, ")"]);
-  let horizon = text_combine_multiple(["rgba(", r, ",", g, ",", b, ",", a_horizon, ")"]);
+  let horizon = text_combine_multiple([
+    "rgba(",
+    r,
+    ",",
+    g,
+    ",",
+    b,
+    ",",
+    a_horizon,
+    ")",
+  ]);
   let gradient = text_combine_multiple([
     "linear-gradient(to bottom, ",
     top,
