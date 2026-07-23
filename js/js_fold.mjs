@@ -11,6 +11,7 @@ import { js_fold_block_escapes } from "./js_fold_block_escapes.mjs";
 import { js_fold_call_statement } from "./js_fold_call_statement.mjs";
 import { js_fold_body_splice } from "./js_fold_body_splice.mjs";
 import { js_fold_plan } from "./js_fold_plan.mjs";
+import { js_fold_equivalent_assert } from "./js_fold_equivalent_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_name } from "./property_get_name.mjs";
 import { property_set } from "./property_set.mjs";
@@ -72,6 +73,10 @@ export function js_fold(x_ast, f_ast) {
   if (escapes) {
     return null;
   }
+
+  // Gate 2: independently verify the matched block canonically equals x's body before rewriting, so a
+  // matcher/binding bug that matched a non-equivalent block throws here instead of changing behavior.
+  js_fold_equivalent_assert(pattern_sigs, params, return_local, target_sigs, arg_keys, output_name, start, k);
 
   let call_statement = js_fold_call_statement(x_name, arg_keys, output_name);
   let new_statements = js_fold_body_splice(f_statements, start, k, call_statement);

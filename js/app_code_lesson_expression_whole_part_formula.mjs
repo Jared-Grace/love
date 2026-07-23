@@ -23,6 +23,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_arrow } from "./app_code_arrow.mjs";
+import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_whole_part_formula() {
@@ -166,15 +167,15 @@ export function app_code_lesson_expression_whole_part_formula() {
     let term = html_span_text(define, "whole part");
     html_style_set(term, "font-weight", "bold");
     html_div_cycle_code(derivation, ["", "quotient * divisor"]);
-    let step_divisor = html_div(derivation);
+    let step_divisor = app_code_row_flex_center(derivation);
     app_code_arrow(step_divisor);
     html_span_text_code_dark(step_divisor, "Math.floor(14 / 4) * divisor");
-    let step_four = html_div(derivation);
+    let step_four = app_code_row_flex_center(derivation);
     app_code_arrow(step_four);
     html_span_text_code_dark(step_four, "Math.floor(14 / 4) * 4");
     let conclusion = app_code_container_light_blue(root);
-    let concl = html_div(conclusion);
-    html_span_text(concl, "So, ");
+    let concl = app_code_row_flex_center(conclusion);
+    html_span_text(concl, "So,");
     html_span_text_code_dark(concl, "14 / 4");
     app_code_arrow(concl);
     html_span_text_code_dark(concl, "Math.floor(14 / 4) * 4");
