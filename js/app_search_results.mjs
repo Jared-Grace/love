@@ -54,7 +54,6 @@ import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_to_dictionary_value } from "./list_to_dictionary_value.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { properties_from_empty } from "./properties_from_empty.mjs";
 import { list_intersect_multiple } from "./list_intersect_multiple.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -90,11 +89,6 @@ export async function app_search_results(context, div_results) {
   let mapped = await list_map_unordered_async(words, lambda);
   let keys = list_map(mapped, properties_get);
   let chapter_codes_match = list_intersect_multiple(keys);
-  function lambda4(m) {
-    let to = properties_from_empty(m, chapter_codes_match);
-    return to;
-  }
-  list_map(mapped, lambda4);
   function value_get(chapter_code) {
     let mapped3 = list_map_property(mapped, chapter_code);
     let i = list_intersect_multiple(mapped3);
