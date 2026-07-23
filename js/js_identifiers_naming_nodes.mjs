@@ -6,7 +6,7 @@ import { list_adder_unique } from "./list_adder_unique.mjs";
 import { not } from "./not.mjs";
 export function js_identifiers_naming_nodes(ast) {
   "the Identifier nodes that NAME something rather than reference a value — the log in console.log, the key in { log: 1 }";
-  ("a name in these positions is text, not a variable, so it must never count as using an import: that is what made console.log(x) pull in an unused import of this repo's own log");
+  "a name in these positions is text, not a variable, so it must never count as using an import: that is what made console.log(x) pull in an unused import of this repo's own log";
   function lambda2(la) {
     function lambda(node) {
       let computed = property_get(node, "computed");
