@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_block_canonical } from "./js_block_canonical.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { add } from "./add.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { error_json } from "./error_json.mjs";
 export function js_fold_equivalent_assert(
   pattern_sigs,
@@ -24,8 +23,7 @@ export function js_fold_equivalent_assert(
   let block_end = add(start, k);
   let block_sigs = list_slice(target_sigs, start, block_end);
   let b_canonical = js_block_canonical(block_sigs, arg_keys, output_name);
-  let equivalent = equal(x_canonical, b_canonical);
-  let differ = not(equivalent);
+  let differ = equal_not(x_canonical, b_canonical);
   if (differ) {
     error_json({
       hint: "fold equivalence check failed: matched block is not x's body",
