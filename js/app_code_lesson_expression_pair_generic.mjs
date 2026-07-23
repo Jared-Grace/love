@@ -62,7 +62,11 @@ export function app_code_lesson_expression_pair_generic(params) {
       return render;
     }
     let rights = [word];
-    let built = app_code_lesson_name_id_generic(rights, "expressions", title_get);
+    let built = app_code_lesson_name_id_generic(
+      rights,
+      "expressions",
+      title_get,
+    );
     return built;
   }
 }
