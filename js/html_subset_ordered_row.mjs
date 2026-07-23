@@ -1,18 +1,17 @@
-import { list_get } from "../../love/js/list_get.mjs";
-import { list_size } from "../../love/js/list_size.mjs";
-import { subtract } from "../../love/js/subtract.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { list_swap_at } from "../../love/js/list_swap_at.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { html_span_text } from "../../love/js/html_span_text.mjs";
-import { html_display_flex } from "../../love/js/html_display_flex.mjs";
-import { html_width_full } from "../../love/js/html_width_full.mjs";
-import { html_style_set } from "../../love/js/html_style_set.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { app_shared_spaced_small_gap } from "../../love/js/app_shared_spaced_small_gap.mjs";
-import { emoji_arrow_up } from "../../love/js/emoji_arrow_up.mjs";
-import { emoji_arrow_down } from "../../love/js/emoji_arrow_down.mjs";
-import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
+import { list_get_property } from "./list_get_property.mjs";
+import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
+import { list_swap_at } from "./list_swap_at.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
+import { html_width_full } from "./html_width_full.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
+import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
+import { emoji_arrow_down } from "./emoji_arrow_down.mjs";
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 export function html_subset_ordered_row(
   parent,
   chosen,
@@ -20,8 +19,7 @@ export function html_subset_ordered_row(
   name_property,
   changed,
 ) {
-  let item = list_get(chosen, i);
-  let name = property_get(item, name_property);
+  let name = list_get_property(chosen, i, name_property);
   let last = subtract(list_size(chosen), 1);
   let row = html_div(parent);
   html_display_flex(row);

@@ -9,7 +9,14 @@ import { list_size } from "./list_size.mjs";
 import { math_min } from "./math_min.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
-export function app_g_need_quiz(overlay, npc, overlay_close, needs, off, closing) {
+export function app_g_need_quiz(
+  overlay,
+  npc,
+  overlay_close,
+  needs,
+  off,
+  closing,
+) {
   "the shared need→Scripture quiz: each turn the NPC voices a CONCERN (a struggle for app_g_how, a doubt for app_g_believe) and the player picks the on-topic verse over an OFF-topic one — pray-for-discernment reveals the right one. after the turns the NPC responds with `closing` and can end. needs=[{concern, correct:{reference,text}}], off=[{reference,text}]. NOTE: turn_count caps at 2 (a STUB — meant to grow) but is CLAMPED to the pool sizes, so a short pool (e.g. a 1-item disciple pool) still runs";
   list_shuffle(needs);
   list_shuffle(off);
@@ -36,11 +43,21 @@ export function app_g_need_quiz(overlay, npc, overlay_close, needs, off, closing
     let concern = property_get(spec, "concern");
     let correct = property_get(spec, "correct");
     let wrong = property_get(spec, "wrong");
-    let discern = { prayed: false };
+    let discern = {
+      prayed: false,
+    };
     function on_correct() {
       turn(index + 1);
     }
-    app_g_turn_quiz_once(overlay, npc, concern, correct, wrong, on_correct, discern);
+    app_g_turn_quiz_once(
+      overlay,
+      npc,
+      concern,
+      correct,
+      wrong,
+      on_correct,
+      discern,
+    );
     function on_end() {
       if (app_g_discern_prevent(discern)) {
         return;

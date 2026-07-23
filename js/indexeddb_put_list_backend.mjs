@@ -1,6 +1,6 @@
 import { each } from "./each.mjs";
 export async function indexeddb_put_list_backend(db_get, store, items) {
-  ("every item lands in one transaction, so saving a whole bible is one write instead of a thousand");
+  "every item lands in one transaction, so saving a whole bible is one write instead of a thousand";
   let db = await db_get();
   let tx = db.transaction(store, "readwrite");
   let s = tx.objectStore(store);

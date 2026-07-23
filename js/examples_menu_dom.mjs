@@ -10,10 +10,6 @@ import { app_shared_text_category } from "./app_shared_text_category.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-// The chooser screen: a heading, then the examples as numbered wide buttons drawn
-// under complexity-tier headers (examples_groups is the source of both order and
-// grouping). Numbering runs continuously 1..N across groups so the intended reading
-// order stays visible; clicking a button loads that example (on_select with its index).
 export function examples_menu_dom(parent, examples, on_select) {
   let heading = html_element(parent, "h1");
   html_text_set(heading, "Transform examples");
@@ -51,7 +47,6 @@ export function examples_menu_dom(parent, examples, on_select) {
       placed = placed + 1;
     }
   }
-  // A newly-added, not-yet-grouped example (appended by examples_corpus_read) still shows.
   let count = list_size(examples);
   if (index < count) {
     group_header("Other");
