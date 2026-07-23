@@ -23,7 +23,10 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { app_code_arrow } from "./app_code_arrow.mjs";
+import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_whole_part_both() {
   "the THIRD whole-part lesson: DO BOTH steps at once. Given a division a / b, the learner gives its whole part value directly (rewrite with the formula Math.floor(a / b) * b, then evaluate). The answer is the whole part quotient*divisor - NOT what a / b evaluates to - so this is an explicit-answer multiple choice, not an eval lesson. Tailored decoys are the tempting partial answers: the quotient (rounded down but not multiplied back), the remainder, and the raw decimal division";
@@ -142,12 +145,10 @@ export function app_code_lesson_expression_whole_part_both() {
     ]);
     let steps = app_code_container_light_blue(root);
     html_div_cycle_code(steps, ["Rewrite the division with the formula:"]);
-    html_div_cycle_code(steps, [
-      "",
-      "14 / 4",
-      " → ",
-      "Math.floor(14 / 4) * 4",
-    ]);
+    let rewrite = html_div(steps);
+    html_span_text_code_dark(rewrite, "14 / 4");
+    app_code_arrow(rewrite);
+    html_span_text_code_dark(rewrite, "Math.floor(14 / 4) * 4");
     html_div_cycle_code(steps, ["Then evaluate:"]);
     html_div_cycle_code(steps, [
       "",
