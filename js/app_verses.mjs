@@ -24,7 +24,6 @@ import { list_find_property_or_null } from "../../love/js/list_find_property_or_
 import { list_filter_null_not_is } from "../../love/js/list_filter_null_not_is.mjs";
 import { app_reply_initialize } from "../../love/js/app_reply_initialize.mjs";
 import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
-import { app_shared_contact_button } from "../../love/js/app_shared_contact_button.mjs";
 import { app_shared_button } from "../../love/js/app_shared_button.mjs";
 import { app_shared_button_toggle_style } from "../../love/js/app_shared_button_toggle_style.mjs";
 import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
@@ -123,7 +122,6 @@ export async function app_verses(context) {
   let copy_button = app_shared_button(card3, html_button_copy_text(), copy);
   let card4 = app_shared_container_blue(content);
   card4_refresh();
-  app_shared_contact_button(content, app_verses);
   await draw_restore();
   async function draw_restore() {
     "reopening the app (or changing language, which reloads the page) brings back the last verses, re-rendered in the current languages, until New verses is tapped";
