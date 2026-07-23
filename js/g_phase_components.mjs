@@ -10,7 +10,7 @@ import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { property_get } from "./property_get.mjs";
 export function g_phase_components(phase) {
-  "the sky components {r,g,b,a,light} linearly interpolated for a CONTINUOUS day phase (0=morning … 3=night, wrapping) — the single bracket-and-lerp that BOTH the tint colour (g_phase_color) and the map darkness (g_phase_brightness) read from, so the two knobs can never drift apart";
+  "the sky components {r,g,b,a,light,contrast} linearly interpolated for a CONTINUOUS day phase (0=morning … 3=night, wrapping) — the single bracket-and-lerp that BOTH the tint colour (g_phase_color) and the map darkness (g_phase_backdrop) read from, so the two knobs can never drift apart";
   let times = g_times();
   let n = list_size(times);
   let p = mod(phase, n);
