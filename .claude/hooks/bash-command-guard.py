@@ -396,7 +396,13 @@ RESERVED_WORDS = {
 # words have no meaning outside a loop body). A numeric argument (`break 2`)
 # is inert; a `$(...)` argument was already validated by tokenize like
 # anywhere else.
-SAFE_BUILTINS = {"break", "continue"}
+#
+# `true`/`false` are here for the same reason: they run nothing and only set
+# an exit status. They are also what makes `while true; do …; done` reachable
+# at all - the loop condition is verb-checked like any other command, so
+# without them the most common loop header would always prompt no matter how
+# trusted the body.
+SAFE_BUILTINS = {"break", "continue", "true", "false"}
 
 # Block-structure keywords this hook parses (in addition to plain simple
 # commands): `for … done` / `while … done` / `until … done` loops and
