@@ -64,6 +64,20 @@ export function js_fold(x_ast, f_ast) {
   let start = property_get(match, "start");
   let binding = property_get(match, "binding");
 
+  // A param that never appears as an argument in the matched statements (or a return local that was
+  // never bound) has no value to pass at the call site, so the fold is undeterminable — REFUSE rather
+  // than let the plan's lookup throw. Fail-closed means refuse, not crash.
+  let needed = list_concat(params, [return_local]);
+  function unbound_is(name) {
+    let has = property_exists(binding, name);
+    let missing = not(has);
+    return missing;
+  }
+  let any_unbound = list_any(needed, unbound_is);
+  if (any_unbound) {
+    return null;
+  }
+
   let plan = js_fold_plan(binding, params, return_local, target_sigs, start, k);
   let arg_keys = property_get(plan, "arg_keys");
   let output_name = property_get(plan, "output_name");
