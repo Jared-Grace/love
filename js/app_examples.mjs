@@ -8,6 +8,7 @@ import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { number_is } from "./number_is.mjs";
 import { examples_menu_dom } from "./examples_menu_dom.mjs";
 import { examples_single_dom } from "./examples_single_dom.mjs";
+import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 // Client entry for the examples app. Single-screen: a chooser menu, or one
 // selected example with prev/next. The selection (an index, or null for the
 // menu) persists in localStorage, namespaced by this fn's name.
@@ -45,6 +46,8 @@ export async function app_examples(context) {
     } else {
       examples_menu_dom(page, examples, select);
     }
+    "render() clears root each time, so re-add the contact button here to keep it present on every view";
+    app_shared_contact_button(page, app_examples);
   }
   render();
 }
