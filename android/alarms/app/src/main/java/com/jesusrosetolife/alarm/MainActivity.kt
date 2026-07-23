@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val version = packageManager.getPackageInfo(packageName, 0).versionName
+        findViewById<TextView>(R.id.version_text).text = getString(R.string.version_label, version)
+
         val status = findViewById<TextView>(R.id.status_text)
         findViewById<Button>(R.id.test_alarm_button).setOnClickListener {
             alarm_ring_in_one_minute(this)
