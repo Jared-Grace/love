@@ -111,7 +111,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   );
   let verse_number = property_get(verse_current, "verse_number");
   let text = property_get(verse_current, "text");
-  let languages_chosen = app_bible_languages_chosen_get(context);
+  let languages_chosen = app_bible_languages_chosen_get();
   async function lambda_language(lc) {
     let bible_folder = property_get(lc, "bible_folder");
     async function get() {
