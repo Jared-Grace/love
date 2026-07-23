@@ -55,7 +55,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let decoy_fn = property_get_or(info, "decoys", null);
   let has_decoys = null_not_is(decoy_fn);
   if (has_decoys) {
-    "seed the TAILORED wrong answers first (the tempting mistakes for this question, e.g. the rounded-UP value), so they are guaranteed to appear; the loop below then fills any remaining slots with random distractors from other questions. Opt-in via info.decoys - lessons without it behave exactly as before";
+    ("seed the TAILORED wrong answers first (the tempting mistakes for this question, e.g. the rounded-UP value), so they are guaranteed to appear; the loop below then fills any remaining slots with random distractors from other questions. Opt-in via info.decoys - lessons without it behave exactly as before");
     let tailored = decoy_fn(quiz_question, quiz_answer);
     function add_decoy(decoy) {
       let decoy_text = text_to(decoy);
@@ -108,7 +108,7 @@ export function app_code_lesson_quiz_multiple_choice(
         app_shared_button_screen_green_style_assign(b);
         await on_success();
       } else {
-        "a wrong pick disables just THIS choice (dimmed) and leaves the others live, so the learner narrows down to the answer without it being revealed; on_wrong marks the attempt so the review requeues it";
+        ("a wrong pick disables just THIS choice (dimmed) and leaves the others live, so the learner narrows down to the answer without it being revealed; on_wrong marks the attempt so the review requeues it");
         on_wrong();
         app_code_lesson_quiz_wrong_set(b);
         html_style_set(b, "pointer-events", "none");
