@@ -7,15 +7,24 @@ export async function html_on_transitionend(
   on_transition_begin,
 ) {
   await new Promise(function lambda(resolve) {
+    let type = "transitionend";
+    let done = false;
+    function finish() {
+      if (done) {
+        return;
+      }
+      done = true;
+      html_listener_remove(c, type, handler);
+      resolve();
+    }
     function handler(e) {
       let includes = list_includes(properties, e.propertyName);
       if (includes) {
-        let type = "transitionend";
-        html_listener_remove(c, type, handler);
-        resolve();
+        finish();
       }
     }
-    html_on(c, "transitionend", handler);
+    html_on(c, type, handler);
     on_transition_begin();
+    setTimeout(finish, 400);
   });
 }
