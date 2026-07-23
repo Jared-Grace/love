@@ -1,3 +1,6 @@
+import { catch_null_async } from "./catch_null_async.mjs";
+import { null_is } from "./null_is.mjs";
+import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_search_none_found_text } from "./app_search_none_found_text.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
@@ -95,7 +98,8 @@ export async function app_search_results(context, div_results) {
     let n = null_is(r);
     if (n) {
       list_add(words_missing, word);
-      return {};
+      let r2 = {};
+      return r2;
     }
     return r;
   }
