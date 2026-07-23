@@ -79,14 +79,25 @@ export async function app_search_results(context, div_results) {
   let books = await ebible_version_books_browser(en);
   let query = property_get(context, "query");
   let words = text_to_words(query);
+  let words_missing = [];
   async function lambda(word) {
-    let destination = app_bible_search_word_path(word);
-    let project_url = firebase_storage_url_project_jg();
-    let o = await firebase_storage_download_json_decompress(
-      project_url,
-      destination,
-    );
-    return o;
+    async function get() {
+      let destination = app_bible_search_word_path(word);
+      let project_url = firebase_storage_url_project_jg();
+      let o = await firebase_storage_download_json_decompress(
+        project_url,
+        destination,
+      );
+      return o;
+    }
+    ("the index keeps one file per word it has seen, so a word appearing nowhere has no file and the download fails; catch it and carry on, rather than letting one unknown word reject the whole search and leave a blank page");
+    let r = await catch_null_async(get);
+    let n = null_is(r);
+    if (n) {
+      list_add(words_missing, word);
+      return {};
+    }
+    return r;
   }
   let mapped = await list_map_unordered_async(words, lambda);
   let keys = list_map(mapped, properties_get);
@@ -98,6 +109,12 @@ export async function app_search_results(context, div_results) {
   }
   let dictionary = list_to_dictionary_value(chapter_codes_match, value_get);
   html_clear(div_results);
+  let missing = list_empty_not_is(words_missing);
+  if (missing) {
+    let missing_text = app_search_words_missing_text(words_missing);
+    app_shared_text_body(div_results, missing_text);
+    return;
+  }
   let results_all = object_to_list(dictionary);
   function result_verses_exist(vk) {
     "a chapter can hold every query word and still have no single verse holding them all, so the verse intersection comes back empty";
