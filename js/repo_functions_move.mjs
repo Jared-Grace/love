@@ -1,7 +1,6 @@
+import { list_map_squash } from "./list_map_squash.mjs";
 import { functions_imports_paths_fix_list } from "./functions_imports_paths_fix_list.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { list_squash } from "./list_squash.mjs";
-import { list_map } from "./list_map.mjs";
 import { data_identifiers_get } from "./data_identifiers_get.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { file_delete } from "./file_delete.mjs";
@@ -27,8 +26,7 @@ export async function repo_functions_move(f_names, repo_name_to) {
     let list = property_get(identifiers, f_name);
     return list;
   }
-  let mapped = list_map(f_names, lambda2);
-  let squashed = list_squash(mapped);
+  let squashed = list_map_squash(f_names, lambda2);
   let unique = list_unique(squashed);
   let v = await functions_imports_paths_fix_list(unique);
   return v;

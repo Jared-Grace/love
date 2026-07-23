@@ -1,3 +1,4 @@
+import { app_code_lesson_operators_value_max_range_1_next } from "./app_code_lesson_operators_value_max_range_1_next.mjs";
 import { js_code_call_symbols } from "./js_code_call_symbols.mjs";
 import { list_power_set_empty_not_is } from "./list_power_set_empty_not_is.mjs";
 import { text_replace_multiple_to_space } from "./text_replace_multiple_to_space.mjs";
@@ -17,15 +18,12 @@ import { app_code_container_light_blue_cycle_code } from "./app_code_container_l
 import { js_operator_to_code_call } from "./js_operator_to_code_call.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { app_code_lesson_validity_code } from "./app_code_lesson_validity_code.mjs";
-import { range_1_next } from "./range_1_next.mjs";
-import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators_value_max.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_functions_invalid() {
   let name_id = app_code_lesson_name_id("functions", ["validity"]);
   let operators = js_operators_arithmetic();
-  let m = app_code_lesson_operators_value_max();
-  let next = range_1_next(m);
+  let next = app_code_lesson_operators_value_max_range_1_next();
   let symbols_required = js_code_call_symbols();
   let operators_next = list_iterator_refillable_value(operators);
   let filtered = list_power_set_empty_not_is(symbols_required);

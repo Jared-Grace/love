@@ -1,3 +1,4 @@
+import { list_find_property_get } from "./list_find_property_get.mjs";
 import { ebible_references_names } from "./ebible_references_names.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
@@ -9,7 +10,6 @@ import { list_second } from "./list_second.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_shared_bible_ref_chapter_codes(ref_line, books_en) {
   let v = ebible_references_names(books_en, [ref_line]);
@@ -20,8 +20,12 @@ export function app_shared_bible_ref_chapter_codes(ref_line, books_en) {
   let chapter_verses_list = property_get(v, "chapter_verses_list");
   let book_name = list_first(book_names);
   let chapter_verses = list_first(chapter_verses_list);
-  let book = list_find_property(books_en, "text", book_name);
-  let book_code = property_get(book, "book_code");
+  let book_code = list_find_property_get(
+    books_en,
+    "text",
+    book_name,
+    "book_code",
+  );
   let parts = text_split_colon(chapter_verses);
   let first_chapter = list_first(parts);
   function to_code(chapter) {
