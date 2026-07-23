@@ -3,6 +3,7 @@ import { function_ast } from "./function_ast.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_fold_all } from "./js_fold_all.mjs";
 import { js_imports_fix } from "./js_imports_fix.mjs";
+import { js_imports_verify_assert } from "./js_imports_verify_assert.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export async function function_fold(x_name, f_name) {
   // Brick 5b: the CLI wrapper over js_fold_all. Read pure fn x's AST (read-only), then transform F in
@@ -19,6 +20,9 @@ export async function function_fold(x_name, f_name) {
     let folded = null_not_is(result);
     if (folded) {
       await js_imports_fix(f_ast);
+      // Gate 1: verify the repair — a fold that left a name unbound or an import dead throws here,
+      // aborting the write so the broken file is never committed. Verify, don't trust the repair.
+      await js_imports_verify_assert(f_ast);
     }
     return result;
   }
