@@ -11,31 +11,18 @@ import { app_g_dev_if } from "./app_g_dev_if.mjs";
 import { app_g_view_render } from "./app_g_view_render.mjs";
 import { app_g_time_tint } from "./app_g_time_tint.mjs";
 export async function app_g_refresh(context, div_map_container) {
-  try {
-    localStorage.setItem("dbg_step", "0-start");
-    await app_g_reset_if();
-    app_g_title_hash();
-    let g = await app_g_game_save_get_or_refresh(context);
-    if (null_is(g)) {
-      localStorage.setItem("dbg_step", "1-g-null");
-      return;
-    }
-    html_clear(div_map_container);
-    let div_map = await app_g_div_map_new(div_map_container);
-    localStorage.setItem("dbg_step", "2-map");
-    let player_img_c = await app_g_player_img(div_map);
-    localStorage.setItem("dbg_step", "3-player_img");
-    app_g_div_map_on_click(div_map, player_img_c);
-    localStorage.setItem("dbg_step", "4-on_click");
-    await app_g_player_scroll_center(div_map, player_img_c);
-    localStorage.setItem("dbg_step", "5-scroll_center");
-    app_g_time_tint(div_map_container, g);
-    localStorage.setItem("dbg_step", "6-tint");
-    await app_g_dev_if();
-    localStorage.setItem("dbg_step", "7-dev_if");
-    await app_g_view_render(div_map);
-    localStorage.setItem("dbg_step", "8-done");
-  } catch (e) {
-    localStorage.setItem("dbg_err", (e && e.message) + " @@ " + (e && e.stack));
+  await app_g_reset_if();
+  app_g_title_hash();
+  let g = await app_g_game_save_get_or_refresh(context);
+  if (null_is(g)) {
+    return;
   }
+  html_clear(div_map_container);
+  let div_map = await app_g_div_map_new(div_map_container);
+  let player_img_c = await app_g_player_img(div_map);
+  app_g_div_map_on_click(div_map, player_img_c);
+  await app_g_player_scroll_center(div_map, player_img_c);
+  app_g_time_tint(div_map_container, g);
+  await app_g_dev_if();
+  await app_g_view_render(div_map);
 }
