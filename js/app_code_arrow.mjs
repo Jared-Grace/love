@@ -6,5 +6,7 @@ export function app_code_arrow(parent) {
   html_style_set(arrow, "font-size", "2.4em");
   html_style_set(arrow, "font-weight", "bold");
   html_style_set(arrow, "line-height", "1");
+  "the → glyph is drawn low in its line box, so flex centring still leaves it near the bottom of the chips - nudge it up to sit at the true middle";
+  html_style_set(arrow, "transform", "translateY(-0.16em)");
   return arrow;
 }
