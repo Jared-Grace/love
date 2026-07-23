@@ -12,15 +12,23 @@ export async function js_imports_verify_assert(ast) {
   "committed. Verifies the repair worked rather than trusting it.";
   arguments_assert(arguments, 1);
   let missing = await js_imports_missing_all(ast);
-  let missing_bad = not(list_empty(missing));
+  let b = list_empty(missing);
+  let missing_bad = not(b);
   if (missing_bad) {
-    error_json({ missing: missing, hint: "transform left references unimported" });
+    error_json({
+      missing: missing,
+      hint: "transform left references unimported",
+    });
   }
   let unused_records = js_imports_unused(ast);
   let unused = list_map_property(unused_records, "name");
-  let unused_bad = not(list_empty(unused));
+  let b2 = list_empty(unused);
+  let unused_bad = not(b2);
   if (unused_bad) {
-    error_json({ unused: unused, hint: "transform left dead imports" });
+    error_json({
+      unused: unused,
+      hint: "transform left dead imports",
+    });
   }
   return;
 }
