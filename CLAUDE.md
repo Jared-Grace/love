@@ -25,7 +25,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 
 **Why.** A named transform edits the *AST* — it moves a symbol's definition, every import of it, every caller, and its aliases together, in one operation. That makes it **provable by construction** (a rename can't change behavior) and **auto-mergeable** under parallel-Claudes-on-`main` (it touches whole named units, not one text region a peer may have shifted). Text `Edit` sees only the bytes in front of it; it can't follow a symbol across the files you never opened. So for the shapes below, a transform is faster *and* safer. This isn't a global switch — `Edit` stays the right tool for edits no transform covers (logic inside a body, prose, data, one-off tweaks). Adoption grows per-shape.
 
-**How to run one.** `node scripts/r.mjs <fn-or-alias> <arg> <arg> …` — args are positional strings; a list is one comma-joined arg (`a,b,c`). Aliases below are for typing; the **full function name** is the stable identity (aliases can be repointed).
+**How to run one.** `node scripts/ai.mjs <full_fn_name> <arg> <arg> …` — args are positional strings; a list is one comma-joined arg (`a,b,c`). The alias column below is **for the human at the keyboard**; `ai.mjs` refuses it (see "Two seams" below), so always type the full function name.
 
 **Find a transform / who-calls-what.** `s <substrings>` (`functions_search`, AND-of-substrings over fn *names* — e.g. `s rename`, `s import`) · `i <name>` (`data_identifiers_search`, find callers of a symbol).
 
@@ -56,6 +56,13 @@ Two `ao` gotchas, both worth designing around:
 - **Refactors get their own commit.** A symbol rename (via `ri` / `function_rename`) is behavior-preserving, so isolate it — a peer can then verify it trivially and it won't entangle with logic changes. Do the refactor first, then build on top.
 - **Commit message is always exactly `ai`.**
 - **Run `node scripts/r.mjs ai_git` yourself** after a batch of edits (from the repo root) — unless you just ran `ao`, which already committed the whole tree. Don't rely on a background watcher to commit: the save-time watcher is retired.
+
+## Two seams: `ai.mjs` for Claude, `r.mjs` for the human
+
+Same dispatcher, two audiences. **Claude runs `node scripts/ai.mjs <full_fn_name>`** — every permission rule names that seam, so `r.mjs` now prompts.
+
+- **Full names only.** `ai.mjs` refuses both shorthands — an alias key (`fb`) and an auto-derived acronym (`hud`) — and the error names the function it would have run. A permission rule is matched as *literal text*, so a rule can only ever name what actually runs; shorthand would let a repointed alias silently redirect a granted rule. The human keeps shorthand on `r.mjs`, where keystrokes cost something.
+- **Results print as JSON.** `r.mjs` prints through `console.log`, whose `util.inspect` silently abbreviates — `[Object]` past depth 2, `... N more items` past 100, truncated strings — and you cannot tell elision from data. (Real case: `folder_read_files js` shows 100 entries and hides `... 5416 more items`.) `ai.mjs` prints lossless JSON.
 
 ## Throwaway node — never raw `node -e`
 
