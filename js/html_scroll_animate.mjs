@@ -6,10 +6,23 @@ export function html_scroll_animate(element, target_left, target_top) {
   element.scroll_animation_token = token;
   let start = null;
   function animate(settled) {
+    let done = false;
+    function finish() {
+      if (done) {
+        return;
+      }
+      done = true;
+      let superseded = element.scroll_animation_token !== token;
+      if (!superseded) {
+        element.scrollLeft = target_left;
+        element.scrollTop = target_top;
+      }
+      settled();
+    }
     function step(now) {
       let cancelled = element.scroll_animation_token !== token;
       if (cancelled) {
-        settled();
+        finish();
         return;
       }
       if (start === null) {
@@ -26,9 +39,10 @@ export function html_scroll_animate(element, target_left, target_top) {
         requestAnimationFrame(step);
         return;
       }
-      settled();
+      finish();
     }
     requestAnimationFrame(step);
+    setTimeout(finish, duration + 120);
   }
   let promise = new Promise(animate);
   element.scroll_animation_settle = promise;
