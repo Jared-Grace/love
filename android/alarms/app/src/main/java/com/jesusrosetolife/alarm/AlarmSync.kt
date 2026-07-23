@@ -55,9 +55,9 @@ fun alarms_sync_recurring(context: Context, json: String): Int {
             putExtra(AlarmClock.EXTRA_SKIP_UI, true)
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
-        // Space the intents out: Android drops all but one if several ACTION_SET_ALARM
-        // launches arrive in the same instant, so each alarm gets its own delayed turn.
-        handler.postDelayed({ context.startActivity(intent) }, sent * 1500L)
+        // Space the intents ~3s apart: the Clock app needs time to finish saving one
+        // alarm before the next ACTION_SET_ALARM arrives, or it drops the later ones.
+        handler.postDelayed({ context.startActivity(intent) }, sent * 3000L)
         sent++
     }
     return sent
