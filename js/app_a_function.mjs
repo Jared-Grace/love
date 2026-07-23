@@ -1,5 +1,5 @@
+import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
-import { app_a_function_name_selected_key } from "./app_a_function_name_selected_key.mjs";
 import { app_a_history } from "./app_a_history.mjs";
 import { emoji_hourglass } from "./emoji_hourglass.mjs";
 import { function_delete } from "./function_delete.mjs";
@@ -11,7 +11,6 @@ import { app_a_functions_overlay } from "./app_a_functions_overlay.mjs";
 import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "./app_a_function_refresh_scroll.mjs";
-import { storage_local_get_context } from "./storage_local_get_context.mjs";
 import { html_bar_content } from "./html_bar_content.mjs";
 import { app_shared_api_fn } from "./app_shared_api_fn.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -66,8 +65,7 @@ import { function_parse_unaliased } from "./function_parse_unaliased.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
-  let key = app_a_function_name_selected_key();
-  let f_name = storage_local_get_context(context, key);
+  let f_name = app_a_function_name_selected(context);
   let parsed = await function_parse_unaliased(f_name);
   let ast = property_get(parsed, "ast");
   let root = property_get(context, "root");
