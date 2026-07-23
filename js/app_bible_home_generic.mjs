@@ -8,7 +8,7 @@ import { noop } from "./noop.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { app_bible_verse_previous } from "./app_bible_verse_previous.mjs";
 import { app_bible_verse_next } from "./app_bible_verse_next.mjs";
-import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
+import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
@@ -51,10 +51,7 @@ import { list_map } from "./list_map.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { each } from "./each.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
-import { html_span_text_bold } from "./html_span_text_bold.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let root = html_clear_context(context);
@@ -235,17 +232,21 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   }
   html_span(top, verse_number);
   let show_language_names = list_multiple_is(text_languages);
-  function lambda_text_render(item) {
-    let language = property_get(item, "language");
-    let name = property_get(language, "name");
-    let text_l = property_get(item, "text");
-    let div_l = html_div(top);
+  function to_entry(item) {
+    let name = "";
     if (show_language_names) {
-      html_span_text_bold(div_l, text_combine(name, ": "));
+      let language = property_get(item, "language");
+      name = property_get(language, "name");
     }
-    app_bible_on_click_google_define(div_l, text_l);
+    let text_l = property_get(item, "text");
+    let entry = {
+      name,
+      text: text_l,
+    };
+    return entry;
   }
-  each(text_languages, lambda_text_render);
+  let entries = list_map(text_languages, to_entry);
+  app_shared_bible_verse_texts(top, entries);
   let p = html_p(content);
   await lambda$a({
     p_verse,
