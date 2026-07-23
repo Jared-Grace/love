@@ -1,3 +1,4 @@
+import { ebible_offline_books_get } from "./ebible_offline_books_get.mjs";
 import { ebible_version_books_original_check } from "./ebible_version_books_original_check.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { firebase_storage_download_ebible_cache } from "./firebase_storage_download_ebible_cache.mjs";
@@ -15,6 +16,10 @@ export async function ebible_version_books_browser(bible_folder) {
   if (is_english) {
     let baked = ebible_books_engbsb();
     return baked;
+  }
+  let offline = await ebible_offline_books_get(bible_folder);
+  if (null_not_is(offline)) {
+    return offline;
   }
   let file_name = ebible_version_books_upload_name();
   let v = await firebase_storage_download_ebible_cache(

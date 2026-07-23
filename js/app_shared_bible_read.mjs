@@ -64,6 +64,8 @@ import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
 import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
 import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
+import { app_shared_bible_offline_button } from "./app_shared_bible_offline_button.mjs";
+import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
 import { app_shared_bible_code_open } from "./app_shared_bible_code_open.mjs";
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
@@ -209,6 +211,8 @@ export async function app_shared_bible_read(context, verse_action) {
     app_shared_button_arrow_right(bar, chapter_next);
   }
   app_shared_bible_languages_gear(bar, content, languages_chosen);
+  let languages_offline = ebible_languages_from_codes(languages_chosen);
+  app_shared_bible_offline_button(bar, content, languages_offline);
   async function fetch_language(lc) {
     let r = await app_shared_bible_fetch_language(
       lc,

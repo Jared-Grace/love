@@ -40,6 +40,7 @@ import { property_get } from "./property_get.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { app_bible_languages } from "./app_bible_languages.mjs";
 import { app_shared_gear_languages_text } from "./app_shared_gear_languages_text.mjs";
+import { app_shared_bible_offline_button } from "./app_shared_bible_offline_button.mjs";
 import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
@@ -109,6 +110,7 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let verse_number = property_get(verse_current, "verse_number");
   let text = property_get(verse_current, "text");
   let languages_chosen = app_bible_languages_chosen_get();
+  app_shared_bible_offline_button(bar, content, languages_chosen);
   async function lambda_language(lc) {
     let bible_folder = property_get(lc, "bible_folder");
     async function get() {
