@@ -61,7 +61,7 @@ export async function app_verses(context) {
   let default_l = list_join_plus(default_codes);
   let remembered_l = app_shared_language_codes_saved_or(default_l);
   let hash = html_hash_object_get();
-  "a url hash wins over the remembered choice, so a shared link still opens in the languages it names";
+  ("a url hash wins over the remembered choice, so a shared link still opens in the languages it names");
   let l = property_get_or(hash, "l", remembered_l);
   let language_codes = text_split_plus(l);
   function code_to_language(code) {
@@ -150,11 +150,14 @@ export async function app_verses(context) {
       return false;
     }
     let folders = list_map_property(languages_chosen, "bible_folder");
-    let packages = await list_map_unordered_async(folders, uplifting_package_get);
+    let packages = await list_map_unordered_async(
+      folders,
+      uplifting_package_get,
+    );
     let loaded = list_filter_null_not_is(packages);
     let nothing_loaded = list_empty_is(loaded);
     if (nothing_loaded) {
-      "show the gentle offline message only once per offline stretch, so nudging the count while offline does not stack overlays";
+      ("show the gentle offline message only once per offline stretch, so nudging the count while offline does not stack overlays");
       if (offline_notified) {
         return true;
       }
@@ -194,7 +197,7 @@ export async function app_verses(context) {
     let texts = await references_to_texts(references);
     let superseded = my_seq !== apply_seq;
     if (superseded) {
-      "a newer tap started while these verses were being gathered, so drop this stale result rather than let two renders fight over the display";
+      ("a newer tap started while these verses were being gathered, so drop this stale result rather than let two renders fight over the display");
       return;
     }
     chosen_references = references;

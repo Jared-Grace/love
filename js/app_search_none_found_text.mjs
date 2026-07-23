@@ -1,6 +1,6 @@
 import { list_multiple_is } from "./list_multiple_is.mjs";
 export function app_search_none_found_text(words) {
-  ("say why nothing came back, then offer the way forward as a question, so a search that found nothing still feels like an invitation to keep looking");
+  "say why nothing came back, then offer the way forward as a question, so a search that found nothing still feels like an invitation to keep looking";
   let several = list_multiple_is(words);
   if (several) {
     let together =
