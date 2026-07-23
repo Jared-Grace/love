@@ -1,5 +1,5 @@
+import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { app_code_lesson_quiz_qa_property_other } from "./app_code_lesson_quiz_qa_property_other.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -23,11 +23,10 @@ export function app_code_lesson_quiz_choose_operand(
   let answer_property = property_get(info, "answer_property");
   let quiz_answer = property_get(qa, answer_property);
   let quiz_answer_text = text_to(quiz_answer);
-  let question_property = app_code_lesson_quiz_qa_property_other(answer_property);
-  let quiz_question = property_get(qa, question_property);
+  let quiz_question = app_code_lesson_quiz_qa_question(qa, answer_property);
   let quiz_question_text = text_to(quiz_question);
   let choices = text_regex_match(quiz_question_text, /[0-9]+/g);
-  "shuffle rather than sort the numbers: value-sorting would always put the dividend (largest) last and the quotient (smallest) first, so the learner could pick by position without knowing the role";
+  ("shuffle rather than sort the numbers: value-sorting would always put the dividend (largest) last and the quotient (smallest) first, so the learner could pick by position without knowing the role");
   list_shuffle(choices);
   let answered = false;
   function each_button(choice) {
@@ -45,7 +44,7 @@ export function app_code_lesson_quiz_choose_operand(
         app_shared_button_screen_green_style_assign(b);
         await on_success();
       } else {
-        "a wrong pick dims just this choice and leaves the others live, and on_wrong marks the attempt so the review requeues it";
+        ("a wrong pick dims just this choice and leaves the others live, and on_wrong marks the attempt so the review requeues it");
         on_wrong();
         app_code_lesson_quiz_wrong_set(b);
         html_style_set(b, "pointer-events", "none");
