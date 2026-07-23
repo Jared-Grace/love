@@ -15,6 +15,10 @@
 #       to auto-clear because the red tmux window is the durable pull-signal; the
 #       toast is only the push that gets the human's eyes to the tmux bar.
 #
+# Urgency is deliberately NOT critical: the freedesktop spec says a critical
+# notification must stay until dismissed, ignoring -t, and xfce4-notifyd obeys
+# that — so critical + auto-expire is a contradiction. Normal urgency lets -t win.
+#
 # The tmux window name is the body, so the toast says WHICH Claude to go to.
 # Always exits 0: no notifier, or no desktop at all, must never block a session.
 command -v notify-send >/dev/null || exit 0
