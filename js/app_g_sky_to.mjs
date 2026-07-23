@@ -1,13 +1,12 @@
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_sky_set } from "./app_g_sky_set.mjs";
-import { g_phase_color } from "./g_phase_color.mjs";
+import { app_g_sky_paint } from "./app_g_sky_paint.mjs";
 import { g_sky_seed_get } from "./g_sky_seed_get.mjs";
 import { global_function_initialize } from "./global_function_initialize.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { not } from "./not.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 export async function app_g_sky_to(target) {
   "smoothly DRIFT the sky to a target continuous PHASE (0=morning … 3=evening; values past 3 keep going, wrapping night→morning) and persist it (g.sky_phase). a CSS gradient can't be transitioned, so this recomputes g_phase_color EVERY animation frame (html_scroll_animate style). an element-attached token cancels a superseded drift (e.g. a conversation-end snap); `from` is the element's LIVE phase, so a step fired mid-drift chains smoothly instead of jumping. a setTimeout GUARANTEES the target color is painted even if rAF is throttled/paused (background tab or a janky frame) — otherwise a dropped final frame leaves the tint STUCK on the old color while the phase silently advanced";
   let g = await app_g_game_save_get();
@@ -24,8 +23,7 @@ export async function app_g_sky_to(target) {
   element.sky_token = token;
   let start = null;
   function paint(phase) {
-    element.sky_phase = phase;
-    html_style_set(element, "background", g_phase_color(phase, seed));
+    app_g_sky_paint(element, phase, seed);
   }
   function step(now) {
     let cancelled = element.sky_token !== token;

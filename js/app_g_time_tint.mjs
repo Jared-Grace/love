@@ -12,6 +12,7 @@ export function app_g_time_tint(container, g) {
     width: "100vw",
     height: "100vh",
     "pointer-events": "none",
+    "mix-blend-mode": "soft-light",
     "z-index": g_z("tint"),
   });
   app_g_sky_set(div, g);
