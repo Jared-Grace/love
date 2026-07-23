@@ -36,7 +36,7 @@ export function app_code_lesson_operand_generic(params) {
     let middle = text_combine_multiple([" the ", role, " is "]);
     html_div_cycle_code(intro, ["In ", sample_question, middle, sample_answer]);
     if (above_more) {
-      "an optional extra block after the definition (the quotient lesson uses it to remind all three roles, since its question shows the dividend, divisor and quotient at once)";
+      ("an optional extra block after the definition (the quotient lesson uses it to remind all three roles, since its question shows the dividend, divisor and quotient at once)");
       above_more(root);
     }
     let ask = app_code_container_light_blue(root);
@@ -57,7 +57,7 @@ export function app_code_lesson_operand_generic(params) {
     };
     let infos = [forwards];
     if (unscramble) {
-      "the backward direction of the same idea: instead of picking which number is the role, the learner is TOLD the role's number (the prompt shows it) and builds the division from its pieces - answer_property 'question' makes the code to build the division itself (14 / 4), and since / is not commutative only the dividend-first order is accepted, so placing the given number correctly is the whole test";
+      ("the backward direction of the same idea: instead of picking which number is the role, the learner is TOLD the role's number (the prompt shows it) and builds the division from its pieces - answer_property 'question' makes the code to build the division itself (14 / 4), and since / is not commutative only the dividend-first order is accepted, so placing the given number correctly is the whole test");
       let build = {
         question_label: example_answer_label,
         on_question: html_text_set_code_dark,
