@@ -145,7 +145,7 @@ export function app_code_lesson_expression_whole_part_both() {
     html_div_cycle_code(steps, [
       "",
       "14 / 4",
-      " => ",
+      " → ",
       "Math.floor(14 / 4) * 4",
     ]);
     html_div_cycle_code(steps, ["Then evaluate:"]);

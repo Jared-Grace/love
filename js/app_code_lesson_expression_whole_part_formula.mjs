@@ -16,6 +16,8 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -133,19 +135,20 @@ export function app_code_lesson_expression_whole_part_formula() {
       " is the quotient",
     ]);
     let derivation = app_code_container_light_blue(root);
-    html_div_cycle_code(derivation, [
-      "The ",
-      "quotient * divisor",
-      " is called the whole part",
-    ]);
+    let define = html_div(derivation);
+    html_span_text(define, "The ");
+    html_span_text_code_dark(define, "quotient * divisor");
+    html_span_text(define, " is called the ");
+    let term = html_span_text(define, "whole part");
+    html_style_set(term, "font-weight", "bold");
     html_div_cycle_code(derivation, ["", "quotient * divisor"]);
-    html_div_cycle_code(derivation, ["-> ", "Math.floor(14 / 4) * divisor"]);
-    html_div_cycle_code(derivation, ["-> ", "Math.floor(14 / 4) * 4"]);
+    html_div_cycle_code(derivation, ["→ ", "Math.floor(14 / 4) * divisor"]);
+    html_div_cycle_code(derivation, ["→ ", "Math.floor(14 / 4) * 4"]);
     let conclusion = app_code_container_light_blue(root);
     html_div_cycle_code(conclusion, [
       "So, ",
       "14 / 4",
-      " -> ",
+      " → ",
       "Math.floor(14 / 4) * 4",
     ]);
   }

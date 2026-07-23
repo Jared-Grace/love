@@ -54,6 +54,7 @@ export async function app_g_verify_home(context) {
   let advanced_for = null;
   let chapter_advance_armed = false;
   let shown_json = null;
+  let poll_timer = null;
   let chapter;
   let status;
   let chapter_state;
@@ -298,7 +299,13 @@ export async function app_g_verify_home(context) {
     }
   }
   function poll() {
-    setTimeout(refresh, 4000);
+    // Exactly one timer chain, ever. The visibilitychange handler calls
+    // refresh(), and refresh() ends by calling poll() — so every focus of the
+    // tab used to start an ADDITIONAL chain that never stopped. A tab focused N
+    // times polled N+1 times as fast, permanently, which is how three open tabs
+    // came to issue ~5.4 requests/second instead of the expected 2.25.
+    clearTimeout(poll_timer);
+    poll_timer = setTimeout(refresh, 4000);
   }
   async function refresh() {
     // Don't poll a hidden/backgrounded tab: skip the API calls (which otherwise
