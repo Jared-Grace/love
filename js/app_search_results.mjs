@@ -32,6 +32,7 @@ import { list_size_1 } from "./list_size_1.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { firebase_storage_download_json_decompress } from "./firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
@@ -129,13 +130,20 @@ export async function app_search_results(context, div_results) {
   );
   html_br_2(div_results);
   let results_all = object_to_list(dictionary);
+  function result_verses_exist(vk) {
+    "a chapter can hold every query word and still have no single verse holding them all, so the verse intersection comes back empty";
+    let verse_numbers = property_get(vk, "value");
+    let e = list_empty_not_is(verse_numbers);
+    return e;
+  }
+  let results_verses = list_filter(results_all, result_verses_exist);
   function result_book_exists(vk) {
     let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let e = ebible_book_exists(books, book_code);
     return e;
   }
-  let results = list_filter(results_all, result_book_exists);
+  let results = list_filter(results_verses, result_book_exists);
   function bible_order_key(vk) {
     let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
