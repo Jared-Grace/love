@@ -1,6 +1,7 @@
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -8,7 +9,9 @@ import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_to } from "./text_to.mjs";
+import { text_integers } from "./text_integers.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
@@ -46,8 +49,28 @@ export function app_code_lesson_expression_whole_part_formula() {
   }
   let example_answer_label = "Whole part formula: ";
   let example_question_label = app_code_label_code_question();
+  function recognize_decoys(question, answer) {
+    "tempting wrong rewrites of a / b: Math.floor(a / b) alone (forgot to multiply back by the divisor), a * b (multiplied the two numbers instead), and a / b * b (forgot to round down). Built from the division's numbers so they stay tied to the question";
+    let nums = text_integers(question);
+    let dividend = list_get(nums, 0);
+    let divisor = list_get(nums, 1);
+    let no_multiply = text_combine_multiple(["Math.floor(", question, ")"]);
+    let times = text_combine_multiple([text_to(dividend), " * ", text_to(divisor)]);
+    let no_floor = text_combine_multiple([question, " * ", text_to(divisor)]);
+    return [no_multiply, times, no_floor];
+  }
   function quizzes_get(question, answer) {
-    "one quiz kind: build the whole-part formula from tokens, given the division as the prompt (answer_property 'answer' is the formula to build)";
+    "two quiz kinds: first RECOGNISE the whole-part formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens - recognise before produce";
+    let recognize = {
+      question_label: "Division: ",
+      on_question: html_text_set_code_dark,
+      answer_label: "Which is the whole part formula? ",
+      answer_on_button: html_text_set_code_dark,
+      answer_count_override: null,
+      answer_property: "answer",
+      on_answer: app_code_lesson_quiz_multiple_choice,
+      decoys: recognize_decoys,
+    };
     let build = {
       question_label: "Division: ",
       on_question: html_text_set_code_dark,
@@ -57,7 +80,7 @@ export function app_code_lesson_expression_whole_part_formula() {
       answer_property: "answer",
       on_answer: app_code_lesson_quiz_token_select,
     };
-    let infos = [build];
+    let infos = [recognize, build];
     function each_info(info) {
       function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
