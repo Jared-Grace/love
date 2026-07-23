@@ -15,6 +15,6 @@ export function app_g_time_tint(container, g) {
     "z-index": g_z("tint"),
   });
   app_g_sky_set(div, g);
-  console.log("[dbg tint] mounted ok");
+  localStorage.setItem("dbg_tint", "mounted");
   return div;
 }
