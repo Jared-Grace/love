@@ -7,5 +7,6 @@ export async function app_g_sky_step() {
   let g = await app_g_game_save_get();
   let phase = g_sky_phase_get(g);
   let next = add_1(phase);
+  localStorage.setItem("dbg_sky", phase + "->" + next);
   await app_g_sky_to(next);
 }
