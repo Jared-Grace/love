@@ -96,7 +96,28 @@ export async function app_search_results(context, div_results) {
   }
   let dictionary = list_to_dictionary_value(chapter_codes_match, value_get);
   html_clear(div_results);
-  let text = app_shared_button_back_text();
+  let results_all = object_to_list(dictionary);
+  function result_verses_exist(vk) {
+    "a chapter can hold every query word and still have no single verse holding them all, so the verse intersection comes back empty";
+    let verse_numbers = property_get(vk, "value");
+    let e = list_empty_not_is(verse_numbers);
+    return e;
+  }
+  let results_verses = list_filter(results_all, result_verses_exist);
+  function result_book_exists(vk) {
+    let chapter_code = property_get(vk, "key");
+    let book_code = ebible_chapter_code_to_book(chapter_code);
+    let e = ebible_book_exists(books, book_code);
+    return e;
+  }
+  let results = list_filter(results_verses, result_book_exists);
+  let none = list_empty_is(results);
+  if (none) {
+    ("nothing to expand and nothing to copy, so say so instead of leaving a bare Expand all button over an empty page");
+    let none_text = app_search_none_found_text(words);
+    app_shared_text_body(div_results, none_text);
+    return;
+  }
   let button_list = null;
   let expand_all_div = html_div(div_results);
   let expand_all = null;
@@ -123,21 +144,6 @@ export async function app_search_results(context, div_results) {
     expand_all_lambda,
   );
   html_br_2(div_results);
-  let results_all = object_to_list(dictionary);
-  function result_verses_exist(vk) {
-    "a chapter can hold every query word and still have no single verse holding them all, so the verse intersection comes back empty";
-    let verse_numbers = property_get(vk, "value");
-    let e = list_empty_not_is(verse_numbers);
-    return e;
-  }
-  let results_verses = list_filter(results_all, result_verses_exist);
-  function result_book_exists(vk) {
-    let chapter_code = property_get(vk, "key");
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let e = ebible_book_exists(books, book_code);
-    return e;
-  }
-  let results = list_filter(results_verses, result_book_exists);
   function bible_order_key(vk) {
     let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
