@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
@@ -16,7 +17,7 @@ export function js_imports_unused(ast) {
     );
     let to = object_merge_set(
       {
-        unused: count_import === count_declaration,
+        unused: equal(count_import, count_declaration),
       },
       i,
     );
