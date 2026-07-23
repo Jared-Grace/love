@@ -1,11 +1,10 @@
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_fn_fold_pattern } from "./js_fn_fold_pattern.mjs";
 import { function_fold } from "./function_fold.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_without } from "./list_without.mjs";
 import { properties_get } from "./properties_get.mjs";
@@ -24,8 +23,7 @@ export async function function_fold_everywhere(x_name) {
     return null;
   }
   let pattern_sigs = property_get(pattern, "pattern_sigs");
-  let callees = list_map_property(pattern_sigs, "callee");
-  let unique_callees = list_unique(callees);
+  let unique_callees = list_map_property_unique(pattern_sigs, "callee");
   let ids_comma = list_join(unique_callees, ",");
   let candidates = await data_identifiers_search(ids_comma);
   let names = properties_get(candidates);
