@@ -10,15 +10,15 @@ import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { list_map } from "./list_map.mjs";
 export function js_atomic_statement_signature(statement) {
-  // Brick 1 of the fold: reduce a normalized atomic statement `let <name> = <callee>(<arg>, ...)`
-  // to the tuple the matcher compares — the bound name, the callee fn name, and each argument as
-  // its canonical unparse (post-atomize an argument is an identifier, so its key is just its name).
-  // callee is null when the statement isn't a single call-declaration (e.g. a bare `return r`).
   arguments_assert(arguments, 1);
   let declarator = js_declare_single(statement);
   let none = not(declarator);
   if (none) {
-    let empty = { name: null, callee: null, args: [] };
+    let empty = {
+      name: null,
+      callee: null,
+      args: [],
+    };
     return empty;
   }
   let id = property_get(declarator, "id");
@@ -32,6 +32,10 @@ export function js_atomic_statement_signature(statement) {
     let args = js_call_arguments_get(init);
     arg_keys = list_map(args, js_unparse);
   }
-  let signature = { name: name, callee: callee, args: arg_keys };
+  let signature = {
+    name: name,
+    callee: callee,
+    args: arg_keys,
+  };
   return signature;
 }

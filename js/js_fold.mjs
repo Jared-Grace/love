@@ -28,11 +28,6 @@ import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 export function js_fold(x_ast, f_ast) {
-  // Brick 5a: fold the first contiguous occurrence of pure fn x's body inside F into a call to x.
-  // Pure composition of bricks 1-4: extract x's pattern (params, body-sigs minus the return, and the
-  // return-output local), match it as a contiguous block in F (js_fold_match_block), verify no
-  // internal local escapes (js_fold_block_escapes), then rewrite the block to `let out = x(args)`.
-  // Mutates and returns f_ast when a sound fold applies; returns null when none does.
   arguments_assert(arguments, 2);
   let x_name = js_flo_name(x_ast);
   let x_declaration = js_flo(x_ast);
@@ -44,9 +39,6 @@ export function js_fold(x_ast, f_ast) {
   let return_statement = list_last(x_statements);
   let return_argument = js_return_argument_get(return_statement);
   let return_local = property_get_name(return_argument);
-  // Pattern = x's call-declaration statements only; skip ceremony (doc-string comments and the
-  // arguments_assert) so a fn folds into bare sites that carry none of it. Ceremony sigs have a null
-  // callee (they aren't `let y = call(...)`), so filtering on callee keeps just the foldable logic.
   let body_sigs = list_map(body_statements, js_atomic_statement_signature);
   let pattern_sigs = list_filter(body_sigs, js_signature_has_callee);
   let k = list_size(pattern_sigs);
@@ -54,12 +46,10 @@ export function js_fold(x_ast, f_ast) {
   if (empty) {
     return null;
   }
-
   let f_declaration = js_flo(f_ast);
   let f_block = property_get(f_declaration, "body");
   let f_statements = property_get(f_block, "body");
   let target_sigs = list_map(f_statements, js_atomic_statement_signature);
-
   let match = js_fold_match_block(pattern_sigs, target_sigs, params);
   let no_match = null_is(match);
   if (no_match) {
@@ -67,10 +57,6 @@ export function js_fold(x_ast, f_ast) {
   }
   let start = property_get(match, "start");
   let binding = property_get(match, "binding");
-
-  // A param that never appears as an argument in the matched statements (or a return local that was
-  // never bound) has no value to pass at the call site, so the fold is undeterminable — REFUSE rather
-  // than let the plan's lookup throw. Fail-closed means refuse, not crash.
   let needed = list_concat(params, [return_local]);
   function unbound_is(name) {
     let has = property_exists(binding, name);
@@ -81,23 +67,31 @@ export function js_fold(x_ast, f_ast) {
   if (any_unbound) {
     return null;
   }
-
   let plan = js_fold_plan(binding, params, return_local, target_sigs, start, k);
   let arg_keys = property_get(plan, "arg_keys");
   let output_name = property_get(plan, "output_name");
   let internal_locals = property_get(plan, "internal_locals");
-
   let escapes = js_fold_block_escapes(f_statements, start, k, internal_locals);
   if (escapes) {
     return null;
   }
-
-  // Gate 2: independently verify the matched block canonically equals x's body before rewriting, so a
-  // matcher/binding bug that matched a non-equivalent block throws here instead of changing behavior.
-  js_fold_equivalent_assert(pattern_sigs, params, return_local, target_sigs, arg_keys, output_name, start, k);
-
+  js_fold_equivalent_assert(
+    pattern_sigs,
+    params,
+    return_local,
+    target_sigs,
+    arg_keys,
+    output_name,
+    start,
+    k,
+  );
   let call_statement = js_fold_call_statement(x_name, arg_keys, output_name);
-  let new_statements = js_fold_body_splice(f_statements, start, k, call_statement);
+  let new_statements = js_fold_body_splice(
+    f_statements,
+    start,
+    k,
+    call_statement,
+  );
   property_set(f_block, "body", new_statements);
   return f_ast;
 }

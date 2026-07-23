@@ -10,10 +10,6 @@ import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_fold_unify_use } from "./js_fold_unify_use.mjs";
 export function js_signature_match(pattern, target, params, binding) {
-  // Brick 2: does one pattern statement-signature match one target signature under the current
-  // binding? Callees must be identical and arity equal; each pattern arg unifies as a hole or a
-  // constant (js_fold_unify_use); the produced local name (LHS) binds as a fresh definition.
-  // Returns the extended binding, or null when they don't match.
   arguments_assert(arguments, 4);
   let pattern_callee = property_get(pattern, "callee");
   let missing_callee = null_is(pattern_callee);
@@ -37,7 +33,12 @@ export function js_signature_match(pattern, target, params, binding) {
   while (index < count) {
     let pattern_key = list_get(pattern_args, index);
     let target_key = list_get(target_args, index);
-    let unified = js_fold_unify_use(pattern_key, target_key, params, binding_so_far);
+    let unified = js_fold_unify_use(
+      pattern_key,
+      target_key,
+      params,
+      binding_so_far,
+    );
     let failed = null_is(unified);
     if (failed) {
       return null;
