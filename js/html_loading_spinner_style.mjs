@@ -10,7 +10,7 @@ export function html_loading_spinner_style() {
     "@keyframes html_loading_spin {\n  0% { transform: rotate(0deg) scale(1); }\n  50% { transform: rotate(180deg) scale(1.15); }\n  100% { transform: rotate(360deg) scale(1); }\n}",
   );
   html_style_head(
-    "@keyframes html_loading_glow {\n  0% { box-shadow: 0 0 0.75rem rgba(255, 248, 232, 0.4); }\n  50% { box-shadow: 0 0 2rem rgba(255, 248, 232, 0.9); }\n  100% { box-shadow: 0 0 0.75rem rgba(255, 248, 232, 0.4); }\n}",
+    "@keyframes html_loading_glow {\n  0% { box-shadow: 0 0 0.75rem rgba(140, 180, 255, 0.4); }\n  50% { box-shadow: 0 0 2rem rgba(140, 180, 255, 0.9); }\n  100% { box-shadow: 0 0 0.75rem rgba(140, 180, 255, 0.4); }\n}",
   );
   html_style_head(
     "@keyframes html_loading_spin_reverse {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(-360deg); }\n}",
