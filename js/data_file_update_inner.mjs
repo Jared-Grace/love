@@ -8,7 +8,7 @@ import { js_flo } from "./js_flo.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_delete } from "./property_delete.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_remove_all } from "./list_remove_all.mjs";
+import { list_remove_every } from "./list_remove_every.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { each } from "./each.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -35,7 +35,7 @@ export function data_file_update_inner(parsed, data) {
     let removals = list_difference(items_old, items);
     function lambda(item) {
       let list = property_initialize(items_to_functions, item, []);
-      list_remove_all(list, f_name);
+      list_remove_every(list, f_name);
       let e = list_empty_is(list);
       if (e) {
         property_delete(items_to_functions, item);
