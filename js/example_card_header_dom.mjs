@@ -21,7 +21,8 @@ export function example_card_header_dom(parent, example) {
   example_function_chip_dom(card, fn);
   if (alias) {
     example_label_dom(card, "command");
-    example_chip_dom(card, example_command_text(alias, args));
+    let text = example_command_text(alias, args);
+    example_chip_dom(card, text);
   }
   return card;
 }
