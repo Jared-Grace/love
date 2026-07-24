@@ -25,7 +25,7 @@ export async function ebible_offline_download_chapters(
         let v = await ebible_verses_storage_browser(bible_folder, chapter_code);
         return v;
       }
-      "a translation that omits a book simply has no file for that chapter, so a miss is skipped rather than failing the whole download";
+      ("a translation that omits a book simply has no file for that chapter, so a miss is skipped rather than failing the whole download");
       let value = await catch_null_async(fetch);
       if (null_is(value)) {
         return null;
