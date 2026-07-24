@@ -35,6 +35,7 @@
       "Bash(ls:*)",
       "Bash(sort:*)",
       "Bash(uniq:*)",
+      "Bash(tr:*)",
       "Bash(node --check:*)",
       "Bash(node scripts/ai.mjs ai_git)",
       "Bash(node scripts/ai.mjs app_shared_dev_build:*)",
