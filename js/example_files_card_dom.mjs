@@ -1,8 +1,7 @@
 import { property_get } from "./property_get.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { example_card_header_dom } from "./example_card_header_dom.mjs";
-import { example_label_dom } from "./example_label_dom.mjs";
+import { example_io_column_dom } from "./example_io_column_dom.mjs";
+import { example_labeled_column_dom } from "./example_labeled_column_dom.mjs";
 import { example_arrow_dom } from "./example_arrow_dom.mjs";
 import { example_files_column_dom } from "./example_files_column_dom.mjs";
 import { example_refusal_dom } from "./example_refusal_dom.mjs";
@@ -17,22 +16,15 @@ export function example_files_card_dom(parent, example) {
   let expect_text = property_get_or_null(example, "expectText");
   let after = refuses ? null : property_get(example, "after");
   let card = example_card_header_dom(parent, example);
-  let io = html_div(card);
-  html_style_set(io, "display", "flex");
-  html_style_set(io, "flex-direction", "column");
-  html_style_set(io, "gap", "0.3rem");
-  let before_column = html_div(io);
-  html_style_set(before_column, "min-width", "0");
-  example_label_dom(before_column, "before");
+  let io = example_io_column_dom(card);
+  let before_column = example_labeled_column_dom(io, "before");
   example_files_column_dom(before_column, before);
   if (refuses) {
     example_refusal_dom(io, expect_text);
     return card;
   }
   example_arrow_dom(io);
-  let after_column = html_div(io);
-  html_style_set(after_column, "min-width", "0");
-  example_label_dom(after_column, "after");
+  let after_column = example_labeled_column_dom(io, "after");
   example_files_column_dom(after_column, after);
   return card;
 }
