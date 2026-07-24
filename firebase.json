@@ -13,7 +13,7 @@
         "type": 302
       },
       {
-        "source": "/book",
+        "source": "/calendar",
         "destination": "/latest/calendar.html",
         "type": 302
       }
