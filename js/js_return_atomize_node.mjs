@@ -1,5 +1,5 @@
 import { js_node_atomize } from "./js_node_atomize.mjs";
-import { js_visit_match } from "./js_visit_match.mjs";
+import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_boolean_values } from "./js_boolean_values.mjs";
@@ -24,7 +24,7 @@ export async function js_return_atomize_node(ast, node, variable_name) {
         return;
       }
     }
-    let v = js_visit_match(ast, argument);
+    let v = js_node_to_visitor(ast, argument);
     await js_node_atomize(ast, v, variable_name, 0);
   }
 }
