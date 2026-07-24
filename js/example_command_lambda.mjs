@@ -1,5 +1,7 @@
 import { function_arguments_assert_each_add } from "./function_arguments_assert_each_add.mjs";
 import { js_node_type_is_new } from "./js_node_type_is_new.mjs";
+import { function_identifier_replace } from "./function_identifier_replace.mjs";
+import { function_identifier_replace_lambda } from "./function_identifier_replace_lambda.mjs";
 import { file_imports_repair } from "./file_imports_repair.mjs";
 import { js_imports_auto_relative } from "./js_imports_auto_relative.mjs";
 import { js_atomize } from "./js_atomize.mjs";
@@ -34,6 +36,9 @@ export function example_command_lambda(fn_name, args) {
   }
   if (fn_name === js_node_type_is_new.name) {
     return js_node_type_is_new_lambda(args[0], args[1]);
+  }
+  if (fn_name === function_identifier_replace.name) {
+    return function_identifier_replace_lambda(args[0], args[1]);
   }
   if (fn_name === file_imports_repair.name) {
     return example_imports_lambda();
