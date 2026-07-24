@@ -28,7 +28,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
-import { list_empty } from "./list_empty.mjs";
+import { list_clear } from "./list_clear.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -109,9 +109,9 @@ export async function app_reply(context) {
   each(choices_verse_count, lambda2);
   let visible_count = null;
   async function update(verse_count) {
-    list_empty(bible_texts);
-    list_empty(responses);
-    list_empty(responses_buttons);
+    list_clear(bible_texts);
+    list_clear(responses);
+    list_clear(responses_buttons);
     let e = encouragement;
     if (equal(verse_count, 1)) {
       e = encouragement_singles;

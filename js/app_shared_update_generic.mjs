@@ -2,7 +2,7 @@ import { function_parse_declaration_unaliased } from "./function_parse_declarati
 import { property_get } from "./property_get.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty } from "./list_empty.mjs";
+import { list_clear } from "./list_clear.mjs";
 import { js_flo_body } from "./js_flo_body.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
@@ -42,7 +42,7 @@ export async function app_shared_update_generic(
     );
     let statement = js_parse_statement(code);
     let body_block = js_flo_body(ast);
-    list_empty(body_block);
+    list_clear(body_block);
     list_add(body_block, statement);
   }
   let output = await function_transform(f_name_transformed, lambda);
