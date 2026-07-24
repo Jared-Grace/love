@@ -10,13 +10,13 @@ export function list_duplicates_by_property(list, property_name) {
   "occurrence after the first, keyed by that property. Keep-first dedup: the returned entries are the";
   "ones a dedup would drop. Pure — returns a new list, mutates nothing.";
   arguments_assert(arguments, 2);
-  function collect(add) {
+  function collect(emit) {
     let seen = {};
     function consider(entry) {
       let value = property_get(entry, property_name);
       let already = property_exists(seen, value);
       if (already) {
-        add(entry);
+        emit(entry);
         return;
       }
       property_set(seen, value, true);
