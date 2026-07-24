@@ -3,12 +3,16 @@ import { app_supper_folders_get } from "./app_supper_folders_get.mjs";
 import { app_supper_chosen_from_options } from "./app_supper_chosen_from_options.mjs";
 import { app_supper_versions_hash_set } from "./app_supper_versions_hash_set.mjs";
 import { app_bible_subset_screen_generic } from "./app_bible_subset_screen_generic.mjs";
+import { app_shared_screen_set_home } from "./app_shared_screen_set_home.mjs";
 export async function app_supper_versions(context) {
   let options = await ebible_choices();
   let folders = app_supper_folders_get(context);
   let chosen = app_supper_chosen_from_options(folders, options);
   function on_change() {
     app_supper_versions_hash_set(chosen);
+  }
+  function back() {
+    app_shared_screen_set_home(context);
   }
   app_bible_subset_screen_generic(
     context,
@@ -18,5 +22,6 @@ export async function app_supper_versions(context) {
     "bible_folder",
     on_change,
     "Versions",
+    back,
   );
 }
