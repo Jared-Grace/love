@@ -8,4 +8,5 @@ export function app_shared_button_screen_wide(
 ) {
   let b = app_shared_screen_set_button(parent, context, screen_fn, text);
   html_width_full(b);
+  return b;
 }
