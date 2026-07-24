@@ -15,4 +15,7 @@ export function html_loading_spinner_style() {
   html_style_head(
     "@keyframes html_loading_spin_reverse {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(-360deg); }\n}",
   );
+  html_style_head(
+    "@keyframes html_loading_core {\n  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }\n  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }\n  100% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }\n}",
+  );
 }
