@@ -1,33 +1,33 @@
-import { app_replace_animation_duration_max } from "../../love/js/app_replace_animation_duration_max.mjs";
-import { log } from "../../love/js/log.mjs";
-import { property_set } from "../../love/js/property_set.mjs";
-import { html_move_animate_multiple } from "../../love/js/html_move_animate_multiple.mjs";
-import { list_wait } from "../../love/js/list_wait.mjs";
-import { lists_map } from "../../love/js/lists_map.mjs";
-import { html_translation_transition_clear } from "../../love/js/html_translation_transition_clear.mjs";
-import { sleep } from "../../love/js/sleep.mjs";
-import { html_move_animate_translate } from "../../love/js/html_move_animate_translate.mjs";
-import { html_move_animate_rect } from "../../love/js/html_move_animate_rect.mjs";
-import { each_index } from "../../love/js/each_index.mjs";
-import { html_insert } from "../../love/js/html_insert.mjs";
-import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
-import { html_clone } from "../../love/js/html_clone.mjs";
-import { html_request_animation_frame } from "../../love/js/html_request_animation_frame.mjs";
-import { html_move_animate_multiple_parent_remove } from "../../love/js/html_move_animate_multiple_parent_remove.mjs";
-import { html_bounding_client_rect } from "../../love/js/html_bounding_client_rect.mjs";
-import { list_map } from "../../love/js/list_map.mjs";
-import { list_skip } from "../../love/js/list_skip.mjs";
-import { list_slice_count } from "../../love/js/list_slice_count.mjs";
-import { list_size } from "../../love/js/list_size.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { list_size_range } from "../../love/js/list_size_range.mjs";
-import { app_replace_rule_apply } from "../../love/js/app_replace_rule_apply.mjs";
-import { app_replace_symbol_tile_valid_if_multiple } from "../../love/js/app_replace_symbol_tile_valid_if_multiple.mjs";
-import { app_replace_rule_valid } from "../../love/js/app_replace_rule_valid.mjs";
-import { list_get } from "../../love/js/list_get.mjs";
-import { text_combine } from "../../love/js/text_combine.mjs";
-import { divide } from "../../love/js/divide.mjs";
-import { multiply } from "../../love/js/multiply.mjs";
+import { app_replace_animation_duration_max } from "./app_replace_animation_duration_max.mjs";
+import { log } from "./log.mjs";
+import { property_set } from "./property_set.mjs";
+import { html_move_animate_multiple } from "./html_move_animate_multiple.mjs";
+import { list_wait } from "./list_wait.mjs";
+import { lists_map } from "./lists_map.mjs";
+import { html_translation_transition_clear } from "./html_translation_transition_clear.mjs";
+import { sleep } from "./sleep.mjs";
+import { html_move_animate_translate } from "./html_move_animate_translate.mjs";
+import { html_move_animate_rect } from "./html_move_animate_rect.mjs";
+import { each_index } from "./each_index.mjs";
+import { html_insert } from "./html_insert.mjs";
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
+import { html_clone } from "./html_clone.mjs";
+import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
+import { html_move_animate_multiple_parent_remove } from "./html_move_animate_multiple_parent_remove.mjs";
+import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { list_slice_count } from "./list_slice_count.mjs";
+import { list_size } from "./list_size.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_to_indices } from "./list_to_indices.mjs";
+import { app_replace_rule_apply } from "./app_replace_rule_apply.mjs";
+import { app_replace_symbol_tile_valid_if_multiple } from "./app_replace_symbol_tile_valid_if_multiple.mjs";
+import { app_replace_rule_valid } from "./app_replace_rule_valid.mjs";
+import { list_get } from "./list_get.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
 export async function app_replace_rule_set_symbol_on_click(
   rules_parsed,
   index_selected,
@@ -46,7 +46,7 @@ export async function app_replace_rule_set_symbol_on_click(
     symbols_invalid_chosen = {};
     app_replace_symbol_tile_valid_if_multiple(sbs, true, false);
     start = app_replace_rule_apply(rule, index, start);
-    start_indices = list_size_range(start);
+    start_indices = list_to_indices(start);
     log(app_replace_rule_set_symbol_on_click.name, {
       start_indices,
     });
