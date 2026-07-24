@@ -6,7 +6,11 @@ import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
 import { app_shared_bible_offline_panel } from "./app_shared_bible_offline_panel.mjs";
 import { app_shared_bible_settings_render } from "./app_shared_bible_settings_render.mjs";
-export function app_shared_bible_settings_choose(bar, content, languages_chosen) {
+export function app_shared_bible_settings_choose(
+  bar,
+  content,
+  languages_chosen,
+) {
   "the chapter reader's in-place settings hub: language choice and offline downloads, each returning here; leaving the hub reloads back to the reading";
   "clear the reading bar too, so its verse-selecting hint and chapter nav do not linger over the settings menu";
   html_clear(bar);
