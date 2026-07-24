@@ -45,6 +45,7 @@
       "Bash(node scripts/ai.mjs function_auto:*)",
       "Bash(node scripts/ai.mjs function_auto_multiple:*)",
       "Bash(node scripts/ai.mjs guard_check:*)",
+      "Bash(node scripts/ai.mjs html_update_dev_webpack:*)",
       "Bash(node scripts/ai.mjs webpack_watch)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
