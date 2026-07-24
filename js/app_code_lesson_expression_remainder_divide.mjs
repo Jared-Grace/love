@@ -96,6 +96,13 @@ export function app_code_lesson_expression_remainder_divide() {
       "14",
     ]);
     html_div_cycle_code(properties, [
+      "The divisor (",
+      "4",
+      ") may or may not evenly divide into the dividend (",
+      "14",
+      ")",
+    ]);
+    html_div_cycle_code(properties, [
       "The whole part (",
       "12",
       ") cannot be larger than the dividend (",
