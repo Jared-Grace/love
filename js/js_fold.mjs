@@ -1,4 +1,4 @@
-import { list_size_less_1 } from "./list_size_less_1.mjs";
+import { list_take_less_1 } from "./list_take_less_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
@@ -21,7 +21,6 @@ import { list_concat } from "./list_concat.mjs";
 import { list_any } from "./list_any.mjs";
 import { not } from "./not.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_take } from "./list_take.mjs";
 import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -33,8 +32,7 @@ export function js_fold(x_ast, f_ast) {
   let x_declaration = js_flo(x_ast);
   let params = js_function_declaration_params_names(x_declaration);
   let x_statements = js_flo_body(x_ast);
-  let body_count = list_size_less_1(x_statements);
-  let body_statements = list_take(x_statements, body_count);
+  let body_statements = list_take_less_1(x_statements);
   let return_statement = list_last(x_statements);
   let return_argument = js_return_argument_get(return_statement);
   let return_local = property_get_name(return_argument);
