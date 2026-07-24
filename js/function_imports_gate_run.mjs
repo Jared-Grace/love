@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { functions_imports_missing } from "./functions_imports_missing.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -11,7 +12,7 @@ export async function function_imports_gate_run() {
     console.log("MISSING IMPORT  " + name + "  -> " + joined);
   }
   console.log("\noffenders " + offenders.length);
-  let any = offenders.length > 0;
+  let any = greater_than(offenders.length, 0);
   if (any) {
     let message =
       "imports gate: " +
