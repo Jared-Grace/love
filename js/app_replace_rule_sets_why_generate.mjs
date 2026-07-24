@@ -12,7 +12,6 @@ import { error } from "./error.mjs";
 import { js_call_empty } from "./js_call_empty.mjs";
 import { js_property } from "./js_property.mjs";
 import { null_is } from "./null_is.mjs";
-import { js_object_expression_property_named_or_null } from "./js_object_expression_property_named_or_null.mjs";
 import { list_find } from "./list_find.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "./app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "./log.mjs";
