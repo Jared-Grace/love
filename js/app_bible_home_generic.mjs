@@ -1,3 +1,5 @@
+import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
+import { app_bible_settings } from "./app_bible_settings.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_bible_mode_switch } from "./app_bible_mode_switch.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
@@ -38,9 +40,6 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
-import { app_bible_languages } from "./app_bible_languages.mjs";
-import { app_shared_gear_languages_text } from "./app_shared_gear_languages_text.mjs";
-import { app_shared_bible_offline_button } from "./app_shared_bible_offline_button.mjs";
 import { app_bible_languages_chosen_get } from "./app_bible_languages_chosen_get.mjs";
 import { list_map_unordered_add_async } from "./list_map_unordered_add_async.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
