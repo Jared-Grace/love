@@ -6,7 +6,7 @@ import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function ebible_offline_download_whole(bible_folder, on_progress) {
-  ("some versions are published as one file of every chapter: one request beats a thousand, so try that first and say whether it worked");
+  "some versions are published as one file of every chapter: one request beats a thousand, so try that first and say whether it worked";
   async function get() {
     let v = await ebible_version_chapters_all_download(bible_folder);
     return v;
