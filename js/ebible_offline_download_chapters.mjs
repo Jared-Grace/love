@@ -11,7 +11,7 @@ export async function ebible_offline_download_chapters(
   bible_folder,
   on_progress,
 ) {
-  ("chapter by chapter, a handful at a time, saving each handful before starting the next so progress survives a lost connection");
+  "chapter by chapter, a handful at a time, saving each handful before starting the next so progress survives a lost connection";
   let chapter_codes = await ebible_chapter_codes_browser(bible_folder);
   let total = list_size(chapter_codes);
   let done = 0;
@@ -31,7 +31,8 @@ export async function ebible_offline_download_chapters(
     }
     let entries = await list_map_unordered_async(chunk, to_entry);
     await ebible_offline_put_list(bible_folder, entries);
-    done = add(done, list_size(chunk));
+    let right = list_size(chunk);
+    done = add(done, right);
     on_progress(done, total);
   }
   await each_async(chunks, lambda_chunk);
