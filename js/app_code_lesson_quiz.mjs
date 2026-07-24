@@ -118,7 +118,9 @@ export function app_code_lesson_quiz(
     };
     let left = app_shared_button_back_text();
     let back_text = text_combine(left, " to the previous quiz");
-    app_shared_button_wide(parent_container, back_text, on_back);
+    "set the go-back button apart from the forward actions (Show me the answer) above it with a larger gap, so it reads as a separate step rather than crowding them";
+    let back_button = app_shared_button_wide(parent_container, back_text, on_back);
+    html_style_margin_top(back_button, app_shared_spaced_large_gap());
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
