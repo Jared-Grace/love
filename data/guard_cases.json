@@ -123,6 +123,11 @@
     { "command": "rm -rf /home/j/repos/love/scripts/temp/wrap_preview.mjs", "decision": "silent", "why": "recursion ('r') is refused even inside scripts/temp - no scripts/temp rm rule, so it falls through to a prompt" },
     { "command": "rm -f /home/j/repos/love/scripts/temp/../../js/bible.mjs", "decision": "silent", "why": "'..' traversal out of scripts/temp fails normpath-equality" },
     { "command": "rm -f /home/j/repos/love/scripts/temp/nested/x.mjs", "decision": "silent", "why": "only direct children of scripts/temp qualify, not a nested subdirectory" },
-    { "command": "rm -f /home/j/repos/love/js/bible.mjs", "decision": "silent", "why": "outside scripts/temp, rm is never a trusted verb" }
+    { "command": "rm -f /home/j/repos/love/js/bible.mjs", "decision": "silent", "why": "outside scripts/temp, rm is never a trusted verb" },
+    { "command": "aaa=..; rm -f /home/j/repos/love/scripts/temp/$aaa/file.mjs", "decision": "silent", "why": "the guard never expands variables - '$' is outside the path char-allowlist, so a var holding '..' can't smuggle traversal past the textual check" },
+    { "command": "aaa=..; rm -f /home/j/repos/love/scripts/temp/${aaa}/file.mjs", "decision": "silent", "why": "braced ${...} expansion is refused for the same reason - '$', '{', '}' are not allowlisted path chars" },
+    { "command": "rm -f /home/j/repos/love/scripts/temp/$(echo ..)/file.mjs", "decision": "silent", "why": "command substitution '$(...)' can't hide a '..' - '$', '(', ')' fail the path char-allowlist" },
+    { "command": "rm -f /home/j/repos/love/scripts/temp/*", "decision": "silent", "why": "a glob '*' is never expanded by the guard and fails the char-allowlist, so rm-all-of-scripts/temp still prompts" },
+    { "command": "rm -f \"/home/j/repos/love/scripts/temp/../js/bible.mjs\"", "decision": "silent", "why": "quotes are stripped at tokenize, exposing the literal '..' which normpath-equality then rejects" }
   ]
 }
