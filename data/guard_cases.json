@@ -116,6 +116,13 @@
     { "command": "for i in 1 2; do while true; do ls; done; done", "decision": "allow", "why": "and while nests inside for" },
     { "command": "while true; do ls; done; rm -rf /", "decision": "silent", "why": "an untrusted statement after the loop still counts" },
     { "command": "true", "decision": "allow", "why": "inert builtin, like break/continue" },
-    { "command": "case x in a) ls ;; esac", "decision": "silent", "why": "case stays unmodelled - its patterns need ) which tokenize rejects" }
+    { "command": "case x in a) ls ;; esac", "decision": "silent", "why": "case stays unmodelled - its patterns need ) which tokenize rejects" },
+
+    { "command": "rm -f /home/j/repos/love/scripts/temp/wrap_preview.mjs", "decision": "allow", "why": "file-only rm of a direct child of the gitignored scripts/temp throwaway dir" },
+    { "command": "rm /home/j/repos/love/scripts/temp/probe.mjs", "decision": "allow", "why": "no flag is also fine - the path is what earns trust, not the flags" },
+    { "command": "rm -rf /home/j/repos/love/scripts/temp/wrap_preview.mjs", "decision": "silent", "why": "recursion ('r') is refused even inside scripts/temp - no scripts/temp rm rule, so it falls through to a prompt" },
+    { "command": "rm -f /home/j/repos/love/scripts/temp/../../js/bible.mjs", "decision": "silent", "why": "'..' traversal out of scripts/temp fails normpath-equality" },
+    { "command": "rm -f /home/j/repos/love/scripts/temp/nested/x.mjs", "decision": "silent", "why": "only direct children of scripts/temp qualify, not a nested subdirectory" },
+    { "command": "rm -f /home/j/repos/love/js/bible.mjs", "decision": "silent", "why": "outside scripts/temp, rm is never a trusted verb" }
   ]
 }
