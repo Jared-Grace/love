@@ -32,6 +32,7 @@ import { text_combine } from "../../love/js/text_combine.mjs";
 import { app_code_button_skip_lesson } from "../../love/js/app_code_button_skip_lesson.mjs";
 import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "../../love/js/app_shared_spaced_gap.mjs";
+import { app_shared_spaced_large_gap } from "../../love/js/app_shared_spaced_large_gap.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
