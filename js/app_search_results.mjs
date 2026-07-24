@@ -144,7 +144,7 @@ export async function app_search_results(context, div_results) {
   let button_list = null;
   let expand_all_div = html_div(div_results);
   let expand_all = null;
-  async function expand_all_lambda() {
+  async function collect_all_texts() {
     async function lambda9(b) {
       let click2 = property_get(b, "click");
       await catch_ignore_async(click2);
@@ -152,19 +152,35 @@ export async function app_search_results(context, div_results) {
       return bible_texts2;
     }
     let waited = await list_map_unordered_async(button_list, lambda9);
+    let squashed = list_squash(waited);
+    return squashed;
+  }
+  async function expand_all_lambda() {
+    let squashed = await collect_all_texts();
     html_remove(expand_all);
     let c = html_button_copy_text();
     async function lambda6() {
-      let squashed = list_squash(waited);
       await list_join_newline_2_copy(squashed);
     }
     let text = text_combine(c, " all");
     let component = app_shared_button_wide(expand_all_div, text, lambda6);
   }
+  async function copy_all_lambda() {
+    "let the reader copy every matching verse in one click, without first expanding them all on screen";
+    let squashed = await collect_all_texts();
+    await list_join_newline_2_copy(squashed);
+  }
   expand_all = app_shared_button_wide(
     div_results,
     "Expand all",
     expand_all_lambda,
+  );
+  let left2 = html_button_copy_text();
+  let copy_all_text = text_combine(left2, " all");
+  let copy_all = app_shared_button_wide(
+    div_results,
+    copy_all_text,
+    copy_all_lambda,
   );
   html_br_2(div_results);
   function bible_order_key(vk) {
