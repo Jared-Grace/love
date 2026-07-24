@@ -64,7 +64,7 @@ export function app_code_lesson_expression_whole_part_both() {
   let example_answer_label = "Whole part: ";
   let example_question_label = app_code_label_code_question();
   function quizzes_get(question, answer) {
-    "one quiz kind: given the division, choose its whole part value";
+    "two quiz kinds: forwards (given the division, choose its whole part value) then backwards (given a whole part value, choose which division has it - the other batch divisions are the distractors, so no tailored decoys are needed)";
     let forwards = {
       question_label: "Division: ",
       on_question: html_text_set_code_dark,
@@ -75,7 +75,16 @@ export function app_code_lesson_expression_whole_part_both() {
       on_answer: app_code_lesson_quiz_multiple_choice,
       decoys,
     };
-    let infos = [forwards];
+    let backwards = {
+      question_label: "Whole part: ",
+      on_question: app_code_style_normal_text,
+      answer_label: "Which division has this whole part? ",
+      answer_on_button: html_text_set_code_dark,
+      answer_count_override: null,
+      answer_property: "question",
+      on_answer: app_code_lesson_quiz_multiple_choice,
+    };
+    let infos = [forwards, backwards];
     function each_info(info) {
       function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
