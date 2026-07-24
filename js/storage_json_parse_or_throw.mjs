@@ -13,6 +13,10 @@ export function storage_json_parse_or_throw(storage_local_key, json) {
       ": ",
       parse_error.message,
     ]);
-    error(message);
+    let corrupt = new Error(message);
+    corrupt.storage_corrupt = true;
+    corrupt.storage_local_key = storage_local_key;
+    corrupt.raw = json;
+    throw corrupt;
   }
 }
