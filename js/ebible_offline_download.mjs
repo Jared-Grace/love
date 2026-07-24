@@ -6,7 +6,7 @@ import { ebible_offline_put_list } from "./ebible_offline_put_list.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { not } from "./not.mjs";
 export async function ebible_offline_download(bible_folder, on_progress) {
-  ("keep one whole bible on this device: the book names first, then every chapter, and only then is it named as ready to read without internet");
+  "keep one whole bible on this device: the book names first, then every chapter, and only then is it named as ready to read without internet";
   let books = await ebible_version_books_browser(bible_folder);
   let name = ebible_offline_books_name();
   await ebible_offline_put_list(bible_folder, [

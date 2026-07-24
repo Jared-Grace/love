@@ -12,7 +12,8 @@ export async function ebible_version_books_browser(bible_folder) {
   if (null_not_is(result)) {
     return result;
   }
-  let is_english = equal(bible_folder, ebible_folder_english());
+  let right = ebible_folder_english();
+  let is_english = equal(bible_folder, right);
   if (is_english) {
     let baked = ebible_books_engbsb();
     return baked;
