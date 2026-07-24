@@ -42,6 +42,7 @@ export function examples_groups() {
       examples: [
         "example_rename_across_files", // rename a fn across every file that uses it
         "example_delete_unused_across_files", // delete a fn only after proving nothing uses it
+        "example_delete_unused_refused", // ...but refuse when a file still uses it (the guard)
       ],
     },
   ];
