@@ -6,14 +6,14 @@ export function html_loading_spinner(parent) {
   let spinner = html_div(parent);
   html_style_assign(spinner, {
     position: "relative",
-    width: "8rem",
-    height: "8rem",
+    width: "12rem",
+    height: "12rem",
   });
   let outer = html_div(spinner);
   html_style_assign(outer, {
     position: "absolute",
     inset: "0",
-    border: "0.5rem solid rgba(140, 180, 255, 0.2)",
+    border: "0.75rem solid rgba(140, 180, 255, 0.2)",
     "border-top-color": "#bcd6ff",
     "border-radius": "50%",
     "box-shadow": "0 0 1rem rgba(140, 180, 255, 0.6)",
@@ -23,8 +23,8 @@ export function html_loading_spinner(parent) {
   let inner = html_div(spinner);
   html_style_assign(inner, {
     position: "absolute",
-    inset: "2rem",
-    border: "0.3rem solid rgba(140, 180, 255, 0.15)",
+    inset: "3rem",
+    border: "0.45rem solid rgba(140, 180, 255, 0.15)",
     "border-bottom-color": "#bcd6ff",
     "border-radius": "50%",
     animation: "html_loading_spin_reverse 1.4s linear infinite",
@@ -34,8 +34,8 @@ export function html_loading_spinner(parent) {
     position: "absolute",
     top: "50%",
     left: "50%",
-    width: "1.4rem",
-    height: "1.4rem",
+    width: "2.1rem",
+    height: "2.1rem",
     transform: "translate(-50%, -50%)",
     "border-radius": "50%",
     background: "radial-gradient(circle, #bcd6ff 0%, #4a90e2 70%)",
