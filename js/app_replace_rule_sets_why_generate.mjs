@@ -1,7 +1,7 @@
 import { app_replace_rule_sets_fns } from "./app_replace_rule_sets_fns.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { js_object_expression_properties_find_key_named } from "./js_object_expression_properties_find_key_named.mjs";
+import { js_object_expression_property_named_or_null } from "./js_object_expression_property_named_or_null.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_property_value_set } from "./js_property_value_set.mjs";
 import { js_string } from "./js_string.mjs";
@@ -50,7 +50,7 @@ export async function app_replace_rule_sets_why_generate() {
       }
       let f = list_find(list, lambda3);
       let property = "why";
-      let found = js_object_expression_properties_find_key_named(f, property);
+      let found = js_object_expression_property_named_or_null(f, property);
       let n = null_is(found);
       if (n) {
         let expression = js_parse_expression(property);
