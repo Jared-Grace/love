@@ -10,6 +10,7 @@ export function examples_groups() {
         "example_atomize_nested_call", // flatten a nested call — simplest transform
         "example_if_test_set_positive", // set an if-condition — a single slot edit
         "example_return_argument_set_positive", // set a return's argument — same setter shape, another node
+        "example_ir_identifier_replace", // replace an identifier with an expression, at every site
         "example_prune_unused_import", // remove one unused import — one localized edit
         "example_imports_paths_canonicalize", // rewrite one import to its canonical path
       ],
