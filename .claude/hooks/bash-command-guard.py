@@ -1834,17 +1834,19 @@ def main():
         return
 
     # Also a hard floor (before any allow decision, so a stray allow rule can't
-    # re-enable it): Claude must run repo functions through scripts/ai.mjs, not
-    # the human's r.mjs/rl.mjs/g.mjs seams. Denies routing around ai.mjs's
-    # full-name refusal and JSON output; the human's own terminal never passes
-    # through this hook, so this constrains only Claude.
-    non_ai_script = find_non_ai_dispatcher(command)
+    # re-enable it): Claude runs the repo only through scripts/ai.mjs. Every
+    # other scripts/ file - the human's r.mjs/rl.mjs/g.mjs seams and utilities -
+    # is denied, so nothing routes around ai.mjs's full-name refusal and JSON
+    # output. The human's own terminal never passes through this hook, so this
+    # constrains only Claude. The sandboxed throwaway (scripts/temp via unshare)
+    # is unaffected - its script is not in word position 1.
+    non_ai_script = find_non_ai_scripts_invocation(command)
     if non_ai_script:
         print(json.dumps({
             "hookSpecificOutput": {
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
-                "permissionDecisionReason": non_ai_dispatcher_deny_reason(non_ai_script),
+                "permissionDecisionReason": non_ai_scripts_deny_reason(non_ai_script),
             }
         }))
         return
