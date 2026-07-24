@@ -52,7 +52,6 @@ export async function app_verses(context) {
   let r = await app_reply_initialize(context);
   let languages = property_get(r, "languages");
   let root = property_get(r, "root");
-  let encouragement = property_get(r, "encouragement");
   let languages_chosen_default = app_reply_languages_chosen_default();
   let default_codes = list_map_property(
     languages_chosen_default,
