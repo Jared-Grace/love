@@ -1,6 +1,6 @@
 import { app_code_container_light_blue_border_color } from "./app_code_container_light_blue_border_color.mjs";
 import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
-import { app_code_padding_x } from "./app_code_padding_x.mjs";
+import { app_code_content_center_padding } from "./app_code_content_center_padding.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_border_y } from "./html_border_y.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
