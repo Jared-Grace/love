@@ -11,7 +11,6 @@ import { json_decompress } from "./json_decompress.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
-import { app_a_file_system_initialize } from "./app_a_file_system_initialize.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
@@ -19,7 +18,6 @@ import { file_path_temp } from "./file_path_temp.mjs";
 export async function file_overwrite_uncached(file_path, contents) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
-    await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     async function value_get(previous) {
       let p = "compressed";
