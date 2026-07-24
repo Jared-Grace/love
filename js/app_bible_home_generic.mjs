@@ -1,5 +1,5 @@
+import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
-import { html_max_width_centered } from "./html_max_width_centered.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
 import { app_bible_settings } from "./app_bible_settings.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
@@ -61,7 +61,8 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   ("center the reader in one column the code app's way: full-width scroll area (scrollbar at the window edge), content padded into the column");
-  app_shared_content_center_padding(content, app_shared_column_max_width());
+  let column = app_shared_column_max_width();
+  app_shared_content_center_padding(content, column);
   let bar = property_get(bc, "bar");
   html_centered(bar);
   bar_extra(bar);
