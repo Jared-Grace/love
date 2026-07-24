@@ -16,7 +16,7 @@ export function app_bible_settings(context) {
     await app_shared_screen_set_home(context);
   }
   app_shared_button_back(root, lambda_back);
-  "each entry opens its own registered screen";
+  ("each entry opens its own registered screen");
   let open_languages = app_shared_screen_later(context, app_bible_languages);
   let open_offline = app_shared_screen_later(context, app_bible_offline);
   app_shared_bible_settings_render(root, open_languages, open_offline);
