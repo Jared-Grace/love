@@ -1,3 +1,4 @@
+import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
 import { each_async } from "./each_async.mjs";
@@ -22,6 +23,8 @@ export async function app_autopray(context) {
         [verse_number],
       );
       await app_autopray_verse_show(root, reference, verse_text);
+      ("each verse clears the page and redraws, so add the way to reach the developer just after — the clear removes the previous one, so it never piles up");
+      app_shared_contact_button(root, app_autopray);
     }
     await each_async(verses, each_verse);
   }
