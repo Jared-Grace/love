@@ -21,8 +21,9 @@ export function app_shared_bible_offline_row(parent, language) {
     html_clear(row);
     let downloaded = ebible_offline_folder_downloaded_is(bible_folder);
     if (downloaded) {
+      let e = emoji_check();
       let saved = text_combine_multiple([
-        emoji_check(),
+        e,
         " ",
         name,
         " is saved on this device",
@@ -31,7 +32,8 @@ export function app_shared_bible_offline_row(parent, language) {
       app_shared_text_deemphasized(div);
       return;
     }
-    let save = text_combine_multiple([emoji_arrow_down(), " Save ", name]);
+    let e2 = emoji_arrow_down();
+    let save = text_combine_multiple([e2, " Save ", name]);
     app_shared_button(row, save, on_save);
   }
   async function on_save() {
@@ -64,7 +66,8 @@ export function app_shared_bible_offline_row(parent, language) {
       ]);
       let div2 = html_div_text(row, sorry);
       app_shared_text_deemphasized(div2);
-      let again = text_combine_multiple([emoji_arrow_down(), " Try again"]);
+      let e3 = emoji_arrow_down();
+      let again = text_combine_multiple([e3, " Try again"]);
       app_shared_button(row, again, on_save);
       return;
     }

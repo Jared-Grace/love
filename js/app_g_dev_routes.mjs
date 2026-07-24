@@ -14,7 +14,9 @@ import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { app_g_sky_demo_enable } from "./app_g_sky_demo_enable.mjs";
-import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
+import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
+import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
+import { property_set } from "./property_set.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -82,10 +84,12 @@ export function app_g_dev_routes() {
     app_g_pray_turn(prayer_texts, done);
   }
   async function sky() {
-    ("walk the map and watch the day drift: enable the sky demo (each MOVE steps the sky one colour, smoothly) and show the plain walkable map (no overlay). a live testbed for the smooth drift the real conversation uses");
+    ("walk the map and watch the day drift: enable the sky demo (each MOVE steps the sky one colour, smoothly) and show the plain walkable map (no overlay). STARTS AT NIGHT (phase 3) so the strongest tint is visible immediately; walking wraps night→morning→noon→afternoon. a live testbed for the smooth drift the real conversation uses");
     app_g_sky_demo_enable();
     await app_g_view_set(null);
-    await app_g_sky_reset();
+    let g = await app_g_game_save_get();
+    property_set(g, "sky_phase", 3);
+    await app_g_sky_snap();
   }
   let routes = {
     study,
