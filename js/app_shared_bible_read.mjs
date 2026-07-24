@@ -1,3 +1,4 @@
+import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -64,9 +65,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { app_shared_button_arrow_left } from "./app_shared_button_arrow_left.mjs";
 import { app_shared_button_arrow_right } from "./app_shared_button_arrow_right.mjs";
-import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
-import { app_shared_bible_offline_button } from "./app_shared_bible_offline_button.mjs";
-import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { app_shared_bible_book_chapter } from "./app_shared_bible_book_chapter.mjs";
 import { app_shared_bible_code_open } from "./app_shared_bible_code_open.mjs";
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
