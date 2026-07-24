@@ -12,23 +12,11 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 ("show). A GUARD (example.refuses) shows the before file-set + a red refusal line, no");
 ("after — nothing changes when the tool refuses. The DOM twin has no string-renderer.");
 export function example_files_card_dom(parent, example) {
-  let title = property_get(example, "title");
-  let note = property_get(example, "note");
-  let fn = property_get(example, "fn");
-  let alias = property_get(example, "alias");
-  let args = property_get(example, "args");
   let before = property_get(example, "before");
   let refuses = property_get_or_null(example, "refuses");
   let expect_text = property_get_or_null(example, "expectText");
   let after = refuses ? null : property_get(example, "after");
-  let card = example_card_container_dom(parent);
-  example_card_title_note_dom(card, title, note, alias);
-  example_label_dom(card, "function");
-  example_function_chip_dom(card, fn);
-  if (alias) {
-    example_label_dom(card, "command");
-    example_chip_dom(card, example_command_text(alias, args));
-  }
+  let card = example_card_header_dom(parent, example);
   let io = html_div(card);
   html_style_set(io, "display", "flex");
   html_style_set(io, "flex-direction", "column");
