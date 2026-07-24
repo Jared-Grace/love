@@ -295,6 +295,20 @@ narrowness for its own sake rather than a real risk closed. Any deviation
 - extra or reordered flags, a non-localhost URL, a different scheme -
 falls through to a real prompt exactly like the sandboxed-node templates.
 
+A tenth exception, `is_safe_scripts_temp_rm`, is the same shape as
+`is_safe_verify_html_rm` applied to this repo's `scripts/temp/` throwaway
+directory: file-only `rm` (same 'v'/'f'-only flag restriction) where every
+argument is an absolute path to a direct child of `<repo>/scripts/temp/`.
+That directory is gitignored (`/scripts/temp/`) and is the sanctioned home
+for disposable one-off scripts (see the sandboxed-node-script template,
+which only ever runs files from there), so anything directly inside it is
+as disposable as the scratchpad - no basename pattern is needed the way
+`is_safe_verify_html_rm` needs one for `public/` (which also holds real,
+served files). Path validation reuses the same character-allowlist +
+normpath-equality + direct-child checks as everywhere else, so `../`
+traversal, a nested subdirectory, or a glob character all fail closed to a
+real prompt.
+
 A fourth check, `is_dangerous_find`, goes the other direction: it
 *narrows* an existing broad allow rule instead of adding a new auto-allow
 path. `Bash(find:*)` is in permissions.allow for ordinary read-only
@@ -1116,6 +1130,52 @@ def is_safe_verify_html_rm(words):
     return all(is_safe_verify_html_path(p) for p in paths)
 
 
+SCRIPTS_TEMP_DIR = os.path.join(REPO_ROOT, "scripts", "temp") + os.sep
+
+
+def is_safe_scripts_temp_abs_path(path):
+    """True iff `path` is a plain, already-normalized absolute path to a file
+    directly inside this repo's `scripts/temp/` throwaway directory. Same
+    character-allowlist + normpath-equality checks as is_safe_verify_html_path
+    (blocking '../' traversal and '//' collapsing), plus a direct-child check
+    so this can't reach a nested subdirectory. Unlike is_safe_verify_html_path
+    there's no basename pattern: scripts/temp/ is gitignored and holds nothing
+    but disposable scratch files, so the directory confinement is itself the
+    whole safety boundary."""
+    if not SAFE_SCRATCHPAD_PATH_RE.match(path):
+        return False
+    if not path.startswith(SCRIPTS_TEMP_DIR):
+        return False
+    if os.path.normpath(path) != path:
+        return False
+    basename = os.path.basename(path)
+    # Direct child only - startswith(SCRIPTS_TEMP_DIR) alone wouldn't rule
+    # out scripts/temp/nested/x.mjs.
+    if os.path.join(SCRIPTS_TEMP_DIR, basename) != path:
+        return False
+    return bool(basename)
+
+
+def is_safe_scripts_temp_rm(words):
+    """Exact-shape exception for `rm`, sibling of is_safe_verify_html_rm:
+    file-only removal (same 'v'/'f'-only flag restriction) where every
+    argument passes is_safe_scripts_temp_abs_path. Cleans up the disposable
+    one-off scripts that live under scripts/temp/."""
+    if not words or words[0] != "rm":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(c not in RM_SAFE_FLAG_CHARS for c in flag_chars):
+                return False
+            continue
+        paths.append(word)
+    if not paths:
+        return False
+    return all(is_safe_scripts_temp_abs_path(p) for p in paths)
+
+
 GIT_RM_TMP_BASENAME_RE = re.compile(r"^(?:_tmp_|claude_tmp_)[A-Za-z0-9_.-]+$")
 
 
@@ -1410,6 +1470,7 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
             and not is_safe_verify_html_rm(words)
+            and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
             and not is_safe_curl_status_check(words)
         ):
