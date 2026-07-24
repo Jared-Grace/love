@@ -1,6 +1,6 @@
 import { js_functionize } from "./js_functionize.mjs";
 import { js_block_find } from "./js_block_find.mjs";
-import { js_visit_match } from "./js_visit_match.mjs";
+import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { property_get } from "./property_get.mjs";
 export async function app_a_functionize(a, f_name_new) {
   let context = property_get(a, "context");
@@ -8,7 +8,7 @@ export async function app_a_functionize(a, f_name_new) {
   function lambda(ai) {
     let node = property_get(ai, "node");
     let ast = property_get(ai, "ast");
-    let v_match = js_visit_match(ast, node);
+    let v_match = js_node_to_visitor(ast, node);
     let stack = property_get(v_match, "stack");
     let f = js_block_find(stack);
     return f;

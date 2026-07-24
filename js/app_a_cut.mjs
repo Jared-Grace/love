@@ -2,7 +2,7 @@ import { list_remove } from "./list_remove.mjs";
 import { app_a_paste } from "./app_a_paste.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 import { js_block_find } from "./js_block_find.mjs";
-import { js_visit_match } from "./js_visit_match.mjs";
+import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_a_cut(o, a) {
   let r = {
@@ -13,7 +13,7 @@ export function app_a_cut(o, a) {
       overlay_close();
       let ast = property_get(a, "ast");
       let node = property_get(a, "node");
-      let v_match = js_visit_match(ast, node);
+      let v_match = js_node_to_visitor(ast, node);
       let stack = property_get(v_match, "stack");
       let f = js_block_find(stack);
       let item = property_get(f, "item");
