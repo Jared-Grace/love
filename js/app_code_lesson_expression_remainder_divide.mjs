@@ -14,6 +14,8 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
+import { app_code_arrow } from "./app_code_arrow.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_divide() {
   "the LAST step of finding a remainder by dividing: subtract the whole part (quotient * divisor) from the number, and what is left is the remainder - 14 - 12 is 2, the same as 14 % 4; this closes the divide pipeline (integer division -> whole part -> this subtraction) and is the fast counterpart to finding the remainder by repeated subtraction; the answer is the leftover; divisor 3..6, quotient 2..3, leftover 1..divisor-1";
@@ -59,10 +61,7 @@ export function app_code_lesson_expression_remainder_divide() {
   }
   function above(root) {
     let setup = app_code_container_light_blue(root);
-    html_div_cycle_code(setup, [
-      "You found the whole part - as much of the number as splits evenly into the divisor",
-    ]);
-    html_div_cycle_code(setup, ["", "14 / 4", " :"]);
+    html_div_cycle_code(setup, ["For ", "14 / 4", " :"]);
     html_div_cycle_code(setup, ["", "14", " is the dividend"]);
     html_div_cycle_code(setup, ["", "4", " is the divisor"]);
     html_div_cycle_code(setup, [
@@ -71,7 +70,10 @@ export function app_code_lesson_expression_remainder_divide() {
       ", so the quotient is ",
       "3",
     ]);
-    html_div_cycle_code(setup, ["quotient * divisor → ", "3 * 4 === 12"]);
+    let step = app_code_row_flex_center(setup);
+    html_span_text_code_dark(step, "quotient * divisor");
+    app_code_arrow(step);
+    html_span_text_code_dark(step, "3 * 4 === 12");
     html_div_cycle_code(setup, ["So the whole part is ", "12"]);
     let properties = app_code_container_light_blue(root);
     html_div_cycle_code(properties, [
@@ -83,7 +85,9 @@ export function app_code_lesson_expression_remainder_divide() {
     html_div_cycle_code(properties, [
       "The divisor (",
       "4",
-      ") always evenly divides into the whole part",
+      ") always evenly divides into the whole part (",
+      "12",
+      ")",
     ]);
     html_div_cycle_code(properties, [
       "However ",
@@ -101,9 +105,7 @@ export function app_code_lesson_expression_remainder_divide() {
     html_div_cycle_code(properties, [
       "The whole part (",
       "12",
-      ") is always the largest number, that is evenly divided by the divisor (",
-      "4",
-      "), that is not larger than the dividend (",
+      ") is always the largest number, that can be evenly divided by the divisor, that is not larger than the dividend (",
       "14",
       ")",
     ]);
