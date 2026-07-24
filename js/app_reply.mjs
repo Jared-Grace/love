@@ -47,7 +47,8 @@ export async function app_reply(context) {
   languages_chosen_reset();
   let root = property_get(r, "root");
   let en = property_get(r, "en");
-  let encouragement = property_get(r, "encouragement");
+  "app_reply keeps the authored list in its own bundle; the verses app, by contrast, now fetches it from firebase";
+  let encouragement = bible_verses_uplifting();
   let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
   let bible_texts = [];
   let responses = [];

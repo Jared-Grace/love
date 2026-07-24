@@ -8,7 +8,8 @@ import { app_shared_message_overlay } from "../../love/js/app_shared_message_ove
 import { browser_online_is } from "../../love/js/browser_online_is.mjs";
 import { emoji_pray } from "../../love/js/emoji_pray.mjs";
 import { list_map_unordered_async } from "../../love/js/list_map_unordered_async.mjs";
-import { list_unique } from "../../love/js/list_unique.mjs";
+import { uplifting_references_get } from "../../love/js/uplifting_references_get.mjs";
+import { null_not_is } from "../../love/js/null_not_is.mjs";
 import { list_copy } from "../../love/js/list_copy.mjs";
 import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
 import { html_centered } from "../../love/js/html_centered.mjs";
@@ -73,9 +74,15 @@ export async function app_verses(context) {
   let offline_notified = false;
   let apply_seq = 0;
   let chosen_references = [];
-  let order = list_copy(list_unique(encouragement));
-  list_shuffle(order);
-  order_standalone_first();
+  "the list of which verses to draw from lives in firebase as data, not baked into this app, so it can change without a rebuild; until it loads (or if offline with a cold cache) order stays empty and a returning reader still sees their last saved draw";
+  let order = [];
+  let references_source = await uplifting_references_get();
+  let have_references = null_not_is(references_source);
+  if (have_references) {
+    order = list_copy(references_source);
+    list_shuffle(order);
+    order_standalone_first();
+  }
   let bc = html_bar_content_padded(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
@@ -171,6 +178,10 @@ export async function app_verses(context) {
   }
   function order_standalone_first() {
     "asking for a single verse shows the first reference, so keep a standalone verse there, never a multi-verse range";
+    let none = list_empty_is(order);
+    if (none) {
+      return;
+    }
     let first_reference = list_first(order);
     let first_is_range = text_includes(first_reference, "-");
     if (first_is_range) {
