@@ -1,5 +1,7 @@
 import { app_code_quiz_index_reset } from "../../love/js/app_code_quiz_index_reset.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
+import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
+import { app_shared_spaced_gap } from "../../love/js/app_shared_spaced_gap.mjs";
 import { app_code_home } from "../../love/js/app_code_home.mjs";
 import { app_shared_button_home_text } from "../../love/js/app_shared_button_home_text.mjs";
 import { app_code_examples } from "../../love/js/app_code_examples.mjs";
@@ -63,4 +65,5 @@ export function app_code_quiz(context) {
   }
   let g = app_code_container_padded_x(root);
   let b3 = app_shared_button_wide(g, text, lambda2);
+  html_style_margin_top(b3, app_shared_spaced_gap());
 }
