@@ -1,3 +1,4 @@
+import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { equal } from "./equal.mjs";
@@ -111,8 +112,7 @@ export async function app_shared_bible_read(context, verse_action) {
   let c = property_get_or(hash, "c", "");
   let b = property_get_or(hash, "b", "");
   let ref = property_get_or(hash, "ref", "");
-  let list = text_split(ref, "+");
-  let ref_line = list_join(list, " ");
+  let ref_line = text_replace(ref, "+", " ");
   let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let language = list_last(languages_chosen);

@@ -1,5 +1,4 @@
-import { object_values } from "./object_values.mjs";
-import { object_values_map } from "./object_values_map.mjs";
+import { object_values_map_list } from "./object_values_map_list.mjs";
 export function object_to_list_names(o, key_name, value_name) {
   function lambda(value, key) {
     let v = {
@@ -8,7 +7,6 @@ export function object_to_list_names(o, key_name, value_name) {
     };
     return v;
   }
-  let result = object_values_map(o, lambda);
-  let list = object_values(result);
+  let list = object_values_map_list(o, lambda);
   return list;
 }
