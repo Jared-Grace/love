@@ -1,7 +1,5 @@
 import { each_async } from "./each_async.mjs";
 import { function_auto } from "./function_auto.mjs";
 export async function function_auto_multiple(list) {
-  await each_async(list, async function lambda(item) {
-    await function_auto(item);
-  });
+  await each_unordered_async(list, function_auto);
 }
