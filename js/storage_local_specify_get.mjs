@@ -7,7 +7,7 @@ export function storage_local_specify_get(storage_local_key) {
   let nn = null_not_is(json);
   let result = null;
   if (nn) {
-    let r = json_from(json);
+    let r = storage_json_parse_or_throw(storage_local_key, json);
     result = property_get(r, "value");
   }
   return result;
