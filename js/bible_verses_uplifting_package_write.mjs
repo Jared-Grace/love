@@ -1,7 +1,5 @@
-import { file_overwrite } from "./file_overwrite.mjs";
-import { folder_public_join } from "./folder_public_join.mjs";
-import { user_repo_path_combine } from "./user_repo_path_combine.mjs";
-import { json_to } from "./json_to.mjs";
+import { uplifting_package_destination } from "./uplifting_package_destination.mjs";
+import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
@@ -103,10 +101,8 @@ export async function bible_verses_uplifting_package_write(bible_folder) {
   if (empty) {
     return count;
   }
-  let name = text_combine_multiple(["bible/uplifting/", bible_folder, ".json"]);
-  let joined_path = folder_public_join(name);
-  let path = await user_repo_path_combine(joined_path);
-  let json = json_to(map);
-  await file_overwrite(path, json);
+  "upload the built package straight to firebase storage — the verse text is served from the bucket, not deployed as a hosting file, so there is no transient public copy to write then push";
+  let destination = uplifting_package_destination(bible_folder);
+  await firebase_upload_object(destination, map);
   return count;
 }
