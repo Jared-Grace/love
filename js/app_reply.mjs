@@ -50,7 +50,7 @@ export async function app_reply(context) {
   languages_chosen_reset();
   let root = property_get(r, "root");
   let en = property_get(r, "en");
-  "the legacy reply app keeps the authored list in its own bundle; the verses app, by contrast, now fetches the list from firebase as data";
+  ("the legacy reply app keeps the authored list in its own bundle; the verses app, by contrast, now fetches the list from firebase as data");
   let encouragement = bible_verses_uplifting();
   let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
   let bible_texts = [];
