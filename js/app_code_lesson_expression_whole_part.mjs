@@ -77,7 +77,7 @@ export function app_code_lesson_expression_whole_part() {
     ]);
     let evaluating = app_code_container_light_blue(root);
     html_div_cycle_code(evaluating, [
-      "Evaluate the formula one step at a time:",
+      "Solve the formula one step at a time:",
     ]);
     html_div_cycle_code(evaluating, ["", "Math.floor(14 / 4)", " is ", "3"]);
     html_div_cycle_code(evaluating, [
