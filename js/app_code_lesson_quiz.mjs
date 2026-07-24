@@ -31,7 +31,7 @@ import { property_get_or } from "../../love/js/property_get_or.mjs";
 import { text_combine } from "../../love/js/text_combine.mjs";
 import { app_code_button_skip_lesson } from "../../love/js/app_code_button_skip_lesson.mjs";
 import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
-import { app_shared_spaced_large_gap } from "../../love/js/app_shared_spaced_large_gap.mjs";
+import { app_shared_spaced_gap } from "../../love/js/app_shared_spaced_gap.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -90,7 +90,7 @@ export function app_code_lesson_quiz(
     }
   }
   let next_button = app_shared_button_wide_next(parent_container, on_next);
-  html_style_margin_top(next_button, app_shared_spaced_large_gap());
+  html_style_margin_top(next_button, app_shared_spaced_gap());
   let last_lesson_end = qli && no_more;
   if (last_lesson_end) {
     "Next is ALWAYS shown so the learner can always move on; at the very end it wraps back to the first lesson, and this note tells them they have reached the last one";
@@ -106,7 +106,7 @@ export function app_code_lesson_quiz(
     "Show me the answer",
     on_reveal,
   );
-  html_style_margin_top(reveal_button, app_shared_spaced_large_gap());
+  html_style_margin_top(reveal_button, app_shared_spaced_gap());
   if (not(qli)) {
     app_code_button_skip_lesson(context, parent_container);
   }
@@ -119,7 +119,7 @@ export function app_code_lesson_quiz(
     let back_text = text_combine(left, " to the previous quiz");
     "set the go-back button apart from the forward actions (Show me the answer) above it with a larger gap, so it reads as a separate step rather than crowding them";
     let back_button = app_shared_button_wide(parent_container, back_text, on_back);
-    html_style_margin_top(back_button, app_shared_spaced_large_gap());
+    html_style_margin_top(back_button, app_shared_spaced_gap());
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
