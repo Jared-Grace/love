@@ -16,13 +16,15 @@ export function app_bible_languages(context) {
     "write the chosen languages back to the url hash (key l) so the choice is shareable, survives a reload, and matches the chapter reader";
     let codes = list_map_property(languages_chosen, "language_code");
     if (list_empty_is(codes)) {
-      codes = [ebible_language_en_code()];
+      let v = ebible_language_en_code();
+      codes = [v];
     }
     let l = list_join_plus(codes);
     html_hash_property_set("l", l);
   }
-  "reached from the settings hub, so back returns there";
+  ("reached from the settings hub, so back returns there");
   let back = app_shared_screen_later(context, app_bible_settings);
+  let choices_label = app_shared_languages_prompt_text();
   app_bible_subset_screen_generic(
     context,
     languages,
@@ -30,7 +32,7 @@ export function app_bible_languages(context) {
     "name",
     "language_code",
     on_change,
-    app_shared_languages_prompt_text(),
+    choices_label,
     back,
   );
 }
