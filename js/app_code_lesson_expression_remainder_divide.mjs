@@ -124,7 +124,7 @@ export function app_code_lesson_expression_remainder_divide() {
       "14",
       ") to find what is left over:",
     ]);
-    html_div_cycle_code(result, ["", "14 - 12", " is ", "2"]);
+    html_div_cycle_code(result, ["", "14 - 12 === 2"]);
     html_div_cycle_code(result, ["So ", "2", " is the remainder"]);
     html_div_cycle_code(result, ["This is the same as ", "14 % 4", " :"]);
     html_div_cycle_code(result, ["", "14 % 4 === 2"]);
