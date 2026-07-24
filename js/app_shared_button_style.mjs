@@ -1,11 +1,12 @@
-import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
-import { app_shared_button_background_color } from "../../love/js/app_shared_button_background_color.mjs";
-import { app_shared_symbol_tile_style } from "../../love/js/app_shared_symbol_tile_style.mjs";
-import { html_border } from "../../love/js/html_border.mjs";
-import { app_shared_color_gray } from "../../love/js/app_shared_color_gray.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_shared_button_background_color } from "./app_shared_button_background_color.mjs";
+import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
+import { html_border } from "./html_border.mjs";
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
 export function app_shared_button_style(b) {
   app_shared_symbol_tile_style(b);
   let c = app_shared_button_background_color();
   html_style_background_color_set(b, c);
-  html_border(b, "0.05em", app_shared_color_gray());
+  let border_color = app_shared_color_gray();
+  html_border(b, "0.05em", border_color);
 }
