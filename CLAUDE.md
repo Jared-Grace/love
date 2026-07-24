@@ -59,7 +59,7 @@ Two `ao` gotchas, both worth designing around:
 
 ## Two seams: `ai.mjs` for Claude, `r.mjs` for the human
 
-Same dispatcher, two audiences. **Claude runs `node scripts/ai.mjs <full_fn_name>`** — every permission rule names that seam, so `r.mjs` now prompts.
+Same dispatcher, two audiences. **Claude runs `node scripts/ai.mjs <full_fn_name>`** — every permission rule names that seam. The bash guard **hard-denies every other `node scripts/…` for Claude** (`r.mjs`/`rl.mjs`/`g.mjs` and the human's utilities alike) — a floor before the allow decision, so no rule can reopen it. This constrains only Claude: the human's own terminal never passes through the hook. The one carve-out is the sandboxed throwaway (`scripts/temp` via the `unshare … --permission` form below), which stays allowed.
 
 - **Full names only.** `ai.mjs` refuses both shorthands — an alias key (`fb`) and an auto-derived acronym (`hud`) — and the error names the function it would have run. A permission rule is matched as *literal text*, so a rule can only ever name what actually runs; shorthand would let a repointed alias silently redirect a granted rule. The human keeps shorthand on `r.mjs`, where keystrokes cost something.
 - **Results print as JSON.** `r.mjs` prints through `console.log`, whose `util.inspect` silently abbreviates — `[Object]` past depth 2, `... N more items` past 100, truncated strings — and you cannot tell elision from data. (Real case: `folder_read_files js` shows 100 entries and hides `... 5416 more items`.) `ai.mjs` prints lossless JSON.

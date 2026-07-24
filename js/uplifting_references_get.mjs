@@ -10,7 +10,8 @@ export async function uplifting_references_get() {
   let key = "references";
   let cached = global_function_property_exists(uplifting_references_get, key);
   if (cached) {
-    return global_function_property_get(uplifting_references_get, key);
+    let value = global_function_property_get(uplifting_references_get, key);
+    return value;
   }
   let url = uplifting_references_url();
   async function fetch_references() {
