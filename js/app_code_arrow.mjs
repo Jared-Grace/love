@@ -10,7 +10,8 @@ export function app_code_arrow(parent) {
   let text = app_code_arrow_svg();
   html_text_set(arrow, text);
   ("the svg fills with currentColor, so this colours it - a theme blue instead of hard black, softer than the code chips while still clear on the light-blue container");
-  html_font_color_set(arrow, app_shared_color_blue_dark());
+  let color = app_shared_color_blue_dark();
+  html_font_color_set(arrow, color);
   ("flex + line-height 0 makes the wrapper exactly as tall as the drawing, so the row centres it against the chips and gains no extra height");
   html_style_set(arrow, "display", "flex");
   html_style_set(arrow, "align-items", "center");
