@@ -1,54 +1,55 @@
-import { list_filter_text_includes_not } from "../../love/js/list_filter_text_includes_not.mjs";
-import { emoji_arrows_crossed } from "../../love/js/emoji_arrows_crossed.mjs";
-import { text_combine } from "../../love/js/text_combine.mjs";
-import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
-import { app_reply_verses_add_uplifting } from "../../love/js/app_reply_verses_add_uplifting.mjs";
-import { uplifting_package_get } from "../../love/js/uplifting_package_get.mjs";
-import { app_shared_message_overlay } from "../../love/js/app_shared_message_overlay.mjs";
-import { browser_online_is } from "../../love/js/browser_online_is.mjs";
-import { emoji_pray } from "../../love/js/emoji_pray.mjs";
-import { list_map_unordered_async } from "../../love/js/list_map_unordered_async.mjs";
-import { uplifting_references_get } from "../../love/js/uplifting_references_get.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
-import { list_copy } from "../../love/js/list_copy.mjs";
-import { html_bar_content_padded } from "../../love/js/html_bar_content_padded.mjs";
-import { html_centered } from "../../love/js/html_centered.mjs";
-import { app_shared_bible_languages_gear } from "../../love/js/app_shared_bible_languages_gear.mjs";
-import { app_shared_language_codes_saved_or } from "../../love/js/app_shared_language_codes_saved_or.mjs";
-import { html_hash_object_get } from "../../love/js/html_hash_object_get.mjs";
-import { property_get_or } from "../../love/js/property_get_or.mjs";
-import { text_split_plus } from "../../love/js/text_split_plus.mjs";
-import { list_join_plus } from "../../love/js/list_join_plus.mjs";
-import { list_map_property } from "../../love/js/list_map_property.mjs";
-import { list_map } from "../../love/js/list_map.mjs";
-import { list_find_property_or_null } from "../../love/js/list_find_property_or_null.mjs";
-import { list_filter_null_not_is } from "../../love/js/list_filter_null_not_is.mjs";
-import { app_reply_initialize } from "../../love/js/app_reply_initialize.mjs";
-import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
-import { app_shared_contact_button } from "../../love/js/app_shared_contact_button.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { app_shared_button_toggle_style } from "../../love/js/app_shared_button_toggle_style.mjs";
-import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
-import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
-import { html_clear } from "../../love/js/html_clear.mjs";
-import { html_display_none_or_block } from "../../love/js/html_display_none_or_block.mjs";
-import { list_shuffle } from "../../love/js/list_shuffle.mjs";
-import { list_take } from "../../love/js/list_take.mjs";
-import { list_first } from "../../love/js/list_first.mjs";
-import { list_swap_first } from "../../love/js/list_swap_first.mjs";
-import { text_includes } from "../../love/js/text_includes.mjs";
-import { list_join_newline_2_copy } from "../../love/js/list_join_newline_2_copy.mjs";
-import { list_empty } from "../../love/js/list_empty.mjs";
-import { list_empty_is } from "../../love/js/list_empty_is.mjs";
-import { list_add } from "../../love/js/list_add.mjs";
-import { list_add_multiple } from "../../love/js/list_add_multiple.mjs";
-import { null_is } from "../../love/js/null_is.mjs";
-import { app_verses_draw_save } from "../../love/js/app_verses_draw_save.mjs";
-import { app_verses_draw_get } from "../../love/js/app_verses_draw_get.mjs";
-import { each } from "../../love/js/each.mjs";
-import { each_async } from "../../love/js/each_async.mjs";
-import { equal } from "../../love/js/equal.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
+import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
+import { app_reply_verses_add_uplifting } from "./app_reply_verses_add_uplifting.mjs";
+import { uplifting_package_get } from "./uplifting_package_get.mjs";
+import { app_shared_message_overlay } from "./app_shared_message_overlay.mjs";
+import { browser_online_is } from "./browser_online_is.mjs";
+import { emoji_pray } from "./emoji_pray.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { uplifting_references_get } from "./uplifting_references_get.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { list_copy } from "./list_copy.mjs";
+import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { app_shared_bible_languages_gear } from "./app_shared_bible_languages_gear.mjs";
+import { app_shared_language_codes_saved_or } from "./app_shared_language_codes_saved_or.mjs";
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { text_split_plus } from "./text_split_plus.mjs";
+import { list_join_plus } from "./list_join_plus.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { app_reply_initialize } from "./app_reply_initialize.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
+import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
+import { list_take } from "./list_take.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_swap_first } from "./list_swap_first.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
+import { list_empty } from "./list_empty.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { null_is } from "./null_is.mjs";
+import { app_verses_draw_save } from "./app_verses_draw_save.mjs";
+import { app_verses_draw_get } from "./app_verses_draw_get.mjs";
+import { each } from "./each.mjs";
+import { each_async } from "./each_async.mjs";
+import { equal } from "./equal.mjs";
+import { property_get } from "./property_get.mjs";
 export async function app_verses(context) {
   let r = await app_reply_initialize(context);
   let languages = property_get(r, "languages");
@@ -65,7 +66,8 @@ export async function app_verses(context) {
   let l = property_get_or(hash, "l", remembered_l);
   let language_codes = text_split_plus(l);
   function code_to_language(code) {
-    return list_find_property_or_null(languages, "language_code", code);
+    let r2 = list_find_property_or_null(languages, "language_code", code);
+    return r2;
   }
   let mapped = list_map(language_codes, code_to_language);
   let languages_chosen = list_filter_null_not_is(mapped);
@@ -74,7 +76,7 @@ export async function app_verses(context) {
   let offline_notified = false;
   let apply_seq = 0;
   let chosen_references = [];
-  "the list of which verses to draw from lives in firebase as data, not baked into this app, so it can change without a rebuild; until it loads (or if offline with a cold cache) order stays empty and a returning reader still sees their last saved draw";
+  ("the list of which verses to draw from lives in firebase as data, not baked into this app, so it can change without a rebuild; until it loads (or if offline with a cold cache) order stays empty and a returning reader still sees their last saved draw");
   let order = [];
   let references_source = await uplifting_references_get();
   let have_references = null_not_is(references_source);
@@ -92,8 +94,8 @@ export async function app_verses(context) {
     content,
     "1. Tap the ⚙️ button above to choose which language or languages your verses appear in.",
   );
-  let card2 = app_shared_container_blue(content);
-  app_shared_text_body(card2, "2. How many Bible verses would you like?");
+  let card = app_shared_container_blue(content);
+  app_shared_text_body(card, "2. How many Bible verses would you like?");
   let counts = [1, 2, 3, 4, 6, 8, 10, 20, 40];
   let count_updates = [];
   function count_each(c) {
@@ -103,7 +105,7 @@ export async function app_verses(context) {
       counts_refresh();
       await draw_fresh(false);
     }
-    component = app_shared_button(card2, c, on_click);
+    component = app_shared_button(card, c, on_click);
     function update() {
       let chosen = equal(verse_count, c);
       app_shared_button_toggle_style(chosen, component);
@@ -117,16 +119,15 @@ export async function app_verses(context) {
     card3,
     "3. Whenever you would like a different set, tap the button below. Your verses are lovingly copied for you each time.",
   );
-  let reroll_button = app_shared_button(
-    card3,
-    text_combine(emoji_arrows_crossed(), " New verses"),
-    reroll,
-  );
+  let left = emoji_arrows_crossed();
+  let text = text_combine(left, " New verses");
+  let reroll_button = app_shared_button(card3, text, reroll);
   app_shared_text_body(
     card3,
     "If the copy did not work, this button will gently copy them again.",
   );
-  let copy_button = app_shared_button(card3, html_button_copy_text(), copy);
+  let text2 = html_button_copy_text();
+  let copy_button = app_shared_button(card3, text2, copy);
   let card4 = app_shared_container_blue(content);
   card4_refresh();
   app_shared_contact_button(content, app_verses);
@@ -168,8 +169,9 @@ export async function app_verses(context) {
         return true;
       }
       offline_notified = true;
+      let emoji_text = emoji_pray();
       app_shared_message_overlay(
-        emoji_pray(),
+        emoji_text,
         "It looks like you are not connected to the internet right now. Please reconnect, then choose your verses again — they will be waiting for you.",
       );
       return true;
@@ -205,7 +207,7 @@ export async function app_verses(context) {
       return;
     }
     let texts = await references_to_texts(references);
-    let superseded = my_seq !== apply_seq;
+    let superseded = not_equal(my_seq, apply_seq);
     if (superseded) {
       ("a newer tap started while these verses were being gathered, so drop this stale result rather than let two renders fight over the display");
       return;
