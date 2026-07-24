@@ -97,8 +97,8 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
     app_bible_verses,
     verse_number_hash,
   );
-  let text2 = app_shared_gear_languages_text();
-  app_shared_screen_set_button(bar, context, app_bible_languages, text2);
+  let text2 = app_shared_gear_settings_text();
+  app_shared_screen_set_button(bar, context, app_bible_settings, text2);
   let verse_numbers_chosen = [];
   let languages_verses = [];
   let updates = [];
@@ -110,7 +110,6 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let verse_number = property_get(verse_current, "verse_number");
   let text = property_get(verse_current, "text");
   let languages_chosen = app_bible_languages_chosen_get();
-  app_shared_bible_offline_button(bar, content, languages_chosen);
   async function lambda_language(lc) {
     let bible_folder = property_get(lc, "bible_folder");
     async function get() {
