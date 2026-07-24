@@ -842,6 +842,19 @@ def dispatcher_script_is(word):
             return True
     return False
 
+
+# The one dispatcher Claude runs. ai.mjs refuses shorthand (full names only)
+# and prints lossless JSON; r.mjs/rl.mjs/g.mjs are the human's seams. Claude
+# invoking any of the others directly is denied below - not because they are
+# unsafe, but so the safety properties of ai.mjs can't be routed around and so
+# every permission rule keeps naming exactly one seam. See CLAUDE.md "Two seams".
+AI_DISPATCHER_SCRIPT = "scripts/ai.mjs"
+
+
+def ai_script_is(word):
+    """True when `word` names scripts/ai.mjs, relative or absolute."""
+    return word == AI_DISPATCHER_SCRIPT or word.endswith("/" + AI_DISPATCHER_SCRIPT)
+
 # git global options that take NO argument and cannot inject an executable or
 # change how a subcommand is resolved - so skipping them before reading the
 # subcommand (see verb_of) never widens trust beyond the subcommand's own
@@ -1727,6 +1740,46 @@ def find_denied_dispatcher_function(command):
     return None
 
 
+def find_non_ai_dispatcher(command):
+    """If `command` directly invokes `node <dispatcher>` for a dispatcher other
+    than scripts/ai.mjs (r.mjs / rl.mjs / g.mjs), return that script path so
+    main() can DENY it; else None. Claude runs functions only through ai.mjs;
+    the others are the human's seams and would route around ai.mjs's full-name
+    refusal and JSON output.
+
+    Matches the same `node <script> ...` shape as the eval floor: the script in
+    word position 1 after the usual prefix-strip (assignments, time/timeout/
+    xargs). This deliberately does NOT catch the sanctioned sandboxed throwaway
+    (`unshare ... node --permission ... scripts/temp/x.mjs`), whose script arg
+    is not in position 1 - that path stays allowed by is_safe_sandboxed_node_*.
+    An unparseable command returns None and falls through to normal handling."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if (
+            len(words) >= 2
+            and words[0] == "node"
+            and dispatcher_script_is(words[1])
+            and not ai_script_is(words[1])
+        ):
+            return words[1]
+    return None
+
+
+def non_ai_dispatcher_deny_reason(script):
+    return (
+        f"`node {script}` is refused: Claude runs repo functions only through "
+        "scripts/ai.mjs, which takes full function names (no alias/acronym) and "
+        "prints lossless JSON. r.mjs/rl.mjs/g.mjs are the human's seams. Re-run "
+        "the same function via `node scripts/ai.mjs <full_function_name> "
+        "<args>`. See CLAUDE.md - 'Two seams: ai.mjs for Claude, r.mjs for the "
+        "human'."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "
@@ -1767,6 +1820,22 @@ def main():
                 "permissionDecisionReason": (
                     dispatcher_deny_reason(denied_fn) if denied_fn else NODE_EVAL_DENY_REASON
                 ),
+            }
+        }))
+        return
+
+    # Also a hard floor (before any allow decision, so a stray allow rule can't
+    # re-enable it): Claude must run repo functions through scripts/ai.mjs, not
+    # the human's r.mjs/rl.mjs/g.mjs seams. Denies routing around ai.mjs's
+    # full-name refusal and JSON output; the human's own terminal never passes
+    # through this hook, so this constrains only Claude.
+    non_ai_script = find_non_ai_dispatcher(command)
+    if non_ai_script:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": non_ai_dispatcher_deny_reason(non_ai_script),
             }
         }))
         return

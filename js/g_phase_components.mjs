@@ -32,6 +32,7 @@ export function g_phase_components(phase) {
     a: lerp("a"),
     light: lerp("light"),
     contrast: lerp("contrast"),
+    saturate: lerp("saturate"),
   };
   return c;
 }
