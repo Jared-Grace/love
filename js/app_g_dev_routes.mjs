@@ -84,11 +84,11 @@ export function app_g_dev_routes() {
     app_g_pray_turn(prayer_texts, done);
   }
   async function sky() {
-    ("walk the map and watch the day drift: enable the sky demo (each MOVE steps the sky one colour, smoothly) and show the plain walkable map (no overlay). STARTS AT NIGHT (phase 3) so the strongest tint is visible immediately; walking wraps night→morning→noon→afternoon. a live testbed for the smooth drift the real conversation uses");
+    ("walk the map and watch the day drift: enable the sky demo (each MOVE steps the sky one colour, smoothly) and show the plain walkable map (no overlay). STARTS AT AFTERNOON (phase 2) so the first two moves walk afternoon→sunset→night — the exact transition the PROTOTYPE sunset keyframe is being evaluated on; keeps wrapping through morning→noon. a live testbed for the smooth drift the real conversation uses");
     app_g_sky_demo_enable();
     await app_g_view_set(null);
     let g = await app_g_game_save_get();
-    property_set(g, "sky_phase", 3);
+    property_set(g, "sky_phase", 2);
     await app_g_sky_snap();
   }
   let routes = {
