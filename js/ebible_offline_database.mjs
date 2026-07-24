@@ -31,7 +31,9 @@ export async function ebible_offline_database() {
       };
       request.onblocked = function lambda5() {
         "another tab of this app still holds the database open, so this upgrade cannot proceed; fail loudly instead of hanging so the reader is asked to try again";
-        let v3 = reject(new Error("ebible offline database is open in another tab"));
+        let v3 = reject(
+          new Error("ebible offline database is open in another tab"),
+        );
         return v3;
       };
     });
@@ -48,7 +50,7 @@ export async function ebible_offline_database() {
       let db = await open_bounded();
       return db;
     } catch (e) {
-      "drop the remembered attempt so the next save re-opens once the other tab lets go, rather than being poisoned by this one failure for the rest of the session";
+      ("drop the remembered attempt so the next save re-opens once the other tab lets go, rather than being poisoned by this one failure for the rest of the session");
       global_function_property_delete(ebible_offline_database, "database");
       throw e;
     }

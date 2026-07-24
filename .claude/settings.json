@@ -40,6 +40,7 @@
       "Bash(node scripts/ai.mjs app_shared_dev_build:*)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid_assert)",
+      "Bash(node scripts/ai.mjs file_imports_repair:*)",
       "Bash(node scripts/ai.mjs firebase_deploy)",
       "Bash(node scripts/ai.mjs function_auto:*)",
       "Bash(node scripts/ai.mjs function_auto_multiple:*)",
