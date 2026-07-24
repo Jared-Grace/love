@@ -102,7 +102,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=white,bg=red,bold'",
+            "command": "sh /home/j/repos/love/.claude/hooks/tmux_notification_mark.sh",
             "timeout": 5
           },
           {
