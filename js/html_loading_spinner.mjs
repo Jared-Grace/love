@@ -7,10 +7,10 @@ export function html_loading_spinner(parent) {
   html_style_assign(spinner, {
     width: "6rem",
     height: "6rem",
-    border: "0.5rem solid rgba(255, 213, 74, 0.2)",
-    "border-top-color": "#ffd54a",
+    border: "0.5rem solid rgba(255, 248, 232, 0.2)",
+    "border-top-color": "#fff8e8",
     "border-radius": "50%",
-    "box-shadow": "0 0 1rem rgba(255, 213, 74, 0.6)",
+    "box-shadow": "0 0 1rem rgba(255, 248, 232, 0.6)",
     animation:
       "html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite",
   });
