@@ -1,3 +1,4 @@
+import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -223,4 +224,5 @@ export async function app_reply(context) {
   function typed_reset() {
     typed = "";
   }
+  app_shared_contact_button(root, app_reply);
 }
