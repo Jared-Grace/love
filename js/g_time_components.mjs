@@ -7,7 +7,7 @@ export function g_time_components(time) {
     afternoon: { r: 255, g: 120, b: 30, a: 0.55, saturate: 1, darkness: 0.2 },
     sunset: { r: 250, g: 60, b: 140, a: 0.7, saturate: 0.5, darkness: 0.52 },
     night: { r: 10, g: 50, b: 250, a: 0.95, saturate: 0.1, darkness: 1 },
-    sunrise: { r: 255, g: 145, b: 165, a: 0.58, saturate: 0.7, darkness: 0.5 },
+    sunrise: { r: 255, g: 140, b: 178, a: 0.62, saturate: 0.55, darkness: 0.48 },
   };
   let base = property_get(bases, time);
   return base;
