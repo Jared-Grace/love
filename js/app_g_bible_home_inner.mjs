@@ -1,7 +1,7 @@
 import { integer_to_try_multiple_max_text_to } from "./integer_to_try_multiple_max_text_to.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_copy } from "./list_copy.mjs";
-import { list_empty } from "./list_empty.mjs";
+import { list_clear } from "./list_clear.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_bible_home_generic } from "./app_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
@@ -29,7 +29,7 @@ export async function app_g_bible_home_inner(context, download) {
             passage,
             verses: copy,
           });
-          list_empty(verses);
+          list_clear(verses);
         }
       }
       each(passages, lambda2);

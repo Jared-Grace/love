@@ -39,7 +39,7 @@ import { list_first } from "./list_first.mjs";
 import { list_swap_first } from "./list_swap_first.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { list_empty } from "./list_empty.mjs";
+import { list_clear } from "./list_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -213,7 +213,7 @@ export async function app_verses(context) {
       return;
     }
     chosen_references = references;
-    list_empty(bible_texts);
+    list_clear(bible_texts);
     list_add_multiple(bible_texts, texts);
     display();
     app_verses_draw_save({
