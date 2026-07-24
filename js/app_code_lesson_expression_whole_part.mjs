@@ -70,7 +70,7 @@ export function app_code_lesson_expression_whole_part() {
   function above(root) {
     let recall = app_code_container_light_blue(root);
     html_div_cycle_code(recall, [
-      "The whole part of ",
+      "Remember, the whole part of ",
       "14 / 4",
       " is ",
       "Math.floor(14 / 4) * 4",
