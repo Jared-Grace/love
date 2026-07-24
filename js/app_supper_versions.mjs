@@ -11,8 +11,8 @@ export async function app_supper_versions(context) {
   function on_change() {
     app_supper_versions_hash_set(chosen);
   }
-  function back() {
-    app_shared_screen_set_home(context);
+  async function back() {
+    await app_shared_screen_set_home(context);
   }
   app_bible_subset_screen_generic(
     context,
