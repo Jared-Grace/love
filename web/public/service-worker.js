@@ -1,4 +1,4 @@
-var CACHE_NAME = 'love-cache-v1';
+var CACHE_NAME = 'love-cache-v2';
 var SHELL_TIMEOUT_MS = 4000;
 self.addEventListener('install', function () {
   self.skipWaiting();
@@ -22,6 +22,10 @@ self.addEventListener('fetch', function (event) {
     return;
   }
   var url = new URL(request.url);
+  if (url.hostname === 'firebasestorage.googleapis.com') {
+    event.respondWith(stale_while_revalidate(request));
+    return;
+  }
   if (url.origin !== self.location.origin) {
     return;
   }
