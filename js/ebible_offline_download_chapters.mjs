@@ -1,4 +1,4 @@
-import { add_1 } from "./add_1.mjs";
+import { add } from "./add.mjs";
 import { each_async } from "./each_async.mjs";
 import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs";
 import { ebible_offline_download_chunk_size } from "./ebible_offline_download_chunk_size.mjs";
@@ -31,7 +31,7 @@ export async function ebible_offline_download_chapters(
     }
     let entries = await list_map_unordered_async(chunk, to_entry);
     await ebible_offline_put_list(bible_folder, entries);
-    done = add_1(done, list_size(chunk));
+    done = add(done, list_size(chunk));
     on_progress(done, total);
   }
   await each_async(chunks, lambda_chunk);
