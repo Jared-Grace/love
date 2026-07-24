@@ -24,5 +24,6 @@ export function app_code_container_light_blue(parent) {
     "flex-direction": "column",
   });
   app_code_flex_gap(c);
+  app_code_column_style(c);
   return c;
 }
