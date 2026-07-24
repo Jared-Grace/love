@@ -23,6 +23,7 @@ import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson
 import { app_code_lesson_expression_whole_part } from "./app_code_lesson_expression_whole_part.mjs";
 import { app_code_lesson_expression_whole_part_both } from "./app_code_lesson_expression_whole_part_both.mjs";
 import { app_code_lesson_expression_remainder_divide } from "./app_code_lesson_expression_remainder_divide.mjs";
+import { app_code_lesson_expression_remainder_divide_solve } from "./app_code_lesson_expression_remainder_divide_solve.mjs";
 import { app_code_lesson_expression_nested_add } from "./app_code_lesson_expression_nested_add.mjs";
 import { app_code_lesson_expression_nested_subtract } from "./app_code_lesson_expression_nested_subtract.mjs";
 import { app_code_lesson_expression_nested_multiply } from "./app_code_lesson_expression_nested_multiply.mjs";
@@ -117,6 +118,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_whole_part,
     app_code_lesson_expression_whole_part_both,
     app_code_lesson_expression_remainder_divide,
+    app_code_lesson_expression_remainder_divide_solve,
     app_code_lesson_expression_remainder_any,
   ];
   return fns;
