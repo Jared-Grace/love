@@ -37,6 +37,12 @@ export function examples_groups() {
         "example_ntp_node_type_predicate", // generate a whole fn from an empty file — capstone
       ],
     },
+    {
+      name: "Whole-repo changes",
+      examples: [
+        "example_rename_across_files", // rename a fn across every file that uses it
+      ],
+    },
   ];
   return groups;
 }
