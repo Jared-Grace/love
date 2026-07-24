@@ -10,7 +10,8 @@ export function js_function_params_all(ast) {
     "ArrowFunctionExpression",
   ];
   function nodes_of(type) {
-    return js_list_type_nodes(ast, type);
+    let nodes2 = js_list_type_nodes(ast, type);
+    return nodes2;
   }
   let node_lists = list_map(types, nodes_of);
   let nodes = list_concat_multiple(node_lists);
