@@ -174,7 +174,7 @@ export function app_code_lesson_expression_whole_part_both() {
     html_span_text_code_dark(rewrite, "14 / 4");
     app_code_arrow(rewrite);
     html_span_text_code_dark(rewrite, "Math.floor(14 / 4) * 4");
-    html_div_cycle_code(steps, ["Then evaluate:"]);
+    html_div_cycle_code(steps, ["Then solve:"]);
     html_div_cycle_code(steps, [
       "",
       "Math.floor(14 / 4) * 4",
