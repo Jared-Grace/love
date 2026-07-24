@@ -7,5 +7,5 @@ export function app_shared_button_style(b) {
   app_shared_symbol_tile_style(b);
   let c = app_shared_button_background_color();
   html_style_background_color_set(b, c);
-  html_border(b, "0.1em", app_shared_color_gray());
+  html_border(b, "0.05em", app_shared_color_gray());
 }
