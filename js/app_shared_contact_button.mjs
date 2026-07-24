@@ -1,4 +1,4 @@
-import { app_shared_button } from "./app_shared_button.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_email } from "./emoji_email.mjs";
 import { app_shared_name_prefix_without_fn } from "./app_shared_name_prefix_without_fn.mjs";
@@ -10,6 +10,7 @@ export function app_shared_contact_button(parent, app_fn) {
     app_shared_contact_overlay(from);
   }
   let label = text_combine(emoji_email(), " Contact the developer");
-  let button = app_shared_button(parent, label, on_click);
+  "full-width, so it matches the other bottom-of-screen action buttons (Home, Next, Skip) it sits among, instead of reading as a smaller odd-one-out";
+  let button = app_shared_button_wide(parent, label, on_click);
   return button;
 }
