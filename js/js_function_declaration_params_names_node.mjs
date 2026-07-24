@@ -24,8 +24,14 @@ export function js_function_declaration_params_names_node(node) {
         let value = property_get(node, "value");
         names = js_function_declaration_params_names_node(value);
       } else {
-        let message = json_format_to(node);
-        error(message);
+        let rest_is = js_node_type_is(node, "RestElement");
+        if (rest_is) {
+          let argument = property_get(node, "argument");
+          names = js_function_declaration_params_names_node(argument);
+        } else {
+          let message = json_format_to(node);
+          error(message);
+        }
       }
     }
   }
