@@ -9,12 +9,12 @@ import { app_bible_offline } from "./app_bible_offline.mjs";
 import { app_shared_bible_languages_text } from "./app_shared_bible_languages_text.mjs";
 import { app_shared_bible_offline_text } from "./app_shared_bible_offline_text.mjs";
 export function app_bible_settings(context) {
-  ("one gear on the reading bar opens this; language choice and keeping a bible on the device both live here so the bar stays about reading");
+  "one gear on the reading bar opens this; language choice and keeping a bible on the device both live here so the bar stays about reading";
   let root = html_clear_context(context);
   html_centered(root);
   html_page_padding_x(root);
-  function lambda_back() {
-    app_shared_screen_set_home(context);
+  async function lambda_back() {
+    await app_shared_screen_set_home(context);
   }
   app_shared_button_back(root, lambda_back);
   let languages_text = app_shared_bible_languages_text();
