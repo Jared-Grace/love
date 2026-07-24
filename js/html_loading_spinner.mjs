@@ -13,10 +13,10 @@ export function html_loading_spinner(parent) {
   html_style_assign(outer, {
     position: "absolute",
     inset: "0",
-    border: "0.5rem solid rgba(255, 248, 232, 0.2)",
-    "border-top-color": "#ffe9a8",
+    border: "0.5rem solid rgba(140, 180, 255, 0.2)",
+    "border-top-color": "#bcd6ff",
     "border-radius": "50%",
-    "box-shadow": "0 0 1rem rgba(255, 248, 232, 0.6)",
+    "box-shadow": "0 0 1rem rgba(140, 180, 255, 0.6)",
     animation:
       "html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite",
   });
@@ -24,8 +24,8 @@ export function html_loading_spinner(parent) {
   html_style_assign(inner, {
     position: "absolute",
     inset: "1.25rem",
-    border: "0.3rem solid rgba(255, 248, 232, 0.15)",
-    "border-bottom-color": "#ffe9a8",
+    border: "0.3rem solid rgba(140, 180, 255, 0.15)",
+    "border-bottom-color": "#bcd6ff",
     "border-radius": "50%",
     animation: "html_loading_spin_reverse 1.4s linear infinite",
   });
