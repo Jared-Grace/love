@@ -51,6 +51,7 @@
       "Bash(node scripts/ai.mjs function_imports_gate_run:*)",
       "Bash(node scripts/ai.mjs function_read:*)",
       "Bash(node scripts/ai.mjs guard_check:*)",
+      "Bash(node scripts/ai.mjs html_update_dev:*)",
       "Bash(node scripts/ai.mjs html_update_dev_webpack:*)",
       "Bash(node scripts/ai.mjs permission_gate_run:*)",
       "Bash(node scripts/ai.mjs webpack_watch)",
