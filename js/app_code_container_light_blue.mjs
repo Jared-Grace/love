@@ -9,7 +9,6 @@ import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
-import { app_code_column_style } from "./app_code_column_style.mjs";
 export function app_code_container_light_blue(parent) {
   let c = html_div(parent);
   html_style_padding_y(c, "0.2em");
