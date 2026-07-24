@@ -46,6 +46,14 @@
     { "command": "node scripts/rl.mjs eval_console_log_replace x", "decision": "deny", "why": "the floor covers every dispatcher, not just r.mjs" },
     { "command": "node /home/j/repos/love/scripts/r.mjs command_line_generic ls", "decision": "deny", "why": "an absolute dispatcher path does not route around the floor" },
 
+    { "command": "node scripts/r.mjs firebase_deploy", "decision": "deny", "reason_includes": "scripts/ai.mjs", "why": "Claude uses ai.mjs; r.mjs is the human's seam, and the deny points there" },
+    { "command": "node scripts/g.mjs ai_git", "decision": "deny", "why": "g.mjs is a non-ai dispatcher, denied for Claude" },
+    { "command": "node scripts/rl.mjs qa_gate_run", "decision": "deny", "why": "rl.mjs is a non-ai dispatcher, denied for Claude" },
+    { "command": "node scripts/r.mjs w", "decision": "deny", "why": "even a bare shorthand start of a non-ai dispatcher is denied" },
+    { "command": "node /home/j/repos/love/scripts/g.mjs firebase_deploy", "decision": "deny", "why": "absolute path to a non-ai dispatcher is still denied" },
+    { "command": "node scripts/ai.mjs firebase_deploy", "decision": "allow", "why": "ai.mjs is the sanctioned seam and firebase_deploy is allow-listed for it" },
+    { "command": "node scripts/ai.mjs qa_gate_run", "decision": "allow", "why": "the non-ai deny must not touch ai.mjs itself" },
+
     { "command": "ls $(ls)", "decision": "allow", "why": "substitution whose inner command is trusted" },
     { "command": "ls $(git status)", "decision": "allow", "why": "substitution with a trusted 2-word verb" },
     { "command": "ls $(ls $(ls))", "decision": "allow", "why": "nested substitution, trusted throughout" },
