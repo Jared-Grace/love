@@ -1,3 +1,4 @@
+import { list_size_less_1 } from "./list_size_less_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
@@ -26,15 +27,13 @@ import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
 export function js_fold(x_ast, f_ast) {
   arguments_assert(arguments, 2);
   let x_name = js_flo_name(x_ast);
   let x_declaration = js_flo(x_ast);
   let params = js_function_declaration_params_names(x_declaration);
   let x_statements = js_flo_body(x_ast);
-  let statement_count = list_size(x_statements);
-  let body_count = subtract(statement_count, 1);
+  let body_count = list_size_less_1(x_statements);
   let body_statements = list_take(x_statements, body_count);
   let return_statement = list_last(x_statements);
   let return_argument = js_return_argument_get(return_statement);

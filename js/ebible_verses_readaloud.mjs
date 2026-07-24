@@ -1,12 +1,11 @@
+import { list_skip_map } from "./list_skip_map.mjs";
 import { ebible_verses_before } from "./ebible_verses_before.mjs";
 import { list_remove_if_exists } from "./list_remove_if_exists.mjs";
 import { ebible_verses_numbers } from "./ebible_verses_numbers.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 import { list_map_pairs } from "./list_map_pairs.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
-import { list_skip } from "./list_skip.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
 import { file_read } from "./file_read.mjs";
@@ -33,8 +32,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let only = list_find_includes(files, search);
   let contents = await file_read(only);
   let lines = text_split_newline(contents);
-  let skipped = list_skip(lines, 2);
-  let mapped = list_map(skipped, text_trim);
+  let mapped = list_skip_map(lines, 2, text_trim);
   let filtered = list_filter_text_empty_not_is(mapped);
   let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
