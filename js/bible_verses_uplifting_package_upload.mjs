@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { uplifting_package_destination } from "./uplifting_package_destination.mjs";
 import { firebase_upload_object } from "./firebase_upload_object.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
@@ -25,18 +26,18 @@ import { each_object } from "./each_object.mjs";
 import { text_to } from "./text_to.mjs";
 import { bible_interlinear_verses_upload_folder } from "./bible_interlinear_verses_upload_folder.mjs";
 import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function bible_verses_uplifting_package_write(bible_folder) {
+export async function bible_verses_uplifting_package_upload(bible_folder) {
   let lines = bible_verses_uplifting();
   let interlinear_folder = bible_interlinear_verses_upload_folder();
-  let is_interlinear = bible_folder === interlinear_folder;
+  let is_interlinear = equal(bible_folder, interlinear_folder);
   let interlinear_chapters = null;
   if (is_interlinear) {
     interlinear_chapters = await bible_interlinear_chapters();
     function chapter_normalize(chapter_verses) {
       function verse_normalize(verse) {
         let number = property_get(verse, "verse_number");
-        property_set(verse, "verse_number", text_to(number));
+        let value = text_to(number);
+        property_set(verse, "verse_number", value);
       }
       each(chapter_verses, verse_normalize);
     }
@@ -76,7 +77,8 @@ export async function bible_verses_uplifting_package_write(bible_folder) {
     if (null_is(found)) {
       return null;
     }
-    return object_copy(found);
+    let copy = object_copy(found);
+    return copy;
   }
   let bible_folders = [bible_folder];
   let map = {};
@@ -101,7 +103,7 @@ export async function bible_verses_uplifting_package_write(bible_folder) {
   if (empty) {
     return count;
   }
-  "upload the built package straight to firebase storage — the verse text is served from the bucket, not deployed as a hosting file, so there is no transient public copy to write then push";
+  ("upload the built package straight to firebase storage — the verse text is served from the bucket, not deployed as a hosting file, so there is no transient public copy to write then push");
   let destination = uplifting_package_destination(bible_folder);
   await firebase_upload_object(destination, map);
   return count;
