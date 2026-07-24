@@ -3,7 +3,7 @@ import { ebible_offline_database_name } from "./ebible_offline_database_name.mjs
 import { ebible_offline_store } from "./ebible_offline_store.mjs";
 import { not } from "./not.mjs";
 export async function ebible_offline_database() {
-  ("one database holds every downloaded bible version; the promise is remembered so many chapters opening at once still open the database only once");
+  "one database holds every downloaded bible version; the promise is remembered so many chapters opening at once still open the database only once";
   async function open() {
     let store = ebible_offline_store();
     let name = ebible_offline_database_name();
