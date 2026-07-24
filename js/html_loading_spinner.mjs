@@ -29,5 +29,18 @@ export function html_loading_spinner(parent) {
     "border-radius": "50%",
     animation: "html_loading_spin_reverse 1.4s linear infinite",
   });
+  let core = html_div(spinner);
+  html_style_assign(core, {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    width: "1.4rem",
+    height: "1.4rem",
+    transform: "translate(-50%, -50%)",
+    "border-radius": "50%",
+    background: "radial-gradient(circle, #ffd54a 0%, #ffb300 70%)",
+    "box-shadow": "0 0 1rem rgba(255, 213, 74, 0.9)",
+    animation: "html_loading_core 2s ease-in-out infinite",
+  });
   return spinner;
 }
