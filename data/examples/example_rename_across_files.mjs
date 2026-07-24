@@ -5,7 +5,7 @@ export const example = {
   kind: "files",
   title: "Rename a function across every file that uses it",
   note: [
-    { alias: true },
+    { fn: function_rename.name },
     " moves the definition and repoints every reference in one operation — the call sites in ",
     { code: "app_x.mjs" },
     ", its ",
