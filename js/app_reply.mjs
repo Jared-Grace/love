@@ -1,42 +1,45 @@
-import { list_filter_text_includes_not } from "../../love/js/list_filter_text_includes_not.mjs";
-import { ebible_versions_english_choices_browser } from "../../love/js/ebible_versions_english_choices_browser.mjs";
-import { clipboard_copy } from "../../love/js/clipboard_copy.mjs";
-import { log } from "../../love/js/log.mjs";
-import { list_map_existing } from "../../love/js/list_map_existing.mjs";
-import { text_lower_to } from "../../love/js/text_lower_to.mjs";
-import { app_reply_languages_chosen_default } from "../../love/js/app_reply_languages_chosen_default.mjs";
-import { app_reply_main_shortcuts } from "../../love/js/app_reply_main_shortcuts.mjs";
-import { object_merge_set } from "../../love/js/object_merge_set.mjs";
-import { text_alphabet_includes } from "../../love/js/text_alphabet_includes.mjs";
-import { text_empty_not_is } from "../../love/js/text_empty_not_is.mjs";
-import { list_shuffle_take } from "../../love/js/list_shuffle_take.mjs";
-import { app_reply_verses_add } from "../../love/js/app_reply_verses_add.mjs";
-import { app_reply_languages_chosen_reset } from "../../love/js/app_reply_languages_chosen_reset.mjs";
-import { app_reply_buttons_languages } from "../../love/js/app_reply_buttons_languages.mjs";
-import { app_reply_languages_prompt } from "../../love/js/app_reply_languages_prompt.mjs";
-import { app_reply_buttons_refresh } from "../../love/js/app_reply_buttons_refresh.mjs";
-import { html_on_keydown_body } from "../../love/js/html_on_keydown_body.mjs";
-import { text_take_less_1 } from "../../love/js/text_take_less_1.mjs";
-import { equal } from "../../love/js/equal.mjs";
-import { list_join_newline_2_copy } from "../../love/js/list_join_newline_2_copy.mjs";
-import { list_concat_multiple } from "../../love/js/list_concat_multiple.mjs";
-import { list_join_comma } from "../../love/js/list_join_comma.mjs";
-import { list_map_property } from "../../love/js/list_map_property.mjs";
-import { prayer_blessing_expand } from "../../love/js/prayer_blessing_expand.mjs";
-import { each_async } from "../../love/js/each_async.mjs";
-import { list_copy_reverse } from "../../love/js/list_copy_reverse.mjs";
-import { list_empty } from "../../love/js/list_empty.mjs";
-import { each_range_from } from "../../love/js/each_range_from.mjs";
-import { each } from "../../love/js/each.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { html_button_copy_text } from "../../love/js/html_button_copy_text.mjs";
-import { app_reply_love } from "../../love/js/app_reply_love.mjs";
-import { list_add } from "../../love/js/list_add.mjs";
-import { app_shared_text_body } from "../../love/js/app_shared_text_body.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { app_reply_initialize } from "../../love/js/app_reply_initialize.mjs";
-import { app_shared_container_blue } from "../../love/js/app_shared_container_blue.mjs";
-import { multiply } from "../../love/js/multiply.mjs";
+import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
+import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
+import { clipboard_copy } from "./clipboard_copy.mjs";
+import { log } from "./log.mjs";
+import { list_map_existing } from "./list_map_existing.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
+import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
+import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
+import { object_merge_set } from "./object_merge_set.mjs";
+import { text_alphabet_includes } from "./text_alphabet_includes.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { list_shuffle_take } from "./list_shuffle_take.mjs";
+import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
+import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
+import { app_reply_buttons_languages } from "./app_reply_buttons_languages.mjs";
+import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
+import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
+import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
+import { text_take_less_1 } from "./text_take_less_1.mjs";
+import { equal } from "./equal.mjs";
+import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { prayer_blessing_expand } from "./prayer_blessing_expand.mjs";
+import { each_async } from "./each_async.mjs";
+import { list_copy_reverse } from "./list_copy_reverse.mjs";
+import { list_empty } from "./list_empty.mjs";
+import { each_range_from } from "./each_range_from.mjs";
+import { each } from "./each.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { html_button_copy_text } from "./html_button_copy_text.mjs";
+import { app_reply_love } from "./app_reply_love.mjs";
+import { list_add } from "./list_add.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_reply_initialize } from "./app_reply_initialize.mjs";
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
+import { multiply } from "./multiply.mjs";
 export async function app_reply(context) {
   let r = await app_reply_initialize(context);
   let choices = property_get(r, "choices");
@@ -47,7 +50,7 @@ export async function app_reply(context) {
   languages_chosen_reset();
   let root = property_get(r, "root");
   let en = property_get(r, "en");
-  "app_reply keeps the authored list in its own bundle; the verses app, by contrast, now fetches it from firebase";
+  "the legacy reply app keeps the authored list in its own bundle; the verses app, by contrast, now fetches the list from firebase as data";
   let encouragement = bible_verses_uplifting();
   let encouragement_singles = list_filter_text_includes_not(encouragement, "-");
   let bible_texts = [];
@@ -55,8 +58,8 @@ export async function app_reply(context) {
   let responses_buttons = [];
   let typed = null;
   typed_reset();
-  let card1 = app_shared_container_blue(root);
-  let p = app_reply_languages_prompt(card1);
+  let card = app_shared_container_blue(root);
+  let p = app_reply_languages_prompt(card);
   function languages_chosen_reset() {
     app_reply_languages_chosen_reset(
       languages_chosen,
@@ -75,10 +78,10 @@ export async function app_reply(context) {
     await update(3);
     languages_chosen = languages_chosen_before;
   }
-  let component4 = app_shared_button(card1, "❤️", love);
+  let component4 = app_shared_button(card, "❤️", love);
   let buttons_languages = app_reply_buttons_languages(
     languages_chosen,
-    card1,
+    card,
     languages,
   );
   let card2 = app_shared_container_blue(root);
@@ -96,8 +99,7 @@ export async function app_reply(context) {
     list_add(choices_verse_count, c);
   }
   each_range_from(3, 6, lambda4);
-  list_add(choices_verse_count, 20);
-  list_add(choices_verse_count, 40);
+  list_add_multiple(choices_verse_count, [20, 40]);
   function lambda2(c) {
     async function lambda3() {
       await update(c);
@@ -111,7 +113,7 @@ export async function app_reply(context) {
     list_empty(responses);
     list_empty(responses_buttons);
     let e = encouragement;
-    if (verse_count === 1) {
+    if (equal(verse_count, 1)) {
       e = encouragement_singles;
     }
     let taken = list_shuffle_take(e, verse_count);
@@ -131,11 +133,8 @@ export async function app_reply(context) {
     await copy_refresh();
   }
   let buttons_responses = [];
-  let component3 = app_shared_button(
-    card2,
-    html_button_copy_text(),
-    copy_refresh,
-  );
+  let text2 = html_button_copy_text();
+  let component3 = app_shared_button(card2, text2, copy_refresh);
   let card3 = app_shared_container_blue(root);
   app_reply_main_shortcuts(
     card3,
@@ -201,7 +200,7 @@ export async function app_reply(context) {
     } else {
       let includes = text_alphabet_includes(key);
       if (includes) {
-        if (visible_count > 0) {
+        if (greater_than(visible_count, 0)) {
           typed += key;
         }
       }
