@@ -855,6 +855,13 @@ def ai_script_is(word):
     """True when `word` names scripts/ai.mjs, relative or absolute."""
     return word == AI_DISPATCHER_SCRIPT or word.endswith("/" + AI_DISPATCHER_SCRIPT)
 
+
+def scripts_path_is(word):
+    """True when `word` is a path into the repo's scripts/ directory (relative
+    `scripts/x` or absolute `.../scripts/x`). Used to fence the whole directory
+    to ai.mjs; the leading-slash boundary keeps it from matching `myscripts/`."""
+    return word.startswith("scripts/") or "/scripts/" in word
+
 # git global options that take NO argument and cannot inject an executable or
 # change how a subcommand is resolved - so skipping them before reading the
 # subcommand (see verb_of) never widens trust beyond the subcommand's own
@@ -1740,12 +1747,12 @@ def find_denied_dispatcher_function(command):
     return None
 
 
-def find_non_ai_dispatcher(command):
-    """If `command` directly invokes `node <dispatcher>` for a dispatcher other
-    than scripts/ai.mjs (r.mjs / rl.mjs / g.mjs), return that script path so
-    main() can DENY it; else None. Claude runs functions only through ai.mjs;
-    the others are the human's seams and would route around ai.mjs's full-name
-    refusal and JSON output.
+def find_non_ai_scripts_invocation(command):
+    """If `command` directly runs `node scripts/<X>` for any script under the
+    repo's scripts/ directory other than ai.mjs, return that path so main() can
+    DENY it; else None. The whole directory is fenced to ai.mjs: r.mjs/rl.mjs/
+    g.mjs are the human's function seams, and p.mjs/u.mjs/the config files are
+    the human's utilities - Claude runs repo work only through ai.mjs.
 
     Matches the same `node <script> ...` shape as the eval floor: the script in
     word position 1 after the usual prefix-strip (assignments, time/timeout/
@@ -1762,21 +1769,23 @@ def find_non_ai_dispatcher(command):
         if (
             len(words) >= 2
             and words[0] == "node"
-            and dispatcher_script_is(words[1])
+            and scripts_path_is(words[1])
             and not ai_script_is(words[1])
         ):
             return words[1]
     return None
 
 
-def non_ai_dispatcher_deny_reason(script):
+def non_ai_scripts_deny_reason(script):
     return (
-        f"`node {script}` is refused: Claude runs repo functions only through "
+        f"`node {script}` is refused: Claude runs the repo only through "
         "scripts/ai.mjs, which takes full function names (no alias/acronym) and "
-        "prints lossless JSON. r.mjs/rl.mjs/g.mjs are the human's seams. Re-run "
-        "the same function via `node scripts/ai.mjs <full_function_name> "
-        "<args>`. See CLAUDE.md - 'Two seams: ai.mjs for Claude, r.mjs for the "
-        "human'."
+        "prints lossless JSON. Everything else under scripts/ - r.mjs/rl.mjs/"
+        "g.mjs and the human's utilities - is the human's, not Claude's. If this "
+        "was going to run a repo function, run `node scripts/ai.mjs "
+        "<full_function_name> <args>` instead. (Throwaway node goes through the "
+        "sandboxed unshare form in CLAUDE.md.) See CLAUDE.md - 'Two seams: "
+        "ai.mjs for Claude, r.mjs for the human'."
     )
 
 
