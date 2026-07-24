@@ -58,25 +58,66 @@ export function app_code_lesson_expression_remainder_divide() {
     return built;
   }
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
+    let setup = app_code_container_light_blue(root);
+    html_div_cycle_code(setup, [
       "You found the whole part - as much of the number as splits evenly into the divisor",
     ]);
-    html_div_cycle_code(c, [
+    html_div_cycle_code(setup, ["", "14 / 4", " :"]);
+    html_div_cycle_code(setup, ["", "14", " is the dividend"]);
+    html_div_cycle_code(setup, ["", "4", " is the divisor"]);
+    html_div_cycle_code(setup, [
       "",
-      "14 / 4",
-      " is ",
+      "Math.floor(14 / 4) === 3",
+      ", so the quotient is ",
       "3",
-      " and ",
-      "3 * 4",
-      " is ",
+    ]);
+    html_div_cycle_code(setup, ["quotient * divisor → ", "3 * 4 === 12"]);
+    html_div_cycle_code(setup, ["So the whole part is ", "12"]);
+    let properties = app_code_container_light_blue(root);
+    html_div_cycle_code(properties, [
+      "Notice that ",
+      "4",
+      " evenly divides into ",
       "12",
     ]);
-    html_div_cycle_code(c, [
-      "Subtract the whole part from the number to find what is left over:",
+    html_div_cycle_code(properties, [
+      "The divisor (",
+      "4",
+      ") always evenly divides into the whole part",
     ]);
-    html_div_cycle_code(c, ["", "14 - 12", " is ", "2"]);
-    html_div_cycle_code(c, ["", "2", " is the remainder"]);
-    html_div_cycle_code(c, ["This is the same as ", "14 % 4"]);
+    html_div_cycle_code(properties, [
+      "However ",
+      "4",
+      " does not evenly divide into ",
+      "14",
+    ]);
+    html_div_cycle_code(properties, [
+      "The whole part (",
+      "12",
+      ") cannot be larger than the dividend (",
+      "14",
+      ")",
+    ]);
+    html_div_cycle_code(properties, [
+      "The whole part (",
+      "12",
+      ") is always the largest number, that is evenly divided by the divisor (",
+      "4",
+      "), that is not larger than the dividend (",
+      "14",
+      ")",
+    ]);
+    let result = app_code_container_light_blue(root);
+    html_div_cycle_code(result, [
+      "Now we will subtract the whole part (",
+      "12",
+      ") from the dividend (",
+      "14",
+      ") to find what is left over:",
+    ]);
+    html_div_cycle_code(result, ["", "14 - 12", " is ", "2"]);
+    html_div_cycle_code(result, ["So ", "2", " is the remainder"]);
+    html_div_cycle_code(result, ["This is the same as ", "14 % 4", " :"]);
+    html_div_cycle_code(result, ["", "14 % 4 === 2"]);
   }
 }
