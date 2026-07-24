@@ -41,6 +41,7 @@
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid_assert)",
       "Bash(node scripts/ai.mjs data_identifiers_search:*)",
+      "Bash(node scripts/ai.mjs examples_gate_run:*)",
       "Bash(node scripts/ai.mjs file_imports_repair:*)",
       "Bash(node scripts/ai.mjs firebase_deploy)",
       "Bash(node scripts/ai.mjs firebase_storage_exists:*)",
