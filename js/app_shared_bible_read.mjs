@@ -1,3 +1,5 @@
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
+import { html_max_width_centered } from "./html_max_width_centered.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
@@ -93,7 +95,8 @@ export async function app_shared_bible_read(context, verse_action) {
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
   let shell = property_get(bc, "shell");
-  html_max_width_centered(shell, app_shared_column_max_width());
+  let max_width = app_shared_column_max_width();
+  html_max_width_centered(shell, max_width);
   let content = property_get(bc, "content");
   html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
