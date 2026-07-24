@@ -1,8 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_imports_declarations } from "./js_imports_declarations.mjs";
+import { list_duplicates_by_property } from "./list_duplicates_by_property.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_set } from "./property_set.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { each } from "./each.mjs";
 export function js_imports_dedupe(ast) {
@@ -12,18 +11,12 @@ export function js_imports_dedupe(ast) {
   "that. One name per import line here, so removing the whole declaration is safe.";
   arguments_assert(arguments, 1);
   let imports = js_imports_declarations(ast);
+  let duplicates = list_duplicates_by_property(imports, "name");
   let body = property_get(ast, "body");
-  let seen = {};
-  function consider(entry) {
-    let name = property_get(entry, "name");
-    let already = property_exists(seen, name);
-    if (already) {
-      let declaration = property_get(entry, "declaration");
-      list_remove(body, declaration);
-      return;
-    }
-    property_set(seen, name, true);
+  function drop(entry) {
+    let declaration = property_get(entry, "declaration");
+    list_remove(body, declaration);
   }
-  each(imports, consider);
+  each(duplicates, drop);
   return;
 }
