@@ -1,9 +1,9 @@
-import { app_shared_gear_languages_text } from "../../love/js/app_shared_gear_languages_text.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
-import { ebible_languages } from "../../love/js/ebible_languages.mjs";
-import { list_multiple_is } from "../../love/js/list_multiple_is.mjs";
-import { window_reload } from "../../love/js/window_reload.mjs";
-import { app_shared_bible_languages_choose } from "../../love/js/app_shared_bible_languages_choose.mjs";
+import { app_shared_gear_languages_text } from "./app_shared_gear_languages_text.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { ebible_languages } from "./ebible_languages.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { window_reload } from "./window_reload.mjs";
+import { app_shared_bible_languages_choose } from "./app_shared_bible_languages_choose.mjs";
 export function app_shared_bible_languages_gear(
   bar,
   content,
@@ -22,6 +22,7 @@ export function app_shared_bible_languages_gear(
         window_reload,
       );
     }
-    app_shared_button(bar, app_shared_gear_languages_text(), on_gear);
+    let text = app_shared_gear_languages_text();
+    app_shared_button(bar, text, on_gear);
   }
 }

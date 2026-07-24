@@ -20,17 +20,19 @@ export function app_shared_bible_languages_choose(
   languages_chosen,
   back,
 ) {
-  ("back is supplied by the caller: a plain reload when this stands alone, or a return to the settings hub when reached from there");
+  "back is supplied by the caller: a plain reload when this stands alone, or a return to the settings hub when reached from there";
   html_clear(content);
   function to_language(code) {
-    return list_find_property_or_null(languages, "language_code", code);
+    let r = list_find_property_or_null(languages, "language_code", code);
+    return r;
   }
   let mapped = list_map(languages_chosen, to_language);
   let chosen = list_filter_null_not_is(mapped);
   function on_change() {
     let codes = list_map_property(chosen, "language_code");
     if (list_empty_is(codes)) {
-      codes = [ebible_language_en_code()];
+      let v = ebible_language_en_code();
+      codes = [v];
     }
     let l = list_join_plus(codes);
     app_shared_language_codes_save(l);
@@ -50,6 +52,7 @@ export function app_shared_bible_languages_choose(
     );
   }
   app_shared_language_sort_button(content, on_sort_change);
+  let choices_label = app_shared_languages_prompt_text();
   html_subset_ordered_choose(
     content,
     languages,
@@ -57,6 +60,6 @@ export function app_shared_bible_languages_choose(
     "name",
     "language_code",
     on_change,
-    app_shared_languages_prompt_text(),
+    choices_label,
   );
 }
