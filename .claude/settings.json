@@ -130,7 +130,7 @@
           },
           {
             "type": "command",
-            "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=black,bg=yellow,bold'",
+            "command": "sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=black,bg=colour226,bold'",
             "timeout": 5
           }
         ]
