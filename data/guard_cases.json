@@ -53,6 +53,9 @@
     { "command": "node /home/j/repos/love/scripts/g.mjs firebase_deploy", "decision": "deny", "why": "absolute path to a non-ai dispatcher is still denied" },
     { "command": "node scripts/ai.mjs firebase_deploy", "decision": "allow", "why": "ai.mjs is the sanctioned seam and firebase_deploy is allow-listed for it" },
     { "command": "node scripts/ai.mjs qa_gate_run", "decision": "allow", "why": "the non-ai deny must not touch ai.mjs itself" },
+    { "command": "node scripts/p.mjs", "decision": "deny", "why": "the whole scripts/ dir is fenced to ai.mjs, not just the dispatchers" },
+    { "command": "node scripts/u.mjs", "decision": "deny", "why": "a human utility under scripts/ is off-limits to Claude" },
+    { "command": "node scripts/temp/probe.mjs", "decision": "deny", "reason_includes": "sandboxed unshare", "why": "unsandboxed temp is denied and pointed at the sandboxed form" },
 
     { "command": "ls $(ls)", "decision": "allow", "why": "substitution whose inner command is trusted" },
     { "command": "ls $(git status)", "decision": "allow", "why": "substitution with a trusted 2-word verb" },
