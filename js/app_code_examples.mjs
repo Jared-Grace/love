@@ -28,6 +28,8 @@ import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 export function app_code_examples(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -110,5 +112,6 @@ export function app_code_examples(context) {
   app_code_button_skip_lesson(context, g);
   let text = app_shared_button_home_text();
   let b2 = app_shared_button_screen_wide(context, app_code_home, g, text);
+  html_style_margin_top(b2, app_shared_spaced_gap());
   return;
 }
