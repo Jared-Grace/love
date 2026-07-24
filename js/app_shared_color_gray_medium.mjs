@@ -1,5 +1,5 @@
 export function app_shared_color_gray_medium() {
-  "a mid neutral gray (Tailwind gray-300), between gray_light (the button fill) and gray - light enough to read soft, but dark enough to stay visible as a border ON the gray_light fill";
-  let c = "#d1d5db";
+  "a soft neutral gray one step lighter than app_shared_color_gray (#9ca3af) - a visible but gentle button border, a little less heavy than the plain gray while staying clearly darker than the gray_light button fill";
+  let c = "#aeb4be";
   return c;
 }
