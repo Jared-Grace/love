@@ -59,10 +59,9 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
-  let shell = property_get(bc, "shell");
-  let max_width = app_shared_column_max_width();
-  html_max_width_centered(shell, max_width);
   let content = property_get(bc, "content");
+  ("center the reader in one column the code app's way: full-width scroll area (scrollbar at the window edge), content padded into the column");
+  app_shared_content_center_padding(content, app_shared_column_max_width());
   let bar = property_get(bc, "bar");
   html_centered(bar);
   bar_extra(bar);
