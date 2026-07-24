@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -15,7 +16,7 @@ export async function functions_imports_missing() {
     let ast = property_get(parsed, "ast");
     let free = js_free_names(ast);
     let missing = list_intersect(free, candidates);
-    let any = missing.length > 0;
+    let any = greater_than(missing.length, 0);
     if (any) {
       list_add(offenders, {
         name,
