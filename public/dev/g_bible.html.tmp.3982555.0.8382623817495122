@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🙏</text></svg>">
-  <title>examples</title>
+  <title>g_bible</title>
 </head>
 <body>
-  <script src="examples.js?v=1784863376191"> 
+  <script src="g_bible.js?v=1784863386432"> 
     
   </script>
 </body>
