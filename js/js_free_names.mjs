@@ -11,13 +11,12 @@ export function js_free_names(ast) {
   "identifiers referenced as values but bound by nothing in this module — not imported, not the module's own function, not declared, not a parameter, not a JS global; these are the names a runtime ReferenceError would name";
   let declaration = js_flo(ast);
   let referenced = js_identifiers_referenced_names(declaration);
-  let bound = list_concat_multiple([
-    js_imports(ast),
-    [js_flo_name(ast)],
-    js_declared_names(ast),
-    js_function_params_all(ast),
-    js_global_names(),
-  ]);
+  let imports = js_imports(ast);
+  let name = js_flo_name(ast);
+  let names = js_declared_names(ast);
+  let names2 = js_function_params_all(ast);
+  let names3 = js_global_names();
+  let bound = list_concat_multiple([imports, [name], names, names2, names3]);
   let free = list_difference(referenced, bound);
   return free;
 }
