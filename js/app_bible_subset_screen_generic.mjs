@@ -2,7 +2,6 @@ import { html_clear_context } from "./html_clear_context.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_page_padding_x } from "./html_page_padding_x.mjs";
 import { app_shared_button_back } from "./app_shared_button_back.mjs";
-import { app_shared_screen_set_home } from "./app_shared_screen_set_home.mjs";
 import { ebible_languages_sort_mode } from "./ebible_languages_sort_mode.mjs";
 import { app_shared_language_sort_button } from "./app_shared_language_sort_button.mjs";
 import { html_subset_ordered_choose } from "./html_subset_ordered_choose.mjs";
@@ -14,14 +13,13 @@ export function app_bible_subset_screen_generic(
   key_property,
   on_change,
   choices_label,
+  back,
 ) {
+  "back is the caller's: the bible languages chooser returns to the settings hub, the supper versions chooser returns home";
   let root = html_clear_context(context);
   html_centered(root);
   html_page_padding_x(root);
-  function lambda_back() {
-    app_shared_screen_set_home(context);
-  }
-  app_shared_button_back(root, lambda_back);
+  app_shared_button_back(root, back);
   ebible_languages_sort_mode(options);
   function on_sort_change() {
     app_bible_subset_screen_generic(
@@ -32,6 +30,7 @@ export function app_bible_subset_screen_generic(
       key_property,
       on_change,
       choices_label,
+      back,
     );
   }
   app_shared_language_sort_button(root, on_sort_change);
