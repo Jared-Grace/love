@@ -1,3 +1,5 @@
+import { object_merge } from "./object_merge.mjs";
+import { app_shared_contact_button_context } from "./app_shared_contact_button_context.mjs";
 import { app_shared_initialize_refresh } from "./app_shared_initialize_refresh.mjs";
 import { html_margin_0_context_root } from "./html_margin_0_context_root.mjs";
 import { property_set_exists_not_fn } from "./property_set_exists_not_fn.mjs";
@@ -17,5 +19,9 @@ export async function app_a(context) {
     invoke_multiple_arg(on_keydowns, e);
   }
   html_on_keydown(root, lambda);
+  ("offer a way to reach the developer on every screen; the after-render hook re-adds it since each screen clears the page");
+  object_merge(context, {
+    after_refresh: app_shared_contact_button_context,
+  });
   await app_shared_initialize_refresh(context, app_fn, screens);
 }
