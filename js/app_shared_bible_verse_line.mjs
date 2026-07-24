@@ -7,9 +7,16 @@ import { html_style_set } from "./html_style_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_bible_on_click_google_define } from "./app_bible_on_click_google_define.mjs";
+import { text_rtl_is } from "./text_rtl_is.mjs";
 export function app_shared_bible_verse_line(parent, name, text, color) {
   let line = html_div(parent);
   html_font_color_set(line, color);
+  let rtl = text_rtl_is(text);
+  if (rtl) {
+    ("a right-to-left verse aligns to the right and flows right-to-left, so the label sits at the reading start and the words run the natural direction");
+    html_style_set(line, "direction", "rtl");
+    html_style_set(line, "text-align", "right");
+  }
   let has_name = text_empty_not_is(name);
   if (has_name) {
     ("color the language name with the language color so it matches its verse text");
