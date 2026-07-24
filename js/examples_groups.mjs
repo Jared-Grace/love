@@ -41,6 +41,7 @@ export function examples_groups() {
       name: "Whole-repo changes",
       examples: [
         "example_rename_across_files", // rename a fn across every file that uses it
+        "example_delete_unused_across_files", // delete a fn only after proving nothing uses it
       ],
     },
   ];
