@@ -1,5 +1,5 @@
+import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
-import { html_max_width_centered } from "./html_max_width_centered.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
@@ -96,7 +96,8 @@ export async function app_shared_bible_read(context, verse_action) {
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   ("center the reader in one column the code app's way: keep the scroll area full width (scrollbar stays at the window edge) and pad its content into the column, so verses and the full-width nav bars line up and a wide desktop gets a comfortable measure instead of edge-to-edge text");
-  app_shared_content_center_padding(content, app_shared_column_max_width());
+  let column = app_shared_column_max_width();
+  app_shared_content_center_padding(content, column);
   html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
