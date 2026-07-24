@@ -88,7 +88,7 @@ export function app_g_dev_routes() {
     app_g_sky_demo_enable();
     await app_g_view_set(null);
     let g = await app_g_game_save_get();
-    property_set(g, "sky_phase", 5);
+    property_set(g, "sky_phase", 0);
     await app_g_sky_snap();
   }
   let routes = {
