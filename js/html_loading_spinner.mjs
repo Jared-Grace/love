@@ -14,7 +14,7 @@ export function html_loading_spinner(parent) {
     position: "absolute",
     inset: "0",
     border: "0.5rem solid rgba(255, 248, 232, 0.2)",
-    "border-top-color": "#fff8e8",
+    "border-top-color": "#ffe9a8",
     "border-radius": "50%",
     "box-shadow": "0 0 1rem rgba(255, 248, 232, 0.6)",
     animation:
@@ -25,7 +25,7 @@ export function html_loading_spinner(parent) {
     position: "absolute",
     inset: "1.25rem",
     border: "0.3rem solid rgba(255, 248, 232, 0.15)",
-    "border-bottom-color": "#fff8e8",
+    "border-bottom-color": "#ffe9a8",
     "border-radius": "50%",
     animation: "html_loading_spin_reverse 1.4s linear infinite",
   });
