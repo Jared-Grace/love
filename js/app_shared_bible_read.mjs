@@ -92,6 +92,8 @@ export async function app_shared_bible_read(context, verse_action) {
   html_clear(root);
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
+  let shell = property_get(bc, "shell");
+  html_max_width_centered(shell, app_shared_column_max_width());
   let content = property_get(bc, "content");
   html_flex_column_gap(content, "0");
   let bar = property_get(bc, "bar");
