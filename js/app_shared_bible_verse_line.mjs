@@ -1,4 +1,6 @@
 import { html_div } from "./html_div.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -16,6 +18,9 @@ export function app_shared_bible_verse_line(parent, name, text, color) {
     ("deemphasize the label by fading it, keeping the language hue rather than graying it out");
     html_style_set(name_span, "opacity", "0.6");
   }
-  app_bible_on_click_google_define(line, text);
+  ("hold the verse words in their own isolated run so a right-to-left script like Urdu or Arabic reads in its own direction, detected from the text itself, without the Latin label flipping it");
+  let text_holder = html_span(line);
+  html_attribute_set(text_holder, "dir", "auto");
+  app_bible_on_click_google_define(text_holder, text);
   return line;
 }
