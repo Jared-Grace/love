@@ -1,3 +1,4 @@
+import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
@@ -41,6 +42,7 @@ export function app_calendar(context) {
   app_shared_input_style(link);
   let status = html_div_text(card, "");
   app_shared_button_green(card, "Book preaching", on_book);
+  app_shared_contact_button(root, app_calendar);
   async function on_book() {
     let name_value = html_value_get(name);
     let day_value = html_value_get(day);
