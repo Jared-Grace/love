@@ -5,6 +5,7 @@ import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invali
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { dispatcher_scripts_python_assert } from "./dispatcher_scripts_python_assert.mjs";
 import { function_worker_pool_run_try } from "./function_worker_pool_run_try.mjs";
+import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
 
 // Every repo-wide gate qa_gate_run runs. A gate is a zero-argument async
 // function that prints its own detail and throws if anything failed.
@@ -17,6 +18,7 @@ export function qa_gates() {
     daemons_gate_run,
     dispatcher_scripts_python_assert,
     function_worker_pool_run_try,
+    function_imports_gate_run,
   ];
   return gates;
 }

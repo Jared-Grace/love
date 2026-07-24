@@ -1,4 +1,4 @@
-import { storage_local_get } from "./storage_local_get.mjs";
+import { storage_local_get_or_fresh } from "./storage_local_get_or_fresh.mjs";
 import { app_shared_bible_mode_verse } from "./app_shared_bible_mode_verse.mjs";
 import { app_shared_bible_mode_hash_key } from "./app_shared_bible_mode_hash_key.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -8,15 +8,21 @@ import { null_not_is } from "./null_not_is.mjs";
 export function app_bible_mode_get() {
   "the hash wins: a shared link opens in the mode it names, so the whole reading spot travels in the url";
   let hash = html_hash_object_get();
-  let mode_hash = property_get_or_null(hash, app_shared_bible_mode_hash_key());
+  let property = app_shared_bible_mode_hash_key();
+  let mode_hash = property_get_or_null(hash, property);
   if (null_not_is(mode_hash)) {
     return mode_hash;
   }
-  let mode = storage_local_get(app_bible_mode_get, "mode");
+  let mode = storage_local_get_or_fresh(
+    app_bible_mode_get,
+    "mode",
+    app_shared_bible_mode_verse,
+  );
   let missing = null_is(mode);
   if (missing) {
     ("verse mode is the default: it remembers the exact verse you were on across visits");
-    return app_shared_bible_mode_verse();
+    let mode2 = app_shared_bible_mode_verse();
+    return mode2;
   }
   return mode;
 }
