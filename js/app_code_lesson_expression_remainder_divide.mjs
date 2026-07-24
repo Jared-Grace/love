@@ -26,6 +26,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { app_code_arrow } from "./app_code_arrow.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
 export function app_code_lesson_expression_remainder_divide() {
   "BUILD the remainder-by-dividing formula from a division a / b: the remainder is a - Math.floor(a / b) * b (the dividend minus its whole part). First RECOGNISE the formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce, easy before hard. The next lesson EVALUATES this formula. Uses the shared divisor/quotient batch so a quotient-0 division can appear; divisor 3..6";
   let operator = js_operator_percent();
@@ -79,8 +80,22 @@ export function app_code_lesson_expression_remainder_divide() {
     ]);
     return [whole_part, no_floor, no_multiply];
   }
+  function backwards_decoys(shown_formula, percent) {
+    "for the backwards kind (given the remainder formula, pick the % it equals): tempting wrong matches. The DIVISION a / b (it sits right inside the formula, but that is the division, not its remainder), the SWAPPED remainder b % a, and the QUOTIENT part Math.floor(a / b) (only a piece of the formula). Dividend is the formula's first integer, divisor the third (inside Math.floor)";
+    let nums = text_integers(shown_formula);
+    let dividend = list_get(nums, 0);
+    let divisor = list_get(nums, 2);
+    let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let swapped = js_code_binary_spaced_nb(divisor, "%", dividend);
+    let floored = text_combine_multiple(["Math.floor(", division, ")"]);
+    return [division, swapped, floored];
+  }
   function quizzes_get(question, answer) {
-    "two quiz kinds: first RECOGNISE the remainder formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens (unscramble) - recognise before produce";
+    "three quiz kinds: RECOGNISE the remainder formula among wrong rewrites (multiple choice), BUILD it from tokens (unscramble), then BACKWARDS - given the formula, pick the % it equals (14 - Math.floor(14 / 4) * 4 is 14 % 4). Forwards recognise then produce, then connect the long formula to the % shorthand";
+    let nums = text_integers(question);
+    let dividend = list_get(nums, 0);
+    let divisor = list_get(nums, 1);
+    let percent = js_code_binary_spaced_nb(dividend, "%", divisor);
     let recognize = {
       question_label: "Division: ",
       on_question: html_text_set_code_dark,
@@ -100,15 +115,38 @@ export function app_code_lesson_expression_remainder_divide() {
       answer_property: "answer",
       on_answer: app_code_lesson_quiz_token_select,
     };
-    let infos = [recognize, build];
+    let backwards = {
+      question_label: "Formula: ",
+      on_question: html_text_set_code_dark,
+      answer_label: "Which is this the same as? ",
+      answer_on_button: html_text_set_code_dark,
+      answer_count_override: null,
+      answer_property: "answer",
+      on_answer: app_code_lesson_quiz_multiple_choice,
+      decoys: backwards_decoys,
+      backwards: true,
+    };
+    let infos = [recognize, build, backwards];
+    function qa_for(info) {
+      "forwards kinds are shown the division and answer with the formula; the backwards kind is shown the formula and answers with the % it equals";
+      let is_backwards = property_get_or(info, "backwards", false);
+      if (is_backwards) {
+        return {
+          question: answer,
+          answer: percent,
+        };
+      }
+      return {
+        question,
+        answer,
+      };
+    }
     function each_info(info) {
+      let quiz_qa = qa_for(info);
       function quiz(context, parent, container, refresh, next_get) {
         app_code_lesson_quiz(
           container,
-          {
-            question,
-            answer,
-          },
+          quiz_qa,
           parent,
           context,
           refresh,
@@ -122,10 +160,11 @@ export function app_code_lesson_expression_remainder_divide() {
     }
     let quizzes = list_map(infos, each_info);
     function each_exercise(info) {
+      let quiz_qa = qa_for(info);
       let exercise = {
         info,
-        question,
-        answer,
+        question: property_get(quiz_qa, "question"),
+        answer: property_get(quiz_qa, "answer"),
         batch_get,
       };
       return exercise;
