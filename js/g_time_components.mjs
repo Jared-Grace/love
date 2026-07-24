@@ -5,7 +5,7 @@ export function g_time_components(time) {
     morning: { r: 255, g: 223, b: 168, a: 0.42, saturate: 1.05, darkness: 0 },
     noon: { r: 200, g: 222, b: 255, a: 0.42, saturate: 1, darkness: 0 },
     afternoon: { r: 255, g: 120, b: 30, a: 0.55, saturate: 1, darkness: 0.2 },
-    night: { r: 10, g: 50, b: 250, a: 0.95, saturate: 0.25, darkness: 1 },
+    night: { r: 10, g: 50, b: 250, a: 0.95, saturate: 0.15, darkness: 1 },
   };
   let base = property_get(bases, time);
   return base;
