@@ -11,7 +11,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { integer_to_try } from "./integer_to_try.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export async function app_shared_bible_copy(
@@ -20,7 +19,6 @@ export async function app_shared_bible_copy(
   chapter_code,
 ) {
   list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
-  let show_names = list_multiple_is(languages_verses);
   let primary = list_last(languages_verses);
   let primary_books = property_get(primary, "books");
   let primary_verses = property_get(primary, "verses");
@@ -52,14 +50,9 @@ export async function app_shared_bible_copy(
       );
       let nn = null_not_is(verse_l);
       if (nn) {
+        ("copied text is only scripture — no language-name labels, unlike the on-screen parallel view");
         let text_l = property_get(verse_l, "text");
-        let line = text_l;
-        if (show_names) {
-          let language = property_get(entry, "language");
-          let name = property_get(language, "name");
-          line = text_combine_multiple([name, ": ", text_l]);
-        }
-        list_add(lines, line);
+        list_add(lines, text_l);
       }
     }
     each(languages_verses, per_language);
