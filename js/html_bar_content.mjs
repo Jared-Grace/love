@@ -20,6 +20,7 @@ export function html_bar_content(root) {
     "overflow-x": "auto",
   });
   let v = {
+    shell,
     bar,
     content,
   };

@@ -57,6 +57,8 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
+  let shell = property_get(bc, "shell");
+  html_max_width_centered(shell, app_shared_column_max_width());
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
   html_centered(bar);
