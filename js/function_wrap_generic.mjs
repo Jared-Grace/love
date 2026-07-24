@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_name_new_get_args } from "./function_name_new_get_args.mjs";
 import { function_wrap } from "./function_wrap.mjs";
-export async function function_wrap_generic_args(plugin_fn, args_comma) {
+export async function function_wrap_generic(plugin_fn, args_comma) {
   arguments_assert(arguments, 2);
   let f_name_new = null;
   let f_name_old = null;
