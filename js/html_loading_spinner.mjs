@@ -6,8 +6,8 @@ export function html_loading_spinner(parent) {
   let spinner = html_div(parent);
   html_style_assign(spinner, {
     position: "relative",
-    width: "6rem",
-    height: "6rem",
+    width: "8rem",
+    height: "8rem",
   });
   let outer = html_div(spinner);
   html_style_assign(outer, {
@@ -23,7 +23,7 @@ export function html_loading_spinner(parent) {
   let inner = html_div(spinner);
   html_style_assign(inner, {
     position: "absolute",
-    inset: "1.25rem",
+    inset: "2rem",
     border: "0.3rem solid rgba(140, 180, 255, 0.15)",
     "border-bottom-color": "#bcd6ff",
     "border-radius": "50%",
