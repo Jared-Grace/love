@@ -13,7 +13,8 @@ import { app_code_column_style } from "./app_code_column_style.mjs";
 export function app_code_container_light_blue(parent) {
   let c = html_div(parent);
   html_style_padding_y(c, "0.2em");
-  app_code_padding_x(c);
+  "full width, but its content centered into the button column";
+  app_code_content_center_padding(c);
   html_border_none(c);
   html_style_background_color_set(c, app_shared_container_blue_background_color());
   let border_color = app_code_container_light_blue_border_color();
