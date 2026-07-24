@@ -10,7 +10,7 @@ import { text_combine } from "./text_combine.mjs";
 import { text_combine_middle_space_nb } from "./text_combine_middle_space_nb.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 export function app_code_button_skip_lesson(context, parent) {
   "a 'Skip to the next lesson' button that jumps straight to the next lesson (or the review, at a checkpoint), the same as finishing this lesson - shared by the examples screen and the quiz screen so either offers the escape. Renders nothing (returns null) on the last lesson with no review, since there is nowhere to skip to";
   let number = app_code_lesson_current_number(context);
@@ -35,6 +35,6 @@ export function app_code_button_skip_lesson(context, parent) {
     text_combine("Skip to the next ", destination),
   );
   let skip_button = app_shared_button_wide(parent, skip_text, skip);
-  html_style_margin_top(skip_button, app_shared_spaced_large_gap());
+  html_style_margin_top(skip_button, app_shared_spaced_gap());
   return skip_button;
 }
