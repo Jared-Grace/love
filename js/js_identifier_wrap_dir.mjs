@@ -12,12 +12,13 @@ import { js_unparse } from "./js_unparse.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 ("Wrap a fn in a new ./<name_new>.mjs that delegates to name_old: the new file imports the");
 ("original, forwards the same params to it, and returns the result, leaving the original in");
-("place. The hermetic core of function_wrap — bakes the ./<name_old>.mjs import into the");
+("place. The hermetic core of the wrap tool — bakes the ./<name_old>.mjs import into the");
 ("scaffold and copies params directly, so it needs NO global dictionary and runs the same in");
 ("a sandbox as in the repo.");
 export async function js_identifier_wrap_dir(dir, name_old, name_new) {
   let old_file = text_combine_multiple([name_old, ".mjs"]);
-  let src = await file_read(path_join([dir, old_file]));
+  let file_path = path_join([dir, old_file]);
+  let src = await file_read(file_path);
   let ast_old = js_parse(src);
   let declaration_call = js_flo(ast_old);
   let arg_names = js_function_declaration_params_names(declaration_call);
@@ -44,5 +45,6 @@ export async function js_identifier_wrap_dir(dir, name_old, name_new) {
   await js_return_atomize(ast_new);
   let new_src = js_unparse(ast_new);
   let new_file = text_combine_multiple([name_new, ".mjs"]);
-  await file_overwrite(path_join([dir, new_file]), new_src);
+  let file_path2 = path_join([dir, new_file]);
+  await file_overwrite(file_path2, new_src);
 }
