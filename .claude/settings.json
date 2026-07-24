@@ -36,6 +36,7 @@
       "Bash(sort:*)",
       "Bash(uniq:*)",
       "Bash(node --check:*)",
+      "Bash(curl -s http://localhost:8080/:*)",
       "Bash(node scripts/ai.mjs ai_git)",
       "Bash(node scripts/ai.mjs app_shared_dev_build:*)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid)",
