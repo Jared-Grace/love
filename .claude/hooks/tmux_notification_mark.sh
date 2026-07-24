@@ -13,6 +13,6 @@ payload=$(cat)
 if printf '%s' "$payload" | grep -q "needs your permission"; then
   sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=white,bg=red,bold'
 else
-  sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=black,bg=yellow,bold'
+  sh /home/j/repos/love/.claude/hooks/tmux_window_mark.sh 'fg=black,bg=colour226,bold'
 fi
 exit 0
