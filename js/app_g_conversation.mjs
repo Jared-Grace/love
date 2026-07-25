@@ -83,6 +83,9 @@ export async function app_g_conversation(
   let prayed = {
     done: false,
   };
+  let greeted = {
+    done: false,
+  };
   function label_for(turn) {
     let kind = property_get(turn, "kind");
     let v = emoji_cross();
@@ -189,13 +192,11 @@ export async function app_g_conversation(
     setTimeout(reveal, delay);
   }
   function render_openers() {
-    let left4 = list_size(remaining);
-    let right3 = list_size(turns);
-    let first = equal(left4, right3);
     let intro = greeting;
-    if (not(first)) {
+    if (greeted.done) {
       intro = g_anything_else();
     }
+    greeted.done = true;
     app_g_npc_says(npc, overlay, intro);
     let discern = {
       prayed: false,
