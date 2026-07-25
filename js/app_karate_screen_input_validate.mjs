@@ -14,7 +14,7 @@ import { html_value_set } from "./html_value_set.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_margin_0 } from "./html_margin_0.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_element } from "./html_element.mjs";
 import { app_karate_style_control_border } from "./app_karate_style_control_border.mjs";
@@ -38,7 +38,7 @@ export function app_karate_screen_input_validate(
     let ul = html_element(div_checks, "ul");
     property_set(input, "ul", ul);
     html_font_color_set(ul, "#872121ff");
-    html_style_set(ul, "margin", "0");
+    html_margin_0(ul);
     html_on_input(input, validate_all);
     validate_input(input);
   }
