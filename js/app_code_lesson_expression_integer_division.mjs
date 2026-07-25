@@ -1,3 +1,4 @@
+import { app_code_remainder_roadmap } from "./app_code_remainder_roadmap.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -81,6 +82,7 @@ export function app_code_lesson_expression_integer_division() {
     return built;
   }
   function above(root) {
+    app_code_remainder_roadmap(root, "integer_division");
     let recall = app_code_container_light_blue(root);
     html_div_cycle_code(recall, [
       "You know that ",

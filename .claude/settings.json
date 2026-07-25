@@ -81,6 +81,8 @@
       "Bash(node scripts/ai.mjs permission_reachable_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_rule_command_probe:*)",
       "Bash(node scripts/ai.mjs permission_rules_unreachable:*)",
+      "Bash(node scripts/ai.mjs permission_rules_unreachable_bash:*)",
+      "Bash(node scripts/ai.mjs permission_rules_unreachable_file:*)",
       "Bash(node scripts/ai.mjs webpack_watch)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
       "Edit(/tmp/claude-1000/-home-j-repos-love/**)",
@@ -89,8 +91,9 @@
       "Bash(mkdir -p /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(rm /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
-      "Edit(.claude/hooks/bash-command-guard.py)",
-      "Edit(.claude/hooks/claude_edit_claim.mjs)"
+      "Edit(.claude/hooks/**)",
+      "Edit(.claude/settings.json)",
+      "Edit(.claude/settings.local.json)"
     ],
     "defaultMode": "acceptEdits"
   },
@@ -147,6 +150,11 @@
     "Notification": [
       {
         "hooks": [
+          {
+            "type": "command",
+            "command": "node /home/j/repos/love/.claude/hooks/notification_log.mjs",
+            "timeout": 5
+          },
           {
             "type": "command",
             "command": "sh /home/j/repos/love/.claude/hooks/tmux_notification_mark.sh",
