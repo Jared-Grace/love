@@ -209,6 +209,7 @@ export function app_code_lesson_expression_remainder_divide() {
     return built;
   }
   function above(root) {
+    app_code_remainder_roadmap(root, "remainder_divide");
     let setup = app_code_container_light_blue(root);
     html_div_cycle_code(setup, ["For ", "14 / 4", " :"]);
     html_div_cycle_code(setup, ["", "14", " is the dividend"]);
