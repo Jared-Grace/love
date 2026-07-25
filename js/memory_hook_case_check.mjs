@@ -1,3 +1,5 @@
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -12,12 +14,20 @@ export async function memory_hook_case_check(c) {
   let result = await memory_hook_check(tool, path);
   let actual = property_get(result, "decision");
   let note = "";
-  if (reason_includes !== "" && actual === expected) {
+  if (not_equal(reason_includes, "") && equal(actual, expected)) {
     let reason = property_get(result, "reason");
-    if (not(text_includes(reason, reason_includes))) {
+    let b = text_includes(reason, reason_includes);
+    if (not(b)) {
       note = "reason does not name " + reason_includes;
     }
   }
   let label = tool + " " + path;
-  return { label, expected, actual, note, pass: actual === expected && note === "" };
+  let r = {
+    label,
+    expected,
+    actual,
+    note,
+    pass: equal(actual, expected) && equal(note, ""),
+  };
+  return r;
 }

