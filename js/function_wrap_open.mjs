@@ -6,7 +6,7 @@ import { js_function_declaration_asyncify_params_from } from "./js_function_decl
 import { js_call_args_await_maybe_declaration_return_add } from "./js_call_args_await_maybe_declaration_return_add.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { function_new_open_transform } from "./function_new_open_transform.mjs";
-export async function function_wrap(f_name, f_name_wrapped) {
+export async function function_wrap_open(f_name, f_name_wrapped) {
   arguments_assert(arguments, 2);
   let r = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(r, "unaliased");

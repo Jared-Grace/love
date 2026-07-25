@@ -6,7 +6,7 @@ import { function_delete_unused } from "./function_delete_unused.mjs";
 import { js_identifier_delete_unused_dir } from "./js_identifier_delete_unused_dir.mjs";
 import { function_copy } from "./function_copy.mjs";
 import { js_identifier_copy_dir } from "./js_identifier_copy_dir.mjs";
-import { function_wrap } from "./function_wrap.mjs";
+import { function_wrap_open } from "./function_wrap_open.mjs";
 import { js_identifier_wrap_dir } from "./js_identifier_wrap_dir.mjs";
 import { functions_rename_if_starts_with } from "./functions_rename_if_starts_with.mjs";
 import { js_identifiers_prefix_rename_dir } from "./js_identifiers_prefix_rename_dir.mjs";
@@ -45,7 +45,7 @@ export function example_files_command_lambda(fn_name, args) {
     }
     return lambda;
   }
-  if (equal(fn_name, function_wrap.name)) {
+  if (equal(fn_name, function_wrap_open.name)) {
     async function lambda(dir) {
       let r4 = await js_identifier_wrap_dir(dir, args[0], args[1]);
       return r4;
@@ -61,7 +61,12 @@ export function example_files_command_lambda(fn_name, args) {
   }
   if (equal(fn_name, function_param_new.name)) {
     async function lambda(dir) {
-      let r6 = await js_identifier_param_new_dir(dir, args[0], args[1], args[2]);
+      let r6 = await js_identifier_param_new_dir(
+        dir,
+        args[0],
+        args[1],
+        args[2],
+      );
       return r6;
     }
     return lambda;
