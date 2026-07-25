@@ -8,6 +8,7 @@ import { permission_prompt_rows_print } from "./permission_prompt_rows_print.mjs
 export async function permission_prompt_report(days, seconds_minimum) {
   "Which tool calls made the human stop and approve something, over the last days, ranked by how often - the DEMAND side of the permission system. The allow-rule gates answer which rules are dead; this answers which interruptions are real, so a rule gets written for what actually costs the human time instead of for whatever seemed likely.";
   "Two sections, because the evidence differs in kind and merging them would launder a guess into a measurement. The first holds tools that do nothing but touch a local file, where a long wait has no other available cause. The second holds tools that can be slow all by themselves, so its rows carry the guard verdict instead: a row the guard settles never reached the human, whatever the clock says.";
+  "Reach for the proved report first now that blocks are recorded, and for this one only where the record does not reach: it is the same question answered by inference, which was the best available answer before a prompt left a trace and is the weaker one after. What it still holds alone is the stretch before the recorder existed, where inference is not worse than proof but is all there is.";
   let events = await permission_prompt_events_recent(days, seconds_minimum);
   function instant_is(event) {
     let b = permission_prompt_tool_instant_is(event.tool);
