@@ -63,6 +63,7 @@
       "Bash(node scripts/ai.mjs html_update_dev:*)",
       "Bash(node scripts/ai.mjs html_update_dev_webpack:*)",
       "Bash(node scripts/ai.mjs js_free_names:*)",
+      "Bash(node scripts/ai.mjs memory_orphans:*)",
       "Bash(node scripts/ai.mjs permission_gate_run:*)",
       "Bash(node scripts/ai.mjs webpack_watch)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
