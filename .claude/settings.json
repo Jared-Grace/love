@@ -45,6 +45,7 @@
       "Bash(node scripts/ai.mjs ai_git)",
       "Bash(node scripts/ai.mjs app_shared_build:*)",
       "Bash(node scripts/ai.mjs app_shared_dev_build:*)",
+      "Bash(node scripts/ai.mjs app_shared_name_search_multiple:*)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid_assert)",
       "Bash(node scripts/ai.mjs bible_interlinear_offline_upload:*)",
