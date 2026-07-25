@@ -1,3 +1,5 @@
+import { g_sermon_loop_folder } from "./g_sermon_loop_folder.mjs";
+import { path_join } from "./path_join.mjs";
 export function g_verify_queue_path() {
   "Absolute path of the sermon-loop queue file next_books.txt - the curated";
   "next-books order the queue-advance step promotes from. Single source so the";
