@@ -2111,6 +2111,15 @@ PYTHON_EVAL_DENY_REASON = (
 # reaches the command line, so it's unaffected.
 DENIED_DISPATCHER_FUNCTIONS = {
     "command_line_generic",
+    # The rest of the command_line_* family that runs a command from its
+    # argument - directly (spawnSync) or by forwarding to command_line_generic.
+    # Each is `node -e` by another name when invoked from the command line;
+    # internal use by a committed fn (with fixed args) is unaffected.
+    "command_line_interactive",
+    "command_line_cmd",
+    "command_line_code_ignore",
+    "command_line_folder",
+    "command_line_generic_code_ignore",
     "eval_console_log_replace",
     "firebase_storage_function_run_generic",
 }
