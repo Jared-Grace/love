@@ -6,6 +6,7 @@
       "Bash(cat:*)",
       "Bash(cp:*)",
       "Bash(cd:*)",
+      "Bash(date:*)",
       "Bash(diff:*)",
       "Bash(echo:*)",
       "Bash(printf:*)",
