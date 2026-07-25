@@ -10,12 +10,14 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function bundle_size_gate_run() {
   "QA gate: each small-by-design client page stays under its byte ceiling, so a";
   "dependency-tree leak into a nav/docs bundle fails loud instead of shipping silently.";
+  "Measures the dev bundle, never the promoted prod copy: prod only changes on a";
+  "deliberate promote, so measuring it reports history and passes green while dev grows.";
   let ceilings = bundle_size_ceilings();
   async function measure(entry) {
     let name = property_get(entry, "name");
     let kib = property_get(entry, "kib");
     let limit = multiply(kib, 1024);
-    let path = text_combine_multiple(["public/", name, ".js"]);
+    let path = text_combine_multiple(["public/dev/", name, ".js"]);
     let size = await file_size(path);
     let over = greater_than(size, limit);
     let result = {
