@@ -1,3 +1,4 @@
+import { app_bible_button_back_to_reader } from "./app_bible_button_back_to_reader.mjs";
 import { app_bible_hash_v_get } from "./app_bible_hash_v_get.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -10,6 +11,7 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 export async function app_bible_chapters_before(context) {
   let root = html_clear_context(context);
+  await app_bible_button_back_to_reader(root, context);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
