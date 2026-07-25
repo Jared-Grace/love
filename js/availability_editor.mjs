@@ -42,9 +42,15 @@ export function availability_editor(parent) {
   function go_next() {
     shift_week(7);
   }
-  app_shared_button(nav, "◀", go_prev);
-  let week_label = html_div_text(nav, "");
-  app_shared_button(nav, "▶", go_next);
+  let week_row = html_div(nav);
+  html_style_assign(week_row, {
+    display: "flex",
+    "align-items": "center",
+    gap: "0.5rem",
+  });
+  app_shared_button(week_row, "◀", go_prev);
+  let week_label = html_div_text(week_row, "");
+  app_shared_button(week_row, "▶", go_next);
   let jump = html_input_date(nav);
   app_shared_input_style(jump);
   html_on(jump, "change", on_jump);
@@ -69,7 +75,7 @@ export function availability_editor(parent) {
     let last = list_last(dates);
     let label = date_month_day(first);
     let label2 = date_month_day(last);
-    let text = text_combine_multiple([label, " – ", label2]);
+    let text = text_combine_multiple(["Week of: ", label, " – ", label2]);
     html_text_set(week_label, text);
   }
   function on_grid_ranges(new_ranges) {
