@@ -116,7 +116,7 @@ export function app_g_verify_view(
     html_font_color_set(l, app_shared_text_category_color());
     html_style_font_size(l, "0.72em");
     html_style_set(l, "letter-spacing", "0.11em");
-    html_style_set(l, "font-weight", "600");
+    html_bold_semi(l);
     html_margin_em(l, "0");
     html_style_margin_top(l, small_gap);
   }
