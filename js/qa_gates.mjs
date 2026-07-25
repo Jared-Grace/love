@@ -18,6 +18,8 @@ export function qa_gates() {
   let gates = [
     guard_gate_run,
     memory_hook_gate_run,
+    memory_pointer_gate_run,
+    memory_integrity_gate_run,
     examples_gate_run,
     permission_gate_run,
     permission_reachable_gate_run,
