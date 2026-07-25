@@ -117,6 +117,11 @@
     { "command": "grep 'git commit' MEMORY.md", "decision": "allow", "why": "quote-aware: 'git commit' inside a grep pattern is literal text, not a git command, so grep stays trusted" },
     { "command": "git status", "decision": "allow", "why": "read-only git subcommand stays allowed - the floor catches only add/commit writes" },
 
+    { "command": "ls -la f | awk '{print $5}'", "decision": "deny", "reason_includes": "never auto-trusted", "why": "awk in a pipe segment is refused (it can exec/write) and redirected to a trusted verb, so Claude self-corrects instead of prompting the human" },
+    { "command": "awk '{print $1}' foo.txt", "decision": "deny", "reason_includes": "wc -c", "why": "bare awk denied too, and the reason names the trusted rewrite (wc/cut/grep -o)" },
+    { "command": "grep 'awk' notes.txt", "decision": "allow", "why": "quote-aware: 'awk' inside a grep pattern is literal text, not the awk program, so grep stays trusted" },
+    { "command": "gawk 'BEGIN{print 1}'", "decision": "deny", "reason_includes": "never auto-trusted", "why": "gawk/mawk/nawk variants are the same eval seam as awk and denied alike" },
+
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
     { "command": "while true; do ls; done", "decision": "allow", "why": "while blocks are modelled like for/if" },

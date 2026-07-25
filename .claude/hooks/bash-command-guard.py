@@ -1950,6 +1950,52 @@ def git_commit_write_deny_reason(subcommand):
     )
 
 
+AWK_TEXT_TOOLS = {"awk", "gawk", "mawk", "nawk"}
+
+
+def find_awk_text_tool(command):
+    """If any statement/pipe segment in `command` invokes awk (or a gawk/mawk/
+    nawk variant), return that program name so main() can DENY it with a rewrite
+    hint - turning what would be a human prompt (awk is never auto-trusted) into
+    a self-correction Claude can act on. Else None.
+
+    awk is Turing-complete and can exec (`system(...)`) and write files
+    (`print > "file"`), so it's the same eval/write seam as `sed -i`/`node -e` -
+    never safe to blanket-allow. In this repo's inspection idiom (extract a
+    column, count, sum) it's always rewritable with an already-trusted verb
+    (wc/cut/grep -o/sort), which the deny reason names; genuine field logic goes
+    in a committed JS fn or the sandboxed throwaway, and a true one-off escapes
+    to the human.
+
+    Quote-aware and prefix-unwrapping like the other floor finders; an
+    unparseable command returns None and falls through. Safe as a floor: awk is
+    never in the allow-list, so this only ever converts an 'ask' into a
+    self-correcting 'deny', never blocks something that would have auto-approved."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if words and words[0] in AWK_TEXT_TOOLS:
+            return words[0]
+    return None
+
+
+def awk_text_tool_deny_reason(program):
+    return (
+        f"`{program}` is refused: it's Turing-complete and can exec "
+        "(`system(...)`) and write files (`print > \"file\"`), so - like "
+        "`sed -i`/`node -e` - it's never auto-trusted. For the usual inspection "
+        "one-liners rewrite with an already-allowed verb: a byte/line count -> "
+        "`wc -c`/`wc -l`; a column -> `cut -d<sep> -f<n>` or `grep -oE`; "
+        "sort/dedup/first/last -> `sort`/`uniq`/`head`/`tail`. For real field "
+        "logic put it in a committed JS fn (see CLAUDE.md - 'Scripting in JS, "
+        "not bash') or the sandboxed throwaway. If none of these fit a genuine "
+        "one-off, ask the human to approve the awk."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "
@@ -2045,6 +2091,24 @@ def main():
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
                 "permissionDecisionReason": git_commit_write_deny_reason(git_write),
+            }
+        }))
+        return
+
+    # awk (or a gawk/mawk/nawk variant) in any segment: Turing-complete, can
+    # exec (`system(...)`) and write files, so never auto-trusted - but in this
+    # repo's inspection idiom always rewritable with a trusted verb. Deny with
+    # that rewrite hint rather than prompting the human (an 'ask'), so Claude
+    # self-corrects in the loop; a genuine one-off still escapes to the human.
+    # Safe as a floor: awk is never allow-listed, so this only ever converts an
+    # 'ask' into a self-correcting 'deny', never blocks an auto-approve.
+    awk_tool = find_awk_text_tool(command)
+    if awk_tool is not None:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": awk_text_tool_deny_reason(awk_tool),
             }
         }))
         return
