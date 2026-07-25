@@ -17,6 +17,10 @@ export async function g_sermon_group_size_distribution(ceiling) {
       blocks = blocks + 1;
     }
   }
-  let r = { ceiling, blocks, tally };
+  let r = {
+    ceiling,
+    blocks,
+    tally,
+  };
   return r;
 }
