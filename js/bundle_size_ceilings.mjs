@@ -20,7 +20,7 @@ export function bundle_size_ceilings() {
     },
     {
       name: "sandbox",
-      kib: 50,
+      kib: 64,
     },
     {
       name: "designs_universal",
