@@ -1,7 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -31,6 +31,6 @@ export function app_g_progress_bar(root, count, total, name) {
     text_combine_multiple([name, " ", add_1(count), " out of ", total]),
   );
   let text_div = html_div_text_centered(container, caption);
-  html_style_set(text_div, "font-size", "0.8em");
+  html_style_font_size(text_div, "0.8em");
   return container;
 }

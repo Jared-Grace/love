@@ -16,6 +16,7 @@ export function examples_groups() {
         "example_block_add_if_first", // add a statement at the start of a then-block — a localized insert
         "example_block_add_else_last", // add a statement at the end of an else-block — the sibling insert
         "example_wrap_call_in_if", // select a call, then wrap it in an if — the selector+transform seam
+        "example_if_return_add_selected", // the same selector, a different transform — the pair that builds a guard clause
       ],
     },
     {

@@ -151,7 +151,7 @@ export function app_code_lesson_expression_exponent() {
     function final_count(grid, number, color) {
       "the FINAL count as a coloured chip with white text - it IS the exponent, so it echoes the exponent chip in the shorthand and stands out clearly from the quiet running counts";
       let made = app_code_lesson_number_chip(grid, number, color);
-      html_style_set(made, "font-size", "0.85em");
+      html_style_font_size(made, "0.85em");
       return made;
     }
     function cell_at(node, row, column) {

@@ -1,4 +1,5 @@
 import { html_style_set } from "./html_style_set.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_karate_button_background_invalid } from "../../karate_code/js/app_karate_button_background_invalid.mjs";
 import { sleep_0 } from "./sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "./html_checkboxes_checked_value_get.mjs";
@@ -44,7 +45,7 @@ export function html_checkboxes(
   button_back(context, container_main);
   let div = html_div_text(container_main, top_text);
   html_centered(div);
-  html_style_set(div, "font-size", app_shared_style_control_font_size());
+  html_style_font_size(div, app_shared_style_control_font_size());
   html_style_set(div, "padding", "0.6em");
   let checkboxes = null;
   let bn = null;
@@ -92,7 +93,7 @@ export function html_checkboxes(
       margin: "1em",
     });
     let s = html_span_text(label, title);
-    html_style_set(s, "font-size", app_shared_style_control_font_size());
+    html_style_font_size(s, app_shared_style_control_font_size());
     let div = html_div_text(label, details);
     object_merge_set(checkbox, {
       container,
