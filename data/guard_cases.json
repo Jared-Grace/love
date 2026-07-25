@@ -101,6 +101,18 @@
     { "command": "rm -r /tmp/claude-1000/-home-j-repos-love/d", "decision": "ask", "why": "recursion is refused even inside the scratchpad" },
     { "command": "rm /tmp/other/x.txt", "decision": "silent", "why": "outside the scratchpad, rm is never a trusted verb" },
 
+    { "command": "mkdir -p /tmp/claude-1000/-home-j-repos-love/scratchpad/sub", "decision": "allow", "why": "creating a dir inside the Claude scratchpad destroys nothing; the multi-word allow rule for this could never match through verb_of, so a helper earns it by path" },
+    { "command": "mkdir /tmp/claude-1000/-home-j-repos-love/d", "decision": "allow", "why": "no flag is fine too - the path is what earns trust" },
+    { "command": "mkdir -m 777 /tmp/claude-1000/-home-j-repos-love/d", "decision": "silent", "why": "-m takes a mode value and is outside the 'p'/'v' flag allowlist, so it fails closed" },
+    { "command": "mkdir -p /tmp/claude-1000/-home-j-repos-love/../escape", "decision": "ask", "why": "'..' traversal out of the scratchpad fails normpath-equality" },
+    { "command": "mkdir -p /etc/evil", "decision": "silent", "why": "outside the scratchpad, mkdir is never a trusted verb" },
+
+    { "command": "mv /tmp/claude-1000/-home-j-repos-love/a /tmp/claude-1000/-home-j-repos-love/b", "decision": "allow", "why": "both ends inside the scratchpad, so the move is contained" },
+    { "command": "mv /tmp/claude-1000/-home-j-repos-love/a /etc/cron.d/x", "decision": "ask", "why": "destination outside the scratchpad would plant a file anywhere - both ends are checked, not just the source" },
+    { "command": "mv /home/j/repos/love/js/bible.mjs /tmp/claude-1000/-home-j-repos-love/b", "decision": "silent", "why": "source outside the scratchpad would quietly remove real repo source" },
+    { "command": "mv /tmp/claude-1000/-home-j-repos-love/a", "decision": "ask", "why": "a single path is not a move; at least two non-flag arguments are required" },
+    { "command": "mv -t /etc /tmp/claude-1000/-home-j-repos-love/a", "decision": "silent", "why": "-t carries the destination as a flag value, escaping the positional check, so it fails closed" },
+
     { "command": "mount", "decision": "allow", "why": "bare mount only lists current mounts" },
     { "command": "mount /dev/sda1 /mnt", "decision": "silent", "why": "mount with arguments actually mounts" },
 
