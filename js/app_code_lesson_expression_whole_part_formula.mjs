@@ -20,7 +20,7 @@ import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_gener
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_arrow } from "./app_code_arrow.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
