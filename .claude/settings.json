@@ -5,6 +5,7 @@
       "Bash(grep:*)",
       "Bash(cat:*)",
       "Bash(cp:*)",
+      "Bash(cut:*)",
       "Bash(cd:*)",
       "Bash(date:*)",
       "Bash(diff:*)",
