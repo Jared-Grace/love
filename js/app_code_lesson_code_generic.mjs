@@ -72,17 +72,43 @@ export function app_code_lesson_code_generic(params) {
     answer_count_override: forwards_answer_count_override,
     decoys,
   };
+  ("a lesson may likewise override the backwards quiz labels: the question shown (the value) and the multiple-choice answer prompt; absent, they fall back to the generic Value: / What code produces this value? wording");
+  let backwards_question_label_override = property_get_or(
+    params,
+    "backwards_question_label",
+    null,
+  );
+  let backwards_answer_label_override = property_get_or(
+    params,
+    "backwards_answer_label",
+    null,
+  );
+  let backwards_question_label_final = backwards_question_label;
+  if (null_is(backwards_question_label_override)) {
+    backwards_question_label_final = backwards_question_label;
+  } else {
+    backwards_question_label_final = backwards_question_label_override;
+  }
+  let backwards_answer_label_final = quiz_backwards_label_answer;
+  if (null_is(backwards_answer_label_override)) {
+    backwards_answer_label_final = quiz_backwards_label_answer;
+  } else {
+    backwards_answer_label_final = backwards_answer_label_override;
+  }
   let backwards = {
-    question_label: backwards_question_label,
+    question_label: backwards_question_label_final,
     on_question: app_code_style_normal_text,
-    answer_label: quiz_backwards_label_answer,
+    answer_label: backwards_answer_label_final,
     answer_on_button: on_question,
     answer_count_override: quiz_backwards_answer_count_override,
   };
+  ("the unscramble (build-from-tokens) answer prompt is set inside the quizzes builder; a lesson may override it too");
+  let unscramble_label = property_get_or(params, "unscramble_label", null);
   let quizzes_get = app_code_lesson_quizzes_unscramble({
     batch_get,
     forwards,
     backwards,
+    unscramble_label,
   });
   let lesson = app_code_lesson_base(
     name_id,

@@ -1,3 +1,5 @@
+import { property_get_or } from "./property_get_or.mjs";
+import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
@@ -14,6 +16,17 @@ export function app_code_lesson_quizzes_generic(params) {
   let backwards_code = property_get(params, "backwards_code");
   let batch_get = property_get(params, "batch_get");
   let forwards_code = property_get(params, "forwards_code");
+  let unscramble_label_override = property_get_or(
+    params,
+    "unscramble_label",
+    null,
+  );
+  let unscramble_label = "Please unscramble the code: ";
+  if (null_is(unscramble_label_override)) {
+    unscramble_label = "Please unscramble the code: ";
+  } else {
+    unscramble_label = unscramble_label_override;
+  }
   let mc = app_code_lesson_quiz_multiple_choice;
   let backwards = object_copy_assign(backwards_record, {
     answer_property: "question",
@@ -41,7 +54,7 @@ export function app_code_lesson_quizzes_generic(params) {
       let token_select = object_copy(base);
       object_assign(token_select, {
         on_answer: app_code_lesson_quiz_token_select,
-        answer_label: "Please unscramble the code: ",
+        answer_label: unscramble_label,
       });
       list_add(infos, token_select);
     }
