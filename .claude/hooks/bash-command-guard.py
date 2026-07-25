@@ -1368,6 +1368,40 @@ def is_safe_sandboxed_node_script(words):
     return is_safe_temp_script_path(words[7])
 
 
+def sandbox_read_path_near_miss(words):
+    """Mirror of is_safe_sandboxed_node_eval / is_safe_sandboxed_node_script:
+    the same token-for-token sandbox template (eval form ending in `-e`, or
+    script form ending in a scripts/temp/*.mjs path), differing ONLY in that the
+    --allow-fs-read path points OUTSIDE this repo. Returns that out-of-repo path
+    so main() can DENY with narrow-the-path advice instead of letting the
+    command fall through to a human approval prompt (a `silent` verdict).
+
+    An in-repo path is already is_safe (allowed) and returns None here, so this
+    never shadows the sanctioned form; anything that isn't this template at all
+    (wrong flags, a relative or non-normalized path, an invalid tail) also
+    returns None and is left to normal handling. The path gate is the exact
+    complement of the recognizers' `path == REPO_ROOT or startswith(REPO_ROOT +
+    sep)` test, so every well-formed sandbox command is either allowed there or
+    corrected here - never silently dropped to a prompt."""
+    if len(words) not in (8, 9):
+        return None
+    if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
+        return None
+    if words[5] != "--permission":
+        return None
+    if not words[6].startswith("--allow-fs-read="):
+        return None
+    path = words[6][len("--allow-fs-read="):]
+    if not os.path.isabs(path) or os.path.normpath(path) != path:
+        return None
+    tail_ok = (words[7] == "-e") if len(words) == 9 else is_safe_temp_script_path(words[7])
+    if not tail_ok:
+        return None
+    if path == REPO_ROOT or path.startswith(REPO_ROOT + os.sep):
+        return None
+    return path
+
+
 # Matches exactly one sed script shape, anchored start-to-end:
 #   - a single `s/PATTERN/REPLACEMENT/FLAGS` substitution, where FLAGS is
 #     restricted to digits (occurrence number) plus g/p/I/i/M/m - notably
@@ -1850,6 +1884,36 @@ def non_ai_scripts_deny_reason(script):
     )
 
 
+def find_sandbox_path_near_miss(command):
+    """If any statement in `command` is the sandboxed-node template with an
+    --allow-fs-read path outside this repo (see sandbox_read_path_near_miss),
+    return that path so main() can DENY it with narrow-the-path advice; else
+    None. Quote-aware and prefix-unwrapping like the other floor finders; an
+    unparseable command returns None and falls through to normal handling."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        path = sandbox_read_path_near_miss(words)
+        if path is not None:
+            return path
+    return None
+
+
+def sandbox_path_near_miss_deny_reason(path):
+    return (
+        f"Sandboxed node: --allow-fs-read={path} points outside this repo, so "
+        f"the guard won't auto-approve it - the sanctioned throwaway pins read "
+        f"access to {REPO_ROOT}. Narrow it to --allow-fs-read={REPO_ROOT} and "
+        f"re-run; that exact form is auto-approved with no prompt. Only if the "
+        f"script genuinely must read another repo is a wider path needed - in "
+        f"that case ask the human to approve the one command. See CLAUDE.md - "
+        f"'Throwaway node - never raw `node -e`'."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "
@@ -1908,6 +1972,24 @@ def main():
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
                 "permissionDecisionReason": non_ai_scripts_deny_reason(non_ai_script),
+            }
+        }))
+        return
+
+    # Near-miss on the sandboxed throwaway: the exact sandbox shape but with an
+    # --allow-fs-read path outside the repo. Rather than fall through to a human
+    # prompt (silent), hand the correction back to Claude - narrow the path to
+    # REPO_ROOT - so the common over-broad-path mistake self-corrects in the
+    # agent loop; only a genuine cross-repo read has to escalate to the human.
+    # Safe to sit before the allow decision: the detector excludes in-repo paths,
+    # so it never shadows the sanctioned (allowed) form.
+    near_miss_path = find_sandbox_path_near_miss(command)
+    if near_miss_path is not None:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": sandbox_path_near_miss_deny_reason(near_miss_path),
             }
         }))
         return
