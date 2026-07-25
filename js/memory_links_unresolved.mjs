@@ -27,7 +27,9 @@ export async function memory_links_unresolved() {
     list_add(texts, text);
   }
   let joined = texts.join("\n");
-  let links = memory_wikilink_tokens(joined);
+  ("a note that explains how links are written has to show one, and the note defining the marker convention was the first thing the check reported. what is quoted as code is an example being shown, not a link being made");
+  let prose = text_code_spans_without(joined);
+  let links = memory_wikilink_tokens(prose);
   let stems = await memory_note_stems();
   function unresolved_is(link) {
     let resolved = list_includes(stems, link);

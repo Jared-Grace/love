@@ -57,6 +57,8 @@
       "Bash(node scripts/ai.mjs memory_frontmatter_defects:*)",
       "Bash(node scripts/ai.mjs memory_link_defects:*)",
       "Bash(node scripts/ai.mjs memory_link_gate_run:*)",
+      "Bash(node scripts/ai.mjs memory_link_verdict_gate_run:*)",
+      "Bash(node scripts/ai.mjs function_identifier_replace_named:*)",
       "Bash(node scripts/ai.mjs g_sermon_groups_check:*)",
       "Bash(node scripts/ai.mjs g_sermon_group_size_distribution:*)",
       "Bash(node scripts/ai.mjs g_sermon_lines_stats:*)",
