@@ -1,5 +1,5 @@
 import { html_hash_get } from "./html_hash_get.mjs";
-import { storage_local_set_context } from "./storage_local_set_context.mjs";
+import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_shared_screen_stored_set } from "./app_shared_screen_stored_set.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_get } from "./list_get.mjs";
@@ -22,7 +22,7 @@ export function app_code_hash_restore(context) {
     let value = decodeURIComponent(item);
     let is_lesson = equal(key, "lesson");
     if (is_lesson) {
-      storage_local_set_context(context, "lesson_id", value);
+      storage_session_set_context(context,"lesson_id", value);
     }
     let is_screen = equal(key, "screen");
     if (is_screen) {
@@ -31,7 +31,7 @@ export function app_code_hash_restore(context) {
     let is_quiz = equal(key, "quiz");
     if (is_quiz) {
       let value2 = Number(value);
-      storage_local_set_context(context, "quiz_index", value2);
+      storage_session_set_context(context,"quiz_index", value2);
     }
   }
   each(pairs, apply_pair);
