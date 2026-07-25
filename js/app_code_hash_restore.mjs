@@ -18,7 +18,8 @@ export function app_code_hash_restore(context) {
   function apply_pair(pair) {
     let kv = text_split(pair, "=");
     let key = list_get(kv, 0);
-    let value = decodeURIComponent(list_get(kv, 1));
+    let item = list_get(kv, 1);
+    let value = decodeURIComponent(item);
     let is_lesson = equal(key, "lesson");
     if (is_lesson) {
       storage_local_set_context(context, "lesson_id", value);
@@ -29,7 +30,8 @@ export function app_code_hash_restore(context) {
     }
     let is_quiz = equal(key, "quiz");
     if (is_quiz) {
-      storage_local_set_context(context, "quiz_index", Number(value));
+      let value2 = Number(value);
+      storage_local_set_context(context, "quiz_index", value2);
     }
   }
   each(pairs, apply_pair);
