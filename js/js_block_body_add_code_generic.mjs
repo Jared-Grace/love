@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_block_body_get } from "./js_block_body_get.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
-export function js_block_body_add_generic(
+export function js_block_body_add_code_generic(
   ast,
   selects,
   code,
