@@ -33,7 +33,12 @@ export function examples_groups() {
       examples: [
         "example_imports_migrate_multi_function", // add missing imports across a file
         "example_auto_imports_all_three", // add + remove + canonicalize at once
+        "example_imports_property_names_are_not_references", // a property key matching a fn name is NOT a reference — no import
+        "example_imports_shorthand_and_computed_are_references", // shorthand + computed keys ARE references — keep the import
         "example_fn_name_reference_strip", // drop a name-only dependency (fn.name -> fn_name("fn")) for web bundling
+        "example_fold_wrap_index", // fold hand-written wrap logic into a call to the pure fn
+        "example_fold_all_two", // fold every occurrence, not just the first
+        "example_fold_auto_discover", // discover and fold the matching fn without naming which
       ],
     },
     {
