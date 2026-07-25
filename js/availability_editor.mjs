@@ -24,8 +24,8 @@ export function availability_editor(parent) {
   html_div_text(panel, "Repeat these times");
   let date = html_input_date(panel);
   app_shared_input_style(date);
-  function add_once() {
-    commit("once");
+  function add_daily() {
+    commit("daily");
   }
   function add_weekly() {
     commit("weekly");
@@ -33,9 +33,13 @@ export function availability_editor(parent) {
   function add_monthly() {
     commit("monthly");
   }
-  app_shared_button(panel, "One time", add_once);
+  function add_once() {
+    commit("once");
+  }
+  app_shared_button(panel, "Daily", add_daily);
   app_shared_button(panel, "Weekly", add_weekly);
   app_shared_button(panel, "Monthly", add_monthly);
+  app_shared_button(panel, "One time", add_once);
   let added = html_div(parent);
   function commit(kind) {
     let date_value = html_value_get(date);
