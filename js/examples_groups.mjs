@@ -47,6 +47,7 @@ export function examples_groups() {
         "example_wrap_adds_delegating_file", // wrap a fn — adds a file that delegates to it
         "example_prefix_rename_across_files", // rename a whole name-prefix family at once
         "example_param_new_across_files", // add a parameter — every caller gets the default
+        "example_param_delete_across_files", // delete a parameter — every caller's arg is stripped
       ],
     },
   ];

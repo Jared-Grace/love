@@ -12,6 +12,8 @@ import { functions_rename_if_starts_with } from "./functions_rename_if_starts_wi
 import { js_identifiers_prefix_rename_dir } from "./js_identifiers_prefix_rename_dir.mjs";
 import { function_param_new } from "./function_param_new.mjs";
 import { js_identifier_param_new_dir } from "./js_identifier_param_new_dir.mjs";
+import { function_params_delete } from "./function_params_delete.mjs";
+import { js_identifier_param_delete_dir } from "./js_identifier_param_delete_dir.mjs";
 ("Map a multi-file example's fn to a directory transform (dir)=>void run in a sandbox");
 ("temp dir. ",
   function_rename.name,
@@ -61,6 +63,13 @@ export function example_files_command_lambda(fn_name, args) {
     async function lambda(dir) {
       let r6 = await js_identifier_param_new_dir(dir, args[0], args[1], args[2]);
       return r6;
+    }
+    return lambda;
+  }
+  if (equal(fn_name, function_params_delete.name)) {
+    async function lambda(dir) {
+      let r7 = await js_identifier_param_delete_dir(dir, args[0], args[1]);
+      return r7;
     }
     return lambda;
   }
