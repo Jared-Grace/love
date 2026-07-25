@@ -1,9 +1,4 @@
-import { app_code_container_generic } from "./app_code_container_generic.mjs";
-import { app_shared_container_blue_background_color } from "./app_shared_container_blue_background_color.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
-import { app_shared_symbol_tile_style_box_shadow_value_width_set } from "./app_shared_symbol_tile_style_box_shadow_value_width_set.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_span_text } from "./html_span_text.mjs";
