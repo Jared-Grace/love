@@ -1,8 +1,9 @@
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
 import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { identity } from "./identity.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { app_bible_verse_open_curried } from "./app_bible_verse_open_curried.mjs";
@@ -17,15 +18,16 @@ export async function app_bible_verses(context) {
     return;
   }
   let r = await app_bible_chapters_before(context);
-  let root = property_get(r, "root");
+  let card = property_get(r, "card");
   let chapter_code = property_get(r, "chapter_code");
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
-  let chapter_div = html_div_text_centered(root, chapter_name);
-  app_shared_text_deemphasized(chapter_div);
+  let chapter_div = html_div_text_centered(card, chapter_name);
+  let color = app_shared_color_blue_dark();
+  html_font_color_set(chapter_div, color);
   let e = ebible_folder_english();
   let verses = await ebible_verses_browser(e, chapter_code);
   let items = list_map_property(verses, "verse_number");
   let oc = app_bible_verse_open_curried(context);
-  let buttons = app_shared_button_list_centered(root, items, identity, oc);
+  let buttons = app_shared_button_list_centered(card, items, identity, oc);
   app_bible_picker_buttons_enlarge(buttons);
 }
