@@ -84,11 +84,10 @@ export function app_g_dev_routes() {
     app_g_pray_turn(prayer_texts, done);
   }
   async function sky() {
-    ("walk the map and watch the day drift: enable the sky demo (each MOVE steps the sky one colour, smoothly) and show the plain walkable map (no overlay). STARTS AT MORNING (phase 0); walking forward drifts the whole ring morning→noon→afternoon→sunset→night→sunrise→(back to morning), so every keyframe and every transition is walkable. a live testbed for the smooth drift the real conversation uses");
+    ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (app_g_sky_step) and jumping (app_g_sky_jump) now write g.sky_phase to disk. this is the same smooth drift the real conversation uses");
     app_g_sky_demo_enable();
     await app_g_view_set(null);
-    let g = await app_g_game_save_get();
-    property_set(g, "sky_phase", 0);
+    app_g_sky_choices();
     await app_g_sky_snap();
   }
   let routes = {
