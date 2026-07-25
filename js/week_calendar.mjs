@@ -1,9 +1,10 @@
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { week_range_sort_key } from "./week_range_sort_key.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { app_shared_container } from "./app_shared_container.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -15,6 +16,7 @@ import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_day_names } from "./week_day_names.mjs";
 import { slot_hour_label } from "./slot_hour_label.mjs";
 import { week_range_label } from "./week_range_label.mjs";
+import { week_range_sort_key } from "./week_range_sort_key.mjs";
 import { week_calendar_color_anchor } from "./week_calendar_color_anchor.mjs";
 import { week_calendar_color_empty } from "./week_calendar_color_empty.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
@@ -22,17 +24,29 @@ import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_any } from "./list_any.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
 export function week_calendar(parent, on_ranges) {
-  "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; click a piece to start a range then click another piece in the same day to select every piece between them; click any selected piece to remove its range, or click a waiting piece again to cancel it; lists the chosen windows below the grid and reports them to on_ranges after each change";
+  "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click any selected piece to remove its range, or click a waiting piece again to cancel it; reports the sorted windows to on_ranges after each change";
   let days = week_day_names();
   let slots = numbers_up_to(48);
   let ranges = [];
   let anchor = null;
   let records = [];
-  let scroller = html_div(parent);
+  let root = app_shared_container(parent);
+  let heading = html_div_text(root, "Your available times");
+  html_style_assign(heading, {
+    "font-weight": "bold",
+    "margin-bottom": "0.25rem",
+  });
+  let summary = html_div(root);
+  html_style_assign(summary, {
+    "margin-bottom": "0.75rem",
+  });
+  let scroller = html_div(root);
   html_style_assign(scroller, {
-    "max-height": "80vh",
+    "max-height": "70vh",
     overflow: "auto",
   });
   let grid = html_div(scroller);
@@ -40,11 +54,6 @@ export function week_calendar(parent, on_ranges) {
   html_div_text(grid, "");
   each(days, header_cell);
   each(slots, slot_row);
-  let summary = html_div(parent);
-  html_style_assign(summary, {
-    "margin-top": "0.75rem",
-    "line-height": "1.6",
-  });
   paint();
   function header_cell(day) {
     let head = html_div_text(grid, day);
@@ -57,11 +66,11 @@ export function week_calendar(parent, on_ranges) {
   function slot_row(slot) {
     let text = slot_hour_label(slot);
     let label = html_div_text(grid, text);
+    app_shared_text_deemphasized(label);
     html_style_assign(label, {
       "font-size": "0.75rem",
       "text-align": "right",
       padding: "0 0.4rem",
-      color: "#666666",
     });
     function day_of_slot(day) {
       day_cell(day, slot);
@@ -125,12 +134,27 @@ export function week_calendar(parent, on_ranges) {
   }
   function summary_line(span) {
     let text = week_range_label(span);
-    html_div_text(summary, text);
+    app_shared_text_body(summary, text);
+  }
+  function summary_empty() {
+    let none = app_shared_text_body(
+      summary,
+      "No times chosen yet — click a piece to start",
+    );
+    app_shared_text_deemphasized(none);
+  }
+  function render_summary() {
+    html_clear(summary);
+    let has = list_empty_not_is(ranges);
+    if (has) {
+      each(ranges, summary_line);
+    } else {
+      summary_empty();
+    }
   }
   function paint() {
     each(records, paint_record);
-    html_clear(summary);
-    each(ranges, summary_line);
+    render_summary();
   }
   function range_add(day, a, b) {
     let start = Math.min(a, b);
