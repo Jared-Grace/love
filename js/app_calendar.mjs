@@ -12,7 +12,7 @@ export async function app_calendar(context) {
   let user = await firebase_auth_ensure(root);
   let is_owner = owner_is(user);
   if (is_owner) {
-    app_calendar_availability(root);
+    app_calendar_availability(root, user);
   } else {
     app_calendar_booking(root, user);
   }
