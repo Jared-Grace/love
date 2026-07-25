@@ -38,6 +38,7 @@ export function app_code_lesson_symbols_counting(
     answer_label: quiz_backwards_label_answer,
     answer_on_button: on_quiz_answer_button_backwards,
     answer_count_override: quiz_backwards_answer_count_override,
+    answers_horizontal: true,
   };
   let quizzes_get = app_code_lesson_quizzes({
     batch_get,
