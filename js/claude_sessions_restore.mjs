@@ -4,6 +4,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { claude_sessions_recent } from "./claude_sessions_recent.mjs";
 import { claude_session_title } from "./claude_session_title.mjs";
 import { claude_running_count } from "./claude_running_count.mjs";
+import { claude_tmux_session_name } from "./claude_tmux_session_name.mjs";
 // Reopen every Claude that was running when the machine went down, one tmux
 // window each, named after the prompt that started it.
 //
@@ -11,7 +12,7 @@ import { claude_running_count } from "./claude_running_count.mjs";
 // them on one line — so "which of these is waiting on me?" is one glance instead
 // of clicking through a dozen tabs. The waiting marker itself is painted by
 // .claude/hooks/tmux_window_mark.sh from the Stop and Notification hooks.
-const TMUX_SESSION = "claude";
+const TMUX_SESSION = claude_tmux_session_name();
 export async function claude_sessions_restore(minutes) {
   // Recency identifies the open-set correctly after a reboot and WRONGLY while
   // sessions are alive — a live session has the freshest transcript of all, so
@@ -63,7 +64,9 @@ export async function claude_sessions_restore(minutes) {
     let window = await command_line(naming);
     await claude_window_start(window, session);
   }
-  await command_line("tmux set-option -t claude mouse on");
+  await command_line(
+    text_combine_multiple(["tmux set-option -t ", TMUX_SESSION, " mouse on"]),
+  );
   return text_combine_multiple([
     "Restored ",
     sessions.length,
