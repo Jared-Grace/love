@@ -19,7 +19,12 @@ import { basename, dirname } from "node:path";
 
 const memory_root = "/home/j/backup/love_claude_memory/memory";
 const log_path = "/tmp/claude-1000/-home-j-repos-love/memory_write_allow.log";
-const tools_allowed = new Set(["Read", "Edit", "Write", "NotebookEdit", "MultiEdit"]);
+/* The self-settings guard is about EDITING Claude's own config, so only the
+write tools need the deny-and-redirect. Read is left to the normal permission
+engine (allow-listed on both spellings), because a deny on Read would cost a
+wasted retry round-trip on every memory recall. Under test 2026-07-25: if a
+~/.claude-spelled Read turns out to prompt after all, put "Read" back. */
+const tools_allowed = new Set(["Edit", "Write", "NotebookEdit", "MultiEdit"]);
 
 function path_resolved(file_path) {
   /* A brand-new memory file does not exist yet, so realpath of the file
