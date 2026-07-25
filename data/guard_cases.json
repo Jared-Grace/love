@@ -92,6 +92,8 @@
     { "command": "sort < a.txt | head", "decision": "allow", "why": "input redirect works inside a pipe of trusted verbs" },
     { "command": "printf \"%d\" \"$(wc -c < public/examples.js)\"", "decision": "allow", "why": "a subshell whose inner command uses an input redirect now validates - the < is dropped and wc is trusted" },
     { "command": "wc -c < $(rm -rf /)", "decision": "ask", "why": "a command substitution in the redirect target must NOT be treated as a plain path - the metacharacter charset rejects it, so it stays unapproved" },
+    { "command": "S=/tmp/claude-1000/-home-j-repos-love; tr ',' '\\n' < $S/a.txt > $S/b.txt", "decision": "allow", "why": "a leading $VAR assigned a literal path earlier in the same command resolves on the INPUT redirect as it already did on the output one - reading is safer than the writing that was already allowed" },
+    { "command": "wc -c < $UNSET_VAR/a.txt", "decision": "ask", "why": "an unresolved $VAR input target still fails the plain-path charset - resolution only ever adds recognition, it never lets a $ through" },
     { "command": "cat <(rm -rf /)", "decision": "ask", "why": "process substitution runs a command - excluded from the input-redirect allowance" },
     { "command": "cat <> /tmp/claude-1000/-home-j-repos-love/x", "decision": "ask", "why": "<> opens the target for WRITE too, so it is not a read-only input redirect" },
     { "command": "cat << EOF", "decision": "ask", "why": "heredoc is not the plain-file input-redirect shape" },
