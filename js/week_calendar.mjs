@@ -160,6 +160,40 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
       end: end,
     });
     list_sort_number_mapper(ranges, week_range_sort_key);
+    ranges = ranges_merged(ranges);
+  }
+  function ranges_merged(sorted) {
+    "join overlapping or touching windows on the same day into one: walk the day-then-start sorted list, growing the current window whenever the next one starts within a piece of its end";
+    let out = [];
+    let current = null;
+    function flush() {
+      if (current !== null) {
+        list_add(out, current);
+      }
+    }
+    function fold(span) {
+      let live = current !== null;
+      let joins =
+        live && current.day === span.day && span.start <= current.end + 1;
+      if (joins) {
+        let end = Math.max(current.end, span.end);
+        current = {
+          day: current.day,
+          start: current.start,
+          end: end,
+        };
+      } else {
+        flush();
+        current = {
+          day: span.day,
+          start: span.start,
+          end: span.end,
+        };
+      }
+    }
+    each(sorted, fold);
+    flush();
+    return out;
   }
   function endpoint_back_up(day, slot) {
     let next = [];
