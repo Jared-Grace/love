@@ -866,7 +866,10 @@ def tokenize(command, subst_validator=None):
             # path as an argument - so any plain-path target is safe and the
             # redirect is simply dropped (like >/dev/null). The target must be
             # a metacharacter-free path (SAFE_SCRATCHPAD_PATH_RE charset) so a
-            # `< $(cmd)`/`< \`cmd\`` can't smuggle in command execution.
+            # `< $(cmd)`/`< \`cmd\`` can't smuggle in command execution. A
+            # leading `$VAR` is resolved first, exactly as on the output side -
+            # a read is strictly safer than the write that already allows it,
+            # and an unresolved `$VAR` still fails the charset and is rejected.
             # Excluded, all still Unsupported: `<<`/`<<<` (heredoc/here-string),
             # `<>` (opens for WRITE too), and `<(` (process substitution - runs
             # a command).
@@ -879,6 +882,7 @@ def tokenize(command, subst_validator=None):
                 while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n", "<", ">"):
                     k += 1
                 path = command[path_start:k]
+                path = _resolve_leading_var(path, var_map)
                 if path and SAFE_SCRATCHPAD_PATH_RE.match(path) and not _is_network_pseudo_device(path):
                     word.clear()
                     i = k
