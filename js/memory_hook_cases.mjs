@@ -10,8 +10,8 @@ export function memory_hook_cases() {
   let real = memory_folder_realpath();
   let note = "MEMORY.md";
   let absent = "brand_new_note_that_does_not_exist_yet.md";
-  let home = os.homedir();
-  let settings = path_join([home, ".claude", "settings.json"]);
+  let config_folder = claude_config_folder();
+  let settings = path_join([config_folder, "settings.json"]);
   let cases = [
     {
       tool: "Edit",
