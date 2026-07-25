@@ -3,15 +3,36 @@ export function g_sunrise_candidates() {
   let candidates = [
     {
       label: "Warm",
-      components: { r: 250, g: 182, b: 150, a: 0.53, saturate: 0.6, darkness: 0.38 },
+      components: {
+        r: 250,
+        g: 182,
+        b: 150,
+        a: 0.53,
+        saturate: 0.6,
+        darkness: 0.38,
+      },
     },
     {
       label: "Lavender",
-      components: { r: 200, g: 165, b: 242, a: 0.6, saturate: 0.42, darkness: 0.4 },
+      components: {
+        r: 200,
+        g: 165,
+        b: 242,
+        a: 0.6,
+        saturate: 0.42,
+        darkness: 0.4,
+      },
     },
     {
       label: "Split",
-      components: { r: 228, g: 172, b: 210, a: 0.57, saturate: 0.48, darkness: 0.4 },
+      components: {
+        r: 228,
+        g: 172,
+        b: 210,
+        a: 0.57,
+        saturate: 0.48,
+        darkness: 0.4,
+      },
     },
   ];
   return candidates;
