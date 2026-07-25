@@ -2,6 +2,7 @@ import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
 import { storage_session_set } from "./storage_session_set.mjs";
