@@ -19,7 +19,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_any() {
-  "practice the remainder % with a mix of divisors, after learning it for 2, 3, 4 one at a time; both the number and the divisor vary each question";
+  "practice the remainder % with a mix of divisors; the intro DEFINES the remainder via the formula (dividend - Math.floor(n / d) * d, learned in the remainder-by-dividing lessons) rather than pointing back to the 2/3/4 lessons; both the number and the divisor vary each question";
   let operator = js_operator_percent();
   let percent = property_get(operator, "operator");
   function make(divisor) {
@@ -74,9 +74,15 @@ export function app_code_lesson_expression_remainder_any() {
   function above(root) {
     let c = app_code_container_light_blue(root);
     html_div_cycle_code(c, [
-      "We found the remainder ",
+      "The remainder ",
       percent,
-      " for 2, 3, and 4",
+      " is the dividend minus its whole part",
+    ]);
+    html_div_cycle_code(c, [
+      "",
+      "14 % 4",
+      " is ",
+      "14 - Math.floor(14 / 4) * 4",
     ]);
     html_div_cycle_code(c, [
       "It works the same way for any number we divide by",
