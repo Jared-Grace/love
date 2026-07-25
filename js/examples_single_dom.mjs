@@ -1,6 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_next_text } from "./app_shared_button_next_text.mjs";
 import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
@@ -21,7 +22,7 @@ export function examples_single_dom(
   let count = list_size(examples);
   html_progress_bar(parent, index, count, "example");
   let nav = html_div(parent);
-  html_style_set(nav, "display", "flex");
+  html_display_flex(nav);
   html_style_set(nav, "gap", "0.5rem");
   html_style_set(nav, "flex-wrap", "wrap");
   html_style_set(nav, "align-items", "center");

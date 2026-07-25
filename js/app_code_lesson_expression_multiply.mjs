@@ -32,6 +32,7 @@ import { html_span } from "./html_span.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_display_set } from "./html_display_set.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -164,7 +165,7 @@ export function app_code_lesson_expression_multiply() {
       let column_count = add(multiply(2, count), 1);
       let end_column = column_count;
       let grid = html_span(parent);
-      html_style_set(grid, "display", "inline-grid");
+      html_display_set(grid, "inline-grid");
       html_style_set(grid, "grid-template-rows", "auto auto");
       html_style_set(grid, "grid-template-columns", text_combine_multiple(["repeat(", text_to(column_count), ", auto)"]));
       html_style_set(grid, "align-items", "center");
