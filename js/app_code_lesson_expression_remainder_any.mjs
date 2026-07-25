@@ -55,20 +55,15 @@ export function app_code_lesson_expression_remainder_any() {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let params = {
     above,
     name_id,
     next_arg,
     example_count: 2,
     decoys,
-    forwards_question_label: "Remainder expression: ",
-    forwards_answer_label: "remainder value: ",
-    backwards_question_label: "remainder value: ",
-    backwards_answer_label:
-      "What remainder expression produces the remainder value? ",
-    unscramble_label:
-      "Build the remainder expression that produces the remainder value: ",
-  });
+  };
+  object_merge(params, app_code_remainder_percent_labels());
+  let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function title_name_id() {
     "the home title is console.log remainder % (no 'by <divisor>', since the divisor now varies)";
