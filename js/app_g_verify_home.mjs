@@ -25,6 +25,8 @@ import { app_g_verify_view } from "./app_g_verify_view.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 import { app_shared_milestone_background_color } from "./app_shared_milestone_background_color.mjs";
 import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
@@ -140,7 +142,7 @@ export async function app_g_verify_home(context) {
     html_style_padding_x(wrap, "1.2em");
     html_style_padding_y(wrap, "2em");
     let cbar = html_div(wrap);
-    html_style_set(cbar, "margin-bottom", app_shared_spaced_small_gap());
+    html_style_margin_bottom(cbar, app_shared_spaced_small_gap());
     let book_order = [];
     let book_chapters = {};
     chapter_codes.forEach(function (code) {
@@ -206,7 +208,7 @@ export async function app_g_verify_home(context) {
       html_style_padding_x(banner, "0.7em");
       html_style_padding_y(banner, "0.5em");
       html_margin_em(banner, "0");
-      html_style_set(banner, "margin-top", app_shared_spaced_small_gap());
+      html_style_margin_top(banner, app_shared_spaced_small_gap());
       html_style_font_size(banner, "0.95em");
     }
     let view = null;
@@ -246,7 +248,7 @@ export async function app_g_verify_home(context) {
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
       app_shared_text_deemphasized(msg);
       html_style_font_size(msg, "1.1em");
-      html_style_set(msg, "margin-top", "1em");
+      html_style_margin_top(msg, "1em");
     }
     let bar = html_div_centered(wrap);
     html_style_set(bar, "margin-top", app_shared_spaced_small_gap());
