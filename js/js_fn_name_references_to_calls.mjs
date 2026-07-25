@@ -19,18 +19,25 @@ export async function js_fn_name_references_to_calls(ast) {
   let fn_names = await functions_names();
   function each(v) {
     let node = property_get(v, "node");
-    let object = property_get(node, "object");
-    let property = property_get(node, "property");
     let computed = property_get(node, "computed");
+    if (computed) {
+      return;
+    }
+    let object = property_get(node, "object");
     let object_type = property_get(object, "type");
     let object_is_identifier = equal(object_type, "Identifier");
-    let property_name = property_get(property, "name");
+    if (not(object_is_identifier)) {
+      return;
+    }
+    let property = property_get(node, "property");
+    let property_name = property_get_or_null(property, "name");
     let property_is_name = equal(property_name, "name");
+    if (not(property_is_name)) {
+      return;
+    }
     let name = property_get(object, "name");
     let is_fn = list_includes(fn_names, name);
-    let convert = object_is_identifier && property_is_name && is_fn;
-    let keep = computed || not(convert);
-    if (keep) {
+    if (not(is_fn)) {
       return;
     }
     let string_code = js_code_string(name);
