@@ -102,6 +102,11 @@
     { "command": "ls > /dev/nullX", "decision": "ask", "why": "not exactly /dev/null - the target must be followed by a separator, so /dev/nullX is a real file write" },
     { "command": "ls > /dev/null/x", "decision": "ask", "why": "writing INTO /dev/null/x is a real path, not the /dev/null discard" },
     { "command": "ls >> /home/j/.bashrc", "decision": "ask", "why": "append to a startup file" },
+    { "command": "S=/tmp/claude-1000/-home-j-repos-love/s/scratchpad; ls > $S/b2.txt", "decision": "allow", "why": "a VAR=<literal scratchpad path> assignment lets the guard resolve a $VAR redirect target and confirm it lands in the scratchpad (MACHINE-DEPENDENT prefix, like the rm cases)" },
+    { "command": "S=/tmp/claude-1000/-home-j-repos-love/s/scratchpad; ls > ${S}/b2.txt", "decision": "allow", "why": "${VAR} braces resolve the same as $VAR" },
+    { "command": "S=/etc; ls > $S/passwd", "decision": "silent", "why": "resolving $S to a non-scratchpad path leaves it blocked - variable resolution feeds the scratchpad check, never bypasses it" },
+    { "command": "S=$(echo /tmp); ls > $S/x", "decision": "silent", "why": "a value built from $(...) is not a literal, so $S is never captured or resolved" },
+    { "command": "ls > $UNDEF/x", "decision": "ask", "why": "an unassigned variable is not in the literal map, so the $UNDEF/x target stays unresolved and unapproved" },
 
     { "command": "find . -type f", "decision": "allow", "why": "find with no exec surface" },
     { "command": "find . -exec ls {} \\;", "decision": "allow", "why": "-exec running a trusted verb" },
