@@ -1,3 +1,6 @@
+import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
+import { object_merge } from "./object_merge.mjs";
+import { modulo } from "./modulo.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -44,7 +47,10 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_console_log_remainder_generic(divisor, insight) {
+export function app_code_lesson_console_log_remainder_generic(
+  divisor,
+  insight,
+) {
   "a reusable remainder (%) lesson for a fixed divisor; the intro shows the CYCLE table (0..2*divisor, so the repeat is visible) and any divisor-specific insight lines (e.g. even/odd for divisor 2)";
   let operator = js_operator_percent();
   let percent = property_get(operator, "operator");
@@ -60,7 +66,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let base = integer_random(0, max);
     function each_offset(offset) {
       let n = add(base, offset);
-      return code_of(n);
+      let r = code_of(n);
+      return r;
     }
     let list = range_map(divisor, each_offset);
     return list;
@@ -73,7 +80,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     next_arg,
     example_count: 2,
   };
-  object_merge(params, app_code_remainder_percent_labels());
+  let from2 = app_code_remainder_percent_labels();
+  object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function title_name_id() {
@@ -110,7 +118,8 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     html_span_text(tile, before);
     let chip = remainder_chip(tile, remainder);
     app_code_lesson_chip_lift(chip);
-    let after = text_combine_multiple([" ", triple_equal, " ", text_to(result)]);
+    let t2 = text_to(result);
+    let after = text_combine_multiple([" ", triple_equal, " ", t2]);
     html_span_text(tile, after);
   }
   function example(parent) {
@@ -121,34 +130,40 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let total = add(group_total, left);
     function group_size_of(index) {
       "the size of each group (ignores which group), so the sum reads 4 + 4 + 4";
-      return text_to(each_group);
+      let t = text_to(each_group);
+      return t;
     }
     let fours = range_map(divisor, group_size_of);
     let sum_expr = list_join(fours, " + ");
     let triple_equal = js_operator_triple_equal_symbol();
+    let right = text_to(group_total);
     let grouped_equation = js_code_binary_spaced_nb(
       sum_expr,
       triple_equal,
-      text_to(group_total),
+      right,
     );
+    let t3 = text_to(total);
     html_div_cycle_code(parent, [
       "Suppose we share ",
-      text_to(total),
+      t3,
       " loaves of bread into ",
       divisor_text,
       " groups",
     ]);
+    let t4 = text_to(each_group);
     html_div_cycle_code(parent, [
       "Then each group gets ",
-      text_to(each_group),
+      t4,
       " loaves - that is ",
       grouped_equation,
     ]);
+    let chosen = word_pluralize(left, "loaf");
+    let verb = word_is_are(left);
     let leftover_middle = text_combine_multiple([
       " ",
-      word_pluralize(left, "loaf"),
+      chosen,
       " ",
-      word_is_are(left),
+      verb,
       " left over, so ",
     ]);
     let leftover_line = html_div(parent);
@@ -177,7 +192,9 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       " we divide two numbers, sometimes the numbers divide evenly",
     );
     html_div_cycle_code(intro, [first_line]);
-    html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
+    html_div_cycle_code(intro, [
+      "Other times the numbers do not divide evenly",
+    ]);
     let example_box = app_code_container_light_blue(root);
     example(example_box);
     let evenly_box = app_code_container_light_blue(root);
@@ -202,8 +219,10 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
     let remainder_texts = range_map(divisor, text_to);
     let or_parts = list_to_or_list_generic(remainder_texts, "or");
     function legend_part(part, index) {
-      "list_to_or_list_generic interleaves item, separator, item, ...; the items land on even indices, so render those as colored chips and the odd separators (', ' and ' or ') as plain text";
-      let is_item = equal_0(modulo(index, 2));
+      (list_to_or_list_generic.name,
+        " interleaves item, separator, item, ...; the items land on even indices, so render those as colored chips and the odd separators (', ' and ' or ') as plain text");
+      let item = modulo(index, 2);
+      let is_item = equal_0(item);
       if (is_item) {
         let remainder = divide(index, 2);
         remainder_chip(legend, remainder);
@@ -228,15 +247,19 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
       html_span_text(line, " is ");
       remainder_chip(line, remainder);
     }
-    let row_count = add(multiply(2, divisor), 1);
-    each(range(row_count), row);
+    let left2 = multiply(2, divisor);
+    let row_count = add(left2, 1);
+    let list2 = range(row_count);
+    each(list2, row);
     let has_insight = list_empty_not_is(insight);
     if (has_insight) {
       let insight_box = app_code_container_light_blue(root);
       function insight_line(line) {
         let row = html_div(insight_box);
-        html_span_text(row, property_get(line, "text"));
-        remainder_chip(row, property_get(line, "remainder"));
+        let text = property_get(line, "text");
+        html_span_text(row, text);
+        let value = property_get(line, "remainder");
+        remainder_chip(row, value);
       }
       each(insight, insight_line);
     }

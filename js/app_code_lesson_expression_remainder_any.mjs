@@ -1,3 +1,5 @@
+import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
+import { object_merge } from "./object_merge.mjs";
 import { multiply } from "./multiply.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -62,7 +64,8 @@ export function app_code_lesson_expression_remainder_any() {
     example_count: 2,
     decoys,
   };
-  object_merge(params, app_code_remainder_percent_labels());
+  let from2 = app_code_remainder_percent_labels();
+  object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function title_name_id() {
