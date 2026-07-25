@@ -46,7 +46,6 @@ export function app_g_verify_view(
   html_clear(container);
   let tokens = g_sermon_passage_words(english);
   let highlight = app_shared_verse_selected_background_color();
-  let muted = app_shared_text_deemphasized_color();
   let border = app_shared_container_blue_border_color();
   let serif = app_shared_font_serif();
   let small_gap = app_shared_spaced_small_gap();
@@ -111,15 +110,15 @@ export function app_g_verify_view(
   function label_new(caption) {
     let l = html_p_text(container, caption);
     html_font_color_set(l, app_shared_text_category_color());
-    html_style_set(l, "font-size", "0.72em");
+    html_style_font_size(l, "0.72em");
     html_style_set(l, "letter-spacing", "0.11em");
     html_style_set(l, "font-weight", "600");
     html_margin_em(l, "0");
-    html_style_set(l, "margin-top", small_gap);
+    html_style_margin_top(l, small_gap);
   }
   let passage_panel = app_shared_container_base(container);
   html_style_set(passage_panel, "font-family", serif);
-  html_style_set(passage_panel, "font-size", "1.3em");
+  html_style_font_size(passage_panel, "1.3em");
   html_style_set(passage_panel, "line-height", "1.95");
   tokens.forEach(function (t, i) {
     let span = html_span_text(passage_panel, t);
@@ -168,7 +167,7 @@ export function app_g_verify_view(
     let words_el = html_span_text(row, words);
     html_style_set(words_el, "font-family", serif);
     html_style_set(words_el, "flex", "0 0 42%");
-    html_font_color_set(words_el, muted);
+    app_shared_text_deemphasized(words_el);
     html_span_text(row, property_get(l, "text"));
     html_on(row, "mouseenter", function () {
       highlight_lines([li]);
@@ -181,7 +180,7 @@ export function app_g_verify_view(
   lines.forEach(function (l, li) {
     let row = row_new(ord, li === 0);
     let n = html_span_text(row, String(li + 1));
-    html_font_color_set(n, muted);
+    app_shared_text_deemphasized(n);
     html_style_set(n, "flex", "0 0 1.2em");
     html_style_set(n, "font-variant-numeric", "tabular-nums");
     html_span_text(row, property_get(l, "text"));
@@ -192,7 +191,7 @@ export function app_g_verify_view(
     order_comps[li] = row;
   });
   let links_bar = html_div(container);
-  html_style_set(links_bar, "margin-top", small_gap);
+  html_style_margin_top(links_bar, small_gap);
   html_style_set(links_bar, "text-align", "center");
   let bh_chapter = String(Number(chapter_code.slice(3)));
   let bh_book = g_verify_book_name(chapter_code.slice(0, 3));
@@ -207,7 +206,7 @@ export function app_g_verify_view(
   html_button_biblehub_open_parallel(links_bar, bh_chapter, bh_book, bh_verse);
   html_button_biblehub_open_interlinear(links_bar, bh_chapter, bh_book, bh_verse);
   let approve_bar = html_div(container);
-  html_style_set(approve_bar, "margin-top", small_gap);
+  html_style_margin_top(approve_bar, small_gap);
   html_style_set(approve_bar, "text-align", "center");
   async function on_approve() {
     try {
@@ -217,12 +216,12 @@ export function app_g_verify_view(
       });
       html_clear(approve_bar);
       let done = html_p_text(approve_bar, "Approved v" + verse + " ✓");
-      html_font_color_set(done, muted);
+      app_shared_text_deemphasized(done);
       on_approved(verse);
     } catch (failed) {
       html_clear(approve_bar);
       let msg = html_p_text(approve_bar, "Couldn't save — please try again.");
-      html_font_color_set(msg, muted);
+      app_shared_text_deemphasized(msg);
       app_shared_button(approve_bar, "Approve v" + verse, on_approve);
     }
   }
@@ -242,11 +241,11 @@ export function app_g_verify_view(
   html_style_set(suggest_area, "min-height", "6em");
   html_style_set(suggest_area, "box-sizing", "border-box");
   html_style_set(suggest_area, "font-family", serif);
-  html_style_set(suggest_area, "font-size", "1em");
+  html_style_font_size(suggest_area, "1em");
   html_style_set(suggest_area, "line-height", "1.5");
-  html_style_set(suggest_area, "margin-top", small_gap);
+  html_style_margin_top(suggest_area, small_gap);
   let suggest_bar = html_div(container);
-  html_style_set(suggest_bar, "margin-top", small_gap);
+  html_style_margin_top(suggest_bar, small_gap);
   html_style_set(suggest_bar, "text-align", "center");
   async function on_suggest() {
     try {
@@ -256,11 +255,11 @@ export function app_g_verify_view(
       });
       html_clear(suggest_bar);
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
-      html_font_color_set(sent, muted);
+      app_shared_text_deemphasized(sent);
     } catch (failed) {
       html_clear(suggest_bar);
       let msg = html_p_text(suggest_bar, "Couldn't send — please try again.");
-      html_font_color_set(msg, muted);
+      app_shared_text_deemphasized(msg);
       app_shared_button(suggest_bar, "Send suggestion", on_suggest);
     }
   }
