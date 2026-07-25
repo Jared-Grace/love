@@ -31,6 +31,6 @@ export async function bundle_size_gate_run() {
   }
   let violations = list_filter(measured, over_lambda);
   list_empty_is_assert_json(violations, {
-    hint: "a small-by-design client page exceeded its byte ceiling — it likely imported an app's dependency tree; strip name-only deps with js_fn_name_references_to_calls, or move the heavy import out; adjust bundle_size_ceilings only for genuine growth",
+    hint: "a small-by-design client page exceeded its byte ceiling — it likely imported an app's dependency tree; strip name-only imports (the fn.name to marker inverse transform) or move the heavy import out; raise the ceiling only for genuine growth",
   });
 }
