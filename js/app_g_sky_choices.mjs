@@ -5,15 +5,12 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { g_times } from "./g_times.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { app_g_sky_jump } from "./app_g_sky_jump.mjs";
+import { app_g_sky_pill_style } from "./app_g_sky_pill_style.mjs";
+import { app_g_sky_choices_highlight } from "./app_g_sky_choices_highlight.mjs";
+import { global_function_property_set } from "./global_function_property_set.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-export function app_g_sky_choices() {
-  ("the #sky demo's always-visible CHOICE panel (dev only): a fixed column top-right, above everything, with one pill per time of day in ",
-    g_times.name,
-    " — clicking a pill jumps the sky straight to that keyframe (",
-    app_g_sky_jump.name,
-    "), so you can inspect any sky without walking there. built by mapping ",
-    g_times.name,
-    ", so adding a keyframe adds its button automatically (no list to keep in sync)");
+export async function app_g_sky_choices() {
+  "the #sky demo's always-visible CHOICE panel (dev only): a fixed column top-right, above everything, with one pill per time of day in g_times — clicking a pill jumps the sky straight to that keyframe (app_g_sky_jump), so you can inspect any sky without walking there. built by mapping g_times, so adding a keyframe adds its button automatically. stashes the pills (button + index) so app_g_sky_choices_highlight can mark the CURRENT sky, and applies that you-are-here highlight once on render";
   let body = html_document_body();
   let panel = html_div(body);
   html_style_assign(panel, {
@@ -26,22 +23,17 @@ export function app_g_sky_choices() {
     gap: "0.3rem",
   });
   let times = g_times();
-  function pill_add(name, index) {
+  function pill_of(name, index) {
     let label = text_first_upper_to(name);
     async function on_click() {
       await app_g_sky_jump(index);
     }
     let button = html_button(panel, label, on_click);
-    html_style_assign(button, {
-      background: "rgba(0, 0, 0, 0.7)",
-      color: "white",
-      border: "none",
-      padding: "0.3rem 0.6rem",
-      "border-radius": "0.4rem",
-      "font-size": "1rem",
-      cursor: "pointer",
-    });
-    return button;
+    app_g_sky_pill_style(button, false);
+    let pill = { button, index };
+    return pill;
   }
-  list_map_index(times, pill_add);
+  let pills = list_map_index(times, pill_of);
+  global_function_property_set(app_g_sky_choices_highlight, "pills", pills);
+  await app_g_sky_choices_highlight();
 }
