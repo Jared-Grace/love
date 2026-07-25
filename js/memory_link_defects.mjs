@@ -1,7 +1,6 @@
 import { memory_links_unresolved } from "./memory_links_unresolved.mjs";
 import { memory_note_stems } from "./memory_note_stems.mjs";
 import { memory_type_prefixes } from "./memory_type_prefixes.mjs";
-import { todo } from "./todo.mjs";
 import { memory_todo_prefix } from "./memory_todo_prefix.mjs";
 import { memory_dangling_links } from "./memory_dangling_links.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -11,7 +10,6 @@ import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { marker } from "./marker.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
