@@ -11,7 +11,7 @@ export function example_file_name_dom(parent, name) {
   let caption = html_div(parent);
   html_text_set(caption, name);
   html_style_font_size(caption, "0.75rem");
-  html_style_set(caption, "font-weight", "600");
+  html_bold_semi(caption);
   html_font_color_set(caption, app_shared_color_blue_dark());
   html_style_set(caption, "margin", "0.4rem 0 0.2rem");
   return caption;

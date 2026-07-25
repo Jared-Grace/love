@@ -1,4 +1,3 @@
-import { marker } from "./marker.mjs";
 import { file_read } from "./file_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -13,8 +12,8 @@ export async function function_node_only_is(f_path) {
     return false;
   }
   let markers = node_module_import_markers();
-  function lambda(marker) {
-    let hit = text_includes(code, marker);
+  function lambda(marker_text) {
+    let hit = text_includes(code, marker_text);
     return hit;
   }
   let any = list_any(markers, lambda);

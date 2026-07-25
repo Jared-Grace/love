@@ -41,7 +41,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_set(header, "text-transform", "uppercase");
     html_style_set(header, "letter-spacing", "0.05em");
     html_font_color_set(header, "#888");
-    html_style_set(header, "font-weight", "600");
+    html_bold_semi(header);
     html_style_set(header, "margin", "0.75rem 0 0.35rem");
   }
   function example_button(index) {
