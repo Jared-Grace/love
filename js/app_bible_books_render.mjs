@@ -33,7 +33,8 @@ export function app_bible_books_render(list_div, query, books, on_open) {
       let value = app_shared_spaced_tiny_gap();
       html_style_padding_x(s_card, value);
       let header = html_div_text_centered(s_card, s_name);
-      app_shared_text_deemphasized(header);
+      ("color the section name in the deep blue of the nested cards, not gray, so the heading stays in the blue family");
+      html_font_color_set(header, app_shared_color_blue_dark());
       let buttons_div = html_div_centered(s_card);
       function render_book(book) {
         let text = property_get(book, "text");
