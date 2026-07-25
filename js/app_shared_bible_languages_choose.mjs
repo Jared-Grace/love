@@ -1,5 +1,4 @@
-import { html_clear } from "./html_clear.mjs";
-import { app_shared_button_back } from "./app_shared_button_back.mjs";
+import { app_shared_bible_panel_open } from "./app_shared_bible_panel_open.mjs";
 import { ebible_languages_sort_mode } from "./ebible_languages_sort_mode.mjs";
 import { app_shared_language_sort_button } from "./app_shared_language_sort_button.mjs";
 import { html_subset_ordered_choose } from "./html_subset_ordered_choose.mjs";
@@ -21,7 +20,7 @@ export function app_shared_bible_languages_choose(
   back,
 ) {
   "back is supplied by the caller: a plain reload when this stands alone, or a return to the settings hub when reached from there";
-  html_clear(content);
+  app_shared_bible_panel_open(content, back);
   function to_language(code) {
     let r = list_find_property_or_null(languages, "language_code", code);
     return r;
@@ -41,7 +40,6 @@ export function app_shared_bible_languages_choose(
     }
     html_hash_transform(transform);
   }
-  app_shared_button_back(content, back);
   ebible_languages_sort_mode(languages);
   function on_sort_change() {
     app_shared_bible_languages_choose(
