@@ -19,7 +19,7 @@ import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { app_a_app_run } from "./app_a_app_run.mjs";
 import { list_add } from "./list_add.mjs";
-import { storage_local_exists } from "./storage_local_exists.mjs";
+import { storage_session_exists } from "./storage_session_exists.mjs";
 import { app_a } from "./app_a.mjs";
 import { app_a_apps } from "./app_a_apps.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
@@ -195,7 +195,7 @@ export async function app_a_function(context) {
       fn: screen_choose(app_a_history),
     },
   ];
-  let e = storage_local_exists(app_a, "app_selected");
+  let e = storage_session_exists(app_a, "app_selected");
   if (e) {
     list_add(choices, preview_app);
   }

@@ -3,12 +3,13 @@ import { app_a_function_name_selected_history_key } from "./app_a_function_name_
 import { app_a_function_name_selected_key } from "./app_a_function_name_selected_key.mjs";
 import { list_slice_end } from "./list_slice_end.mjs";
 import { storage_local_transform_context } from "./storage_local_transform_context.mjs";
-import { storage_local_set_context } from "./storage_local_set_context.mjs";
+import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_a_function } from "./app_a_function.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 export function app_a_function_select(context, f_name) {
+  ("the pick is this tab's, but the history it feeds is yours everywhere, so the two are kept apart");
   let key = app_a_function_name_selected_key();
-  storage_local_set_context(context, key, f_name);
+  storage_session_set_context(context, key, f_name);
   function lambda(h) {
     list_add_unique(h, f_name);
     let max = 100;
