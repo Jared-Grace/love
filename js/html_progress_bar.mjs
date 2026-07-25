@@ -1,4 +1,4 @@
-import { html_style_set } from "../../love/js/html_style_set.mjs";
+import { html_style_font_size } from "../../love/js/html_style_font_size.mjs";
 import { add_1 } from "../../love/js/add_1.mjs";
 import { html_div_text_centered } from "../../love/js/html_div_text_centered.mjs";
 import { text_first_upper_to } from "../../love/js/text_first_upper_to.mjs";
@@ -51,7 +51,7 @@ export function html_progress_bar(
   ]);
   let text = text_first_upper_to(combined);
   let div2 = html_div_text_centered(progress_container_text, text);
-  html_style_set(div2, "font-size", "0.8em");
+  html_style_font_size(div2, "0.8em");
   let r = {
     container: progress_container_text,
   };

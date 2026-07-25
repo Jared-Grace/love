@@ -3,6 +3,7 @@ import { greater_than } from "./greater_than.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -18,7 +19,7 @@ import { subtract } from "./subtract.mjs";
 export function examples_menu_dom(parent, examples, on_select) {
   let heading = html_element(parent, "h1");
   html_text_set(heading, "Transform examples");
-  html_style_set(heading, "font-size", "1.6rem");
+  html_style_font_size(heading, "1.6rem");
   app_shared_text_body(
     parent,
     "Each example is one code transform — the same file shown before and after. They run easiest first; pick any to see it in full.",
@@ -27,14 +28,14 @@ export function examples_menu_dom(parent, examples, on_select) {
     let header = html_element(parent, "h2");
     html_text_set(header, name);
     app_shared_text_category(header);
-    html_style_set(header, "font-size", "1rem");
+    html_style_font_size(header, "1rem");
     html_style_set(header, "margin", "1.5rem 0 0.5rem");
   }
   function tool_subheader(name) {
     "a lighter label than the tier header — clusters same-tool cards inside a tier";
     let header = html_element(parent, "h3");
     html_text_set(header, name);
-    html_style_set(header, "font-size", "0.8rem");
+    html_style_font_size(header, "0.8rem");
     html_style_set(header, "text-transform", "uppercase");
     html_style_set(header, "letter-spacing", "0.05em");
     html_style_set(header, "color", "#888");
