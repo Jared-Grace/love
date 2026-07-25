@@ -56,7 +56,7 @@ export function app_g_message_overlay(
     "text-shadow": "0 0 0.2em rgba(255, 255, 255, 0.7)",
   });
   html_reflow_force(div);
-  html_style_set(div, "opacity", "1");
+  html_style_opacity(div, "1");
   function dismiss() {
     html_remove(div);
     on_dismiss();
