@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { app_shared_container } from "./app_shared_container.mjs";
+import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
@@ -26,7 +26,7 @@ export function app_bible_books_render(list_div, query, books, on_open) {
     function render_section(section) {
       let s_name = property_get(section, "name");
       let s_books = property_get(section, "books");
-      let s_card = app_shared_container(t_card);
+      let s_card = app_shared_container_blue_medium(t_card);
       let header = html_div_text_centered(s_card, s_name);
       app_shared_text_deemphasized(header);
       let buttons_div = html_div_centered(s_card);
