@@ -28,5 +28,5 @@ export async function app_bible_verses(context) {
   let items = list_map_property(verses, "verse_number");
   let oc = app_bible_verse_open_curried(context);
   let buttons = app_shared_button_list_centered(root, items, identity, oc);
-  each(buttons, app_bible_picker_button_enlarge);
+  app_bible_picker_buttons_enlarge(buttons);
 }
