@@ -72,21 +72,36 @@ export function app_code_lesson_expression_remainder_any() {
     return built;
   }
   function above(root) {
-    let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, [
-      "The remainder ",
-      percent,
-      " is the dividend minus its whole part",
+    let derive = app_code_container_light_blue(root);
+    html_div_cycle_code(derive, [
+      "For ",
+      "14 / 4",
+      ", remember ",
+      "14",
+      " is the dividend",
     ]);
-    html_div_cycle_code(c, [
-      "",
+    html_div_cycle_code(derive, [
+      "And ",
+      "Math.floor(14 / 4) * 4",
+      " is the whole part",
+    ]);
+    html_div_cycle_code(derive, ["Now we will subtract them from each other:"]);
+    html_div_cycle_code(derive, ["", "14 - Math.floor(14 / 4) * 4"]);
+    html_div_cycle_code(derive, ["This is the same as ", "14 % 4"]);
+    html_div_cycle_code(derive, [
+      "So ",
       "14 % 4",
       " is ",
       "14 - Math.floor(14 / 4) * 4",
     ]);
-    html_div_cycle_code(c, [
-      "It works the same way for any number we divide by",
+    let define = app_code_container_light_blue(root);
+    html_div_cycle_code(define, [
+      "So the remainder ",
+      percent,
+      " is the dividend minus its whole part",
     ]);
-    html_div_cycle_code(c, ["The remainder is still what is left over"]);
+    html_div_cycle_code(define, [
+      "And this works the same way for any number we divide by",
+    ]);
   }
 }
