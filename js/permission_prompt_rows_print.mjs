@@ -11,6 +11,7 @@ export function permission_prompt_rows_print(title, rows, keep) {
         "s  last " +
         row.latest.slice(5, 16) +
         "  " +
+        row.verdict.padEnd(7) +
         row.label,
     );
   }
