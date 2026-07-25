@@ -1,3 +1,9 @@
+import { app_g } from "./app_g.mjs";
+import { app_g_dev_if } from "./app_g_dev_if.mjs";
+import { app_g_dev_index } from "./app_g_dev_index.mjs";
+import { app_g_sky_step } from "./app_g_sky_step.mjs";
+import { app_g_sky_jump } from "./app_g_sky_jump.mjs";
+import { app_g_sky_choices } from "./app_g_sky_choices.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_npcs_get } from "./app_g_npcs_get.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
@@ -14,14 +20,18 @@ import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 import { app_g_sky_demo_enable } from "./app_g_sky_demo_enable.mjs";
-import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
-import { property_set } from "./property_set.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_g_dev_routes() {
-  "registry of dev-only hash routes for app_g (open g.html#<name>): each value sets up that test screen. SINGLE SOURCE OF TRUTH — app_g_dev_if dispatches from it and app_g_dev_index lists its keys, so the #index directory can never drift from the real routes";
+  ("registry of dev-only hash routes for ",
+    app_g.name,
+    " (open g.html#<name>): each value sets up that test screen. SINGLE SOURCE OF TRUTH — ",
+    app_g_dev_if.name,
+    " dispatches from it and ",
+    app_g_dev_index.name,
+    " lists its keys, so the #index directory can never drift from the real routes");
   async function study() {
     let view = {
       kind: app_g_view_kind_study(),
@@ -46,21 +56,28 @@ export function app_g_dev_routes() {
   }
   async function unbeliever() {
     let npcs = await app_g_npcs_get();
-    let unconverted = list_filter_object_includes(npcs, { christian: false });
+    let unconverted = list_filter_object_includes(npcs, {
+      christian: false,
+    });
     let npc = list_random_item(unconverted);
-    await npc_view_of(npc, app_g_view_phase_conversation());
+    let result = app_g_view_phase_conversation();
+    await npc_view_of(npc, result);
   }
   async function gospel_share() {
-    await npc_view(app_g_view_phase_gospel());
+    let result2 = app_g_view_phase_gospel();
+    await npc_view(result2);
   }
   async function hru() {
-    await npc_view(app_g_view_phase_how());
+    let result3 = app_g_view_phase_how();
+    await npc_view(result3);
   }
   async function believe() {
-    await npc_view(app_g_view_phase_believe());
+    let result4 = app_g_view_phase_believe();
+    await npc_view(result4);
   }
   async function disciple() {
-    await npc_view(app_g_view_phase_disciple());
+    let result5 = app_g_view_phase_disciple();
+    await npc_view(result5);
   }
   async function discern() {
     await app_g_view_set(null);
@@ -80,11 +97,18 @@ export function app_g_dev_routes() {
   async function pray() {
     await app_g_view_set(null);
     function done() {}
-    let prayer_texts = ["comfort them and carry their burden", "settle their doubts and help them trust You"];
+    let prayer_texts = [
+      "comfort them and carry their burden",
+      "settle their doubts and help them trust You",
+    ];
     app_g_pray_turn(prayer_texts, done);
   }
   async function sky() {
-    ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (app_g_sky_step) and jumping (app_g_sky_jump) now write g.sky_phase to disk. this is the same smooth drift the real conversation uses");
+    ("a testbed for the day-drift, two ways to move it: WALK the map (each move drifts the sky one colour, morning→noon→afternoon→sunset→night→sunrise→back), OR click a pill in the always-visible CHOICE panel (top-right) to jump straight to any sky. it REMEMBERS the current sky across refresh — snaps to the persisted phase instead of resetting to morning, because both walking (",
+      app_g_sky_step.name,
+      ") and jumping (",
+      app_g_sky_jump.name,
+      ") now write g.sky_phase to disk. this is the same smooth drift the real conversation uses");
     app_g_sky_demo_enable();
     await app_g_view_set(null);
     app_g_sky_choices();
