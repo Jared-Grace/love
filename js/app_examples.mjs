@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -9,11 +10,11 @@ import { number_is } from "./number_is.mjs";
 import { examples_menu_dom } from "./examples_menu_dom.mjs";
 import { examples_single_dom } from "./examples_single_dom.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
-// Client entry for the examples app. Single-screen: a chooser menu, or one
-// selected example with prev/next. The selection (an index, or null for the
-// menu) persists in localStorage, namespaced by this fn's name.
 export async function app_examples(context) {
-  let response = await fetch("examples_data.json");
+  "no-store so a data-only corpus rebuild is never masked by a cached JSON on hash-only navigation";
+  let response = await fetch("examples_data.json", {
+    cache: "no-store",
+  });
   let examples = await response.json();
   let root = property_get(context, "root");
   html_style_set(root, "margin", "0");
@@ -37,16 +38,19 @@ export async function app_examples(context) {
     let selected = storage_local_get(app_examples, "selected");
     if (number_is(selected)) {
       function on_prev() {
-        select(list_get_wrap_index(examples, selected - 1));
+        let index2 = subtract(selected, 1);
+        let r = list_get_wrap_index(examples, index2);
+        select(r);
       }
       function on_next() {
-        select(list_get_wrap_index(examples, selected + 1));
+        let r2 = list_get_wrap_index(examples, selected + 1);
+        select(r2);
       }
       examples_single_dom(page, examples, selected, on_prev, on_next, to_menu);
     } else {
       examples_menu_dom(page, examples, select);
     }
-    "render() clears root each time, so re-add the contact button here to keep it present on every view";
+    ("render() clears root each time, so re-add the contact button here to keep it present on every view");
     app_shared_contact_button(page, app_examples);
   }
   render();
