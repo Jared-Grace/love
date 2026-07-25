@@ -30,6 +30,7 @@ export function html_loading_spinner(parent) {
     animation:
       "html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite",
   });
+  html_loading_spinner_pulse(pulse, milliseconds);
   let inner = html_div(spinner);
   html_style_assign(inner, {
     position: "absolute",
