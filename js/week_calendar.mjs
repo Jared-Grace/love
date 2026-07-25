@@ -28,7 +28,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
 export function week_calendar(parent, initial_ranges, on_ranges) {
-  "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click a selected piece to collapse its range down to the far end (one piece remains), then click that lone piece to clear it; or click a waiting piece again to cancel it; reports the sorted windows to on_ranges after each change";
+  "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click a selected piece to back up a step — the range collapses to a fresh anchor on its far end, ready to re-draw — then click that anchor again to clear it; reports the sorted windows to on_ranges after each change";
   let days = week_day_names();
   let slots = numbers_up_to(48);
   let ranges = initial_ranges;
@@ -161,33 +161,31 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
     });
     list_sort_number_mapper(ranges, week_range_sort_key);
   }
-  function piece_remove(day, slot) {
+  function endpoint_back_up(day, slot) {
     let next = [];
     function handle(span) {
       let covers = range_covers(span, day, slot);
       if (not(covers)) {
         list_add(next, span);
       } else {
-        collapse_add(next, span, slot);
+        far_anchor_set(span, slot);
       }
     }
     each(ranges, handle);
     ranges = next;
   }
-  function collapse_add(next, span, slot) {
-    "clicking a piece inside a range collapses the whole range down to its far end — the single endpoint furthest from where you clicked; clicking a lone one-piece range clears it, leaving nothing";
-    let single = equal(span.start, span.end);
+  function far_anchor_set(span, slot) {
+    "backing up a step: drop the whole range and re-plant the anchor on its far end — the endpoint furthest from the clicked piece — so the next click re-draws the range from there; a lone one-piece range just clears";
+    let single = span.start === span.end;
     if (not(single)) {
-      let distance_start = subtract(slot, span.start);
-      let distance_end = subtract(span.end, slot);
-      let far_first = greater_than_equal(distance_start, distance_end);
+      let distance_start = slot - span.start;
+      let distance_end = span.end - slot;
+      let far_first = distance_start >= distance_end;
       let keep = far_first ? span.start : span.end;
-      let piece = {
+      anchor = {
         day: span.day,
-        start: keep,
-        end: keep,
+        slot: keep,
       };
-      list_add(next, piece);
     }
   }
   function cell_pressed(day, slot) {
@@ -218,7 +216,7 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
   function free_click(day, slot) {
     let selected = selected_is(day, slot);
     if (selected) {
-      piece_remove(day, slot);
+      endpoint_back_up(day, slot);
       on_ranges(ranges);
     } else {
       anchor = {
