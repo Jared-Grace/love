@@ -1,3 +1,10 @@
+import { text_empty } from "./text_empty.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 export function permission_rule_path_probe(rule) {
   "a concrete file path a file-tool allow rule claims to grant, for asking the real hook whether the rule can ever apply, or empty text when the rule names no path a probe can build";
   "the rule holds a glob and a hook resolves a real path, so a trailing star segment becomes a leaf inside the folder it names; a star anywhere else is left unprobed, because a path with a star in it resolves nowhere and the hook would abstain for a reason that has nothing to do with the rule";
@@ -22,14 +29,16 @@ export function permission_rule_path_probe(rule) {
   if (text_ends_with(inner, folder_deep)) {
     let difference2 = subtract(inner.length, folder_deep.length);
     let folder = inner.slice(0, difference2);
-    let path = text_combine(folder, text_combine("/", leaf));
+    let right = text_combine("/", leaf);
+    let path = text_combine(folder, right);
     return path;
   }
   let folder_flat = "/*";
   if (text_ends_with(inner, folder_flat)) {
     let difference3 = subtract(inner.length, folder_flat.length);
     let folder2 = inner.slice(0, difference3);
-    let path2 = text_combine(folder2, text_combine("/", leaf));
+    let right2 = text_combine("/", leaf);
+    let path2 = text_combine(folder2, right2);
     return path2;
   }
   let star = "*";
