@@ -57,5 +57,12 @@ export function example_files_command_lambda(fn_name, args) {
     }
     return lambda;
   }
+  if (equal(fn_name, function_param_new.name)) {
+    async function lambda(dir) {
+      let r6 = await js_identifier_param_new_dir(dir, args[0], args[1], args[2]);
+      return r6;
+    }
+    return lambda;
+  }
   return null;
 }
