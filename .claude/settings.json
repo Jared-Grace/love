@@ -75,6 +75,7 @@
       "Bash(node scripts/ai.mjs memory_folder:*)",
       "Bash(node scripts/ai.mjs memory_hook_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_orphans:*)",
+      "Bash(node scripts/ai.mjs notification_hook_check:*)",
       "Bash(node scripts/ai.mjs permission_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_prompt_files_report:*)",
       "Bash(node scripts/ai.mjs permission_prompt_report:*)",
@@ -92,6 +93,9 @@
       "Bash(rm /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
       "Edit(.claude/hooks/**)",
+      "Edit(.claude/hooks/bash-command-guard.py)",
+      "Edit(.claude/hooks/claude_edit_claim.mjs)",
+      "Edit(.claude/hooks/memory_write_allow.mjs)",
       "Edit(.claude/settings.json)",
       "Edit(.claude/settings.local.json)"
     ],
