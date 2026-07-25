@@ -167,14 +167,16 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
     let out = [];
     let current = null;
     function flush() {
-      if (current !== null) {
+      if (not_equal(current, null)) {
         list_add(out, current);
       }
     }
     function fold(span) {
-      let live = current !== null;
+      let live = not_equal(current, null);
       let joins =
-        live && current.day === span.day && span.start <= current.end + 1;
+        live &&
+        equal(current.day, span.day) &&
+        less_than_equal(span.start, current.end + 1);
       if (joins) {
         let end = Math.max(current.end, span.end);
         current = {
