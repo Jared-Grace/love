@@ -158,6 +158,6 @@ export function app_code_lesson_expression_remainder_subtract() {
     html_span_text_code_dark(named, percent);
     html_span_text(named, ", what remains is called the ");
     let word = html_span_text(named, "remainder");
-    html_style_set(word, "font-weight", "bold");
+    html_bold(word);
   }
 }
