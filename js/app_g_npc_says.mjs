@@ -30,7 +30,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let name_color = property_get(name_map, gender);
   let name_npc = property_get(npc, "name");
   let label = app_g_p_text(container, text_combine(name_npc, " says:"));
-  html_style_set(label, "color", name_color);
+  html_font_color_set(label, name_color);
   html_style_set(label, "margin-top", "-0.4em");
   html_bold_mild(label);
   let speech = app_g_p_text(container, npc_says);

@@ -3,6 +3,7 @@ import { greater_than } from "./greater_than.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -38,7 +39,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_font_size(header, "0.8rem");
     html_style_set(header, "text-transform", "uppercase");
     html_style_set(header, "letter-spacing", "0.05em");
-    html_style_set(header, "color", "#888");
+    html_font_color_set(header, "#888");
     html_style_set(header, "font-weight", "600");
     html_style_set(header, "margin", "0.75rem 0 0.35rem");
   }
