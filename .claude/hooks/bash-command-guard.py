@@ -1914,6 +1914,44 @@ def sandbox_path_near_miss_deny_reason(path):
     )
 
 
+GIT_WRITE_COMMIT_SUBCOMMANDS = {"add", "commit"}
+
+
+def find_git_commit_write(command):
+    """If any statement in `command` is a bare `git add`/`git commit` - the
+    commit flow Claude must run through the sanctioned commit function instead
+    of raw git - return that git subcommand so main() can DENY it with a
+    redirect (turning what would be a human prompt into a self-correction
+    Claude can act on). Else None.
+
+    Quote-aware and prefix-unwrapping like the other floor finders, so
+    `grep 'git commit' f` is NOT matched and a leading timeout/xargs prefix is
+    unwrapped; an unparseable command returns None and falls through to normal
+    handling. Only the bare `git <sub>` shape is caught - a `git -C <dir> ...`
+    form is deliberately left alone so this floor never overrides an exact
+    `git -C ...` allow rule the human may have granted."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if len(words) >= 2 and words[0] == "git" and words[1] in GIT_WRITE_COMMIT_SUBCOMMANDS:
+            return words[1]
+    return None
+
+
+def git_commit_write_deny_reason(subcommand):
+    return (
+        f"`git {subcommand}` is refused: Claude commits through the sanctioned "
+        "function, never raw git - it does add+commit as one atomic step with "
+        "the fixed 'ai' message. Use `node scripts/ai.mjs ai_git` for the love "
+        "repo (whole tree, message 'ai'), or `node scripts/ai.mjs "
+        "git_ac_call_folder_try <folder> ai` for another repo like the memory "
+        "dir. See CLAUDE.md - 'Editing protocol (optimistic concurrency)'."
+    )
+
+
 def dispatcher_deny_reason(fn):
     return (
         f"Running {fn} from the command line is refused: {fn} runs arbitrary "
@@ -1990,6 +2028,25 @@ def main():
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
                 "permissionDecisionReason": sandbox_path_near_miss_deny_reason(near_miss_path),
+            }
+        }))
+        return
+
+    # Raw `git add`/`git commit`: Claude commits only through the sanctioned
+    # function (ai_git / git_ac_call_folder_try), so deny with that redirect
+    # rather than prompting the human (an 'ask') - the reason goes back to
+    # Claude, which reruns the correct form on its own. Bare `git <sub>` only;
+    # a `git -C ...` form is left to normal handling so an exact `git -C` allow
+    # rule still wins. Safe as a floor: bare git add/commit is never in the
+    # allow-list, so this only ever converts an 'ask' into a self-correcting
+    # 'deny', never blocks something that would have auto-approved.
+    git_write = find_git_commit_write(command)
+    if git_write is not None:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": git_commit_write_deny_reason(git_write),
             }
         }))
         return
