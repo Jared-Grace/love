@@ -21,13 +21,13 @@ export async function memory_link_defects() {
   let unresolved = await memory_links_unresolved();
   let stems = await memory_note_stems();
   let prefixes = memory_type_prefixes();
-  let todo = memory_todo_prefix();
+  let todo_prefix = memory_todo_prefix();
   let typo = await memory_dangling_links();
   let defects = [];
   for (let link of unresolved) {
-    let marked = text_starts_with(link, todo);
+    let marked = text_starts_with(link, todo_prefix);
     if (marked) {
-      let promised = text_prefix_without(link, todo);
+      let promised = text_prefix_without(link, todo_prefix);
       let written = list_includes(stems, promised);
       if (written) {
         list_add(defects, {
@@ -59,11 +59,11 @@ export async function memory_link_defects() {
     if (reported_as_typo) {
       continue;
     }
-    let marker = text_combine(todo, link);
+    let marked_link = text_combine(todo_prefix, link);
     list_add(defects, {
       link,
       kind: "unwritten",
-      suggestion: marker,
+      suggestion: marked_link,
     });
   }
   return defects;
