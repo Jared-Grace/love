@@ -1,6 +1,6 @@
 import { html_loading_state } from "./html_loading_state.mjs";
 import { html_loading_overlay } from "./html_loading_overlay.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 export async function html_loading_show() {
   let state = html_loading_state();
   let timer = state.timer;
