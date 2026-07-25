@@ -1,4 +1,5 @@
 export function js_zzz_select_apply_probe(ast) {
-  ready_is();
+  if (ready_is()) {
+  }
   log_starting();
 }
