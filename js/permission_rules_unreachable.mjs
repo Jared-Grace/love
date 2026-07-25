@@ -1,6 +1,6 @@
 import { equal } from "./equal.mjs";
 import { permission_rules } from "./permission_rules.mjs";
-import { permission_rule_command } from "./permission_rule_command.mjs";
+import { permission_rule_command_probe } from "./permission_rule_command_probe.mjs";
 import { guard_check } from "./guard_check.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -12,7 +12,7 @@ export async function permission_rules_unreachable() {
   let rules = await permission_rules();
   let offenders = [];
   for (let rule of rules) {
-    let command = permission_rule_command(rule);
+    let command = permission_rule_command_probe(rule);
     if (text_empty_is(command)) {
       continue;
     }
