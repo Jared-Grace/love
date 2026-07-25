@@ -35,8 +35,6 @@
       "Bash(git status:*)",
       "Bash(git stash list)",
       "Bash(git branch -a)",
-      "Bash(git branch --set-upstream-to:*)",
-      "Bash(git config --global push.autoSetupRemote:*)",
       "Bash(git reflog)",
       "Bash(ls:*)",
       "Bash(sort:*)",
