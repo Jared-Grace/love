@@ -1086,6 +1086,83 @@ def is_safe_claude_temp_rm(words):
     return all(is_safe_claude_temp_path(p) for p in paths)
 
 
+MKDIR_SAFE_FLAG_CHARS = set("pv")
+
+
+def is_safe_claude_temp_mkdir(words):
+    """Exact-shape exception for `mkdir`, same posture as
+    is_safe_claude_temp_rm: every non-flag argument must resolve to a path
+    strictly inside a Claude-owned /tmp directory
+    (CLAUDE_TEMP_RM_PREFIXES). Flags are checked a token at a time against
+    MKDIR_SAFE_FLAG_CHARS ('p', 'v' only) and any long option fails closed,
+    so an unanticipated flag can't widen this - notably `-m <mode>`, which
+    takes a value and would let a permission mode ride along.
+
+    Creating a directory writes no file content and destroys nothing, so
+    this is the mildest of the scratchpad exceptions - but `mkdir` is still
+    never a blanket-trusted verb, because outside the scratchpad it can
+    litter arbitrary paths (and `mkdir -p /a/b/c` silently creates a whole
+    chain). Trust is earned by the path, exactly as for rm.
+
+    Why this exists: `Bash(mkdir -p /tmp/claude-<uid>/<repo>/:*)` sat in
+    permissions.allow but could never match, because verb_of() returns only
+    words[0] ('mkdir') for a non-git/non-node command - so the multi-word
+    verb the rule names is not a key any lookup ever produces, and every
+    scratchpad mkdir prompted anyway."""
+    if not words or words[0] != "mkdir":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(
+                c not in MKDIR_SAFE_FLAG_CHARS for c in flag_chars
+            ):
+                return False
+            continue
+        paths.append(word)
+    if not paths:
+        return False
+    return all(is_safe_claude_temp_path(p) for p in paths)
+
+
+MV_SAFE_FLAG_CHARS = set("vfn")
+
+
+def is_safe_claude_temp_mv(words):
+    """Exact-shape exception for `mv`, same posture as
+    is_safe_claude_temp_rm - with the extra requirement that there be at
+    least TWO non-flag arguments and that EVERY one of them (sources and
+    destination alike) sit strictly inside a Claude-owned /tmp directory.
+    That two-sided check is the whole point: a one-sided version would let
+    `mv <scratchpad file> /etc/cron.d/x` plant a file anywhere, or
+    `mv /home/j/repos/love/js/bible.mjs <scratchpad>` quietly remove real
+    source from the repo. Requiring both ends keeps the move contained to
+    a directory nothing but Claude Code tooling writes to.
+
+    Flags are checked a token at a time against MV_SAFE_FLAG_CHARS ('v',
+    'f', 'n') and any long option fails closed - notably `-t <dir>`, which
+    takes the destination as a flag value and would move the destination
+    out of the positional list this function checks.
+
+    Same origin as is_safe_claude_temp_mkdir: the
+    `Bash(mv /tmp/claude-<uid>/<repo>/:*)` rule was unreachable through
+    verb_of, so scratchpad moves prompted despite the rule."""
+    if not words or words[0] != "mv":
+        return False
+    paths = []
+    for word in words[1:]:
+        if word.startswith("-"):
+            flag_chars = word[1:]
+            if not flag_chars or any(c not in MV_SAFE_FLAG_CHARS for c in flag_chars):
+                return False
+            continue
+        paths.append(word)
+    if len(paths) < 2:
+        return False
+    return all(is_safe_claude_temp_path(p) for p in paths)
+
+
 VERIFY_HTML_DIR = os.path.join(REPO_ROOT, "public") + os.sep
 VERIFY_HTML_BASENAME_RE = re.compile(r"^tmp_verify_[A-Za-z0-9_-]+\.html$")
 
@@ -1497,6 +1574,8 @@ def check_simple_commands(tokens, safe_verbs, safe_exact_commands):
             and not is_safe_sed(words)
             and not is_safe_bare_mount(words)
             and not is_safe_claude_temp_rm(words)
+            and not is_safe_claude_temp_mkdir(words)
+            and not is_safe_claude_temp_mv(words)
             and not is_safe_verify_html_rm(words)
             and not is_safe_scripts_temp_rm(words)
             and not is_safe_git_rm_tmp(words)
