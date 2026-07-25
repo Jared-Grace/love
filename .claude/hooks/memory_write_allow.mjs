@@ -14,10 +14,11 @@ The check is on the RESOLVED path, so both spellings are covered by one rule
 outside the memory repo gets no output at all (exit 0, empty), which leaves
 the decision to the normal permission engine. */
 
-import { readFileSync, realpathSync } from "node:fs";
+import { appendFileSync, readFileSync, realpathSync } from "node:fs";
 import { dirname } from "node:path";
 
 const memory_root = "/home/j/backup/love_claude_memory/memory";
+const log_path = "/tmp/claude-1000/-home-j-repos-love/memory_write_allow.log";
 const tools_allowed = new Set(["Read", "Edit", "Write", "NotebookEdit", "MultiEdit"]);
 
 function path_resolved(file_path) {
