@@ -71,6 +71,6 @@ export function app_g_prayer_overlay() {
     "text-align": "center",
   });
   html_reflow_force(div);
-  html_style_set(div, "opacity", "1");
+  html_style_opacity(div, "1");
   return div;
 }

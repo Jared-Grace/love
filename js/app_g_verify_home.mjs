@@ -6,6 +6,7 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_set } from "./html_font_set.mjs";
 import { html_bold_semi } from "./html_bold_semi.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -268,7 +269,7 @@ export async function app_g_verify_home(context) {
       let pb = app_shared_button(bar, "v" + pending, function () {
         open_pending(pending);
       });
-      html_style_set(pb, "opacity", "0.5");
+      html_style_opacity(pb, "0.5");
       verse_buttons[pending] = pb;
     }
     view = html_div(wrap);

@@ -29,7 +29,7 @@ export function html_loading_hide() {
     if (overlay === null) {
       return;
     }
-    html_style_set(overlay, "opacity", "0");
+    html_style_opacity(overlay, "0");
     state.timer = setTimeout(remove, 150);
   }
   state.timer = setTimeout(fade_out, 150);

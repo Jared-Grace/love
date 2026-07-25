@@ -33,7 +33,7 @@ export async function app_code_scroll_center_faded(component) {
   }
   await html_scroll_center_now(component);
   await frame();
-  html_style_set(cover, "opacity", "0");
+  html_style_opacity(cover, "0");
   await wait(280);
   html_remove(cover);
 }
