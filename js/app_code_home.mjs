@@ -6,7 +6,7 @@ import { app_code_review_scope } from "./app_code_review_scope.mjs";
 import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
 import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
-import { app_code_screen_go } from "./app_code_screen_go.mjs";
+import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_code_scroll_center_faded } from "./app_code_scroll_center_faded.mjs";
 import { equal } from "./equal.mjs";
@@ -32,7 +32,12 @@ export async function app_code_home(context) {
   function lambda(item, index) {
     let id = property_get(item, "id");
     async function lambda3() {
-      await app_code_screen_go(context, "lesson_id", id, app_code_examples);
+      await app_shared_screen_go_tab(
+        context,
+        "lesson_id",
+        id,
+        app_code_examples,
+      );
     }
     let r = app_shared_button_numbered(g, index, lambda3, false);
     let title = property_get(r, "title");
@@ -51,7 +56,7 @@ export async function app_code_home(context) {
   function review_row(lesson_number, scope) {
     let label = app_code_review_range_label(lesson_number, scope);
     async function on_click() {
-      await app_code_screen_go(
+      await app_shared_screen_go_tab(
         context,
         "review_number",
         lesson_number,
