@@ -11,11 +11,13 @@ export async function function_comments_migrate(f_name) {
   let code = await file_read(f_path);
   let f_names = await functions_names();
   let migrated = js_code_comments_migrated(code, f_names);
+  let left = js_comments_left_count(code);
   let same = equal(code, migrated);
   if (same) {
     let unchanged = {
       name: f_name,
       changed: false,
+      left,
     };
     return unchanged;
   }
@@ -23,6 +25,7 @@ export async function function_comments_migrate(f_name) {
   let r = {
     name: f_name,
     changed: true,
+    left,
   };
   return r;
 }
