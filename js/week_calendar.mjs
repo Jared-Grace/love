@@ -19,7 +19,6 @@ import { week_day_names } from "./week_day_names.mjs";
 import { slot_hour_label } from "./slot_hour_label.mjs";
 import { week_range_label } from "./week_range_label.mjs";
 import { week_range_sort_key } from "./week_range_sort_key.mjs";
-import { week_calendar_color_anchor } from "./week_calendar_color_anchor.mjs";
 import { week_calendar_color_empty } from "./week_calendar_color_empty.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
@@ -113,14 +112,10 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
   function record_color(record) {
     let is_anchor = anchor_is(record.day, record.slot);
     let is_selected = selected_is(record.day, record.slot);
-    let anchor_color = week_calendar_color_anchor();
+    let active = is_anchor || is_selected;
     let selected_color = app_shared_container_blue_border_color();
     let empty_color = week_calendar_color_empty(record.slot);
-    let chosen = is_anchor
-      ? anchor_color
-      : is_selected
-        ? selected_color
-        : empty_color;
+    let chosen = active ? selected_color : empty_color;
     return chosen;
   }
   function paint_record(record) {
