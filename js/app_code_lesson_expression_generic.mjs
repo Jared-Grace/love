@@ -44,6 +44,17 @@ export function app_code_lesson_expression_generic(params) {
     "forwards_answer_label",
     null,
   );
+  let backwards_question_label = property_get_or(
+    params,
+    "backwards_question_label",
+    null,
+  );
+  let backwards_answer_label = property_get_or(
+    params,
+    "backwards_answer_label",
+    null,
+  );
+  let unscramble_label = property_get_or(params, "unscramble_label", null);
   let lesson = app_code_lesson_code_generic({
     value: "value",
     batch_get: b,
@@ -55,6 +66,9 @@ export function app_code_lesson_expression_generic(params) {
     decoys,
     forwards_question_label,
     forwards_answer_label,
+    backwards_question_label,
+    backwards_answer_label,
+    unscramble_label,
   });
   return lesson;
 }
