@@ -1,3 +1,5 @@
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -8,7 +10,6 @@ import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_container_blue_medium } from "./app_shared_container_blue_medium.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
-import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { list_add } from "./list_add.mjs";
@@ -34,7 +35,8 @@ export function app_bible_books_render(list_div, query, books, on_open) {
       html_style_padding_x(s_card, value);
       let header = html_div_text_centered(s_card, s_name);
       ("color the section name in the deep blue of the nested cards, not gray, so the heading stays in the blue family");
-      html_font_color_set(header, app_shared_color_blue_dark());
+      let color = app_shared_color_blue_dark();
+      html_font_color_set(header, color);
       let buttons_div = html_div_centered(s_card);
       function render_book(book) {
         let text = property_get(book, "text");
