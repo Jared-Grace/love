@@ -10,6 +10,8 @@ import { function_wrap } from "./function_wrap.mjs";
 import { js_identifier_wrap_dir } from "./js_identifier_wrap_dir.mjs";
 import { functions_rename_if_starts_with } from "./functions_rename_if_starts_with.mjs";
 import { js_identifiers_prefix_rename_dir } from "./js_identifiers_prefix_rename_dir.mjs";
+import { function_param_new } from "./function_param_new.mjs";
+import { js_identifier_param_new_dir } from "./js_identifier_param_new_dir.mjs";
 ("Map a multi-file example's fn to a directory transform (dir)=>void run in a sandbox");
 ("temp dir. ",
   function_rename.name,
