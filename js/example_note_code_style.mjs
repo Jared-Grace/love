@@ -7,7 +7,7 @@ import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 // lighter than the prominent function/command chips. Shared by the plain literal
 // chip and the clickable fn-name chip so they stay identical.
 export function example_note_code_style(code) {
-  html_style_set(code, "font-family", "ui-monospace, monospace");
+  html_font_set(code, "ui-monospace, monospace");
   html_style_background_color_set(code, "#e8e8e8");
   html_style_set(code, "border-radius", app_shared_border_radius());
   html_style_set(code, "padding", "0.05rem 0.3rem");
