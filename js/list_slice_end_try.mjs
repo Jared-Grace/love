@@ -1,4 +1,4 @@
-import { negative_not_ensure } from "./negative_not_ensure.mjs";
+import { negative_is } from "./negative_is.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
