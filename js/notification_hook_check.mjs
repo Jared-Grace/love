@@ -1,3 +1,5 @@
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import fs from "fs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,7 +12,8 @@ export async function notification_hook_check(message) {
   let hook_path = ".claude/hooks/notification_log.mjs";
   let log_path = notification_log_path();
   let source = fs.readFileSync(hook_path, "utf8");
-  if (!source.includes(log_path)) {
+  let b = source.includes(log_path);
+  if (not(b)) {
     throw new Error("hook does not write to " + log_path);
   }
   let cp = await import("child_process");
@@ -37,6 +40,6 @@ export async function notification_hook_check(message) {
     child.stdin.end();
   });
   let events = notification_events();
-  let last = events[events.length - 1];
+  let last = events[subtract(events.length, 1)];
   return last;
 }
