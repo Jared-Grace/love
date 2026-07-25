@@ -22,8 +22,11 @@ const log_path = "/tmp/claude-1000/-home-j-repos-love/memory_write_allow.log";
 /* The self-settings guard is about EDITING Claude's own config, so only the
 write tools need the deny-and-redirect. Read is left to the normal permission
 engine (allow-listed on both spellings), because a deny on Read would cost a
-wasted retry round-trip on every memory recall. Under test 2026-07-25: if a
-~/.claude-spelled Read turns out to prompt after all, put "Read" back. */
+wasted retry round-trip on every memory recall. Measured 2026-07-25: a
+~/.claude-spelled Read with this hook abstaining resolved in 76ms
+(tool_use 07:35:19.701Z -> tool_result 07:35:19.777Z in the session
+transcript), i.e. auto-approved with no human in the loop. The guard only
+fires on writes. */
 const tools_allowed = new Set(["Edit", "Write", "NotebookEdit", "MultiEdit"]);
 
 function path_resolved(file_path) {
