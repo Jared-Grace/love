@@ -54,6 +54,7 @@
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid_assert)",
       "Bash(node scripts/ai.mjs apps_frozen_names_all:*)",
+      "Bash(node scripts/ai.mjs apps_names:*)",
       "Bash(node scripts/ai.mjs bible_interlinear_offline_upload:*)",
       "Bash(node scripts/ai.mjs data_identifiers_search:*)",
       "Bash(node scripts/ai.mjs ebible_book_divisions_canon_assert:*)",
