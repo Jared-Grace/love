@@ -19,7 +19,12 @@ export async function app_calendar_home(context) {
   }
   let contacts_json = properties_get(dictionary);
   async function lambda7(text) {
-    await app_shared_screen_go_tab(context, "contact_selected", text, app_calendar_contact);
+    await app_shared_screen_go_tab(
+      context,
+      "contact_selected",
+      text,
+      app_calendar_contact,
+    );
   }
   let r = app_a_list_chooser_generic(
     root,
