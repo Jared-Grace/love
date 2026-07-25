@@ -1,3 +1,7 @@
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { memory_hook_cases } from "./memory_hook_cases.mjs";
@@ -8,16 +12,26 @@ export async function memory_hook_gate_run() {
   let results = await list_map_unordered_async(cases, memory_hook_case_check);
   for (let r of results) {
     let mark = r.pass ? "pass  " : "FAIL  ";
-    let note = r.note === "" ? "" : "  " + r.note;
+    let note = equal(r.note, "") ? "" : "  " + r.note;
     console.log(mark + r.label + "  " + r.expected + " / " + r.actual + note);
   }
   function failed(r) {
-    return !r.pass;
+    let n = not(r.pass);
+    return n;
   }
   let failures = list_filter(results, failed);
-  console.log("\npass " + (results.length - failures.length) + "  fail " + failures.length);
-  if (failures.length > 0) {
+  console.log(
+    "\npass " +
+      subtract(results.length, failures.length) +
+      "  fail " +
+      failures.length,
+  );
+  if (greater_than(failures.length, 0)) {
     throw new Error("memory hook gate: " + failures.length + " failed");
   }
-  return { pass: results.length, fail: 0 };
+  let r2 = {
+    pass: results.length,
+    fail: 0,
+  };
+  return r2;
 }
