@@ -62,10 +62,15 @@ export async function permission_prompt_events_file(file_path, wait_minimum) {
         let command = equal(typeof call.input.command, "string")
           ? call.input.command
           : "";
+        ("the exact file is kept alongside the folder label because a grant can name either, and only the exact one says which sibling in a per-file folder is the one still missing");
+        let file = equal(typeof call.input.file_path, "string")
+          ? call.input.file_path
+          : "";
         list_add(events, {
           label: permission_prompt_label(call.name, call.input),
           tool: call.name,
           command,
+          path: file,
           waited,
           at: new Date(call.at).toISOString(),
           sidechain: call.sidechain,
