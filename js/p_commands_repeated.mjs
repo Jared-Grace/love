@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { claude_transcripts_folder } from "./claude_transcripts_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
@@ -12,11 +13,11 @@ import { not } from "./not.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { p_command_of_line } from "./p_command_of_line.mjs";
 export async function p_commands_repeated() {
-  ("Rank the `p ` shorthand commands the user re-pasted across this project's");
-  ("session transcripts, most-repeated first, count 2+. These are automation");
-  ("candidates that never surfaced as a permission prompt - a re-run build, a");
-  ("re-typed workflow. The permission-prompt reports cover the prompt-sourced");
-  ("half; this covers repetition in the command stream itself. Read-only.");
+  "Rank the `p ` shorthand commands the user re-pasted across this project's";
+  "session transcripts, most-repeated first, count 2+. These are automation";
+  "candidates that never surfaced as a permission prompt - a re-run build, a";
+  "re-typed workflow. The permission-prompt reports cover the prompt-sourced";
+  "half; this covers repetition in the command stream itself. Read-only.";
   let folder = claude_transcripts_folder();
   let names = await folder_read_files(folder);
   function is_jsonl(name) {
@@ -30,7 +31,7 @@ export async function p_commands_repeated() {
     let cmds = [];
     for (let line of lines) {
       let cmd = p_command_of_line(line);
-      let empty = cmd === "";
+      let empty = equal(cmd, "");
       if (not(empty)) {
         list_add(cmds, cmd);
       }
