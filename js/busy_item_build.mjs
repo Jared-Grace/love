@@ -1,6 +1,8 @@
+import { range } from "./range.mjs";
+import { equal } from "./equal.mjs";
 export function busy_item_build(kind, range, date) {
   "make one busy calendar item from a chosen time range: a weekly item keeps the weekday, while one-time and monthly items keep the picked date; every item keeps the start and end pieces";
-  let weekly = kind === "weekly";
+  let weekly = equal(kind, "weekly");
   let item = weekly
     ? {
         kind: kind,
