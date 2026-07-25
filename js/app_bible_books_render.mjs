@@ -16,7 +16,7 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { app_bible_picker_button_enlarge } from "./app_bible_picker_button_enlarge.mjs";
 import { each } from "./each.mjs";
 export function app_bible_books_render(list_div, query, books, on_open) {
-  ("re-render the whole grouped book list for the current search text: within each canonical section keep only the books whose name contains the query, and drop a section heading entirely when nothing under it matches, so an empty search shows every section and a typed query narrows to just the hits");
+  "re-render the whole grouped book list for the current search text: within each canonical section keep only the books whose name contains the query, and drop a section heading entirely when nothing under it matches, so an empty search shows every section and a typed query narrows to just the hits";
   html_clear(list_div);
   let q = text_lower_to(query);
   let divisions = ebible_book_divisions();

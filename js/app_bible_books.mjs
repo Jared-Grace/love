@@ -18,7 +18,7 @@ export async function app_bible_books(context) {
   let e = ebible_folder_english();
   let books = await ebible_version_books_browser(e);
   async function on_open(book) {
-    ("open a chosen book at its first chapter, then hand off to the chapter picker");
+    "open a chosen book at its first chapter, then hand off to the chapter picker";
     let book_code = property_get(book, "book_code");
     let chapter_code = ebible_chapter_code_pad(book_code, "1");
     app_bible_chapter_set(chapter_code);
