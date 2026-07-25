@@ -41,11 +41,11 @@ export function examples_groups() {
       name: "Whole-repo changes",
       examples: [
         "example_rename_across_files", // rename a fn across every file that uses it
+        "example_prefix_rename_across_files", // ...and rename a whole name-prefix family at once (same "rename" family)
         "example_delete_unused_across_files", // delete a fn only after proving nothing uses it
         "example_delete_unused_refused", // ...but refuse when a file still uses it (the guard)
         "example_copy_adds_file", // copy a fn to a new name — adds a file
         "example_wrap_adds_delegating_file", // wrap a fn — adds a file that delegates to it
-        "example_prefix_rename_across_files", // rename a whole name-prefix family at once
         "example_param_new_across_files", // add a parameter — every caller gets the default
         "example_param_delete_across_files", // delete a parameter — every caller's arg is stripped
       ],
