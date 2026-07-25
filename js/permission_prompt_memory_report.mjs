@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { memory_folder } from "./memory_folder.mjs";
@@ -16,17 +18,18 @@ export async function permission_prompt_memory_report(days) {
   let config = memory_folder();
   let real = memory_folder_realpath();
   function memory_is(event) {
-    let b = text_includes(event.label, config) || text_includes(event.label, real);
+    let b =
+      text_includes(event.label, config) || text_includes(event.label, real);
     return b;
   }
   let interruptions = list_filter(confirmed, memory_is);
   let rows = permission_prompt_events_grouped(interruptions);
   let recorded = notification_events();
   let state = "clear";
-  if (recorded.length === 0) {
+  if (equal(recorded.length, 0)) {
     state = "nothing recorded";
   }
-  if (interruptions.length > 0) {
+  if (greater_than(interruptions.length, 0)) {
     state = "regressed";
     permission_prompt_rows_print("memory paths still interrupting", rows, 20);
   }

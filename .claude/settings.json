@@ -82,7 +82,6 @@
       "Bash(node scripts/ai.mjs permission_prompt_memory_report:*)",
       "Bash(node scripts/ai.mjs permission_prompt_confirmed_report:*)",
       "Bash(node scripts/ai.mjs permission_prompt_report:*)",
-      "Bash(node scripts/ai.mjs notification_hook_check:*)",
       "Bash(node scripts/ai.mjs permission_reachable_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_rule_command_probe:*)",
       "Bash(node scripts/ai.mjs permission_rules_unreachable:*)",
