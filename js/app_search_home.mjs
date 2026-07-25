@@ -1,3 +1,5 @@
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
+import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { app_search } from "./app_search.mjs";
 import { not_equal_loose } from "./not_equal_loose.mjs";
@@ -37,6 +39,8 @@ export async function app_search_home(context) {
   let bc = html_bar_content_padded(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
+  let column = app_shared_column_max_width();
+  app_shared_content_center_padding(content, column);
   html_centered(bar);
   let hash = html_hash_object_get();
   let language_codes = app_next_hash_to_languages_chosen(hash);

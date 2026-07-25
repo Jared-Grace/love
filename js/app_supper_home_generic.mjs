@@ -1,3 +1,5 @@
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
+import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { html_bar_content_padded } from "./html_bar_content_padded.mjs";
 import { html_centered } from "./html_centered.mjs";
@@ -12,9 +14,12 @@ export async function app_supper_home_generic(context) {
   let root = html_clear_context(context);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
+  let column = app_shared_column_max_width();
+  app_shared_content_center_padding(content, column);
   let bar = property_get(bc, "bar");
   html_centered(bar);
-  app_shared_screen_set_button(bar, context, app_supper_versions, emoji_gear());
+  let text = emoji_gear();
+  app_shared_screen_set_button(bar, context, app_supper_versions, text);
   let folders = app_supper_folders_get(context);
   let empty = list_empty_is(folders);
   if (empty) {
