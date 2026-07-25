@@ -1,7 +1,7 @@
 import { list_map_path_join_left } from "./list_map_path_join_left.mjs";
-import { folder_read_async } from "./folder_read_async.mjs";
+import { folder_read_files } from "./folder_read_files.mjs";
 export async function folder_read_paths_async(path) {
-  let file_names = await folder_read_async(path);
+  let file_names = await folder_read_files(path);
   let combineds = list_map_path_join_left(file_names, path);
   return combineds;
 }
