@@ -108,6 +108,13 @@
     { "command": "unshare --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "silent", "why": "no --net, so the network is not actually blocked" },
     { "command": "node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "deny", "why": "unsandboxed node -e hits the hard floor even with node's own flags" },
 
+    { "command": "git commit -m ai", "decision": "deny", "reason_includes": "ai_git", "why": "raw git commit is refused and redirected to the sanctioned commit fn, so Claude self-corrects instead of prompting the human" },
+    { "command": "git add -A", "decision": "deny", "reason_includes": "git_ac_call_folder_try", "why": "raw git add (the commit-flow prelude) redirected to the sanctioned fn too" },
+    { "command": "cd /tmp && git add -A && git commit -m ai 2>&1 | tail -2", "decision": "deny", "reason_includes": "ai_git", "why": "the real pasted shape: cd + add + commit + redirect + pipe all parse, and the git-write statement triggers the redirect deny" },
+    { "command": "ls && git commit -m x", "decision": "deny", "reason_includes": "never raw git", "why": "a trusted leading verb cannot launder a raw git commit later in the chain - the floor beats the allow" },
+    { "command": "grep 'git commit' MEMORY.md", "decision": "allow", "why": "quote-aware: 'git commit' inside a grep pattern is literal text, not a git command, so grep stays trusted" },
+    { "command": "git status", "decision": "allow", "why": "read-only git subcommand stays allowed - the floor catches only add/commit writes" },
+
     { "command": "for i in 1 2; do ls; done", "decision": "allow", "why": "for block with trusted body" },
     { "command": "if ls; then ls; fi", "decision": "allow", "why": "if block with trusted body" },
     { "command": "while true; do ls; done", "decision": "allow", "why": "while blocks are modelled like for/if" },
