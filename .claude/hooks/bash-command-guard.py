@@ -694,7 +694,7 @@ def _resolve_leading_var(path, var_map):
     return path
 
 
-def tokenize(command, subst_validator=None):
+def tokenize(command, subst_validator=None, outer_vars=None):
     """Quote-aware tokenizer. Emits word tokens (quotes stripped) and a
     single ';' token for each unquoted ';' or newline. Raises Unsupported
     for any redirection (except the narrow cases below), subshell/group,
@@ -716,7 +716,8 @@ def tokenize(command, subst_validator=None):
     word = []
     quote = None  # None | "'" | '"'
     i, n = 0, len(command)
-    var_map = _literal_var_map(command)
+    var_map = dict(outer_vars or {})
+    var_map.update(_literal_var_map(command))
 
     def flush_word():
         if word:
@@ -1951,7 +1952,16 @@ def check_statements(tokens, safe_verbs, safe_exact_commands):
     return found_command
 
 
-def is_safe(command, safe_verbs, safe_exact_commands):
+def is_safe(command, safe_verbs, safe_exact_commands, outer_vars=None):
+    # A `VAR=<literal path>` assignment belongs to the whole command line, so
+    # the map is carried INTO each `$(...)` as well: `S=/tmp/...; echo "$(wc -c
+    # < $S/f)"` reads the same file whether or not a substitution wraps it, and
+    # validating the inner text alone would leave $S unresolved and prompt.
+    # Resolution only ever adds recognition - a resolved path still has to pass
+    # the same charset and scratchpad checks, so nothing widens.
+    vars_here = dict(outer_vars or {})
+    vars_here.update(_literal_var_map(command))
+
     def subst_validator(inner):
         # A `$(...)` is trusted iff its inner command is itself entirely
         # made of already-trusted verbs - exactly the same requirement every
@@ -1960,11 +1970,11 @@ def is_safe(command, safe_verbs, safe_exact_commands):
         # letting the exception propagate, so the enclosing command falls
         # through to a real prompt.
         try:
-            return is_safe(inner, safe_verbs, safe_exact_commands)
+            return is_safe(inner, safe_verbs, safe_exact_commands, vars_here)
         except Unsupported:
             return False
 
-    tokens = tokenize(command, subst_validator)
+    tokens = tokenize(command, subst_validator, vars_here)
     if not tokens:
         return False
     return check_statements(tokens, safe_verbs, safe_exact_commands)
