@@ -42,6 +42,7 @@
       "Bash(uniq:*)",
       "Bash(tr:*)",
       "Bash(md5sum:*)",
+      "Bash(ffprobe:*)",
       "Bash(node --check:*)",
       "Bash(node scripts/ai.mjs ai_git)",
       "Bash(node scripts/ai.mjs g_sermon_group_size_distribution:*)",
