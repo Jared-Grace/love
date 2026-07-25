@@ -289,5 +289,13 @@ export function app_code_lesson_expression_remainder_divide() {
     html_div_cycle_code(result, ["So ", "2", " is the remainder"]);
     html_div_cycle_code(result, ["This is the same as ", "14 % 4", " :"]);
     html_div_cycle_code(result, ["", "14 % 4 === 2"]);
+    let summary = app_code_container_light_blue(root);
+    html_div_cycle_code(summary, ["So for ", "14 % 4"]);
+    html_div_cycle_code(summary, [
+      "We use this formula: ",
+      "14 - Math.floor(14 / 4) * 4",
+    ]);
+    html_div_cycle_code(summary, ["And here is the answer: ", "2"]);
+    html_div_cycle_code(summary, ["So we know ", "14 % 4 === 2"]);
   }
 }
