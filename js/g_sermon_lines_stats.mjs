@@ -1,7 +1,3 @@
-import { divide } from "./divide.mjs";
-import { equal } from "./equal.mjs";
-import { modulo } from "./modulo.mjs";
-import { subtract } from "./subtract.mjs";
 import { g_sermon_write } from "./g_sermon_write.mjs";
 import { local_function_path } from "./local_function_path.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
@@ -14,6 +10,7 @@ import { list_add } from "./list_add.mjs";
 import { list_min } from "./list_min.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
+import { list_sorted_percentile } from "./list_sorted_percentile.mjs";
 ("Go through every written sermon across BOTH stores — the write store (1JN/1PE/HEB, `lines` arrays) and the edited bible store (ROM/JAS, `sermon` strings) — one sermon = one passage; report min, max, and median line count.");
 export async function g_sermon_lines_stats() {
   let joined = local_function_path(g_sermon_write, "");
@@ -34,18 +31,14 @@ export async function g_sermon_lines_stats() {
   }
   list_sort_number(counts);
   let n = counts.length;
-  let divided = divide(n, 2);
-  let mid = Math.floor(divided);
-  let left = modulo(n, 2);
-  let even = equal(left, 0);
-  let median = even
-    ? divide(counts[subtract(mid, 1)] + counts[mid], 2)
-    : counts[mid];
+  let median = list_sorted_percentile(counts, 0.5);
+  let top_tenth = list_sorted_percentile(counts, 0.9);
   let r = {
     sermon_count: n,
     min: list_min(counts),
     max: list_max(counts),
     median,
+    top_tenth,
   };
   return r;
 }
