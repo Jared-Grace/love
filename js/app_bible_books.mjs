@@ -1,3 +1,5 @@
+import { html_hash_object_get } from "./html_hash_object_get.mjs";
+import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_bible_button_back_to_reader } from "./app_bible_button_back_to_reader.mjs";
