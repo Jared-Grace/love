@@ -1,3 +1,5 @@
+import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -10,6 +12,10 @@ import { app_shared_text_category } from "./app_shared_text_category.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { example_tool_family } from "./example_tool_family.mjs";
+import { equal } from "./equal.mjs";
+import { equal_not } from "./equal_not.mjs";
+import { subtract } from "./subtract.mjs";
 export function examples_menu_dom(parent, examples, on_select) {
   let heading = html_element(parent, "h1");
   html_text_set(heading, "Transform examples");
@@ -25,9 +31,22 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_set(header, "font-size", "1rem");
     html_style_set(header, "margin", "1.5rem 0 0.5rem");
   }
+  function tool_subheader(name) {
+    "a lighter label than the tier header — clusters same-tool cards inside a tier";
+    let header = html_element(parent, "h3");
+    html_text_set(header, name);
+    html_style_set(header, "font-size", "0.8rem");
+    html_style_set(header, "text-transform", "uppercase");
+    html_style_set(header, "letter-spacing", "0.05em");
+    html_style_set(header, "color", "#888");
+    html_style_set(header, "font-weight", "600");
+    html_style_set(header, "margin", "0.75rem 0 0.35rem");
+  }
   function example_button(index) {
-    let title = property_get(list_get(examples, index), "title");
-    let label = text_combine_multiple([add_1(index), ". ", title]);
+    let object = list_get(examples, index);
+    let title = property_get(object, "title");
+    let a = add_1(index);
+    let label = text_combine_multiple([a, ". ", title]);
     function on_click() {
       on_select(index);
     }
@@ -35,24 +54,51 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_set(button, "margin-bottom", "0.5rem");
     html_style_set(button, "text-align", "left");
   }
-  let index = 0;
-  for (let group of examples_groups()) {
-    group_header(property_get(group, "name"));
-    let members = property_get(group, "examples");
-    let size = list_size(members);
-    let placed = 0;
-    while (placed < size) {
-      example_button(index);
-      index = index + 1;
-      placed = placed + 1;
+  function family_at(index) {
+    let example = list_get(examples, index);
+    let fn = property_get(example, "fn");
+    let family = example_tool_family(fn);
+    return family;
+  }
+  function render_segment(name, start, size) {
+    "a tier (or the trailing Other bucket): draw its header, then its cards — and open a";
+    "tool sub-header only at the FIRST card of a run of 2+ cards sharing a tool family, so";
+    "clusters (rename, parameters, fold) get a label and lone tools stay clean.";
+    group_header(name);
+    let last = subtract(size, 1);
+    let local = 0;
+    while (less_than(local, size)) {
+      let g = start + local;
+      let family = family_at(g);
+      let family_prev = "";
+      if (greater_than(local, 0)) {
+        let difference = subtract(g, 1);
+        family_prev = family_at(difference);
+      }
+      let family_next = "";
+      if (less_than(local, last)) {
+        family_next = family_at(g + 1);
+      }
+      if (equal_not(family, family_prev)) {
+        if (equal(family, family_next)) {
+          tool_subheader(family);
+        }
+      }
+      example_button(g);
+      local = local + 1;
     }
   }
+  let index = 0;
+  for (let group of examples_groups()) {
+    let members = property_get(group, "examples");
+    let size = list_size(members);
+    let value = property_get(group, "name");
+    render_segment(value, index, size);
+    index = index + size;
+  }
   let count = list_size(examples);
-  if (index < count) {
-    group_header("Other");
-    while (index < count) {
-      example_button(index);
-      index = index + 1;
-    }
+  if (less_than(index, count)) {
+    let difference2 = subtract(count, index);
+    render_segment("Other", index, difference2);
   }
 }
