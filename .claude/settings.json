@@ -83,6 +83,16 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "Read|Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node /home/j/repos/love/.claude/hooks/memory_write_allow.mjs",
+            "timeout": 5
+          }
+        ]
+      },
+      {
         "matcher": "Bash",
         "hooks": [
           {
