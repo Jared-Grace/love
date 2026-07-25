@@ -1,3 +1,6 @@
+import { function_exists_not } from "./function_exists_not.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { function_auto_check } from "./function_auto_check.mjs";
