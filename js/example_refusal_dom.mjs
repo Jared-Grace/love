@@ -9,7 +9,7 @@ export function example_refusal_dom(parent, text) {
   let expect = html_div(parent);
   html_text_set(expect, text);
   html_font_color_set(expect, "#d33");
-  html_style_set(expect, "font-weight", "600");
+  html_bold_semi(expect);
   html_style_set(expect, "margin-top", "0.5rem");
   return expect;
 }
