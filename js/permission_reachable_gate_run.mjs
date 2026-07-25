@@ -8,7 +8,9 @@ export async function permission_reachable_gate_run() {
     let rule = property_get(o, "rule");
     let decision = property_get(o, "decision");
     let by = property_get(o, "by");
-    console.log("UNREACHABLE  " + rule + "  (" + by + " says " + decision + ")");
+    console.log(
+      "UNREACHABLE  " + rule + "  (" + by + " says " + decision + ")",
+    );
   }
   console.log("\nunreachable " + offenders.length);
   if (greater_than(offenders.length, 0)) {
