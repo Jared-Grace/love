@@ -15,10 +15,11 @@ import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 export async function app_bible_chapters_before(context) {
   let root = html_clear_context(context);
-  ("give the chapter and verse pickers the same left-right breathing room as the reader and the book picker");
+  ("pad a FRESH content child, never the persistent context root — padding the root leaves the column padding stuck on the body and it stacks with the reader's own padding next time, squeezing verses to one word per line");
+  let content = html_div(root);
   let column = app_shared_column_max_width();
-  app_shared_content_center_padding(root, column);
-  await app_bible_button_back_to_reader(root, context);
+  app_shared_content_center_padding(content, column);
+  await app_bible_button_back_to_reader(content, context);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
@@ -27,7 +28,7 @@ export async function app_bible_chapters_before(context) {
   let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   ("hold the choices in a medium-blue card, matching the book picker's section cards");
-  let card = app_shared_container_blue_medium(root);
+  let card = app_shared_container_blue_medium(content);
   let book_div = html_div_text_centered(card, book_name);
   ("color the heading in the deep blue of the cards, not gray");
   let color = app_shared_color_blue_dark();
