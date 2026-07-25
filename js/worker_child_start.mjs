@@ -1,3 +1,5 @@
+import { worker_results_read } from "./worker_results_read.mjs";
+import { worker_exited } from "./worker_exited.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_worker_serve } from "./function_worker_serve.mjs";
 export async function worker_child_start(worker) {
