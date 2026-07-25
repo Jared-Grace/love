@@ -65,6 +65,11 @@ export function app_code_lesson_expression_remainder_divide_solve() {
     decoys,
     forwards_question_label: "Remainder formula: ",
     forwards_answer_label: "solved value: ",
+    backwards_question_label: "solved value: ",
+    backwards_answer_label:
+      "What remainder formula produces the solved value? ",
+    unscramble_label:
+      "Build the remainder formula that produces the solved value: ",
   });
   return lesson;
   function title_name_id() {
