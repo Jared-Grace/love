@@ -25,6 +25,7 @@ export function qa_gates() {
     permission_gate_run,
     permission_reachable_gate_run,
     permission_rule_probe_gate_run,
+    permission_rule_file_gate_run,
     permission_self_settings_gate_run,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
