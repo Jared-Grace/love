@@ -21,4 +21,6 @@ export async function app_bible_chapters(context) {
     oc,
   );
   app_bible_picker_buttons_enlarge(buttons);
+  let current = property_get(r, "chapter_code");
+  app_bible_picker_mark_current(buttons, items, current);
 }
