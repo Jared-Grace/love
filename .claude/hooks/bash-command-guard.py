@@ -701,6 +701,7 @@ def tokenize(command, subst_validator=None):
     word = []
     quote = None  # None | "'" | '"'
     i, n = 0, len(command)
+    var_map = _literal_var_map(command)
 
     def flush_word():
         if word:
@@ -820,6 +821,7 @@ def tokenize(command, subst_validator=None):
                     while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n"):
                         k += 1
                     path = command[path_start:k]
+                    path = _resolve_leading_var(path, var_map)
                     if path and is_safe_scratchpad_target(path):
                         word.clear()
                         i = k
