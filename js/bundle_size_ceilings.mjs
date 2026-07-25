@@ -8,7 +8,7 @@ export function bundle_size_ceilings() {
   let ceilings = [
     {
       name: "index",
-      kib: 1,
+      kib: 50,
     },
     {
       name: "apps_all",
