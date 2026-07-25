@@ -1,3 +1,4 @@
+import { firebase_auth_ensure } from "./firebase_auth_ensure.mjs";
 import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,11 +20,12 @@ import { list_second } from "./list_second.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { booking_send } from "./booking_send.mjs";
 import { date_now_iso } from "./date_now_iso.mjs";
-export function app_calendar(context) {
-  "public page where someone books a preaching visit: their name, the day, the time, and their WhatsApp or Facebook link, written to Firebase as a booking my phone turns into an alarm";
+export async function app_calendar(context) {
+  "page where someone signs in and books a preaching visit: their name, the day, the time, and their WhatsApp or Facebook link, written to Firebase as a booking my phone turns into an alarm; sign-in stamps a verified identity on the booking to prevent abuse";
   let root = property_get(context, "root");
   html_mobile_default(context);
   let card = app_shared_container(root);
+  let user = await firebase_auth_ensure(card);
   html_div_text(card, "Book a preaching visit");
   html_div_text(card, "Your name");
   let name = html_input_text(card, "Your name");
@@ -70,6 +72,8 @@ export function app_calendar(context) {
       minute: Number(second),
       link: link_value,
       when: date_now_iso(),
+      uid: user.uid,
+      email: user.email,
     };
     await booking_send(booking);
     html_value_set(name, "");

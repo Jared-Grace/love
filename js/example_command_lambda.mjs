@@ -1,3 +1,5 @@
+import { js_fn_name_references_to_calls } from "./js_fn_name_references_to_calls.mjs";
+import { example_fn_name_references_lambda } from "./example_fn_name_references_lambda.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_statement_wrap_if } from "./js_statement_wrap_if.mjs";
 import { example_wrap_if_lambda } from "./example_wrap_if_lambda.mjs";
