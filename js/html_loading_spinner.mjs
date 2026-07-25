@@ -12,13 +12,12 @@ export function html_loading_spinner(parent) {
     width: "12rem",
     height: "12rem",
   });
-  let milliseconds = html_loading_spinner_pulse_milliseconds();
   let pulse = html_div(spinner);
-  let left2 = text_combine("transform ", milliseconds);
+  let breath = html_loading_spinner_breath_animation();
   html_style_assign(pulse, {
     position: "absolute",
     inset: "0",
-    transition: text_combine(left2, "ms ease-in-out"),
+    animation: breath,
   });
   let outer = html_div(pulse);
   html_style_assign(outer, {
@@ -31,7 +30,6 @@ export function html_loading_spinner(parent) {
     animation:
       "html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite",
   });
-  html_loading_spinner_pulse(pulse, milliseconds, true);
   let inner = html_div(spinner);
   html_style_assign(inner, {
     position: "absolute",

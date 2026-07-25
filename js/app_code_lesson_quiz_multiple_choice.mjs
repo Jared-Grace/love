@@ -7,7 +7,6 @@ import { app_shared_button_screen_green_style_assign } from "./app_shared_button
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { list_map } from "./list_map.mjs";
@@ -96,19 +95,8 @@ export function app_code_lesson_quiz_multiple_choice(
   let choices = list_concat(distractors, [quiz_answer_text]);
   list_sort_text_to(choices);
   let answered = false;
-  let answers_horizontal = property_get_or(info, "answers_horizontal", false);
-  if (answers_horizontal) {
-    ("short answers (e.g. a group of symbols) flow left to right and wrap onto new rows instead of stacking as full-width buttons - opt-in via info.answers_horizontal, off by default so every other lesson keeps its vertical stack");
-    html_style_set(parent, "display", "flex");
-    html_style_set(parent, "flex-wrap", "wrap");
-    html_style_set(parent, "justify-content", "center");
-  }
   function each_button(quiz_choice) {
-    let make_button = app_shared_button_wide;
-    if (answers_horizontal) {
-      make_button = app_shared_button;
-    }
-    let b = make_button(parent, quiz_choice, on_click);
+    let b = app_shared_button_wide(parent, quiz_choice, on_click);
     html_style_background_color_set(b, "#ececec");
     html_style_margin_top(b, "0.2em");
     async function on_click() {
