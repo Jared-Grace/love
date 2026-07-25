@@ -138,6 +138,7 @@ export function week_calendar(parent, on_ranges) {
       start: start,
       end: end,
     });
+    list_sort_number_mapper(ranges, week_range_sort_key);
   }
   function range_remove(day, slot) {
     function keep(span) {
