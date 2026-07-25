@@ -53,6 +53,15 @@ function main() {
   if (!tools_allowed.has(tool_name)) return;
   const file_path = (payload.tool_input || {}).file_path;
   if (!is_under_memory(file_path)) return;
+  /* Positive evidence that the hook actually fired. A mid-session hook
+  registration does not take effect until Claude Code reloads its hook
+  snapshot, so "no prompt appeared" alone cannot distinguish "the hook
+  allowed it" from "the hook never ran". This log line can. */
+  try {
+    appendFileSync(log_path, `${tool_name} ${file_path}\n`);
+  } catch {
+    /* Logging is diagnostic only - never let it change the decision. */
+  }
   process.stdout.write(JSON.stringify({
     hookSpecificOutput: {
       hookEventName: "PreToolUse",
