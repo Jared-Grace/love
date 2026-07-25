@@ -15,6 +15,9 @@ import { html_on_input } from "./html_on_input.mjs";
 import { app_bible_books_render } from "./app_bible_books_render.mjs";
 export async function app_bible_books(context) {
   let root = html_clear_context(context);
+  ("push every element into the centered reading column so nothing touches the screen edges left or right, the same full-width-band-with-column-padding the reader uses");
+  let column = app_shared_column_max_width();
+  app_shared_content_center_padding(root, column);
   await app_bible_button_back_to_reader(root, context);
   let e = ebible_folder_english();
   let books = await ebible_version_books_browser(e);
