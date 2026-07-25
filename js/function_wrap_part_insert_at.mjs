@@ -1,5 +1,5 @@
 import { function_name_part_insert_at } from "./function_name_part_insert_at.mjs";
-import { function_wrap } from "./function_wrap.mjs";
+import { function_wrap_open } from "./function_wrap_open.mjs";
 export async function function_wrap_part_insert_at(
   f_name_before,
   index_string,
@@ -10,6 +10,6 @@ export async function function_wrap_part_insert_at(
     index_string,
     part,
   );
-  let r = await function_wrap(f_name, f_name_after);
+  let r = await function_wrap_open(f_name, f_name_after);
   return r;
 }

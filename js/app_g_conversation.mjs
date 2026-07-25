@@ -1,3 +1,4 @@
+import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
@@ -35,7 +36,6 @@ import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { g_boundary } from "./g_boundary.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { html_div } from "./html_div.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -181,7 +181,8 @@ export async function app_g_conversation(
     function reveal() {
       let container = app_g_container_player(overlay);
       app_g_p_text(container, "What would you like to say?");
-      app_g_button_green(container, g_boundary_acknowledge(), render);
+      let text = g_boundary_acknowledge();
+      app_g_button_green(container, text, render);
       app_g_button_conversation_end(container, leave);
     }
     let delay = list_random_item([2500, 3000, 3500]);
