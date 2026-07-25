@@ -44,13 +44,7 @@ export function week_calendar(parent, on_ranges) {
   html_style_assign(summary, {
     "margin-bottom": "0.75rem",
   });
-  let scroller = html_div(root);
-  html_style_assign(scroller, {
-    "max-height": "70vh",
-    overflow: "auto",
-    "overscroll-behavior": "contain",
-  });
-  let grid = html_div(scroller);
+  let grid = html_div(root);
   html_style_grid(grid, 8);
   html_div_text(grid, "");
   each(days, header_cell);
