@@ -1,3 +1,5 @@
+import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
+import { equal } from "./equal.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
@@ -15,7 +17,13 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
-export function app_bible_books_render(list_div, query, books, on_open) {
+export function app_bible_books_render(
+  list_div,
+  query,
+  books,
+  on_open,
+  current_book_code,
+) {
   "draw the Old-and-New-Testament to section to books tree as nested cards: a testament card holds a bold centered title and its section cards; each section card holds a blue heading and its book buttons. every shown book is sized together at the end, so a narrow search of a few books gets big targets while the whole canon stays compact";
   html_clear(list_div);
   let testaments = app_bible_books_matches(query, books);
@@ -44,6 +52,10 @@ export function app_bible_books_render(list_div, query, books, on_open) {
           await on_open(book);
         }
         let button = app_shared_button(buttons_div, text, on_click);
+        ("mark the book you are currently reading so the picker shows your place");
+        let book_code = property_get(book, "book_code");
+        let is_current = equal(book_code, current_book_code);
+        app_shared_button_toggle_style(is_current, button);
         list_add(all_buttons, button);
       }
       each(s_books, render_book);
