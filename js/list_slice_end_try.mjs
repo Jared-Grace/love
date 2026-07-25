@@ -5,7 +5,11 @@ import { subtract } from "./subtract.mjs";
 export function list_slice_end_try(list, count) {
   let end = list_size(list);
   let start = subtract(end, count);
-  start = negative_not_ensure(start);
+  ("asking for more items than exist is the ordinary case, and it means take all of them, so a start before the beginning is the beginning");
+  let before = negative_is(start);
+  if (before) {
+    start = 0;
+  }
   let result = list_slice(list, start, end);
   return result;
 }
