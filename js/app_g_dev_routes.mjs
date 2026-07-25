@@ -111,7 +111,7 @@ export function app_g_dev_routes() {
       ") now write g.sky_phase to disk. this is the same smooth drift the real conversation uses");
     app_g_sky_demo_enable();
     await app_g_view_set(null);
-    app_g_sky_choices();
+    await app_g_sky_choices();
     await app_g_sky_snap();
   }
   let routes = {

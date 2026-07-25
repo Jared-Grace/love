@@ -10,7 +10,15 @@ import { app_g_sky_choices_highlight } from "./app_g_sky_choices_highlight.mjs";
 import { global_function_property_set } from "./global_function_property_set.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 export async function app_g_sky_choices() {
-  "the #sky demo's always-visible CHOICE panel (dev only): a fixed column top-right, above everything, with one pill per time of day in g_times — clicking a pill jumps the sky straight to that keyframe (app_g_sky_jump), so you can inspect any sky without walking there. built by mapping g_times, so adding a keyframe adds its button automatically. stashes the pills (button + index) so app_g_sky_choices_highlight can mark the CURRENT sky, and applies that you-are-here highlight once on render";
+  ("the #sky demo's always-visible CHOICE panel (dev only): a fixed column top-right, above everything, with one pill per time of day in ",
+    g_times.name,
+    " — clicking a pill jumps the sky straight to that keyframe (",
+    app_g_sky_jump.name,
+    "), so you can inspect any sky without walking there. built by mapping ",
+    g_times.name,
+    ", so adding a keyframe adds its button automatically. stashes the pills (button + index) so ",
+    app_g_sky_choices_highlight.name,
+    " can mark the CURRENT sky, and applies that you-are-here highlight once on render");
   let body = html_document_body();
   let panel = html_div(body);
   html_style_assign(panel, {
@@ -30,7 +38,10 @@ export async function app_g_sky_choices() {
     }
     let button = html_button(panel, label, on_click);
     app_g_sky_pill_style(button, false);
-    let pill = { button, index };
+    let pill = {
+      button,
+      index,
+    };
     return pill;
   }
   let pills = list_map_index(times, pill_of);
