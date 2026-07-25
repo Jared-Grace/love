@@ -17,16 +17,22 @@ export const example = {
     { fn: fn_name.name, call: true },
     ", then imports are auto-fixed: the unused ",
     { fn: list_size.name },
-    " import is dropped and the marker's is added. Same rename-safety, no bundle bloat.",
+    " import is dropped and the marker's is added. Same rename-safety, no bundle bloat. A plain ",
+    { code: ".name" },
+    " that is not on an imported function — like ",
+    { code: "record.owner.name" },
+    " — is left untouched.",
   ],
   before: `import { list_size } from "./list_size.mjs";
-export function label() {
+export function label(record) {
+  let owner = record.owner.name;
   let name = list_size.name;
-  return name;
+  return owner + name;
 }`,
   after: `import { fn_name } from "./fn_name.mjs";
-export function label() {
+export function label(record) {
+  let owner = record.owner.name;
   let name = fn_name("list_size");
-  return name;
+  return owner + name;
 }`,
 };
