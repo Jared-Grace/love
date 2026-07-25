@@ -54,7 +54,8 @@ export async function app_g_verify_home(context) {
     " " +
     String(Number(chapter_code.slice(3)));
   let storage_key = "g_verify_selected_" + chapter_code;
-  let selected_key = localStorage.getItem(storage_key);
+  ("which verse you are looking at is this tab's, so two chapters can be open side by side; the chapter override above stays shared on purpose");
+  let selected_key = sessionStorage.getItem(storage_key);
   let advanced_for = null;
   let chapter_advance_armed = false;
   let shown_json = null;
@@ -229,7 +230,7 @@ export async function app_g_verify_home(context) {
     }
     function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
-      localStorage.setItem(storage_key, selected_key);
+      sessionStorage.setItem(storage_key, selected_key);
       highlight_selected();
       app_g_verify_view(
         view,
@@ -242,7 +243,7 @@ export async function app_g_verify_home(context) {
     }
     function open_pending(verse) {
       selected_key = verse;
-      localStorage.setItem(storage_key, verse);
+      sessionStorage.setItem(storage_key, verse);
       highlight_selected();
       html_clear(view);
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
@@ -285,7 +286,7 @@ export async function app_g_verify_home(context) {
     let latest = property_get(chapter_state, "latest");
     if (latest !== null && latest !== approved_key && latest !== advanced_for) {
       selected_key = latest;
-      localStorage.setItem(storage_key, latest);
+      sessionStorage.setItem(storage_key, latest);
       advanced_for = latest;
     }
     let initial = null;
