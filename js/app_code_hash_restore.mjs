@@ -22,7 +22,7 @@ export function app_code_hash_restore(context) {
     let value = decodeURIComponent(item);
     let is_lesson = equal(key, "lesson");
     if (is_lesson) {
-      storage_session_set_context(context,"lesson_id", value);
+      storage_session_set_context(context, "lesson_id", value);
     }
     let is_screen = equal(key, "screen");
     if (is_screen) {
@@ -31,7 +31,7 @@ export function app_code_hash_restore(context) {
     let is_quiz = equal(key, "quiz");
     if (is_quiz) {
       let value2 = Number(value);
-      storage_session_set_context(context,"quiz_index", value2);
+      storage_session_set_context(context, "quiz_index", value2);
     }
   }
   each(pairs, apply_pair);
