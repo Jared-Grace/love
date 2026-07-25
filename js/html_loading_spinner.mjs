@@ -9,7 +9,17 @@ export function html_loading_spinner(parent) {
     width: "12rem",
     height: "12rem",
   });
-  let outer = html_div(spinner);
+  let milliseconds = html_loading_spinner_pulse_milliseconds();
+  let pulse = html_div(spinner);
+  html_style_assign(pulse, {
+    position: "absolute",
+    inset: "0",
+    transition: text_combine(
+      text_combine("transform ", milliseconds),
+      "ms ease-in-out",
+    ),
+  });
+  let outer = html_div(pulse);
   html_style_assign(outer, {
     position: "absolute",
     inset: "0",
