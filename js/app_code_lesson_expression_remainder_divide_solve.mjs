@@ -83,6 +83,7 @@ export function app_code_lesson_expression_remainder_divide_solve() {
     ]);
     let solving = app_code_container_light_blue(root);
     html_div_cycle_code(solving, ["Solve the formula one step at a time:"]);
+    html_div_cycle_code(solving, ["", "14 / 4", " is ", "3.5"]);
     html_div_cycle_code(solving, ["", "Math.floor(14 / 4)", " is ", "3"]);
     html_div_cycle_code(solving, ["", "Math.floor(14 / 4) * 4", " is ", "12"]);
     html_div_cycle_code(solving, [
@@ -92,5 +93,6 @@ export function app_code_lesson_expression_remainder_divide_solve() {
       "14 - 12",
     ]);
     html_div_cycle_code(solving, ["", "14 - 12", " is ", "2"]);
+    html_div_cycle_code(solving, ["", "14 - Math.floor(14 / 4) * 4", " is ", "2"]);
   }
 }
