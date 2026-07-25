@@ -1,24 +1,18 @@
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
-import { list_find_property } from "./list_find_property.mjs";
+import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map } from "./list_map.mjs";
 export function ebible_book_testaments() {
-  "the two testaments, each holding its genre sections in canonical order, so the book picker can nest section cards under an Old or New Testament card";
+  "group the genre sections under their testament by reading each section's own testament tag, so the section names live in exactly one place (the divisions list) and a rename never has to be mirrored here";
   let divisions = ebible_book_divisions();
-  function by_name(name) {
-    let division = list_find_property(divisions, "name", name);
-    return division;
+  let names = ["Old Testament", "New Testament"];
+  function to_testament(name) {
+    let members = list_filter_property(divisions, "testament", name);
+    let testament = {
+      name,
+      divisions: members,
+    };
+    return testament;
   }
-  let old_names = ["Law", "History", "Poetry", "Prophets"];
-  let new_names = ["Gospels and Acts", "Letters", "Revelation"];
-  let testaments = [
-    {
-      name: "Old Testament",
-      divisions: list_map(old_names, by_name),
-    },
-    {
-      name: "New Testament",
-      divisions: list_map(new_names, by_name),
-    },
-  ];
+  let testaments = list_map(names, to_testament);
   return testaments;
 }

@@ -1,12 +1,14 @@
 export function ebible_book_divisions() {
-  "the 66-book canon grouped into its traditional genre sections, each a contiguous run of the canonical order, so a reader browsing the book picker can jump to the region (Law, History, Poetry, Prophets, Gospels and Acts, Letters, Revelation) instead of scanning all 66 names at once";
+  "the 66-book canon grouped into its traditional genre sections, each a contiguous run of the canonical order and tagged with its testament, so the book picker can nest section cards under an Old or New Testament card while the section names live in this one place";
   let divisions = [
     {
       name: "Law",
+      testament: "Old Testament",
       book_codes: ["GEN", "EXO", "LEV", "NUM", "DEU"],
     },
     {
       name: "History",
+      testament: "Old Testament",
       book_codes: [
         "JOS",
         "JDG",
@@ -24,10 +26,12 @@ export function ebible_book_divisions() {
     },
     {
       name: "Poetry",
+      testament: "Old Testament",
       book_codes: ["JOB", "PSA", "PRO", "ECC", "SNG"],
     },
     {
       name: "Prophets",
+      testament: "Old Testament",
       book_codes: [
         "ISA",
         "JER",
@@ -49,11 +53,13 @@ export function ebible_book_divisions() {
       ],
     },
     {
-      name: "Gospels and Acts",
+      name: "Gospels & Acts (history)",
+      testament: "New Testament",
       book_codes: ["MAT", "MRK", "LUK", "JHN", "ACT"],
     },
     {
       name: "Letters",
+      testament: "New Testament",
       book_codes: [
         "ROM",
         "1CO",
@@ -80,6 +86,7 @@ export function ebible_book_divisions() {
     },
     {
       name: "Revelation",
+      testament: "New Testament",
       book_codes: ["REV"],
     },
   ];
