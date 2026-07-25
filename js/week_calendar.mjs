@@ -48,6 +48,7 @@ export function week_calendar(parent, on_ranges) {
   html_style_assign(scroller, {
     "max-height": "70vh",
     overflow: "auto",
+    "overscroll-behavior": "contain",
   });
   let grid = html_div(scroller);
   html_style_grid(grid, 8);
