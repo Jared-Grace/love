@@ -1,3 +1,4 @@
+import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { permission_reachable_gate_run } from "./permission_reachable_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { examples_gate_run } from "./examples_gate_run.mjs";

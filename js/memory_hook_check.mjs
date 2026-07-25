@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export async function memory_hook_check(tool_name, file_path) {
@@ -8,7 +9,9 @@ export async function memory_hook_check(tool_name, file_path) {
   let spawn = property_get(cp, "spawn");
   let payload = JSON.stringify({
     tool_name,
-    tool_input: { file_path },
+    tool_input: {
+      file_path,
+    },
   });
   let result = await new Promise(function lambda(resolve, reject) {
     let child = spawn("node", [".claude/hooks/memory_write_allow.mjs"], {
@@ -24,20 +27,28 @@ export async function memory_hook_check(tool_name, file_path) {
     }
     child.on("error", on_error);
     function on_close(code) {
-      resolve({ code, stdout });
+      resolve({
+        code,
+        stdout,
+      });
     }
     child.on("close", on_close);
     child.stdin.write(payload);
     child.stdin.end();
   });
   let stdout = property_get(result, "stdout");
-  if (stdout.trim() === "") {
-    return { decision: "silent" };
+  let left = stdout.trim();
+  if (equal(left, "")) {
+    let r = {
+      decision: "silent",
+    };
+    return r;
   }
   let parsed = JSON.parse(stdout);
   let hook = property_get(parsed, "hookSpecificOutput");
-  return {
+  let r2 = {
     decision: property_get(hook, "permissionDecision"),
     reason: property_get(hook, "permissionDecisionReason"),
   };
+  return r2;
 }
