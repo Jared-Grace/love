@@ -24,7 +24,8 @@ export async function app_code_home(context) {
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
   let div = html_div_text_centered(g, "Lessons:");
-  html_style_margin_y(div, app_shared_spaced_gap());
+  let value = app_shared_spaced_gap();
+  html_style_margin_y(div, value);
   let lessons = app_code_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
   let just_left = null;
