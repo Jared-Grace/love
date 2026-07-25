@@ -4,6 +4,8 @@ import { g_verify_next_across } from "./g_verify_next_across.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { g_verify_suggest_read } from "./g_verify_suggest_read.mjs";
 export async function g_verify_loop_check() {
+  "Multi-book loop state: read the active-chapter list, one chapter code per line, and report each book's chapter, whether it is approved, its latest and next verse, and its state, through the shared cross-book next-step function. The action it returns is one of write, wait, or done, the write form carrying the chapter and verse key it wants written.";
+  "The chapter list lives on a removable data disk. If it isn't mounted, report wait instead of throwing - a stack trace would make the watching monitor's grep miss, and the loop would go silently dead rather than resuming once the disk is back.";
   let ACTIVE_CHAPTERS_PATH = g_verify_active_chapters_path();
   let listed = await file_exists(ACTIVE_CHAPTERS_PATH);
   if (!listed)

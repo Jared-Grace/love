@@ -1,12 +1,16 @@
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
 export function list_sorted_percentile(sorted, fraction) {
   "the value at a fractional rank in an ascending-sorted numeric list, by linear interpolation; fraction 0.5 gives the median, 0.9 the top-tenth threshold";
   let n = sorted.length;
-  let rank = fraction * (n - 1);
+  let right = subtract(n, 1);
+  let rank = multiply(fraction, right);
   let lo = Math.floor(rank);
   let hi = Math.ceil(rank);
-  let frac = rank - lo;
+  let frac = subtract(rank, lo);
   let low = sorted[lo];
   let high = sorted[hi];
-  let value = low + (high - low) * frac;
+  let left = subtract(high, low);
+  let value = low + multiply(left, frac);
   return value;
 }
