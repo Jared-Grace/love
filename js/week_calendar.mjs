@@ -176,11 +176,11 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
   }
   function far_anchor_set(span, slot) {
     "backing up a step: drop the whole range and re-plant the anchor on its far end — the endpoint furthest from the clicked piece — so the next click re-draws the range from there; a lone one-piece range just clears";
-    let single = span.start === span.end;
+    let single = equal(span.start, span.end);
     if (not(single)) {
-      let distance_start = slot - span.start;
-      let distance_end = span.end - slot;
-      let far_first = distance_start >= distance_end;
+      let distance_start = subtract(slot, span.start);
+      let distance_end = subtract(span.end, slot);
+      let far_first = greater_than_equal(distance_start, distance_end);
       let keep = far_first ? span.start : span.end;
       anchor = {
         day: span.day,
