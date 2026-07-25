@@ -43,6 +43,7 @@
       "Bash(tr:*)",
       "Bash(node --check:*)",
       "Bash(node scripts/ai.mjs ai_git)",
+      "Bash(node scripts/ai.mjs g_sermon_lines_stats:*)",
       "Bash(node scripts/ai.mjs app_shared_build:*)",
       "Bash(node scripts/ai.mjs app_shared_dev_build:*)",
       "Bash(node scripts/ai.mjs app_shared_name_search_multiple:*)",
