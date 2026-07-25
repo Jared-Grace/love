@@ -1,9 +1,9 @@
+import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_shared_container } from "./app_shared_container.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { html_div } from "./html_div.mjs";
@@ -34,7 +34,7 @@ export function week_calendar(parent, on_ranges) {
   let ranges = [];
   let anchor = null;
   let records = [];
-  let root = app_shared_container(parent);
+  let root = app_shared_container_blue(parent);
   let heading = html_div_text(root, "Your available times");
   html_style_assign(heading, {
     "font-weight": "bold",
