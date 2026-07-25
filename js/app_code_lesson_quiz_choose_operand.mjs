@@ -5,6 +5,7 @@ import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
@@ -48,7 +49,7 @@ export function app_code_lesson_quiz_choose_operand(
         on_wrong();
         app_code_lesson_quiz_wrong_set(b);
         html_style_set(b, "pointer-events", "none");
-        html_style_set(b, "opacity", "0.5");
+        html_style_opacity(b, "0.5");
       }
     }
     return b;
