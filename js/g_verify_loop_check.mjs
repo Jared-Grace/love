@@ -19,6 +19,7 @@ export async function g_verify_loop_check() {
     .map((s) => s.trim())
     .filter(Boolean);
   let result = await g_verify_next_across(chapters);
+  "A pending in-app suggestion on any active chapter takes priority over drafting new verses - the reviewer's feedback leads. Surface it as a suggest action carrying the chapter and key, so the watching monitor wakes the loop to judge and apply it, or reply to it, before writing ahead.";
   for (let book of result.books) {
     let suggestion = await g_verify_suggest_read(book.chapter);
     if (suggestion.text) {
