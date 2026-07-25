@@ -1,8 +1,9 @@
+import { js_statement_if_return_add } from "./js_statement_if_return_add.mjs";
 import { js_fn_name_references_to_calls } from "./js_fn_name_references_to_calls.mjs";
 import { example_fn_name_references_lambda } from "./example_fn_name_references_lambda.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_statement_wrap_if } from "./js_statement_wrap_if.mjs";
-import { example_wrap_if_lambda } from "./example_wrap_if_lambda.mjs";
+import { example_select_apply_lambda } from "./example_select_apply_lambda.mjs";
 import { equal } from "./equal.mjs";
 import { function_arguments_assert_each_add } from "./function_arguments_assert_each_add.mjs";
 import { js_node_type_is_new } from "./js_node_type_is_new.mjs";
@@ -87,8 +88,15 @@ export function example_command_lambda(fn_name, args) {
     return lambda9;
   }
   if (equal(fn_name, js_statement_wrap_if.name)) {
-    let lambda10 = example_wrap_if_lambda(args[0]);
+    let lambda10 = example_select_apply_lambda(args[0], js_statement_wrap_if);
     return lambda10;
+  }
+  if (equal(fn_name, js_statement_if_return_add.name)) {
+    let lambda14 = example_select_apply_lambda(
+      args[0],
+      js_statement_if_return_add,
+    );
+    return lambda14;
   }
   if (equal(fn_name, js_block_body_add.name)) {
     let lambda11 = example_block_body_add_lambda(
