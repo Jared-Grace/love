@@ -4,10 +4,11 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function claude_window_open(session_name, title) {
   "Open one detached window in a tmux session that already exists, and answer with its window id.";
   "Detached because the caller is opening a dozen of these in a row: letting each one steal the view would leave the human watching windows flash past, and the id is what the next step needs anyway.";
+  "The trailing colon on the target is what says SESSION rather than window. A bare name is looked up as a window of the current session FIRST, by prefix - and every window here is named after the prompt that started a Claude, so a window called claude-keeps-prompting swallows the target, the new window is asked for at that window's own index, and tmux refuses with create window failed: index N in use. The colon skips the window lookup, so the index is the next free one.";
   let command = text_combine_multiple([
     "tmux new-window -d -P -F #{window_id} -t ",
     session_name,
-    " -n ",
+    ": -n ",
     title,
   ]);
   let result = await command_line(command);
