@@ -1,7 +1,7 @@
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 export function html_check_empty_not() {
   let v = {
-    text: "Must be non-empty",
+    text: "Please fill this in",
     check: text_empty_not_is,
   };
   return v;
