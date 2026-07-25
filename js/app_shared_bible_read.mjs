@@ -1,3 +1,4 @@
+import { text_rtl_is } from "./text_rtl_is.mjs";
 import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
@@ -245,6 +246,12 @@ export async function app_shared_bible_read(context, verse_action) {
     html_style_set(p, "grid-template-columns", columns);
     let style_value = app_shared_spaced_small_gap();
     html_style_set(p, "column-gap", style_value);
+    ("when the primary (spine) language reads right-to-left, mirror the whole verse row: direction rtl moves the number gutter to the right and flows the row right-to-left, matching the verse text's own detected direction, so an RTL reader gets RTL numbers too");
+    let primary_text = property_get_or(v, "text", "");
+    let row_rtl = text_rtl_is(primary_text);
+    if (row_rtl) {
+      html_style_set(p, "direction", "rtl");
+    }
     let r = app_shared_bible_toggle_update(
       updates,
       verse_numbers_chosen,
