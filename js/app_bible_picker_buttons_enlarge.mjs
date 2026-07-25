@@ -14,13 +14,14 @@ export function app_bible_picker_buttons_enlarge(buttons) {
   let font = property_get(size, "font");
   let pad_x = property_get(size, "pad_x");
   let pad_y = property_get(size, "pad_y");
-  let margin = property_get(size, "margin");
+  let margin_x = property_get(size, "margin_x");
+  let margin_y = property_get(size, "margin_y");
   function lambda(button) {
     html_style_set(button, "font-size", font);
     html_style_padding_x(button, pad_x);
     html_style_padding_y(button, pad_y);
-    html_style_margin_x(button, margin);
-    html_style_margin_y(button, margin);
+    html_style_margin_x(button, margin_x);
+    html_style_margin_y(button, margin_y);
   }
   each(buttons, lambda);
 }

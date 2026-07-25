@@ -1,3 +1,5 @@
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_bible_books_matches } from "./app_bible_books_matches.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,6 +29,9 @@ export function app_bible_books_render(list_div, query, books, on_open) {
       let s_name = property_get(section, "name");
       let s_books = property_get(section, "books");
       let s_card = app_shared_container_blue_medium(t_card);
+      ("trim the section card's left-right padding so the book buttons get more of the row width; keep the card's vertical padding");
+      let value = app_shared_spaced_tiny_gap();
+      html_style_padding_x(s_card, value);
       let header = html_div_text_centered(s_card, s_name);
       app_shared_text_deemphasized(header);
       let buttons_div = html_div_centered(s_card);
