@@ -1,4 +1,3 @@
-import { app_code_remainder_roadmap } from "./app_code_remainder_roadmap.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -222,7 +221,6 @@ export function app_code_lesson_expression_remainder_divide() {
     return built;
   }
   function above(root) {
-    app_code_remainder_roadmap(root, "remainder_divide");
     let setup = app_code_container_light_blue(root);
     html_div_cycle_code(setup, ["For ", "14 / 4", " :"]);
     html_div_cycle_code(setup, ["", "14", " is the dividend"]);
