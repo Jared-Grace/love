@@ -1,3 +1,4 @@
+import { permission_reachable_gate_run } from "./permission_reachable_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { examples_gate_run } from "./examples_gate_run.mjs";
 import { permission_gate_run } from "./permission_gate_run.mjs";
@@ -9,14 +10,12 @@ import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
 import { bundle_size_gate_run } from "./bundle_size_gate_run.mjs";
 import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_canon_assert.mjs";
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
-
-// Every repo-wide gate qa_gate_run runs. A gate is a zero-argument async
-// function that prints its own detail and throws if anything failed.
 export function qa_gates() {
   let gates = [
     guard_gate_run,
     examples_gate_run,
     permission_gate_run,
+    permission_reachable_gate_run,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
     dispatcher_scripts_python_assert,
