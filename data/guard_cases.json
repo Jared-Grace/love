@@ -95,7 +95,12 @@
 
     { "command": "ls 2>&1", "decision": "allow", "why": "fd duplication writes no file" },
     { "command": "ls > /tmp/x", "decision": "ask", "reason_includes": "prefer rewording into separate Bash calls", "why": "the ask must teach the reword, which is the whole point of asking instead of denying" },
-    { "command": "ls > /dev/null", "decision": "ask", "why": "no /dev/null carve-out - redirection is judged by shape, not target" },
+    { "command": "ls >/dev/null", "decision": "allow", "why": "the glued /dev/null redirect writes nothing observable - always carved out" },
+    { "command": "ls > /dev/null", "decision": "allow", "why": "a space before /dev/null is tolerated - same harmless redirect as the glued form (bash accepts the space)" },
+    { "command": "ls 2> /dev/null", "decision": "allow", "why": "fd-prefixed /dev/null redirect with a space is the same discard" },
+    { "command": "ls > /dev/null 2>&1", "decision": "allow", "why": "the standard `> /dev/null 2>&1` discard idiom - space before /dev/null, then a glued fd-dup" },
+    { "command": "ls > /dev/nullX", "decision": "ask", "why": "not exactly /dev/null - the target must be followed by a separator, so /dev/nullX is a real file write" },
+    { "command": "ls > /dev/null/x", "decision": "ask", "why": "writing INTO /dev/null/x is a real path, not the /dev/null discard" },
     { "command": "ls >> /home/j/.bashrc", "decision": "ask", "why": "append to a startup file" },
 
     { "command": "find . -type f", "decision": "allow", "why": "find with no exec surface" },
