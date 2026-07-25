@@ -12,6 +12,8 @@ export function permission_prompt_events_grouped(events) {
         count: 0,
         seconds_worst: 0,
         latest: "",
+        sample: event.command,
+        verdict: "",
       });
     }
     let group = groups.get(label);
