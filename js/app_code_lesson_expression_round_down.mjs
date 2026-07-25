@@ -51,6 +51,11 @@ export function app_code_lesson_expression_round_down() {
     next_arg,
     example_count: 2,
     decoys,
+    forwards_question_label: "Round down: ",
+    forwards_answer_label: "rounded value: ",
+    backwards_question_label: "rounded value: ",
+    backwards_answer_label: "What code rounds down to the rounded value? ",
+    unscramble_label: "Build the code that rounds down to the rounded value: ",
   });
   return lesson;
   function title_name_id() {
