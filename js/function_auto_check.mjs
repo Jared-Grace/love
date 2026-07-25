@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 import { function_name_unalias_only } from "./function_name_unalias_only.mjs";
 import { function_parse_unaliased } from "./function_parse_unaliased.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,18 +8,19 @@ export async function function_auto_check(f_name) {
   let unaliased = await function_name_unalias_only(f_name);
   let parsed = await function_parse_unaliased(unaliased);
   let ast = property_get(parsed, "ast");
+  ("the local is not named error, because that is the name of a function in this repo and the import-repair pass would bind it and add an import for it");
   let ok = true;
-  let error = "";
+  let error_message = "";
   try {
     await js_auto(ast);
   } catch (e) {
     ok = false;
-    error = e.message;
+    error_message = e.message;
   }
   let r = {
     name: unaliased,
     ok,
-    error,
+    error_message,
   };
   return r;
 }
