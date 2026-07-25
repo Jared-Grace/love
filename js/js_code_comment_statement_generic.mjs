@@ -15,12 +15,16 @@ export function js_code_comment_statement_generic(value, f_names) {
   "A comment that names no function becomes a plain string, the shape the rest of the codebase comments in. A comment that names one becomes a template literal with the name substituted in, and that shape is forced, not chosen: a later step rewrites any function name sitting in the text of a string or a template into a comma expression, which makes the reference live at the cost of tearing the sentence apart. A substitution is skipped by that step, so the sentence survives whole and the reference is still live - renaming the function rewrites the comment along with the code.";
   let trimmed = text_trim(value);
   let segments = text_identifier_segments(trimmed);
+  ("only names carrying an underscore are turned into references. Some fifty functions are named with a single everyday word - and, double, add, range - and those words appear in ordinary prose far more often than they name anything, so substituting them turns a sentence into a row of lookups. The same restriction is already how the pipeline's own name-to-reference step decides, and for the same reason");
   function known_is(segment) {
     let identifier = property_get(segment, "identifier");
     if (identifier) {
       let text = property_get(segment, "text");
-      let known = list_includes(f_names, text);
-      return known;
+      let underscored = text_includes(text, "_");
+      if (underscored) {
+        let known = list_includes(f_names, text);
+        return known;
+      }
     }
     return false;
   }
@@ -49,7 +53,8 @@ export function js_code_comment_statement_generic(value, f_names) {
     }
     let escaped_backslash = text_replace(text, "\\", "\\\\");
     let escaped_tick = text_replace(escaped_backslash, "`", "\\`");
-    let escaped = text_replace(escaped_tick, "${", "\\${");
+    ("every dollar sign is escaped, not just the two characters that open a substitution. A dollar sign is a legal character in a name, so the text arrives split between segments - the dollar on one side of the boundary and the brace on the other - and a rule looking for the pair intact never finds it. Escaping the dollar alone means the pair can never form, and a lone escaped dollar in a template is just a dollar");
+    let escaped = text_replace(escaped_tick, "$", "\\$");
     list_add(pieces, escaped);
   }
   each(segments, lambda);

@@ -55,6 +55,12 @@ node scripts/ai.mjs function_select_apply_args my_fn js_statement_find_call_name
 ```
 It holds **no selection between commands**, which is the point: the older `function_node_select` / `function_current_selects_apply` path persists the selection in shared state, so under parallel Claudes the second command can act on a peer's selection with no way to tell. Prefer this one. **Never allow-list it** — it dispatches functions named in its arguments, so a grant would cover every function, not one.
 
+**Selecting more than one node** — `selects` is a list on purpose: extracting a span into its own function needs a *first* and a *last*. `function_select_multiple_apply_args` runs one selector once per word in its selection list and hands the transform everything found, so the picks accumulate inside a single command instead of in shared state:
+```
+node scripts/ai.mjs function_select_multiple_apply_args my_fn js_statement_find_call_named first_step,middle_step js_selects_functionize helper_name
+```
+That extracts the statements from the one calling `first_step` through the one calling `middle_step` into `helper_name`, inferring its parameters. It replaces the last thing `marker_functionize` was needed for, so nothing requires placing `marker()` calls in the code any more. Same allow-listing rule as above: **never**.
+
 **Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/ai.mjs function_auto <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts). It does **not** commit when Claude runs it via `ai.mjs` — canonicalize-only. (When the *human* types `ao` it commits, but that's their interactive prompt harness committing per-command, not `function_auto`; Claude's `ai.mjs` invocations bypass that harness. Confirmed 2026-07-25: after `ao`, the tree stayed ` M` until an explicit `ai_git`.) So **always run `node scripts/ai.mjs ai_git` after `ao`**, and verify with `git status --short`. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
 
 Two `ao` gotchas, both worth designing around:
