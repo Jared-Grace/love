@@ -1,0 +1,87 @@
+export function ebible_book_divisions() {
+  "the 66-book canon grouped into its traditional genre sections, each a contiguous run of the canonical order, so a reader browsing the book picker can jump to the region (Law, History, Poetry, Prophets, Gospels and Acts, Letters, Revelation) instead of scanning all 66 names at once";
+  let divisions = [
+    {
+      name: "Law",
+      book_codes: ["GEN", "EXO", "LEV", "NUM", "DEU"],
+    },
+    {
+      name: "History",
+      book_codes: [
+        "JOS",
+        "JDG",
+        "RUT",
+        "1SA",
+        "2SA",
+        "1KI",
+        "2KI",
+        "1CH",
+        "2CH",
+        "EZR",
+        "NEH",
+        "EST",
+      ],
+    },
+    {
+      name: "Poetry",
+      book_codes: ["JOB", "PSA", "PRO", "ECC", "SNG"],
+    },
+    {
+      name: "Prophets",
+      book_codes: [
+        "ISA",
+        "JER",
+        "LAM",
+        "EZK",
+        "DAN",
+        "HOS",
+        "JOL",
+        "AMO",
+        "OBA",
+        "JON",
+        "MIC",
+        "NAM",
+        "HAB",
+        "ZEP",
+        "HAG",
+        "ZEC",
+        "MAL",
+      ],
+    },
+    {
+      name: "Gospels and Acts",
+      book_codes: ["MAT", "MRK", "LUK", "JHN", "ACT"],
+    },
+    {
+      name: "Letters",
+      book_codes: [
+        "ROM",
+        "1CO",
+        "2CO",
+        "GAL",
+        "EPH",
+        "PHP",
+        "COL",
+        "1TH",
+        "2TH",
+        "1TI",
+        "2TI",
+        "TIT",
+        "PHM",
+        "HEB",
+        "JAS",
+        "1PE",
+        "2PE",
+        "1JN",
+        "2JN",
+        "3JN",
+        "JUD",
+      ],
+    },
+    {
+      name: "Revelation",
+      book_codes: ["REV"],
+    },
+  ];
+  return divisions;
+}
