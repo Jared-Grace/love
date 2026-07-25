@@ -3,7 +3,7 @@ import { text_empty } from "./text_empty.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { not } from "./not.mjs";
-export function permission_rule_command(rule) {
+export function permission_rule_command_probe(rule) {
   "the shortest shell command a Bash allow rule claims to auto-approve, or empty text when the rule grants some other tool";
   "Bash(<command>) grants exactly that command; Bash(<prefix>:*) grants that prefix plus any arguments, so the prefix alone is the shortest command it claims";
   let opening = "Bash(";
