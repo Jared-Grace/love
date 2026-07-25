@@ -34,15 +34,15 @@ export async function app_a_app(context) {
     {
       shortcut: "f",
       text: app_a_button_function_text(a_name_f),
-      fn: function lambda2() {
-        app_a_function_select(context, a_name_f);
+      fn: async function lambda2() {
+        await app_a_function_select(context, a_name_f);
       },
     },
     {
       shortcut: "p",
       text: text_combine(e, " Preview"),
-      fn: function lambda3() {
-        app_shared_screen_set(context, app_a_app_run);
+      fn: async function lambda3() {
+        await app_shared_screen_set(context, app_a_app_run);
       },
     },
   ];
@@ -51,8 +51,8 @@ export async function app_a_app(context) {
     list_add(choices, {
       shortcut: "m",
       text: app_a_button_function_text(unaliased),
-      fn: function lambda2() {
-        app_a_function_select(context, unaliased);
+      fn: async function lambda2() {
+        await app_a_function_select(context, unaliased);
       },
     });
   }
