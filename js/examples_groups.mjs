@@ -29,6 +29,7 @@ export function examples_groups() {
       examples: [
         "example_imports_migrate_multi_function", // add missing imports across a file
         "example_auto_imports_all_three", // add + remove + canonicalize at once
+        "example_fn_name_reference_strip", // drop a name-only dependency (fn.name -> fn_name("fn")) for web bundling
       ],
     },
     {
