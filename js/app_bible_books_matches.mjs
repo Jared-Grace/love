@@ -1,0 +1,65 @@
+import { text_lower_to } from "./text_lower_to.mjs";
+import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
+export function app_bible_books_matches(query, books) {
+  ("filter the whole Old-and-New-Testament to section to books tree down to what matches the search text, dropping any section or testament left with nothing, so the renderer just draws what comes back");
+  let q = text_lower_to(query);
+  function match_book(book) {
+    let text = property_get(book, "text");
+    let lower = text_lower_to(text);
+    let m = text_includes(lower, q);
+    return m;
+  }
+  function has_any(item, key) {
+    let list = property_get(item, key);
+    let empty = list_empty_is(list);
+    let any = not(empty);
+    return any;
+  }
+  function division_matches(division) {
+    let name = property_get(division, "name");
+    let codes = property_get(division, "book_codes");
+    function to_book(code) {
+      let book = list_find_property_or_null(books, "book_code", code);
+      return book;
+    }
+    let mapped = list_map(codes, to_book);
+    let present = list_filter_null_not_is(mapped);
+    let matching = list_filter(present, match_book);
+    let section = {
+      name,
+      books: matching,
+    };
+    return section;
+  }
+  function testament_matches(testament) {
+    let name = property_get(testament, "name");
+    let divisions = property_get(testament, "divisions");
+    let mapped = list_map(divisions, division_matches);
+    function section_has_books(section) {
+      let any = has_any(section, "books");
+      return any;
+    }
+    let sections = list_filter(mapped, section_has_books);
+    let filled = {
+      name,
+      divisions: sections,
+    };
+    return filled;
+  }
+  let testaments = ebible_book_testaments();
+  let mapped = list_map(testaments, testament_matches);
+  function testament_has_sections(testament) {
+    let any = has_any(testament, "divisions");
+    return any;
+  }
+  let result = list_filter(mapped, testament_has_sections);
+  return result;
+}
