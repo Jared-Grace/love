@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { clock_label } from "./clock_label.mjs";
 import { busy_item_repeat_word } from "./busy_item_repeat_word.mjs";
 import { date_weekday_short } from "./date_weekday_short.mjs";
@@ -9,8 +10,8 @@ export function busy_item_label(item) {
   let end = clock_label(item.end + 1);
   let repeat = busy_item_repeat_word(item.kind);
   let time = text_combine_multiple([start, " – ", end]);
-  let daily = item.kind === "daily";
-  let weekly = item.kind === "weekly";
+  let daily = equal(item.kind, "daily");
+  let weekly = equal(item.kind, "weekly");
   if (daily) {
     let daily_label = text_combine_multiple([repeat, " · ", time]);
     return daily_label;
@@ -25,11 +26,9 @@ export function busy_item_label(item) {
     ]);
     return weekly_label;
   }
-  let when = text_combine_multiple([
-    date_weekday_short(item.date),
-    " ",
-    date_month_day(item.date),
-  ]);
+  let name = date_weekday_short(item.date);
+  let label = date_month_day(item.date);
+  let when = text_combine_multiple([name, " ", label]);
   let dated_label = text_combine_multiple([repeat, " · ", when, " · ", time]);
   return dated_label;
 }
