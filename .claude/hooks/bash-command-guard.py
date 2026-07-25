@@ -570,11 +570,22 @@ def _scan_arithmetic(command, i):
 
 def _arithmetic_is_inert(body):
     """True iff an arithmetic-expansion body is pure math with no embedded
-    command execution. A bare `$var`/`${var}` reference is inert, but a `$(`
-    command substitution or a backtick inside the arithmetic would run a
-    command, so those force a fall-through to Unsupported (conservative: a
-    nested arithmetic `$((` also contains `$(` and is refused, which is safe)."""
-    return "$(" not in body and "`" not in body
+    command execution. A bare `$var`/`${var}` reference is inert, but these
+    force a fall-through to Unsupported: a `$(` command substitution or backtick
+    (runs a command), and an array subscript `[` (bash re-evaluates a subscript
+    as an arithmetic expression, the known indirect-injection vector where a
+    variable's value like `a[$(payload)]` executes). Conservative by design - a
+    nested arithmetic `$((` also contains `$(` and is refused, and plain array
+    math `a[i]` is refused too; both are rare and safe to send to `ask`."""
+    return "$(" not in body and "`" not in body and "[" not in body
+
+
+def _is_network_pseudo_device(path):
+    """True for bash's `/dev/tcp/*` and `/dev/udp/*` redirect specials, which
+    open a NETWORK connection instead of reading a file - so they are NOT
+    equivalent to handing the path to the trusted verb as an argument (a plain
+    file open), and must not ride the read-only input-redirect allowance."""
+    return path.startswith("/dev/tcp/") or path.startswith("/dev/udp/")
 
 
 def is_safe_scratchpad_target(path):
@@ -808,7 +819,7 @@ def tokenize(command, subst_validator=None):
                 while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n", "<", ">"):
                     k += 1
                 path = command[path_start:k]
-                if path and SAFE_SCRATCHPAD_PATH_RE.match(path):
+                if path and SAFE_SCRATCHPAD_PATH_RE.match(path) and not _is_network_pseudo_device(path):
                     word.clear()
                     i = k
                     continue

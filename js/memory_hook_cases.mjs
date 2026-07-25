@@ -62,7 +62,7 @@ export function memory_hook_cases() {
     },
     {
       tool: "Edit",
-      path: "js/qa_gates.mjs",
+      path: "package.json",
       decision: "silent",
       reason_includes: "",
     },
