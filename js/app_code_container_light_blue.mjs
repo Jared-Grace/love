@@ -32,6 +32,7 @@ export function app_code_container_light_blue(parent) {
     "margin-left": "auto",
     "margin-right": "auto",
     padding: inner,
+    gap: inner,
     display: "flex",
     "flex-direction": "column",
   });
