@@ -7,7 +7,7 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { assert_json } from "./assert_json.mjs";
 export function ebible_book_divisions_canon_assert() {
-  ("QA gate: prove the testament-to-section-to-book tree covers the whole 66-book canon exactly, in canonical order, once each, so an edit that drops, duplicates, misspells, reorders, or mistags a book (or leaves a section out of a testament) fails the gate instead of silently hiding a book from the picker");
+  "QA gate: prove the testament-to-section-to-book tree covers the whole 66-book canon exactly, in canonical order, once each, so an edit that drops, duplicates, misspells, reorders, or mistags a book (or leaves a section out of a testament) fails the gate instead of silently hiding a book from the picker";
   let books = ebible_books_engbsb();
   let canon = list_map_property(books, "book_code");
   let testaments = ebible_book_testaments();
