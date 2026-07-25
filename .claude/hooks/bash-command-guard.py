@@ -523,6 +523,60 @@ def _scan_substitution(command, i):
     raise Unsupported("unterminated command substitution")
 
 
+def _scan_arithmetic(command, i):
+    """Given `command` and index `i` pointing at the first character *inside*
+    a `$((` arithmetic expansion (i.e. just past both opening parens), return
+    (body, end) where `body` is the text between `$((` and its matching `))`
+    and `end` is the index just past that closing `))`. Paren-depth- and
+    quote-aware, starting at depth 2 for the two opening parens.
+
+    Arithmetic is pure integer math with no side effects, so the caller can
+    collapse the whole span to an inert placeholder - BUT only after scanning
+    `body` for a nested `$(`/backtick, which WOULD run a command; this scanner
+    finds the boundary and makes no trust decision. Raises Unsupported if
+    unterminated."""
+    depth = 2
+    quote = None  # None | "'" | '"'
+    n = len(command)
+    start = i
+    while i < n:
+        c = command[i]
+        if quote == "'":
+            if c == "'":
+                quote = None
+            i += 1
+            continue
+        if quote == '"':
+            if c == "\\" and i + 1 < n:
+                i += 2
+                continue
+            if c == '"':
+                quote = None
+            i += 1
+            continue
+        if c == "'":
+            quote = "'"
+        elif c == '"':
+            quote = '"'
+        elif c == "(":
+            depth += 1
+        elif c == ")":
+            depth -= 1
+            if depth == 0:
+                return command[start:i - 1], i + 1
+        i += 1
+    raise Unsupported("unterminated arithmetic expansion")
+
+
+def _arithmetic_is_inert(body):
+    """True iff an arithmetic-expansion body is pure math with no embedded
+    command execution. A bare `$var`/`${var}` reference is inert, but a `$(`
+    command substitution or a backtick inside the arithmetic would run a
+    command, so those force a fall-through to Unsupported (conservative: a
+    nested arithmetic `$((` also contains `$(` and is refused, which is safe)."""
+    return "$(" not in body and "`" not in body
+
+
 def is_safe_scratchpad_target(path):
     """True iff `path` is a plain, already-normalized path strictly inside
     this project's scratchpad. Rejects anything containing shell
