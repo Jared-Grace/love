@@ -8,6 +8,7 @@ import { app_g_container_color } from "./app_g_container_color.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_g_npc_says(npc, overlay, npc_says) {
@@ -21,7 +22,7 @@ export function app_g_npc_says(npc, overlay, npc_says) {
   let game_prefix = g_game_prefix();
   let c_src = g_character_img_url_direction(npc, "south");
   let component = html_img_retry(container, c_src);
-  html_style_set(component, "display", "block");
+  html_display_block(component);
   html_style_set(component, "margin", "0 auto");
   let name_map = {
     [g_gender_female()]: "#a3006e",
