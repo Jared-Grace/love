@@ -12,9 +12,9 @@ import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_message_provide_generic(category, emoji, context, verse) {
   let button_back = function lambda(context, parent) {
-    function lambda5() {
+    async function lambda5() {
       let screens = app_message_flow_travel();
-      app_shared_flow_back(context, screens);
+      await app_shared_flow_back(context, screens);
     }
     let button = app_shared_button_back(parent, lambda5);
     return button;
