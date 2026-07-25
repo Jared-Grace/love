@@ -12,7 +12,7 @@ import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_remainder_roadmap(root, stage) {
-  "a road sign shown atop each remainder-machinery lesson: the target formula 14 - Math.floor(14 / 4) * 4 (the remainder we are building toward) with the piece THIS lesson teaches lit green, earlier pieces solid, later pieces dimmed - so the learner always sees where the machinery detour leads and how far along it is. stage is the lesson key: round_down, integer_division, whole_part, or remainder_divide";
+  "a road sign atop each remainder-machinery lesson: names the destination in words the learner already owns (finding the remainder) and shows the formula grown ONLY as far as it has been built - the piece THIS lesson teaches lit green, earlier pieces solid, and nothing ahead shown at all. Never a preview of not-yet-learned notation (that would break first-read sense); a progress trail, so every symbol on screen already makes sense. The full formula 14 - Math.floor(14 / 4) * 4 appears whole only at the arrival lesson. stage is the lesson key: round_down, integer_division, whole_part, or remainder_divide";
   let order = [
     "round_down",
     "integer_division",
@@ -44,7 +44,7 @@ export function app_code_remainder_roadmap(root, stage) {
   ];
   let box = app_code_container_light_blue(root);
   let label = html_div(box);
-  html_span_text(label, "Building toward the remainder:");
+  html_span_text(label, "Building a way to find the remainder");
   let line = html_div(box);
   let tile = html_span(line);
   html_style_code_dark(tile);
