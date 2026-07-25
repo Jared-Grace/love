@@ -1369,37 +1369,31 @@ def is_safe_sandboxed_node_script(words):
 
 
 def sandbox_read_path_near_miss(words):
-    """Mirror of is_safe_sandboxed_node_eval / is_safe_sandboxed_node_script:
-    the same token-for-token sandbox template (eval form ending in `-e`, or
-    script form ending in a scripts/temp/*.mjs path), differing ONLY in that the
-    --allow-fs-read path points OUTSIDE this repo. Returns that out-of-repo path
-    so main() can DENY with narrow-the-path advice instead of letting the
-    command fall through to a human approval prompt (a `silent` verdict).
+    """A command that clearly ATTEMPTS the sandboxed-node throwaway - it opens
+    with the exact `unshare --net --map-root-user -- node --permission
+    --allow-fs-read=<...>` intent-prefix - but is NOT one of the two sanctioned
+    forms (is_safe_sandboxed_node_eval / is_safe_sandboxed_node_script). Returns
+    the --allow-fs-read value so main() can DENY with the canonical template
+    instead of letting a correctable slip fall through to a human prompt (a
+    `silent` verdict). This catches every near-miss in one net: a parent/other
+    read path, an ABSOLUTE script path (recognizer wants a relative
+    scripts/temp/<name>.mjs), a non-normalized path, a stray extra arg.
 
-    An in-repo path is already is_safe (allowed) and returns None here, so this
-    never shadows the sanctioned form; anything that isn't this template at all
-    (wrong flags, a relative or non-normalized path, an invalid tail) also
-    returns None and is left to normal handling. The path gate is the exact
-    complement of the recognizers' `path == REPO_ROOT or startswith(REPO_ROOT +
-    sep)` test, so every well-formed sandbox command is either allowed there or
-    corrected here - never silently dropped to a prompt."""
-    if len(words) not in (8, 9):
+    Returns None when it isn't this template at all (so a totally different
+    command is left to normal handling) and when it IS a sanctioned form (those
+    are already allowed by is_safe before main() reaches here, and excluded here
+    too so this never shadows them). The `--net` requirement is part of the
+    prefix, so the no-`--net` variant - a real sandbox weakening, not a typo -
+    is deliberately NOT treated as a simple near-miss."""
+    if len(words) < 7:
         return None
-    if words[0:5] != ["unshare", "--net", "--map-root-user", "--", "node"]:
-        return None
-    if words[5] != "--permission":
+    if words[0:6] != ["unshare", "--net", "--map-root-user", "--", "node", "--permission"]:
         return None
     if not words[6].startswith("--allow-fs-read="):
         return None
-    path = words[6][len("--allow-fs-read="):]
-    if not os.path.isabs(path) or os.path.normpath(path) != path:
+    if is_safe_sandboxed_node_eval(words) or is_safe_sandboxed_node_script(words):
         return None
-    tail_ok = (words[7] == "-e") if len(words) == 9 else is_safe_temp_script_path(words[7])
-    if not tail_ok:
-        return None
-    if path == REPO_ROOT or path.startswith(REPO_ROOT + os.sep):
-        return None
-    return path
+    return words[6][len("--allow-fs-read="):]
 
 
 # Matches exactly one sed script shape, anchored start-to-end:
@@ -1885,11 +1879,13 @@ def non_ai_scripts_deny_reason(script):
 
 
 def find_sandbox_path_near_miss(command):
-    """If any statement in `command` is the sandboxed-node template with an
-    --allow-fs-read path outside this repo (see sandbox_read_path_near_miss),
-    return that path so main() can DENY it with narrow-the-path advice; else
-    None. Quote-aware and prefix-unwrapping like the other floor finders; an
-    unparseable command returns None and falls through to normal handling."""
+    """True (returns the offending --allow-fs-read value) iff any statement in
+    `command` attempts the sandboxed-node throwaway but isn't a sanctioned form
+    (see sandbox_read_path_near_miss), so main() can DENY it with the canonical
+    template; else None. Quote-aware and prefix-unwrapping like the other floor
+    finders; an unparseable command returns None and falls through to normal
+    handling. Returns "" (still not None) if the flag value is empty - the deny
+    still fires; main() only tests `is not None`."""
     try:
         tokens = tokenize(command)
     except Unsupported:
@@ -1902,15 +1898,17 @@ def find_sandbox_path_near_miss(command):
     return None
 
 
-def sandbox_path_near_miss_deny_reason(path):
+def sandbox_path_near_miss_deny_reason():
     return (
-        f"Sandboxed node: --allow-fs-read={path} points outside this repo, so "
-        f"the guard won't auto-approve it - the sanctioned throwaway pins read "
-        f"access to {REPO_ROOT}. Narrow it to --allow-fs-read={REPO_ROOT} and "
-        f"re-run; that exact form is auto-approved with no prompt. Only if the "
-        f"script genuinely must read another repo is a wider path needed - in "
-        f"that case ask the human to approve the one command. See CLAUDE.md - "
-        f"'Throwaway node - never raw `node -e`'."
+        "Sandboxed node: this opens like the throwaway sandbox but isn't the "
+        "exact sanctioned shape, so the guard won't auto-approve it. The read "
+        f"path must be exactly {REPO_ROOT} (not a parent or other dir), and a "
+        "script must be a RELATIVE scripts/temp/<name>.mjs path (not absolute), "
+        "run from the repo root. Rewrite as exactly one of:\n"
+        f"  unshare --net --map-root-user -- node --permission --allow-fs-read={REPO_ROOT} -e '<script>'\n"
+        f"  unshare --net --map-root-user -- node --permission --allow-fs-read={REPO_ROOT} scripts/temp/<name>.mjs\n"
+        "Both auto-approve with no prompt. If you genuinely need a different "
+        "sandbox, ask the human. See CLAUDE.md - 'Throwaway node - never raw `node -e`'."
     )
 
 
@@ -2027,7 +2025,7 @@ def main():
             "hookSpecificOutput": {
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
-                "permissionDecisionReason": sandbox_path_near_miss_deny_reason(near_miss_path),
+                "permissionDecisionReason": sandbox_path_near_miss_deny_reason(),
             }
         }))
         return

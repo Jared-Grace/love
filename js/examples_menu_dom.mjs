@@ -12,7 +12,6 @@ import { app_shared_text_category } from "./app_shared_text_category.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
-import { example_tool_family } from "./example_tool_family.mjs";
 import { equal } from "./equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { subtract } from "./subtract.mjs";
@@ -55,9 +54,10 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_set(button, "text-align", "left");
   }
   function family_at(index) {
+    "family is attached to each example at build time (see the corpus reader), so the client";
+    "reads a plain string here and never pulls the heavy real transforms into the bundle";
     let example = list_get(examples, index);
-    let fn = property_get(example, "fn");
-    let family = example_tool_family(fn);
+    let family = property_get(example, "family");
     return family;
   }
   function render_segment(name, start, size) {
