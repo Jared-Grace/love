@@ -112,10 +112,14 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
   function record_color(record) {
     let is_anchor = anchor_is(record.day, record.slot);
     let is_selected = selected_is(record.day, record.slot);
-    let active = is_anchor || is_selected;
+    let anchor_color = app_shared_color_blue_dark();
     let selected_color = app_shared_container_blue_border_color();
     let empty_color = week_calendar_color_empty(record.slot);
-    let chosen = active ? selected_color : empty_color;
+    let chosen = is_anchor
+      ? anchor_color
+      : is_selected
+        ? selected_color
+        : empty_color;
     return chosen;
   }
   function paint_record(record) {
