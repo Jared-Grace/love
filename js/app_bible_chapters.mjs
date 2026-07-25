@@ -8,14 +8,14 @@ import { ebible_book_code_to_chapter_codes_browser } from "./ebible_book_code_to
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 export async function app_bible_chapters(context) {
   let r = await app_bible_chapters_before(context);
-  let root = property_get(r, "root");
+  let card = property_get(r, "card");
   let book_code = property_get(r, "book_code");
   let e = ebible_folder_english();
   let items = await ebible_book_code_to_chapter_codes_browser(e, book_code);
   let code_to_button_text = ebible_chapter_code_to_name;
   let oc = app_bible_chapter_open_curried(context);
   let buttons = app_shared_button_list_centered(
-    root,
+    card,
     items,
     code_to_button_text,
     oc,

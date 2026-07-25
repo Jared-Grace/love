@@ -1,9 +1,11 @@
+import { range } from "./range.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { html_style_grid } from "./html_style_grid.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_on_click } from "./html_on_click.mjs";
@@ -11,6 +13,7 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_day_names } from "./week_day_names.mjs";
 import { slot_hour_label } from "./slot_hour_label.mjs";
+import { week_range_label } from "./week_range_label.mjs";
 import { week_calendar_color_anchor } from "./week_calendar_color_anchor.mjs";
 import { week_calendar_color_empty } from "./week_calendar_color_empty.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
@@ -20,7 +23,7 @@ import { list_any } from "./list_any.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { not } from "./not.mjs";
 export function week_calendar(parent, on_ranges) {
-  "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; click a piece to start a range then click another piece in the same day to select every piece between them; click any selected piece to remove its range, or click a waiting piece again to cancel it; reports the chosen {day, start, end} windows to on_ranges after each change";
+  "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; click a piece to start a range then click another piece in the same day to select every piece between them; click any selected piece to remove its range, or click a waiting piece again to cancel it; lists the chosen windows below the grid and reports them to on_ranges after each change";
   let days = week_day_names();
   let slots = numbers_up_to(48);
   let ranges = [];
@@ -36,6 +39,11 @@ export function week_calendar(parent, on_ranges) {
   html_div_text(grid, "");
   each(days, header_cell);
   each(slots, slot_row);
+  let summary = html_div(parent);
+  html_style_assign(summary, {
+    "margin-top": "0.75rem",
+    "line-height": "1.6",
+  });
   paint();
   function header_cell(day) {
     let head = html_div_text(grid, day);
@@ -114,8 +122,14 @@ export function week_calendar(parent, on_ranges) {
     let color = record_color(record);
     html_style_background_color_set(record.element, color);
   }
+  function summary_line(range) {
+    let text = week_range_label(range);
+    html_div_text(summary, text);
+  }
   function paint() {
     each(records, paint_record);
+    html_clear(summary);
+    each(ranges, summary_line);
   }
   function range_add(day, a, b) {
     let start = Math.min(a, b);
