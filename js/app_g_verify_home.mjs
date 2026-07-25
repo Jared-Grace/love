@@ -22,7 +22,9 @@ import { html_loading } from "./html_loading.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_g_verify_view } from "./app_g_verify_view.mjs";
-import { app_shared_text_deemphasized_color } from "./app_shared_text_deemphasized_color.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
 import { app_shared_milestone_background_color } from "./app_shared_milestone_background_color.mjs";
 import { app_shared_verse_selected_background_color } from "./app_shared_verse_selected_background_color.mjs";
@@ -133,7 +135,7 @@ export async function app_g_verify_home(context) {
       pending = status_verse;
     }
     let wrap = html_div(root);
-    html_style_set(wrap, "max-width", "48em");
+    html_style_set(wrap, "max-width", app_g_verify_column_max_width());
     html_style_set(wrap, "margin", "0 auto");
     html_style_padding_x(wrap, "1.2em");
     html_style_padding_y(wrap, "2em");
@@ -152,8 +154,8 @@ export async function app_g_verify_home(context) {
     book_order.forEach(function (book) {
       let row = html_div_centered(cbar);
       let book_label = html_p_text(row, g_verify_book_name(book));
-      html_font_color_set(book_label, app_shared_text_deemphasized_color());
-      html_style_set(book_label, "font-size", "0.85em");
+      app_shared_text_deemphasized(book_label);
+      html_style_font_size(book_label, "0.85em");
       html_margin_em(book_label, "0");
       let buttons = app_shared_button_list_centered(
         row,
@@ -178,15 +180,15 @@ export async function app_g_verify_home(context) {
     });
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     html_style_set(title, "font-family", app_shared_font_serif());
-    html_style_set(title, "font-size", "1.5em");
+    html_style_font_size(title, "1.5em");
     html_style_set(title, "font-weight", "600");
     html_margin_em(title, "0");
     let hint = html_p_text(
       wrap,
       "Pick a passage, then hover a line to light up the words it draws from; hover a word to see the lines that carry it. Underlined words are used by no line.",
     );
-    html_font_color_set(hint, app_shared_text_deemphasized_color());
-    html_style_set(hint, "font-size", "0.9em");
+    app_shared_text_deemphasized(hint);
+    html_style_font_size(hint, "0.9em");
     html_margin_em(hint, "0");
     if (busy) {
       let note = property_get(status, "note");
@@ -205,7 +207,7 @@ export async function app_g_verify_home(context) {
       html_style_padding_y(banner, "0.5em");
       html_margin_em(banner, "0");
       html_style_set(banner, "margin-top", app_shared_spaced_small_gap());
-      html_style_set(banner, "font-size", "0.95em");
+      html_style_font_size(banner, "0.95em");
     }
     let view = null;
     let verse_buttons = {};
@@ -242,8 +244,8 @@ export async function app_g_verify_home(context) {
       highlight_selected();
       html_clear(view);
       let msg = html_p_text(view, "Claude is writing v" + verse + "…");
-      html_font_color_set(msg, app_shared_text_deemphasized_color());
-      html_style_set(msg, "font-size", "1.1em");
+      app_shared_text_deemphasized(msg);
+      html_style_font_size(msg, "1.1em");
       html_style_set(msg, "margin-top", "1em");
     }
     let bar = html_div_centered(wrap);
@@ -273,7 +275,7 @@ export async function app_g_verify_home(context) {
           view,
           "No verses written yet for this chapter.",
         );
-        html_font_color_set(empty, app_shared_text_deemphasized_color());
+        app_shared_text_deemphasized(empty);
         html_style_set(empty, "margin-top", "1em");
       }
       return;
