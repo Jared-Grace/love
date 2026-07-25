@@ -1,3 +1,4 @@
+import { process_daemon_is } from "./process_daemon_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { date_time_zone_now_iso } from "./date_time_zone_now_iso.mjs";
 import { json_to } from "./json_to.mjs";
@@ -9,9 +10,15 @@ export async function ai_log_add(f_name, args) {
   ("One line per command run through the seam. The point is the STREAM: a sequence");
   ("that repeats across sessions is a composite worth naming as a single transform,");
   ("and frequency decides which, rather than anyone's memory of what felt common.");
+  ("A background unit polling on a timer and a person running a command both reach");
+  ("this line, and they mean opposite things: the poller is the machine keeping");
+  ("itself alive, the command is somebody deciding to do something. Recording which");
+  ("is which is what keeps the poller from drowning out the deciding.");
   let time = date_time_zone_now_iso();
+  let daemon = process_daemon_is();
   let entry = {
     time,
+    daemon,
     f_name,
     args,
   };
