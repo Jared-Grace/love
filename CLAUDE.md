@@ -37,7 +37,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` / `function_new_js` |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic` |
-| Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic_args` |
+| Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic` |
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
 | Delete a fn **only if** proven unused (else refuses) | `du <name>` | `function_delete_unused` |
