@@ -85,6 +85,7 @@
       "Bash(node scripts/ai.mjs memory_hook_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_orphans:*)",
       "Bash(node scripts/ai.mjs memory_dangling_links:*)",
+      "Bash(node scripts/ai.mjs memory_pointer_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_symbol_references_unresolved:*)",
       "Bash(node scripts/ai.mjs notification_hook_check:*)",
       "Bash(node scripts/ai.mjs p_commands_repeated:*)",
