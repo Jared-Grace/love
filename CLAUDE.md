@@ -38,9 +38,11 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new_open` / `function_new_js` |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic_args` |
 | Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic_args` |
-| Extract statements between two markers into a new fn | `mf <marker_from> <marker_to> <new_fn>` | `marker_functionize` |
+| Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
 | Delete a fn **only if** proven unused (else refuses) | `du <name>` | `function_delete_unused` |
+
+**Addressing a node inside a fn: use a selector, not the marker cursor.** The `marker_*` family (a persisted current-marker plus `up`/`down`/`enter`/`leave`/`above`/`below` navigation) is **retired** — its 29 alias keys were freed on 2026-07-25 and archived in `marker_aliases_retired()` so they can be restored if it's revived. It cost a multi-command session per edit and carried a shared mutable cursor, which races under parallel Claudes. Selectors are the replacement: a *selector* is any fn `(ast, …args) → node` (`js_statement_find_call_named`, `js_find_return`, `js_call_named_find`, `js_type_find`), and a *transform* is any fn `(ast, selects, …args)` (`js_statement_wrap_if`, `js_statement_if_return_add`, `js_expand_selects`). Keeping the two halves separate is what makes them multiply — every new transform written to that signature pairs with every existing selector. Write new node-level transforms to it. `marker_functionize` still works but needs `marker()` calls placed in the code first.
 
 **Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/ai.mjs function_auto <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts) and **auto-commits the whole tree**, so you don't need a separate `ai_git` after it. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
 
