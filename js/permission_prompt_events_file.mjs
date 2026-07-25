@@ -1,3 +1,7 @@
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import fs from "fs";
 import readline from "readline";
 import path from "path";
@@ -19,43 +23,45 @@ export async function permission_prompt_events_file(file_path, wait_minimum) {
   for await (let line of lines) {
     let interesting =
       line.includes('"tool_use"') || line.includes('"tool_result"');
-    if (!interesting) {
+    if (not(interesting)) {
       continue;
     }
     let entry = json_parse_try(line);
-    if (entry === null) {
+    if (equal(entry, null)) {
       continue;
     }
     let message = entry.message;
-    if (!message) {
+    if (not(message)) {
       continue;
     }
     let content = message.content;
-    if (!Array.isArray(content)) {
+    let b = Array.isArray(content);
+    if (not(b)) {
       continue;
     }
     let at = Date.parse(entry.timestamp);
     for (let part of content) {
-      if (part.type === "tool_use") {
+      if (equal(part.type, "tool_use")) {
         calls.set(part.id, {
           name: part.name,
           input: part.input,
           at,
-          sidechain: entry.isSidechain === true,
+          sidechain: equal(entry.isSidechain, true),
         });
       }
-      if (part.type === "tool_result") {
+      if (equal(part.type, "tool_result")) {
         let call = calls.get(part.tool_use_id);
-        if (!call) {
+        if (not(call)) {
           continue;
         }
         calls.delete(part.tool_use_id);
-        let waited = at - call.at;
-        if (waited < wait_minimum) {
+        let waited = subtract(at, call.at);
+        if (less_than(waited, wait_minimum)) {
           continue;
         }
-        let command =
-          typeof call.input.command === "string" ? call.input.command : "";
+        let command = equal(typeof call.input.command, "string")
+          ? call.input.command
+          : "";
         list_add(events, {
           label: permission_prompt_label(call.name, call.input),
           tool: call.name,
