@@ -16,6 +16,7 @@ import { html_value_set } from "./html_value_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_centered } from "./html_centered.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -192,7 +193,7 @@ export function app_g_verify_view(
   });
   let links_bar = html_div(container);
   html_style_margin_top(links_bar, small_gap);
-  html_style_set(links_bar, "text-align", "center");
+  html_centered(links_bar);
   let bh_chapter = String(Number(chapter_code.slice(3)));
   let bh_book = g_verify_book_name(chapter_code.slice(0, 3));
   let bh_verse = verse.split(",")[0];
@@ -207,7 +208,7 @@ export function app_g_verify_view(
   html_button_biblehub_open_interlinear(links_bar, bh_chapter, bh_book, bh_verse);
   let approve_bar = html_div(container);
   html_style_margin_top(approve_bar, small_gap);
-  html_style_set(approve_bar, "text-align", "center");
+  html_centered(approve_bar);
   async function on_approve() {
     try {
       await app_shared_api({
