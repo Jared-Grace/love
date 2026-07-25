@@ -4,7 +4,6 @@ import { app_shared_border_radius_large } from "./app_shared_border_radius_large
 import { html_border_radius } from "./html_border_radius.mjs";
 import { app_shared_column_content_max_width } from "./app_shared_column_content_max_width.mjs";
 import { app_code_container_light_blue_border_color } from "./app_code_container_light_blue_border_color.mjs";
-import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
