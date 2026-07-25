@@ -761,8 +761,17 @@ def tokenize(command, subst_validator=None):
                 target_len = 0
                 if command[j:j + 2] in ("&1", "&2"):
                     target_len = 2
-                elif command[j:j + len("/dev/null")] == "/dev/null":
-                    target_len = len("/dev/null")
+                else:
+                    # A space is allowed before a /dev/null target: `> /dev/null`
+                    # and `2> /dev/null` are the same harmless redirect as the
+                    # glued `>/dev/null` (bash accepts the space). fd-dup &1/&2
+                    # stays glued, matching how bash requires `>&1`.
+                    j_dev_null = j
+                    while j_dev_null < n and command[j_dev_null] == " ":
+                        j_dev_null += 1
+                    if command[j_dev_null:j_dev_null + len("/dev/null")] == "/dev/null":
+                        j = j_dev_null
+                        target_len = len("/dev/null")
                 if target_len:
                     end = j + target_len
                     if end >= n or command[end].isspace() or command[end] in (";", "&", "|", "\n"):
