@@ -29,8 +29,8 @@ import { js_fold_all } from "./js_fold_all.mjs";
 import { js_fold_auto } from "./js_fold_auto.mjs";
 import { example_fold_lambda } from "./example_fold_lambda.mjs";
 import { example_fold_auto_lambda } from "./example_fold_auto_lambda.mjs";
-import { js_block_body_add } from "./js_block_body_add.mjs";
-import { js_block_body_add_first } from "./js_block_body_add_first.mjs";
+import { js_block_body_add_code } from "./js_block_body_add_code.mjs";
+import { js_block_body_add_code_first } from "./js_block_body_add_code_first.mjs";
 import { example_block_body_add_lambda } from "./example_block_body_add_lambda.mjs";
 export function example_command_lambda(fn_name, args) {
   if (equal(fn_name, js_atomize.name)) {
@@ -117,21 +117,21 @@ export function example_command_lambda(fn_name, args) {
     );
     return lambda15;
   }
-  if (equal(fn_name, js_block_body_add.name)) {
+  if (equal(fn_name, js_block_body_add_code.name)) {
     let lambda11 = example_block_body_add_lambda(
       args[0],
       args[1],
       args[2],
-      js_block_body_add,
+      js_block_body_add_code,
     );
     return lambda11;
   }
-  if (equal(fn_name, js_block_body_add_first.name)) {
+  if (equal(fn_name, js_block_body_add_code_first.name)) {
     let lambda12 = example_block_body_add_lambda(
       args[0],
       args[1],
       args[2],
-      js_block_body_add_first,
+      js_block_body_add_code_first,
     );
     return lambda12;
   }
