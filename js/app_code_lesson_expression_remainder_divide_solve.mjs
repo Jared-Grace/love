@@ -22,16 +22,20 @@ export function app_code_lesson_expression_remainder_divide_solve() {
   function make(divisor) {
     "the full remainder formula dividend - Math.floor(dividend / divisor) * divisor for the given divisor; the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division is uneven and the formula works out to that leftover - the remainder";
     let quotient = integer_random(2, 3);
-    let leftover = integer_random(1, subtract(divisor, 1));
-    let dividend = add(multiply(quotient, divisor), leftover);
+    let max = subtract(divisor, 1);
+    let leftover = integer_random(1, max);
+    let left = multiply(quotient, divisor);
+    let dividend = add(left, leftover);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let t = text_to(divisor);
     let whole_part = text_combine_multiple([
       "Math.floor(",
       division,
       ") * ",
-      text_to(divisor),
+      t,
     ]);
-    let code = text_combine_multiple([text_to(dividend), " - ", whole_part]);
+    let t2 = text_to(dividend);
+    let code = text_combine_multiple([t2, " - ", whole_part]);
     return code;
   }
   function refill() {
@@ -48,7 +52,8 @@ export function app_code_lesson_expression_remainder_divide_solve() {
     let whole_part = subtract(dividend, answer);
     let quotient = divide(whole_part, divisor);
     let raw = divide(dividend, divisor);
-    return [whole_part, quotient, raw];
+    let r = [whole_part, quotient, raw];
+    return r;
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
@@ -95,6 +100,11 @@ export function app_code_lesson_expression_remainder_divide_solve() {
       "14 - 12",
     ]);
     html_div_cycle_code(solving, ["", "14 - 12", " is ", "2"]);
-    html_div_cycle_code(solving, ["", "14 - Math.floor(14 / 4) * 4", " is ", "2"]);
+    html_div_cycle_code(solving, [
+      "",
+      "14 - Math.floor(14 / 4) * 4",
+      " is ",
+      "2",
+    ]);
   }
 }
