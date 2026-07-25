@@ -3,8 +3,8 @@ import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-import { storage_local_get } from "./storage_local_get.mjs";
-import { storage_local_set } from "./storage_local_set.mjs";
+import { storage_session_get } from "./storage_session_get.mjs";
+import { storage_session_set } from "./storage_session_set.mjs";
 import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { number_is } from "./number_is.mjs";
 import { examples_menu_dom } from "./examples_menu_dom.mjs";
@@ -19,12 +19,13 @@ export async function app_examples(context) {
   let root = property_get(context, "root");
   html_style_set(root, "margin", "0");
   html_style_set(root, "background", "#fafafa");
+  ("which example is open belongs to this tab, so two tabs can read two examples");
   function select(index) {
-    storage_local_set(app_examples, "selected", index);
+    storage_session_set(app_examples, "selected", index);
     render();
   }
   function to_menu() {
-    storage_local_set(app_examples, "selected", null);
+    storage_session_set(app_examples, "selected", null);
     render();
   }
   function render() {
@@ -35,7 +36,7 @@ export async function app_examples(context) {
     html_style_set(page, "padding", "2rem");
     html_style_set(page, "font-family", "system-ui, sans-serif");
     html_style_set(page, "color", "#1a1a1a");
-    let selected = storage_local_get(app_examples, "selected");
+    let selected = storage_session_get(app_examples, "selected");
     if (number_is(selected)) {
       function on_prev() {
         let index2 = subtract(selected, 1);
