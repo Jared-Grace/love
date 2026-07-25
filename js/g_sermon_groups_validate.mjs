@@ -1,3 +1,6 @@
+import { greater_than } from "./greater_than.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { g_sermon_chapter_passages_for_grouping } from "./g_sermon_chapter_passages_for_grouping.mjs";
 import { g_sermon_block_line_soft } from "./g_sermon_block_line_soft.mjs";
 import { g_sermon_block_line_hard } from "./g_sermon_block_line_hard.mjs";
@@ -31,22 +34,44 @@ export async function g_sermon_groups_validate(chapter, groups) {
       total = total + n;
     }
     let label = list_join_comma(group);
-    if (total > hard) {
-      let message = "block [" + label + "] = " + total + " lines exceeds the hard cap " + hard;
+    if (greater_than(total, hard)) {
+      let message =
+        "block [" +
+        label +
+        "] = " +
+        total +
+        " lines exceeds the hard cap " +
+        hard;
       list_add(errors, message);
-    } else if (total > soft) {
-      let message = "block [" + label + "] = " + total + " lines is over the soft cap " + soft + " — must be compelling";
+    } else if (greater_than(total, soft)) {
+      let message =
+        "block [" +
+        label +
+        "] = " +
+        total +
+        " lines is over the soft cap " +
+        soft +
+        " — must be compelling";
       list_add(flags, message);
     }
   }
   let expected_seq = list_join_space(expected_refs);
   let got_seq = list_join_space(flat);
-  let sequence_ok = expected_seq === got_seq;
-  if (!sequence_ok) {
-    let message = "passages not covered exactly once in order; expected [" + expected_seq + "] but got [" + got_seq + "]";
+  let sequence_ok = equal(expected_seq, got_seq);
+  if (not(sequence_ok)) {
+    let message =
+      "passages not covered exactly once in order; expected [" +
+      expected_seq +
+      "] but got [" +
+      got_seq +
+      "]";
     list_add(errors, message);
   }
-  let ok = errors.length === 0;
-  let r = { ok, errors, flags };
+  let ok = equal(errors.length, 0);
+  let r = {
+    ok,
+    errors,
+    flags,
+  };
   return r;
 }
