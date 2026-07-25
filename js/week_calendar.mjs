@@ -47,7 +47,12 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     "margin-bottom": "0.75rem",
   });
   let grid = html_div(root);
-  html_style_grid(grid, 8);
+  html_style_assign(grid, {
+    display: "grid",
+    width: "100%",
+    "grid-template-columns": "auto repeat(7, 1fr)",
+    gap: "0",
+  });
   html_div_text(grid, "");
   each(days, header_cell);
   each(slots, slot_row);
