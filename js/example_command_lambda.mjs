@@ -106,5 +106,9 @@ export function example_command_lambda(fn_name, args) {
     );
     return lambda12;
   }
+  if (equal(fn_name, js_fn_name_references_to_calls.name)) {
+    let lambda13 = example_fn_name_references_lambda();
+    return lambda13;
+  }
   return null;
 }
