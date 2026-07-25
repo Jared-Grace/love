@@ -1,5 +1,4 @@
-import { each } from "./each.mjs";
-import { app_bible_picker_button_enlarge } from "./app_bible_picker_button_enlarge.mjs";
+import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
 import { app_bible_chapter_set_default } from "./app_bible_chapter_set_default.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
