@@ -1,3 +1,10 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { not } from "./not.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
@@ -28,16 +35,31 @@ export function app_bible_books_render(
   html_clear(list_div);
   let testaments = app_bible_books_matches(query, books);
   let all_buttons = [];
+  let caret_open = "▾";
+  let caret_closed = "▸";
   function render_testament(testament) {
     let t_name = property_get(testament, "name");
     let divisions = property_get(testament, "divisions");
     let t_card = app_shared_container_blue(list_div);
-    let title = html_div_text_bold(t_card, t_name);
+    ("tap the testament title to fold or unfold its sections, so a phone reader can collapse a whole testament and jump straight to the other one; the caret shows which way it is");
+    let title_text = text_combine_multiple([caret_open, " ", t_name]);
+    let title = html_div_text_bold(t_card, title_text);
     html_centered(title);
+    html_style_set(title, "cursor", "pointer");
+    let sections_holder = html_div(t_card);
+    let collapsed = false;
+    function toggle() {
+      collapsed = not(collapsed);
+      html_display_none_or_block(collapsed, sections_holder);
+      let caret = collapsed ? caret_closed : caret_open;
+      let text = text_combine_multiple([caret, " ", t_name]);
+      html_text_set(title, text);
+    }
+    html_on_click(title, toggle);
     function render_section(section) {
       let s_name = property_get(section, "name");
       let s_books = property_get(section, "books");
-      let s_card = app_shared_container_blue_medium(t_card);
+      let s_card = app_shared_container_blue_medium(sections_holder);
       ("trim the section card's left-right padding so the book buttons get more of the row width; keep the card's vertical padding");
       let value = app_shared_spaced_tiny_gap();
       html_style_padding_x(s_card, value);
