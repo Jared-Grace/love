@@ -788,8 +788,43 @@ def tokenize(command, subst_validator=None):
             word.append("{}")
             i += 2
             continue
+        if c == "<":
+            # Input redirection from a file (`< path`, or `N< path`) is
+            # read-only: it feeds an existing file to the command's stdin,
+            # which the already-trusted verb could equally read by taking that
+            # path as an argument - so any plain-path target is safe and the
+            # redirect is simply dropped (like >/dev/null). The target must be
+            # a metacharacter-free path (SAFE_SCRATCHPAD_PATH_RE charset) so a
+            # `< $(cmd)`/`< \`cmd\`` can't smuggle in command execution.
+            # Excluded, all still Unsupported: `<<`/`<<<` (heredoc/here-string),
+            # `<>` (opens for WRITE too), and `<(` (process substitution - runs
+            # a command).
+            is_fd_prefix = bool(word) and all(ch.isdigit() for ch in word)
+            if (is_fd_prefix or not word) and i + 1 < n and command[i + 1] not in ("<", ">", "("):
+                k = i + 1
+                while k < n and command[k] == " ":
+                    k += 1
+                path_start = k
+                while k < n and not command[k].isspace() and command[k] not in (";", "&", "|", "\n", "<", ">"):
+                    k += 1
+                path = command[path_start:k]
+                if path and SAFE_SCRATCHPAD_PATH_RE.match(path):
+                    word.clear()
+                    i = k
+                    continue
+            raise Unsupported(
+                "unsupported operator '<' (input redirection needs a plain "
+                "file-path target; <<, <>, <( are not accepted)"
+            )
         if c in DANGEROUS_CHARS:
             raise Unsupported(f"unsupported operator {c!r}")
+        if c == "$" and i + 2 < n and command[i + 1] == "(" and command[i + 2] == "(":
+            body, end = _scan_arithmetic(command, i + 3)
+            if not _arithmetic_is_inert(body):
+                raise Unsupported("command substitution inside arithmetic")
+            word.append(SUBSTITUTION_PLACEHOLDER)
+            i = end
+            continue
         if c == "$" and i + 1 < n and command[i + 1] == "(":
             inner, end = _scan_substitution(command, i + 2)
             if subst_validator is None or not subst_validator(inner):
