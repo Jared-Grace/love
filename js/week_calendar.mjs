@@ -102,7 +102,7 @@ export function week_calendar(parent, on_ranges) {
     let is_selected = selected_is(record.day, record.slot);
     let anchor_color = week_calendar_color_anchor();
     let selected_color = app_shared_button_background();
-    let empty_color = week_calendar_color_empty();
+    let empty_color = week_calendar_color_empty(record.slot);
     let chosen = is_anchor
       ? anchor_color
       : is_selected
