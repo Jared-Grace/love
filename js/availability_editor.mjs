@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { week_dates } from "./week_dates.mjs";
 import { date_today_iso } from "./date_today_iso.mjs";
@@ -31,7 +32,8 @@ export function availability_editor(parent) {
   "owner screen: pick a week with the arrows or the date field, select time ranges on that week's real dates, then choose how they repeat (daily, weekly, monthly, one time); the chosen button highlights and the preview refreshes to show the busy items that choice would create";
   let ranges = [];
   let chosen = null;
-  let week_start = date_week_sunday(date_today_iso());
+  let iso = date_today_iso();
+  let week_start = date_week_sunday(iso);
   let button_records = [];
   let nav = app_shared_container_blue(parent);
   function go_prev() {
@@ -65,11 +67,9 @@ export function availability_editor(parent) {
   function update_week_label(dates) {
     let first = list_first(dates);
     let last = list_last(dates);
-    let text = text_combine_multiple([
-      date_month_day(first),
-      " – ",
-      date_month_day(last),
-    ]);
+    let label = date_month_day(first);
+    let label2 = date_month_day(last);
+    let text = text_combine_multiple([label, " – ", label2]);
     html_text_set(week_label, text);
   }
   function on_grid_ranges(new_ranges) {
@@ -107,10 +107,9 @@ export function availability_editor(parent) {
   }
   function highlight() {
     function paint_button(record) {
-      let selected = record.kind === chosen;
-      let outline = selected
-        ? text_combine("3px solid ", app_shared_color_blue_dark())
-        : "none";
+      let selected = equal(record.kind, chosen);
+      let right = app_shared_color_blue_dark();
+      let outline = selected ? text_combine("3px solid ", right) : "none";
       html_style_assign(record.element, {
         outline: outline,
       });
@@ -125,7 +124,7 @@ export function availability_editor(parent) {
   function render_preview() {
     html_clear(preview);
     let has_ranges = list_empty_not_is(ranges);
-    let none = chosen === null;
+    let none = equal(chosen, null);
     if (none) {
       app_shared_text_body(preview, "Pick how these times repeat");
     } else if (has_ranges) {
