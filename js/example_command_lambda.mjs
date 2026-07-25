@@ -1,3 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
+import { js_statement_wrap_if } from "./js_statement_wrap_if.mjs";
+import { example_wrap_if_lambda } from "./example_wrap_if_lambda.mjs";
+import { equal } from "./equal.mjs";
 import { function_arguments_assert_each_add } from "./function_arguments_assert_each_add.mjs";
 import { js_node_type_is_new } from "./js_node_type_is_new.mjs";
 import { function_identifier_replace } from "./function_identifier_replace.mjs";
@@ -19,58 +23,67 @@ import { js_fold_all } from "./js_fold_all.mjs";
 import { js_fold_auto } from "./js_fold_auto.mjs";
 import { example_fold_lambda } from "./example_fold_lambda.mjs";
 import { example_fold_auto_lambda } from "./example_fold_auto_lambda.mjs";
-// Dispatch on the demonstrated fn's name (a strong reference), NOT an alias
-// string — so renaming an alias can never break which transform an example runs.
 export function example_command_lambda(fn_name, args) {
-  if (fn_name === js_atomize.name) {
+  if (equal(fn_name, js_atomize.name)) {
     return js_atomize;
   }
-  if (fn_name === js_imports_unused_remove.name) {
+  if (equal(fn_name, js_imports_unused_remove.name)) {
     return js_imports_unused_remove;
   }
-  if (fn_name === js_imports_paths_fix.name) {
+  if (equal(fn_name, js_imports_paths_fix.name)) {
     return js_imports_paths_fix;
   }
-  if (fn_name === function_arguments_assert_each_add.name) {
-    return function_arguments_assert_each_add_lambda(args[1]);
+  if (equal(fn_name, function_arguments_assert_each_add.name)) {
+    let lambda = function_arguments_assert_each_add_lambda(args[1]);
+    return lambda;
   }
-  if (fn_name === js_node_type_is_new.name) {
-    return js_node_type_is_new_lambda(args[0], args[1]);
+  if (equal(fn_name, js_node_type_is_new.name)) {
+    let lambda2 = js_node_type_is_new_lambda(args[0], args[1]);
+    return lambda2;
   }
-  if (fn_name === function_identifier_replace.name) {
-    return function_identifier_replace_lambda(args[0], args[1]);
+  if (equal(fn_name, function_identifier_replace.name)) {
+    let lambda22 = function_identifier_replace_lambda(args[0], args[1]);
+    return lambda22;
   }
-  if (fn_name === file_imports_repair.name) {
-    return example_imports_lambda();
+  if (equal(fn_name, file_imports_repair.name)) {
+    let lambda3 = example_imports_lambda();
+    return lambda3;
   }
-  if (fn_name === js_imports_auto_relative.name) {
-    return example_auto_lambda();
+  if (equal(fn_name, js_imports_auto_relative.name)) {
+    let lambda4 = example_auto_lambda();
+    return lambda4;
   }
-  if (fn_name === js_statement_if_test_set.name) {
-    return example_slot_expression_set_lambda(
+  if (equal(fn_name, js_statement_if_test_set.name)) {
+    let lambda5 = example_slot_expression_set_lambda(
       "IfStatement",
       js_statement_if_test_set,
       args[0],
     );
+    return lambda5;
   }
-  if (fn_name === js_return_argument_set.name) {
-    return example_slot_expression_set_lambda(
+  if (equal(fn_name, js_return_argument_set.name)) {
+    let lambda6 = example_slot_expression_set_lambda(
       "ReturnStatement",
       js_return_argument_set,
       args[0],
     );
+    return lambda6;
   }
-  if (fn_name === js_fold.name) {
-    return example_fold_lambda(args[0]);
+  if (equal(fn_name, js_fold.name)) {
+    let lambda7 = example_fold_lambda(args[0]);
+    return lambda7;
   }
-  if (fn_name === js_fold_all.name) {
-    return example_fold_lambda(args[0]);
+  if (equal(fn_name, js_fold_all.name)) {
+    let lambda8 = example_fold_lambda(args[0]);
+    return lambda8;
   }
-  if (fn_name === js_fold_auto.name) {
-    return example_fold_auto_lambda(args);
+  if (equal(fn_name, js_fold_auto.name)) {
+    let lambda9 = example_fold_auto_lambda(args);
+    return lambda9;
   }
-  if (fn_name === js_statement_wrap_if.name) {
-    return example_wrap_if_lambda(args[0]);
+  if (equal(fn_name, js_statement_wrap_if.name)) {
+    let lambda10 = example_wrap_if_lambda(args[0]);
+    return lambda10;
   }
   return null;
 }
