@@ -50,7 +50,6 @@
       "Bash(node scripts/ai.mjs g_sermon_chapter_passages_for_grouping:*)",
       "Bash(node scripts/ai.mjs g_sermon_chapter_passages_for_grouping_multiple:*)",
       "Bash(node scripts/ai.mjs function_dependencies_single:*)",
-      "Bash(node scripts/ai.mjs file_open:*)",
       "Bash(node scripts/ai.mjs bible_data_path:*)",
       "Bash(node scripts/ai.mjs g_sermon_groups_check:*)",
       "Bash(node scripts/ai.mjs g_sermon_group_size_distribution:*)",
