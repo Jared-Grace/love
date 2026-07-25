@@ -60,6 +60,11 @@ export function app_code_lesson_code_generic(params) {
     forwards_answer_label_override,
     quiz_label,
   );
+  ("the worked-example card is the forwards direction shown already solved, so it carries the SAME labels the learner meets in the forwards quiz: the forwards question label for the code, and - since the example shows the value as a noun, not a question - the forwards answer override when given, else the plain Value of code: noun");
+  let example_answer_label = value_or_if_null(
+    forwards_answer_label_override,
+    example_answer_label_default,
+  );
   let forwards = {
     question_label: forwards_question_label,
     on_question,
