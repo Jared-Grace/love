@@ -61,6 +61,13 @@ export function app_code_lesson_expression_remainder_any() {
     next_arg,
     example_count: 2,
     decoys,
+    forwards_question_label: "Remainder expression: ",
+    forwards_answer_label: "remainder value: ",
+    backwards_question_label: "remainder value: ",
+    backwards_answer_label:
+      "What remainder expression produces the remainder value? ",
+    unscramble_label:
+      "Build the remainder expression that produces the remainder value: ",
   });
   return lesson;
   function title_name_id() {
