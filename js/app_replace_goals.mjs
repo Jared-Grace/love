@@ -43,7 +43,11 @@ export function app_replace_goals(context) {
     let start = property_get(r4, "start");
     let end = property_get(r4, "end");
     let r2 = app_replace_button_rule_content(title, start, end);
-    app_replace_lefts_rights_style(r2, completed || choose_this_next, completed);
+    app_replace_lefts_rights_style(
+      r2,
+      completed || choose_this_next,
+      completed,
+    );
     let arrow = property_get(r2, "arrow");
     html_font_color_set_if(choose_this_next, arrow, "white", "black");
     function lambda() {
@@ -52,7 +56,12 @@ export function app_replace_goals(context) {
     completed_previous = completed;
   }
   each_index(goals, each_goal);
-  function on_click(index) {
-    app_shared_screen_go_tab(context, "goal_index", index, app_replace_rule_set);
+  async function on_click(index) {
+    await app_shared_screen_go_tab(
+      context,
+      "goal_index",
+      index,
+      app_replace_rule_set,
+    );
   }
 }

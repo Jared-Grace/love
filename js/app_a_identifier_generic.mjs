@@ -75,9 +75,11 @@ export function app_a_identifier_generic(
         let overlay = property_get(o, "overlay");
         let oc = property_get(r, "container");
         let text = property_get(change, "text");
-        let div2 = html_div_text(oc, text_combine(text, " from:"));
+        let text2 = text_combine(text, " from:");
+        let div2 = html_div_text(oc, text2);
         let div = html_div_text(oc, name);
-        html_div_text(oc, text_combine(text, " to:"));
+        let text3 = text_combine(text, " to:");
+        html_div_text(oc, text3);
         let fn = null;
         fn = ternary(lines_multiple, app_a_textarea, app_a_input);
         let input = fn(overlay);
@@ -159,10 +161,10 @@ export function app_a_identifier_generic(
       let choice_function_open = {
         shortcut: "o",
         text: "Open",
-        fn: function lambda() {
+        fn: async function lambda() {
           overlay_close();
           app_a_function_on_keydown_remove(a);
-          app_a_function_select(context, name);
+          await app_a_function_select(context, name);
         },
       };
       list_add(choices, choice_function_open);
@@ -172,8 +174,8 @@ export function app_a_identifier_generic(
         fn: async function lambda() {
           let result = await data_identifiers_search(name);
           let properties = properties_get(result);
-          function lambda3(f_name) {
-            app_a_function_select(context, f_name);
+          async function lambda3(f_name) {
+            await app_a_function_select(context, f_name);
           }
           overlay_close();
           let r = app_a_functions_overlay_generic(a, properties, lambda3);

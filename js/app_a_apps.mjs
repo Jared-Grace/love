@@ -9,7 +9,7 @@ export async function app_a_apps(context) {
   let mapped = await apps_names();
   async function on_select(a_name) {
     let key = app_a_app_selected_key();
-    app_shared_screen_go_tab(context, key, a_name, app_a_app);
+    await app_shared_screen_go_tab(context, key, a_name, app_a_app);
   }
   app_a_list_chooser(context, "app", mapped, on_select);
 }

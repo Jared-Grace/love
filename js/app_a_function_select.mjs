@@ -6,8 +6,8 @@ import { storage_local_transform_context } from "./storage_local_transform_conte
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
 import { app_a_function } from "./app_a_function.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
-export function app_a_function_select(context, f_name) {
-  ("the pick is this tab's, but the history it feeds is yours everywhere, so the two are kept apart");
+export async function app_a_function_select(context, f_name) {
+  "the pick is this tab's, but the history it feeds is yours everywhere, so the two are kept apart";
   let key = app_a_function_name_selected_key();
   storage_session_set_context(context, key, f_name);
   function lambda(h) {
@@ -18,5 +18,5 @@ export function app_a_function_select(context, f_name) {
   }
   let key2 = app_a_function_name_selected_history_key();
   storage_local_transform_context(context, key2, [], lambda);
-  app_shared_screen_set(context, app_a_function);
+  await app_shared_screen_set(context, app_a_function);
 }

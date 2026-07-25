@@ -5,8 +5,8 @@ import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_component } from "./app_shared_component.mjs";
 import { app_a_function } from "./app_a_function.mjs";
 export async function app_a_app_run(context) {
-  function back() {
-    app_shared_screen_set(context, app_a_function);
+  async function back() {
+    await app_shared_screen_set(context, app_a_function);
   }
   let a_name = storage_session_get(app_a, "app_selected");
   let button_text = app_a_button_function_text_selected(context);
