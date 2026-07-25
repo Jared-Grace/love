@@ -1,3 +1,14 @@
+import { permission_rules } from "./permission_rules.mjs";
+import { permission_file_tools } from "./permission_file_tools.mjs";
+import { permission_rule_tool_name } from "./permission_rule_tool_name.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { permission_rule_path_probe } from "./permission_rule_path_probe.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { memory_hook_check } from "./memory_hook_check.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function permission_rules_unreachable_file() {
   "audit: every file-tool allow rule that a hook denies outright, so the grant can never fire";
   "a hook decides before the permission engine is consulted, and its deny is final, so a rule granting a path the hook refuses is not a weaker grant but a dead one: nothing it says can ever take effect";
