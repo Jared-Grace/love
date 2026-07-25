@@ -11,6 +11,7 @@ export function permission_prompt_events_grouped(events) {
         label,
         count: 0,
         seconds_worst: 0,
+        latest: "",
       });
     }
     let group = groups.get(label);
@@ -18,6 +19,9 @@ export function permission_prompt_events_grouped(events) {
     let seconds = Math.round(event.waited / 1000);
     if (seconds > group.seconds_worst) {
       group.seconds_worst = seconds;
+    }
+    if (event.at > group.latest) {
+      group.latest = event.at;
     }
   }
   let rows = [];
