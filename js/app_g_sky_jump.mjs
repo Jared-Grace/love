@@ -3,6 +3,7 @@ import { app_g_sky_to } from "./app_g_sky_to.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_game_save } from "./app_g_game_save.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
+import { app_g_sky_choices_highlight } from "./app_g_sky_choices_highlight.mjs";
 import { property_set } from "./property_set.mjs";
 export async function app_g_sky_jump(phase) {
   ("jump the sky straight to a chosen time-of-day PHASE (an integer index into ",
@@ -16,4 +17,5 @@ export async function app_g_sky_jump(phase) {
   property_set(g, "sky_phase", phase);
   await app_g_game_save(g);
   await app_g_sky_snap();
+  await app_g_sky_choices_highlight();
 }
