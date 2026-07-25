@@ -1,7 +1,10 @@
+import { html_loading_spinner_pulse_milliseconds } from "./html_loading_spinner_pulse_milliseconds.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { html_loading_spinner_pulse } from "./html_loading_spinner_pulse.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_loading_spinner_style } from "./html_loading_spinner_style.mjs";
-export function html_loading_spinner(parent) {
+export async function html_loading_spinner(parent) {
   html_loading_spinner_style();
   let spinner = html_div(parent);
   html_style_assign(spinner, {
@@ -11,13 +14,11 @@ export function html_loading_spinner(parent) {
   });
   let milliseconds = html_loading_spinner_pulse_milliseconds();
   let pulse = html_div(spinner);
+  let left2 = text_combine("transform ", milliseconds);
   html_style_assign(pulse, {
     position: "absolute",
     inset: "0",
-    transition: text_combine(
-      text_combine("transform ", milliseconds),
-      "ms ease-in-out",
-    ),
+    transition: text_combine(left2, "ms ease-in-out"),
   });
   let outer = html_div(pulse);
   html_style_assign(outer, {
@@ -30,7 +31,7 @@ export function html_loading_spinner(parent) {
     animation:
       "html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite",
   });
-  html_loading_spinner_pulse(pulse, milliseconds);
+  await html_loading_spinner_pulse(pulse, milliseconds);
   let inner = html_div(spinner);
   html_style_assign(inner, {
     position: "absolute",
