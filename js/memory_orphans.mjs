@@ -8,7 +8,7 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function memory_orphans() {
-  ("A memory file whose name appears in no pointer line of MEMORY.md is unreachable from the session-loaded index - it exists on disk but no Claude will ever see it. Return every such orphan markdown file so a Claude can add its pointer. Read-only. The reverse leak - a pointer whose file was deleted - is a separate dangling-pointer check.");
+  "A memory file whose name appears in no pointer line of MEMORY.md is unreachable from the session-loaded index - it exists on disk but no Claude will ever see it. Return every such orphan markdown file so a Claude can add its pointer. Read-only. The reverse leak - a pointer whose file was deleted - is a separate dangling-pointer check.";
   let folder = memory_folder();
   let names = await folder_read(folder);
   let index_name = "MEMORY.md";
