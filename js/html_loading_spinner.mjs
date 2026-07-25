@@ -4,7 +4,7 @@ import { html_loading_spinner_pulse } from "./html_loading_spinner_pulse.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_loading_spinner_style } from "./html_loading_spinner_style.mjs";
-export async function html_loading_spinner(parent) {
+export function html_loading_spinner(parent) {
   html_loading_spinner_style();
   let spinner = html_div(parent);
   html_style_assign(spinner, {
@@ -31,7 +31,7 @@ export async function html_loading_spinner(parent) {
     animation:
       "html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite",
   });
-  await html_loading_spinner_pulse(pulse, milliseconds);
+  html_loading_spinner_pulse(pulse, milliseconds, true);
   let inner = html_div(spinner);
   html_style_assign(inner, {
     position: "absolute",

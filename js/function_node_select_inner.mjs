@@ -1,7 +1,6 @@
+import { text_split_comma_dot_or_empty } from "./text_split_comma_dot_or_empty.mjs";
 import { js_visit_id_or_node_multiple } from "./js_visit_id_or_node_multiple.mjs";
 import { list_ensure } from "./list_ensure.mjs";
-import { text_split_comma_dot } from "./text_split_comma_dot.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_concat_single } from "./list_concat_single.mjs";
 import { function_current_selects_add } from "./function_current_selects_add.mjs";
 import { js_visit_id_to_node } from "./js_visit_id_to_node.mjs";
@@ -13,12 +12,7 @@ export async function function_node_select_inner(
   ast,
   args_comma,
 ) {
-  let args = null;
-  if (null_is(args_comma)) {
-    args = [];
-  } else {
-    args = text_split_comma_dot(args_comma);
-  }
+  let args = text_split_comma_dot_or_empty(args_comma);
   let node = js_visit_id_to_node(ast, node_id);
   let concated = list_concat_single(node, args);
   let n = await function_run(select_fn_name, concated);
