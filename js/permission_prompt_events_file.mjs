@@ -1,6 +1,6 @@
 import fs from "fs";
 import readline from "readline";
-import { path_basename } from "./path_basename.mjs";
+import path from "path";
 import { list_add } from "./list_add.mjs";
 import { json_parse_try } from "./json_parse_try.mjs";
 import { permission_prompt_label } from "./permission_prompt_label.mjs";
@@ -15,7 +15,7 @@ export async function permission_prompt_events_file(file_path, wait_minimum) {
   });
   let calls = new Map();
   let events = [];
-  let session = path_basename(file_path).replace(".jsonl", "");
+  let session = path.basename(file_path, ".jsonl");
   for await (let line of lines) {
     let interesting =
       line.includes('"tool_use"') || line.includes('"tool_result"');
