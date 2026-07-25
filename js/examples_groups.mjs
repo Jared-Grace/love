@@ -13,6 +13,7 @@ export function examples_groups() {
         "example_ir_identifier_replace", // replace an identifier with an expression, at every site
         "example_prune_unused_import", // remove one unused import — one localized edit
         "example_imports_paths_canonicalize", // rewrite one import to its canonical path
+        "example_wrap_call_in_if", // select a call, then wrap it in an if — the selector+transform seam
       ],
     },
     {
