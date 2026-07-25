@@ -18,7 +18,7 @@ import { app_code_go_back } from "../../love/js/app_code_go_back.mjs";
 import { app_code_batch_item_get } from "../../love/js/app_code_batch_item_get.mjs";
 import { list_get } from "../../love/js/list_get.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
-import { storage_local_initialize_context } from "../../love/js/storage_local_initialize_context.mjs";
+import { storage_session_initialize_context } from "../../love/js/storage_session_initialize_context.mjs";
 import { app_code_lesson_current } from "../../love/js/app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "../../love/js/app_code_lesson_title_strip.mjs";
 import { html_clear_context } from "../../love/js/html_clear_context.mjs";
@@ -40,7 +40,7 @@ export function app_code_quiz(context) {
     app_code_example_answer_gap(c);
     html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");
-    let quiz_index = storage_local_initialize_context(context, "quiz_index", 0);
+    let quiz_index = storage_session_initialize_context(context, "quiz_index", 0);
     let q = list_get(qs, quiz_index);
     q(context, container, c, refresh, next_get);
   }
