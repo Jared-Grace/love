@@ -39,6 +39,6 @@ export async function html_loading_overlay() {
     padding: "1.25rem 3.5rem",
   });
   html_reflow_force(div);
-  html_style_set(div, "opacity", "1");
+  html_style_opacity(div, "1");
   return div;
 }
