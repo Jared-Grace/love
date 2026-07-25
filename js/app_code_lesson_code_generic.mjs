@@ -24,7 +24,7 @@ export function app_code_lesson_code_generic(params) {
     "forwards_answer_count_override",
   );
   let s = text_combine(value, " of code: ");
-  let example_answer_label = text_first_upper_to(s);
+  let example_answer_label_default = text_first_upper_to(s);
   let quiz_label = text_combine_multiple([
     "What is the ",
     value,
