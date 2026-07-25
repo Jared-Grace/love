@@ -1,3 +1,6 @@
+import { divide } from "./divide.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
@@ -6,7 +9,8 @@ export function permission_prompt_events_grouped(events) {
   let groups = new Map();
   for (let event of events) {
     let label = event.label;
-    if (!groups.has(label)) {
+    let b = groups.has(label);
+    if (not(b)) {
       groups.set(label, {
         label,
         count: 0,
@@ -18,11 +22,12 @@ export function permission_prompt_events_grouped(events) {
     }
     let group = groups.get(label);
     group.count = group.count + 1;
-    let seconds = Math.round(event.waited / 1000);
-    if (seconds > group.seconds_worst) {
+    let divided = divide(event.waited, 1000);
+    let seconds = Math.round(divided);
+    if (greater_than(seconds, group.seconds_worst)) {
       group.seconds_worst = seconds;
     }
-    if (event.at > group.latest) {
+    if (greater_than(event.at, group.latest)) {
       group.latest = event.at;
     }
   }
