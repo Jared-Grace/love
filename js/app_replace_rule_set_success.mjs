@@ -11,7 +11,8 @@ import { storage_local_set_context } from "../../love/js/storage_local_set_conte
 import { html_p_text_centered } from "../../love/js/html_p_text_centered.mjs";
 import { not } from "../../love/js/not.mjs";
 import { app_replace_rule_sets } from "../../love/js/app_replace_rule_sets.mjs";
-import { storage_local_get_context } from "../../love/js/storage_local_get_context.mjs";
+import { storage_session_get_context } from "../../love/js/storage_session_get_context.mjs";
+import { storage_session_set_context } from "../../love/js/storage_session_set_context.mjs";
 import { list_index_is } from "../../love/js/list_index_is.mjs";
 import { html_p } from "../../love/js/html_p.mjs";
 import { html_move_animate_multiple } from "../../love/js/html_move_animate_multiple.mjs";
@@ -46,7 +47,7 @@ export async function app_replace_rule_set_success(
   let p_next = html_p(div_below);
   let goal_index_next = text_combine(goal_index, 1);
   let ii = list_index_is(goals, goal_index_next);
-  let rule_set_index = storage_local_get_context(context, "rule_set_index");
+  let rule_set_index = storage_session_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let rule_set_index_next = text_combine(rule_set_index, 1);
   let ii2 = list_index_is(rule_sets, rule_set_index_next);
@@ -62,15 +63,15 @@ export async function app_replace_rule_set_success(
   }
   async function lambda2() {
     if (ii) {
-      storage_local_set_context(context, "goal_index", goal_index_next);
+      storage_session_set_context(context, "goal_index", goal_index_next);
     } else {
       if (ii2) {
-        storage_local_set_context(
+        storage_session_set_context(
           context,
           "rule_set_index",
           rule_set_index_next,
         );
-        storage_local_set_context(context, "goal_index", 0);
+        storage_session_set_context(context, "goal_index", 0);
       } else {
         next = false;
       }
