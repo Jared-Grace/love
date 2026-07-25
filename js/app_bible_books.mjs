@@ -7,13 +7,11 @@ import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { ebible_chapter_code_pad } from "./ebible_chapter_code_pad.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_input_placeholder_wide } from "./html_input_placeholder_wide.mjs";
+import { html_input_text } from "./html_input_text.mjs";
+import { app_shared_input_style } from "./app_shared_input_style.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_on_input } from "./html_on_input.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_style_padding_y } from "./html_style_padding_y.mjs";
-import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { app_bible_books_render } from "./app_bible_books_render.mjs";
 export async function app_bible_books(context) {
   let root = html_clear_context(context);
@@ -27,11 +25,9 @@ export async function app_bible_books(context) {
     app_bible_chapter_set(chapter_code);
     await app_shared_screen_set(context, app_bible_chapters);
   }
-  ("a search box on top for readers who know the name, and the full canon grouped by section below for readers who browse");
-  let search = html_input_placeholder_wide(root, "Search books");
-  html_style_set(search, "font-size", "1.15em");
-  html_style_padding_y(search, "0.4em");
-  html_style_margin_y(search, "0.5em");
+  ("a search box on top for readers who know the name, and the full canon grouped by section below for readers who browse; styled with the shared input look the search app uses, so every search box reads the same");
+  let search = html_input_text(root, "Search books");
+  app_shared_input_style(search);
   let list_div = html_div(root);
   function on_input() {
     let query = html_value_get(search);
