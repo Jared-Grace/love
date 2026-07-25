@@ -1,3 +1,4 @@
+import { text_includes } from "./text_includes.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_identifier_segments } from "./text_identifier_segments.mjs";
 import { property_get } from "./property_get.mjs";
