@@ -14,13 +14,13 @@ import { list_add } from "./list_add.mjs";
 import { memory_wikilink_tokens } from "./memory_wikilink_tokens.mjs";
 let TYPE_PREFIXES = ["feedback_", "project_", "reference_", "user_"];
 export async function memory_dangling_links() {
-  ("Report only PREFIX-TYPO dangling wikilinks: an unresolved double-bracket");
-  ("link type_rest whose rest matches an EXISTING file under a DIFFERENT type");
-  ("prefix - e.g. a project_dev_x link when reference_dev_x is the real file.");
-  ("This is the narrow high-signal check the memory notes call for: a naive");
-  ("all-unresolved sweep is noisy because peers write code names and bare");
-  ("bracket syntax examples that are not links at all. Each result carries the");
-  ("suggested existing target. Read-only; third of the memory-integrity trio.");
+  "Report only PREFIX-TYPO dangling wikilinks: an unresolved double-bracket";
+  "link type_rest whose rest matches an EXISTING file under a DIFFERENT type";
+  "prefix - e.g. a project_dev_x link when reference_dev_x is the real file.";
+  "This is the narrow high-signal check the memory notes call for: a naive";
+  "all-unresolved sweep is noisy because peers write code names and bare";
+  "bracket syntax examples that are not links at all. Each result carries the";
+  "suggested existing target. Read-only; third of the memory-integrity trio.";
   let folder = memory_folder();
   let file_names = await folder_read_files(folder);
   function is_md(name) {
