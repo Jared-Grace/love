@@ -17,8 +17,10 @@ export async function permission_rules_unreachable_self_settings() {
   let rules = await permission_rules();
   let tools = ["Edit", "Write", "NotebookEdit", "MultiEdit"];
   let separator = "/";
-  let config = text_combine(claude_config_folder(), separator);
-  let memory = text_combine(memory_folder(), separator);
+  let left = claude_config_folder();
+  let config = text_combine(left, separator);
+  let left2 = memory_folder();
+  let memory = text_combine(left2, separator);
   let offenders = [];
   for (let rule of rules) {
     let tool = permission_rule_tool_name(rule);
