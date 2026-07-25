@@ -1,3 +1,20 @@
+import { memory_links_unresolved } from "./memory_links_unresolved.mjs";
+import { memory_note_stems } from "./memory_note_stems.mjs";
+import { memory_type_prefixes } from "./memory_type_prefixes.mjs";
+import { todo } from "./todo.mjs";
+import { memory_todo_prefix } from "./memory_todo_prefix.mjs";
+import { memory_dangling_links } from "./memory_dangling_links.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { text_prefix_without } from "./text_prefix_without.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { marker } from "./marker.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function memory_link_defects() {
   "Every double-bracket link in memory that is wrong rather than merely unwritten. Two faults: a link naming a note that does not exist and was not marked as one to write, and a marker still sitting on a link whose note has since been written. Read-only.";
   "The marker is what makes this gateable at all. An unresolved link is allowed on purpose by the instructions, and nothing in its shape says whether it was meant, so the writer says so - and once they can, a link that says nothing is a slip.";
@@ -39,7 +56,8 @@ export async function memory_link_defects() {
       return b;
     }
     let same = list_filter(typo, is_this_link);
-    let reported_as_typo = not(list_empty_is(same));
+    let b2 = list_empty_is(same);
+    let reported_as_typo = not(b2);
     if (reported_as_typo) {
       continue;
     }
