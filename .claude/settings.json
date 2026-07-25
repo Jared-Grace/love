@@ -15,6 +15,7 @@
       "Bash(wc:*)",
       "Bash(which:*)",
       "Bash(readlink:*)",
+      "Bash(realpath:*)",
       "Bash([:*)",
       "Bash(df:*)",
       "Bash(du:*)",
