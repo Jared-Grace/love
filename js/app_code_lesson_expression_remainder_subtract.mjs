@@ -22,7 +22,7 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_bold } from "./html_bold.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
