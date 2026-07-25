@@ -35,7 +35,10 @@ export async function js_identifiers_prefix_rename_dir(
   let matched = list_filter(names, matches);
   function to_pair(name) {
     let after = text_prefix_change(name, prefix_before, prefix_after);
-    let pair = { before: name, after };
+    let pair = {
+      before: name,
+      after,
+    };
     return pair;
   }
   let pairs = list_map(matched, to_pair);

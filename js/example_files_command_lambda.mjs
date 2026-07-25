@@ -8,6 +8,8 @@ import { function_copy } from "./function_copy.mjs";
 import { js_identifier_copy_dir } from "./js_identifier_copy_dir.mjs";
 import { function_wrap } from "./function_wrap.mjs";
 import { js_identifier_wrap_dir } from "./js_identifier_wrap_dir.mjs";
+import { functions_rename_if_starts_with } from "./functions_rename_if_starts_with.mjs";
+import { js_identifiers_prefix_rename_dir } from "./js_identifiers_prefix_rename_dir.mjs";
 ("Map a multi-file example's fn to a directory transform (dir)=>void run in a sandbox");
 ("temp dir. ",
   function_rename.name,
@@ -43,6 +45,13 @@ export function example_files_command_lambda(fn_name, args) {
     async function lambda(dir) {
       let r4 = await js_identifier_wrap_dir(dir, args[0], args[1]);
       return r4;
+    }
+    return lambda;
+  }
+  if (equal(fn_name, functions_rename_if_starts_with.name)) {
+    async function lambda(dir) {
+      let r5 = await js_identifiers_prefix_rename_dir(dir, args[0], args[1]);
+      return r5;
     }
     return lambda;
   }

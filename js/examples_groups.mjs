@@ -45,6 +45,7 @@ export function examples_groups() {
         "example_delete_unused_refused", // ...but refuse when a file still uses it (the guard)
         "example_copy_adds_file", // copy a fn to a new name — adds a file
         "example_wrap_adds_delegating_file", // wrap a fn — adds a file that delegates to it
+        "example_prefix_rename_across_files", // rename a whole name-prefix family at once
       ],
     },
   ];
