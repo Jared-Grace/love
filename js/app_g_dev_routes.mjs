@@ -112,6 +112,7 @@ export function app_g_dev_routes() {
     app_g_sky_demo_enable();
     await app_g_view_set(null);
     await app_g_sky_choices();
+    await app_g_sky_compare();
     await app_g_sky_snap();
   }
   let routes = {
