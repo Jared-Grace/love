@@ -5,6 +5,7 @@ import { html_div_centered } from "./html_div_centered.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_set } from "./html_font_set.mjs";
+import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
