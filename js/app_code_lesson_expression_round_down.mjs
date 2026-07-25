@@ -99,7 +99,7 @@ export function app_code_lesson_expression_round_down() {
     html_span_text_code_dark(no_decimal, whole_text);
     html_span_text(no_decimal, " is a ");
     let term = html_span_text(no_decimal, "whole number");
-    html_style_set(term, "font-weight", "bold");
+    html_bold(term);
     html_div_cycle_code(define, [
       "",
       decimal,

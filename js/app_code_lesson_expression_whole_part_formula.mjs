@@ -165,7 +165,7 @@ export function app_code_lesson_expression_whole_part_formula() {
     html_span_text_code_dark(define, "quotient * divisor");
     html_span_text(define, " is called the ");
     let term = html_span_text(define, "whole part");
-    html_style_set(term, "font-weight", "bold");
+    html_bold(term);
     html_div_cycle_code(derivation, ["", "quotient * divisor"]);
     let step_divisor = app_code_row_flex_center(derivation);
     app_code_arrow(step_divisor);
