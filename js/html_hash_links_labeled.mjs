@@ -1,5 +1,5 @@
 import { html_a_href_text } from "./html_a_href_text.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,7 +10,7 @@ export function html_hash_links_labeled(root, entries) {
     let label = property_get(entry, "label");
     let href = text_combine("#", hash);
     let a = html_a_href_text(root, href, label);
-    html_style_set(a, "display", "block");
+    html_display_block(a);
   }
   each(entries, link);
 }

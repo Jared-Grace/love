@@ -1,6 +1,7 @@
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { app_code_arrow_svg } from "./app_code_arrow_svg.mjs";
@@ -13,7 +14,7 @@ export function app_code_arrow(parent) {
   let color = app_shared_color_blue_dark();
   html_font_color_set(arrow, color);
   ("flex + line-height 0 makes the wrapper exactly as tall as the drawing, so the row centres it against the chips and gains no extra height");
-  html_style_set(arrow, "display", "flex");
+  html_display_flex(arrow);
   html_style_set(arrow, "align-items", "center");
   html_style_set(arrow, "line-height", "0");
   return arrow;
