@@ -67,12 +67,14 @@ export function app_code_lesson_console_log_remainder_generic(divisor, insight) 
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  let lesson = app_code_lesson_expression_generic({
+  let params = {
     above,
     name_id,
     next_arg,
     example_count: 2,
-  });
+  };
+  object_merge(params, app_code_remainder_percent_labels());
+  let lesson = app_code_lesson_expression_generic(params);
   return lesson;
   function title_name_id() {
     "the home title puts the operator glyph % right after the operator name 'remainder', before the 'by <divisor>' qualifier: console.log remainder % by 2";
