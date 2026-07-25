@@ -1,4 +1,3 @@
-import { range } from "./range.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_div } from "./html_div.mjs";
@@ -40,8 +39,8 @@ export function availability_editor(parent) {
   let added = html_div(parent);
   function commit(kind) {
     let date_value = html_value_get(date);
-    function add_one(range) {
-      let item = busy_item_build(kind, range, date_value);
+    function add_one(span) {
+      let item = busy_item_build(kind, span, date_value);
       list_add(items, item);
     }
     each(current, add_one);
