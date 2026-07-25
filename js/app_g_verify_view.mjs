@@ -3,6 +3,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_space } from "./html_span_space.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
+import { html_button_bible_chapter_open } from "./html_button_bible_chapter_open.mjs";
 import { html_button_biblehub_open_commentary } from "./html_button_biblehub_open_commentary.mjs";
 import { html_button_biblehub_open_parallel } from "./html_button_biblehub_open_parallel.mjs";
 import { html_button_biblehub_open_interlinear } from "./html_button_biblehub_open_interlinear.mjs";
@@ -194,6 +195,7 @@ export function app_g_verify_view(
   let bh_chapter = String(Number(chapter_code.slice(3)));
   let bh_book = g_verify_book_name(chapter_code.slice(0, 3));
   let bh_verse = verse.split(",")[0];
+  html_button_bible_chapter_open(links_bar, chapter_code, "Whole Chapter");
   html_button_biblehub_open_commentary(
     links_bar,
     bh_chapter,
