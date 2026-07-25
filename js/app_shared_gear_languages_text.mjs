@@ -1,6 +1,5 @@
-import { emoji_gear } from "./emoji_gear.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { app_shared_gear_text } from "./app_shared_gear_text.mjs";
 export function app_shared_gear_languages_text() {
-  let text = text_combine(emoji_gear(), " Languages");
+  let text = app_shared_gear_text(" Languages");
   return text;
 }
