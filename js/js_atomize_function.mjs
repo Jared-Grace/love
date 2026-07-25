@@ -10,6 +10,7 @@ import { list_is } from "./list_is.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_parse_expression } from "./js_parse_expression.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_node_type_set } from "./js_node_type_set.mjs";
 export async function js_atomize_function(ast) {
   let fes = js_list_type(ast, "FunctionExpression");
   async function lambda(v) {
@@ -22,6 +23,8 @@ export async function js_atomize_function(ast) {
         let node = property_get(v, "node");
         let name = js_function_declaration_name(node);
         let copy = object_copy(node);
+        ("the copy is retyped before it is inserted: it is being lifted out of an argument list into a block, and a function used as a value and a function declared as a statement are two different node types even though they read the same");
+        js_node_type_set(copy, "FunctionDeclaration");
         js_block_insert(stack, copy);
         let expression = js_parse_expression(name);
         object_replace(node, expression);
