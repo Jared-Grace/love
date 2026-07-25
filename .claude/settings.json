@@ -81,6 +81,7 @@
       "Bash(node scripts/ai.mjs permission_prompt_files_report:*)",
       "Bash(node scripts/ai.mjs permission_prompt_memory_report:*)",
       "Bash(node scripts/ai.mjs permission_prompt_confirmed_report:*)",
+      "Bash(node scripts/ai.mjs permission_prompt_confirmed_files_report:*)",
       "Bash(node scripts/ai.mjs permission_prompt_report:*)",
       "Bash(node scripts/ai.mjs permission_reachable_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_rule_command_probe:*)",
