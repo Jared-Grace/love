@@ -27,11 +27,11 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
-export function week_calendar(parent, on_ranges) {
+export function week_calendar(parent, initial_ranges, on_ranges) {
   "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click any selected piece to remove its range, or click a waiting piece again to cancel it; reports the sorted windows to on_ranges after each change";
   let days = week_day_names();
   let slots = numbers_up_to(48);
-  let ranges = [];
+  let ranges = initial_ranges;
   let anchor = null;
   let records = [];
   let root = app_shared_container_blue(parent);
