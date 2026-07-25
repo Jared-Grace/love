@@ -19,10 +19,11 @@ import { html_on_input } from "./html_on_input.mjs";
 import { app_bible_books_render } from "./app_bible_books_render.mjs";
 export async function app_bible_books(context) {
   let root = html_clear_context(context);
-  ("push every element into the centered reading column so nothing touches the screen edges left or right, the same full-width-band-with-column-padding the reader uses");
+  ("pad a FRESH content child, never the persistent context root — the root survives navigation, so padding it leaves the column padding stuck on the body and it stacks with the reader's own padding next time, squeezing verses to one word per line");
+  let content = html_div(root);
   let column = app_shared_column_max_width();
-  app_shared_content_center_padding(root, column);
-  await app_bible_button_back_to_reader(root, context);
+  app_shared_content_center_padding(content, column);
+  await app_bible_button_back_to_reader(content, context);
   let e = ebible_folder_english();
   let books = await ebible_version_books_browser(e);
   ("the book being read now, so its button can be marked in the list");
@@ -37,9 +38,9 @@ export async function app_bible_books(context) {
     await app_shared_screen_set(context, app_bible_chapters);
   }
   ("a search box on top for readers who know the name, and the full canon grouped by section below for readers who browse; styled with the shared input look the search app uses, so every search box reads the same");
-  let search = html_input_text(root, "Search books");
+  let search = html_input_text(content, "Search books");
   app_shared_input_style(search);
-  let list_div = html_div(root);
+  let list_div = html_div(content);
   function on_input() {
     let query = html_value_get(search);
     app_bible_books_render(list_div, query, books, on_open, current_book_code);
