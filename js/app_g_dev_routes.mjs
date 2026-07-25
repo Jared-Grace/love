@@ -1,3 +1,4 @@
+import { app_g_sky_compare } from "./app_g_sky_compare.mjs";
 import { app_g } from "./app_g.mjs";
 import { app_g_dev_if } from "./app_g_dev_if.mjs";
 import { app_g_dev_index } from "./app_g_dev_index.mjs";
