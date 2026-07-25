@@ -35,8 +35,8 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 | Bulk-rename every fn under a name prefix (namespace migration) | `ri <prefix_before> <prefix_after>` | `functions_rename_if_starts_with` |
 | Replace an identifier *inside the current fn* with an expression | `ir <name> <expr>` | `function_identifier_replace` |
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
-| Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new_open` / `function_new_js` |
-| Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic_args` |
+| Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` |
+| Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy <before> <after>` |
 | Wrap a fn's body in a new wrapper fn | `w <plugin> <args>` | `function_wrap_generic_args` |
 | Extract statements between two markers into a new fn | (no alias) | `marker_functionize` |
 | Add / remove a parameter | `pn <fn> <param> <default>` / `pd <fn> <params>` | `function_param_new` / `function_params_delete` |
@@ -75,7 +75,7 @@ Two `ao` gotchas, both worth designing around:
 Same dispatcher, two audiences. **Claude runs `node scripts/ai.mjs <full_fn_name>`** — every permission rule names that seam. The bash guard **hard-denies every other `node scripts/…` for Claude** (`r.mjs`/`rl.mjs`/`g.mjs` and the human's utilities alike) — a floor before the allow decision, so no rule can reopen it. This constrains only Claude: the human's own terminal never passes through the hook. The one carve-out is the sandboxed throwaway (`scripts/temp` via the `unshare … --permission` form below), which stays allowed.
 
 - **Full names only.** `ai.mjs` refuses both shorthands — an alias key (`fb`) and an auto-derived acronym (`hud`) — and the error names the function it would have run. A permission rule is matched as *literal text*, so a rule can only ever name what actually runs; shorthand would let a repointed alias silently redirect a granted rule. The human keeps shorthand on `r.mjs`, where keystrokes cost something.
-- **No editor windows.** `ai.mjs` marks the process (`process_ai_seam_set`), and `file_open` reads that mark (`process_ai_seam_is`) to **print the file instead of launching VS Code**. So `n` / `nj` / `c` / `r` / `po` and every other `_open` function are safe for Claude to run — they won't pop a window on the human's screen. `r.mjs` is unmarked, so the human still gets the editor. (`function_open_editor` is the deliberate exception: it says "open editor", and it does.)
+- **Never the `_open` twin.** A `_open` suffix means *and then show it to the human in VS Code* — a real feature of the human's workflow, and meaningless from Claude's seam. So **`ai.mjs` marks the process** (`process_ai_seam_set`) and **`file_open` refuses** (`file_open_seam_assert`), naming the twin to call instead. Call the twin without the suffix: **`function_new`** not `function_new_open`, **`function_copy`** not `function_copy_open`, **`function_rename`** not `function_rename_open`, **`functions_search`** not `functions_search_open`. `permission_open_suffix_gate_run` (in `q`) fails the build on any allow rule naming an `_open` function, since such a grant only buys a guaranteed error. Names that open *without* saying so are the bug — `function_new_js` and the `function_copy_generic` family still need splitting.
 - **Results print as JSON.** `r.mjs` prints through `console.log`, whose `util.inspect` silently abbreviates — `[Object]` past depth 2, `... N more items` past 100, truncated strings — and you cannot tell elision from data. (Real case: `folder_read_files js` shows 100 entries and hides `... 5416 more items`.) `ai.mjs` prints lossless JSON.
 
 ## Throwaway node — never raw `node -e`
