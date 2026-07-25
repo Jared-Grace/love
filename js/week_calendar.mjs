@@ -176,11 +176,11 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
   }
   function collapse_add(next, span, slot) {
     "clicking a piece inside a range collapses the whole range down to its far end — the single endpoint furthest from where you clicked; clicking a lone one-piece range clears it, leaving nothing";
-    let single = span.start === span.end;
+    let single = equal(span.start, span.end);
     if (not(single)) {
-      let distance_start = slot - span.start;
-      let distance_end = span.end - slot;
-      let far_first = distance_start >= distance_end;
+      let distance_start = subtract(slot, span.start);
+      let distance_end = subtract(span.end, slot);
+      let far_first = greater_than_equal(distance_start, distance_end);
       let keep = far_first ? span.start : span.end;
       let piece = {
         day: span.day,
