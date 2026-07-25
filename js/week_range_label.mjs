@@ -1,9 +1,21 @@
 import { clock_label } from "./clock_label.mjs";
+import { date_weekday_short } from "./date_weekday_short.mjs";
+import { date_month_day } from "./date_month_day.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function week_range_label(span) {
-  "a chosen availability window as a readable line like 'Tue 3 PM – 5 PM': the weekday, the start of its first piece, and the end of its last piece";
+  "a chosen window as a readable line like 'Sun Aug 3 · 2:30 AM – 7 AM': the weekday and date, then the time span";
+  let weekday = date_weekday_short(span.day);
+  let month_day = date_month_day(span.day);
   let start = clock_label(span.start);
   let end = clock_label(span.end + 1);
-  let label = text_combine_multiple([span.day, " ", start, " – ", end]);
+  let label = text_combine_multiple([
+    weekday,
+    " ",
+    month_day,
+    " · ",
+    start,
+    " – ",
+    end,
+  ]);
   return label;
 }

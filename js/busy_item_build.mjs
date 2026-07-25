@@ -1,8 +1,8 @@
-import { equal } from "./equal.mjs";
-export function busy_item_build(kind, span, date) {
-  "make one busy calendar item from a chosen time range: a daily item repeats every day and keeps only the time; a weekly item keeps the weekday; one-time and monthly items keep the picked date; every item keeps the start and end pieces";
-  let daily = equal(kind, "daily");
-  let weekly = equal(kind, "weekly");
+import { date_weekday_short } from "./date_weekday_short.mjs";
+export function busy_item_build(kind, span) {
+  "make one busy calendar item from a chosen time range on a real date (span.day is a 'YYYY-MM-DD'): a daily item keeps only the time; a weekly item keeps that date's weekday; one-time and monthly items keep the date itself; every item keeps the start and end pieces";
+  let daily = kind === "daily";
+  let weekly = kind === "weekly";
   let item = daily
     ? {
         kind: kind,
@@ -12,13 +12,13 @@ export function busy_item_build(kind, span, date) {
     : weekly
       ? {
           kind: kind,
-          day: span.day,
+          weekday: date_weekday_short(span.day),
           start: span.start,
           end: span.end,
         }
       : {
           kind: kind,
-          date: date,
+          date: span.day,
           start: span.start,
           end: span.end,
         };
