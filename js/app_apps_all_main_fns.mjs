@@ -9,6 +9,7 @@ export function app_apps_all_main_fns() {
     "app_ceb_bible",
     "app_code",
     "app_designs_universal",
+    "app_examples",
     "app_g",
     "app_g_bible",
     "app_index",
