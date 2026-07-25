@@ -1,3 +1,7 @@
+import { subtract } from "./subtract.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { notification_prompts_by_session } from "./notification_prompts_by_session.mjs";
 export function permission_prompt_events_confirmed(events) {
@@ -8,14 +12,18 @@ export function permission_prompt_events_confirmed(events) {
   let confirmed = [];
   for (let event of events) {
     let times = by_session.get(event.session);
-    if (!times) {
+    if (not(times)) {
       continue;
     }
-    let started = Date.parse(event.at) - slack;
+    let left = Date.parse(event.at);
+    let started = subtract(left, slack);
     let ended = Date.parse(event.at) + event.waited + slack;
     for (let at of times) {
       let blocked = Date.parse(at);
-      if (blocked >= started && blocked <= ended) {
+      if (
+        greater_than_equal(blocked, started) &&
+        less_than_equal(blocked, ended)
+      ) {
         list_add(confirmed, event);
         break;
       }
