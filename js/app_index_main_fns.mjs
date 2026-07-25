@@ -38,6 +38,10 @@ export function app_index_main_fns() {
       text: "Teaches computer programming basics using substitution rules",
     },
     {
+      app_fn: fn_name("app_code"),
+      text: "Teaches the JavaScript programming language one small step at a time, by solving code",
+    },
+    {
       app_fn: fn_name("app_designs_universal"),
       text: "Displays different possible designs",
     },
