@@ -1,9 +1,9 @@
 import { storage_local_specify_get_json } from "./storage_local_specify_get_json.mjs";
 import { storage_local_exists_global } from "./storage_local_exists_global.mjs";
 import { storage_local_enabled } from "./storage_local_enabled.mjs";
-import { storage_local_key_get } from "./storage_local_key_get.mjs";
+import { storage_key_get } from "./storage_key_get.mjs";
 export function storage_local_exists(app_fn, key) {
-  let storage_local_key = storage_local_key_get(app_fn, key);
+  let storage_local_key = storage_key_get(app_fn, key);
   if (storage_local_enabled()) {
     let json = storage_local_specify_get_json(storage_local_key);
     let v = json !== null;

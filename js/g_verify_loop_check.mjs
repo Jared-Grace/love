@@ -5,7 +5,7 @@ import { g_verify_suggest_read } from "./g_verify_suggest_read.mjs";
 // Multi-book loop state: read the active-chapter list (one chapter code per line)
 // and return { books:[{chapter,approved,latest,next,state}], action } via the shared
 // g_verify_next_across. action = "write:CHAPTER:KEY" | "wait" | "done".
-const ACTIVE_CHAPTERS_PATH = "/media/j/JPM/user/storage/sermon_loop/chapters.txt";
+const ACTIVE_CHAPTERS_PATH = g_verify_active_chapters_path();
 export async function g_verify_loop_check() {
   // The chapter list lives on a removable data disk. If it isn't mounted, report
   // "wait" instead of throwing — a stack trace would make the Monitor's grep miss
