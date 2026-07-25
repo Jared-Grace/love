@@ -782,17 +782,17 @@ def tokenize(command, subst_validator=None):
         if c == "|":
             if i + 1 < n and command[i + 1] == "|":
                 flush_word()
-                tokens.append("||")
+                tokens.append(SEP_OR)
                 i += 2
                 continue
             flush_word()
-            tokens.append("|")
+            tokens.append(SEP_PIPE)
             i += 1
             continue
         if c == "&":
             if i + 1 < n and command[i + 1] == "&":
                 flush_word()
-                tokens.append("&&")
+                tokens.append(SEP_AND)
                 i += 2
                 continue
             raise Unsupported("unsupported operator '&' (backgrounding)")
@@ -905,7 +905,7 @@ def tokenize(command, subst_validator=None):
             continue
         if c in (";", "\n"):
             flush_word()
-            tokens.append(";")
+            tokens.append(SEP_SEMI)
             i += 1
             continue
         if c.isspace():
@@ -921,17 +921,17 @@ def tokenize(command, subst_validator=None):
 
     collapsed = []
     for t in tokens:
-        if t == ";" and collapsed and collapsed[-1] == ";":
+        if t == SEP_SEMI and collapsed and collapsed[-1] == SEP_SEMI:
             continue
         collapsed.append(t)
-    while collapsed and collapsed[0] == ";":
+    while collapsed and collapsed[0] == SEP_SEMI:
         collapsed.pop(0)
-    while collapsed and collapsed[-1] == ";":
+    while collapsed and collapsed[-1] == SEP_SEMI:
         collapsed.pop()
     return collapsed
 
 
-SEPARATORS = {";", "|", "&&", "||"}
+SEPARATORS = {SEP_SEMI, SEP_PIPE, SEP_AND, SEP_OR}
 
 
 def split_statements(tokens):
@@ -1165,11 +1165,12 @@ def is_safe_find_exec(words, safe_verbs):
     form); a '+' appearing anywhere else is rejected outright rather than
     falling through to the no-'+' branch below, since that would let
     further chained flags/actions after it (`find X -exec cat {} +
-    -delete`) ride in unexamined. With no '+' at all, '{}' itself must be
-    the literal last word - per the module docstring, a real '\\;'
-    terminator never survives as its own token this far, so anything
-    trailing '{}' here isn't legitimate -exec syntax this function can
-    vouch for. The remaining words' own verb (via verb_of, so 'git
+    -delete`) ride in unexamined. With no '+' at all, a trailing ';'
+    terminator (from `\\;` or `';'`, which now survives as its own literal
+    ';' token since the separator-sentinel change) is accepted and dropped
+    only when it immediately follows '{}'; after that '{}' must be the
+    literal last word, so anything else trailing '{}' isn't legitimate
+    -exec syntax this function can vouch for. The remaining words' own verb (via verb_of, so 'git
     status' style multi-word verbs still work) must be in safe_verbs -
     only plain verb-list trust applies here, not the exact-shape
     exceptions (is_safe_sed etc.), the same posture xargs' target command
@@ -1190,6 +1191,16 @@ def is_safe_find_exec(words, safe_verbs):
             return False
         exec_words = exec_words[:-2]
     else:
+        # find's -exec terminator ';' (written `\;` or `';'`) now survives as
+        # its own literal ';' word token (the separator-sentinel change means a
+        # quoted/escaped ';' is no longer mis-classified as a statement
+        # separator). Accept and drop it, but only immediately after '{}' -
+        # find's own syntax rule - so nothing else can trail the clause
+        # unexamined.
+        if exec_words[-1] == ";":
+            if len(exec_words) < 2 or exec_words[-2] != "{}":
+                return False
+            exec_words = exec_words[:-1]
         if exec_words[-1] != "{}":
             return False
         exec_words = [w for w in exec_words if w != "{}"]
@@ -1764,10 +1775,10 @@ def check_for_loop(tokens, safe_verbs, safe_exact_commands):
         raise Unsupported("malformed for-loop")
     i = 3
     list_words = []
-    while i < len(tokens) and tokens[i] != ";":
+    while i < len(tokens) and tokens[i] != SEP_SEMI:
         list_words.append(tokens[i])
         i += 1
-    if not list_words or i >= len(tokens) or tokens[i] != ";":
+    if not list_words or i >= len(tokens) or tokens[i] != SEP_SEMI:
         raise Unsupported("malformed for-loop: missing separator before do")
     i += 1
     if i >= len(tokens) or tokens[i] != "do":
@@ -1815,7 +1826,7 @@ def check_while(tokens, safe_verbs, safe_exact_commands):
     if i >= len(tokens) or tokens[i] != "do":
         raise Unsupported("malformed while-loop: expected 'do'")
     cond = tokens[cond_start:i]
-    while cond and cond[-1] == ";":
+    while cond and cond[-1] == SEP_SEMI:
         cond = cond[:-1]
     if not cond:
         raise Unsupported("malformed while-loop: empty condition")
