@@ -1,3 +1,4 @@
+import { g_verify_active_chapters_path } from "./g_verify_active_chapters_path.mjs";
 import { g_verify_queue_path } from "./g_verify_queue_path.mjs";
 import { readFileSync, writeFileSync } from "fs";
 import { file_exists } from "./file_exists.mjs";
