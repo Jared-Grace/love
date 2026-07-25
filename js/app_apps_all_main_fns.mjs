@@ -13,7 +13,7 @@ export function app_apps_all_main_fns() {
   let f_name11 = fn_name("app_g");
   let f_name12 = fn_name("app_g_bible");
   let f_name13 = fn_name("app_index");
-  let f_name14 = "app_karate";
+  let f_name14 = fn_name("app_karate");
   let f_name15 = fn_name("app_message");
   let f_name16 = fn_name("app_next");
   let f_name17 = fn_name("app_original_bible");
