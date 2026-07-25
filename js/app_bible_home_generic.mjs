@@ -188,6 +188,13 @@ export async function app_bible_home_generic(context, lambda$a, bar_extra) {
   }
   let p_verse = html_p(content);
   let top = html_div(p_verse);
+  ("when the spine (last-chosen) language reads right-to-left, mirror the verse frame: the number moves to the right and the lines right-align, matching the chapter reader");
+  let spine = list_last(text_languages);
+  let spine_text = property_get(spine, "text");
+  let frame_rtl = text_rtl_is(spine_text);
+  if (frame_rtl) {
+    html_style_set(top, "direction", "rtl");
+  }
   let bottom = html_p(p_verse);
   html_centered(bottom);
   let hidden = true;

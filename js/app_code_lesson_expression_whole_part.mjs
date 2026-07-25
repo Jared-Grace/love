@@ -22,11 +22,14 @@ export function app_code_lesson_expression_whole_part() {
   function make(divisor) {
     "Math.floor(dividend / divisor) * divisor for the given divisor - the dividend is quotient*divisor + a leftover of 1..divisor-1 so the division never comes out even; Math.floor gives the quotient and times the divisor gives the whole part (the biggest multiple of the divisor that fits), so the answer is quotient*divisor";
     let quotient = integer_random(2, 3);
-    let leftover = integer_random(1, subtract(divisor, 1));
-    let dividend = add(multiply(quotient, divisor), leftover);
+    let max = subtract(divisor, 1);
+    let leftover = integer_random(1, max);
+    let left = multiply(quotient, divisor);
+    let dividend = add(left, leftover);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let floored = text_combine_multiple(["Math.floor(", division, ")"]);
-    let code = text_combine_multiple([floored, " * ", text_to(divisor)]);
+    let t = text_to(divisor);
+    let code = text_combine_multiple([floored, " * ", t]);
     return code;
   }
   function refill() {
@@ -42,7 +45,8 @@ export function app_code_lesson_expression_whole_part() {
     let divisor = list_get(nums, 1);
     let quotient = divide(answer, divisor);
     let remainder = subtract(dividend, answer);
-    return [quotient, remainder];
+    let r = [quotient, remainder];
+    return r;
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
@@ -52,6 +56,11 @@ export function app_code_lesson_expression_whole_part() {
     next_arg,
     example_count: 2,
     decoys,
+    forwards_question_label: "Whole part formula: ",
+    forwards_answer_label: "whole part: ",
+    backwards_question_label: "whole part: ",
+    backwards_answer_label: "What formula produces the whole part? ",
+    unscramble_label: "Build the formula that produces the whole part: ",
   });
   return lesson;
   function title_name_id() {
@@ -76,9 +85,7 @@ export function app_code_lesson_expression_whole_part() {
       "Math.floor(14 / 4) * 4",
     ]);
     let evaluating = app_code_container_light_blue(root);
-    html_div_cycle_code(evaluating, [
-      "Solve the formula one step at a time:",
-    ]);
+    html_div_cycle_code(evaluating, ["Solve the formula one step at a time:"]);
     html_div_cycle_code(evaluating, ["", "Math.floor(14 / 4)", " is ", "3"]);
     html_div_cycle_code(evaluating, [
       "",
