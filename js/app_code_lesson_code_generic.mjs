@@ -52,18 +52,14 @@ export function app_code_lesson_code_generic(params) {
     "forwards_answer_label",
     null,
   );
-  let forwards_question_label = example_question_label;
-  if (null_is(forwards_question_label_override)) {
-    forwards_question_label = example_question_label;
-  } else {
-    forwards_question_label = forwards_question_label_override;
-  }
-  let forwards_answer_label = quiz_label;
-  if (null_is(forwards_answer_label_override)) {
-    forwards_answer_label = quiz_label;
-  } else {
-    forwards_answer_label = forwards_answer_label_override;
-  }
+  let forwards_question_label = value_or_if_null(
+    forwards_question_label_override,
+    example_question_label,
+  );
+  let forwards_answer_label = value_or_if_null(
+    forwards_answer_label_override,
+    quiz_label,
+  );
   let forwards = {
     question_label: forwards_question_label,
     on_question,
@@ -83,18 +79,14 @@ export function app_code_lesson_code_generic(params) {
     "backwards_answer_label",
     null,
   );
-  let backwards_question_label_final = backwards_question_label;
-  if (null_is(backwards_question_label_override)) {
-    backwards_question_label_final = backwards_question_label;
-  } else {
-    backwards_question_label_final = backwards_question_label_override;
-  }
-  let backwards_answer_label_final = quiz_backwards_label_answer;
-  if (null_is(backwards_answer_label_override)) {
-    backwards_answer_label_final = quiz_backwards_label_answer;
-  } else {
-    backwards_answer_label_final = backwards_answer_label_override;
-  }
+  let backwards_question_label_final = value_or_if_null(
+    backwards_question_label_override,
+    backwards_question_label,
+  );
+  let backwards_answer_label_final = value_or_if_null(
+    backwards_answer_label_override,
+    quiz_backwards_label_answer,
+  );
   let backwards = {
     question_label: backwards_question_label_final,
     on_question: app_code_style_normal_text,

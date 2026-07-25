@@ -21,12 +21,10 @@ export function app_code_lesson_quizzes_generic(params) {
     "unscramble_label",
     null,
   );
-  let unscramble_label = "Please unscramble the code: ";
-  if (null_is(unscramble_label_override)) {
-    unscramble_label = "Please unscramble the code: ";
-  } else {
-    unscramble_label = unscramble_label_override;
-  }
+  let unscramble_label = value_or_if_null(
+    unscramble_label_override,
+    "Please unscramble the code: ",
+  );
   let mc = app_code_lesson_quiz_multiple_choice;
   let backwards = object_copy_assign(backwards_record, {
     answer_property: "question",
