@@ -35,7 +35,7 @@ export function week_calendar(parent, on_ranges) {
   let anchor = null;
   let records = [];
   let root = app_shared_container_blue(parent);
-  let heading = html_div_text(root, "Your available times");
+  let heading = html_div_text(root, "Selected times");
   html_style_assign(heading, {
     "font-weight": "bold",
     "margin-bottom": "0.25rem",
