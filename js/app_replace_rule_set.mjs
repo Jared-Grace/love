@@ -48,7 +48,7 @@ import { property_exists } from "./property_exists.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { storage_local_get_context } from "./storage_local_get_context.mjs";
+import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "./app_replace_rule_set_get.mjs";
 import { ternary } from "./ternary.mjs";
@@ -76,7 +76,7 @@ export async function app_replace_rule_set(context) {
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
   let goals_count = list_size(goals);
-  let goal_index = storage_local_get_context(context, "goal_index");
+  let goal_index = storage_session_get_context(context, "goal_index");
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
   let index_selected = null;
