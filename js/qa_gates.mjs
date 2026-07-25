@@ -1,3 +1,4 @@
+import { permission_rule_probe_gate_run } from "./permission_rule_probe_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { memory_pointer_gate_run } from "./memory_pointer_gate_run.mjs";
 import { memory_integrity_gate_run } from "./memory_integrity_gate_run.mjs";
@@ -23,6 +24,7 @@ export function qa_gates() {
     examples_gate_run,
     permission_gate_run,
     permission_reachable_gate_run,
+    permission_rule_probe_gate_run,
     permission_self_settings_gate_run,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
