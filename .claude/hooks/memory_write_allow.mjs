@@ -6,8 +6,10 @@ and the ~/.claude/... spelling lands inside Claude Code's own config
 directory, which trips a BUILT-IN self-settings guard ("allow Claude to edit
 its own settings for this session"). No permissions.allow entry overrides
 that guard and the grant it offers dies with the session, so the human gets
-re-prompted forever. This hook tests whether a PreToolUse "allow" decision
-short-circuits it.
+re-prompted forever. A PreToolUse "allow" decision does NOT short-circuit it
+-- measured 2026-07-25, see the log note below -- so the write tools get a
+deny-and-redirect to the realpath instead, which costs a retry rather than a
+human click.
 
 The check is on the RESOLVED path, so both spellings are covered by one rule
 -- that is the whole point of resolving rather than string-matching. Anything
