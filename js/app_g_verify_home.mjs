@@ -4,6 +4,7 @@ import { html_div } from "./html_div.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_font_set } from "./html_font_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -182,7 +183,7 @@ export async function app_g_verify_home(context) {
       });
     });
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
-    html_style_set(title, "font-family", app_shared_font_serif());
+    html_font_set(title, app_shared_font_serif());
     html_style_font_size(title, "1.5em");
     html_style_set(title, "font-weight", "600");
     html_margin_em(title, "0");
