@@ -7,7 +7,7 @@ import { app_code_review_range_label } from "./app_code_review_range_label.mjs";
 import { app_code_review_button } from "./app_code_review_button.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_screen_go } from "./app_code_screen_go.mjs";
-import { storage_local_get_context } from "./storage_local_get_context.mjs";
+import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_code_scroll_center_faded } from "./app_code_scroll_center_faded.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,14 +19,14 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_code_home(context) {
+export async function app_code_home(context) {
   "on returning home the lesson just left (its id is remembered in lesson_id) is scrolled to the vertical center, so the learner lands back where they were";
   let root = html_clear_context(context);
   let g = app_code_container_padded_x(root);
   let div = html_div_text_centered(g, "Lessons:");
   html_style_margin_y(div, app_shared_spaced_gap());
   let lessons = app_code_lessons();
-  let current_id = storage_local_get_context(context, "lesson_id");
+  let current_id = storage_session_get_context(context, "lesson_id");
   let just_left = null;
   function lambda(item, index) {
     let id = property_get(item, "id");
@@ -50,14 +50,19 @@ export function app_code_home(context) {
   function review_row(lesson_number, scope) {
     let label = app_code_review_range_label(lesson_number, scope);
     async function on_click() {
-      await app_code_screen_go(context, "review_number", lesson_number, app_code_review);
+      await app_code_screen_go(
+        context,
+        "review_number",
+        lesson_number,
+        app_code_review,
+      );
     }
     app_code_review_button(g, label, on_click);
   }
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
   if (found) {
-    "not awaited on purpose: a white overlay fades IN over the list, the just-left lesson is instantly centered while hidden behind it, then the overlay fades OUT to reveal the already-centered list - a smooth cross-fade that hides the scroll jump without the stark flash the old cover produced (that one jumped straight to full white instead of fading in)";
-    app_code_scroll_center_faded(just_left);
+    ("not awaited on purpose: a white overlay fades IN over the list, the just-left lesson is instantly centered while hidden behind it, then the overlay fades OUT to reveal the already-centered list - a smooth cross-fade that hides the scroll jump without the stark flash the old cover produced (that one jumped straight to full white instead of fading in)");
+    await app_code_scroll_center_faded(just_left);
   }
 }

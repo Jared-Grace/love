@@ -40,7 +40,11 @@ export function app_code_quiz(context) {
     app_code_example_answer_gap(c);
     html_div_text(c, "Please answer the following quiz question:");
     let qs = property_get(b, "quizzes");
-    let quiz_index = storage_session_initialize_context(context, "quiz_index", 0);
+    let quiz_index = storage_session_initialize_context(
+      context,
+      "quiz_index",
+      0,
+    );
     let q = list_get(qs, quiz_index);
     q(context, container, c, refresh, next_get);
   }
