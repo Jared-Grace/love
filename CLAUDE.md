@@ -44,6 +44,17 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 
 **Addressing a node inside a fn: use a selector, not the marker cursor.** The `marker_*` family (a persisted current-marker plus `up`/`down`/`enter`/`leave`/`above`/`below` navigation) is **retired** — its 29 alias keys were freed on 2026-07-25 and archived in `marker_aliases_retired()` so they can be restored if it's revived. It cost a multi-command session per edit and carried a shared mutable cursor, which races under parallel Claudes. Selectors are the replacement: a *selector* is any fn `(ast, …args) → node` (`js_statement_find_call_named`, `js_find_return`, `js_call_named_find`, `js_type_find`), and a *transform* is any fn `(ast, selects, …args)` (`js_statement_wrap_if`, `js_statement_if_return_add`, `js_expand_selects`). Keeping the two halves separate is what makes them multiply — every new transform written to that signature pairs with every existing selector. Write new node-level transforms to it. `marker_functionize` still works but needs `marker()` calls placed in the code first.
 
+**Run a selector-and-transform pair with one command:**
+```
+node scripts/ai.mjs function_select_apply_args <fn> <selector> <selector_args> <transform> <transform_args>
+```
+Each half's args are one comma-joined word; pass `""` for none. Example — wrap the statement calling `ready_is` in an `if`, then add a `return` inside it:
+```
+node scripts/ai.mjs function_select_apply_args my_fn js_statement_find_call_named ready_is js_statement_wrap_if ""
+node scripts/ai.mjs function_select_apply_args my_fn js_statement_find_call_named ready_is js_statement_if_return_add ""
+```
+It holds **no selection between commands**, which is the point: the older `function_node_select` / `function_current_selects_apply` path persists the selection in shared state, so under parallel Claudes the second command can act on a peer's selection with no way to tell. Prefer this one. **Never allow-list it** — it dispatches functions named in its arguments, so a grant would cover every function, not one.
+
 **Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/ai.mjs function_auto <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts). It does **not** commit when Claude runs it via `ai.mjs` — canonicalize-only. (When the *human* types `ao` it commits, but that's their interactive prompt harness committing per-command, not `function_auto`; Claude's `ai.mjs` invocations bypass that harness. Confirmed 2026-07-25: after `ao`, the tree stayed ` M` until an explicit `ai_git`.) So **always run `node scripts/ai.mjs ai_git` after `ao`**, and verify with `git status --short`. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
 
 Two `ao` gotchas, both worth designing around:
