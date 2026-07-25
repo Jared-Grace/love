@@ -4,6 +4,7 @@ import { html_element } from "./html_element.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
