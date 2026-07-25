@@ -9,5 +9,10 @@ export function app_code_lesson_previous_set(context) {
     return value_new;
   }
   let value_initial = app_code_lesson_first_id();
-  storage_session_transform_context(context, "lesson_id", value_initial, lambda);
+  storage_session_transform_context(
+    context,
+    "lesson_id",
+    value_initial,
+    lambda,
+  );
 }
