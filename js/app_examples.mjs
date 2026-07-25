@@ -4,6 +4,7 @@ import { html_clear } from "./html_clear.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_font_set } from "./html_font_set.mjs";
+import { html_margin_0 } from "./html_margin_0.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
 import { storage_session_set } from "./storage_session_set.mjs";
@@ -19,7 +20,7 @@ export async function app_examples(context) {
   });
   let examples = await response.json();
   let root = property_get(context, "root");
-  html_style_set(root, "margin", "0");
+  html_margin_0(root);
   html_style_set(root, "background", "#fafafa");
   ("which example is open belongs to this tab, so two tabs can read two examples");
   function select(index) {

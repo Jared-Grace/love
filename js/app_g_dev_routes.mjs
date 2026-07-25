@@ -1,4 +1,3 @@
-import { app_g_sky_compare } from "./app_g_sky_compare.mjs";
 import { app_g } from "./app_g.mjs";
 import { app_g_dev_if } from "./app_g_dev_if.mjs";
 import { app_g_dev_index } from "./app_g_dev_index.mjs";
@@ -113,7 +112,6 @@ export function app_g_dev_routes() {
     app_g_sky_demo_enable();
     await app_g_view_set(null);
     await app_g_sky_choices();
-    await app_g_sky_compare();
     await app_g_sky_snap();
   }
   let routes = {
