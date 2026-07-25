@@ -36,7 +36,7 @@ export async function app_examples(context) {
     html_style_set(page, "margin", "2rem auto");
     html_style_set(page, "padding", "2rem");
     html_style_set(page, "font-family", "system-ui, sans-serif");
-    html_style_set(page, "color", "#1a1a1a");
+    html_font_color_set(page, "#1a1a1a");
     let selected = storage_session_get(app_examples, "selected");
     if (number_is(selected)) {
       function on_prev() {
