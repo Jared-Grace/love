@@ -47,29 +47,7 @@ export function app_code_remainder_roadmap(root, stage) {
       key: "whole_part",
     },
   ];
-  ("a bounded, centered light-blue CARD, not a full-bleed band: on a wide desktop the band left a big empty blue stripe on both sides, so the road sign hugs its content (max-width fit-content) and centers instead. Same light-blue fill and the soft box-shadow border the worked-example cards use, so it reads as a card of the same family");
-  let box = app_code_container_generic(root);
-  let fill = app_shared_container_blue_background_color();
-  html_style_background_color_set(box, fill);
-  let border_color = app_shared_container_blue_border_color();
-  app_shared_symbol_tile_style_box_shadow_value_width_set(
-    box,
-    border_color,
-    "0.08",
-  );
-  html_style_assign(box, {
-    "max-width": "fit-content",
-    "margin-top": "0.5em",
-    "margin-bottom": "0.5em",
-    "margin-left": "auto",
-    "margin-right": "auto",
-    "padding-left": "0.9em",
-    "padding-right": "0.9em",
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    gap: "0.2em",
-  });
+  let box = app_code_container_light_blue(root);
   let label = html_div(box);
   html_span_text(label, "Building a way to find the remainder");
   let line = html_div(box);
