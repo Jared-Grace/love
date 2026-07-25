@@ -8,7 +8,7 @@ export function g_time_components(time) {
     noon: { r: 238, g: 244, b: 255, a: 0.5, saturate: 1.2, darkness: 0 },
     afternoon: { r: 255, g: 120, b: 30, a: 0.55, saturate: 1, darkness: 0.2 },
     sunset: { r: 250, g: 60, b: 140, a: 0.7, saturate: 0.5, darkness: 0.52 },
-    night: { r: 82, g: 92, b: 120, a: 0.9, saturate: 0.12, darkness: 1 },
+    night: { r: 82, g: 92, b: 120, a: 0.9, saturate: 0.2, darkness: 1 },
     sunrise: { r: 255, g: 160, b: 85, a: 0.62, saturate: 0.5, darkness: 0.32 },
   };
   let overrides = g_time_override_map();
