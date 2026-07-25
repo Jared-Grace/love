@@ -9,7 +9,7 @@ import { text_slice } from "./text_slice.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_parse } from "./js_parse.mjs";
-export function js_code_comments_migrated(code) {
+export function js_code_comments_migrated(code, f_names) {
   "The same source with every comment that had its line to itself turned into a statement holding the same words. Normalizing a file parses it and writes the tree back out, and comments live nowhere in a tree, so every run silently deletes them - this converts them first into something a tree can hold.";
   "The text is edited rather than the tree, because the tree is exactly what cannot carry the answer. But which slashes begin a comment is decided by the parser, never by searching the text: two slashes inside a string or a template literal look identical to a comment and rewriting one of those would change what the code does.";
   let comments = js_comments_get(code);
