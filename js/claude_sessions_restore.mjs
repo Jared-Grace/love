@@ -5,6 +5,8 @@ import { claude_sessions_recent } from "./claude_sessions_recent.mjs";
 import { claude_session_title } from "./claude_session_title.mjs";
 import { claude_running_count } from "./claude_running_count.mjs";
 import { claude_tmux_session_name } from "./claude_tmux_session_name.mjs";
+import { claude_window_claude_start } from "./claude_window_claude_start.mjs";
+import { claude_session_window_start } from "./claude_session_window_start.mjs";
 // Reopen every Claude that was running when the machine went down, one tmux
 // window each, named after the prompt that started it.
 //
@@ -53,16 +55,12 @@ export async function claude_sessions_restore(minutes) {
       TMUX_SESSION,
     ]);
   }
-  await claude_window_start(window_first, first);
+  await claude_window_claude_start(
+    property_get(window_first, "stdout").trim(),
+    property_get(first, "id"),
+  );
   for (let session of sessions.slice(1)) {
-    let naming = text_combine_multiple([
-      "tmux new-window -d -P -F #{window_id} -t ",
-      TMUX_SESSION,
-      " -n ",
-      await claude_session_title(property_get(session, "path")),
-    ]);
-    let window = await command_line(naming);
-    await claude_window_start(window, session);
+    await claude_session_window_start(TMUX_SESSION, session);
   }
   await command_line(
     text_combine_multiple(["tmux set-option -t ", TMUX_SESSION, " mouse on"]),
@@ -73,26 +71,4 @@ export async function claude_sessions_restore(minutes) {
     " sessions. Attach with: tmux attach -t ",
     TMUX_SESSION,
   ]);
-  async function claude_window_start(window, session) {
-    let id = property_get(window, "stdout").trim();
-    // Our own name is the point of the window; let claude's process not fight it.
-    await command_line(
-      text_combine_multiple([
-        "tmux set-option -w -t ",
-        id,
-        " automatic-rename off",
-      ]),
-    );
-    // send-keys rather than launching claude as the window command, so the shell
-    // survives claude exiting and the window stays available to reuse.
-    await command_line(
-      text_combine_multiple([
-        "tmux send-keys -t ",
-        id,
-        ' "claude --resume ',
-        property_get(session, "id"),
-        '" Enter',
-      ]),
-    );
-  }
 }
