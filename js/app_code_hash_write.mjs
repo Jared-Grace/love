@@ -1,4 +1,4 @@
-import { storage_local_get_context } from "./storage_local_get_context.mjs";
+import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_shared_screen_stored_get } from "./app_shared_screen_stored_get.mjs";
 import { html_hash_set } from "./html_hash_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -18,11 +18,11 @@ export function app_code_hash_write(context) {
       list_add(parts, pair);
     }
   }
-  let value2 = storage_local_get_context(context, "lesson_id");
+  let value2 = storage_session_get_context(context,"lesson_id");
   add_part("lesson", value2);
   let value3 = app_shared_screen_stored_get(context);
   add_part("screen", value3);
-  let value4 = storage_local_get_context(context, "quiz_index");
+  let value4 = storage_session_get_context(context,"quiz_index");
   add_part("quiz", value4);
   let query = list_join(parts, "&");
   let hash = text_combine("#", query);
