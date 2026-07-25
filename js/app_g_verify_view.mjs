@@ -18,6 +18,7 @@ import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_font_set } from "./html_font_set.mjs";
+import { html_display_flex } from "./html_display_flex.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -99,7 +100,7 @@ export function app_g_verify_view(
   }
   function row_new(panel, first) {
     let row = html_div(panel);
-    html_style_set(row, "display", "flex");
+    html_display_flex(row);
     html_style_set(row, "gap", small_gap);
     html_style_padding_x(row, small_gap);
     html_style_padding_y(row, small_gap);
