@@ -2,7 +2,7 @@ import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
 import { list_find_property } from "./list_find_property.mjs";
 import { list_map } from "./list_map.mjs";
 export function ebible_book_testaments() {
-  ("the two testaments, each holding its genre sections in canonical order, so the book picker can nest section cards under an Old or New Testament card");
+  "the two testaments, each holding its genre sections in canonical order, so the book picker can nest section cards under an Old or New Testament card";
   let divisions = ebible_book_divisions();
   function by_name(name) {
     let division = list_find_property(divisions, "name", name);
