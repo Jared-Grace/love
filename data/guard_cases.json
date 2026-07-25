@@ -101,7 +101,10 @@
 
     { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "allow", "why": "the sanctioned sandboxed node eval from CLAUDE.md" },
     { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love scripts/temp/x.mjs", "decision": "allow", "why": "the sanctioned sandboxed node script form" },
-    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/ -e 'ls'", "decision": "silent", "why": "read scope widened past the repo, so the template no longer matches" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/ -e 'ls'", "decision": "deny", "reason_includes": "outside this repo", "why": "sandbox shape but read scope widened past the repo: near-miss deny hands Claude the narrow-the-path fix instead of prompting the human" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos -e 'ls'", "decision": "deny", "reason_includes": "outside this repo", "why": "eval form pointed at the repo's PARENT dir - near-miss deny advises narrowing to REPO_ROOT" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos scripts/temp/x.mjs", "decision": "deny", "reason_includes": "outside this repo", "why": "script form pointed at the repo's PARENT dir (the real case that motivated this) - near-miss deny, not a prompt" },
+    { "command": "unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love/.. -e 'ls'", "decision": "silent", "why": "non-normalized path is NOT the near-miss template (recognizer requires normpath==path), so it stays silent rather than getting the tailored deny" },
     { "command": "unshare --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "silent", "why": "no --net, so the network is not actually blocked" },
     { "command": "node --permission --allow-fs-read=/home/j/repos/love -e 'ls'", "decision": "deny", "why": "unsandboxed node -e hits the hard floor even with node's own flags" },
 
