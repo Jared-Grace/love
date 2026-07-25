@@ -13,9 +13,9 @@ export function app_code_container_light_blue(parent) {
   "bounded to the content column and centered, NOT a full-bleed band: on a wide desktop the blue should respect the app width instead of stretching edge to edge. The width caps at the content column and auto side-margins center it; on a narrow screen it fills the width. A full rounded border finishes the now-visible left and right sides so it reads as a card";
   let c = html_div(parent);
   let column = app_shared_column_content_max_width();
-  ("width caps at the column on a wide screen and pulls in by the outer gap on each side on a narrow one, so the card never hugs the screen edge; auto side-margins center it. Inner padding is small so text sits close to the border, outer gap is larger so cards breathe apart from the edge");
+  ("width caps at the column on a wide screen and pulls in by the outer gap on each side on a narrow one, so the card never hugs the screen edge; auto side-margins center it. Inner padding is EQUAL on all four sides so the content sits the same distance from every border");
   let outer = "1.2em";
-  let inner = "0.4em";
+  let inner = "0.5em";
   let width = text_combine_multiple([
     "min(",
     column,
@@ -31,10 +31,7 @@ export function app_code_container_light_blue(parent) {
     "margin-bottom": "0.5em",
     "margin-left": "auto",
     "margin-right": "auto",
-    "padding-top": "0.2em",
-    "padding-bottom": "0.2em",
-    "padding-left": inner,
-    "padding-right": inner,
+    padding: inner,
     display: "flex",
     "flex-direction": "column",
   });
