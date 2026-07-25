@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 import { equal } from "./equal.mjs";
@@ -23,7 +24,6 @@ import { week_calendar_color_empty } from "./week_calendar_color_empty.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_any } from "./list_any.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { not } from "./not.mjs";
@@ -161,13 +161,40 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
     });
     list_sort_number_mapper(ranges, week_range_sort_key);
   }
-  function range_remove(day, slot) {
-    function keep(span) {
+  function piece_remove(day, slot) {
+    let next = [];
+    function handle(span) {
       let covers = range_covers(span, day, slot);
-      let n = not(covers);
-      return n;
+      if (not(covers)) {
+        list_add(next, span);
+      } else {
+        piece_split_add(next, span, slot);
+      }
     }
-    ranges = list_filter(ranges, keep);
+    each(ranges, handle);
+    ranges = next;
+  }
+  function piece_split_add(next, span, slot) {
+    let left_end = subtract(slot, 1);
+    let right_start = slot + 1;
+    let left_ok = less_than_equal(span.start, left_end);
+    let right_ok = less_than_equal(right_start, span.end);
+    if (left_ok) {
+      let left = {
+        day: span.day,
+        start: span.start,
+        end: left_end,
+      };
+      list_add(next, left);
+    }
+    if (right_ok) {
+      let right = {
+        day: span.day,
+        start: right_start,
+        end: span.end,
+      };
+      list_add(next, right);
+    }
   }
   function cell_pressed(day, slot) {
     let has_anchor = not_equal(anchor, null);
@@ -197,7 +224,7 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
   function free_click(day, slot) {
     let selected = selected_is(day, slot);
     if (selected) {
-      range_remove(day, slot);
+      piece_remove(day, slot);
       on_ranges(ranges);
     } else {
       anchor = {
