@@ -50,17 +50,18 @@ export function app_code_remainder_roadmap(root, stage) {
   html_style_code_dark(tile);
   function render_segment(segment) {
     let key = property_get(segment, "key");
-    let text = property_get(segment, "text");
     let seg_index = list_index_of(order, key);
+    let ahead = less_than(current, seg_index);
+    if (ahead) {
+      return;
+    }
+    let text = property_get(segment, "text");
     let span = html_span_text(tile, text);
     let lit = equal(seg_index, current);
-    let ahead = less_than(current, seg_index);
     if (lit) {
       let green = app_shared_color_light_green();
       html_font_color_set(span, green);
       html_style_set(span, "font-weight", "bold");
-    } else if (ahead) {
-      html_style_set(span, "opacity", "0.4");
     }
   }
   each(segments, render_segment);
