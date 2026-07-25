@@ -1,3 +1,10 @@
+import { memory_todo_prefix } from "./memory_todo_prefix.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { text_prefix_without } from "./text_prefix_without.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { memory_type_prefixes } from "./memory_type_prefixes.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { not } from "./not.mjs";
 export function memory_link_verdict(link, stems, typo_links) {
   "What is wrong with one unresolved double-bracket name, or nothing when it is innocent. Given the notes that exist and the links already reported as misspelled prefixes elsewhere.";
   "Kept apart from the sweep that finds these, because the sweep cannot be wrong - it is a set difference - while this is a judgment, and a judgment that only ever runs over links that are all innocent today would answer the same whether it worked or not.";
