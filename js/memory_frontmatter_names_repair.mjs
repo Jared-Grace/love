@@ -1,3 +1,14 @@
+import { memory_frontmatter_name_mismatches } from "./memory_frontmatter_name_mismatches.mjs";
+import { memory_folder } from "./memory_folder.mjs";
+import { property_get } from "./property_get.mjs";
+import { path_join } from "./path_join.mjs";
+import { file_read } from "./file_read.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { file_write } from "./file_write.mjs";
+import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 export async function memory_frontmatter_names_repair() {
   "Bring every memory file's header name back into agreement with its own file name, which is the identity the link checks already resolve against. Rewrites one line per file and returns what it changed.";
   "Only a header line is touched, and only the first one offering the name. A note about how memory files are written can quote a name line in its own prose, and rewriting that quotation would edit an example into a claim about the wrong file.";
