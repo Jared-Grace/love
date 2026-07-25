@@ -122,8 +122,8 @@ export function week_calendar(parent, on_ranges) {
     let color = record_color(record);
     html_style_background_color_set(record.element, color);
   }
-  function summary_line(range) {
-    let text = week_range_label(range);
+  function summary_line(span) {
+    let text = week_range_label(span);
     html_div_text(summary, text);
   }
   function paint() {
