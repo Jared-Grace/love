@@ -247,7 +247,7 @@ export function app_g_verify_view(
   html_style_margin_top(suggest_area, small_gap);
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
-  html_style_set(suggest_bar, "text-align", "center");
+  html_centered(suggest_bar);
   async function on_suggest() {
     try {
       await app_shared_api({
