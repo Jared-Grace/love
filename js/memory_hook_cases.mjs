@@ -1,5 +1,5 @@
-import os from "os";
 import { path_join } from "./path_join.mjs";
+import { claude_config_folder } from "./claude_config_folder.mjs";
 import { memory_folder } from "./memory_folder.mjs";
 import { memory_folder_realpath } from "./memory_folder_realpath.mjs";
 export function memory_hook_cases() {
