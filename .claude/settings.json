@@ -74,6 +74,7 @@
       "Bash(node scripts/ai.mjs function_auto_multiple:*)",
       "Bash(node scripts/ai.mjs function_delete_unused:*)",
       "Bash(node scripts/ai.mjs function_imports_gate_run:*)",
+      "Bash(node scripts/ai.mjs function_new_js:*)",
       "Bash(node scripts/ai.mjs function_read:*)",
       "Bash(node scripts/ai.mjs guard_check:*)",
       "Bash(node scripts/ai.mjs guard_gate_run:*)",
