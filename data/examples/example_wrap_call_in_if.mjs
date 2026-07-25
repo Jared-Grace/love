@@ -1,14 +1,14 @@
 import { js_statement_wrap_if } from "../../js/js_statement_wrap_if.mjs";
 export const example = {
   fn: js_statement_wrap_if.name,
-  args: ["g"],
+  args: ["list_size"],
   kind: "transform",
   title: "Wrap a call in an if, by selecting it first",
   note: [
     "Two functions pair up here. A ",
     { code: "selector" },
     " finds the statement calling ",
-    { code: "g" },
+    { code: "list_size" },
     " — then the transform ",
     { fn: js_statement_wrap_if.name },
     " rewrites just that node, wrapping the call in an ",
@@ -16,10 +16,10 @@ export const example = {
     " test. Selector and transform are separate halves joined by a list of selected nodes, so every new transform written this way composes with every existing selector — this seam replaced the retired marker cursor.",
   ],
   before: `export function f(a) {
-  g(a);
+  list_size(a);
 }`,
   after: `export function f(a) {
-  if (g(a)) {
+  if (list_size(a)) {
   }
 }`,
 };
