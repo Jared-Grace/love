@@ -168,32 +168,26 @@ export function week_calendar(parent, initial_ranges, on_ranges) {
       if (not(covers)) {
         list_add(next, span);
       } else {
-        piece_split_add(next, span, slot);
+        collapse_add(next, span, slot);
       }
     }
     each(ranges, handle);
     ranges = next;
   }
-  function piece_split_add(next, span, slot) {
-    let left_end = subtract(slot, 1);
-    let right_start = slot + 1;
-    let left_ok = less_than_equal(span.start, left_end);
-    let right_ok = less_than_equal(right_start, span.end);
-    if (left_ok) {
-      let left = {
+  function collapse_add(next, span, slot) {
+    "clicking a piece inside a range collapses the whole range down to its far end — the single endpoint furthest from where you clicked; clicking a lone one-piece range clears it, leaving nothing";
+    let single = span.start === span.end;
+    if (not(single)) {
+      let distance_start = slot - span.start;
+      let distance_end = span.end - slot;
+      let far_first = distance_start >= distance_end;
+      let keep = far_first ? span.start : span.end;
+      let piece = {
         day: span.day,
-        start: span.start,
-        end: left_end,
+        start: keep,
+        end: keep,
       };
-      list_add(next, left);
-    }
-    if (right_ok) {
-      let right = {
-        day: span.day,
-        start: right_start,
-        end: span.end,
-      };
-      list_add(next, right);
+      list_add(next, piece);
     }
   }
   function cell_pressed(day, slot) {
