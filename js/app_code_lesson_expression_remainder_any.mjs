@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -30,7 +31,8 @@ export function app_code_lesson_expression_remainder_any() {
   }
   function divisor_of(index) {
     "the divisors 2 through 9";
-    return add(index, 2);
+    let sum = add(index, 2);
+    return sum;
   }
   function refill() {
     "four questions, each with a DIFFERENT divisor, so two examples (or answer choices) never come out identical";
@@ -44,10 +46,12 @@ export function app_code_lesson_expression_remainder_any() {
     let nums = text_integers(question);
     let number = list_get(nums, 0);
     let divisor = list_get(nums, 1);
-    let quotient = floor(divide(number, divisor));
+    let p = divide(number, divisor);
+    let quotient = floor(p);
     let whole_part = multiply(quotient, divisor);
     let raw = divide(number, divisor);
-    return [quotient, whole_part, raw];
+    let r = [quotient, whole_part, raw];
+    return r;
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
