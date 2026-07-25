@@ -2165,6 +2165,21 @@ def main():
         }))
         return
 
+    # Same hard-floor category as the node-eval block above: `python -c` is
+    # arbitrary command-line code, the analog of `node -e`. Floored (not just
+    # left to prompt) so it can't be a bypass and so the reflex is handed back
+    # to Claude as a redirect. Safe as a floor: python -c is never allow-listed,
+    # so this only ever converts a 'silent'/'ask' into a self-correcting 'deny'.
+    if find_python_eval(command):
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": PYTHON_EVAL_DENY_REASON,
+            }
+        }))
+        return
+
     # Also a hard floor (before any allow decision, so a stray allow rule can't
     # re-enable it): Claude runs the repo only through scripts/ai.mjs. Every
     # other scripts/ file - the human's r.mjs/rl.mjs/g.mjs seams and utilities -
