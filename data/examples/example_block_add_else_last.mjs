@@ -1,6 +1,6 @@
-import { js_block_body_add } from "../../js/js_block_body_add.mjs";
+import { js_block_body_add_code } from "../../js/js_block_body_add_code.mjs";
 export const example = {
-  fn: js_block_body_add.name,
+  fn: js_block_body_add_code.name,
   args: ["ready_is", "alternate", "log_missing()"],
   kind: "transform",
   title: "Add a statement at the end of the else-block",
@@ -12,9 +12,9 @@ export const example = {
     " into its ",
     { code: "alternate" },
     " (the else-block). WHERE in that block is the verb: ",
-    { fn: js_block_body_add.name },
+    { fn: js_block_body_add_code.name },
     " appends, its paired ",
-    { code: "js_block_body_add_first" },
+    { code: "js_block_body_add_code_first" },
     " prepends. Neither half knows about the other, so every selector works with ",
     "every transform written to this signature.",
   ],
