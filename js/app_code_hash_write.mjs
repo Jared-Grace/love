@@ -1,4 +1,5 @@
 import { storage_local_get_context } from "./storage_local_get_context.mjs";
+import { app_shared_screen_stored_get } from "./app_shared_screen_stored_get.mjs";
 import { html_hash_set } from "./html_hash_set.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -12,13 +13,17 @@ export function app_code_hash_write(context) {
     "add key=value to the hash only when the value is set, so an unstarted quiz leaves q off rather than writing null";
     let present = null_not_is(value);
     if (present) {
-      let pair = text_combine_multiple([key, "=", encodeURIComponent(value)]);
+      let v = encodeURIComponent(value);
+      let pair = text_combine_multiple([key, "=", v]);
       list_add(parts, pair);
     }
   }
-  add_part("lesson", storage_local_get_context(context, "lesson_id"));
-  add_part("screen", storage_local_get_context(context, "screen"));
-  add_part("quiz", storage_local_get_context(context, "quiz_index"));
+  let value2 = storage_local_get_context(context, "lesson_id");
+  add_part("lesson", value2);
+  let value3 = app_shared_screen_stored_get(context);
+  add_part("screen", value3);
+  let value4 = storage_local_get_context(context, "quiz_index");
+  add_part("quiz", value4);
   let query = list_join(parts, "&");
   let hash = text_combine("#", query);
   html_hash_set(hash);
