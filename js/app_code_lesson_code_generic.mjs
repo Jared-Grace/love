@@ -115,7 +115,7 @@ export function app_code_lesson_code_generic(params) {
     on_question,
     example_answer_label,
     quizzes_get,
-    example_question_label,
+    forwards_question_label,
     app_code_style_normal_text,
   );
   return lesson;
