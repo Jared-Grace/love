@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
@@ -55,10 +56,9 @@ export function availability_editor(parent) {
   }
   function highlight() {
     function paint_button(record) {
-      let selected = record.kind === chosen;
-      let outline = selected
-        ? text_combine("3px solid ", app_shared_color_blue_dark())
-        : "none";
+      let selected = equal(record.kind, chosen);
+      let right = app_shared_color_blue_dark();
+      let outline = selected ? text_combine("3px solid ", right) : "none";
       html_style_assign(record.element, {
         outline: outline,
       });
@@ -74,7 +74,7 @@ export function availability_editor(parent) {
   function render_preview() {
     html_clear(preview);
     let has_ranges = list_empty_not_is(current);
-    let none = chosen === null;
+    let none = equal(chosen, null);
     if (none) {
       app_shared_text_body(preview, "Pick how these times repeat");
     } else if (has_ranges) {
