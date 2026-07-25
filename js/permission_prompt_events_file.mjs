@@ -61,6 +61,7 @@ export async function permission_prompt_events_file(file_path, wait_minimum) {
           tool: call.name,
           command,
           waited,
+          at: new Date(call.at).toISOString(),
           sidechain: call.sidechain,
           session,
         });

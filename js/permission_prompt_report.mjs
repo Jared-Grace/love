@@ -5,10 +5,10 @@ import { permission_prompt_events_asked } from "./permission_prompt_events_asked
 import { permission_prompt_events_grouped } from "./permission_prompt_events_grouped.mjs";
 import { permission_prompt_tool_instant_is } from "./permission_prompt_tool_instant_is.mjs";
 import { permission_prompt_rows_print } from "./permission_prompt_rows_print.mjs";
-export async function permission_prompt_report(days) {
+export async function permission_prompt_report(days, seconds_minimum) {
   "Which tool calls made the human stop and approve something, over the last days, ranked by how often - the DEMAND side of the permission system. The allow-rule gates answer which rules are dead; this answers which interruptions are real, so a rule gets written for what actually costs the human time instead of for whatever seemed likely.";
   "Two sections, because the evidence differs in kind and merging them would launder a guess into a measurement. The first holds tools that are instant unless something blocks them, where a wait has no other explanation. The second holds tools that can be slow on their own; those are filtered down to commands the guard leaves to the permission engine, which narrows the suspects without convicting any of them.";
-  let events = await permission_prompt_events_recent(days);
+  let events = await permission_prompt_events_recent(days, seconds_minimum);
   function instant_is(event) {
     let b = permission_prompt_tool_instant_is(event.tool);
     return b;
@@ -34,6 +34,7 @@ export async function permission_prompt_report(days) {
   );
   let summary = {
     days: Number(days),
+    seconds_minimum: Number(seconds_minimum),
     waits: events.length,
     measured: measured.length,
     suspects: suspects.length,
