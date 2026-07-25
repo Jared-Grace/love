@@ -1,5 +1,6 @@
 import { html_hash_get } from "./html_hash_get.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
+import { app_shared_screen_stored_set } from "./app_shared_screen_stored_set.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_get } from "./list_get.mjs";
 import { each } from "./each.mjs";
@@ -24,7 +25,7 @@ export function app_code_hash_restore(context) {
     }
     let is_screen = equal(key, "screen");
     if (is_screen) {
-      storage_local_set_context(context, "screen", value);
+      app_shared_screen_stored_set(context, value);
     }
     let is_quiz = equal(key, "quiz");
     if (is_quiz) {

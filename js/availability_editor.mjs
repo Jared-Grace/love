@@ -1,3 +1,4 @@
+import { date_month_day_year } from "./date_month_day_year.mjs";
 import { equal } from "./equal.mjs";
 import { week_calendar } from "./week_calendar.mjs";
 import { week_dates } from "./week_dates.mjs";
@@ -74,7 +75,7 @@ export function availability_editor(parent) {
     let first = list_first(dates);
     let last = list_last(dates);
     let label = date_month_day(first);
-    let label2 = date_month_day(last);
+    let label2 = date_month_day_year(last);
     let text = text_combine_multiple(["Week of: ", label, " – ", label2]);
     html_text_set(week_label, text);
   }
