@@ -684,6 +684,13 @@ def tokenize(command, subst_validator=None):
                 continue
             if c == "`":
                 raise Unsupported("command substitution (backtick) in double quotes")
+            if c == "$" and i + 2 < n and command[i + 1] == "(" and command[i + 2] == "(":
+                body, end = _scan_arithmetic(command, i + 3)
+                if not _arithmetic_is_inert(body):
+                    raise Unsupported("command substitution inside arithmetic")
+                word.append(SUBSTITUTION_PLACEHOLDER)
+                i = end
+                continue
             if c == "$" and i + 1 < n and command[i + 1] == "(":
                 inner, end = _scan_substitution(command, i + 2)
                 if subst_validator is None or not subst_validator(inner):
