@@ -1,19 +1,22 @@
-import { list_size } from "../../love/js/list_size.mjs";
-import { list_get } from "../../love/js/list_get.mjs";
-import { list_map_index } from "../../love/js/list_map_index.mjs";
-import { list_interleave_halves } from "../../love/js/list_interleave_halves.mjs";
-import { each_index } from "../../love/js/each_index.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { app_shared_gradient_color } from "../../love/js/app_shared_gradient_color.mjs";
-import { app_shared_bible_verse_line } from "../../love/js/app_shared_bible_verse_line.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_map_index } from "./list_map_index.mjs";
+import { list_interleave_halves } from "./list_interleave_halves.mjs";
+import { each_index } from "./each_index.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_gradient_color } from "./app_shared_gradient_color.mjs";
+import { app_shared_bible_verse_line } from "./app_shared_bible_verse_line.mjs";
 export function app_shared_bible_verse_texts(parent, entries) {
   let count = list_size(entries);
   ("the colours exist to tell one language from another, so a lone language earns no colour at all: pass null and the verse reads in the page's own text colour instead of a muted slate that looks faded for no reason");
   let colored = list_multiple_is(entries);
   function color_get(entry, index) {
-    return app_shared_gradient_color(index, count);
+    let color2 = app_shared_gradient_color(index, count);
+    return color2;
   }
-  let colors = list_interleave_halves(list_map_index(entries, color_get));
+  let list = list_map_index(entries, color_get);
+  let colors = list_interleave_halves(list);
   function render(entry, index) {
     let name = property_get(entry, "name");
     let text = property_get(entry, "text");
