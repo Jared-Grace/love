@@ -98,7 +98,7 @@
 
     { "command": "rm /tmp/claude-1000/-home-j-repos-love/x.txt", "decision": "allow", "why": "file-only rm inside the Claude scratchpad (path is uid+repo derived - see note)" },
     { "command": "rm -f /tmp/claude-1000/-home-j-repos-love/x.txt", "decision": "allow", "why": "-f is one of the two permitted flag chars" },
-    { "command": "rm -r /tmp/claude-1000/-home-j-repos-love/d", "decision": "ask", "why": "recursion is refused even inside the scratchpad" },
+    { "command": "rm -r /tmp/claude-1000/-home-j-repos-love/d", "decision": "silent", "why": "recursion is refused even inside the scratchpad - and now falls through as silent rather than ask, because the Bash(rm -r <scratchpad>:*) allow rule that used to supply a matched leading verb was removed: it promised exactly what this case refuses" },
     { "command": "rm /tmp/other/x.txt", "decision": "silent", "why": "outside the scratchpad, rm is never a trusted verb" },
 
     { "command": "mkdir -p /tmp/claude-1000/-home-j-repos-love/scratchpad/sub", "decision": "allow", "why": "creating a dir inside the Claude scratchpad destroys nothing; the multi-word allow rule for this could never match through verb_of, so a helper earns it by path" },
