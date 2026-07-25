@@ -2,6 +2,7 @@ import { html_element } from "./html_element.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { text_is } from "./text_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -16,7 +17,7 @@ import { text_combine } from "./text_combine.mjs";
 // example's derived alias). Code parts render inline so refs aren't hardcoded prose.
 export function example_note_dom(parent, note, alias) {
   let paragraph = html_element(parent, "p");
-  html_style_set(paragraph, "color", "#555");
+  html_font_color_set(paragraph, "#555");
   html_style_set(paragraph, "line-height", "1.6");
   html_style_set(paragraph, "margin", "0 0 0.75rem");
   if (text_is(note)) {
