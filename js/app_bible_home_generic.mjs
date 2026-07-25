@@ -1,3 +1,6 @@
+import { list_last } from "./list_last.mjs";
+import { text_rtl_is } from "./text_rtl_is.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { app_shared_gear_settings_text } from "./app_shared_gear_settings_text.mjs";
