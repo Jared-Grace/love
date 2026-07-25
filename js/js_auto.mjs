@@ -11,6 +11,7 @@ import { log } from "./log.mjs";
 import { performance_end } from "./performance_end.mjs";
 import { performance_next } from "./performance_next.mjs";
 import { performance_start } from "./performance_start.mjs";
+import { js_auto_transform_run } from "./js_auto_transform_run.mjs";
 import { js_auto_transforms } from "./js_auto_transforms.mjs";
 import { each_async } from "./each_async.mjs";
 import { data_path } from "./data_path.mjs";
@@ -30,7 +31,7 @@ export async function js_auto(ast) {
     let transforms = js_auto_transforms();
     async function lambda(t) {
       performance_next(p, t.name);
-      await t(ast);
+      await js_auto_transform_run(t, ast);
       let data = global_function_property_get(
         file_read_cached_initialize,
         d_path,
