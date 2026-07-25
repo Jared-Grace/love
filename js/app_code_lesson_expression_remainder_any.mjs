@@ -40,12 +40,14 @@ export function app_code_lesson_expression_remainder_any() {
     return list;
   }
   function decoys(question, answer) {
-    "the classic mistake is giving the QUOTIENT (how many whole times the divisor fits, floor(n / d)) instead of the remainder (what is left over)";
+    "three tempting wrong values, matching the mistakes the formula makes visible: the QUOTIENT floor(n / d) (how many whole times the divisor fits - stopped before finding what is left over), the WHOLE PART floor(n / d) * d (the part that divides evenly - forgot to subtract it from the dividend), and the RAW division n / d (never rounded down)";
     let nums = text_integers(question);
     let number = list_get(nums, 0);
     let divisor = list_get(nums, 1);
     let quotient = floor(divide(number, divisor));
-    return [quotient];
+    let whole_part = multiply(quotient, divisor);
+    let raw = divide(number, divisor);
+    return [quotient, whole_part, raw];
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
