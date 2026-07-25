@@ -5,6 +5,7 @@ import { memory_folder_realpath } from "./memory_folder_realpath.mjs";
 export function memory_hook_cases() {
   "What the memory-path hook must decide for each spelling of a memory path. This hook is the only thing standing between every parallel session and a flood of permission prompts the human has to click, and the prompts return silently if it regresses - the symptom is a human clicking, which no test would notice.";
   "The reason text is checked too, not just the decision. A deny whose reason names a bare directory is useless: the retry has nowhere to go. So the absent-note case demands the basename back.";
+  "The escape cases (decision silent) are the SECURITY invariant, not convenience: a path that TEXTUALLY sits under the memory realpath but RESOLVES outside it - via .. traversal, or a prefix-sibling like memory-sibling - must fall through, never allow. The hook resolves realpath and checks memory_root plus a trailing slash, so a naive string-prefix check would leak these; only a test pins that it does not.";
   let config = memory_folder();
   let real = memory_folder_realpath();
   let note = "MEMORY.md";
@@ -63,6 +64,18 @@ export function memory_hook_cases() {
     {
       tool: "Edit",
       path: "package.json",
+      decision: "silent",
+      reason_includes: "",
+    },
+    {
+      tool: "Write",
+      path: real + "/../escape_via_traversal.md",
+      decision: "silent",
+      reason_includes: "",
+    },
+    {
+      tool: "Write",
+      path: real + "-sibling/x.md",
       decision: "silent",
       reason_includes: "",
     },
