@@ -1,3 +1,8 @@
+import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { list_add } from "./list_add.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
 import { property_get } from "./property_get.mjs";
@@ -61,5 +66,29 @@ export function app_bible_books_matches(query, books) {
     return any;
   }
   let result = list_filter(mapped, testament_has_sections);
+  ("catch any book the source returns that no genre section claims (a different canon, e.g. deuterocanon) and show it under an Other card, so the picker can never silently hide a book whatever the version");
+  let divisions_all = ebible_book_divisions();
+  let per_division = list_map_property(divisions_all, "book_codes");
+  let known_codes = list_concat_multiple(per_division);
+  let matching_books = list_filter(books, match_book);
+  function is_uncategorized(book) {
+    let code = property_get(book, "book_code");
+    let unknown = list_includes_not(known_codes, code);
+    return unknown;
+  }
+  let leftovers = list_filter(matching_books, is_uncategorized);
+  let empty = list_empty_is(leftovers);
+  let has_leftovers = not(empty);
+  if (has_leftovers) {
+    let section = {
+      name: "Uncategorized",
+      books: leftovers,
+    };
+    let other = {
+      name: "Other",
+      divisions: [section],
+    };
+    list_add(result, other);
+  }
   return result;
 }
