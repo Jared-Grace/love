@@ -37,6 +37,10 @@ export function availability_editor(parent) {
   let iso = date_today_iso();
   let week_start = date_week_sunday(iso);
   let button_records = [];
+  html_div_text(
+    parent,
+    "Mark the times you are busy — everything else stays open for booking",
+  );
   let nav = app_shared_container_blue(parent);
   function go_prev() {
     shift_week(-7);
@@ -64,7 +68,7 @@ export function availability_editor(parent) {
   add_button("weekly", "Weekly");
   add_button("monthly", "Monthly");
   add_button("once", "One time");
-  let preview_heading = html_div_text(parent, "Preview of what you'll add");
+  let preview_heading = html_div_text(parent, "Busy times you'll add");
   html_style_assign(preview_heading, {
     "font-weight": "bold",
     "margin-top": "0.75rem",
