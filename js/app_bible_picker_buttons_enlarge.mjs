@@ -2,6 +2,7 @@ import { list_size } from "./list_size.mjs";
 import { app_bible_picker_button_size } from "./app_bible_picker_button_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_style_margin_x } from "./html_style_margin_x.mjs";
