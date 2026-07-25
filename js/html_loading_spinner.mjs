@@ -1,6 +1,4 @@
-import { html_loading_spinner_pulse_milliseconds } from "./html_loading_spinner_pulse_milliseconds.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { html_loading_spinner_pulse } from "./html_loading_spinner_pulse.mjs";
+import { html_loading_spinner_breath_animation } from "./html_loading_spinner_breath_animation.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_loading_spinner_style } from "./html_loading_spinner_style.mjs";
