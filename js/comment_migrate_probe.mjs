@@ -1,10 +1,14 @@
-import { js_fold } from "./js_fold.mjs";
-import { fn_name } from "./fn_name.mjs";
 export function comment_migrate_probe() {
-  let f_name = fn_name("js_fold");
-  `a comment naming ${f_name} through the wrapper`;
-  ("a comment naming ", js_fold.name, " as bare text in a template");
-  ("a comment naming ", js_fold.name, " as bare text in a plain string");
+  "a plain comment with no funny business";
+  `a comment naming ${fn_name("js_fold")} ${fn_name("and")} ${fn_name("folder_user")} but also not_a_function_at_all`;
   let a = 1;
-  return a;
+  `a comment with a "${fn_name("double")} quote" ${fn_name("and")} a backslash \\ in it`;
+  let b = 2; // this one trails code and must be left alone
+  `a comment with a \`backtick\` ${fn_name("and")} a ${dollar_brace}`;
+  let c = 3;
+  let d = "// this is a string, not a comment";
+  let e = `
+// this line lives inside a template literal
+`;
+  return [a, b, c, d, e];
 }

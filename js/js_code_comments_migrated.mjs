@@ -1,6 +1,6 @@
 import { js_comments_get } from "./js_comments_get.mjs";
 import { js_comment_own_line_is } from "./js_comment_own_line_is.mjs";
-import { js_code_comment_statement } from "./js_code_comment_statement.mjs";
+import { js_code_comment_statement_generic } from "./js_code_comment_statement_generic.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -26,7 +26,7 @@ export function js_code_comments_migrated(code, f_names) {
     let value = property_get(comment, "value");
     let before = text_slice(code, cursor, start);
     list_add(pieces, before);
-    let statement = js_code_comment_statement(value);
+    let statement = js_code_comment_statement_generic(value, f_names);
     list_add(pieces, statement);
     cursor = end;
   }
