@@ -6,6 +6,6 @@ export function app_code_lesson_bold_term(parent, prose, term) {
   let line = html_div(parent);
   html_span_text(line, prose);
   let word = html_span_text(line, term);
-  html_style_set(word, "font-weight", "bold");
+  html_bold(word);
   return line;
 }

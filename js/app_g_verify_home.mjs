@@ -186,7 +186,7 @@ export async function app_g_verify_home(context) {
     let title = html_p_text(wrap, "Sermon coverage &mdash; " + chapter_code);
     html_font_set(title, app_shared_font_serif());
     html_style_font_size(title, "1.5em");
-    html_style_set(title, "font-weight", "600");
+    html_bold_semi(title);
     html_margin_em(title, "0");
     let hint = html_p_text(
       wrap,
