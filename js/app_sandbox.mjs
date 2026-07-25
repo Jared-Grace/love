@@ -10,10 +10,12 @@ import { html_hash_get } from "../../love/js/html_hash_get.mjs";
 import { text_skip } from "../../love/js/text_skip.mjs";
 import { app_sandbox_choose } from "../../love/js/app_sandbox_choose.mjs";
 import { html_reload_on_hash_change } from "../../love/js/html_reload_on_hash_change.mjs";
+import { html_mobile_default } from "../../love/js/html_mobile_default.mjs";
 export async function app_sandbox(context) {
   let root = property_get(context, "root");
   html_reload_on_hash_change();
   html_clear(root);
+  html_mobile_default(context);
   let name = text_skip(html_hash_get(), 1);
   app_sandbox_choose(root, name);
   return;
