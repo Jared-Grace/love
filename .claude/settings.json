@@ -46,6 +46,7 @@
       "Bash(node scripts/ai.mjs g_sermon_lines_stats:*)",
       "Bash(node scripts/ai.mjs app_shared_build:*)",
       "Bash(node scripts/ai.mjs app_shared_dev_build:*)",
+      "Bash(node scripts/ai.mjs app_shared_name_search_info:*)",
       "Bash(node scripts/ai.mjs app_shared_name_search_multiple:*)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid)",
       "Bash(node scripts/ai.mjs app_shared_prefixes_invalid_assert)",
