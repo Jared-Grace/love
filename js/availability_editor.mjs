@@ -53,6 +53,7 @@ export function availability_editor(parent) {
   app_shared_button(week_row, "◀", go_prev);
   let week_label = html_div_text(week_row, "");
   app_shared_button(week_row, "▶", go_next);
+  html_div_text(nav, "Jump to any week");
   let jump = html_input_date(nav);
   app_shared_input_style(jump);
   html_on(jump, "change", on_jump);
