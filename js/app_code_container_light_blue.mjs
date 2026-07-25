@@ -42,6 +42,5 @@ export function app_code_container_light_blue(parent) {
   html_border(c, "0.15em", border_color);
   let border_radius = app_shared_border_radius_large();
   html_border_radius(c, border_radius);
-  app_code_flex_gap(c);
   return c;
 }
