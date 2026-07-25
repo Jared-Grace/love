@@ -251,7 +251,7 @@ export async function app_g_verify_home(context) {
       html_style_margin_top(msg, "1em");
     }
     let bar = html_div_centered(wrap);
-    html_style_set(bar, "margin-top", app_shared_spaced_small_gap());
+    html_style_margin_top(bar, app_shared_spaced_small_gap());
     passages.forEach(function (passage) {
       let key = g_sermon_passage_verses_key(passage);
       let is_approved =
@@ -278,7 +278,7 @@ export async function app_g_verify_home(context) {
           "No verses written yet for this chapter.",
         );
         app_shared_text_deemphasized(empty);
-        html_style_set(empty, "margin-top", "1em");
+        html_style_margin_top(empty, "1em");
       }
       return;
     }
