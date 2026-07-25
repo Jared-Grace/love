@@ -64,6 +64,11 @@ export function availability_editor(parent) {
   add_button("weekly", "Weekly");
   add_button("monthly", "Monthly");
   add_button("once", "One time");
+  let preview_heading = html_div_text(parent, "Preview of what you'll add");
+  html_style_assign(preview_heading, {
+    "font-weight": "bold",
+    "margin-top": "0.75rem",
+  });
   let preview = html_div(parent);
   render_grid();
   render_preview();
