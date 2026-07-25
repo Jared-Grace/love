@@ -21,5 +21,5 @@ export async function app_bible_chapters(context) {
     code_to_button_text,
     oc,
   );
-  each(buttons, app_bible_picker_button_enlarge);
+  app_bible_picker_buttons_enlarge(buttons);
 }

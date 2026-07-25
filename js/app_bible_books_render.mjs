@@ -20,6 +20,7 @@ export function app_bible_books_render(list_div, query, books, on_open) {
   html_clear(list_div);
   let q = text_lower_to(query);
   let divisions = ebible_book_divisions();
+  let all_buttons = [];
   function lambda_division(division) {
     let name = property_get(division, "name");
     let codes = property_get(division, "book_codes");
@@ -48,10 +49,12 @@ export function app_bible_books_render(list_div, query, books, on_open) {
           await on_open(book);
         }
         let button = app_shared_button(buttons_div, text, lambda_click);
-        app_bible_picker_button_enlarge(button);
+        list_add(all_buttons, button);
       }
       each(matching, lambda_button);
     }
   }
   each(divisions, lambda_division);
+  ("size all the shown books together by how many matched, so a narrow search of a few books gets big targets while the full canon stays compact");
+  app_bible_picker_buttons_enlarge(all_buttons);
 }
