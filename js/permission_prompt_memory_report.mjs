@@ -16,7 +16,7 @@ export async function permission_prompt_memory_report(days) {
   let config = memory_folder();
   let real = memory_folder_realpath();
   function memory_is(event) {
-    let b = text_includes(event.label, config) || text_includes(event.label, real);
+    let b = text_includes(event.label, "/home/j/repos/love/.claude");
     return b;
   }
   let interruptions = list_filter(confirmed, memory_is);
