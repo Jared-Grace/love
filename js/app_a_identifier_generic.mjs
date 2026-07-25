@@ -219,7 +219,7 @@ export function app_a_identifier_generic(
         text: "Param delete",
         fn: async function lambda() {
           let key = app_a_function_name_selected_key();
-          let f_name = storage_local_get_context(context, key);
+          let f_name = storage_session_get_context(context, key);
           await function_param_delete(f_name, name);
           await app_a_function_overlay_refresh(a, o3);
         },

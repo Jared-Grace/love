@@ -16,7 +16,7 @@ import { property_get_fn } from "./property_get_fn.mjs";
 import { on_keydowns_key } from "./on_keydowns_key.mjs";
 import { function_unalias_exists } from "./function_unalias_exists.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
-import { storage_local_get_context } from "./storage_local_get_context.mjs";
+import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { app_a_app_selected_key } from "./app_a_app_selected_key.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -24,7 +24,7 @@ export async function app_a_app(context) {
   let root = html_clear_context(context);
   let e = emoji_mobile();
   let key = app_a_app_selected_key();
-  let a_name = storage_local_get_context(context, key);
+  let a_name = storage_session_get_context(context, key);
   let f_name = app_a_function_name_selected(context);
   let a_name_f = app_shared_name_prefixed(a_name);
   let combined = await app_shared_name_main(a_name);
