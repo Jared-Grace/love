@@ -30,6 +30,8 @@ export function marker_aliases_retired() {
     mdm: "marker_next_delete_multiple",
     mdd: "marker_down_1",
     muu: "marker_up_1",
+    mk: "marker",
+    mg: "data_marker_current_get",
   };
   return aliases;
 }
