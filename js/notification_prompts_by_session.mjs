@@ -1,3 +1,5 @@
+import { not_equal } from "./not_equal.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { notification_events } from "./notification_events.mjs";
 export function notification_prompts_by_session() {
@@ -5,11 +7,12 @@ export function notification_prompts_by_session() {
   let events = notification_events();
   let by_session = new Map();
   for (let event of events) {
-    if (event.kind !== "permission") {
+    if (not_equal(event.kind, "permission")) {
       continue;
     }
     let session = event.session;
-    if (!by_session.has(session)) {
+    let b = by_session.has(session);
+    if (not(b)) {
       by_session.set(session, []);
     }
     let times = by_session.get(session);
