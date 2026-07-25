@@ -1,3 +1,7 @@
+import { equal } from "./equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_style_grid } from "./html_style_grid.mjs";
@@ -74,22 +78,23 @@ export function week_calendar(parent, on_ranges) {
     });
   }
   function range_covers(span, day, slot) {
-    let same_day = span.day === day;
-    let after_start = slot >= span.start;
-    let before_end = slot <= span.end;
+    let same_day = equal(span.day, day);
+    let after_start = greater_than_equal(slot, span.start);
+    let before_end = less_than_equal(slot, span.end);
     let covers = same_day && after_start && before_end;
     return covers;
   }
   function selected_is(day, slot) {
     function in_range(span) {
-      return range_covers(span, day, slot);
+      let r = range_covers(span, day, slot);
+      return r;
     }
     let found = list_any(ranges, in_range);
     return found;
   }
   function anchor_is(day, slot) {
-    let live = anchor !== null;
-    let same = live && anchor.day === day && anchor.slot === slot;
+    let live = not_equal(anchor, null);
+    let same = live && equal(anchor.day, day) && equal(anchor.slot, slot);
     return same;
   }
   function record_color(record) {
@@ -124,12 +129,13 @@ export function week_calendar(parent, on_ranges) {
   function range_remove(day, slot) {
     function keep(span) {
       let covers = range_covers(span, day, slot);
-      return not(covers);
+      let n = not(covers);
+      return n;
     }
     ranges = list_filter(ranges, keep);
   }
   function cell_pressed(day, slot) {
-    let has_anchor = anchor !== null;
+    let has_anchor = not_equal(anchor, null);
     if (has_anchor) {
       anchor_click(day, slot);
     } else {
@@ -138,8 +144,8 @@ export function week_calendar(parent, on_ranges) {
     paint();
   }
   function anchor_click(day, slot) {
-    let same_piece = anchor.day === day && anchor.slot === slot;
-    let same_day = anchor.day === day;
+    let same_piece = equal(anchor.day, day) && equal(anchor.slot, slot);
+    let same_day = equal(anchor.day, day);
     if (same_piece) {
       anchor = null;
     } else if (same_day) {
