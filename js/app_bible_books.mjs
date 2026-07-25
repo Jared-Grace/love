@@ -23,6 +23,10 @@ export async function app_bible_books(context) {
   await app_bible_button_back_to_reader(root, context);
   let e = ebible_folder_english();
   let books = await ebible_version_books_browser(e);
+  ("the book being read now, so its button can be marked in the list");
+  let hash = html_hash_object_get();
+  let current_chapter_code = property_get(hash, "c");
+  let current_book_code = ebible_chapter_code_to_book(current_chapter_code);
   async function on_open(book) {
     "open a chosen book at its first chapter, then hand off to the chapter picker";
     let book_code = property_get(book, "book_code");
@@ -36,8 +40,8 @@ export async function app_bible_books(context) {
   let list_div = html_div(root);
   function on_input() {
     let query = html_value_get(search);
-    app_bible_books_render(list_div, query, books, on_open);
+    app_bible_books_render(list_div, query, books, on_open, current_book_code);
   }
   html_on_input(search, on_input);
-  app_bible_books_render(list_div, "", books, on_open);
+  app_bible_books_render(list_div, "", books, on_open, current_book_code);
 }

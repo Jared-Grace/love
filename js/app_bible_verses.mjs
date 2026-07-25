@@ -30,4 +30,6 @@ export async function app_bible_verses(context) {
   let oc = app_bible_verse_open_curried(context);
   let buttons = app_shared_button_list_centered(card, items, identity, oc);
   app_bible_picker_buttons_enlarge(buttons);
+  let current = property_get(r, "verse_number");
+  app_bible_picker_mark_current(buttons, items, current);
 }
