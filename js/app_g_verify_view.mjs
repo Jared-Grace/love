@@ -17,6 +17,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_centered } from "./html_centered.mjs";
+import { html_font_set } from "./html_font_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -118,7 +119,7 @@ export function app_g_verify_view(
     html_style_margin_top(l, small_gap);
   }
   let passage_panel = app_shared_container_base(container);
-  html_style_set(passage_panel, "font-family", serif);
+  html_font_set(passage_panel, serif);
   html_style_font_size(passage_panel, "1.3em");
   html_style_set(passage_panel, "line-height", "1.95");
   tokens.forEach(function (t, i) {
@@ -166,7 +167,7 @@ export function app_g_verify_view(
       })
       .join(" ");
     let words_el = html_span_text(row, words);
-    html_style_set(words_el, "font-family", serif);
+    html_font_set(words_el, serif);
     html_style_set(words_el, "flex", "0 0 42%");
     app_shared_text_deemphasized(words_el);
     html_span_text(row, property_get(l, "text"));
@@ -241,7 +242,7 @@ export function app_g_verify_view(
   html_style_set(suggest_area, "width", "100%");
   html_style_set(suggest_area, "min-height", "6em");
   html_style_set(suggest_area, "box-sizing", "border-box");
-  html_style_set(suggest_area, "font-family", serif);
+  html_font_set(suggest_area, serif);
   html_style_font_size(suggest_area, "1em");
   html_style_set(suggest_area, "line-height", "1.5");
   html_style_margin_top(suggest_area, small_gap);

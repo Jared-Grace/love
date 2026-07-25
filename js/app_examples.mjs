@@ -3,6 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_font_set } from "./html_font_set.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { storage_session_get } from "./storage_session_get.mjs";
 import { storage_session_set } from "./storage_session_set.mjs";
@@ -35,7 +36,7 @@ export async function app_examples(context) {
     html_style_set(page, "max-width", "62rem");
     html_style_set(page, "margin", "2rem auto");
     html_style_set(page, "padding", "2rem");
-    html_style_set(page, "font-family", "system-ui, sans-serif");
+    html_font_set(page, "system-ui, sans-serif");
     html_font_color_set(page, "#1a1a1a");
     let selected = storage_session_get(app_examples, "selected");
     if (number_is(selected)) {
