@@ -51,7 +51,7 @@ export async function memory_frontmatter_names_repair() {
       lines.splice(1, 0, key + " " + expected);
     }
     let joined = lines.join("\n");
-    await file_write(path, joined);
+    await file_overwrite(path, joined);
     list_add(repaired, {
       file,
       expected,
