@@ -1,3 +1,4 @@
+import { worker_exit_if_idle } from "./worker_exit_if_idle.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 export function pool_retire() {
