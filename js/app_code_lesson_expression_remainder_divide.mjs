@@ -1,3 +1,4 @@
+import { app_code_remainder_roadmap } from "./app_code_remainder_roadmap.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
@@ -33,24 +34,30 @@ export function app_code_lesson_expression_remainder_divide() {
   let percent = property_get(operator, "operator");
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the remainder formula a - Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven and the remainder is real";
-    let leftover = integer_random(1, subtract(divisor, 1));
-    let dividend = add(multiply(quotient, divisor), leftover);
+    let max = subtract(divisor, 1);
+    let leftover = integer_random(1, max);
+    let left = multiply(quotient, divisor);
+    let dividend = add(left, leftover);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
+    let t = text_to(divisor);
     let whole_part = text_combine_multiple([
       "Math.floor(",
       division,
       ") * ",
-      text_to(divisor),
+      t,
     ]);
-    let formula = text_combine_multiple([text_to(dividend), " - ", whole_part]);
-    return {
+    let t2 = text_to(dividend);
+    let formula = text_combine_multiple([t2, " - ", whole_part]);
+    let r = {
       question: division,
       answer: formula,
     };
+    return r;
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 division";
-    return app_code_lesson_divisor_quotient_batch(make);
+    let list = app_code_lesson_divisor_quotient_batch(make);
+    return list;
   }
   let example_answer_label = "Remainder formula: ";
   let example_question_label = app_code_label_code_question();
@@ -59,26 +66,25 @@ export function app_code_lesson_expression_remainder_divide() {
     let nums = text_integers(question);
     let dividend = list_get(nums, 0);
     let divisor = list_get(nums, 1);
+    let t3 = text_to(divisor);
     let whole_part = text_combine_multiple([
       "Math.floor(",
       question,
       ") * ",
-      text_to(divisor),
+      t3,
     ]);
-    let no_floor = text_combine_multiple([
-      text_to(dividend),
-      " - ",
-      question,
-      " * ",
-      text_to(divisor),
-    ]);
+    let t4 = text_to(dividend);
+    let t5 = text_to(divisor);
+    let no_floor = text_combine_multiple([t4, " - ", question, " * ", t5]);
+    let t6 = text_to(dividend);
     let no_multiply = text_combine_multiple([
-      text_to(dividend),
+      t6,
       " - Math.floor(",
       question,
       ")",
     ]);
-    return [whole_part, no_floor, no_multiply];
+    let r2 = [whole_part, no_floor, no_multiply];
+    return r2;
   }
   function backwards_decoys(shown_formula, percent) {
     "for the backwards kind (given the remainder formula, pick the % it equals): tempting wrong matches. The DIVISION a / b (it sits right inside the formula, but that is the division, not its remainder), the SWAPPED remainder b % a, and the QUOTIENT part Math.floor(a / b) (only a piece of the formula). Dividend is the formula's first integer, divisor the third (inside Math.floor)";
@@ -88,7 +94,8 @@ export function app_code_lesson_expression_remainder_divide() {
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
     let swapped = js_code_binary_spaced_nb(divisor, "%", dividend);
     let floored = text_combine_multiple(["Math.floor(", division, ")"]);
-    return [division, swapped, floored];
+    let r3 = [division, swapped, floored];
+    return r3;
   }
   function quizzes_get(question, answer) {
     "three quiz kinds: RECOGNISE the remainder formula among wrong rewrites (multiple choice), BUILD it from tokens (unscramble), then BACKWARDS - given the formula, pick the % it equals (14 - Math.floor(14 / 4) * 4 is 14 % 4). Forwards recognise then produce, then connect the long formula to the % shorthand";
@@ -131,15 +138,17 @@ export function app_code_lesson_expression_remainder_divide() {
       "forwards kinds are shown the division and answer with the formula; the backwards kind is shown the formula and answers with the % it equals";
       let is_backwards = property_get_or(info, "backwards", false);
       if (is_backwards) {
-        return {
+        let r4 = {
           question: answer,
           answer: percent,
         };
+        return r4;
       }
-      return {
+      let r5 = {
         question,
         answer,
       };
+      return r5;
     }
     function each_info(info) {
       let quiz_qa = qa_for(info);
@@ -177,7 +186,11 @@ export function app_code_lesson_expression_remainder_divide() {
     return quizzes_exercises;
   }
   function example_answer(parent, text) {
-    "render the formula as a code chip on its OWN fresh div - passing html_text_set_code_dark straight to app_code_lesson_base would clear the shared example container (wiping the Code label and the division already rendered there) and leave only the formula";
+    ("render the formula as a code chip on its OWN fresh div - passing ",
+      html_text_set_code_dark.name,
+      " straight to ",
+      app_code_lesson_base.name,
+      " would clear the shared example container (wiping the Code label and the division already rendered there) and leave only the formula");
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
