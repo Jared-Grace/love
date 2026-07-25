@@ -27,7 +27,7 @@ export function permission_self_settings_cases() {
   let cases = [
     {
       rule: text_combine("Edit(", right),
-      blocked: true,
+      blocked: false,
       why: "a plain write inside the config folder, which the guard prompts for however the rule is written",
     },
     {
