@@ -1,37 +1,38 @@
-import { sleep_success_color } from "../../love/js/sleep_success_color.mjs";
-import { app_code_no_more_lessons } from "../../love/js/app_code_no_more_lessons.mjs";
-import { not } from "../../love/js/not.mjs";
-import { app_code_lesson_current_last_is } from "../../love/js/app_code_lesson_current_last_is.mjs";
-import { app_code_lesson_quiz_qa_question } from "../../love/js/app_code_lesson_quiz_qa_question.mjs";
-import { html_visibility_hidden } from "../../love/js/html_visibility_hidden.mjs";
-import { html_visibility_visible } from "../../love/js/html_visibility_visible.mjs";
-import { app_code_quiz_correction } from "../../love/js/app_code_quiz_correction.mjs";
-import { html_clear } from "../../love/js/html_clear.mjs";
-import { app_shared_button_wide_next } from "../../love/js/app_shared_button_wide_next.mjs";
-import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
-import { app_code_quiz_index_get } from "../../love/js/app_code_quiz_index_get.mjs";
-import { list_index_last_is } from "../../love/js/list_index_last_is.mjs";
-import { app_code_quiz_index_transform } from "../../love/js/app_code_quiz_index_transform.mjs";
-import { add_1 } from "../../love/js/add_1.mjs";
-import { subtract_1 } from "../../love/js/subtract_1.mjs";
-import { at_least_1 } from "../../love/js/at_least_1.mjs";
-import { app_code_lesson_above } from "../../love/js/app_code_lesson_above.mjs";
-import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
-import { html_visibility_hidden_multiple } from "../../love/js/html_visibility_hidden_multiple.mjs";
-import { app_code_after_lesson } from "../../love/js/app_code_after_lesson.mjs";
-import { app_code_lesson_current_number } from "../../love/js/app_code_lesson_current_number.mjs";
-import { app_code_review_scope } from "../../love/js/app_code_review_scope.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
-import { app_code_quiz_index_reset } from "../../love/js/app_code_quiz_index_reset.mjs";
-import { app_shared_success_message } from "../../love/js/app_shared_success_message.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { app_code_example_answer_label } from "../../love/js/app_code_example_answer_label.mjs";
-import { property_get } from "../../love/js/property_get.mjs";
-import { property_get_or } from "../../love/js/property_get_or.mjs";
-import { text_combine } from "../../love/js/text_combine.mjs";
-import { app_code_button_skip_lesson } from "../../love/js/app_code_button_skip_lesson.mjs";
-import { html_style_margin_top } from "../../love/js/html_style_margin_top.mjs";
-import { app_shared_spaced_gap } from "../../love/js/app_shared_spaced_gap.mjs";
+import { sleep_success_color } from "./sleep_success_color.mjs";
+import { app_code_hash_write } from "./app_code_hash_write.mjs";
+import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
+import { not } from "./not.mjs";
+import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
+import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
+import { html_visibility_visible } from "./html_visibility_visible.mjs";
+import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { app_shared_button_wide_next } from "./app_shared_button_wide_next.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { app_code_quiz_index_get } from "./app_code_quiz_index_get.mjs";
+import { list_index_last_is } from "./list_index_last_is.mjs";
+import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
+import { add_1 } from "./add_1.mjs";
+import { subtract_1 } from "./subtract_1.mjs";
+import { at_least_1 } from "./at_least_1.mjs";
+import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { html_visibility_hidden_multiple } from "./html_visibility_hidden_multiple.mjs";
+import { app_code_after_lesson } from "./app_code_after_lesson.mjs";
+import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
+import { app_code_review_scope } from "./app_code_review_scope.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
+import { app_shared_success_message } from "./app_shared_success_message.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 export function app_code_lesson_quiz(
   container_blue_light,
   qa,
@@ -87,13 +88,16 @@ export function app_code_lesson_quiz(
     } else {
       app_code_quiz_index_transform(context, quizzes, add_1);
       refresh();
+      ("the Next/Back buttons redraw only the quiz area (a local refresh), which does not run the app-level after_refresh, so mirror the new quiz position into the url here - otherwise a browser reload re-seeds the OLD quiz index from a stale hash and drops back to the first quiz");
+      app_code_hash_write(context);
     }
   }
   let next_button = app_shared_button_wide_next(parent_container, on_next);
-  html_style_margin_top(next_button, app_shared_spaced_gap());
+  let value = app_shared_spaced_gap();
+  html_style_margin_top(next_button, value);
   let last_lesson_end = qli && no_more;
   if (last_lesson_end) {
-    "Next is ALWAYS shown so the learner can always move on; at the very end it wraps back to the first lesson, and this note tells them they have reached the last one";
+    ("Next is ALWAYS shown so the learner can always move on; at the very end it wraps back to the first lesson, and this note tells them they have reached the last one");
     app_code_no_more_lessons(parent_container);
   }
   function on_reveal() {
@@ -106,7 +110,8 @@ export function app_code_lesson_quiz(
     "Show me the answer",
     on_reveal,
   );
-  html_style_margin_top(reveal_button, app_shared_spaced_gap());
+  let value2 = app_shared_spaced_gap();
+  html_style_margin_top(reveal_button, value2);
   if (not(qli)) {
     app_code_button_skip_lesson(context, parent_container);
   }
@@ -114,12 +119,18 @@ export function app_code_lesson_quiz(
     let on_back = function lambda() {
       app_code_quiz_index_transform(context, quizzes, subtract_1);
       refresh();
+      app_code_hash_write(context);
     };
     let left = app_shared_button_back_text();
     let back_text = text_combine(left, " to the previous quiz");
-    "give the go-back button the same top gap as the other action buttons so the quiz button stack is evenly spaced";
-    let back_button = app_shared_button_wide(parent_container, back_text, on_back);
-    html_style_margin_top(back_button, app_shared_spaced_gap());
+    ("give the go-back button the same top gap as the other action buttons so the quiz button stack is evenly spaced");
+    let back_button = app_shared_button_wide(
+      parent_container,
+      back_text,
+      on_back,
+    );
+    let value3 = app_shared_spaced_gap();
+    html_style_margin_top(back_button, value3);
   }
   let hides = [success];
   html_visibility_hidden_multiple(hides);
