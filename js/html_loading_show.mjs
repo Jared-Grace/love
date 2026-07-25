@@ -1,7 +1,7 @@
 import { html_loading_state } from "./html_loading_state.mjs";
 import { html_loading_overlay } from "./html_loading_overlay.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-export function html_loading_show() {
+export async function html_loading_show() {
   let state = html_loading_state();
   let timer = state.timer;
   if (timer !== null) {
@@ -11,7 +11,7 @@ export function html_loading_show() {
   state.count = state.count + 1;
   let overlay = state.overlay;
   if (overlay === null) {
-    state.overlay = html_loading_overlay();
+    state.overlay = await html_loading_overlay();
     return;
   }
   html_style_set(overlay, "opacity", "1");

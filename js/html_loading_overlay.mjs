@@ -5,8 +5,8 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_loading_spinner } from "./html_loading_spinner.mjs";
-export function html_loading_overlay() {
-  ("attach to <html>, not <body>: a screen re-render clears <body>, which would delete this overlay and flash white; <html> survives that clear so the spinner stays visible the whole time");
+export async function html_loading_overlay() {
+  "attach to <html>, not <body>: a screen re-render clears <body>, which would delete this overlay and flash white; <html> survives that clear so the spinner stays visible the whole time";
   let html = html_document_root();
   let div = html_div(html);
   let s = {
@@ -26,7 +26,7 @@ export function html_loading_overlay() {
     transition: "opacity 0.15s ease",
   };
   html_style_assign(div, s);
-  html_loading_spinner(div);
+  await html_loading_spinner(div);
   let message = html_p_text(div, "One moment, please 🙏");
   html_style_assign(message, {
     color: "white",
