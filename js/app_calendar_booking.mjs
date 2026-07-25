@@ -35,6 +35,11 @@ export function app_calendar_booking(parent, user) {
     "wa.me/15551234567 or facebook.com/yourname",
   );
   app_shared_input_style(link);
+  let link_hint = html_div_text(
+    card,
+    "So the preacher can message you to confirm your visit",
+  );
+  app_shared_text_deemphasized(link_hint);
   let status = html_div_text(card, "");
   app_shared_button_green(card, "Book preaching", on_book);
   async function on_book() {
