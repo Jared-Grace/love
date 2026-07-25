@@ -49,7 +49,7 @@
       "Bash(node scripts/ai.mjs examples_data_write:*)",
       "Bash(node scripts/ai.mjs examples_gate_run:*)",
       "Bash(node scripts/ai.mjs file_imports_repair:*)",
-      "Bash(node scripts/ai.mjs firebase_deploy)",
+      "Bash(node scripts/ai.mjs firebase_deploy:*)",
       "Bash(node scripts/ai.mjs firebase_storage_exists:*)",
       "Bash(node scripts/ai.mjs function_auto:*)",
       "Bash(node scripts/ai.mjs function_auto_multiple:*)",
