@@ -30,7 +30,10 @@ export function app_calendar_booking(parent, user) {
   let time = html_input_time(card);
   app_shared_input_style(time);
   html_div_text(card, "Your WhatsApp or Facebook link");
-  let link = html_input_text(card, "wa.me/15551234567 or facebook.com/yourname");
+  let link = html_input_text(
+    card,
+    "wa.me/15551234567 or facebook.com/yourname",
+  );
   app_shared_input_style(link);
   let status = html_div_text(card, "");
   app_shared_button_green(card, "Book preaching", on_book);
