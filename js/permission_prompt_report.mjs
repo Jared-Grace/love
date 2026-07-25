@@ -14,7 +14,8 @@ export async function permission_prompt_report(days, seconds_minimum) {
     return b;
   }
   function variable_is(event) {
-    let b = not(instant_is(event));
+    let b2 = instant_is(event);
+    let b = not(b2);
     return b;
   }
   let measured = list_filter(events, instant_is);
