@@ -444,6 +444,21 @@ DANGEROUS_CHARS = set("`<{}()")
 # whatever text it prints.
 SUBSTITUTION_PLACEHOLDER = "\x00"
 
+# Real statement separators are emitted as sentinel tokens prefixed with \x1e
+# (ASCII record separator), a control char that never appears in a command or
+# a word. This keeps a QUOTED separator char - `tr ';'`, `tr '|'`, whose word
+# value is exactly ";"/"|" - distinguishable from a real separator, so it is
+# NOT mis-split into a new statement. The prefix guarantees no collision: a
+# word token can only ever contain \x00 (a substitution placeholder), never
+# \x1e. Fails closed regardless - a misread separator would only over-split
+# into an untrusted fragment (ask), never merge two statements (which could
+# hide a command).
+_SEP = "\x1e"
+SEP_SEMI = _SEP + ";"
+SEP_PIPE = _SEP + "|"
+SEP_AND = _SEP + "&&"
+SEP_OR = _SEP + "||"
+
 ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)=")
 
 # Variable names whose assignment can change how the *following* command is
