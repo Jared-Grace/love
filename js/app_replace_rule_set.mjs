@@ -1,10 +1,10 @@
+import { app_replace_rule_apply } from "./app_replace_rule_apply.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "./list_index_of_json.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
 import { app_shared_color_light_green } from "./app_shared_color_light_green.mjs";
 import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -91,10 +91,12 @@ export async function app_replace_rule_set(context) {
   let resumed = false;
   if (null_not_is(history_saved)) {
     ("only resume history saved in the current {state, rule, index} shape; an older saved shape (no index) is ignored so a format change never crashes an existing player - the goal reopens unsolved and re-saves on the next solve");
-    resumed = property_exists(list_get(history_saved, 0), "index");
+    let object = list_get(history_saved, 0);
+    resumed = property_exists(object, "index");
   }
   ("a goal solved in a past session resumes solved: start at the goal so success fires, and reuse the saved steps so the green proof survives a browser refresh");
-  let start = ternary(resumed, end, property_get(start_end, "start"));
+  let on_false = property_get(start_end, "start");
+  let start = ternary(resumed, end, on_false);
   let history = ternary(resumed, history_saved, [
     {
       state: start,
@@ -123,8 +125,8 @@ export async function app_replace_rule_set(context) {
       button_rule_on_click_inner(index_rule);
     }
   }
-  let left2 = emoji_question();
-  let hint_text = text_combine(left2, "Hint");
+  let left = emoji_question();
+  let hint_text = text_combine(left, "Hint");
   let hint_button = app_shared_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
@@ -212,10 +214,14 @@ export async function app_replace_rule_set(context) {
             duration,
             div_symbols,
           ));
-        let last_state = property_get(list_last(history), "state");
-        if (not(json_equal(start, last_state))) {
+        let object2 = list_last(history);
+        let last_state = property_get(object2, "state");
+        let b = json_equal(start, last_state);
+        if (not(b)) {
           let rule_used = list_get(rules_used, index_selected);
-          ("index is where the rule's left matched (the position passed to app_replace_rule_apply); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
+          ("index is where the rule's left matched (the position passed to ",
+            app_replace_rule_apply.name,
+            "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
           list_add(history, {
             state: start,
             rule: rule_used,
@@ -317,7 +323,8 @@ export async function app_replace_rule_set(context) {
   }
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
-    index_selected = ternary(index_selected === index, null, index);
+    let condition = equal(index_selected, index);
+    index_selected = ternary(condition, null, index);
     list_map_property_invoke(symbol_buttons, "refresh_sb");
     list_map_property_invoke(rule_buttons, "refresh_rb");
     refresh_count_increase();
