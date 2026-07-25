@@ -7,9 +7,9 @@ import { examples_order } from "./examples_order.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function examples_orphan_gate_run() {
-  ("QA gate: every data/examples file is placed in a curriculum tier (examples_groups).");
-  ("An ungrouped example still renders, but only in the trailing Other bucket with no");
-  ("deliberate complexity placement — this fails loud so the junk drawer never grows.");
+  "QA gate: every data/examples file is placed in one of the curriculum tiers.";
+  "An ungrouped example still renders, but only in the trailing Other bucket with no";
+  "deliberate complexity placement — this fails loud so the junk drawer never grows.";
   let names = await folder_read("data/examples");
   function is_mjs(name) {
     let ew = text_ends_with(name, ".mjs");
@@ -28,6 +28,6 @@ export async function examples_orphan_gate_run() {
   }
   let orphans = list_filter(mjs, is_orphan);
   list_empty_is_assert_json(orphans, {
-    hint: "every data/examples file must be listed in examples_groups() so it has a deliberate curriculum tier — add these to the group that fits their complexity (they currently only show in the Other bucket)",
+    hint: "every data/examples file must be listed in the curriculum groups so it has a deliberate tier — add these to the group that fits their complexity (they currently only show in the Other bucket)",
   });
 }
