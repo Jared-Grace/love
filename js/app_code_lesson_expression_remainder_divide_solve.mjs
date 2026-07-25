@@ -58,6 +58,8 @@ export function app_code_lesson_expression_remainder_divide_solve() {
     next_arg,
     example_count: 2,
     decoys,
+    forwards_question_label: "Remainder formula: ",
+    forwards_answer_label: "solved value: ",
   });
   return lesson;
   function title_name_id() {

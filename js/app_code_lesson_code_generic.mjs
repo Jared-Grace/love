@@ -1,3 +1,4 @@
+import { null_is } from "./null_is.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { noop } from "./noop.mjs";
@@ -22,9 +23,8 @@ export function app_code_lesson_code_generic(params) {
     params,
     "forwards_answer_count_override",
   );
-  let example_answer_label = text_first_upper_to(
-    text_combine(value, " of code: "),
-  );
+  let s = text_combine(value, " of code: ");
+  let example_answer_label = text_first_upper_to(s);
   let quiz_label = text_combine_multiple([
     "What is the ",
     value,
@@ -35,15 +35,39 @@ export function app_code_lesson_code_generic(params) {
     value,
     "? ",
   ]);
-  let backwards_question_label = text_first_upper_to(text_combine(value, ": "));
+  let s2 = text_combine(value, ": ");
+  let backwards_question_label = text_first_upper_to(s2);
   let example_question_label = app_code_label_code_question();
   let example_count = property_get(params, "example_count");
   let on_question = html_text_set_code_dark;
   let decoys = property_get_or(params, "decoys", null);
+  ("a lesson may override the forwards quiz labels (the question shown and the answer prompt); absent, they fall back to the generic Code: / What is the value of this code? wording");
+  let forwards_question_label_override = property_get_or(
+    params,
+    "forwards_question_label",
+    null,
+  );
+  let forwards_answer_label_override = property_get_or(
+    params,
+    "forwards_answer_label",
+    null,
+  );
+  let forwards_question_label = example_question_label;
+  if (null_is(forwards_question_label_override)) {
+    forwards_question_label = example_question_label;
+  } else {
+    forwards_question_label = forwards_question_label_override;
+  }
+  let forwards_answer_label = quiz_label;
+  if (null_is(forwards_answer_label_override)) {
+    forwards_answer_label = quiz_label;
+  } else {
+    forwards_answer_label = forwards_answer_label_override;
+  }
   let forwards = {
-    question_label: example_question_label,
+    question_label: forwards_question_label,
     on_question,
-    answer_label: quiz_label,
+    answer_label: forwards_answer_label,
     answer_on_button: noop,
     answer_count_override: forwards_answer_count_override,
     decoys,
