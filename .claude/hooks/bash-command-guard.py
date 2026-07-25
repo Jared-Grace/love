@@ -645,6 +645,40 @@ def load_safe_exact_commands():
     return commands
 
 
+LEADING_LITERAL_ASSIGN_RE = re.compile(
+    r"(?:^|[;&|\n])[ \t]*([A-Za-z_][A-Za-z0-9_]*)=([A-Za-z0-9_./+@:%-]+)(?=[ \t]|$|[;&|\n])"
+)
+
+
+def _literal_var_map(command):
+    """Capture `VAR=<literal path>` assignments (value restricted to a plain
+    path charset - no $, quotes, or shell metacharacters) so that a later
+    `> $VAR/f` redirect target can be resolved and checked against the
+    scratchpad allowance. Safe by construction: resolution only ever ADDS
+    recognition - the resolved target must still pass is_safe_scratchpad_target,
+    so a non-scratchpad value (like /etc), a value built from `$(...)`, or a
+    value the guard misreads all stay blocked, never leaked. Not quote-aware,
+    which is fine for the same reason - a spurious capture can't widen what the
+    scratchpad check accepts."""
+    return {
+        m.group(1): m.group(2)
+        for m in LEADING_LITERAL_ASSIGN_RE.finditer(command)
+    }
+
+
+VAR_PREFIX_RE = re.compile(r"^\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?(.*)$")
+
+
+def _resolve_leading_var(path, var_map):
+    """If `path` starts with `$VAR` or `${VAR}` for a captured literal VAR,
+    substitute its value for that prefix; else return path unchanged. The
+    caller re-validates the result against the scratchpad allowance."""
+    m = VAR_PREFIX_RE.match(path)
+    if m and m.group(1) in var_map:
+        return var_map[m.group(1)] + m.group(2)
+    return path
+
+
 def tokenize(command, subst_validator=None):
     """Quote-aware tokenizer. Emits word tokens (quotes stripped) and a
     single ';' token for each unquoted ';' or newline. Raises Unsupported
