@@ -7,6 +7,7 @@ export async function memory_link_defects() {
   let stems = await memory_note_stems();
   let prefixes = memory_type_prefixes();
   let todo = memory_todo_prefix();
+  let typo = await memory_dangling_links();
   let defects = [];
   for (let link of unresolved) {
     let marked = text_starts_with(link, todo);
@@ -32,15 +33,14 @@ export async function memory_link_defects() {
     if (not(named_like_note)) {
       continue;
     }
-    let typo = await memory_dangling_links();
     function is_this_link(result) {
       let other = property_get(result, "link");
       let b = equal(other, link);
       return b;
     }
-    let already = list_filter(typo, is_this_link);
-    let reported = list_empty_is(already);
-    if (not(reported)) {
+    let same = list_filter(typo, is_this_link);
+    let reported_as_typo = not(list_empty_is(same));
+    if (reported_as_typo) {
       continue;
     }
     let marker = text_combine(todo, link);
