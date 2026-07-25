@@ -20,15 +20,23 @@ export async function js_auto_generic(ast, transforms) {
     d_path,
   );
   if (not(exists)) {
-    let data_get = data_generate_get();
-    global_function_property_set(file_read_cached_initialize, d_path, data_get);
+    ("the local is not named after the getter it shadows: a local sharing a repo function's name gets bound by the import-repair pass, which then adds an import for a function this file never calls");
+    let generated = data_generate_get();
+    global_function_property_set(
+      file_read_cached_initialize,
+      d_path,
+      generated,
+    );
   }
   let f_path = js_flo_path(ast);
   let p = performance_start(js_auto_generic.name);
   async function lambda(t) {
     performance_next(p, t.name);
     await js_auto_transform_run(t, ast);
-    let data = global_function_property_get(file_read_cached_initialize, d_path);
+    let data = global_function_property_get(
+      file_read_cached_initialize,
+      d_path,
+    );
     data_file_update_inner(
       {
         ast,
