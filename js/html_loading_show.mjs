@@ -14,5 +14,5 @@ export async function html_loading_show() {
     state.overlay = await html_loading_overlay();
     return;
   }
-  html_style_set(overlay, "opacity", "1");
+  html_style_opacity(overlay, "1");
 }
