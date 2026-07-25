@@ -27,7 +27,7 @@ wasted retry round-trip on every memory recall. Measured 2026-07-25: a
 (tool_use 07:35:19.701Z -> tool_result 07:35:19.777Z in the session
 transcript), i.e. auto-approved with no human in the loop. The guard only
 fires on writes. */
-const tools_allowed = new Set(["Edit", "Write", "NotebookEdit", "MultiEdit"]);
+const tools_allowed = new Set(["Read", "Edit", "Write", "NotebookEdit", "MultiEdit"]);
 
 function path_resolved(file_path) {
   /* A brand-new memory file does not exist yet, so realpath of the file
