@@ -1,10 +1,12 @@
 import { week_calendar } from "./week_calendar.mjs";
 import { availability_send } from "./availability_send.mjs";
-export function app_calendar_availability(parent, user) {
-  "the owner's screen for choosing when they are available to preach: a weekly grid of 30-minute pieces, saved to Firebase after each change";
+import { availability_load } from "./availability_load.mjs";
+export async function app_calendar_availability(parent, user) {
+  "the owner's screen for choosing when they can preach: loads their saved windows, shows the weekly grid, and saves to Firebase after each change";
   let uid = user.uid;
+  let initial = await availability_load(uid);
   async function on_ranges(ranges) {
     await availability_send(uid, ranges);
   }
-  week_calendar(parent, on_ranges);
+  week_calendar(parent, initial, on_ranges);
 }
