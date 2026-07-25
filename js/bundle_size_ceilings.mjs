@@ -18,6 +18,14 @@ export function bundle_size_ceilings() {
       name: "examples",
       kib: 260,
     },
+    {
+      name: "sandbox",
+      kib: 50,
+    },
+    {
+      name: "designs_universal",
+      kib: 50,
+    },
   ];
   return ceilings;
 }
