@@ -28,8 +28,11 @@ export function permission_rule_command_probe(rule) {
     let prefix = inner.slice(0, difference2);
     let separator = "/";
     if (text_ends_with(prefix, separator)) {
+      ("two leaves, not one — a path verb that moves rather than acts in place needs a source and a destination, and probing it with a single path reports a prompt the real two-argument command never sees");
       let leaf = text_combine(prefix, "probe_leaf");
-      return leaf;
+      let leaf_second = text_combine(prefix, "probe_leaf_second");
+      let both = text_join([leaf, leaf_second], " ");
+      return both;
     }
     return prefix;
   }
