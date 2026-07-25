@@ -172,12 +172,22 @@ export async function app_g_conversation(
     let topic = property_get(topics, kind);
     return topic;
   }
-  function render_openers() {
-    let says_div = html_div(overlay);
-    function say(text) {
-      html_clear(says_div);
-      app_g_npc_says(npc, says_div, text);
+  function render_boundary(turn) {
+    "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen, the NPC states the boundary, then hold a silent BEAT with no options (setTimeout) before offering just two gracious replies — a humble acknowledgement that returns to the openers, or ending the conversation. the beat plus the re-randomized openers make guessing slower than praying for discernment, so prayer becomes the best path";
+    html_clear(overlay);
+    let topic2 = topic_for(turn);
+    let message = g_boundary(meet, topic2);
+    app_g_npc_says(npc, overlay, message);
+    function reveal() {
+      let container = app_g_container_player(overlay);
+      app_g_p_text(container, "What would you like to say?");
+      app_g_button_green(container, g_boundary_acknowledge(), render);
+      app_g_button_conversation_end(container, leave);
     }
+    let delay = list_random_item([2500, 3000, 3500]);
+    setTimeout(reveal, delay);
+  }
+  function render_openers() {
     let left4 = list_size(remaining);
     let right3 = list_size(turns);
     let first = equal(left4, right3);
@@ -185,7 +195,7 @@ export async function app_g_conversation(
     if (not(first)) {
       intro = g_anything_else();
     }
-    say(intro);
+    app_g_npc_says(npc, overlay, intro);
     let discern = {
       prayed: false,
     };
@@ -197,9 +207,7 @@ export async function app_g_conversation(
           if (app_g_discern_prevent(discern)) {
             return;
           }
-          let topic2 = topic_for(turn);
-          let result = g_boundary(meet, topic2);
-          say(result);
+          render_boundary(turn);
           return;
         }
         run_turn(turn);

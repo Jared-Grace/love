@@ -12,12 +12,12 @@ export async function functions_callers_inside_dependencies(
 ) {
   "Who calls each of these functions, counting only the callers the root function can actually reach. Asking which functions call a low-level helper answers with every caller in every repo, and most of them are irrelevant to the one program being traced, so the honest answer to what pulls this in here is the callers that are also dependencies of the root. Each name keeps its own entry, and a name with an empty list is the useful answer that nothing inside the root reaches it.";
   let names = text_split_comma(names_comma);
-  let reachable = await function_dependencies_single(root_name);
+  let reachable_names = await function_dependencies_single(root_name);
   async function name_entry(name) {
     let callers = await data_identifiers_search_names(name);
     function caller_inside_is(caller) {
       let itself = equal(caller, name);
-      let inside = list_includes(reachable, caller);
+      let inside = list_includes(reachable_names, caller);
       let b = inside && not(itself);
       return b;
     }
