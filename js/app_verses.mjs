@@ -1,3 +1,5 @@
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
+import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
@@ -88,6 +90,8 @@ export async function app_verses(context) {
   let bc = html_bar_content_padded(root);
   let bar = property_get(bc, "bar");
   let content = property_get(bc, "content");
+  let column = app_shared_column_max_width();
+  app_shared_content_center_padding(content, column);
   html_centered(bar);
   app_shared_bible_languages_gear(bar, content, language_codes);
   app_shared_text_body(
