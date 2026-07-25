@@ -13,6 +13,8 @@ export function examples_groups() {
         "example_ir_identifier_replace", // replace an identifier with an expression, at every site
         "example_prune_unused_import", // remove one unused import — one localized edit
         "example_imports_paths_canonicalize", // rewrite one import to its canonical path
+        "example_block_add_if_first", // add a statement at the start of a then-block — a localized insert
+        "example_block_add_else_last", // add a statement at the end of an else-block — the sibling insert
         "example_wrap_call_in_if", // select a call, then wrap it in an if — the selector+transform seam
       ],
     },
@@ -22,6 +24,8 @@ export function examples_groups() {
         "example_single_rejects_two", // refuse a 2-item list — a simple invariant guard
         "example_slot_set_rejects_statement", // the slot setter guarding its input
         "example_frozen_app_refused", // a guard in the deployment domain
+        "example_fold_refused_escape", // refuse to fold when an internal local escapes the block
+        "example_fold_refused_gap", // refuse to fold across a gap between the matched statements
       ],
     },
     {
