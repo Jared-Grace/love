@@ -4,7 +4,7 @@ import { app_calendar_paste_convert } from "../../love/js/app_calendar_paste_con
 import { clipboard_paste } from "../../love/js/clipboard_paste.mjs";
 import { app_calendar_id_properties } from "../../love/js/app_calendar_id_properties.mjs";
 import { object_pick_try_single_value } from "../../love/js/object_pick_try_single_value.mjs";
-import { storage_local_get_context } from "../../love/js/storage_local_get_context.mjs";
+import { storage_session_get_context } from "../../love/js/storage_session_get_context.mjs";
 import { property_get } from "../../love/js/property_get.mjs";
 import { app_shared_screen_set } from "../../love/js/app_shared_screen_set.mjs";
 import { app_shared_button_home_text } from "../../love/js/app_shared_button_home_text.mjs";
@@ -22,7 +22,10 @@ export async function app_calendar_contact(context) {
   let text = app_shared_button_home_text();
   let component = app_a_button_wide(root, text, lambda2);
   let dictionary = await app_calendar_download_browser_contacts();
-  let contact_selected = storage_local_get_context(context, "contact_selected");
+  let contact_selected = storage_session_get_context(
+    context,
+    "contact_selected",
+  );
   log(app_calendar_contact.name, {
     contact_selected,
   });
