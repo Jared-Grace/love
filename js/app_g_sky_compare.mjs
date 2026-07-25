@@ -45,14 +45,18 @@ export async function app_g_sky_compare() {
       await app_g_sky_jump(sunrise_index);
       function restyle(entry) {
         let button = property_get(entry, "button");
-        let active = equal(property_get(entry, "index"), index);
+        let left2 = property_get(entry, "index");
+        let active = equal(left2, index);
         app_g_sky_pill_style(button, active);
       }
       each(entries, restyle);
     }
     let button = html_button(panel, label, on_click);
     app_g_sky_pill_style(button, false);
-    let entry = { button, index };
+    let entry = {
+      button,
+      index,
+    };
     return entry;
   }
   entries = list_map_index(candidates, pill_of);
