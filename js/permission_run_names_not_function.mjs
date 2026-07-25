@@ -21,7 +21,7 @@ export async function permission_run_names_not_function() {
     return is;
   });
   let described = list_map(offenders, function (name) {
-    let target = property_get(aliases, name);
+    let target = property_or_null(aliases, name);
     let kind = target
       ? "alias pointing at " + target
       : "dangling — neither a function nor an alias, so the name is free for anyone to claim";
