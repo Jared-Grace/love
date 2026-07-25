@@ -75,6 +75,7 @@
       "Bash(node scripts/ai.mjs memory_hook_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_orphans:*)",
       "Bash(node scripts/ai.mjs permission_gate_run:*)",
+      "Bash(node scripts/ai.mjs permission_prompt_report:*)",
       "Bash(node scripts/ai.mjs permission_reachable_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_rule_command_probe:*)",
       "Bash(node scripts/ai.mjs permission_rules_unreachable:*)",
