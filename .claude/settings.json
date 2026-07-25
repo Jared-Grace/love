@@ -100,7 +100,6 @@
       "Bash(node scripts/ai.mjs permission_rules_unreachable_file:*)",
       "Bash(node scripts/ai.mjs permission_rules_unreachable_self_settings:*)",
       "Bash(node scripts/ai.mjs permission_self_settings_gate_run:*)",
-      "Bash(node scripts/ai.mjs process_daemon_is:*)",
       "Bash(node scripts/ai.mjs scripts_temp_delete:*)",
       "Bash(node scripts/ai.mjs webpack_watch)",
       "Bash(pkill -f vite --config scripts/vite.config.mjs)",
