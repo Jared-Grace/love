@@ -1,3 +1,7 @@
+import { equal } from "./equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_style_grid } from "./html_style_grid.mjs";
@@ -40,16 +44,18 @@ export function week_calendar(parent, on_ranges) {
     });
   }
   function slot_row(slot) {
-    let label = html_div_text(grid, slot_hour_label(slot));
+    let text = slot_hour_label(slot);
+    let label = html_div_text(grid, text);
     html_style_assign(label, {
       "font-size": "0.7rem",
       "text-align": "right",
       padding: "0 0.4rem",
       color: "#666666",
     });
-    each(days, function (day) {
+    function day_of_slot(day) {
       day_cell(day, slot);
-    });
+    }
+    each(days, day_of_slot);
   }
   function day_cell(day, slot) {
     let cell = html_div(grid);
@@ -59,9 +65,10 @@ export function week_calendar(parent, on_ranges) {
       border: "1px solid #e3e3e3",
       "box-sizing": "border-box",
     });
-    html_on_click(cell, function () {
+    function on_press() {
       cell_pressed(day, slot);
-    });
+    }
+    html_on_click(cell, on_press);
     list_add(records, {
       day: day,
       slot: slot,
@@ -69,58 +76,71 @@ export function week_calendar(parent, on_ranges) {
     });
   }
   function selected_is(day, slot) {
-    return list_any(ranges, function (range) {
-      let same_day = range.day === day;
-      let within = slot >= range.start && slot <= range.end;
-      return same_day && within;
-    });
+    function in_range(span) {
+      let same_day = equal(span.day, day);
+      let after_start = greater_than_equal(slot, span.start);
+      let before_end = less_than_equal(slot, span.end);
+      let r = same_day && after_start && before_end;
+      return r;
+    }
+    let found = list_any(ranges, in_range);
+    return found;
   }
   function anchor_is(day, slot) {
-    if (anchor === null) {
-      return false;
-    }
-    return anchor.day === day && anchor.slot === slot;
+    let live = not_equal(anchor, null);
+    let same = live && equal(anchor.day, day) && equal(anchor.slot, slot);
+    return same;
   }
   function record_color(record) {
-    if (anchor_is(record.day, record.slot)) {
-      return week_calendar_color_anchor();
-    }
-    if (selected_is(record.day, record.slot)) {
-      return app_shared_button_background();
-    }
-    return week_calendar_color_empty();
+    let is_anchor = anchor_is(record.day, record.slot);
+    let is_selected = selected_is(record.day, record.slot);
+    let anchor_color = week_calendar_color_anchor();
+    let selected_color = app_shared_button_background();
+    let empty_color = week_calendar_color_empty();
+    let chosen = is_anchor
+      ? anchor_color
+      : is_selected
+        ? selected_color
+        : empty_color;
+    return chosen;
+  }
+  function paint_record(record) {
+    let color = record_color(record);
+    html_style_background_color_set(record.element, color);
   }
   function paint() {
-    each(records, function (record) {
-      html_style_background_color_set(record.element, record_color(record));
+    each(records, paint_record);
+  }
+  function range_add(day, a, b) {
+    let start = Math.min(a, b);
+    let end = Math.max(a, b);
+    list_add(ranges, {
+      day: day,
+      start: start,
+      end: end,
     });
   }
   function cell_pressed(day, slot) {
-    if (anchor === null) {
-      anchor = {
-        day: day,
-        slot: slot,
-      };
-      paint();
-      return;
-    }
-    if (anchor.day === day) {
-      let start = Math.min(anchor.slot, slot);
-      let end = Math.max(anchor.slot, slot);
-      list_add(ranges, {
-        day: day,
-        start: start,
-        end: end,
-      });
-      anchor = null;
-      paint();
-      on_ranges(ranges);
-      return;
-    }
-    anchor = {
+    let pressed = {
       day: day,
       slot: slot,
     };
+    let no_anchor = equal(anchor, null);
+    let same_day = live_anchor_same_day(day);
+    if (no_anchor) {
+      anchor = pressed;
+    } else if (same_day) {
+      range_add(day, anchor.slot, slot);
+      anchor = null;
+      on_ranges(ranges);
+    } else {
+      anchor = pressed;
+    }
     paint();
+  }
+  function live_anchor_same_day(day) {
+    let live = not_equal(anchor, null);
+    let same = live && equal(anchor.day, day);
+    return same;
   }
 }
