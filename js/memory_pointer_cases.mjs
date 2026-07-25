@@ -34,7 +34,7 @@ export function memory_pointer_cases() {
     },
     {
       text: "See [[project_design_philosophy_map]] and [[feedback_edit_implies_rule]] for the reading order",
-      targets: ["project_design_philosophy_map.md"],
+      targets: [],
       why: "double-bracket links are not pointers, and claiming them here would report the neighbouring check's findings in the wrong words",
     },
     {
