@@ -13,7 +13,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { app_bible_picker_buttons_enlarge } from "./app_bible_picker_buttons_enlarge.mjs";
 export function app_bible_books_render(list_div, query, books, on_open) {
-  ("draw the Old-and-New-Testament to section to books tree as nested cards: a testament card holds a bold centered title and its section cards; each section card holds a deemphasized heading and its book buttons. every shown book is sized together at the end, so a narrow search of a few books gets big targets while the whole canon stays compact");
+  "draw the Old-and-New-Testament to section to books tree as nested cards: a testament card holds a bold centered title and its section cards; each section card holds a deemphasized heading and its book buttons. every shown book is sized together at the end, so a narrow search of a few books gets big targets while the whole canon stays compact";
   html_clear(list_div);
   let testaments = app_bible_books_matches(query, books);
   let all_buttons = [];
