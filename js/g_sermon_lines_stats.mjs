@@ -14,11 +14,7 @@ import { list_add } from "./list_add.mjs";
 import { list_min } from "./list_min.mjs";
 import { list_max } from "./list_max.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
-("Go through every written sermon across BOTH stores — ",
-  g_sermon_write.name,
-  " (1JN/1PE/HEB, `lines` arrays) and the edited ",
-  app_g_bible.name,
-  " store (ROM/JAS, `sermon` strings) — one sermon = one passage; report min, max, and median line count.");
+("Go through every written sermon across BOTH stores — the write store (1JN/1PE/HEB, `lines` arrays) and the edited bible store (ROM/JAS, `sermon` strings) — one sermon = one passage; report min, max, and median line count.");
 export async function g_sermon_lines_stats() {
   let joined = local_function_path(g_sermon_write, "");
   let joined2 = local_function_path(app_g_bible, "");
@@ -47,7 +43,6 @@ export async function g_sermon_lines_stats() {
     : counts[mid];
   let r = {
     sermon_count: n,
-    chapter_count: files.length,
     min: list_min(counts),
     max: list_max(counts),
     median,
