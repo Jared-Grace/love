@@ -106,6 +106,7 @@
       "Bash(rm /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(mv /tmp/claude-1000/-home-j-repos-love/:*)",
       "Bash(rm -f public/dev/sandbox.js public/dev/calendar.js)",
+      "Bash(rm -f public/dev/sandbox.js)",
       "Edit(.claude/hooks/**)",
       "Edit(.claude/hooks/bash-command-guard.py)",
       "Edit(.claude/hooks/claude_edit_claim.mjs)",
