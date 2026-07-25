@@ -46,6 +46,7 @@
       "Bash(node --check:*)",
       "Bash(node scripts/ai.mjs ai_git)",
       "Bash(node scripts/ai.mjs ai_log_add:*)",
+      "Bash(node scripts/ai.mjs g_sermon_chapter_passages_for_grouping:*)",
       "Bash(node scripts/ai.mjs g_sermon_group_size_distribution:*)",
       "Bash(node scripts/ai.mjs g_sermon_lines_stats:*)",
       "Bash(node scripts/ai.mjs g_sermon_loop_folder:*)",
