@@ -69,5 +69,8 @@ export function example_command_lambda(fn_name, args) {
   if (fn_name === js_fold_auto.name) {
     return example_fold_auto_lambda(args);
   }
+  if (fn_name === js_statement_wrap_if.name) {
+    return example_wrap_if_lambda(args[0]);
+  }
   return null;
 }
