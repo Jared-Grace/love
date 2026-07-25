@@ -2,6 +2,7 @@ import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 ("A small filename caption above a file's code block (e.g. app_x.mjs). Not uppercased");
