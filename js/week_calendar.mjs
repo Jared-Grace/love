@@ -14,7 +14,6 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_style_grid } from "./html_style_grid.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -86,7 +85,6 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   function day_cell(day, slot) {
     let cell = html_div(grid);
     html_style_assign(cell, {
-      width: "3.2rem",
       height: "1.9rem",
       border: "1px solid #e3e3e3",
       "box-sizing": "border-box",
