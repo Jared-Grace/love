@@ -15,7 +15,7 @@ outside the memory repo gets no output at all (exit 0, empty), which leaves
 the decision to the normal permission engine. */
 
 import { appendFileSync, readFileSync, realpathSync } from "node:fs";
-import { dirname } from "node:path";
+import { basename, dirname } from "node:path";
 
 const memory_root = "/home/j/backup/love_claude_memory/memory";
 const log_path = "/tmp/claude-1000/-home-j-repos-love/memory_write_allow.log";
@@ -52,8 +52,19 @@ function claude_config_spelling_is(file_path) {
   return file_path.startsWith(claude_config_root);
 }
 
+function realpath_for_retry(file_path) {
+  /* A complete file path, never a bare directory: for a memory note that does
+  not exist yet, path_resolved can only resolve the parent, so the basename is
+  re-attached. Handing back a directory would make the redirect unactionable -
+  the whole point is that the retry needs no thought. */
+  const resolved = path_resolved(file_path);
+  if (resolved === null) return `${memory_root}/${basename(file_path)}`;
+  if (resolved.endsWith("/")) return `${resolved}${basename(file_path)}`;
+  return resolved;
+}
+
 function deny_redirect_reason(file_path) {
-  const realpath = path_resolved(file_path);
+  const realpath = realpath_for_retry(file_path);
   return "Use the memory realpath, not the ~/.claude/ spelling. Retry this "
     + `exact edit against: ${realpath}\n\n`
     + "Why: a path under /home/j/.claude/ lands inside Claude Code's own "
