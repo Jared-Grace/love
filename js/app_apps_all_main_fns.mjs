@@ -11,7 +11,6 @@ import { app_examples } from "./app_examples.mjs";
 import { app_g } from "./app_g.mjs";
 import { app_g_bible } from "./app_g_bible.mjs";
 import { app_index } from "./app_index.mjs";
-import { app_karate } from "./app_karate.mjs";
 import { app_message } from "./app_message.mjs";
 import { app_next } from "./app_next.mjs";
 import { app_original_bible } from "./app_original_bible.mjs";
@@ -37,7 +36,7 @@ export function app_apps_all_main_fns() {
   let f_name11 = app_g.name;
   let f_name12 = app_g_bible.name;
   let f_name13 = app_index.name;
-  let f_name14 = app_karate.name;
+  let f_name14 = "app_karate";
   let f_name15 = app_message.name;
   let f_name16 = app_next.name;
   let f_name17 = app_original_bible.name;
