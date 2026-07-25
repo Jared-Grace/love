@@ -1,6 +1,6 @@
 import { html_body_div } from "./html_body_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_scroll_center_now } from "./html_scroll_center_now.mjs";
 export async function app_code_scroll_center_faded(component) {
