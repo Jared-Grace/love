@@ -1876,6 +1876,52 @@ NODE_EVAL_DENY_REASON = (
 )
 
 
+PYTHON_PROGRAMS = ("python", "python2", "python3")
+
+
+def find_python_eval(command):
+    """True iff `command` runs `python`/`python2`/`python3` with a `-c` flag -
+    arbitrary code from the command line, the exact analog of a raw `node -e`
+    (find_raw_node_eval) and floored the same way so main() can DENY it with a
+    redirect instead of handing the human a prompt. Without this floor, a `-c`
+    is merely `silent` and becomes a bypass: blocked on `node -e`, a Claude
+    could pivot to `python -c` and only get a prompt. python invoked on a script
+    FILE (`python3 foo.py`) is a different surface and is deliberately left
+    alone - the hook itself runs that way.
+
+    Same quote-aware tokenizer and prefix-unwrapping as the node-eval floor, so
+    a literal 'python3 -c' inside a quoted argument (e.g. `grep 'python3 -c'
+    file`) is NOT matched, and a leading VAR=.../timeout wrapper is unwrapped.
+    An unparseable command raises Unsupported and falls through to normal
+    handling rather than being force-denied on a guess."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return False
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if words and words[0] in PYTHON_PROGRAMS and "-c" in words[1:]:
+            return True
+    return False
+
+
+PYTHON_EVAL_DENY_REASON = (
+    "Raw `python -c` can't be approved here - it's arbitrary code from the "
+    "command line, the exact analog of `node -e` (floored the same way): it can "
+    "shell out, write files, and reach the network, so it's never auto-trusted. "
+    "Three supported paths instead:\n"
+    "  - inspecting or parsing text/JSON: use trusted verbs (grep, wc, head, "
+    "sort) - e.g. a decision field is `grep -o '\"decision\": \"[a-z]*\"'`.\n"
+    "  - a read-only one-off (auto-approved, no prompt): the sandboxed node "
+    "throwaway, unshare --net --map-root-user -- node --permission "
+    f"--allow-fs-read={REPO_ROOT} -e '<script>'.\n"
+    "  - anything that writes, or that you'd run more than once: add a committed "
+    "JS function and run it as `node scripts/ai.mjs <fn> <args>`.\n"
+    "If you genuinely need Python, ask the human. See CLAUDE.md - 'Throwaway "
+    "node - never raw `node -e`'."
+)
+
+
 # Library functions that run arbitrary code/commands from their own
 # arguments - shell-out (command_line_generic), `new Function` eval
 # (eval_console_log_replace), or download-and-run remote code
