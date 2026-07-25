@@ -3,6 +3,7 @@ import { permission_reachable_gate_run } from "./permission_reachable_gate_run.m
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { examples_gate_run } from "./examples_gate_run.mjs";
 import { permission_gate_run } from "./permission_gate_run.mjs";
+import { permission_self_settings_gate_run } from "./permission_self_settings_gate_run.mjs";
 import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invalid_assert.mjs";
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { dispatcher_scripts_python_assert } from "./dispatcher_scripts_python_assert.mjs";
@@ -18,6 +19,7 @@ export function qa_gates() {
     examples_gate_run,
     permission_gate_run,
     permission_reachable_gate_run,
+    permission_self_settings_gate_run,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
     dispatcher_scripts_python_assert,
