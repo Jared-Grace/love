@@ -3,6 +3,8 @@ import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
+import { app_g_day_talkable_is } from "./app_g_day_talkable_is.mjs";
+import { g_busy } from "./g_busy.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
