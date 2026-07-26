@@ -1,0 +1,40 @@
+import { property_get } from "./property_get.mjs";
+import { each } from "./each.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_join } from "./list_join.mjs";
+import { list_index_of } from "./list_index_of.mjs";
+import { list_size } from "./list_size.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { equal } from "./equal.mjs";
+export function js_template_comment_text(template) {
+  "The plain words of a comment written as a template literal, with every name that was substituted back in as text. Reading it out this way is what lets such a comment be written back as an ordinary string when the place it sits cannot hold anything more complicated.";
+  "Only a substitution that is a call to the name wrapper is understood. Anything else in the holes would be real work being done, and turning that into text would be turning code into prose - so it is left for a person rather than guessed at.";
+  let quasis = property_get(template, "quasis");
+  let expressions = property_get(template, "expressions");
+  let pieces = [];
+  function lambda(quasi) {
+    let value = property_get(quasi, "value");
+    let cooked = property_get(value, "cooked");
+    list_add(pieces, cooked);
+    let index = list_index_of(quasis, quasi);
+    let size = list_size(expressions);
+    let past = index >= size;
+    if (past) {
+      return;
+    }
+    let expression = expressions[index];
+    let callee = property_get(expression, "callee");
+    let name = property_get(callee, "name");
+    let wrapper_is = equal(name, fn_name.name);
+    if (wrapper_is) {
+      let args = property_get(expression, "arguments");
+      let first = args[0];
+      let value_2 = property_get(first, "value");
+      list_add(pieces, value_2);
+    }
+  }
+  each(quasis, lambda);
+  let empty = "";
+  let text = list_join(pieces, empty);
+  return text;
+}
