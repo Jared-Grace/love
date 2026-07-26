@@ -8,8 +8,8 @@ import { object_merge_set } from "./object_merge_set.mjs";
 export async function function_comments_migrate(f_name) {
   "Convert one function's slash comments into statements holding the same words, so that normalizing the file stops deleting them. Reports whether anything changed, and how many comments could not be carried across, because the caller sweeping a list needs both.";
   let f_names = await functions_names();
-  function migrated_of(code) {
-    let migrated = js_code_comments_migrated(code, f_names);
+  function migrated_of(code_before) {
+    let migrated = js_code_comments_migrated(code_before, f_names);
     return migrated;
   }
   let result = await function_code_transform(f_name, migrated_of);
