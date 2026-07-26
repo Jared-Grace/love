@@ -18,15 +18,22 @@ export async function qa_commit_gate_run_at(commit) {
     };
     return r;
   }
+  "What is kept is the answer and not the hundreds of lines that led to it, because the keeping is shared and committed - the reasons are the same reasons a fresh asking gives again";
   let folder = await qa_snapshot_ensure(commit);
   let told = await qa_snapshot_gate_told(folder);
+  let green = property_get(told, "green");
+  let failed = property_get(told, "failed");
+  let kept = {
+    green,
+    failed,
+  };
   let path = qa_commit_verdicts_path();
-  verdicts[commit] = told;
+  verdicts[commit] = kept;
   await file_overwrite_json(path, verdicts);
   let r2 = {
     commit,
     remembered: false,
-    verdict: told,
+    verdict: kept,
   };
   return r2;
 }
