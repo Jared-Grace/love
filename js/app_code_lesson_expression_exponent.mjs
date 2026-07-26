@@ -137,7 +137,7 @@ export function app_code_lesson_expression_exponent() {
       "one continuous black code tile that holds a whole expression, so it reads as a single unit instead of being chopped into separate pieces (matching how the % lesson renders its code)";
       let tile = html_span(parent);
       html_style_code_dark(tile);
-      html_style_set(tile, "white-space", "nowrap");
+      html_style_white_space(tile, "nowrap");
       return tile;
     }
     function lifted_chip(tile, number, color) {
@@ -178,7 +178,7 @@ export function app_code_lesson_expression_exponent() {
       let t2 = text_to(column_count);
       let style_value3 = text_combine_multiple(["repeat(", t2, ", auto)"]);
       html_style_set(grid, "grid-template-columns", style_value3);
-      html_style_set(grid, "align-items", "center");
+      html_align_items_center(grid);
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
       html_style_set(grid, "row-gap", "0.4em");
@@ -186,10 +186,10 @@ export function app_code_lesson_expression_exponent() {
       let pill = html_span(grid);
       html_style_set(pill, "grid-row", "2");
       html_style_set(pill, "grid-column", "1 / -1");
-      html_style_set(pill, "background", "black");
+      html_style_background(pill, "black");
       html_border_radius(pill, "0.5em");
       html_style_set(pill, "align-self", "stretch");
-      html_style_set(pill, "justify-self", "stretch");
+      html_style_justify_self(pill, "stretch");
       function spacer(column) {
         "a thin empty cell at each end so the black pill has a little padding beyond the outer chips";
         let s = html_span(grid);
