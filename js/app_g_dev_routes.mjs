@@ -24,7 +24,7 @@ import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_g_dev_routes() {
+export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
     app_g.name,
     " (open g.html#<name>): each value sets up that test screen. SINGLE SOURCE OF TRUTH — ",
@@ -114,9 +114,22 @@ export function app_g_dev_routes() {
     await app_g_sky_choices();
     await app_g_sky_snap();
   }
+  async function day_unbelievers() {
+    "the #day_unbelievers demo: 3 nearby unbelievers become today's ONLY talkable people (chosen close together so the walk between them is short). each gets a soft speech-bubble marker; every OTHER npc gives a randomized 'busy' line instead of a conversation (the gate lives in the conversation entry, reading the day session). foundation for the discernment-walk + slice-time day mechanic";
+    await app_g_view_set(null);
+    let npcs = await app_g_npcs_get();
+    let three = app_g_day_talkables_choose(npcs);
+    let state = app_g_day_state();
+    property_set(state, "talkable", three);
+    function mark(npc) {
+      app_g_day_talkable_marker(div_map, npc);
+    }
+    each(three, mark);
+  }
   let routes = {
     study,
     unbeliever,
+    day_unbelievers,
     gospel_share,
     hru,
     believe,
