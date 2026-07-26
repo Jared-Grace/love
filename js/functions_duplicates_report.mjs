@@ -1,3 +1,4 @@
+import { list_filter_property } from "./list_filter_property.mjs";
 import { functions_duplicates } from "./functions_duplicates.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -12,7 +13,9 @@ export async function functions_duplicates_report() {
     console.log(tag + names.length + "  " + joined);
   }
   let working = list_filter_property(groups, "work");
-  console.log("\ngroups " + groups.length + ", of them doing work " + working.length);
+  console.log(
+    "\ngroups " + groups.length + ", of them doing work " + working.length,
+  );
   let result = {
     groups: groups.length,
     working: working.length,
