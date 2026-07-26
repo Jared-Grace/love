@@ -268,7 +268,7 @@ export async function app_shared_bible_read(context, verse_action) {
       count_refresh();
     }
     let number = app_shared_button(p, verse_number_v, select_persist);
-    html_style_set(number, "justify-self", "end");
+    html_style_justify_self(number, "end");
     let text_cell = html_div(p);
     let entries = app_shared_bible_verse_entries(
       languages_verses,
