@@ -20,18 +20,8 @@ export async function qa_snapshot_ensure(commit) {
   "The parts a repo deliberately never commits are linked in too - the installed packages and the settings meant for this machine only - because they are the surroundings, not the code under question";
   let repos = qa_snapshot_repos_folder();
   await folder_exists_ensure(repos);
+  await qa_snapshot_siblings_link(repos);
   let here = folder_current_absolute();
-  let beside = path_directory(here);
-  let names = await repos_names();
-  let mine = repo_current_name();
-  for (let name of names) {
-    if (equal(name, mine)) {
-      continue;
-    }
-    let live = path_join([beside, name]);
-    let link = path_join([repos, name]);
-    await qa_snapshot_link(live, link);
-  }
   let folder = qa_snapshot_folder();
   let made = await file_exists(folder);
   if (made) {
