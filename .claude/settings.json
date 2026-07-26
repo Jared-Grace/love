@@ -147,6 +147,7 @@
       "Bash(node scripts/ai.mjs functions_unbound_report:*)",
       "Bash(node scripts/ai.mjs function_shape:*)",
       "Bash(node scripts/ai.mjs functions_duplicates_report:*)",
+      "Bash(node scripts/ai.mjs functions_duplicates_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_grant_refusals:*)",
       "Bash(node scripts/ai.mjs permission_grants_gate_run:*)",
       "Bash(node scripts/ai.mjs function_worker_pool_run_try:*)",
@@ -269,7 +270,8 @@
       "Bash(node scripts/ai.mjs permission_grant_rule:*)",
       "Bash(node scripts/ai.mjs permission_grant_words_unsafe:*)",
       "Bash(node scripts/ai.mjs function_imports_beyond_infrastructure:*)",
-      "Bash(node scripts/ai.mjs functions_unbound_baseline_write:*)"
+      "Bash(node scripts/ai.mjs functions_unbound_baseline_write:*)",
+      "Bash(node scripts/ai.mjs functions_import_ignored:*)"
     ],
     "defaultMode": "acceptEdits"
   },
