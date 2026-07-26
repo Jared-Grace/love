@@ -6,11 +6,11 @@ import { add } from "./add.mjs";
 import { add_1 } from "./add_1.mjs";
 import { js_identifiers_names } from "./js_identifiers_names.mjs";
 export function js_fold_block_escapes(target_statements, start, k, internal_locals) {
-  // Brick 3b: the fold soundness gate. The matched block produces internal locals — every matched F
-  // local except the return-output. Folding collapses the block into one opaque call, deleting those
-  // locals, so each must be USED NOWHERE in F outside the block; only the return-output may escape.
-  // Returns true when some internal local is referenced outside [start, start+k) (fold NOT allowed),
-  // false when the fold is sound.
+  "Brick 3b: the fold soundness gate. The matched block produces internal locals — every matched F";
+  "local except the return-output. Folding collapses the block into one opaque call, deleting those";
+  "locals, so each must be USED NOWHERE in F outside the block; only the return-output may escape.";
+  "Returns true when some internal local is referenced outside [start, start+k) (fold NOT allowed),";
+  "false when the fold is sound.";
   arguments_assert(arguments, 4);
   let block_end = add(start, k);
   let n = list_size(target_statements);
