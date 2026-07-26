@@ -1,6 +1,6 @@
 import { examples_order } from "./examples_order.mjs";
 import { examples_notes } from "./examples_notes.mjs";
-import { object_keys } from "./object_keys.mjs";
+import { properties_get } from "./properties_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -9,7 +9,7 @@ export function examples_notes_gate_run() {
   "The two lists sit in separate files and nothing but this holds them together, so either can drift. Both directions are checked because they fail differently: an example with no note is a rung on the climb with no reason given, and a note with no example is a description of something that was renamed or deleted and left its description behind.";
   let order = examples_order();
   let notes = examples_notes();
-  let named = object_keys(notes);
+  let named = properties_get(notes);
   function note_missing_is(name) {
     let missing = list_includes_not(named, name);
     return missing;

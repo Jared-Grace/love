@@ -1,39 +1,36 @@
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
-import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
+import { log } from "./log.mjs";
 import { timings_print } from "./timings_print.mjs";
 import { qa_gates } from "./qa_gates.mjs";
-import { list_add } from "./list_add.mjs";
-("The repo-wide correctness gate (alias `q`). Runs every gate in qa_gates(),");
-("sequentially so their output stays readable, and keeps going after a");
-("failure so one red gate never hides another. Throws at the end if any");
-("gate failed, so the r.mjs seam exits nonzero.");
+import { qa_gate_result } from "./qa_gate_result.mjs";
+import { qa_gate_failures_report } from "./qa_gate_failures_report.mjs";
+import { console_log_silence } from "./console_log_silence.mjs";
+import { console_log_restore } from "./console_log_restore.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function qa_gate_run() {
-  let failed = [];
-  let timings = [];
-  for (let gate of qa_gates()) {
-    console.log("\n=== " + gate.name + " ===");
-    let started = date_now_milliseconds();
-    try {
-      await gate();
-    } catch (e) {
-      list_add(failed, gate.name);
-      console.log("GATE FAILED  " + gate.name + ": " + e.message);
-    }
-    let milliseconds = date_milliseconds_since(started);
-    let timing = {
-      name: gate.name,
-      milliseconds,
-    };
-    list_add(timings, timing);
+  "The repo-wide correctness gate (alias `q`). Every gate is an independent";
+  "read-only question about the repo, so they are all asked at once rather than";
+  "one after another — the wait becomes the slowest single question instead of";
+  "the sum of every question.";
+  "Nothing prints while they run, because lines arriving from work happening side";
+  "by side cannot be attributed by a reader. A gate that complains is then asked";
+  "again on its own, where its output belongs to it alone and is worth reading.";
+  let gates = qa_gates();
+  let real = console_log_silence();
+  let results = null;
+  try {
+    results = await list_map_unordered_async(gates, qa_gate_result);
+  } finally {
+    console_log_restore(real);
   }
-  timings_print(timings);
+  timings_print(results);
+  let failed = await qa_gate_failures_report(results, gates);
   if (failed.length > 0) {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
   return {
-    gates: qa_gates().length,
+    gates: gates.length,
     failed: 0,
-    timings,
+    timings: results,
   };
 }
