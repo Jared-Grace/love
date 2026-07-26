@@ -1,6 +1,6 @@
 import { js_flo } from "./js_flo.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
-import { js_imports } from "./js_imports.mjs";
+import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
 import { js_function_params_all } from "./js_function_params_all.mjs";
 import { js_global_names } from "./js_global_names.mjs";
