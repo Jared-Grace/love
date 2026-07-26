@@ -3,7 +3,6 @@ import { app_code_lesson_number_chip } from "./app_code_lesson_number_chip.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { text_combine } from "./text_combine.mjs";
-
 export function app_code_first_decimal_digit_line(
   parent,
   lead,
