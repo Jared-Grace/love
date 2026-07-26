@@ -119,6 +119,10 @@
   {
    "name": "g_chapter_code_next",
    "refusals": 1
+  },
+  {
+   "name": "qa_commit_gate_run_at",
+   "refusals": 1
   }
  ]
 }
