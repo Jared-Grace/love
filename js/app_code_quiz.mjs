@@ -22,7 +22,6 @@ import { storage_session_initialize_context } from "./storage_session_initialize
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
 export function app_code_quiz(context) {

@@ -1,5 +1,6 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_code_quiz_index_set } from "./app_code_quiz_index_set.mjs";
 import { list_index_last } from "./list_index_last.mjs";
@@ -8,6 +9,7 @@ import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_button_screen_wide } from "./app_shared_button_screen_wide.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_code_go_back } from "./app_code_go_back.mjs";
+import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 import { app_code_lesson_first_id } from "./app_code_lesson_first_id.mjs";
 import { app_code_next } from "./app_code_next.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
@@ -40,7 +42,7 @@ export function app_code_examples(context) {
   app_code_example_answer_gap(c);
   let another = app_code_lesson_text_example_another(lesson);
   let example_count = property_get(lesson, "example_count");
-  let plural = example_count >= 2;
+  let plural = greater_than_equal(example_count, 2);
   let root_word = "example";
   let is_a = null;
   if (plural) {
@@ -50,11 +52,12 @@ export function app_code_examples(context) {
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
+  let on_batch = app_code_batch_on_refill(noop);
   let refresh = app_code_batch_item_get(
     c,
     lesson,
     on_batch_item,
-    app_code_batch_on_refill(noop),
+    on_batch,
     false,
   );
   function on_batch_item(container, bs) {
@@ -71,11 +74,13 @@ export function app_code_examples(context) {
   let lesson_first_not = property_equals_not(lesson, "id", value_initial);
   let on_back = null;
   let back_text = null;
+  let do_you_want_to_text = text_combine("see ", another);
+  let yes_text = text_combine("please show me ", another);
   app_code_next(
     context,
     c,
-    text_combine("see ", another),
-    text_combine("please show me ", another),
+    do_you_want_to_text,
+    yes_text,
     refresh,
     example_another,
     on_back,
@@ -88,30 +93,35 @@ export function app_code_examples(context) {
       await app_shared_screen_set(context, app_code_examples);
     }
     let backs = [];
-    list_add(backs, {
-      text: "take me back to the previous lesson",
-      on_click: previous,
-    });
-    list_add(backs, {
-      text: "take me back to the last quiz of the previous lesson",
-      on_click: async function lambda() {
-        app_code_lesson_previous_set(context);
-        let previous = app_code_lesson_current(context);
-        let batch = property_get(previous, "batch");
-        let list = batch();
-        let first = list_first(list);
-        let quizzes = property_get(first, "quizzes");
-        let index_last = list_index_last(quizzes);
-        app_code_quiz_index_set(context, index_last);
-        await app_shared_screen_set(context, app_code_quiz);
+    list_add_multiple(backs, [
+      {
+        emoji: emoji_arrow_left(),
+        text: "Previous lesson",
+        on_click: previous,
       },
-    });
-    app_code_go_back(root, "to the previous lesson", backs);
+      {
+        emoji: emoji_arrow_left(),
+        text: "Previous lesson's last quiz",
+        on_click: async function lambda() {
+          app_code_lesson_previous_set(context);
+          let previous = app_code_lesson_current(context);
+          let batch = property_get(previous, "batch");
+          let list = batch();
+          let first = list_first(list);
+          let quizzes = property_get(first, "quizzes");
+          let index_last = list_index_last(quizzes);
+          app_code_quiz_index_set(context, index_last);
+          await app_shared_screen_set(context, app_code_quiz);
+        },
+      },
+    ]);
+    app_code_go_back(root, backs);
   }
   let g = app_code_container_padded_x(root);
   app_code_button_skip_lesson(context, g);
   let text = app_shared_button_home_text();
   let b2 = app_shared_button_screen_wide(context, app_code_home, g, text);
-  html_style_margin_top(b2, app_shared_spaced_gap());
+  let value = app_shared_spaced_gap();
+  html_style_margin_top(b2, value);
   return;
 }
