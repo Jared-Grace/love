@@ -4,7 +4,7 @@ import { list_copy } from "./list_copy.mjs";
 import { null_is } from "./null_is.mjs";
 import { retry_until_success } from "./retry_until_success.mjs";
 import { equal } from "./equal.mjs";
-import { catch_null_async } from "./catch_ignore_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
 export async function app_reply_verse(
