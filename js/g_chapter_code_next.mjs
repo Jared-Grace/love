@@ -1,7 +1,8 @@
 import { assert_json } from "./assert_json.mjs";
-"Next chapter code within the SAME book: \"HEB01\" → \"HEB02\", \"1JN05\" → \"1JN06\".";
-"Book = the code minus its trailing digits; the number increments, keeping width.";
+('Next chapter code within the SAME book: "HEB01" → "HEB02", "1JN05" → "1JN06".');
+("Book = the code minus its trailing digits; the number increments, keeping width.");
 export function g_chapter_code_next(chapter_code) {
+  "$plain chapter_code";
   let numbered = chapter_code.match(/\d+$/);
   assert_json(numbered, {
     chapter_code,
