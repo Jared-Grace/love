@@ -57,8 +57,14 @@ export async function permission_grant_refusals_context(unaliased, context) {
         list_join_comma(seams),
     );
   }
+  ("A word inside a parameter's name is a guess about what the parameter holds, and the guess is wrong often enough to matter - chapter_code holds a Bible chapter identifier, not source text. Reading the shape of the name instead would loosen the check for every function nobody has looked at, so the function declares the exception itself and an unmarked parameter is still refused.");
+  let plain = await function_params_plain(unaliased);
   for (let p of params) {
     let p_name = property_get(p, "name");
+    let declared = list_includes(plain, p_name);
+    if (declared) {
+      continue;
+    }
     for (let word of permission_grant_words_unsafe()) {
       let matches = text_includes(p_name, word);
       if (matches) {
