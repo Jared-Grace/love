@@ -3,24 +3,24 @@ import { greater_than } from "./greater_than.mjs";
 import { property_get } from "./property_get.mjs";
 export function shadowing_entries_counts(entries) {
   "how many functions break each of the two name rules — the two numbers that say whether the ratchet is tightening";
-  let bound_twice = 0;
-  let shadows_function = 0;
+  let hides_outer = 0;
+  let hides_function = 0;
   function count(entry) {
-    let duplicated = property_get(entry, "duplicated");
-    let shadowed = property_get(entry, "shadowed");
-    let any_duplicated = greater_than(duplicated.length, 0);
-    if (any_duplicated) {
-      bound_twice = bound_twice + 1;
+    let shadows_outer = property_get(entry, "shadows_outer");
+    let shadows_function = property_get(entry, "shadows_function");
+    let any_outer = greater_than(shadows_outer.length, 0);
+    if (any_outer) {
+      hides_outer = hides_outer + 1;
     }
-    let any_shadowed = greater_than(shadowed.length, 0);
-    if (any_shadowed) {
-      shadows_function = shadows_function + 1;
+    let any_function = greater_than(shadows_function.length, 0);
+    if (any_function) {
+      hides_function = hides_function + 1;
     }
   }
   each(entries, count);
   let counts = {
-    bound_twice,
-    shadows_function,
+    hides_outer,
+    hides_function,
   };
   return counts;
 }
