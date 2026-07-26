@@ -11,6 +11,19 @@ Consequences:
 - Committing sweeps the whole working tree (see below), so your commit may include a peer's in-flight work. **That's fine and intended.**
 - **Don't wait on another Claude.** You can't message them, so blocking on an unseen peer just stalls you. Proceed and integrate. Only pause if you can see *uncommitted* work you'd clobber — and even then, commit your own first, don't wait.
 
+## Don't idle — ask the repo, not the human
+
+The human's reading time is the scarcest thing here, and with ~10 Claudes running it is the **only** real bottleneck. Ending your turn to ask "what next?" spends a reply and buys nothing, because the repo can answer that question itself.
+
+**Before you end a turn, run `node scripts/ai.mjs work_next`.** It prints every provably-safe thing you could start right now — measured items first (each with the count proving it's real), then the standing directions that never run out: **DRY refactor → new transform → new gate**. It is never empty. If it returns something, do that instead of asking.
+
+Two rules keep this from backfiring:
+
+- **Admission test.** Only work that's safe to start unasked belongs here: it preserves behavior (a refactor, a rename, a codemod), or it only adds a new named unit nothing calls yet. Total, idempotent, independent — the same bar as an auto transform.
+- **Hard stop on judgment.** The moment the next step needs a decision that's genuinely the human's, **stop and report**. Don't guess in order to stay busy — that regenerates exactly the reading load this is removing.
+
+**Report on a macro cadence, commit on a micro one.** Micro-commits stay: one atomic idea per commit, `ao` and `q` between them, refactors isolated. But "check yourself often" was never the same rule as "check *with the human* often" — make many small commits, then report **once**, or immediately on a real interrupt: a decision that's theirs, a peer collision, something broke.
+
 ## Editing protocol (optimistic concurrency)
 
 The working directory has **no isolation** — peers' uncommitted edits sit on the same disk you read. Git gives you atomic, serialized, linear commits for free, but not isolation. This protocol covers the gap:
