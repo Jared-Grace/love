@@ -1,4 +1,14 @@
-import { js_code_call_args_await_maybe_parse_statement } from "./js_code_call_args_await_maybe_parse_statement.mjs";
+import { list_max } from "./list_max.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { js_statements_declared_names } from "./js_statements_declared_names.mjs";
+import { js_statements_referenced_names } from "./js_statements_referenced_names.mjs";
+import { list_intersection } from "./list_intersection.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { js_code_names_object_or_single } from "./js_code_names_object_or_single.mjs";
+import { js_statement_return } from "./js_statement_return.mjs";
+import { js_code_call_args_await_maybe } from "./js_code_call_args_await_maybe.mjs";
+import { js_code_let_assign } from "./js_code_let_assign.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
 import { list_min } from "./list_min.mjs";
 import { list_slice_from_indices } from "./list_slice_from_indices.mjs";
 import { js_outside_move } from "./js_outside_move.mjs";
@@ -29,12 +39,23 @@ import { range } from "./range.mjs";
 export async function js_functionize(
   ast,
   f_name_new,
-  stack_2,
+  stack_,
   index_from,
   index_to,
 ) {
   let indices = [index_from, index_to];
-  let range = list_slice_from_indices(stack_2, indices);
+  let range = list_slice_from_indices(stack_, indices);
+  ("A span that declares a name the rest of the block still reads cannot simply");
+  ("leave — the name would go with it and the reader behind would be left pointing");
+  ("at nothing. Those names are the ones the new function hands back, which is the");
+  ("mirror of the free names it takes in.");
+  let index_max = list_max(indices);
+  let index_after = index_max + 1;
+  let tail = list_skip(stack_, index_after);
+  let declared = js_statements_declared_names(range);
+  let referenced = js_statements_referenced_names(tail);
+  let outputs = list_intersection(declared, referenced);
+  let outputs_any = list_empty_not_is(outputs);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
@@ -44,6 +65,11 @@ export async function js_functionize(
   let declaration = js_parse_statement_module(code_declaration);
   let body_block = js_function_declaration_to_block_body(declaration);
   list_add_multiple(body_block, range);
+  if (outputs_any) {
+    let code_outputs = js_code_names_object_or_single(outputs);
+    let statement_return = js_statement_return(code_outputs);
+    list_add(body_block, statement_return);
+  }
   let body = property_get(ast, "body");
   list_add(body, declaration);
   function lambda3(la) {
@@ -71,14 +97,20 @@ export async function js_functionize(
   let list = property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
-  list_remove_multiple(stack_2, range);
-  let parsed = js_code_call_args_await_maybe_parse_statement(
+  list_remove_multiple(stack_, range);
+  let code_call = js_code_call_args_await_maybe(
     f_name_new,
     missing,
     declaration,
   );
+  let code_statement = code_call;
+  if (outputs_any) {
+    let left = js_code_names_object_or_single(outputs);
+    code_statement = js_code_let_assign(left, code_call);
+  }
+  let parsed = js_parse_statement(code_statement);
   let m = list_min(indices);
-  list_insert(stack_2, m, parsed);
+  list_insert(stack_, m, parsed);
   await js_outside_move(ast);
   await js_imports_fix(ast);
 }
