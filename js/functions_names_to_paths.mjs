@@ -2,7 +2,6 @@ import { repos_paths_map_unordered_combine_merge_functions } from "./repos_paths
 import { function_path_to_name } from "./function_path_to_name.mjs";
 import { list_to_dictionary_key } from "./list_to_dictionary_key.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
-import { repo_path } from "./repo_path.mjs";
 export async function functions_names_to_paths() {
   async function lambda(repo_path) {
     let paths = await folder_read_paths_async(repo_path);
