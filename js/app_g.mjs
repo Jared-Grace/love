@@ -8,13 +8,14 @@ import { global_function_property_set } from "./global_function_property_set.mjs
 import { app_g_refresh } from "./app_g_refresh.mjs";
 import { html_loading } from "./html_loading.mjs";
 import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
-import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { g_verses_waiting_prepare } from "./g_verses_waiting_prepare.mjs";
 import { g_verses_hs_warning_prepare } from "./g_verses_hs_warning_prepare.mjs";
 export async function app_g(context) {
   async function lambda() {
     await app_a_indexeddb_initialize();
-    let books = await ebible_version_books_browser(ebible_folder_english());
+    let bible_folder = ebible_folder_english();
+    let books = await ebible_version_books_browser(bible_folder);
     global_function_property_set(app_g, "books", books);
     global_function_property_set(app_g, "chapter_code", "JAS01");
     let div_map_container = app_g_html_initialize(context);
@@ -24,6 +25,6 @@ export async function app_g(context) {
   }
   await html_loading(lambda);
   html_reload_on_hash_change();
-  catch_ignore_async(g_verses_waiting_prepare);
-  catch_ignore_async(g_verses_hs_warning_prepare);
+  await catch_null_async(g_verses_waiting_prepare);
+  await catch_null_async(g_verses_hs_warning_prepare);
 }
