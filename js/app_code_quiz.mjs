@@ -5,7 +5,6 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { app_code_home } from "./app_code_home.mjs";
 import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
-import { app_code_lesson_text_example_another } from "./app_code_lesson_text_example_another.mjs";
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
 import { list_single } from "./list_single.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
