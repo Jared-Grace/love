@@ -1,3 +1,4 @@
+import { command_seams_agree_gate_run } from "./command_seams_agree_gate_run.mjs";
 import { python_mirrors_assert } from "./python_mirrors_assert.mjs";
 import { functions_duplicates_gate_run } from "./functions_duplicates_gate_run.mjs";
 import { html_style_literal_gate_run } from "./html_style_literal_gate_run.mjs";
