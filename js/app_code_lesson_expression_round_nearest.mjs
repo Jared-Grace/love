@@ -82,7 +82,7 @@ export function app_code_lesson_expression_round_nearest() {
     return built;
   }
   function above(root) {
-    "the worked examples are randomized each visit: the definitions, a decimal that rounds DOWN (first digit under 5) and a decimal that rounds UP (first digit 5 or more), so both directions of nearest are shown";
+    "example before rule: show a round-down and a round-up first, THEN name it nearest, THEN teach how it decides - the first digit after the decimal point, shown on a two-digit decimal so first is unambiguous. Randomized each visit";
     let whole = integer_random(2, 7);
     let whole_text = text_to(whole);
     let low_digit = integer_random(1, 4);
@@ -93,28 +93,35 @@ export function app_code_lesson_expression_round_nearest() {
     let high_decimal = text_combine_multiple([whole_text, ".", t4]);
     let input = add(whole, 1);
     let whole_up = text_to(input);
-    let define = app_code_container_light_blue(root);
-    let nearest_line = html_div(define);
-    html_span_text_code_dark(nearest_line, "Math.round");
-    html_span_text(nearest_line, " rounds a number to the ");
-    let term = html_span_text(nearest_line, "nearest");
-    html_bold(term);
-    html_span_text(nearest_line, " whole number");
-    let down_box = app_code_container_light_blue(root);
-    html_div_cycle_code(down_box, [
-      "If the first decimal digit is less than ",
-      "5",
-      ", it rounds down",
-    ]);
+    let two_digit = text_combine_multiple([whole_text, ".45"]);
+    ("examples first, then name it, then explain how it decides");
+    let examples = app_code_container_light_blue(root);
     let v = round_code(low_decimal);
-    html_div_cycle_code(down_box, ["", v, " is ", whole_text]);
-    let up_box = app_code_container_light_blue(root);
-    html_div_cycle_code(up_box, [
-      "If the first decimal digit is ",
-      "5",
-      " or more, it rounds up",
-    ]);
+    html_div_cycle_code(examples, ["", v, " is ", whole_text]);
     let v2 = round_code(high_decimal);
-    html_div_cycle_code(up_box, ["", v2, " is ", whole_up]);
+    html_div_cycle_code(examples, ["", v2, " is ", whole_up]);
+    let name_line = html_div(examples);
+    html_span_text_code_dark(name_line, "Math.round");
+    html_span_text(name_line, " gives the ");
+    let term = html_span_text(name_line, "nearest");
+    html_bold(term);
+    html_span_text(name_line, " whole number");
+    let rule = app_code_container_light_blue(root);
+    html_div_cycle_code(rule, [
+      "The first digit after the decimal point decides which way it rounds",
+    ]);
+    html_div_cycle_code(rule, [
+      "For example, in ",
+      two_digit,
+      " the first digit after the decimal point is ",
+      "4",
+    ]);
+    html_div_cycle_code(rule, [
+      "Less than ",
+      "5",
+      " rounds down, and ",
+      "5",
+      " or more rounds up",
+    ]);
   }
 }
