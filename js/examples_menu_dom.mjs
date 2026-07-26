@@ -1,3 +1,4 @@
+import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -32,7 +33,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_text_set(header, name);
     app_shared_text_category(header);
     html_style_font_size(header, "1rem");
-    html_style_set(header, "margin", "1.5rem 0 0.5rem");
+    html_style_margin(header, "1.5rem 0 0.5rem");
   }
   function tool_subheader(name) {
     "a lighter label than the tier header — clusters same-tool cards inside a tier";
@@ -43,7 +44,7 @@ export function examples_menu_dom(parent, examples, on_select) {
     html_style_set(header, "letter-spacing", "0.05em");
     html_font_color_set(header, "#888");
     html_bold_semi(header);
-    html_style_set(header, "margin", "0.75rem 0 0.35rem");
+    html_style_margin(header, "0.75rem 0 0.35rem");
   }
   function example_button(index) {
     let object = list_get(examples, index);
