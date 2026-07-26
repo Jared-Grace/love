@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { memory_orphans } from "./memory_orphans.mjs";
 import { literal_duplicates } from "./literal_duplicates.mjs";
 import { list_add } from "./list_add.mjs";
@@ -6,7 +7,7 @@ export async function work_items_measured() {
   "Left in source order on purpose, not sorted by count. The counts measure different kinds of thing, so ordering by them would rank a large pile of small items over a small pile of large ones and call that a priority.";
   let items = [];
   function found(count, title, why, how) {
-    if (count < 1) {
+    if (less_than(count, 1)) {
       return;
     }
     let item = {
