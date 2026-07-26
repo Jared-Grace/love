@@ -17,7 +17,8 @@ export function js_scope_identifier_nodes_own(scope_node, name) {
       if (not(identifier)) {
         return;
       }
-      let named = equal(property_get(node, "name"), name);
+      let left = property_get(node, "name");
+      let named = equal(left, name);
       if (not(named)) {
         return;
       }
