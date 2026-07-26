@@ -1,5 +1,6 @@
+import { permission_rules_other } from "./permission_rules_other.mjs";
+import { permission_grant_names_write } from "./permission_grant_names_write.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { permission_grant_names } from "./permission_grant_names.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { list_first } from "./list_first.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -9,7 +10,6 @@ import { list_add } from "./list_add.mjs";
 import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { js_code_names_spelled } from "./js_code_names_spelled.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { js_code_texts_listed } from "./js_code_texts_listed.mjs";
 import { not } from "./not.mjs";
@@ -39,9 +39,12 @@ export async function permission_lists_bootstrap_write() {
   await permission_grant_names_write(unique);
   let note_other =
     "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
-  let f_name2 = fn_name("permission_rules_other");
-  let code_other = js_code_texts_listed(f_name2, note_other, other);
-  await file_overwrite("js/permission_rules_other.mjs", code_other);
+  let f_name = fn_name("permission_rules_other");
+  let code_other = js_code_texts_listed(f_name, note_other, other);
+  await file_overwrite(
+    text_combine_multiple(["js/", permission_rules_other.name, ".mjs"]),
+    code_other,
+  );
   let report = {
     names: unique.length,
     other: other.length,

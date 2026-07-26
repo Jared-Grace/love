@@ -30,7 +30,11 @@ export async function npx_run(words, extra) {
     }
     child.on("error", on_error);
     function on_close(code) {
-      resolve({ code, stdout, stderr });
+      resolve({
+        code,
+        stdout,
+        stderr,
+      });
     }
     child.on("close", on_close);
   });
