@@ -19,31 +19,34 @@ export async function permission_grants_gate_run() {
   let worsened = property_get(change, "worsened");
   let any_added = greater_than(added.length, 0);
   if (any_added) {
+    let list = list_map_property(added, "name");
     let message_added =
       "permission grants gate: " +
       added.length +
       " standing grants fail the safety check and were not recorded as known — take the rule out, or narrow the function, rather than leaving an approval nobody would give today: " +
-      list_join_comma(list_map_property(added, "name"));
+      list_join_comma(list);
     throw new Error(message_added);
   }
   let any_worsened = greater_than(worsened.length, 0);
   if (any_worsened) {
+    let list2 = list_map_property(worsened, "name");
     let message_worsened =
       "permission grants gate: " +
       worsened.length +
       " standing grants fail for more reasons than the baseline holds, so a new hole opened under a grant already blessed: " +
-      list_join_comma(list_map_property(worsened, "name"));
+      list_join_comma(list2);
     throw new Error(message_worsened);
   }
   let any_stale = greater_than(stale.length, 0);
   if (any_stale) {
+    let list3 = list_map_property(stale, "name");
     let message_stale =
       "permission grants gate: " +
       stale.length +
       " baseline entries pass the check now — rerun " +
       permission_grants_baseline_write.name +
       " to shrink the baseline: " +
-      list_join_comma(list_map_property(stale, "name"));
+      list_join_comma(list3);
     throw new Error(message_stale);
   }
   let r = {
