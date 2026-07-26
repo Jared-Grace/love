@@ -5,11 +5,6 @@ export function list_first_second_only(list) {
     hint: "the list should have exactly two items to take a first and second",
   });
   let result = list_first_second(list);
-  if (false) {
-    let copy_paste = {
-      first,
-      second,
-    };
-  }
+  ("a caller unpacks this as first and second");
   return result;
 }
