@@ -110,6 +110,14 @@ export function app_code_lesson_expression_round_down() {
       " is not a whole number",
     ]);
     let rounds = app_code_container_light_blue(root);
+    app_code_between_two_wholes(rounds, high_decimal, whole_text, whole_up);
+    html_div_cycle_code(rounds, [
+      "so ",
+      "Math.floor",
+      " chooses ",
+      whole_text,
+      ", the smaller one",
+    ]);
     let v = floor_code(decimal);
     html_div_cycle_code(rounds, ["", v, " is ", whole_text]);
     let v2 = floor_code(high_decimal);
@@ -125,14 +133,6 @@ export function app_code_lesson_expression_round_down() {
       "",
       "Math.floor",
       " gives the whole number below it",
-    ]);
-    app_code_between_two_wholes(rounds, high_decimal, whole_text, whole_up);
-    html_div_cycle_code(rounds, [
-      "so ",
-      "Math.floor",
-      " chooses ",
-      whole_text,
-      ", the smaller one",
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
