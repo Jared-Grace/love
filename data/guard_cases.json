@@ -215,11 +215,11 @@
     { "command": "git diff --stat", "decision": "allow", "why": "reading what changed is untouched by the discard floor" },
     { "command": "grep 'git checkout' notes.txt", "decision": "allow", "why": "quote-aware: the shape mentioned inside a pattern is not the shape performed" },
 
-    { "command": "cd /home/j/repos/love; node scripts/ai.mjs ungranted_thing | head -3", "decision": "deny", "reason_includes": "separate Bash calls", "why": "one untrusted piece among trusted ones splits cleanly, so Claude is told to split rather than the human asked about the whole chain" },
-    { "command": "ls; git status; node scripts/ai.mjs ungranted_thing", "decision": "deny", "reason_includes": "needs its own call", "why": "the message names which piece is left, so the split is mechanical rather than a guess" },
-    { "command": "cat f.txt; node scripts/ai.mjs nope1; node scripts/ai.mjs nope2", "decision": "ask", "why": "TWO untrusted pieces - splitting would turn one prompt into two, so the ask stands. This is the boundary the narrow condition exists to hold" },
+    { "command": "cd /home/j/repos/love; node scripts/ai.mjs list_add | head -3", "decision": "deny", "reason_includes": "separate Bash calls", "why": "one untrusted piece among trusted ones splits cleanly, so Claude is told to split rather than the human asked about the whole chain. The ungranted piece must name a LIVE function: a made-up name is denied earlier by the dead-name floor and never reaches this branch" },
+    { "command": "ls; git status; node scripts/ai.mjs list_add", "decision": "deny", "reason_includes": "needs its own call", "why": "the message names which piece is left, so the split is mechanical rather than a guess" },
+    { "command": "cat f.txt; node scripts/ai.mjs list_add; node scripts/ai.mjs list_single", "decision": "ask", "why": "TWO untrusted pieces - splitting would turn one prompt into two, so the ask stands. This is the boundary the narrow condition exists to hold" },
     { "command": "ls; git status", "decision": "allow", "why": "an all-trusted chain never reaches the split branch" },
-    { "command": "for f in a b; do node scripts/ai.mjs nope $f; done", "decision": "silent", "why": "a ';' inside a loop separates parts of ONE command - shell structure words mean the command is left whole" },
+    { "command": "for f in a b; do node scripts/ai.mjs list_add $f; done", "decision": "silent", "why": "a ';' inside a loop separates parts of ONE command - shell structure words mean the command is left whole" },
     { "command": "ls | tail -4", "decision": "allow", "why": "a pipe is not a split point: its halves have no meaning apart" },
     { "command": "ls; rm -rf /", "decision": "ask", "why": "one untrusted piece, but not one this branch may recommend running alone - only a dispatcher call is proposed for splitting, so everything else keeps the answer it had" },
     { "command": "S=/etc; ls > $S/passwd", "decision": "silent", "why": "the second piece reads what the first set, so the pieces are not independent and splitting would not preserve them - a variable anywhere stops the proposal" },
@@ -253,6 +253,16 @@
     { "command": "aaa=..; rm -f /home/j/repos/love/scripts/temp/${aaa}/file.mjs", "decision": "silent", "why": "braced ${...} expansion is refused for the same reason - '$', '{', '}' are not allowlisted path chars" },
     { "command": "rm -f /home/j/repos/love/scripts/temp/$(echo ..)/file.mjs", "decision": "silent", "why": "command substitution '$(...)' can't hide a '..' - '$', '(', ')' fail the path char-allowlist" },
     { "command": "rm -f /home/j/repos/love/scripts/temp/*", "decision": "silent", "why": "a glob '*' is never expanded by the guard and fails the char-allowlist, so rm-all-of-scripts/temp still prompts" },
-    { "command": "rm -f \"/home/j/repos/love/scripts/temp/../js/bible.mjs\"", "decision": "silent", "why": "quotes are stripped at tokenize, exposing the literal '..' which normpath-equality then rejects" }
+    { "command": "rm -f \"/home/j/repos/love/scripts/temp/../js/bible.mjs\"", "decision": "silent", "why": "quotes are stripped at tokenize, exposing the literal '..' which normpath-equality then rejects" },
+
+    { "command": "node scripts/ai.mjs guard_corpus_dead_name_never_defined", "decision": "deny", "reason_includes": "No function named", "why": "a dispatcher call to a name no repo defines can only throw, so a prompt costs a click and still fails - deny instead, and let the agent loop fix the name" },
+    { "command": "node scripts/ai.mjs functions_shadowing_baselin_report", "decision": "deny", "reason_includes": "Closest live names:", "why": "a dead name is nearly always a real one misremembered, so the deny has to carry the neighbours - a refusal with no correction just moves the dead end" },
+    { "command": "node scripts/ai.mjs ao", "decision": "deny", "reason_includes": "is an alias key, not a function name", "why": "an alias reaching this seam has an EXACT fix, not a guess: name what it points at. ai.mjs refuses shorthand anyway, so this only converts a guaranteed throw into a redirect" },
+    { "command": "node scripts/ai.mjs qa_gate_run", "decision": "allow", "why": "the dead-name floor must not touch a live, granted function - it fires only on names that resolve to no file" },
+    { "command": "node scripts/ai.mjs $f", "decision": "silent", "why": "a name held in a variable is one the guard cannot resolve, so the floor abstains rather than guessing - unresolvable is not the same as dead" },
+    { "command": "ls; node scripts/ai.mjs guard_corpus_dead_name_never_defined", "decision": "deny", "reason_includes": "No function named", "why": "every statement is checked, so a dead name does not gain cover by riding in a chain" },
+    { "command": "node scripts/ai.mjs command_line_generic ls", "decision": "deny", "reason_includes": "arbitrary code/commands", "why": "floor ORDER: a live-but-dangerous function keeps the danger message. Safety outranks correctness when both apply" },
+    { "command": "node scripts/r.mjs guard_corpus_dead_name_never_defined", "decision": "deny", "reason_includes": "Two seams", "why": "floor ORDER the other way: the wrong seam is the first thing wrong, so the dead name never gets to speak. Only ai.mjs calls are name-checked" },
+    { "command": "grep 'node scripts/ai.mjs guard_corpus_dead_name_never_defined' notes.txt", "decision": "allow", "why": "quote-aware like every other floor: a dispatcher call quoted inside a search pattern is mentioned, not performed" }
   ]
 }
