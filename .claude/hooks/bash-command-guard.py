@@ -1501,8 +1501,13 @@ def is_safe_bare_mount(words):
     return words == ["mount"]
 
 
+# A query string and a fragment are allowed after the path: the dev pages are
+# addressed that way (`?chapter=MRK01`, `#c=JAS01,v=3`), and neither can turn a
+# status probe into a general fetch - the scheme is still fixed to plain http
+# and the host still pinned to localhost, which is what bounds this template.
 CURL_LOCALHOST_URL_RE = re.compile(
-    r"^http://(localhost|127\.0\.0\.1)(:[0-9]{1,5})?(/[A-Za-z0-9_./-]*)?$"
+    r"^http://(localhost|127\.0\.0\.1)(:[0-9]{1,5})?(/[A-Za-z0-9_./-]*)?"
+    r"(\?[A-Za-z0-9_.,=&%/+-]*)?(#[A-Za-z0-9_.,=&%/+-]*)?$"
 )
 
 CURL_WRITE_OUT_VAR_RE = re.compile(r"%\{[a-z_]+\}")
