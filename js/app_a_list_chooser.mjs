@@ -12,7 +12,8 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   async function on_enter() {
     let list = filtered_get();
     let first = list_first(list);
-    await f_name_select(first);
+    ("pressing Enter picks the top match, which is the same act as clicking its button - so it goes through the very lambda the buttons call, and retires the keydown on the way out just as a click does");
+    await lambda(first);
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);

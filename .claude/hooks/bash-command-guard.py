@@ -2365,6 +2365,105 @@ def sandbox_path_near_miss_deny_reason():
     )
 
 
+# Words that make a command a structure rather than a sequence. A ';' inside a
+# loop or a conditional separates parts of ONE command, so splitting there
+# produces fragments that mean nothing on their own - `do node ...` is not a
+# command. Seeing any of these is the signal to leave the command whole.
+SHELL_STRUCTURE_WORDS = {
+    "for", "while", "until", "do", "done",
+    "if", "then", "elif", "else", "fi",
+    "case", "esac", "function", "select",
+}
+
+STATEMENT_SEPARATORS = (";", "&&", "||")
+
+
+def split_top_level_statements_text(command):
+    """Split `command` at top-level ';', '&&' and '||', outside quotes, and
+    return the pieces. Returns None when the command should be left whole - it
+    contains a shell structure word, a subshell, or a substitution, where a
+    separator is part of one command rather than between two.
+
+    Pipes are deliberately NOT split points: `a | b` is a single command whose
+    halves have no meaning apart, and the guard already answers a pipe of
+    trusted verbs on its own."""
+    if any(ch in command for ch in "()`"):
+        return None
+    if "$(" in command or "\n" in command:
+        return None
+    pieces = []
+    current = ""
+    quote = ""
+    index = 0
+    while index < len(command):
+        ch = command[index]
+        if quote:
+            current += ch
+            if ch == quote:
+                quote = ""
+            index += 1
+            continue
+        if ch in "'\"":
+            quote = ch
+            current += ch
+            index += 1
+            continue
+        two = command[index:index + 2]
+        if two in ("&&", "||"):
+            pieces.append(current)
+            current = ""
+            index += 2
+            continue
+        if ch == ";":
+            pieces.append(current)
+            current = ""
+            index += 1
+            continue
+        current += ch
+        index += 1
+    if quote:
+        return None
+    pieces.append(current)
+    stripped = [p.strip() for p in pieces]
+    kept = [p for p in stripped if p]
+    for piece in kept:
+        first = piece.split()[0] if piece.split() else ""
+        if first in SHELL_STRUCTURE_WORDS:
+            return None
+    return kept
+
+
+def splittable_statements(command, safe_verbs, safe_exact_commands):
+    """If `command` is a chain that would be better run as separate Bash calls,
+    return (trusted_pieces, the_one_blocked_piece); else None.
+
+    The condition is deliberately narrow, because splitting can make things
+    worse. Asking Claude to split a chain with THREE untrusted pieces turns one
+    prompt into three - the opposite of the point. So a split is proposed only
+    when exactly one piece is not already allowed and at least one is: the
+    human's prompt count stays at one and that one prompt becomes a single
+    plain command instead of an opaque chain. That matters beyond legibility -
+    a lone `node scripts/ai.mjs <fn>` can be granted by name and never asked
+    about again, while a chain can never be granted at all."""
+    pieces = split_top_level_statements_text(command)
+    if pieces is None or len(pieces) < 2:
+        return None
+    trusted = []
+    blocked = []
+    for piece in pieces:
+        try:
+            ok = is_safe(piece, safe_verbs, safe_exact_commands)
+        except Unsupported:
+            ok = False
+        if ok:
+            trusted.append(piece)
+        else:
+            blocked.append(piece)
+    if len(blocked) != 1 or not trusted:
+        return None
+    return trusted, blocked[0]
+
+
 GIT_WRITE_COMMIT_SUBCOMMANDS = {"add", "commit"}
 
 # Subcommands that throw work away rather than record it. In a normal checkout
@@ -2652,6 +2751,30 @@ def main():
                 "permissionDecisionReason": (
                     "Auto-approved: every command in this sequence/for-loop "
                     "uses a verb already in permissions.allow."
+                ),
+            }
+        }))
+        return
+
+    split = splittable_statements(command, safe_verbs, safe_exact_commands)
+    if split is not None:
+        trusted, blocked = split
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": (
+                    "Run this as separate Bash calls instead of one chain - "
+                    "it splits cleanly, so there is no need to ask the human "
+                    "about the whole thing.\n"
+                    + "".join(f"  already allowed: {t}\n" for t in trusted)
+                    + f"  needs its own call: {blocked}\n"
+                    "The allowed parts run with no prompt at all. The last "
+                    "one is then a single plain command rather than a chain, "
+                    "which is both easier to approve and, if it is a "
+                    "`node scripts/ai.mjs <fn>` call, something that can be "
+                    "granted once by name and never asked about again - a "
+                    "chain never can be."
                 ),
             }
         }))
