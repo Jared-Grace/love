@@ -11,21 +11,15 @@ export function app_g_day_talkable_marker(div_map, npc) {
   html_click_none(i);
   html_class_add(i, "ri-chat-3-fill");
   let v = g_img_square_size_css();
-  let size = text_combine_multiple(["calc(", v, "*.35)"]);
+  let size = text_combine_multiple(["calc(", v, "*.42)"]);
   let v2 = g_img_square_size_css();
-  let glow = text_combine_multiple(["calc(", v2, "*.05)"]);
+  let glow = text_combine_multiple(["calc(", v2, "*.03)"]);
   html_style_assign(i, {
     display: "flex",
     "justify-content": "center",
     "align-items": "flex-start",
-    color: "#bfe4ff",
-    "text-shadow": text_combine_multiple([
-      "0 0 ",
-      glow,
-      " white, 0 0 ",
-      glow,
-      " #7fbfff",
-    ]),
+    color: "#5ec8ff",
+    "text-shadow": text_combine_multiple(["0 0 ", glow, " #072a44"]),
     "font-size": size,
   });
   g_img_square_style_position(i, npc, "icon");
