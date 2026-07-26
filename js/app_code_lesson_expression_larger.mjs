@@ -75,7 +75,7 @@ export function app_code_lesson_expression_larger() {
     return built;
   }
   function above(root) {
-    "examples FIRST and in BOTH orders - the larger number on the left and on the right - so it is clear the larger VALUE is chosen, not a position; Math.min (the reference) and Math.max both in code style";
+    "examples FIRST and in BOTH orders - the larger number on the left and on the right - so it is clear the larger VALUE is chosen, not a position; self-contained (does not assume the learner has seen Math.min), with Math.max in code style";
     let two = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 2);
     let a = list_get(two, 0);
     let b = list_get(two, 1);
@@ -85,9 +85,7 @@ export function app_code_lesson_expression_larger() {
     let big_text = text_to(big);
     let define = app_code_container_light_blue(root);
     html_div_cycle_code(define, [
-      "Like ",
-      "Math.min",
-      ", this function takes two numbers separated by a comma ",
+      "This function takes two numbers, separated by a comma ",
       ",",
     ]);
     let example_box = app_code_container_light_blue(root);
