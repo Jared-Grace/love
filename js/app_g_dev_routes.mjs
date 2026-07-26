@@ -1,3 +1,8 @@
+import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
+import { app_g_day_state } from "./app_g_day_state.mjs";
+import { property_set } from "./property_set.mjs";
+import { app_g_day_talkable_marker } from "./app_g_day_talkable_marker.mjs";
+import { each } from "./each.mjs";
 import { app_g } from "./app_g.mjs";
 import { app_g_dev_if } from "./app_g_dev_if.mjs";
 import { app_g_dev_index } from "./app_g_dev_index.mjs";
