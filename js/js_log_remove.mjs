@@ -5,6 +5,4 @@ export function js_log_remove(ast) {
   ("see: ", js_log_remove_workflow);
   let fn = log;
   js_statement_call_remove(ast, fn);
-  return;
-  ("see: ", js_log_remove_workflow);
 }
