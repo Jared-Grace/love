@@ -1,4 +1,4 @@
-import { function_callee_seam_assert } from "./function_callee_seam_assert.mjs";
+import { function_callee_read_only_assert } from "./function_callee_read_only_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { function_import_unalias } from "./function_import_unalias.mjs";
 import { list_add } from "./list_add.mjs";
