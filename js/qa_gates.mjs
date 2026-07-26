@@ -34,6 +34,7 @@ import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_cano
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
 export function qa_gates() {
   let gates = [
+    zzz_planted_missing_gate,
     guard_gate_run,
     memory_hook_gate_run,
     memory_pointer_gate_run,
