@@ -1,7 +1,6 @@
-import { folder_read } from "./folder_read.mjs";
+import { examples_names } from "./examples_names.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_includes } from "./list_includes.mjs";
