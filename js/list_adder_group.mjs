@@ -1,5 +1,4 @@
 import { list_adder } from "./list_adder.mjs";
-import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
 export function list_adder_group(lambda$g) {
   function adder_groups(la) {

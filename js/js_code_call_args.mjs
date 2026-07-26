@@ -1,6 +1,5 @@
 import { js_code_join_comma_space } from "./js_code_join_comma_space.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function js_code_call_args(fn_name, args) {

@@ -2,7 +2,6 @@ import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { undefined_not_is_assert_lambda } from "./undefined_not_is_assert_lambda.mjs";
 export function property_initialize_lambda(object, property_name, lambda) {
   let exists = property_exists(object, property_name);
   if (not(exists)) {

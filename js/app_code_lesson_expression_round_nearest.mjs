@@ -63,7 +63,8 @@ export function app_code_lesson_expression_round_nearest() {
     forwards_answer_label: "rounded value: ",
     backwards_question_label: "rounded value: ",
     backwards_answer_label: "What code rounds to the nearest rounded value? ",
-    unscramble_label: "Build the code that rounds to the nearest rounded value: ",
+    unscramble_label:
+      "Build the code that rounds to the nearest rounded value: ",
   });
   return lesson;
   function title_name_id() {
@@ -92,11 +93,6 @@ export function app_code_lesson_expression_round_nearest() {
     let input = add(whole, 1);
     let whole_up = text_to(input);
     let define = app_code_container_light_blue(root);
-    html_div_cycle_code(define, [
-      "",
-      "Math.round",
-      " rounds a number to the ",
-    ]);
     let nearest_line = html_div(define);
     html_span_text_code_dark(nearest_line, "Math.round");
     html_span_text(nearest_line, " rounds a number to the ");

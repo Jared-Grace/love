@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { js_identifier_name } from "./js_identifier_name.mjs";
 export function js_identifier_name_starts_with(id, prefix) {

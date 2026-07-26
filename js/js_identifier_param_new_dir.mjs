@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_js_transform } from "./file_js_transform.mjs";

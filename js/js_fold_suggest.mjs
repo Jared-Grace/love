@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_flo_name } from "./js_flo_name.mjs";
