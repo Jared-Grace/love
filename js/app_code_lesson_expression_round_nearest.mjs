@@ -93,7 +93,9 @@ export function app_code_lesson_expression_round_nearest() {
     let high_decimal = text_combine_multiple([whole_text, ".", t4]);
     let input = add(whole, 1);
     let whole_up = text_to(input);
-    let two_digit = text_combine_multiple([whole_text, ".45"]);
+    let whole_dot = text_combine_multiple([whole_text, "."]);
+    let four_nines = text_combine_multiple([whole_text, ".4999"]);
+    let half_decimal = text_combine_multiple([whole_text, ".5"]);
     ("examples first, then name it, then explain how it decides");
     let examples = app_code_container_light_blue(root);
     let v = round_code(low_decimal);
@@ -110,18 +112,27 @@ export function app_code_lesson_expression_round_nearest() {
     html_div_cycle_code(rule, [
       "The first digit after the decimal point decides which way it rounds",
     ]);
-    html_div_cycle_code(rule, [
+    app_code_first_decimal_digit_line(
+      rule,
       "For example, in ",
-      two_digit,
-      " the first digit after the decimal point is ",
+      whole_dot,
       "4",
+      "5",
+    );
+    app_code_first_decimal_digit_line(rule, "in ", whole_dot, "4", "999");
+    html_div_cycle_code(rule, [
+      "If the first digit after the decimal point is 0, 1, 2, 3, or 4 then ",
+      "Math.round",
+      " is like ",
+      "Math.floor",
     ]);
     html_div_cycle_code(rule, [
-      "Less than ",
-      "5",
-      " rounds down, and ",
-      "5",
-      " or more rounds up",
+      "If the first digit after the decimal point is 5, 6, 7, 8, or 9 then ",
+      "Math.round",
+      " is like ",
+      "Math.ceil",
     ]);
+    html_div_cycle_code(rule, ["", four_nines, ' rounds "down" to ', whole_text]);
+    html_div_cycle_code(rule, ["", half_decimal, ' rounds "up" to ', whole_up]);
   }
 }
