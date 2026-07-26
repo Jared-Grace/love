@@ -109,6 +109,8 @@
       "Bash(node scripts/ai.mjs claude_md_name_defects:*)",
       "Bash(node scripts/ai.mjs claude_md_name_gate_run:*)",
       "Bash(node scripts/ai.mjs functions_shadowing_report:*)",
+      "Bash(node scripts/ai.mjs literal_duplicates:*)",
+      "Bash(node scripts/ai.mjs literal_duplicates_report:*)",
       "Bash(node scripts/ai.mjs function_browser_guarded_is:*)",
       "Bash(node scripts/ai.mjs bible_interlinear_offline_upload:*)",
       "Bash(node scripts/ai.mjs data_identifiers_search:*)",
