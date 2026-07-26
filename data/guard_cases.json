@@ -204,6 +204,13 @@
     { "command": "git stash list", "decision": "allow", "why": "list only reads, and it is already granted - a floor runs before the allow decision, so it has to spare the reading spelling or it silently revokes the human's rule" },
     { "command": "git diff --stat", "decision": "allow", "why": "reading what changed is untouched by the discard floor" },
     { "command": "grep 'git checkout' notes.txt", "decision": "allow", "why": "quote-aware: the shape mentioned inside a pattern is not the shape performed" },
+
+    { "command": "cd /home/j/repos/love; node scripts/ai.mjs ungranted_thing | head -3", "decision": "deny", "reason_includes": "separate Bash calls", "why": "one untrusted piece among trusted ones splits cleanly, so Claude is told to split rather than the human asked about the whole chain" },
+    { "command": "ls; git status; node scripts/ai.mjs ungranted_thing", "decision": "deny", "reason_includes": "needs its own call", "why": "the message names which piece is left, so the split is mechanical rather than a guess" },
+    { "command": "cat f.txt; node scripts/ai.mjs nope1; node scripts/ai.mjs nope2", "decision": "ask", "why": "TWO untrusted pieces - splitting would turn one prompt into two, so the ask stands. This is the boundary the narrow condition exists to hold" },
+    { "command": "ls; git status", "decision": "allow", "why": "an all-trusted chain never reaches the split branch" },
+    { "command": "for f in a b; do node scripts/ai.mjs nope $f; done", "decision": "silent", "why": "a ';' inside a loop separates parts of ONE command - shell structure words mean the command is left whole" },
+    { "command": "ls | tail -4", "decision": "allow", "why": "a pipe is not a split point: its halves have no meaning apart" },
     { "command": "git status", "decision": "allow", "why": "read-only git subcommand stays allowed - the floor catches only add/commit writes" },
 
     { "command": "ls -la f | awk '{print $5}'", "decision": "deny", "reason_includes": "never auto-trusted", "why": "awk in a pipe segment is refused (it can exec/write) and redirected to a trusted verb, so Claude self-corrects instead of prompting the human" },
