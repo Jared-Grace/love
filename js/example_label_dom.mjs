@@ -12,7 +12,8 @@ export function example_label_dom(parent, text) {
   html_style_font_size(label, "0.7rem");
   html_style_set(label, "text-transform", "uppercase");
   html_style_set(label, "letter-spacing", "0.05em");
-  html_font_color_set(label, app_shared_color_blue_dark());
+  let color = app_shared_color_blue_dark();
+  html_font_color_set(label, color);
   html_bold_semi(label);
   html_style_set(label, "margin", "0.6rem 0 0.3rem");
   return label;
