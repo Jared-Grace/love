@@ -1,16 +1,26 @@
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { list_difference } from "./list_difference.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
+import { not } from "./not.mjs";
 import { visit_async } from "./visit_async.mjs";
 export async function visit_unique_async(node, children_get, on_each) {
-  let found = [];
+  "Walks a graph outward from one node, never following the same node twice";
+  "Whether a node has been met already is asked of a record kept by name, not searched for in a list. The question is asked once for every edge, and the list grows to the size of the graph, so a walk over a few thousand nodes spends millions of comparisons deciding what it has already seen - and a sweep starting from two hundred roots pays the whole of that again for every root.";
+  let seen = {};
   async function lambda(node) {
     let children = await children_get(node);
-    let difference = list_difference(children, found);
-    return difference;
+    function unseen_is(child) {
+      let met = property_exists(seen, child);
+      let b = not(met);
+      return b;
+    }
+    let fresh = list_filter(children, unseen_is);
+    return fresh;
   }
   async function lambda2(v) {
-    let { node } = v;
-    list_add_if_not_includes(found, node);
+    let node = property_get(v, "node");
+    property_set(seen, node, true);
     await on_each(v);
   }
   await visit_async(node, lambda, lambda2);
