@@ -1,3 +1,7 @@
+import { app_reply_verses_uplifting_entries } from "./app_reply_verses_uplifting_entries.mjs";
+import { html_div_text_centered } from "./html_div_text_centered.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_bible_verse_texts } from "./app_shared_bible_verse_texts.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { app_shared_content_center_padding } from "./app_shared_content_center_padding.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -5,7 +9,6 @@ import { list_filter_text_includes_not } from "./list_filter_text_includes_not.m
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
-import { app_reply_verses_add_uplifting } from "./app_reply_verses_add_uplifting.mjs";
 import { uplifting_package_get } from "./uplifting_package_get.mjs";
 import { app_shared_message_overlay } from "./app_shared_message_overlay.mjs";
 import { browser_online_is } from "./browser_online_is.mjs";
