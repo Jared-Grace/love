@@ -15,8 +15,6 @@
   "function_params_consolidate_task_simple",
   "function_run_log_task_duplicate_lines_to_each",
   "greater_than_equal",
-  "html_data_set_multiple",
-  "html_data_set_object",
   "http_post_json_cache_global_args",
   "identity",
   "js_await",
