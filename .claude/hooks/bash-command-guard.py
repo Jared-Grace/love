@@ -2250,20 +2250,16 @@ PYTHON_EVAL_DENY_REASON = (
 # before the allow decision in main). This does NOT touch internal use - a
 # committed function that imports one and calls it with fixed arguments never
 # reaches the command line, so it's unaffected.
-DENIED_DISPATCHER_FUNCTIONS = {
-    "command_line_generic",
-    # The rest of the command_line_* family that runs a command from its
-    # argument - directly (spawnSync) or by forwarding to command_line_generic.
-    # Each is `node -e` by another name when invoked from the command line;
-    # internal use by a committed fn (with fixed args) is unaffected.
-    "command_line_interactive",
-    "command_line_cmd",
-    "command_line_code_ignore",
-    "command_line_folder",
-    "command_line_generic_code_ignore",
-    "eval_console_log_replace",
-    "firebase_storage_function_run_generic",
-}
+#
+# Imported, not duplicated: denied_dispatcher_functions.py is GENERATED from
+# js/functions_command_seams.mjs (the source of truth), which is the same list
+# the JS side fences its dispatchers against. Two hand-kept copies could only
+# ever be checked for agreement after the fact; one source cannot disagree with
+# itself. Regenerate with `node scripts/r.mjs python_mirrors_write`; drift fails
+# `q` via python_mirrors_assert. An import of a literal rather than a runtime
+# read, for the same reason as NODE_DISPATCHER_SCRIPTS above - a read that could
+# fail would fail OPEN, and this is the floor. A missing module raises here.
+from denied_dispatcher_functions import DENIED_DISPATCHER_FUNCTIONS
 
 
 def find_denied_dispatcher_function(command):
