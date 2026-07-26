@@ -9,8 +9,8 @@ import { text_combine } from "./text_combine.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { example_card_dom } from "./example_card_dom.mjs";
-// The single-example screen: a nav row (back to menu, prev, next, position) and
-// just the one selected card — no scrolling through the rest.
+"The single-example screen: a nav row (back to menu, prev, next, position) and";
+"just the one selected card — no scrolling through the rest.";
 export function examples_single_dom(
   parent,
   examples,
