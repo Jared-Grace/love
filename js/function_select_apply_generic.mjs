@@ -1,3 +1,4 @@
+import { function_callee_seam_assert } from "./function_callee_seam_assert.mjs";
 import { js_select_apply } from "./js_select_apply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_import } from "./function_import.mjs";
