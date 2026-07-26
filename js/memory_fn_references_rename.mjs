@@ -16,7 +16,8 @@ export async function memory_fn_references_rename(before, after) {
   let suffix = ".md";
   let marked = new RegExp("\\$fn " + before + "(?![a-z0-9_])", "g");
   let bare = new RegExp("\\b" + before + "\\b", "g");
-  let replacement = "$fn " + after;
+  ("a dollar starts a substitution in a replacement string, so the doubled one is how a literal dollar is written - $f happens to be left alone but only by not matching any of the special forms");
+  let replacement = "$$fn " + after;
   let rewritten = [];
   let mentioned = [];
   for (let name of names) {
