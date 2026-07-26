@@ -14,7 +14,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
@@ -30,23 +29,23 @@ export function app_code_lesson_expression_whole_part_formula() {
   "the FIRST of the three whole-part lessons: LEARN THE EQUATION a / b => Math.floor(a / b) * b (rewrite a division into its whole-part formula). The learner builds the formula from tokens given the division, so they produce the rewrite themselves rather than just recognising it. The next lesson evaluates the formula, and the one after does both. Uses the shared divisor/quotient batch so a quotient-0 division can appear";
   function make(divisor, quotient) {
     "given a / b, the answer to BUILD is the whole-part formula Math.floor(a / b) * b; the dividend is quotient*divisor + a leftover so the division is uneven";
-    let leftover = integer_random(1, subtract(divisor, 1));
-    let dividend = add(multiply(quotient, divisor), leftover);
+    let max = subtract(divisor, 1);
+    let leftover = integer_random(1, max);
+    let left = multiply(quotient, divisor);
+    let dividend = add(left, leftover);
     let division = js_code_binary_spaced_nb(dividend, "/", divisor);
-    let formula = text_combine_multiple([
-      "Math.floor(",
-      division,
-      ") * ",
-      text_to(divisor),
-    ]);
-    return {
+    let t = text_to(divisor);
+    let formula = text_combine_multiple(["Math.floor(", division, ") * ", t]);
+    let r = {
       question: division,
       answer: formula,
     };
+    return r;
   }
   function batch_get() {
     "the shared integer-division-family batch: four different divisors, one a quotient-0 division";
-    return app_code_lesson_divisor_quotient_batch(make);
+    let list = app_code_lesson_divisor_quotient_batch(make);
+    return list;
   }
   let example_answer_label = "Whole part formula: ";
   let example_question_label = app_code_label_code_question();
@@ -56,9 +55,13 @@ export function app_code_lesson_expression_whole_part_formula() {
     let dividend = list_get(nums, 0);
     let divisor = list_get(nums, 1);
     let no_multiply = text_combine_multiple(["Math.floor(", question, ")"]);
-    let times = text_combine_multiple([text_to(dividend), " * ", text_to(divisor)]);
-    let no_floor = text_combine_multiple([question, " * ", text_to(divisor)]);
-    return [no_multiply, times, no_floor];
+    let t2 = text_to(dividend);
+    let t3 = text_to(divisor);
+    let times = text_combine_multiple([t2, " * ", t3]);
+    let t4 = text_to(divisor);
+    let no_floor = text_combine_multiple([question, " * ", t4]);
+    let r2 = [no_multiply, times, no_floor];
+    return r2;
   }
   function quizzes_get(question, answer) {
     "two quiz kinds: first RECOGNISE the whole-part formula among tempting wrong rewrites (multiple choice), then BUILD it from tokens - recognise before produce";
@@ -119,7 +122,11 @@ export function app_code_lesson_expression_whole_part_formula() {
     return quizzes_exercises;
   }
   function example_answer(parent, text) {
-    "render the formula as a code chip on its OWN fresh div - passing html_text_set_code_dark straight to app_code_lesson_base would clear the shared example container (wiping the Code label and the division question already rendered there) and leave only the formula";
+    ("render the formula as a code chip on its OWN fresh div - passing ",
+      html_text_set_code_dark.name,
+      " straight to ",
+      app_code_lesson_base.name,
+      " would clear the shared example container (wiping the Code label and the division question already rendered there) and leave only the formula");
     let div = html_div(parent);
     html_text_set_code_dark(div, text);
   }
