@@ -1,4 +1,4 @@
-import { files_written_take } from "./files_written_take.mjs";
+import { files_to_commit_take } from "./files_to_commit_take.mjs";
 import { ai_git_files } from "./ai_git_files.mjs";
 export async function ai_git_command_generic(f_name, args) {
   "Commits what a named command wrote, saying in the message which command that";
@@ -11,7 +11,7 @@ export async function ai_git_command_generic(f_name, args) {
   "The note of written files is taken before anything else and emptied in the same";
   "breath, so it is spent exactly once: left behind, it would let the next commit";
   "claim files that a different command wrote.";
-  let files = await files_written_take();
+  let files = await files_to_commit_take();
   let result = await ai_git_files(f_name, args, files);
   return result;
 }
