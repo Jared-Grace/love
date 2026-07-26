@@ -47,7 +47,7 @@
       "Bash(node --check:*)",
       "Bash(node scripts/ai.mjs ai_git)",
       "Bash(node scripts/ai.mjs ai_log_add:*)",
-      "Bash(node scripts/ai.mjs work_next:*)",
+      "Bash(node scripts/ai.mjs work_options:*)",
       "Bash(node scripts/ai.mjs work_items:*)",
       "Bash(node scripts/ai.mjs g_sermon_chapter_passages_for_grouping:*)",
       "Bash(node scripts/ai.mjs g_sermon_chapter_passages_for_grouping_multiple:*)",
