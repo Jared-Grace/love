@@ -1,3 +1,5 @@
+import { text_column } from "./text_column.mjs";
+import { duplicate_kind_work } from "./duplicate_kind_work.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { functions_duplicates } from "./functions_duplicates.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,12 +9,13 @@ export async function functions_duplicates_report() {
   let groups = await functions_duplicates();
   for (let group of groups) {
     let names = property_get(group, "names");
-    let work = property_get(group, "work");
+    let kind = property_get(group, "kind");
     let joined = list_join_comma(names);
-    let tag = work ? "         " : "constant ";
+    let tag = text_column(kind, 9);
     console.log(tag + names.length + "  " + joined);
   }
-  let working = list_filter_property(groups, "work", true);
+  let property_value = duplicate_kind_work();
+  let working = list_filter_property(groups, "kind", property_value);
   console.log(
     "\ngroups " + groups.length + ", of them doing work " + working.length,
   );
