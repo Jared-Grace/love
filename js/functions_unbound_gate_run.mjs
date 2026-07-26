@@ -1,4 +1,4 @@
-import { shadowing_entries_names_text } from "./shadowing_entries_names_text.mjs";
+import { entries_names_text } from "./entries_names_text.mjs";
 import { functions_unbound_baseline_write } from "./functions_unbound_baseline_write.mjs";
 import { functions_unbound_names } from "./functions_unbound_names.mjs";
 import { functions_unbound_versus_baseline } from "./functions_unbound_versus_baseline.mjs";
@@ -21,7 +21,7 @@ export async function functions_unbound_gate_run() {
       "unbound gate: " +
       added.length +
       " functions read a name that nothing binds and no function answers to - bind it, correct the spelling, or delete the line: " +
-      shadowing_entries_names_text(added);
+      entries_names_text(added);
     throw new Error(message_added);
   }
   let any_stale = greater_than(stale.length, 0);
@@ -32,7 +32,7 @@ export async function functions_unbound_gate_run() {
       " baseline entries are bound now - rerun " +
       functions_unbound_baseline_write.name +
       " to shrink the baseline: " +
-      shadowing_entries_names_text(stale);
+      entries_names_text(stale);
     throw new Error(message_stale);
   }
   let result = {
