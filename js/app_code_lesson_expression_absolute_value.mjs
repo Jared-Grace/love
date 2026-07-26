@@ -11,10 +11,8 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div } from "./html_div.mjs";
 export function app_code_lesson_expression_absolute_value() {
   "practice Math.abs, another value-in value-out function like the rounding ones: Math.abs gives how far a number is from zero, which is always positive - a negative number loses its minus sign (Math.abs(-5) is 5) and a positive number stays the same (Math.abs(5) is 5); the answer is that distance; magnitude 2..9";
   function abs_code(inner) {
@@ -54,10 +52,10 @@ export function app_code_lesson_expression_absolute_value() {
     example_count: 2,
     decoys,
     forwards_question_label: "Absolute value: ",
-    forwards_answer_label: "distance from zero: ",
-    backwards_question_label: "distance from zero: ",
-    backwards_answer_label: "What code gives this distance from zero? ",
-    unscramble_label: "Build the code that gives this distance from zero: ",
+    forwards_answer_label: "positive value: ",
+    backwards_question_label: "positive value: ",
+    backwards_answer_label: "What code gives this positive value? ",
+    unscramble_label: "Build the code that gives this positive value: ",
   });
   return lesson;
   function title_name_id() {
@@ -75,28 +73,30 @@ export function app_code_lesson_expression_absolute_value() {
     return built;
   }
   function above(root) {
-    "the worked examples are randomized each visit: the definition, a negative number turning positive, and an already-positive number that does not change";
+    "examples FIRST (a negative made positive, a positive kept the same), then the three plain rules, with Math.abs in code style. Negatives were seen earlier (e.g. 2 - 5 is -3)";
     let magnitude = integer_random(2, 9);
     let magnitude_text = text_to(magnitude);
     let negative_text = text_combine_multiple(["-", magnitude_text]);
-    let define = app_code_container_light_blue(root);
-    let define_line = html_div(define);
-    html_span_text(define_line, "The ");
-    let term = html_span_text(define_line, "absolute value");
-    html_bold(term);
-    html_span_text(define_line, " of a number is how far it is from zero");
-    html_div_cycle_code(define, [
-      "The distance is always positive, so the minus sign is dropped",
-    ]);
-    let negative_box = app_code_container_light_blue(root);
-    html_div_cycle_code(negative_box, ["A negative number becomes positive:"]);
+    let example_box = app_code_container_light_blue(root);
     let v = abs_code(negative_text);
-    html_div_cycle_code(negative_box, ["", v, " is ", magnitude_text]);
-    let positive_box = app_code_container_light_blue(root);
-    html_div_cycle_code(positive_box, [
-      "A number that is already positive does not change:",
-    ]);
+    html_div_cycle_code(example_box, ["", v, " is ", magnitude_text]);
     let v2 = abs_code(magnitude_text);
-    html_div_cycle_code(positive_box, ["", v2, " is ", magnitude_text]);
+    html_div_cycle_code(example_box, ["", v2, " is ", magnitude_text]);
+    let rules = app_code_container_light_blue(root);
+    html_div_cycle_code(rules, [
+      "",
+      "Math.abs",
+      " will make a negative number positive",
+    ]);
+    html_div_cycle_code(rules, [
+      "",
+      "Math.abs",
+      " will keep a positive number the same",
+    ]);
+    html_div_cycle_code(rules, [
+      "The result of ",
+      "Math.abs",
+      " is always positive",
+    ]);
   }
 }
