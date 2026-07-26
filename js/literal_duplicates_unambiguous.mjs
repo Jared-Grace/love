@@ -1,3 +1,6 @@
+import { property_get_or } from "./property_get_or.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { literal_duplicates } from "./literal_duplicates.mjs";
 import { list_add } from "./list_add.mjs";
 export async function literal_duplicates_unambiguous() {
@@ -7,16 +10,13 @@ export async function literal_duplicates_unambiguous() {
   let found = await literal_duplicates();
   let claims = {};
   for (let entry of found) {
-    let seen = claims[entry.literal];
-    if (seen === undefined) {
-      claims[entry.literal] = 1;
-    } else {
-      claims[entry.literal] = seen + 1;
-    }
+    let seen = property_get_or(claims, entry.literal, 0);
+    claims[entry.literal] = seen + 1;
   }
   let safe = [];
   for (let entry of found) {
-    if (claims[entry.literal] > 1) {
+    let claimed = property_get_or(claims, entry.literal, 0);
+    if (greater_than(claimed, 1)) {
       continue;
     }
     let family = entry.f_name.split("_")[0] + "_";
@@ -26,7 +26,7 @@ export async function literal_duplicates_unambiguous() {
         list_add(files, f_name);
       }
     }
-    if (files.length > 0) {
+    if (greater_than(files.length, 0)) {
       list_add(safe, {
         f_name: entry.f_name,
         literal: entry.literal,
@@ -35,8 +35,10 @@ export async function literal_duplicates_unambiguous() {
       });
     }
   }
-  safe.sort(function lambda(a, b) {
-    return b.files.length - a.files.length;
-  });
+  function lambda(a, b) {
+    let difference = subtract(b.files.length, a.files.length);
+    return difference;
+  }
+  safe.sort(lambda);
   return safe;
 }
