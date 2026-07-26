@@ -8,7 +8,7 @@ export async function memory_symbols_baseline_write() {
   "That difference is deliberate and is the whole reason growth is not refused here. A name that shadows another is always a fault, so that ratchet can turn one way only. A call-shaped name in a note is a fault only sometimes: prose quotes its own callbacks, records what something used to be called, and names things written in other languages. Refusing to write those down would leave the gate red with no honest way to clear it, and a gate nobody can clear is one people learn to skip.";
   "What keeps it from becoming a place to dump things is that the file is small, changes rarely, and every addition shows up as its own line in a commit somebody can ask about.";
   let known = await memory_symbol_references_judged();
-  ("the sort is in place and hands nothing back, so the list itself is what gets written");
+  ("the sort is in place, so the list itself is what gets written - what it hands back is that same list, not a copy");
   list_sort_text(known);
   let baseline = {
     known,
