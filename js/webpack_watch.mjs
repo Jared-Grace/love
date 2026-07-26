@@ -29,7 +29,7 @@ import { catch_null } from "./catch_null.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 export async function webpack_watch() {
   let dev_relative = folder_public_join(app_shared_name_dev_text());
@@ -165,7 +165,7 @@ export async function webpack_watch() {
     let deps = property_get(ad, "deps");
     async function dep_stale_is(dep) {
       function resolve() {
-        let p = function_name_to_path(dep);
+        let p = function_name_to_path_relative(dep);
         return p;
       }
       let path = catch_null(resolve);
