@@ -24,7 +24,9 @@ export function js_identifiers_naming_nodes(ast) {
         return;
       }
       let member = js_node_type_is(node, "MemberExpression");
-      if (not(member)) {
+      let pair_is = js_node_type_is(node, "Property");
+      if (pair_is) {
+        ("only a key-and-value pair inside an object can be written the short way, so only it carries the flag - asking a method for it errors");
         let shorthand = property_get(node, "shorthand");
         if (shorthand) {
           ("{ log } really does reference log");
