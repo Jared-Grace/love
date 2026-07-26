@@ -1,12 +1,9 @@
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
-import { command_line_git_folder } from "./command_line_git_folder.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { git_folder_run } from "./git_folder_run.mjs";
 export async function git_commit_folder(folder, message) {
+  "The message travels as one word of the list, so nothing it contains can end up as a further argument to git - which is why it does not have to be stripped of anything first.";
   async function lambda() {
-    await command_line_git_folder(
-      folder,
-      text_combine_multiple(['commit -m "', message, '"']),
-    );
+    await git_folder_run(folder, ["commit", "-m", message]);
   }
   await catch_ignore_async(lambda);
 }

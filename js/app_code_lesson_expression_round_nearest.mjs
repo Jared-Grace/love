@@ -84,8 +84,11 @@ export function app_code_lesson_expression_round_nearest() {
   }
   function above(root) {
     "example before rule: show a round-down and a round-up first, THEN name it nearest, THEN teach how it decides - the first digit after the decimal point, shown on a two-digit decimal so first is unambiguous. Randomized each visit";
-    let whole = integer_random(2, 7);
+    ("the whole part avoids 3 and 4 so it never equals a highlighted first digit (3 or 4 below), which would make the number look like it repeats a digit");
+    let whole = list_random_item([2, 5, 6, 7]);
     let whole_text = text_to(whole);
+    let color_low = app_code_match_color();
+    let color_high = app_code_match_color_alt();
     let low_digit = integer_random(1, 4);
     let t3 = text_to(low_digit);
     let low_decimal = text_combine_multiple([whole_text, ".", t3]);
@@ -109,36 +112,60 @@ export function app_code_lesson_expression_round_nearest() {
     let term = html_span_text(name_line, "nearest");
     html_bold(term);
     html_span_text(name_line, " whole number");
+    ("concrete first: two worked examples with DIFFERENT first digits in different colours, then the knife-edge pair rounding down then up, THEN the general rule, and the one-line takeaway LAST");
     let rule = app_code_container_light_blue(root);
-    html_div_cycle_code(rule, [
-      "The first digit after the decimal point decides which way it rounds",
-    ]);
     app_code_first_decimal_digit_line(
       rule,
       "For example, in ",
       whole_dot,
-      "4",
+      "3",
       "5",
+      color_low,
     );
-    app_code_first_decimal_digit_line(rule, "in ", whole_dot, "4", "999");
+    app_code_first_decimal_digit_line(
+      rule,
+      "in ",
+      whole_dot,
+      "4",
+      "999",
+      color_high,
+    );
+    html_div_cycle_code(rule, ["", four_nines, ' rounds "down" to ', whole_text]);
+    html_div_cycle_code(rule, ["", half_decimal, ' rounds "up" to ', whole_up]);
     html_div_cycle_code(rule, [
-      "If the first digit after the decimal point is 0, 1, 2, 3, or 4 then ",
+      "If the first digit after the decimal point is ",
+      "0",
+      ", ",
+      "1",
+      ", ",
+      "2",
+      ", ",
+      "3",
+      ", or ",
+      "4",
+      " then ",
       "Math.round",
       " is like ",
       "Math.floor",
     ]);
     html_div_cycle_code(rule, [
-      "If the first digit after the decimal point is 5, 6, 7, 8, or 9 then ",
+      "If the first digit after the decimal point is ",
+      "5",
+      ", ",
+      "6",
+      ", ",
+      "7",
+      ", ",
+      "8",
+      ", or ",
+      "9",
+      " then ",
       "Math.round",
       " is like ",
       "Math.ceil",
     ]);
     html_div_cycle_code(rule, [
-      "",
-      four_nines,
-      ' rounds "down" to ',
-      whole_text,
+      "The first digit after the decimal point decides which way it rounds",
     ]);
-    html_div_cycle_code(rule, ["", half_decimal, ' rounds "up" to ', whole_up]);
   }
 }
