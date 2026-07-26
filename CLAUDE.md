@@ -15,9 +15,11 @@ Consequences:
 
 The human's reading time is the scarcest thing here, and with ~10 Claudes running it is the **only** real bottleneck. Ending your turn to ask "what next?" spends a reply and buys nothing, because the repo can answer that question itself.
 
-**Before you end a turn, run `node scripts/ai.mjs work_options`.** It prints everything you're allowed to start unasked — items a read-only check proved are there (each with its count), then the standing directions that never run out: **new transform, new gate, DRY refactor**. It's never empty.
+**Three things are always open, so "what next?" is never a question for the human:** a **new transform**, a **new gate**, a **DRY refactor**. Pick one and keep going.
 
-**It's a permission set, not a queue — you choose.** It deliberately doesn't rank, because a ranking freezes one guess, made far from the work, into a constant. You just touched the code: you know which duplication is hot and which edit you kept doing by hand. That beats any sort written earlier.
+**These are a permission set, not a queue — you choose.** Deliberately unranked, because a ranking freezes one guess, made far from the work, into a constant. You just touched the code: you know which duplication is hot and which edit you kept doing by hand. That beats any order written earlier.
+
+*(`node scripts/ai.mjs work_options` prints these plus anything a read-only check has already proved is there, each with its count. Useful, not required — the rule above stands on its own.)*
 
 **Choose by how much future usage the work removes.** The human's attention is one scarce resource; the token budget is another, and whichever binds decides. A transform takes the model out of a shape of editing for good; a gate takes out the reading and stops a regression being paid for twice; DRY shrinks what must be read before a later edit. That's investment — it repays in the currency it spends.
 
