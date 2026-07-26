@@ -1,4 +1,4 @@
-import { at_least } from "./at_least.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_copy } from "./list_copy.mjs";
@@ -14,7 +14,7 @@ export function list_cartesian_functions_inner(
   candidate,
 ) {
   let size = list_size(list);
-  let g = at_least(index, size);
+  let g = greater_than_equal(index, size);
   if (g) {
     let copy = list_copy(candidate);
     list_add(result, copy);
@@ -24,13 +24,8 @@ export function list_cartesian_functions_inner(
   function lambda(fn) {
     let v = fn(item);
     list_add(candidate, v);
-    list_cartesian_functions_inner(
-      list,
-      text_combine(index, 1),
-      fns,
-      result,
-      candidate,
-    );
+    let index2 = text_combine(index, 1);
+    list_cartesian_functions_inner(list, index2, fns, result, candidate);
     list_pop(candidate);
   }
   each(fns, lambda);

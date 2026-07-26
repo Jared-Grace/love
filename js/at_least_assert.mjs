@@ -1,7 +1,7 @@
 import { assert_json_get } from "./assert_json_get.mjs";
-import { at_least } from "./at_least.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 export function at_least_assert(left, right) {
-  let l = at_least(left, right);
+  let l = greater_than_equal(left, right);
   function lambda() {
     let r = {
       left,
