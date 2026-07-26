@@ -12,7 +12,8 @@ export function example_file_name_dom(parent, name) {
   html_text_set(caption, name);
   html_style_font_size(caption, "0.75rem");
   html_bold_semi(caption);
-  html_font_color_set(caption, app_shared_color_blue_dark());
+  let color = app_shared_color_blue_dark();
+  html_font_color_set(caption, color);
   html_style_set(caption, "margin", "0.4rem 0 0.2rem");
   return caption;
 }
