@@ -12,7 +12,8 @@ import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "./app_a_function_refresh_scroll.mjs";
 import { html_bar_content } from "./html_bar_content.mjs";
-import { app_shared_api_fn } from "./app_shared_api_fn.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
@@ -39,7 +40,6 @@ import { emoji_sync } from "./emoji_sync.mjs";
 import { indexeddb_store_clear } from "./indexeddb_store_clear.mjs";
 import { app_a_file_system_initialize_download } from "./app_a_file_system_initialize_download.mjs";
 import { emoji_down } from "./emoji_down.mjs";
-import { app_a_upload } from "./app_a_upload.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
@@ -90,8 +90,10 @@ export async function app_a_function(context) {
     let deltas = list_map(filtered, lambda2);
     let ne = list_empty_not_is(deltas);
     if (ne) {
-      let r = await app_shared_api_fn({
-        fn: app_a_upload,
+      "The server runs the upload, so its name is spelled rather than imported: importing";
+      "it would pull the git command chain into this browser bundle.";
+      let r = await app_shared_api({
+        f_name: fn_name("app_a_upload"),
         args: [deltas],
       });
     }
