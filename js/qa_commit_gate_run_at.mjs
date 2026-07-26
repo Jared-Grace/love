@@ -1,3 +1,9 @@
+import { qa_commit_verdicts } from "./qa_commit_verdicts.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { qa_snapshot_ensure } from "./qa_snapshot_ensure.mjs";
+import { qa_commit_gate_told } from "./qa_commit_gate_told.mjs";
+import { qa_commit_verdicts_path } from "./qa_commit_verdicts_path.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function qa_commit_gate_run_at(commit) {
   "Judges the commit you name, against a frozen copy of it, and keeps the answer";
   "Naming the commit is what makes the keeping worth anything: with this many of us committing, the newest commit changes several times while one run finishes, so an answer asked for about whatever is newest is almost always an answer nobody has yet - measured, after guessing otherwise";
