@@ -1,4 +1,9 @@
-import { ceil } from "./ceil.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { multiply } from "./multiply.mjs";
@@ -16,11 +21,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     }
     addClause(...lits) {
       function lambda3(x) {
-        let r2 = x !== 0;
+        let r2 = not_equal(x, 0);
         return r2;
       }
       let clean = lits.filter(lambda3);
-      if (clean.length === 0) {
+      if (equal(clean.length, 0)) {
         return;
       }
       this.clauses.push(clean);
@@ -34,7 +39,8 @@ export async function integer_factorization_to_sat(integer_to_factor) {
         "\n",
       ]);
       for (let c of this.clauses) {
-        out += text_combine(c.join(" "), " 0\n");
+        let left = c.join(" ");
+        out += text_combine(left, " 0\n");
       }
       return out;
     }
@@ -99,9 +105,9 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       },
       lambda6,
     );
-    for (let i = 0; i < columns.length; i++) {
+    for (let i = 0; less_than(i, columns.length); i++) {
       let col = [...columns[i]];
-      while (col.length >= 3) {
+      while (greater_than_equal(col.length, 3)) {
         let a = col.pop();
         let b = col.pop();
         let c = col.pop();
@@ -109,11 +115,11 @@ export async function integer_factorization_to_sat(integer_to_factor) {
         next[i].push(s);
         next[text_combine(i, 1)].push(carry);
       }
-      if (col.length === 2) {
+      if (equal(col.length, 2)) {
         let [s, carry] = halfAdder(cnf, col[0], col[1]);
         next[i].push(s);
         next[text_combine(i, 1)].push(carry);
-      } else if (col.length === 1) {
+      } else if (equal(col.length, 1)) {
         next[i].push(col[0]);
       }
     }
@@ -131,14 +137,14 @@ export async function integer_factorization_to_sat(integer_to_factor) {
       },
       lambda7,
     );
-    for (let i = 0; i < bits; i++) {
-      for (let j = 0; j < bits; j++) {
+    for (let i = 0; less_than(i, bits); i++) {
+      for (let j = 0; less_than(j, bits); j++) {
         let p = andGate(cnf, x[i], y[j]);
         columns[text_combine(i, j)].push(p);
       }
     }
     function lambda8(col) {
-      let r8 = col.length > 2;
+      let r8 = greater_than(col.length, 2);
       return r8;
     }
     while (columns.some(lambda8)) {
@@ -149,30 +155,30 @@ export async function integer_factorization_to_sat(integer_to_factor) {
   function finalizeSum(cnf, columns) {
     let result = [];
     let carry = null;
-    for (let i = 0; i < columns.length; i++) {
+    for (let i = 0; less_than(i, columns.length); i++) {
       let col = columns[i];
       let a = col[0] || null;
       let b = col[1] || null;
       if (a && b) {
-        if (carry === null) {
+        if (equal(carry, null)) {
           [result[i], carry] = halfAdder(cnf, a, b);
         } else {
           [result[i], carry] = fullAdder(cnf, a, b, carry);
         }
       } else if (a) {
-        if (carry === null) {
+        if (equal(carry, null)) {
           result[i] = a;
         } else {
           [result[i], carry] = halfAdder(cnf, a, carry);
         }
       } else if (b) {
-        if (carry === null) {
+        if (equal(carry, null)) {
           result[i] = b;
         } else {
           [result[i], carry] = halfAdder(cnf, b, carry);
         }
       } else {
-        if (carry === null) {
+        if (equal(carry, null)) {
           result[i] = null;
         } else {
           result[i] = carry;
@@ -206,16 +212,16 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     );
     cnf.addClause(...x);
     cnf.addClause(...y);
-    if (bits > 1) {
+    if (greater_than(bits, 1)) {
       cnf.addClause(...x.slice(1));
       cnf.addClause(...y.slice(1));
     }
     cnf.addClause(-x[subtract(bits, 1)], y[subtract(bits, 1)]);
     let columns = buildMultiplierCSA(cnf, x, y);
     let result = finalizeSum(cnf, columns);
-    for (let i = 0; i < result.length; i++) {
+    for (let i = 0; less_than(i, result.length); i++) {
       let bit = (N >> i) & 1;
-      if (result[i] !== null) {
+      if (not_equal(result[i], null)) {
         cnf.addClause(bit ? result[i] : -result[i]);
       }
     }
@@ -225,11 +231,12 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     let out = new CNF();
     out.varCount = cnf.varCount;
     for (let clause of cnf.clauses) {
-      if (clause.length <= 3) {
+      if (less_than_equal(clause.length, 3)) {
         out.clauses.push(clause);
       } else {
         let prev = clause[0];
-        for (let i = 1; i < subtract(clause.length, 2); i++) {
+        let b2 = subtract(clause.length, 2);
+        for (let i = 1; less_than(i, b2); i++) {
           let v = out.newVar();
           out.addClause(prev, clause[i], v);
           prev = -v;
@@ -244,8 +251,9 @@ export async function integer_factorization_to_sat(integer_to_factor) {
     return out;
   }
   let v4 = Math.sqrt(integer_to_factor);
-  let v5 = Math.log2(v4);
-  let bits = text_combine(Math.ceil(v5), 1);
+  let v5 = Math.log(v4);
+  let left2 = Math.ceil(v5);
+  let bits = text_combine(left2, 1);
   let cnf = factorizationCNF(integer_to_factor, bits);
   let cnf3 = to3SAT(cnf);
   cnf3.bits = bits;
