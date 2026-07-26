@@ -7,8 +7,36 @@
   <title>next</title>
 </head>
 <body>
-  <style>@keyframes app_loading_spin{to{transform:rotate(360deg)}}</style><div id="app-loading" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.5rem;z-index:1000"><div style="width:8rem;height:8rem;border:0.75rem solid rgba(140,180,255,0.2);border-top-color:#bcd6ff;border-radius:50%;box-shadow:0 0 1.5rem rgba(140,180,255,0.6);animation:app_loading_spin 1.2s linear infinite"></div><p style="color:white;font-size:1.5rem;font-family:sans-serif;text-align:center;text-shadow:0 0.05em 0.15em rgba(0,0,0,0.8);margin:0">One moment, please 🙏</p></div>
-  <script src="next.js?v=1785074169628"> 
+  <style>@keyframes html_loading_spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes html_loading_glow {
+  0% { box-shadow: 0 0 0.75rem rgba(140, 180, 255, 0.4); }
+  50% { box-shadow: 0 0 2rem rgba(140, 180, 255, 0.9); }
+  100% { box-shadow: 0 0 0.75rem rgba(140, 180, 255, 0.4); }
+}
+@keyframes html_loading_spin_reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes html_loading_breath {
+  0% { transform: scale(1.1460788100214887); }
+  12.5% { transform: scale(0.9260396535950581); }
+  25% { transform: scale(1.1470081574233); }
+  37.5% { transform: scale(0.8972521206986644); }
+  50% { transform: scale(1.22571117942526); }
+  62.5% { transform: scale(0.9255114062722313); }
+  75% { transform: scale(1.2783038921726333); }
+  87.5% { transform: scale(0.9187695979758119); }
+  100% { transform: scale(1.1460788100214887); }
+}
+@keyframes html_loading_core {
+  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.85; }
+}</style><div id="app-loading" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0, 0, 0, 0.8);z-index:1000"><div style="position:fixed;top:50%;left:50%;width:16rem;height:16rem;transform:translate(-50%,-50%)"><div style="position:absolute;inset:0;animation:html_loading_breath 8s ease-in-out infinite"><div style="position:absolute;inset:0;border:1rem solid rgba(140,180,255,0.2);border-top-color:#bcd6ff;border-radius:50%;box-shadow:0 0 1rem rgba(140,180,255,0.6);animation:html_loading_spin 2s ease-in-out infinite, html_loading_glow 2s ease-in-out infinite"></div></div><div style="position:absolute;inset:4rem;border:0.6rem solid rgba(140,180,255,0.15);border-bottom-color:#bcd6ff;border-radius:50%;animation:html_loading_spin_reverse 1.4s linear infinite"></div><div style="position:absolute;top:50%;left:50%;width:2.8rem;height:2.8rem;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#bcd6ff 0%,#4a90e2 70%);box-shadow:0 0 1rem rgba(140,180,255,0.9);animation:html_loading_core 2s ease-in-out infinite"></div></div><p style="position:fixed;top:calc(50% + 11rem);left:50%;transform:translateX(-50%);margin:0;color:white;font-size:1.5rem;font-family:sans-serif;text-align:center;text-shadow:0 0.05em 0.15em rgba(0, 0, 0, 0.8);background:radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%);padding:1.25rem 3.5rem">One moment, please 🙏</p></div>
+  <script src="next.js?v=1785103176490"> 
     
   </script>
 </body>
