@@ -1,3 +1,5 @@
+import { function_call_commit } from "./function_call_commit.mjs";
+import { ai_git_noted } from "./ai_git_noted.mjs";
 import { each_object } from "./each_object.mjs";
 import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { function_rename } from "./function_rename.mjs";
@@ -41,8 +43,11 @@ export async function functions_rename_generic(filter, name_change) {
   }
   each_object(different, lambda4);
   async function lambda3(f_name_after, f_name_before) {
-    let v = await function_rename(f_name_before, f_name_after);
+    let args = [f_name_before, f_name_after];
+    await function_call_commit(function_rename, args);
   }
+  ("each rename is committed as it lands rather than the whole batch at the end. A prefix migration touches hundreds of files and runs for minutes, and with many hands editing the same folder somebody else's sweep files most of them under a bare word long before this returns — so the window has to be one rename wide, which is also the only size that leaves a message naming a real command with its real arguments");
+  await ai_git_noted();
   let r = await object_map_async(different, lambda3);
   return r;
 }
