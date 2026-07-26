@@ -47,9 +47,11 @@ export function app_code_lesson_expression_multiply() {
     "the multiply written out as repeated addition - sum_code(2, 3) is 2 + 2 + 2";
     let plus = js_operator_plus_symbol();
     function value_text(index) {
-      return text_to(value);
+      let t = text_to(value);
+      return t;
     }
-    let terms = list_map(range(count), value_text);
+    let list = range(count);
+    let terms = list_map(list, value_text);
     let separator = text_combine_multiple([" ", plus, " "]);
     let sum = list_join(terms, separator);
     return sum;
@@ -146,7 +148,8 @@ export function app_code_lesson_expression_multiply() {
     }
     function running_count(grid, number) {
       "the count under an intermediate term - bold and dark so the counting reads clearly; it does not compete with the final count, which stands apart by its coloured chip rather than by weight";
-      let label = html_span_text_smaller(grid, text_to(number));
+      let text = text_to(number);
+      let label = html_span_text_smaller(grid, text);
       html_font_color_set(label, "rgb(55, 55, 55)");
       html_bold(label);
       return label;
@@ -159,21 +162,22 @@ export function app_code_lesson_expression_multiply() {
     }
     function cell_at(node, row, column) {
       "place a node in a specific grid row and column";
-      html_style_set(node, "grid-row", text_to(row));
-      html_style_set(node, "grid-column", text_to(column));
+      let style_value = text_to(row);
+      html_style_set(node, "grid-row", style_value);
+      let style_value2 = text_to(column);
+      html_style_set(node, "grid-column", style_value2);
     }
     function sum_counted(parent, value, value_color, count_color, count) {
       "value + value + ... with the running count 1..count OUTSIDE the code, on the light background below each term: row 1 is one continuous black pill (value chips joined by +), row 2 holds the counts (no black behind them), the last count in the count colour so how-many visibly becomes the second number";
-      let column_count = add(multiply(2, count), 1);
+      let left = multiply(2, count);
+      let column_count = add(left, 1);
       let end_column = column_count;
       let grid = html_span(parent);
       html_display_set(grid, "inline-grid");
       html_style_set(grid, "grid-template-rows", "auto auto");
-      html_style_set(
-        grid,
-        "grid-template-columns",
-        text_combine_multiple(["repeat(", text_to(column_count), ", auto)"]),
-      );
+      let t2 = text_to(column_count);
+      let style_value3 = text_combine_multiple(["repeat(", t2, ", auto)"]);
+      html_style_set(grid, "grid-template-columns", style_value3);
       html_style_set(grid, "align-items", "center");
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
@@ -194,11 +198,12 @@ export function app_code_lesson_expression_multiply() {
       }
       function place_term(index) {
         let position = add(index, 1);
-        let column = add(multiply(2, index), 2);
+        let left2 = multiply(2, index);
+        let column = add(left2, 2);
         let chip = lifted_chip(grid, value, value_color);
         cell_at(chip, 2, column);
         let last = equal(position, count);
-        let numeral;
+        let numeral = null;
         if (last) {
           numeral = final_count(grid, position, count_color);
         } else {
@@ -207,7 +212,8 @@ export function app_code_lesson_expression_multiply() {
         cell_at(numeral, 1, column);
       }
       function place_operator(gap) {
-        let column = add(multiply(2, gap), 3);
+        let left3 = multiply(2, gap);
+        let column = add(left3, 3);
         let op = html_span_text(grid, plus);
         html_font_color_set(op, "white");
         html_font_jetbrains_mono(op);
@@ -215,8 +221,11 @@ export function app_code_lesson_expression_multiply() {
       }
       spacer(1);
       spacer(end_column);
-      each(range(count), place_term);
-      each(range(subtract(count, 1)), place_operator);
+      let list2 = range(count);
+      each(list2, place_term);
+      let count2 = subtract(count, 1);
+      let list3 = range(count2);
+      each(list3, place_operator);
     }
     function product_form(parent, value, count, value_color, count_color) {
       "one dark tile reading value * count, value and count as lifted color chips, so product_form(2, 3, ...) is 2 * 3";

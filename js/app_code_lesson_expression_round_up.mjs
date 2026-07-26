@@ -13,7 +13,6 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_up() {
@@ -100,8 +99,8 @@ export function app_code_lesson_expression_round_up() {
     html_span_text(no_decimal, " has no decimal, so ");
     html_span_text_code_dark(no_decimal, whole_text);
     html_span_text(no_decimal, " is a ");
-    let term = html_span_text(no_decimal, "whole number");
-    html_bold(term);
+    ("whole number is defined at Round down, so it is not re-bolded here");
+    html_span_text(no_decimal, "whole number");
     html_div_cycle_code(define, [
       "",
       decimal,
