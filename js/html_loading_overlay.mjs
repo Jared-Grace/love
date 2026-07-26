@@ -27,7 +27,7 @@ export async function html_loading_overlay() {
   };
   html_style_assign(div, s);
   await html_loading_spinner(div);
-  let message = html_p_text(div, "One moment, please 🙏");
+  let message = html_p_text(div, html_loading_message_text());
   html_style_assign(message, {
     color: "white",
     "font-size": "1.5rem",
