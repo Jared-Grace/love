@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { file_append } from "./file_append.mjs";
 import { files_to_commit_path } from "./files_to_commit_path.mjs";
-export async function file_written_add(f_path) {
+export async function file_to_commit_add(f_path) {
   arguments_assert(arguments, 1);
   ("Notes that this file has just been changed, so the commit that follows can name");
   ("exactly what it is committing instead of sweeping up everything in the folder.");
