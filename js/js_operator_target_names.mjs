@@ -9,6 +9,5 @@ export function js_operator_target_names() {
   let binary = js_operators_binary();
   let operators = list_concat(unary, binary);
   let names = js_operators_to_fn_name(operators);
-  names.push("equal_not");
   return names;
 }
