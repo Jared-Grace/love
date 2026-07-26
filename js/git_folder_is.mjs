@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { catch_only_run_async } from "./catch_only_run_async.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 export async function git_folder_is(folder) {
@@ -7,7 +8,7 @@ export async function git_folder_is(folder) {
       "rev-parse",
       "--is-inside-work-tree",
     ]);
-    is = stdout === "true\n";
+    is = equal(stdout, "true\n");
   }
   function lambda2() {
     is = false;
