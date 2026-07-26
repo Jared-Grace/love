@@ -1,12 +1,12 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_not_is } from "./null_not_is.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { json_to } from "./json_to.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_is } from "./list_is.mjs";
 import { each } from "./each.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { and } from "./and.mjs";
 import { object_values_map_list } from "./object_values_map_list.mjs";
@@ -31,7 +31,7 @@ export function js_node_signature(node, bound) {
     return slot;
   }
   function written_key(key) {
-    ("a key is written either as a bare word or as a quoted one, and only one of the two fields is there to read");
+    "a key is written either as a bare word or as a quoted one, and only one of the two fields is there to read";
     let name = property_get_or_null(key, "name");
     let named_is = null_not_is(name);
     if (named_is) {
@@ -54,7 +54,7 @@ export function js_node_signature(node, bound) {
       return;
     }
     let type = property_get_or_null(node_, "type");
-    let untyped_is = text_empty_is(type);
+    let untyped_is = null_is(type);
     if (untyped_is) {
       return;
     }
@@ -77,7 +77,8 @@ export function js_node_signature(node, bound) {
       list_add(pieces, "literal:" + text);
       return;
     }
-    let computed = property_get(node_, "computed");
+    ("only these two kinds carry a computed field, so it is read inside them rather than above them");
+    let computed = property_get_or_null(node_, "computed");
     let plain_is = not(computed);
     let member_is = equal(type, "MemberExpression");
     let after_dot_is = and(member_is, plain_is);
@@ -113,20 +114,21 @@ export function js_node_signature(node, bound) {
         return;
       }
       let child = property_get(node_, key_3);
+      let child_absent = null_is(child);
+      if (child_absent) {
+        list_add(pieces, key_3 + "=null;");
+        return;
+      }
       let child_list_is = list_is(child);
       if (child_list_is) {
         emit(child);
         return;
       }
-      let child_type = property_get(child, "type");
-      let child_node_is = text_empty_not_is(child_type);
+      ("a plain word like the kind of a declaration answers nothing when asked for its type, and asking it for its parts would walk it letter by letter");
+      let child_type = property_get_or_null(child, "type");
+      let child_node_is = null_not_is(child_type);
       if (child_node_is) {
         emit(child);
-        return;
-      }
-      let child_absent = null_is(child);
-      if (child_absent) {
-        list_add(pieces, key_3 + "=null;");
         return;
       }
       let written_3 = json_to(child);
