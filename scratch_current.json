@@ -1,0 +1,2018 @@
+[
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Digits, numbered",
+    "text": "Symbols: Digits, numbered\nThe numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 are called digits\nIn a number, its digits (0, 1, 2, ..., 9) are examples of symbols\nWhen we write computer programs, we use symbols, including numbers\nHere is an example:\nSymbols:\n7\n1\n3\n2\n3\n3\nNumber of symbols:\n3\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_digits_numbered",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Digits, numbered",
+    "text": "Symbols: Digits, numbered\nPlease answer the following quiz question:\nSymbols:\n1\n1\n1\n2\n6\n3\n9\n4\nHow many symbols are there?\n2\n3\n4\n5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_digits_numbered",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Digits, numbered",
+    "text": "Symbols: Digits, numbered\nPlease answer the following quiz question:\nCount:\n1\nWhat symbols produce this count?\n3\n1\n4\n1\n2\n2\n2\n1\n6\n2\n7\n3\n3\n4\n1\n1\n6\n2\n4\n3\n0\n4\n7\n5\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_digits_numbered",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Digits",
+    "text": "Symbols: Digits\nThis lesson is the same as the previous lesson, except there are not numbers underneath\nHere is an example:\nSymbols:\n1\n1\n1\n5\n2\nNumber of symbols:\n5\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_digits",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Digits",
+    "text": "Symbols: Digits\nPlease answer the following quiz question:\nSymbols:\n1\n0\n5\n2\n3\nHow many symbols are there?\n2\n3\n4\n5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_digits",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Digits",
+    "text": "Symbols: Digits\nPlease answer the following quiz question:\nCount:\n2\nWhat symbols produce this count?\n7\n8\n3\n9\n2\n0\n3\n3\n5\n2\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_digits",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Letters",
+    "text": "Symbols: Letters\nIn English, there are 26 letters in the alphabet:\na\n1\n, b\n2\n, c\n3\n, d\n4\n, e\n5\n, f\n6\n, g\n7\n, h\n8\n, i\n9\n, j\n10\n, k\n11\n, l\n12\n, m\n13\n, n\n14\n, o\n15\n, p\n16\n, q\n17\n, r\n18\n, s\n19\n, t\n20\n, u\n21\n, v\n22\n, w\n23\n, x\n24\n, y\n25\n, z\n26\nThose 26 letters are written in lowercase.\nHere are the 26 English letters written in uppercase:\nA\n1\n, B\n2\n, C\n3\n, D\n4\n, E\n5\n, F\n6\n, G\n7\n, H\n8\n, I\n9\n, J\n10\n, K\n11\n, L\n12\n, M\n13\n, N\n14\n, O\n15\n, P\n16\n, Q\n17\n, R\n18\n, S\n19\n, T\n20\n, U\n21\n, V\n22\n, W\n23\n, X\n24\n, Y\n25\n, Z\n26\nRemember, numbers are examples of symbols\nAlso, both uppercase and lowercase letters are examples of symbols\nWhen we write computer programs, we use symbols, including letters and numbers\nFor a computer, lowercase letters may be considered different than uppercase letters\nHere is an example:\nSymbols:\nF\no\nr\nNumber of symbols:\n3\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_letters",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Letters",
+    "text": "Symbols: Letters\nPlease answer the following quiz question:\nSymbols:\nH\nI\nm\nHow many symbols are there?\n2\n3\n4\n5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_letters",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Letters",
+    "text": "Symbols: Letters\nPlease answer the following quiz question:\nCount:\n4\nWhat symbols produce this count?\nF\no\nR\nG\nO\nD\no\nn\nl\ny\nS\no\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_letters",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Space",
+    "text": "Symbols: Space\nIn English, when writing, we use   spaces   to separate words\nFor a computer, a space is considered a symbol, just like a letter or a number\nHere is an example:\nSymbols:\nF\no\nr\nG\n5\no\nd\ns\no\nNumber of symbols:\n10\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_space",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Space",
+    "text": "Symbols: Space\nPlease answer the following quiz question:\nSymbols:\nb\nu\nt\nh\n5\na\nv\ne\ne\n10\nt\ne\nr\nn\na\n15\nl\nHow many symbols are there?\n7\n9\n12\n16\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_space",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Symbols: Space",
+    "text": "Symbols: Space\nPlease answer the following quiz question:\nCount:\n9\nWhat symbols produce this count?\nF\no\nr\nG\n5\no\nd\nG\no\nd\ns\n5\no\nl\no\nv\n10\ne\nd\nH\ni\nm\ns\n5\nh\na\nl\nl\ns\no\nl\no\n5\nv\ne\nd\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "symbols_space",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Letters allowed, spaces not",
+    "text": "Identifiers: Letters allowed, spaces not\nHumans use languages like English, Chinese or Hindi to speak to each other\nFor a human to talk to a computer, the human can use a programming language\nThe programming language we will learn now is called JavaScript\nWe can give names to people, cities, countries, mountains, rivers, etc.\nIn JavaScript, identifiers are used as names\nIn English, letters are inside of words, words are inside of sentences and sentences are inside of paragraphs\nIn English, letters are a basic building block and in JavaScript, symbols are a basic building block\nIn English, letters are inside of words and in JavaScript, symbols (like letters) are inside of identifiers\nIdentifiers can have different kinds of symbols including letters\nBut identifiers cannot have spaces\nHere are some examples:\nCode:\nO\nn\nl\ny\nS\no\nn\nIdentifier validity:\n✅ valid\nCode:\nn\no\nt\np\ne\nr\ni\ns\nh\nIdentifier validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_letters_allowed_spaces_not",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Letters allowed, spaces not",
+    "text": "Identifiers: Letters allowed, spaces not\nPlease answer the following quiz question:\nCode:\nI\nn\nH\ni\nm\nS\nh\na\nl\nl\nIs this a valid identifier?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_letters_allowed_spaces_not",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Letters allowed, spaces not",
+    "text": "Identifiers: Letters allowed, spaces not\nPlease answer the following quiz question:\nIdentifier validity:\n✅ valid\nWhat code matches this validity?\nG\no\nd\ns\no\nO\nn\nl\ny\nS\no\nn\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_letters_allowed_spaces_not",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Underscores allowed _, hyphens not",
+    "text": "Identifiers: Underscores allowed _, hyphens not\nThis is a hyphen: -\nThis is an underscore: _\nHow they look different:\n-\nThe line of a hyphen is shorter and is near the middle vertically, not the bottom or the top\n_\nThe line of an underscore is longer and is near the bottom\nRemember, identifiers can have different kinds of symbols including letters\nIdentifiers can also have underscores _\nHowever identifiers cannot have hyphens -\nHere are some examples:\nCode:\nh\na\nv\ne\n_\n_\ne\nt\ne\nr\nn\na\nl\nIdentifier validity:\n✅ valid\nCode:\nH\ne\n-\ng\na\nv\ne\n-\nH\ni\ns\n-\nIdentifier validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_underscores_allowed_hyphens_not",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Underscores allowed _, hyphens not",
+    "text": "Identifiers: Underscores allowed _, hyphens not\nPlease answer the following quiz question:\nCode:\no\nn\ne\n-\n-\na\nn\nd\n_\no\nn\nl\ny\nIs this a valid identifier?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_underscores_allowed_hyphens_not",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Underscores allowed _, hyphens not",
+    "text": "Identifiers: Underscores allowed _, hyphens not\nPlease answer the following quiz question:\nIdentifier validity:\n✅ valid\nWhat code matches this validity?\nF\no\nr\n_\nG\no\nd\nw\nh\no\n-\n-\nb\ne\nl\ni\ne\nv\ne\ns\n-\ni\nn\n-\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_underscores_allowed_hyphens_not",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Dollar signs allowed $, periods not",
+    "text": "Identifiers: Dollar signs allowed $, periods not\nThis is a dollar sign: $\nThis is a period: .\nRemember, identifiers can have different kinds of symbols including letters and underscores\nIdentifiers can also have dollar signs $\nHowever identifiers cannot have periods .\nHere are some examples:\nCode:\ni\nn\n$\n$\nH\ni\nm\nIdentifier validity:\n✅ valid\nCode:\nH\ne\n.\ng\na\nv\ne\n.\n.\nH\ni\ns\n.\nIdentifier validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_dollar_signs_allowed_periods_not",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Dollar signs allowed $, periods not",
+    "text": "Identifiers: Dollar signs allowed $, periods not\nPlease answer the following quiz question:\nCode:\ng\na\nv\ne\n.\nH\ni\ns\n.\no\nn\ne\n.\n.\na\nn\nd\nIs this a valid identifier?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_dollar_signs_allowed_periods_not",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Dollar signs allowed $, periods not",
+    "text": "Identifiers: Dollar signs allowed $, periods not\nPlease answer the following quiz question:\nIdentifier validity:\n✅ valid\nWhat code matches this validity?\nt\nh\ne\n.\nw\no\nr\nl\nd\n.\n.\nt\nh\na\nt\n.\nw\nh\no\n$\nb\ne\nl\ni\ne\nv\ne\ns\n$\ni\nn\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_dollar_signs_allowed_periods_not",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Symbol, first",
+    "text": "Identifiers: Symbol, first\nRemember, identifiers can have different kinds of symbols including letters, underscores and dollar signs\nIdentifiers can also have digits: 0 1 2 3 4 5 6 7 8 9\nHowever identifiers cannot have a digit as their first symbol (Identifiers cannot begin with a digit)\nAfter the first symbol an identifier can always be a digit\nAnd letters a - z A - Z , underscores _ and dollar signs $ may be used anywhere in an identifier, even as the first symbol\nHere are some examples:\nCode:\n_\nw\nh\no\n0\nIdentifier validity:\n✅ valid\nCode:\n2\n3\nG\no\nd\n1\nIdentifier validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_symbol_first",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Symbol, first",
+    "text": "Identifiers: Symbol, first\nPlease answer the following quiz question:\nCode:\nt\nh\na\nt\n2\n3\nH\ne\n4\n5\nIs this a valid identifier?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_symbol_first",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Symbol, first",
+    "text": "Identifiers: Symbol, first\nPlease answer the following quiz question:\nIdentifier validity:\n🚫 invalid\nWhat code matches this validity?\n_\n$\no\nn\nl\ny\n0\n1\n0\nS\no\nn\n8\n9\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_symbol_first",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Symbol, first, unseparated",
+    "text": "Identifiers: Symbol, first, unseparated\nThis lesson is the same as the previous lesson, except the symbols are not separated\nFor example, instead of:\n$_the0 ,\nYou will now see:\n$_the0\nHere are some examples:\nCode:\n_have0\nIdentifier validity:\n✅ valid\nCode:\n2Son1\nIdentifier validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_symbol_first_unseparated",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Symbol, first, unseparated",
+    "text": "Identifiers: Symbol, first, unseparated\nPlease answer the following quiz question:\nCode:\n_gave1\nIs this a valid identifier?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_symbol_first_unseparated",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Identifiers: Symbol, first, unseparated",
+    "text": "Identifiers: Symbol, first, unseparated\nPlease answer the following quiz question:\nIdentifier validity:\n🚫 invalid\nWhat code matches this validity?\n$the0\n1eternal0\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "identifiers_symbol_first_unseparated",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Addition +",
+    "text": "Operators: Addition +\nThis is a plus sign: +\nIn math, a plus sign can be used to add numbers: 1 + 2\nIn JavaScript, the + symbol can be used to add two numbers\nHere is an example:\nCode:\n3 + 6\nValue of code:\n9\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_addition",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Addition +",
+    "text": "Operators: Addition +\nPlease answer the following quiz question:\nCode:\n6 + 2\nWhat is the value of this code?\n4\n6\n7\n8\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_addition",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Addition +",
+    "text": "Operators: Addition +\nPlease answer the following quiz question:\nValue:\n6\nWhat code produces this value?\n1 + 1\n2 + 4\n4 + 5\n4 + 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_addition",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Addition +",
+    "text": "Operators: Addition +\nPlease answer the following quiz question:\nValue:\n8\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_addition",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Subtraction -",
+    "text": "Operators: Subtraction -\nThis is a minus sign: -\nIn math, a minus sign can be used to subtract numbers: 8 - 4\nIn JavaScript, the - symbol can be used to subtract two numbers\nHere is an example:\nCode:\n4 - 1\nValue of code:\n3\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_subtraction",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Subtraction -",
+    "text": "Operators: Subtraction -\nPlease answer the following quiz question:\nCode:\n8 - 6\nWhat is the value of this code?\n1\n2\n6\n7\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_subtraction",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Subtraction -",
+    "text": "Operators: Subtraction -\nPlease answer the following quiz question:\nValue:\n3\nWhat code produces this value?\n8 - 3\n9 - 6\n11 - 7\n13 - 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_subtraction",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Subtraction -",
+    "text": "Operators: Subtraction -\nPlease answer the following quiz question:\nValue:\n6\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_subtraction",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiplication *",
+    "text": "Operators: Multiplication *\nThis is a multiplication sign: ×\nIn math, a multiplication sign can be used to multiply numbers: 6 × 5\nThis is an asterisk: *\nIn JavaScript, we do not use a multiplication sign × to multiply numbers\nInstead, the * symbol can be used to multiply two numbers\nHere is an example:\nCode:\n1 * 4\nValue of code:\n4\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiplication",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiplication *",
+    "text": "Operators: Multiplication *\nPlease answer the following quiz question:\nCode:\n5 * 6\nWhat is the value of this code?\n9\n12\n18\n30\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiplication",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiplication *",
+    "text": "Operators: Multiplication *\nPlease answer the following quiz question:\nValue:\n14\nWhat code produces this value?\n2 * 1\n2 * 7\n3 * 7\n6 * 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiplication",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiplication *",
+    "text": "Operators: Multiplication *\nPlease answer the following quiz question:\nValue:\n14\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiplication",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Division /",
+    "text": "Operators: Division /\nThis is a forward slash: /\nIn math, a forward slash can be used to divide numbers: 35 / 5\nIn JavaScript, the / symbol can be used to divide two numbers\nHere is an example:\nCode:\n6 / 3\nValue of code:\n2\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_division",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Division /",
+    "text": "Operators: Division /\nPlease answer the following quiz question:\nCode:\n12 / 6\nWhat is the value of this code?\n2\n4\n6\n7\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_division",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Division /",
+    "text": "Operators: Division /\nPlease answer the following quiz question:\nValue:\n1\nWhat code produces this value?\n5 / 5\n12 / 2\n28 / 4\n30 / 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_division",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Division /",
+    "text": "Operators: Division /\nPlease answer the following quiz question:\nValue:\n7\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_division",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Minus -",
+    "text": "Operators: Minus -\nIn math and JavaScript, a minus sign can be used to make a number negative: -4\nWhen subtracting two numbers there is a number on both the left and right sides of the - :\n7 - 5\nleft - right\nHowever, when making a number negative, there is only a number on right side of the - :\n-4\n-right\nTherefore, - must have a value on the right side\nAnd if - does not have anything on its right side, then that is invalid code:\ninvalid-\nHere are some examples:\nCode:\n6 - 1\nCode validity:\n✅ valid\nCode:\n2-\nCode validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_minus",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Minus -",
+    "text": "Operators: Minus -\nPlease answer the following quiz question:\nCode:\n-1\nIs this code valid?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_minus",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Minus -",
+    "text": "Operators: Minus -\nPlease answer the following quiz question:\nCode validity:\n✅ valid\nWhat code matches this validity?\n-2\n3 -\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_minus",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Asterisk *",
+    "text": "Operators: Asterisk *\nWhen multiplying two numbers there is a number on both the left and right sides of the * :\n1 * 1\nleft * right\nRemember, for - it's possible to have a number only on the right and not on the left:\n-6\n-right\nHowever JavaScript does not have something like this for *\nTherefore, * must have values both on the left side and the right side\nSo if * does not have anything on its right side, then that is invalid code:\ninvalid *\nAnd, likewise, if * does not have anything on its left side, then that is also invalid code:\n* invalid\nHere are some examples:\nCode:\n14 * 7\nCode validity:\n✅ valid\nCode:\n*5\nCode validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_asterisk",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Asterisk *",
+    "text": "Operators: Asterisk *\nPlease answer the following quiz question:\nCode:\n* 1\nIs this code valid?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_asterisk",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Asterisk *",
+    "text": "Operators: Asterisk *\nPlease answer the following quiz question:\nCode validity:\n✅ valid\nWhat code matches this validity?\n* 3\n5 * 5\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_asterisk",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Forward slash /",
+    "text": "Operators: Forward slash /\nWhen dividing two numbers there is a number on both the left and right sides of the / :\n15 / 5\nleft / right\nRemember, for - it's possible to have a number only on the right and not on the left:\n-6\n-right\nHowever JavaScript does not have something like this for /\nTherefore, / must have values both on the left side and the right side\nSo if / does not have anything on its right side, then that is invalid code:\ninvalid /\nAnd, likewise, if / does not have anything on its left side, then that is also invalid code:\n/ invalid\nHere are some examples:\nCode:\n10 / 5\nCode validity:\n✅ valid\nCode:\n/1\nCode validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_forward_slash",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Forward slash /",
+    "text": "Operators: Forward slash /\nPlease answer the following quiz question:\nCode:\n49 / 7\nIs this code valid?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_forward_slash",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Forward slash /",
+    "text": "Operators: Forward slash /\nPlease answer the following quiz question:\nCode validity:\n🚫 invalid\nWhat code matches this validity?\n2/\n30 / 5\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_forward_slash",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Property access ., numbers",
+    "text": "Operators: Property access ., numbers\nIn JavaScript, a period . can be used in numbers as a decimal point:\n3.14\nBesides decimal points, . is a symbol that can be used like: + , - , * and /\nWe can use + , - , * and / with numbers\nAnd we can use . with identifiers:\nperson.name\nbook.chapters\nWhen used with identifiers, there must be something on both the left and right sides of the . :\nshirt.size\nleft.right\nHowever, we cannot directly use . with both an identifier and a number\nWe cannot have a number on the right:\ninvalid.2\nAnd we cannot have a number directly on the left:\n5.invalid\nHere are some examples:\nCode:\nB.V\nCode validity:\n✅ valid\nCode:\nC.3\nCode validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_property_access_numbers",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Property access ., numbers",
+    "text": "Operators: Property access ., numbers\nPlease answer the following quiz question:\nCode:\ng.M\nIs this code valid?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_property_access_numbers",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Property access ., numbers",
+    "text": "Operators: Property access ., numbers\nPlease answer the following quiz question:\nCode validity:\n🚫 invalid\nWhat code matches this validity?\n8.a\nl.b\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_property_access_numbers",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Property access ., missing",
+    "text": "Operators: Property access ., missing\nFor this lesson, . will be used with identifiers, and not as a decimal point in a number\nRemember, there must be something on both the left and right sides of the . :\nshirt.size\nleft.right\nAnd remember, for - it's possible to have a number only on the right and not on the left:\n-8\n-right\nHowever JavaScript does not have something like this for .\nTherefore, . must have values both on the left side and the right side\nSo if . does not have anything on its right side, then that is invalid code:\ninvalid.\nAnd, likewise, if . does not have anything on its left side, then that is also invalid code:\n.invalid\nHere are some examples:\nCode:\nF.D\nCode validity:\n✅ valid\nCode:\nc.8\nCode validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_property_access_missing",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Property access ., missing",
+    "text": "Operators: Property access ., missing\nPlease answer the following quiz question:\nCode:\nE.N\nIs this code valid?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_property_access_missing",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Property access ., missing",
+    "text": "Operators: Property access ., missing\nPlease answer the following quiz question:\nCode validity:\n✅ valid\nWhat code matches this validity?\nr.T\nY.7\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_property_access_missing",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than <",
+    "text": "Operators: Less than <\nThe symbol < asks a question: is the left number smaller than the right number?\nWe answer that question with yes or no\nYes is written as true\nNo is written as false\nBefore, the value was always a number, but now it is true or false\nHere are some examples:\nCode:\n5 < 6\nValue of code:\ntrue\nCode:\n2 < 1\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than <",
+    "text": "Operators: Less than <\nPlease answer the following quiz question:\nCode:\n1 < 5\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than <",
+    "text": "Operators: Less than <\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\n3 < 5\n4 < 3\n6 < 3\n6 < 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than <",
+    "text": "Operators: Less than <\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than >",
+    "text": "Operators: Greater than >\nThe symbol > asks a question: is the left number bigger than the right number?\n> is like <\nHere are some examples:\nCode:\n4 > 1\nValue of code:\ntrue\nCode:\n5 > 6\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than >",
+    "text": "Operators: Greater than >\nPlease answer the following quiz question:\nCode:\n3 > 1\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than >",
+    "text": "Operators: Greater than >\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\n4 > 6\n4 > 7\n5 > 6\n6 > 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than >",
+    "text": "Operators: Greater than >\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than or equal to <=",
+    "text": "Operators: Less than or equal to <=\nThe symbol <= asks a question: is the left number less than or equal to the right number?\nif < is true, then <= is true\nif === is true, then <= is true\nif > is true, then <= is false\n<= is like < || ===\nHere are some examples:\nCode:\n1 <= 1\nValue of code:\ntrue\nCode:\n2 <= 4\nValue of code:\ntrue\nCode:\n7 <= 6\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than_or_equal_to",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than or equal to <=",
+    "text": "Operators: Less than or equal to <=\nPlease answer the following quiz question:\nCode:\n5 <= 5\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than_or_equal_to",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than or equal to <=",
+    "text": "Operators: Less than or equal to <=\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\n5 <= 4\n6 <= 3\n6 <= 6\n7 <= 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than_or_equal_to",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Less than or equal to <=",
+    "text": "Operators: Less than or equal to <=\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_less_than_or_equal_to",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than or equal to >=",
+    "text": "Operators: Greater than or equal to >=\nThe symbol >= asks a question: is the left number greater than or equal to the right number?\nif > is true, then >= is true\nif === is true, then >= is true\nif < is true, then >= is false\n>= is like > || ===\nHere are some examples:\nCode:\n2 >= 2\nValue of code:\ntrue\nCode:\n7 >= 5\nValue of code:\ntrue\nCode:\n3 >= 4\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than_or_equal_to",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than or equal to >=",
+    "text": "Operators: Greater than or equal to >=\nPlease answer the following quiz question:\nCode:\n2 >= 2\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than_or_equal_to",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than or equal to >=",
+    "text": "Operators: Greater than or equal to >=\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\n3 >= 3\n3 >= 7\n4 >= 5\n6 >= 7\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than_or_equal_to",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Greater than or equal to >=",
+    "text": "Operators: Greater than or equal to >=\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_greater_than_or_equal_to",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Equal to ===",
+    "text": "Operators: Equal to ===\nIn math, we write: 1 + 2 = 3\nIn code, we write: 1 + 2 === 3\nThe symbol === asks a question: is the left number the same as the right number?\n=== is true only when both sides are the same number\n=== means the same — a single = means something else you will learn later\nHere are some examples:\nCode:\n1 === 1\nValue of code:\ntrue\nCode:\n4 === 5\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_equal_to",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Equal to ===",
+    "text": "Operators: Equal to ===\nPlease answer the following quiz question:\nCode:\n2 === 2\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_equal_to",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Equal to ===",
+    "text": "Operators: Equal to ===\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\n1 === 2\n1 === 4\n4 === 4\n4 === 7\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_equal_to",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Equal to ===",
+    "text": "Operators: Equal to ===\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_equal_to",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not equal to !==",
+    "text": "Operators: Not equal to !==\nThe symbol !== asks a question: is the left number different from the right number?\n!== is like ===, but asks if the two sides are different\nHere are some examples:\nCode:\n2 !== 7\nValue of code:\ntrue\nCode:\n3 !== 3\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not_equal_to",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not equal to !==",
+    "text": "Operators: Not equal to !==\nPlease answer the following quiz question:\nCode:\n6 !== 7\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not_equal_to",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not equal to !==",
+    "text": "Operators: Not equal to !==\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\n1 !== 1\n2 !== 2\n3 !== 6\n4 !== 4\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not_equal_to",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not equal to !==",
+    "text": "Operators: Not equal to !==\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not_equal_to",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Values: true, false",
+    "text": "Values: true, false\ntrue and false are the two yes-or-no answers you have seen\nNow you can write true or false all by itself, with no question to ask\nHere are some examples:\nCode:\ntrue\nValue of code:\ntrue\nCode:\nfalse\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "values_true_or_false",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Values: true, false",
+    "text": "Values: true, false\nPlease answer the following quiz question:\nCode:\ntrue\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "values_true_or_false",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Values: true, false",
+    "text": "Values: true, false\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "values_true_or_false",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Values: true, false",
+    "text": "Values: true, false\nPlease answer the following quiz question:\nValue:\nfalse\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "values_true_or_false",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not !",
+    "text": "Operators: Not !\nThe symbol ! gives the opposite yes-or-no answer\n!true is false\n!false is true\nHere are some examples:\nCode:\n!true\nValue of code:\nfalse\nCode:\n!false\nValue of code:\ntrue\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not !",
+    "text": "Operators: Not !\nPlease answer the following quiz question:\nCode:\n!true\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not !",
+    "text": "Operators: Not !\nPlease answer the following quiz question:\nValue:\nfalse\nWhat code produces this value?\n!false\n!true\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Not !",
+    "text": "Operators: Not !\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_not",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Or ||",
+    "text": "Operators: Or ||\nThe symbol || is true when the left side is true, or the right side is true, or both sides are true\n|| is only false when both sides are false\nHere are some examples:\nCode:\nfalse || true\nValue of code:\ntrue\nCode:\nfalse || false\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_or",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Or ||",
+    "text": "Operators: Or ||\nPlease answer the following quiz question:\nCode:\nfalse || true\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_or",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Or ||",
+    "text": "Operators: Or ||\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\nfalse || false\nfalse || true\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_or",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Or ||",
+    "text": "Operators: Or ||\nPlease answer the following quiz question:\nValue:\nfalse\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_or",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: And &&",
+    "text": "Operators: And &&\nThe symbol && is true only when both sides are true\n&& is false when the left side is false, or the right side is false, or both sides are false\nHere are some examples:\nCode:\ntrue && true\nValue of code:\ntrue\nCode:\ntrue && false\nValue of code:\nfalse\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_and",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: And &&",
+    "text": "Operators: And &&\nPlease answer the following quiz question:\nCode:\ntrue && true\nWhat is the value of this code?\nfalse\ntrue\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_and",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: And &&",
+    "text": "Operators: And &&\nPlease answer the following quiz question:\nValue:\ntrue\nWhat code produces this value?\nfalse && false\nfalse && true\ntrue && false\ntrue && true\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_and",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: And &&",
+    "text": "Operators: And &&\nPlease answer the following quiz question:\nValue:\ntrue\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_and",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested +",
+    "text": "Expressions: Nested +\nWe've already seen how to add two numbers: 1 + 2\nWe can add more than two numbers together like this: 3 + 4 + 5\nCode like this is called an expression\nPut one + between each number\nHere are some examples:\nCode:\n7 + 4 + 9\nValue of code:\n20\nCode:\n5 + 7 + 3\nValue of code:\n15\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_add",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested +",
+    "text": "Expressions: Nested +\nPlease answer the following quiz question:\nCode:\n7 + 7 + 3\nWhat is the value of this code?\n17\n19\n20\n22\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_add",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested +",
+    "text": "Expressions: Nested +\nPlease answer the following quiz question:\nValue:\n14\nWhat code produces this value?\n2 + 3 + 5\n2 + 8 + 8\n4 + 5 + 5\n7 + 7 + 7\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_add",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested +",
+    "text": "Expressions: Nested +\nPlease answer the following quiz question:\nValue:\n17\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_add",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested -",
+    "text": "Expressions: Nested -\nWe've already seen how to subtract two numbers: 5 - 2\nWe can subtract more than two numbers together like this: 9 - 3 - 2\nCode like this is called an expression\nPut one - between each number\nHere are some examples:\nCode:\n12 - 3 - 2\nValue of code:\n7\nCode:\n15 - 4 - 4\nValue of code:\n7\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_subtract",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested -",
+    "text": "Expressions: Nested -\nPlease answer the following quiz question:\nCode:\n12 - 3 - 5\nWhat is the value of this code?\n4\n7\n8\n9\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_subtract",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested -",
+    "text": "Expressions: Nested -\nPlease answer the following quiz question:\nValue:\n1\nWhat code produces this value?\n11 - 5 - 5\n12 - 4 - 5\n16 - 4 - 2\n17 - 5 - 2\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_subtract",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested -",
+    "text": "Expressions: Nested -\nPlease answer the following quiz question:\nValue:\n1\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_subtract",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiply *",
+    "text": "Operators: Multiply *\nYou already know how to add numbers like 2 + 3 + 4\nWhat if the numbers you add together are all the same number?\nLike\n2\n1\n2\n2\n2\n3\n+\n+\nThe 2 appears 3 times, so we can write 2 * 3 for short\nLikewise\n3\n1\n3\n2\n3\n3\n3\n4\n+\n+\n+\nis 3 * 4\nThe second number is how many to add together\nHere are some examples:\nCode:\n2 * 3\nExpansion:\n2 + 2 + 2\nCode:\n5 * 3\nExpansion:\n5 + 5 + 5\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiply",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiply *",
+    "text": "Operators: Multiply *\nPlease answer the following quiz question:\nCode:\n3 * 3\nWhat is this written out as addition?\n2 + 2 + 2\n3 + 3 + 3\n4 + 4 + 4\n5 + 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiply",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiply *",
+    "text": "Operators: Multiply *\nPlease answer the following quiz question:\nAddition:\n5 + 5 + 5\nWhich code uses * for this?\n3 * 3\n4 * 2\n5 * 2\n5 * 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiply",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiply *",
+    "text": "Operators: Multiply *\nPlease answer the following quiz question:\nCode:\n4 * 2\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiply",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Multiply *",
+    "text": "Operators: Multiply *\nPlease answer the following quiz question:\nAddition:\n2 + 2 + 2\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_multiply",
+    "screen": "quiz",
+    "kind": 3
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested *",
+    "text": "Expressions: Nested *\nWe've already seen how to multiply two numbers: 2 * 3\nWe can multiply more than two numbers together like this: 2 * 3 * 4\nCode like this is called an expression\nPut one * between each number\nHere are some examples:\nCode:\n3 * 3 * 2\nValue of code:\n18\nCode:\n2 * 2 * 2\nValue of code:\n8\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_multiply",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested *",
+    "text": "Expressions: Nested *\nPlease answer the following quiz question:\nCode:\n4 * 4 * 3\nWhat is the value of this code?\n18\n24\n30\n48\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_multiply",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested *",
+    "text": "Expressions: Nested *\nPlease answer the following quiz question:\nValue:\n27\nWhat code produces this value?\n2 * 2 * 2\n3 * 3 * 3\n4 * 4 * 3\n5 * 4 * 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_multiply",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested *",
+    "text": "Expressions: Nested *\nPlease answer the following quiz question:\nValue:\n16\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_multiply",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested /",
+    "text": "Expressions: Nested /\nWe've already seen how to divide two numbers: 8 / 2\nWe can divide more than two numbers together like this: 12 / 3 / 2\nCode like this is called an expression\nPut one / between each number\nHere are some examples:\nCode:\n24 / 4 / 2\nValue of code:\n3\nCode:\n12 / 2 / 2\nValue of code:\n3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_divide",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested /",
+    "text": "Expressions: Nested /\nPlease answer the following quiz question:\nCode:\n18 / 3 / 3\nWhat is the value of this code?\n2\n3\n4\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_divide",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested /",
+    "text": "Expressions: Nested /\nPlease answer the following quiz question:\nValue:\n2\nWhat code produces this value?\n12 / 2 / 2\n18 / 3 / 2\n30 / 5 / 3\n45 / 5 / 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_divide",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: Nested /",
+    "text": "Expressions: Nested /\nPlease answer the following quiz question:\nValue:\n4\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_nested_divide",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + -",
+    "text": "Expressions: + -\nWe can mix + and - together\nWhichever one comes first, we do first\nFor example, for 5 + 2 - 3, we do 5 + 2 first, which is 7\nNow we have 7 - 3, which is 4\nSo 5 + 2 - 3 is 4\nHere are some examples:\nCode:\n8 + 4 - 4\nValue of code:\n8\nCode:\n9 - 2 + 3\nValue of code:\n10\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_minus",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + -",
+    "text": "Expressions: + -\nPlease answer the following quiz question:\nCode:\n6 + 4 - 4\nWhat is the value of this code?\n5\n6\n8\n9\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_minus",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + -",
+    "text": "Expressions: + -\nPlease answer the following quiz question:\nValue:\n7\nWhat code produces this value?\n6 + 2 - 4\n7 - 3 + 4\n8 - 4 + 3\n8 + 4 - 2\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_minus",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + -",
+    "text": "Expressions: + -\nPlease answer the following quiz question:\nValue:\n9\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_minus",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: * /",
+    "text": "Expressions: * /\nWe can mix * and / together\nWhichever one comes first, we do first\nFor example, for 6 * 2 / 3, we do 6 * 2 first, which is 12\nNow we have 12 / 3, which is 4\nSo 6 * 2 / 3 is 4\nHere are some examples:\nCode:\n6 * 3 / 2\nValue of code:\n9\nCode:\n12 / 4 * 3\nValue of code:\n9\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_times_divide",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: * /",
+    "text": "Expressions: * /\nPlease answer the following quiz question:\nCode:\n15 * 5 / 3\nWhat is the value of this code?\n4\n9\n16\n25\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_times_divide",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: * /",
+    "text": "Expressions: * /\nPlease answer the following quiz question:\nValue:\n4\nWhat code produces this value?\n4 / 2 * 2\n6 / 2 * 3\n9 * 3 / 3\n15 / 5 * 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_times_divide",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: * /",
+    "text": "Expressions: * /\nPlease answer the following quiz question:\nValue:\n25\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_times_divide",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + *",
+    "text": "Expressions: + *\nWe always do * before +, even if * appears later\nFor 2 + 3 * 4, we do 3 * 4 first, which is 12\nNow we have 2 + 12, which is 14\nFor 3 * 4 + 2, we do 3 * 4 first, which is 12\nNow we have 12 + 2, which is 14\nHere are some examples:\nCode:\n4 + 3 * 2\nValue of code:\n10\nCode:\n3 * 3 + 3\nValue of code:\n12\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_times",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + *",
+    "text": "Expressions: + *\nPlease answer the following quiz question:\nCode:\n5 * 2 + 3\nWhat is the value of this code?\n9\n10\n12\n13\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_times",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + *",
+    "text": "Expressions: + *\nPlease answer the following quiz question:\nValue:\n6\nWhat code produces this value?\n2 * 2 + 2\n2 + 3 * 3\n4 * 3 + 3\n5 + 3 * 2\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_times",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + *",
+    "text": "Expressions: + *\nPlease answer the following quiz question:\nValue:\n9\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_times",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + /",
+    "text": "Expressions: + /\nWe always do / before +, even if / appears later\nFor 2 + 6 / 3, we do 6 / 3 first, which is 2\nNow we have 2 + 2, which is 4\nFor 6 / 3 + 2, we do 6 / 3 first, which is 2\nNow we have 2 + 2, which is 4\nHere are some examples:\nCode:\n8 + 4 / 2\nValue of code:\n10\nCode:\n27 / 9 + 3\nValue of code:\n6\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_divide",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + /",
+    "text": "Expressions: + /\nPlease answer the following quiz question:\nCode:\n18 / 6 + 3\nWhat is the value of this code?\n4\n6\n22\n30\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_divide",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + /",
+    "text": "Expressions: + /\nPlease answer the following quiz question:\nValue:\n7\nWhat code produces this value?\n12 + 6 / 2\n18 / 6 + 2\n30 + 6 / 3\n36 / 9 + 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_divide",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: + /",
+    "text": "Expressions: + /\nPlease answer the following quiz question:\nValue:\n6\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_plus_divide",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - *",
+    "text": "Expressions: - *\nWe always do * before -, even if * appears later\nFor 10 - 2 * 3, we do 2 * 3 first, which is 6\nNow we have 10 - 6, which is 4\nFor 2 * 3 - 4, we do 2 * 3 first, which is 6\nNow we have 6 - 4, which is 2\nHere are some examples:\nCode:\n6 - 2 * 2\nValue of code:\n2\nCode:\n9 * 2 - 3\nValue of code:\n15\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_times",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - *",
+    "text": "Expressions: - *\nPlease answer the following quiz question:\nCode:\n11 * 3 - 3\nWhat is the value of this code?\n3\n4\n16\n30\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_times",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - *",
+    "text": "Expressions: - *\nPlease answer the following quiz question:\nValue:\n22\nWhat code produces this value?\n6 - 2 * 2\n8 * 3 - 2\n9 - 3 * 2\n11 * 2 - 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_times",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - *",
+    "text": "Expressions: - *\nPlease answer the following quiz question:\nValue:\n17\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_times",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - /",
+    "text": "Expressions: - /\nWe always do / before -, even if / appears later\nFor 10 - 6 / 3, we do 6 / 3 first, which is 2\nNow we have 10 - 2, which is 8\nFor 6 / 3 - 1, we do 6 / 3 first, which is 2\nNow we have 2 - 1, which is 1\nHere are some examples:\nCode:\n42 - 6 / 3\nValue of code:\n40\nCode:\n54 / 9 - 3\nValue of code:\n3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_divide",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - /",
+    "text": "Expressions: - /\nPlease answer the following quiz question:\nCode:\n36 / 9 - 3\nWhat is the value of this code?\n1\n3\n28\n60\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_divide",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - /",
+    "text": "Expressions: - /\nPlease answer the following quiz question:\nValue:\n22\nWhat code produces this value?\n20 - 4 / 2\n24 - 4 / 2\n24 / 6 - 3\n45 / 9 - 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_divide",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Expressions: - /",
+    "text": "Expressions: - /\nPlease answer the following quiz question:\nValue:\n28\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "expressions_minus_divide",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Exponent **",
+    "text": "Operators: Exponent **\nYou already know how to multiply numbers like 2 * 3 * 4\nWhat if the numbers you multiply together are all the same number?\nLike\n2\n1\n2\n2\n2\n3\n*\n*\nThe 2 appears 3 times, so we can write 2 ** 3 for short\nLikewise\n3\n1\n3\n2\n3\n3\n3\n4\n*\n*\n*\nis 3 ** 4\nThe second number is how many to multiply together\nHere are some examples:\nCode:\n4 ** 2\nExpansion:\n4 * 4\nCode:\n3 ** 3\nExpansion:\n3 * 3 * 3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_exponent",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Exponent **",
+    "text": "Operators: Exponent **\nPlease answer the following quiz question:\nCode:\n5 ** 3\nWhat is this written out as multiplication?\n2 * 2\n3 * 3 * 3\n4 * 4 * 4\n5 * 5 * 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_exponent",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Exponent **",
+    "text": "Operators: Exponent **\nPlease answer the following quiz question:\nMultiplication:\n4 * 4 * 4\nWhich code uses ** for this?\n2 ** 2\n3 ** 3\n4 ** 3\n5 ** 2\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_exponent",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Exponent **",
+    "text": "Operators: Exponent **\nPlease answer the following quiz question:\nCode:\n2 ** 3\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_exponent",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Exponent **",
+    "text": "Operators: Exponent **\nPlease answer the following quiz question:\nMultiplication:\n2 * 2\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_exponent",
+    "screen": "quiz",
+    "kind": 3
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Arithmetic",
+    "text": "Functions: Arithmetic\nInstead of 1 + 2 we could write: add(1, 2)\nInstead of 7 - 4 we could write: subtract(7, 4)\nInstead of 5 * 6 we could write: multiply(5, 6)\nInstead of 7 / 1 we could write: divide(7, 1)\nadd is an example of a function\nadd(2, 3) is called a function call\nHere is an example:\nCode:\n4 + 5\nFunction:\nadd(4, 5)\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_arithmetic",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Arithmetic",
+    "text": "Functions: Arithmetic\nPlease answer the following quiz question:\nCode:\n7 - 4\nWhat is this code rewritten using a function call?\nadd(3, 4)\nmultiply(7, 1)\nsubtract(7, 4)\nsubtract(11, 6)\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_arithmetic",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Arithmetic",
+    "text": "Functions: Arithmetic\nPlease answer the following quiz question:\nFunction call:\ndivide(7, 1)\nRewrite this function call using a math symbol:\n1 * 2\n4 + 5\n7 / 1\n13 - 7\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_arithmetic",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Arithmetic",
+    "text": "Functions: Arithmetic\nPlease answer the following quiz question:\nCode:\n5 * 6\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_arithmetic",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Arithmetic",
+    "text": "Functions: Arithmetic\nPlease answer the following quiz question:\nFunction call:\ndivide(20, 5)\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_arithmetic",
+    "screen": "quiz",
+    "kind": 3
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Validity",
+    "text": "Functions: Validity\nCalling the add function requires all of these parts:\nadd ( 1 , 2 )\nIf any of these symbols ( ) , are missing from the function call, then the code is invalid\nHere are some examples:\nCode:\nadd(3, 4)\nCode validity:\n✅ valid\nCode:\nadd 5, 6)\nCode validity:\n🚫 invalid\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_validity",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Validity",
+    "text": "Functions: Validity\nPlease answer the following quiz question:\nCode:\nadd 3, 4)\nIs this code valid?\n✅ valid\n🚫 invalid\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_validity",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Validity",
+    "text": "Functions: Validity\nPlease answer the following quiz question:\nCode validity:\n🚫 invalid\nWhat code matches this validity?\nmultiply(1, 2)\nsubtract 13  7\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_validity",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log",
+    "text": "Functions: console.log\nHere is an example of a function call: add(1, 2)\nadd is a function\nAnd here is a new function: console.log\nHowever, add and console.log are different\nadd has two numbers separated by a , inside its ( ) :\nadd(3, 4)\nBut, for now, we will see console.log with only one number inside its ( ) :\nconsole.log(25)\nWhatever is inside the ( ) of console.log will be written out for someone to read\nHere is an example:\nCode:\nconsole.log(724)\nLogged output of code:\n724\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log",
+    "text": "Functions: console.log\nPlease answer the following quiz question:\nCode:\nconsole.log(41)\nWhat is the logged output of this code?\n3\n41\n64\n157\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log",
+    "text": "Functions: console.log\nPlease answer the following quiz question:\nLogged output:\n892\nWhat code produces this logged output?\nconsole.log(6)\nconsole.log(57)\nconsole.log(396)\nconsole.log(892)\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log",
+    "text": "Functions: console.log\nPlease answer the following quiz question:\nLogged output:\n2\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log statement",
+    "text": "Functions: console.log statement\nIn English we use sentences\nIn JavaScript, \"sentences\" are called statements\nIn English, we can use a period (.) to mean the end of a sentence.\nIn JavaScript, instead of a period (.), we use a semicolon ; to mean the end of a JavaScript statement\nTherefore, this lesson is the same as the previous, except there is a ; at the end of the console.log function call\nHere is an example:\nCode:\nconsole.log(1);\nLogged output of code:\n1\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log_statement",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log statement",
+    "text": "Functions: console.log statement\nPlease answer the following quiz question:\nCode:\nconsole.log(91);\nWhat is the logged output of this code?\n2\n71\n91\n652\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log_statement",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log statement",
+    "text": "Functions: console.log statement\nPlease answer the following quiz question:\nLogged output:\n640\nWhat code produces this logged output?\nconsole.log(8);\nconsole.log(48);\nconsole.log(640);\nconsole.log(673);\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log_statement",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: console.log statement",
+    "text": "Functions: console.log statement\nPlease answer the following quiz question:\nLogged output:\n9\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_console_log_statement",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: console.log arithmetic",
+    "text": "Operators: console.log arithmetic\nBefore, we put a single number inside console.log\nWe can also use console.log like this:\nconsole.log(1 + 2);\nconsole.log(7 - 4);\nconsole.log(5 * 6);\nconsole.log(7 / 1);\nconsole.log will do the math and write out the answer\nHere is an example:\nCode:\nconsole.log(2 + 3);\nLogged output of code:\n5\nDo you want to see another example? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me another example\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_console_log_arithmetic",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: console.log arithmetic",
+    "text": "Operators: console.log arithmetic\nPlease answer the following quiz question:\nCode:\nconsole.log(9 - 5);\nWhat is the logged output of this code?\n1\n4\n7\n42\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_console_log_arithmetic",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: console.log arithmetic",
+    "text": "Operators: console.log arithmetic\nPlease answer the following quiz question:\nLogged output:\n5\nWhat code produces this logged output?\nconsole.log(4 + 5);\nconsole.log(6 / 3);\nconsole.log(7 * 1);\nconsole.log(11 - 6);\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_console_log_arithmetic",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: console.log arithmetic",
+    "text": "Operators: console.log arithmetic\nPlease answer the following quiz question:\nLogged output:\n6\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see another example?\n⬅️ Yes, please go back and show me another example\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_console_log_arithmetic",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 2",
+    "text": "Operators: Remainder % by 2\nWhen we divide two numbers, sometimes the numbers divide evenly\nOther times the numbers do not divide evenly\nSuppose we share 7 loaves of bread into 2 groups\nThen each group gets 3 loaves - that is 3 + 3 === 6\n1 loaf is left over, so 3 + 3 + 1 === 7\nWhen we divide two numbers, the left over is called the remainder\nSo the remainder is 1\nWhen two numbers divide evenly, nothing is left over, so the remainder is 0\n% gives the remainder\nWhen we divide by 2, the remainder is always smaller than 2\nSo if we divide by 2, the remainder is one of these: 0 or 1\n0 % 2 is 0\n1 % 2 is 1\n2 % 2 is 0\n3 % 2 is 1\n4 % 2 is 0\nIf the number is even, then the remainder is 0\nIf the number is odd, then the remainder is 1\nThe remainder alternates between 0 and 1\nHere are some examples:\nRemainder expression:\n4 % 2\nremainder value:\n0\nRemainder expression:\n5 % 2\nremainder value:\n1\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_2",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 2",
+    "text": "Operators: Remainder % by 2\nPlease answer the following quiz question:\nRemainder expression:\n4 % 2\nremainder value:\n0\n1\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_2",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 2",
+    "text": "Operators: Remainder % by 2\nPlease answer the following quiz question:\nremainder value:\n1\nWhat remainder expression produces the remainder value?\n2 % 2\n4 % 2\n5 % 2\n6 % 2\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_2",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 2",
+    "text": "Operators: Remainder % by 2\nPlease answer the following quiz question:\nremainder value:\n1\nBuild the remainder expression that produces the remainder value:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_2",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 3",
+    "text": "Operators: Remainder % by 3\nRemember: when we divide two numbers, sometimes the numbers divide evenly\nOther times the numbers do not divide evenly\nSuppose we share 14 loaves of bread into 3 groups\nThen each group gets 4 loaves - that is 4 + 4 + 4 === 12\n2 loaves are left over, so 4 + 4 + 4 + 2 === 14\nWhen we divide two numbers, the left over is called the remainder\nSo the remainder is 2\nWhen two numbers divide evenly, nothing is left over, so the remainder is 0\n% gives the remainder\nWhen we divide by 3, the remainder is always smaller than 3\nSo if we divide by 3, the remainder is one of these: 0, 1 or 2\n0 % 3 is 0\n1 % 3 is 1\n2 % 3 is 2\n3 % 3 is 0\n4 % 3 is 1\n5 % 3 is 2\n6 % 3 is 0\nThe remainder counts up, then starts over at 0\nHere are some examples:\nRemainder expression:\n6 % 3\nremainder value:\n0\nRemainder expression:\n7 % 3\nremainder value:\n1\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_3",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 3",
+    "text": "Operators: Remainder % by 3\nPlease answer the following quiz question:\nRemainder expression:\n8 % 3\nremainder value:\n0\n1\n2\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_3",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 3",
+    "text": "Operators: Remainder % by 3\nPlease answer the following quiz question:\nremainder value:\n0\nWhat remainder expression produces the remainder value?\n3 % 3\n5 % 3\n7 % 3\n8 % 3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_3",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 3",
+    "text": "Operators: Remainder % by 3\nPlease answer the following quiz question:\nremainder value:\n0\nBuild the remainder expression that produces the remainder value:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_3",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 4",
+    "text": "Operators: Remainder % by 4\nRemember: when we divide two numbers, sometimes the numbers divide evenly\nOther times the numbers do not divide evenly\nSuppose we share 23 loaves of bread into 4 groups\nThen each group gets 5 loaves - that is 5 + 5 + 5 + 5 === 20\n3 loaves are left over, so 5 + 5 + 5 + 5 + 3 === 23\nWhen we divide two numbers, the left over is called the remainder\nSo the remainder is 3\nWhen two numbers divide evenly, nothing is left over, so the remainder is 0\n% gives the remainder\nWhen we divide by 4, the remainder is always smaller than 4\nSo if we divide by 4, the remainder is one of these: 0, 1, 2 or 3\n0 % 4 is 0\n1 % 4 is 1\n2 % 4 is 2\n3 % 4 is 3\n4 % 4 is 0\n5 % 4 is 1\n6 % 4 is 2\n7 % 4 is 3\n8 % 4 is 0\nThe remainder counts up, then starts over at 0\nHere are some examples:\nRemainder expression:\n4 % 4\nremainder value:\n0\nRemainder expression:\n5 % 4\nremainder value:\n1\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_4",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 4",
+    "text": "Operators: Remainder % by 4\nPlease answer the following quiz question:\nRemainder expression:\n3 % 4\nremainder value:\n0\n1\n2\n3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_4",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 4",
+    "text": "Operators: Remainder % by 4\nPlease answer the following quiz question:\nremainder value:\n3\nWhat remainder expression produces the remainder value?\n7 % 4\n8 % 4\n9 % 4\n10 % 4\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_4",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder % by 4",
+    "text": "Operators: Remainder % by 4\nPlease answer the following quiz question:\nremainder value:\n0\nBuild the remainder expression that produces the remainder value:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_4",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by subtracting %",
+    "text": "Operators: Remainder by subtracting %\nYou already know how to subtract like 20 - 5 - 5\nWhat if you keep subtracting the same number until you can not take it away again?\n17 - 5 - 5 - 5 leaves 2\nWe stop because 2 is smaller than 5\nIf we subtracted 5 again we would have 2 - 5 === -3\nWe do not want to go below zero\nSo 2 is what remains after we kept subtracting 5 from 17\nSo we write 17 % 5 === 2\n% means we keep subtracting the second number from the first number until what remains is smaller than the second number\nWhen we %, what remains is called the remainder\nHere are some examples:\nCode:\n11 % 4\nSubtraction:\n11 - 4 - 4\nCode:\n20 % 6\nSubtraction:\n20 - 6 - 6 - 6\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_subtracting",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by subtracting %",
+    "text": "Operators: Remainder by subtracting %\nPlease answer the following quiz question:\nCode:\n15 % 6\nWhat is this worked out by subtracting?\n9 - 4 - 4\n11 - 3 - 3 - 3\n15 - 6 - 6\n22 - 6 - 6 - 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_subtracting",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by subtracting %",
+    "text": "Operators: Remainder by subtracting %\nPlease answer the following quiz question:\nSubtraction:\n13 - 5 - 5\nWhich code uses % for this?\n10 % 4\n11 % 3\n13 % 5\n19 % 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_subtracting",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by subtracting %",
+    "text": "Operators: Remainder by subtracting %\nPlease answer the following quiz question:\nCode:\n11 % 4\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_subtracting",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by subtracting %",
+    "text": "Operators: Remainder by subtracting %\nPlease answer the following quiz question:\nSubtraction:\n11 - 3 - 3 - 3\nPlease unscramble the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_subtracting",
+    "screen": "quiz",
+    "kind": 3
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Round down",
+    "text": "Functions: Round down\n5.8 is a decimal number\n5 has no decimal, so 5 is a whole number\n5.8 has a decimal, so 5.8 is not a whole number\nMath.floor takes a number and rounds it down to the whole number below it\nIn other words (for these positive numbers) Math.floor removes the decimal part, so that only the whole number is left\nMath.floor(5.8) is 5\nMath.floor always rounds down, never up\nFor example: Math.floor(5.8) is also 5 not 6\nMath.floor does not change a number that is already whole\nFor example, Math.floor(3) is 3\nHere are some examples:\nRound down:\nMath.floor(5.4)\nrounded value:\n5\nRound down:\nMath.floor(3)\nrounded value:\n3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_round_down",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Round down",
+    "text": "Functions: Round down\nPlease answer the following quiz question:\nRound down:\nMath.floor(3.2)\nrounded value:\n2\n3\n4\n7\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_round_down",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Round down",
+    "text": "Functions: Round down\nPlease answer the following quiz question:\nrounded value:\n4\nWhat code rounds down to the rounded value?\nMath.floor(3.5)\nMath.floor(4)\nMath.floor(6)\nMath.floor(7)\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_round_down",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Functions: Round down",
+    "text": "Functions: Round down\nPlease answer the following quiz question:\nrounded value:\n5\nBuild the code that rounds down to the rounded value:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "functions_round_down",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Integer division",
+    "text": "Operators: Integer division\nYou know that Math.floor rounds a number down\nDividing does not always come out even\nFor example, 14 / 4 is 3.5\nNow we will divide, and then round down to get a whole number:\nMath.floor(14 / 4) is Math.floor(3.5)\nMath.floor(3.5) is 3\nThat is how many whole 4s fit into 14\nThe 3 is also how many times you can take 4 away from 14:\n14 - 4 - 4 - 4\nHere are some examples:\nInteger division:\nMath.floor(3 / 4)\nwhole count:\n0\nInteger division:\nMath.floor(10 / 3)\nwhole count:\n3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_integer_division",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Integer division",
+    "text": "Operators: Integer division\nPlease answer the following quiz question:\nInteger division:\nMath.floor(10 / 3)\nwhole count:\n0\n2\n3\n4\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_integer_division",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Integer division",
+    "text": "Operators: Integer division\nPlease answer the following quiz question:\nwhole count:\n0\nWhat code produces the whole count?\nMath.floor(4 / 5)\nMath.floor(10 / 4)\nMath.floor(11 / 3)\nMath.floor(22 / 6)\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_integer_division",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Integer division",
+    "text": "Operators: Integer division\nPlease answer the following quiz question:\nwhole count:\n0\nBuild the code that produces the whole count:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_integer_division",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Dividend",
+    "text": "Operators: Dividend\nWhen you divide, the number you divide is called the dividend\nIn 14 / 4 the dividend is 14\nIn this lesson you will choose the dividend\nHere are some examples:\nCode:\n21 / 6\nThe dividend is:\n21\nCode:\n2 / 4\nThe dividend is:\n2\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_dividend",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Dividend",
+    "text": "Operators: Dividend\nPlease answer the following quiz question:\nDivision:\n8 / 3\nChoose the dividend:\n3\n8\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_dividend",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Dividend",
+    "text": "Operators: Dividend\nPlease answer the following quiz question:\nThe dividend is:\n19\nPlease build the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_dividend",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Divisor",
+    "text": "Operators: Divisor\nWhen you divide, the number you divide by is called the divisor\nIn 19 / 5 the divisor is 5\nIn this lesson you will choose the divisor\nHere are some examples:\nCode:\n3 / 4\nThe divisor is:\n4\nCode:\n19 / 6\nThe divisor is:\n6\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_divisor",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Divisor",
+    "text": "Operators: Divisor\nPlease answer the following quiz question:\nDivision:\n10 / 3\nChoose the divisor:\n10\n3\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_divisor",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Divisor",
+    "text": "Operators: Divisor\nPlease answer the following quiz question:\nThe divisor is:\n6\nPlease build the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_divisor",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Quotient",
+    "text": "Operators: Quotient\nWhen you divide and round down, the whole result is called the quotient\nIn Math.floor(10 / 3) === 3 the quotient is 3\nMath.floor(14 / 4) === 3\nRemember:\nThe 14 is the dividend\nThe 4 is the divisor\nThe 3 is the quotient\nIn this lesson you will choose the quotient\nHere are some examples:\nCode:\nMath.floor(11 / 4) === 2\nThe quotient is:\n2\nCode:\nMath.floor(19 / 5) === 3\nThe quotient is:\n3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_quotient",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Quotient",
+    "text": "Operators: Quotient\nPlease answer the following quiz question:\nDivision:\nMath.floor(1 / 3) === 0\nChoose the quotient:\n3\n1\n0\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_quotient",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Quotient",
+    "text": "Operators: Quotient\nPlease answer the following quiz question:\nThe quotient is:\n2\nPlease build the code:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_quotient",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part formula",
+    "text": "Operators: Whole part formula\nSuppose we are dividing two numbers:\n14 / 4\nRemember, 4 is the divisor\nAnd remember, Math.floor(14 / 4) is the quotient\nThe quotient * divisor is called the whole part\nquotient * divisor\nMath.floor(14 / 4) * divisor\nMath.floor(14 / 4) * 4\nSo,\n14 / 4\nMath.floor(14 / 4) * 4\nHere are some examples:\nCode:\n1 / 6\nWhole part formula:\nMath.floor(1 / 6) * 6\nCode:\n19 / 5\nWhole part formula:\nMath.floor(19 / 5) * 5\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part_formula",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part formula",
+    "text": "Operators: Whole part formula\nPlease answer the following quiz question:\nDivision:\n15 / 4\nWhich is the whole part formula?\n15 * 4\n15 / 4 * 4\nMath.floor(15 / 4)\nMath.floor(15 / 4) * 4\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part_formula",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part formula",
+    "text": "Operators: Whole part formula\nPlease answer the following quiz question:\nDivision:\n3 / 5\nBuild the whole part formula:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part_formula",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part",
+    "text": "Operators: Whole part\nRemember, the whole part of 14 / 4 is Math.floor(14 / 4) * 4\nSolve the formula one step at a time:\nMath.floor(14 / 4) is 3\nMath.floor(14 / 4) * 4 is 3 * 4\n3 * 4 is 12\nHere are some examples:\nWhole part formula:\nMath.floor(11 / 4) * 4\nwhole part:\n8\nWhole part formula:\nMath.floor(22 / 6) * 6\nwhole part:\n18\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part",
+    "text": "Operators: Whole part\nPlease answer the following quiz question:\nWhole part formula:\nMath.floor(14 / 6) * 6\nwhole part:\n2\n6\n10\n12\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part",
+    "text": "Operators: Whole part\nPlease answer the following quiz question:\nwhole part:\n15\nWhat formula produces the whole part?\nMath.floor(11 / 4) * 4\nMath.floor(14 / 4) * 4\nMath.floor(16 / 5) * 5\nMath.floor(23 / 6) * 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part",
+    "text": "Operators: Whole part\nPlease answer the following quiz question:\nwhole part:\n9\nBuild the formula that produces the whole part:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part in one step",
+    "text": "Operators: Whole part in one step\nNow find the whole part of a division in one go:\nRewrite the division with the formula:\n14 / 4\nMath.floor(14 / 4) * 4\nThen solve:\nMath.floor(14 / 4) * 4 is 3 * 4 is 12\nSo the whole part of 14 / 4 is 12\nHere are some examples:\nCode:\n14 / 4\nWhole part:\n12\nCode:\n11 / 3\nWhole part:\n9\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part_in_one_step",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part in one step",
+    "text": "Operators: Whole part in one step\nPlease answer the following quiz question:\nDivision:\n19 / 5\nWhat is the whole part?\n3\n3.8\n4\n15\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part_in_one_step",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Whole part in one step",
+    "text": "Operators: Whole part in one step\nPlease answer the following quiz question:\nWhole part:\n9\nWhich division has this whole part?\n11 / 3\n17 / 5\n19 / 2\n27 / 3\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_whole_part_in_one_step",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by dividing %",
+    "text": "Operators: Remainder by dividing %\nFor 14 / 4 :\n14 is the dividend\n4 is the divisor\nMath.floor(14 / 4) === 3, so the quotient is 3\nquotient * divisor\n3 * 4 === 12\nSo the whole part is 12\nNotice that 4 evenly divides into 12\nThe divisor (4) always evenly divides into the whole part (12)\nHowever 4 does not evenly divide into 14\nThe divisor (4) may or may not evenly divide into the dividend (14)\nThe whole part (12) cannot be larger than the dividend (14)\nThe whole part (12) is always the largest number, that can be evenly divided by the divisor, that is not larger than the dividend (14)\nNow we will subtract the whole part (12) from the dividend (14) to find what is left over:\n14 - 12 === 2\nSo 2 is the remainder\nThis is the same as 14 % 4 :\n14 % 4 === 2\nSo for 14 % 4\nWe use this formula: 14 - Math.floor(14 / 4) * 4\nAnd here is the answer: 2\nSo we know 14 % 4 === 2\nHere are some examples:\nCode:\n11 / 4\nRemainder formula:\n11 - Math.floor(11 / 4) * 4\nCode:\n10 / 3\nRemainder formula:\n10 - Math.floor(10 / 3) * 3\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_dividing",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by dividing %",
+    "text": "Operators: Remainder by dividing %\nPlease answer the following quiz question:\nDivision:\n4 / 5\nWhich is the remainder formula?\n4 - 4 / 5 * 5\n4 - Math.floor(4 / 5)\n4 - Math.floor(4 / 5) * 5\nMath.floor(4 / 5) * 5\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_dividing",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by dividing %",
+    "text": "Operators: Remainder by dividing %\nPlease answer the following quiz question:\nDivision:\n19 / 6\nBuild the remainder formula:\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_dividing",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder by dividing %",
+    "text": "Operators: Remainder by dividing %\nPlease answer the following quiz question:\nFormula:\n14 - Math.floor(14 / 4) * 4\nWhich is this the same as?\n4 % 14\n14 / 4\n14 % 4\nMath.floor(14 / 4)\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder_by_dividing",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Solve the remainder formula",
+    "text": "Operators: Solve the remainder formula\nRemember, the remainder of 14 / 4 is 14 - Math.floor(14 / 4) * 4\nSolve the formula one step at a time:\n14 / 4 is 3.5\nMath.floor(14 / 4) is 3\nMath.floor(14 / 4) * 4 is 12\n14 - Math.floor(14 / 4) * 4 is 14 - 12\n14 - 12 is 2\n14 - Math.floor(14 / 4) * 4 is 2\nHere are some examples:\nRemainder formula:\n17 - Math.floor(17 / 6) * 6\nsolved value:\n5\nRemainder formula:\n10 - Math.floor(10 / 3) * 3\nsolved value:\n1\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next lesson\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_solve_the_remainder_formula",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Solve the remainder formula",
+    "text": "Operators: Solve the remainder formula\nPlease answer the following quiz question:\nRemainder formula:\n14 - Math.floor(14 / 6) * 6\nsolved value:\n1\n2\n2.3333333333333335\n12\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_solve_the_remainder_formula",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Solve the remainder formula",
+    "text": "Operators: Solve the remainder formula\nPlease answer the following quiz question:\nsolved value:\n2\nWhat remainder formula produces the solved value?\n11 - Math.floor(11 / 3) * 3\n13 - Math.floor(13 / 5) * 5\n14 - Math.floor(14 / 5) * 5\n23 - Math.floor(23 / 6) * 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next lesson\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_solve_the_remainder_formula",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Solve the remainder formula",
+    "text": "Operators: Solve the remainder formula\nPlease answer the following quiz question:\nsolved value:\n2\nBuild the remainder formula that produces the solved value:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_solve_the_remainder_formula",
+    "screen": "quiz",
+    "kind": 2
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder %",
+    "text": "Operators: Remainder %\nFor 14 / 4, remember 14 is the dividend\nAnd Math.floor(14 / 4) * 4 is the whole part\nNow we will subtract them from each other:\n14 - Math.floor(14 / 4) * 4\nThis is the same as 14 % 4\nSo 14 % 4 is 14 - Math.floor(14 / 4) * 4\nSo the remainder % is the dividend minus its whole part\nAnd this works the same way for any number we divide by\nHere are some examples:\nRemainder expression:\n15 % 9\nremainder value:\n6\nRemainder expression:\n20 % 2\nremainder value:\n0\nDo you want to see some more examples? If not, choose: \"➡️ Next\"\n🔂 Yes, please show me some more examples\n➡️ Next\nDo you want to go back to the previous lesson?\n⬅️ Yes, please take me back to the previous lesson\n⬅️ Yes, please take me back to the last quiz of the previous lesson\n➡️ Skip to the next review\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder",
+    "screen": "examples",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder %",
+    "text": "Operators: Remainder %\nPlease answer the following quiz question:\nRemainder expression:\n6 % 3\nremainder value:\n0\n1\n2\n6\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder",
+    "screen": "quiz",
+    "kind": 0
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder %",
+    "text": "Operators: Remainder %\nPlease answer the following quiz question:\nremainder value:\n0\nWhat remainder expression produces the remainder value?\n5 % 2\n6 % 4\n7 % 7\n10 % 6\n➡️ Next\nShow me the answer\n➡️ Skip to the next review\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder",
+    "screen": "quiz",
+    "kind": 1
+  },
+  {
+    "overflow": 0,
+    "empty": false,
+    "title": "Operators: Remainder %",
+    "text": "Operators: Remainder %\nPlease answer the following quiz question:\nremainder value:\n2\nBuild the remainder expression that produces the remainder value:\n➡️ Next\nShow me the answer\n⬅️ Back to the previous quiz\nDo you want to go back and see some more examples?\n⬅️ Yes, please go back and show me some more examples\n🏠 Home\n📨 Contact the developer",
+    "id": "operators_remainder",
+    "screen": "quiz",
+    "kind": 2
+  }
+]
