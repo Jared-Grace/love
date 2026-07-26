@@ -1,10 +1,6 @@
 {
  "known": [
   {
-   "name": "ai_git_command_args",
-   "refusals": 1
-  },
-  {
    "name": "bible_data_path",
    "refusals": 1
   },
@@ -49,6 +45,10 @@
    "refusals": 1
   },
   {
+   "name": "qa_commit_gate_run_at",
+   "refusals": 1
+  },
+  {
    "name": "function_node_only_is",
    "refusals": 1
   },
@@ -70,7 +70,7 @@
   },
   {
    "name": "git_ac_call_folder_try",
-   "refusals": 2
+   "refusals": 1
   },
   {
    "name": "webpack_build_dev",
@@ -118,10 +118,6 @@
   },
   {
    "name": "g_chapter_code_next",
-   "refusals": 1
-  },
-  {
-   "name": "qa_commit_gate_run_at",
    "refusals": 1
   }
  ]
