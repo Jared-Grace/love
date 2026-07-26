@@ -62,6 +62,7 @@
       "Bash(node scripts/ai.mjs function_open_names:*)",
       "Bash(node scripts/ai.mjs function_open_name_defects:*)",
       "Bash(node scripts/ai.mjs functions_fn_name_literals_unresolved:*)",
+      "Bash(node scripts/ai.mjs fn_name_literals_gate_run:*)",
       "Bash(node scripts/ai.mjs function_open_name_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_editor_open_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_frontmatter_name_mismatches:*)",

@@ -1,3 +1,7 @@
+import { functions_fn_name_literals_unresolved } from "./functions_fn_name_literals_unresolved.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { greater_than } from "./greater_than.mjs";
 export async function fn_name_literals_gate_run() {
   "QA gate: every spelled function name in the code names a function that exists. Spelling";
   "a name instead of importing it is what keeps a bundle small and a reference rename-safe,";
