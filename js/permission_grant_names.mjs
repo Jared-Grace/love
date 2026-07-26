@@ -217,6 +217,19 @@ export function permission_grant_names() {
   let spelled214 = fn_name("functions_import_ignored");
   let spelled215 = fn_name("permission_settings_allow_assert");
   let spelled216 = fn_name("g_passage_match_count");
+  let spelled217 = fn_name("python_mirrors_write");
+  let spelled218 = fn_name("python_mirrors_assert");
+  let spelled219 = fn_name("permission_settings_allow_write");
+  let spelled220 = fn_name("permission_grant_names_rewrite");
+  let spelled221 = fn_name("permission_grants_counted");
+  let spelled222 = fn_name("permission_rules_other");
+  let spelled223 = fn_name("apps_names_dev");
+  let spelled224 = fn_name("apps_dev_build_all");
+  let spelled225 = fn_name("app_shared_dev_build_multiple");
+  let spelled226 = fn_name("functions_duplicates_baseline_write");
+  let spelled227 = fn_name("html_code_loading_splash");
+  let spelled228 = fn_name("function_param_plain_mark");
+  let spelled229 = fn_name("function_rename");
   let names = [
     spelled,
     spelled2,
@@ -434,6 +447,19 @@ export function permission_grant_names() {
     spelled214,
     spelled215,
     spelled216,
+    spelled217,
+    spelled218,
+    spelled219,
+    spelled220,
+    spelled221,
+    spelled222,
+    spelled223,
+    spelled224,
+    spelled225,
+    spelled226,
+    spelled227,
+    spelled228,
+    spelled229,
   ];
   return names;
 }
