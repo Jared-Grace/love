@@ -28,6 +28,7 @@ export function js_global_names() {
     "String",
     "Symbol",
     "SyntaxError",
+    "Uint8Array",
     "TypeError",
     "URIError",
     "WeakMap",
@@ -59,6 +60,7 @@ export function js_global_names() {
     "IntersectionObserver",
     "MutationObserver",
     "Notification",
+    "PointerEvent",
     "Request",
     "Response",
     "TextDecoder",
@@ -79,6 +81,7 @@ export function js_global_names() {
     "crypto",
     "document",
     "fetch",
+    "getComputedStyle",
     "history",
     "indexedDB",
     "localStorage",
@@ -94,7 +97,7 @@ export function js_global_names() {
     "setTimeout",
     "window",
   ];
-  let node = ["Buffer", "process"];
+  let node = ["Buffer", "global", "process"];
   let names = list_concat_multiple([keywords, built_in, browser, node]);
   return names;
 }
