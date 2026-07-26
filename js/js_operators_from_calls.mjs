@@ -1,11 +1,6 @@
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operators_from_calls_generic } from "./js_operators_from_calls_generic.mjs";
-import { js_operator_minus } from "./js_operator_minus.mjs";
-import { js_operator_asterisk } from "./js_operator_asterisk.mjs";
-import { js_operator_division } from "./js_operator_division.mjs";
-import { js_operator_percent } from "./js_operator_percent.mjs";
-import { js_operator_double_asterisk } from "./js_operator_double_asterisk.mjs";
 export function js_operators_from_calls(ast) {
   arguments_assert(arguments, 1);
   ("Denormalize compile step: the inverse of the operators-to-calls forward pass. Fold arithmetic");
