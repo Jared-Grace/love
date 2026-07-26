@@ -13,7 +13,7 @@ export async function git_remove(f_path) {
   let added = git_ignore_name();
   await git_add(added);
   await git_commit(
-    text_combine_multiple(["Remove ", f_path, " and add to ", g_name]),
+    text_combine_multiple(["Remove ", f_path, " and add to ", added]),
   );
   await git_push();
   await repos_gitignore_overwrite_all();
