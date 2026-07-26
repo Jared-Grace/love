@@ -146,6 +146,7 @@ Raw `node -e '...'` **always prompts the human** (arbitrary JS can shell out / h
   ```
   unshare --net --map-root-user -- node --permission --allow-fs-read=/home/j/repos/love scripts/temp/<name>.mjs
   ```
+  **Create that file with the `Write` tool, never `cat > … <<'EOF'`.** `Write`/`Edit` on `scripts/temp/**` are allow-listed (the folder is gitignored, and `scripts_temp_delete` clears it), so the write costs nothing — while a heredoc has no bash-guard parse at all and prompts the human every single time. Both halves are then prompt-free.
 
 If the task genuinely needs to **write** or **persist** (not just read+print), it isn't a throwaway — add a named alias/function in the `r.mjs` system and commit it (in git = reviewable, reusable, DRY), rather than reaching for raw `node -e`.
 
