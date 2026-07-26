@@ -10,8 +10,10 @@ import { app_shared_color_green } from "./app_shared_color_green.mjs";
 ("currentColor).");
 export function example_arrow_dom(parent) {
   let arrow = html_div(parent);
-  html_text_set(arrow, example_arrow_svg());
-  html_font_color_set(arrow, app_shared_color_green());
+  let text = example_arrow_svg();
+  html_text_set(arrow, text);
+  let color = app_shared_color_green();
+  html_font_color_set(arrow, color);
   html_centered(arrow);
   html_style_set(arrow, "line-height", "0");
   html_margin_0(arrow);
