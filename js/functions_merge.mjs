@@ -39,9 +39,9 @@ export async function functions_merge(f_name_keep, f_name_drop) {
     await function_auto(name);
   }
   ("a gate baseline is a record of the defect, not something depending on it, so the one file listing this pair as an open twin must not be what stops the pair being closed - every other mention in the data folder still does");
-  let data_paths = await data_paths_mentioning(f_name_drop);
+  let paths_mentioning = await data_paths_mentioning(f_name_drop);
   let baseline_path = duplicates_baseline_path();
-  let blocking = list_filter_equal_not(data_paths, baseline_path);
+  let blocking = list_filter_equal_not(paths_mentioning, baseline_path);
   list_empty_is_assert_json(blocking, {
     f_name_drop,
     blocking,

@@ -11,8 +11,8 @@ export async function function_delete_unused(s) {
   "The data folder is not code either, so a sweep over the functions never sees the example corpus or a gate baseline naming this - and deleting it would leave that spelling pointing at nothing";
   let alias_keys = await function_alias_keys(s);
   let aliased = list_empty_not_is(alias_keys);
-  let data_paths = await data_paths_mentioning(s);
-  let named_in_data = list_empty_not_is(data_paths);
+  let paths_mentioning = await data_paths_mentioning(s);
+  let named_in_data = list_empty_not_is(paths_mentioning);
   let search = await data_identifiers_search(s);
   let properties = properties_get(search);
   let eq = json_equal(properties, [s]);
@@ -27,7 +27,7 @@ export async function function_delete_unused(s) {
     result = {
       message:
         "The data folder still spells this name, so something there is counting on it. Would you like to clear these first? Not deleting.",
-      data_paths,
+      paths_mentioning,
     };
   } else if (eq) {
     result = await function_delete(s);
