@@ -37,7 +37,8 @@ export function example_note_dom(parent, note, alias) {
         : fn;
       example_note_link_dom(paragraph, fn, shown);
     } else {
-      example_note_code_dom(paragraph, property_get(segment, "code"));
+      let text = property_get(segment, "code");
+      example_note_code_dom(paragraph, text);
     }
   }
   return paragraph;
