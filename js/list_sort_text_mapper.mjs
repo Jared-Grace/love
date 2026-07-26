@@ -1,4 +1,3 @@
-import { list_sort_number } from "./list_sort_number.mjs";
 import { undefined } from "./undefined.mjs";
 export function list_sort_text_mapper(list, lambda$item) {
   "numeric true gives natural ordering (item2 before item10), NOT a numeric sort; the numeric sort stays a separate helper because string collation is wrong for negatives and decimals, and typed transpile targets sort numbers by comparison rather than by a string collator";
