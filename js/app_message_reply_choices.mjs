@@ -3,7 +3,6 @@ import { reply_on_match_capture } from "./reply_on_match_capture.mjs";
 import { reply_on_match_output_add_multiple } from "./reply_on_match_output_add_multiple.mjs";
 import { reply_sequence_optional } from "./reply_sequence_optional.mjs";
 import { reply_optional } from "./reply_optional.mjs";
-import { visit } from "./visit.mjs";
 import { app_message_reply_give } from "./app_message_reply_give.mjs";
 import { reply_word_us } from "./reply_word_us.mjs";
 import { reply_phrase_according_to_gods_will } from "./reply_phrase_according_to_gods_will.mjs";
@@ -61,7 +60,7 @@ export function app_message_reply_choices() {
   let digits_oom = reply_once_or_more(rc_digits);
   let r_roads = reply_roads();
   let r_cities = reply_cities();
-  let fn24 = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
+  let fn = reply_sequence(["contact", digits_oom, r_roads, r_cities]);
   let cannot_middle = reply_choice_optional(["'", "no"]);
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
@@ -91,7 +90,7 @@ export function app_message_reply_choices() {
     give,
     visit,
     thanks,
-    fn24,
+    fn,
     matcher,
   ]);
   let room = reply_once_or_more(choices_main);
