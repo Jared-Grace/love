@@ -19,5 +19,10 @@ export async function example_transform_run(e) {
   let out = await file_temp(sandbox);
   let got = await js_format_trim(out);
   let want = await js_format_trim(e.after);
-  return got === want ? "pass" : "fail";
+  let same_is = equal(got, want);
+  if (same_is) {
+    return "pass";
+  }
+  example_transform_difference_print(e.title, got, want);
+  return "fail";
 }
