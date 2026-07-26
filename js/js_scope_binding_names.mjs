@@ -3,7 +3,12 @@ import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_scope_binding_names(node) {
-  "the names this one scope binds: a function binds its parameters, a block or module binds what its own statements declare. A function's own name belongs to the scope around it, not to this one, and so does everything a deeper scope declares.";
+  "the names this one scope binds: a function binds its parameters, a block or module binds what its own statements declare, a catch clause binds the error it names. A declared function's own name belongs to the scope around it, not to this one, and so does everything a deeper scope declares.";
+  let binds_caught = js_node_type_is(node, "CatchClause");
+  if (binds_caught) {
+    let caught = js_catch_clause_names(node);
+    return caught;
+  }
   let types = [
     "FunctionDeclaration",
     "FunctionExpression",
@@ -12,7 +17,10 @@ export function js_scope_binding_names(node) {
   let binds_params = js_node_types_is(node, types);
   if (binds_params) {
     let params = js_function_declaration_params_names(node);
-    return params;
+    ("a function EXPRESSION also binds its own name, and inside itself only - that is the one place the name can be read, so it is this scope's binding and not the enclosing one's");
+    let own = js_function_expression_own_names(node);
+    let names = list_concat(params, own);
+    return names;
   }
   let statements = property_get(node, "body");
   let names = js_statements_declared_names_direct(statements);

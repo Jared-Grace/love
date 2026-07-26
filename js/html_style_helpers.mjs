@@ -10,7 +10,8 @@ export async function html_style_helpers() {
   let f_names = await repo_functions_names("love");
   let html = list_filter_starts_with(f_names, "html_");
   async function helper_of(f_name) {
-    let declaration = await function_parse_declaration(f_name);
+    let parsed = await function_parse_declaration(f_name);
+    let declaration = property_get(parsed, "declaration");
     let helper = js_html_style_helper_try(declaration);
     return helper;
   }
