@@ -1,3 +1,4 @@
+import { html_style_literal_gate_run } from "./html_style_literal_gate_run.mjs";
 import { js_operator_targets_leaf_gate_run } from "./js_operator_targets_leaf_gate_run.mjs";
 import { apps_node_only_gate_run } from "./apps_node_only_gate_run.mjs";
 import { js_function_self_call_cases_gate_run } from "./js_function_self_call_cases_gate_run.mjs";
@@ -71,6 +72,7 @@ export function qa_gates() {
     bundle_size_gate_run,
     examples_orphan_gate_run,
     examples_notes_gate_run,
+    html_style_literal_gate_run,
     ebible_book_divisions_canon_assert,
   ];
   return gates;
