@@ -20,13 +20,18 @@ export async function app_code_reload_persists_test(url_prefix) {
   let results = [];
   async function on_page(page) {
     async function check(id) {
+      let combined = text_combine_multiple([
+        "&screen=",
+        app_code_quiz.name,
+        "&quiz=0",
+      ]);
       let url = text_combine_multiple([
         url_prefix,
         "?s=",
         id,
         "_r#lesson=",
         id,
-        text_combine_multiple(["&screen=", app_code_quiz.name, "&quiz=0"]),
+        combined,
       ]);
       await page.goto(url);
       await page.waitForTimeout(180);

@@ -154,6 +154,21 @@ If the task genuinely needs to **write** or **persist** (not just read+print), i
 
 Your memory dir `~/.claude/projects/-home-j-repos-love/memory` is a **symlink** to `/home/j/backup/love_claude_memory/memory` (its own git repo). **Always spell the realpath** in `Read`/`Edit`/`Write` calls. The `~/.claude/…` spelling lands inside Claude Code's own config directory and trips a **built-in self-settings guard** — the prompt offers "allow Claude to edit its own settings *for this session*". No allow rule overrides that guard, `acceptEdits` doesn't either, and the grant it offers dies with the session, so the human gets re-prompted forever. The realpath reaches the identical files and never prompts.
 
+## Memory: mark live pointers as `fn(name)`
+
+A memory note names functions constantly, and most of those names are **narrative** — a build log, or the record of a rename. Those must never be rewritten: "`list_empty` was renamed to `list_clear`" becomes nonsense if either name follows a later rename, and nothing in a name's *shape* tells a stale reference apart from a deliberate record of one.
+
+So a function name in a note is **frozen by default**. When it is a *live pointer* into the code — "the judgment lives in X", "single-sourced in X" — write it `` `fn(X)` `` instead:
+
+- `function_rename` **rewrites** every `fn(before)` across memory, and **reports** the notes still writing that name bare so a human judges those. Aliases already follow a rename; memory is the other named referrer.
+- `memory_fn_reference_gate_run` (in `q`) fails if any `fn(X)` names no live function. A marker is a *claim*, so it also catches a name that never existed at all — the failure a rename could never catch.
+
+**Mark the name, not the call:** `` `fn(list_empty_not_is)` ``, with arguments given separately. `fn(x)(a, b)` is not the convention.
+
+The word boundary is load-bearing, not incidental: `html_update_latest_promote_deploy_app_fn(app_g)` is a real call whose last two letters before the bracket are the marker's, and it is left alone. `memory_fn_reference_cases` pins that.
+
+**Nothing requires you to mark anything** — an unmarked name behaves exactly as it always has. Marking is opt-in and earns its keep by surviving renames.
+
 ## Tests (gap)
 
 `q` (`qa_gate_run`) is the repo-wide gate. It runs every gate listed in `qa_gates()` and exits nonzero if any fail. Current members (the list grows — read `js/qa_gates.mjs` for the live set, don't trust this enumeration blindly): `guard_gate_run` (the bash-guard corpus in `data/guard_cases.json`, checked through the real hook), `examples_gate_run` (the `data/examples` corpus) + `examples_orphan_gate_run` (no orphaned example files), `permission_gate_run` + `permission_reachable_gate_run` (allow rules name a live, reachable full function), `app_shared_prefixes_invalid_assert` (no `app_<part>_` prefix squatting a name that isn't a real app), `function_imports_gate_run` (no missing relative imports), `bundle_size_gate_run` (small-by-design client pages stay under their `bundle_size_ceilings()` KiB caps), `ebible_book_divisions_canon_assert` (Bible book divisions stay canonical), plus `memory_hook_gate_run`, `daemons_gate_run`, `dispatcher_scripts_python_assert`, and `function_worker_pool_run_try`. Add a new gate by adding its function to `qa_gates()`.
