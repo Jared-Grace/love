@@ -33,7 +33,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 |---|---|---|
 | Rename a function everywhere (def + imports + callers + aliases) | `function_rename <before> <after>` | `function_rename` |
 | Bulk-rename every fn under a name prefix (namespace migration) | `ri <prefix_before> <prefix_after>` | `functions_rename_if_starts_with` |
-| Replace an identifier *inside the current fn* with an expression | `ir <name> <expr>` | `function_identifier_replace` |
+| Replace an identifier with an expression, inside the fn you name | `ir <name> <expr>` | `function_identifier_replace_named <fn> <name> <expr>` |
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` / `function_new_js` |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic` |
