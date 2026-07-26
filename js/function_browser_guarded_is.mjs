@@ -1,4 +1,5 @@
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
+import { property_get } from "./property_get.mjs";
 import { file_read } from "./file_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_includes } from "./text_includes.mjs";
