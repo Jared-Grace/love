@@ -12,6 +12,7 @@ import { html_code_attributes_html } from "./html_code_attributes_html.mjs";
 import { html_code_manifest_link } from "./html_code_manifest_link.mjs";
 import { html_code_service_worker_register } from "./html_code_service_worker_register.mjs";
 import { apps_pwa_is } from "./apps_pwa_is.mjs";
+import { html_code_loading_splash } from "./html_code_loading_splash.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 export function html_code(name, body) {
   let attributes_none = {};
@@ -34,7 +35,8 @@ export function html_code(name, body) {
   ]);
   let head_children = html_code_children(head_items, indent);
   let head = html_code_element("head", attributes_none, head_children);
-  let body_items = list_filter_null_not_is([body, service_worker]);
+  let splash = html_code_loading_splash();
+  let body_items = list_filter_null_not_is([splash, body, service_worker]);
   let body_children = html_code_children(body_items, indent);
   let body_element = html_code_element("body", attributes_none, body_children);
   let html_children = html_code_children([head, body_element], text_empty());
