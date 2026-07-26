@@ -1,4 +1,3 @@
-import { marker } from "./marker.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_quiz } from "./app_code_quiz.mjs";
@@ -51,7 +50,7 @@ export async function app_code_screens_crawl_lesson(
   first.screen = "quiz";
   first.kind = 0;
   list_add(records, first);
-  let marker = text_combine_multiple([
+  let quiz_marker = text_combine_multiple([
     "lesson=",
     id,
     text_combine_multiple(["&screen=", app_code_quiz.name]),
