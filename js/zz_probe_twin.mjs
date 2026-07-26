@@ -1,5 +1,5 @@
-import { greater_than_equal } from "./greater_than_equal.mjs";
-export function zz_probe_twin(one, two) {
-  let outcome = greater_than_equal(one, two);
-  return outcome;
+import { text_slice } from "./text_slice.mjs";
+export function zz_probe_twin(words, howmany) {
+  let front = text_slice(words, 0, howmany);
+  return front;
 }
