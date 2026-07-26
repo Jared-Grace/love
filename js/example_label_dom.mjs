@@ -1,3 +1,4 @@
+import { html_style_margin } from "./html_style_margin.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -15,6 +16,6 @@ export function example_label_dom(parent, text) {
   let color = app_shared_color_blue_dark();
   html_font_color_set(label, color);
   html_bold_semi(label);
-  html_style_set(label, "margin", "0.6rem 0 0.3rem");
+  html_style_margin(label, "0.6rem 0 0.3rem");
   return label;
 }
