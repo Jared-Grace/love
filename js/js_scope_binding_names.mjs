@@ -30,8 +30,8 @@ export function js_scope_binding_names(node) {
     let params = js_function_declaration_params_names(node);
     ("a function EXPRESSION also binds its own name, and inside itself only - that is the one place the name can be read, so it is this scope's binding and not the enclosing one's");
     let own = js_function_expression_own_names(node);
-    let names = list_concat(params, own);
-    return names;
+    let params_and_own = list_concat(params, own);
+    return params_and_own;
   }
   let statements = property_get(node, "body");
   let names = js_statements_declared_names_direct(statements);
