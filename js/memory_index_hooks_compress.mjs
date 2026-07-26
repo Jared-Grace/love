@@ -16,6 +16,7 @@ export async function memory_index_hooks_compress() {
   "Shortens every over-long index line to its own hook plus the bare links it was carrying, and answers which lines changed and by how much.";
   "What is dropped is the second hook a line writes about a note it merely links to. That note already carries the same sentence in its own header, so the index was holding a copy - and it is the copy that overflows the budget the index is read within.";
   "This is safe to run over the whole index only because of that. Where it is untrue, the name lives in the index and nowhere else - and the reader of index-only names answers exactly those, so ask it before and after: empty both times is the proof that the lines were compressed rather than robbed.";
+  "A link is only a link when it is not quoted. A note explaining how links are written shows one as an example, and the first run of this read one of those as the real thing and cut the line off inside the quotation - so the line is read with its backtick spans blanked out, keeping every position where it was.";
   "Lines carrying no link are left alone. Their whole length is the hook for the note they point at, and shortening that is a judgment about what the note is for, which no rule here can make.";
   let folder = memory_folder();
   let name = "MEMORY.md";
@@ -24,24 +25,25 @@ export async function memory_index_hooks_compress() {
   let lines = text.split("\n");
   let ceiling = memory_index_line_ceiling();
   let opener = "- [";
-  let marker = "[[";
+  let link_open = "[[";
   let dash = "—";
   let kept = [];
   let shortened = [];
   for (let line of lines) {
     let entry_is = text_starts_with(line, opener);
     let over = greater_than(line.length, ceiling);
-    let linked = text_includes(line, marker);
+    let masked = text_code_spans_blanked(line);
+    let linked = text_includes(masked, link_open);
     let right = and(over, linked);
     let touched = and(entry_is, right);
     if (not(touched)) {
       list_add(kept, line);
       continue;
     }
-    let at = line.indexOf(marker);
+    let at = masked.indexOf(link_open);
     let head = line.slice(0, at);
     let tidy = memory_index_head_tidy(head);
-    let links = memory_wikilink_tokens(line);
+    let links = memory_wikilink_tokens(masked);
     function inner(stem) {
       let one = "[[" + stem + "]]";
       return one;

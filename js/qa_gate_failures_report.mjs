@@ -1,3 +1,5 @@
+import { null_is } from "./null_is.mjs";
+import { functions_names } from "./functions_names.mjs";
 import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
@@ -16,6 +18,8 @@ export async function qa_gate_failures_report(results, gates) {
   "complains, and is quiet a moment later. Which of those happened is said out";
   "loud, because a failure printed above output reporting nothing wrong reads as";
   "a broken gate, and the reader goes looking for a fault that is not there.";
+  "every function in every repo is read once, and only once something has actually gone red - a green run pays nothing for it, and a run with four red gates pays for it once rather than four times";
+  let known = null;
   let failed = [];
   let size = list_size(results);
   for (let index = 0; less_than(index, size); index++) {
@@ -39,7 +43,11 @@ export async function qa_gate_failures_report(results, gates) {
       );
     } catch (e) {
       console.log("GATE FAILED  " + name + ": " + e.message);
-      await qa_gate_blame_print(e.message);
+      let first = null_is(known);
+      if (first) {
+        known = await functions_names();
+      }
+      await qa_gate_blame_print(e.message, known);
     }
   }
   return failed;
