@@ -1,4 +1,4 @@
-import { examples_paths } from "./examples_paths.mjs";
+import { data_paths } from "./data_paths.mjs";
 import { file_identifier_replace } from "./file_identifier_replace.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 export async function function_rename_data_check(f_name_before, f_name_after) {
