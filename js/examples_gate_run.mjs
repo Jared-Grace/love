@@ -1,7 +1,8 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { list_add } from "./list_add.mjs";
-import { log } from "./log.mjs";
 import { timings_print } from "./timings_print.mjs";
 import { examples_corpus_read } from "./examples_corpus_read.mjs";
 import { example_check } from "./example_check.mjs";
@@ -23,9 +24,9 @@ export async function examples_gate_run() {
       milliseconds,
     };
     list_add(timings, timing);
-    if (result === "pass") {
+    if (equal(result, "pass")) {
       pass++;
-    } else if (result === "fail") {
+    } else if (equal(result, "fail")) {
       fail++;
     } else {
       skip++;
@@ -34,23 +35,24 @@ export async function examples_gate_run() {
   }
   timings_print(timings);
   console.log("\npass " + pass + "  fail " + fail + "  skip " + skip);
-  if (fail > 0) {
+  if (greater_than(fail, 0)) {
     throw new Error("examples gate: " + fail + " failed");
   }
   ("A skipped example is an example nobody is checking. It happens when the corpus");
   ("names a function the runner has no branch for — a rename on one side and not");
   ("the other — and it reads as a pass in every summary, so the coverage goes");
   ("quietly rather than loudly. Refusing to skip is what keeps the count honest.");
-  if (skip > 0) {
+  if (greater_than(skip, 0)) {
     throw new Error(
       "examples gate: " +
         skip +
         " skipped — the corpus names a function the runner has no branch for, so nothing checked it. Would you like to check the fn name on both sides?",
     );
   }
-  return {
+  let r = {
     pass,
     fail,
     skip,
   };
+  return r;
 }

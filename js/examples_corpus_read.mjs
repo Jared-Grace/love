@@ -1,5 +1,3 @@
-import { mod } from "./mod.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { folder_read } from "./folder_read.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
