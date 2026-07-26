@@ -12,7 +12,6 @@ import { and } from "./and.mjs";
 import { object_values_map_list } from "./object_values_map_list.mjs";
 import { js_node_signature_keys_skipped } from "./js_node_signature_keys_skipped.mjs";
 import { list_join } from "./list_join.mjs";
-import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_node_signature(node, bound) {
