@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { json_to } from "./json_to.mjs";
+import { list_join } from "./list_join.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function python_code_mirror(mirror) {
   arguments_assert(arguments, 1);
   ("The python text for one mirrored list — a header saying where it came from and");
