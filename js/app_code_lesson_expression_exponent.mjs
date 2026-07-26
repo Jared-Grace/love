@@ -47,9 +47,11 @@ export function app_code_lesson_expression_exponent() {
     "the exponent written out as repeated multiplication - product_code(2, 3) is 2 * 2 * 2";
     let star = js_operator_asterisk_symbol();
     function base_text(index) {
-      return text_to(base);
+      let t = text_to(base);
+      return t;
     }
-    let factors = list_map(range(exponent), base_text);
+    let list = range(exponent);
+    let factors = list_map(list, base_text);
     let separator = text_combine_multiple([" ", star, " "]);
     let product = list_join(factors, separator);
     return product;
@@ -146,7 +148,8 @@ export function app_code_lesson_expression_exponent() {
     }
     function running_count(grid, number) {
       "the count under an intermediate factor - bold and dark so the counting reads clearly; it does not compete with the final count, which stands apart by its coloured chip rather than by weight";
-      let label = html_span_text_smaller(grid, text_to(number));
+      let text = text_to(number);
+      let label = html_span_text_smaller(grid, text);
       html_font_color_set(label, "rgb(55, 55, 55)");
       html_bold(label);
       return label;
@@ -159,21 +162,22 @@ export function app_code_lesson_expression_exponent() {
     }
     function cell_at(node, row, column) {
       "place a node in a specific grid row and column";
-      html_style_set(node, "grid-row", text_to(row));
-      html_style_set(node, "grid-column", text_to(column));
+      let style_value = text_to(row);
+      html_style_set(node, "grid-row", style_value);
+      let style_value2 = text_to(column);
+      html_style_set(node, "grid-column", style_value2);
     }
     function product_expression(parent, base, base_color, power_color, count) {
       "base * base * ... with the running count 1..count OUTSIDE the code, on the light background below each factor: row 1 is one continuous black pill (base chips joined by *), row 2 holds the counts (no black behind them), the last count in the power colour so how-many visibly becomes the exponent";
-      let column_count = add(multiply(2, count), 1);
+      let left = multiply(2, count);
+      let column_count = add(left, 1);
       let end_column = column_count;
       let grid = html_span(parent);
       html_display_set(grid, "inline-grid");
       html_style_set(grid, "grid-template-rows", "auto auto");
-      html_style_set(
-        grid,
-        "grid-template-columns",
-        text_combine_multiple(["repeat(", text_to(column_count), ", auto)"]),
-      );
+      let t2 = text_to(column_count);
+      let style_value3 = text_combine_multiple(["repeat(", t2, ", auto)"]);
+      html_style_set(grid, "grid-template-columns", style_value3);
       html_style_set(grid, "align-items", "center");
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
@@ -194,11 +198,12 @@ export function app_code_lesson_expression_exponent() {
       }
       function place_factor(index) {
         let position = add(index, 1);
-        let column = add(multiply(2, index), 2);
+        let left2 = multiply(2, index);
+        let column = add(left2, 2);
         let chip = lifted_chip(grid, base, base_color);
         cell_at(chip, 2, column);
         let last = equal(position, count);
-        let numeral;
+        let numeral = null;
         if (last) {
           numeral = final_count(grid, position, power_color);
         } else {
@@ -207,7 +212,8 @@ export function app_code_lesson_expression_exponent() {
         cell_at(numeral, 1, column);
       }
       function place_operator(gap) {
-        let column = add(multiply(2, gap), 3);
+        let left3 = multiply(2, gap);
+        let column = add(left3, 3);
         let op = html_span_text(grid, star);
         html_font_color_set(op, "white");
         html_font_jetbrains_mono(op);
@@ -215,8 +221,11 @@ export function app_code_lesson_expression_exponent() {
       }
       spacer(1);
       spacer(end_column);
-      each(range(count), place_factor);
-      each(range(subtract(count, 1)), place_operator);
+      let list2 = range(count);
+      each(list2, place_factor);
+      let count2 = subtract(count, 1);
+      let list3 = range(count2);
+      each(list3, place_operator);
     }
     function power_expression(parent, base, power, base_color, power_color) {
       "one dark tile reading base ** power, base and power as lifted color chips, so power_expression(2, 3, ...) is 2 ** 3";
