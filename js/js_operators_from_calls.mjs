@@ -1,3 +1,4 @@
+import { js_operators_binary } from "./js_operators_binary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operators_from_calls_generic } from "./js_operators_from_calls_generic.mjs";
 import { js_operator_minus } from "./js_operator_minus.mjs";
@@ -9,14 +10,13 @@ export function js_operators_from_calls(ast) {
   arguments_assert(arguments, 1);
   ("Denormalize compile step: the inverse of the operators-to-calls forward pass. Fold arithmetic");
   ("operator-fn calls back to operators for readable output, reusing the same operator descriptors so");
-  ("the round-trip is exact. Arithmetic subset (minus, times, divide, mod, power); plus is excluded");
-  ("both ways since it is ambiguous with string concatenation.");
-  let o = js_operator_minus();
-  let o2 = js_operator_asterisk();
-  let o3 = js_operator_division();
-  let o4 = js_operator_percent();
-  let o5 = js_operator_double_asterisk();
-  let operators = [o, o2, o3, o4, o5];
+  ("the round-trip is exact. It reads the very list the forward pass works from, so the two cover the");
+  ("same ground without anybody keeping them level by hand - it used to name five arithmetic ones here");
+  ("and silently left every comparison folded. Plus is absent from that list already, excluded both");
+  ("ways since it is ambiguous with joining words.");
+  ("Written between the two things it acts on, only. The one written before its single operand still");
+  ("needs a shape of its own to be rebuilt into.");
+  let operators = js_operators_binary();
   js_operators_from_calls_generic(ast, operators);
   return;
 }
