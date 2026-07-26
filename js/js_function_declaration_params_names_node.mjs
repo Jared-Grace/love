@@ -29,8 +29,26 @@ export function js_function_declaration_params_names_node(node) {
           let argument = property_get(node, "argument");
           names = js_function_declaration_params_names_node(argument);
         } else {
-          let message = json_format_to(node);
-          error(message);
+          let array_is = js_node_type_is(node, "ArrayPattern");
+          if (array_is) {
+            let elements = property_get(node, "elements");
+            ("a hole, as in the first slot of a two-name unpacking that skips it, is an absent element and names nothing");
+            let filled = list_filter(elements, js_node_is);
+            names = list_map_squash(
+              filled,
+              js_function_declaration_params_names_node,
+            );
+          } else {
+            let default_is = js_node_type_is(node, "AssignmentPattern");
+            if (default_is) {
+              ("a default value stands to the right of the name and binds nothing itself, so only the left side is asked");
+              let left = property_get(node, "left");
+              names = js_function_declaration_params_names_node(left);
+            } else {
+              let message = json_format_to(node);
+              error(message);
+            }
+          }
         }
       }
     }
