@@ -20,9 +20,8 @@ export async function git_files_changed_folder(folder, paths) {
     let nothing = [];
     return nothing;
   }
-  let listed = list_join_space(paths);
-  let command = text_combine_multiple(["status --porcelain -- ", listed]);
-  let stdout = await command_line_git_folder(folder, command);
+  let asked = ["status", "--porcelain", "--"].concat(paths);
+  let stdout = await git_folder_run(folder, asked);
   let lines = text_split_newline(stdout);
   let filled = list_filter_text_empty_not_is(lines);
   let changed = list_map(filled, git_status_line_path);
