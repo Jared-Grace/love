@@ -12,6 +12,6 @@ export async function functions_duplicates_names() {
     let group_names = property_get(group, "names");
     list_add_multiple(names, group_names);
   }
-  let sorted = list_sort_alphabetical(names);
+  let sorted = list_sort_text(names);
   return sorted;
 }
