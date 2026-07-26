@@ -1,3 +1,5 @@
+import { path_join } from "./path_join.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
 import { property_get } from "./property_get.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
