@@ -25,6 +25,7 @@
       "Bash(ps:*)",
       "Bash(pgrep:*)",
       "Bash(uptime:*)",
+      "Bash(nproc:*)",
       "Bash(sleep:*)",
       "Bash(git cat-file:*)",
       "Bash(git check-ignore:*)",
