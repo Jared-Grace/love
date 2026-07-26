@@ -8,7 +8,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_is } from "./null_is.mjs";
-export async function app_dependency_paths_multiple(targets_comma) {
+export async function apps_dependency_paths_multiple(targets_comma) {
   "Which apps can reach each of these functions, by what route, and where on that route someone remembered to ask about the browser. An app reaching a Node-only function is only a fault when nothing along the way guards it, so the route and its guards are the answer rather than the yes or no.";
   "Every app is asked about every target in one call, because the finding that matters is which apps differ - one app reaching it and its neighbour not is what says the reach was accidental.";
   let targets = text_split_comma(targets_comma);
