@@ -107,7 +107,8 @@ export function app_code_lesson_quiz(
     html_visibility_hidden(container_success_message);
     show_correction();
   }
-  let reveal_label = text_combine(emoji_light_bulb(), " Show me the answer");
+  let left2 = emoji_light_bulb();
+  let reveal_label = text_combine(left2, " Show me the answer");
   let reveal_button = app_shared_button_wide(
     parent_container,
     reveal_label,
