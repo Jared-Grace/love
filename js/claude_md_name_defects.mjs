@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { unordered_async } from "./unordered_async.mjs";
+import { each_unordered_async } from "./each_unordered_async.mjs";
 export async function claude_md_name_defects() {
   "Lists the names the instructions file tells a Claude to run that the ai seam would refuse";
   "Either no such function exists, or the name is a shorthand the seam turns away, and each one is a crash waiting for whoever follows the instructions";
@@ -31,7 +31,7 @@ export async function claude_md_name_defects() {
       });
     }
   }
-  await unordered_async(names, lambda);
+  await each_unordered_async(names, lambda);
   let v = {
     checked: names.length,
     defects,
