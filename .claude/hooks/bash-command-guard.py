@@ -2104,7 +2104,28 @@ def find_python_eval(command):
             return True
         if words and words[0] in STDIN_PROGRAMS and "-" in words[1:]:
             return True
+        if words and words[0] in SHELL_PROGRAMS and "-c" in words[1:]:
+            return True
+        if words and words[0] in SCRIPT_EVAL_PROGRAMS and "-e" in words[1:]:
+            return True
     return False
+
+
+# A shell handed `-c` is the widest arbitrary-execution seam there is: every
+# floor above it - the dispatcher floor, the eval floors, the raw-git refusal -
+# is a statement about a command line, and `sh -c '<anything>'` writes a fresh
+# command line the guard never sees. It is floored with the rest rather than
+# left to prompt, on the rule that anything which executes freely has to be
+# narrowed to a safe shape first. A shell reached through `find -exec` is a
+# different word position and keeps its existing answer; only a shell invoked
+# as the command itself is caught here.
+SHELL_PROGRAMS = ("sh", "bash", "zsh", "dash", "ksh")
+
+# The same seam wearing two more names. Enumerating the interpreters matters
+# more than covering any one of them: a floor that names a single program is a
+# signpost to the next program, and the pivot from a blocked node to an
+# unblocked python is the reason this family exists at all.
+SCRIPT_EVAL_PROGRAMS = ("perl", "ruby")
 
 
 # An interpreter reads its program from standard input in three spellings:
@@ -2139,13 +2160,20 @@ def find_stdin_program_unparsed(command):
 
 
 PYTHON_EVAL_DENY_REASON = (
-    "Raw `python -c` can't be approved here - nor the same code handed to "
-    "python or node on standard input instead (`python3 - <<PY`, `node -`, "
-    "`python3 <<< '...'`), which is the same thing with the script moved off "
-    "the argument list. It's arbitrary code from the "
-    "command line, the exact analog of `node -e` (floored the same way): it can "
-    "shell out, write files, and reach the network, so it's never auto-trusted. "
-    "Three supported paths instead:\n"
+    "An interpreter handed code on the command line can't be approved here. "
+    "That is one seam wearing many names, and all of them are floored the same "
+    "way: `python -c`, `node -e`, `perl -e`, `ruby -e`, a shell's `sh -c` / "
+    "`bash -c`, and the same code moved onto standard input instead "
+    "(`python3 - <<PY`, `node -`, `python3 <<< '...'`). Each can shell out, "
+    "write files, and reach the network, so none is ever auto-trusted - "
+    "anything that executes freely has to be narrowed to a safe shape first. "
+    "Four supported paths instead, best first:\n"
+    "  - EDITING A FILE: use the Edit tool (or Write for a brand-new file). "
+    "A script that rewrites a file is the wrong instrument for it - Edit fails "
+    "loudly on a conflict where a scripted replace silently does nothing.\n"
+    "  - WORK THE REPO SHOULD KNOW HOW TO DO: add a committed JS function and "
+    "run it as `node scripts/ai.mjs <fn> <args>`. Repo functions beat scripting, "
+    "and this repo's language is JS, not Python.\n"
     "  - inspecting or parsing text/JSON: use trusted verbs (grep, wc, head, "
     "sort) - e.g. a decision field is `grep -o '\"decision\": \"[a-z]*\"'`.\n"
     "  - a read-only one-off (auto-approved, no prompt): the sandboxed node "
