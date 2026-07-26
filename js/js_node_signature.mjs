@@ -22,8 +22,8 @@ export function js_node_signature(node, bound) {
   let slot_names = [];
   let pieces = [];
   function slot_of(name) {
-    let seen = list_index_of(slot_names, name);
-    let missing = less_than(seen, 0);
+    let known = list_includes(slot_names, name);
+    let missing = not(known);
     if (missing) {
       list_add(slot_names, name);
     }
