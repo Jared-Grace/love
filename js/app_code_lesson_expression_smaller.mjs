@@ -98,8 +98,8 @@ export function app_code_lesson_expression_smaller() {
       " is smaller than ",
       big_text,
     ]);
-    let v1 = min_code(small, big);
-    html_div_cycle_code(example_box, ["so ", v1, " is ", small_text]);
+    let v = min_code(small, big);
+    html_div_cycle_code(example_box, ["so ", v, " is ", small_text]);
     let v2 = min_code(big, small);
     html_div_cycle_code(example_box, ["and ", v2, " is also ", small_text]);
     html_div_cycle_code(example_box, [
