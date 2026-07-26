@@ -1,4 +1,4 @@
-import { log } from "./log.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { timings_print } from "./timings_print.mjs";
 import { qa_gates } from "./qa_gates.mjs";
 import { qa_gate_result } from "./qa_gate_result.mjs";
@@ -24,13 +24,14 @@ export async function qa_gate_run() {
   }
   timings_print(results);
   let failed = await qa_gate_failures_report(results, gates);
-  if (failed.length > 0) {
+  if (greater_than(failed.length, 0)) {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
-  return {
+  let r = {
     gates: gates.length,
     failed: 0,
     timings: results,
   };
+  return r;
 }
