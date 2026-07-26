@@ -26,26 +26,12 @@ export function js_code_top_level_templates_flattened(code) {
     return false;
   }
   let templates = list_filter(body, template_statement_is);
-  let pieces = [];
-  let cursor = 0;
-  function lambda(statement) {
-    let start = property_get(statement, "start");
-    let end = property_get(statement, "end");
+  function plain_of(statement) {
     let expression = property_get(statement, "expression");
     let text = js_template_comment_text(expression);
-    let before = text_slice(code, cursor, start);
-    list_add(pieces, before);
-    let backslashed = text_replace(text, "\\", "\\\\");
-    let quoted = text_replace(backslashed, '"', '\\"');
-    let plain = text_combine_multiple(['"', quoted, '";']);
-    list_add(pieces, plain);
-    cursor = end;
+    let plain = js_code_string_statement(text);
+    return plain;
   }
-  each(templates, lambda);
-  let size = text_size(code);
-  let rest = text_slice(code, cursor, size);
-  list_add(pieces, rest);
-  let flattened = text_combine_multiple(pieces);
-  js_parse(flattened);
+  let flattened = js_code_spans_replaced(code, templates, plain_of);
   return flattened;
 }

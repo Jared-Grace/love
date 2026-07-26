@@ -31,10 +31,8 @@ export function js_code_comment_statement_generic(value, f_names) {
   }
   let known = list_filter(segments, known_is);
   let none = list_empty_is(known);
-  let backslashed = text_replace(trimmed, "\\", "\\\\");
   if (none) {
-    let quoted = text_replace(backslashed, '"', '\\"');
-    let plain = text_combine_multiple(['"', quoted, '";']);
+    let plain = js_code_string_statement(trimmed);
     return plain;
   }
   let pieces = [];
