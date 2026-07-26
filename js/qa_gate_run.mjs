@@ -1,6 +1,6 @@
+import { qa_gates_read } from "./qa_gates_read.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { timings_print } from "./timings_print.mjs";
-import { qa_gates } from "./qa_gates.mjs";
 import { qa_gate_result } from "./qa_gate_result.mjs";
 import { qa_gate_failures_report } from "./qa_gate_failures_report.mjs";
 import { console_log_silence } from "./console_log_silence.mjs";
@@ -14,7 +14,7 @@ export async function qa_gate_run() {
   "Nothing prints while they run, because lines arriving from work happening side";
   "by side cannot be attributed by a reader. A gate that complains is then asked";
   "again on its own, where its output belongs to it alone and is worth reading.";
-  let gates = qa_gates();
+  let gates = qa_gates_read();
   let real = console_log_silence();
   let results = null;
   try {
