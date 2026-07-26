@@ -5,7 +5,7 @@ import { example_card_title_note_dom } from "./example_card_title_note_dom.mjs";
 import { example_code_block_dom } from "./example_code_block_dom.mjs";
 import { example_refusal_dom } from "./example_refusal_dom.mjs";
 "A rejection example as DOM: title, note, the call block (red left edge), and";
-`the expected outcome (shared red refusal line, via ${fn_name("example_refusal_dom")}).`;
+"the expected outcome (shared red refusal line, via example_refusal_dom).";
 export function example_rejection_card_dom(parent, example) {
   let title = property_get(example, "title");
   let note = property_get(example, "note");
