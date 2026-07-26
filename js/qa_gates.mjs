@@ -1,3 +1,5 @@
+import { js_function_self_call_cases_gate_run } from "./js_function_self_call_cases_gate_run.mjs";
+import { functions_self_call_gate_run } from "./functions_self_call_gate_run.mjs";
 import { fn_name_literals_gate_run } from "./fn_name_literals_gate_run.mjs";
 import { command_seams_agree_gate_run } from "./command_seams_agree_gate_run.mjs";
 import { function_top_level_comment_gate_run } from "./function_top_level_comment_gate_run.mjs";
@@ -56,6 +58,8 @@ export function qa_gates() {
     dispatcher_scripts_python_assert,
     function_worker_pool_run_try,
     function_imports_gate_run,
+    js_function_self_call_cases_gate_run,
+    functions_self_call_gate_run,
     fn_name_literals_gate_run,
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
