@@ -1,7 +1,5 @@
-import { list_single } from "./list_single.mjs";
-import { list_adder } from "./list_adder.mjs";
+import { list_adder_single_message } from "./list_adder_single_message.mjs";
 export function list_adder_single(lambda) {
-  let list = list_adder(lambda);
-  let only = list_single(list);
+  let only = list_adder_single_message(lambda, {});
   return only;
 }

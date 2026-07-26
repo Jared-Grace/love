@@ -1,5 +1,5 @@
-import { command_line_git_folder } from "./command_line_git_folder.mjs";
-import { text_combine } from "./text_combine.mjs";
-export async function git_add_folder(folder, added) {
-  await command_line_git_folder(folder, text_combine("add ", added));
+import { git_folder_run } from "./git_folder_run.mjs";
+export async function git_add_folder(folder, words) {
+  "What to stage arrives as a list of words, so a file whose name holds a space stays one file rather than becoming two names git cannot find.";
+  await git_folder_run(folder, ["add"].concat(words));
 }

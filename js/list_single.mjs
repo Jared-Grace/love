@@ -1,7 +1,6 @@
-import { list_size_1_assert } from "./list_size_1_assert.mjs";
-import { list_first } from "./list_first.mjs";
+import { list_single_message } from "./list_single_message.mjs";
 export function list_single(list) {
-  list_size_1_assert(list);
-  let only = list_first(list);
+  "The one thing in a list, for a caller with nothing of its own to add about why there should be one";
+  let only = list_single_message(list, {});
   return only;
 }
