@@ -32,8 +32,8 @@ export async function function_param_plain_mark(f_name, param) {
     };
     return unchanged;
   }
-  let marker = permission_plain_marker();
-  let text = text_combine(marker, param);
+  let plain_prefix = permission_plain_marker();
+  let text = text_combine(plain_prefix, param);
   let code = js_code_string_statement(text);
   function lambda$ast(ast) {
     let statement = js_parse_statement(code);
