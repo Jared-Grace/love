@@ -21,6 +21,7 @@ export async function function_rename_inner(f_name_before, f_name_after) {
   });
   await function_rename_fn_names_check(f_name_before, f_name_after);
   await function_rename_data_check(f_name_before, f_name_after);
+  await function_rename_examples_check(f_name_before, f_name_after);
   await function_alias_rename(f_name_before, f_name_after);
   await function_move(f_name_before, f_name_after);
   await functions_identifiers_rename(f_name_before, f_name_after);
