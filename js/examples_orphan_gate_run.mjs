@@ -1,6 +1,5 @@
-import { folder_read } from "./folder_read.mjs";
+import { examples_names } from "./examples_names.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { examples_order } from "./examples_order.mjs";
@@ -10,12 +9,7 @@ export async function examples_orphan_gate_run() {
   "QA gate: every data/examples file is placed in one of the curriculum tiers.";
   "An ungrouped example still renders, but only in the trailing Other bucket with no";
   "deliberate complexity placement — this fails loud so the junk drawer never grows.";
-  let names = await folder_read("data/examples");
-  function is_mjs(name) {
-    let ew = text_ends_with(name, ".mjs");
-    return ew;
-  }
-  let mjs = list_filter(names, is_mjs);
+  let mjs = await examples_names();
   let order = examples_order();
   function to_file(base) {
     let combined = text_combine(base, ".mjs");
