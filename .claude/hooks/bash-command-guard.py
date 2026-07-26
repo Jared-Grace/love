@@ -2089,12 +2089,15 @@ def find_python_eval(command):
     Same quote-aware tokenizer and prefix-unwrapping as the node-eval floor, so
     a literal 'python3 -c' inside a quoted argument (e.g. `grep 'python3 -c'
     file`) is NOT matched, and a leading VAR=.../timeout wrapper is unwrapped.
-    An unparseable command raises Unsupported and falls through to normal
-    handling rather than being force-denied on a guess."""
+    An unparseable command raises Unsupported. It used to fall through to
+    normal handling rather than being force-denied on a guess, but a heredoc is
+    exactly what makes a command unparseable, so that left the stdin spellings
+    of the same eval uncovered - see find_stdin_program_unparsed, which is what
+    that case is now asked."""
     try:
         tokens = tokenize(command)
     except Unsupported:
-        return False
+        return find_stdin_program_unparsed(command)
     for words in split_statements(tokens):
         words = _strip_command_prefixes(words)
         if words and words[0] in PYTHON_PROGRAMS and "-c" in words[1:]:
