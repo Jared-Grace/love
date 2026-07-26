@@ -6,7 +6,6 @@ import { log } from "./log.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { git_push_folder_now } from "./git_push_folder_now.mjs";
 import { git_history_delete_repo_folder_name } from "./git_history_delete_repo_folder_name.mjs";
-import { repo_path } from "./repo_path.mjs";
 import { git_repo_url } from "./git_repo_url.mjs";
 import { folder_delete } from "./folder_delete.mjs";
 import { command_line_git_current } from "./command_line_git_current.mjs";
@@ -20,9 +19,13 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   let repo_folder_name = await git_history_delete_repo_folder_name(repo);
   let repo_folder = folder_gitignore_join(repo_folder_name);
   let repo_folder_resolved = await path_resolve(repo_folder);
-  let stdout = await command_line_git_current(
-    text_combine_multiple(["clone --mirror ", url, " ", repo_folder]),
-  );
+  let command_git = text_combine_multiple([
+    "clone --mirror ",
+    url,
+    " ",
+    repo_folder,
+  ]);
+  let stdout = await command_line_git_current(command_git);
   log(git_history_delete.name, {
     stdout,
   });
@@ -34,18 +37,14 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
     await command_line_git_folder(repo_folder, "remote remove origin");
   }
   let r = await catch_ignore_async(lambda);
-  await command_line_git_folder(
-    repo_folder,
-    text_combine_multiple([
-      "filter-repo --path ",
-      f_path,
-      " --invert-paths --force",
-    ]),
-  );
-  await command_line_git_folder(
-    repo_folder,
-    text_combine("remote add origin ", url),
-  );
+  let command_git2 = text_combine_multiple([
+    "filter-repo --path ",
+    f_path,
+    " --invert-paths --force",
+  ]);
+  await command_line_git_folder(repo_folder, command_git2);
+  let command_git3 = text_combine("remote add origin ", url);
+  await command_line_git_folder(repo_folder, command_git3);
   await command_line_git_folder(repo_folder, "push --force --all origin");
   await command_line_git_folder(repo_folder, "push --force --tags origin");
   await folder_delete(repo_folder_resolved);
