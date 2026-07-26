@@ -9,7 +9,7 @@ import { text_combine } from "./text_combine.mjs";
 "line per request on fd 4. Dedicated fds rather than stdout because a called";
 "function's own console output would otherwise corrupt the protocol stream.";
 "Staleness is deliberately NOT this process's problem: a worker only ever";
-`serves the code it booted with, and ${fn_name("function_worker_pool_run")} retires it as`;
+"serves the code it booted with, and function_worker_pool_run retires it as";
 "soon as a watched file changes. That is what keeps dev hot reload honest.";
 export async function function_worker_serve() {
   let fs = await import("fs");

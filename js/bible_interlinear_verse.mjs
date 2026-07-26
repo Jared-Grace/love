@@ -5,7 +5,7 @@ import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
 "The readable \"VerseId\" is only stamped on the FIRST word of a verse; the rest share";
 "the numeric \"Verse\" id — so find the id from the first word, then gather all words.";
 "Uses plain bracket access because these external rows have optional fields (an";
-`asserting ${fn_name("property_get")} would throw on the many rows that omit "VerseId").`;
+"asserting property_get would throw on the many rows that omit \"VerseId\").";
 const ORIGINAL_KEY = "WLC / Nestle Base TR RP WH NE NA SBL";
 const GLOSS_KEY = " BSB version ";
 export async function bible_interlinear_verse(reference) {

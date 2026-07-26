@@ -24,6 +24,18 @@ Two rules keep this from backfiring:
 
 **Report on a macro cadence, commit on a micro one.** Micro-commits stay: one atomic idea per commit, `ao` and `q` between them, refactors isolated. But "check yourself often" was never the same rule as "check *with the human* often" — make many small commits, then report **once**, or immediately on a real interrupt: a decision that's theirs, a peer collision, something broke.
 
+**Silence is the success report.** When a task simply worked, don't narrate it — no file list, no step diary, no "all gates passed", no recap of what was asked. The commit and `q` already record all of that losslessly, and re-telling it costs the one resource that's actually scarce. Speak only to break the silence:
+
+- a decision that's genuinely the human's
+- something broke, or a gate went red
+- a peer collision you had to reconcile
+- a **surprise** — a number or finding that contradicts what they were assuming
+- scope you did **not** deliver, and why
+
+**Silence rests on the artifacts, not on trust.** It only means success because the commit and a green `q` prove it independently — so never report silently what you didn't verify. A `*_try` that swallowed a total failure looks exactly like a clean run; check the output, not the exit code.
+
+**The one thing silence must not swallow: how to reach what you built.** A new entry point is unrecoverable without reading source — name it in one line. Its implementation isn't; leave that to the code.
+
 ## Editing protocol (optimistic concurrency)
 
 The working directory has **no isolation** — peers' uncommitted edits sit on the same disk you read. Git gives you atomic, serialized, linear commits for free, but not isolation. This protocol covers the gap:

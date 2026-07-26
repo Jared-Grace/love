@@ -64,6 +64,8 @@
       "Bash(node scripts/ai.mjs function_new_js:*)",
       "Bash(node scripts/ai.mjs function_comments_migrate:*)",
       "Bash(node scripts/ai.mjs function_comments_migrate_multiple:*)",
+      "Bash(node scripts/ai.mjs function_top_level_templates_flatten:*)",
+      "Bash(node scripts/ai.mjs function_top_level_templates_flatten_multiple:*)",
       "Bash(node scripts/ai.mjs function_command_seams_reached:*)",
       "Bash(node scripts/ai.mjs function_dependencies_count_multiple:*)",
       "Bash(node scripts/ai.mjs function_alias_keys:*)",

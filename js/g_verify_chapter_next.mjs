@@ -3,7 +3,7 @@ import { g_sermon_write_read } from "./g_sermon_write_read.mjs";
 import { g_verify_approval_read } from "./g_verify_approval_read.mjs";
 import { g_verify_chapter_next_generic } from "./g_verify_chapter_next_generic.mjs";
 "The single source of truth for \"where does this sermon chapter stand?\" — reused by";
-`the loop (${fn_name("g_verify_loop_check")}) and the app's auto-advance. Returns`;
+"the loop (g_verify_loop_check) and the app's auto-advance. Returns";
 "{ chapter, approved, latest, next, action } where action is";
 "\"write:<key>\" | \"wait\" | \"done\".";
 export async function g_verify_chapter_next(chapter_code) {
