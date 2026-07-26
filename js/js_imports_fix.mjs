@@ -14,6 +14,8 @@ export async function js_imports_fix(ast) {
     list_remove(body, declaration);
   }
   each(unuseds, lambda);
+  ("counting mentions cannot see an import a local of the same name stands in front of, so ask separately");
+  js_imports_shadowed_remove(ast);
   await js_imports_paths_fix(ast);
   return v;
 }
