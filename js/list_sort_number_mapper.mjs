@@ -7,4 +7,5 @@ export function list_sort_number_mapper(list, lambda$item) {
     return 0;
   }
   list.sort(lambda);
+  return list;
 }
