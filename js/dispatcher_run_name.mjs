@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
@@ -8,12 +9,13 @@ export function dispatcher_run_name(line) {
   for (let script of dispatcher_scripts()) {
     let marker = text_combine(script, " ");
     let at = line.indexOf(marker);
-    if (at < 0) {
+    if (less_than(at, 0)) {
       continue;
     }
     let rest = line.slice(at + marker.length);
     let name = rest.split(/[ :)]/)[0];
     return name;
   }
-  return text_empty();
+  let v = text_empty();
+  return v;
 }
