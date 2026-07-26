@@ -1,3 +1,7 @@
+import { function_ast } from "./function_ast.mjs";
+import { list_add } from "./list_add.mjs";
+import { js_visit_calls_named_nodes } from "./js_visit_calls_named_nodes.mjs";
+import { greater_than } from "./greater_than.mjs";
 export async function function_calls_name_is(f_name, called_name) {
   "Whether the fn of this name calls the fn of that name, asked of the tree rather than of the text";
   "A plain text search cannot tell a call from the same word written inside a message, and the two mean opposite things when the question is what a fn does";
