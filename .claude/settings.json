@@ -178,7 +178,7 @@
       "Bash(node scripts/ai.mjs function_imports_gate_run:*)",
       "Bash(node scripts/ai.mjs function_name_to_path:*)",
       "Bash(node scripts/ai.mjs functions_html_style_literals_migrate:*)",
-      "Bash(node scripts/ai.mjs functions_imports_missing:*)",
+      "Bash(node scripts/ai.mjs functions_imports_missing_repair:*)",
       "Bash(node scripts/ai.mjs functions_callers_inside_dependencies:*)",
       "Bash(node scripts/ai.mjs functions_rename_if_starts_with:*)",
       "Bash(node scripts/ai.mjs functions_node_types_count:*)",

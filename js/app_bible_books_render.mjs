@@ -1,6 +1,5 @@
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_none_or_block } from "./html_display_none_or_block.mjs";
 import { html_text_set } from "./html_text_set.mjs";
