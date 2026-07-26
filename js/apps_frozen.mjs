@@ -1,7 +1,6 @@
-import { app_replace } from "../../love/js/app_replace.mjs";
-import { app_g } from "../../love/js/app_g.mjs";
+import { app_replace } from "./app_replace.mjs";
 export function apps_frozen() {
   "these apps should not be changed in prod or deleted";
-  let r = [ app_replace];
+  let r = [app_replace];
   return r;
 }
