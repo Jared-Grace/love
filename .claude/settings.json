@@ -147,6 +147,7 @@
       "Bash(node scripts/ai.mjs functions_unbound_report:*)",
       "Bash(node scripts/ai.mjs function_shape:*)",
       "Bash(node scripts/ai.mjs functions_duplicates_report:*)",
+      "Bash(node scripts/ai.mjs permission_grant_refusals:*)",
       "Bash(node scripts/ai.mjs permission_grants_gate_run:*)",
       "Bash(node scripts/ai.mjs function_worker_pool_run_try:*)",
       "Bash(node scripts/ai.mjs function_work_none_is:*)",
