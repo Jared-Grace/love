@@ -46,8 +46,8 @@ export async function claude_sessions_restore(minutes) {
   let window_first = null;
   try {
     window_first = await command_line(opening);
-  } catch (running) {
-    running;
+  } catch (already_open) {
+    already_open;
     return text_combine_multiple([
       "A tmux session named ",
       TMUX_SESSION,

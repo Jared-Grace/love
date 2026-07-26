@@ -27,7 +27,7 @@ export function js_unparse(ast) {
       let node = property_get(v, "node");
       try {
         js_unparse_inner(node);
-      } catch (e) {
+      } catch (node_error) {
         current = node;
         return true;
       }
