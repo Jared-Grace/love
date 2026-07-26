@@ -2444,10 +2444,30 @@ def splittable_statements(command, safe_verbs, safe_exact_commands):
     human's prompt count stays at one and that one prompt becomes a single
     plain command instead of an opaque chain. That matters beyond legibility -
     a lone `node scripts/ai.mjs <fn>` can be granted by name and never asked
-    about again, while a chain can never be granted at all."""
+    about again, while a chain can never be granted at all.
+
+    Two further conditions, both learned from the regression corpus rather than
+    reasoned out in advance, and both about not giving advice this branch is
+    not entitled to give:
+
+    The blocked piece must BE a dispatcher call. `ls; rm -rf /` also has one
+    untrusted piece, and telling Claude to run that one on its own is advice
+    nobody should hand out. Restricting the branch to the one shape it can
+    honestly recommend keeps every other command on the answer it had.
+
+    And nothing may carry a variable. `S=/etc; ls > $S/passwd` is not two
+    commands that happen to be adjacent - the second reads what the first set,
+    so splitting it does not preserve it, and this is exactly where the guard
+    means to fail closed."""
+    if "$" in command:
+        return None
     pieces = split_top_level_statements_text(command)
     if pieces is None or len(pieces) < 2:
         return None
+    for piece in pieces:
+        head = piece.split()[0] if piece.split() else ""
+        if "=" in head:
+            return None
     trusted = []
     blocked = []
     for piece in pieces:
@@ -2461,7 +2481,25 @@ def splittable_statements(command, safe_verbs, safe_exact_commands):
             blocked.append(piece)
     if len(blocked) != 1 or not trusted:
         return None
+    if not ai_dispatcher_call_is(blocked[0]):
+        return None
     return trusted, blocked[0]
+
+
+def ai_dispatcher_call_is(piece):
+    """True iff `piece` is a plain `node scripts/ai.mjs <fn> ...` call, the one
+    blocked shape this branch is entitled to recommend running on its own -
+    it is read-only until the function says otherwise, it is what a permission
+    rule can name, and a wrapper or a pipe around it does not change either."""
+    try:
+        tokens = tokenize(piece)
+    except Unsupported:
+        return False
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if len(words) >= 3 and words[0] == "node" and words[1] == AI_DISPATCHER_SCRIPT:
+            return True
+    return False
 
 
 GIT_WRITE_COMMIT_SUBCOMMANDS = {"add", "commit"}
