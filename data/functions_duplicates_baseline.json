@@ -29,8 +29,6 @@
   "list_range",
   "list_slice",
   "list_slice_include",
-  "memory_symbols_versus_baseline",
-  "names_versus_baseline",
   "openai_responses_cache_args",
   "pair_to_list",
   "shadowing_entries_names_text",
