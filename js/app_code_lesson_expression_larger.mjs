@@ -85,7 +85,10 @@ export function app_code_lesson_expression_larger() {
     html_span_text(define_line, "Like ");
     let term = html_span_text(define_line, "Math.min");
     html_bold(term);
-    html_span_text(define_line, ", this function takes two numbers separated by a comma");
+    html_span_text(
+      define_line,
+      ", this function takes two numbers separated by a comma",
+    );
     html_div_cycle_code(define, [
       "",
       "Math.max",
