@@ -1441,25 +1441,43 @@ def is_safe_verify_html_rm(words):
 SCRIPTS_TEMP_DIR = os.path.join(REPO_ROOT, "scripts", "temp") + os.sep
 
 
-def is_safe_scripts_temp_abs_path(path):
-    """True iff `path` is a plain, already-normalized absolute path to a file
-    directly inside this repo's `scripts/temp/` throwaway directory. Same
-    character-allowlist + normpath-equality checks as is_safe_verify_html_path
-    (blocking '../' traversal and '//' collapsing), plus a direct-child check
-    so this can't reach a nested subdirectory. Unlike is_safe_verify_html_path
-    there's no basename pattern: scripts/temp/ is gitignored and holds nothing
-    but disposable scratch files, so the directory confinement is itself the
-    whole safety boundary."""
+SCRIPTS_TEMP_RELATIVE_DIR = os.path.join("scripts", "temp") + os.sep
+
+
+def is_safe_scripts_temp_path(path):
+    """True iff `path` is a plain, already-normalized path to a file directly
+    inside a `scripts/temp/` throwaway directory - written either as this
+    repo's own absolute path or as the bare relative `scripts/temp/<file>`.
+    Same character-allowlist + normpath-equality checks as
+    is_safe_verify_html_path (blocking '../' traversal and '//' collapsing),
+    plus a direct-child check so this can't reach a nested subdirectory.
+    Unlike is_safe_verify_html_path there's no basename pattern: scripts/temp/
+    is gitignored and holds nothing but disposable scratch files, so the
+    directory confinement is itself the whole safety boundary.
+
+    The relative spelling is accepted because it is the one a command run
+    from a repo root actually uses, and requiring the absolute form bought no
+    safety - it only bought a prompt. What the relative form gives up is
+    knowing WHICH repo's scripts/temp is meant, since it resolves against the
+    working directory; that is worth nothing here, because scripts/temp is
+    gitignored scratch space in every repo by convention, so any directory
+    this can name holds only disposable files. What it does NOT give up is
+    the confinement: normpath equality still refuses `scripts/temp/../../x`,
+    and the direct-child check still refuses a nested subdirectory."""
     if not SAFE_SCRATCHPAD_PATH_RE.match(path):
-        return False
-    if not path.startswith(SCRIPTS_TEMP_DIR):
         return False
     if os.path.normpath(path) != path:
         return False
+    if path.startswith(SCRIPTS_TEMP_DIR):
+        directory = SCRIPTS_TEMP_DIR
+    elif path.startswith(SCRIPTS_TEMP_RELATIVE_DIR):
+        directory = SCRIPTS_TEMP_RELATIVE_DIR
+    else:
+        return False
     basename = os.path.basename(path)
-    # Direct child only - startswith(SCRIPTS_TEMP_DIR) alone wouldn't rule
-    # out scripts/temp/nested/x.mjs.
-    if os.path.join(SCRIPTS_TEMP_DIR, basename) != path:
+    # Direct child only - the startswith alone wouldn't rule out
+    # scripts/temp/nested/x.mjs.
+    if os.path.join(directory, basename) != path:
         return False
     return bool(basename)
 
@@ -1467,7 +1485,7 @@ def is_safe_scripts_temp_abs_path(path):
 def is_safe_scripts_temp_rm(words):
     """Exact-shape exception for `rm`, sibling of is_safe_verify_html_rm:
     file-only removal (same 'v'/'f'-only flag restriction) where every
-    argument passes is_safe_scripts_temp_abs_path. Cleans up the disposable
+    argument passes is_safe_scripts_temp_path. Cleans up the disposable
     one-off scripts that live under scripts/temp/."""
     if not words or words[0] != "rm":
         return False
@@ -1481,7 +1499,7 @@ def is_safe_scripts_temp_rm(words):
         paths.append(word)
     if not paths:
         return False
-    return all(is_safe_scripts_temp_abs_path(p) for p in paths)
+    return all(is_safe_scripts_temp_path(p) for p in paths)
 
 
 GIT_RM_TMP_BASENAME_RE = re.compile(r"^(?:_tmp_|claude_tmp_)[A-Za-z0-9_.-]+$")
