@@ -57,6 +57,12 @@ export async function app_g_conversation(
   overlay_close,
   div_map,
 ) {
+  let talkable = app_g_day_talkable_is(npc);
+  if (not(talkable)) {
+    app_g_npc_says(npc, overlay, g_busy());
+    app_g_button_conversation_end(overlay, overlay_close);
+    return;
+  }
   let player = await app_g_player_get();
   property_set(player, "conversed", true);
   property_set(prayer, "conversation", false);
