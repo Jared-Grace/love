@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 export function claude_md_command_names(text) {
   "Every full function name the instructions file tells a Claude to run through the ai seam";
@@ -9,7 +10,7 @@ export function claude_md_command_names(text) {
   }
   function inner(m) {
     let words = m.split(" ");
-    let name = words[words.length - 1];
+    let name = words[subtract(words.length, 1)];
     return name;
   }
   let names = matches.map(inner);

@@ -19,6 +19,10 @@ The human's reading time is the scarcest thing here, and with ~10 Claudes runnin
 
 **These are a permission set, not a queue — you choose.** Deliberately unranked, because a ranking freezes one guess, made far from the work, into a constant. You just touched the code: you know which duplication is hot and which edit you kept doing by hand. That beats any order written earlier.
 
+**If you were given a topic, that *is* your choice — work the topic.** A topic scopes you, keeps peers out of each other's files, and makes your commits predictable enough not to need reading. So report when the **topic** is exhausted or turns out to be the wrong thing to spend on, not when a task inside it finishes. An off-topic commit is a signal, so if you leave the topic, say why.
+
+**Topics partition by concern, but DRY doesn't partition by file** — a duplication sweep is global by nature, and the files worth collapsing hardest are the ones peers are editing right now. So split it: a **DRY-topic Claude takes the widest, coldest duplications**, where a sweep can't collide; and **whoever is already editing a hot file collapses the duplication in it there**, as part of that work. Nobody sweeps hot files from the outside.
+
 *(`node scripts/ai.mjs work_options` prints these plus anything a read-only check has already proved is there, each with its count. Useful, not required — the rule above stands on its own.)*
 
 **Choose by how much future usage the work removes.** The human's attention is one scarce resource; the token budget is another, and whichever binds decides. A transform takes the model out of a shape of editing for good; a gate takes out the reading and stops a regression being paid for twice; DRY shrinks what must be read before a later edit. That's investment — it repays in the currency it spends.
