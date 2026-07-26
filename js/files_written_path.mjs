@@ -1,7 +1,7 @@
 import { path_join } from "./path_join.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { files_written_folder } from "./files_written_folder.mjs";
+import { files_to_commit_folder } from "./files_to_commit_folder.mjs";
 import { process_session_or_null } from "./process_session_or_null.mjs";
 export function files_written_path() {
   "One note per conversation, and that is the whole point of it. Several of us";
@@ -19,7 +19,7 @@ export function files_written_path() {
     named = "keyboard";
   }
   let name = text_combine(named, ".txt");
-  let folder = files_written_folder();
+  let folder = files_to_commit_folder();
   let f_path = path_join([folder, name]);
   return f_path;
 }

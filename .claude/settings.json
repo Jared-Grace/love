@@ -44,6 +44,7 @@
       "Bash(sort:*)",
       "Bash(uniq:*)",
       "Bash(tr:*)",
+      "Bash(paste:*)",
       "Bash(md5sum:*)",
       "Bash(ffprobe:*)",
       "Bash(node --check:*)",
