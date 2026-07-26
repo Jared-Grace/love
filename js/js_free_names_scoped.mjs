@@ -10,9 +10,9 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 export function js_free_names_scoped(ast) {
   "the same question the twin without the suffix answers — which mentions nothing in this file binds — but asked mention by mention instead of name by name. A name bound in one function and used in another is bound for the first and free for the second; the twin sees the binding, calls the name covered, and misses the ReferenceError in the second. Here a mention counts as covered only when a scope around that mention binds it.";
-  "Two things it does not know yet, so read its answer as a candidate list and not as a verdict: a catch clause is not treated as a scope, so the name it binds reads as free, and the list of language globals it forgives is short, so Math and Promise and their kind read as free too. Comparing its answer before an edit against after cancels both, which is what it was built for.";
+  "Four things once made it over-report and are now closed: a catch clause is a scope, a named function expression binds its own name inside itself, the list of language and host globals it forgives covers the ones the repo actually reaches for, and an import counts however it was written rather than only in the repo's own relative shape. What is left is a name nothing supplies, which is what a runtime would call an error. Anything it still names beyond that is a global this list has not met yet, so add it there rather than teaching a caller to ignore it.";
   let names = js_identifiers_referenced_names(ast);
-  let imports = js_imports(ast);
+  let imports = js_imports_local_names(ast);
   let globals = js_global_names();
   let name = js_flo_name(ast);
   let supplied = list_concat_multiple([imports, globals, [name]]);
