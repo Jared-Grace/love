@@ -1,3 +1,4 @@
+import { functions_duplicates_gate_run } from "./functions_duplicates_gate_run.mjs";
 import { html_style_literal_gate_run } from "./html_style_literal_gate_run.mjs";
 import { js_operator_targets_leaf_gate_run } from "./js_operator_targets_leaf_gate_run.mjs";
 import { apps_node_only_gate_run } from "./apps_node_only_gate_run.mjs";
@@ -74,6 +75,7 @@ export function qa_gates() {
     apps_node_only_gate_run,
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
+    functions_duplicates_gate_run,
     command_seams_agree_gate_run,
     bundle_size_gate_run,
     examples_orphan_gate_run,
