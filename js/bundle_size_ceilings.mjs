@@ -3,8 +3,10 @@ export function bundle_size_ceilings() {
   "nav/docs pages. If one accidentally imports an app's dependency tree (e.g. an ao";
   "string-to-reference conversion pulls heavy server-side modules in) it blows past";
   "its ceiling instantly, so the gate catches silent bloat that a green build hides.";
-  "Functional apps are intentionally ABSENT — they are legitimately large. Each ceiling";
-  "sits well above the page's real size but far below any accidental-import size.";
+  "Each ceiling sits well above the page's real size but far below any accidental-import size.";
+  "Most functional apps are ABSENT — they are legitimately large. One exception: a functional";
+  "app joins this list once a MEASURED size win is worth protecting, with its ceiling set just";
+  "above the measured size, so the win cannot silently regress.";
   let ceilings = [
     {
       name: "index",
@@ -25,6 +27,10 @@ export function bundle_size_ceilings() {
     {
       name: "designs_universal",
       kib: 50,
+    },
+    {
+      name: "reply_local",
+      kib: 176,
     },
   ];
   return ceilings;
