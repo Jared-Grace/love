@@ -21,7 +21,7 @@ export async function memory_index_lines_longest() {
       continue;
     }
     let pointed = memory_pointer_tokens(line);
-    let first = list_first_or_null(pointed);
+    let first = list_first(pointed);
     let told = text_combine_multiple([first, " (", size, ")"]);
     list_add(over, { told, size });
   }
