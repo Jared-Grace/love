@@ -3,11 +3,8 @@ import { equal_not } from "./equal_not.mjs";
 import { function_current_get } from "./function_current_get.mjs";
 import { user_data_set } from "./user_data_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { marker_top } from "./marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "./function_parse_declaration_js_unparse.mjs";
 import { function_unalias_exists } from "./function_unalias_exists.mjs";
-import { marker_first } from "./marker_first.mjs";
-import { marker_current_set } from "./marker_current_set.mjs";
 import { assert_json } from "./assert_json.mjs";
 export async function function_current_set(f_name) {
   let v2 = await function_unalias_exists(f_name);
