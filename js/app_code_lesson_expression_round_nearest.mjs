@@ -133,7 +133,12 @@ export function app_code_lesson_expression_round_nearest() {
       " is like ",
       "Math.ceil",
     ]);
-    html_div_cycle_code(rule, ["", four_nines, ' rounds "down" to ', whole_text]);
+    html_div_cycle_code(rule, [
+      "",
+      four_nines,
+      ' rounds "down" to ',
+      whole_text,
+    ]);
     html_div_cycle_code(rule, ["", half_decimal, ' rounds "up" to ', whole_up]);
   }
 }
