@@ -22,7 +22,7 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
   }
   let title = html_span_text(button, "");
   html_style_set(title, "justify-self", "center");
-  html_style_set(title, "text-align", "center");
+  html_centered(title);
   html_style_set(title, "line-height", 1.5);
   html_style_assign(button, {
     display: "grid",
