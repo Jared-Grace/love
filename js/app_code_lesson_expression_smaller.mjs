@@ -66,7 +66,8 @@ export function app_code_lesson_expression_smaller() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "Smaller of two");
+        html_span_text(parent, "Smaller of two ");
+        html_span_text_code_dark(parent, "Math.min");
       }
       return render;
     }
