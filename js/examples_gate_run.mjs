@@ -37,6 +37,17 @@ export async function examples_gate_run() {
   if (fail > 0) {
     throw new Error("examples gate: " + fail + " failed");
   }
+  ("A skipped example is an example nobody is checking. It happens when the corpus");
+  ("names a function the runner has no branch for — a rename on one side and not");
+  ("the other — and it reads as a pass in every summary, so the coverage goes");
+  ("quietly rather than loudly. Refusing to skip is what keeps the count honest.");
+  if (skip > 0) {
+    throw new Error(
+      "examples gate: " +
+        skip +
+        " skipped — the corpus names a function the runner has no branch for, so nothing checked it. Would you like to check the fn name on both sides?",
+    );
+  }
   return {
     pass,
     fail,

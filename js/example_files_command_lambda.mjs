@@ -1,3 +1,4 @@
+import { function_wrap } from "./function_wrap.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { function_rename } from "./function_rename.mjs";
@@ -45,7 +46,7 @@ export function example_files_command_lambda(fn_name, args) {
     }
     return lambda;
   }
-  if (equal(fn_name, function_wrap_open.name)) {
+  if (equal(fn_name, function_wrap.name)) {
     async function lambda(dir) {
       let r4 = await js_identifier_wrap_dir(dir, args[0], args[1]);
       return r4;
