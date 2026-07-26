@@ -48,6 +48,7 @@
       "Bash(ffprobe:*)",
       "Bash(node --check:*)",
       "Bash(node scripts/ai.mjs ai_git)",
+      "Bash(node scripts/ai.mjs ai_git_command_args:*)",
       "Bash(node scripts/ai.mjs ai_log_add:*)",
       "Bash(node scripts/ai.mjs work_options:*)",
       "Bash(node scripts/ai.mjs work_items:*)",
