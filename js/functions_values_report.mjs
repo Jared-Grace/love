@@ -15,12 +15,12 @@ export async function functions_values_report(names_comma) {
     let wants = fn.length;
     let takes_something = greater_than(wants, 0);
     if (takes_something) {
-      let line = {
+      let skipped = "SKIPPED - arguments wanted: " + wants;
+      list_add(lines, {
         name,
-        value: "SKIPPED - takes " + wants + " arguments",
-      };
-      list_add(lines, line);
-      console.log(name + "  SKIPPED - takes " + wants + " arguments");
+        value: skipped,
+      });
+      console.log(name + "  " + skipped);
       continue;
     }
     let value = await function_run(name, []);
