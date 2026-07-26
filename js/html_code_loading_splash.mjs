@@ -3,7 +3,13 @@ import { html_loading_spinner_markup } from "./html_loading_spinner_markup.mjs";
 import { html_loading_message_text } from "./html_loading_message_text.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function html_code_loading_splash() {
-  "the static loading splash baked into the app's HTML body so a refresh paints the dark spinner INSTANTLY (before the bundle even downloads) instead of a white flash. self-contained: inline styles plus the shared keyframes, no external CSS or JS. carries the id app-loading so the shared boot can drop it once the app has loaded. shows the SAME spinner and message as the runtime overlay - single-sourced via html_loading_spinner_markup, html_loading_spinner_keyframes_css, and html_loading_message_text - so the dark-to-dark, spinner-to-spinner handoff is seamless; that overlay lives on the document element (surviving body clears) and takes over the moment scripts boot, this only covers the gap before that";
+  ("the static loading splash baked into the app's HTML body so a refresh paints the dark spinner INSTANTLY (before the bundle even downloads) instead of a white flash. self-contained: inline styles plus the shared keyframes, no external CSS or JS. carries the id app-loading so the shared boot can drop it once the app has loaded. shows the SAME spinner and message as the runtime overlay - single-sourced via ",
+    html_loading_spinner_markup.name,
+    ", ",
+    html_loading_spinner_keyframes_css.name,
+    ", and ",
+    html_loading_message_text.name,
+    " - so the dark-to-dark, spinner-to-spinner handoff is seamless; that overlay lives on the document element (surviving body clears) and takes over the moment scripts boot, this only covers the gap before that");
   let keyframes = html_loading_spinner_keyframes_css();
   let style_open = "<style>";
   let style_close = "</style>";

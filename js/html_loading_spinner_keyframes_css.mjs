@@ -1,7 +1,13 @@
+import { html_loading_spinner_style } from "./html_loading_spinner_style.mjs";
+import { html_code_loading_splash } from "./html_code_loading_splash.mjs";
 import { html_loading_spinner_breath_keyframes } from "./html_loading_spinner_breath_keyframes.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function html_loading_spinner_keyframes_css() {
-  "all the keyframes the loading spinner needs, as ONE css string - the single source shared by the runtime style injector (html_loading_spinner_style, into the head) and the build-time static splash (html_code_loading_splash, inlined in a style tag), so the instant splash and the runtime overlay can never drift apart";
+  ("all the keyframes the loading spinner needs, as ONE css string - the single source shared by the runtime style injector (",
+    html_loading_spinner_style.name,
+    ", into the head) and the build-time static splash (",
+    html_code_loading_splash.name,
+    ", inlined in a style tag), so the instant splash and the runtime overlay can never drift apart");
   let spin =
     "@keyframes html_loading_spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}";
   let glow =

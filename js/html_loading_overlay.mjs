@@ -1,3 +1,4 @@
+import { html_loading_message_text } from "./html_loading_message_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_document_root } from "./html_document_root.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -27,7 +28,8 @@ export async function html_loading_overlay() {
   };
   html_style_assign(div, s);
   await html_loading_spinner(div);
-  let message = html_p_text(div, html_loading_message_text());
+  let text = html_loading_message_text();
+  let message = html_p_text(div, text);
   html_style_assign(message, {
     color: "white",
     "font-size": "1.5rem",
