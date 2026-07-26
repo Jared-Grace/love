@@ -2,7 +2,9 @@ import { app_a } from "./app_a.mjs";
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
 import { not } from "./not.mjs";
 export async function app_a_indexeddb_initialize() {
-  let db_name = app_a.name;
+  "The database name is spelled, not imported: measured 2026-07-26, a name-only import of";
+  "the app entry point costs the g bundle 410 KiB, since file_read reaches this everywhere.";
+  let db_name = fn_name("app_a");
   let store_files = "files";
   let version = 1;
   let db = await new Promise(function lambda4(resolve, reject) {
