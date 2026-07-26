@@ -1,3 +1,5 @@
+import { function_alias_keys } from "./function_alias_keys.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { function_delete } from "./function_delete.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { properties_get } from "./properties_get.mjs";
@@ -13,7 +15,8 @@ export async function function_delete_unused(s) {
   let result = null;
   if (aliased) {
     result = {
-      message: "The human reaches this by an alias, so it is in use. Not deleting.",
+      message:
+        "The human reaches this by an alias, so it is in use. Not deleting.",
       alias_keys,
     };
   } else if (eq) {
