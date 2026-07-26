@@ -10,36 +10,25 @@ export async function html_loading_overlay() {
   "attach to <html>, not <body>: a screen re-render clears <body>, which would delete this overlay and flash white; <html> survives that clear so the spinner stays visible the whole time";
   let html = html_document_root();
   let div = html_div(html);
-  let s = {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    background: "rgba(0, 0, 0, 0.8)",
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "center",
-    "align-items": "center",
-    gap: "0.25rem",
-    "z-index": "1000",
+  let backdrop = html_loading_backdrop_style();
+  html_style_assign(div, backdrop);
+  let fade = {
     opacity: "0",
     transition: "opacity 0.15s ease",
   };
-  html_style_assign(div, s);
+  html_style_assign(div, fade);
   await html_loading_spinner(div);
   let text = html_loading_message_text();
   let message = html_p_text(div, text);
-  html_style_assign(message, {
-    color: "white",
-    "font-size": "1.5rem",
-    "font-family": "sans-serif",
-    "text-align": "center",
-    "text-shadow": "0 0.05em 0.15em rgba(0, 0, 0, 0.8)",
-    background:
-      "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 75%)",
-    padding: "1.25rem 3.5rem",
-  });
+  let message_style = html_loading_message_style();
+  html_style_assign(message, message_style);
+  ("hand over from the static boot splash, which shows this very spinner: two covers at once double the dim and show a second, fainter spinner through it");
+  let handed_over = html_loading_splash_take();
+  if (handed_over) {
+    ("the screen is already dark, so appear at once: skipping the reflow means the browser never sees the see-through state, so no fade runs and nothing half-painted shows through");
+    html_style_opacity(div, "1");
+    return div;
+  }
   html_reflow_force(div);
   html_style_opacity(div, "1");
   return div;
