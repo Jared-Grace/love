@@ -1,5 +1,5 @@
 import { list_difference_mapper } from "./list_difference_mapper.mjs";
-import { list_find_property } from "./list_find_property.mjs";
+import { list_find_property_try_or_null } from "./list_find_property_try_or_null.mjs";
 import { property_get_name } from "./property_get_name.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,7 +13,8 @@ export function permission_grants_versus_baseline(counted, known) {
   let worsened = [];
   for (let entry of counted) {
     let name = property_get_name(entry);
-    let before = list_find_property(known, "name", name);
+    ("nothing found is the ordinary answer here, since most of what fails now is already the same list — the plain find treats it as a broken assumption and throws");
+    let before = list_find_property_try_or_null(known, "name", name);
     if (before) {
       let after_count = property_get(entry, "refusals");
       let before_count = property_get(before, "refusals");
