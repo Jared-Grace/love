@@ -18,8 +18,12 @@ export async function function_open_names() {
   let more = properties_get(by_function);
   list_add_multiple(names, more);
   let unique = list_unique(names);
-  let openers = [];
+  let openers = [file_open.name, function_open.name];
+  "The two fns that do the opening are on the list because of what they are, not because of what they call, and one of them calls neither";
   for (let name of unique) {
+    if (list_includes(openers, name)) {
+      continue;
+    }
     let by_one = await function_calls_name_is(name, file_open.name);
     let by_two = await function_calls_name_is(name, function_open.name);
     let calls = or(by_one, by_two);
