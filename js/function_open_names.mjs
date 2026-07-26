@@ -1,3 +1,4 @@
+import { list_includes } from "./list_includes.mjs";
 import { function_calls_name_is } from "./function_calls_name_is.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { file_open } from "./file_open.mjs";
@@ -19,7 +20,7 @@ export async function function_open_names() {
   list_add_multiple(names, more);
   let unique = list_unique(names);
   let openers = [file_open.name, function_open.name];
-  "The two fns that do the opening are on the list because of what they are, not because of what they call, and one of them calls neither";
+  ("The two fns that do the opening are on the list because of what they are, not because of what they call, and one of them calls neither");
   for (let name of unique) {
     if (list_includes(openers, name)) {
       continue;
