@@ -19,6 +19,10 @@ export function js_fold_all(x_ast, f_ast) {
   while (not(b)) {
     folded_any = true;
     result = js_fold(x_ast, f_ast);
+    ("Asked again every time round, because the answer is what ends the loop. Read");
+    ("once before the loop it can never change, and a first fold that succeeds then");
+    ("spins here forever.");
+    b = null_is(result);
   }
   if (not(folded_any)) {
     return null;
