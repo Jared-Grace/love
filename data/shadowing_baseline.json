@@ -1306,13 +1306,6 @@
    "shadows_function": []
   },
   {
-   "name": "webpack_build_generic",
-   "shadows_outer": [
-    "f_name_ext"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "webpack_watch",
    "shadows_outer": [
     "r"
