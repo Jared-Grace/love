@@ -23,7 +23,8 @@ export async function function_open_names() {
   let unique = list_unique(names);
   let openers = [];
   for (let name of unique) {
-    let f_path = path_join(["js", text_combine(name, ".mjs")]);
+    let combined = text_combine(name, ".mjs");
+    let f_path = path_join(["js", combined]);
     let there = await file_exists(f_path);
     if (there) {
       let code = await file_read(f_path);
