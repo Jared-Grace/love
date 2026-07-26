@@ -1,6 +1,5 @@
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
-import { modulo } from "./modulo.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_operator_percent } from "./js_operator_percent.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
