@@ -1,32 +1,20 @@
-import { console_log_silence } from "./console_log_silence.mjs";
-import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { qa_gate_result } from "./qa_gate_result.mjs";
-import { console_log_restore } from "./console_log_restore.mjs";
-import { timings_print } from "./timings_print.mjs";
-import { qa_gate_failures_report } from "./qa_gate_failures_report.mjs";
+import { qa_gates_told } from "./qa_gates_told.mjs";
+import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function qa_gates_run(gates) {
   "Asks every gate in a list and complains if any of them do";
-  "Each gate is an independent read-only question, so they are all asked at once rather than one after another - the wait becomes the slowest single question instead of the sum of every question";
-  "Nothing prints while they run, because lines arriving from work happening side by side cannot be attributed by a reader. A gate that complains is then asked again on its own, where its output belongs to it alone and is worth reading";
-  "Which gates to ask is the caller's to choose, because not every gate answers a question about the code - one asks the machine and one asks where the folder sits, and neither can be asked of a copy";
-  let real = console_log_silence();
-  let results = null;
-  try {
-    results = await list_map_unordered_async(gates, qa_gate_result);
-  } finally {
-    console_log_restore(real);
-  }
-  timings_print(results);
-  let failed = await qa_gate_failures_report(results, gates);
+  "Which gates to ask is the caller's to choose, because not every gate answers a question about the code - one asks the machine and two ask where the folder sits, and none of the three can be asked of a copy";
+  let told = await qa_gates_told(gates);
+  let failed = property_get(told, "failed");
   if (greater_than(failed.length, 0)) {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
+  let timings = property_get(told, "timings");
   let r = {
     gates: gates.length,
     failed: 0,
-    timings: results,
+    timings: timings,
   };
   return r;
 }
