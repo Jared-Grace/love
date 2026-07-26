@@ -1222,13 +1222,6 @@
    "shadows_function": []
   },
   {
-   "name": "permission_rule_run_name",
-   "shadows_outer": [],
-   "shadows_function": [
-    "marker"
-   ]
-  },
-  {
    "name": "qa_tests_run",
    "shadows_outer": [],
    "shadows_function": [
