@@ -1,10 +1,6 @@
 {
  "known": [
   {
-   "name": "ai_git",
-   "refusals": 1
-  },
-  {
    "name": "ai_git_command_args",
    "refusals": 1
   },
@@ -17,31 +13,7 @@
    "refusals": 1
   },
   {
-   "name": "function_open_names",
-   "refusals": 1
-  },
-  {
-   "name": "function_open_name_defects",
-   "refusals": 1
-  },
-  {
-   "name": "function_open_name_gate_run",
-   "refusals": 1
-  },
-  {
-   "name": "permission_editor_open_gate_run",
-   "refusals": 1
-  },
-  {
    "name": "function_command_seams_reached",
-   "refusals": 1
-  },
-  {
-   "name": "functions_command_seams",
-   "refusals": 1
-  },
-  {
-   "name": "command_seams_agree_gate_run",
    "refusals": 1
   },
   {
@@ -93,19 +65,7 @@
    "refusals": 1
   },
   {
-   "name": "g_verify_books_urls",
-   "refusals": 1
-  },
-  {
    "name": "function_node_only_is",
-   "refusals": 1
-  },
-  {
-   "name": "qa_gates",
-   "refusals": 1
-  },
-  {
-   "name": "examples_gate_run",
    "refusals": 1
   },
   {
@@ -117,23 +77,11 @@
    "refusals": 1
   },
   {
-   "name": "firebase_deploy",
-   "refusals": 1
-  },
-  {
    "name": "firebase_storage_exists",
    "refusals": 1
   },
   {
    "name": "guard_check",
-   "refusals": 1
-  },
-  {
-   "name": "permission_self_settings_gate_run",
-   "refusals": 1
-  },
-  {
-   "name": "webpack_watch",
    "refusals": 1
   },
   {
@@ -150,10 +98,6 @@
   },
   {
    "name": "html_update_latest_promote_deploy",
-   "refusals": 1
-  },
-  {
-   "name": "html_update_latest_promote_deploy_code",
    "refusals": 1
   },
   {
@@ -181,10 +125,6 @@
    "refusals": 1
   },
   {
-   "name": "g_verify_queue_advance",
-   "refusals": 1
-  },
-  {
    "name": "g_verify_next_books_set",
    "refusals": 1
   },
@@ -193,19 +133,7 @@
    "refusals": 1
   },
   {
-   "name": "g_verify_loop_check",
-   "refusals": 1
-  },
-  {
-   "name": "g_verify_loop_check_line",
-   "refusals": 1
-  },
-  {
    "name": "g_chapter_code_next",
-   "refusals": 1
-  },
-  {
-   "name": "qa_gate_run",
    "refusals": 1
   }
  ]
