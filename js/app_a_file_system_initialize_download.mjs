@@ -13,10 +13,8 @@ import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
-  ("The server runs the download, so its name is spelled rather than imported: importing");
-  ("it would pull a recursive walk of the repo folder into this browser bundle.");
-  let r = await app_shared_api({
-    f_name: fn_name("app_a_download"),
+  let r = await app_shared_api_fn({
+    fn: app_a_download,
   });
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
