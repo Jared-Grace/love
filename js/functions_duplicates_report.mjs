@@ -12,7 +12,7 @@ export async function functions_duplicates_report() {
     let tag = work ? "         " : "constant ";
     console.log(tag + names.length + "  " + joined);
   }
-  let working = list_filter_property(groups, "work");
+  let working = list_filter_property(groups, "work", true);
   console.log(
     "\ngroups " + groups.length + ", of them doing work " + working.length,
   );
