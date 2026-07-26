@@ -1,8 +1,8 @@
+import { less_than_equal } from "./less_than_equal.mjs";
 import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
 import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
 import { property_get } from "./property_get.mjs";
 import { import_install } from "./import_install.mjs";
-import { floor } from "./floor.mjs";
 import fs from "fs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,8 +20,10 @@ export async function image_generate(text, path_output) {
   let TEXT_COLOR = "#ffffff";
   let FONT_FAMILY = "sans-serif";
   let PADDING = 120;
-  let MAX_WIDTH = subtract(WIDTH, multiply(PADDING, 2));
-  let MAX_HEIGHT = subtract(HEIGHT, multiply(PADDING, 2));
+  let right = multiply(PADDING, 2);
+  let MAX_WIDTH = subtract(WIDTH, right);
+  let right2 = multiply(PADDING, 2);
+  let MAX_HEIGHT = subtract(HEIGHT, right2);
   let canvas = createCanvas(WIDTH, HEIGHT);
   let ctx = canvas.getContext("2d");
   ctx.fillStyle = BACKGROUND;
@@ -33,7 +35,7 @@ export async function image_generate(text, path_output) {
     let line = "";
     for (let word of words) {
       let test = line ? text_combine_multiple([line, " ", word]) : word;
-      if (ctx.measureText(test).width <= MAX_WIDTH) {
+      if (less_than_equal(ctx.measureText(test).width, MAX_WIDTH)) {
         line = test;
       } else {
         lines.push(line);
@@ -49,12 +51,14 @@ export async function image_generate(text, path_output) {
     let low = 10;
     let high = 500;
     let best = low;
-    while (low <= high) {
-      let mid = Math.floor(divide(add(low, high), 2));
+    while (less_than_equal(low, high)) {
+      let top = add(low, high);
+      let divided = divide(top, 2);
+      let mid = Math.floor(divided);
       let lines = wrapText(text, mid);
       let lineHeight = multiply(mid, 1.25);
       let totalHeight = multiply(lines.length, lineHeight);
-      if (totalHeight <= MAX_HEIGHT) {
+      if (less_than_equal(totalHeight, MAX_HEIGHT)) {
         best = mid;
         low = text_combine(mid, 1);
       } else {
@@ -70,16 +74,16 @@ export async function image_generate(text, path_output) {
   ctx.fillStyle = TEXT_COLOR;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  let startY = subtract(
-    divide(HEIGHT, 2),
-    divide(multiply(subtract(lines.length, 1), lineHeight), 2),
-  );
+  let left = divide(HEIGHT, 2);
+  let left2 = subtract(lines.length, 1);
+  let top2 = multiply(left2, lineHeight);
+  let right3 = divide(top2, 2);
+  let startY = subtract(left, right3);
   function lambda(line, i) {
-    ctx.fillText(
-      line,
-      divide(WIDTH, 2),
-      text_combine(startY, multiply(i, lineHeight)),
-    );
+    let divided2 = divide(WIDTH, 2);
+    let right4 = multiply(i, lineHeight);
+    let combined = text_combine(startY, right4);
+    ctx.fillText(line, divided2, combined);
   }
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");
