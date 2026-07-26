@@ -1,3 +1,7 @@
+import { qa_gate_blame_told } from "./qa_gate_blame_told.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function qa_gate_blame_print(message) {
   "Prints, under a gate's complaint, the last commit to touch each function it named";
   "Under the complaint rather than instead of it: what is wrong and who last touched it are two different questions, and the reader needs both to know whether to fix it or to leave it to whoever is mid-way through it.";
