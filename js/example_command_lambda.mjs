@@ -1,3 +1,5 @@
+import { js_selects_call_add_after } from "./js_selects_call_add_after.mjs";
+import { js_selects_call_add_before } from "./js_selects_call_add_before.mjs";
 import { js_statement_find_call_named } from "./js_statement_find_call_named.mjs";
 import { js_statement_return_argument_set } from "./js_statement_return_argument_set.mjs";
 import { js_find_return } from "./js_find_return.mjs";
@@ -106,6 +108,24 @@ export function example_command_lambda(fn_name, args) {
       [],
     );
     return lambda14;
+  }
+  if (equal(fn_name, js_selects_call_add_after.name)) {
+    let lambda16 = example_select_apply_lambda(
+      js_statement_find_call_named,
+      [args[0]],
+      js_selects_call_add_after,
+      [args[1]],
+    );
+    return lambda16;
+  }
+  if (equal(fn_name, js_selects_call_add_before.name)) {
+    let lambda17 = example_select_apply_lambda(
+      js_statement_find_call_named,
+      [args[0]],
+      js_selects_call_add_before,
+      [args[1]],
+    );
+    return lambda17;
   }
   if (equal(fn_name, js_statement_return_argument_set.name)) {
     let lambda15 = example_select_apply_lambda(

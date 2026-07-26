@@ -22,8 +22,7 @@ import { storage_session_initialize_context } from "./storage_session_initialize
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
+import { emoji_arrow_left } from "./emoji_arrow_left.mjs";
 export function app_code_quiz(context) {
   let root = html_clear_context(context);
   let lesson = app_code_lesson_current(context);
@@ -51,16 +50,14 @@ export function app_code_quiz(context) {
     q(context, container, c, refresh, next_get);
   }
   refresh();
-  let another = app_code_lesson_text_example_another(lesson);
-  let button_text = text_first_upper_to(another);
   async function lambda() {
     app_code_quiz_index_reset(context);
     await app_shared_screen_set(context, app_code_examples);
   }
   app_code_go_back(root, [
     {
-      emoji: emoji_repeat_1(),
-      text: button_text,
+      emoji: emoji_arrow_left(),
+      text: "Back to the examples",
       on_click: lambda,
     },
   ]);
