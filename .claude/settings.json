@@ -150,6 +150,8 @@
       "Bash(node scripts/ai.mjs functions_callers_inside_dependencies:*)",
       "Bash(node scripts/ai.mjs functions_rename_if_starts_with:*)",
       "Bash(node scripts/ai.mjs functions_node_types_count:*)",
+      "Bash(node scripts/ai.mjs functions_names_code_includes:*)",
+      "Bash(node scripts/ai.mjs functions_code:*)",
       "Bash(node scripts/ai.mjs permission_rule_file_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_rule_probe_gate_run:*)",
       "Bash(node scripts/ai.mjs function_param_new:*)",
