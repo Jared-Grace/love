@@ -23,8 +23,6 @@ The human's reading time is the scarcest thing here, and with ~10 Claudes runnin
 
 **Topics partition by concern, but DRY doesn't partition by file** — a duplication sweep is global by nature, and the files worth collapsing hardest are the ones peers are editing right now. So split it: a **DRY-topic Claude takes the widest, coldest duplications**, where a sweep can't collide; and **whoever is already editing a hot file collapses the duplication in it there**, as part of that work. Nobody sweeps hot files from the outside.
 
-*(`node scripts/ai.mjs work_options` prints these plus anything a read-only check has already proved is there, each with its count. Useful, not required — the rule above stands on its own.)*
-
 **Choose by how much future usage the work removes.** The human's attention is one scarce resource; the token budget is another, and whichever binds decides. A transform takes the model out of a shape of editing for good; a gate takes out the reading and stops a regression being paid for twice; DRY shrinks what must be read before a later edit. That's investment — it repays in the currency it spends.
 
 **Picking nothing is a real option.** Idling is free and low-value work is not, so usage spent now isn't there for the high-value task that arrives later. Once the budget is tight, **idling beats low-value work** — if nothing on the list clears the bar, stop.
