@@ -15,12 +15,7 @@ export function js_function_work_none_is(declaration) {
   if (takes_something) {
     return false;
   }
-  let referenced = js_identifiers_referenced_names(declaration);
-  let own = js_function_declaration_name(declaration);
-  let locals = js_declared_names(declaration);
-  let globals = js_global_names();
-  let bound = list_concat_multiple([[own], locals, globals]);
-  let free = list_difference(referenced, bound);
+  let free = js_function_declaration_free_names(declaration);
   let none = list_empty_is(free);
   return none;
 }
