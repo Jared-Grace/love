@@ -87,6 +87,7 @@
       "Bash(node scripts/ai.mjs apps_node_only_gate_run:*)",
       "Bash(node scripts/ai.mjs bible_interlinear_offline_upload:*)",
       "Bash(node scripts/ai.mjs data_identifiers_search:*)",
+      "Bash(node scripts/ai.mjs data_identifiers_search_names:*)",
       "Bash(node scripts/ai.mjs ebible_book_divisions_canon_assert:*)",
       "Bash(node scripts/ai.mjs examples_data_write:*)",
       "Bash(node scripts/ai.mjs examples_gate_run:*)",
