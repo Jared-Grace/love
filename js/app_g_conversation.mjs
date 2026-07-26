@@ -1,3 +1,4 @@
+import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
 import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -176,12 +177,14 @@ export async function app_g_conversation(
     return topic;
   }
   function render_boundary(turn) {
-    "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen, the NPC states the boundary, then hold a silent BEAT with no options (setTimeout) before offering just two gracious replies — a humble acknowledgement that returns to the openers, or ending the conversation. the beat plus the re-randomized openers make guessing slower than praying for discernment, so prayer becomes the best path";
+    "a wrong opener is a BOUNDARY, not a retry: clear to a clean screen where the NPC HESITATES — a pulsing typing-dots bubble for a BEAT (setTimeout), so the wait reads as the person gathering a kind way to say no, not a frozen screen — then they gently state the boundary and just two gracious replies appear: a humble acknowledgement that returns to the openers, or ending the conversation. the beat plus the re-randomized openers make guessing slower than praying for discernment, so prayer becomes the best path";
     html_clear(overlay);
-    let topic2 = topic_for(turn);
-    let message = g_boundary(meet, topic2);
-    app_g_npc_says(npc, overlay, message);
+    app_g_npc_typing(npc, overlay);
     function reveal() {
+      html_clear(overlay);
+      let topic2 = topic_for(turn);
+      let message = g_boundary(meet, topic2);
+      app_g_npc_says(npc, overlay, message);
       let container = app_g_container_player(overlay);
       app_g_p_text(container, "What would you like to say?");
       let text = g_boundary_acknowledge();
