@@ -13,22 +13,6 @@
    "refusals": 1
   },
   {
-   "name": "function_command_seams_reached",
-   "refusals": 1
-  },
-  {
-   "name": "function_transform_single",
-   "refusals": 1
-  },
-  {
-   "name": "function_select_apply_args",
-   "refusals": 1
-  },
-  {
-   "name": "function_select_multiple_apply_args",
-   "refusals": 1
-  },
-  {
    "name": "app_shared_build",
    "refusals": 1
   },
