@@ -5,7 +5,7 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { permission_grant_names } from "./permission_grant_names.mjs";
 import { permission_grant_names_write } from "./permission_grant_names_write.mjs";
 import { permission_grant_refusals } from "./permission_grant_refusals.mjs";
-import { permission_settings_allow_write } from "./permission_settings_allow_write.mjs";
+import { permission_settings_allow_write_from } from "./permission_settings_allow_write_from.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 export async function permission_grant_add_multiple(names_comma) {
@@ -29,7 +29,7 @@ export async function permission_grant_add_multiple(names_comma) {
   }
   await each_async(asked, each_asked);
   await permission_grant_names_write(names);
-  let written = await permission_settings_allow_write();
+  let written = await permission_settings_allow_write_from(names);
   let allow = property_get(written, "allow");
   let report = {
     asked: asked.length,
