@@ -1,0 +1,58 @@
+{
+ "known": [
+  {
+   "name": "function_param_swap_task_simple",
+   "unbound": [
+    "f_name2",
+    "param_name_a",
+    "param_name_b"
+   ]
+  },
+  {
+   "name": "g_objection_generate_migrate",
+   "unbound": [
+    "g_objection_generate_migrate_generic"
+   ]
+  },
+  {
+   "name": "g_sermon_generate_book_generic_open",
+   "unbound": [
+    "returnp",
+    "f_name"
+   ]
+  },
+  {
+   "name": "g_sermon_generate_sandbox",
+   "unbound": [
+    "p"
+   ]
+  },
+  {
+   "name": "messenger_reply",
+   "unbound": [
+    "page",
+    "p"
+   ]
+  },
+  {
+   "name": "reply_on_match_capture",
+   "unbound": [
+    "u"
+   ]
+  },
+  {
+   "name": "sandbox_4_a",
+   "unbound": [
+    "bible_folders",
+    "books",
+    "list"
+   ]
+  },
+  {
+   "name": "sandbox",
+   "unbound": [
+    "text"
+   ]
+  }
+ ]
+}

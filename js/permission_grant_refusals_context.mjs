@@ -1,3 +1,4 @@
+import { and } from "./and.mjs";
 import { function_command_seams_reached_memo } from "./function_command_seams_reached_memo.mjs";
 import { function_params_get } from "./function_params_get.mjs";
 import { permission_grant_words_unsafe } from "./permission_grant_words_unsafe.mjs";
@@ -42,9 +43,13 @@ export async function permission_grant_refusals_context(unaliased, context) {
         " opens an editor, which is meaningless from this seam — grant the twin without the suffix instead",
     );
   }
+  let params = await function_params_get(unaliased);
+  let takes_arguments = greater_than(params.length, 0);
   let seams = await function_command_seams_reached_memo(unaliased, remembered);
   let reaches = greater_than(seams.length, 0);
-  if (reaches) {
+  ("Reaching a command-running function is only a reason to refuse when there are arguments that could steer it there. The refusal is a sentence about arguments, and a function declaring none cannot have it be true: a rule covers every argument the function is ever handed, and handing arguments to a function that declares none changes nothing it does. That is exactly the condition this repo already states for granting at all - behaviour fixed regardless of the arguments - so an empty parameter list proves it rather than estimating it. Without this the gates and reports, which take nothing and are the most worth granting, were the ones refused.");
+  let steerable = and(reaches, takes_arguments);
+  if (steerable) {
     list_add(
       refusals,
       unaliased +
@@ -52,7 +57,6 @@ export async function permission_grant_refusals_context(unaliased, context) {
         list_join_comma(seams),
     );
   }
-  let params = await function_params_get(unaliased);
   for (let p of params) {
     let p_name = property_get(p, "name");
     for (let word of permission_grant_words_unsafe()) {

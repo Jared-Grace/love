@@ -1,3 +1,4 @@
+import { app_search } from "./app_search.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_div } from "./html_div.mjs";
@@ -6,7 +7,9 @@ import { html_style_background_color_set } from "./html_style_background_color_s
 import { html_border } from "./html_border.mjs";
 import { app_shared_container_blue_medium_background_color } from "./app_shared_container_blue_medium_background_color.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
-("The blue card surface every example sits on — the medium step of the graduated blue nesting (light outer frame -> medium example card), matching the search app.");
+("The blue card surface every example sits on — the medium step of the graduated blue nesting (light outer frame -> medium example card), matching ",
+  app_search.name,
+  ".");
 export function example_card_container_dom(parent) {
   let card = html_div(parent);
   let background = app_shared_container_blue_medium_background_color();
