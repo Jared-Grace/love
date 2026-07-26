@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function js_global_names() {
   "JS global value-identifiers that are never repo functions - a keyword like undefined that happens to share a file name must not be mistaken for a missing import, and a mention of Math or Promise must not be mistaken for a name nothing binds. Only value positions matter, so type-only names are not here. Kept as one flat list because every reader asks the same question of it: is this name supplied by the language or the host rather than by this file.";
   let keywords = ["undefined", "NaN", "Infinity", "arguments", "globalThis"];

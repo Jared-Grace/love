@@ -26,26 +26,6 @@ export async function function_rename_fn_names_check(
       }
     }
     let waited = await functions_transform_list(value, lambda3);
-    return;
-    error_json({
-      message: text_combine_multiple([
-        "You are trying to rename: ",
-        f_name_before,
-        ". However that is referenced by ",
-        value,
-        " through ",
-        fn_name.name,
-        ". TODO: ",
-        function_rename_open.name,
-        " needs enhancing to rename ",
-        fn_name.name,
-        " references.",
-      ]),
-      f_name_before,
-      value,
-    });
   }
   await property_exists_if_async(i, f_name_before, lambda);
-  return;
-  async function lambda2(ast) {}
 }
