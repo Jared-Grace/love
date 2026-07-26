@@ -10,7 +10,8 @@ export async function functions_shadowing_baseline_write() {
     known,
   };
   let json = json_format_to(baseline);
-  await file_overwrite("data/shadowing_baseline.json", json);
+  let path = shadowing_baseline_path();
+  await file_overwrite(path, json);
   let r = known.length;
   return r;
 }
