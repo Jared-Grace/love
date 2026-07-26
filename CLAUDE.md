@@ -15,7 +15,11 @@ Consequences:
 
 The human's reading time is the scarcest thing here, and with ~10 Claudes running it is the **only** real bottleneck. Ending your turn to ask "what next?" spends a reply and buys nothing, because the repo can answer that question itself.
 
-**Before you end a turn, run `node scripts/ai.mjs work_next`.** It prints every provably-safe thing you could start right now — measured items first (each with the count proving it's real), then the standing directions that never run out: **DRY refactor → new transform → new gate**. It is never empty. If it returns something, do that instead of asking.
+**Before you end a turn, run `node scripts/ai.mjs work_next`.** It prints every provably-safe thing you could start right now — measured items first (each with the count proving it's real), then the standing directions that never run out: **DRY refactor → new transform → new gate**. It is never empty.
+
+**But safe is not the same as worth it — usage is finite too.** The human's attention is one scarce resource; the token budget is another. Whichever binds decides. Filling idle time is right only while usage is abundant; once it isn't, **idling beats low-value work**, because usage spent now is not available for the high-value task that arrives later. So treat `work_next` as a floor rather than an order: take the top item **only if it clears the bar**, and let the bar rise as the budget drains.
+
+**The idle work that always clears the bar is work that reduces future usage.** A transform removes the LLM from a shape of editing permanently. A gate removes reading, and prevents the rework a regression would cost. DRY cuts what has to be read before any future edit. That is investment — it repays in the same currency it spends. Idle work that doesn't reduce future usage is consumption, and consumption loses to idling.
 
 Two rules keep this from backfiring:
 
