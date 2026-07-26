@@ -1,3 +1,4 @@
+import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { functions_imports_missing } from "./functions_imports_missing.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,6 +15,7 @@ export async function functions_imports_missing_repair() {
   "The repo-wide fix rewrites every file and every import path in it, which under many hands editing at once is a diff nobody can read and a collision with whoever is mid-edit - so this one touches only what the gate names";
   "Asking the same question again afterwards is the only honest way to say it worked, since a repair that adds nothing looks identical to one that succeeded";
   "Each file is committed the moment it is repaired rather than all of them at the end, because a run over many files lasts long enough that somebody else's sweep takes them first, and what it leaves behind then says nothing about how they were repaired";
+  await ai_git_noted();
   let offenders = await functions_imports_missing();
   let repaired = [];
   for (let offender of offenders) {
