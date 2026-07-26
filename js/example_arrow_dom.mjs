@@ -1,3 +1,4 @@
+import { html_centered } from "./html_centered.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
