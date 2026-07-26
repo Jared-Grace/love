@@ -96,7 +96,7 @@ export function app_g_verify_view(
     let p = app_shared_container_base(container);
     html_style_padding_x(p, "0");
     html_style_padding_y(p, "0");
-    html_style_set(p, "overflow", "hidden");
+    html_style_overflow_hidden(p);
     return p;
   }
   function row_new(panel, first) {
@@ -127,7 +127,7 @@ export function app_g_verify_view(
   tokens.forEach(function (t, i) {
     let span = html_span_text(passage_panel, t);
     html_border_radius(span, app_shared_border_radius());
-    html_style_set(span, "padding", "0 0.06em");
+    html_style_padding(span, "0 0.06em");
     html_style_set(span, "transition", "background-color .12s");
     if (!covered[i]) {
       html_style_set(
@@ -208,7 +208,12 @@ export function app_g_verify_view(
     bh_verse,
   );
   html_button_biblehub_open_parallel(links_bar, bh_chapter, bh_book, bh_verse);
-  html_button_biblehub_open_interlinear(links_bar, bh_chapter, bh_book, bh_verse);
+  html_button_biblehub_open_interlinear(
+    links_bar,
+    bh_chapter,
+    bh_book,
+    bh_verse,
+  );
   let approve_bar = html_div(container);
   html_style_margin_top(approve_bar, small_gap);
   html_centered(approve_bar);
@@ -230,7 +235,6 @@ export function app_g_verify_view(
     }
   }
   app_shared_button(approve_bar, "Approve v" + verse, on_approve);
-
   label_new("SUGGEST AN EDIT");
   let suggest_area = html_textarea(container);
   html_value_set(
@@ -241,7 +245,7 @@ export function app_g_verify_view(
       })
       .join("\n"),
   );
-  html_style_set(suggest_area, "width", "100%");
+  html_width_full(suggest_area);
   html_style_set(suggest_area, "min-height", "6em");
   html_style_set(suggest_area, "box-sizing", "border-box");
   html_font_set(suggest_area, serif);
