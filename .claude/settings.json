@@ -148,6 +148,7 @@
       "Bash(node scripts/ai.mjs function_shape:*)",
       "Bash(node scripts/ai.mjs functions_duplicates_report:*)",
       "Bash(node scripts/ai.mjs functions_duplicates_gate_run:*)",
+      "Bash(node scripts/ai.mjs qa_gates_read:*)",
       "Bash(node scripts/ai.mjs qa_gates_machine:*)",
       "Bash(node scripts/ai.mjs qa_gates_tree:*)",
       "Bash(node scripts/ai.mjs functions_shadowing_versus_baseline:*)",
