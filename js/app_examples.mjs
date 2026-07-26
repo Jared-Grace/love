@@ -1,3 +1,5 @@
+import { html_style_background } from "./html_style_background.mjs";
+import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
@@ -22,7 +24,7 @@ export async function app_examples(context) {
   let examples = await response.json();
   let root = property_get(context, "root");
   html_margin_0(root);
-  html_style_set(root, "background", "#fafafa");
+  html_style_background(root, "#fafafa");
   ("which example is open belongs to this tab, so two tabs can read two examples");
   function select(index) {
     storage_session_set(app_examples, "selected", index);
@@ -36,7 +38,7 @@ export async function app_examples(context) {
     html_clear(root);
     let page = app_shared_container_blue(root);
     html_style_set(page, "max-width", "62rem");
-    html_style_set(page, "margin", "2rem auto");
+    html_style_margin(page, "2rem auto");
     html_style_padding(page, "2rem");
     html_font_set(page, "system-ui, sans-serif");
     html_font_color_set(page, "#1a1a1a");
