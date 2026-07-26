@@ -1,3 +1,4 @@
+import { app_g_day_discern_button } from "./app_g_day_discern_button.mjs";
 import { app_g_day_talkables_choose } from "./app_g_day_talkables_choose.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { property_set } from "./property_set.mjs";
@@ -130,6 +131,7 @@ export function app_g_dev_routes(div_map) {
       app_g_day_talkable_marker(div_map, npc);
     }
     each(three, mark);
+    app_g_day_discern_button(div_map);
   }
   let routes = {
     study,
