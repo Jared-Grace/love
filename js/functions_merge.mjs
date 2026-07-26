@@ -1,3 +1,5 @@
+import { js_identifier_rename_imports_fix_curried_right_2 } from "./js_identifier_rename_imports_fix_curried_right_2.mjs";
+import { function_transform } from "./function_transform.mjs";
 import { data_paths_mentioning } from "./data_paths_mentioning.mjs";
 import { duplicates_baseline_path } from "./duplicates_baseline_path.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -11,8 +13,6 @@ import { equal_assert_json } from "./equal_assert_json.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_filter_equal_not } from "./list_filter_equal_not.mjs";
-import { function_identifier_replace_named } from "./function_identifier_replace_named.mjs";
-import { function_auto } from "./function_auto.mjs";
 export async function functions_merge(f_name_keep, f_name_drop) {
   "Collapse two functions that do one job under two names into one. Everything that reached for the dropped name is pointed at the kept name, and the dropped file is then removed only if nothing at all is left holding it.";
   "What makes this safe is not a reading of the two but a proof: both must come out to the same shape, meaning the body with the names that say only who wrote it taken away. Same shape is same work under two spellings, so refusing when the shapes differ is what keeps this from being a guess.";
@@ -34,9 +34,7 @@ export async function functions_merge(f_name_keep, f_name_drop) {
   let search = await data_identifiers_search(f_name_drop);
   let names = properties_get(search);
   let others = list_filter_equal_not(names, f_name_drop);
-  (
-    "swapping the name alone leaves the import line still naming the dropped file, and a file that already imported the kept name is left declaring it twice - which is not a wrong import but a file that will not parse at all"
-  );
+  ("swapping the name alone leaves the import line still naming the dropped file, and a file that already imported the kept name is left declaring it twice - which is not a wrong import but a file that will not parse at all");
   let swap = await js_identifier_rename_imports_fix_curried_right_2(
     f_name_drop,
     f_name_keep,
