@@ -27,9 +27,9 @@ export async function git_folder_run(folder, command_words) {
       reject(err);
     }
     child.on("error", on_error);
-    function on_close(code) {
+    function on_close(closed) {
       resolve({
-        code,
+        code: closed,
         stdout,
         stderr,
       });
