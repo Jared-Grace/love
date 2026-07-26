@@ -1,18 +1,28 @@
-import { local_function_path_json } from "./local_function_path_json.mjs";
+import { local_function_folder } from "./local_function_folder.mjs";
 import { g_sermon_write } from "./g_sermon_write.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 export async function g_verify_chapters_available() {
-  let sample = local_function_path_json("_", g_sermon_write);
-  let folder = sample.slice(0, sample.lastIndexOf("/"));
-  let files;
+  let folder = local_function_folder(g_sermon_write);
+  let files = null;
   try {
     files = await folder_read_files(folder);
   } catch (missing) {
-    return { chapters: [] };
+    let r = {
+      chapters: [],
+    };
+    return r;
   }
-  let chapters = files
-    .filter((name) => name.endsWith(".json"))
-    .map((name) => name.slice(0, -5))
-    .sort();
-  return { chapters };
+  function lambda(name) {
+    let r2 = name.endsWith(".json");
+    return r2;
+  }
+  function lambda2(name) {
+    let r3 = name.slice(0, -5);
+    return r3;
+  }
+  let chapters = files.filter(lambda).map(lambda2).sort();
+  let r4 = {
+    chapters,
+  };
+  return r4;
 }
