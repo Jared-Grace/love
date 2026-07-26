@@ -1,5 +1,5 @@
+import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
 import { app_apps_all_main_fns } from "./app_apps_all_main_fns.mjs";
-import { function_dependencies } from "./function_dependencies.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_node_only_is } from "./function_node_only_is.mjs";
@@ -9,8 +9,12 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function apps_node_only_gate_run() {
   "QA gate: nothing an app can reach may call a Node built-in without a browser branch.";
   "Such a call throws at runtime and blanks the screen, which a green build happily hides.";
+  "Reach is measured along the roads a page actually travels, so the walk stops wherever";
+  "someone asked which environment they were in. Measuring the whole import closure instead";
+  "named six functions that sit under a guard and cannot be fixed where they are, which is a";
+  "gate that can never be cleared - so it stayed out of the suite and guarded nothing.";
   let mains = app_apps_all_main_fns();
-  let reachable = await function_dependencies(mains);
+  let reachable = await functions_reachable_unguarded(mains);
   let paths = await functions_names_to_paths();
   async function measure(f_name) {
     let f_path = property_get(paths, f_name);
