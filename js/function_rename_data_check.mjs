@@ -1,3 +1,7 @@
+import { examples_folder } from "./examples_folder.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { not } from "./not.mjs";
 import { data_paths } from "./data_paths.mjs";
 import { file_identifier_replace } from "./file_identifier_replace.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";

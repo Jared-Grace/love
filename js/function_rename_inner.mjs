@@ -1,3 +1,4 @@
+import { function_rename_examples_check } from "./function_rename_examples_check.mjs";
 import { function_rename_data_check } from "./function_rename_data_check.mjs";
 import { function_alias_rename } from "./function_alias_rename.mjs";
 import { functions_identifiers_rename } from "./functions_identifiers_rename.mjs";
