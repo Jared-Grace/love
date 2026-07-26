@@ -1,3 +1,4 @@
+import { todo } from "./todo.mjs";
 import { g_sermon_chapter_codes_all } from "./g_sermon_chapter_codes_all.mjs";
 import { bible_data_path } from "./bible_data_path.mjs";
 import { file_exists } from "./file_exists.mjs";
@@ -16,6 +17,9 @@ export async function g_sermon_groups_todo() {
       list_add(todo, code);
     }
   }
-  let r = { done, todo };
+  let r = {
+    done,
+    todo,
+  };
   return r;
 }
