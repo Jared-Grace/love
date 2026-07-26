@@ -10,7 +10,7 @@ import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_code_names_spelled } from "./js_code_names_spelled.mjs";
-import { file_write } from "./file_write.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { js_code_texts_listed } from "./js_code_texts_listed.mjs";
 import { not } from "./not.mjs";
 export async function permission_lists_bootstrap_write() {
@@ -40,7 +40,7 @@ export async function permission_lists_bootstrap_write() {
     "every function Claude may run on its own seam without asking first - the one list both rule families are generated from, so a second entry point costs no second list";
   let f_name = fn_name("permission_grant_names");
   let code_names = js_code_names_spelled(f_name, note_names, unique);
-  await file_write(
+  await file_overwrite(
     text_combine_multiple(["js/", permission_grant_names.name, ".mjs"]),
     code_names,
   );
@@ -48,7 +48,7 @@ export async function permission_lists_bootstrap_write() {
     "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
   let f_name2 = fn_name("permission_rules_other");
   let code_other = js_code_texts_listed(f_name2, note_other, other);
-  await file_write("js/permission_rules_other.mjs", code_other);
+  await file_overwrite("js/permission_rules_other.mjs", code_other);
   let report = {
     names: unique.length,
     other: other.length,
