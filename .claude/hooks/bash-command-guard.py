@@ -2376,6 +2376,12 @@ GIT_WRITE_COMMIT_SUBCOMMANDS = {"add", "commit"}
 # away whatever other people have not committed yet?" has no informed approver.
 GIT_DISCARD_SUBCOMMANDS = {"checkout", "restore", "reset", "stash", "clean"}
 
+# `git stash` alone moves the whole working tree into a stash; `git stash list`
+# and `git stash show` only read. The reading pair is already granted, and a
+# floor runs before the allow decision, so without this exception the floor
+# would silently revoke a rule the human wrote.
+GIT_STASH_READ_ONLY = {"list", "show"}
+
 
 def find_git_commit_write(command):
     """If any statement in `command` is a bare `git add`/`git commit` - the
@@ -2399,11 +2405,33 @@ def find_git_commit_write(command):
         if len(words) >= 2 and words[0] == "git" and words[1] in GIT_WRITE_COMMIT_SUBCOMMANDS:
             return words[1]
         if len(words) >= 2 and words[0] == "git" and words[1] in GIT_DISCARD_SUBCOMMANDS:
+            if words[1] == "stash" and words[2:3] and words[2] in GIT_STASH_READ_ONLY:
+                continue
             return words[1]
     return None
 
 
 def git_commit_write_deny_reason(subcommand):
+    if subcommand in GIT_DISCARD_SUBCOMMANDS:
+        return (
+            f"`git {subcommand}` is refused: it throws away uncommitted work, "
+            "and the working directory is shared. Several Claudes and the "
+            "human edit these same files at once, so this discards whatever "
+            "THEY have in flight too - and nobody, including the human "
+            "approving a prompt, can see what that was. A prompt cannot make "
+            "that call, so it is refused here instead.\n"
+            "  - undoing your OWN edit: use the Edit tool to put the text "
+            "back. It is the only undo that touches just your change.\n"
+            "  - wanting a clean tree to re-test something: commit first with "
+            "`node scripts/ai.mjs ai_git`, which is cheap and keeps the "
+            "history linear. A commit you regret is recoverable; a discard is "
+            "not.\n"
+            "  - reading what changed: `git diff` and `git status` are "
+            "already trusted and change nothing.\n"
+            "If a genuine revert is really needed, ask the human - they can "
+            "see which peers are running. See CLAUDE.md - 'Editing protocol "
+            "(optimistic concurrency)'."
+        )
     return (
         f"`git {subcommand}` is refused: Claude commits through the sanctioned "
         "function, never raw git - it does add+commit as one atomic step with "

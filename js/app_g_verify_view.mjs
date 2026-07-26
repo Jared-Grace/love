@@ -1,3 +1,7 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_width_full } from "./html_width_full.mjs";
@@ -57,11 +61,13 @@ export function app_g_verify_view(
   let serif = app_shared_font_serif();
   let small_gap = app_shared_spaced_small_gap();
   let covered = {};
-  lines.forEach(function (l) {
-    property_get(l, "indices").forEach(function (i) {
+  function lambda2(l) {
+    function lambda(i) {
       covered[i] = true;
-    });
-  });
+    }
+    property_get(l, "indices").forEach(lambda);
+  }
+  lines.forEach(lambda2);
   let token_spans = [];
   let row_comps = [];
   let order_comps = [];
@@ -70,30 +76,34 @@ export function app_g_verify_view(
   }
   function clear_all() {
     token_spans.forEach(background_clear);
-    row_comps.forEach(function (r) {
+    function lambda3(r) {
       if (r) {
         background_clear(r);
       }
-    });
-    order_comps.forEach(function (r) {
+    }
+    row_comps.forEach(lambda3);
+    function lambda4(r) {
       if (r) {
         background_clear(r);
       }
-    });
+    }
+    order_comps.forEach(lambda4);
   }
   function highlight_lines(li_list) {
     clear_all();
-    li_list.forEach(function (li) {
-      property_get(lines[li], "indices").forEach(function (i) {
+    function lambda6(li) {
+      function lambda5(i) {
         html_style_background_color_set(token_spans[i], highlight);
-      });
+      }
+      property_get(lines[li], "indices").forEach(lambda5);
       if (row_comps[li]) {
         html_style_background_color_set(row_comps[li], highlight);
       }
       if (order_comps[li]) {
         html_style_background_color_set(order_comps[li], highlight);
       }
-    });
+    }
+    li_list.forEach(lambda6);
   }
   function panel_flush() {
     let p = app_shared_container_base(container);
@@ -108,7 +118,7 @@ export function app_g_verify_view(
     html_style_set(row, "gap", small_gap);
     html_style_padding_x(row, small_gap);
     html_style_padding_y(row, small_gap);
-    if (!first) {
+    if (not(first)) {
       html_style_set(row, "border-top", "1px solid " + border);
     }
     html_style_set(row, "transition", "background-color .12s");
@@ -116,7 +126,8 @@ export function app_g_verify_view(
   }
   function label_new(caption) {
     let l = html_p_text(container, caption);
-    html_font_color_set(l, app_shared_text_category_color());
+    let color = app_shared_text_category_color();
+    html_font_color_set(l, color);
     html_style_font_size(l, "0.72em");
     html_style_set(l, "letter-spacing", "0.11em");
     html_bold_semi(l);
@@ -127,12 +138,13 @@ export function app_g_verify_view(
   html_font_set(passage_panel, serif);
   html_style_font_size(passage_panel, "1.3em");
   html_style_set(passage_panel, "line-height", "1.95");
-  tokens.forEach(function (t, i) {
+  function lambda9(t, i) {
     let span = html_span_text(passage_panel, t);
-    html_border_radius(span, app_shared_border_radius());
+    let border_radius = app_shared_border_radius();
+    html_border_radius(span, border_radius);
     html_style_padding(span, "0 0.06em");
     html_style_set(span, "transition", "background-color .12s");
-    if (!covered[i]) {
+    if (not(covered[i])) {
       html_style_set(
         span,
         "text-decoration",
@@ -140,68 +152,89 @@ export function app_g_verify_view(
       );
       html_style_set(span, "text-underline-offset", "0.2em");
     }
-    html_on(span, "mouseenter", function () {
+    function lambda8() {
       let lis = [];
-      lines.forEach(function (l, li) {
-        if (property_get(l, "indices").indexOf(i) >= 0) {
+      function lambda7(l, li) {
+        let a2 = property_get(l, "indices").indexOf(i);
+        if (greater_than_equal(a2, 0)) {
           lis.push(li);
         }
-      });
+      }
+      lines.forEach(lambda7);
       highlight_lines(lis);
-    });
+    }
+    html_on(span, "mouseenter", lambda8);
     html_on(span, "mouseleave", clear_all);
     token_spans[i] = span;
     html_span_space(passage_panel);
-  });
+  }
+  tokens.forEach(lambda9);
   label_new("BY PASSAGE ORDER");
   let cov = panel_flush();
-  let order = lines.map(function (l, li) {
+  function lambda10(l, li) {
     return li;
-  });
-  order.sort(function (a, b) {
-    let ma = Math.min.apply(null, property_get(lines[a], "indices"));
-    let mb = Math.min.apply(null, property_get(lines[b], "indices"));
-    return ma - mb || a - b;
-  });
-  order.forEach(function (li, k) {
+  }
+  let order = lines.map(lambda10);
+  function lambda11(a, b) {
+    let value2 = property_get(lines[a], "indices");
+    let ma = Math.min.apply(null, value2);
+    let value3 = property_get(lines[b], "indices");
+    let mb = Math.min.apply(null, value3);
+    let r2 = subtract(ma, mb) || subtract(a, b);
+    return r2;
+  }
+  order.sort(lambda11);
+  function lambda14(li, k) {
     let l = lines[li];
-    let row = row_new(cov, k === 0);
-    let words = property_get(l, "indices")
-      .map(function (i) {
-        return tokens[i];
-      })
-      .join(" ");
+    let eq = equal(k, 0);
+    let row = row_new(cov, eq);
+    function lambda12(i) {
+      let r3 = tokens[i];
+      return r3;
+    }
+    let words = property_get(l, "indices").map(lambda12).join(" ");
     let words_el = html_span_text(row, words);
     html_font_set(words_el, serif);
     html_style_set(words_el, "flex", "0 0 42%");
     app_shared_text_deemphasized(words_el);
-    html_span_text(row, property_get(l, "text"));
-    html_on(row, "mouseenter", function () {
+    let text = property_get(l, "text");
+    html_span_text(row, text);
+    function lambda13() {
       highlight_lines([li]);
-    });
+    }
+    html_on(row, "mouseenter", lambda13);
     html_on(row, "mouseleave", clear_all);
     row_comps[li] = row;
-  });
+  }
+  order.forEach(lambda14);
   label_new("IN SERMON ORDER");
   let ord = panel_flush();
-  lines.forEach(function (l, li) {
-    let row = row_new(ord, li === 0);
-    let n = html_span_text(row, String(li + 1));
+  function lambda16(l, li) {
+    let eq2 = equal(li, 0);
+    let row = row_new(ord, eq2);
+    let text2 = String(li + 1);
+    let n = html_span_text(row, text2);
     app_shared_text_deemphasized(n);
     html_style_set(n, "flex", "0 0 1.2em");
     html_style_set(n, "font-variant-numeric", "tabular-nums");
-    html_span_text(row, property_get(l, "text"));
-    html_on(row, "mouseenter", function () {
+    let text3 = property_get(l, "text");
+    html_span_text(row, text3);
+    function lambda15() {
       highlight_lines([li]);
-    });
+    }
+    html_on(row, "mouseenter", lambda15);
     html_on(row, "mouseleave", clear_all);
     order_comps[li] = row;
-  });
+  }
+  lines.forEach(lambda16);
   let links_bar = html_div(container);
   html_style_margin_top(links_bar, small_gap);
   html_centered(links_bar);
-  let bh_chapter = String(Number(chapter_code.slice(3)));
-  let bh_book = g_verify_book_name(chapter_code.slice(0, 3));
+  let v = chapter_code.slice(3);
+  let v2 = Number(v);
+  let bh_chapter = String(v2);
+  let book_code = chapter_code.slice(0, 3);
+  let bh_book = g_verify_book_name(book_code);
   let bh_verse = verse.split(",")[0];
   html_button_bible_chapter_open(links_bar, chapter_code, "Whole Chapter");
   html_button_biblehub_open_commentary(
@@ -240,14 +273,12 @@ export function app_g_verify_view(
   app_shared_button(approve_bar, "Approve v" + verse, on_approve);
   label_new("SUGGEST AN EDIT");
   let suggest_area = html_textarea(container);
-  html_value_set(
-    suggest_area,
-    lines
-      .map(function (l) {
-        return property_get(l, "text");
-      })
-      .join("\n"),
-  );
+  function lambda17(l) {
+    let value = property_get(l, "text");
+    return value;
+  }
+  let value4 = lines.map(lambda17).join("\n");
+  html_value_set(suggest_area, value4);
   html_width_full(suggest_area);
   html_style_set(suggest_area, "min-height", "6em");
   html_style_set(suggest_area, "box-sizing", "border-box");
@@ -260,9 +291,10 @@ export function app_g_verify_view(
   html_centered(suggest_bar);
   async function on_suggest() {
     try {
+      let value5 = html_value_get(suggest_area);
       await app_shared_api({
         f_name: fn_name("g_verify_suggest_set"),
-        args: [chapter_code, verse, html_value_get(suggest_area)],
+        args: [chapter_code, verse, value5],
       });
       html_clear(suggest_bar);
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
