@@ -130,7 +130,7 @@ export function app_code_lesson_expression_round_up() {
       whole_text,
     ]);
     html_div_cycle_code(rounds, [
-      "",
+      "If a number has a decimal, ",
       "Math.ceil",
       " gives the whole number above it",
     ]);
