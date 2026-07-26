@@ -1,3 +1,4 @@
+import { app_g_day_guide_show } from "./app_g_day_guide_show.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_target_highlight } from "./app_g_day_target_highlight.mjs";
 import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
@@ -21,6 +22,7 @@ export function app_g_day_discern(div_map) {
     property_set(prayer, "conversation", true);
     await app_g_player_save(player);
     app_g_day_target_highlight(div_map, target);
+    await app_g_day_guide_show(div_map);
   }
   let delay = list_random_item([4000, 5000, 6000, 7000]);
   setTimeout(answered, delay);
