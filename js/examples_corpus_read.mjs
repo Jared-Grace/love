@@ -14,12 +14,7 @@ import { function_aliases_inverted } from "./function_aliases_inverted.mjs";
 import { example_alias_derive } from "./example_alias_derive.mjs";
 import { example_tool_family } from "./example_tool_family.mjs";
 export async function examples_corpus_read() {
-  let names = await folder_read("data/examples");
-  function is_mjs(name) {
-    let ew = text_ends_with(name, ".mjs");
-    return ew;
-  }
-  let mjs = list_filter(names, is_mjs);
+  let mjs = await examples_names();
   list_sort_text(mjs);
   function to_file(base) {
     let combined = text_combine(base, ".mjs");
