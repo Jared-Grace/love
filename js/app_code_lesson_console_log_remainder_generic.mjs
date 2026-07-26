@@ -1,3 +1,4 @@
+import { html_style_gap } from "./html_style_gap.mjs";
 import { app_code_remainder_percent_labels } from "./app_code_remainder_percent_labels.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -13,7 +14,6 @@ import { app_code_lesson_operators_value_max } from "./app_code_lesson_operators
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_span } from "./html_span.mjs";
 import { equal } from "./equal.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
