@@ -26,6 +26,7 @@ import { examples_gate_run } from "./examples_gate_run.mjs";
 import { permission_gate_run } from "./permission_gate_run.mjs";
 import { permission_editor_open_gate_run } from "./permission_editor_open_gate_run.mjs";
 import { permission_self_settings_gate_run } from "./permission_self_settings_gate_run.mjs";
+import { permission_grants_gate_run } from "./permission_grants_gate_run.mjs";
 import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invalid_assert.mjs";
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { dispatcher_scripts_python_assert } from "./dispatcher_scripts_python_assert.mjs";
@@ -56,6 +57,7 @@ export function qa_gates() {
     permission_rule_probe_gate_run,
     permission_rule_file_gate_run,
     permission_self_settings_gate_run,
+    permission_grants_gate_run,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
     dispatcher_scripts_python_assert,
