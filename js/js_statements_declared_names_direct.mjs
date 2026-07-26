@@ -8,10 +8,11 @@ export function js_statements_declared_names_direct(statements) {
   function collect(emit) {
     function name_emit(node) {
       let id = property_get(node, "id");
-      let identifier = js_node_type_is(id, "Identifier");
-      if (identifier) {
-        let name = property_get(id, "name");
-        emit(name);
+      let named = js_node_is(id);
+      if (named) {
+        ("a declaration can unpack rather than name, as in taking three pieces out of one split, and every name it unpacks is bound here just as a plain one would be");
+        let names = js_function_declaration_params_names_node(id);
+        each(names, emit);
       }
     }
     function consider(statement) {
