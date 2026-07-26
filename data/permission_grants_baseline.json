@@ -1,14 +1,6 @@
 {
  "known": [
   {
-   "name": "bible_data_path",
-   "refusals": 1
-  },
-  {
-   "name": "bible_data_relative",
-   "refusals": 1
-  },
-  {
    "name": "app_code_screens_crawl",
    "refusals": 1
   },
@@ -70,34 +62,14 @@
   },
   {
    "name": "g_sermon_write_lines_file",
-   "refusals": 2
+   "refusals": 1
   },
   {
    "name": "g_sermon_write_lines_file_check",
-   "refusals": 2
+   "refusals": 1
   },
   {
    "name": "g_sermon_pull",
-   "refusals": 1
-  },
-  {
-   "name": "g_verify_status_set",
-   "refusals": 1
-  },
-  {
-   "name": "g_verify_suggest_clear",
-   "refusals": 1
-  },
-  {
-   "name": "g_verify_suggest_read",
-   "refusals": 1
-  },
-  {
-   "name": "g_verify_next_books_set",
-   "refusals": 1
-  },
-  {
-   "name": "g_chapter_code_next",
    "refusals": 1
   }
  ]
