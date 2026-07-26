@@ -2159,6 +2159,63 @@ def find_stdin_program_unparsed(command):
     return bool(STDIN_PROGRAM_TEXT.search(command))
 
 
+# A heredoc whose output lands in a file is the shell writing a file, and the
+# tools already do that better: Write for a new file, Edit for a change to an
+# existing one. The difference that matters is failure. Edit names the text it
+# expects to replace and fails loudly when a peer has moved it; a heredoc
+# append is blind, so under several Claudes sharing one working directory it
+# silently doubles a section or lands in a file that has moved on. It also
+# always prompts, because a heredoc is unparseable, and the same append shape
+# recurs constantly (sermon logs, memory notes) - a standing prompt for the one
+# operation the tools were built for.
+HEREDOC_FILE_WRITE_TEXT = re.compile(
+    r"(?:(?:>>?\s*\S+|\btee\b)[^\n]*<<)|(?:<<[^\n]*>>?\s*\S+)"
+)
+
+QUOTED_SPAN_TEXT = re.compile(r"'[^']*'?|\"[^\"]*\"?")
+
+HEREDOC_FILE_WRITE_DENY_REASON = (
+    "Writing a file through a heredoc can't be approved here - use the Write "
+    "tool for a new file, or the Edit tool to change an existing one.\n"
+    "  - Edit states the text it is replacing, so when a peer has already "
+    "changed that region it fails loudly instead of appending a second copy. "
+    "A heredoc append cannot tell the difference.\n"
+    "  - Several Claudes share this one working directory, so a blind append "
+    "is how a memory note or a sermon log quietly ends up with the same entry "
+    "twice.\n"
+    "  - The tools never prompt for this; a heredoc always does, because a "
+    "heredoc is not parseable, and this exact append shape recurs constantly.\n"
+    "Redirecting a COMMAND's output to a file is untouched - this is only "
+    "about a heredoc, where the text being written is already in your hands. "
+    "See CLAUDE.md - 'Create that file with the `Write` tool, never "
+    "`cat > ... <<EOF`'."
+)
+
+
+def find_heredoc_file_write(command):
+    """True iff `command` feeds a heredoc into a file - `cat > f <<EOF`,
+    `cat >> f <<EOF`, `tee f <<EOF`.
+
+    Text-matched for the same reason as find_stdin_program_unparsed: a heredoc
+    is what makes a command unparseable, so tokens are not available to answer
+    with. Both halves are required - a redirect into a file AND a heredoc - so
+    a bare `cat <<EOF` with nowhere to land keeps its existing answer, and so
+    does an ordinary `<cmd> > file` with no heredoc in it.
+
+    Two narrowings stand in for the tokenizer, and both are needed. Only the
+    FIRST line is read, because that is where a heredoc's operator and its
+    redirect must both appear, while the body below can say anything at all -
+    including, in this repo, sermon text full of apostrophes. And quoted spans
+    in that line are blanked first, so a command that merely quotes this shape
+    (`grep 'cat >> f << EOF' notes.txt`, or a test loop passing the shape as an
+    argument) is not mistaken for performing it. An unterminated quote is
+    blanked to end of line, which is the safe direction: it hides a mention
+    rather than inventing one."""
+    first_line = command.split("\n")[0]
+    unquoted = QUOTED_SPAN_TEXT.sub(" ", first_line)
+    return bool(HEREDOC_FILE_WRITE_TEXT.search(unquoted))
+
+
 PYTHON_EVAL_DENY_REASON = (
     "An interpreter handed code on the command line can't be approved here. "
     "That is one seam wearing many names, and all of them are floored the same "
@@ -2447,6 +2504,20 @@ def main():
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
                 "permissionDecisionReason": PYTHON_EVAL_DENY_REASON,
+            }
+        }))
+        return
+
+    # Same floor-instead-of-prompt reasoning, applied to the shell writing a
+    # file from a heredoc: the Write and Edit tools do it without a prompt and
+    # fail loudly on a conflict, which a blind append cannot. See
+    # find_heredoc_file_write.
+    if find_heredoc_file_write(command):
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": HEREDOC_FILE_WRITE_DENY_REASON,
             }
         }))
         return
