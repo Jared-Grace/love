@@ -7,7 +7,8 @@ export function js_catch_clause_names(node) {
   let param = property_get(node, "param");
   let bound = js_node_is(param);
   if (not(bound)) {
-    return [];
+    let r = [];
+    return r;
   }
   let names = js_function_declaration_params_names_node(param);
   return names;

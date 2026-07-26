@@ -15,5 +15,6 @@ export function js_loop_declared_names(node) {
     let names = js_statements_declared_names_direct([part]);
     return names;
   }
-  return [];
+  let r = [];
+  return r;
 }
