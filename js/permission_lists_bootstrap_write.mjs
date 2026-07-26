@@ -40,10 +40,12 @@ export async function permission_lists_bootstrap_write() {
     "every function Claude may run on its own seam without asking first - the one list both rule families are generated from, so a second entry point costs no second list";
   let f_name = fn_name("permission_grant_names");
   let code_names = js_code_names_spelled(f_name, note_names, unique);
-  await file_overwrite(
-    text_combine_multiple(["js/", permission_grant_names.name, ".mjs"]),
-    code_names,
-  );
+  let file_path = text_combine_multiple([
+    "js/",
+    permission_grant_names.name,
+    ".mjs",
+  ]);
+  await file_overwrite(file_path, code_names);
   let note_other =
     "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
   let f_name2 = fn_name("permission_rules_other");
