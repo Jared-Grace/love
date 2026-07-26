@@ -1,10 +1,8 @@
+import { git_folder_run } from "./git_folder_run.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { list_map } from "./list_map.mjs";
-import { command_line_git_folder } from "./command_line_git_folder.mjs";
 import { git_status_line_path } from "./git_status_line_path.mjs";
 export async function git_files_changed_folder(folder, paths) {
   "Of the files handed in, which ones this folder actually has a change to commit.";
