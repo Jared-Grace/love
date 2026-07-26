@@ -46,7 +46,7 @@ export function html_checkboxes(
   let div = html_div_text(container_main, top_text);
   html_centered(div);
   html_style_font_size(div, app_shared_style_control_font_size());
-  html_style_set(div, "padding", "0.6em");
+  html_style_padding(div, "0.6em");
   let checkboxes = null;
   let bn = null;
   let value_previous = value_previous_get();
@@ -60,21 +60,20 @@ export function html_checkboxes(
     async function on_click() {
       function lambda2(r) {
         let container2 = property_get(r, "container");
-        html_style_set(container2, "box-shadow", "none");
+        html_box_shadow_set(container2, "none");
         html_checked_set(r, false);
       }
       each(checkboxes, lambda2);
       html_checked_set(checkbox, true);
       let selected = "#5ffb84ff";
-      html_style_set(container, "background-color", selected);
+      html_style_background_color_set(container, selected);
       await sleep_0();
       let valid = valid_get(checkboxes);
       validate(valid);
       let ci = app_karate_button_background_invalid();
       let c = valid ? "#4ad66bff" : ci;
-      html_style_set(
+      html_box_shadow_set(
         container,
-        "box-shadow",
         text_combine_multiple([
           "inset 0 0 0 .15em ",
           html_rgba_to_rgb(c),

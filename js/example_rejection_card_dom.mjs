@@ -4,8 +4,8 @@ import { example_card_container_dom } from "./example_card_container_dom.mjs";
 import { example_card_title_note_dom } from "./example_card_title_note_dom.mjs";
 import { example_code_block_dom } from "./example_code_block_dom.mjs";
 import { example_refusal_dom } from "./example_refusal_dom.mjs";
-"A rejection example as DOM: title, note, the call block (red left edge), and";
-"the expected outcome (shared red refusal line, via example_refusal_dom).";
+("A rejection example as DOM: title, note, the call block (red left edge), and");
+("the expected outcome (shared red refusal line, via example_refusal_dom).");
 export function example_rejection_card_dom(parent, example) {
   let title = property_get(example, "title");
   let note = property_get(example, "note");
@@ -16,7 +16,7 @@ export function example_rejection_card_dom(parent, example) {
   example_card_title_note_dom(card, title, note, alias);
   let block = example_code_block_dom(card, call);
   html_style_set(block, "border-left", "3px solid #d33");
-  html_style_set(block, "margin-top", "0.75rem");
+  html_style_margin_top(block, "0.75rem");
   example_refusal_dom(card, expect_text);
   return card;
 }

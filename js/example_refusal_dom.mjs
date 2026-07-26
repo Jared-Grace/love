@@ -10,6 +10,6 @@ export function example_refusal_dom(parent, text) {
   html_text_set(expect, text);
   html_font_color_set(expect, "#d33");
   html_bold_semi(expect);
-  html_style_set(expect, "margin-top", "0.5rem");
+  html_style_margin_top(expect, "0.5rem");
   return expect;
 }

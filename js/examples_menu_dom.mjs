@@ -53,7 +53,7 @@ export function examples_menu_dom(parent, examples, on_select) {
       on_select(index);
     }
     let button = app_shared_button_wide(parent, label, on_click);
-    html_style_set(button, "margin-bottom", "0.5rem");
+    html_style_margin_bottom(button, "0.5rem");
     html_style_set(button, "text-align", "left");
   }
   function family_at(index) {
