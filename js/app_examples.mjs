@@ -36,7 +36,7 @@ export async function app_examples(context) {
     let page = app_shared_container_blue(root);
     html_style_set(page, "max-width", "62rem");
     html_style_set(page, "margin", "2rem auto");
-    html_style_set(page, "padding", "2rem");
+    html_style_padding(page, "2rem");
     html_font_set(page, "system-ui, sans-serif");
     html_font_color_set(page, "#1a1a1a");
     let selected = storage_session_get(app_examples, "selected");
