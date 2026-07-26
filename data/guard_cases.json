@@ -194,6 +194,16 @@
     { "command": "cd /tmp && git add -A && git commit -m ai 2>&1 | tail -2", "decision": "deny", "reason_includes": "ai_git", "why": "the real pasted shape: cd + add + commit + redirect + pipe all parse, and the git-write statement triggers the redirect deny" },
     { "command": "ls && git commit -m x", "decision": "deny", "reason_includes": "never raw git", "why": "a trusted leading verb cannot launder a raw git commit later in the chain - the floor beats the allow" },
     { "command": "grep 'git commit' MEMORY.md", "decision": "allow", "why": "quote-aware: 'git commit' inside a grep pattern is literal text, not a git command, so grep stays trusted" },
+
+    { "command": "git checkout .claude/settings.json && echo reverted", "decision": "deny", "reason_includes": "working directory is shared", "why": "the real pasted shape - a peer reverting a file to re-test discards every other Claude's uncommitted edit to it, and a human approving the prompt cannot see what was in flight" },
+    { "command": "git checkout -- js/foo.mjs", "decision": "deny", "reason_includes": "Edit tool", "why": "the redirect names the only undo that touches just your own change" },
+    { "command": "git restore f.txt", "decision": "deny", "reason_includes": "throws away uncommitted work", "why": "restore is checkout's newer spelling and discards the same way" },
+    { "command": "git reset --hard origin/main", "decision": "deny", "reason_includes": "throws away uncommitted work", "why": "a hard reset takes the whole shared tree with it" },
+    { "command": "git clean -fd", "decision": "deny", "reason_includes": "throws away uncommitted work", "why": "clean deletes peers' untracked files, which are not even recoverable from the index" },
+    { "command": "git stash", "decision": "deny", "reason_includes": "throws away uncommitted work", "why": "a bare stash sweeps the whole working tree, peers' edits included" },
+    { "command": "git stash list", "decision": "allow", "why": "list only reads, and it is already granted - a floor runs before the allow decision, so it has to spare the reading spelling or it silently revokes the human's rule" },
+    { "command": "git diff --stat", "decision": "allow", "why": "reading what changed is untouched by the discard floor" },
+    { "command": "grep 'git checkout' notes.txt", "decision": "allow", "why": "quote-aware: the shape mentioned inside a pattern is not the shape performed" },
     { "command": "git status", "decision": "allow", "why": "read-only git subcommand stays allowed - the floor catches only add/commit writes" },
 
     { "command": "ls -la f | awk '{print $5}'", "decision": "deny", "reason_includes": "never auto-trusted", "why": "awk in a pipe segment is refused (it can exec/write) and redirected to a trusted verb, so Claude self-corrects instead of prompting the human" },

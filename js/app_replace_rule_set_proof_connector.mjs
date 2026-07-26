@@ -25,8 +25,10 @@ export function app_replace_rule_set_proof_connector(
   html_style_set(number_side, "flex", "1");
   html_style_set(number_side, "text-align", "right");
   html_style_set(number_side, "padding-right", gap);
-  html_span_text_deemphasized(number_side, text_combine_multiple([index, "."]));
-  let arrow = html_span_text(connector, text_arrow_down());
+  let text = text_combine_multiple([index, "."]);
+  html_span_text_deemphasized(number_side, text);
+  let text2 = text_arrow_down();
+  let arrow = html_span_text(connector, text2);
   html_bold(arrow);
   html_style_font_size(arrow, "2.2em");
   let rule_side = html_div(connector);
