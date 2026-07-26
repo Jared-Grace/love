@@ -33,12 +33,28 @@ export async function functions_merge(f_name_keep, f_name_drop) {
     await function_identifier_replace_named(name, f_name_drop, f_name_keep);
     await function_auto(name);
   }
-  let deleted = await function_delete_unused(f_name_drop);
+  ("a gate baseline is a record of the defect, not something depending on it, so the one file listing this pair as an open twin must not be what stops the pair being closed - every other mention in the data folder still does");
+  let data_paths = await data_paths_mentioning(f_name_drop);
+  let baseline_path = duplicates_baseline_path();
+  let blocking = list_filter_equal_not(data_paths, baseline_path);
+  list_empty_is_assert_json(blocking, {
+    f_name_drop,
+    blocking,
+    hint: "the data folder still spells the dropped name - clear those first",
+  });
+  let alias_keys = await function_alias_keys(f_name_drop);
+  list_empty_is_assert_json(alias_keys, {
+    f_name_drop,
+    alias_keys,
+    hint: "the human reaches the dropped name by an alias - move the alias to the kept name first",
+  });
+  await function_delete(f_name_drop);
+  let remaining = await functions_duplicates_baseline_write();
   let result = {
     kept: f_name_keep,
     dropped: f_name_drop,
     changed: others,
-    deleted,
+    remaining,
   };
   return result;
 }
