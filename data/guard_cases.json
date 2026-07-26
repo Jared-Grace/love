@@ -211,6 +211,8 @@
     { "command": "ls; git status", "decision": "allow", "why": "an all-trusted chain never reaches the split branch" },
     { "command": "for f in a b; do node scripts/ai.mjs nope $f; done", "decision": "silent", "why": "a ';' inside a loop separates parts of ONE command - shell structure words mean the command is left whole" },
     { "command": "ls | tail -4", "decision": "allow", "why": "a pipe is not a split point: its halves have no meaning apart" },
+    { "command": "ls; rm -rf /", "decision": "ask", "why": "one untrusted piece, but not one this branch may recommend running alone - only a dispatcher call is proposed for splitting, so everything else keeps the answer it had" },
+    { "command": "S=/etc; ls > $S/passwd", "decision": "silent", "why": "the second piece reads what the first set, so the pieces are not independent and splitting would not preserve them - a variable anywhere stops the proposal" },
     { "command": "git status", "decision": "allow", "why": "read-only git subcommand stays allowed - the floor catches only add/commit writes" },
 
     { "command": "ls -la f | awk '{print $5}'", "decision": "deny", "reason_includes": "never auto-trusted", "why": "awk in a pipe segment is refused (it can exec/write) and redirected to a trusted verb, so Claude self-corrects instead of prompting the human" },
