@@ -22,7 +22,8 @@ export function js_free_names_scoped(ast) {
       return false;
     }
     let nodes = js_identifier_nodes_bound_by(ast, candidate, null);
-    let any = not(list_empty_is(nodes));
+    let b = list_empty_is(nodes);
+    let any = not(b);
     return any;
   }
   let free = list_filter(names, free_is);
