@@ -116,7 +116,11 @@ export function app_code_lesson_expression_round_up() {
     ]);
     let v = ceil_code(decimal);
     html_div_cycle_code(rounds, ["", v, " is ", whole_up]);
-    html_div_cycle_code(rounds, ["", "Math.ceil", " always rounds up, never down"]);
+    html_div_cycle_code(rounds, [
+      "",
+      "Math.ceil",
+      " always rounds up, never down",
+    ]);
     let v2 = ceil_code(low_decimal);
     html_div_cycle_code(rounds, [
       "For example: ",
