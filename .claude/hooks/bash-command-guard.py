@@ -1016,6 +1016,11 @@ TIMEOUT_DURATION_RE = re.compile(r"^\d+(\.\d+)?[smhd]?$")
 # could fail would fail OPEN. A missing module raises here instead, loudly.
 from dispatcher_scripts import NODE_DISPATCHER_SCRIPTS
 
+# Also generated, from js/dispatcher_commands_fn_named.mjs; drift fails `q` via
+# dispatcher_commands_python_assert. The verb fold reads it to know when the
+# function being granted is the fourth word rather than the third.
+from dispatcher_commands import DISPATCHER_COMMANDS_FN_NAMED
+
 
 def dispatcher_script_is(word):
     """True when `word` (the second word of `node <script> <fn>`) names one of
@@ -1127,6 +1132,19 @@ def verb_of(words):
             and len(words) >= 3
             and not words[2].startswith("-")
         ):
+            # A handful of commands take the function they act on as their
+            # FOURTH word (DISPATCHER_COMMANDS_FN_NAMED). For those the third
+            # word is the same for every call, so a 3-word verb collapses them
+            # all together and a rule can only grant the command for every
+            # function at once - giving back exactly what the per-function
+            # grants exist to withhold. Folding one word further is what makes
+            # `<command> <fn>` grantable one function at a time.
+            if (
+                words[2] in DISPATCHER_COMMANDS_FN_NAMED
+                and len(words) >= 4
+                and not words[3].startswith("-")
+            ):
+                return f"{words[0]} {words[1]} {words[2]} {words[3]}"
             return f"{words[0]} {words[1]} {words[2]}"
         return f"{words[0]} {words[1]}"
     return words[0]
