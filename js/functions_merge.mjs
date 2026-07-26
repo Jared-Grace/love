@@ -1,3 +1,9 @@
+import { data_paths_mentioning } from "./data_paths_mentioning.mjs";
+import { duplicates_baseline_path } from "./duplicates_baseline_path.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { function_alias_keys } from "./function_alias_keys.mjs";
+import { function_delete } from "./function_delete.mjs";
+import { functions_duplicates_baseline_write } from "./functions_duplicates_baseline_write.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal_not_assert_json } from "./equal_not_assert_json.mjs";
 import { function_shape } from "./function_shape.mjs";
@@ -7,7 +13,6 @@ import { properties_get } from "./properties_get.mjs";
 import { list_filter_equal_not } from "./list_filter_equal_not.mjs";
 import { function_identifier_replace_named } from "./function_identifier_replace_named.mjs";
 import { function_auto } from "./function_auto.mjs";
-import { function_delete_unused } from "./function_delete_unused.mjs";
 export async function functions_merge(f_name_keep, f_name_drop) {
   "Collapse two functions that do one job under two names into one. Everything that reached for the dropped name is pointed at the kept name, and the dropped file is then removed only if nothing at all is left holding it.";
   "What makes this safe is not a reading of the two but a proof: both must come out to the same shape, meaning the body with the names that say only who wrote it taken away. Same shape is same work under two spellings, so refusing when the shapes differ is what keeps this from being a guess.";
