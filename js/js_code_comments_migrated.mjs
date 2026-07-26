@@ -1,3 +1,4 @@
+import { js_code_spans_replaced } from "./js_code_spans_replaced.mjs";
 import { js_bound_names } from "./js_bound_names.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { js_offset_inside_function_is } from "./js_offset_inside_function_is.mjs";
@@ -5,12 +6,7 @@ import { js_comments_get } from "./js_comments_get.mjs";
 import { js_comment_own_line_is } from "./js_comment_own_line_is.mjs";
 import { js_code_comment_statement_generic } from "./js_code_comment_statement_generic.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_slice } from "./text_slice.mjs";
-import { text_size } from "./text_size.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_parse } from "./js_parse.mjs";
 export function js_code_comments_migrated(code, f_names) {
   "The same source with every comment that had its line to itself turned into a statement holding the same words. Normalizing a file parses it and writes the tree back out, and comments live nowhere in a tree, so every run silently deletes them - this converts them first into something a tree can hold.";
