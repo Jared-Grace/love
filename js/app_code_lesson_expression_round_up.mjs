@@ -110,6 +110,14 @@ export function app_code_lesson_expression_round_up() {
       " is not a whole number",
     ]);
     let rounds = app_code_container_light_blue(root);
+    app_code_between_two_wholes(rounds, low_decimal, whole_text, whole_up);
+    html_div_cycle_code(rounds, [
+      "so ",
+      "Math.ceil",
+      " chooses ",
+      whole_up,
+      ", the bigger one",
+    ]);
     let v = ceil_code(decimal);
     html_div_cycle_code(rounds, ["", v, " is ", whole_up]);
     let v2 = ceil_code(low_decimal);
@@ -125,14 +133,6 @@ export function app_code_lesson_expression_round_up() {
       "",
       "Math.ceil",
       " gives the whole number above it",
-    ]);
-    app_code_between_two_wholes(rounds, low_decimal, whole_text, whole_up);
-    html_div_cycle_code(rounds, [
-      "so ",
-      "Math.ceil",
-      " chooses ",
-      whole_up,
-      ", the bigger one",
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
