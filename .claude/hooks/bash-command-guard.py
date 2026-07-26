@@ -2367,6 +2367,15 @@ def sandbox_path_near_miss_deny_reason():
 
 GIT_WRITE_COMMIT_SUBCOMMANDS = {"add", "commit"}
 
+# Subcommands that throw work away rather than record it. In a normal checkout
+# that is a personal undo; here it is not. Several Claudes and the human share
+# ONE working directory, so `git checkout .claude/settings.json` discards every
+# peer's uncommitted edit to that file along with your own, and neither you nor
+# the human approving the prompt can see what was in flight. That is what makes
+# a prompt the wrong answer and a deny the right one: the question "may I throw
+# away whatever other people have not committed yet?" has no informed approver.
+GIT_DISCARD_SUBCOMMANDS = {"checkout", "restore", "reset", "stash", "clean"}
+
 
 def find_git_commit_write(command):
     """If any statement in `command` is a bare `git add`/`git commit` - the
@@ -2388,6 +2397,8 @@ def find_git_commit_write(command):
     for words in split_statements(tokens):
         words = _strip_command_prefixes(words)
         if len(words) >= 2 and words[0] == "git" and words[1] in GIT_WRITE_COMMIT_SUBCOMMANDS:
+            return words[1]
+        if len(words) >= 2 and words[0] == "git" and words[1] in GIT_DISCARD_SUBCOMMANDS:
             return words[1]
     return None
 
