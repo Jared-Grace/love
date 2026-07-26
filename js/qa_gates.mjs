@@ -38,6 +38,7 @@ export function qa_gates() {
     permission_gate_run,
     permission_open_suffix_gate_run,
     function_open_name_gate_run,
+    claude_md_name_gate_run,
     permission_reachable_gate_run,
     permission_rule_probe_gate_run,
     permission_rule_file_gate_run,
