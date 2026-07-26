@@ -9,5 +9,6 @@ export async function ai_git_command_args(f_name, args_comma) {
   "change, and a claim missing its last argument is worse than no claim: it names";
   "a command that would not reproduce the commit.";
   let args = text_split_comma_or_empty(args_comma);
-  await ai_git_command_generic(f_name, args);
+  let result = await ai_git_command_generic(f_name, args);
+  return result;
 }
