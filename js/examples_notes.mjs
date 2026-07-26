@@ -24,6 +24,10 @@ export function examples_notes() {
       "the same selector, a different transform — the pair that builds a guard clause",
     example_return_argument_set_selected:
       "a second selector through the same seam — one that takes no arguments",
+    example_call_add_after_selected:
+      "call an existing function beside a selected statement — the call writes its own arguments",
+    example_call_add_before_selected:
+      "the same gap named from the other neighbour — the sibling verb",
     example_single_rejects_two:
       "refuse a 2-item list — a simple invariant guard",
     example_slot_set_rejects_statement: "the slot setter guarding its input",
