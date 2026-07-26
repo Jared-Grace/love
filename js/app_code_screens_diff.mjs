@@ -1,5 +1,5 @@
 import { file_read } from "./file_read.mjs";
-import { text_digits_mask } from "./text_digits_mask.mjs";
+import { app_code_screen_text_normalize } from "./app_code_screen_text_normalize.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,7 +25,7 @@ export async function app_code_screens_diff(baseline_path, current_path) {
   }
   function masked_of(record) {
     let text = property_get(record, "text");
-    let masked = text_digits_mask(text);
+    let masked = app_code_screen_text_normalize(text);
     return masked;
   }
   let baseline_map = {};
