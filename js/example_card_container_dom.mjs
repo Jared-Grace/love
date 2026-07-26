@@ -7,14 +7,15 @@ import { html_border } from "./html_border.mjs";
 import { app_shared_container_blue_medium_background_color } from "./app_shared_container_blue_medium_background_color.mjs";
 import { app_shared_container_blue_border_color } from "./app_shared_container_blue_border_color.mjs";
 ("The blue card surface every example sits on — the medium step of the graduated");
-("blue nesting (light outer frame -> medium example card), matching app_search.");
+("blue nesting (light outer frame -> medium example card), matching ",
+  app_search.name,
+  ".");
 export function example_card_container_dom(parent) {
   let card = html_div(parent);
-  html_style_background_color_set(
-    card,
-    app_shared_container_blue_medium_background_color(),
-  );
-  html_border(card, "1px", app_shared_container_blue_border_color());
+  let background = app_shared_container_blue_medium_background_color();
+  html_style_background_color_set(card, background);
+  let border_color = app_shared_container_blue_border_color();
+  html_border(card, "1px", border_color);
   html_border_radius(card, "8px");
   html_style_padding(card, "1.25rem");
   html_style_set(card, "margin", "1.5rem 0");
