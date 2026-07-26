@@ -16,7 +16,7 @@ export function app_g_typing_dots(container) {
     padding: "0.35em 0",
   });
   let delays = ["0s", "0.2s", "0.4s"];
-  function add(delay) {
+  function place_dot(delay) {
     let dot = html_div(row);
     let animation = text_combine_multiple([
       "g_typing_dot 1.4s ease-in-out ",
@@ -31,6 +31,6 @@ export function app_g_typing_dots(container) {
       animation,
     });
   }
-  each(delays, add);
+  each(delays, place_dot);
   return row;
 }
