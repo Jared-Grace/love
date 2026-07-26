@@ -20,6 +20,10 @@ export async function function_command_seams_reached(f_name) {
       list_add_if_not_includes(reached, node);
     }
   }
-  await visit_unique_async(f_name, function_imports_beyond_infrastructure, lambda);
+  await visit_unique_async(
+    f_name,
+    function_imports_beyond_infrastructure,
+    lambda,
+  );
   return reached;
 }
