@@ -3,7 +3,6 @@ import { app_bible_chapter_verse_open } from "./app_bible_chapter_verse_open.mjs
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
 import { ebible_chapter_codes_browser } from "./ebible_chapter_codes_browser.mjs";
-import { list_next_wrap } from "./list_next_wrap.mjs";
 export async function app_bible_chapter_change(
   context,
   chapter_code,
