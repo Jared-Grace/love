@@ -1,5 +1,5 @@
+import { html_style_flex } from "./html_style_flex.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_div } from "./html_div.mjs";
 export function html_bar_content(root) {
   let shell = html_div(root);
@@ -10,7 +10,7 @@ export function html_bar_content(root) {
     "box-sizing": "border-box",
   });
   let bar = html_div(shell);
-  html_style_set(bar, "flex", "0 0 auto");
+  html_style_flex(bar, "0 0 auto");
   let content = html_div(shell);
   html_style_assign(content, {
     flex: "1 1 auto",

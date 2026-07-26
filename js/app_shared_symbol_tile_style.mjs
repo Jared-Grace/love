@@ -1,8 +1,8 @@
-import { html_style_set } from "./html_style_set.mjs";
+import { html_style_line_height } from "./html_style_line_height.mjs";
 import { app_shared_symbol_tile_style_inner } from "./app_shared_symbol_tile_style_inner.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
 export function app_shared_symbol_tile_style(b) {
   app_shared_symbol_tile_style_inner(b);
   html_display_inline_block(b);
-  html_style_set(b, "line-height", 1);
+  html_style_line_height(b, 1);
 }

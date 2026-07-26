@@ -6,12 +6,16 @@ export async function functions_duplicates_report() {
   let groups = await functions_duplicates();
   for (let group of groups) {
     let names = property_get(group, "names");
+    let work = property_get(group, "work");
     let joined = list_join_comma(names);
-    console.log(names.length + "  " + joined);
+    let tag = work ? "         " : "constant ";
+    console.log(tag + names.length + "  " + joined);
   }
-  console.log("\ngroups " + groups.length);
+  let working = list_filter_property(groups, "work");
+  console.log("\ngroups " + groups.length + ", of them doing work " + working.length);
   let result = {
     groups: groups.length,
+    working: working.length,
   };
   return result;
 }

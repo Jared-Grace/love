@@ -1,6 +1,6 @@
+import { html_style_margin } from "./html_style_margin.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold_semi } from "./html_bold_semi.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
@@ -14,6 +14,6 @@ export function example_file_name_dom(parent, name) {
   html_bold_semi(caption);
   let color = app_shared_color_blue_dark();
   html_font_color_set(caption, color);
-  html_style_set(caption, "margin", "0.4rem 0 0.2rem");
+  html_style_margin(caption, "0.4rem 0 0.2rem");
   return caption;
 }
