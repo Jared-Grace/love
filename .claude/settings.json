@@ -96,6 +96,7 @@
       "Bash(node scripts/ai.mjs apps_names:*)",
       "Bash(node scripts/ai.mjs apps_node_only_gate_run:*)",
       "Bash(node scripts/ai.mjs app_dependency_paths_multiple:*)",
+      "Bash(node scripts/ai.mjs app_code_screens_crawl:*)",
       "Bash(node scripts/ai.mjs function_browser_guarded_is:*)",
       "Bash(node scripts/ai.mjs bible_interlinear_offline_upload:*)",
       "Bash(node scripts/ai.mjs data_identifiers_search:*)",
