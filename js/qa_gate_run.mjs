@@ -1,6 +1,6 @@
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
-import { qa_gate_timings_print } from "./qa_gate_timings_print.mjs";
+import { timings_print } from "./timings_print.mjs";
 import { qa_gates } from "./qa_gates.mjs";
 import { list_add } from "./list_add.mjs";
 ("The repo-wide correctness gate (alias `q`). Runs every gate in qa_gates(),");
@@ -26,7 +26,7 @@ export async function qa_gate_run() {
     };
     list_add(timings, timing);
   }
-  qa_gate_timings_print(timings);
+  timings_print(timings);
   if (failed.length > 0) {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }

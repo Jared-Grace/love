@@ -1,4 +1,5 @@
-import { app_shared_api_fn } from "./app_shared_api_fn.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
 import { list_property_exists_not_error } from "./list_property_exists_not_error.mjs";
 import { list_to_dictionary_property } from "./list_to_dictionary_property.mjs";
@@ -7,14 +8,15 @@ import { app_a_file_system_initialize } from "./app_a_file_system_initialize.mjs
 import { app_a } from "./app_a.mjs";
 import { storage_local_set } from "./storage_local_set.mjs";
 import { app_a_file_system_store } from "./app_a_file_system_store.mjs";
-import { app_a_download } from "./app_a_download.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
-  let r = await app_shared_api_fn({
-    fn: app_a_download,
+  ("The server runs the download, so its name is spelled rather than imported: importing");
+  ("it would pull a recursive walk of the repo folder into this browser bundle.");
+  let r = await app_shared_api({
+    f_name: fn_name("app_a_download"),
   });
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
