@@ -1,3 +1,4 @@
+import { function_is } from "./function_is.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
