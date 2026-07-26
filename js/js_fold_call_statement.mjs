@@ -1,10 +1,11 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join } from "./list_join.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 export function js_fold_call_statement(fn_name, arg_keys, output_name) {
-  "Brick 4a: build the statement that replaces a matched block — `let <output> = <fn_name>(<args>)`.";
+  ("Brick 4a: build the statement that replaces a matched block — `let <output> = <",
+    fn_name.name,
+    ">(<args>)`.");
   ("arg_keys are canonical unparses (identifier names or literal source), so they compose straight");
   ("into valid source; parse it back to an AST statement node.");
   arguments_assert(arguments, 3);

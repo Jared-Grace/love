@@ -1,4 +1,3 @@
-import { equal } from "./equal.mjs";
 import { lists_sizes_equal_pair } from "./lists_sizes_equal_pair.mjs";
 import { not } from "./not.mjs";
 import { each_pair_min } from "./each_pair_min.mjs";

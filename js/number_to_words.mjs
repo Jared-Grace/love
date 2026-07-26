@@ -1,4 +1,7 @@
-import { floor } from "./floor.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { mod } from "./mod.mjs";
@@ -40,27 +43,32 @@ export function number_to_words(num) {
     "ninety",
   ];
   let g = ["", "thousand", "million", "billion", "trillion"];
-  if (num === 0) {
+  if (equal(num, 0)) {
     let v = "zero";
     return v;
   }
   let words = "";
   let group = 0;
-  while (num > 0) {
+  while (greater_than(num, 0)) {
     let n = mod(num, 1000);
-    if (n !== 0) {
+    if (not_equal(n, 0)) {
       let str = "";
-      if (mod(n, 100) < 20) {
+      let a2 = mod(n, 100);
+      if (less_than(a2, 20)) {
         str = a[mod(n, 100)];
-        n = Math.floor(divide(n, 100));
+        let divided = divide(n, 100);
+        n = Math.floor(divided);
       } else {
+        let left = mod(n, 100);
+        let right = mod(n, 10);
         str = text_combine(
-          b[subtract(mod(n, 100), mod(n, 10))],
+          b[subtract(left, right)],
           mod(n, 10) ? text_combine("-", a[mod(n, 10)]) : "",
         );
-        n = Math.floor(divide(n, 100));
+        let divided2 = divide(n, 100);
+        n = Math.floor(divided2);
       }
-      if (n > 0) {
+      if (greater_than(n, 0)) {
         str = text_combine_multiple([
           a[n],
           " hundred",
@@ -69,7 +77,8 @@ export function number_to_words(num) {
       }
       words = text_combine_multiple([str, " ", g[group], " ", words]);
     }
-    num = Math.floor(divide(num, 1000));
+    let divided3 = divide(num, 1000);
+    num = Math.floor(divided3);
     group++;
   }
   let v2 = words.trim().replace(/\s+/g, " ");

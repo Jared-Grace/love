@@ -1,4 +1,3 @@
-import { add } from "./add.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_add } from "./list_add.mjs";
 export async function list_adder_group_async(lambda) {

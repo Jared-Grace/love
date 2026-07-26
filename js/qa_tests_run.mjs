@@ -3,7 +3,6 @@ import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_asy
 import { list_map } from "./list_map.mjs";
 import { catch_call_later_async } from "./catch_call_later_async.mjs";
 import { list_add } from "./list_add.mjs";
-import { error } from "./error.mjs";
 export async function qa_tests_run(fns, name_get) {
   let errors = [];
   function lambda(item) {

@@ -23,6 +23,8 @@ export function app_g_npc_bubble(npc, overlay) {
   let component = html_img_retry(container, c_src);
   html_display_block(component);
   html_style_set(component, "margin", "0 auto");
+  html_style_set(component, "width", "128px");
+  html_style_set(component, "height", "128px");
   let name_map = {
     [g_gender_female()]: "#a3006e",
     [g_gender_male()]: "#1a3aa0",
