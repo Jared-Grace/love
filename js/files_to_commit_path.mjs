@@ -3,7 +3,7 @@ import { null_is } from "./null_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { files_to_commit_folder } from "./files_to_commit_folder.mjs";
 import { process_session_or_null } from "./process_session_or_null.mjs";
-export function files_written_path() {
+export function files_to_commit_path() {
   "One note per conversation, and that is the whole point of it. Several of us";
   "change files in this one directory at the same time, so a single shared note";
   "would hand my commit a peer's work and label it as mine, which is the very";
