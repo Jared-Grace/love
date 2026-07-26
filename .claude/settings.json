@@ -162,6 +162,7 @@
       "Bash(node scripts/ai.mjs function_auto_multiple:*)",
       "Bash(node scripts/ai.mjs function_delete_unused:*)",
       "Bash(node scripts/ai.mjs function_imports_gate_run:*)",
+      "Bash(node scripts/ai.mjs functions_imports_missing:*)",
       "Bash(node scripts/ai.mjs functions_callers_inside_dependencies:*)",
       "Bash(node scripts/ai.mjs functions_rename_if_starts_with:*)",
       "Bash(node scripts/ai.mjs functions_node_types_count:*)",
