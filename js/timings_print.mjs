@@ -3,7 +3,7 @@ import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 import { log } from "./log.mjs";
-export function qa_gate_timings_print(timings) {
+export function timings_print(timings) {
   "Slowest first, because the only question anyone asks of these numbers is which";
   "gate is eating the wait. A gate that quietly grows from seconds to minutes is";
   "invisible in a pass-or-fail list, and the whole suite stops finishing before";
@@ -15,5 +15,5 @@ export function qa_gate_timings_print(timings) {
   }
   list_sort_number_mapper(sorted, lambda);
   list_reverse(sorted);
-  log(qa_gate_timings_print.name, sorted);
+  log(timings_print.name, sorted);
 }

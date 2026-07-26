@@ -1,5 +1,5 @@
 import { app_code_screens_records } from "./app_code_screens_records.mjs";
-import { file_write } from "./file_write.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_code_screens_manifest_write(url_prefix, path) {
@@ -7,7 +7,7 @@ export async function app_code_screens_manifest_write(url_prefix, path) {
   let collected = await app_code_screens_records(url_prefix);
   let records = property_get(collected, "records");
   let json = JSON.stringify(records, null, 2);
-  await file_write(path, json);
+  await file_overwrite(path, json);
   let screens = list_size(records);
   let result = {
     screens,

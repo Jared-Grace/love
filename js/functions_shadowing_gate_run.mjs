@@ -1,3 +1,4 @@
+import { functions_shadowing_baseline_write } from "./functions_shadowing_baseline_write.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { functions_shadowing_versus_baseline } from "./functions_shadowing_versus_baseline.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -15,21 +16,21 @@ export async function functions_shadowing_gate_run() {
   shadowing_entries_print(stale, "GONE   ");
   let any_added = greater_than(added.length, 0);
   if (any_added) {
-    let message =
+    let message_added =
       "shadowing gate: " +
       added.length +
       " functions bind a name that shadows another — rename the inner one, or if it was meant to be the outer name, that is the bug";
-    throw new Error(message);
+    throw new Error(message_added);
   }
   let any_stale = greater_than(stale.length, 0);
   if (any_stale) {
-    let message =
+    let message_stale =
       "shadowing gate: " +
       stale.length +
       " baseline entries no longer shadow anything — rerun " +
-      "functions_shadowing_baseline_write" +
+      functions_shadowing_baseline_write.name +
       " to shrink data/shadowing_baseline.json";
-    throw new Error(message);
+    throw new Error(message_stale);
   }
   let result = {
     added: 0,

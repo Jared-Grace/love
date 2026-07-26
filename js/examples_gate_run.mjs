@@ -9,8 +9,13 @@ export async function examples_gate_run() {
   let pass = 0;
   let fail = 0;
   let skip = 0;
+  let timings = [];
   for (let e of examples) {
+    let started = date_now_milliseconds();
     let result = await example_check(e);
+    let milliseconds = date_milliseconds_since(started);
+    let timing = { name: e.title, milliseconds };
+    list_add(timings, timing);
     if (result === "pass") {
       pass++;
     } else if (result === "fail") {
@@ -20,6 +25,7 @@ export async function examples_gate_run() {
     }
     console.log(result.toUpperCase().padEnd(6) + e.title);
   }
+  timings_print(timings);
   console.log("\npass " + pass + "  fail " + fail + "  skip " + skip);
   if (fail > 0) {
     throw new Error("examples gate: " + fail + " failed");
