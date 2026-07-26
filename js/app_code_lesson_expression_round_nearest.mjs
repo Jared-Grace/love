@@ -16,8 +16,7 @@ import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_first_decimal_digit_line } from "./app_code_first_decimal_digit_line.mjs";
-import { app_code_match_color } from "./app_code_match_color.mjs";
-import { app_code_match_color_alt } from "./app_code_match_color_alt.mjs";
+import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_nearest() {
@@ -90,8 +89,9 @@ export function app_code_lesson_expression_round_nearest() {
     "the whole part avoids 3 and 4 so it never equals a highlighted first digit (3 or 4 below), which would make the number look like it repeats a digit";
     let whole = list_random_item([2, 5, 6, 7]);
     let whole_text = text_to(whole);
-    let color_low = app_code_match_color();
-    let color_high = app_code_match_color_alt();
+    ("the two highlighted first digits get two of the shared categorical chip colours (amber and blue) so digit colouring is chosen the same way as everywhere else, and the two digits read as clearly distinct");
+    let color_low = app_code_lesson_chip_color(3);
+    let color_high = app_code_lesson_chip_color(2);
     let low_digit = integer_random(1, 4);
     let t3 = text_to(low_digit);
     let low_decimal = text_combine_multiple([whole_text, ".", t3]);

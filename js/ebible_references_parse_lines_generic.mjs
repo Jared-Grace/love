@@ -1,6 +1,6 @@
 import { object_assign } from "./object_assign.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { list_adder } from "./list_adder.mjs";
 import { each_pair } from "./each_pair.mjs";
 import { each_range_from } from "./each_range_from.mjs";
@@ -50,7 +50,7 @@ export async function ebible_references_parse_lines_generic(
     let verse_number = property_get(v, "verse_number");
     let chapter_code = property_get(v, "chapter_code");
     let bible_folder = property_get(v, "bible_folder");
-    let v3 = await catch_ignore_async(verse_get_lambda);
+    let v3 = await catch_null_async(verse_get_lambda);
     async function verse_get_lambda() {
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
