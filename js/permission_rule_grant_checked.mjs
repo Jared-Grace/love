@@ -39,7 +39,8 @@ export async function permission_rule_grant_checked(unaliased) {
     return refused;
   }
   ("the repo-shared settings file rather than the per-machine one, so peers and the gates see the grant");
-  let settings_path = list_first(permission_settings_paths());
+  let list = permission_settings_paths();
+  let settings_path = list_first(list);
   let settings = await file_read_json(settings_path);
   let permissions = property_get(settings, "permissions");
   let allow = property_get(permissions, "allow");

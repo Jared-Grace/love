@@ -2099,7 +2099,40 @@ def find_python_eval(command):
         words = _strip_command_prefixes(words)
         if words and words[0] in PYTHON_PROGRAMS and "-c" in words[1:]:
             return True
+        if words and words[0] in STDIN_PROGRAMS and "-" in words[1:]:
+            return True
     return False
+
+
+# An interpreter reads its program from standard input in three spellings:
+# an explicit `-` in place of a script name, a heredoc (`<<`), and a
+# herestring (`<<<`). All three are `-c` with the code moved off the argument
+# list, so the floor has to cover them or it only blocks the spelling it
+# happens to name. This was a live bypass, not a theoretical one:
+# `python3 - <<PY ... PY` was used to rewrite a repo file and reached the
+# human as a prompt, because `<<` makes the command unparseable and an
+# unparseable command was reported as "nothing found here".
+STDIN_PROGRAMS = PYTHON_PROGRAMS + ("node",)
+
+STDIN_PROGRAM_TEXT = re.compile(
+    r"(?:^|[;&|]|\bxargs\b|\btimeout\s+\S+)\s*"
+    r"(?:python3?|python2|node)\b"
+    r"[^;&|]*?(?:<<<|<<|(?<=\s)-(?=\s|$))"
+)
+
+
+def find_stdin_program_unparsed(command):
+    """True iff a command the tokenizer gave up on nonetheless shows an
+    interpreter being handed its program on standard input.
+
+    It is deliberately a text match, and deliberately reachable only after
+    Unsupported. A command that parses is answered by tokens, where a quoted
+    'python3 <<EOF' inside a grep pattern is plainly not an invocation; this
+    fallback sees no such difference. Restricting it to what already failed to
+    parse keeps that bluntness away from every command that could be read
+    properly, and what it does reach was heading for a human prompt anyway, so
+    the worst it can do is turn one prompt into a message Claude can act on."""
+    return bool(STDIN_PROGRAM_TEXT.search(command))
 
 
 PYTHON_EVAL_DENY_REASON = (
