@@ -8,7 +8,7 @@ export async function markers_gate_run() {
   let marker_names = markers_names();
   let unresolved = await markers_unresolved(marker_names);
   for (let one of unresolved) {
-    let mark_name = property_get(one, "mark_name");
+    let mark_name = property_get(one, "marker");
     let missing = property_get(one, "missing");
     console.log("unresolved  " + mark_name + "  names no live  " + missing);
   }
