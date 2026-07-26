@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
