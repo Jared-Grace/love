@@ -2,7 +2,7 @@ import { g_verify_loop_check_line } from "./g_verify_loop_check_line.mjs";
 import { property_get } from "./property_get.mjs";
 import { firebase_prod_asset_url } from "./firebase_prod_asset_url.mjs";
 export async function g_verify_books_open_bible_chrome() {
-  ("Open each active sermon-loop book's CURRENT verse (the latest-written one, awaiting approval) in its own tab, all in ONE new Chrome window. Reads the live loop state, deep-links the PROD bible app per book (bible.html#c=<chapter code>,v=<verse> — the hash pairs are COMMA-separated), and spawns google-chrome --new-window with every URL. A one-command review shortcut to eyeball all in-flight passages at once.");
+  "Open each active sermon-loop book's CURRENT verse (the latest-written one, awaiting approval) in its own tab, all in ONE new Chrome window. Reads the live loop state, deep-links the PROD bible app per book (bible.html#c=<chapter code>,v=<verse> — the hash pairs are COMMA-separated), and spawns google-chrome --new-window with every URL. A one-command review shortcut to eyeball all in-flight passages at once.";
   let state = await g_verify_loop_check_line();
   let books = property_get(state, "books");
   let base = firebase_prod_asset_url("bible.html");
