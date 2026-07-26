@@ -8,9 +8,9 @@ export async function markers_gate_run() {
   let marker_names = markers_names();
   let unresolved = await markers_unresolved(marker_names);
   for (let one of unresolved) {
-    let marker = property_get(one, "marker");
+    let mark_name = property_get(one, "mark_name");
     let missing = property_get(one, "missing");
-    console.log("unresolved  " + marker + "  names no live  " + missing);
+    console.log("unresolved  " + mark_name + "  names no live  " + missing);
   }
   console.log("marker defects: " + unresolved.length);
   if (list_empty_not_is(unresolved)) {
