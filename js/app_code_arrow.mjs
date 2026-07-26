@@ -15,7 +15,7 @@ export function app_code_arrow(parent) {
   html_font_color_set(arrow, color);
   ("flex + line-height 0 makes the wrapper exactly as tall as the drawing, so the row centres it against the chips and gains no extra height");
   html_display_flex(arrow);
-  html_style_set(arrow, "align-items", "center");
-  html_style_set(arrow, "line-height", "0");
+  html_align_items_center(arrow);
+  html_style_line_height(arrow, "0");
   return arrow;
 }
