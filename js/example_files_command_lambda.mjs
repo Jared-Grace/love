@@ -14,13 +14,7 @@ import { js_identifier_param_new_dir } from "./js_identifier_param_new_dir.mjs";
 import { function_params_delete } from "./function_params_delete.mjs";
 import { js_identifier_param_delete_dir } from "./js_identifier_param_delete_dir.mjs";
 ("Map a multi-file example's fn to a directory transform (dir)=>void run in a sandbox");
-("temp dir. ",
-  function_rename.name,
-  " / ",
-  function_delete_unused.name,
-  " / ",
-  function_copy.name,
-  " are repo-wide/ambient,");
+("temp dir. The repo-wide renaming, unused-deleting and copying commands are ambient,");
 ("so the gate proves their CROSS-FILE core via the hermetic js_identifier(s)_*_dir cores.");
 export function example_files_command_lambda(fn_name, args) {
   if (equal(fn_name, function_rename.name)) {

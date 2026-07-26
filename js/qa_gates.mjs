@@ -1,3 +1,4 @@
+import { function_top_level_comment_gate_run } from "./function_top_level_comment_gate_run.mjs";
 import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
 import { examples_notes_gate_run } from "./examples_notes_gate_run.mjs";
 import { claude_md_name_gate_run } from "./claude_md_name_gate_run.mjs";
@@ -53,7 +54,9 @@ export function qa_gates() {
     dispatcher_scripts_python_assert,
     function_worker_pool_run_try,
     function_imports_gate_run,
+    function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
+    command_seams_agree_gate_run,
     bundle_size_gate_run,
     examples_orphan_gate_run,
     examples_notes_gate_run,
