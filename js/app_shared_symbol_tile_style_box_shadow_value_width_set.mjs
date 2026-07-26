@@ -9,5 +9,5 @@ export function app_shared_symbol_tile_style_box_shadow_value_width_set(
     color_box_shadow,
     width,
   );
-  html_style_set(component, "box-shadow", style_value);
+  html_box_shadow_set(component, style_value);
 }

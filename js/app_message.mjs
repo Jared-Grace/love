@@ -66,9 +66,8 @@ export async function app_message(context) {
     function lambda(message) {
       message_display("left", message);
       let right = message_display("right", "(Loading...)");
-      html_style_set(
+      html_style_background_color_set(
         right,
-        "background-color",
         app_shared_button_uncolored_background_color(),
       );
       async function next() {
