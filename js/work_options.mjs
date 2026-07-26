@@ -1,6 +1,5 @@
 import { work_items } from "./work_items.mjs";
 import { work_item_print } from "./work_item_print.mjs";
-import { list_first } from "./list_first.mjs";
 export async function work_options() {
   "Everything a Claude is allowed to start unasked, printed together. Call this instead of ending your turn to ask what to do: a permitted answer always exists, so the asking costs the human a reply and buys nothing.";
   "A permission set, not a queue. It hands back every option rather than a winner because ranking them here would freeze one guess, made far from the work and long before it, into a constant. The Claude reading this list just touched the code and knows which duplication is hot and which shape of edit it kept repeating by hand, and that knowledge cannot reach a sort written months earlier. So the list carries the criterion and the caller carries the choice.";

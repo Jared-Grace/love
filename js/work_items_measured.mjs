@@ -3,7 +3,7 @@ import { memory_orphans } from "./memory_orphans.mjs";
 import { literal_duplicates } from "./literal_duplicates.mjs";
 import { list_add } from "./list_add.mjs";
 export async function work_items_measured() {
-  "Work that a read-only check has already proved is there, each entry carrying the count that proves it. These come before the standing directions because a count means the item is real today and has a finish line, where a direction is true always and finishes never.";
+  "Work a read-only check has already proved is there, each entry carrying the count that proves it. A count is evidence offered to the caller's judgement, not a claim to go first: it says the item is real today and has a finish line, which a standing direction never has, and says nothing about whether clearing it is worth the budget.";
   "Left in source order on purpose, not sorted by count. The counts measure different kinds of thing, so ordering by them would rank a large pile of small items over a small pile of large ones and call that a priority.";
   let items = [];
   function found(count, title, why, how) {
