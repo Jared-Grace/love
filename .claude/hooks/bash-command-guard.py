@@ -2139,7 +2139,10 @@ def find_stdin_program_unparsed(command):
 
 
 PYTHON_EVAL_DENY_REASON = (
-    "Raw `python -c` can't be approved here - it's arbitrary code from the "
+    "Raw `python -c` can't be approved here - nor the same code handed to "
+    "python or node on standard input instead (`python3 - <<PY`, `node -`, "
+    "`python3 <<< '...'`), which is the same thing with the script moved off "
+    "the argument list. It's arbitrary code from the "
     "command line, the exact analog of `node -e` (floored the same way): it can "
     "shell out, write files, and reach the network, so it's never auto-trusted. "
     "Three supported paths instead:\n"
