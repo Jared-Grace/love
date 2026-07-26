@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 export async function indexeddb_get_all_backend(db_get, store) {
   let db = await db_get();
   let tx = db.transaction(store, "readonly");
