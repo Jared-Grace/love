@@ -1,7 +1,7 @@
 import { qa_commit_verdicts } from "./qa_commit_verdicts.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { qa_snapshot_ensure } from "./qa_snapshot_ensure.mjs";
-import { qa_commit_gate_told } from "./qa_commit_gate_told.mjs";
+import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
 import { qa_commit_verdicts_path } from "./qa_commit_verdicts_path.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function qa_commit_gate_run_at(commit) {
@@ -19,7 +19,7 @@ export async function qa_commit_gate_run_at(commit) {
     return r;
   }
   let folder = await qa_snapshot_ensure(commit);
-  let told = await qa_commit_gate_told(folder);
+  let told = await qa_snapshot_gate_told(folder);
   let path = qa_commit_verdicts_path();
   verdicts[commit] = told;
   await file_overwrite_json(path, verdicts);
