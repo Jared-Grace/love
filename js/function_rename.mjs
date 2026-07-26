@@ -9,5 +9,7 @@ export async function function_rename(f_name_before, f_name_after) {
   });
   await function_rename_check(f_name_after);
   f_name_before = await function_rename_inner(f_name_before, f_name_after);
+  ("aliases already follow a rename; memory notes are the other named referrer, so marked pointers follow too and bare mentions are reported for a human to weigh");
+  await memory_fn_references_rename_report(f_name_before, f_name_after);
   return f_name_before;
 }

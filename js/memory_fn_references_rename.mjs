@@ -27,7 +27,8 @@ export async function memory_fn_references_rename(before, after) {
     let path = path_join([folder, name]);
     let text = await file_read(path);
     let updated = text.replace(marked, replacement);
-    let changed = not(equal(text, updated));
+    let b = equal(text, updated);
+    let changed = not(b);
     if (changed) {
       await file_overwrite(path, updated);
       let one = {
