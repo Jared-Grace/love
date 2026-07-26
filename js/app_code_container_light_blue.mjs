@@ -13,7 +13,7 @@ export function app_code_container_light_blue(parent) {
   let c = html_div(parent);
   let column = app_shared_column_content_max_width();
   ("width caps at the column on a wide screen and pulls in by the outer gap on each side on a narrow one, so the card never hugs the screen edge; auto side-margins center it. Inner padding is EQUAL on all four sides so the content sits the same distance from every border");
-  let outer = "1.2em";
+  let outer = app_shared_spaced_gap();
   let inner = "0.5em";
   let width = text_combine_multiple([
     "min(",

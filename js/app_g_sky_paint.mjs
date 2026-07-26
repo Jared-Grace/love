@@ -1,3 +1,4 @@
+import { html_style_background } from "./html_style_background.mjs";
 import { g_phase_color } from "./g_phase_color.mjs";
 import { g_phase_backdrop } from "./g_phase_backdrop.mjs";
 import { g_sky_tone_write } from "./g_sky_tone_write.mjs";
@@ -10,7 +11,7 @@ export function app_g_sky_paint(element, phase, seed) {
     " references it). splitting them is what keeps CHARACTERS bright and visible while the GROUND goes dark. also stashes the phase on the element so a drift can resume from the LIVE value");
   element.sky_phase = phase;
   let style_value = g_phase_color(phase, seed);
-  html_style_set(element, "background", style_value);
+  html_style_background(element, style_value);
   g_sky_tone_write(phase);
   let style_value2 = g_phase_backdrop(phase);
   html_style_set(element.ground, "backdrop-filter", style_value2);
