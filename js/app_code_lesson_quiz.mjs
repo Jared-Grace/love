@@ -15,7 +15,7 @@ import { list_index_last_is } from "./list_index_last_is.mjs";
 import { app_code_quiz_index_transform } from "./app_code_quiz_index_transform.mjs";
 import { add_1 } from "./add_1.mjs";
 import { subtract_1 } from "./subtract_1.mjs";
-import { at_least_1 } from "./at_least_1.mjs";
+import { greater_than_equal_1 } from "./greater_than_equal_1.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_visibility_hidden_multiple } from "./html_visibility_hidden_multiple.mjs";
@@ -115,7 +115,7 @@ export function app_code_lesson_quiz(
   if (not(qli)) {
     app_code_button_skip_lesson(context, parent_container);
   }
-  if (at_least_1(quiz_index)) {
+  if (greater_than_equal_1(quiz_index)) {
     let on_back = function lambda() {
       app_code_quiz_index_transform(context, quizzes, subtract_1);
       refresh();
