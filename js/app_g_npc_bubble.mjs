@@ -34,7 +34,7 @@ export function app_g_npc_bubble(npc, overlay) {
   let name = text_combine(name_npc, " says:");
   let label = app_g_p_text(container, name);
   html_font_color_set(label, name_color);
-  html_style_set(label, "margin-top", "-0.4em");
+  html_style_margin_top(label, "-0.4em");
   html_bold_mild(label);
   return container;
 }

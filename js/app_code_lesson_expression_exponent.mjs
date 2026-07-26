@@ -120,7 +120,7 @@ export function app_code_lesson_expression_exponent() {
     let c = app_code_container_light_blue(root);
     let star = js_operator_asterisk_symbol();
     let power_separator = text_combine_multiple([" ", symbol, " "]);
-    "two worked examples, each a base and a power - four colored numbers in all - given four distinct familiar colours (red, green, blue, amber) so every number is easy to tell apart and no number wears a colour here and another colour there";
+    ("two worked examples, each a base and a power - four colored numbers in all - given four distinct familiar colours (red, green, blue, amber) so every number is easy to tell apart and no number wears a colour here and another colour there");
     let base_one = app_code_lesson_chip_color(0);
     let power_one = app_code_lesson_chip_color(1);
     let base_two = app_code_lesson_chip_color(2);
@@ -168,7 +168,11 @@ export function app_code_lesson_expression_exponent() {
       let grid = html_span(parent);
       html_display_set(grid, "inline-grid");
       html_style_set(grid, "grid-template-rows", "auto auto");
-      html_style_set(grid, "grid-template-columns", text_combine_multiple(["repeat(", text_to(column_count), ", auto)"]));
+      html_style_set(
+        grid,
+        "grid-template-columns",
+        text_combine_multiple(["repeat(", text_to(column_count), ", auto)"]),
+      );
       html_style_set(grid, "align-items", "center");
       html_style_set(grid, "justify-items", "center");
       html_style_set(grid, "column-gap", "0.35em");
@@ -178,7 +182,7 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(pill, "grid-row", "2");
       html_style_set(pill, "grid-column", "1 / -1");
       html_style_set(pill, "background", "black");
-      html_style_set(pill, "border-radius", "0.5em");
+      html_border_radius(pill, "0.5em");
       html_style_set(pill, "align-self", "stretch");
       html_style_set(pill, "justify-self", "stretch");
       function spacer(column) {
@@ -224,7 +228,9 @@ export function app_code_lesson_expression_exponent() {
       "You already know how to multiply numbers like ",
       "2 * 3 * 4",
     ]);
-    html_div_cycle_code(c, ["What if the numbers you multiply together are all the same number?"]);
+    html_div_cycle_code(c, [
+      "What if the numbers you multiply together are all the same number?",
+    ]);
     let like = html_div(c);
     html_span_text(like, "Like ");
     product_expression(like, 2, base_one, power_one, 3);
