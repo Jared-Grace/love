@@ -5,7 +5,7 @@ import { permission_grant_refusals } from "./permission_grant_refusals.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_add } from "./list_add.mjs";
 import { permission_grant_names_write } from "./permission_grant_names_write.mjs";
-import { permission_settings_allow_write } from "./permission_settings_allow_write.mjs";
+import { permission_settings_allow_write_from } from "./permission_settings_allow_write_from.mjs";
 export async function permission_grant_add(unaliased) {
   "let Claude run this one function without asking first, refusing outright if it is a function that must never be handed a standing approval";
   "the safety check runs here, before the rule is written, rather than only afterwards in the gate. Both read the same answers, so neither is stricter than the other; what changes is that a grant nobody would approve is now impossible to write rather than merely reported once it exists.";
@@ -29,7 +29,7 @@ export async function permission_grant_add(unaliased) {
   });
   list_add(names, unaliased);
   await permission_grant_names_write(names);
-  let written = await permission_settings_allow_write();
+  let written = await permission_settings_allow_write_from(names);
   let allow = property_get(written, "allow");
   let report = {
     name: unaliased,
