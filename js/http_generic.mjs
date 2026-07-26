@@ -1,4 +1,4 @@
-import { sleep } from "./sleep.mjs";
+import { equal } from "./equal.mjs";
 import { text_starts_with_https_prefix } from "./text_starts_with_https_prefix.mjs";
 import { ternary } from "./ternary.mjs";
 import { property_get } from "./property_get.mjs";
@@ -38,7 +38,9 @@ export async function http_generic(url, options) {
         });
       }
       async function attempt() {
-        ("a stalled dev HTTP/1.1 connection must not hang forever: a fetch with no ceiling never settles, so html_loading's finally never runs and the shared loading overlay stays up permanently. abort after a ceiling (covering both the fetch and the body read) so the socket frees and rejects; retry lets a fresh connection succeed — which is exactly why a manual reload 'fixes' it today");
+        ("a stalled dev HTTP/1.1 connection must not hang forever: a fetch with no ceiling never settles, so ",
+          html_loading.name,
+          "'s finally never runs and the shared loading overlay stays up permanently. abort after a ceiling (covering both the fetch and the body read) so the socket frees and rejects; retry lets a fresh connection succeed — which is exactly why a manual reload 'fixes' it today");
         let controller = new AbortController();
         property_set(r, "signal", controller.signal);
         function abort() {
@@ -87,7 +89,8 @@ export async function http_generic(url, options) {
         let statusCode = property_get(res, "statusCode");
         let d = divide(statusCode, 100);
         let rounded = round(d);
-        assert_json(rounded === 2, {
+        let b2 = equal(rounded, 2);
+        assert_json(b2, {
           url,
           statusCode,
         });
