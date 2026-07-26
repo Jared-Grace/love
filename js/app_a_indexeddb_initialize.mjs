@@ -1,9 +1,12 @@
-import { app_a } from "./app_a.mjs";
+import { file_read } from "./file_read.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
 import { not } from "./not.mjs";
 export async function app_a_indexeddb_initialize() {
   "The database name is spelled, not imported: measured 2026-07-26, a name-only import of";
-  "the app entry point costs the g bundle 410 KiB, since file_read reaches this everywhere.";
+  ("the app entry point costs the g bundle 410 KiB, since ",
+    file_read.name,
+    " reaches this everywhere.");
   let db_name = fn_name("app_a");
   let store_files = "files";
   let version = 1;
