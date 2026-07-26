@@ -7,8 +7,8 @@ import { js_unparse_inner } from "./js_unparse_inner.mjs";
 import { promise_not_is } from "./promise_not_is.mjs";
 import { error } from "./error.mjs";
 export function js_unparse(ast) {
-  let a2 = promise_not_is(ast);
-  if (not(a2)) {
+  let a = promise_not_is(ast);
+  if (not(a)) {
     error();
   }
   let a3 = js_visit_filter(ast);
