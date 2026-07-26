@@ -1,3 +1,4 @@
+import { command_seams_agree_gate_run } from "./command_seams_agree_gate_run.mjs";
 import { function_top_level_comment_gate_run } from "./function_top_level_comment_gate_run.mjs";
 import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
 import { examples_notes_gate_run } from "./examples_notes_gate_run.mjs";
