@@ -16,7 +16,6 @@ import { html_div } from "./html_div.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_first_decimal_digit_line } from "./app_code_first_decimal_digit_line.mjs";
-import { app_code_decimal_spaced } from "./app_code_decimal_spaced.mjs";
 import { app_code_lesson_chip_color } from "./app_code_lesson_chip_color.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -116,9 +115,10 @@ export function app_code_lesson_expression_round_nearest() {
     ("concrete first: two worked examples with DIFFERENT first digits in different colours, then the knife-edge pair rounding down then up, THEN the general rule, and the one-line takeaway LAST");
     let rule = app_code_container_light_blue(root);
     function rounds_line(fraction_text, middle_text, result_text) {
-      "a spaced decimal, then the rounds-to prose, then the whole-number result as a code tile";
+      "a plain tight decimal number, then the rounds-to prose, then the whole-number result as a code tile";
       let line = html_div(rule);
-      app_code_decimal_spaced(line, whole_text, fraction_text, null);
+      let number = text_combine_multiple([whole_text, ".", fraction_text]);
+      html_span_text_code_dark(line, number);
       html_span_text(line, middle_text);
       html_span_text_code_dark(line, result_text);
     }
