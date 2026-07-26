@@ -1,10 +1,13 @@
+import { log } from "./log.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
+import { qa_gate_timings_print } from "./qa_gate_timings_print.mjs";
 import { qa_gates } from "./qa_gates.mjs";
 import { list_add } from "./list_add.mjs";
-
-"The repo-wide correctness gate (alias `q`). Runs every gate in qa_gates(),";
-"sequentially so their output stays readable, and keeps going after a";
-"failure so one red gate never hides another. Throws at the end if any";
-"gate failed, so the r.mjs seam exits nonzero.";
+("The repo-wide correctness gate (alias `q`). Runs every gate in qa_gates(),");
+("sequentially so their output stays readable, and keeps going after a");
+("failure so one red gate never hides another. Throws at the end if any");
+("gate failed, so the r.mjs seam exits nonzero.");
 export async function qa_gate_run() {
   let failed = [];
   let timings = [];
@@ -18,7 +21,10 @@ export async function qa_gate_run() {
       console.log("GATE FAILED  " + gate.name + ": " + e.message);
     }
     let milliseconds = date_milliseconds_since(started);
-    let timing = { name: gate.name, milliseconds };
+    let timing = {
+      name: gate.name,
+      milliseconds,
+    };
     list_add(timings, timing);
   }
   qa_gate_timings_print(timings);
@@ -26,5 +32,9 @@ export async function qa_gate_run() {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
-  return { gates: qa_gates().length, failed: 0, timings };
+  return {
+    gates: qa_gates().length,
+    failed: 0,
+    timings,
+  };
 }
