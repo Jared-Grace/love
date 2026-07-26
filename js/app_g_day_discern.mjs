@@ -21,7 +21,12 @@ export function app_g_day_discern(div_map) {
     let prayer = property_get(player, "prayer");
     property_set(prayer, "conversation", true);
     await app_g_player_save(player);
-    app_g_day_target_highlight(div_map, target);
+    let previous = property_get(state, "reticle");
+    if (previous) {
+      html_remove(previous);
+    }
+    let reticle = app_g_day_target_highlight(div_map, target);
+    property_set(state, "reticle", reticle);
     await app_g_day_guide_show(div_map);
   }
   let delay = list_random_item([4000, 5000, 6000, 7000]);

@@ -8,6 +8,7 @@ export function app_g_day_state() {
     talkable: null,
     target: null,
     guide: null,
+    reticle: null,
   });
   return state;
 }
