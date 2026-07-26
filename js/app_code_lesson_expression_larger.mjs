@@ -12,10 +12,8 @@ import { math_max } from "./math_max.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div } from "./html_div.mjs";
 export function app_code_lesson_expression_larger() {
   "practice Math.max, the partner of Math.min and the other two-number function: Math.max(a, b) gives the larger of the two, written with the numbers separated by a comma (Math.max(3, 8) is 8); the answer is the larger number; two different numbers 2..12";
   function max_code(a, b) {
@@ -77,38 +75,35 @@ export function app_code_lesson_expression_larger() {
     return built;
   }
   function above(root) {
-    "the worked examples are randomized each visit: the definition, then one concrete pair with its larger value";
+    "examples FIRST and in BOTH orders - the larger number on the left and on the right - so it is clear the larger VALUE is chosen, not a position; Math.min (the reference) and Math.max both in code style";
     let two = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 2);
     let a = list_get(two, 0);
     let b = list_get(two, 1);
-    let larger = math_max(a, b);
+    let small = math_min(a, b);
+    let big = math_max(a, b);
+    let small_text = text_to(small);
+    let big_text = text_to(big);
     let define = app_code_container_light_blue(root);
-    let define_line = html_div(define);
-    html_span_text(define_line, "Like ");
-    let term = html_span_text(define_line, "Math.min");
-    html_bold(term);
-    html_span_text(
-      define_line,
-      ", this function takes two numbers separated by a comma",
-    );
     html_div_cycle_code(define, [
-      "",
-      "Math.max",
-      " takes two numbers and gives the larger one",
+      "Like ",
+      "Math.min",
+      ", this function takes two numbers separated by a comma",
     ]);
     let example_box = app_code_container_light_blue(root);
-    let ta = text_to(a);
-    let tb = text_to(b);
-    let larger_text = text_to(larger);
     html_div_cycle_code(example_box, [
-      "Between ",
-      ta,
-      " and ",
-      tb,
-      ", the larger number is ",
-      larger_text,
+      "",
+      big_text,
+      " is bigger than ",
+      small_text,
     ]);
-    let v = max_code(a, b);
-    html_div_cycle_code(example_box, ["So ", v, " is ", larger_text]);
+    let v = max_code(big, small);
+    html_div_cycle_code(example_box, ["so ", v, " is ", big_text]);
+    let v2 = max_code(small, big);
+    html_div_cycle_code(example_box, ["and ", v2, " is also ", big_text]);
+    html_div_cycle_code(example_box, [
+      "",
+      "Math.max",
+      " chooses the larger number",
+    ]);
   }
 }
