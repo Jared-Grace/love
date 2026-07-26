@@ -1,0 +1,2427 @@
+{
+ "known": [
+  {
+   "name": "app_a_app",
+   "duplicated": [
+    "e"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_body_inner",
+   "duplicated": [
+    "b"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_function_declaration",
+   "duplicated": [
+    "choices",
+    "o"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_function_node",
+   "duplicated": [
+    "inner",
+    "lambda20",
+    "on_change",
+    "specifiers",
+    "k",
+    "value",
+    "r",
+    "value_new"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_function",
+   "duplicated": [
+    "store",
+    "o",
+    "r",
+    "fn",
+    "choices",
+    "f",
+    "a",
+    "e"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_functionize",
+   "duplicated": [
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_identifier_generic",
+   "duplicated": [
+    "overlay",
+    "oc",
+    "input",
+    "value_new",
+    "component",
+    "r",
+    "c",
+    "f_name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_identifier",
+   "duplicated": [
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_indexeddb_initialize",
+   "duplicated": [
+    "db"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_list_chooser_generic",
+   "duplicated": [
+    "text",
+    "value"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_statement_choices_add",
+   "duplicated": [
+    "on_select",
+    "overlay_close",
+    "v2",
+    "overlay_result",
+    "v",
+    "list",
+    "index"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_a_upload",
+   "duplicated": [
+    "key",
+    "versions",
+    "d"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_bible_books_matches",
+   "duplicated": [
+    "name",
+    "mapped",
+    "any",
+    "empty",
+    "section",
+    "book",
+    "code",
+    "testament"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_bible_books_render",
+   "duplicated": [
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_bible_chapter_change",
+   "duplicated": [],
+   "shadowed": [
+    "list_next_wrap"
+   ]
+  },
+  {
+   "name": "app_bible_home_generic",
+   "duplicated": [
+    "r",
+    "verses_l",
+    "v",
+    "language",
+    "text_l",
+    "item"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_calendar_paste_convert",
+   "duplicated": [
+    "start",
+    "zone"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_calendar_paste",
+   "duplicated": [
+    "joined"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_examples",
+   "duplicated": [
+    "previous"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_home",
+   "duplicated": [
+    "lesson_number",
+    "scope"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_console_log_remainder_generic",
+   "duplicated": [
+    "color",
+    "chip",
+    "triple_equal",
+    "remainder",
+    "row",
+    "n",
+    "parent",
+    "index",
+    "line"
+   ],
+   "shadowed": [
+    "modulo"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_exponent",
+   "duplicated": [
+    "star",
+    "made",
+    "chip",
+    "column",
+    "tile",
+    "exponent",
+    "base",
+    "parent",
+    "number",
+    "color",
+    "grid",
+    "index",
+    "base_color",
+    "power_color"
+   ],
+   "shadowed": [
+    "exponent"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_greater_than_equal",
+   "duplicated": [
+    "next_arg",
+    "coordinates"
+   ],
+   "shadowed": [
+    "equal"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_integer_division",
+   "duplicated": [
+    "divisor"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_less_than_equal",
+   "duplicated": [
+    "next_arg",
+    "coordinates"
+   ],
+   "shadowed": [
+    "equal"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_minus_divide",
+   "duplicated": [],
+   "shadowed": [
+    "divide"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_multiply",
+   "duplicated": [
+    "plus",
+    "made",
+    "chip",
+    "column",
+    "tile",
+    "count",
+    "value",
+    "parent",
+    "number",
+    "color",
+    "grid",
+    "index",
+    "value_color",
+    "count_color"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_plus_divide",
+   "duplicated": [],
+   "shadowed": [
+    "divide"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_remainder_any",
+   "duplicated": [
+    "number",
+    "divisor"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_remainder_divide_solve",
+   "duplicated": [
+    "dividend",
+    "whole_part",
+    "quotient",
+    "divisor"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_remainder_divide",
+   "duplicated": [
+    "dividend",
+    "whole_part",
+    "nums",
+    "divisor",
+    "division",
+    "percent",
+    "quiz_qa",
+    "info",
+    "question",
+    "answer",
+    "parent"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_remainder_subtract",
+   "duplicated": [
+    "number",
+    "count",
+    "divisor"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_round_down",
+   "duplicated": [
+    "digit",
+    "inner",
+    "whole"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_times_divide",
+   "duplicated": [],
+   "shadowed": [
+    "divide"
+   ]
+  },
+  {
+   "name": "app_code_lesson_expression_whole_part_both",
+   "duplicated": [
+    "dividend",
+    "nums",
+    "whole_part",
+    "divisor",
+    "division",
+    "info",
+    "question",
+    "answer",
+    "parent"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_whole_part_formula",
+   "duplicated": [
+    "dividend",
+    "divisor",
+    "info",
+    "question",
+    "answer",
+    "parent"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_expression_whole_part",
+   "duplicated": [
+    "dividend",
+    "quotient",
+    "divisor"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_functions_arithmetic",
+   "duplicated": [
+    "r",
+    "c",
+    "o"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_functions_console_log_arithmetic",
+   "duplicated": [
+    "o"
+   ],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "app_code_lesson_functions_console_log_statement",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "app_code_lesson_functions_console_log",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "app_code_lesson_functions_invalid",
+   "duplicated": [
+    "call"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_identifiers_symbol_first",
+   "duplicated": [
+    "t"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_operand_generic",
+   "duplicated": [
+    "info"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_quiz_token_select_variations",
+   "duplicated": [
+    "swap",
+    "la"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_lesson_quiz_token_select",
+   "duplicated": [
+    "token",
+    "variation"
+   ],
+   "shadowed": [
+    "equal"
+   ]
+  },
+  {
+   "name": "app_code_lesson_symbols_batch_digits",
+   "duplicated": [],
+   "shadowed": [
+    "digits"
+   ]
+  },
+  {
+   "name": "app_code_quiz",
+   "duplicated": [
+    "refresh"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_review_load",
+   "duplicated": [
+    "queue",
+    "passed"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_review",
+   "duplicated": [
+    "arrow"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_screens_crawl_summary",
+   "duplicated": [
+    "overflow",
+    "record"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_screens_diff",
+   "duplicated": [
+    "key",
+    "masked",
+    "record"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_code_scroll_center_faded",
+   "duplicated": [
+    "resolve"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_dependency_paths_multiple",
+   "duplicated": [
+    "step"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_bible_home_inner",
+   "duplicated": [
+    "passages"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_conversation",
+   "duplicated": [
+    "kind",
+    "message",
+    "discern",
+    "container",
+    "turn",
+    "t"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_dev_index",
+   "duplicated": [
+    "name",
+    "e"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_dev_routes",
+   "duplicated": [
+    "view",
+    "npcs",
+    "npc",
+    "phase"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_gospel",
+   "duplicated": [
+    "o",
+    "container"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_gratitude_overlay",
+   "duplicated": [],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "app_g_menu",
+   "duplicated": [
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_need_quiz",
+   "duplicated": [
+    "spec",
+    "index"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_pray_turn",
+   "duplicated": [
+    "item",
+    "prayer_texts"
+   ],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "app_g_rows_ensure",
+   "duplicated": [
+    "rows"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_study",
+   "duplicated": [
+    "lambda3",
+    "b"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_turn_quiz_once",
+   "duplicated": [
+    "b",
+    "container"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_verify_home",
+   "duplicated": [
+    "chapter",
+    "status",
+    "chapter_state",
+    "code",
+    "book",
+    "passage"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_verify_view",
+   "duplicated": [
+    "l",
+    "row",
+    "msg",
+    "r",
+    "i",
+    "li"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_g_view_render_study",
+   "duplicated": [
+    "label",
+    "b",
+    "i"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_karate_screen_input_validate",
+   "duplicated": [
+    "ul",
+    "input"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_message_provide_generic",
+   "duplicated": [
+    "screens",
+    "context"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_message_reply_choices",
+   "duplicated": [],
+   "shadowed": [
+    "visit"
+   ]
+  },
+  {
+   "name": "app_message",
+   "duplicated": [
+    "results",
+    "messages",
+    "message"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_goals_generic",
+   "duplicated": [
+    "e"
+   ],
+   "shadowed": [
+    "marker"
+   ]
+  },
+  {
+   "name": "app_replace_goals",
+   "duplicated": [
+    "index"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_rule_set_proof_show",
+   "duplicated": [
+    "rule",
+    "j",
+    "entry",
+    "position"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_rule_set_verify_from_try",
+   "duplicated": [
+    "start"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_rule_set",
+   "duplicated": [
+    "state",
+    "rule_button",
+    "index",
+    "symbol_button",
+    "value"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_rule_sets_migrate_functionize",
+   "duplicated": [
+    "f_name_new",
+    "e"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_rule_sets_why_generate",
+   "duplicated": [
+    "found"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_tests_proof_start_over_click",
+   "duplicated": [
+    "button"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_tests_proof_state",
+   "duplicated": [
+    "span"
+   ],
+   "shadowed": [
+    "marker"
+   ]
+  },
+  {
+   "name": "app_replace_tests_run_e2e_all",
+   "duplicated": [
+    "rule_set"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_replace_tests_run_e2e_goal",
+   "duplicated": [
+    "goal"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_reply_buttons_languages_on_toggle",
+   "duplicated": [
+    "chosen"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_reply_main_shortcuts",
+   "duplicated": [
+    "extended",
+    "ke",
+    "base",
+    "name_suffix",
+    "r"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_reply_verses_add_uplifting",
+   "duplicated": [
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_reply",
+   "duplicated": [
+    "lambda6",
+    "c"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_search_home",
+   "duplicated": [
+    "query_hash",
+    "plus"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_search_results",
+   "duplicated": [
+    "e",
+    "squashed",
+    "chapter_code",
+    "book_code",
+    "verse_numbers",
+    "vk",
+    "b",
+    "collapsed_set"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_bible_books_choose",
+   "duplicated": [
+    "book"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_bible_read",
+   "duplicated": [
+    "r",
+    "v"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_bible_settings_choose",
+   "duplicated": [
+    "languages"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_bible_share",
+   "duplicated": [],
+   "shadowed": [
+    "range"
+   ]
+  },
+  {
+   "name": "app_shared_bible_verse_texts",
+   "duplicated": [
+    "entry",
+    "index"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_button_numbered",
+   "duplicated": [],
+   "shadowed": [
+    "marker"
+   ]
+  },
+  {
+   "name": "app_shared_flow_next",
+   "duplicated": [
+    "screens"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_gloss_bible_home_generic",
+   "duplicated": [
+    "span",
+    "span2",
+    "p",
+    "e",
+    "verses"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_prefixes_invalid",
+   "duplicated": [
+    "is",
+    "parts",
+    "f_name",
+    "part"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_shared_screen_set",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "app_supper_folders_get",
+   "duplicated": [
+    "folders"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_supper_verses_get",
+   "duplicated": [
+    "v",
+    "verses"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "app_verses",
+   "duplicated": [
+    "texts",
+    "update",
+    "references",
+    "copy_after"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "apps_node_only_gate_run",
+   "duplicated": [
+    "only"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "autopray",
+   "duplicated": [
+    "verses"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "availability_editor",
+   "duplicated": [
+    "text",
+    "dates",
+    "kind"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "bible_interlinear_verse",
+   "duplicated": [
+    "x"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "bible_verses_uplifting_package_upload",
+   "duplicated": [
+    "present",
+    "chapter_verses",
+    "folder"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "bundle_size_gate_run",
+   "duplicated": [
+    "over"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "claude_sessions_restart",
+   "duplicated": [
+    "pane",
+    "session",
+    "minutes"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "claude_transcript_paths",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "command_line_generic",
+   "duplicated": [
+    "args",
+    "c",
+    "options",
+    "stdout",
+    "data",
+    "command"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "command_line_read",
+   "duplicated": [
+    "answer"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "crypto_mini_sat_dimacs_to_output",
+   "duplicated": [
+    "v"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "daemon_ensure",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "daemon_properties",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "daemon_status",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "daemon_unit_name",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "daemon_unit_path",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "daemon_unit_text_current",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "daemon_unit_text",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "data_file_update_inner",
+   "duplicated": [
+    "list"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "data_generate_get",
+   "duplicated": [],
+   "shadowed": [
+    "data_get"
+   ]
+  },
+  {
+   "name": "digits_3_random_next",
+   "duplicated": [
+    "next"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "each_previous_reverse",
+   "duplicated": [
+    "index"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_book_video_generate",
+   "duplicated": [
+    "path_video"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_chapters_all_plain",
+   "duplicated": [
+    "entry"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_languages_versions",
+   "duplicated": [
+    "code",
+    "language"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_offline_database",
+   "duplicated": [
+    "db"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_offline_get",
+   "duplicated": [
+    "value"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_references_parse_lines_generic",
+   "duplicated": [
+    "chapter_code",
+    "bible_folder",
+    "verse_number",
+    "books",
+    "v"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_verses_references",
+   "duplicated": [
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_verses",
+   "duplicated": [
+    "v"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_versions_english_downloadable_words_lookup",
+   "duplicated": [
+    "lower",
+    "s"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "ebible_versions_english_full",
+   "duplicated": [
+    "value",
+    "key"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "example_alias_derive",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "example_check",
+   "duplicated": [
+    "r"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "example_command_lambda",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "example_files_command_lambda",
+   "duplicated": [
+    "lambda",
+    "dir"
+   ],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "example_files_refuses_run",
+   "duplicated": [
+    "threw"
+   ],
+   "shadowed": [
+    "sandbox"
+   ]
+  },
+  {
+   "name": "example_files_run",
+   "duplicated": [
+    "got"
+   ],
+   "shadowed": [
+    "sandbox"
+   ]
+  },
+  {
+   "name": "example_function_chip_dom",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "example_note_link_dom",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "example_slot_expression_set_lambda",
+   "duplicated": [],
+   "shadowed": [
+    "each"
+   ]
+  },
+  {
+   "name": "example_transform_before",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "example_transform_run",
+   "duplicated": [],
+   "shadowed": [
+    "sandbox"
+   ]
+  },
+  {
+   "name": "examples_corpus_read",
+   "duplicated": [
+    "file",
+    "name",
+    "example"
+   ],
+   "shadowed": [
+    "mod",
+    "fn_name"
+   ]
+  },
+  {
+   "name": "examples_menu_dom",
+   "duplicated": [
+    "header",
+    "family",
+    "name",
+    "index",
+    "size"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "file_exists",
+   "duplicated": [
+    "exists"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "file_overwrite_json",
+   "duplicated": [
+    "json"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "firebase_auth_ensure",
+   "duplicated": [
+    "resolve"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "folder_read_browser",
+   "duplicated": [
+    "r"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_aliases_delete_if_starts_with",
+   "duplicated": [
+    "sw",
+    "f_name",
+    "alias"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_auto_check_multiple",
+   "duplicated": [
+    "missing",
+    "b",
+    "r",
+    "entry"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_comments_migrate_multiple",
+   "duplicated": [
+    "changed",
+    "left",
+    "result"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_dependencies_code_export",
+   "duplicated": [],
+   "shadowed": [
+    "mod"
+   ]
+  },
+  {
+   "name": "function_eachify_transform",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "function_eachify",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "function_exists_inner",
+   "duplicated": [
+    "exists"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_github_url",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "function_name_prefix_without",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "function_name_to_path_search",
+   "duplicated": [
+    "mapped",
+    "exists"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_param_swap_end",
+   "duplicated": [
+    "index_a",
+    "index_b"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_params_new_generic",
+   "duplicated": [
+    "v"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_rename_fn_names_check",
+   "duplicated": [
+    "value",
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_rename_prefix_add",
+   "duplicated": [
+    "f_name_before"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_run_args_none",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "function_run_prompt_repo_name_colored",
+   "duplicated": [],
+   "shadowed": [
+    "chalk_color"
+   ]
+  },
+  {
+   "name": "function_string_split_space_change",
+   "duplicated": [
+    "literal"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_top_level_templates_flatten_multiple",
+   "duplicated": [
+    "changed"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_worker_pool_run",
+   "duplicated": [
+    "r",
+    "workers",
+    "worker",
+    "started",
+    "waiting",
+    "retired",
+    "id",
+    "child",
+    "owner",
+    "f_name",
+    "args",
+    "chunk",
+    "code",
+    "line"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "function_worker_serve",
+   "duplicated": [
+    "line"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "functions_call_pairs_frequent",
+   "duplicated": [
+    "key",
+    "record"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "functions_callers_inside_dependencies",
+   "duplicated": [
+    "inside"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "functions_fold_sites",
+   "duplicated": [
+    "pattern",
+    "name",
+    "s"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "functions_names_to_paths",
+   "duplicated": [],
+   "shadowed": [
+    "repo_path"
+   ]
+  },
+  {
+   "name": "functions_param_new",
+   "duplicated": [
+    "param_name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "functions_rename_generic",
+   "duplicated": [
+    "f_name_after",
+    "f_name_before"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_chapter_code_next",
+   "duplicated": [],
+   "shadowed": [
+    "digits"
+   ]
+  },
+  {
+   "name": "g_characters_unzip",
+   "duplicated": [
+    "input"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_coordinates_neighbors_walkable_get",
+   "duplicated": [],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "g_path_steps",
+   "duplicated": [],
+   "shadowed": [
+    "each",
+    "add"
+   ]
+  },
+  {
+   "name": "g_phase_curve",
+   "duplicated": [],
+   "shadowed": [
+    "identity"
+   ]
+  },
+  {
+   "name": "g_sermon_chapter_passages_for_grouping",
+   "duplicated": [
+    "verse_numbers",
+    "passage"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_coverage",
+   "duplicated": [
+    "word"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_generate_book_generic_prompts",
+   "duplicated": [
+    "each_chapter",
+    "text",
+    "texts",
+    "originals",
+    "original",
+    "group",
+    "groups",
+    "chapter_code"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_generate_book_generic",
+   "duplicated": [
+    "prompt_system"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_groups_backup_multiple",
+   "duplicated": [
+    "b",
+    "result"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_groups_validate",
+   "duplicated": [
+    "ref",
+    "message"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_passage_get",
+   "duplicated": [
+    "v"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_pull",
+   "duplicated": [
+    "w"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_sermon_study",
+   "duplicated": [
+    "key",
+    "edited_passage"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_themes",
+   "duplicated": [
+    "list"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_verify_chapters_available",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_verify_next_across",
+   "duplicated": [
+    "b"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "g_verify_queue_advance",
+   "duplicated": [
+    "s"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "git_history_delete",
+   "duplicated": [],
+   "shadowed": [
+    "repo_path"
+   ]
+  },
+  {
+   "name": "guard_check",
+   "duplicated": [
+    "stdout"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "guard_gate_run",
+   "duplicated": [
+    "r"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "html_checkboxes",
+   "duplicated": [
+    "div",
+    "valid"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "html_code_children",
+   "duplicated": [
+    "r"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "html_document_root",
+   "duplicated": [],
+   "shadowed": [
+    "html_element"
+   ]
+  },
+  {
+   "name": "html_loading_hide",
+   "duplicated": [
+    "overlay"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "html_overlay",
+   "duplicated": [
+    "s"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "html_parse_descendants_classes",
+   "duplicated": [
+    "item"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "html_text_characters_numbered",
+   "duplicated": [
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "http_generic",
+   "duplicated": [],
+   "shadowed": [
+    "sleep"
+   ]
+  },
+  {
+   "name": "image_generate",
+   "duplicated": [
+    "lines",
+    "lineHeight",
+    "line",
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "indexeddb_put_backend",
+   "duplicated": [
+    "tx",
+    "s",
+    "resolve",
+    "reject"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "indexeddb_put_multiple_backend_transform",
+   "duplicated": [
+    "key"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "integer_factorization_to_sat",
+   "duplicated": [
+    "z",
+    "sum",
+    "carry",
+    "c",
+    "i",
+    "col",
+    "a",
+    "b",
+    "columns",
+    "result",
+    "out",
+    "bits",
+    "cnf",
+    "x",
+    "y"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "invoke_cache_global",
+   "duplicated": [
+    "key",
+    "value"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "invoke_cache_indexeddb",
+   "duplicated": [
+    "item",
+    "key"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "invoke_cache_storage_local",
+   "duplicated": [
+    "key",
+    "value"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_block_canonical",
+   "duplicated": [
+    "has",
+    "slot",
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_bound_names",
+   "duplicated": [
+    "names",
+    "param"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_calls_to_each",
+   "duplicated": [
+    "nti"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_code_call_arg_fn",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_code_call_arg",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_code_call_args",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_code_call",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_code_comment_statement_generic",
+   "duplicated": [
+    "known",
+    "text",
+    "segment"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_code_comments_migrated",
+   "duplicated": [
+    "own",
+    "comment"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_code_fn_names_pieces",
+   "duplicated": [
+    "code"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_code_top_level_templates_flattened",
+   "duplicated": [
+    "expression",
+    "statement"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_comments_left_count",
+   "duplicated": [
+    "left"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_curry_replace",
+   "duplicated": [
+    "first",
+    "expression",
+    "call",
+    "difference"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_dollar_a",
+   "duplicated": [
+    "stack_1",
+    "stack_2",
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_dollar_g",
+   "duplicated": [
+    "lambda"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_dollar_s",
+   "duplicated": [
+    "stack_1",
+    "stack_2",
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_expand_generic",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_fn_name_references_to_calls",
+   "duplicated": [],
+   "shadowed": [
+    "each"
+   ]
+  },
+  {
+   "name": "js_fold_call_statement",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_function_declaration_params_names_node",
+   "duplicated": [
+    "type_is"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_function_declaration",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_function_last_asyncify",
+   "duplicated": [
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_function_last_deasyncify",
+   "duplicated": [
+    "ast"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_identifier_defineds",
+   "duplicated": [
+    "names",
+    "value",
+    "item2",
+    "node"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_identifier_param_delete_dir",
+   "duplicated": [
+    "ast"
+   ],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_identifier_param_new_dir",
+   "duplicated": [],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "js_identifier_used_dir",
+   "duplicated": [
+    "file"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_identifiers_prefix_rename_dir",
+   "duplicated": [
+    "name",
+    "pair",
+    "file"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_list_add_combine",
+   "duplicated": [],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "js_list_add_run_apply",
+   "duplicated": [
+    "call",
+    "statement"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_list_add_run_start_is",
+   "duplicated": [],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "js_log_assignments_add",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_module_variable_names",
+   "duplicated": [
+    "names"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_node_atomize_variable_name_get",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_offset_inside_function_is",
+   "duplicated": [
+    "inside"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_operator_to_code_call",
+   "duplicated": [
+    "replaced",
+    "call"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_operators_from_calls_generic",
+   "duplicated": [
+    "o"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_outside_move_generic",
+   "duplicated": [
+    "fd"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "js_ternary_replace",
+   "duplicated": [
+    "a",
+    "test",
+    "c"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "list_adder_group_async",
+   "duplicated": [],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "list_adder_group",
+   "duplicated": [],
+   "shadowed": [
+    "add"
+   ]
+  },
+  {
+   "name": "list_chunk",
+   "duplicated": [
+    "lambda"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "list_interleave_halves",
+   "duplicated": [],
+   "shadowed": [
+    "half"
+   ]
+  },
+  {
+   "name": "list_replace_all",
+   "duplicated": [],
+   "shadowed": [
+    "list_new"
+   ]
+  },
+  {
+   "name": "lists_equal_pair",
+   "duplicated": [],
+   "shadowed": [
+    "equal"
+   ]
+  },
+  {
+   "name": "literal_duplicates",
+   "duplicated": [
+    "f_name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "machine_resumes_past_day",
+   "duplicated": [
+    "stdout",
+    "journalctl_command",
+    "wrap",
+    "line",
+    "iso"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "memory_fn_references_rename_report",
+   "duplicated": [
+    "note"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "memory_hook_check",
+   "duplicated": [
+    "stdout"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "memory_hook_gate_run",
+   "duplicated": [
+    "r"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "memory_link_defects",
+   "duplicated": [
+    "link"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "memory_symbol_references_unresolved",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "messenger_reply_messages",
+   "duplicated": [
+    "img",
+    "imgs",
+    "node"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "messenger_reply_unread_collect",
+   "duplicated": [
+    "page"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "p_commands_repeated",
+   "duplicated": [
+    "cmds",
+    "cmd",
+    "row",
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "path_relative",
+   "duplicated": [
+    "s"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "permission_open_suffix_gate_run",
+   "duplicated": [
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "permission_prompt_events_grouped_by",
+   "duplicated": [
+    "group"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "permission_prompt_files_report",
+   "duplicated": [
+    "b",
+    "event"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "permission_prompt_report",
+   "duplicated": [
+    "b",
+    "event"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "permission_rule_run_name",
+   "duplicated": [],
+   "shadowed": [
+    "marker"
+   ]
+  },
+  {
+   "name": "permission_run_names_not_function",
+   "duplicated": [
+    "is",
+    "name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "qa_tests_run",
+   "duplicated": [],
+   "shadowed": [
+    "error"
+   ]
+  },
+  {
+   "name": "reply_messages_all",
+   "duplicated": [
+    "result"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "reply_on_match_capture",
+   "duplicated": [
+    "u",
+    "lambda",
+    "possibilities"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "reply_test",
+   "duplicated": [
+    "item"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "reply_wrap_invoke",
+   "duplicated": [
+    "possibilities"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "repo_functions_move",
+   "duplicated": [
+    "f_name"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "retry",
+   "duplicated": [
+    "wait"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "roman_to_integer",
+   "duplicated": [
+    "roman",
+    "input"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "sandbox_4_a",
+   "duplicated": [
+    "mapped"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "server_data_endpoints",
+   "duplicated": [
+    "req",
+    "res"
+   ],
+   "shadowed": [
+    "data_get"
+   ]
+  },
+  {
+   "name": "server",
+   "duplicated": [
+    "result",
+    "res",
+    "req"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "storage_local_mock_enable",
+   "duplicated": [
+    "storage_local_key"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "text_identifier_char_is",
+   "duplicated": [],
+   "shadowed": [
+    "digits"
+   ]
+  },
+  {
+   "name": "text_to_uuid_cache",
+   "duplicated": [
+    "text"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "visit_unique_async",
+   "duplicated": [
+    "node"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "webpack_build_generic",
+   "duplicated": [
+    "f_name_ext"
+   ],
+   "shadowed": []
+  },
+  {
+   "name": "webpack_watch",
+   "duplicated": [
+    "lambda",
+    "r",
+    "deps",
+    "names",
+    "ad",
+    "failed",
+    "a_name",
+    "stale",
+    "fn_name",
+    "path"
+   ],
+   "shadowed": [
+    "fn_name"
+   ]
+  },
+  {
+   "name": "week_calendar",
+   "duplicated": [
+    "text",
+    "live",
+    "end",
+    "covers",
+    "same_day",
+    "day",
+    "slot",
+    "span",
+    "record"
+   ],
+   "shadowed": []
+  }
+ ]
+}
