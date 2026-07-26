@@ -1,4 +1,4 @@
-import { digits_3_random_next } from "../../love/js/digits_3_random_next.mjs";
+import { digits_3_random_next } from "./digits_3_random_next.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_cycle_bold_code } from "./html_cycle_bold_code.mjs";
@@ -7,7 +7,6 @@ import { app_code_container_light_blue_text } from "./app_code_container_light_b
 import { js_code_statement } from "./js_code_statement.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
 import { property_get } from "./property_get.mjs";
-import { fn_name } from "./fn_name.mjs";
 export function app_code_lesson_functions_console_log_statement() {
   var r = app_code_lesson_functions_console_log_generic({
     above,
@@ -34,8 +33,8 @@ export function app_code_lesson_functions_console_log_statement() {
       root,
       "In English, we can use a period (.) to mean the end of a sentence.",
     );
-    let div2 = html_div(c);
-    html_cycle_bold_code(div2, [
+    let div = html_div(c);
+    html_cycle_bold_code(div, [
       "In JavaScript, instead of a period (.), we use a ",
       "semicolon",
       " ",
