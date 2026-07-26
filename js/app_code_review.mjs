@@ -18,7 +18,7 @@ import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_review_complete } from "./app_code_review_complete.mjs";
-import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
+import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
@@ -128,16 +128,16 @@ export function app_code_review(context) {
       }
       storage_local_remove_context(context, key);
       app_code_review_complete(c);
-      if (has_next) {
+      function render_continue(continue_parent) {
+        "the continue-to-the-next-lesson button";
         let arrow = emoji_arrow_right();
         let continue_text = text_combine_middle_space_nb(
           arrow,
           "Continue to the next lesson",
         );
-        app_shared_button_wide(c, continue_text, go_next);
-      } else {
-        app_code_no_more_lessons(c);
+        app_shared_button_wide(continue_parent, continue_text, go_next);
       }
+      app_code_advance_or_no_more(c, has_next, render_continue);
       return;
     }
     let remaining = list_size(queue);
