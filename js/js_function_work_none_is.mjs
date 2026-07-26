@@ -1,11 +1,6 @@
+import { js_function_declaration_free_names } from "./js_function_declaration_free_names.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
-import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
-import { js_declared_names } from "./js_declared_names.mjs";
-import { js_global_names } from "./js_global_names.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_difference } from "./list_difference.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function js_function_work_none_is(declaration) {
   "Whether a function takes nothing and calls nothing. Such a function can only be handing back a fixed value, or doing nothing at all - there is no third thing left for it to be.";
