@@ -46,7 +46,6 @@
       "Bash(tr:*)",
       "Bash(paste:*)",
       "Bash(mkdir:*)",
-      "Bash(git -C /dev/shm/love_qa/repos/love checkout:*)",
       "Bash(md5sum:*)",
       "Bash(ffprobe:*)",
       "Bash(node --check:*)",
