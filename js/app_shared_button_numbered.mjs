@@ -1,8 +1,9 @@
+import { html_style_justify_self } from "./html_style_justify_self.mjs";
+import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { add_1_period } from "./add_1_period.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_shared_number_gutter } from "./app_shared_number_gutter.mjs";
@@ -13,19 +14,19 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
   let gutter = app_shared_number_gutter();
   let text = add_1_period(index);
   let number = html_span_text(button, text);
-  html_style_set(number, "justify-self", "end");
+  html_style_justify_self(number, "end");
   app_shared_text_deemphasized(number);
   let marker = null;
   let columns = text_combine_multiple([gutter, " 1fr"]);
   if (with_marker) {
     marker = html_span_text(button, "");
-    html_style_set(marker, "justify-self", "center");
+    html_style_justify_self(marker, "center");
     columns = text_combine_multiple([gutter, " ", gutter, " 1fr"]);
   }
   let title = html_span_text(button, "");
-  html_style_set(title, "justify-self", "center");
+  html_style_justify_self(title, "center");
   html_centered(title);
-  html_style_set(title, "line-height", 1.5);
+  html_style_line_height(title, 1.5);
   html_style_assign(button, {
     display: "grid",
     "grid-template-columns": columns,
