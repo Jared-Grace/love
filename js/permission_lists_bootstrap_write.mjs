@@ -1,3 +1,18 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { permission_grant_names } from "./permission_grant_names.mjs";
+import { permission_settings_paths } from "./permission_settings_paths.mjs";
+import { list_first } from "./list_first.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { list_add } from "./list_add.mjs";
+import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { js_code_names_spelled } from "./js_code_names_spelled.mjs";
+import { file_write } from "./file_write.mjs";
+import { js_code_texts_listed } from "./js_code_texts_listed.mjs";
+import { not } from "./not.mjs";
 export async function permission_lists_bootstrap_write() {
   "One-time migration: read the allow rules the shared settings file holds today and write them back out as JS, so the JS becomes what they are generated from rather than a second copy of them.";
   "Run as a command rather than typed by hand because the list is long enough that transcribing it would introduce exactly the drift that generating it removes.";
@@ -23,19 +38,16 @@ export async function permission_lists_bootstrap_write() {
   let unique = list_unique(names);
   let note_names =
     "every function Claude may run on its own seam without asking first - the one list both rule families are generated from, so a second entry point costs no second list";
-  let code_names = js_code_names_spelled(
-    fn_name("permission_grant_names"),
-    note_names,
-    unique,
+  let f_name = fn_name("permission_grant_names");
+  let code_names = js_code_names_spelled(f_name, note_names, unique);
+  await file_write(
+    text_combine_multiple(["js/", permission_grant_names.name, ".mjs"]),
+    code_names,
   );
-  await file_write("js/permission_grant_names.mjs", code_names);
   let note_other =
     "the allow rules that grant something other than running a function on Claude's seam - kept as written, since nothing generates them";
-  let code_other = js_code_texts_listed(
-    fn_name("permission_rules_other"),
-    note_other,
-    other,
-  );
+  let f_name2 = fn_name("permission_rules_other");
+  let code_other = js_code_texts_listed(f_name2, note_other, other);
   await file_write("js/permission_rules_other.mjs", code_other);
   let report = {
     names: unique.length,
