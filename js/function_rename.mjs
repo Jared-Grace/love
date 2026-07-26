@@ -1,3 +1,4 @@
+import { memory_fn_references_rename_report } from "./memory_fn_references_rename_report.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_rename_inner } from "./function_rename_inner.mjs";
 import { function_rename_check } from "./function_rename_check.mjs";

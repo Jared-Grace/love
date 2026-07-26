@@ -4,11 +4,13 @@ import { ebible_verse_merge } from "./ebible_verse_merge.mjs";
 import { global_function_set } from "./global_function_set.mjs";
 import { app_reply } from "./app_reply.mjs";
 import { list_find_property } from "./list_find_property.mjs";
-import { ebible_languages_chapters } from "./ebible_languages_chapters.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 export async function app_reply_local(context) {
+  "The server runs this one, so its name is spelled rather than imported: importing it";
+  "would drag the whole Bible ingestion tree into this bundle for the sake of one string.";
   let result = await app_shared_api({
-    f_name: ebible_languages_chapters.name,
+    f_name: fn_name("ebible_languages_chapters"),
     args: [],
   });
   function verse_get(bible_folder, chapter_code, verse_number) {
