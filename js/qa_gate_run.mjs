@@ -1,4 +1,3 @@
-import { log } from "./log.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { qa_gate_timings_print } from "./qa_gate_timings_print.mjs";
