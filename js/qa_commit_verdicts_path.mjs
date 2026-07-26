@@ -1,3 +1,5 @@
+import { data_folder } from "./data_folder.mjs";
+import { path_join } from "./path_join.mjs";
 export function qa_commit_verdicts_path() {
   "Where the answer for each commit is kept";
   "It sits in the repo and is committed, so an answer one of us paid for is an answer all of us have, and the file doubles as a record of which commits were ever sound";
