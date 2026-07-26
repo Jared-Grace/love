@@ -9,8 +9,8 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_difference } from "./list_difference.mjs";
 export function js_free_names(ast) {
   "identifiers referenced as values but bound by nothing in this module — not imported, not the module's own function, not declared, not a parameter, not a JS global; these are the names a runtime ReferenceError would name";
-  let declaration = js_flo(ast);
-  let referenced = js_identifiers_referenced_names(declaration);
+  ("asked of the whole module, not just the exported declaration. A line at the top of a file runs the moment the file loads, so a name referenced there needs its import just as much as one inside the function - and asking only inside the function made those names invisible, which is how a torn comment could reference a function nothing imported and neither the repair pass nor its gate could see it. Measured across every file in the repo: widening the question changes no answer that was already right.");
+  let referenced = js_identifiers_referenced_names(ast);
   ("asking for every shape of import, not just the repo's own relative one - a default or whole-module import binds its local name just as firmly, and a name that IS bound is not free");
   let imports = js_imports_local_names(ast);
   let name = js_flo_name(ast);
