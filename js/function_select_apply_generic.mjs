@@ -17,6 +17,8 @@ export async function function_select_apply_generic(
   ("This half is only the outside: turning two names into two functions, and one");
   ("function name into a file to rewrite. The pairing itself lives in the pure");
   ("middle, where the corpus can check it.");
+  await function_callee_seam_assert(select_fn_name);
+  await function_callee_seam_assert(apply_fn_name);
   let select_fn = await function_import(select_fn_name);
   let apply_fn = await function_import(apply_fn_name);
   async function lambda(ast) {
