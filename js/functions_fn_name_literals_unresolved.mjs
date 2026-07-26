@@ -10,13 +10,11 @@ import { fn_name } from "./fn_name.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 export async function functions_fn_name_literals_unresolved() {
-  ("every ",
-    fn_name.name,
-    '("X") literal in the repo whose X names no live function - the string');
-  ("was written to survive a rename, so a name that resolves to nothing is either a typo");
-  ("or a rename that got away, and nothing else in the repo would ever say so out loud.");
-  ("A plain string cannot fail at import time the way a missing import does, so the wrong");
-  ("name travels all the way to the call that uses it and only then behaves as if absent.");
+  "every spelled-name literal in the repo that names no live function - the string";
+  "was written to survive a rename, so a name that resolves to nothing is either a typo";
+  "or a rename that got away, and nothing else in the repo would ever say so out loud.";
+  "A plain string cannot fail at import time the way a missing import does, so the wrong";
+  "name travels all the way to the call that uses it and only then behaves as if absent.";
   let candidates = await functions_names();
   let love = await repo_functions_names("love");
   let offenders = [];
