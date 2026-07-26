@@ -90,10 +90,8 @@ export async function app_a_function(context) {
     let deltas = list_map(filtered, lambda2);
     let ne = list_empty_not_is(deltas);
     if (ne) {
-      ("The server runs the upload, so its name is spelled rather than imported: importing");
-      ("it would pull the git command chain into this browser bundle.");
-      let r = await app_shared_api({
-        f_name: fn_name("app_a_upload"),
+      let r = await app_shared_api_fn({
+        fn: app_a_upload,
         args: [deltas],
       });
     }
