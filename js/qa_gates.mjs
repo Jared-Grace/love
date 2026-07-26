@@ -29,6 +29,7 @@ import { permission_gate_run } from "./permission_gate_run.mjs";
 import { permission_editor_open_gate_run } from "./permission_editor_open_gate_run.mjs";
 import { permission_self_settings_gate_run } from "./permission_self_settings_gate_run.mjs";
 import { permission_grants_gate_run } from "./permission_grants_gate_run.mjs";
+import { permission_settings_allow_assert } from "./permission_settings_allow_assert.mjs";
 import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invalid_assert.mjs";
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { function_worker_pool_run_try } from "./function_worker_pool_run_try.mjs";
@@ -60,6 +61,7 @@ export function qa_gates() {
     permission_rule_file_gate_run,
     permission_self_settings_gate_run,
     permission_grants_gate_run,
+    permission_settings_allow_assert,
     app_shared_prefixes_invalid_assert,
     daemons_gate_run,
     python_mirrors_assert,
