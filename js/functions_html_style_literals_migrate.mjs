@@ -21,9 +21,12 @@ export async function functions_html_style_literals_migrate() {
   }
   let results = await list_map_async(asked, migrated_of);
   let changed = list_filter_property(results, "changed");
+  let refused = list_filter_property(results, "error_message");
   let report = {
     asked: list_size(asked),
     changed: list_map_property(changed, "name"),
+    refused: list_map_property(refused, "name"),
+    reasons: list_map_property(refused, "error_message"),
   };
   return report;
 }
