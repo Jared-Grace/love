@@ -1,3 +1,12 @@
+import { memory_folder } from "./memory_folder.mjs";
+import { path_join } from "./path_join.mjs";
+import { file_read } from "./file_read.mjs";
+import { text_bytes_size } from "./text_bytes_size.mjs";
+import { memory_index_size_ceiling } from "./memory_index_size_ceiling.mjs";
+import { memory_index_lines_longest } from "./memory_index_lines_longest.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
 export async function memory_index_size_gate_run() {
   "Fails when the memory index has grown past the size it can be loaded whole at, and names the longest lines so the next reader knows where the weight is.";
   "This guards a failure that is silent by construction. Every other memory check answers a question about content and can be seen to be wrong; this one is about a budget, and going over it costs nothing at the moment it happens - the price is paid later, by a session that never learns the note it needed was cut off.";
@@ -10,17 +19,22 @@ export async function memory_index_size_gate_run() {
   let ceiling = memory_index_size_ceiling();
   let over = greater_than(size, ceiling);
   if (not(over)) {
-    let fine = { size, ceiling, over: false };
+    let fine = {
+      size,
+      ceiling,
+      over: false,
+    };
     return fine;
   }
   let waiting = await memory_index_lines_longest();
+  let v = waiting.join(", ");
   let message = text_combine_multiple([
     "memory index size gate: the index is ",
     size,
     " bytes and may be ",
     ceiling,
     " - shorten the longest lines, whose hooks the notes they link to already carry: ",
-    waiting.join(", "),
+    v,
   ]);
   throw new Error(message);
 }
