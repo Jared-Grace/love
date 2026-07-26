@@ -34,7 +34,7 @@ export function html_subset_ordered_row(
   }
   ("split each row at the card's horizontal center: the arrows fill the left half and hug the center, the name fills the right half and starts at the center, so adding a longer language name grows rightward and never shifts the arrows");
   let arrows = html_div(row);
-  html_style_set(arrows, "flex", "1 1 0");
+  html_style_flex(arrows, "1 1 0");
   html_display_flex(arrows);
   html_style_set(arrows, "justify-content", "flex-end");
   let up_button = app_shared_button(arrows, emoji_arrow_up(), up);
@@ -46,7 +46,7 @@ export function html_subset_ordered_row(
     html_visibility_hidden(down_button);
   }
   let label = html_div(row);
-  html_style_set(label, "flex", "1 1 0");
+  html_style_flex(label, "1 1 0");
   html_style_set(label, "text-align", "left");
   html_style_set(label, "padding-left", app_shared_spaced_small_gap());
   html_span_text(label, name);

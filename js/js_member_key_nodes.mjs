@@ -9,8 +9,8 @@ export function js_member_key_nodes(ast) {
   let members = js_list_type_nodes(ast, "MemberExpression");
   function fixed_is(node) {
     let computed = property_get(node, "computed");
-    let fixed = not(computed);
-    return fixed;
+    let written_after_a_dot = not(computed);
+    return written_after_a_dot;
   }
   let fixed = list_filter(members, fixed_is);
   let keys = list_map_property(fixed, "property");
