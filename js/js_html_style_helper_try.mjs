@@ -27,6 +27,10 @@ export function js_html_style_helper_try(declaration) {
     return null;
   }
   let statement = list_first(statements);
+  let expression_is = js_node_type_is(statement, "ExpressionStatement");
+  if (!expression_is) {
+    return null;
+  }
   let call = property_get(statement, "expression");
   let callee = js_call_callee_name_try(call);
   let sets = equal(callee, html_style_set.name);
