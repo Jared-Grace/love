@@ -1,4 +1,5 @@
+import { equal } from "./equal.mjs";
 export function files_written_probe() {
-  let same = "a" === "c";
+  let same = equal("a", "c");
   return same;
 }
