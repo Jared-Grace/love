@@ -73,7 +73,7 @@ export async function app_verses(context) {
   }
   let mapped = list_map(language_codes, code_to_language);
   let languages_chosen = list_filter_null_not_is(mapped);
-  let bible_texts = [];
+  let verse_groups = [];
   let verse_count = 1;
   let offline_notified = false;
   let apply_seq = 0;
