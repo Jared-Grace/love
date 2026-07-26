@@ -149,6 +149,8 @@
       "Bash(node scripts/ai.mjs functions_duplicates_report:*)",
       "Bash(node scripts/ai.mjs functions_duplicates_gate_run:*)",
       "Bash(node scripts/ai.mjs functions_values_report:*)",
+      "Bash(node scripts/ai.mjs permission_grants_flagged:*)",
+      "Bash(node scripts/ai.mjs functions_merge:*)",
       "Bash(node scripts/ai.mjs data_paths:*)",
       "Bash(node scripts/ai.mjs data_paths_mentioning:*)",
       "Bash(node scripts/ai.mjs qa_gates_read:*)",
