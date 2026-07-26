@@ -7,6 +7,6 @@ export async function functions_rename_parts_delete(f_names_comma, deleted) {
     let r = await function_rename_parts_delete(f_name, deleted);
     return r;
   }
-  await list_map_async(f_names, lambda);
-  return r;
+  let renamed = await list_map_async(f_names, lambda);
+  return renamed;
 }

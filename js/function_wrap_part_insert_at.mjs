@@ -10,6 +10,6 @@ export async function function_wrap_part_insert_at(
     index_string,
     part,
   );
-  let r = await function_wrap_open(f_name, f_name_after);
+  let r = await function_wrap_open(f_name_before, f_name_after);
   return r;
 }
