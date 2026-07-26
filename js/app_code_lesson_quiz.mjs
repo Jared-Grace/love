@@ -1,6 +1,6 @@
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_hash_write } from "./app_code_hash_write.mjs";
-import { app_code_no_more_lessons } from "./app_code_no_more_lessons.mjs";
+import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_current_last_is } from "./app_code_lesson_current_last_is.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
@@ -92,14 +92,15 @@ export function app_code_lesson_quiz(
       app_code_hash_write(context);
     }
   }
-  let next_button = app_shared_button_wide_next(parent_container, on_next);
-  let value = app_shared_spaced_gap();
-  html_style_margin_top(next_button, value);
   let last_lesson_end = qli && no_more;
-  if (last_lesson_end) {
-    ("Next is ALWAYS shown so the learner can always move on; at the very end it wraps back to the first lesson, and this note tells them they have reached the last one");
-    app_code_no_more_lessons(parent_container);
+  function render_next(next_parent) {
+    "the Next button with the standard top gap; shown only while there is still somewhere to go";
+    let next_button = app_shared_button_wide_next(next_parent, on_next);
+    let value = app_shared_spaced_gap();
+    html_style_margin_top(next_button, value);
   }
+  let has_next_step = not(last_lesson_end);
+  app_code_advance_or_no_more(parent_container, has_next_step, render_next);
   function on_reveal() {
     "for a learner who is stuck: reveal the correction (the code and its output) so they can see the answer, then continue with Next; wrong attempts alone no longer reveal it";
     html_visibility_hidden(container_success_message);
