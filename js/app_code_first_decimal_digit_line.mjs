@@ -4,7 +4,6 @@ import { html_span } from "./html_span.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-
 export function app_code_first_decimal_digit_line(
   parent,
   lead,
