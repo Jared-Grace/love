@@ -155,7 +155,7 @@ If the task genuinely needs to **write** or **persist** (not just read+print), i
 
 Your memory dir `~/.claude/projects/-home-j-repos-love/memory` is a **symlink** to `/home/j/backup/love_claude_memory/memory` (its own git repo). **Always spell the realpath** in `Read`/`Edit`/`Write` calls. The `~/.claude/…` spelling lands inside Claude Code's own config directory and trips a **built-in self-settings guard** — the prompt offers "allow Claude to edit its own settings *for this session*". No allow rule overrides that guard, `acceptEdits` doesn't either, and the grant it offers dies with the session, so the human gets re-prompted forever. The realpath reaches the identical files and never prompts.
 
-## Memory: mark live pointers as `fn(name)`
+## Memory: mark live pointers as `$fn name`
 
 A memory note names functions constantly, and most of those names are **narrative** — a build log, or the record of a rename. Those must never be rewritten: "`list_empty` was renamed to `list_clear`" becomes nonsense if either name follows a later rename, and nothing in a name's *shape* tells a stale reference apart from a deliberate record of one.
 
