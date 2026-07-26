@@ -1,10 +1,11 @@
-import { g_verify_loop_check_line } from "./g_verify_loop_check_line.mjs";
+import { window_open_seam_assert } from "./window_open_seam_assert.mjs";
+import { g_verify_loop_check } from "./g_verify_loop_check.mjs";
 import { property_get } from "./property_get.mjs";
 import { firebase_prod_asset_url } from "./firebase_prod_asset_url.mjs";
 export async function g_verify_books_bible_chrome_open() {
   "Open each active sermon-loop book's CURRENT verse (the latest-written one, awaiting approval) in its own tab, all in ONE new Chrome window. Reads the live loop state, deep-links the PROD bible app per book (bible.html#c=<chapter code>,v=<verse> — the hash pairs are COMMA-separated), and spawns google-chrome --new-window with every URL. A one-command review shortcut to eyeball all in-flight passages at once.";
   window_open_seam_assert(g_verify_books_bible_chrome_open.name);
-  let state = await g_verify_loop_check_line();
+  let state = await g_verify_loop_check();
   let books = property_get(state, "books");
   let base = firebase_prod_asset_url("bible.html");
   function lambda(book) {
