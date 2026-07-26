@@ -60,6 +60,7 @@
       "Bash(node scripts/ai.mjs memory_link_verdict_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_links_unresolved:*)",
       "Bash(node scripts/ai.mjs function_new_js:*)",
+      "Bash(node scripts/ai.mjs function_comments_migrate:*)",
       "Bash(node scripts/ai.mjs function_copy_generic:*)",
       "Bash(node scripts/ai.mjs function_wrap_generic:*)",
       "Bash(node scripts/ai.mjs function_dependency_path:*)",
