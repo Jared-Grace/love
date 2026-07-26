@@ -2,9 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
 import { not } from "./not.mjs";
 export async function app_a_indexeddb_initialize() {
-  "The database name is spelled, not imported: a name-only import of the app entry";
-  "point would drag that whole application tree into every bundle that reads a file.";
-  let db_name = fn_name("app_a");
+  let db_name = app_a.name;
   let store_files = "files";
   let version = 1;
   let db = await new Promise(function lambda4(resolve, reject) {
