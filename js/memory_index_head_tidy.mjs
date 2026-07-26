@@ -1,14 +1,15 @@
-import { text_trim_right } from "./text_trim_right.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 export function memory_index_head_tidy(head) {
   "The part of an index line that comes before its first link, with the separator it was in the middle of writing taken off, so a rebuilt line does not end up carrying two of them.";
-  let right = text_trim_right(head);
+  "An index line starts at the left margin, so trimming both ends and trimming the right one are the same thing here.";
+  let squeezed = text_trim(head);
   let semi = ";";
-  let ends = text_ends_with(right, semi);
+  let ends = text_ends_with(squeezed, semi);
   if (ends) {
-    let without = right.slice(0, -1);
-    let trimmed = text_trim_right(without);
+    let without = squeezed.slice(0, -1);
+    let trimmed = text_trim(without);
     return trimmed;
   }
-  return right;
+  return squeezed;
 }
