@@ -1,7 +1,6 @@
 import { list_join_newline } from "./list_join_newline.mjs";
 import { global_name } from "./global_name.mjs";
 import { js_code_export_wrapped } from "./js_code_export_wrapped.mjs";
-import { mod } from "./mod.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_code_global_init } from "./js_code_global_init.mjs";
 import { function_dependencies_code } from "./function_dependencies_code.mjs";

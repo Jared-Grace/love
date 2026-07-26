@@ -1,5 +1,4 @@
 import { function_wrap } from "./function_wrap.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { function_rename } from "./function_rename.mjs";
 import { js_identifiers_rename_dir } from "./js_identifiers_rename_dir.mjs";
@@ -7,7 +6,6 @@ import { function_delete_unused } from "./function_delete_unused.mjs";
 import { js_identifier_delete_unused_dir } from "./js_identifier_delete_unused_dir.mjs";
 import { function_copy } from "./function_copy.mjs";
 import { js_identifier_copy_dir } from "./js_identifier_copy_dir.mjs";
-import { function_wrap_open } from "./function_wrap_open.mjs";
 import { js_identifier_wrap_dir } from "./js_identifier_wrap_dir.mjs";
 import { functions_rename_if_starts_with } from "./functions_rename_if_starts_with.mjs";
 import { js_identifiers_prefix_rename_dir } from "./js_identifiers_prefix_rename_dir.mjs";
