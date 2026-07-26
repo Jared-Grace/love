@@ -16,6 +16,9 @@ export async function g_sermon_groups_todo() {
       list_add(pending, code);
     }
   }
-  let r = { done: grouped, todo: pending };
+  let r = {
+    done: grouped,
+    todo: pending,
+  };
   return r;
 }
