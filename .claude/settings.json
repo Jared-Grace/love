@@ -152,6 +152,8 @@
       "Bash(node scripts/ai.mjs permission_grants_flagged:*)",
       "Bash(node scripts/ai.mjs qa_tree_ensure:*)",
       "Bash(node scripts/ai.mjs qa_gate_tree_run:*)",
+      "Bash(node scripts/ai.mjs qa_commit_gate_run_at:*)",
+      "Bash(node scripts/ai.mjs app_g_day_guide_pick_check:*)",
       "Bash(node scripts/ai.mjs functions_merge:*)",
       "Bash(node scripts/ai.mjs data_paths:*)",
       "Bash(node scripts/ai.mjs data_paths_mentioning:*)",
