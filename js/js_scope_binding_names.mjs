@@ -1,3 +1,7 @@
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_catch_clause_names } from "./js_catch_clause_names.mjs";
+import { js_function_expression_own_names } from "./js_function_expression_own_names.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
