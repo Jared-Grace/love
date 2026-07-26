@@ -13,8 +13,7 @@ export async function memory_index_size_gate_run() {
     let fine = { size, ceiling, over: false };
     return fine;
   }
-  let longest = memory_index_lines_longest();
-  let waiting = await longest;
+  let waiting = await memory_index_lines_longest();
   let message = text_combine_multiple([
     "memory index size gate: the index is ",
     size,
