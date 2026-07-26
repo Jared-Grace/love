@@ -1,4 +1,4 @@
-import { fn_name } from "./fn_name.mjs";
+import { app_a } from "./app_a.mjs";
 import { app_a_indexeddb_path_key } from "./app_a_indexeddb_path_key.mjs";
 import { not } from "./not.mjs";
 export async function app_a_indexeddb_initialize() {
