@@ -15,6 +15,7 @@ export async function function_open_names() {
   "Every fn that puts a VS Code window on the human's screen, by calling one of the two fns that do it";
   "Those refuse on the ai seam, so this is also the list a Claude cannot run and a permission rule must never name";
   "A fn that only hands one of the two names to something else is left out, since naming a thing is not doing it, and the list is read as though everything on it opens a window";
+  "Membership is settled on the tree, so a name written inside a message can never be mistaken for a call";
   let by_file = await data_identifiers_search(file_open.name);
   let by_function = await data_identifiers_search(function_open.name);
   let names = properties_get(by_file);
