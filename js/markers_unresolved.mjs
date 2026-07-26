@@ -10,7 +10,7 @@ export async function markers_unresolved(marker_names) {
     let marker_lives = await function_exists(mark_name);
     if (not(marker_lives)) {
       list_add(unresolved, {
-        mark_name,
+        marker: mark_name,
         missing: mark_name,
       });
       continue;
@@ -19,7 +19,7 @@ export async function markers_unresolved(marker_names) {
     let reader_lives = await function_exists(reader);
     if (not(reader_lives)) {
       list_add(unresolved, {
-        mark_name,
+        marker: mark_name,
         missing: reader,
       });
     }
