@@ -45,7 +45,7 @@ export function app_bible_books_render(
     let title_text = text_combine_multiple([caret_open, " ", t_name]);
     let title = html_div_text_bold(t_card, title_text);
     html_centered(title);
-    html_style_set(title, "cursor", "pointer");
+    html_cursor_pointer(title);
     let sections_holder = html_div(t_card);
     let collapsed = false;
     function toggle() {
