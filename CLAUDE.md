@@ -105,6 +105,8 @@ That extracts the statements from the one calling `first_step` through the one c
 
 **Run `ao` yourself after editing a `js/*.mjs` file** — `node scripts/ai.mjs function_auto <fn_name>` (`ao` = `function_auto`). The save-time watcher is **retired**, so nothing else canonicalizes your file. `ao` runs the full normalize pipeline (operators→calls, atomize, add/repair imports, add arg-asserts). It does **not** commit when Claude runs it via `ai.mjs` — canonicalize-only. (When the *human* types `ao` it commits, but that's their interactive prompt harness committing per-command, not `function_auto`; Claude's `ai.mjs` invocations bypass that harness. Confirmed 2026-07-25: after `ao`, the tree stayed ` M` until an explicit `ai_git`.) So **always run `node scripts/ai.mjs ai_git` after `ao`**, and verify with `git status --short`. (This reverses an older rule: the import-mangling bug that made manual `ao` unsafe is gone — verified 2026-07-20.)
 
+**To sanity-check that a function still loads and normalizes, run `function_auto_check <fn_name>`** — it answers `{name, ok, error_message}` without writing anything, and it is allow-listed. Do **not** call the function bare (`node scripts/ai.mjs js_fold_call_statement`) to "see what it reports": with no arguments it either throws something unrelated to the question or silently does nothing, and the verb prompts the human because no individual transform is granted.
+
 Two `ao` gotchas, both worth designing around:
 
 - **`ao` strips `//` comments.** The AST round-trip drops them. Use **bare string-literal statements** as comments instead — they're real AST nodes and survive (`ao` renders them as `("...")`). This is why the codebase comments that way.
