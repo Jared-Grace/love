@@ -1,3 +1,13 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { python_mirrors_write } from "./python_mirrors_write.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { python_mirrors } from "./python_mirrors.mjs";
+import { list_map_async } from "./list_map_async.mjs";
+import { python_mirror_checked } from "./python_mirror_checked.mjs";
+import { list_filter_property_not } from "./list_filter_property_not.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { list_size } from "./list_size.mjs";
 export async function python_mirrors_assert() {
   arguments_assert(arguments, 0);
   ("Gate: every list the python guard imports still says what this side says.");
@@ -12,7 +22,10 @@ export async function python_mirrors_assert() {
   let stale = list_filter_property_not(checked, "fresh", true);
   let paths = list_map_property(stale, "path");
   list_empty_is_assert_json(paths, {
-    hint: "these generated python files no longer match their source — regenerate them with python_mirrors_write",
+    hint: text_combine_multiple([
+      "these generated python files no longer match their source — regenerate them with ",
+      python_mirrors_write.name,
+    ]),
     paths,
   });
   let r = {
