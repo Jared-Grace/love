@@ -23,7 +23,7 @@ export function app_g_npc_bubble(npc, overlay) {
   let c_src = g_character_img_url_direction(npc, "south");
   let component = html_img_retry(container, c_src);
   html_display_block(component);
-  html_style_set(component, "margin", "0 auto");
+  html_style_margin(component, "0 auto");
   html_style_set(component, "width", "128px");
   html_style_set(component, "height", "128px");
   let name_map = {
