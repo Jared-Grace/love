@@ -92,13 +92,6 @@
    "shadows_function": []
   },
   {
-   "name": "app_calendar_paste",
-   "shadows_outer": [
-    "joined"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "app_code_examples",
    "shadows_outer": [
     "previous"
