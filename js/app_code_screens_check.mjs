@@ -1,3 +1,4 @@
+import { app_code_screens_manifest_path_assert } from "./app_code_screens_manifest_path_assert.mjs";
 import { app_code_screens_records } from "./app_code_screens_records.mjs";
 import { app_code_screens_crawl_summary } from "./app_code_screens_crawl_summary.mjs";
 import { app_code_screens_diff } from "./app_code_screens_diff.mjs";
@@ -11,6 +12,7 @@ export async function app_code_screens_check(url_prefix, current_path) {
   let errors = property_get(collected, "errors");
   let mechanical = app_code_screens_crawl_summary(records, errors);
   let json = JSON.stringify(records, null, 2);
+  app_code_screens_manifest_path_assert(current_path);
   await file_overwrite(current_path, json);
   let reload = await app_code_reload_persists_test(url_prefix);
   let baseline_path = "data/app_code_screens_baseline.json";
