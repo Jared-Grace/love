@@ -1,5 +1,4 @@
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { html_textarea } from "./html_textarea.mjs";
@@ -52,11 +51,9 @@ export async function app_message(context) {
   app_shared_input_style(textarea);
   html_focus(textarea);
   let div_checks = html_div(div);
-  let button_send = app_shared_button_green(
-    div,
-    text_combine(emoji_email(), " Send"),
-    on_send,
-  );
+  let left = emoji_email();
+  let text = text_combine(left, " Send");
+  let button_send = app_shared_button_green(div, text, on_send);
   let v = html_check_empty_not();
   app_karate_screen_input_validate(div, div_checks, [textarea], button_send, [
     v,
@@ -67,10 +64,8 @@ export async function app_message(context) {
     function lambda(message) {
       message_display("left", message);
       let right = message_display("right", "(Loading...)");
-      html_style_background_color_set(
-        right,
-        app_shared_button_uncolored_background_color(),
-      );
+      let background = app_shared_button_uncolored_background_color();
+      html_style_background_color_set(right, background);
       async function next() {
         let results = await reply_messages_matches([message], start);
         let e = list_empty_is(results);
