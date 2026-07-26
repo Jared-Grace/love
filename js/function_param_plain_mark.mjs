@@ -12,9 +12,9 @@ import { permission_plain_marker } from "./permission_plain_marker.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function function_param_plain_mark(f_name, param) {
   arguments_assert(arguments, 2);
-  "Writes into one function's body the declaration that one of its parameters carries ordinary data, so a word inside that parameter's name stops standing in for what the parameter holds.";
-  "The parameter has to be one the function declares, and that is checked here rather than where the marker is read: a marker naming nothing matches nothing, so the reader would see a mistake as silence, and the moment of writing is the only moment somebody is looking.";
-  "Marking a second time changes nothing, because the marker is already there and a function that says the same thing twice says no more than once.";
+  ("Writes into one function's body the declaration that one of its parameters carries ordinary data, so a word inside that parameter's name stops standing in for what the parameter holds.");
+  ("The parameter has to be one the function declares, and that is checked here rather than where the marker is read: a marker naming nothing matches nothing, so the reader would see a mistake as silence, and the moment of writing is the only moment somebody is looking.");
+  ("Marking a second time changes nothing, because the marker is already there and a function that says the same thing twice says no more than once.");
   let params = await function_params_get(f_name);
   let names = list_map_property(params, "name");
   list_includes_assert_json(names, param, {
