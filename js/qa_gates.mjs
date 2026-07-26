@@ -1,3 +1,4 @@
+import { python_mirrors_assert } from "./python_mirrors_assert.mjs";
 import { functions_duplicates_gate_run } from "./functions_duplicates_gate_run.mjs";
 import { html_style_literal_gate_run } from "./html_style_literal_gate_run.mjs";
 import { js_operator_targets_leaf_gate_run } from "./js_operator_targets_leaf_gate_run.mjs";
@@ -5,7 +6,6 @@ import { apps_node_only_gate_run } from "./apps_node_only_gate_run.mjs";
 import { js_function_self_call_cases_gate_run } from "./js_function_self_call_cases_gate_run.mjs";
 import { functions_self_call_gate_run } from "./functions_self_call_gate_run.mjs";
 import { fn_name_literals_gate_run } from "./fn_name_literals_gate_run.mjs";
-import { command_seams_agree_gate_run } from "./command_seams_agree_gate_run.mjs";
 import { function_top_level_comment_gate_run } from "./function_top_level_comment_gate_run.mjs";
 import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
 import { examples_notes_gate_run } from "./examples_notes_gate_run.mjs";
@@ -30,8 +30,6 @@ import { permission_self_settings_gate_run } from "./permission_self_settings_ga
 import { permission_grants_gate_run } from "./permission_grants_gate_run.mjs";
 import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invalid_assert.mjs";
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
-import { dispatcher_scripts_python_assert } from "./dispatcher_scripts_python_assert.mjs";
-import { dispatcher_commands_python_assert } from "./dispatcher_commands_python_assert.mjs";
 import { function_worker_pool_run_try } from "./function_worker_pool_run_try.mjs";
 import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
 import { functions_shadowing_gate_run } from "./functions_shadowing_gate_run.mjs";

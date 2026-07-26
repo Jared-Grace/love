@@ -29,12 +29,8 @@
   "list_slice_include",
   "openai_responses_cache_args",
   "pair_to_list",
-  "shadowing_entries_names_text",
   "text_combine",
   "text_index_of_last_try",
-  "text_slice",
-  "text_to_uuid_ids_exists",
-  "text_to_uuid_save_exists",
-  "unbound_entries_names_text"
+  "text_slice"
  ]
 }
