@@ -87,7 +87,8 @@ export function app_code_lesson_expression_larger() {
     html_div_cycle_code(define, [
       "Like ",
       "Math.min",
-      ", this function takes two numbers separated by a comma",
+      ", this function takes two numbers separated by a comma ",
+      ",",
     ]);
     let example_box = app_code_container_light_blue(root);
     html_div_cycle_code(example_box, [
@@ -97,13 +98,21 @@ export function app_code_lesson_expression_larger() {
       small_text,
     ]);
     let v = max_code(big, small);
-    html_div_cycle_code(example_box, ["so ", v, " is ", big_text]);
+    html_div_cycle_code(example_box, ["So ", v, " is ", big_text]);
     let v2 = max_code(small, big);
-    html_div_cycle_code(example_box, ["and ", v2, " is also ", big_text]);
+    html_div_cycle_code(example_box, ["And ", v2, " is also ", big_text]);
     html_div_cycle_code(example_box, [
       "",
       "Math.max",
       " chooses the larger number",
+    ]);
+    let equal_box = app_code_container_light_blue(root);
+    html_div_cycle_code(equal_box, [
+      "If both numbers are equal, then there's only ",
+      "1",
+      " number to choose from, so ",
+      "Math.max",
+      " chooses that number",
     ]);
   }
 }
