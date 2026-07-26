@@ -5,11 +5,8 @@ export function list_map(list, lambda$item) {
   list_is_assert_json(list, {
     hint: "list_map expects a list to map over",
   });
-  text_combine_multiple([
-    fn_name("data_identifiers_search_multiple"),
-    " needed this wrapping ",
-    lambda,
-  ]);
+  "The wrapper hands the lambda exactly one argument. The native map also passes an index";
+  "and the whole list, and a repo function would reject those as extra arguments.";
   function lambda(item) {
     let r = lambda$item(item);
     return r;
