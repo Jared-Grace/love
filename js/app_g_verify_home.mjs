@@ -1,3 +1,4 @@
+import { html_style_margin } from "./html_style_margin.mjs";
 import { api_read } from "./api_read.mjs";
 import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -147,7 +148,7 @@ export async function app_g_verify_home(context) {
     let wrap = html_div(root);
     let style_value = app_g_verify_column_max_width();
     html_style_set(wrap, "max-width", style_value);
-    html_style_set(wrap, "margin", "0 auto");
+    html_style_margin(wrap, "0 auto");
     html_style_padding_x(wrap, "1.2em");
     html_style_padding_y(wrap, "2em");
     let cbar = html_div(wrap);

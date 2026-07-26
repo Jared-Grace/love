@@ -115,7 +115,7 @@ export function app_g_verify_view(
   function row_new(panel, first) {
     let row = html_div(panel);
     html_display_flex(row);
-    html_style_set(row, "gap", small_gap);
+    html_style_gap(row, small_gap);
     html_style_padding_x(row, small_gap);
     html_style_padding_y(row, small_gap);
     if (not(first)) {
@@ -137,7 +137,7 @@ export function app_g_verify_view(
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
   html_style_font_size(passage_panel, "1.3em");
-  html_style_set(passage_panel, "line-height", "1.95");
+  html_style_line_height(passage_panel, "1.95");
   function lambda9(t, i) {
     let span = html_span_text(passage_panel, t);
     let border_radius = app_shared_border_radius();
@@ -195,7 +195,7 @@ export function app_g_verify_view(
     let words = property_get(l, "indices").map(lambda12).join(" ");
     let words_el = html_span_text(row, words);
     html_font_set(words_el, serif);
-    html_style_set(words_el, "flex", "0 0 42%");
+    html_style_flex(words_el, "0 0 42%");
     app_shared_text_deemphasized(words_el);
     let text = property_get(l, "text");
     html_span_text(row, text);
@@ -215,7 +215,7 @@ export function app_g_verify_view(
     let text2 = String(li + 1);
     let n = html_span_text(row, text2);
     app_shared_text_deemphasized(n);
-    html_style_set(n, "flex", "0 0 1.2em");
+    html_style_flex(n, "0 0 1.2em");
     html_style_set(n, "font-variant-numeric", "tabular-nums");
     let text3 = property_get(l, "text");
     html_span_text(row, text3);
@@ -284,7 +284,7 @@ export function app_g_verify_view(
   html_style_set(suggest_area, "box-sizing", "border-box");
   html_font_set(suggest_area, serif);
   html_style_font_size(suggest_area, "1em");
-  html_style_set(suggest_area, "line-height", "1.5");
+  html_style_line_height(suggest_area, "1.5");
   html_style_margin_top(suggest_area, small_gap);
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
