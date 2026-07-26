@@ -1,3 +1,4 @@
+import { html_centered } from "./html_centered.mjs";
 import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
 import { html_span_text } from "../../love/js/html_span_text.mjs";
 import { html_style_assign } from "../../love/js/html_style_assign.mjs";
