@@ -1,5 +1,5 @@
-import { app_shared_api_fn } from "./app_shared_api_fn.mjs";
-import { app_a_download } from "./app_a_download.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { indexeddb_get_all } from "./indexeddb_get_all.mjs";
 import { list_property_exists_not_error } from "./list_property_exists_not_error.mjs";
 import { list_to_dictionary_property } from "./list_to_dictionary_property.mjs";
@@ -13,8 +13,10 @@ import { app_a_indexeddb_initialize } from "./app_a_indexeddb_initialize.mjs";
 export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
-  let r = await app_shared_api_fn({
-    fn: app_a_download,
+  ("The server runs this one, so its name crosses the wire rather than the function itself.");
+  ("Importing it to read a name told the import graph a page could reach git and the shell.");
+  let r = await app_shared_api({
+    f_name: fn_name("app_a_download"),
   });
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
