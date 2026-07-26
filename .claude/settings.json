@@ -144,6 +144,8 @@
       "Bash(node scripts/ai.mjs apps_mains_browser_guarded_report:*)",
       "Bash(node scripts/ai.mjs functions_names_to_paths:*)",
       "Bash(node scripts/ai.mjs functions_unbound_report:*)",
+      "Bash(node scripts/ai.mjs function_shape:*)",
+      "Bash(node scripts/ai.mjs functions_twins:*)",
       "Bash(node scripts/ai.mjs html_style_literal_gate_run:*)",
       "Bash(node scripts/ai.mjs js_operator_targets_leaf_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_settings_paths:*)",
