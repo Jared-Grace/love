@@ -19,7 +19,8 @@ export function js_function_shape(declaration) {
   let own = js_function_declaration_name(declaration);
   let params = js_function_declaration_params_names(declaration);
   let locals = js_declared_names(declaration);
-  let personal = list_concat([own], list_concat(params, locals));
+  let b = list_concat(params, locals);
+  let personal = list_concat([own], b);
   let block = property_get(declaration, "body");
   let doing = js_function_declaration_statements_doing(declaration);
   property_set(block, "body", doing);
