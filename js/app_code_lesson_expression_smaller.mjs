@@ -1,3 +1,4 @@
+import { math_min } from "./math_min.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -7,7 +8,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_integers } from "./text_integers.mjs";
 import { list_get } from "./list_get.mjs";
 import { math_max } from "./math_max.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
