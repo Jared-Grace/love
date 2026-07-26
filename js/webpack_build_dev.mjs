@@ -6,7 +6,7 @@ import { repo_path_combine } from "./repo_path_combine.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 import { webpack_dev_chunks_clean } from "./webpack_dev_chunks_clean.mjs";
 export async function webpack_build_dev(search) {
-  let command_text_after = "";
+  let words_after = [];
   let info = await app_shared_name_search_info(search);
   let repo_name = property_get(info, "repo_name");
   let a_name = property_get(info, "a_name");
@@ -14,10 +14,6 @@ export async function webpack_build_dev(search) {
   let public_dev = folder_public_join(folder);
   let config_folder = repo_path_combine(repo_name, public_dev);
   await webpack_dev_chunks_clean(config_folder, a_name);
-  let result = await webpack_build_generic(
-    search,
-    config_folder,
-    command_text_after,
-  );
+  let result = await webpack_build_generic(search, config_folder, words_after);
   return result;
 }
