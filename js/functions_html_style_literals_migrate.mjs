@@ -1,3 +1,4 @@
+import { repo_functions_names_code_includes } from "./repo_functions_names_code_includes.mjs";
 import { list_filter_property_not } from "./list_filter_property_not.mjs";
 import { html_style_helpers } from "./html_style_helpers.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -14,7 +15,7 @@ export async function functions_html_style_literals_migrate() {
   let helpers = await html_style_helpers();
   let helper_names = list_map_property(helpers, "name");
   let f_name = html_style_set.name;
-  let mentioning = await functions_names_code_includes(f_name);
+  let mentioning = await repo_functions_names_code_includes("love", f_name);
   let asked = list_without_multiple(mentioning, helper_names);
   async function migrated_of(name) {
     let result = await function_html_style_literals_migrate(name, helpers);
