@@ -1,4 +1,4 @@
-import { function_rename_examples_check } from "./function_rename_examples_check.mjs";
+import { function_rename_data_check } from "./function_rename_data_check.mjs";
 import { function_alias_rename } from "./function_alias_rename.mjs";
 import { functions_identifiers_rename } from "./functions_identifiers_rename.mjs";
 import { function_move } from "./function_move.mjs";
@@ -20,7 +20,7 @@ export async function function_rename_inner(f_name_before, f_name_after) {
     msg: "already exists in file as identifier",
   });
   await function_rename_fn_names_check(f_name_before, f_name_after);
-  await function_rename_examples_check(f_name_before, f_name_after);
+  await function_rename_data_check(f_name_before, f_name_after);
   await function_alias_rename(f_name_before, f_name_after);
   await function_move(f_name_before, f_name_after);
   await functions_identifiers_rename(f_name_before, f_name_after);
