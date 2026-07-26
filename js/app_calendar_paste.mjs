@@ -50,11 +50,11 @@ export function app_calendar_paste(context) {
         try {
           let r = app_calendar_paste_convert(input, country);
           let date_time_zones = property_get(r, "date_time_zones");
-          let joined = list_join_newline_2([
+          let joined_lines = list_join_newline_2([
             "Do you want me to share the word of God on this day and time?",
             date_time_zones,
           ]);
-          lines = text_split_newline(joined);
+          lines = text_split_newline(joined_lines);
         } catch (e) {
           lines = ["Invalid input:", input, e];
           red = true;
