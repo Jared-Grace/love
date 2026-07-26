@@ -1,3 +1,4 @@
+import { function_calls_name_is } from "./function_calls_name_is.mjs";
 import { data_identifiers_search } from "./data_identifiers_search.mjs";
 import { file_open } from "./file_open.mjs";
 import { function_open } from "./function_open.mjs";
@@ -5,12 +6,7 @@ import { properties_get } from "./properties_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { path_join } from "./path_join.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { file_read } from "./file_read.mjs";
-import { code_calls_name_is } from "./code_calls_name_is.mjs";
 import { or } from "./or.mjs";
-import { text_combine } from "./text_combine.mjs";
 export async function function_open_names() {
   "Every fn that puts a VS Code window on the human's screen, by calling one of the two fns that do it";
   "Those refuse on the ai seam, so this is also the list a Claude cannot run and a permission rule must never name";

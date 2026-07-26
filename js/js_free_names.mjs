@@ -11,7 +11,8 @@ export function js_free_names(ast) {
   "identifiers referenced as values but bound by nothing in this module — not imported, not the module's own function, not declared, not a parameter, not a JS global; these are the names a runtime ReferenceError would name";
   let declaration = js_flo(ast);
   let referenced = js_identifiers_referenced_names(declaration);
-  let imports = js_imports(ast);
+  ("asking for every shape of import, not just the repo's own relative one - a default or whole-module import binds its local name just as firmly, and a name that IS bound is not free");
+  let imports = js_imports_local_names(ast);
   let name = js_flo_name(ast);
   let names = js_declared_names(ast);
   let names2 = js_function_params_all(ast);
