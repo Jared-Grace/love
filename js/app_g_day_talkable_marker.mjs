@@ -10,8 +10,10 @@ export function app_g_day_talkable_marker(div_map, npc) {
   let i = html_element(div_map, "i");
   html_click_none(i);
   html_class_add(i, "ri-chat-3-fill");
-  let size = text_combine_multiple(["calc(", g_img_square_size_css(), "*.35)"]);
-  let glow = text_combine_multiple(["calc(", g_img_square_size_css(), "*.05)"]);
+  let v = g_img_square_size_css();
+  let size = text_combine_multiple(["calc(", v, "*.35)"]);
+  let v2 = g_img_square_size_css();
+  let glow = text_combine_multiple(["calc(", v2, "*.05)"]);
   html_style_assign(i, {
     display: "flex",
     "justify-content": "center",
