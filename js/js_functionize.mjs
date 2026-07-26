@@ -35,7 +35,6 @@ import { js_parse_statement_module } from "./js_parse_statement_module.mjs";
 import { js_code_function_declaration } from "./js_code_function_declaration.mjs";
 import { list_any } from "./list_any.mjs";
 import { js_node_types_includes } from "./js_node_types_includes.mjs";
-import { range } from "./range.mjs";
 export async function js_functionize(
   ast,
   f_name_new,
@@ -44,7 +43,7 @@ export async function js_functionize(
   index_to,
 ) {
   let indices = [index_from, index_to];
-  let range = list_slice_from_indices(stack_, indices);
+  let span = list_slice_from_indices(stack_, indices);
   ("A span that declares a name the rest of the block still reads cannot simply");
   ("leave — the name would go with it and the reader behind would be left pointing");
   ("at nothing. Those names are the ones the new function hands back, which is the");
@@ -52,7 +51,7 @@ export async function js_functionize(
   let index_max = list_max(indices);
   let index_after = index_max + 1;
   let tail = list_skip(stack_, index_after);
-  let declared = js_statements_declared_names(range);
+  let declared = js_statements_declared_names(span);
   let referenced = js_statements_referenced_names(tail);
   let outputs = list_intersection(declared, referenced);
   let outputs_any = list_empty_not_is(outputs);
@@ -60,11 +59,11 @@ export async function js_functionize(
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
   }
-  let async_is = list_any(range, lambda);
+  let async_is = list_any(span, lambda);
   let code_declaration = js_code_function_declaration(f_name_new, "", async_is);
   let declaration = js_parse_statement_module(code_declaration);
   let body_block = js_function_declaration_to_block_body(declaration);
-  list_add_multiple(body_block, range);
+  list_add_multiple(body_block, span);
   if (outputs_any) {
     let code_outputs = js_code_names_object_or_single(outputs);
     let statement_return = js_statement_return(code_outputs);
@@ -97,7 +96,7 @@ export async function js_functionize(
   let list = property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
-  list_remove_multiple(stack_, range);
+  list_remove_multiple(stack_, span);
   let code_call = js_code_call_args_await_maybe(
     f_name_new,
     missing,
