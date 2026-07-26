@@ -15,11 +15,15 @@ Consequences:
 
 The human's reading time is the scarcest thing here, and with ~10 Claudes running it is the **only** real bottleneck. Ending your turn to ask "what next?" spends a reply and buys nothing, because the repo can answer that question itself.
 
-**Before you end a turn, run `node scripts/ai.mjs work_next`.** It prints every provably-safe thing you could start right now — measured items first (each with the count proving it's real), then the standing directions that never run out: **DRY refactor → new transform → new gate**. It is never empty.
+**Before you end a turn, run `node scripts/ai.mjs work_options`.** It prints everything you're allowed to start unasked — items a read-only check proved are there (each with its count), then the standing directions that never run out: **new transform, new gate, DRY refactor**. It's never empty.
 
-**But safe is not the same as worth it — usage is finite too.** The human's attention is one scarce resource; the token budget is another. Whichever binds decides. Filling idle time is right only while usage is abundant; once it isn't, **idling beats low-value work**, because usage spent now is not available for the high-value task that arrives later. So treat `work_next` as a floor rather than an order: take the top item **only if it clears the bar**, and let the bar rise as the budget drains.
+**It's a permission set, not a queue — you choose.** It deliberately doesn't rank, because a ranking freezes one guess, made far from the work, into a constant. You just touched the code: you know which duplication is hot and which edit you kept doing by hand. That beats any sort written earlier.
 
-**The idle work that always clears the bar is work that reduces future usage.** A transform removes the LLM from a shape of editing permanently. A gate removes reading, and prevents the rework a regression would cost. DRY cuts what has to be read before any future edit. That is investment — it repays in the same currency it spends. Idle work that doesn't reduce future usage is consumption, and consumption loses to idling.
+**Choose by how much future usage the work removes.** The human's attention is one scarce resource; the token budget is another, and whichever binds decides. A transform takes the model out of a shape of editing for good; a gate takes out the reading and stops a regression being paid for twice; DRY shrinks what must be read before a later edit. That's investment — it repays in the currency it spends.
+
+**Picking nothing is a real option.** Idling is free and low-value work is not, so usage spent now isn't there for the high-value task that arrives later. Once the budget is tight, **idling beats low-value work** — if nothing on the list clears the bar, stop.
+
+**Freedom over *which*, never over *whether it's safe*.** Every option is behavior-preserving or adds a unit nothing calls yet. That admission test is also the stopping rule: the moment the next step needs a judgment the repo can't make, stop and report rather than picking something to stay busy.
 
 Two rules keep this from backfiring:
 
@@ -33,7 +37,7 @@ Two rules keep this from backfiring:
 **One test decides whether to speak: is progress blocked, and can you unblock yourself?** Only when both fail is it the human's.
 
 - **"Progress" means toward the goal, not motion.** Work that isn't valuable isn't progress, so drifting into busywork counts as blocked — even though nothing stopped you.
-- **"Blocked" is not the same as uninformed.** Read the file, run the search, fix the red gate, take the next `work_next` item. A gate you can fix yourself was never the human's business.
+- **"Blocked" is not the same as uninformed.** Read the file, run the search, fix the red gate, take the next `work_options` item. A gate you can fix yourself was never the human's business.
 
 That one test absorbs the whole usual list: a decision genuinely theirs, a peer collision you can't reconcile, work you can't do correctly or safely, scope you can't deliver.
 
