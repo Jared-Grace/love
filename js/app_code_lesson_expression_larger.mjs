@@ -108,9 +108,7 @@ export function app_code_lesson_expression_larger() {
     ]);
     let equal_box = app_code_container_light_blue(root);
     html_div_cycle_code(equal_box, [
-      "If both numbers are equal, then there's only ",
-      "1",
-      " number to choose from, so ",
+      "If both numbers are equal, then there's only one number to choose from, so ",
       "Math.max",
       " chooses that number",
     ]);
