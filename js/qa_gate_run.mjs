@@ -7,18 +7,24 @@ import { list_add } from "./list_add.mjs";
 "gate failed, so the r.mjs seam exits nonzero.";
 export async function qa_gate_run() {
   let failed = [];
+  let timings = [];
   for (let gate of qa_gates()) {
     console.log("\n=== " + gate.name + " ===");
+    let started = date_now_milliseconds();
     try {
       await gate();
     } catch (e) {
       list_add(failed, gate.name);
       console.log("GATE FAILED  " + gate.name + ": " + e.message);
     }
+    let milliseconds = date_milliseconds_since(started);
+    let timing = { name: gate.name, milliseconds };
+    list_add(timings, timing);
   }
+  qa_gate_timings_print(timings);
   if (failed.length > 0) {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
-  return { gates: qa_gates().length, failed: 0 };
+  return { gates: qa_gates().length, failed: 0, timings };
 }
