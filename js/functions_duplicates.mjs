@@ -29,8 +29,7 @@ export async function functions_duplicates() {
     let names = property_get(by_shape, shape);
     let shared = list_multiple_is(names);
     if (shared) {
-      let first = names[0];
-      let kind = await function_duplicate_kind(first);
+      let kind = await functions_duplicates_group_kind(names);
       list_add(groups, {
         names,
         shape,
