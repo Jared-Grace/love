@@ -1,3 +1,4 @@
+import { memory_symbol_gate_run } from "./memory_symbol_gate_run.mjs";
 import { examples_notes_gate_run } from "./examples_notes_gate_run.mjs";
 import { claude_md_name_gate_run } from "./claude_md_name_gate_run.mjs";
 import { function_open_name_gate_run } from "./function_open_name_gate_run.mjs";
