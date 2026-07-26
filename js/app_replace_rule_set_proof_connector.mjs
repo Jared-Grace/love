@@ -1,3 +1,5 @@
+import { html_align_items_center } from "./html_align_items_center.mjs";
+import { html_style_flex } from "./html_style_flex.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -19,10 +21,10 @@ export function app_replace_rule_set_proof_connector(
   "the link that carries one state down to the next: the step number to the left, a bold centered down arrow on the states' axis, and the rule used as a clickable button to the right; both sides get flex:1 with a zero basis so they are equal halves and the arrow stays on the exact center axis the states sit on; returns the button (with its lefts and rights) so the caller can style it selected or dimmed";
   let connector = html_div(parent);
   html_display_flex(connector);
-  html_style_set(connector, "align-items", "center");
+  html_align_items_center(connector);
   html_style_margin_y(connector, gap);
   let number_side = html_div(connector);
-  html_style_set(number_side, "flex", "1");
+  html_style_flex(number_side, "1");
   html_style_set(number_side, "text-align", "right");
   html_style_set(number_side, "padding-right", gap);
   let text = text_combine_multiple([index, "."]);
@@ -32,7 +34,7 @@ export function app_replace_rule_set_proof_connector(
   html_bold(arrow);
   html_style_font_size(arrow, "2.2em");
   let rule_side = html_div(connector);
-  html_style_set(rule_side, "flex", "1");
+  html_style_flex(rule_side, "1");
   html_style_set(rule_side, "padding-left", gap);
   let result = app_replace_button_rule(rule_side, rule, on_click);
   return result;
