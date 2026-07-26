@@ -4,14 +4,21 @@ import { g_distance_taxicab } from "./g_distance_taxicab.mjs";
 import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 export function app_g_day_guide_tile(g, player, target, div_map) {
-  "the GOLD guide tile toward the discerned person. null when the target is already ON-SCREEN (tap its reticle to go). otherwise the FARTHEST tile on the shortest land path toward the target that is still fully in view — so each tap makes maximal visible progress and a far person takes several hops (each a slice). BESPOKE: reads the live viewport (container size + tile size) with querySelector / getBoundingClientRect / Math, so do NOT auto-canonicalize this file";
-  const container = html_component_element_get(app_g_div_map_container_get(div_map));
+  "the GOLD guide tile toward the discerned person. null when the target is already FULLY ON-SCREEN (tap its reticle to go). otherwise the FARTHEST tile on the shortest land path toward the target that is still fully in view — so each tap makes maximal visible progress and a far person takes several hops (each a slice). BESPOKE: reads the live viewport directly (scroll offset + client size + tile px) so visibility is accurate even at map edges where the player is not centred; do NOT auto-canonicalize this file";
+  const container = html_component_element_get(
+    app_g_div_map_container_get(div_map),
+  );
   const img = container.querySelector("img");
   const tile = img.getBoundingClientRect().width;
-  const halfW = Math.floor(container.clientWidth / tile / 2) - 1;
-  const halfH = Math.floor(container.clientHeight / tile / 2) - 1;
+  const left = container.scrollLeft;
+  const top = container.scrollTop;
+  const right = left + container.clientWidth;
+  const bottom = top + container.clientHeight;
   const inView = (c) =>
-    Math.abs(c.x - player.x) <= halfW && Math.abs(c.y - player.y) <= halfH;
+    c.x * tile >= left &&
+    (c.x + 1) * tile <= right &&
+    c.y * tile >= top &&
+    (c.y + 1) * tile <= bottom;
   if (inView(target)) {
     return null;
   }
