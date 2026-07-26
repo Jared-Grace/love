@@ -231,7 +231,7 @@ export function app_code_lesson_console_log_remainder_generic(
     }
     each_index(or_parts, legend_part);
     let table = app_code_container_light_blue(root);
-    html_style_set(table, "gap", "0");
+    html_style_gap(table, "0");
     html_style_padding_x(table, "0");
     html_style_padding_y(table, "0");
     function row(n) {

@@ -1,4 +1,4 @@
-import { app_search } from "./app_search.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_div } from "./html_div.mjs";
