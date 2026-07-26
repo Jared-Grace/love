@@ -1,4 +1,4 @@
-import { digits_3_random_next } from "../../love/js/digits_3_random_next.mjs";
+import { digits_3_random_next } from "./digits_3_random_next.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { identity } from "./identity.mjs";
 import { app_code_lesson_functions_console_log_generic } from "./app_code_lesson_functions_console_log_generic.mjs";
@@ -11,7 +11,6 @@ import { js_code_parenthesis_list } from "./js_code_parenthesis_list.mjs";
 import { js_code_comma } from "./js_code_comma.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_operator_first_code_call } from "./js_operator_first_code_call.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_container_light_blue_cycle_code_multiple } from "./app_code_container_light_blue_cycle_code_multiple.mjs";
@@ -55,7 +54,7 @@ export function app_code_lesson_functions_console_log() {
       " are different",
     ]);
     let first = js_operator_first_code_call_only(next_operator);
-    let v4 = js_code_call_arg_fn(fn_name, next);
+    let v = js_code_call_arg_fn(fn_name, next);
     app_code_container_light_blue_cycle_code_multiple(root, [
       ["", verb, " has two numbers separated by a ", comma, ...inside, " :"],
       ["", first],
@@ -67,7 +66,7 @@ export function app_code_lesson_functions_console_log() {
         ...list_transform_first_combine(" with only one number ", inside),
         " :",
       ],
-      ["", v4],
+      ["", v],
     ]);
     app_code_container_light_blue_cycle_code(root, [
       "Whatever is inside the ",
