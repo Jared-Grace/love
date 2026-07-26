@@ -2179,10 +2179,8 @@ PYTHON_EVAL_DENY_REASON = (
     "  - a read-only one-off (auto-approved, no prompt): the sandboxed node "
     "throwaway, unshare --net --map-root-user -- node --permission "
     f"--allow-fs-read={REPO_ROOT} -e '<script>'.\n"
-    "  - anything that writes, or that you'd run more than once: add a committed "
-    "JS function and run it as `node scripts/ai.mjs <fn> <args>`.\n"
-    "If you genuinely need Python, ask the human. See CLAUDE.md - 'Throwaway "
-    "node - never raw `node -e`'."
+    "If none of those fit a genuine one-off, ask the human. See CLAUDE.md - "
+    "'Throwaway node - never raw `node -e`'."
 )
 
 
