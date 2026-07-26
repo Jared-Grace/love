@@ -111,6 +111,7 @@
       "Bash(node scripts/ai.mjs memory_frontmatter_gate_run:*)",
       "Bash(node scripts/ai.mjs memory_symbols_baseline_write:*)",
       "Bash(node scripts/ai.mjs memory_symbols_baseline_read:*)",
+      "Bash(node scripts/ai.mjs memory_symbol_gate_run:*)",
       "Bash(node scripts/ai.mjs literal_duplicates_unambiguous:*)",
       "Bash(node scripts/ai.mjs firebase_prod_asset_url:*)",
       "Bash(node scripts/ai.mjs claude_md_names:*)",
