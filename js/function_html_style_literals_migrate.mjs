@@ -16,6 +16,8 @@ export async function function_html_style_literals_migrate(f_name, helpers) {
       js_html_style_set_to_helpers(ast, helpers);
     }
     await function_transform(f_name, lambda);
+    ("the normalize pass has to run here, in the same breath as the rewrite. Swapping a call for another one leaves the file naming a function it never imported, and transforming does not repair imports - it writes the file and reports success, and the file no longer loads. That is not a worry, it is a thing that happened: a sweep of eighty-three files did exactly this earlier the same day and broke the shared branch for everyone. A codemod that emits a call owes the file its import");
+    await function_auto(f_name);
     let code_after = await file_read(f_path);
     let same = equal(code_before, code_after);
     changed = !same;

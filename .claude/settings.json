@@ -247,7 +247,8 @@
       "Edit(.claude/hooks/claude_edit_claim.mjs)",
       "Edit(.claude/hooks/memory_write_allow.mjs)",
       "Edit(.claude/settings.json)",
-      "Edit(.claude/settings.local.json)"
+      "Edit(.claude/settings.local.json)",
+      "Bash(node scripts/ai.mjs permission_grant_rule:*)"
     ],
     "defaultMode": "acceptEdits"
   },
