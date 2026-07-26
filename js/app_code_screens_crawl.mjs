@@ -1,26 +1,11 @@
-import { playwright_test_url } from "./playwright_test_url.mjs";
-import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
-import { app_code_screens_crawl_lesson } from "./app_code_screens_crawl_lesson.mjs";
+import { app_code_screens_records } from "./app_code_screens_records.mjs";
 import { app_code_screens_crawl_summary } from "./app_code_screens_crawl_summary.mjs";
-import { each_async } from "./each_async.mjs";
-import { list_add } from "./list_add.mjs";
+import { property_get } from "./property_get.mjs";
 export async function app_code_screens_crawl(url_prefix) {
-  "the durable regression crawler: walk EVERY code lesson (examples + every quiz kind via Next) in a headless browser, capturing each screen and collecting any javascript errors. url_prefix is the served code.html, e.g. http://localhost:8080/love/public/dev/code.html . Returns a compact summary of the mechanical failures (horizontal overflow, blank screens, page errors) - the deterministic half of the check; the captured text feeds the separate make-sense judge. Reuses the same playwright harness as the app-replace e2e tests";
-  let ids = app_code_lesson_ids();
-  let records = [];
-  let errors = [];
-  async function on_page(page) {
-    function on_error(e) {
-      let text = String(e);
-      list_add(errors, text);
-    }
-    page.on("pageerror", on_error);
-    async function crawl_one(id) {
-      await app_code_screens_crawl_lesson(page, url_prefix, id, records);
-    }
-    await each_async(ids, crawl_one);
-  }
-  await playwright_test_url(url_prefix, on_page);
+  "the durable regression crawler: walk EVERY code lesson (examples plus every quiz kind via Next) in a headless browser and return a compact summary of the mechanical failures - horizontal overflow, blank screens, page errors. This is the deterministic half of the check; the captured text feeds the separate make-sense judge via the manifest. url_prefix is the served code.html, e.g. http://localhost:8080/love/public/dev/code.html . Reuses the same playwright harness as the app-replace e2e tests";
+  let collected = await app_code_screens_records(url_prefix);
+  let records = property_get(collected, "records");
+  let errors = property_get(collected, "errors");
   let summary = app_code_screens_crawl_summary(records, errors);
   return summary;
 }
