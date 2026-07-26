@@ -4,6 +4,8 @@ import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_day_talkable_is } from "./app_g_day_talkable_is.mjs";
+import { app_g_day_blocked_is } from "./app_g_day_blocked_is.mjs";
+import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
 import { g_busy } from "./g_busy.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
@@ -63,6 +65,11 @@ export async function app_g_conversation(
   if (not(talkable)) {
     app_g_npc_says(npc, overlay, g_busy());
     app_g_button_conversation_end(overlay, overlay_close);
+    return;
+  }
+  if (app_g_day_blocked_is(npc)) {
+    await overlay_close();
+    app_g_discern_prevented_overlay(5000);
     return;
   }
   let player = await app_g_player_get();
