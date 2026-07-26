@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { shadowing_baseline_read } from "./shadowing_baseline_read.mjs";
 import { shadowing_entries_print } from "./shadowing_entries_print.mjs";
 export async function functions_shadowing_gate_run() {
-  "QA gate for the two name rules: inside one file a name is bound once, and a name that belongs to a repo function means that function. Both break the same way — code pasted in brings its own declaration, and every line below it that reads the name now gets the pasted value instead. Measured against data/shadowing_baseline.json, so the rule binds new code today; a name the baseline does not list fails, and a name it lists that no longer happens fails too, so the list can only shrink.";
+  "QA gate for the two name rules: a scope does not rebind a name a scope around it already binds, and a name belonging to a repo function keeps meaning that function. Both break the same way — pasted-in code brings its own declaration, and every line below it that reads the name now gets the pasted value instead. Two scopes side by side may reuse a name freely, since neither can see the other. Measured against the baseline file rather than against zero, so the rule binds new code today; a name the baseline does not list fails, and a name it lists that no longer happens fails too, so the list can only shrink.";
   let offenders = await functions_shadowing();
   let known = await shadowing_baseline_read();
   let change = functions_shadowing_versus_baseline(offenders, known);
@@ -19,7 +19,7 @@ export async function functions_shadowing_gate_run() {
     let message_added =
       "shadowing gate: " +
       added.length +
-      " functions bind a name that shadows another — rename the inner one, or if it was meant to be the outer name, that is the bug";
+      " functions hide a name that was already in scope — rename the inner one, and if a line below it was reading the outer name, that line was the bug";
     throw new Error(message_added);
   }
   let any_stale = greater_than(stale.length, 0);

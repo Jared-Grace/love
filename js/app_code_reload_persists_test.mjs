@@ -41,7 +41,9 @@ export async function app_code_reload_persists_test(url_prefix) {
       let kind = app_code_screen_text_normalize(text2);
       let b = equal(kind0, kind);
       let moved = not(b);
-      await page.reload();
+      ("reload the way F5 does - re-load the CURRENT address including the hash that Next updated. page.reload() can re-load the originally committed url (quiz=0) instead of the SPA-updated hash, which would falsely look like a reset");
+      let current = page.url();
+      await page.goto(current);
       await page.waitForTimeout(180);
       let reloaded = await app_code_screen_capture(page);
       let text3 = property_get(reloaded, "text");

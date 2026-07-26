@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function examples_notes() {
   "One line for each example saying what it is there to show - why it sits at the rung it sits at, rather than what it does. The reading order and the grouping live next door; this is the reason each entry earns its place.";
   "These were written beside the names they describe, as comments on the same line. Normalizing a file parses it and writes the tree back out, and a comment lives nowhere in a tree, so all thirty-four were deleted in one pass. They are data now because they always were data - curriculum text, not a note to whoever is reading the source.";
@@ -30,15 +32,17 @@ export function examples_notes() {
       "refuse to fold when an internal local escapes the block",
     example_fold_refused_gap:
       "refuse to fold across a gap between the matched statements",
-    example_imports_migrate_multi_function:
-      "add missing imports across a file",
+    example_imports_migrate_multi_function: "add missing imports across a file",
     example_auto_imports_all_three: "add + remove + canonicalize at once",
     example_imports_property_names_are_not_references:
       "a property key matching a fn name is NOT a reference — no import",
     example_imports_shorthand_and_computed_are_references:
       "shorthand + computed keys ARE references — keep the import",
-    example_fn_name_reference_strip:
-      'drop a name-only dependency (fn.name -> fn_name("fn")) for web bundling',
+    example_fn_name_reference_strip: text_combine_multiple([
+      "drop a name-only dependency (fn.name -> ",
+      fn_name.name,
+      '("fn")) for web bundling',
+    ]),
     example_fold_wrap_index:
       "fold hand-written wrap logic into a call to the pure fn",
     example_fold_all_two: "fold every occurrence, not just the first",
@@ -47,8 +51,7 @@ export function examples_notes() {
     example_aea_slot_setter_guard: "generate a guard + repair imports",
     example_ntp_node_type_predicate:
       "generate a whole fn from an empty file — capstone",
-    example_rename_across_files:
-      "rename a fn across every file that uses it",
+    example_rename_across_files: "rename a fn across every file that uses it",
     example_prefix_rename_across_files:
       '...and rename a whole name-prefix family at once (same "rename" family)',
     example_delete_unused_across_files:
