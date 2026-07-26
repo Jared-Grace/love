@@ -6,12 +6,12 @@ import { subtract } from "./subtract.mjs";
 import { add_1 } from "./add_1.mjs";
 import { js_signature_match } from "./js_signature_match.mjs";
 export function js_fold_match_block(pattern_sigs, target_sigs, params) {
-  // Brick 3a: find where x's call-statements (pattern_sigs = x's body minus the return) appear as a
-  // CONTIGUOUS block in F's statements (target_sigs), threading one binding through
-  // js_signature_match. Contiguous — no gaps — so nothing moves and the fold is sound without a
-  // purity oracle; interleaved-gap folds need side-effect commutativity and are deferred.
-  // Slides a window of size k (no subsequence enumeration). Returns { start, binding } of the first
-  // matching block, or null.
+  "Brick 3a: find where x's call-statements (pattern_sigs = x's body minus the return) appear as a";
+  "CONTIGUOUS block in F's statements (target_sigs), threading one binding through";
+  `${fn_name("js_signature_match")}. Contiguous — no gaps — so nothing moves and the fold is sound without a`;
+  "purity oracle; interleaved-gap folds need side-effect commutativity and are deferred.";
+  "Slides a window of size k (no subsequence enumeration). Returns { start, binding } of the first";
+  "matching block, or null.";
   arguments_assert(arguments, 3);
   let k = list_size(pattern_sigs);
   let n = list_size(target_sigs);

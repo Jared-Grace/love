@@ -1,9 +1,9 @@
 import { examples_corpus_read } from "./examples_corpus_read.mjs";
 import { example_check } from "./example_check.mjs";
 
-// Runs the example corpus as a gate: each example checked against its expected
-// outcome (transform → byte-exact after; rejection → throws as declared).
-// Throws on any failure so the r.mjs seam exits nonzero.
+"Runs the example corpus as a gate: each example checked against its expected";
+"outcome (transform → byte-exact after; rejection → throws as declared).";
+"Throws on any failure so the r.mjs seam exits nonzero.";
 export async function examples_gate_run() {
   let examples = await examples_corpus_read();
   let pass = 0;

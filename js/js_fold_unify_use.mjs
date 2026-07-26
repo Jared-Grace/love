@@ -6,10 +6,10 @@ import { object_copy } from "./object_copy.mjs";
 import { property_set } from "./property_set.mjs";
 import { equal } from "./equal.mjs";
 export function js_fold_unify_use(pattern_key, target_key, params, binding) {
-  // Unify one argument key of a fold pattern against the target. A HOLE — a param, or a local
-  // already bound — binds to the target key, or must equal its existing binding. A CONSTANT —
-  // neither a param nor bound (e.g. a literal "1") — must match the target key exactly.
-  // Returns the (possibly extended) binding, or null on conflict.
+  "Unify one argument key of a fold pattern against the target. A HOLE — a param, or a local";
+  "already bound — binds to the target key, or must equal its existing binding. A CONSTANT —";
+  "neither a param nor bound (e.g. a literal \"1\") — must match the target key exactly.";
+  "Returns the (possibly extended) binding, or null on conflict.";
   arguments_assert(arguments, 4);
   let is_param = list_includes(params, pattern_key);
   let is_bound = property_exists(binding, pattern_key);

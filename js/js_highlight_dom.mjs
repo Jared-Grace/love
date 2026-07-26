@@ -3,10 +3,10 @@ import { js_highlight_token_class } from "./js_highlight_token_class.mjs";
 import { example_token_color } from "./example_token_color.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-// The DOM twin of js_highlight_html: append one colored span per token (and the
-// whitespace gaps verbatim) into a code container. Colors are set per-span since
-// the DOM app has no stylesheet. Non-JS input (a placeholder) can't tokenize, so
-// it drops in as one plain span.
+"The DOM twin of js_highlight_html: append one colored span per token (and the";
+"whitespace gaps verbatim) into a code container. Colors are set per-span since";
+"the DOM app has no stylesheet. Non-JS input (a placeholder) can't tokenize, so";
+"it drops in as one plain span.";
 export function js_highlight_dom(parent, code) {
   let tokens;
   try {

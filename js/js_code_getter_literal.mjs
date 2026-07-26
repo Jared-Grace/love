@@ -1,11 +1,11 @@
-// A zero-argument getter whose whole job is to RETURN one string literal —
-// the shape that makes a constant nameable. Returns that literal, or "" when
-// `code` is not that shape.
-//
-// The literal must be the returned value, not merely present in the body:
-// `ebible_languages_without_original()` contains exactly one string
-// ("language_code", passed as an argument) and returns a list, and an
-// earlier version of this reported it as a constant named for a property key.
+"A zero-argument getter whose whole job is to RETURN one string literal —";
+"the shape that makes a constant nameable. Returns that literal, or \"\" when";
+"`code` is not that shape.";
+"";
+"The literal must be the returned value, not merely present in the body:";
+`\`${fn_name("ebible_languages_without_original")}()\` contains exactly one string`;
+"(\"language_code\", passed as an argument) and returns a list, and an";
+"earlier version of this reported it as a constant named for a property key.";
 export function js_code_getter_literal(code, f_name) {
   let start = code.indexOf("export function " + f_name + "()");
   if (start < 0) {
