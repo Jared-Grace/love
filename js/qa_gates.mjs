@@ -21,6 +21,7 @@ import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { dispatcher_scripts_python_assert } from "./dispatcher_scripts_python_assert.mjs";
 import { function_worker_pool_run_try } from "./function_worker_pool_run_try.mjs";
 import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
+import { functions_shadowing_gate_run } from "./functions_shadowing_gate_run.mjs";
 import { bundle_size_gate_run } from "./bundle_size_gate_run.mjs";
 import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_canon_assert.mjs";
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
@@ -49,8 +50,10 @@ export function qa_gates() {
     dispatcher_scripts_python_assert,
     function_worker_pool_run_try,
     function_imports_gate_run,
+    functions_shadowing_gate_run,
     bundle_size_gate_run,
     examples_orphan_gate_run,
+    examples_notes_gate_run,
     ebible_book_divisions_canon_assert,
   ];
   return gates;
