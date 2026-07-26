@@ -1,3 +1,4 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,7 +19,7 @@ export function js_template_comment_text(template) {
     list_add(pieces, cooked);
     let index = list_index_of(quasis, quasi);
     let size = list_size(expressions);
-    let past = index >= size;
+    let past = greater_than_equal(index, size);
     if (past) {
       return;
     }
@@ -29,8 +30,8 @@ export function js_template_comment_text(template) {
     if (wrapper_is) {
       let args = property_get(expression, "arguments");
       let first = args[0];
-      let value_2 = property_get(first, "value");
-      list_add(pieces, value_2);
+      let value_ = property_get(first, "value");
+      list_add(pieces, value_);
     }
   }
   each(quasis, lambda);

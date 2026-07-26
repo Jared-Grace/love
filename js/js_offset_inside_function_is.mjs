@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_any } from "./list_any.mjs";
@@ -12,8 +14,8 @@ export function js_offset_inside_function_is(ast, offset) {
   function contains_is(node) {
     let start = property_get(node, "start");
     let end = property_get(node, "end");
-    let after = offset > start;
-    let before = offset < end;
+    let after = greater_than(offset, start);
+    let before = less_than(offset, end);
     let inside = after && before;
     return inside;
   }
