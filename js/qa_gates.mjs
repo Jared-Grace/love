@@ -55,6 +55,7 @@ export function qa_gates() {
     dispatcher_scripts_python_assert,
     function_worker_pool_run_try,
     function_imports_gate_run,
+    fn_name_literals_gate_run,
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
     command_seams_agree_gate_run,
