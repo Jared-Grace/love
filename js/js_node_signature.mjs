@@ -53,7 +53,7 @@ export function js_node_signature(node, bound) {
       list_add(pieces, "]");
       return;
     }
-    let type = property_get(node_, "type");
+    let type = property_get_or_null(node_, "type");
     let untyped_is = text_empty_is(type);
     if (untyped_is) {
       return;
