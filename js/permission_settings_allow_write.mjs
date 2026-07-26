@@ -1,3 +1,10 @@
+import { permission_settings_paths } from "./permission_settings_paths.mjs";
+import { list_first } from "./list_first.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { permission_allow_generated } from "./permission_allow_generated.mjs";
+import { property_set } from "./property_set.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function permission_settings_allow_write() {
   "write the shared settings file's allow list out from the JS list it is generated from, leaving every other key in the file exactly as it was";
   "only the allow list is replaced. The hooks and the default mode live in the same file and nothing here derives them, so reading the file and putting one key back is the difference between generating a list and overwriting a file somebody else also owns.";
