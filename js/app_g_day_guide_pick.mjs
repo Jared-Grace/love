@@ -18,9 +18,10 @@ export function app_g_day_guide_pick(g, player, target, min_x, max_x, min_y, max
   );
   const destination = neighbors[0];
   const path = g_coordinates_path_shortest(g, player, destination);
+  const onPlayer = (c) => c.x === player.x && c.y === player.y;
   let gold = null;
   for (const c of path) {
-    if (inWindow(c)) {
+    if (inWindow(c) && !onPlayer(c)) {
       gold = c;
     }
   }
