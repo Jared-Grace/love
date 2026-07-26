@@ -1,5 +1,5 @@
-import { app_shared_api_fn } from "./app_shared_api_fn.mjs";
-import { app_a_upload } from "./app_a_upload.mjs";
+import { app_shared_api } from "./app_shared_api.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_a_function_name_selected } from "./app_a_function_name_selected.mjs";
 import { js_visit_type_node } from "./js_visit_type_node.mjs";
 import { app_a_history } from "./app_a_history.mjs";
@@ -90,8 +90,10 @@ export async function app_a_function(context) {
     let deltas = list_map(filtered, lambda2);
     let ne = list_empty_not_is(deltas);
     if (ne) {
-      let r = await app_shared_api_fn({
-        fn: app_a_upload,
+      ("The server runs this one, so its name crosses the wire rather than the function itself.");
+      ("Importing it to read a name told the import graph a page could reach git and the shell.");
+      let r = await app_shared_api({
+        f_name: fn_name("app_a_upload"),
         args: [deltas],
       });
     }
