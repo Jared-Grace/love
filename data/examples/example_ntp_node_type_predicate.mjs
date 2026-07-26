@@ -5,11 +5,17 @@ export const example = {
   kind: "transform",
   title: "Generate a node-type predicate from scratch",
   note: [
-    { alias: true },
+    {
+      alias: true,
+    },
     " creates a new ",
-    { code: "js_<X>_is" },
+    {
+      code: "js_<X>_is",
+    },
     " predicate; ",
-    { code: "before" },
+    {
+      code: "before",
+    },
     " is empty because nothing existed. Runs file-side (sandboxed) — see the app or the temp-file runner.",
   ],
   before: ``,
