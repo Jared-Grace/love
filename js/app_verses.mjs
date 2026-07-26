@@ -210,15 +210,15 @@ export async function app_verses(context) {
     if (handled) {
       return;
     }
-    let texts = await references_to_texts(references);
+    let groups = await references_to_groups(references);
     let superseded = not_equal(my_seq, apply_seq);
     if (superseded) {
       ("a newer tap started while these verses were being gathered, so drop this stale result rather than let two renders fight over the display");
       return;
     }
     chosen_references = references;
-    list_clear(bible_texts);
-    list_add_multiple(bible_texts, texts);
+    list_clear(verse_groups);
+    list_add_multiple(verse_groups, groups);
     display();
     app_verses_draw_save({
       count: verse_count,
@@ -228,30 +228,51 @@ export async function app_verses(context) {
       await copy();
     }
   }
-  async function references_to_texts(references) {
-    let texts = [];
+  async function references_to_groups(references) {
+    let groups = [];
     async function reference_each(reference) {
-      await app_reply_verses_add_uplifting(reference, languages_chosen, texts);
+      let entries = await app_reply_verses_uplifting_entries(
+        reference,
+        languages_chosen,
+      );
+      let group = {
+        reference,
+        entries,
+      };
+      list_add(groups, group);
     }
     await each_async(references, reference_each);
-    return texts;
+    return groups;
   }
   async function reroll() {
     await draw_fresh(true);
   }
   function display() {
     html_clear(card4);
-    each(bible_texts, display_line);
+    each(verse_groups, display_group);
     card4_refresh();
   }
-  function display_line(line) {
-    app_shared_text_body(card4, line);
+  function display_group(group) {
+    let reference = property_get(group, "reference");
+    let d = html_div_text_centered(card4, reference);
+    app_shared_text_deemphasized(d);
+    let entries = property_get(group, "entries");
+    app_shared_bible_verse_texts(card4, entries);
   }
   function card4_refresh() {
-    let empty = list_empty_is(bible_texts);
+    let empty = list_empty_is(verse_groups);
     html_display_none_or_block(empty, card4);
   }
   async function copy() {
-    let joined = await list_join_newline_2_copy(bible_texts);
+    let lines = [];
+    function group_each(group) {
+      let reference = property_get(group, "reference");
+      list_add(lines, reference);
+      let entries = property_get(group, "entries");
+      let texts = list_map_property(entries, "text");
+      list_add_multiple(lines, texts);
+    }
+    each(verse_groups, group_each);
+    let joined = await list_join_newline_2_copy(lines);
   }
 }
