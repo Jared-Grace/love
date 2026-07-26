@@ -1,9 +1,18 @@
-import { ai_git_command_generic } from "./ai_git_command_generic.mjs";
+import { files_written_take } from "./files_written_take.mjs";
+import { ai_git_files } from "./ai_git_files.mjs";
 Error.stackTraceLimit = Infinity;
 export async function ai_git() {
   "Commits without claiming that any command produced the change — the message is";
   "one bare word. For a hand-made edit that is the honest report, and reading those";
   "back out of the log is how the changes no named unit could make are found.";
-  let result = await ai_git_command_generic("ai", []);
+  "Sweeps everything rather than any list of files, because a hand-made edit leaves";
+  "no note of itself, and committing only what the commands wrote would step over";
+  "exactly the change this was called for.";
+  "The note is still emptied first: the sweep covers those files anyway, and a note";
+  "left standing would have the next command claim them a second time.";
+  await files_written_take();
+  let none = [];
+  let args = [];
+  let result = await ai_git_files("ai", args, none);
   return result;
 }

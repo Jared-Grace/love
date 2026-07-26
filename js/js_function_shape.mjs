@@ -1,3 +1,4 @@
+import { js_member_key_nodes } from "./js_member_key_nodes.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { js_declared_names } from "./js_declared_names.mjs";
@@ -16,6 +17,7 @@ export function js_function_shape(declaration) {
   "Three things are taken away and no more. The name of the function, because that is the very thing being asked about - two names for one job is the answer, not the question. The names it gives its own parameters and workings, because a name a reader never sees from outside carries no meaning to compare. And the sentences of prose, because a description differing is not the work differing.";
   "Everything else stays, above all the names of the other functions it calls. Those are what it does. Blanking them too would make every function of the same length look alike, and the answer would be noise.";
   "Order of first appearance is what numbers the blanks, so the numbering is a property of the work rather than of the order somebody happened to declare things in.";
+  "The word after a dot is left alone even when it reads exactly like a private name, and it often does - a function that asks a list whether it includes something calls the answer includes. Blanking that word too made four separate roundings of a number look like one function, and made asking a list whether it holds something identical to cutting a piece out of some words.";
   let own = js_function_declaration_name(declaration);
   let params = js_function_declaration_params_names(declaration);
   let locals = js_declared_names(declaration);
@@ -24,9 +26,14 @@ export function js_function_shape(declaration) {
   let block = property_get(declaration, "body");
   let doing = js_function_declaration_statements_doing(declaration);
   property_set(block, "body", doing);
+  let keys = js_member_key_nodes(declaration);
   let blanks = {};
   let taken = [];
   function blanked(node) {
+    let key_is = list_includes(keys, node);
+    if (key_is) {
+      return;
+    }
     let name = property_get_name(node);
     let personal_is = list_includes(personal, name);
     if (personal_is) {
