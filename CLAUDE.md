@@ -163,7 +163,7 @@ So a function name in a note is **frozen by default**. When it is a *live pointe
 - `function_rename` **rewrites** every `fn(before)` across memory, and **reports** the notes still writing that name bare so a human judges those. Aliases already follow a rename; memory is the other named referrer.
 - `memory_fn_reference_gate_run` (in `q`) fails if any `fn(X)` names no live function. A marker is a *claim*, so it also catches a name that never existed at all — the failure a rename could never catch.
 
-**Mark the name, not the call:** `` `fn(list_empty_not_is)` ``, with arguments given separately. `fn(x)(a, b)` is not the convention.
+**Mark the name, not the call:** `` `fn(list_empty_not_is)` ``, with arguments given separately. `fn(NAME)(a, b)` is not the convention. To write *about* a marker rather than use one, put the placeholder in upper case — the reader matches lower case only, so `fn(NAME)` is excluded by construction.
 
 The word boundary is load-bearing, not incidental: `html_update_latest_promote_deploy_app_fn(app_g)` is a real call whose last two letters before the bracket are the marker's, and it is left alone. `memory_fn_reference_cases` pins that.
 
