@@ -1,4 +1,3 @@
-import { html_element } from "./html_element.mjs";
 import { html_component_wrap } from "./html_component_wrap.mjs";
 export function html_document_root() {
   let html_element = document.documentElement;
