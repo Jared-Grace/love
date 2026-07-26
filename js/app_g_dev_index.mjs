@@ -42,7 +42,7 @@ export function app_g_dev_index() {
     margin: "0",
     "font-weight": "bold",
   });
-  let routes = app_g_dev_routes();
+  let routes = app_g_dev_routes(null);
   let names = properties_get(routes);
   let all = list_concat(names, ["reset", "index"]);
   let conversation_prefix = "conversation: ";
