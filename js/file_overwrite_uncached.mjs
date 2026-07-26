@@ -1,4 +1,4 @@
-import { file_written_add_try } from "./file_written_add_try.mjs";
+import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
 import { promise_catch_ignore } from "./promise_catch_ignore.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -67,7 +67,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       throw e;
     }
     ("noted only once the file is actually on disk, and only on this side of the branch: a browser keeps its files in its own store, where there is no commit for a note to serve");
-    await file_written_add_try(file_path);
+    await file_to_commit_add_try(file_path);
   }
   await data_file_update(file_path);
   return;
