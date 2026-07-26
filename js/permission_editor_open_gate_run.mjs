@@ -5,7 +5,7 @@ import { greater_than } from "./greater_than.mjs";
 import { each } from "./each.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { log_console } from "./log_console.mjs";
-export async function permission_open_suffix_gate_run() {
+export async function permission_editor_open_gate_run() {
   "Gate: no allow rule may auto-approve a function whose name ends in the open suffix";
   "Those launch VS Code on the human's screen, and the ai seam refuses them at file_open_seam_assert, so granting one would only buy a guaranteed error";
   "The fix is always the same - point the rule at the twin without the suffix";
