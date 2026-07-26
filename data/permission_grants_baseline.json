@@ -9,14 +9,6 @@
    "refusals": 1
   },
   {
-   "name": "app_shared_build",
-   "refusals": 1
-  },
-  {
-   "name": "app_shared_dev_build",
-   "refusals": 1
-  },
-  {
    "name": "app_code_screens_crawl",
    "refusals": 1
   },
@@ -73,14 +65,6 @@
    "refusals": 1
   },
   {
-   "name": "webpack_build_dev",
-   "refusals": 1
-  },
-  {
-   "name": "html_update_latest_promote",
-   "refusals": 1
-  },
-  {
    "name": "html_update_latest_promote_deploy",
    "refusals": 1
   },
@@ -110,10 +94,6 @@
   },
   {
    "name": "g_verify_next_books_set",
-   "refusals": 1
-  },
-  {
-   "name": "webpack_build",
    "refusals": 1
   },
   {
