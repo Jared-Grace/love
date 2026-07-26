@@ -29,9 +29,9 @@ export async function npx_run(words, extra) {
       reject(err);
     }
     child.on("error", on_error);
-    function on_close(code) {
+    function on_close(exit_code) {
       resolve({
-        code,
+        code: exit_code,
         stdout,
         stderr,
       });
