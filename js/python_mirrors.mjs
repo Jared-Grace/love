@@ -1,3 +1,8 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
+import { dispatcher_commands_fn_named } from "./dispatcher_commands_fn_named.mjs";
+import { functions_command_seams } from "./functions_command_seams.mjs";
 export function python_mirrors() {
   arguments_assert(arguments, 0);
   ("Every list of names the python guard needs, together with where its generated");
@@ -10,7 +15,11 @@ export function python_mirrors() {
   let mirrors = [
     {
       constant: "NODE_DISPATCHER_SCRIPTS",
-      path: ".claude/hooks/dispatcher_scripts.py",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        dispatcher_scripts.name,
+        ".py",
+      ]),
       source: dispatcher_scripts,
     },
     {
