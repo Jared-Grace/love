@@ -11,7 +11,7 @@ import { html_bold_mild } from "./html_bold_mild.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_g_npc_bubble(npc, overlay) {
-  "the NPC's speech bubble WITHOUT its words — the gender-colored container, the south-facing avatar, and the bold 'Name says:' label. shared by app_g_npc_says (which appends the spoken words) and app_g_npc_typing (which appends pulsing dots), so the avatar + name header lives in ONE place";
+  "the NPC's speech bubble WITHOUT its words — the gender-colored container, the south-facing avatar, and the bold 'Name says:' label. shared by the spoken-words bubble and the typing-dots bubble, so the avatar and name header live in ONE place";
   let gender = property_get(npc, "gender");
   let map = {
     [g_gender_female()]: "#ff80ea",
@@ -29,7 +29,8 @@ export function app_g_npc_bubble(npc, overlay) {
   };
   let name_color = property_get(name_map, gender);
   let name_npc = property_get(npc, "name");
-  let label = app_g_p_text(container, text_combine(name_npc, " says:"));
+  let name = text_combine(name_npc, " says:");
+  let label = app_g_p_text(container, name);
   html_font_color_set(label, name_color);
   html_style_set(label, "margin-top", "-0.4em");
   html_bold_mild(label);
