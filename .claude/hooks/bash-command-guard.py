@@ -1034,6 +1034,32 @@ def dispatcher_script_is(word):
     return False
 
 
+def dispatcher_script_canonical(word):
+    """The repo-relative spelling of whichever dispatcher script `word` names,
+    when `word` is either that spelling already or THIS repo's own absolute
+    path to it; otherwise `word` unchanged.
+
+    An allow rule is matched as literal text, so Bash(node scripts/ai.mjs
+    <fn>:*) never matched `node /home/j/repos/love/scripts/ai.mjs <fn>` - the
+    same program running the same function with the same arguments, spelled
+    the other way. Every such call fell through to a prompt. Folding the two
+    spellings together here is what lets one generated rule cover both,
+    instead of generating a second copy of all 500-odd rules.
+
+    Pinned to REPO_ROOT rather than reusing dispatcher_script_is's
+    endswith("/" + script): `/anywhere/else/scripts/ai.mjs` is a DIFFERENT
+    checkout whose functions are not the ones the human granted. Pinned this
+    way the fold is strictly NARROWER than the relative spelling it folds
+    onto, which resolves against whatever the working directory happens to
+    be and so already names any checkout you care to stand in."""
+    for script in NODE_DISPATCHER_SCRIPTS:
+        if word == script:
+            return script
+        if word == os.path.join(REPO_ROOT, script):
+            return script
+    return word
+
+
 # The one dispatcher Claude runs. ai.mjs refuses shorthand (full names only)
 # and prints lossless JSON; r.mjs/rl.mjs/g.mjs are the human's seams. Claude
 # invoking any of the others directly is denied below - not because they are
