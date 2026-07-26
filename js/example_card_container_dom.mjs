@@ -1,3 +1,4 @@
+import { html_style_margin } from "./html_style_margin.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
@@ -18,6 +19,6 @@ export function example_card_container_dom(parent) {
   html_border(card, "1px", border_color);
   html_border_radius(card, "8px");
   html_style_padding(card, "1.25rem");
-  html_style_set(card, "margin", "1.5rem 0");
+  html_style_margin(card, "1.5rem 0");
   return card;
 }

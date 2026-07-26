@@ -82,7 +82,7 @@ export function app_code_lesson_expression_round_up() {
     "the worked examples are randomized each visit (a different example may be the one that clicks): a decimal and its whole part for the definitions and the ceil, a LOW decimal (1..3) to show it rounds UP not to the nearest, and a separate already-whole number that does not change";
     let whole = integer_random(2, 7);
     let whole_text = text_to(whole);
-    let digit = integer_random(1, 9);
+    let digit = integer_random(5, 9);
     let t3 = text_to(digit);
     let decimal = text_combine_multiple([whole_text, ".", t3]);
     let low_digit = integer_random(1, 3);
@@ -123,12 +123,7 @@ export function app_code_lesson_expression_round_up() {
     html_div_cycle_code(rounds, [
       "",
       "Math.ceil",
-      " rounds a number up to the whole number above it",
-    ]);
-    html_div_cycle_code(rounds, [
-      "",
-      "Math.ceil",
-      " always rounds up, never down",
+      " gives the whole number above it",
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [

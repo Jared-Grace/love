@@ -82,7 +82,7 @@ export function app_code_lesson_expression_round_down() {
     "the worked examples are randomized each visit (a different example may be the one that clicks): a decimal and its whole part for the definitions and the floor, a HIGH decimal (7..9) to show it rounds DOWN not to the nearest, and a separate already-whole number that does not change";
     let whole = integer_random(2, 7);
     let whole_text = text_to(whole);
-    let digit = integer_random(1, 9);
+    let digit = integer_random(1, 4);
     let t3 = text_to(digit);
     let decimal = text_combine_multiple([whole_text, ".", t3]);
     let high_digit = integer_random(7, 9);

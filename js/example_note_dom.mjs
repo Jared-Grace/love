@@ -1,7 +1,8 @@
+import { html_style_line_height } from "./html_style_line_height.mjs";
+import { html_style_margin } from "./html_style_margin.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { text_is } from "./text_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,8 +19,8 @@ import { text_combine } from "./text_combine.mjs";
 export function example_note_dom(parent, note, alias) {
   let paragraph = html_element(parent, "p");
   html_font_color_set(paragraph, "#555");
-  html_style_set(paragraph, "line-height", "1.6");
-  html_style_set(paragraph, "margin", "0 0 0.75rem");
+  html_style_line_height(paragraph, "1.6");
+  html_style_margin(paragraph, "0 0 0.75rem");
   if (text_is(note)) {
     html_text_content_set(paragraph, note);
     return paragraph;
