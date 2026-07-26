@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 export async function indexeddb_put_backend(db_get, store, key, next) {
   let db = await db_get();
   if (false) {
