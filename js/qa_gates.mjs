@@ -73,6 +73,7 @@ export function qa_gates() {
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
     functions_duplicates_gate_run,
+    command_seams_agree_gate_run,
     bundle_size_gate_run,
     examples_orphan_gate_run,
     examples_notes_gate_run,
