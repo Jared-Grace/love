@@ -1,6 +1,5 @@
 {
  "known": [
-  "add",
   "app_code_container_light_blue_border_color",
   "app_replace_symbol_tile_font_color_invalid",
   "app_supper_home",
@@ -12,14 +11,9 @@
   "identity",
   "js_dollar_ien_generic",
   "js_dollar_if_call",
-  "list_index_of_last_try",
   "list_range",
-  "list_slice",
   "list_slice_include",
   "openai_responses_cache_args",
-  "pair_to_list",
-  "text_combine",
-  "text_index_of_last_try",
-  "text_slice"
+  "pair_to_list"
  ]
 }
