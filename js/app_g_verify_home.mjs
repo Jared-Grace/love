@@ -1,5 +1,4 @@
 import { api_read } from "./api_read.mjs";
-import { server } from "./server.mjs";
 import { subtract } from "./subtract.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -242,7 +241,6 @@ export async function app_g_verify_home(context) {
       Object.keys(verse_buttons).forEach(lambda8);
     }
     async function on_approved(v) {
-      await server();
       chapter_advance_armed = true;
       refresh();
     }
