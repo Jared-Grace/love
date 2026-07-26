@@ -1,5 +1,4 @@
 import { html_loading } from "./html_loading.mjs";
-import { log } from "./log.mjs";
 import { firebase_app_initialize } from "./firebase_app_initialize.mjs";
 import { getStorage, ref, uploadString } from "firebase/storage";
 import { log_keep } from "./log_keep.mjs";
