@@ -1,3 +1,5 @@
+import { text_trim_right } from "./text_trim_right.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
 export function memory_index_head_tidy(head) {
   "The part of an index line that comes before its first link, with the separator it was in the middle of writing taken off, so a rebuilt line does not end up carrying two of them.";
   let right = text_trim_right(head);
