@@ -12,7 +12,7 @@ export async function git_remove(f_path) {
   await command_line_git_current(command_git);
   await git_ignore_add(f_path);
   let added = git_ignore_name();
-  await git_add(added);
+  await git_add([added]);
   let message = text_combine_multiple([
     "Remove ",
     f_path,
