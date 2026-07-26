@@ -266,7 +266,8 @@
       "Edit(.claude/settings.json)",
       "Edit(.claude/settings.local.json)",
       "Bash(node scripts/ai.mjs permission_grant_rule:*)",
-      "Bash(node scripts/ai.mjs permission_grant_words_unsafe:*)"
+      "Bash(node scripts/ai.mjs permission_grant_words_unsafe:*)",
+      "Bash(node scripts/ai.mjs function_imports_beyond_infrastructure:*)"
     ],
     "defaultMode": "acceptEdits"
   },
