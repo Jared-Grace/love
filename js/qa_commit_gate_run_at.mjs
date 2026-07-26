@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { qa_commit_verdicts } from "./qa_commit_verdicts.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { qa_snapshot_ensure } from "./qa_snapshot_ensure.mjs";
@@ -18,7 +19,7 @@ export async function qa_commit_gate_run_at(commit) {
     };
     return r;
   }
-  "What is kept is the answer and not the hundreds of lines that led to it, because the keeping is shared and committed - the reasons are the same reasons a fresh asking gives again";
+  ("What is kept is the answer and not the hundreds of lines that led to it, because the keeping is shared and committed - the reasons are the same reasons a fresh asking gives again");
   let folder = await qa_snapshot_ensure(commit);
   let told = await qa_snapshot_gate_told(folder);
   let green = property_get(told, "green");

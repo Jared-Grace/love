@@ -1,5 +1,11 @@
+import { qa_tree_ensure } from "./qa_tree_ensure.mjs";
+import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
+import { property_get } from "./property_get.mjs";
+import { qa_gates_machine } from "./qa_gates_machine.mjs";
+import { qa_gates_told } from "./qa_gates_told.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { qa_gates_read } from "./qa_gates_read.mjs";
-import { qa_gates_run } from "./qa_gates_run.mjs";
 export async function qa_gate_run() {
   "The repo-wide correctness gate (alias `q`), asking every gate there is";
   "It asks about the working folder as it stands, work nobody has committed included, which is what makes it the thing to run before committing";
@@ -13,7 +19,7 @@ export async function qa_gate_run() {
   let here = await qa_gates_told(machine);
   let failed_copy = property_get(told, "failed");
   let failed_here = property_get(here, "failed");
-  let failed = list_combine(failed_copy, failed_here);
+  let failed = list_concat(failed_copy, failed_here);
   if (greater_than(failed.length, 0)) {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
