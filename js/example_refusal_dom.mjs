@@ -1,7 +1,6 @@
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold_semi } from "./html_bold_semi.mjs";
 ("The red 'what it refuses' line shared by every rejection card (single-file and multi-");
