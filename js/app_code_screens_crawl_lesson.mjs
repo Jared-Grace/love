@@ -50,11 +50,8 @@ export async function app_code_screens_crawl_lesson(
   first.screen = "quiz";
   first.kind = 0;
   list_add(records, first);
-  let quiz_marker = text_combine_multiple([
-    "lesson=",
-    id,
-    text_combine_multiple(["&screen=", app_code_quiz.name]),
-  ]);
+  let combined3 = text_combine_multiple(["&screen=", app_code_quiz.name]);
+  let quiz_marker = text_combine_multiple(["lesson=", id, combined3]);
   let script = app_code_screen_next_click_script();
   let kind = 1;
   while (less_than(kind, 8)) {
@@ -65,7 +62,7 @@ export async function app_code_screens_crawl_lesson(
     await page.waitForTimeout(180);
     ("detect leaving the lesson by the url, not the title: the title collapses to just the category (Operators) which is shared, so it can never mark a boundary. Next writes the new lesson and screen into the hash, so if the hash no longer names this lesson's quiz we have walked out of it - into the next lesson or a review - and stop before capturing that as a kind of this lesson");
     let url = page.url();
-    let still = text_includes(url, marker);
+    let still = text_includes(url, quiz_marker);
     if (not(still)) {
       break;
     }
