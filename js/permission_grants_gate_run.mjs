@@ -3,6 +3,7 @@ import { permission_grants_counted } from "./permission_grants_counted.mjs";
 import { permission_grants_baseline_read } from "./permission_grants_baseline_read.mjs";
 import { permission_grants_versus_baseline } from "./permission_grants_versus_baseline.mjs";
 import { permission_grants_baseline_write } from "./permission_grants_baseline_write.mjs";
+import { permission_grants_baseline_bless } from "./permission_grants_baseline_bless.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +24,9 @@ export async function permission_grants_gate_run() {
     let message_added =
       "permission grants gate: " +
       added.length +
-      " standing grants fail the safety check and were not recorded as known — take the rule out, or narrow the function, rather than leaving an approval nobody would give today: " +
+      " standing grants fail the safety check and were not recorded as known — take the rule out, or narrow the function, or, if the grant was meant, name it to " +
+      permission_grants_baseline_bless.name +
+      " one at a time: " +
       list_join_comma(list);
     throw new Error(message_added);
   }
@@ -33,7 +36,9 @@ export async function permission_grants_gate_run() {
     let message_worsened =
       "permission grants gate: " +
       worsened.length +
-      " standing grants fail for more reasons than the baseline holds, so a new hole opened under a grant already blessed: " +
+      " standing grants fail for more reasons than the baseline holds, so a new hole opened under a grant already blessed — fix the new reason, or, if it was meant, name the grant to " +
+      permission_grants_baseline_bless.name +
+      ": " +
       list_join_comma(list2);
     throw new Error(message_worsened);
   }
