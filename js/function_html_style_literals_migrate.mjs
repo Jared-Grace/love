@@ -1,6 +1,6 @@
 import { function_auto } from "./function_auto.mjs";
 import { not } from "./not.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_html_style_set_to_helpers } from "./js_html_style_set_to_helpers.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -12,7 +12,7 @@ export async function function_html_style_literals_migrate(f_name, helpers) {
   let changed = false;
   let error_message = "";
   try {
-    let f_path = await function_name_to_path(f_name);
+    let f_path = await function_name_to_path_relative(f_name);
     let code_before = await file_read(f_path);
     function lambda(ast) {
       js_html_style_set_to_helpers(ast, helpers);
