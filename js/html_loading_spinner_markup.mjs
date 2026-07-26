@@ -1,16 +1,7 @@
-import { html_loading_spinner_keyframes_css } from "./html_loading_spinner_keyframes_css.mjs";
-import { html_loading_spinner } from "./html_loading_spinner.mjs";
-import { html_code_loading_splash } from "./html_code_loading_splash.mjs";
 import { html_loading_spinner_breath_animation } from "./html_loading_spinner_breath_animation.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function html_loading_spinner_markup() {
-  ("the loading spinner as a self-contained html string (inline styles only; the keyframes come from ",
-    html_loading_spinner_keyframes_css.name,
-    "): a breathing outer ring that spins and glows, a counter-spinning inner ring, and a pulsing core. the single source of the spinner's LOOK - rendered as live dom by ",
-    html_loading_spinner.name,
-    " at runtime and baked into the page by ",
-    html_code_loading_splash.name,
-    " at build time, so the instant splash and the runtime overlay show the exact same spinner");
+  "the loading spinner as a self-contained html string (inline styles only; the keyframes come from the shared keyframes css): a breathing outer ring that spins and glows, a counter-spinning inner ring, and a pulsing core. the single source of the spinner LOOK - rendered as live dom at runtime and baked into the page at build time, so the instant splash and the runtime overlay show the exact same spinner";
   let breath = html_loading_spinner_breath_animation();
   let spinner_open = '<div style="position:relative;width:12rem;height:12rem">';
   let pulse_open = text_combine_multiple([

@@ -45,7 +45,6 @@
       "Bash(uniq:*)",
       "Bash(tr:*)",
       "Bash(paste:*)",
-      "Bash(mkdir:*)",
       "Bash(md5sum:*)",
       "Bash(ffprobe:*)",
       "Bash(node --check:*)",
