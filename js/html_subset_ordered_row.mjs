@@ -1,3 +1,5 @@
+import { html_style_flex } from "./html_style_flex.mjs";
+import { equal } from "./equal.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
@@ -20,12 +22,14 @@ export function html_subset_ordered_row(
   changed,
 ) {
   let name = list_get_property(chosen, i, name_property);
-  let last = subtract(list_size(chosen), 1);
+  let left = list_size(chosen);
+  let last = subtract(left, 1);
   let row = html_div(parent);
   html_display_flex(row);
   html_width_full(row);
   function up() {
-    list_swap_at(chosen, i, subtract(i, 1));
+    let index_b = subtract(i, 1);
+    list_swap_at(chosen, i, index_b);
     changed();
   }
   function down() {
@@ -37,18 +41,21 @@ export function html_subset_ordered_row(
   html_style_flex(arrows, "1 1 0");
   html_display_flex(arrows);
   html_style_set(arrows, "justify-content", "flex-end");
-  let up_button = app_shared_button(arrows, emoji_arrow_up(), up);
-  if (i === 0) {
+  let text = emoji_arrow_up();
+  let up_button = app_shared_button(arrows, text, up);
+  if (equal(i, 0)) {
     html_visibility_hidden(up_button);
   }
-  let down_button = app_shared_button(arrows, emoji_arrow_down(), down);
-  if (i === last) {
+  let text2 = emoji_arrow_down();
+  let down_button = app_shared_button(arrows, text2, down);
+  if (equal(i, last)) {
     html_visibility_hidden(down_button);
   }
   let label = html_div(row);
   html_style_flex(label, "1 1 0");
   html_style_set(label, "text-align", "left");
-  html_style_set(label, "padding-left", app_shared_spaced_small_gap());
+  let style_value = app_shared_spaced_small_gap();
+  html_style_set(label, "padding-left", style_value);
   html_span_text(label, name);
   return row;
 }
