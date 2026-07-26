@@ -10,7 +10,7 @@ import { equal_assert_json } from "./equal_assert_json.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function karate_tests() {
   text_combine("TODO: fix url like ", app_replace_url_dev);
-  await playwright_test_app_dev(url_prefix, app_karate, lambda);
+  await playwright_test_app_dev(app_karate, lambda);
   async function lambda(page) {
     let title_actual = await page.title();
     let title = app_karate_main_title();
