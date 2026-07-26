@@ -1,6 +1,6 @@
 import { js_comments_left_count } from "./js_comments_left_count.mjs";
 import { functions_names } from "./functions_names.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_code_comments_migrated } from "./js_code_comments_migrated.mjs";
 import { function_code_transform } from "./function_code_transform.mjs";
@@ -13,7 +13,7 @@ export async function function_comments_migrate(f_name) {
     return migrated;
   }
   let result = await function_code_transform(f_name, migrated_of);
-  let f_path = await function_name_to_path(f_name);
+  let f_path = await function_name_to_path_relative(f_name);
   let code = await file_read(f_path);
   let left = js_comments_left_count(code);
   let r = object_merge_set(

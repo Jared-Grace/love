@@ -8,7 +8,9 @@ export async function file_written_add(f_path) {
   ("exactly what it is committing instead of sweeping up everything in the folder.");
   ("One plain path per line: the note is read once and thrown away, so it never");
   ("needs to carry anything a later reader would have to interpret.");
-  let line = text_combine(f_path, "\n");
+  ("noted as the full path from the root: the same file is written under several spellings depending on where a command was started from, and only the process doing the writing knows which folder its spelling was relative to");
+  let absolute = await path_resolve(f_path);
+  let line = text_combine(absolute, "\n");
   let path_note = files_written_path();
   await file_append(path_note, line);
 }

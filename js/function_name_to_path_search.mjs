@@ -7,9 +7,9 @@ import { list_filter } from "./list_filter.mjs";
 import { true_is } from "./true_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_exists } from "./file_exists.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 export async function function_name_to_path_search(f_name) {
-  let f_path = function_name_to_path(f_name);
+  let f_path = function_name_to_path_relative(f_name);
   async function lambda(joined) {
     let exists = await file_exists(joined);
     let v = {

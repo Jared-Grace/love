@@ -1,7 +1,7 @@
 import { folder_previous_join } from "./folder_previous_join.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 export function vite_config_entry_path(fn) {
-  let f_path = function_name_to_path(fn.name);
+  let f_path = function_name_to_path_relative(fn.name);
   let path = folder_previous_join(f_path);
   return path;
 }

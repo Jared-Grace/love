@@ -1,5 +1,5 @@
 import { repo_functions_names } from "./repo_functions_names.mjs";
-import { function_name_to_path } from "./function_name_to_path.mjs";
+import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_top_level_broken_comments_from_code } from "./js_top_level_broken_comments_from_code.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -10,7 +10,7 @@ export async function functions_top_level_broken_comments() {
   "Every file is opened at once rather than one after another. Waiting for each read in turn made this the slowest check in the suite by a wide margin, and a check nobody wants to wait for is one that gets left out.";
   let names = await repo_functions_names("love");
   async function offender_of(name) {
-    let f_path = function_name_to_path(name);
+    let f_path = function_name_to_path_relative(name);
     let code = await file_read(f_path);
     let kinds = js_top_level_broken_comments_from_code(code);
     let any = greater_than(kinds.length, 0);
