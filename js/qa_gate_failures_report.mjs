@@ -10,6 +10,11 @@ export async function qa_gate_failures_report(results, gates) {
   "can be read. The quiet run says which gate is unhappy; this one says why.";
   "Results come back in the order the gates were given, so a result and its gate";
   "share an index and no lookup by name is needed.";
+  "The verdict is the first run's and the output is the second run's, so the two";
+  "can disagree - with many hands editing at once, a gate reads a file mid-edit,";
+  "complains, and is quiet a moment later. Which of those happened is said out";
+  "loud, because a failure printed above output reporting nothing wrong reads as";
+  "a broken gate, and the reader goes looking for a fault that is not there.";
   let failed = [];
   let size = list_size(results);
   for (let index = 0; less_than(index, size); index++) {
@@ -26,6 +31,11 @@ export async function qa_gate_failures_report(results, gates) {
     let gate = list_get(gates, index);
     try {
       await gate();
+      console.log(
+        "QUIET ON THE SECOND ASK  " +
+          name +
+          ": it complained while the others were running and had nothing to say when asked on its own, which is what a file being edited mid-run looks like",
+      );
     } catch (e) {
       console.log("GATE FAILED  " + name + ": " + e.message);
     }
