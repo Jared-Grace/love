@@ -1,9 +1,13 @@
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
+import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
+import { list_add } from "./list_add.mjs";
+import { log } from "./log.mjs";
+import { timings_print } from "./timings_print.mjs";
 import { examples_corpus_read } from "./examples_corpus_read.mjs";
 import { example_check } from "./example_check.mjs";
-
-"Runs the example corpus as a gate: each example checked against its expected";
-"outcome (transform → byte-exact after; rejection → throws as declared).";
-"Throws on any failure so the r.mjs seam exits nonzero.";
+("Runs the example corpus as a gate: each example checked against its expected");
+("outcome (transform → byte-exact after; rejection → throws as declared).");
+("Throws on any failure so the r.mjs seam exits nonzero.");
 export async function examples_gate_run() {
   let examples = await examples_corpus_read();
   let pass = 0;
@@ -14,7 +18,10 @@ export async function examples_gate_run() {
     let started = date_now_milliseconds();
     let result = await example_check(e);
     let milliseconds = date_milliseconds_since(started);
-    let timing = { name: e.title, milliseconds };
+    let timing = {
+      name: e.title,
+      milliseconds,
+    };
     list_add(timings, timing);
     if (result === "pass") {
       pass++;
@@ -30,5 +37,9 @@ export async function examples_gate_run() {
   if (fail > 0) {
     throw new Error("examples gate: " + fail + " failed");
   }
-  return { pass, fail, skip };
+  return {
+    pass,
+    fail,
+    skip,
+  };
 }
