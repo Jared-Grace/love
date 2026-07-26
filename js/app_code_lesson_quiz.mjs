@@ -30,6 +30,7 @@ import { app_code_example_answer_label } from "./app_code_example_answer_label.m
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { emoji_light_bulb } from "./emoji_light_bulb.mjs";
 import { app_code_button_skip_lesson } from "./app_code_button_skip_lesson.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
@@ -106,9 +107,10 @@ export function app_code_lesson_quiz(
     html_visibility_hidden(container_success_message);
     show_correction();
   }
+  let reveal_label = text_combine(emoji_light_bulb(), " Show me the answer");
   let reveal_button = app_shared_button_wide(
     parent_container,
-    "Show me the answer",
+    reveal_label,
     on_reveal,
   );
   let value2 = app_shared_spaced_gap();

@@ -20,6 +20,8 @@ export function examples_groups() {
         "example_wrap_call_in_if",
         "example_if_return_add_selected",
         "example_return_argument_set_selected",
+        "example_call_add_after_selected",
+        "example_call_add_before_selected",
       ],
     },
     {
