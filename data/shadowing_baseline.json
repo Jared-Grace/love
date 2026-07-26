@@ -753,13 +753,6 @@
    "shadows_function": []
   },
   {
-   "name": "function_rename_fn_names_check",
-   "shadows_outer": [
-    "value"
-   ],
-   "shadows_function": []
-  },
-  {
    "name": "function_rename_prefix_add",
    "shadows_outer": [
     "f_name_before"
