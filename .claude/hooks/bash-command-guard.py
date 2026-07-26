@@ -2551,6 +2551,41 @@ def find_git_commit_write(command):
     return None
 
 
+def snapshot_detached_checkout_is(command):
+    """True iff the whole command is `git -C <dir under /dev/shm> checkout
+    --detach <ref>` and nothing else.
+
+    This one shape is auto-approved because it is provably harmless, and it
+    recurs: a snapshot worktree in tmpfs is advanced to a commit every time the
+    gates are run there. Detaching moves no branch, so nothing another Claude
+    could be standing on is touched, and the only state it overwrites belongs
+    to that scratch worktree.
+
+    Being in /dev/shm is NOT by itself the reason, and assuming it would be a
+    mistake worth naming: a worktree's .git points back at the real
+    repository, so a commit or a branch checkout made from tmpfs writes to the
+    same objects and refs everyone else is using. Volatile storage says
+    nothing about what a git command can reach from inside it. `--detach`
+    does, which is why the check insists on it rather than on the path alone.
+    Any extra word makes it a different command and it falls through."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return False
+    statements = list(split_statements(tokens))
+    if len(statements) != 1:
+        return False
+    words = _strip_command_prefixes(statements[0])
+    if len(words) != 6:
+        return False
+    shape = [words[0], words[1], words[3], words[4]]
+    if shape != ["git", "-C", "checkout", "--detach"]:
+        return False
+    directory = os.path.normpath(words[2])
+    inside = directory.startswith("/dev/shm/")
+    return inside
+
+
 def git_repo_root_directed_subcommand(words):
     """The subcommand of a `git -C <dir> <sub>` aimed at THIS repo's root, or
     None.
@@ -2797,6 +2832,20 @@ def main():
     safe_verbs = load_safe_verbs()
     safe_exact_commands = load_safe_exact_commands()
     if not safe_verbs and not safe_exact_commands:
+        return
+
+    if snapshot_detached_checkout_is(command):
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "allow",
+                "permissionDecisionReason": (
+                    "Auto-approved: a detached checkout of a scratch worktree "
+                    "under /dev/shm, which moves no branch and discards only "
+                    "that worktree's own state."
+                ),
+            }
+        }))
         return
 
     try:
