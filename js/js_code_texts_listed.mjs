@@ -1,3 +1,7 @@
+import { json_to } from "./json_to.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_join } from "./list_join.mjs";
 export function js_code_texts_listed(f_name, note, texts) {
   "the source of a function that answers a fixed list of pieces of text, one per line so a change to one of them reads as one line in a diff";
   "the text is written out as JSON rather than quoted by hand, which is what keeps a quote or a backslash inside one of them from ending the string early and turning the generated file into something that will not parse";
@@ -8,12 +12,13 @@ export function js_code_texts_listed(f_name, note, texts) {
     list_add(lines, line);
   }
   let joined = list_join(lines, "");
+  let json2 = json_to(note);
   let code = text_combine_multiple([
     "export function ",
     f_name,
     "() {\n",
     "  ",
-    json_to(note),
+    json2,
     ";\n",
     "  let texts = [\n",
     joined,
