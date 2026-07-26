@@ -11,4 +11,5 @@ export function list_sort_text_mapper(list, lambda$item) {
     return r;
   }
   list.sort(lambda);
+  return list;
 }
