@@ -2,7 +2,7 @@ import { js_flo_name } from "./js_flo_name.mjs";
 import { js_global_names } from "./js_global_names.mjs";
 import { js_identifier_nodes_bound_by } from "./js_identifier_nodes_bound_by.mjs";
 import { js_identifiers_referenced_names } from "./js_identifiers_referenced_names.mjs";
-import { js_imports } from "./js_imports.mjs";
+import { js_imports_local_names } from "./js_imports_local_names.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
