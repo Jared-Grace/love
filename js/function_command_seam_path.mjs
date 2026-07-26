@@ -1,3 +1,10 @@
+import { functions_command_seams } from "./functions_command_seams.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { function_imports_beyond_infrastructure } from "./function_imports_beyond_infrastructure.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { property_set } from "./property_set.mjs";
+import { function_seam_path_back } from "./function_seam_path_back.mjs";
 export async function function_command_seam_path(f_name) {
   "The chain of calls by which this function reaches a command-running one, with the plumbing edges left out - or an empty list when it reaches none.";
   "This exists because the reach answer and the path answer disagreed, and a disagreement between them is unreadable. The reach walk drops the install plumbing every function sits on; the plain path walk does not, so it kept offering the same route through saving a file and installing a package, which is the route the filter was written to ignore. Reading that path explained nothing about why the function was refused. Walking with the same filter the answer was computed with is what makes the path an explanation of it.";
@@ -6,7 +13,7 @@ export async function function_command_seam_path(f_name) {
   let parents = {};
   let seen = [f_name];
   let frontier = [f_name];
-  while (list_not_empty_is(frontier)) {
+  while (list_empty_not_is(frontier)) {
     let next = [];
     for (let name of frontier) {
       let children = await function_imports_beyond_infrastructure(name);
@@ -27,5 +34,6 @@ export async function function_command_seam_path(f_name) {
     }
     frontier = next;
   }
-  return [];
+  let r = [];
+  return r;
 }
