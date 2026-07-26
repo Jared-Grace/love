@@ -1,3 +1,5 @@
+import { js_operator_targets_leaf_gate_run } from "./js_operator_targets_leaf_gate_run.mjs";
+import { apps_node_only_gate_run } from "./apps_node_only_gate_run.mjs";
 import { js_function_self_call_cases_gate_run } from "./js_function_self_call_cases_gate_run.mjs";
 import { functions_self_call_gate_run } from "./functions_self_call_gate_run.mjs";
 import { fn_name_literals_gate_run } from "./fn_name_literals_gate_run.mjs";
@@ -60,7 +62,9 @@ export function qa_gates() {
     function_imports_gate_run,
     js_function_self_call_cases_gate_run,
     functions_self_call_gate_run,
+    js_operator_targets_leaf_gate_run,
     fn_name_literals_gate_run,
+    apps_node_only_gate_run,
     function_top_level_comment_gate_run,
     functions_shadowing_gate_run,
     command_seams_agree_gate_run,
