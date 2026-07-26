@@ -133,6 +133,7 @@
       "Bash(node scripts/ai.mjs data_identifiers_search_names:*)",
       "Bash(node scripts/ai.mjs data_identifiers_fn_names_get:*)",
       "Bash(node scripts/ai.mjs git_message_safe:*)",
+      "Bash(node scripts/ai.mjs qa_gates:*)",
       "Bash(node scripts/ai.mjs ebible_book_divisions_canon_assert:*)",
       "Bash(node scripts/ai.mjs examples_data_write:*)",
       "Bash(node scripts/ai.mjs examples_gate_run:*)",

@@ -40,8 +40,8 @@ export function app_code_lesson_expression_absolute_value() {
   }
   function decoys(question, answer) {
     "the classic Math.abs mistake is keeping the minus sign instead of dropping it, so the tailored wrong answer is the NEGATIVE of the answer - what you get if you forget to take the distance";
-    let negative = subtract(0, answer);
-    let r2 = [negative];
+    let answer_negated = subtract(0, answer);
+    let r2 = [answer_negated];
     return r2;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -76,7 +76,7 @@ export function app_code_lesson_expression_absolute_value() {
     "the worked examples are randomized each visit: the definition, a negative number turning positive, and an already-positive number that does not change";
     let magnitude = integer_random(2, 9);
     let magnitude_text = text_to(magnitude);
-    let negative = text_combine_multiple(["-", magnitude_text]);
+    let negative_text = text_combine_multiple(["-", magnitude_text]);
     let define = app_code_container_light_blue(root);
     let define_line = html_div(define);
     html_span_text(define_line, "The ");
@@ -88,7 +88,7 @@ export function app_code_lesson_expression_absolute_value() {
     ]);
     let negative_box = app_code_container_light_blue(root);
     html_div_cycle_code(negative_box, ["A negative number becomes positive:"]);
-    let v = abs_code(negative);
+    let v = abs_code(negative_text);
     html_div_cycle_code(negative_box, ["", v, " is ", magnitude_text]);
     let positive_box = app_code_container_light_blue(root);
     html_div_cycle_code(positive_box, [

@@ -19,25 +19,24 @@ export async function permission_editor_open_gate_run() {
   }
   let offenders = list_filter(names, lambda);
   function lambda2(name) {
-    log_console(text_combine_multiple(["OPENS EDITOR  ", name]));
+    let message = text_combine_multiple(["OPENS EDITOR  ", name]);
+    log_console(message);
   }
   each(offenders, lambda2);
-  log_console(
-    text_combine_multiple([
-      "\nchecked ",
-      names.length,
-      "  offenders ",
-      offenders.length,
-    ]),
-  );
+  let message2 = text_combine_multiple([
+    "\nchecked ",
+    names.length,
+    "  offenders ",
+    offenders.length,
+  ]);
+  log_console(message2);
   if (greater_than(offenders.length, 0)) {
-    throw new Error(
-      text_combine_multiple([
-        "permission editor open gate: ",
-        offenders.length,
-        " allow rules name a function that opens the editor on the human's screen",
-      ]),
-    );
+    let combined = text_combine_multiple([
+      "permission editor open gate: ",
+      offenders.length,
+      " allow rules name a function that opens the editor on the human's screen",
+    ]);
+    throw new Error(combined);
   }
   let r = {
     checked: names.length,
