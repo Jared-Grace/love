@@ -1,3 +1,12 @@
+import { js_flo } from "./js_flo.mjs";
+import { js_declared_names } from "./js_declared_names.mjs";
+import { js_function_params_all } from "./js_function_params_all.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { js_node_signature } from "./js_node_signature.mjs";
+import { not } from "./not.mjs";
 export function js_declaration_signature(ast) {
   "The shape of what a module's function actually does, with its own name and its comments left out. Two people solving the same small problem write the same steps and choose different words for them, so this is the form in which their two functions can be recognised as one.";
   "The name is left out because the whole point is to find the same work sitting under two names. The comments are left out because prose is where two authors differ most and it changes nothing about what runs.";
