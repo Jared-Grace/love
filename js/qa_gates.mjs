@@ -1,3 +1,4 @@
+import { function_open_name_gate_run } from "./function_open_name_gate_run.mjs";
 import { memory_link_verdict_gate_run } from "./memory_link_verdict_gate_run.mjs";
 import { memory_link_gate_run } from "./memory_link_gate_run.mjs";
 import { memory_frontmatter_gate_run } from "./memory_frontmatter_gate_run.mjs";
@@ -32,6 +33,7 @@ export function qa_gates() {
     examples_gate_run,
     permission_gate_run,
     permission_open_suffix_gate_run,
+    function_open_name_gate_run,
     permission_reachable_gate_run,
     permission_rule_probe_gate_run,
     permission_rule_file_gate_run,
