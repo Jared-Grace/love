@@ -1,11 +1,11 @@
 import { file_read_json } from "./file_read_json.mjs";
 import { bible_interlinear_json_path } from "./bible_interlinear_json_path.mjs";
-// Given a readable verse reference (e.g. "1 John 3:4"), return its ordered
-// interlinear words, each { original, translit, parsing, parsing_long, gloss, strong }.
-// The readable "VerseId" is only stamped on the FIRST word of a verse; the rest share
-// the numeric "Verse" id — so find the id from the first word, then gather all words.
-// Uses plain bracket access because these external rows have optional fields (an
-// asserting property_get would throw on the many rows that omit "VerseId").
+"Given a readable verse reference (e.g. \"1 John 3:4\"), return its ordered";
+"interlinear words, each { original, translit, parsing, parsing_long, gloss, strong }.";
+"The readable \"VerseId\" is only stamped on the FIRST word of a verse; the rest share";
+"the numeric \"Verse\" id — so find the id from the first word, then gather all words.";
+"Uses plain bracket access because these external rows have optional fields (an";
+`asserting ${fn_name("property_get")} would throw on the many rows that omit "VerseId").`;
 const ORIGINAL_KEY = "WLC / Nestle Base TR RP WH NE NA SBL";
 const GLOSS_KEY = " BSB version ";
 export async function bible_interlinear_verse(reference) {

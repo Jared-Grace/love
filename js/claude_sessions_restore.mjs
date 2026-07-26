@@ -7,19 +7,19 @@ import { claude_running_count } from "./claude_running_count.mjs";
 import { claude_tmux_session_name } from "./claude_tmux_session_name.mjs";
 import { claude_window_claude_start } from "./claude_window_claude_start.mjs";
 import { claude_session_window_start } from "./claude_session_window_start.mjs";
-// Reopen every Claude that was running when the machine went down, one tmux
-// window each, named after the prompt that started it.
-//
-// tmux rather than separate terminal windows because the status bar shows all of
-// them on one line — so "which of these is waiting on me?" is one glance instead
-// of clicking through a dozen tabs. The waiting marker itself is painted by
-// .claude/hooks/tmux_window_mark.sh from the Stop and Notification hooks.
+"Reopen every Claude that was running when the machine went down, one tmux";
+"window each, named after the prompt that started it.";
+"";
+"tmux rather than separate terminal windows because the status bar shows all of";
+"them on one line — so \"which of these is waiting on me?\" is one glance instead";
+"of clicking through a dozen tabs. The waiting marker itself is painted by";
+".claude/hooks/tmux_window_mark.sh from the Stop and Notification hooks.";
 const TMUX_SESSION = claude_tmux_session_name();
 export async function claude_sessions_restore(minutes) {
-  // Recency identifies the open-set correctly after a reboot and WRONGLY while
-  // sessions are alive — a live session has the freshest transcript of all, so
-  // resuming it would put a second process on the same file. Refuse rather than
-  // guess which of the recent ids are safe.
+  "Recency identifies the open-set correctly after a reboot and WRONGLY while";
+  "sessions are alive — a live session has the freshest transcript of all, so";
+  "resuming it would put a second process on the same file. Refuse rather than";
+  "guess which of the recent ids are safe.";
   let running = await claude_running_count();
   if (running > 0) {
     return text_combine_multiple([
