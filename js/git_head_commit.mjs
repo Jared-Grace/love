@@ -1,3 +1,6 @@
+import { folder_current_absolute } from "./folder_current_absolute.mjs";
+import { command_line_git_folder } from "./command_line_git_folder.mjs";
+import { text_trim } from "./text_trim.mjs";
 export async function git_head_commit() {
   "The full name of the commit we are standing on";
   "The full name rather than the short one, because a short name is only unique until the day it is not, and this one is used as a key";
