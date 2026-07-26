@@ -1,3 +1,6 @@
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_box_shadow_set } from "./html_box_shadow_set.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_karate_button_background_invalid } from "../../karate_code/js/app_karate_button_background_invalid.mjs";
