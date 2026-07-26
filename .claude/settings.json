@@ -101,7 +101,7 @@
       "Bash(node scripts/ai.mjs memory_fn_reference_gate_run:*)",
       "Bash(node scripts/ai.mjs apps_names:*)",
       "Bash(node scripts/ai.mjs apps_node_only_gate_run:*)",
-      "Bash(node scripts/ai.mjs app_dependency_paths_multiple:*)",
+      "Bash(node scripts/ai.mjs apps_dependency_paths_multiple:*)",
       "Bash(node scripts/ai.mjs app_code_screens_crawl:*)",
       "Bash(node scripts/ai.mjs app_code_screens_manifest_write:*)",
       "Bash(node scripts/ai.mjs app_code_screens_diff:*)",
