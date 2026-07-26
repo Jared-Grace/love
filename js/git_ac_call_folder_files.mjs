@@ -1,3 +1,4 @@
+import { path_resolve } from "./path_resolve.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_starts_with_curried_right } from "./text_starts_with_curried_right.mjs";
@@ -15,7 +16,9 @@ export async function git_ac_call_folder_files(folder, f_name, args, files) {
   "Answering with what was committed is the other half. A commit of nothing looks";
   "exactly like a commit that worked, and this is the only place that can tell";
   "them apart.";
-  let under = text_starts_with_curried_right(folder);
+  "the folder arrives named from where the caller stands, and the written files are named from the root, so one of the two has to be moved before they can be compared at all. Comparing them as they came reads every file as belonging to no folder, which asks git about nothing, which git answers with everything";
+  let rooted = await path_resolve(folder);
+  let under = text_starts_with_curried_right(rooted);
   let inside = list_filter(files, under);
   let changed = await git_files_changed_folder(folder, inside);
   let none = list_empty_is(changed);
