@@ -1,4 +1,4 @@
-import { function_duplicate_kind } from "./function_duplicate_kind.mjs";
+import { functions_duplicates_group_kind } from "./functions_duplicates_group_kind.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_shape } from "./function_shape.mjs";
 import { property_exists } from "./property_exists.mjs";

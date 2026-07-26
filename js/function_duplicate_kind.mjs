@@ -1,3 +1,6 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
+import { function_marked_is } from "./function_marked_is.mjs";
+import { duplicate_kind_parallel } from "./duplicate_kind_parallel.mjs";
 import { function_stub_is } from "./function_stub_is.mjs";
 import { duplicate_kind_stub } from "./duplicate_kind_stub.mjs";
 import { function_work_none_is } from "./function_work_none_is.mjs";
