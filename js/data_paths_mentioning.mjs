@@ -1,5 +1,4 @@
-import { data_folder } from "./data_folder.mjs";
-import { folder_read_recursive_paths_async } from "./folder_read_recursive_paths_async.mjs";
+import { data_paths } from "./data_paths.mjs";
 import { file_read } from "./file_read.mjs";
 import { text_identifier_includes } from "./text_identifier_includes.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
