@@ -1,6 +1,6 @@
 import { memory_symbol_references_judged } from "./memory_symbol_references_judged.mjs";
 import { memory_symbols_baseline_read } from "./memory_symbols_baseline_read.mjs";
-import { memory_symbols_versus_baseline } from "./memory_symbols_versus_baseline.mjs";
+import { names_versus_baseline } from "./names_versus_baseline.mjs";
 import { memory_symbols_baseline_write } from "./memory_symbols_baseline_write.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -10,7 +10,7 @@ export async function memory_symbol_gate_run() {
   "The worst thing a note can do is instruct: a line telling a Claude to call something that has never existed costs a search that finds nothing and then a wrong belief about what the repo has. That is what this catches early, while whoever wrote it still remembers what they meant.";
   let current = await memory_symbol_references_judged();
   let known = await memory_symbols_baseline_read();
-  let change = memory_symbols_versus_baseline(current, known);
+  let change = names_versus_baseline(current, known);
   let added = property_get(change, "added");
   let stale = property_get(change, "stale");
   console.log("memory symbols  new " + added.length + "  gone " + stale.length);
