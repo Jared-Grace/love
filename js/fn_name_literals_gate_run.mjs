@@ -1,0 +1,27 @@
+export async function fn_name_literals_gate_run() {
+  "QA gate: every spelled function name in the code names a function that exists. Spelling";
+  "a name instead of importing it is what keeps a bundle small and a reference rename-safe,";
+  "and this is the price of that trade - a plain string cannot fail at import time, so a typo";
+  "or a rename that got away survives all the way to the call that uses it. Throws so the";
+  "dispatcher seam exits nonzero.";
+  let offenders = await functions_fn_name_literals_unresolved();
+  for (let offender of offenders) {
+    let name = property_get(offender, "name");
+    let unresolved = property_get(offender, "unresolved");
+    let joined = list_join_comma(unresolved);
+    console.log("UNRESOLVED  " + name + "  -> " + joined);
+  }
+  console.log("\noffenders " + offenders.length);
+  let any = greater_than(offenders.length, 0);
+  if (any) {
+    let message =
+      "spelled name gate: " +
+      offenders.length +
+      " functions spell a name that no function answers to";
+    throw new Error(message);
+  }
+  let result = {
+    offenders: 0,
+  };
+  return result;
+}
