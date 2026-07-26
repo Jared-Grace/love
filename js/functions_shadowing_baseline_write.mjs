@@ -9,5 +9,6 @@ export async function functions_shadowing_baseline_write() {
   };
   let json = json_format_to(baseline);
   await file_overwrite("data/shadowing_baseline.json", json);
-  return known.length;
+  let r = known.length;
+  return r;
 }
