@@ -1,0 +1,28 @@
+export function python_mirrors() {
+  arguments_assert(arguments, 0);
+  ("Every list of names the python guard needs, together with where its generated");
+  ("copy lives. The guard can only read a command line; this side can read the");
+  ("import graph. Both have to know the same names, and the only way two copies");
+  ("cannot disagree is for one of them to be written by the other.");
+  ("A generated literal rather than a file the guard reads while it runs: the deny");
+  ("floor is keyed on these sets, so a read that could fail would fail open. A");
+  ("missing module raises at import instead, loudly, before any command is judged.");
+  let mirrors = [
+    {
+      constant: "NODE_DISPATCHER_SCRIPTS",
+      path: ".claude/hooks/dispatcher_scripts.py",
+      source: dispatcher_scripts,
+    },
+    {
+      constant: "DISPATCHER_COMMANDS_FN_NAMED",
+      path: ".claude/hooks/dispatcher_commands.py",
+      source: dispatcher_commands_fn_named,
+    },
+    {
+      constant: "DENIED_DISPATCHER_FUNCTIONS",
+      path: ".claude/hooks/denied_dispatcher_functions.py",
+      source: functions_command_seams,
+    },
+  ];
+  return mirrors;
+}
