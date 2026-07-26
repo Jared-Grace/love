@@ -58,6 +58,10 @@ export async function memory_index_hooks_compress() {
     }
     let short = tidy + separator + joined;
     list_add(kept, short);
+    let same = equal(short, line);
+    if (same) {
+      continue;
+    }
     let record = {
       was: line.length,
       now: short.length,
