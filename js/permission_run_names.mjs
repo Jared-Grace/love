@@ -1,7 +1,7 @@
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
-import { permission_rule_run_name } from "./permission_rule_run_name.mjs";
+import { dispatcher_run_name } from "./dispatcher_run_name.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -14,7 +14,7 @@ export async function permission_run_names() {
     let permissions = property_get(settings, "permissions");
     let allow = property_get(permissions, "allow");
     for (let rule of allow) {
-      let name = permission_rule_run_name(rule);
+      let name = dispatcher_run_name(rule);
       if (not(text_empty_is(name))) {
         list_add(names, name);
       }
