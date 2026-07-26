@@ -31,12 +31,13 @@ export function js_node_signature(node, bound) {
     return slot;
   }
   function written_key(key) {
-    let name = property_get(key, "name");
-    let named_is = text_empty_not_is(name);
+    ("a key is written either as a bare word or as a quoted one, and only one of the two fields is there to read");
+    let name = property_get_or_null(key, "name");
+    let named_is = null_not_is(name);
     if (named_is) {
       return name;
     }
-    let value = property_get(key, "value");
+    let value = property_get_or_null(key, "value");
     let text = json_to(value);
     return text;
   }
