@@ -123,17 +123,7 @@ export function app_code_lesson_expression_round_down() {
     html_div_cycle_code(rounds, [
       "",
       "Math.floor",
-      " rounds a number down to the whole number below it",
-    ]);
-    html_div_cycle_code(rounds, [
-      "In other words (for these positive numbers) ",
-      "Math.floor",
-      " removes the decimal part, so that only the whole number is left",
-    ]);
-    html_div_cycle_code(rounds, [
-      "",
-      "Math.floor",
-      " always rounds down, never up",
+      " gives the whole number below it",
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
