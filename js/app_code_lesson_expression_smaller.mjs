@@ -90,7 +90,8 @@ export function app_code_lesson_expression_smaller() {
     html_span_text(define_line, "Some functions take ");
     let term = html_span_text(define_line, "two");
     html_bold(term);
-    html_span_text(define_line, " numbers, separated by a comma");
+    html_span_text(define_line, " numbers, separated by a comma ");
+    html_span_text_code_dark(define_line, ",");
     let example_box = app_code_container_light_blue(root);
     html_div_cycle_code(example_box, [
       "",
@@ -99,13 +100,21 @@ export function app_code_lesson_expression_smaller() {
       big_text,
     ]);
     let v = min_code(small, big);
-    html_div_cycle_code(example_box, ["so ", v, " is ", small_text]);
+    html_div_cycle_code(example_box, ["So ", v, " is ", small_text]);
     let v2 = min_code(big, small);
-    html_div_cycle_code(example_box, ["and ", v2, " is also ", small_text]);
+    html_div_cycle_code(example_box, ["And ", v2, " is also ", small_text]);
     html_div_cycle_code(example_box, [
       "",
       "Math.min",
       " chooses the smaller number",
+    ]);
+    let equal_box = app_code_container_light_blue(root);
+    html_div_cycle_code(equal_box, [
+      "If both numbers are equal, then there's only ",
+      "1",
+      " number to choose from, so ",
+      "Math.min",
+      " chooses that number",
     ]);
   }
 }
