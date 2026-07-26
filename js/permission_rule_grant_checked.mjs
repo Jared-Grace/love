@@ -1,3 +1,4 @@
+import { text_combine } from "./text_combine.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { permission_grant_rule } from "./permission_grant_rule.mjs";
 import { permission_grant_refusals } from "./permission_grant_refusals.mjs";
