@@ -20,8 +20,9 @@ export async function functions_html_style_literals_migrate() {
     return result;
   }
   let results = await list_map_async(asked, migrated_of);
-  let changed = list_filter_property(results, "changed");
-  let refused = list_filter_property(results, "error_message");
+  ("both filters name the value they want. Asking for the property alone silently compares it against nothing at all, so every entry fails the test and the report reads as an empty list - which is how the first real run of this claimed nothing had changed while it was rewriting twenty files");
+  let changed = list_filter_property(results, "changed", true);
+  let refused = list_filter_property_not(results, "error_message", "");
   let report = {
     asked: list_size(asked),
     changed: list_map_property(changed, "name"),
