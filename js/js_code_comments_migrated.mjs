@@ -25,26 +25,14 @@ export function js_code_comments_migrated(code, f_names) {
     return own;
   }
   let own = list_filter(comments, own_is);
-  let pieces = [];
-  let cursor = 0;
-  function lambda(comment) {
+  function statement_of(comment) {
     let start = property_get(comment, "start");
-    let end = property_get(comment, "end");
     let value = property_get(comment, "value");
-    let before = text_slice(code, cursor, start);
-    list_add(pieces, before);
     let inside = js_offset_inside_function_is(ast_before, start);
     let usable = inside ? free : [];
     let statement = js_code_comment_statement_generic(value, usable);
-    list_add(pieces, statement);
-    cursor = end;
+    return statement;
   }
-  each(own, lambda);
-  let size = text_size(code);
-  let rest = text_slice(code, cursor, size);
-  list_add(pieces, rest);
-  let migrated = text_combine_multiple(pieces);
-  ("the result is parsed before it is handed back, so that a file this cannot handle is refused loudly instead of saved broken. A comment can sit on its own line and still be somewhere a statement may not go - between an assignment and the value being assigned, for one - and there the swap produces something that is no longer JavaScript. Parsing catches every such case without anyone having to think of them in advance");
-  js_parse(migrated);
+  let migrated = js_code_spans_replaced(code, own, statement_of);
   return migrated;
 }
