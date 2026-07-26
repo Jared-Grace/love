@@ -1,3 +1,10 @@
+import { qa_gate_failed_complaints } from "./qa_gate_failed_complaints.mjs";
+import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
+import { list_size } from "./list_size.mjs";
+import { functions_names } from "./functions_names.mjs";
+import { list_get } from "./list_get.mjs";
+import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
+import { less_than } from "./less_than.mjs";
 import { qa_tree_ensure } from "./qa_tree_ensure.mjs";
 import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,6 +22,20 @@ export async function qa_gate_run() {
   let told = await qa_snapshot_gate_told(folder);
   let printed = property_get(told, "printed");
   console.log(printed);
+  ("Who last touched the things the copy complained about is asked out here rather than in there. The copy is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault");
+  let complaints = qa_gate_failed_complaints(printed);
+  let names = qa_gate_failed_names(printed);
+  let size = list_size(complaints);
+  let any = greater_than(size, 0);
+  if (any) {
+    let known = await functions_names();
+    for (let index = 0; less_than(index, size); index++) {
+      let name = list_get(names, index);
+      let complaint = list_get(complaints, index);
+      console.log("\n=== who last touched what " + name + " named ===");
+      await qa_gate_blame_print(complaint, known);
+    }
+  }
   let machine = qa_gates_machine();
   let here = await qa_gates_told(machine);
   let failed_copy = property_get(told, "failed");
