@@ -1165,13 +1165,17 @@ def verb_of(words):
             # function at once - giving back exactly what the per-function
             # grants exist to withhold. Folding one word further is what makes
             # `<command> <fn>` grantable one function at a time.
+            # Both spellings of this repo's own dispatcher fold to the
+            # relative one, so a rule naming it matches either - see
+            # dispatcher_script_canonical.
+            script = dispatcher_script_canonical(words[1])
             if (
                 words[2] in DISPATCHER_COMMANDS_FN_NAMED
                 and len(words) >= 4
                 and not words[3].startswith("-")
             ):
-                return f"{words[0]} {words[1]} {words[2]} {words[3]}"
-            return f"{words[0]} {words[1]} {words[2]}"
+                return f"{words[0]} {script} {words[2]} {words[3]}"
+            return f"{words[0]} {script} {words[2]}"
         return f"{words[0]} {words[1]}"
     return words[0]
 
