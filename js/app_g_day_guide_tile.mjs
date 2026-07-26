@@ -8,11 +8,13 @@ export function app_g_day_guide_tile(g, player, target, div_map) {
   );
   const img = container.querySelector("img");
   const tile = img.getBoundingClientRect().width;
+  const bar = document.getElementById("day-discern-bar");
+  const barH = bar ? bar.getBoundingClientRect().height : 0;
   const minX = Math.ceil(container.scrollLeft / tile);
   const maxX =
     Math.floor((container.scrollLeft + container.clientWidth) / tile) - 1;
   const minY = Math.ceil(container.scrollTop / tile);
   const maxY =
-    Math.floor((container.scrollTop + container.clientHeight) / tile) - 1;
+    Math.floor((container.scrollTop + container.clientHeight - barH) / tile) - 1;
   return app_g_day_guide_pick(g, player, target, minX, maxX, minY, maxY);
 }
