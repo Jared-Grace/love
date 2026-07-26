@@ -17,7 +17,7 @@ export function app_code_decimal_spaced(
   html_style_code_dark_nowrap(tile);
   html_span_text(tile, whole_text);
   html_span_text(tile, ".");
-  let digits = text_split_empty(fraction_text);
+  let fraction_digits = text_split_empty(fraction_text);
   function render_digit(d, index) {
     "each fraction digit preceded by a space; the first digit becomes a lifted colour chip when a colour was given, otherwise a plain code digit like the rest";
     html_span_text(tile, " ");
@@ -31,6 +31,6 @@ export function app_code_decimal_spaced(
     }
     html_span_text(tile, d);
   }
-  each_index(digits, render_digit);
+  each_index(fraction_digits, render_digit);
   return tile;
 }
