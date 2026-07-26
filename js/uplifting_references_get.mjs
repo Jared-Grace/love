@@ -1,6 +1,6 @@
 import { http_json } from "./http_json.mjs";
 import { uplifting_references_url } from "./uplifting_references_url.mjs";
-import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { global_function_property_exists } from "./global_function_property_exists.mjs";
 import { global_function_property_get } from "./global_function_property_get.mjs";
@@ -18,7 +18,7 @@ export async function uplifting_references_get() {
     let list = await http_json(url, {});
     return list;
   }
-  let references = await catch_ignore_async(fetch_references);
+  let references = await catch_null_async(fetch_references);
   if (null_is(references)) {
     return null;
   }
