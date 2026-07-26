@@ -23,17 +23,11 @@ export async function function_open_names() {
   let unique = list_unique(names);
   let openers = [];
   for (let name of unique) {
-    let combined = text_combine(name, ".mjs");
-    let f_path = path_join(["js", combined]);
-    let there = await file_exists(f_path);
-    if (there) {
-      let code = await file_read(f_path);
-      let by_one = code_calls_name_is(code, file_open.name);
-      let by_two = code_calls_name_is(code, function_open.name);
-      let calls = or(by_one, by_two);
-      if (calls) {
-        list_add(openers, name);
-      }
+    let by_one = await function_calls_name_is(name, file_open.name);
+    let by_two = await function_calls_name_is(name, function_open.name);
+    let calls = or(by_one, by_two);
+    if (calls) {
+      list_add(openers, name);
     }
   }
   return openers;
