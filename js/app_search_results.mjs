@@ -71,7 +71,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { app_bible_search_word_path } from "./app_bible_search_word_path.mjs";
 import { text_to_words } from "./text_to_words.mjs";
-import { catch_null_async } from "./catch_ignore_async.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_scroll_center } from "./html_scroll_center.mjs";
