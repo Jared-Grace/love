@@ -20,6 +20,7 @@ export async function function_transform_single(
     f_name_transformer,
     remaining,
   });
+  await function_callee_seam_assert(f_name_transformer);
   let imported_fn = await function_import_unalias(f_name_transformer);
   async function function_transform_single_lambda(ast) {
     let result = await imported_fn(ast, ...remaining);
