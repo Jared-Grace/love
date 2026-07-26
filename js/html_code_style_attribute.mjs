@@ -9,8 +9,8 @@ export function html_code_style_attribute(style) {
   function declaration(property) {
     let value = property_get(style, property);
     let named = text_combine(property, ":");
-    let r = text_combine(named, value);
-    return r;
+    let pair = text_combine(named, value);
+    return pair;
   }
   let declarations = list_map(properties, declaration);
   let body = list_join(declarations, ";");
