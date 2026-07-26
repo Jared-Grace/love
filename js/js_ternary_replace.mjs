@@ -1,3 +1,5 @@
+import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
+import { equal } from "./equal.mjs";
 import { js_call_argument_add } from "./js_call_argument_add.mjs";
 import { invoke_multiple_arg } from "./invoke_multiple_arg.mjs";
 import { js_statement_if_alternate_get } from "./js_statement_if_alternate_get.mjs";
@@ -87,7 +89,7 @@ export async function js_ternary_replace(ast) {
   }
   return;
   let a = null;
-  let test = b === 1;
+  let test = equal(b, 1);
   let b = 2;
   let c = 1;
   a = ternary(test, b, c);

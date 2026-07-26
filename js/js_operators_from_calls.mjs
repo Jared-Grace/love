@@ -1,3 +1,4 @@
+import { js_operator_call_to_node } from "./js_operator_call_to_node.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operators_from_calls_generic } from "./js_operators_from_calls_generic.mjs";
@@ -12,6 +13,6 @@ export function js_operators_from_calls(ast) {
   ("Written between the two things it acts on, only. The one written before its single operand still");
   ("needs a shape of its own to be rebuilt into.");
   let operators = js_operators_binary();
-  js_operators_from_calls_generic(ast, operators);
+  js_operators_from_calls_generic(ast, operators, js_operator_call_to_node);
   return;
 }
