@@ -1,4 +1,4 @@
-import { error } from "./error.mjs";
+import { greater_than } from "./greater_than.mjs";
 export async function indexeddb_exists_backend(db_get, store, key) {
   let db = await db_get();
   let tx = db.transaction(store, "readonly");
@@ -6,7 +6,8 @@ export async function indexeddb_exists_backend(db_get, store, key) {
   let exists = await new Promise(function lambda3(resolve, reject) {
     let req = s.count(key);
     req.onsuccess = function lambda() {
-      let v = resolve(req.result > 0);
+      let g = greater_than(req.result, 0);
+      let v = resolve(g);
       return v;
     };
     req.onerror = function lambda2() {
