@@ -145,6 +145,7 @@
       "Bash(node scripts/ai.mjs functions_names_to_paths:*)",
       "Bash(node scripts/ai.mjs html_style_literal_gate_run:*)",
       "Bash(node scripts/ai.mjs js_operator_targets_leaf_gate_run:*)",
+      "Bash(node scripts/ai.mjs permission_settings_paths:*)",
       "Bash(node scripts/ai.mjs functions_imports_missing:*)",
       "Bash(node scripts/ai.mjs permission_run_names:*)",
       "Bash(node scripts/ai.mjs permission_rules_unreachable:*)",
