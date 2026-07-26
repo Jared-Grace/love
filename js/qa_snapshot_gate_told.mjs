@@ -3,7 +3,7 @@ import { qa_gate_tree_run } from "./qa_gate_tree_run.mjs";
 import { command_line_folder } from "./command_line_folder.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
-export async function qa_commit_gate_told(folder) {
+export async function qa_snapshot_gate_told(folder) {
   "Asks the frozen copy its questions and brings back what it said";
   "The run is asked for from inside the copy, so every path it follows to find a function stays inside the copy";
   "A complaint arrives here as a thrown thing carrying everything that was printed, which is why it is caught rather than left to travel - a complaint is the answer being looked for, not a failure to get one";
