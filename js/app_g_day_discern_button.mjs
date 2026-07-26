@@ -25,7 +25,8 @@ export function app_g_day_discern_button(div_map) {
   function on_click() {
     app_g_day_discern(div_map);
   }
-  let label = text_combine(emoji_pray(), " Pray: who's next?");
+  let left2 = emoji_pray();
+  let label = text_combine(left2, " Pray: who's next?");
   let button = app_g_button_green(holder, label, on_click);
   html_width_full(button);
   html_style_assign(button, {
