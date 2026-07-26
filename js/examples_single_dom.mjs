@@ -9,8 +9,8 @@ import { text_combine } from "./text_combine.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { example_card_dom } from "./example_card_dom.mjs";
-"The single-example screen: a nav row (back to menu, prev, next, position) and";
-"just the one selected card — no scrolling through the rest.";
+("The single-example screen: a nav row (back to menu, prev, next, position) and");
+("just the one selected card — no scrolling through the rest.");
 export function examples_single_dom(
   parent,
   examples,
@@ -26,7 +26,7 @@ export function examples_single_dom(
   html_style_set(nav, "gap", "0.5rem");
   html_style_set(nav, "flex-wrap", "wrap");
   html_style_set(nav, "align-items", "center");
-  html_style_set(nav, "margin-bottom", "1rem");
+  html_style_margin_bottom(nav, "1rem");
   app_shared_button(nav, "☰ All examples", on_menu);
   app_shared_button(nav, text_combine(emoji_arrow_left(), " Prev"), on_prev);
   app_shared_button(nav, app_shared_button_next_text(), on_next);

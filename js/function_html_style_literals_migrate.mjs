@@ -6,7 +6,7 @@ import { equal } from "./equal.mjs";
 export async function function_html_style_literals_migrate(f_name, helpers) {
   "Rewrite one function's style properties set by name into the named helpers, and say whether anything moved.";
   "A failure is reported rather than thrown, and finding the file is inside the attempt along with the rewrite. A sweep wants the whole list, and one name that names nothing would otherwise throw past it and discard every answer already paid for. That is not a guess about what might happen - this function was written without it, and the first run over the codebase died on a file a peer had created and deleted while the sweep was reading, losing all of the work that came before it.";
-  ("the local is not named error, because that is the name of a function in this repo and the import-repair pass would bind it and add an import for it");
+  "the local is not named error, because that is the name of a function in this repo and the import-repair pass would bind it and add an import for it";
   let changed = false;
   let error_message = "";
   try {
