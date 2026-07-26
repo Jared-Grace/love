@@ -1,3 +1,9 @@
+import { examples_folder } from "./examples_folder.mjs";
+import { folder_read } from "./folder_read.mjs";
+import { text_ends_with } from "./text_ends_with.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { path_join } from "./path_join.mjs";
+import { list_map } from "./list_map.mjs";
 export async function examples_paths() {
   "Every file of the example corpus, as a path that can be read and written. The corpus is data rather than functions, so a sweep over the tree of functions never sees these - anything that wants to reach them asks here.";
   let folder = examples_folder();
