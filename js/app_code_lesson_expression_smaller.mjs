@@ -77,35 +77,35 @@ export function app_code_lesson_expression_smaller() {
     return built;
   }
   function above(root) {
-    "the worked examples are randomized each visit: the definition, then one concrete pair with its smaller value";
+    "examples FIRST and in BOTH orders - the smaller number on the left and on the right - so it is clear the smaller VALUE is chosen, not a position (left or right); then the rule, with Math.min in code style";
     let two = list_shuffle_take([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 2);
     let a = list_get(two, 0);
     let b = list_get(two, 1);
-    let smaller = math_min(a, b);
+    let small = math_min(a, b);
+    let big = math_max(a, b);
+    let small_text = text_to(small);
+    let big_text = text_to(big);
     let define = app_code_container_light_blue(root);
     let define_line = html_div(define);
     html_span_text(define_line, "Some functions take ");
     let term = html_span_text(define_line, "two");
     html_bold(term);
     html_span_text(define_line, " numbers, separated by a comma");
-    html_div_cycle_code(define, [
+    let example_box = app_code_container_light_blue(root);
+    html_div_cycle_code(example_box, [
+      "",
+      small_text,
+      " is smaller than ",
+      big_text,
+    ]);
+    let v1 = min_code(small, big);
+    html_div_cycle_code(example_box, ["so ", v1, " is ", small_text]);
+    let v2 = min_code(big, small);
+    html_div_cycle_code(example_box, ["and ", v2, " is also ", small_text]);
+    html_div_cycle_code(example_box, [
       "",
       "Math.min",
-      " takes two numbers and gives the smaller one",
+      " chooses the smaller number",
     ]);
-    let example_box = app_code_container_light_blue(root);
-    let ta = text_to(a);
-    let tb = text_to(b);
-    let smaller_text = text_to(smaller);
-    html_div_cycle_code(example_box, [
-      "Between ",
-      ta,
-      " and ",
-      tb,
-      ", the smaller number is ",
-      smaller_text,
-    ]);
-    let v = min_code(a, b);
-    html_div_cycle_code(example_box, ["So ", v, " is ", smaller_text]);
   }
 }
