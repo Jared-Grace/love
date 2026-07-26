@@ -2545,7 +2545,30 @@ def find_git_commit_write(command):
             if words[1] == "stash" and words[2:3] and words[2] in GIT_STASH_READ_ONLY:
                 continue
             return words[1]
+        directed = git_repo_root_directed_subcommand(words)
+        if directed in GIT_DISCARD_SUBCOMMANDS:
+            return directed
     return None
+
+
+def git_repo_root_directed_subcommand(words):
+    """The subcommand of a `git -C <dir> <sub>` aimed at THIS repo's root, or
+    None.
+
+    The `-C` form is otherwise left alone, so that a floor can never override an
+    exact `git -C ...` rule the human granted. That reasoning holds for the
+    commit subcommands and fails for the discarding ones: no such rule exists,
+    and `git -C /home/j/repos/love checkout .` throws away every peer's
+    uncommitted work exactly as the bare spelling does - the `-C` only changes
+    where it is typed from. Only this repo's root is named, so a worktree
+    somewhere else, which is a throwaway by construction, keeps the answer it
+    had."""
+    if len(words) < 4 or words[0] != "git" or words[1] != "-C":
+        return None
+    directory = os.path.normpath(words[2])
+    if directory != os.path.normpath(REPO_ROOT):
+        return None
+    return words[3]
 
 
 def git_commit_write_deny_reason(subcommand):
