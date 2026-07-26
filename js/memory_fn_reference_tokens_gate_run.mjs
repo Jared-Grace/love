@@ -14,7 +14,9 @@ export function memory_fn_reference_tokens_gate_run() {
     let text = property_get(c, "text");
     let expected = property_get(c, "tokens");
     let actual = memory_fn_reference_tokens(text);
-    let b = equal(expected.join(","), actual.join(","));
+    let left = expected.join(",");
+    let right = actual.join(",");
+    let b = equal(left, right);
     let mark = b ? "pass  " : "FAIL  ";
     console.log(mark + text + "  ->  [" + actual.join(", ") + "]");
     if (not(b)) {
