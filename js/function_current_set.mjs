@@ -22,12 +22,6 @@ export async function function_current_set(f_name) {
     await user_data_set("function_current", unaliased);
     await function_current_selects_empty();
   }
-  if (false) {
-    ("previously, used markers in vs code text editor however because of browser ide, no longer using markers at this time so disabling adding markers to files");
-    await marker_top();
-    let name = marker_first();
-    await marker_current_set(name);
-  }
   let v = await function_parse_declaration_js_unparse(unaliased);
   return v;
 }
