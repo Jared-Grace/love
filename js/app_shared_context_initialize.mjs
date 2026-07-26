@@ -1,6 +1,7 @@
 import { app_shared_context_initialize_root } from "./app_shared_context_initialize_root.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { app_shared_boot_safe } from "./app_shared_boot_safe.mjs";
+import { html_loading_splash_remove } from "./html_loading_splash_remove.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_shared_context_initialize(fn) {
   "boot every app through the corruption net: the happy path renders exactly once, unchanged; if a read hits CORRUPT storage the net quarantines that key and retries, clearing the root first so a partial first render never doubles the DOM";
@@ -15,4 +16,5 @@ export async function app_shared_context_initialize(fn) {
     return r;
   };
   await app_shared_boot_safe(render);
+  html_loading_splash_remove();
 }
