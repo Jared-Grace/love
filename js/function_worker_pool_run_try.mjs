@@ -3,8 +3,8 @@ import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { log } from "./log.mjs";
 import { identity } from "./identity.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-// Proves the two properties the pool exists for: answers are correct, and many
-// calls are served by a BOUNDED number of node processes rather than one each.
+"Proves the two properties the pool exists for: answers are correct, and many";
+"calls are served by a BOUNDED number of node processes rather than one each.";
 export async function function_worker_pool_run_try() {
   let wanted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   async function lambda(n) {
