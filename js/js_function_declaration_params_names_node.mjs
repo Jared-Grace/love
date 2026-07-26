@@ -1,4 +1,6 @@
 import { list_map_squash } from "./list_map_squash.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { js_node_is } from "./js_node_is.mjs";
 import { error } from "./error.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
