@@ -18,8 +18,8 @@ export async function qa_commit_gate_told(folder) {
       failed: [],
     };
     return r;
-  } catch (error) {
-    let printed = property_get(error, "message");
+  } catch (complaint) {
+    let printed = property_get(complaint, "message");
     let failed = qa_gate_failed_names(printed);
     let r2 = {
       green: false,
