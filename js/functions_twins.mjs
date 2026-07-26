@@ -29,7 +29,10 @@ export async function functions_twins(repo) {
     }
     ("a function taking nothing and calling nothing can only be handing back a constant, whatever spelling it uses to get there");
     let calls_something = text_includes(signature, "free:");
-    let takes_something = text_includes(signature, "local:");
+    let declaration = js_flo(ast);
+    let params = property_get(declaration, "params");
+    let size = list_size(params);
+    let takes_something = greater_than(size, 0);
     let does_work = or(calls_something, takes_something);
     if (does_work) {
       let signed = {
