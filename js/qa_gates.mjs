@@ -37,6 +37,7 @@ export function qa_gates() {
     memory_link_gate_run,
     memory_fn_reference_tokens_gate_run,
     memory_fn_reference_gate_run,
+    memory_symbol_gate_run,
     examples_gate_run,
     permission_gate_run,
     permission_open_suffix_gate_run,
