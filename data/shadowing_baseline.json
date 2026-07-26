@@ -2,2426 +2,1345 @@
  "known": [
   {
    "name": "app_a_app",
-   "duplicated": [
+   "shadows_outer": [
     "e"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_body_inner",
-   "duplicated": [
+   "shadows_outer": [
     "b"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_a_function_declaration",
-   "duplicated": [
-    "choices",
-    "o"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_function_node",
-   "duplicated": [
-    "inner",
-    "lambda20",
-    "on_change",
-    "specifiers",
-    "k",
-    "value",
+   "shadows_outer": [
     "r",
-    "value_new"
+    "value"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_function",
-   "duplicated": [
-    "store",
-    "o",
-    "r",
-    "fn",
-    "choices",
-    "f",
+   "shadows_outer": [
     "a",
-    "e"
+    "e",
+    "choices"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_functionize",
-   "duplicated": [
+   "shadows_outer": [
     "ast"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_identifier_generic",
-   "duplicated": [
+   "shadows_outer": [
     "overlay",
     "oc",
-    "input",
-    "value_new",
-    "component",
-    "r",
-    "c",
-    "f_name"
+    "c"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_a_identifier",
-   "duplicated": [
-    "ast"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_indexeddb_initialize",
-   "duplicated": [
+   "shadows_outer": [
     "db"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_a_list_chooser_generic",
-   "duplicated": [
-    "text",
-    "value"
+   "shadows_outer": [
+    "text"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_a_statement_choices_add",
-   "duplicated": [
-    "on_select",
-    "overlay_close",
-    "v2",
-    "overlay_result",
-    "v",
-    "list",
-    "index"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_a_upload",
-   "duplicated": [
-    "key",
-    "versions",
-    "d"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_bible_books_matches",
-   "duplicated": [
-    "name",
-    "mapped",
-    "any",
+   "shadows_outer": [
     "empty",
-    "section",
-    "book",
-    "code",
-    "testament"
+    "mapped"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_bible_books_render",
-   "duplicated": [
-    "text"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_bible_chapter_change",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "list_next_wrap"
    ]
   },
   {
    "name": "app_bible_home_generic",
-   "duplicated": [
-    "r",
-    "verses_l",
-    "v",
-    "language",
-    "text_l",
-    "item"
+   "shadows_outer": [
+    "r"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_calendar_paste_convert",
-   "duplicated": [
+   "shadows_outer": [
     "start",
     "zone"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_calendar_paste",
-   "duplicated": [
+   "shadows_outer": [
     "joined"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_code_examples",
-   "duplicated": [
+   "shadows_outer": [
     "previous"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_home",
-   "duplicated": [
-    "lesson_number",
-    "scope"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_console_log_remainder_generic",
-   "duplicated": [
-    "color",
-    "chip",
-    "triple_equal",
-    "remainder",
-    "row",
-    "n",
-    "parent",
-    "index",
-    "line"
+   "shadows_outer": [
+    "row"
    ],
-   "shadowed": [
+   "shadows_function": [
     "modulo"
    ]
   },
   {
    "name": "app_code_lesson_expression_exponent",
-   "duplicated": [
-    "star",
-    "made",
-    "chip",
-    "column",
-    "tile",
-    "exponent",
-    "base",
-    "parent",
-    "number",
-    "color",
-    "grid",
-    "index",
-    "base_color",
-    "power_color"
+   "shadows_outer": [
+    "chip"
    ],
-   "shadowed": [
+   "shadows_function": [
     "exponent"
    ]
   },
   {
    "name": "app_code_lesson_expression_greater_than_equal",
-   "duplicated": [
-    "next_arg",
-    "coordinates"
+   "shadows_outer": [
+    "next_arg"
    ],
-   "shadowed": [
+   "shadows_function": [
     "equal"
    ]
   },
   {
-   "name": "app_code_lesson_expression_integer_division",
-   "duplicated": [
-    "divisor"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "app_code_lesson_expression_less_than_equal",
-   "duplicated": [
-    "next_arg",
-    "coordinates"
+   "shadows_outer": [
+    "next_arg"
    ],
-   "shadowed": [
+   "shadows_function": [
     "equal"
    ]
   },
   {
    "name": "app_code_lesson_expression_minus_divide",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "divide"
    ]
   },
   {
    "name": "app_code_lesson_expression_multiply",
-   "duplicated": [
-    "plus",
-    "made",
-    "chip",
-    "column",
-    "tile",
-    "count",
-    "value",
-    "parent",
-    "number",
-    "color",
-    "grid",
-    "index",
-    "value_color",
-    "count_color"
+   "shadows_outer": [
+    "chip"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_expression_plus_divide",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "divide"
    ]
-  },
-  {
-   "name": "app_code_lesson_expression_remainder_any",
-   "duplicated": [
-    "number",
-    "divisor"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_expression_remainder_divide_solve",
-   "duplicated": [
-    "dividend",
-    "whole_part",
-    "quotient",
-    "divisor"
-   ],
-   "shadowed": []
   },
   {
    "name": "app_code_lesson_expression_remainder_divide",
-   "duplicated": [
-    "dividend",
-    "whole_part",
-    "nums",
-    "divisor",
-    "division",
-    "percent",
-    "quiz_qa",
-    "info",
-    "question",
-    "answer",
-    "parent"
+   "shadows_outer": [
+    "percent"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_expression_remainder_subtract",
-   "duplicated": [
-    "number",
-    "count",
-    "divisor"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_expression_round_down",
-   "duplicated": [
-    "digit",
-    "inner",
-    "whole"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_expression_times_divide",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "divide"
    ]
   },
   {
-   "name": "app_code_lesson_expression_whole_part_both",
-   "duplicated": [
-    "dividend",
-    "nums",
-    "whole_part",
-    "divisor",
-    "division",
-    "info",
-    "question",
-    "answer",
-    "parent"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_expression_whole_part_formula",
-   "duplicated": [
-    "dividend",
-    "divisor",
-    "info",
-    "question",
-    "answer",
-    "parent"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_expression_whole_part",
-   "duplicated": [
-    "dividend",
-    "quotient",
-    "divisor"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "app_code_lesson_functions_arithmetic",
-   "duplicated": [
-    "r",
-    "c",
-    "o"
+   "shadows_outer": [
+    "c"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_code_lesson_functions_console_log_arithmetic",
-   "duplicated": [
-    "o"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "app_code_lesson_functions_console_log_statement",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "app_code_lesson_functions_console_log",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
-   "name": "app_code_lesson_functions_invalid",
-   "duplicated": [
-    "call"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_identifiers_symbol_first",
-   "duplicated": [
-    "t"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_operand_generic",
-   "duplicated": [
-    "info"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_lesson_quiz_token_select_variations",
-   "duplicated": [
-    "swap",
-    "la"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "app_code_lesson_quiz_token_select",
-   "duplicated": [
-    "token",
-    "variation"
+   "shadows_outer": [
+    "token"
    ],
-   "shadowed": [
+   "shadows_function": [
     "equal"
    ]
   },
   {
    "name": "app_code_lesson_symbols_batch_digits",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "digits"
    ]
   },
   {
    "name": "app_code_quiz",
-   "duplicated": [
+   "shadows_outer": [
     "refresh"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_code_review_load",
-   "duplicated": [
+   "shadows_outer": [
     "queue",
     "passed"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_review",
-   "duplicated": [
-    "arrow"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_screens_crawl_summary",
-   "duplicated": [
-    "overflow",
-    "record"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_screens_diff",
-   "duplicated": [
-    "key",
-    "masked",
-    "record"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_code_scroll_center_faded",
-   "duplicated": [
-    "resolve"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_dependency_paths_multiple",
-   "duplicated": [
-    "step"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_g_bible_home_inner",
-   "duplicated": [
+   "shadows_outer": [
     "passages"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_conversation",
-   "duplicated": [
-    "kind",
-    "message",
-    "discern",
-    "container",
-    "turn",
-    "t"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_dev_index",
-   "duplicated": [
-    "name",
-    "e"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_dev_routes",
-   "duplicated": [
-    "view",
-    "npcs",
-    "npc",
-    "phase"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_g_gospel",
-   "duplicated": [
-    "o",
-    "container"
+   "shadows_outer": [
+    "o"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_g_gratitude_overlay",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
    "name": "app_g_menu",
-   "duplicated": [
+   "shadows_outer": [
     "text"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_need_quiz",
-   "duplicated": [
-    "spec",
-    "index"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_g_pray_turn",
-   "duplicated": [
-    "item",
-    "prayer_texts"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
    "name": "app_g_rows_ensure",
-   "duplicated": [
+   "shadows_outer": [
     "rows"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_study",
-   "duplicated": [
-    "lambda3",
-    "b"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_turn_quiz_once",
-   "duplicated": [
-    "b",
-    "container"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_g_verify_home",
-   "duplicated": [
+   "shadows_outer": [
     "chapter",
     "status",
-    "chapter_state",
-    "code",
-    "book",
-    "passage"
+    "chapter_state"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_verify_view",
-   "duplicated": [
-    "l",
-    "row",
-    "msg",
-    "r",
-    "i",
-    "li"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_g_view_render_study",
-   "duplicated": [
-    "label",
-    "b",
-    "i"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_karate_screen_input_validate",
-   "duplicated": [
-    "ul",
-    "input"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_message_provide_generic",
-   "duplicated": [
-    "screens",
+   "shadows_outer": [
     "context"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_message_reply_choices",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "visit"
    ]
   },
   {
-   "name": "app_message",
-   "duplicated": [
-    "results",
-    "messages",
-    "message"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "app_replace_goals_generic",
-   "duplicated": [
-    "e"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "marker"
    ]
-  },
-  {
-   "name": "app_replace_goals",
-   "duplicated": [
-    "index"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_replace_rule_set_proof_show",
-   "duplicated": [
-    "rule",
-    "j",
-    "entry",
-    "position"
-   ],
-   "shadowed": []
   },
   {
    "name": "app_replace_rule_set_verify_from_try",
-   "duplicated": [
+   "shadows_outer": [
     "start"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_replace_rule_set",
-   "duplicated": [
-    "state",
-    "rule_button",
-    "index",
-    "symbol_button",
-    "value"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_replace_rule_sets_migrate_functionize",
-   "duplicated": [
-    "f_name_new",
-    "e"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_replace_rule_sets_why_generate",
-   "duplicated": [
+   "shadows_outer": [
     "found"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_replace_tests_proof_start_over_click",
-   "duplicated": [
+   "shadows_outer": [
     "button"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_replace_tests_proof_state",
-   "duplicated": [
-    "span"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "marker"
    ]
   },
   {
-   "name": "app_replace_tests_run_e2e_all",
-   "duplicated": [
-    "rule_set"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "app_replace_tests_run_e2e_goal",
-   "duplicated": [
+   "shadows_outer": [
     "goal"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_reply_buttons_languages_on_toggle",
-   "duplicated": [
-    "chosen"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_reply_main_shortcuts",
-   "duplicated": [
-    "extended",
-    "ke",
-    "base",
-    "name_suffix",
-    "r"
+   "shadows_outer": [
+    "ke"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
-   "name": "app_reply_verses_add_uplifting",
-   "duplicated": [
+   "name": "app_reply_verses_uplifting_entries",
+   "shadows_outer": [
     "text"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_reply",
-   "duplicated": [
-    "lambda6",
-    "c"
+   "shadows_outer": [
+    "lambda6"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_search_home",
-   "duplicated": [
-    "query_hash",
-    "plus"
+   "shadows_outer": [
+    "query_hash"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_search_results",
-   "duplicated": [
-    "e",
-    "squashed",
-    "chapter_code",
-    "book_code",
-    "verse_numbers",
-    "vk",
-    "b",
-    "collapsed_set"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_shared_bible_books_choose",
-   "duplicated": [
-    "book"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_shared_bible_read",
-   "duplicated": [
-    "r",
-    "v"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "app_shared_bible_settings_choose",
-   "duplicated": [
-    "languages"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_shared_bible_share",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "range"
    ]
   },
   {
-   "name": "app_shared_bible_verse_texts",
-   "duplicated": [
-    "entry",
-    "index"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "app_shared_button_numbered",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "marker"
    ]
   },
   {
    "name": "app_shared_flow_next",
-   "duplicated": [
+   "shadows_outer": [
     "screens"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_shared_gloss_bible_home_generic",
-   "duplicated": [
-    "span",
-    "span2",
+   "shadows_outer": [
     "p",
-    "e",
     "verses"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_shared_prefixes_invalid",
-   "duplicated": [
-    "is",
-    "parts",
-    "f_name",
-    "part"
+   "shadows_outer": [
+    "parts"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_shared_screen_set",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "app_supper_folders_get",
-   "duplicated": [
+   "shadows_outer": [
     "folders"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "app_supper_verses_get",
-   "duplicated": [
+   "shadows_outer": [
     "v",
     "verses"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "app_verses",
-   "duplicated": [
-    "texts",
-    "update",
-    "references",
-    "copy_after"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "apps_node_only_gate_run",
-   "duplicated": [
-    "only"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "autopray",
-   "duplicated": [
+   "shadows_outer": [
     "verses"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "availability_editor",
-   "duplicated": [
-    "text",
-    "dates",
-    "kind"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "bible_interlinear_verse",
-   "duplicated": [
-    "x"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "bible_verses_uplifting_package_upload",
-   "duplicated": [
-    "present",
-    "chapter_verses",
-    "folder"
+   "shadows_outer": [
+    "present"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "bundle_size_gate_run",
-   "duplicated": [
-    "over"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "claude_sessions_restart",
-   "duplicated": [
+   "shadows_outer": [
     "pane",
     "session",
     "minutes"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "claude_transcript_paths",
-   "duplicated": [
-    "name"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "command_line_generic",
-   "duplicated": [
-    "args",
-    "c",
+   "shadows_outer": [
     "options",
     "stdout",
-    "data",
+    "c",
+    "args",
     "command"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "command_line_read",
-   "duplicated": [
+   "shadows_outer": [
     "answer"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "crypto_mini_sat_dimacs_to_output",
-   "duplicated": [
+   "shadows_outer": [
     "v"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "daemon_ensure",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "daemon_properties",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "daemon_status",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "daemon_unit_name",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "daemon_unit_path",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "daemon_unit_text_current",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "daemon_unit_text",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
-   "name": "data_file_update_inner",
-   "duplicated": [
-    "list"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "data_generate_get",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "data_get"
    ]
   },
   {
    "name": "digits_3_random_next",
-   "duplicated": [
+   "shadows_outer": [
     "next"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "each_previous_reverse",
-   "duplicated": [
-    "index"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "ebible_book_video_generate",
-   "duplicated": [
+   "shadows_outer": [
     "path_video"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "ebible_chapters_all_plain",
-   "duplicated": [
+   "shadows_outer": [
     "entry"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "ebible_languages_versions",
-   "duplicated": [
-    "code",
-    "language"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "ebible_offline_database",
-   "duplicated": [
-    "db"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "ebible_offline_get",
-   "duplicated": [
+   "shadows_outer": [
     "value"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "ebible_references_parse_lines_generic",
-   "duplicated": [
-    "chapter_code",
+   "shadows_outer": [
     "bible_folder",
-    "verse_number",
     "books",
     "v"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "ebible_verses_references",
-   "duplicated": [
+   "shadows_outer": [
     "text"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "ebible_verses",
-   "duplicated": [
-    "v"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "ebible_versions_english_downloadable_words_lookup",
-   "duplicated": [
+   "shadows_outer": [
     "lower",
     "s"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "ebible_versions_english_full",
-   "duplicated": [
-    "value",
-    "key"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "example_alias_derive",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
-   "name": "example_check",
-   "duplicated": [
-    "r"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "example_command_lambda",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "example_files_command_lambda",
-   "duplicated": [
-    "lambda",
-    "dir"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "example_files_refuses_run",
-   "duplicated": [
+   "shadows_outer": [
     "threw"
    ],
-   "shadowed": [
+   "shadows_function": [
     "sandbox"
    ]
   },
   {
    "name": "example_files_run",
-   "duplicated": [
+   "shadows_outer": [
     "got"
    ],
-   "shadowed": [
+   "shadows_function": [
     "sandbox"
    ]
   },
   {
    "name": "example_function_chip_dom",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "example_note_link_dom",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "example_slot_expression_set_lambda",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "each"
    ]
   },
   {
    "name": "example_transform_before",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "example_transform_run",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "sandbox"
    ]
   },
   {
    "name": "examples_corpus_read",
-   "duplicated": [
-    "file",
-    "name",
-    "example"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "mod",
     "fn_name"
    ]
   },
   {
    "name": "examples_menu_dom",
-   "duplicated": [
-    "header",
-    "family",
-    "name",
-    "index",
-    "size"
+   "shadows_outer": [
+    "index"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "file_exists",
-   "duplicated": [
+   "shadows_outer": [
     "exists"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "file_overwrite_json",
-   "duplicated": [
-    "json"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "firebase_auth_ensure",
-   "duplicated": [
-    "resolve"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "folder_read_browser",
-   "duplicated": [
+   "shadows_outer": [
     "r"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "function_aliases_delete_if_starts_with",
-   "duplicated": [
-    "sw",
-    "f_name",
-    "alias"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_auto_check_multiple",
-   "duplicated": [
-    "missing",
-    "b",
-    "r",
-    "entry"
+   "shadows_outer": [
+    "r"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_comments_migrate_multiple",
-   "duplicated": [
+   "shadows_outer": [
     "changed",
-    "left",
-    "result"
+    "left"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_dependencies_code_export",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "mod"
    ]
   },
   {
    "name": "function_eachify_transform",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "function_eachify",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "function_exists_inner",
-   "duplicated": [
+   "shadows_outer": [
     "exists"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_github_url",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "function_name_prefix_without",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "function_name_to_path_search",
-   "duplicated": [
-    "mapped",
-    "exists"
+   "shadows_outer": [
+    "exists",
+    "mapped"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "function_param_swap_end",
-   "duplicated": [
-    "index_a",
-    "index_b"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_params_new_generic",
-   "duplicated": [
+   "shadows_outer": [
     "v"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_rename_fn_names_check",
-   "duplicated": [
-    "value",
-    "ast"
+   "shadows_outer": [
+    "value"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_rename_prefix_add",
-   "duplicated": [
+   "shadows_outer": [
     "f_name_before"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_run_args_none",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "function_run_prompt_repo_name_colored",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "chalk_color"
    ]
   },
   {
    "name": "function_string_split_space_change",
-   "duplicated": [
+   "shadows_outer": [
     "literal"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "function_top_level_templates_flatten_multiple",
-   "duplicated": [
+   "shadows_outer": [
     "changed"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "function_worker_pool_run",
-   "duplicated": [
-    "r",
-    "workers",
-    "worker",
-    "started",
-    "waiting",
-    "retired",
-    "id",
-    "child",
-    "owner",
-    "f_name",
-    "args",
-    "chunk",
-    "code",
-    "line"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "function_worker_serve",
-   "duplicated": [
-    "line"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "functions_call_pairs_frequent",
-   "duplicated": [
-    "key",
-    "record"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "functions_callers_inside_dependencies",
-   "duplicated": [
+   "shadows_outer": [
     "inside"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "functions_fold_sites",
-   "duplicated": [
-    "pattern",
-    "name",
-    "s"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "functions_names_to_paths",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "repo_path"
    ]
   },
   {
    "name": "functions_param_new",
-   "duplicated": [
+   "shadows_outer": [
     "param_name"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "functions_rename_generic",
-   "duplicated": [
-    "f_name_after",
-    "f_name_before"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "g_chapter_code_next",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "digits"
    ]
   },
   {
-   "name": "g_characters_unzip",
-   "duplicated": [
-    "input"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "g_coordinates_neighbors_walkable_get",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
    "name": "g_path_steps",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "each",
     "add"
    ]
   },
   {
    "name": "g_phase_curve",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "identity"
    ]
   },
   {
-   "name": "g_sermon_chapter_passages_for_grouping",
-   "duplicated": [
-    "verse_numbers",
-    "passage"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "g_sermon_coverage",
-   "duplicated": [
-    "word"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "g_sermon_generate_book_generic_prompts",
-   "duplicated": [
-    "each_chapter",
+   "shadows_outer": [
     "text",
-    "texts",
-    "originals",
-    "original",
-    "group",
-    "groups",
-    "chapter_code"
+    "each_chapter",
+    "groups"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "g_sermon_generate_book_generic",
-   "duplicated": [
+   "shadows_outer": [
     "prompt_system"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "g_sermon_groups_backup_multiple",
-   "duplicated": [
-    "b",
-    "result"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "g_sermon_groups_validate",
-   "duplicated": [
-    "ref",
-    "message"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "g_sermon_passage_get",
-   "duplicated": [
+   "shadows_outer": [
     "v"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "g_sermon_pull",
-   "duplicated": [
-    "w"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "g_sermon_study",
-   "duplicated": [
-    "key",
-    "edited_passage"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "g_themes",
-   "duplicated": [
+   "shadows_outer": [
     "list"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "g_verify_chapters_available",
-   "duplicated": [
-    "name"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "g_verify_next_across",
-   "duplicated": [
-    "b"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "g_verify_queue_advance",
-   "duplicated": [
-    "s"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "git_history_delete",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "repo_path"
    ]
   },
   {
    "name": "guard_check",
-   "duplicated": [
+   "shadows_outer": [
     "stdout"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "guard_gate_run",
-   "duplicated": [
-    "r"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "html_checkboxes",
-   "duplicated": [
-    "div",
-    "valid"
+   "shadows_outer": [
+    "div"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "html_code_children",
-   "duplicated": [
+   "shadows_outer": [
     "r"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "html_document_root",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "html_element"
    ]
   },
   {
-   "name": "html_loading_hide",
-   "duplicated": [
-    "overlay"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "html_overlay",
-   "duplicated": [
+   "shadows_outer": [
     "s"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "html_parse_descendants_classes",
-   "duplicated": [
+   "shadows_outer": [
     "item"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "html_text_characters_numbered",
-   "duplicated": [
+   "shadows_outer": [
     "text"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "http_generic",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "sleep"
    ]
   },
   {
    "name": "image_generate",
-   "duplicated": [
+   "shadows_outer": [
     "lines",
-    "lineHeight",
-    "line",
-    "text"
+    "text",
+    "lineHeight"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "indexeddb_put_backend",
-   "duplicated": [
+   "shadows_outer": [
     "tx",
-    "s",
-    "resolve",
-    "reject"
+    "s"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "indexeddb_put_multiple_backend_transform",
-   "duplicated": [
-    "key"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "integer_factorization_to_sat",
-   "duplicated": [
-    "z",
-    "sum",
-    "carry",
-    "c",
-    "i",
-    "col",
-    "a",
-    "b",
-    "columns",
-    "result",
-    "out",
-    "bits",
+   "shadows_outer": [
     "cnf",
-    "x",
-    "y"
+    "bits"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "invoke_cache_global",
-   "duplicated": [
-    "key",
-    "value"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "invoke_cache_indexeddb",
-   "duplicated": [
-    "item",
-    "key"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "invoke_cache_storage_local",
-   "duplicated": [
-    "key",
-    "value"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "js_block_canonical",
-   "duplicated": [
-    "has",
-    "slot",
-    "name"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_bound_names",
-   "duplicated": [
-    "names",
-    "param"
+   "shadows_outer": [
+    "names"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_calls_to_each",
-   "duplicated": [
+   "shadows_outer": [
     "nti"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_code_call_arg_fn",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_code_call_arg",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_code_call_args",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_code_call",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_code_comment_statement_generic",
-   "duplicated": [
-    "known",
-    "text",
-    "segment"
+   "shadows_outer": [
+    "known"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_code_comments_migrated",
-   "duplicated": [
-    "own",
-    "comment"
+   "shadows_outer": [
+    "own"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "js_code_fn_names_pieces",
-   "duplicated": [
-    "code"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "js_code_top_level_templates_flattened",
-   "duplicated": [
-    "expression",
-    "statement"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_comments_left_count",
-   "duplicated": [
+   "shadows_outer": [
     "left"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "js_curry_replace",
-   "duplicated": [
-    "first",
-    "expression",
-    "call",
-    "difference"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_dollar_a",
-   "duplicated": [
+   "shadows_outer": [
     "stack_1",
     "stack_2",
     "ast"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "js_dollar_g",
-   "duplicated": [
-    "lambda"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_dollar_s",
-   "duplicated": [
+   "shadows_outer": [
     "stack_1",
     "stack_2",
     "ast"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_expand_generic",
-   "duplicated": [
+   "shadows_outer": [
     "name"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_fn_name_references_to_calls",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "each"
    ]
   },
   {
    "name": "js_fold_call_statement",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_function_declaration_params_names_node",
-   "duplicated": [
+   "shadows_outer": [
     "type_is"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_function_declaration",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_function_last_asyncify",
-   "duplicated": [
+   "shadows_outer": [
     "ast"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_function_last_deasyncify",
-   "duplicated": [
+   "shadows_outer": [
     "ast"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "js_identifier_defineds",
-   "duplicated": [
-    "names",
-    "value",
-    "item2",
-    "node"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_identifier_param_delete_dir",
-   "duplicated": [
-    "ast"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
    "name": "js_identifier_param_new_dir",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "fn_name"
    ]
   },
   {
-   "name": "js_identifier_used_dir",
-   "duplicated": [
-    "file"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "js_identifiers_prefix_rename_dir",
-   "duplicated": [
-    "name",
-    "pair",
-    "file"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "js_list_add_combine",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
    "name": "js_list_add_run_apply",
-   "duplicated": [
-    "call",
-    "statement"
+   "shadows_outer": [
+    "call"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_list_add_run_start_is",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
-   "name": "js_log_assignments_add",
-   "duplicated": [
-    "name"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "js_module_variable_names",
-   "duplicated": [
+   "shadows_outer": [
     "names"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "js_node_atomize_variable_name_get",
-   "duplicated": [
-    "name"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_offset_inside_function_is",
-   "duplicated": [
+   "shadows_outer": [
     "inside"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "js_operator_to_code_call",
-   "duplicated": [
-    "replaced",
-    "call"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "js_operators_from_calls_generic",
-   "duplicated": [
-    "o"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "js_outside_move_generic",
-   "duplicated": [
-    "fd"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "js_ternary_replace",
-   "duplicated": [
+   "shadows_outer": [
     "a",
     "test",
     "c"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "list_adder_group_async",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
    "name": "list_adder_group",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "add"
    ]
   },
   {
    "name": "list_chunk",
-   "duplicated": [
+   "shadows_outer": [
     "lambda"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "list_interleave_halves",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "half"
    ]
   },
   {
    "name": "list_replace_all",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "list_new"
    ]
   },
   {
    "name": "lists_equal_pair",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "equal"
    ]
   },
   {
-   "name": "literal_duplicates",
-   "duplicated": [
-    "f_name"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "machine_resumes_past_day",
-   "duplicated": [
+   "shadows_outer": [
     "stdout",
-    "journalctl_command",
-    "wrap",
-    "line",
-    "iso"
+    "wrap"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "memory_fn_references_rename_report",
-   "duplicated": [
-    "note"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "memory_hook_check",
-   "duplicated": [
+   "shadows_outer": [
     "stdout"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "memory_hook_gate_run",
-   "duplicated": [
-    "r"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "memory_link_defects",
-   "duplicated": [
-    "link"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "memory_symbol_references_unresolved",
-   "duplicated": [
-    "name"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "messenger_reply_messages",
-   "duplicated": [
-    "img",
-    "imgs",
-    "node"
+   "shadows_outer": [
+    "imgs"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "messenger_reply_unread_collect",
-   "duplicated": [
+   "shadows_outer": [
     "page"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "p_commands_repeated",
-   "duplicated": [
-    "cmds",
-    "cmd",
-    "row",
-    "name"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "path_relative",
-   "duplicated": [
-    "s"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "permission_open_suffix_gate_run",
-   "duplicated": [
-    "name"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "permission_prompt_events_grouped_by",
-   "duplicated": [
-    "group"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "permission_prompt_files_report",
-   "duplicated": [
-    "b",
-    "event"
-   ],
-   "shadowed": []
-  },
-  {
-   "name": "permission_prompt_report",
-   "duplicated": [
-    "b",
-    "event"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "permission_rule_run_name",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "marker"
    ]
   },
   {
-   "name": "permission_run_names_not_function",
-   "duplicated": [
-    "is",
-    "name"
-   ],
-   "shadowed": []
-  },
-  {
    "name": "qa_tests_run",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "error"
    ]
   },
   {
    "name": "reply_messages_all",
-   "duplicated": [
+   "shadows_outer": [
     "result"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "reply_on_match_capture",
-   "duplicated": [
-    "u",
-    "lambda",
-    "possibilities"
+   "shadows_outer": [
+    "lambda"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "reply_test",
-   "duplicated": [
+   "shadows_outer": [
     "item"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "reply_wrap_invoke",
-   "duplicated": [
+   "shadows_outer": [
     "possibilities"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "repo_functions_move",
-   "duplicated": [
-    "f_name"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "retry",
-   "duplicated": [
+   "shadows_outer": [
     "wait"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "roman_to_integer",
-   "duplicated": [
-    "roman",
+   "shadows_outer": [
     "input"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "sandbox_4_a",
-   "duplicated": [
+   "shadows_outer": [
     "mapped"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "server_data_endpoints",
-   "duplicated": [
-    "req",
-    "res"
-   ],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "data_get"
    ]
   },
   {
    "name": "server",
-   "duplicated": [
-    "result",
-    "res",
-    "req"
+   "shadows_outer": [
+    "result"
    ],
-   "shadowed": []
-  },
-  {
-   "name": "storage_local_mock_enable",
-   "duplicated": [
-    "storage_local_key"
-   ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "text_identifier_char_is",
-   "duplicated": [],
-   "shadowed": [
+   "shadows_outer": [],
+   "shadows_function": [
     "digits"
    ]
   },
   {
    "name": "text_to_uuid_cache",
-   "duplicated": [
+   "shadows_outer": [
     "text"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "visit_unique_async",
-   "duplicated": [
+   "shadows_outer": [
     "node"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "webpack_build_generic",
-   "duplicated": [
+   "shadows_outer": [
     "f_name_ext"
    ],
-   "shadowed": []
+   "shadows_function": []
   },
   {
    "name": "webpack_watch",
-   "duplicated": [
-    "lambda",
-    "r",
-    "deps",
-    "names",
-    "ad",
-    "failed",
-    "a_name",
-    "stale",
-    "fn_name",
-    "path"
+   "shadows_outer": [
+    "r"
    ],
-   "shadowed": [
+   "shadows_function": [
     "fn_name"
    ]
-  },
-  {
-   "name": "week_calendar",
-   "duplicated": [
-    "text",
-    "live",
-    "end",
-    "covers",
-    "same_day",
-    "day",
-    "slot",
-    "span",
-    "record"
-   ],
-   "shadowed": []
   }
  ]
 }
