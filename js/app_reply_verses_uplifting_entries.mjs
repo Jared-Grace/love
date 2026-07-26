@@ -1,13 +1,25 @@
+import { list_copy_reverse } from "./list_copy_reverse.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { uplifting_package_get } from "./uplifting_package_get.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { ebible_references_parse_lines_browser } from "./ebible_references_parse_lines_browser.mjs";
+import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_map_property_join_space } from "./list_map_property_join_space.mjs";
+import { each_async } from "./each_async.mjs";
 export async function app_reply_verses_uplifting_entries(
   reference,
   languages_chosen,
 ) {
-  ("one entry per language, named and ordered so the reader can tell the languages apart by colour the way the supper app does");
+  "one entry per language, named and ordered so the reader can tell the languages apart by colour the way the supper app does";
   let ordered = list_copy_reverse(languages_chosen);
   let multiple = list_multiple_is(ordered);
   let entries = [];
   function entry_add(language, text) {
-    ("a lone language needs no label, since there is nothing to tell it apart from");
+    "a lone language needs no label, since there is nothing to tell it apart from";
     let name = "";
     if (multiple) {
       name = property_get(language, "name");
