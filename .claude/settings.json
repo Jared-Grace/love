@@ -133,6 +133,7 @@
       "Bash(node scripts/ai.mjs file_name_references_strip:*)",
       "Bash(node scripts/ai.mjs firebase_deploy:*)",
       "Bash(node scripts/ai.mjs firebase_storage_exists:*)",
+      "Bash(node scripts/ai.mjs function_alias_add:*)",
       "Bash(node scripts/ai.mjs function_alias_replace:*)",
       "Bash(node scripts/ai.mjs function_auto:*)",
       "Bash(node scripts/ai.mjs function_auto_check:*)",

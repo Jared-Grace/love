@@ -1,3 +1,4 @@
+import { app_code_screens_manifest_path_assert } from "./app_code_screens_manifest_path_assert.mjs";
 import { app_code_screens_records } from "./app_code_screens_records.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,6 +8,7 @@ export async function app_code_screens_manifest_write(url_prefix, path) {
   let collected = await app_code_screens_records(url_prefix);
   let records = property_get(collected, "records");
   let json = JSON.stringify(records, null, 2);
+  app_code_screens_manifest_path_assert(path);
   await file_overwrite(path, json);
   let screens = list_size(records);
   let result = {
