@@ -1,4 +1,4 @@
-import { shadowing_entries_names_text } from "./shadowing_entries_names_text.mjs";
+import { entries_names_text } from "./entries_names_text.mjs";
 import { functions_shadowing_baseline_write } from "./functions_shadowing_baseline_write.mjs";
 import { functions_shadowing } from "./functions_shadowing.mjs";
 import { functions_shadowing_versus_baseline } from "./functions_shadowing_versus_baseline.mjs";
@@ -21,7 +21,7 @@ export async function functions_shadowing_gate_run() {
       "shadowing gate: " +
       added.length +
       " functions hide a name that was already in scope — rename the inner one, and if a line below it was reading the outer name, that line was the bug: " +
-      shadowing_entries_names_text(added);
+      entries_names_text(added);
     throw new Error(message_added);
   }
   let any_stale = greater_than(stale.length, 0);
@@ -32,7 +32,7 @@ export async function functions_shadowing_gate_run() {
       " baseline entries no longer shadow anything — rerun " +
       functions_shadowing_baseline_write.name +
       " to shrink the baseline: " +
-      shadowing_entries_names_text(stale);
+      entries_names_text(stale);
     throw new Error(message_stale);
   }
   let result = {
