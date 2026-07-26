@@ -1,3 +1,4 @@
+import { js_call_arguments_add } from "./js_call_arguments_add.mjs";
 import { js_return_is_if_async } from "./js_return_is_if_async.mjs";
 import { js_await_if_unwrap_argument } from "./js_await_if_unwrap_argument.mjs";
 import { list_first } from "./list_first.mjs";
@@ -13,7 +14,6 @@ import { each_async } from "./each_async.mjs";
 import { log } from "./log.mjs";
 import { list_size_2 } from "./list_size_2.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { js_call_args_from_code } from "./js_call_args_from_code.mjs";
 import { function_curryify_specify_curried_right } from "./function_curryify_specify_curried_right.mjs";
 import { function_curryify_specify_name_get_curried_right } from "./function_curryify_specify_name_get_curried_right.mjs";
@@ -50,8 +50,8 @@ export async function js_curry_replace(ast) {
       let node = property_get(v, "node");
       let params = js_function_declaration_params_get(node);
       let body_block = js_function_declaration_to_block_body(node);
-      let s1 = list_size_1(body_block);
-      if (s1) {
+      let s = list_size_1(body_block);
+      if (s) {
         let only = list_single(body_block);
         let esi = js_expression_statement_is(only);
         if (esi) {
@@ -93,24 +93,24 @@ export async function js_curry_replace(ast) {
           if (includes) {
             let args = js_call_arguments_get(expression);
             let difference = js_identifiers_names_difference_try(args, params);
-            let difference_sz_1 = list_size_1(difference);
+            let difference_sz_ = list_size_1(difference);
             let first = list_first(difference);
             let fi = list_first_is(args, first);
             let name_get = null;
             let curry_generate = null;
-            if (fi && difference_sz_1) {
+            if (fi && difference_sz_) {
               name_get = function_curryify_generic_name;
               curry_generate = function_curryify;
             } else {
               let li = list_last_is(args, first);
-              if (li && difference_sz_1) {
+              if (li && difference_sz_) {
                 name_get = function_curryify_right_name;
                 curry_generate = function_curryify_right;
               } else {
-                let positions_1 = list_map_index_of_1(difference, args);
+                let positions_ = list_map_index_of_1(difference, args);
                 name_get =
-                  function_curryify_specify_name_get_curried_right(positions_1);
-                let positions_1_comma = list_join_comma(positions_1);
+                  function_curryify_specify_name_get_curried_right(positions_);
+                let positions_1_comma = list_join_comma(positions_);
                 curry_generate =
                   function_curryify_specify_curried_right(positions_1_comma);
               }
@@ -135,8 +135,4 @@ export async function js_curry_replace(ast) {
   let f_names_added = await list_adder_unique_async(lambda2);
   await js_imports_missing_add_specified(ast, f_names_added);
   await js_imports_unused_remove(ast);
-  function js_call_arguments_add(call, difference) {
-    let args2 = js_call_arguments_get(call);
-    list_add_multiple(args2, difference);
-  }
 }

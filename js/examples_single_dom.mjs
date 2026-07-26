@@ -1,3 +1,5 @@
+import { html_style_gap } from "./html_style_gap.mjs";
+import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
@@ -24,13 +26,16 @@ export function examples_single_dom(
   html_progress_bar(parent, index, count, "example");
   let nav = html_div(parent);
   html_display_flex(nav);
-  html_style_set(nav, "gap", "0.5rem");
+  html_style_gap(nav, "0.5rem");
   html_style_set(nav, "flex-wrap", "wrap");
-  html_style_set(nav, "align-items", "center");
+  html_align_items_center(nav);
   html_style_margin_bottom(nav, "1rem");
   app_shared_button(nav, "☰ All examples", on_menu);
-  app_shared_button(nav, text_combine(emoji_arrow_left(), " Prev"), on_prev);
-  app_shared_button(nav, app_shared_button_next_text(), on_next);
+  let left = emoji_arrow_left();
+  let text = text_combine(left, " Prev");
+  app_shared_button(nav, text, on_prev);
+  let text2 = app_shared_button_next_text();
+  app_shared_button(nav, text2, on_next);
   let example = list_get(examples, index);
   example_card_dom(parent, example);
 }
