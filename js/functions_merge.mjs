@@ -34,9 +34,15 @@ export async function functions_merge(f_name_keep, f_name_drop) {
   let search = await data_identifiers_search(f_name_drop);
   let names = properties_get(search);
   let others = list_filter_equal_not(names, f_name_drop);
+  (
+    "swapping the name alone leaves the import line still naming the dropped file, and a file that already imported the kept name is left declaring it twice - which is not a wrong import but a file that will not parse at all"
+  );
+  let swap = await js_identifier_rename_imports_fix_curried_right_2(
+    f_name_drop,
+    f_name_keep,
+  );
   for (let name of others) {
-    await function_identifier_replace_named(name, f_name_drop, f_name_keep);
-    await function_auto(name);
+    await function_transform(name, swap);
   }
   ("a gate baseline is a record of the defect, not something depending on it, so the one file listing this pair as an open twin must not be what stops the pair being closed - every other mention in the data folder still does");
   let paths_mentioning = await data_paths_mentioning(f_name_drop);
