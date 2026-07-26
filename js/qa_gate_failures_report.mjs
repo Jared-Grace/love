@@ -38,6 +38,7 @@ export async function qa_gate_failures_report(results, gates) {
       );
     } catch (e) {
       console.log("GATE FAILED  " + name + ": " + e.message);
+      await qa_gate_blame_print(e.message);
     }
   }
   return failed;
