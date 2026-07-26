@@ -14,7 +14,9 @@ export async function functions_shadowing_report() {
     let any_duplicated = greater_than(duplicated.length, 0);
     if (any_duplicated) {
       duplicated_count = duplicated_count + 1;
-      console.log("BOUND TWICE  " + name + "  -> " + list_join_comma(duplicated));
+      console.log(
+        "BOUND TWICE  " + name + "  -> " + list_join_comma(duplicated),
+      );
     }
     let any_shadowed = greater_than(shadowed.length, 0);
     if (any_shadowed) {
