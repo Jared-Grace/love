@@ -1,9 +1,10 @@
 import { equal } from "./equal.mjs";
 export function html_loading_splash_take() {
-  "remove the static boot splash (the app-loading element) once the app has loaded; the runtime overlay or the freshly rendered app now covers, so the instant-paint splash has done its job. no-op if it is absent (already gone, or a context without it)";
+  "take the static boot splash (the app-loading element) away once the app has loaded, and say whether there was one to take. the runtime overlay or the freshly rendered app now covers, so the instant-paint splash has done its job. a yes means the screen was already dark, so whatever replaces it should appear at once rather than fade in over a half-painted page; a no means nothing was covering, so a fade is the gentle way in";
   let element = document.getElementById("app-loading");
   if (equal(element, null)) {
-    return;
+    return false;
   }
   element.remove();
+  return true;
 }
