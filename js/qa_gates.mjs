@@ -40,6 +40,7 @@ import { functions_unbound_gate_run } from "./functions_unbound_gate_run.mjs";
 import { bundle_size_gate_run } from "./bundle_size_gate_run.mjs";
 import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_canon_assert.mjs";
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
+import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
 export function qa_gates() {
   let gates = [
     guard_gate_run,
@@ -52,6 +53,7 @@ export function qa_gates() {
     memory_fn_reference_tokens_gate_run,
     memory_fn_reference_gate_run,
     memory_symbol_gate_run,
+    memory_index_size_gate_run,
     examples_gate_run,
     permission_gate_run,
     permission_editor_open_gate_run,
