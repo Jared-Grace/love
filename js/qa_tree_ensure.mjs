@@ -1,3 +1,12 @@
+import { qa_tree_repos_folder } from "./qa_tree_repos_folder.mjs";
+import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
+import { qa_snapshot_siblings_link } from "./qa_snapshot_siblings_link.mjs";
+import { folder_current_absolute } from "./folder_current_absolute.mjs";
+import { qa_tree_folder } from "./qa_tree_folder.mjs";
+import { qa_tree_names_skipped } from "./qa_tree_names_skipped.mjs";
+import { folder_copy_fresh } from "./folder_copy_fresh.mjs";
+import { path_join } from "./path_join.mjs";
+import { qa_snapshot_link } from "./qa_snapshot_link.mjs";
 export async function qa_tree_ensure() {
   "Freezes the working folder exactly as it stands, in memory, and answers where the frozen copy is";
   "Work nobody has committed is included, because that is what the gate is asked about before committing - which is the one thing a copy taken from a commit cannot show";
