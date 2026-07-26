@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 export async function indexeddb_store_clear(db_get, store) {
   let db = await db_get();
   let tx = db.transaction(store, "readwrite");

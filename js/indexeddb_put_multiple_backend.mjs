@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 import { each_object_values } from "./each_object_values.mjs";
 export async function indexeddb_put_multiple_backend(db_get, store, nexts) {
   let tx = await db_get().transaction(store, "readwrite");
@@ -10,8 +9,8 @@ export async function indexeddb_put_multiple_backend(db_get, store, nexts) {
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
     tx.onerror = function lambda4() {
-      let v3 = reject(tx.error);
-      return v3;
+      let v = reject(tx.error);
+      return v;
     };
     tx.onabort = function lambda5() {
       let v4 = reject(tx.error);

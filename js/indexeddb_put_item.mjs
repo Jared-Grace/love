@@ -1,4 +1,3 @@
-import { error } from "./error.mjs";
 export async function indexeddb_put_item(key, s) {
   let previous = await new Promise(async function lambda3(resolve, reject) {
     let req = s.get(key);
