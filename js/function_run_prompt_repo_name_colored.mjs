@@ -1,5 +1,4 @@
 import { chalk_green_or_red_bg } from "./chalk_green_or_red_bg.mjs";
-import { chalk_color } from "./chalk_color.mjs";
 import { list_includes } from "./list_includes.mjs";
 export async function function_run_prompt_repo_name_colored(repo_name) {
   let safe = ["p_np"];
