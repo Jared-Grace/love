@@ -189,6 +189,7 @@
       "Bash(node scripts/ai.mjs permission_rule_file_gate_run:*)",
       "Bash(node scripts/ai.mjs permission_rule_probe_gate_run:*)",
       "Bash(node scripts/ai.mjs function_param_new:*)",
+      "Bash(node scripts/ai.mjs function_params_delete:*)",
       "Bash(node scripts/ai.mjs function_read:*)",
       "Bash(node scripts/ai.mjs guard_check:*)",
       "Bash(node scripts/ai.mjs guard_gate_run:*)",
