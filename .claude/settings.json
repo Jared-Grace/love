@@ -121,6 +121,7 @@
       "Bash(node scripts/ai.mjs functions_shadowing_report:*)",
       "Bash(node scripts/ai.mjs functions_shadowing_gate_run:*)",
       "Bash(node scripts/ai.mjs functions_shadowing_baseline_write:*)",
+      "Bash(node scripts/ai.mjs function_shadowing_rename:*)",
       "Bash(node scripts/ai.mjs g_sermon_groups_todo:*)",
       "Bash(node scripts/ai.mjs g_verify_books_urls:*)",
       "Bash(node scripts/ai.mjs literal_duplicates:*)",
