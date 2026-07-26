@@ -8,13 +8,18 @@ import { git_push } from "./git_push.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function git_remove(f_path) {
-  await command_line_git_current(text_combine("rm -r --cached ", f_path));
+  let command_git = text_combine("rm -r --cached ", f_path);
+  await command_line_git_current(command_git);
   await git_ignore_add(f_path);
   let added = git_ignore_name();
   await git_add(added);
-  await git_commit(
-    text_combine_multiple(["Remove ", f_path, " and add to ", added]),
-  );
+  let message = text_combine_multiple([
+    "Remove ",
+    f_path,
+    " and add to ",
+    added,
+  ]);
+  await git_commit(message);
   await git_push();
   await repos_gitignore_overwrite_all();
 }
