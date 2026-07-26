@@ -63,9 +63,11 @@ import { app_code_lesson_symbols_space } from "./app_code_lesson_symbols_space.m
 import { app_code_lesson_symbols_letters } from "./app_code_lesson_symbols_letters.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
+import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 export function app_code_lessons_fns() {
   let fns = [
     app_code_lesson_symbols_digits_numbered,
+    app_code_lesson_symbols_digit_number,
     app_code_lesson_symbols_digits,
     app_code_lesson_symbols_letters,
     app_code_lesson_symbols_space,
