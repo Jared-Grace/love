@@ -10,13 +10,13 @@ import { not } from "./not.mjs";
 export async function memory_fn_references_rename(before, after) {
   "Follow a rename into memory: rewrite every marked pointer at the old name, and report - without touching - every place the old name is written bare.";
   "The split is the whole design. A marked name is a pointer into the code and has to follow the code, so it is rewritten. A bare name is usually narrative, and a note whose sentence is that something used to be called one thing and is now called another would be turned into nonsense by rewriting it. Nobody can tell those apart from the text, but the person doing the rename can, so they are handed the list instead.";
-  "The word boundary is what keeps a call ending in the marker's two letters, and a longer name that merely starts with the old one, out of both halves.";
+  "The word boundary on the bare half is what keeps a longer name that merely starts with the old one out of the report. The marked half needs no such care - nothing written in code can spell the marker.";
   let folder = memory_folder();
   let names = await folder_read_files(folder);
   let suffix = ".md";
-  let marked = new RegExp("\\bfn\\(" + before + "\\)", "g");
+  let marked = new RegExp("\\$fn " + before + "(?![a-z0-9_])", "g");
   let bare = new RegExp("\\b" + before + "\\b", "g");
-  let replacement = "fn(" + after + ")";
+  let replacement = "$fn " + after;
   let rewritten = [];
   let mentioned = [];
   for (let name of names) {
