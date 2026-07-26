@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_comma } from "./text_split_comma.mjs";
+import { function_delete_unused_among } from "./function_delete_unused_among.mjs";
+import { list_map_async } from "./list_map_async.mjs";
 export async function function_delete_unused_multiple(names_comma) {
   arguments_assert(arguments, 1);
   ("Removes each of these, and refuses any one of them that something outside the");
