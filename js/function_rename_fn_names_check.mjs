@@ -5,11 +5,8 @@ import { fn_name_arg_get } from "./fn_name_arg_get.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { functions_transform_list } from "./functions_transform_list.mjs";
 import { property_exists_if_async } from "./property_exists_if_async.mjs";
-import { function_rename_open } from "./function_rename_open.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { error_json } from "./error_json.mjs";
 import { data_identifiers_fn_names_get } from "./data_identifiers_fn_names_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function function_rename_fn_names_check(
   f_name_before,
   f_name_after,
