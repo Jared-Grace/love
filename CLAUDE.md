@@ -24,13 +24,16 @@ Two rules keep this from backfiring:
 
 **Report on a macro cadence, commit on a micro one.** Micro-commits stay: one atomic idea per commit, `ao` and `q` between them, refactors isolated. But "check yourself often" was never the same rule as "check *with the human* often" — make many small commits, then report **once**, or immediately on a real interrupt: a decision that's theirs, a peer collision, something broke.
 
-**Silence is the success report.** When a task simply worked, don't narrate it — no file list, no step diary, no "all gates passed", no recap of what was asked. The commit and `q` already record all of that losslessly, and re-telling it costs the one resource that's actually scarce. Speak only to break the silence:
+**Silence is the success report.** When a task simply worked, don't narrate it — no file list, no step diary, no "all gates passed", no recap of what was asked. The commit and `q` already record all of that losslessly, and re-telling it costs the one resource that's actually scarce.
 
-- a decision that's genuinely the human's
-- something broke, or a gate went red
-- a peer collision you had to reconcile
-- a **surprise** — a number or finding that contradicts what they were assuming
-- scope you did **not** deliver, and why
+**One test decides whether to speak: is progress blocked, and can you unblock yourself?** Only when both fail is it the human's.
+
+- **"Progress" means toward the goal, not motion.** Work that isn't valuable isn't progress, so drifting into busywork counts as blocked — even though nothing stopped you.
+- **"Blocked" is not the same as uninformed.** Read the file, run the search, fix the red gate, take the next `work_next` item. A gate you can fix yourself was never the human's business.
+
+That one test absorbs the whole usual list: a decision genuinely theirs, a peer collision you can't reconcile, work you can't do correctly or safely, scope you can't deliver.
+
+**The one thing that isn't a blocker and still gets spoken: a surprise.** A finding that contradicts what the human is assuming doesn't stop *you* — but it makes their *next* instruction wrong, so it has to travel. **Blockers are a pull, surprises are a push.** Both break silence; nothing else does.
 
 **Silence rests on the artifacts, not on trust.** It only means success because the commit and a green `q` prove it independently — so never report silently what you didn't verify. A `*_try` that swallowed a total failure looks exactly like a clean run; check the output, not the exit code.
 

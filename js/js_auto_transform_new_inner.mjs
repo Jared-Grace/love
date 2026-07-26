@@ -1,6 +1,5 @@
 import { property_get } from "./property_get.mjs";
 import { js_flo_body_add_return } from "./js_flo_body_add_return.mjs";
-import { function_open } from "./function_open.mjs";
 import { js_auto_transforms } from "./js_auto_transforms.mjs";
 import { function_transform_marker_specified } from "./function_transform_marker_specified.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
@@ -23,5 +22,4 @@ export async function js_auto_transform_new_inner(f_name_unprefixed) {
     "transforms",
     lambda,
   );
-  await function_open(js_auto_transforms.name);
 }
