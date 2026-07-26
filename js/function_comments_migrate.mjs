@@ -1,3 +1,4 @@
+import { js_comments_left_count } from "./js_comments_left_count.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { function_name_to_path } from "./function_name_to_path.mjs";
 import { file_read } from "./file_read.mjs";

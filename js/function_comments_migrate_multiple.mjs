@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { function_comments_migrate } from "./function_comments_migrate.mjs";
@@ -15,7 +16,7 @@ export async function function_comments_migrate_multiple(names_comma) {
   }
   function left_is(result) {
     let left = property_get(result, "left");
-    let any = left > 0;
+    let any = greater_than(left, 0);
     return any;
   }
   let changed = list_filter(results, changed_is);
