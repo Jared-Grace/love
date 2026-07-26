@@ -1,3 +1,4 @@
+import { app_code_between_two_wholes } from "./app_code_between_two_wholes.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { integer_random } from "./integer_random.mjs";
@@ -124,6 +125,14 @@ export function app_code_lesson_expression_round_up() {
       "",
       "Math.ceil",
       " gives the whole number above it",
+    ]);
+    app_code_between_two_wholes(rounds, low_decimal, whole_text, whole_up);
+    html_div_cycle_code(rounds, [
+      "so ",
+      "Math.ceil",
+      " chooses ",
+      whole_up,
+      ", the bigger one",
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
