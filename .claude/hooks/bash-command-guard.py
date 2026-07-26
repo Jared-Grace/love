@@ -2289,6 +2289,135 @@ def find_denied_dispatcher_function(command):
     return None
 
 
+# A function's own full name: lower snake_case, the shape every file under
+# js/ is named. Anything else in the function-name slot (a $variable, a glob, a
+# path) is a name this guard cannot resolve, so the dead-name floor abstains on
+# it rather than guessing.
+FUNCTION_NAME_TEXT = re.compile(r"^[a-z][a-z0-9_]*$")
+
+
+def repos_function_names():
+    """Every live function name across the sibling repos - one function per
+    file, <repo>/js/<name>.mjs. The repos folder is REPO_ROOT's parent and the
+    layout is functions_path(), so this reads the same set repos_names() and
+    function_name_to_path_search() do, without running node. Returns None when
+    nothing can be read, so the caller fails open instead of denying blind."""
+    repos_folder = os.path.dirname(REPO_ROOT)
+    try:
+        repo_names = os.listdir(repos_folder)
+    except OSError:
+        return None
+    names = set()
+    for repo_name in repo_names:
+        if repo_name == ".vscode":
+            continue
+        try:
+            entries = os.listdir(os.path.join(repos_folder, repo_name, "js"))
+        except OSError:
+            continue
+        for entry in entries:
+            if entry.endswith(".mjs"):
+                names.add(entry[: -len(".mjs")])
+    if not names:
+        return None
+    return names
+
+
+def alias_full_name(name):
+    """The full function name an alias key points at, or None. ai.mjs refuses
+    shorthand, so an alias arriving at this seam is a dead name whose fix is
+    exact - name the function the alias currently points at."""
+    try:
+        with open(os.path.join(REPO_ROOT, "data", "aliases.json")) as handle:
+            aliases = json.load(handle).get("aliases") or {}
+    except (OSError, ValueError, AttributeError):
+        return None
+    full = aliases.get(name)
+    if isinstance(full, str) and full:
+        return full
+    return None
+
+
+def function_name_near_misses(name, live_names):
+    """Up to three live names sharing at least two underscore-separated words
+    with `name`, closest first (most words shared, then fewest words differing).
+    A dead name is nearly always a real function misremembered, so the neighbours
+    are the correction - naming them is what makes the deny self-serviceable."""
+    words = set(name.split("_"))
+    scored = []
+    for live in live_names:
+        live_words = set(live.split("_"))
+        shared = len(words & live_words)
+        if shared < 2:
+            continue
+        scored.append((-shared, len(live_words ^ words), live))
+    scored.sort()
+    return [live for _, _, live in scored[:3]]
+
+
+def find_dead_dispatcher_function(command):
+    """If `command` runs `node scripts/ai.mjs <fn>` for a plain function name no
+    repo defines, return that name so main() can DENY it; else None.
+
+    A dead name cannot succeed - the dispatcher throws on it - so a prompt costs
+    the human a click and still fails. Denying instead hands the correction back
+    into the agent loop, where the near-miss live names can actually be used.
+    Safe as a floor: it only ever fires on a command that was going to fail, and
+    a dangling allow rule (a grant left behind by a deleted function) should not
+    outrank that. Fails open everywhere - unparseable command, unresolvable
+    name, unreadable repos folder all return None."""
+    try:
+        tokens = tokenize(command)
+    except Unsupported:
+        return None
+    candidates = []
+    for words in split_statements(tokens):
+        words = _strip_command_prefixes(words)
+        if (
+            len(words) >= 3
+            and words[0] == "node"
+            and ai_script_is(words[1])
+            and FUNCTION_NAME_TEXT.match(words[2])
+        ):
+            candidates.append(words[2])
+    if not candidates:
+        return None
+    live_names = repos_function_names()
+    if live_names is None:
+        return None
+    for name in candidates:
+        if name not in live_names:
+            return name
+    return None
+
+
+def dead_dispatcher_deny_reason(name, live_names):
+    aliased = alias_full_name(name)
+    if aliased:
+        return (
+            f"`{name}` is an alias key, not a function name, and scripts/ai.mjs "
+            f"takes full names only. It currently points at `{aliased}` - run "
+            f"`node scripts/ai.mjs {aliased} <args>` instead. (Aliases are for "
+            "the human at the keyboard; a permission rule is matched as literal "
+            "text, so granting an alias would follow it wherever it is later "
+            "repointed. See CLAUDE.md - 'Two seams'.)"
+        )
+    near = function_name_near_misses(name, live_names or set())
+    suggestion = (
+        "Closest live names: " + ", ".join(near) + "."
+        if near
+        else "Find the real name with `node scripts/ai.mjs functions_search "
+        "<substrings>` (AND-of-substrings over function names)."
+    )
+    return (
+        f"No function named `{name}` exists in any repo, so this command would "
+        f"throw rather than do anything. {suggestion} If you meant to create it, "
+        f"run `node scripts/ai.mjs function_new {name}` first - and if you "
+        "already did, run the create as its own call so the file exists before "
+        "this one is checked."
+    )
+
+
 def find_non_ai_scripts_invocation(command):
     """If `command` directly runs `node scripts/<X>` for any script under the
     repo's scripts/ directory other than ai.mjs, return that path so main() can
@@ -2770,6 +2899,26 @@ def main():
                 "hookEventName": "PreToolUse",
                 "permissionDecision": "deny",
                 "permissionDecisionReason": non_ai_scripts_deny_reason(non_ai_script),
+            }
+        }))
+        return
+
+    # Correctness floor rather than a safety one: a dispatcher call naming a
+    # function no repo defines is guaranteed to throw, so a prompt spends the
+    # human's attention on a command that fails either way. Deny with the
+    # near-miss live names so the correction happens in the agent loop. Sits
+    # before the allow decision on purpose - a dangling grant (left behind by a
+    # deleted function) must not outrank "this name does not exist". Placed
+    # after the seam floor so `node scripts/r.mjs <fn>` keeps its own message.
+    dead_fn = find_dead_dispatcher_function(command)
+    if dead_fn:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": dead_dispatcher_deny_reason(
+                    dead_fn, repos_function_names()
+                ),
             }
         }))
         return
