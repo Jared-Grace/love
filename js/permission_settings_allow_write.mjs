@@ -1,24 +1,9 @@
-import { permission_settings_paths } from "./permission_settings_paths.mjs";
-import { list_first } from "./list_first.mjs";
-import { file_read_json } from "./file_read_json.mjs";
-import { property_get } from "./property_get.mjs";
-import { permission_allow_generated } from "./permission_allow_generated.mjs";
-import { property_set } from "./property_set.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { permission_grant_names } from "./permission_grant_names.mjs";
+import { permission_settings_allow_write_from } from "./permission_settings_allow_write_from.mjs";
 export async function permission_settings_allow_write() {
   "write the shared settings file's allow list out from the JS list it is generated from, leaving every other key in the file exactly as it was";
-  "only the allow list is replaced. The hooks and the default mode live in the same file and nothing here derives them, so reading the file and putting one key back is the difference between generating a list and overwriting a file somebody else also owns.";
-  "the local settings file beside it is per-machine and outside version control, so it is never written";
-  let paths = permission_settings_paths();
-  let path = list_first(paths);
-  let settings = await file_read_json(path);
-  let permissions = property_get(settings, "permissions");
-  let generated = permission_allow_generated();
-  property_set(permissions, "allow", generated);
-  await file_overwrite_json(path, settings);
-  let report = {
-    path,
-    allow: generated.length,
-  };
+  "this reads the list as the loaded module holds it, so running it on its own renders the file from what is on disk. A command that has just written a new name passes its own list to the taking-a-list twin instead, because the loader keeps the module it already loaded however many times the file underneath it is rewritten.";
+  let names = permission_grant_names();
+  let report = await permission_settings_allow_write_from(names);
   return report;
 }
