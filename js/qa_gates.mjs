@@ -30,6 +30,7 @@ import { permission_grants_gate_run } from "./permission_grants_gate_run.mjs";
 import { app_shared_prefixes_invalid_assert } from "./app_shared_prefixes_invalid_assert.mjs";
 import { daemons_gate_run } from "./daemons_gate_run.mjs";
 import { dispatcher_scripts_python_assert } from "./dispatcher_scripts_python_assert.mjs";
+import { dispatcher_commands_python_assert } from "./dispatcher_commands_python_assert.mjs";
 import { function_worker_pool_run_try } from "./function_worker_pool_run_try.mjs";
 import { function_imports_gate_run } from "./function_imports_gate_run.mjs";
 import { functions_shadowing_gate_run } from "./functions_shadowing_gate_run.mjs";
