@@ -1,4 +1,4 @@
-import { files_written_take } from "./files_written_take.mjs";
+import { files_to_commit_take } from "./files_to_commit_take.mjs";
 import { ai_git_files } from "./ai_git_files.mjs";
 Error.stackTraceLimit = Infinity;
 export async function ai_git() {
@@ -10,7 +10,7 @@ export async function ai_git() {
   "exactly the change this was called for.";
   "The note is still emptied first: the sweep covers those files anyway, and a note";
   "left standing would have the next command claim them a second time.";
-  await files_written_take();
+  await files_to_commit_take();
   let none = [];
   let args = [];
   let result = await ai_git_files("ai", args, none);
