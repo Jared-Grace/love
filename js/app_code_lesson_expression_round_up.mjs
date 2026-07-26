@@ -109,26 +109,26 @@ export function app_code_lesson_expression_round_up() {
       " is not a whole number",
     ]);
     let rounds = app_code_container_light_blue(root);
-    html_div_cycle_code(rounds, [
-      "",
-      "Math.ceil",
-      " takes a number and rounds it up to the whole number above it",
-    ]);
     let v = ceil_code(decimal);
     html_div_cycle_code(rounds, ["", v, " is ", whole_up]);
-    html_div_cycle_code(rounds, [
-      "",
-      "Math.ceil",
-      " always rounds up, never down",
-    ]);
     let v2 = ceil_code(low_decimal);
     html_div_cycle_code(rounds, [
-      "For example: ",
+      "",
       v2,
       " is also ",
       whole_up,
       " not ",
       whole_text,
+    ]);
+    html_div_cycle_code(rounds, [
+      "",
+      "Math.ceil",
+      " rounds a number up to the whole number above it",
+    ]);
+    html_div_cycle_code(rounds, [
+      "",
+      "Math.ceil",
+      " always rounds up, never down",
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [

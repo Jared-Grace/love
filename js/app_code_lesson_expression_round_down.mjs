@@ -109,31 +109,31 @@ export function app_code_lesson_expression_round_down() {
       " is not a whole number",
     ]);
     let rounds = app_code_container_light_blue(root);
+    let v = floor_code(decimal);
+    html_div_cycle_code(rounds, ["", v, " is ", whole_text]);
+    let v2 = floor_code(high_decimal);
+    html_div_cycle_code(rounds, [
+      "",
+      v2,
+      " is also ",
+      whole_text,
+      " not ",
+      whole_up,
+    ]);
     html_div_cycle_code(rounds, [
       "",
       "Math.floor",
-      " takes a number and rounds it down to the whole number below it",
+      " rounds a number down to the whole number below it",
     ]);
     html_div_cycle_code(rounds, [
       "In other words (for these positive numbers) ",
       "Math.floor",
       " removes the decimal part, so that only the whole number is left",
     ]);
-    let v = floor_code(decimal);
-    html_div_cycle_code(rounds, ["", v, " is ", whole_text]);
     html_div_cycle_code(rounds, [
       "",
       "Math.floor",
       " always rounds down, never up",
-    ]);
-    let v2 = floor_code(high_decimal);
-    html_div_cycle_code(rounds, [
-      "For example: ",
-      v2,
-      " is also ",
-      whole_text,
-      " not ",
-      whole_up,
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
