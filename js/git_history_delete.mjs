@@ -1,7 +1,7 @@
 import { git_purge_everyone } from "./git_purge_everyone.mjs";
 import { command_line_git_folder } from "./command_line_git_folder.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
-import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { log } from "./log.mjs";
 import { path_resolve } from "./path_resolve.mjs";
 import { git_push_folder_now } from "./git_push_folder_now.mjs";
@@ -36,7 +36,7 @@ export async function git_history_delete(user, repo, f_path, repo_path) {
   async function lambda() {
     await command_line_git_folder(repo_folder, "remote remove origin");
   }
-  let r = await catch_ignore_async(lambda);
+  let r = await catch_null_async(lambda);
   let command_git2 = text_combine_multiple([
     "filter-repo --path ",
     f_path,

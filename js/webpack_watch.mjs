@@ -10,7 +10,7 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { import_install } from "./import_install.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
-import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { catch_null_async } from "./catch_null_async.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 import { app_shared_dev_build } from "./app_shared_dev_build.mjs";
@@ -47,7 +47,7 @@ export async function webpack_watch() {
       };
       return r;
     }
-    let r = await catch_ignore_async(lambda);
+    let r = await catch_null_async(lambda);
     return r;
   }
   let built = await list_map_async(a_names, app_deps_get);
