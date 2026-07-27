@@ -104,8 +104,6 @@ export function examples_notes() {
       "copy a line below itself — the third thing that can happen to an addressed line and the only one that has to rename what it binds",
     example_block_call_add:
       "write a call from a function name alone — the callee's own parameters become the arguments and a clashing one is renamed rather than silently repointed",
-    example_block_call_add:
-      "call an existing function at the end of a block - the verb the name-only way of writing rests on",
     example_type_find_address:
       "address a line by its node type — the address left for a line that calls nothing and binds nothing — and the one that refuses as soon as a second node of that type appears",
     example_call_name_includes_address:
@@ -116,6 +114,8 @@ export function examples_notes() {
       "add a name to a register of functions — the twin that writes a word looks identical afterwards and runs nothing",
     example_expand_call_inline:
       "put a called function's body where the call was — the only verb that reads a second function to do its work",
+    example_call_callee_set:
+      "point one call at a different function — the commonest hand edit a verb could have made, chosen by reading the history rather than guessing",
   };
   return notes;
 }
