@@ -1,3 +1,5 @@
+import { js_object_shorthand_add } from "./js_object_shorthand_add.mjs";
+import { js_array_text_add } from "./js_array_text_add.mjs";
 import { js_call_argument_named_identifier_set } from "./js_call_argument_named_identifier_set.mjs";
 import { js_block_return_identifier_add } from "./js_block_return_identifier_add.mjs";
 import { js_block_call_add } from "./js_block_call_add.mjs";
