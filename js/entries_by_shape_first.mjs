@@ -3,7 +3,7 @@ export function entries_by_shape_first(entries) {
   let by_shape = {};
   for (let entry of entries) {
     let shape = property_get(entry, "shape");
-    property_set_exists_not(by_shape, shape, entry);
+    property_set_if_exists_not(by_shape, shape, entry);
   }
   return by_shape;
 }
