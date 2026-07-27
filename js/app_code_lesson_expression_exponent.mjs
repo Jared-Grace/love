@@ -191,7 +191,7 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(pill, "grid-row", "2");
       html_style_set(pill, "grid-column", "1 / -1");
       html_style_background(pill, "black");
-      html_border_radius(pill, "0.5em");
+      html_border_radius(pill, app_shared_border_radius());
       html_style_set(pill, "align-self", "stretch");
       html_style_justify_self(pill, "stretch");
       function spacer(column) {
