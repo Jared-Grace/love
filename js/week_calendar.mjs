@@ -1,3 +1,4 @@
+import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { date_weekday_short } from "./date_weekday_short.mjs";
 import { date_month_day } from "./date_month_day.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -84,9 +85,10 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   }
   function day_cell(day, slot) {
     let cell = html_div(grid);
+    let c = app_shared_color_gray_light();
     html_style_assign(cell, {
       height: "1.9rem",
-      border: "1px solid #e3e3e3",
+      border: `1px solid ${c}`,
       "box-sizing": "border-box",
     });
     function on_press() {

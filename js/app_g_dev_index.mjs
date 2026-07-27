@@ -1,4 +1,5 @@
-import { app_g } from "./app_g.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -16,7 +17,11 @@ import { list_concat } from "./list_concat.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function app_g_dev_index() {
-  ("the #index dev directory, rendered like a search app's RESULTS: a drill-down of tappable CARDS (shared html_card look) built from the ",
+  (text_combine_multiple([
+    "the #index dev directory, rendered like a search app's RESULTS: a drill-down of tappable CARDS (shared ",
+    html_card.name,
+    " look) built from the ",
+  ]),
     app_g_dev_routes.name,
     " registry + its category prefixes (",
     app_g_dev_index_prefixes.name,
@@ -28,7 +33,7 @@ export function app_g_dev_index() {
     left: "0",
     width: "100vw",
     height: "100vh",
-    background: "#eef0f3",
+    background: app_shared_color_page_background(),
     color: "black",
     display: "flex",
     "flex-direction": "column",
