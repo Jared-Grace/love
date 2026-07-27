@@ -15,12 +15,7 @@ export async function app_g_day_guide_show(div_map) {
   if (null_is(target)) {
     return;
   }
-  let previous = property_get(state, "guide");
-  if (previous) {
-    html_remove(previous);
-  }
-  property_set(state, "guide", null);
-  property_set(state, "guide_coords", null);
+  app_g_day_guide_clear();
   let g = await app_g_game_save_get();
   let player = await app_g_player_get();
   await app_g_day_slice_move(player);
