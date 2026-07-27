@@ -1,3 +1,4 @@
+import { js_find_call_name_includes } from "./js_find_call_name_includes.mjs";
 import { js_type_find } from "./js_type_find.mjs";
 import { js_find_object_containing_text } from "./js_find_object_containing_text.mjs";
 import { js_find_statement_after } from "./js_find_statement_after.mjs";
@@ -24,6 +25,7 @@ export function example_selectors() {
     js_call_named_find,
     js_find_object_containing_text,
     js_type_find,
+    js_find_call_name_includes,
   };
   return selectors;
 }
