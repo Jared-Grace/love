@@ -10,6 +10,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
+import { app_code_string_shape } from "./app_code_string_shape.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_string_phrases } from "./app_code_string_phrases.mjs";
 import { html_div } from "./html_div.mjs";
@@ -62,7 +63,8 @@ export function app_code_lesson_expression_string_spaces() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "A string can hold spaces");
+        html_span_text(parent, "A string can hold spaces ");
+        app_code_string_shape(parent, 2);
       }
       return render;
     }

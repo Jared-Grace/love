@@ -6,14 +6,12 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_name_id_generic } from "./app_code_lesson_name_id_generic.mjs";
 import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_category.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { html_span } from "./html_span.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
 import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
-import { app_code_placeholder_color } from "./app_code_placeholder_color.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
+import { app_code_string_shape } from "./app_code_string_shape.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
@@ -70,7 +68,8 @@ export function app_code_lesson_expression_string_hello() {
     function title_get(lesson_name, left_upper) {
       function render(parent) {
         app_code_lesson_name_id_category(parent, left_upper);
-        html_span_text(parent, "A string is text in quotes");
+        html_span_text(parent, "A string is text in quotes ");
+        app_code_string_shape(parent, 1);
       }
       return render;
     }
@@ -100,13 +99,7 @@ export function app_code_lesson_expression_string_hello() {
     html_span_text(marks, " marks the end");
     let shape_line = html_div(intro);
     html_span_text(shape_line, "A string looks like this: ");
-    let shape = html_span(shape_line);
-    html_style_code_dark_nowrap(shape);
-    html_span_text(shape, quote);
-    let dots = html_span_text(shape, "...");
-    let color = app_code_placeholder_color();
-    html_font_color_set(dots, color);
-    html_span_text(shape, quote);
+    app_code_string_shape(shape_line, 1);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is an example string: ");
     html_span_text_code_dark(example_line, code);
@@ -115,8 +108,8 @@ export function app_code_lesson_expression_string_hello() {
     html_span_text(concept, "The ");
     let value_term = html_span_text(concept, "value of a string");
     html_bold(value_term);
-    let color3 = app_code_string_value_color_on_light();
-    html_font_color_set(value_term, color3);
+    let color = app_code_string_value_color_on_light();
+    html_font_color_set(value_term, color);
     html_span_text(concept, " is what's between the quotes");
     let example = html_div(define);
     html_span_text(example, "For example, the ");
