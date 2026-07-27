@@ -1,4 +1,3 @@
-import { promise_resolved } from "./promise_resolved.mjs";
 import { promise_later } from "./promise_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
@@ -326,11 +325,7 @@ export async function app_g_verify_view(
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
-  ("size to fit the content NOW, then AGAIN on the next tick (",
-    promise_later.name,
-    " is ao-safe — ",
-    promise_resolved.name,
-    " is sync so ao won't inject an await that breaks the chain) and after the serif font loads (its metrics change the height); reading scrollHeight already forces a reflow, so a full animation-frame wait is unnecessary; all re-runs are idempotent");
+  ("size to fit the content NOW, then AGAIN on the next microtask (the deferred-run helper is ao-safe because the resolver it chains on is a plain sync function, so ao will not inject an await that breaks the chain) and after the serif font loads, whose metrics change the height; reading scrollHeight already forces a reflow, so a full animation-frame wait is unnecessary; all re-runs are idempotent");
   autosize();
   promise_later(autosize);
   document.fonts.ready.then(autosize);
