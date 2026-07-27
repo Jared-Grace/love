@@ -108,7 +108,10 @@ export function app_code_lesson_expression_string_hello() {
     html_span_text(example_line, "Here is an example string: ");
     html_span_text_code_dark(example_line, code);
     let define = app_code_container_light_blue(root);
+    html_div_cycle_code(define, [
+      "The value of a string is what's between the quotes",
+    ]);
     html_div_cycle_code(define, ["The value of ", code, " is ", word]);
-    html_div_cycle_code(define, ["The quotes are not part of the value"]);
+    html_div_cycle_code(define, ["The quotes are left out"]);
   }
 }
