@@ -59,6 +59,10 @@ export async function qa_gate_run() {
   let failed_here = property_get(here, "failed");
   let failed = list_concat(failed_copy, failed_here);
   if (greater_than(failed.length, 0)) {
+    ("Every red is asked once more out here, in the folder as it stands, because the copy was taken while several of us were writing to it and a file caught half-copied answers the same way however many times it is asked in there. What that ask finds is printed and nothing else: the verdict below stays exactly what the frozen copy said, since a gate quiet out here may only be quiet because somebody is mid-edit, and a clean answer from this gate is supposed to mean the code is sound");
+    let joined = list_join_comma(failed);
+    console.log("\n=== asking the red gates again, here in the living folder ===");
+    await qa_gates_here_failed(joined);
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
