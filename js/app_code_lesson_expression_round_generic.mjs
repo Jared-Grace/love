@@ -22,7 +22,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_generic(params) {
   "the shared body of the two whole-number rounding lessons - Math.floor (round down) and Math.ceil (round up). They practise the same thing on a decimal by itself: the four questions (each a fresh whole part 2..7, alternating a decimal to round with an already-whole number that does not change), the labels, the worked example between two wholes shown for an ordinary AND an extreme decimal (to show it rounds its fixed way, not to the nearest), and the already-whole case. Nearly everything follows from the one direction (up or down): the words (up/down, bigger/smaller, above/below), which of the two wholes is chosen, and the decoy (the other whole). Each lesson passes the function name, its two digit ranges, and whether it is the one that first introduces the term whole number.";
-  let fn_name = property_get(params, "fn_name");
+  let called_name = property_get(params, "fn_name");
   let rounds_up = property_get(params, "rounds_up");
   let ordinary_digits = property_get(params, "ordinary_digits");
   let extreme_digits = property_get(params, "extreme_digits");
@@ -37,7 +37,7 @@ export function app_code_lesson_expression_round_generic(params) {
   }
   function code(inner) {
     "the rounding call on inner as a code string";
-    let combined = text_combine_multiple([fn_name, "(", inner, ")"]);
+    let combined = text_combine_multiple([called_name, "(", inner, ")"]);
     return combined;
   }
   function make(whole, index) {
@@ -108,7 +108,7 @@ export function app_code_lesson_expression_round_generic(params) {
         app_code_lesson_name_id_category(parent, left_upper);
         let heading = text_combine_multiple(["Round ", direction, " "]);
         html_span_text(parent, heading);
-        html_span_text_code_dark(parent, fn_name);
+        html_span_text_code_dark(parent, called_name);
       }
       return render;
     }
@@ -163,7 +163,7 @@ export function app_code_lesson_expression_round_generic(params) {
     let chooses_suffix = text_combine_multiple([", the ", superlative, " one"]);
     html_div_cycle_code(rounds, [
       "So ",
-      fn_name,
+      called_name,
       " chooses ",
       chosen_whole,
       chooses_suffix,
@@ -186,13 +186,13 @@ export function app_code_lesson_expression_round_generic(params) {
     ]);
     html_div_cycle_code(rounds, [
       "If a number has a decimal, ",
-      fn_name,
+      called_name,
       gives_suffix,
     ]);
     let whole_para = app_code_container_light_blue(root);
     html_div_cycle_code(whole_para, [
       "",
-      fn_name,
+      called_name,
       " does not change a number that is already whole",
     ]);
     let v3 = code(whole_stays);
