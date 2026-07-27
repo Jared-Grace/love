@@ -26,8 +26,14 @@ export async function qa_gate_blame_told(message, known) {
       list_add(named, text);
     }
   }
+  ("asking after a name starts a program that reads the history, so a fixed few are asked at a time. what a gate says is now everything it printed rather than the one sentence it threw, and a gate that found two hundred faults names two hundred functions - starting two hundred of these together would cost more in the starting than the waiting it saves");
   let unique = list_unique(named);
-  let blamed = await list_map_unordered_async(unique, function_commit_last);
+  let limit = probes_at_once();
+  let blamed = await list_map_limited_async(
+    unique,
+    function_commit_last,
+    limit,
+  );
   let found = list_filter_null_not_is(blamed);
   return found;
 }

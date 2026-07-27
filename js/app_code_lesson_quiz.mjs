@@ -148,13 +148,13 @@ export function app_code_lesson_quiz(
     on_answer(answers_div, info, qa, on_success, on_wrong, batch_get);
   }
   function render_correction() {
-    "render the correction for the current question but keep it INVISIBLE, so it reserves its space and the layout does not jump; on_wrong reveals it";
+    "render the correction for the current question but keep it out of the layout entirely (display none, not merely invisible) so it leaves NO white band - on a correct answer the correction is never shown, and reserving its height would strand an empty gap above the success message. Show me the answer reveals it (a small one-time downward shift is fine for that deliberate, now-rare action)";
     html_clear(container_correction);
     correction_render(container_correction, qa);
-    html_visibility_hidden(container_correction);
+    html_display_none(container_correction);
   }
   function show_correction() {
-    html_visibility_visible(container_correction);
+    html_display_block(container_correction);
   }
   function on_wrong() {
     "a wrong attempt no longer reveals the answer - the learner narrows down (MC) or keeps building (unscramble); only the 'Show me the answer' button reveals the correction";

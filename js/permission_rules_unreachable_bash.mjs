@@ -1,4 +1,4 @@
-import { permission_probe_limit } from "./permission_probe_limit.mjs";
+import { probes_at_once } from "./probes_at_once.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { permission_rules } from "./permission_rules.mjs";
@@ -32,7 +32,7 @@ export async function permission_rules_unreachable_bash() {
     };
     return offence;
   }
-  let limit = permission_probe_limit();
+  let limit = probes_at_once();
   let judged = await list_map_limited_async(rules, offence_or_null, limit);
   let offenders = list_filter_null_not_is(judged);
   return offenders;
