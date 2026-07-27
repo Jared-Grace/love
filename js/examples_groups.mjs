@@ -26,6 +26,10 @@ export function examples_groups() {
         "example_declaration_delete",
         "example_call_argument_named_set",
         "example_statement_move_after",
+        "example_statement_last_address",
+        "example_prose_address",
+        "example_wrap_for_of",
+        "example_unwrap_for_of",
       ],
     },
     {

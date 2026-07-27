@@ -36,6 +36,14 @@ export function examples_notes() {
       "reach inside a call and change one argument, addressed by the name the callee knows it by",
     example_statement_move_after:
       "two addresses through the seam at once — and the only verb here that changes the order of lines",
+    example_statement_last_address:
+      "an address that takes no argument — the last line, which no neighbour can name",
+    example_prose_address:
+      "address a line by the sentence written above it — comments are real nodes here, so they are bookmarks",
+    example_wrap_for_of:
+      "wrap one line in a loop over a list — the first example to name its address and its verb separately",
+    example_unwrap_for_of:
+      "the previous example undone, character for character — which is how the inverse is checked",
     example_move_refused_binding:
       "the guard inside the move, asked on its own — reordering is the edit that breaks a function without changing a line",
     example_single_rejects_two:
