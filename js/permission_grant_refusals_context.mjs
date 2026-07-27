@@ -58,6 +58,22 @@ export async function permission_grant_refusals_context(unaliased, context) {
         list_join_comma(seams),
     );
   }
+  ("Reaching a function that writes the permission rules is refused whatever the arguments are, which is the one place this check does not ask about arguments. The other seams are about what a caller could steer the function into doing; this one is about what the function does on its own. A regenerator that takes nothing still renders the settings file from a list held in ordinary source, and anything able to edit a file can change that list first, so the escalation sits in the write rather than in what points it. Left out, the single tool standing between a bad grant and the settings file was blind to the one category that grants further grants.");
+  let permission_seams = functions_permission_seams();
+  let rules_written = await function_seams_reached_memo(
+    unaliased,
+    permission_seams,
+    remembered,
+  );
+  let escalates = greater_than(rules_written.length, 0);
+  if (escalates) {
+    list_add(
+      refusals,
+      unaliased +
+        " reaches a function that writes Claude's own permission rules, so approving it approves whatever it goes on to approve: " +
+        list_join_comma(rules_written),
+    );
+  }
   ("A word inside a parameter's name is a guess about what the parameter holds, and the guess is wrong often enough to matter - chapter_code holds a Bible chapter identifier, not source text. Reading the shape of the name instead would loosen the check for every function nobody has looked at, so the function declares the exception itself and an unmarked parameter is still refused.");
   let plain = await function_params_plain(unaliased);
   for (let p of params) {
