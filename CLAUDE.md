@@ -106,6 +106,9 @@ It holds **no selection between commands**, which is the point: the older `funct
 | `js_type_find <NodeType>` | the one node of that type |
 | `js_find_call_name_includes <part>` | the call whose name contains `<part>` |
 | `js_function_node_find_named <name>` | a named inner function node |
+| `js_find_string_starting_with <prefix>` | the line a bare-string comment sits on — prose is real nodes here, so it works as a bookmark that says what it means |
+| `js_find_statement_last` | the last line — takes no argument, and is the one end of a block no neighbour can name |
+| `js_find_statement_index <n>` | the *n*-th line, counting from 0 — the address of last resort, and the most fragile (every insert above moves it) |
 
 | Verb (transform) | does |
 |---|---|
@@ -116,6 +119,8 @@ It holds **no selection between commands**, which is the point: the older `funct
 | `js_block_call_add <fn>` | call an existing fn at the end of a selected block |
 | `js_block_body_add_code <code>` / `_first <code>` | written code at the end / start of a selected block |
 | `js_statement_wrap_if` / `js_statement_if_return_add` | build a guard clause in two steps |
+| `js_statement_wrap_for_of <name> <list>` | put the line inside a loop over `<list>`, binding each item to `<name>` |
+| `js_selects_unwrap` | take the lines back out of a wrapper — the inverse of both wraps |
 | `js_call_argument_named_set <param> <code>` | change one argument of a call, named as the **callee** knows it — works whether the address stopped at the call or at the line holding it |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_move_after` | move the first selected line to sit after the second — **guarded**, refuses a move that would cross a line it reads or that reads it (needs `function_select_multiple_apply_args`) |
