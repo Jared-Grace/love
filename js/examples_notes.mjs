@@ -104,6 +104,8 @@ export function examples_notes() {
       "copy a line below itself — the third thing that can happen to an addressed line and the only one that has to rename what it binds",
     example_block_call_add:
       "write a call from a function name alone — the callee's own parameters become the arguments and a clashing one is renamed rather than silently repointed",
+    example_block_call_add:
+      "call an existing function at the end of a block - the verb the name-only way of writing rests on",
   };
   return notes;
 }
