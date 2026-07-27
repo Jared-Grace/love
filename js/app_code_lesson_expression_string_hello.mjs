@@ -11,6 +11,7 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
+import { app_code_string_value_color_on_light } from "./app_code_string_value_color_on_light.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { html_bold } from "./html_bold.mjs";
@@ -113,7 +114,7 @@ export function app_code_lesson_expression_string_hello() {
     html_span_text(concept, "The ");
     let value_term = html_span_text(concept, "value of a string");
     html_bold(value_term);
-    let color3 = app_code_string_value_color();
+    let color3 = app_code_string_value_color_on_light();
     html_font_color_set(value_term, color3);
     html_span_text(concept, " is what's between the quotes");
     let example = html_div(define);
