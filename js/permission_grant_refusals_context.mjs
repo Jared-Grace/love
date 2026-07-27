@@ -60,14 +60,16 @@ export async function permission_grant_refusals_context(unaliased, context) {
         list_join_comma(seams),
     );
   }
-  ("Reaching a function that writes the permission rules is refused whatever the arguments are, which is the one place this check does not ask about arguments. The other seams are about what a caller could steer the function into doing; this one is about what the function does on its own. A regenerator that takes nothing still renders the settings file from a list held in ordinary source, and anything able to edit a file can change that list first, so the escalation sits in the write rather than in what points it. Left out, the single tool standing between a bad grant and the settings file was blind to the one category that grants further grants.");
+  ("Reaching a function that writes the permission rules is the one refusal about escalation rather than about damage. A grant here does not merely let something run unasked, it lets something decide what else runs unasked, so approving it approves whatever it goes on to approve. Without this the one tool standing between a bad grant and the settings file was blind to the single category that matters most, and the function that grants rules straight from the prompt record passed it clean.");
+  ("The same argument condition as above, and for the same reason rather than by imitation. The two rules that already stand are argument-free regenerators - one renders the settings file from the granted-names list, the other renders that list from itself - so what they write is fixed by committed source, and a grant covering every argument they are ever handed covers nothing they would not do anyway. Changing what they write means editing the source first, which is a visible edit and not something a standing approval buys. What the condition cannot see is an argument-free function that adds rules from something outside the source, a log say; none exists today, and if one is written this check will pass it.");
   let permission_seams = functions_permission_seams();
   let rules_written = await function_seams_reached_memo(
     unaliased,
     permission_seams,
     remembered,
   );
-  let escalates = greater_than(rules_written.length, 0);
+  let writes_rules = greater_than(rules_written.length, 0);
+  let escalates = and(writes_rules, takes_arguments);
   if (escalates) {
     list_add(
       refusals,
