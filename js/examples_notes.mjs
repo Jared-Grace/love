@@ -118,6 +118,8 @@ export function examples_notes() {
       "point one call at a different function — the commonest hand edit a verb could have made, chosen by reading the history rather than guessing",
     example_array_text_remove:
       "take a word back out of an ordered register — the undoing that moving an entry needs since adding can only append",
+    example_object_shorthand_remove:
+      "take an entry back out of a register — the other end of a unit's life and the last one still done by hand",
   };
   return notes;
 }
