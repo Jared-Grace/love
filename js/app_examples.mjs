@@ -1,3 +1,4 @@
+import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_style_background } from "./html_style_background.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
@@ -24,7 +25,8 @@ export async function app_examples(context) {
   let examples = await response.json();
   let root = property_get(context, "root");
   html_margin_0(root);
-  html_style_background(root, "#fafafa");
+  let value = app_shared_color_page_background();
+  html_style_background(root, value);
   ("which example is open belongs to this tab, so two tabs can read two examples");
   function select(index) {
     storage_session_set(app_examples, "selected", index);
