@@ -12,16 +12,17 @@ export async function app_g_day_convert(div_map, npc) {
   let x = property_get(npc, "x");
   let y = property_get(npc, "y");
   let id = text_combine_multiple(["day-talkable-", x, "-", y]);
-  let marker = document.getElementById(id);
-  let b = equal(marker, null);
+  let bubble = document.getElementById(id);
+  let b = equal(bubble, null);
   let exists = not(b);
   if (exists) {
-    marker.remove();
+    bubble.remove();
   }
   g_icon_cross_baptized(div_map, npc);
   let state = app_g_day_state();
   let slices_done = property_get(state, "slices_done");
-  property_set(state, "slices_done", add(slices_done, 1));
+  let value = add(slices_done, 1);
+  property_set(state, "slices_done", value);
   property_set(state, "target_start", null);
   property_set(state, "target_best", null);
   await app_g_day_sky_update();
