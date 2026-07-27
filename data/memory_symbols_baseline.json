@@ -4,6 +4,7 @@
   "app_code_review_exercises_gather",
   "app_shared_api_fn",
   "dispatcher_script_is",
+  "function_identifier_replace_named",
   "function_imports_add_at",
   "function_name_to_path_import_at",
   "functions_rename_if_part_equals",
