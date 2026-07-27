@@ -1,3 +1,5 @@
+import { js_array_text_add_after } from "./js_array_text_add_after.mjs";
+import { js_array_text_add_before } from "./js_array_text_add_before.mjs";
 import { js_array_text_remove } from "./js_array_text_remove.mjs";
 import { js_object_shorthand_remove } from "./js_object_shorthand_remove.mjs";
 import { js_call_callee_set } from "./js_call_callee_set.mjs";
@@ -51,6 +53,8 @@ export function example_transforms() {
     js_call_callee_set,
     js_array_text_remove,
     js_object_shorthand_remove,
+    js_array_text_add_after,
+    js_array_text_add_before,
   };
   return transforms;
 }
