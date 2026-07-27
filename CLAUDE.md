@@ -116,12 +116,15 @@ It holds **no selection between commands**, which is the point: the older `funct
 | `js_block_call_add <fn>` | call an existing fn at the end of a selected block |
 | `js_block_body_add_code <code>` / `_first <code>` | written code at the end / start of a selected block |
 | `js_statement_wrap_if` / `js_statement_if_return_add` | build a guard clause in two steps |
+| `js_call_argument_named_set <param> <code>` | change one argument of a call, named as the **callee** knows it — works whether the address stopped at the call or at the line holding it |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_functionize <new_fn>` | extract first-through-last selection (needs `function_select_multiple_apply_args`) |
 
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 
-**Known holes, in rough order of how often they force an `Edit`:** move a statement to another position · set one argument of an existing call · add / remove an argument at one call site · rename a local within a fn (`function_identifier_replace_named` does the whole fn, not one node) · wrap in `for`/`try` · unwrap a block · select the *n*-th statement or the last one · select by string-literal content.
+**Known holes, in rough order of how often they force an `Edit`:** move a statement to another position · add / remove an argument at one call site · rename a local within a fn (`function_identifier_replace_named` does the whole fn, not one node) · wrap in `for`/`try` · unwrap a block · select the *n*-th statement or the last one · select by string-literal content.
+
+**A verb that reads a node at one depth pairs with only half the addresses.** Two selectors answer at different depths for the same call — `js_call_named_find` hands back the call, `js_statement_find_call_named` hands back the line holding it — so a call-level verb that assumes one of them refuses the other. `js_node_call_get` resolves either to the call; use it at the top of any new call-level verb, and the whole address column stays available.
 
 **Wiring a new function in is a transform too — don't hand-write the call.** The edit after every `n`/`nj`: the helper exists, and it has to be called at one particular point in an existing function. `js_selects_call_add_after` / `js_selects_call_add_before` put the call on the line under or over a selected statement:
 ```
