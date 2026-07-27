@@ -1,8 +1,6 @@
+import { function_shadowing_findings } from "./function_shadowing_findings.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { repo_functions_names } from "./repo_functions_names.mjs";
-import { function_parse_declaration } from "./function_parse_declaration.mjs";
-import { js_shadowing_names } from "./js_shadowing_names.mjs";
-import { js_binding_names_shadowing } from "./js_binding_names_shadowing.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -12,18 +10,13 @@ export async function functions_shadowing() {
   let candidates = await functions_names();
   let offenders = [];
   for (let name of love) {
-    let parsed = await function_parse_declaration(name);
-    let ast = property_get(parsed, "ast");
-    let shadows_outer = js_shadowing_names(ast);
-    let shadows_function = js_binding_names_shadowing(ast, name, candidates);
+    let finding = await function_shadowing_findings(name, candidates);
+    let shadows_outer = property_get(finding, "shadows_outer");
+    let shadows_function = property_get(finding, "shadows_function");
     let count = shadows_outer.length + shadows_function.length;
     let any = greater_than(count, 0);
     if (any) {
-      list_add(offenders, {
-        name,
-        shadows_outer,
-        shadows_function,
-      });
+      list_add(offenders, finding);
     }
   }
   return offenders;

@@ -1,3 +1,4 @@
+import { js_array_elements_text_assert } from "./js_array_elements_text_assert.mjs";
 import { js_selects_array_elements } from "./js_selects_array_elements.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_string } from "./js_string.mjs";
@@ -11,6 +12,7 @@ export function js_array_text_add(ast, selects, text) {
   ("away rather than being spelled into a line and read back, so there is no point");
   ("at which it could be taken for something to work out.");
   let elements = js_selects_array_elements(ast, selects);
+  js_array_elements_text_assert(elements);
   let literal = js_string(text);
   list_add(elements, literal);
 }
