@@ -95,6 +95,34 @@ node scripts/ai.mjs function_select_apply_args my_fn js_statement_find_call_name
 ```
 It holds **no selection between commands**, which is the point: the older `function_node_select` / `function_current_selects_apply` path persists the selection in shared state, so under parallel Claudes the second command can act on a peer's selection with no way to tell. Prefer this one. It **dispatches functions named in its arguments**, so it used to be un-grantable — a grant would have covered every function, not one. It is now fenced instead: `function_callee_seam_assert` refuses, **on Claude's seam only**, any selector or transform that can reach a command-running function (`functions_command_seams`), following imports but skipping the install plumbing every function sits on (`functions_import_ignored`). With the fence in place `function_select_apply_args`, `function_select_multiple_apply_args` and `function_transform_single` are allow-listed. Ask `function_command_seams_reached <fn>` yourself — an empty list is the clean answer.
 
+**The atom vocabulary — every address × every verb.** These two lists are the whole seam, and they *multiply*: adding one member to either list adds a row or a column, not a cell. That is the reason to write the next atom rather than the next convenience combination. Anything not on these lists is still a text `Edit`; **the gaps are the work**, so check here before reaching for `Edit`.
+
+| Address (selector) | names |
+|---|---|
+| `js_find_declaration_named <name>` | the line that binds `<name>` — the only address a line that calls nothing has |
+| `js_statement_find_call_named <fn>` | the whole statement that calls `<fn>` |
+| `js_call_named_find <fn>` | the call expression itself, not its statement |
+| `js_find_return` | the `return` |
+| `js_type_find <NodeType>` | the one node of that type |
+| `js_find_call_name_includes <part>` | the call whose name contains `<part>` |
+| `js_function_node_find_named <name>` | a named inner function node |
+
+| Verb (transform) | does |
+|---|---|
+| `js_statement_replace_code <code>` | swap the selected statement for written code |
+| `js_statement_delete` | remove it |
+| `js_statement_duplicate` | copy it below, uniquifying the copy's binding |
+| `js_selects_call_add_before <fn>` / `_after <fn>` | call an existing fn on the line above / below |
+| `js_block_call_add <fn>` | call an existing fn at the end of a selected block |
+| `js_block_body_add_code <code>` / `_first <code>` | written code at the end / start of a selected block |
+| `js_statement_wrap_if` / `js_statement_if_return_add` | build a guard clause in two steps |
+| `js_statement_return_argument_set <code>` | set what a selected return hands back |
+| `js_selects_functionize <new_fn>` | extract first-through-last selection (needs `function_select_multiple_apply_args`) |
+
+**A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
+
+**Known holes, in rough order of how often they force an `Edit`:** move a statement to another position · set one argument of an existing call · add / remove an argument at one call site · rename a local within a fn (`function_identifier_replace_named` does the whole fn, not one node) · wrap in `for`/`try` · unwrap a block · select the *n*-th statement or the last one · select by string-literal content.
+
 **Wiring a new function in is a transform too — don't hand-write the call.** The edit after every `n`/`nj`: the helper exists, and it has to be called at one particular point in an existing function. `js_selects_call_add_after` / `js_selects_call_add_before` put the call on the line under or over a selected statement:
 ```
 node scripts/ai.mjs function_select_apply_args my_fn js_statement_find_call_named ready_is js_selects_call_add_after my_helper
