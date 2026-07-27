@@ -14,10 +14,9 @@ export async function examples_registers_unexampled() {
   let named = list_concat(fns, selects);
   let selectors = example_selectors();
   let transforms = example_transforms();
-  let registered = list_concat(
-    properties_get(selectors),
-    properties_get(transforms),
-  );
+  let a = properties_get(selectors);
+  let b = properties_get(transforms);
+  let registered = list_concat(a, b);
   function unexampled_is(name) {
     let missing = list_includes_not(named, name);
     return missing;
