@@ -1,3 +1,4 @@
+import { html_border_radius } from "./html_border_radius.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_click_none } from "./html_click_none.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -12,7 +13,7 @@ export function app_g_day_guide_highlight(div_map, coords) {
   let i = html_element(div_map, "i");
   html_click_none(i);
   app_shared_scripture_gold(i);
-  html_style_set(i, "border-radius", "18%");
+  html_border_radius(i, "18%");
   let style_text = app_g_day_guide_keyframe();
   html_style_head(style_text);
   html_style_set(
