@@ -40,7 +40,22 @@ import { example_fold_auto_lambda } from "./example_fold_auto_lambda.mjs";
 import { js_block_body_add_code } from "./js_block_body_add_code.mjs";
 import { js_block_body_add_code_first } from "./js_block_body_add_code_first.mjs";
 import { example_block_body_add_lambda } from "./example_block_body_add_lambda.mjs";
-export function example_command_lambda(fn_name, args) {
+export function example_command_lambda(fn_name, args, e) {
+  ("An example that names its address as well as its verb takes the one branch");
+  ("that covers every pairing. The branches below each fix a verb to the one");
+  ("address it was written with, so they can show a cell of the multiplication and");
+  ("never a column — and they would have to grow as the product of the two lists");
+  ("rather than their sum.");
+  let select_name = e.select;
+  if (select_name) {
+    let lambda_named = example_select_apply_named(
+      select_name,
+      e.select_args,
+      fn_name,
+      args,
+    );
+    return lambda_named;
+  }
   if (equal(fn_name, js_atomize.name)) {
     return js_atomize;
   }
