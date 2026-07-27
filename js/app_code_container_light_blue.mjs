@@ -15,7 +15,8 @@ export function app_code_container_light_blue(parent) {
   let column = app_shared_column_content_max_width();
   ("width caps at the column on a wide screen and pulls in by the outer gap on each side on a narrow one, so the card never hugs the screen edge; auto side-margins center it. Inner padding is EQUAL on all four sides so the content sits the same distance from every border");
   let outer = app_shared_spaced_gap();
-  let inner = "0.5em";
+  let inner = app_shared_spaced_small_gap();
+  let edge = app_shared_spaced_small_gap();
   let width = text_combine_multiple([
     "min(",
     column,
@@ -27,8 +28,8 @@ export function app_code_container_light_blue(parent) {
   ]);
   html_style_assign(c, {
     width,
-    "margin-top": "0.5em",
-    "margin-bottom": "0.5em",
+    "margin-top": edge,
+    "margin-bottom": edge,
     "margin-left": "auto",
     "margin-right": "auto",
     padding: inner,
