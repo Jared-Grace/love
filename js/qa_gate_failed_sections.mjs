@@ -49,6 +49,7 @@ export function qa_gate_failed_sections(output) {
     }
     let complained = text_includes(line, failure);
     if (not(complained)) {
+      list_add(said, line);
       continue;
     }
     let parts = text_split(line, failure);

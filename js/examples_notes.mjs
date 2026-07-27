@@ -128,6 +128,8 @@ export function examples_notes() {
       "the same chosen place two names deep — the shape every curriculum group is",
     example_nested_record_add_before:
       "the head of a list two names deep — where a new simplest example keeps arriving",
+    example_selects_functionize_local:
+      "extract a span into a function of its own - the verb that needs two addresses at once",
   };
   return notes;
 }
