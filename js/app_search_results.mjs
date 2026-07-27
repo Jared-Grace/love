@@ -141,7 +141,6 @@ export async function app_search_results(context, div_results) {
     return;
   }
   let button_list = null;
-  let expand_all_div = html_div(div_results);
   let expand_all = null;
   async function collect_all_texts() {
     async function lambda9(b) {
@@ -155,14 +154,13 @@ export async function app_search_results(context, div_results) {
     return squashed;
   }
   async function expand_all_lambda() {
-    let squashed = await collect_all_texts();
-    html_remove(expand_all);
-    let c = html_button_copy_text();
-    async function lambda6() {
-      await list_join_newline_2_copy(squashed);
+    "open the book cards first: on a page long enough to scroll they start collapsed, so filling in the verses inside them changes nothing the reader can see, and the button reads as broken. opening them costs no waiting, so it lands before the verse texts are fetched and the reader watches them arrive";
+    function book_open(collapsed_set) {
+      collapsed_set(false);
     }
-    let text = text_combine(c, " all");
-    let component = app_shared_button_wide(expand_all_div, text, lambda6);
+    each(book_collapse_setters, book_open);
+    html_remove(expand_all);
+    await collect_all_texts();
   }
   async function copy_all_lambda() {
     "let the reader copy every matching verse in one click, without first expanding them all on screen";
