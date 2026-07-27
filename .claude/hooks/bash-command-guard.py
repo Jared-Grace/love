@@ -1078,17 +1078,26 @@ def dispatcher_script_canonical(word):
     return word
 
 
-# The one dispatcher Claude runs. ai.mjs refuses shorthand (full names only)
-# and prints lossless JSON; r.mjs/rl.mjs/g.mjs are the human's seams. Claude
-# invoking any of the others directly is denied below - not because they are
-# unsafe, but so the safety properties of ai.mjs can't be routed around and so
-# every permission rule keeps naming exactly one seam. See CLAUDE.md "Two seams".
-AI_DISPATCHER_SCRIPT = "scripts/ai.mjs"
+# The dispatchers Claude runs. Both refuse shorthand (full names only) and
+# print lossless JSON; they differ only in that aig.mjs commits what the
+# command wrote, under that command's own name. r.mjs/rl.mjs/g.mjs are the
+# human's seams. Claude invoking any of the others directly is denied below -
+# not because they are unsafe, but so the safety properties of these can't be
+# routed around and so every permission rule keeps naming exactly one seam.
+# See CLAUDE.md "Two seams".
+#
+# The set is GENERATED from js/dispatcher_scripts_claude.mjs, because the same
+# list decides which allow rules exist; a hand-kept copy here could grant a
+# seam this floor refuses, or refuse one the rules claim to grant.
+from dispatcher_scripts_claude import AI_DISPATCHER_SCRIPTS
 
 
 def ai_script_is(word):
-    """True when `word` names scripts/ai.mjs, relative or absolute."""
-    return word == AI_DISPATCHER_SCRIPT or word.endswith("/" + AI_DISPATCHER_SCRIPT)
+    """True when `word` names one of Claude's dispatchers, relative or absolute."""
+    return any(
+        word == script or word.endswith("/" + script)
+        for script in AI_DISPATCHER_SCRIPTS
+    )
 
 
 def scripts_path_is(word):
