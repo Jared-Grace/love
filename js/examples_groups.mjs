@@ -28,6 +28,8 @@ export function examples_groups() {
         "example_statement_move_after",
         "example_statement_last_address",
         "example_statement_after_address",
+        "example_argument_identifier_set",
+        "example_return_identifier_add",
         "example_prose_address",
         "example_wrap_for_of",
         "example_unwrap_for_of",
