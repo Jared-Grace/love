@@ -1,11 +1,10 @@
+import { kinds_all_is } from "./kinds_all_is.mjs";
+import { commit_edit_callee_swap_is } from "./commit_edit_callee_swap_is.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { diff_line_kind } from "./diff_line_kind.mjs";
-import { text_includes } from "./text_includes.mjs";
-import { text_index_of_from } from "./text_index_of_from.mjs";
-import { text_slice_from } from "./text_slice_from.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_add } from "./list_add.mjs";
@@ -43,11 +42,13 @@ export async function commit_edit_kind(commit) {
   }
   let only_import = kinds_all_is(kinds, "import");
   if (only_import) {
-    return "imports only (the canonicalizing pass)";
+    let r = "imports only (the canonicalizing pass)";
+    return r;
   }
   let only_comment = kinds_all_is(kinds, "comment");
   if (only_comment) {
-    return "comment prose only";
+    let r2 = "comment prose only";
+    return r2;
   }
   let code = [];
   for (let line of changed) {
@@ -60,68 +61,30 @@ export async function commit_edit_kind(commit) {
   let size = list_size(code);
   let none = equal(size, 0);
   if (none) {
-    return "comment and imports only";
+    let r3 = "comment and imports only";
+    return r3;
   }
   let pair = equal(size, 2);
   if (pair) {
     let swapped = commit_edit_callee_swap_is(code);
     if (swapped) {
-      return "one call, different function put in its place";
+      let r4 = "one call, different function put in its place";
+      return r4;
     }
-    return "one line of code replaced";
+    let r5 = "one line of code replaced";
+    return r5;
   }
   let single = equal(size, 1);
   if (single) {
     let first = list_first(code);
     let put_in = text_starts_with(first, "+");
     if (put_in) {
-      return "one line of code added";
+      let r6 = "one line of code added";
+      return r6;
     }
-    return "one line of code removed";
+    let r7 = "one line of code removed";
+    return r7;
   }
-  return "several lines of code";
-}
-function kinds_all_is(kinds, wanted) {
-  let size = list_size(kinds);
-  let empty = equal(size, 0);
-  if (empty) {
-    return false;
-  }
-  for (let kind of kinds) {
-    let same = equal(kind, wanted);
-    if (not(same)) {
-      return false;
-    }
-  }
-  return true;
-}
-function commit_edit_callee_swap_is(code) {
-  "Two lines that read the same from their opening bracket onward, and differently before it, are one call with a different function put in its place - the arguments untouched";
-  let taken_out = null;
-  let put_in = null;
-  for (let line of code) {
-    let added = text_starts_with(line, "+");
-    if (added) {
-      put_in = line;
-      continue;
-    }
-    taken_out = line;
-  }
-  let missing = equal(put_in, null) || equal(taken_out, null);
-  if (missing) {
-    return false;
-  }
-  let bracket = "(";
-  let has_out = text_includes(taken_out, bracket);
-  let has_in = text_includes(put_in, bracket);
-  let callable = has_out && has_in;
-  if (not(callable)) {
-    return false;
-  }
-  let at_out = text_index_of_from(taken_out, bracket, 0);
-  let at_in = text_index_of_from(put_in, bracket, 0);
-  let tail_out = text_slice_from(taken_out, at_out);
-  let tail_in = text_slice_from(put_in, at_in);
-  let same_arguments = equal(tail_out, tail_in);
-  return same_arguments;
+  let r8 = "several lines of code";
+  return r8;
 }
