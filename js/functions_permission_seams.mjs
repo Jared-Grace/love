@@ -4,8 +4,10 @@ export function functions_permission_seams() {
   "This is the third set the reachability walk is asked against, and it asks a different question from the other two. Reaching a shell means the arguments could become a command line; reaching a writer means the call costs something that cannot be taken back; reaching one of these means the call can hand out further calls that never ask. That last one escalates rather than merely acts, so an automatic approval for it approves everything it goes on to approve.";
   "Arguments do not enter into it, which is the one way this differs from the command-running set. A grant is only ever given to a function whose behaviour is fixed regardless of its arguments, and a regenerator that takes nothing is exactly that — it renders the file from a list held in ordinary source, which anything able to edit a file can change first. So the escalation is in the write and not in what steers it, and taking no arguments is no defence.";
   "The names are spelled rather than imported, which the other two rosters do not do. Importing them would give this function an edge to the very seams it names, and every checker that consults the roster would inherit that edge and be reported as writing permission rules itself — the roster of command seams needed a line in the ignored-imports list for exactly that reason. Spelling a name follows a rename just as well, because the rename pass rewrites these marked strings.";
+  "The third name is the one that proves the list has to be written by hand rather than derived. The other two are generators, and a reader looking for who writes the settings file would find them by following the generated-file writer. This one appends a rule straight into the file through the ordinary file writer, so nothing about its imports marks it out from the hundreds of functions that write some file or other. It was found by reading it, and the next one will be too.";
   let f_name = fn_name("permission_settings_allow_write_from");
   let f_name2 = fn_name("permission_grant_names_write");
-  let names = [f_name, f_name2];
+  let f_name3 = fn_name("permission_rule_grant_checked_context");
+  let names = [f_name, f_name2, f_name3];
   return names;
 }
