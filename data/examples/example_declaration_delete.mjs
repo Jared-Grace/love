@@ -1,7 +1,10 @@
 import { js_statement_delete } from "../../js/js_statement_delete.mjs";
+import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
 export const example = {
   fn: js_statement_delete.name,
-  args: ["unused"],
+  select: js_find_declaration_named.name,
+  select_args: ["unused"],
+  args: [],
   kind: "transform",
   title: "Delete a line, addressed by the name it binds",
   note: [

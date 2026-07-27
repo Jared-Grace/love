@@ -1,7 +1,10 @@
 import { js_call_argument_named_set } from "../../js/js_call_argument_named_set.mjs";
+import { js_call_named_find } from "../../js/js_call_named_find.mjs";
 export const example = {
   fn: js_call_argument_named_set.name,
-  args: ["list_slice", "index_b", "7"],
+  select: js_call_named_find.name,
+  select_args: ["list_slice"],
+  args: ["index_b", "7"],
   kind: "transform",
   title: "Change one argument of a call, naming it as the callee knows it",
   note: [
