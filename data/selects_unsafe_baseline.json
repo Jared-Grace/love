@@ -1,0 +1,11 @@
+{
+ "known": [
+  "js_block_body_add_code",
+  "js_block_body_add_code_first",
+  "js_block_body_add_code_generic",
+  "js_call_argument_named_set",
+  "js_statement_replace_code",
+  "js_statement_return_argument_set",
+  "js_statement_wrap_for_of"
+ ]
+}
