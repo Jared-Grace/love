@@ -266,6 +266,7 @@ export function permission_grant_names() {
   let spelled263 = fn_name("g_clock_sky_phase_check");
   let spelled264 = fn_name("timings_ranked");
   let spelled265 = fn_name("app_g_map_pad_check");
+  let spelled266 = fn_name("function_copy");
   let names = [
     spelled,
     spelled2,
@@ -532,6 +533,7 @@ export function permission_grant_names() {
     spelled263,
     spelled264,
     spelled265,
+    spelled266,
   ];
   return names;
 }
