@@ -323,4 +323,28 @@ export function app_g_verify_view(
     }
   }
   app_shared_button(suggest_bar, "Send suggestion", on_suggest);
+  ("show a badge if the loop has already reviewed a suggestion for this verse, so the reviewer knows it was seen and handled");
+  async function reviewed_show() {
+    try {
+      let r = await app_shared_api({
+        f_name: fn_name("g_verify_reviewed_read"),
+        args: [chapter_code],
+      });
+      let reviewed_verse = property_get(r, "verse");
+      if (equal(reviewed_verse, verse)) {
+        let note = property_get(r, "note");
+        let text = "✓ Claude reviewed your suggestion for v" + verse;
+        if (note) {
+          text = text + " — " + note;
+        }
+        let badge = html_p_text(container, text);
+        app_shared_text_deemphasized(badge);
+        html_style_font_size(badge, "0.85em");
+        html_style_margin_top(badge, small_gap);
+      }
+    } catch (ignore) {
+      ignore;
+    }
+  }
+  reviewed_show();
 }
