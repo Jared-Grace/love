@@ -2,6 +2,7 @@ import { app_g_day_convert } from "./app_g_day_convert.mjs";
 import { app_g_day_state } from "./app_g_day_state.mjs";
 import { app_g_day_guide_tile } from "./app_g_day_guide_tile.mjs";
 import { app_g_day_guide_highlight } from "./app_g_day_guide_highlight.mjs";
+import { app_g_day_slice_move } from "./app_g_day_slice_move.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_player_get } from "./app_g_player_get.mjs";
 import { g_distance_taxicab } from "./g_distance_taxicab.mjs";
@@ -24,6 +25,7 @@ export async function app_g_day_guide_show(div_map) {
   property_set(state, "guide", null);
   let g = await app_g_game_save_get();
   let player = await app_g_player_get();
+  await app_g_day_slice_move(player);
   let distance = g_distance_taxicab(player, target);
   if (equal(distance, 1)) {
     property_set(state, "target", null);
