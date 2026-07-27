@@ -1,3 +1,4 @@
+import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { qa_gate_failed_complaints } from "./qa_gate_failed_complaints.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
 import { list_size } from "./list_size.mjs";
@@ -18,8 +19,23 @@ export async function qa_gate_run() {
   "It asks about the working folder as it stands, work nobody has committed included, which is what makes it the thing to run before committing";
   "A clean answer here is meant to mean the code is sound - so every question the files alone can answer is put to a frozen copy of the folder rather than to the folder itself. Asked of the living folder, neither answer could be checked: a complaint might be nothing but a neighbour saving a file, and a clean answer might be about a file broken a moment after it was read. Asked of a copy nobody can touch, both answers can be had again and come out the same";
   "The three questions about this machine and about where the folder sits are asked here, where the answer is, and their names are added to whatever the copy complained about so one complaint covers both halves";
+  "The three questions about this machine are put while the copy is being asked its own, because neither waits on the other and the slowest of the three took as long as a third of the whole run while nothing else was happening. What each half prints still arrives whole and after the other, since the asking here holds back everything it would print until it is finished";
   let folder = await qa_tree_ensure();
-  let told = await qa_snapshot_gate_told(folder);
+  let machine = qa_gates_machine();
+  async function copy_asked() {
+    let asked = await qa_snapshot_gate_told(folder);
+    return asked;
+  }
+  async function machine_asked() {
+    let asked = await qa_gates_told(machine);
+    return asked;
+  }
+  let halves = await invoke_multiple_unordered_async([
+    copy_asked,
+    machine_asked,
+  ]);
+  let told = list_get(halves, 0);
+  let here = list_get(halves, 1);
   let printed = property_get(told, "printed");
   console.log(printed);
   ("Who last touched the things the copy complained about is asked out here rather than in there. The copy is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault");
@@ -36,8 +52,6 @@ export async function qa_gate_run() {
       await qa_gate_blame_print(complaint, known);
     }
   }
-  let machine = qa_gates_machine();
-  let here = await qa_gates_told(machine);
   let failed_copy = property_get(told, "failed");
   let failed_here = property_get(here, "failed");
   let failed = list_concat(failed_copy, failed_here);

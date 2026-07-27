@@ -34,6 +34,10 @@ export function examples_notes() {
       "the same address, the deleting verb — a function that fit the transform shape before the shape had a name",
     example_call_argument_named_set:
       "reach inside a call and change one argument, addressed by the name the callee knows it by",
+    example_statement_move_after:
+      "two addresses through the seam at once — and the only verb here that changes the order of lines",
+    example_move_refused_binding:
+      "the guard inside the move, asked on its own — reordering is the edit that breaks a function without changing a line",
     example_single_rejects_two:
       "refuse a 2-item list — a simple invariant guard",
     example_slot_set_rejects_statement: "the slot setter guarding its input",
