@@ -1,3 +1,4 @@
+import { js_array_elements_identifier_assert } from "./js_array_elements_identifier_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_selects_array_elements } from "./js_selects_array_elements.mjs";
 import { js_identifier_expression } from "./js_identifier_expression.mjs";
@@ -14,6 +15,7 @@ export function js_array_identifier_add(ast, selects, identifier_name) {
   ("neighbours, and runs nothing — in the one kind of list whose whole job is to");
   ("run what it holds.");
   let elements = js_selects_array_elements(ast, selects);
+  js_array_elements_identifier_assert(elements);
   let identifier = js_identifier_expression(identifier_name);
   list_add(elements, identifier);
 }
