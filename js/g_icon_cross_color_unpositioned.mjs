@@ -9,16 +9,10 @@ export function g_icon_cross_color_unpositioned(parent, color) {
   let i = html_element(parent, "i");
   html_click_none(i);
   html_class_add(i, "ri-cross-fill");
-  let square_size = text_combine_multiple([
-    "calc(",
-    g_img_square_size_css(),
-    "*.4)",
-  ]);
-  let glow_size = text_combine_multiple([
-    "calc(",
-    g_img_square_size_css(),
-    "*.05)",
-  ]);
+  let v = g_img_square_size_css();
+  let square_size = text_combine_multiple(["calc(", v, "*.4)"]);
+  let v2 = g_img_square_size_css();
+  let glow_size = text_combine_multiple(["calc(", v2, "*.05)"]);
   html_style_assign(i, {
     display: "flex",
     "justify-content": "flex-end",
