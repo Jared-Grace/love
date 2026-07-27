@@ -15,12 +15,14 @@ export function app_g_self_menu() {
   html_on(link, "click", html_stop_propagation);
   html_style_assign(link, {
     "align-self": "center",
-    background: "rgba(0, 0, 0, 0.7)",
-    color: "white",
-    padding: "0.6rem 1.2rem",
-    "border-radius": "0.5rem",
-    "font-size": "1.2rem",
+    background: "white",
+    color: "black",
+    padding: "0.9rem 1.8rem",
+    "border-radius": "0.6rem",
+    "font-size": "1.4rem",
+    "font-weight": "bold",
     "text-decoration": "none",
+    "box-shadow": "0 2px 10px rgba(0, 0, 0, 0.5)",
   });
   return overlay;
 }
