@@ -16,7 +16,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_min_max_generic(params) {
   "the shared body of the two two-number function lessons - Math.min (smaller of two) and Math.max (larger of two). They differ only in the function, which of the pair it picks, and the words (smaller/larger, smaller than/bigger than), all passed in params; everything else lives here once: the four questions over pairs 2..12, the forwards/backwards/unscramble labels, the worked example shown in BOTH orders (so the VALUE is clearly what is chosen, not a position), the equal-numbers case, and the home title. Only the intro's opening line differs in shape between the two, so each lesson passes it as define_render.";
-  let fn_name = property_get(params, "fn_name");
+  let called_name = property_get(params, "fn_name");
   let choose = property_get(params, "choose");
   let decoy_choose = property_get(params, "decoy_choose");
   let noun = property_get(params, "noun");
@@ -27,7 +27,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
     "the two-number call as a code string - the function's name, then its two numbers separated by a comma inside parentheses";
     let ta = text_to(a);
     let tb = text_to(b);
-    let combined = text_combine_multiple([fn_name, "(", ta, ", ", tb, ")"]);
+    let combined = text_combine_multiple([called_name, "(", ta, ", ", tb, ")"]);
     return combined;
   }
   function two_numbers() {
@@ -92,7 +92,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
         app_code_lesson_name_id_category(parent, left_upper);
         let heading = text_combine(noun_upper, " of two ");
         html_span_text(parent, heading);
-        html_span_text_code_dark(parent, fn_name);
+        html_span_text_code_dark(parent, called_name);
       }
       return render;
     }
@@ -124,11 +124,11 @@ export function app_code_lesson_expression_min_max_generic(params) {
     let v2 = code(other, chosen);
     html_div_cycle_code(example_box, ["And ", v2, " is also ", chosen_text]);
     let chooses = text_combine_multiple([" chooses the ", noun, " number"]);
-    html_div_cycle_code(example_box, ["", fn_name, chooses]);
+    html_div_cycle_code(example_box, ["", called_name, chooses]);
     let equal_box = app_code_container_light_blue(root);
     html_div_cycle_code(equal_box, [
       "If both numbers are equal, then there's only one number to choose from, so ",
-      fn_name,
+      called_name,
       " chooses that number",
     ]);
   }
