@@ -270,6 +270,7 @@ export function permission_grant_names() {
   let spelled267 = fn_name("machine_load_average");
   let spelled268 = fn_name("qa_gate_names_in_flight");
   let spelled269 = fn_name("qa_tree_folder");
+  let spelled270 = fn_name("function_local_to_param");
   let names = [
     spelled,
     spelled2,
@@ -540,6 +541,7 @@ export function permission_grant_names() {
     spelled267,
     spelled268,
     spelled269,
+    spelled270,
   ];
   return names;
 }
