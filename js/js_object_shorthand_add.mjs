@@ -14,9 +14,7 @@ export function js_object_shorthand_add(ast, selects, identifier_name) {
   ("Adding one entry had no verb at all, so the way round it was to write the");
   ("whole set out again, which replaces every entry with whatever was typed. That");
   ("cost forty-five of them once. Adding one is the only safe shape.");
-  let node = list_single(selects);
-  let object_expression = js_node_value_get(node);
-  let properties = js_object_expression_properties(object_expression);
+  let properties = js_selects_object_properties(ast, selects);
   let identifier = js_identifier_expression(identifier_name);
   let property = js_property_shorthand(identifier);
   list_add(properties, property);
