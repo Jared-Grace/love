@@ -1,3 +1,5 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { list_map } from "./list_map.mjs";
 import { examples_corpus_read } from "./examples_corpus_read.mjs";
 import { example_selectors } from "./example_selectors.mjs";
 import { example_transforms } from "./example_transforms.mjs";
@@ -10,7 +12,11 @@ export async function examples_registers_unexampled() {
   "The addresses and verbs an example is allowed to name that no example names. Being on one of those lists is what makes a unit reachable from the corpus, and the corpus is the only thing that ever runs these - so a name on the list with nothing naming it is a unit that looks checked and is not.";
   let examples = await examples_corpus_read();
   let fns = list_map_property(examples, "fn");
-  let selects = list_map_property(examples, "select");
+  function select_of(example) {
+    let select = property_get_or_null(example, "select");
+    return select;
+  }
+  let selects = list_map(examples, select_of);
   let named = list_concat(fns, selects);
   let selectors = example_selectors();
   let transforms = example_transforms();
