@@ -1,3 +1,4 @@
+import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -52,7 +53,7 @@ import { app_shared_container_blue_border_color } from "./app_shared_container_b
 import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
 import { app_shared_font_serif } from "./app_shared_font_serif.mjs";
-export function app_g_verify_view(
+export async function app_g_verify_view(
   container,
   english,
   lines,
@@ -320,7 +321,10 @@ export function app_g_verify_view(
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
+  ("size to fit the content NOW, then AGAIN after layout settles and after the serif font loads — the first synchronous call can measure scrollHeight before the textarea has its final width/font, undersizing it to the 6em floor (~4 lines) so a 5th line hides below the fold; the re-runs are idempotent");
   autosize();
+  (await html_request_animation_frame()).then(autosize);
+  document.fonts.ready.then(autosize);
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
