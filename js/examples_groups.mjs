@@ -46,6 +46,7 @@ export function examples_groups() {
         "example_frozen_app_refused",
         "example_fold_refused_escape",
         "example_fold_refused_gap",
+        "example_probe_delete_me",
       ],
     },
     {
