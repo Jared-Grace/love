@@ -295,6 +295,12 @@ export function permission_grant_names() {
   let spelled292 = fn_name("commits_ai_js_file_shapes");
   let spelled293 = fn_name("permission_prompt_run_rows");
   let spelled294 = fn_name("functions_permission_seams");
+  let spelled295 = fn_name("examples_comments_none_gate_run");
+  let spelled296 = fn_name("examples_registers_gate_run");
+  let spelled297 = fn_name("js_array_identifier_add_after");
+  let spelled298 = fn_name("functions_selects_unsafe_params");
+  let spelled299 = fn_name("functions_dispatcher_bootstrap");
+  let spelled300 = fn_name("functions_selects_unsafe_gate_run");
   let names = [
     spelled,
     spelled2,
@@ -590,6 +596,12 @@ export function permission_grant_names() {
     spelled292,
     spelled293,
     spelled294,
+    spelled295,
+    spelled296,
+    spelled297,
+    spelled298,
+    spelled299,
+    spelled300,
   ];
   return names;
 }

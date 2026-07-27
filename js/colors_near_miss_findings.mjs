@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { js_colors_written } from "./js_colors_written.mjs";
 import { color_parse } from "./color_parse.mjs";
 import { colors_near_miss_is } from "./colors_near_miss_is.mjs";
@@ -16,8 +17,8 @@ export async function colors_near_miss_findings() {
     }
   }
   let findings = [];
-  for (let i = 0; i < readable.length; i++) {
-    for (let j = i + 1; j < readable.length; j++) {
+  for (let i = 0; less_than(i, readable.length); i++) {
+    for (let j = i + 1; less_than(j, readable.length); j++) {
       let left = readable[i];
       let right = readable[j];
       let near = colors_near_miss_is(left.parsed, right.parsed);
