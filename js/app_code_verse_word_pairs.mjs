@@ -7,11 +7,11 @@ import { add_1 } from "./add_1.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_map } from "./list_map.mjs";
-
 export function app_code_verse_word_pairs() {
   "adjacent word pairs drawn from the shared verse text, each two words joined by a space and commas stripped - a large single-sourced set of two-word strings for the spaces lesson. Reusing the verse is cheaper to maintain and changed in one place, and it yields many more example pairs than a hand-written list";
   let words = app_code_verse_words();
-  let count = subtract(list_size(words), 1);
+  let left = list_size(words);
+  let count = subtract(left, 1);
   let indexes = range(count);
   function pair(index) {
     "the word at index joined by a space to the next word, both with commas removed";
