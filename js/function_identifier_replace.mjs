@@ -1,6 +1,6 @@
 import { function_identifier_replace_lambda } from "./function_identifier_replace_lambda.mjs";
 import { function_transform } from "./function_transform.mjs";
-export async function function_identifier_replace_named(
+export async function function_identifier_replace(
   f_name,
   identifier_name,
   replacement,
