@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_comma } from "./text_split_comma.mjs";
+import { list_multiple_is_assert_json } from "./list_multiple_is_assert_json.mjs";
+import { ai_git_noted } from "./ai_git_noted.mjs";
+import { function_call_commit } from "./function_call_commit.mjs";
+import { function_parallel_mark } from "./function_parallel_mark.mjs";
+import { list_add } from "./list_add.mjs";
 export async function functions_parallel_mark(f_names_comma) {
   "Mark a whole group of same-shaped functions as alike on purpose, so nothing tries to collapse them and the ratchet stops holding them.";
   "It takes the group rather than one name because the answer is only true of a group. One function alone cannot say a pair was meant, so a half-marked group is read as the work it looked like - which is right, and is exactly why marking one at a time is the wrong shape for this.";
