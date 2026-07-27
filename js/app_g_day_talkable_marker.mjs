@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { html_id_set } from "./html_id_set.mjs";
 import { app_g_npc_color } from "./app_g_npc_color.mjs";
 import { html_element } from "./html_element.mjs";
 import { html_click_none } from "./html_click_none.mjs";
@@ -11,6 +13,10 @@ export function app_g_day_talkable_marker(div_map, npc) {
   let i = html_element(div_map, "i");
   html_click_none(i);
   html_class_add(i, "ri-chat-3-fill");
+  let mx = property_get(npc, "x");
+  let my = property_get(npc, "y");
+  let u = text_combine_multiple(["day-talkable-", mx, "-", my]);
+  html_id_set(i, u);
   let v = g_img_square_size_css();
   let size = text_combine_multiple(["calc(", v, "*.3)"]);
   let color = app_g_npc_color(npc);
