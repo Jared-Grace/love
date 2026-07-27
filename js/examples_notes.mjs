@@ -114,6 +114,8 @@ export function examples_notes() {
       "name an inner function and the whole of it answers — the address a let-binding finder looks straight past",
     example_array_identifier_add:
       "add a name to a register of functions — the twin that writes a word looks identical afterwards and runs nothing",
+    example_expand_call_inline:
+      "put a called function's body where the call was — the only verb that reads a second function to do its work",
   };
   return notes;
 }

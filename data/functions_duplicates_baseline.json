@@ -9,8 +9,6 @@
   "fn_name",
   "http_post_json_cache_global_args",
   "identity",
-  "js_dollar_ien_generic",
-  "js_dollar_if_call",
   "list_range",
   "list_slice_include",
   "openai_responses_cache_args",
