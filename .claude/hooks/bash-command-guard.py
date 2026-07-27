@@ -3233,6 +3233,27 @@ def main():
         }))
         return
 
+    stripped = time_subshell_stripped(command, safe_verbs, safe_exact_commands)
+    if stripped is not None:
+        print(json.dumps({
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "permissionDecision": "deny",
+                "permissionDecisionReason": (
+                    "Drop the parentheses and run this instead - it is "
+                    "already approved, so it needs no human at all:\n"
+                    f"  {stripped}\n"
+                    "`time` runs its command in a subshell either way, so "
+                    "the timing is the same; the parentheses only add a "
+                    "shape this hook does not parse. (They would be worth "
+                    "keeping around a `cd` or an assignment, or in `( time "
+                    "CMD ) 2>&1 | ...` where they decide whose stderr the "
+                    "redirect catches - none of which is the case here.)"
+                ),
+            }
+        }))
+        return
+
     split = splittable_statements(command, safe_verbs, safe_exact_commands)
     if split is not None:
         trusted, blocked = split
