@@ -2,4 +2,4 @@
 # Source of truth: js/dispatcher_scripts.mjs. Regenerate with
 # `node scripts/r.mjs python_mirrors_write`; drift fails `q`
 # via python_mirrors_assert.
-NODE_DISPATCHER_SCRIPTS = {"scripts/r.mjs", "scripts/rl.mjs", "scripts/ai.mjs", "scripts/g.mjs"}
+NODE_DISPATCHER_SCRIPTS = {"scripts/r.mjs", "scripts/rl.mjs", "scripts/ai.mjs", "scripts/aig.mjs", "scripts/g.mjs"}
