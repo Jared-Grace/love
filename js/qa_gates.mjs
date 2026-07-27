@@ -1,3 +1,4 @@
+import { functions_duplicate_keys_gate_run } from "./functions_duplicate_keys_gate_run.mjs";
 import { examples_data_gate_run } from "./examples_data_gate_run.mjs";
 import { markers_gate_run } from "./markers_gate_run.mjs";
 import { command_seams_agree_gate_run } from "./command_seams_agree_gate_run.mjs";
@@ -88,6 +89,7 @@ export function qa_gates() {
     html_style_literal_gate_run,
     ebible_book_divisions_canon_assert,
     examples_data_gate_run,
+    functions_duplicate_keys_gate_run,
   ];
   return gates;
 }
