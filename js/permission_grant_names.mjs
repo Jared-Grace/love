@@ -261,6 +261,8 @@ export function permission_grant_names() {
   let spelled258 = fn_name("qa_gate_failed_complaints");
   let spelled259 = fn_name("g_verify_reviewed_set");
   let spelled260 = fn_name("g_day_sky_phase_check");
+  let spelled261 = fn_name("app_g_day_fraction_check");
+  let spelled262 = fn_name("timings_total_ms");
   let names = [
     spelled,
     spelled2,
@@ -522,6 +524,8 @@ export function permission_grant_names() {
     spelled258,
     spelled259,
     spelled260,
+    spelled261,
+    spelled262,
   ];
   return names;
 }
