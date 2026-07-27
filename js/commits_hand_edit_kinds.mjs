@@ -29,7 +29,8 @@ export async function commits_hand_edit_kinds(count_given) {
     if (not(alone)) {
       continue;
     }
-    list_add(single, property_get(commit, "commit"));
+    let item = property_get(commit, "commit");
+    list_add(single, item);
   }
   let limit = probes_at_once();
   let kinds = await list_map_limited_async(single, commit_edit_kind, limit);
@@ -46,7 +47,8 @@ export async function commits_hand_edit_kinds(count_given) {
     }
     let bucket = property_get(counted, kind);
     bucket.count = bucket.count + 1;
-    let few = less_than(list_size(bucket.samples), 4);
+    let a = list_size(bucket.samples);
+    let few = less_than(a, 4);
     if (few) {
       list_add(bucket.samples, single[index]);
     }
