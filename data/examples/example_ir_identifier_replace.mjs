@@ -1,17 +1,25 @@
-import { function_identifier_replace } from "../../js/function_identifier_replace.mjs";
+import { function_identifier_replace_current } from "../../js/function_identifier_replace_current.mjs";
 export const example = {
-  fn: function_identifier_replace.name,
+  fn: function_identifier_replace_current.name,
   args: ["x", "a * b"],
   kind: "transform",
   title: "Replace an identifier with an expression, everywhere in the fn",
   note: [
-    { alias: true },
+    {
+      alias: true,
+    },
     " swaps every occurrence of an identifier for a parsed ",
-    { code: "expression" },
+    {
+      code: "expression",
+    },
     " — not just a name, so ",
-    { code: "x" },
+    {
+      code: "x",
+    },
     " becomes ",
-    { code: "a * b" },
+    {
+      code: "a * b",
+    },
     " at both sites. Unlike a rename, the replacement can be any expression.",
   ],
   before: `export function scale(a, b) {
