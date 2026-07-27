@@ -4,9 +4,7 @@ import { app_shared_name_prefix_without_fn } from "../../js/app_shared_name_pref
 import { app_shared_frozen_assert } from "../../js/app_shared_frozen_assert.mjs";
 import { js_code_call_args } from "../../js/js_code_call_args.mjs";
 import { json_to } from "../../js/json_to.mjs";
-// Subject = whatever app is currently frozen (first in apps_frozen()), derived
-// from the source of truth — so this example survives changes to the frozen list
-// (a peer removing one, etc.) instead of hard-picking a specific app.
+("The subject is whatever app is frozen right now - the first one on that list - taken from the source of truth rather than written out here, so the example survives a change to the list instead of going stale the moment a peer takes an app off it.");
 let name = app_shared_name_prefix_without_fn(list_first(apps_frozen()));
 export const example = {
   kind: "rejection",
@@ -17,10 +15,8 @@ export const example = {
     { fn: apps_frozen.name, call: true },
     ", guarding every path that would change or remove its production assets. Non-frozen apps pass.",
   ],
-  // human-readable form
   call: js_code_call_args(app_shared_frozen_assert.name, [json_to(name)]),
   expectText: `throws — ${name} is on the frozen list`,
-  // machine-runnable form: import fn, pass the literal app name, call, assert
   fn: app_shared_frozen_assert.name,
   args: [{ value: name, parse: "value" }],
   expect: "throw",

@@ -8,10 +8,8 @@ export const example = {
     { fn: js_expression_node_is.name },
     " fails on arg 1).",
   ],
-  // human-readable form
   call: `${js_statement_if_test_set.name}( parse("if (a) {}"), parseStatement("b();") )`,
   expectText: `throws — arg 1 is not an expression node`,
-  // machine-runnable form: import fn, build each arg by parsing, call, assert
   fn: js_statement_if_test_set.name,
   args: [
     { code: "if (a) {}", parse: "statement" },

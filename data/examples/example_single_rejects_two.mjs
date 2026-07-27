@@ -13,10 +13,8 @@ export const example = {
     { fn: js_flo.name },
     " leans on to require a single-export file.",
   ],
-  // human-readable form
   call: `${list_single.name}([1, 2])`,
   expectText: `throws — a single list has exactly one item`,
-  // machine-runnable form: pass the two-item list as a literal value, call, assert
   fn: list_single.name,
   args: [{ value: [1, 2], parse: "value" }],
   expect: "throw",
