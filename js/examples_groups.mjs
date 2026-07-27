@@ -37,6 +37,7 @@ export function examples_groups() {
         "example_unwrap_for_of",
         "example_nested_record_add",
         "example_nested_record_remove",
+        "example_statement_duplicate",
       ],
     },
     {

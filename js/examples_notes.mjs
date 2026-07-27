@@ -100,6 +100,8 @@ export function examples_notes() {
     example_nested_record_add:
       "reach a list two names deep - the first address past the top of a function",
     example_nested_record_remove: "the undo - a register is not only added to",
+    example_statement_duplicate:
+      "copy a line below itself — the third thing that can happen to an addressed line and the only one that has to rename what it binds",
   };
   return notes;
 }

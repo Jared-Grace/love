@@ -25,7 +25,12 @@ export const example = {
   return groups;
 }`,
   after: `export function f() {
-  let groups = [{ name: "Guards", examples: ["example_single_rejects_two"] }];
+  let groups = [
+    {
+      name: "Guards",
+      examples: ["example_single_rejects_two"],
+    },
+  ];
   return groups;
 }`,
 };
