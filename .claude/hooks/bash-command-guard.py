@@ -1569,9 +1569,7 @@ def is_safe_scripts_temp_path(path):
     # scripts/temp/nested/x.mjs fails here rather than needing a separate
     # test. The prefix itself is a constant, never caller text.
     basename = path[len(directory):]
-    if not SAFE_TEMP_BASENAME_RE.match(basename):
-        return False
-    return True
+    return safe_temp_basename_is(basename)
 
 
 def is_safe_scripts_temp_rm(words):

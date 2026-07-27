@@ -11,6 +11,7 @@ export async function app_g_day_discern(div_map) {
   let talkable = property_get(state, "talkable");
   let target = list_random_item(talkable);
   property_set(state, "target", target);
+  property_set(state, "target_best", null);
   let player = await app_g_player_get();
   let prayer = property_get(player, "prayer");
   property_set(prayer, "conversation", true);
