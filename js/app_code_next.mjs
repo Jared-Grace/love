@@ -1,39 +1,27 @@
-import { app_shared_button_wide_next } from "../../love/js/app_shared_button_wide_next.mjs";
-import { app_code_padding_x } from "../../love/js/app_code_padding_x.mjs";
-import { html_div } from "../../love/js/html_div.mjs";
-import { text_combine_middle_space } from "../../love/js/text_combine_middle_space.mjs";
-import { null_not_is } from "../../love/js/null_not_is.mjs";
-import { app_shared_button_back_text } from "../../love/js/app_shared_button_back_text.mjs";
-import { text_pad_space_quote_double } from "../../love/js/text_pad_space_quote_double.mjs";
-import { app_shared_button_wide } from "../../love/js/app_shared_button_wide.mjs";
-import { emoji_repeat_1 } from "../../love/js/emoji_repeat_1.mjs";
-import { html_div_text } from "../../love/js/html_div_text.mjs";
-import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
-import { app_shared_button_next_text } from "../../love/js/app_shared_button_next_text.mjs";
+import { app_shared_button_wide_next } from "./app_shared_button_wide_next.mjs";
+import { app_code_padding_x } from "./app_code_padding_x.mjs";
+import { html_div } from "./html_div.mjs";
+import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
+import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_next(
   context,
-  parent_question,
-  do_you_want_to_text,
-  yes_text,
+  parent_more,
+  more_text,
   refresh,
   on_next,
   on_back,
   back_text,
   parent_next_back,
 ) {
-  let container_question = html_div(parent_question);
-  let nt = app_shared_button_next_text();
-  let padded = text_pad_space_quote_double(nt);
-  let question = text_combine_multiple([
-    "Do you want to ",
-    do_you_want_to_text,
-    "? If not, choose: ",
-    padded,
-  ]);
-  html_div_text(container_question, question);
+  "the way-forward controls on the examples screen: a self-descriptive 'see more examples' button (its own action, no question) that refreshes the examples in place, then the primary Next button and an optional Back. more_text is the plain label for the refresh button; refresh runs it; on_next is Next; on_back/back_text are the optional back control";
+  let container_more = html_div(parent_more);
   let left = emoji_repeat_1();
-  let answer_yes = text_combine_multiple([left, " Yes, ", yes_text]);
-  app_shared_button_wide(container_question, answer_yes, refresh);
+  let more_label = text_combine_multiple([left, " ", more_text]);
+  app_shared_button_wide(container_more, more_label, refresh);
   let container_buttons = html_div(parent_next_back);
   app_code_padding_x(container_buttons);
   let bn = app_shared_button_wide_next(container_buttons, on_next);
@@ -44,9 +32,4 @@ export function app_code_next(
     }
     let bb = app_shared_button_wide(container_buttons, bt, on_back);
   }
-  let r = {
-    containers: [container_question, container_buttons],
-    container_question,
-  };
-  return r;
 }
