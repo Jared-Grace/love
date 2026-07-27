@@ -11,15 +11,18 @@ export function permission_allow_generated_from(names) {
   let rules = [];
   let other = permission_rules_other();
   list_add_multiple(rules, other);
-  for (let name of names) {
-    let rule = permission_grant_rule(name);
-    list_add(rules, rule);
-  }
+  let scripts = dispatcher_scripts_claude();
   let commands = dispatcher_commands_fn_named();
-  for (let command of commands) {
+  for (let script of scripts) {
     for (let name of names) {
-      let rule = permission_grant_rule_command(command, name);
+      let rule = permission_grant_rule(name, script);
       list_add(rules, rule);
+    }
+    for (let command of commands) {
+      for (let name of names) {
+        let rule = permission_grant_rule_command(command, name, script);
+        list_add(rules, rule);
+      }
     }
   }
   return rules;
