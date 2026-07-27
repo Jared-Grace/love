@@ -4,6 +4,7 @@ import { html_style_flex } from "./html_style_flex.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
@@ -289,6 +290,17 @@ export function app_g_verify_view(
   html_style_font_size(suggest_area, "1em");
   html_style_line_height(suggest_area, "1.5");
   html_style_margin_top(suggest_area, small_gap);
+  ("keep an in-progress suggestion per verse, so navigating away and back does not reset the textarea to the current lines");
+  let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
+  let saved_draft = sessionStorage.getItem(draft_key);
+  if (not_equal(saved_draft, null)) {
+    html_value_set(suggest_area, saved_draft);
+  }
+  function draft_save() {
+    let current = html_value_get(suggest_area);
+    sessionStorage.setItem(draft_key, current);
+  }
+  html_on(suggest_area, "input", draft_save);
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
   html_centered(suggest_bar);
@@ -302,6 +314,7 @@ export function app_g_verify_view(
       html_clear(suggest_bar);
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
       app_shared_text_deemphasized(sent);
+      sessionStorage.removeItem(draft_key);
     } catch (failed) {
       html_clear(suggest_bar);
       let msg = html_p_text(suggest_bar, "Couldn't send — please try again.");
