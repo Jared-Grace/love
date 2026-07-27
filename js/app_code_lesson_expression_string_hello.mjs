@@ -114,8 +114,10 @@ export function app_code_lesson_expression_string_hello() {
     html_span_text(concept, "The ");
     let value_term = html_span_text(concept, "value of a string");
     html_bold(value_term);
-    let color3 = app_code_string_value_color_on_light();
-    html_font_color_set(value_term, color3);
+    html_font_color_set(value_term, app_code_string_value_color());
+    html_style_background_color_set(value_term, app_shared_color_code_background());
+    html_border_radius(value_term, app_shared_border_radius());
+    html_style_padding_x(value_term, "0.35em");
     html_span_text(concept, " is what's between the quotes");
     let example = html_div(define);
     html_span_text(example, "For example, the value of ");
