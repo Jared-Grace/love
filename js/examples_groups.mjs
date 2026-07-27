@@ -24,6 +24,7 @@ export function examples_groups() {
         "example_call_add_before_selected",
         "example_declaration_replace_code",
         "example_declaration_delete",
+        "example_call_argument_named_set",
       ],
     },
     {
