@@ -1,3 +1,4 @@
+import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { dispatcher_scripts } from "./dispatcher_scripts.mjs";
@@ -21,6 +22,15 @@ export function python_mirrors() {
         ".py",
       ]),
       source: dispatcher_scripts,
+    },
+    {
+      constant: "AI_DISPATCHER_SCRIPTS",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        dispatcher_scripts_claude.name,
+        ".py",
+      ]),
+      source: dispatcher_scripts_claude,
     },
     {
       constant: "DISPATCHER_COMMANDS_FN_NAMED",

@@ -325,10 +325,9 @@ export async function app_g_verify_view(
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
-  ("size to fit the content NOW, then AGAIN after layout settles and after the serif font loads — the first synchronous call can measure scrollHeight before the textarea has its final width/font, undersizing it to the 6em floor (~4 lines) so a 5th line hides below the fold; the re-runs are idempotent");
+  ("size to fit the content NOW, then AGAIN on the next tick (promise_later is ao-safe — promise_resolved is sync so ao won't inject an await that breaks the chain) and after the serif font loads (its metrics change the height); reading scrollHeight already forces a reflow, so a full animation-frame wait is unnecessary; all re-runs are idempotent");
   autosize();
-  await html_request_animation_frame();
-  autosize();
+  promise_later(autosize);
   document.fonts.ready.then(autosize);
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
