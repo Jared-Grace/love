@@ -73,7 +73,7 @@ The working directory has **no isolation** — peers' uncommitted edits sit on t
 |---|---|---|
 | Rename a function everywhere (def + imports + callers + aliases) | `function_rename <before> <after>` | `function_rename` |
 | Bulk-rename every fn under a name prefix (namespace migration) | `ri <prefix_before> <prefix_after>` | `functions_rename_if_starts_with` |
-| Replace an identifier with an expression, inside the fn you name | `ir <name> <expr>` | `function_identifier_replace_named <fn> <name> <expr>` |
+| Replace an identifier with an expression, inside the fn you name | `ir <name> <expr>` | `function_identifier_replace <fn> <name> <expr>` |
 | Add the missing relative imports for a file | `imports <file>` | `file_imports_repair` |
 | Create a new empty fn file (one fn per file) | `n <name>` / `nj <name>` | `function_new` / `function_new_js` |
 | Copy a fn to a derived new name | `c <plugin> <args>` | `function_copy_generic` |
@@ -146,7 +146,7 @@ node scripts/ai.mjs function_auto js_find_statement_after                       
 
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 
-**Known holes:** rename a local within a fn (`function_identifier_replace_named` does the whole fn, not one node) · select a node *relative* to another (the line after this one) · address more than one match at a time (every selector here answers exactly one node, and says so when it can't).
+**Known holes:** rename a local within a fn (`function_identifier_replace` does the whole fn, not one node) · select a node *relative* to another (the line after this one) · address more than one match at a time (every selector here answers exactly one node, and says so when it can't).
 
 **Two things deliberately not built, so nobody builds them by mistake.** **Adding or removing an argument at one call site** — every call here targets a repo function, and `function_param_new` / `function_params_delete` change the definition *and* every caller together; a single-site arity change writes a call that disagrees with its callee. Use those, then `js_call_argument_named_set` to set the one site's value. **Wrapping in `try`** — the generated `catch` would have to be empty, which is the shape that swallows a total failure and reads as success; this repo writes a named `*_try` wrapper instead.
 
