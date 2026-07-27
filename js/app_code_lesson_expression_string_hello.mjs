@@ -56,7 +56,7 @@ export function app_code_lesson_expression_string_hello() {
     next_arg,
     example_count: 2,
     decoys,
-    forwards_question_label: "Value of the string: ",
+    forwards_question_label: "The string: ",
     forwards_answer_label: "value: ",
     backwards_question_label: "value: ",
     backwards_answer_label: "What code gives this value? ",
