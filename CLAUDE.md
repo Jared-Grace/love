@@ -171,6 +171,10 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_selects_functionize <new_fn>` | extract first-through-last selection, then move the new fn into its own file (needs `function_select_multiple_apply_args`) |
 | `js_selects_functionize_local <new_fn>` | the same extraction, left in the file it came from — the half a sandbox can watch, so this is the one under a gate |
 
+**Before writing a new atom, ask the history whether one is missing.** `commits_ai_js_file_shapes <count>` buckets every hand-made change to `js/` by shape, **one changed file at a time**. Count whole commits instead and the reading is worthless: `ai_git` sweeps the working directory, so one commit named `ai` carries two people's unrelated work, and that arrives as the largest bucket of all — a missing transform for a shape nobody edited. Throwaway probes are set aside and reported separately for the same reason.
+
+**Read it for a bucket that dominates.** One does — that shape is the atom to write, and its samples say what it would have to do. As of 2026-07-28 the last forty commits are **flat** (22/17/14/14/14/14/1 across the seven shapes), which says the vocabulary covers the common shapes and what is left is ordinary domain work rather than an editing gap. Writing another atom against a flat reading is guessing, which is the thing this measurement exists to stop.
+
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 
 **Registering a new example now needs no hand editing at all** — list it, group it, and describe it, three commands:
