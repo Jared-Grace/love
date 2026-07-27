@@ -8,6 +8,7 @@ export function app_g_day_state() {
     talkable: null,
     target: null,
     guide: null,
+    guide_coords: null,
     slices_total: 0,
     slices_done: 0,
     target_start: null,

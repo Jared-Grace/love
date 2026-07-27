@@ -20,6 +20,7 @@ export async function app_g_day_guide_show(div_map) {
     html_remove(previous);
   }
   property_set(state, "guide", null);
+  property_set(state, "guide_coords", null);
   let g = await app_g_game_save_get();
   let player = await app_g_player_get();
   await app_g_day_slice_move(player);
@@ -29,4 +30,5 @@ export async function app_g_day_guide_show(div_map) {
   }
   let element = app_g_day_guide_highlight(div_map, gold);
   property_set(state, "guide", element);
+  property_set(state, "guide_coords", gold);
 }
