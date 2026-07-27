@@ -59,6 +59,7 @@ export async function qa_gate_run() {
     throw new Error("qa gate: " + failed.join(", ") + " failed");
   }
   console.log("\nall gates passed");
+  ("How long each gate took is deliberately NOT returned here, and the reason is worth writing down because the obvious fix is wrong. The half asked of this machine has its timings in hand, but the half asked of the copy is several separate processes whose only channel back is the text they printed - so returning what is available would hand back three gates' numbers in a shape that reads like all of them. A number that looks complete and is not is worse than no number. Making it whole means giving the shares a way to answer in something other than printed text; until then the whole-run timings live in the printed block, and one gate at a time is asked for by name instead");
   let gates = qa_gates_read();
   let r = {
     gates: gates.length,
