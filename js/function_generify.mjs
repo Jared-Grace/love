@@ -1,29 +1,26 @@
-import { js_declaration_declarators_get } from "./js_declaration_declarators_get.mjs";
-import { list_single } from "./list_single.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_find_declaration_named } from "./js_find_declaration_named.mjs";
-import { js_declare_init_get } from "./js_declare_init_get.mjs";
-import { js_unparse } from "./js_unparse.mjs";
-import { js_flo_body } from "./js_flo_body.mjs";
-import { list_remove } from "./list_remove.mjs";
+import { js_select_apply } from "./js_select_apply.mjs";
+import { js_string_literal_single_find } from "./js_string_literal_single_find.mjs";
+import { js_literal_hoist } from "./js_literal_hoist.mjs";
 import { function_transform } from "./function_transform.mjs";
-import { function_params_new } from "./function_params_new.mjs";
-export async function function_generify(f_name, local_name) {
-  "Turns a value the function decides for itself into one its callers decide: the binding goes, the name becomes a parameter, and every place that already called the function passes the value the binding used to hold.";
-  "This is the step that makes a function general, and it is the one that cannot be done by hand safely. Adding the parameter is nothing; finding every caller and handing each one the old value is the whole job, and a caller missed is a function silently receiving nothing where it used to have a value.";
-  "Callers keep their old behaviour exactly, because they are given the very expression that was there. So this changes what the function can do without changing what it does - which is what makes it safe to run before anyone has decided what the new value should be.";
-  "The value has to be one the command line can hand over as a single word, since the parameter machinery reads its defaults as a comma-separated list. A value with a comma inside it belongs in a parameter added by hand.";
+import { function_local_to_param } from "./function_local_to_param.mjs";
+export async function function_generify(f_name, name) {
+  "Makes a function general in one step: the one value it had written into it is given the name you choose, and that name becomes a parameter its callers fill in.";
+  "Two things had to happen in order and neither is interesting on its own - a value has to be named before it can be handed over, and every caller has to keep passing the value it always had. Doing them by hand means remembering the order and the second half; asking for it by name means the function is either general or untouched, with nothing in between to get wrong.";
+  "Nothing about the meaning changes. Every caller is handed the very value that was written in, so this is worth running before anyone has decided what the other value will be - and the point of running it then is that the second value costs a copy afterwards instead of a rewrite.";
+  "It refuses a function using no strings, or more than one, because then which value was meant is a question and this cannot answer it.";
   arguments_assert(arguments, 2);
-  let source = null;
-  function taken(ast) {
-    let node = js_find_declaration_named(ast, local_name);
-    let declarators = js_declaration_declarators_get(node);
-    let declarator = list_single(declarators);
-    let init = js_declare_init_get(declarator);
-    source = js_unparse(init);
-    let body = js_flo_body(ast);
-    list_remove(body, node);
+  async function hoisted(ast) {
+    let select_args = [];
+    let apply_args = [name];
+    await js_select_apply(
+      ast,
+      js_string_literal_single_find,
+      select_args,
+      js_literal_hoist,
+      apply_args,
+    );
   }
-  await function_transform(f_name, taken);
-  await function_params_new(f_name, local_name, source);
+  await function_transform(f_name, hoisted);
+  await function_local_to_param(f_name, name);
 }
