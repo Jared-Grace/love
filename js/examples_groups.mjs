@@ -34,6 +34,7 @@ export function examples_groups() {
         "example_return_identifier_add",
         "example_object_shorthand_add",
         "example_array_text_add",
+        "example_array_identifier_add",
         "example_prose_address",
         "example_type_find_address",
         "example_call_name_includes_address",

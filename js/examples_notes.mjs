@@ -112,6 +112,8 @@ export function examples_notes() {
       "address a call by a fragment of its name — shorter than the whole name and exact only while one call matches",
     example_function_node_named_address:
       "name an inner function and the whole of it answers — the address a let-binding finder looks straight past",
+    example_array_identifier_add:
+      "add a name to a register of functions — the twin that writes a word looks identical afterwards and runs nothing",
   };
   return notes;
 }
