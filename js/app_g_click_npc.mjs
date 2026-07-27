@@ -7,8 +7,13 @@ import { property_get } from "./property_get.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { app_g_npc_img_get } from "./app_g_npc_img_get.mjs";
 import { app_g_character_face } from "./app_g_character_face.mjs";
+import { app_g_day_convert_tap_if } from "./app_g_day_convert_tap_if.mjs";
 export async function app_g_click_npc(div_map, npcs_matched, player_img_c) {
   let npc = list_single(npcs_matched);
+  let converted = await app_g_day_convert_tap_if(div_map, npc);
+  if (converted) {
+    return;
+  }
   let x = property_get(npc, "x");
   let y = property_get(npc, "y");
   let player = await app_g_player_get();
