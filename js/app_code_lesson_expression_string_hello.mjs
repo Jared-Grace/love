@@ -74,16 +74,26 @@ export function app_code_lesson_expression_string_hello() {
     return built;
   }
   function above(root) {
-    "introduce strings: text in quotes is a string, and its value is that text WITHOUT the quotes. Example first, then the one rule; string is bolded once at its definition";
+    "intro grounded in the familiar: connect to numbers already seen, name text as the other kind of value, relate to English quotes-for-speech, then name the string and show its value drops the quotes. Example after the framing; string is bolded once at its definition";
     let word = list_random_item(["hello", "cat", "sun"]);
     let code = string_code(word);
+    let intro = app_code_container_light_blue(root);
+    html_div_text(intro, "You've seen JavaScript use numbers");
+    html_div_text(intro, "Besides numbers, JavaScript can use text");
+    let speech = text_combine_multiple([
+      "In English, quotes can show speech: he said ",
+      quote,
+      "love people.",
+      quote,
+    ]);
+    html_div_text(intro, speech);
+    html_div_text(intro, "JavaScript uses quotes the same way, to mean any text");
     let define = app_code_container_light_blue(root);
     let line = html_div(define);
     html_span_text(line, "Text inside quotes is a ");
     let term = html_span_text(line, "string");
     html_bold(term);
-    let example = app_code_container_light_blue(root);
-    html_div_cycle_code(example, ["The value of ", code, " is ", word]);
-    html_div_cycle_code(example, ["The quotes are not part of the value"]);
+    html_div_cycle_code(define, ["The value of ", code, " is ", word]);
+    html_div_cycle_code(define, ["The quotes are not part of the value"]);
   }
 }
