@@ -9,7 +9,7 @@ import { file_js_transform } from "./file_js_transform.mjs";
 import { file_read } from "./file_read.mjs";
 import { js_format_trim } from "./js_format_trim.mjs";
 export async function example_transform_run(e) {
-  let lambda = example_command_lambda(e.fn, e.args);
+  let lambda = example_command_lambda(e.fn, e.args, e);
   if (not(lambda)) {
     let r = "skip";
     return r;
