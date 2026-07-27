@@ -1513,8 +1513,6 @@ def is_safe_scripts_temp_path(path):
     this can name holds only disposable files. What it does NOT give up is
     the confinement: normpath equality still refuses `scripts/temp/../../x`,
     and the direct-child check still refuses a nested subdirectory."""
-    if not SAFE_SCRATCHPAD_PATH_RE.match(path):
-        return False
     if os.path.normpath(path) != path:
         return False
     if path.startswith(SCRIPTS_TEMP_DIR):
@@ -1523,12 +1521,16 @@ def is_safe_scripts_temp_path(path):
         directory = SCRIPTS_TEMP_RELATIVE_DIR
     else:
         return False
-    basename = os.path.basename(path)
-    # Direct child only - the startswith alone wouldn't rule out
-    # scripts/temp/nested/x.mjs.
-    if os.path.join(directory, basename) != path:
+    # Everything after the fixed directory prefix must be one plain name.
+    # Checking the remainder rather than the whole path is what lets the
+    # basename carry glob characters while the prefix stays literal - and it
+    # is also the direct-child check, since a '/' is not in the class, so
+    # scripts/temp/nested/x.mjs fails here rather than needing a separate
+    # test. The prefix itself is a constant, never caller text.
+    basename = path[len(directory):]
+    if not SAFE_TEMP_BASENAME_RE.match(basename):
         return False
-    return bool(basename)
+    return True
 
 
 def is_safe_scripts_temp_rm(words):
