@@ -21,6 +21,7 @@ import { app_code_lesson_expression_absolute_value } from "./app_code_lesson_exp
 import { app_code_lesson_expression_smaller } from "./app_code_lesson_expression_smaller.mjs";
 import { app_code_lesson_expression_larger } from "./app_code_lesson_expression_larger.mjs";
 import { app_code_lesson_expression_string_hello } from "./app_code_lesson_expression_string_hello.mjs";
+import { app_code_lesson_expression_string_spaces } from "./app_code_lesson_expression_string_spaces.mjs";
 import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
 import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
 import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression_divisor.mjs";
@@ -87,6 +88,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_dot_numbers,
     app_code_lesson_operators_dot_missing,
     app_code_lesson_expression_string_hello,
+    app_code_lesson_expression_string_spaces,
     app_code_lesson_expression_less_than,
     app_code_lesson_expression_greater_than,
     app_code_lesson_expression_less_than_equal,
