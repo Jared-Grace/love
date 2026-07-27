@@ -1,3 +1,4 @@
+import { example_select_apply_named } from "./example_select_apply_named.mjs";
 import { js_selects_move_after } from "./js_selects_move_after.mjs";
 import { example_select_multiple_apply_lambda } from "./example_select_multiple_apply_lambda.mjs";
 import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
@@ -41,11 +42,11 @@ import { js_block_body_add_code } from "./js_block_body_add_code.mjs";
 import { js_block_body_add_code_first } from "./js_block_body_add_code_first.mjs";
 import { example_block_body_add_lambda } from "./example_block_body_add_lambda.mjs";
 export function example_command_lambda(fn_name, args, e) {
-  ("An example that names its address as well as its verb takes the one branch");
-  ("that covers every pairing. The branches below each fix a verb to the one");
-  ("address it was written with, so they can show a cell of the multiplication and");
-  ("never a column — and they would have to grow as the product of the two lists");
-  ("rather than their sum.");
+  "An example that names its address as well as its verb takes the one branch";
+  "that covers every pairing. The branches below each fix a verb to the one";
+  "address it was written with, so they can show a cell of the multiplication and";
+  "never a column — and they would have to grow as the product of the two lists";
+  "rather than their sum.";
   let select_name = e.select;
   if (select_name) {
     let lambda_named = example_select_apply_named(
