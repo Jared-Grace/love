@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 export function permission_grant_names() {
   "every function Claude may run on its own seam without asking first - the one list both rule families are generated from, so a second entry point costs no second list";
-  let spelled = fn_name("ai_git");
+  let spelled1 = fn_name("ai_git");
   let spelled2 = fn_name("ai_git_command_args");
   let spelled3 = fn_name("ai_log_add");
   let spelled4 = fn_name("work_options");
@@ -210,388 +210,91 @@ export function permission_grant_names() {
   let spelled207 = fn_name("repos_names");
   let spelled208 = fn_name("scripts_temp_delete");
   let spelled209 = fn_name("webpack_watch");
-  let spelled210 = fn_name("permission_grant_rule");
-  let spelled211 = fn_name("permission_grant_words_unsafe");
-  let spelled212 = fn_name("function_imports_beyond_infrastructure");
-  let spelled213 = fn_name("functions_unbound_baseline_write");
-  let spelled214 = fn_name("functions_import_ignored");
-  let spelled215 = fn_name("permission_settings_allow_assert");
-  let spelled216 = fn_name("g_passage_match_count");
-  let spelled217 = fn_name("python_mirrors_write");
-  let spelled218 = fn_name("python_mirrors_assert");
-  let spelled219 = fn_name("permission_settings_allow_write");
-  let spelled220 = fn_name("permission_grant_names_rewrite");
-  let spelled221 = fn_name("permission_grants_counted");
-  let spelled222 = fn_name("permission_rules_other");
-  let spelled223 = fn_name("apps_names_dev");
-  let spelled224 = fn_name("apps_dev_build_all");
-  let spelled225 = fn_name("app_shared_dev_build_multiple");
-  let spelled226 = fn_name("functions_duplicates_baseline_write");
-  let spelled227 = fn_name("html_code_loading_splash");
-  let spelled228 = fn_name("function_param_plain_mark");
-  let spelled229 = fn_name("function_rename");
-  let spelled230 = fn_name("g_verify_loop_check_line");
-  let spelled231 = fn_name("g_verify_loop_check");
-  let spelled232 = fn_name("memory_index_only_tokens");
-  let spelled233 = fn_name("g_verify_chapters_available");
-  let spelled234 = fn_name("permission_grants_param_plain_mark");
-  let spelled235 = fn_name("memory_index_head_tidy");
-  let spelled236 = fn_name("memory_index_hooks_compress");
-  let spelled237 = fn_name("memory_index_line_ceiling");
-  let spelled238 = fn_name("memory_index_size_gate_run");
-  let spelled239 = fn_name("memory_index_lines_longest");
-  let spelled240 = fn_name("memory_index_size_ceiling");
-  let spelled241 = fn_name("text_bytes_size");
-  let spelled242 = fn_name("text_code_spans_blanked");
-  let spelled243 = fn_name("function_arguments_assert_each_add");
-  let spelled244 = fn_name("markers_gate_run");
-  let spelled245 = fn_name("markers_unresolved");
-  let spelled246 = fn_name("marker_reader_name");
-  let spelled247 = fn_name("function_duplicate_kind");
-  let spelled248 = fn_name("function_marked_is");
-  let spelled249 = fn_name("ebible_chapter_code_assert");
-  let spelled250 = fn_name("qa_gates_timed_solo");
-  let spelled251 = fn_name("app_g_day_blocked_check");
-  let spelled252 = fn_name("function_ast");
-  let spelled253 = fn_name("function_params_plain");
-  let spelled254 = fn_name("function_name_to_path_search");
-  let spelled255 = fn_name("qa_trees_reap");
-  let spelled256 = fn_name("qa_tree_owners_folder");
-  let spelled257 = fn_name("qa_tree_stale_minutes");
-  let spelled258 = fn_name("qa_gate_failed_complaints");
-  let spelled259 = fn_name("g_verify_reviewed_set");
-  let spelled260 = fn_name("g_day_sky_phase_check");
-  let spelled261 = fn_name("app_g_day_fraction_check");
-  let spelled262 = fn_name("timings_total_ms");
-  let spelled263 = fn_name("g_clock_sky_phase_check");
-  let spelled264 = fn_name("timings_ranked");
-  let spelled265 = fn_name("app_g_map_pad_check");
-  let spelled266 = fn_name("function_copy");
-  let spelled267 = fn_name("machine_load_average");
-  let spelled268 = fn_name("qa_gate_names_in_flight");
-  let spelled269 = fn_name("qa_tree_folder");
-  let spelled270 = fn_name("function_local_to_param");
-  let spelled271 = fn_name("function_generify");
-  let spelled272 = fn_name("examples_data_gate_run");
-  let spelled273 = fn_name("functions_absorbable");
-  let spelled274 = fn_name("commits_ai_js_shapes");
-  let spelled275 = fn_name("functions_parallel_mark");
-  let spelled276 = fn_name("commit_edit_kind");
-  let spelled277 = fn_name("server_port");
-  let spelled278 = fn_name("g_sermon_write_read");
-  let spelled279 = fn_name("commits_hand_edit_kinds");
-  let spelled280 = fn_name("app_shared_api_generic_f_name_args");
-  let spelled281 = fn_name("functions_duplicate_keys");
-  let spelled282 = fn_name("repo_shapes");
-  let spelled283 = fn_name("functions_duplicates_names");
-  let spelled284 = fn_name("functions_parallel_marks_stale");
-  let spelled285 = fn_name("qa_gate_confirm");
-  let spelled286 = fn_name("app_g_dev_index_tree_check");
-  let spelled287 = fn_name("functions_parallel_marks_gate_run");
-  let spelled288 = fn_name("memory_hook_limit_candidates");
-  let spelled289 = fn_name("function_shadowing_report");
-  let spelled290 = fn_name("html_loading_spinner_markup");
-  let spelled291 = fn_name("html_loading_spinner_keyframes_css");
-  let spelled292 = fn_name("qa_report_gate_run");
-  let spelled293 = fn_name("commits_ai_js_file_shapes");
-  let spelled294 = fn_name("permission_prompt_run_rows");
-  let spelled295 = fn_name("functions_permission_seams");
-  let names = [
-    spelled,
-    spelled2,
-    spelled3,
-    spelled4,
-    spelled5,
-    spelled6,
-    spelled7,
-    spelled8,
-    spelled9,
-    spelled10,
-    spelled11,
-    spelled12,
-    spelled13,
-    spelled14,
-    spelled15,
-    spelled16,
-    spelled17,
-    spelled18,
-    spelled19,
-    spelled20,
-    spelled21,
-    spelled22,
-    spelled23,
-    spelled24,
-    spelled25,
-    spelled26,
-    spelled27,
-    spelled28,
-    spelled29,
-    spelled30,
-    spelled31,
-    spelled32,
-    spelled33,
-    spelled34,
-    spelled35,
-    spelled36,
-    spelled37,
-    spelled38,
-    spelled39,
-    spelled40,
-    spelled41,
-    spelled42,
-    spelled43,
-    spelled44,
-    spelled45,
-    spelled46,
-    spelled47,
-    spelled48,
-    spelled49,
-    spelled50,
-    spelled51,
-    spelled52,
-    spelled53,
-    spelled54,
-    spelled55,
-    spelled56,
-    spelled57,
-    spelled58,
-    spelled59,
-    spelled60,
-    spelled61,
-    spelled62,
-    spelled63,
-    spelled64,
-    spelled65,
-    spelled66,
-    spelled67,
-    spelled68,
-    spelled69,
-    spelled70,
-    spelled71,
-    spelled72,
-    spelled73,
-    spelled74,
-    spelled75,
-    spelled76,
-    spelled77,
-    spelled78,
-    spelled79,
-    spelled80,
-    spelled81,
-    spelled82,
-    spelled83,
-    spelled84,
-    spelled85,
-    spelled86,
-    spelled87,
-    spelled88,
-    spelled89,
-    spelled90,
-    spelled91,
-    spelled92,
-    spelled93,
-    spelled94,
-    spelled95,
-    spelled96,
-    spelled97,
-    spelled98,
-    spelled99,
-    spelled100,
-    spelled101,
-    spelled102,
-    spelled103,
-    spelled104,
-    spelled105,
-    spelled106,
-    spelled107,
-    spelled108,
-    spelled109,
-    spelled110,
-    spelled111,
-    spelled112,
-    spelled113,
-    spelled114,
-    spelled115,
-    spelled116,
-    spelled117,
-    spelled118,
-    spelled119,
-    spelled120,
-    spelled121,
-    spelled122,
-    spelled123,
-    spelled124,
-    spelled125,
-    spelled126,
-    spelled127,
-    spelled128,
-    spelled129,
-    spelled130,
-    spelled131,
-    spelled132,
-    spelled133,
-    spelled134,
-    spelled135,
-    spelled136,
-    spelled137,
-    spelled138,
-    spelled139,
-    spelled140,
-    spelled141,
-    spelled142,
-    spelled143,
-    spelled144,
-    spelled145,
-    spelled146,
-    spelled147,
-    spelled148,
-    spelled149,
-    spelled150,
-    spelled151,
-    spelled152,
-    spelled153,
-    spelled154,
-    spelled155,
-    spelled156,
-    spelled157,
-    spelled158,
-    spelled159,
-    spelled160,
-    spelled161,
-    spelled162,
-    spelled163,
-    spelled164,
-    spelled165,
-    spelled166,
-    spelled167,
-    spelled168,
-    spelled169,
-    spelled170,
-    spelled171,
-    spelled172,
-    spelled173,
-    spelled174,
-    spelled175,
-    spelled176,
-    spelled177,
-    spelled178,
-    spelled179,
-    spelled180,
-    spelled181,
-    spelled182,
-    spelled183,
-    spelled184,
-    spelled185,
-    spelled186,
-    spelled187,
-    spelled188,
-    spelled189,
-    spelled190,
-    spelled191,
-    spelled192,
-    spelled193,
-    spelled194,
-    spelled195,
-    spelled196,
-    spelled197,
-    spelled198,
-    spelled199,
-    spelled200,
-    spelled201,
-    spelled202,
-    spelled203,
-    spelled204,
-    spelled205,
-    spelled206,
-    spelled207,
-    spelled208,
-    spelled209,
-    spelled210,
-    spelled211,
-    spelled212,
-    spelled213,
-    spelled214,
-    spelled215,
-    spelled216,
-    spelled217,
-    spelled218,
-    spelled219,
-    spelled220,
-    spelled221,
-    spelled222,
-    spelled223,
-    spelled224,
-    spelled225,
-    spelled226,
-    spelled227,
-    spelled228,
-    spelled229,
-    spelled230,
-    spelled231,
-    spelled232,
-    spelled233,
-    spelled234,
-    spelled235,
-    spelled236,
-    spelled237,
-    spelled238,
-    spelled239,
-    spelled240,
-    spelled241,
-    spelled242,
-    spelled243,
-    spelled244,
-    spelled245,
-    spelled246,
-    spelled247,
-    spelled248,
-    spelled249,
-    spelled250,
-    spelled251,
-    spelled252,
-    spelled253,
-    spelled254,
-    spelled255,
-    spelled256,
-    spelled257,
-    spelled258,
-    spelled259,
-    spelled260,
-    spelled261,
-    spelled262,
-    spelled263,
-    spelled264,
-    spelled265,
-    spelled266,
-    spelled267,
-    spelled268,
-    spelled269,
-    spelled270,
-    spelled271,
-    spelled272,
-    spelled273,
-    spelled274,
-    spelled275,
-    spelled276,
-    spelled277,
-    spelled278,
-    spelled279,
-    spelled280,
-    spelled281,
-    spelled282,
-    spelled283,
-    spelled284,
-    spelled285,
-    spelled286,
-    spelled287,
-    spelled288,
-    spelled289,
-    spelled290,
-    spelled291,
-    spelled292,
-    spelled293,
-    spelled294,
-    spelled295,
-  ];
+  let spelled210 = fn_name("permission_grant_words_unsafe");
+  let spelled211 = fn_name("function_imports_beyond_infrastructure");
+  let spelled212 = fn_name("functions_unbound_baseline_write");
+  let spelled213 = fn_name("functions_import_ignored");
+  let spelled214 = fn_name("permission_settings_allow_assert");
+  let spelled215 = fn_name("g_passage_match_count");
+  let spelled216 = fn_name("python_mirrors_write");
+  let spelled217 = fn_name("python_mirrors_assert");
+  let spelled218 = fn_name("permission_settings_allow_write");
+  let spelled219 = fn_name("permission_grant_names_rewrite");
+  let spelled220 = fn_name("permission_grants_counted");
+  let spelled221 = fn_name("permission_rules_other");
+  let spelled222 = fn_name("apps_names_dev");
+  let spelled223 = fn_name("apps_dev_build_all");
+  let spelled224 = fn_name("app_shared_dev_build_multiple");
+  let spelled225 = fn_name("functions_duplicates_baseline_write");
+  let spelled226 = fn_name("html_code_loading_splash");
+  let spelled227 = fn_name("function_param_plain_mark");
+  let spelled228 = fn_name("function_rename");
+  let spelled229 = fn_name("g_verify_loop_check_line");
+  let spelled230 = fn_name("g_verify_loop_check");
+  let spelled231 = fn_name("memory_index_only_tokens");
+  let spelled232 = fn_name("g_verify_chapters_available");
+  let spelled233 = fn_name("permission_grants_param_plain_mark");
+  let spelled234 = fn_name("memory_index_head_tidy");
+  let spelled235 = fn_name("memory_index_hooks_compress");
+  let spelled236 = fn_name("memory_index_line_ceiling");
+  let spelled237 = fn_name("memory_index_size_gate_run");
+  let spelled238 = fn_name("memory_index_lines_longest");
+  let spelled239 = fn_name("memory_index_size_ceiling");
+  let spelled240 = fn_name("text_bytes_size");
+  let spelled241 = fn_name("text_code_spans_blanked");
+  let spelled242 = fn_name("function_arguments_assert_each_add");
+  let spelled243 = fn_name("markers_gate_run");
+  let spelled244 = fn_name("markers_unresolved");
+  let spelled245 = fn_name("marker_reader_name");
+  let spelled246 = fn_name("function_duplicate_kind");
+  let spelled247 = fn_name("function_marked_is");
+  let spelled248 = fn_name("ebible_chapter_code_assert");
+  let spelled249 = fn_name("qa_gates_timed_solo");
+  let spelled250 = fn_name("app_g_day_blocked_check");
+  let spelled251 = fn_name("function_ast");
+  let spelled252 = fn_name("function_params_plain");
+  let spelled253 = fn_name("function_name_to_path_search");
+  let spelled254 = fn_name("qa_trees_reap");
+  let spelled255 = fn_name("qa_tree_owners_folder");
+  let spelled256 = fn_name("qa_tree_stale_minutes");
+  let spelled257 = fn_name("qa_gate_failed_complaints");
+  let spelled258 = fn_name("g_verify_reviewed_set");
+  let spelled259 = fn_name("g_day_sky_phase_check");
+  let spelled260 = fn_name("app_g_day_fraction_check");
+  let spelled261 = fn_name("timings_total_ms");
+  let spelled262 = fn_name("g_clock_sky_phase_check");
+  let spelled263 = fn_name("timings_ranked");
+  let spelled264 = fn_name("app_g_map_pad_check");
+  let spelled265 = fn_name("function_copy");
+  let spelled266 = fn_name("machine_load_average");
+  let spelled267 = fn_name("qa_gate_names_in_flight");
+  let spelled268 = fn_name("qa_tree_folder");
+  let spelled269 = fn_name("function_local_to_param");
+  let spelled270 = fn_name("function_generify");
+  let spelled271 = fn_name("examples_data_gate_run");
+  let spelled272 = fn_name("functions_absorbable");
+  let spelled273 = fn_name("commits_ai_js_shapes");
+  let spelled274 = fn_name("functions_parallel_mark");
+  let spelled275 = fn_name("commit_edit_kind");
+  let spelled276 = fn_name("server_port");
+  let spelled277 = fn_name("g_sermon_write_read");
+  let spelled278 = fn_name("commits_hand_edit_kinds");
+  let spelled279 = fn_name("app_shared_api_generic_f_name_args");
+  let spelled280 = fn_name("functions_duplicate_keys");
+  let spelled281 = fn_name("repo_shapes");
+  let spelled282 = fn_name("functions_duplicates_names");
+  let spelled283 = fn_name("functions_parallel_marks_stale");
+  let spelled284 = fn_name("qa_gate_confirm");
+  let spelled285 = fn_name("app_g_dev_index_tree_check");
+  let spelled286 = fn_name("functions_parallel_marks_gate_run");
+  let spelled287 = fn_name("memory_hook_limit_candidates");
+  let spelled288 = fn_name("function_shadowing_report");
+  let spelled289 = fn_name("html_loading_spinner_markup");
+  let spelled290 = fn_name("html_loading_spinner_keyframes_css");
+  let spelled291 = fn_name("qa_report_gate_run");
+  let spelled292 = fn_name("commits_ai_js_file_shapes");
+  let spelled293 = fn_name("permission_prompt_run_rows");
+  let spelled294 = fn_name("functions_permission_seams");
+  let names = [spelled1, spelled2, spelled3, spelled4, spelled5, spelled6, spelled7, spelled8, spelled9, spelled10, spelled11, spelled12, spelled13, spelled14, spelled15, spelled16, spelled17, spelled18, spelled19, spelled20, spelled21, spelled22, spelled23, spelled24, spelled25, spelled26, spelled27, spelled28, spelled29, spelled30, spelled31, spelled32, spelled33, spelled34, spelled35, spelled36, spelled37, spelled38, spelled39, spelled40, spelled41, spelled42, spelled43, spelled44, spelled45, spelled46, spelled47, spelled48, spelled49, spelled50, spelled51, spelled52, spelled53, spelled54, spelled55, spelled56, spelled57, spelled58, spelled59, spelled60, spelled61, spelled62, spelled63, spelled64, spelled65, spelled66, spelled67, spelled68, spelled69, spelled70, spelled71, spelled72, spelled73, spelled74, spelled75, spelled76, spelled77, spelled78, spelled79, spelled80, spelled81, spelled82, spelled83, spelled84, spelled85, spelled86, spelled87, spelled88, spelled89, spelled90, spelled91, spelled92, spelled93, spelled94, spelled95, spelled96, spelled97, spelled98, spelled99, spelled100, spelled101, spelled102, spelled103, spelled104, spelled105, spelled106, spelled107, spelled108, spelled109, spelled110, spelled111, spelled112, spelled113, spelled114, spelled115, spelled116, spelled117, spelled118, spelled119, spelled120, spelled121, spelled122, spelled123, spelled124, spelled125, spelled126, spelled127, spelled128, spelled129, spelled130, spelled131, spelled132, spelled133, spelled134, spelled135, spelled136, spelled137, spelled138, spelled139, spelled140, spelled141, spelled142, spelled143, spelled144, spelled145, spelled146, spelled147, spelled148, spelled149, spelled150, spelled151, spelled152, spelled153, spelled154, spelled155, spelled156, spelled157, spelled158, spelled159, spelled160, spelled161, spelled162, spelled163, spelled164, spelled165, spelled166, spelled167, spelled168, spelled169, spelled170, spelled171, spelled172, spelled173, spelled174, spelled175, spelled176, spelled177, spelled178, spelled179, spelled180, spelled181, spelled182, spelled183, spelled184, spelled185, spelled186, spelled187, spelled188, spelled189, spelled190, spelled191, spelled192, spelled193, spelled194, spelled195, spelled196, spelled197, spelled198, spelled199, spelled200, spelled201, spelled202, spelled203, spelled204, spelled205, spelled206, spelled207, spelled208, spelled209, spelled210, spelled211, spelled212, spelled213, spelled214, spelled215, spelled216, spelled217, spelled218, spelled219, spelled220, spelled221, spelled222, spelled223, spelled224, spelled225, spelled226, spelled227, spelled228, spelled229, spelled230, spelled231, spelled232, spelled233, spelled234, spelled235, spelled236, spelled237, spelled238, spelled239, spelled240, spelled241, spelled242, spelled243, spelled244, spelled245, spelled246, spelled247, spelled248, spelled249, spelled250, spelled251, spelled252, spelled253, spelled254, spelled255, spelled256, spelled257, spelled258, spelled259, spelled260, spelled261, spelled262, spelled263, spelled264, spelled265, spelled266, spelled267, spelled268, spelled269, spelled270, spelled271, spelled272, spelled273, spelled274, spelled275, spelled276, spelled277, spelled278, spelled279, spelled280, spelled281, spelled282, spelled283, spelled284, spelled285, spelled286, spelled287, spelled288, spelled289, spelled290, spelled291, spelled292, spelled293, spelled294];
   return names;
 }
