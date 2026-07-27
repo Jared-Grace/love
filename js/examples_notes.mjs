@@ -42,6 +42,10 @@ export function examples_notes() {
       "address a line by its neighbour — the first relative address, and the first tool built with no hand editing",
     example_argument_identifier_set:
       "point a generated call's argument at a local — two names, no code, so the command can be approved once",
+    example_object_shorthand_add:
+      "add one entry to a register — the commonest hand edit left, and the one whose workaround destroyed forty-five entries",
+    example_array_text_add:
+      "add one word to an ordered register — the pair to it",
     example_return_identifier_add:
       "hand back a local by name — the last piece of writing a whole function from names alone",
     example_prose_address:
