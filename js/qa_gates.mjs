@@ -1,3 +1,4 @@
+import { examples_comments_none_gate_run } from "./examples_comments_none_gate_run.mjs";
 import { examples_registers_gate_run } from "./examples_registers_gate_run.mjs";
 import { qa_report_gate_run } from "./qa_report_gate_run.mjs";
 import { functions_parallel_marks_gate_run } from "./functions_parallel_marks_gate_run.mjs";
@@ -95,6 +96,7 @@ export function qa_gates() {
     bundle_size_gate_run,
     examples_orphan_gate_run,
     examples_notes_gate_run,
+    examples_comments_none_gate_run,
     html_style_literal_gate_run,
     ebible_book_divisions_canon_assert,
     examples_data_gate_run,
