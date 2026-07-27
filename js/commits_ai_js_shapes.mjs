@@ -1,3 +1,5 @@
+import { commits_shape_name } from "./commits_shape_name.mjs";
+import { not } from "./not.mjs";
 import { integer_from_base_try } from "./integer_from_base_try.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
@@ -9,7 +11,6 @@ import { list_last } from "./list_last.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
-import { text_length } from "./text_length.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -20,8 +21,15 @@ export async function commits_ai_js_shapes(count_given) {
   "One ask of the history rather than one per commit. The whole range comes back as a single reading, which is the difference between a few hundred programs started and one";
   let count = integer_from_base_try(count_given, 10);
   let folder = folder_current_absolute();
-  let range = "HEAD~" + count + "..HEAD";
-  let words = ["log", range, "--format=%H\t%s", "--numstat", "--", "js"];
+  let commits_range = "HEAD~" + count + "..HEAD";
+  let words = [
+    "log",
+    commits_range,
+    "--format=%H\t%s",
+    "--numstat",
+    "--",
+    "js",
+  ];
   let out = await git_folder_run(folder, words);
   let lines = text_split_newline(out);
   let commits = [];
@@ -46,8 +54,10 @@ export async function commits_ai_js_shapes(count_given) {
     let numbered = equal(width, 3);
     if (numbered) {
       if (current) {
-        let added = integer_from_base_try(list_get(parts, 0), 10);
-        let removed = integer_from_base_try(list_get(parts, 1), 10);
+        let input = list_get(parts, 0);
+        let added = integer_from_base_try(input, 10);
+        let input2 = list_get(parts, 1);
+        let removed = integer_from_base_try(input2, 10);
         current.files = current.files + 1;
         current.added = current.added + added;
         current.removed = current.removed + removed;
@@ -60,7 +70,7 @@ export async function commits_ai_js_shapes(count_given) {
   for (let commit of commits) {
     let subject = property_get(commit, "subject");
     let named = equal(subject, "ai");
-    if (!named) {
+    if (not(named)) {
       continue;
     }
     let files = property_get(commit, "files");
@@ -83,43 +93,4 @@ export async function commits_ai_js_shapes(count_given) {
     shapes: buckets,
   };
   return r;
-}
-function commits_shape_name(commit) {
-  let files = property_get(commit, "files");
-  let added = property_get(commit, "added");
-  let removed = property_get(commit, "removed");
-  let single = equal(files, 1);
-  if (!single) {
-    let touch = added + removed;
-    let broad = touch > files * 6;
-    if (broad) {
-      return "many files, large";
-    }
-    return "many files, small each (codemod-shaped)";
-  }
-  let pure_add = equal(removed, 0);
-  if (pure_add) {
-    let one = added < 4;
-    if (one) {
-      return "one file, a line or two added";
-    }
-    let body = added < 20;
-    if (body) {
-      return "one file, a block added";
-    }
-    return "one file, whole new function";
-  }
-  let pure_cut = equal(added, 0);
-  if (pure_cut) {
-    return "one file, lines only removed";
-  }
-  let swap = added < 4 && removed < 4;
-  if (swap) {
-    return "one file, a line or two replaced";
-  }
-  let small = added < 12 && removed < 12;
-  if (small) {
-    return "one file, a block replaced";
-  }
-  return "one file, rewritten";
 }
