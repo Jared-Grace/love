@@ -17,6 +17,7 @@ import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_container_padded_x } from "./app_code_container_padded_x.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { each_index } from "./each_index.mjs";
 export async function app_code_home(context) {
@@ -40,11 +41,14 @@ export async function app_code_home(context) {
       );
     }
     let r = app_shared_button_numbered(g, index, lambda3, false);
+    let button = property_get(r, "button");
+    let gap = app_shared_spaced_gap();
+    html_style_margin_top(button, gap);
     let title = property_get(r, "title");
     app_code_lesson_title_render(title, item);
     let is_current = equal(id, current_id);
     if (is_current) {
-      just_left = property_get(r, "button");
+      just_left = button;
     }
     let lesson_number = add_1(index);
     let scope = app_code_review_scope(lesson_number);
