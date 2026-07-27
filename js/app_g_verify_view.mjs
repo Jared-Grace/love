@@ -1,4 +1,5 @@
-import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
+import { promise_resolved } from "./promise_resolved.mjs";
+import { promise_later } from "./promise_later.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
@@ -325,7 +326,11 @@ export async function app_g_verify_view(
     autosize();
   }
   html_on(suggest_area, "input", on_suggest_input);
-  ("size to fit the content NOW, then AGAIN on the next tick (promise_later is ao-safe — promise_resolved is sync so ao won't inject an await that breaks the chain) and after the serif font loads (its metrics change the height); reading scrollHeight already forces a reflow, so a full animation-frame wait is unnecessary; all re-runs are idempotent");
+  ("size to fit the content NOW, then AGAIN on the next tick (",
+    promise_later.name,
+    " is ao-safe — ",
+    promise_resolved.name,
+    " is sync so ao won't inject an await that breaks the chain) and after the serif font loads (its metrics change the height); reading scrollHeight already forces a reflow, so a full animation-frame wait is unnecessary; all re-runs are idempotent");
   autosize();
   promise_later(autosize);
   document.fonts.ready.then(autosize);
