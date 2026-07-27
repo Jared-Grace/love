@@ -131,14 +131,8 @@ export function app_g_dev_routes(div_map) {
     let state = app_g_day_state();
     property_set(state, "talkable", three);
     let player = await app_g_player_get();
-    let px = property_get(player, "x");
-    let py = property_get(player, "y");
     property_set(state, "slices", 0);
     property_set(state, "slices_total", app_g_day_slices_total(three, player));
-    property_set(state, "last_pos", {
-      x: px,
-      y: py,
-    });
     await app_g_day_sky_update();
     function mark(npc) {
       app_g_day_talkable_marker(div_map, npc);
