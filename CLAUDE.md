@@ -128,7 +128,9 @@ It holds **no selection between commands**, which is the point: the older `funct
 
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 
-**Known holes, in rough order of how often they force an `Edit`:** add / remove an argument at one call site · rename a local within a fn (`function_identifier_replace_named` does the whole fn, not one node) · wrap in `for`/`try` · unwrap a block · select the *n*-th statement or the last one · select by string-literal content.
+**Known holes:** rename a local within a fn (`function_identifier_replace_named` does the whole fn, not one node) · select a node *relative* to another (the line after this one) · address more than one match at a time (every selector here answers exactly one node, and says so when it can't).
+
+**Two things deliberately not built, so nobody builds them by mistake.** **Adding or removing an argument at one call site** — every call here targets a repo function, and `function_param_new` / `function_params_delete` change the definition *and* every caller together; a single-site arity change writes a call that disagrees with its callee. Use those, then `js_call_argument_named_set` to set the one site's value. **Wrapping in `try`** — the generated `catch` would have to be empty, which is the shape that swallows a total failure and reads as success; this repo writes a named `*_try` wrapper instead.
 
 **A verb that reads a node at one depth pairs with only half the addresses.** Two selectors answer at different depths for the same call — `js_call_named_find` hands back the call, `js_statement_find_call_named` hands back the line holding it — so a call-level verb that assumes one of them refuses the other. `js_node_call_get` resolves either to the call; use it at the top of any new call-level verb, and the whole address column stays available.
 
