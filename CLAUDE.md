@@ -124,6 +124,8 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 
 **`js_statement_replace_code` replaces the *whole* statement**, so aiming it at a `let notes = { … }` of forty entries replaces all forty with whatever you typed. That silently cost forty-five of them once. Adding one entry is the only shape that cannot do this.
 
+**But `js_array_text_add` writes a *word*, and an ordered register of functions holds *references*.** Point it at `qa_gates()` and the entry arrives as the string `"my_gate_run"`, which the auto pass then rewrites to `my_gate_run.name` — a live-looking line that runs nothing, in the one list whose job is to run things. There is no identifier twin yet, so for a register of functions, add the entry with `Edit` and check the line reads as a bare name. Writing `js_array_identifier_add` closes this and is the next atom worth having.
+
 **The atom vocabulary — every address × every verb.** These two lists are the whole seam, and they *multiply*: adding one member to either list adds a row or a column, not a cell. That is the reason to write the next atom rather than the next convenience combination. Anything not on these lists is still a text `Edit`; **the gaps are the work**, so check here before reaching for `Edit`.
 
 | Address (selector) | names |
