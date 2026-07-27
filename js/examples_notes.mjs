@@ -108,6 +108,8 @@ export function examples_notes() {
       "call an existing function at the end of a block - the verb the name-only way of writing rests on",
     example_type_find_address:
       "address a line by its node type — the address left for a line that calls nothing and binds nothing — and the one that refuses as soon as a second node of that type appears",
+    example_call_name_includes_address:
+      "address a call by a fragment of its name — shorter than the whole name and exact only while one call matches",
   };
   return notes;
 }
