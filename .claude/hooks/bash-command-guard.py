@@ -2732,6 +2732,54 @@ def split_top_level_statements_text(command):
     return kept
 
 
+TIME_SUBSHELL_RE = re.compile(r"^\s*time\s+\(\s*(.+?)\s*\)\s*$", re.DOTALL)
+
+# Constructs whose effect a subshell deliberately contains. `cd` and a
+# variable assignment both outlive the command when the parentheses go, and
+# the working directory persists between Bash calls here - so for these the
+# parentheses are load-bearing and stripping them is a behaviour change, not
+# a reword. They keep falling through to a real prompt.
+SUBSHELL_LOAD_BEARING_RE = re.compile(r"(^|[\s;&|])(cd\s|[A-Za-z_][A-Za-z0-9_]*=)")
+
+
+def time_subshell_stripped(command, safe_verbs, safe_exact_commands):
+    """For `time ( CMD )` where the parentheses are pure grouping, the same
+    command without them; otherwise None.
+
+    A subshell is not a shape this hook parses, so `time (timeout 900 node
+    scripts/ai.mjs <granted fn> > /dev/null 2>&1)` fell through to a prompt
+    even though every verb in it was trusted - and the human was asked to
+    approve a command that differs from an approved one by two characters.
+    Answering that with a deny naming the stripped form costs no human
+    click: the caller reads the reason and reissues.
+
+    Deliberately the narrowest shape that is provably identical. `time` runs
+    a subshell either way, so the measurement does not change, and the whole
+    command must be the wrapper - `( time CMD ) 2>&1 | grep real` is
+    excluded, because there the parentheses decide whose stderr the
+    redirect catches and stripping them would silently measure something
+    else. A `cd` or an assignment inside means the subshell is containing
+    something, so that is excluded too.
+
+    Only offered when the stripped form actually passes: a deny must always
+    leave a way forward, or it is worse than the prompt it replaced."""
+    match = TIME_SUBSHELL_RE.match(command)
+    if not match:
+        return None
+    inner = match.group(1)
+    if "(" in inner or ")" in inner:
+        return None
+    if SUBSHELL_LOAD_BEARING_RE.search(inner):
+        return None
+    stripped = "time " + inner
+    try:
+        if not is_safe(stripped, safe_verbs, safe_exact_commands):
+            return None
+    except Unsupported:
+        return None
+    return stripped
+
+
 def splittable_statements(command, safe_verbs, safe_exact_commands):
     """If `command` is a chain that would be better run as separate Bash calls,
     return (trusted_pieces, the_one_blocked_piece); else None.
