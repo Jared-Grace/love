@@ -120,6 +120,14 @@ export function examples_notes() {
       "take a word back out of an ordered register — the undoing that moving an entry needs since adding can only append",
     example_object_shorthand_remove:
       "take an entry back out of a register — the other end of a unit's life and the last one still done by hand",
+    example_array_text_add_after:
+      "put a word at a chosen place rather than at the end — the commonest hand edit left until this",
+    example_array_text_add_before:
+      "the sibling for the head of a list — nothing sits above the first entry to name",
+    example_nested_record_add_after:
+      "the same chosen place two names deep — the shape every curriculum group is",
+    example_nested_record_add_before:
+      "the head of a list two names deep — where a new simplest example keeps arriving",
   };
   return notes;
 }
