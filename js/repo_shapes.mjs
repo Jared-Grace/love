@@ -1,0 +1,26 @@
+export async function repo_shapes(repo_name) {
+  "Every function one repo holds, each with the shape of the work it does. Read by path rather than by name, because the same name in two repos is exactly the case this is looking for.";
+  "A file that will not parse comes back as nothing rather than stopping the sweep - one repo somewhere being mid-edit is not a reason to answer nothing about all of them.";
+  let names = await repo_functions_names(repo_name);
+  let folder = repo_functions_path(repo_name);
+  async function to_entry(name) {
+    let f_path = function_name_folder_to_path(name, folder);
+    async function read() {
+      let s = await file_shape(f_path);
+      return s;
+    }
+    let shape = await catch_null_async(read);
+    if (null_is(shape)) {
+      return null;
+    }
+    let entry = {
+      repo_name,
+      name,
+      shape,
+    };
+    return entry;
+  }
+  let mapped = await list_map_unordered_async(names, to_entry);
+  let entries = list_filter_null_not_is(mapped);
+  return entries;
+}
