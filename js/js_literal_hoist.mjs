@@ -1,3 +1,4 @@
+import { js_flo_body_add_after_prose } from "./js_flo_body_add_after_prose.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 import { js_literal_value_get } from "./js_literal_value_get.mjs";
@@ -11,7 +12,6 @@ import { js_statement_expression_get } from "./js_statement_expression_get.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { each } from "./each.mjs";
 import { js_code_let_assign } from "./js_code_let_assign.mjs";
-import { js_flo_body_add_first } from "./js_flo_body_add_first.mjs";
 export function js_literal_hoist(ast, selects, name) {
   "Gives a value written into a function a name of its own: binds it once at the top, and puts that name everywhere the value was written.";
   "This is the first half of making a function general. A value spelled out in three places is three separate decisions that happen to agree, and nothing says they must go on agreeing; bound to one name it becomes a single decision, and the name is then something a later step can turn into a parameter.";
@@ -41,5 +41,5 @@ export function js_literal_hoist(ast, selects, name) {
   each(matching, named);
   let code = js_code_let_assign(name, source);
   let binding = js_parse_statement(code);
-  js_flo_body_add_first(ast, binding);
+  js_flo_body_add_after_prose(ast, binding);
 }
