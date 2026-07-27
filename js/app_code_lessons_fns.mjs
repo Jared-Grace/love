@@ -86,6 +86,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_operators_slash_forward,
     app_code_lesson_operators_dot_numbers,
     app_code_lesson_operators_dot_missing,
+    app_code_lesson_expression_string_hello,
     app_code_lesson_expression_less_than,
     app_code_lesson_expression_greater_than,
     app_code_lesson_expression_less_than_equal,
@@ -133,7 +134,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_absolute_value,
     app_code_lesson_expression_smaller,
     app_code_lesson_expression_larger,
-    app_code_lesson_expression_string_hello,
   ];
   return fns;
 }

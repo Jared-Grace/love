@@ -8,6 +8,7 @@ import { app_code_lesson_name_id_category } from "./app_code_lesson_name_id_cate
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -87,7 +88,10 @@ export function app_code_lesson_expression_string_hello() {
       quote,
     ]);
     html_div_text(intro, speech);
-    html_div_text(intro, "JavaScript uses quotes the same way, to mean any text");
+    html_div_text(
+      intro,
+      "JavaScript uses quotes the same way, to mean any text",
+    );
     let define = app_code_container_light_blue(root);
     let line = html_div(define);
     html_span_text(line, "Text inside quotes is a ");
