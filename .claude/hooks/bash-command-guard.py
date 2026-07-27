@@ -1492,6 +1492,19 @@ SCRIPTS_TEMP_DIR = os.path.join(REPO_ROOT, "scripts", "temp") + os.sep
 
 SCRIPTS_TEMP_RELATIVE_DIR = os.path.join("scripts", "temp") + os.sep
 
+# One plain name inside scripts/temp, glob characters allowed. The shell's
+# own rule is what makes this safe rather than a guess about what the pattern
+# matches: a glob with no '/' in it expands only within the one directory it
+# sits in, and '*' never matches '.' or '..', so every name this can possibly
+# name is already a direct child of scripts/temp - the same set the literal
+# form was confined to. '/' is deliberately absent from the class, which is
+# simultaneously what blocks scripts/temp/nested/x and what stops a pattern
+# reaching out of the directory. '**' buys nothing extra: bash only treats it
+# as recursive under globstar, and even then the '/' it would need is refused
+# here. Removing a directory still takes -r, which is refused separately, so
+# a pattern matching a folder cannot delete one.
+SAFE_TEMP_BASENAME_RE = re.compile(r"^[A-Za-z0-9_.*?\[\]-]+$")
+
 
 def is_safe_scripts_temp_path(path):
     """True iff `path` is a plain, already-normalized path to a file directly
