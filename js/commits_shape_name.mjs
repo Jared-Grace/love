@@ -11,10 +11,11 @@ export function commits_shape_name(commit) {
   let single = equal(files, 1);
   if (not(single)) {
     let touch = added + removed;
-    let broad = greater_than(touch, multiply(files, 6));
+    let b = multiply(files, 6);
+    let broad = greater_than(touch, b);
     if (broad) {
-      let r2 = "many files, large";
-      return r2;
+      let r = "many files, large";
+      return r;
     }
     let r3 = "many files, small each (codemod-shaped)";
     return r3;
