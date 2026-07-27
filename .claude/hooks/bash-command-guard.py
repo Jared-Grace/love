@@ -1114,7 +1114,56 @@ def transparent_wrapper_skip(words):
         return 2
     if words[0] == "time" and len(words) >= 2 and not words[1].startswith("-"):
         return 1
+    skip = time_wrapper_skip(words)
+    if skip:
+        return skip
     return 0
+
+
+# /usr/bin/time's flags, split by whether they can write anywhere. `-f`/
+# `--format` only shapes the line it prints to stderr, and `-p`/`-v`/`-q` and
+# friends take no argument at all - none can name a file or run anything. The
+# excluded ones are exactly the writers: `-o`/`--output` names a file to write
+# the report into, and `-a`/`--append` decides how. Those must keep prompting,
+# because a wrapper that can write a caller-named file is not transparent -
+# `/usr/bin/time -o ~/.bashrc true` is a file write wearing a timer's name.
+TIME_SAFE_VALUELESS_FLAGS = {"-p", "--portability", "-v", "--verbose", "-q", "--quiet"}
+TIME_SAFE_FORMAT_FLAGS = {"-f", "--format"}
+
+
+def time_wrapper_skip(words):
+    """How many leading words `/usr/bin/time [flags]` occupies, or 0.
+
+    Split out from the bare `time` case above because the shapes differ in
+    two ways at once: the binary is spelled as an absolute path, and it is
+    almost always carrying `-f "<format>"`, since a format string is the only
+    reason to reach for /usr/bin/time over the shell builtin. Both had to be
+    accepted together or neither was worth accepting.
+
+    Flags are an explicit allowlist, never "skip anything starting with -",
+    for the same reason git's globals are (see GIT_SAFE_GLOBAL_FLAGS): the
+    value-taking ones are precisely the dangerous ones. `-f` is allowed with
+    its value because a format string is printed, not executed."""
+    if words[0] not in ("/usr/bin/time", "/bin/time"):
+        return 0
+    index = 1
+    while index < len(words):
+        word = words[index]
+        if word in TIME_SAFE_VALUELESS_FLAGS:
+            index += 1
+            continue
+        if word in TIME_SAFE_FORMAT_FLAGS and index + 1 < len(words):
+            index += 2
+            continue
+        if word.startswith("--format="):
+            index += 1
+            continue
+        break
+    # A wrapper with nothing left to wrap is not a wrapper, and a next word
+    # that is still a flag is one this allowlist did not recognise.
+    if index >= len(words) or words[index].startswith("-"):
+        return 0
+    return index
 
 
 def verb_of(words):
