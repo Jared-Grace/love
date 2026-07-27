@@ -1,3 +1,6 @@
+import { js_call_argument_named_identifier_set } from "./js_call_argument_named_identifier_set.mjs";
+import { js_block_return_identifier_add } from "./js_block_return_identifier_add.mjs";
+import { js_block_call_add } from "./js_block_call_add.mjs";
 import { js_statement_wrap_if } from "./js_statement_wrap_if.mjs";
 import { js_statement_wrap_for_of } from "./js_statement_wrap_for_of.mjs";
 import { js_selects_unwrap } from "./js_selects_unwrap.mjs";
@@ -19,6 +22,9 @@ export function example_transforms() {
     js_statement_duplicate,
     js_selects_call_add_after,
     js_selects_call_add_before,
+    js_call_argument_named_identifier_set,
+    js_block_return_identifier_add,
+    js_block_call_add,
   };
   return transforms;
 }
