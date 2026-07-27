@@ -30,9 +30,8 @@ import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_player_get } from "./app_g_player_get.mjs";
-import { app_g_day_slices_total } from "./app_g_day_slices_total.mjs";
 import { app_g_day_sky_update } from "./app_g_day_sky_update.mjs";
+import { list_size } from "./list_size.mjs";
 export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
     app_g.name,
@@ -130,9 +129,8 @@ export function app_g_dev_routes(div_map) {
     let three = app_g_day_talkables_choose(npcs);
     let state = app_g_day_state();
     property_set(state, "talkable", three);
-    let player = await app_g_player_get();
-    property_set(state, "slices", 0);
-    property_set(state, "slices_total", app_g_day_slices_total(three, player));
+    property_set(state, "slices_total", list_size(three));
+    property_set(state, "slices_done", 0);
     await app_g_day_sky_update();
     function mark(npc) {
       app_g_day_talkable_marker(div_map, npc);
