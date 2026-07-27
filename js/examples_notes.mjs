@@ -102,6 +102,8 @@ export function examples_notes() {
     example_nested_record_remove: "the undo - a register is not only added to",
     example_statement_duplicate:
       "copy a line below itself — the third thing that can happen to an addressed line and the only one that has to rename what it binds",
+    example_block_call_add:
+      "write a call from a function name alone — the callee's own parameters become the arguments and a clashing one is renamed rather than silently repointed",
   };
   return notes;
 }
