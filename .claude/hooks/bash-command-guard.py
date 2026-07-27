@@ -2853,7 +2853,7 @@ def ai_dispatcher_call_is(piece):
         return False
     for words in split_statements(tokens):
         words = _strip_command_prefixes(words)
-        if len(words) >= 3 and words[0] == "node" and words[1] == AI_DISPATCHER_SCRIPT:
+        if len(words) >= 3 and words[0] == "node" and words[1] in AI_DISPATCHER_SCRIPTS:
             return True
     return False
 
