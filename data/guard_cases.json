@@ -22,6 +22,11 @@
     { "command": "ls | tail -4", "decision": "allow", "why": "pipe of trusted verbs" },
     { "command": "FOO=bar ls", "decision": "allow", "why": "inert assignment is stripped" },
     { "command": "PATH=/tmp ls", "decision": "silent", "why": "execution-influencing assignment fails closed" },
+    { "command": "NODE_OPTIONS=\"--require /tmp/evil.js\" node scripts/ai.mjs qa_gate_run", "decision": "silent", "why": "REGRESSION 2026-07-27: this was ALLOW. An interpreter's options variable names code to load before the script runs, so it is LD_PRELOAD one level up - and it rode in on the granted function's trust, which never got to run at all. The most granted verb in the repo made it the sharpest version of the hole" },
+    { "command": "NODE_OPTIONS='--import file:///tmp/evil.mjs' node scripts/ai.mjs apps_names", "decision": "silent", "why": "--import is the same injection as --require through the ESM loader" },
+    { "command": "NODE_OPTIONS=--cpu-prof node scripts/ai.mjs apps_names", "decision": "silent", "why": "a benign value is still refused - the guard reads the NAME, not what today's value happens to say, because a value it had to judge is a value it could judge wrongly" },
+    { "command": "PYTHONSTARTUP=/tmp/evil.py python3 x.py", "decision": "silent", "why": "the other interpreters are covered for the same reason; being second-choice here is not a safety property" },
+    { "command": "NODE_ENV=production node scripts/ai.mjs apps_names", "decision": "allow", "why": "the boundary: NODE_ENV is an everyday data assignment, which is why the dangerous names are listed explicitly rather than by a 'NODE_' prefix" },
 
     { "command": "time ls", "decision": "allow", "why": "time unwraps to inner verb" },
     { "command": "time git status", "decision": "allow", "why": "time unwraps to a 2-word verb" },
