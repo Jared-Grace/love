@@ -1,3 +1,4 @@
+import { app_shared_border_radius } from "./app_shared_border_radius.mjs";
 import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_background } from "./html_style_background.mjs";
@@ -191,7 +192,8 @@ export function app_code_lesson_expression_exponent() {
       html_style_set(pill, "grid-row", "2");
       html_style_set(pill, "grid-column", "1 / -1");
       html_style_background(pill, "black");
-      html_border_radius(pill, app_shared_border_radius());
+      let border_radius = app_shared_border_radius();
+      html_border_radius(pill, border_radius);
       html_style_set(pill, "align-self", "stretch");
       html_style_justify_self(pill, "stretch");
       function spacer(column) {
