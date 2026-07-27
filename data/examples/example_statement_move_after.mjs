@@ -1,7 +1,10 @@
 import { js_selects_move_after } from "../../js/js_selects_move_after.mjs";
+import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
 export const example = {
   fn: js_selects_move_after.name,
-  args: ["first", "doubled"],
+  select: js_find_declaration_named.name,
+  select_args_multiple: ["first", "doubled"],
+  args: [],
   kind: "transform",
   title: "Move a line to sit after another line",
   note: [
