@@ -1,4 +1,5 @@
 import { app_g_day_state } from "./app_g_day_state.mjs";
+import { app_g_day_fraction } from "./app_g_day_fraction.mjs";
 import { g_day_sky_phase } from "./g_day_sky_phase.mjs";
 import { app_g_game_save_get } from "./app_g_game_save_get.mjs";
 import { app_g_sky_snap } from "./app_g_sky_snap.mjs";
@@ -6,16 +7,17 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { positive_is } from "./positive_is.mjs";
 import { not } from "./not.mjs";
-import { divide } from "./divide.mjs";
 export async function app_g_day_sky_update() {
-  "advance the #day_unbelievers sky to match elapsed SLICES: fraction = slices / slices_total → the clock-anchored day phase (g_day_sky_phase) → g.sky_phase, then snap the tint. so the sky rides sunrise→sunset as the player walks and stub-converts (TIME passing), not per equal conversation-step. no-op until the day is set up (slices_total > 0)";
+  "paint the #day_unbelievers sky for the current slice clock: app_g_day_fraction turns (people reached + progress through the current person-leg) into a day fraction, g_day_sky_phase turns that into the clock-anchored phase, then g.sky_phase is set and the tint snapped. so the sky rides sunrise→sunset as the player closes distance on each person and reaches them. no-op until the day is set up (slices_total > 0)";
   let state = app_g_day_state();
-  let total = property_get(state, "slices_total");
-  if (not(positive_is(total))) {
+  let slices_total = property_get(state, "slices_total");
+  if (not(positive_is(slices_total))) {
     return;
   }
-  let slices = property_get(state, "slices");
-  let fraction = divide(slices, total);
+  let slices_done = property_get(state, "slices_done");
+  let target_start = property_get(state, "target_start");
+  let target_best = property_get(state, "target_best");
+  let fraction = app_g_day_fraction(slices_done, slices_total, target_start, target_best);
   let phase = g_day_sky_phase(fraction);
   let g = await app_g_game_save_get();
   property_set(g, "sky_phase", phase);
