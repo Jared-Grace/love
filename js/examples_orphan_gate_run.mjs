@@ -24,4 +24,13 @@ export async function examples_orphan_gate_run() {
   list_empty_is_assert_json(orphans, {
     hint: "every data/examples file must be listed in the curriculum groups so it has a deliberate tier — add these to the group that fits their complexity (they currently only show in the Other bucket)",
   });
+  ("The other direction, which fails silently rather than loudly. Reading the corpus keeps the entries whose file is really there and quietly drops the rest, so a group naming an example nobody wrote reads as a shorter curriculum and never as a mistake — no error, no empty card, nothing to notice. It happened: a name went in as a probe and sat in the list for a day answering to nothing.");
+  function example_missing_is(file) {
+    let n = list_includes_not(mjs, file);
+    return n;
+  }
+  let missing = list_filter(order_files, example_missing_is);
+  list_empty_is_assert_json(missing, {
+    hint: "the curriculum groups name these examples but no file in data/examples answers to them, so they are dropped from the reading order without a word — was one renamed or removed, or is the file still to be written?",
+  });
 }
