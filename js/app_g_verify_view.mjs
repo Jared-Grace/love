@@ -301,6 +301,7 @@ export function app_g_verify_view(
     sessionStorage.setItem(draft_key, current);
   }
   html_on(suggest_area, "input", draft_save);
+  let reviewed_badge = null;
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
   html_centered(suggest_bar);
@@ -315,6 +316,18 @@ export function app_g_verify_view(
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
       app_shared_text_deemphasized(sent);
       sessionStorage.removeItem(draft_key);
+      ("a fresh suggestion supersedes any prior reviewed-badge, so clear the marker and hide the badge until this new one is reviewed");
+      try {
+        await app_shared_api({
+          f_name: fn_name("g_verify_reviewed_set"),
+          args: [chapter_code, "", ""],
+        });
+      } catch (ignore_clear) {
+        ignore_clear;
+      }
+      if (reviewed_badge) {
+        html_style_set(reviewed_badge, "display", "none");
+      }
     } catch (failed) {
       html_clear(suggest_bar);
       let msg = html_p_text(suggest_bar, "Couldn't send — please try again.");
