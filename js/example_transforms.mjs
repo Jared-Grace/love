@@ -1,3 +1,4 @@
+import { js_selects_functionize } from "./js_selects_functionize.mjs";
 import { js_object_property_text_add } from "./js_object_property_text_add.mjs";
 import { js_object_property_text_remove } from "./js_object_property_text_remove.mjs";
 import { js_object_shorthand_add } from "./js_object_shorthand_add.mjs";
@@ -33,6 +34,7 @@ export function example_transforms() {
     js_array_text_add,
     js_object_property_text_add,
     js_object_property_text_remove,
+    js_selects_functionize,
   };
   return transforms;
 }
