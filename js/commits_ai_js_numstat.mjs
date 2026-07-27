@@ -40,6 +40,7 @@ export async function commits_ai_js_numstat(count) {
         files: 0,
         added: 0,
         removed: 0,
+        rows: [],
       };
       list_add(commits, current);
       continue;
@@ -54,6 +55,16 @@ export async function commits_ai_js_numstat(count) {
         current.files = current.files + 1;
         current.added = current.added + added;
         current.removed = current.removed + removed;
+        ("Each changed file is kept as well as added into the totals. A commit here");
+        ("sweeps the whole working directory, so one named `ai` can hold two");
+        ("unrelated pieces of work at once, and its totals then describe a shape");
+        ("nobody edited. The rows describe shapes somebody did edit.");
+        let path = list_get(parts, 2);
+        list_add(current.rows, {
+          path,
+          added,
+          removed,
+        });
       }
     }
   }

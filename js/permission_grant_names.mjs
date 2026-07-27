@@ -289,6 +289,7 @@ export function permission_grant_names() {
   let spelled286 = fn_name("app_g_dev_index_tree_check");
   let spelled287 = fn_name("functions_parallel_marks_gate_run");
   let spelled288 = fn_name("memory_hook_limit_candidates");
+  let spelled289 = fn_name("function_shadowing_report");
   let names = [
     spelled,
     spelled2,
@@ -578,6 +579,7 @@ export function permission_grant_names() {
     spelled286,
     spelled287,
     spelled288,
+    spelled289,
   ];
   return names;
 }

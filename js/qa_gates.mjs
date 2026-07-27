@@ -104,6 +104,7 @@ export function qa_gates() {
     app_g_map_pad_check,
     app_g_day_blocked_check,
     functions_parallel_marks_gate_run,
+    qa_report_gate_run,
   ];
   return gates;
 }
