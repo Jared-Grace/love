@@ -1,3 +1,4 @@
+import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
@@ -28,7 +29,6 @@ import { list_all } from "./list_all.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
-import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
 import { log } from "./log.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -52,7 +52,7 @@ export function app_code_lesson_quiz_token_select(
   let text = text_space_nb();
   html_text_set(answer_div, text);
   let variations = app_code_lesson_quiz_token_select_variations(code);
-  let normalized = js_tokenizer_normalized(code);
+  let normalized = app_code_quiz_tokens(code);
   let tokens_unique = list_unique(normalized);
   function variation_buildable(variation) {
     "keep only variations whose every token is an available button; a commutative swap across a non-commutative neighbour introduces parentheses (e.g. 9 - 4 + 4 gives 4 + (9 - 4)) that the answer never had, so there is no ( or ) button - that would be an unbuildable trap that accepts the first token then dead-ends";
