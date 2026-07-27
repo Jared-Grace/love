@@ -1,13 +1,12 @@
+import { examples_comments_none_assert } from "./examples_comments_none_assert.mjs";
 import { examples_paths } from "./examples_paths.mjs";
 import { example_rename_lambda } from "./example_rename_lambda.mjs";
 import { file_js_parse } from "./file_js_parse.mjs";
 import { file_js_unparse } from "./file_js_unparse.mjs";
-import { js_code_comments_none_assert } from "./js_code_comments_none_assert.mjs";
 import { text_identifier_includes } from "./text_identifier_includes.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
-import { each } from "./each.mjs";
 export async function function_rename_examples_check(
   f_name_before,
   f_name_after,
@@ -23,12 +22,7 @@ export async function function_rename_examples_check(
     return includes;
   }
   let mentioning = list_filter(parseds, mentions_is);
-  function remarks_none_assert(parsed) {
-    let code = property_get(parsed, "code");
-    let f_path = property_get(parsed, "f_path");
-    js_code_comments_none_assert(code, f_path);
-  }
-  each(mentioning, remarks_none_assert);
+  examples_comments_none_assert(mentioning);
   let lambda = example_rename_lambda(f_name_before, f_name_after);
   async function rewrite(parsed) {
     let ast = property_get(parsed, "ast");
