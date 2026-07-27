@@ -224,7 +224,8 @@ export async function app_g_verify_home(context) {
       let border_radius = app_shared_border_radius();
       html_border_radius(banner, border_radius);
       html_style_padding_x(banner, "0.7em");
-      html_style_padding_y(banner, "0.5em");
+      let value5 = app_shared_spaced_small_gap();
+      html_style_padding_y(banner, value5);
       html_margin_em(banner, "0");
       let value3 = app_shared_spaced_small_gap();
       html_style_margin_top(banner, value3);
