@@ -67,7 +67,9 @@ export async function app_code_home(context) {
         app_code_review,
       );
     }
-    app_code_review_button(g, label, on_click);
+    let review = app_code_review_button(g, label, on_click);
+    let gap = app_shared_spaced_gap();
+    html_style_margin_top(review, gap);
   }
   each_index(lessons, lambda);
   let found = null_not_is(just_left);
