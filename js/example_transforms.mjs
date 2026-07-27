@@ -11,7 +11,6 @@ import { js_array_identifier_add } from "./js_array_identifier_add.mjs";
 import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
 import { js_selects_move_after } from "./js_selects_move_after.mjs";
 import { js_statement_return_argument_set } from "./js_statement_return_argument_set.mjs";
-import { js_selects_functionize } from "./js_selects_functionize.mjs";
 import { js_object_property_text_add } from "./js_object_property_text_add.mjs";
 import { js_object_property_text_remove } from "./js_object_property_text_remove.mjs";
 import { js_object_shorthand_add } from "./js_object_shorthand_add.mjs";
@@ -47,7 +46,6 @@ export function example_transforms() {
     js_array_text_add,
     js_object_property_text_add,
     js_object_property_text_remove,
-    js_selects_functionize,
     js_statement_return_argument_set,
     js_selects_move_after,
     js_call_argument_named_set,
