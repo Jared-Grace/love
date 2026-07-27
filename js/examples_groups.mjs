@@ -37,6 +37,8 @@ export function examples_groups() {
         "example_array_text_add",
         "example_array_identifier_add",
         "example_array_text_remove",
+        "example_array_text_add_after",
+        "example_array_text_add_before",
         "example_prose_address",
         "example_type_find_address",
         "example_call_name_includes_address",

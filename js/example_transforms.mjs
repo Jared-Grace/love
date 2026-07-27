@@ -1,3 +1,5 @@
+import { js_object_property_text_add_after } from "./js_object_property_text_add_after.mjs";
+import { js_object_property_text_add_before } from "./js_object_property_text_add_before.mjs";
 import { js_array_text_add_after } from "./js_array_text_add_after.mjs";
 import { js_array_text_add_before } from "./js_array_text_add_before.mjs";
 import { js_array_text_remove } from "./js_array_text_remove.mjs";
@@ -55,6 +57,8 @@ export function example_transforms() {
     js_object_shorthand_remove,
     js_array_text_add_after,
     js_array_text_add_before,
+    js_object_property_text_add_after,
+    js_object_property_text_add_before,
   };
   return transforms;
 }
