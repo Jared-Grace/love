@@ -1,30 +1,19 @@
-import { node_run } from "./node_run.mjs";
-import { qa_gate_tree_run } from "./qa_gate_tree_run.mjs";
-import { property_get } from "./property_get.mjs";
-import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
+import { qa_shard_count } from "./qa_shard_count.mjs";
+import { numbers_below } from "./numbers_below.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { qa_snapshot_shard_told } from "./qa_snapshot_shard_told.mjs";
+import { qa_snapshot_shards_combined } from "./qa_snapshot_shards_combined.mjs";
 export async function qa_snapshot_gate_told(folder) {
-  "Asks the frozen copy its questions and brings back what it said";
-  "The run is asked for from inside the copy, so every path it follows to find a function stays inside the copy";
-  "A complaint arrives here as a thrown thing carrying everything that was printed, which is why it is caught rather than left to travel - a complaint is the answer being looked for, not a failure to get one";
-  "Everything printed comes back alongside the names, because the names alone say which gates to look at and the reader wants to know why - and what was printed inside the copy is not printed out here on its own";
-  "The run is asked for as a list of words rather than as a line of text, so nothing carried in a word can turn into a second word - and because the program is spelled inside the runner rather than passed to it, asking this by name cannot become a way to run something else";
-  let words = ["scripts/ai.mjs", qa_gate_tree_run.name];
-  try {
-    let said = await node_run(folder, words);
-    let r = {
-      green: true,
-      failed: [],
-      printed: said,
-    };
-    return r;
-  } catch (complaint) {
-    let printed = property_get(complaint, "message");
-    let failed = qa_gate_failed_names(printed);
-    let r2 = {
-      green: false,
-      failed,
-      printed,
-    };
-    return r2;
+  "Asks the frozen copy its questions, as several runs side by side, and brings back what they all said";
+  "One process answers one question at a time however many questions it is given at once, so the whole set asked of a single process took as long as asking each gate on its own and left every processor but one idle. Divided into shares, one process each, the wait is the slowest share";
+  "Dividing costs nothing because the gates share nothing: each one was measured alone in its own process and again in one process alongside all the others, and the heavy ones took the same time both ways, so there is no work being done once that would have to be done again by each share";
+  let count = await qa_shard_count();
+  let indexes = numbers_below(count);
+  async function lambda(index) {
+    let told = await qa_snapshot_shard_told(folder, index, count);
+    return told;
   }
+  let results = await list_map_unordered_async(indexes, lambda);
+  let r = qa_snapshot_shards_combined(results);
+  return r;
 }
