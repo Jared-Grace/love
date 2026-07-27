@@ -14,7 +14,10 @@ export async function functions_absorbable() {
   let repos = await repos_names();
   let others = list_filter_equal_not(repos, home);
   let mine = await repo_shapes(home);
-  let by_shape = list_to_dictionary_property(mine, "shape");
+  (
+    "the common repo has shapes of its own that appear twice, so the first name found under a shape is the one reported - a dictionary that refuses a repeated key would answer nothing at all here"
+  );
+  let by_shape = entries_by_shape_first(mine);
   let matches = [];
   for (let repo_name of others) {
     let theirs = await repo_shapes(repo_name);
