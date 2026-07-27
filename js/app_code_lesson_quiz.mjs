@@ -1,3 +1,4 @@
+import { app_code_column_cap } from "./app_code_column_cap.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
@@ -71,6 +72,7 @@ export function app_code_lesson_quiz(
   let parent_container = html_div(parent);
   let container_correction = html_div(parent_container);
   let container_success_message = html_div(parent_container);
+  app_code_column_cap(container_success_message);
   let success = app_shared_success_message(container_success_message);
   let quiz_index = app_code_quiz_index_get(context);
   let qli = list_index_last_is(quizzes, quiz_index);
