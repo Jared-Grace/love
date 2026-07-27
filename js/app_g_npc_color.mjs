@@ -6,7 +6,7 @@ export function app_g_npc_color(npc) {
   let gender = property_get(npc, "gender");
   let map = {
     [g_gender_female()]: "#ff80ea",
-    [g_gender_male()]: "#acc1ff",
+    [g_gender_male()]: "#9cc5ff",
   };
   let color = property_get(map, gender);
   return color;
