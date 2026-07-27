@@ -18,16 +18,19 @@ export function html_code(name, body) {
   let attributes_none = {};
   let indent = html_code_indent();
   let title = html_code_element("title", attributes_none, name);
-  let favicon = html_code_favicon_emoji(app_shared_icon_emoji(name));
+  let emoji = app_shared_icon_emoji(name);
+  let favicon = html_code_favicon_emoji(emoji);
   let pwa = apps_pwa_is(name);
   let manifest_link = null;
   if (pwa) {
     manifest_link = html_code_manifest_link(name);
   }
   let service_worker = html_code_service_worker_register(pwa);
+  let r2 = html_code_meta_charset();
+  let r3 = html_code_meta_viewport();
   let head_items = list_filter_null_not_is([
-    html_code_meta_charset(),
-    html_code_meta_viewport(),
+    r2,
+    r3,
     favicon,
     title,
     manifest_link,
@@ -38,7 +41,8 @@ export function html_code(name, body) {
   let body_items = list_filter_null_not_is([splash, body, service_worker]);
   let body_children = html_code_children(body_items, indent);
   let body_element = html_code_element("body", attributes_none, body_children);
-  let html_children = html_code_children([head, body_element], text_empty());
+  let indent2 = text_empty();
+  let html_children = html_code_children([head, body_element], indent2);
   let attributes_html = html_code_attributes_html();
   let html = html_code_element("html", attributes_html, html_children);
   let doctype = html_code_doctype();
