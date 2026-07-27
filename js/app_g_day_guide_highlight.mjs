@@ -19,7 +19,7 @@ export function app_g_day_guide_highlight(div_map, coords) {
   html_style_set(
     i,
     "animation",
-    "g_day_guide_pulse 1s ease-in-out infinite alternate",
+    "g_day_guide_pulse 2s ease-in-out infinite alternate",
   );
   g_img_square_style_position(i, coords, "ground_tint");
   return i;
