@@ -307,7 +307,18 @@ export function app_g_verify_view(
     sessionStorage.setItem(draft_key, current);
     sessionStorage.setItem(base_key, value4);
   }
-  html_on(suggest_area, "input", draft_save);
+  ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
+  function autosize() {
+    html_style_set(suggest_area, "height", "auto");
+    let h = suggest_area.scrollHeight;
+    html_style_set(suggest_area, "height", h + "px");
+  }
+  function on_suggest_input() {
+    draft_save();
+    autosize();
+  }
+  html_on(suggest_area, "input", on_suggest_input);
+  autosize();
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
   html_style_margin_top(suggest_bar, small_gap);
@@ -319,6 +330,15 @@ export function app_g_verify_view(
         f_name: fn_name("g_verify_suggest_set"),
         args: [chapter_code, verse, value5],
       });
+      ("also record it in the per-passage history so it can be viewed later; non-fatal if it fails");
+      try {
+        await app_shared_api({
+          f_name: fn_name("g_verify_suggest_history_append"),
+          args: [chapter_code, verse, value5],
+        });
+      } catch (ignore_hist) {
+        ignore_hist;
+      }
       html_clear(suggest_bar);
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
       app_shared_text_deemphasized(sent);
@@ -369,4 +389,42 @@ export function app_g_verify_view(
     }
   }
   reviewed_show();
+  ("show the reviewer their own past suggestions for this verse; Load drops one back into the box to view or build on");
+  async function history_show() {
+    try {
+      let all = await app_shared_api({
+        f_name: fn_name("g_verify_suggest_history_read"),
+        args: [chapter_code],
+      });
+      let mine = [];
+      function lambda_hist(h) {
+        let left = property_get(h, "verse");
+        if (equal(left, verse)) {
+          mine.push(h);
+        }
+      }
+      all.forEach(lambda_hist);
+      if (greater_than_equal(mine.length, 1)) {
+        label_new("YOUR PAST SUGGESTIONS FOR v" + verse);
+        function lambda_show(h) {
+          let box = app_shared_container_base(container);
+          let t = property_get(h, "text");
+          let txt = html_p_text(box, t);
+          html_style_set(txt, "white-space", "pre-wrap");
+          app_shared_text_deemphasized(txt);
+          html_style_font_size(txt, "0.9em");
+          function load_this() {
+            html_value_set(suggest_area, t);
+            draft_save();
+            autosize();
+          }
+          app_shared_button(box, "Load into box", load_this);
+        }
+        mine.forEach(lambda_show);
+      }
+    } catch (ignore_h) {
+      ignore_h;
+    }
+  }
+  history_show();
 }
