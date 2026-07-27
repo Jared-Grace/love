@@ -354,6 +354,7 @@ export function app_g_verify_view(
         app_shared_text_deemphasized(badge);
         html_style_font_size(badge, "0.85em");
         html_style_margin_top(badge, small_gap);
+        reviewed_badge = badge;
       }
     } catch (ignore) {
       ignore;
