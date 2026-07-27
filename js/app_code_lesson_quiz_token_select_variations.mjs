@@ -37,9 +37,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   let variation_fns = list_adder(lambda4);
   function lambda5(la) {
-    ("every commutative node can independently keep or swap its two sides, so the acceptable orderings are ALL combinations of the swaps (2^n, not just one); enumerate them by recursively trying each swap off then on, and since each swap is its own inverse the ast is left back at its original state; ",
-      list_adder_unique.name,
-      " folds identical results (e.g. 2 * 2 * 2 where swapping changes nothing)");
+    "every commutative node can independently keep or swap its two sides, so the acceptable orderings are ALL combinations of the swaps (2^n, not just one); enumerate them by recursively trying each swap off then on, and since each swap is its own inverse the ast is left back at its original state; the unique adder folds identical results (e.g. 2 * 2 * 2 where swapping changes nothing)";
     function generate(swaps) {
       let none_left = list_empty_is(swaps);
       if (none_left) {
