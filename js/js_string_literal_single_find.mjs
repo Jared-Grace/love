@@ -21,8 +21,8 @@ export function js_string_literal_single_find(ast) {
     if (commented) {
       return false;
     }
-    let value = js_literal_value_get(node);
-    let string_is = text_is(value);
+    let each_value = js_literal_value_get(node);
+    let string_is = text_is(each_value);
     return string_is;
   }
   let used = list_filter(literals, value_string_is);

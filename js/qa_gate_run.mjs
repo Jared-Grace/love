@@ -1,3 +1,5 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { qa_gate_in_flight_print } from "./qa_gate_in_flight_print.mjs";
 import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
 import { list_size } from "./list_size.mjs";
@@ -43,12 +45,15 @@ export async function qa_gate_run() {
   let any = greater_than(size, 0);
   if (any) {
     let known = await functions_names();
+    let flying = [];
     for (let section of sections) {
       let name = property_get(section, "name");
       let said = property_get(section, "said");
       console.log("\n=== who last touched what " + name + " named ===");
-      await qa_gate_blame_print(said, known);
+      let some = await qa_gate_blame_print(said, known);
+      list_add_multiple(flying, some);
     }
+    qa_gate_in_flight_print(flying);
   }
   let failed_copy = property_get(told, "failed");
   let failed_here = property_get(here, "failed");
