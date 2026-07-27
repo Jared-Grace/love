@@ -1,4 +1,4 @@
-import { js_dollar_ien_generic } from "./js_dollar_ien_generic.mjs";
+import { js_dollar_if_call } from "./js_dollar_if_call.mjs";
 import { equal_not } from "./equal_not.mjs";
 export async function js_dollar_ine({
   remaining,
@@ -10,5 +10,5 @@ export async function js_dollar_ine({
   afters,
 }) {
   let fn = equal_not;
-  await js_dollar_ien_generic(stack_1, fn, ast);
+  await js_dollar_if_call(stack_1, fn, ast);
 }

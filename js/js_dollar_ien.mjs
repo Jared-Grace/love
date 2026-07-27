@@ -1,4 +1,4 @@
-import { js_dollar_ien_generic } from "./js_dollar_ien_generic.mjs";
+import { js_dollar_if_call } from "./js_dollar_if_call.mjs";
 import { null_is } from "./null_is.mjs";
 export async function js_dollar_ien({
   remaining,
@@ -10,5 +10,5 @@ export async function js_dollar_ien({
   afters,
 }) {
   let fn = null_is;
-  await js_dollar_ien_generic(stack_1, fn, ast);
+  await js_dollar_if_call(stack_1, fn, ast);
 }
