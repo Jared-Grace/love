@@ -1,3 +1,5 @@
+import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
+import { js_call_named_find } from "./js_call_named_find.mjs";
 import { js_statement_replace_code } from "./js_statement_replace_code.mjs";
 import { js_find_declaration_named } from "./js_find_declaration_named.mjs";
 import { js_statement_delete } from "./js_statement_delete.mjs";
@@ -129,6 +131,15 @@ export function example_command_lambda(fn_name, args) {
       [args[1]],
     );
     return lambda17;
+  }
+  if (equal(fn_name, js_call_argument_named_set.name)) {
+    let lambda20 = example_select_apply_lambda(
+      js_call_named_find,
+      [args[0]],
+      js_call_argument_named_set,
+      [args[1], args[2]],
+    );
+    return lambda20;
   }
   if (equal(fn_name, js_statement_replace_code.name)) {
     let lambda18 = example_select_apply_lambda(
