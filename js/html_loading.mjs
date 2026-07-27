@@ -7,7 +7,7 @@ export async function html_loading(lambda) {
   let suppressed = html_loading_state().suppressed;
   let show = browser_is() && not(suppressed);
   if (show) {
-    await html_loading_show();
+    html_loading_show();
   }
   let result = null;
   try {
