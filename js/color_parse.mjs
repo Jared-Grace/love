@@ -8,29 +8,29 @@ export function color_parse(written) {
   let parsed = null;
   let hash = written.startsWith("#");
   if (hash) {
-    let digits = written.slice(1);
-    let short = equal(digits.length, 3) || equal(digits.length, 4);
+    let hex_digits = written.slice(1);
+    let short = equal(hex_digits.length, 3) || equal(hex_digits.length, 4);
     if (short) {
       function each_digit(d) {
         let r = d + d;
         return r;
       }
-      digits = digits.split("").map(each_digit).join("");
+      hex_digits = hex_digits.split("").map(each_digit).join("");
     }
-    let full = equal(digits.length, 6) || equal(digits.length, 8);
+    let full = equal(hex_digits.length, 6) || equal(hex_digits.length, 8);
     if (not(full)) {
       return null;
     }
     let alpha = 1;
-    let has_alpha = equal(digits.length, 8);
+    let has_alpha = equal(hex_digits.length, 8);
     if (has_alpha) {
-      let v = digits.slice(6, 8);
+      let v = hex_digits.slice(6, 8);
       let top = parseInt(v, 16);
       alpha = divide(top, 255);
     }
-    let v2 = digits.slice(0, 2);
-    let v3 = digits.slice(2, 4);
-    let v4 = digits.slice(4, 6);
+    let v2 = hex_digits.slice(0, 2);
+    let v3 = hex_digits.slice(2, 4);
+    let v4 = hex_digits.slice(4, 6);
     parsed = {
       red: parseInt(v2, 16),
       green: parseInt(v3, 16),
