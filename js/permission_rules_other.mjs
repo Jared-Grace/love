@@ -20,6 +20,7 @@ export function permission_rules_other() {
     "Bash(which:*)",
     "Bash(readlink:*)",
     "Bash(realpath:*)",
+    "Bash(pwd:*)",
     "Bash([:*)",
     "Bash(test:*)",
     "Bash(df:*)",
