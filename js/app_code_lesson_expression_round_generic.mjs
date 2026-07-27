@@ -72,7 +72,6 @@ export function app_code_lesson_expression_round_generic(params) {
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
-  let heading_lower = text_combine("round ", direction);
   let forwards_question_label = text_combine_multiple([
     "Round ",
     direction,
@@ -112,6 +111,7 @@ export function app_code_lesson_expression_round_generic(params) {
       }
       return render;
     }
+    let heading_lower = text_combine("round ", direction);
     let rights = [heading_lower];
     let built = app_code_lesson_name_id_generic(rights, "functions", title_get);
     return built;
