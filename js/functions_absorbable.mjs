@@ -1,3 +1,11 @@
+import { repo_love_name } from "./repo_love_name.mjs";
+import { repos_names } from "./repos_names.mjs";
+import { list_filter_equal_not } from "./list_filter_equal_not.mjs";
+import { repo_shapes } from "./repo_shapes.mjs";
+import { list_to_dictionary_property } from "./list_to_dictionary_property.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { list_add } from "./list_add.mjs";
 export async function functions_absorbable() {
   "Every function in another repo whose work the common repo already does. Each one is logic that belongs in the common core rather than in the repo that happens to hold it, and the repo it sits in shrinks to only what is genuinely its own.";
   "This is the compare step of absorbing a repo. Sameness is decided by shape - the body with the names that say only who wrote it taken away - so two people who solved one small problem in two places and named it differently still land on the same text.";
