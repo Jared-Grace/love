@@ -74,13 +74,11 @@ export function app_code_examples(context) {
   let lesson_first_not = property_equals_not(lesson, "id", value_initial);
   let on_back = null;
   let back_text = null;
-  let do_you_want_to_text = text_combine("see ", another);
-  let yes_text = text_combine("please show me ", another);
+  let more_text = text_combine("See ", another);
   app_code_next(
     context,
     c,
-    do_you_want_to_text,
-    yes_text,
+    more_text,
     refresh,
     example_another,
     on_back,
