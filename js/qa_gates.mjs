@@ -43,6 +43,12 @@ import { bundle_size_gate_run } from "./bundle_size_gate_run.mjs";
 import { ebible_book_divisions_canon_assert } from "./ebible_book_divisions_canon_assert.mjs";
 import { examples_orphan_gate_run } from "./examples_orphan_gate_run.mjs";
 import { memory_index_size_gate_run } from "./memory_index_size_gate_run.mjs";
+import { g_clock_sky_phase_check } from "./g_clock_sky_phase_check.mjs";
+import { g_day_sky_phase_check } from "./g_day_sky_phase_check.mjs";
+import { app_g_day_fraction_check } from "./app_g_day_fraction_check.mjs";
+import { app_g_day_guide_pick_check } from "./app_g_day_guide_pick_check.mjs";
+import { app_g_map_pad_check } from "./app_g_map_pad_check.mjs";
+import { app_g_day_blocked_check } from "./app_g_day_blocked_check.mjs";
 export function qa_gates() {
   let gates = [
     guard_gate_run,
@@ -90,6 +96,12 @@ export function qa_gates() {
     ebible_book_divisions_canon_assert,
     examples_data_gate_run,
     functions_duplicate_keys_gate_run,
+    g_clock_sky_phase_check,
+    g_day_sky_phase_check,
+    app_g_day_fraction_check,
+    app_g_day_guide_pick_check,
+    app_g_map_pad_check,
+    app_g_day_blocked_check,
   ];
   return gates;
 }
