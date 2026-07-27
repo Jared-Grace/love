@@ -1,3 +1,5 @@
+import { js_array_text_remove } from "./js_array_text_remove.mjs";
+import { js_object_shorthand_remove } from "./js_object_shorthand_remove.mjs";
 import { js_call_callee_set } from "./js_call_callee_set.mjs";
 import { js_expand_selects } from "./js_expand_selects.mjs";
 import { js_array_identifier_add } from "./js_array_identifier_add.mjs";
