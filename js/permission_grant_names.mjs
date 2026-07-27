@@ -278,6 +278,9 @@ export function permission_grant_names() {
   let spelled275 = fn_name("functions_parallel_mark");
   let spelled276 = fn_name("commit_edit_kind");
   let spelled277 = fn_name("server_port");
+  let spelled278 = fn_name("g_sermon_write_read");
+  let spelled279 = fn_name("commits_hand_edit_kinds");
+  let spelled280 = fn_name("app_shared_api_generic_f_name_args");
   let names = [
     spelled,
     spelled2,
@@ -556,6 +559,9 @@ export function permission_grant_names() {
     spelled275,
     spelled276,
     spelled277,
+    spelled278,
+    spelled279,
+    spelled280,
   ];
   return names;
 }
