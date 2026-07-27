@@ -31,6 +31,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { list_filter_object_includes } from "./list_filter_object_includes.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_day_sky_update } from "./app_g_day_sky_update.mjs";
+import { app_g_hour_choices } from "./app_g_hour_choices.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_g_dev_routes(div_map) {
   ("registry of dev-only hash routes for ",
@@ -122,6 +123,11 @@ export function app_g_dev_routes(div_map) {
     await app_g_sky_choices();
     await app_g_sky_snap();
   }
+  async function hour() {
+    "the #hour previewer: pick any of the 24 wall-clock hours to see the sky at that time — helps CHOOSE the day's cutoff (how far past sunset the workday runs before it looks dark). paints via the same clock→phase mapping (g_clock_sky_phase) the real day uses, so what you pick here IS what the day will show";
+    await app_g_view_set(null);
+    await app_g_hour_choices();
+  }
   async function day_unbelievers() {
     "the #day_unbelievers demo: 3 nearby unbelievers become today's ONLY talkable people (chosen close together so the walk between them is short). each gets a soft speech-bubble marker; every OTHER npc gives a randomized 'busy' line instead of a conversation (the gate lives in the conversation entry, reading the day session). foundation for the discernment-walk + slice-time day mechanic";
     await app_g_view_set(null);
@@ -141,6 +147,7 @@ export function app_g_dev_routes(div_map) {
   let routes = {
     study,
     unbeliever,
+    hour,
     day_unbelievers,
     gospel_share,
     hru,
