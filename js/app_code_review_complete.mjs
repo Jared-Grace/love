@@ -10,7 +10,8 @@ import { app_code_review_complete_message } from "../../love/js/app_code_review_
 export function app_code_review_complete(parent) {
   "the large end-of-review celebration: an enlarged green success message and a centered congratulatory line with emojis, with generous vertical spacing (more under the line than the green message)";
   let celebration = html_div(parent);
-  html_style_font_size(celebration, "1.8em");
+  let celebration_size = "clamp(1.1rem, 4.5vw, 1.8rem)";
+  html_style_font_size(celebration, celebration_size);
   let green = app_shared_success_message(celebration);
   html_style_margin_y(green, app_shared_spaced_gap());
   let text = app_code_review_complete_message();

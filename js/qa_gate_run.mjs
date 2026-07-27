@@ -39,17 +39,17 @@ export async function qa_gate_run() {
   let printed = property_get(told, "printed");
   console.log(printed);
   ("Who last touched the things the copy complained about is asked out here rather than in there. The copy is made without the history on purpose, so the question has no answer inside it - and the answer it gives instead is an empty one, which reads exactly like nobody being at fault");
-  let complaints = qa_gate_failed_complaints(printed);
-  let names = qa_gate_failed_names(printed);
-  let size = list_size(complaints);
+  ("Everything a gate printed is looked at, not only the sentence it threw. A gate that finds eight faults prints the eight and throws a count, so the sentence on its own names nobody and the answer comes back empty - which reads as nobody being at fault, the very thing this is here to stop");
+  let sections = qa_gate_failed_sections(printed);
+  let size = list_size(sections);
   let any = greater_than(size, 0);
   if (any) {
     let known = await functions_names();
-    for (let index = 0; less_than(index, size); index++) {
-      let name = list_get(names, index);
-      let complaint = list_get(complaints, index);
+    for (let section of sections) {
+      let name = property_get(section, "name");
+      let said = property_get(section, "said");
       console.log("\n=== who last touched what " + name + " named ===");
-      await qa_gate_blame_print(complaint, known);
+      await qa_gate_blame_print(said, known);
     }
   }
   let failed_copy = property_get(told, "failed");
