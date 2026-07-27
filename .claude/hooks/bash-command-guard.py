@@ -1495,15 +1495,43 @@ SCRIPTS_TEMP_RELATIVE_DIR = os.path.join("scripts", "temp") + os.sep
 # One plain name inside scripts/temp, glob characters allowed. The shell's
 # own rule is what makes this safe rather than a guess about what the pattern
 # matches: a glob with no '/' in it expands only within the one directory it
-# sits in, and '*' never matches '.' or '..', so every name this can possibly
-# name is already a direct child of scripts/temp - the same set the literal
-# form was confined to. '/' is deliberately absent from the class, which is
-# simultaneously what blocks scripts/temp/nested/x and what stops a pattern
-# reaching out of the directory. '**' buys nothing extra: bash only treats it
-# as recursive under globstar, and even then the '/' it would need is refused
-# here. Removing a directory still takes -r, which is refused separately, so
-# a pattern matching a folder cannot delete one.
+# sits in, so every file this can name is already inside scripts/temp - the
+# same set the literal form was confined to. '/' is deliberately absent from
+# the class, which is simultaneously what blocks scripts/temp/nested/x and
+# what stops a pattern reaching out of the directory.
 SAFE_TEMP_BASENAME_RE = re.compile(r"^[A-Za-z0-9_.*?\[\]-]+$")
+
+GLOB_CHARS = "*?["
+
+
+def safe_temp_basename_is(basename):
+    """True iff `basename` is one name inside scripts/temp that no shell can
+    expand outside it.
+
+    Two refusals on top of the character class, both closing near-misses
+    rather than real holes - `rm` itself declines to remove `.`/`..` and
+    declines a directory without -r, so neither reached a deletion. They are
+    refused here anyway, because the property this function is supposed to
+    guarantee should be true on its own terms and not by leaning on what the
+    command it is guarding happens to do next:
+
+    - A pattern must not begin with '.'. The one exception to "globs never
+      match '.' or '..'" is a pattern that starts with a dot itself, so `.*`
+      and `..*` both name the PARENT directory. A literal dotfile is still
+      fine; only a pattern is refused.
+    - '**' is refused, so "direct child only" stays literally true. Under
+      globstar `scripts/temp/**` descends into subdirectories - harmless,
+      since everything down there is equally disposable, but it would quietly
+      make the stated invariant false, and an invariant nobody can trust is
+      worse than a narrower rule."""
+    if not SAFE_TEMP_BASENAME_RE.match(basename):
+        return False
+    globbed = any(c in basename for c in GLOB_CHARS)
+    if globbed and basename.startswith("."):
+        return False
+    if "**" in basename:
+        return False
+    return True
 
 
 def is_safe_scripts_temp_path(path):
