@@ -1,20 +1,7 @@
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
 import { example_select_apply_named } from "./example_select_apply_named.mjs";
-import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
-import { js_call_named_find } from "./js_call_named_find.mjs";
-import { js_statement_replace_code } from "./js_statement_replace_code.mjs";
-import { js_find_declaration_named } from "./js_find_declaration_named.mjs";
-import { js_statement_delete } from "./js_statement_delete.mjs";
-import { js_selects_call_add_after } from "./js_selects_call_add_after.mjs";
-import { js_selects_call_add_before } from "./js_selects_call_add_before.mjs";
-import { js_statement_find_call_named } from "./js_statement_find_call_named.mjs";
-import { js_statement_return_argument_set } from "./js_statement_return_argument_set.mjs";
-import { js_find_return } from "./js_find_return.mjs";
-import { js_statement_if_return_add } from "./js_statement_if_return_add.mjs";
 import { js_fn_name_references_to_calls } from "./js_fn_name_references_to_calls.mjs";
 import { example_fn_name_references_lambda } from "./example_fn_name_references_lambda.mjs";
-import { js_statement_wrap_if } from "./js_statement_wrap_if.mjs";
-import { example_select_apply_lambda } from "./example_select_apply_lambda.mjs";
 import { equal } from "./equal.mjs";
 import { function_arguments_assert_each_add } from "./function_arguments_assert_each_add.mjs";
 import { js_node_type_is_new } from "./js_node_type_is_new.mjs";
@@ -123,78 +110,11 @@ export function example_command_lambda(fn_name, args, e) {
     let lambda9 = example_fold_auto_lambda(args);
     return lambda9;
   }
-  if (equal(fn_name, js_statement_wrap_if.name)) {
-    let lambda10 = example_select_apply_lambda(
-      js_statement_find_call_named,
-      [args[0]],
-      js_statement_wrap_if,
-      [],
-    );
-    return lambda10;
-  }
-  if (equal(fn_name, js_statement_if_return_add.name)) {
-    let lambda14 = example_select_apply_lambda(
-      js_statement_find_call_named,
-      [args[0]],
-      js_statement_if_return_add,
-      [],
-    );
-    return lambda14;
-  }
-  if (equal(fn_name, js_selects_call_add_after.name)) {
-    let lambda16 = example_select_apply_lambda(
-      js_statement_find_call_named,
-      [args[0]],
-      js_selects_call_add_after,
-      [args[1]],
-    );
-    return lambda16;
-  }
-  if (equal(fn_name, js_selects_call_add_before.name)) {
-    let lambda17 = example_select_apply_lambda(
-      js_statement_find_call_named,
-      [args[0]],
-      js_selects_call_add_before,
-      [args[1]],
-    );
-    return lambda17;
-  }
-  if (equal(fn_name, js_call_argument_named_set.name)) {
-    let lambda20 = example_select_apply_lambda(
-      js_call_named_find,
-      [args[0]],
-      js_call_argument_named_set,
-      [args[1], args[2]],
-    );
-    return lambda20;
-  }
-  if (equal(fn_name, js_statement_replace_code.name)) {
-    let lambda18 = example_select_apply_lambda(
-      js_find_declaration_named,
-      [args[0]],
-      js_statement_replace_code,
-      [args[1]],
-    );
-    return lambda18;
-  }
-  if (equal(fn_name, js_statement_delete.name)) {
-    let lambda19 = example_select_apply_lambda(
-      js_find_declaration_named,
-      [args[0]],
-      js_statement_delete,
-      [],
-    );
-    return lambda19;
-  }
-  if (equal(fn_name, js_statement_return_argument_set.name)) {
-    let lambda15 = example_select_apply_lambda(
-      js_find_return,
-      [],
-      js_statement_return_argument_set,
-      [args[0]],
-    );
-    return lambda15;
-  }
+  ("Every pairing that was once a branch of its own now arrives through the one");
+  ("above, because its example names its address as well as its verb. What is left");
+  ("here is what that generic path cannot yet say: a whole-file pass, which has no");
+  ("address at all, and the two block verbs, whose address is a slot inside an if");
+  ("rather than anything a register lists.");
   if (equal(fn_name, js_block_body_add_code.name)) {
     let lambda11 = example_block_body_add_lambda(
       args[0],

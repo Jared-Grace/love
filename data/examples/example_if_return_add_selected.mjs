@@ -1,7 +1,10 @@
 import { js_statement_if_return_add } from "../../js/js_statement_if_return_add.mjs";
+import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_statement_if_return_add.name,
-  args: ["ready_is"],
+  select: js_statement_find_call_named.name,
+  select_args: ["ready_is"],
+  args: [],
   kind: "transform",
   title: "Add an early return inside a selected if",
   note: [

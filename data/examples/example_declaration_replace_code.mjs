@@ -1,7 +1,10 @@
 import { js_statement_replace_code } from "../../js/js_statement_replace_code.mjs";
+import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
 export const example = {
   fn: js_statement_replace_code.name,
-  args: ["doubled", "let doubled = thrice(a);"],
+  select: js_find_declaration_named.name,
+  select_args: ["doubled"],
+  args: ["let doubled = thrice(a);"],
   kind: "transform",
   title: "Replace a line, addressed by the name it binds",
   note: [

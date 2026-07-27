@@ -1,7 +1,10 @@
 import { js_selects_call_add_after } from "../../js/js_selects_call_add_after.mjs";
+import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_selects_call_add_after.name,
-  args: ["run", "date_now_milliseconds"],
+  select: js_statement_find_call_named.name,
+  select_args: ["run"],
+  args: ["date_now_milliseconds"],
   kind: "transform",
   title: "Add a call on the line after a selected statement",
   note: [
