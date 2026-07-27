@@ -1,15 +1,17 @@
-import { list_adder_single_message } from "./list_adder_single_message.mjs";
-import { js_visit_calls_named_nodes } from "./js_visit_calls_named_nodes.mjs";
-export function js_find_call_argument(ast, unaliased) {
-  "The one place a name is called, which is how a selector says where";
-  "Naming what was looked for is the whole of the complaint's usefulness: a name called twice and a name called never fail here the same way, and told only that a list was the wrong length a reader cannot tell which happened, nor in whose code";
-  function lambda(la) {
-    js_visit_calls_named_nodes(ast, unaliased, la);
-  }
-  let asked = {
-    hint: "a selector names one place, so this name was expected to be called exactly once here - would you like to pick a name that is called once, or say which of several places you meant?",
-    name: unaliased,
-  };
-  let only = list_adder_single_message(lambda, asked);
+import { js_call_named_find } from "./js_call_named_find.mjs";
+import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { list_get } from "./list_get.mjs";
+import { subtract } from "./subtract.mjs";
+export function js_find_call_argument(ast, name, place) {
+  "One argument handed to a named call, addressed by which call and which position - which is how a selector says where.";
+  "The call itself was already addressable and the pieces inside it were not, so a transform could replace a whole call and nothing smaller. Most of what a person wants to change about a call is one of the things it is given, which is a smaller and safer edit than rewriting the call around it.";
+  "Position rather than name, because an argument has no name where it is written - the name belongs to the parameter waiting for it, on the other side of a call the reader may not have open. Counting starts at one, the way a person counts arguments out loud.";
+  "The name has to be called exactly once here, which the address it is built on already insists on, so which call was meant is never a guess.";
+  let call = js_call_named_find(ast, name);
+  let args = js_call_arguments_get(call);
+  let counted = number_from_text(place);
+  let index = subtract(counted, 1);
+  let only = list_get(args, index);
   return only;
 }
