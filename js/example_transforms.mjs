@@ -1,3 +1,4 @@
+import { js_selects_functionize_local } from "./js_selects_functionize_local.mjs";
 import { js_object_property_text_add_after } from "./js_object_property_text_add_after.mjs";
 import { js_object_property_text_add_before } from "./js_object_property_text_add_before.mjs";
 import { js_array_text_add_after } from "./js_array_text_add_after.mjs";
@@ -59,6 +60,7 @@ export function example_transforms() {
     js_array_text_add_before,
     js_object_property_text_add_after,
     js_object_property_text_add_before,
+    js_selects_functionize_local,
   };
   return transforms;
 }
