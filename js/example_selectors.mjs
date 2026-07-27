@@ -1,3 +1,4 @@
+import { js_find_object_containing_text } from "./js_find_object_containing_text.mjs";
 import { js_find_statement_after } from "./js_find_statement_after.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
 import { js_find_return } from "./js_find_return.mjs";
@@ -20,6 +21,7 @@ export function example_selectors() {
     js_find_declaration_named,
     js_statement_find_call_named,
     js_call_named_find,
+    js_find_object_containing_text,
   };
   return selectors;
 }
