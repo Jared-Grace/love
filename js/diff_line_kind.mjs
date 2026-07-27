@@ -8,15 +8,19 @@ export function diff_line_kind(line) {
   let bare = text_trim(without_sign);
   let brought_in = text_starts_with(bare, "import ");
   if (brought_in) {
-    return "import";
+    let r = "import";
+    return r;
   }
   let written = text_starts_with(bare, '"');
   if (written) {
-    return "comment";
+    let r2 = "comment";
+    return r2;
   }
   let wrapped = text_starts_with(bare, '("');
   if (wrapped) {
-    return "comment";
+    let r3 = "comment";
+    return r3;
   }
-  return "code";
+  let r4 = "code";
+  return r4;
 }
