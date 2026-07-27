@@ -4,15 +4,17 @@ import { assert } from "./assert.mjs";
 import { divide } from "./divide.mjs";
 import { add } from "./add.mjs";
 export function app_g_day_fraction_check() {
-  "deterministic REGRESSION check of the per-person-leg day fraction: dawn = 0, a leg just prayed = 0 progress, reaching a person = that many thirds, a far leg and a near leg both fill exactly one third (only their PER-STEP speed differs), sunset = 1 after the 3rd, and praying while already adjacent counts the leg whole. run: node scripts/ai.mjs app_g_day_fraction_check";
-  assert(equal(app_g_day_fraction(0, 3, null, null), 0), "dawn, no leg → 0");
-  assert(equal(app_g_day_fraction(0, 3, 8, 8), 0), "leg just prayed (best = start) → 0");
-  assert(equal(app_g_day_fraction(0, 3, 8, 1), divide(1, 3)), "reached person 1 from far → 1/3");
-  assert(equal(app_g_day_fraction(1, 3, null, null), divide(1, 3)), "person 1 done, before next prayer → 1/3");
-  assert(equal(app_g_day_fraction(1, 3, 4, 3), divide(add(1, divide(1, 3)), 3)), "1 done + 1/3 into a near leg → (1 + 1/3)/3");
-  assert(equal(app_g_day_fraction(2, 3, 2, 1), 1), "reached person 3 → sunset (1)");
-  assert(equal(app_g_day_fraction(3, 3, null, null), 1), "all 3 done → sunset (1)");
-  assert(equal(app_g_day_fraction(0, 3, 1, 1), divide(1, 3)), "prayed while adjacent → leg whole → 1/3");
+  "deterministic REGRESSION check of the walk+conversation day fraction. At 1:1 over 3 people the day is 6 equal sixths, alternating walk then conversation: dawn 0 → walk to person 1 fills 1/6 → convert BLOCK jumps to 2/6 → … → reach person 3 at 5/6 → convert to sunset (1). Within a walk the sky moves by distance closed; a far leg and near leg both fill their sixth. Also checks a reweighted 2:1 ratio (walk-heavier). run: node scripts/ai.mjs app_g_day_fraction_check";
+  assert(equal(app_g_day_fraction(0, 3, null, null, 1, 1), 0), "dawn, no leg → 0");
+  assert(equal(app_g_day_fraction(0, 3, 8, 8, 1, 1), 0), "leg just prayed (best = start) → 0");
+  assert(equal(app_g_day_fraction(0, 3, 8, 1, 1, 1), divide(1, 6)), "reached person 1's walk-end → 1/6");
+  assert(equal(app_g_day_fraction(1, 3, null, null, 1, 1), divide(2, 6)), "person 1 fully done (walk + conversation block) → 2/6");
+  assert(equal(app_g_day_fraction(1, 3, 4, 3, 1, 1), divide(add(2, divide(1, 3)), 6)), "1 done + 1/3 into person 2's walk → (2 + 1/3)/6");
+  assert(equal(app_g_day_fraction(2, 3, 2, 1, 1, 1), divide(5, 6)), "reached person 3's walk-end → 5/6");
+  assert(equal(app_g_day_fraction(3, 3, null, null, 1, 1), 1), "all 3 done → sunset (1)");
+  assert(equal(app_g_day_fraction(0, 3, 1, 1, 1, 1), divide(1, 6)), "prayed while adjacent → walk whole → 1/6");
+  assert(equal(app_g_day_fraction(0, 3, 8, 1, 2, 1), divide(2, 9)), "2:1 ratio: person 1 walk-end fills the bigger walk share → 2/9");
+  assert(equal(app_g_day_fraction(1, 3, null, null, 2, 1), divide(3, 9)), "2:1 ratio: person 1 fully done → 3/9");
   return {
     ok: true,
   };
