@@ -20,14 +20,23 @@ export const example = {
   ],
   before: `export function f() {
   let groups = [
-    { name: "Single edits", examples: ["example_atomize_nested_call"] },
-    { name: "Guards", examples: ["example_single_rejects_two"] },
+    {
+      name: "Single edits",
+      examples: ["example_atomize_nested_call"],
+    },
+    {
+      name: "Guards",
+      examples: ["example_single_rejects_two"],
+    },
   ];
   return groups;
 }`,
   after: `export function f() {
   let groups = [
-    { name: "Single edits", examples: ["example_atomize_nested_call"] },
+    {
+      name: "Single edits",
+      examples: ["example_atomize_nested_call"],
+    },
     {
       name: "Guards",
       examples: ["example_single_rejects_two", "example_new_one"],
