@@ -1,3 +1,4 @@
+import { qa_report_gate_run } from "./qa_report_gate_run.mjs";
 import { functions_parallel_marks_gate_run } from "./functions_parallel_marks_gate_run.mjs";
 import { functions_duplicate_keys_gate_run } from "./functions_duplicate_keys_gate_run.mjs";
 import { examples_data_gate_run } from "./examples_data_gate_run.mjs";
