@@ -140,6 +140,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_find_statement_index <n>` | the *n*-th line, counting from 0 — the address of last resort, and the most fragile (every insert above moves it) |
 | `js_find_statement_after <name>` | the line *after* the one binding `<name>` — the only relative address, so it reaches lines that are themselves unnameable |
 | `js_find_body_block` | the function's own body block — use this to append lines, not `js_type_find BlockStatement` |
+| `js_find_object_containing_text <word>` | one record out of a list of them, found by a word written directly in it (a group by its heading) |
 
 | Verb (transform) | does |
 |---|---|
@@ -156,6 +157,8 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_block_return_identifier_add <local>` | hand back a local at the end of a selected block |
 | `js_object_shorthand_add <name>` | add one entry to a register (key and value the same word) — never rewrite the whole set |
 | `js_array_text_add <word>` | add one written word to an ordered register |
+| `js_object_text_add <key> <sentence>` | add a `key: "sentence"` entry — the shape a note or a label takes |
+| `js_object_property_text_add <key> <word>` / `_remove <key> <word>` | add / take out one word in a list held **inside** a record — the two-levels-deep pair |
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_move_after` | move the first selected line to sit after the second — **guarded**, refuses a move that would cross a line it reads or that reads it (needs `function_select_multiple_apply_args`) |
@@ -163,7 +166,17 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 
-**Known holes:** **a nested address** — every selector answers at the top level of a function, so a list inside an object inside a list (`examples_groups`) still can't be reached, and that is the biggest one left · remove one entry from a register (adding has a verb, removing does not) · rename a local within one node rather than the whole fn · address more than one match at a time (every selector here answers exactly one node, and says so when it can't).
+**Registering a new example now needs no hand editing at all** — list it, group it, and describe it, three commands:
+
+```
+node scripts/ai.mjs function_select_apply_args examples_groups js_find_object_containing_text "Single edits" js_object_property_text_add examples,example_my_new_one
+node scripts/ai.mjs function_select_apply_args examples_notes js_find_declaration_named notes js_object_text_add example_my_new_one,"what it is there to show"
+node scripts/ai.mjs function_auto_multiple examples_groups,examples_notes
+```
+
+**Run `ao` after a command edit or the imports are missing.** A command adds the entry; only `ao` adds the `import` the entry now needs. Skipping it fails at run time, not at edit time.
+
+**Known holes:** rename a local within one node rather than the whole fn · address more than one match at a time (every selector answers exactly one node, and says so when it can't) · reach a record by *position* rather than by a word in it.
 
 **Two things deliberately not built, so nobody builds them by mistake.** **Adding or removing an argument at one call site** — every call here targets a repo function, and `function_param_new` / `function_params_delete` change the definition *and* every caller together; a single-site arity change writes a call that disagrees with its callee. Use those, then `js_call_argument_named_set` to set the one site's value. **Wrapping in `try`** — the generated `catch` would have to be empty, which is the shape that swallows a total failure and reads as success; this repo writes a named `*_try` wrapper instead.
 
