@@ -1,3 +1,4 @@
+import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { divide } from "./divide.mjs";
 import { equal } from "./equal.mjs";
 import { modulo } from "./modulo.mjs";
@@ -7,6 +8,6 @@ export function week_calendar_color_empty(slot) {
   let hour = Math.floor(divided);
   let left = modulo(hour, 2);
   let even_hour = equal(left, 0);
-  let c = even_hour ? "#ffffff" : "#eef1f5";
+  let c = even_hour ? "#ffffff" : app_shared_color_gray_light();
   return c;
 }
