@@ -1,3 +1,4 @@
+import { js_expand_selects } from "./js_expand_selects.mjs";
 import { js_array_identifier_add } from "./js_array_identifier_add.mjs";
 import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
 import { js_selects_move_after } from "./js_selects_move_after.mjs";
@@ -43,6 +44,7 @@ export function example_transforms() {
     js_selects_move_after,
     js_call_argument_named_set,
     js_array_identifier_add,
+    js_expand_selects,
   };
   return transforms;
 }
