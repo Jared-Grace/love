@@ -1,3 +1,5 @@
+import { js_find_statement_after } from "./js_find_statement_after.mjs";
+import { js_find_body_block } from "./js_find_body_block.mjs";
 import { js_find_return } from "./js_find_return.mjs";
 import { js_find_statement_last } from "./js_find_statement_last.mjs";
 import { js_find_statement_index } from "./js_find_statement_index.mjs";
@@ -12,6 +14,8 @@ export function example_selectors() {
     js_find_return,
     js_find_statement_last,
     js_find_statement_index,
+    js_find_statement_after,
+    js_find_body_block,
     js_find_string_starting_with,
     js_find_declaration_named,
     js_statement_find_call_named,
