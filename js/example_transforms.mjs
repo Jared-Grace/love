@@ -47,6 +47,8 @@ export function example_transforms() {
     js_array_identifier_add,
     js_expand_selects,
     js_call_callee_set,
+    js_array_text_remove,
+    js_object_shorthand_remove,
   };
   return transforms;
 }
