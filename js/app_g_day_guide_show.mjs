@@ -43,9 +43,9 @@ export async function app_g_day_guide_show(div_map) {
       y,
       phase,
     };
-    function open() {
+    async function open() {
       html_remove(under);
-      app_g_view_set_render(view, div_map);
+      await app_g_view_set_render(view, div_map);
     }
     setTimeout(open, 600);
     return;
