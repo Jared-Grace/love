@@ -1,7 +1,5 @@
 import { example_select_multiple_apply_named } from "./example_select_multiple_apply_named.mjs";
 import { example_select_apply_named } from "./example_select_apply_named.mjs";
-import { js_selects_move_after } from "./js_selects_move_after.mjs";
-import { example_select_multiple_apply_lambda } from "./example_select_multiple_apply_lambda.mjs";
 import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
 import { js_call_named_find } from "./js_call_named_find.mjs";
 import { js_statement_replace_code } from "./js_statement_replace_code.mjs";
@@ -160,15 +158,6 @@ export function example_command_lambda(fn_name, args, e) {
       [args[1]],
     );
     return lambda17;
-  }
-  if (equal(fn_name, js_selects_move_after.name)) {
-    let lambda21 = example_select_multiple_apply_lambda(
-      js_find_declaration_named,
-      [args[0], args[1]],
-      js_selects_move_after,
-      [],
-    );
-    return lambda21;
   }
   if (equal(fn_name, js_call_argument_named_set.name)) {
     let lambda20 = example_select_apply_lambda(
