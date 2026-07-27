@@ -1,7 +1,7 @@
+import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { each } from "./each.mjs";
 import { list_remove_last_equal } from "./list_remove_last_equal.mjs";
-import { js_tokenizer_normalized } from "./js_tokenizer_normalized.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -37,7 +37,9 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   let variation_fns = list_adder(lambda4);
   function lambda5(la) {
-    "every commutative node can independently keep or swap its two sides, so the acceptable orderings are ALL combinations of the swaps (2^n, not just one); enumerate them by recursively trying each swap off then on, and since each swap is its own inverse the ast is left back at its original state; list_adder_unique folds identical results (e.g. 2 * 2 * 2 where swapping changes nothing)";
+    ("every commutative node can independently keep or swap its two sides, so the acceptable orderings are ALL combinations of the swaps (2^n, not just one); enumerate them by recursively trying each swap off then on, and since each swap is its own inverse the ast is left back at its original state; ",
+      list_adder_unique.name,
+      " folds identical results (e.g. 2 * 2 * 2 where swapping changes nothing)");
     function generate(swaps) {
       let none_left = list_empty_is(swaps);
       if (none_left) {
@@ -56,7 +58,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     generate(variation_fns);
   }
   let codes = list_adder_unique(lambda5);
-  let variations = list_map(codes, js_tokenizer_normalized);
+  let variations = list_map(codes, app_code_quiz_tokens);
   if (expression_is) {
     function lambda6(item) {
       let expected_last = ";";
