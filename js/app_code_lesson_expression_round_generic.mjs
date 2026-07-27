@@ -21,9 +21,7 @@ import { html_bold } from "./html_bold.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_round_generic(params) {
-  ("the shared body of the two whole-number rounding lessons - Math.floor (round down) and Math.ceil (round up). They practise the same thing on a decimal by itself: the four questions (each a fresh whole part 2..7, alternating a decimal to round with an already-whole number that does not change), the labels, the worked example between two wholes shown for an ordinary AND an extreme decimal (to show it rounds its fixed way, not to the nearest), and the already-whole case. Nearly everything follows from the one direction, rounds_up: the words (up/down, bigger/smaller, above/below), which of the two wholes is chosen, and the decoy (the other whole). Each lesson passes ",
-    fn_name.name,
-    ", its two digit ranges, and whether it is the one that first introduces the term whole number.");
+  "the shared body of the two whole-number rounding lessons - Math.floor (round down) and Math.ceil (round up). They practise the same thing on a decimal by itself: the four questions (each a fresh whole part 2..7, alternating a decimal to round with an already-whole number that does not change), the labels, the worked example between two wholes shown for an ordinary AND an extreme decimal (to show it rounds its fixed way, not to the nearest), and the already-whole case. Nearly everything follows from the one direction (up or down): the words (up/down, bigger/smaller, above/below), which of the two wholes is chosen, and the decoy (the other whole). Each lesson passes the function name, its two digit ranges, and whether it is the one that first introduces the term whole number.";
   let fn_name = property_get(params, "fn_name");
   let rounds_up = property_get(params, "rounds_up");
   let ordinary_digits = property_get(params, "ordinary_digits");

@@ -9,8 +9,8 @@ export function qa_gates_named(names) {
   let gates = qa_gates();
   let picked = [];
   for (let name of names) {
-    function named_is(gate) {
-      let same = equal(gate.name, name);
+    function named_is(one) {
+      let same = equal(one.name, name);
       return same;
     }
     let matching = list_filter(gates, named_is);

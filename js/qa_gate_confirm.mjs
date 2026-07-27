@@ -11,8 +11,8 @@ export async function qa_gate_confirm() {
   "It throws only for the faults that survived, so a run whose reds were all tears ends clean, and the sentence it throws names what is actually broken.";
   let message = null;
   try {
-    let r = await qa_gate_run();
-    return r;
+    let passed = await qa_gate_run();
+    return passed;
   } catch (e) {
     message = e.message;
   }
