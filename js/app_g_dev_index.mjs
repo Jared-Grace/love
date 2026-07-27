@@ -1,11 +1,12 @@
-import { app_g } from "./app_g.mjs";
+import { html_display_set } from "./html_display_set.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_a_href_text } from "./html_a_href_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
 import { app_g_dev_index_prefixes } from "./app_g_dev_index_prefixes.mjs";
 import { app_g_dev_index_tree } from "./app_g_dev_index_tree.mjs";
@@ -49,7 +50,7 @@ export function app_g_dev_index() {
   let tree = app_g_dev_index_tree(all, prefixes);
   function render_node(parent, label, node) {
     let child_labels = Object.keys(node.children).sort();
-    if (child_labels.length === 0) {
+    if (equal(child_labels.length, 0)) {
       let leaf_href = "#" + node.hash;
       html_a_href_text(parent, leaf_href, label);
       return;
@@ -75,9 +76,9 @@ export function app_g_dev_index() {
       on: false,
     };
     function toggle() {
-      open.on = !open.on;
+      open.on = not(open.on);
       let show = open.on ? "flex" : "none";
-      html_style_set(sub, "display", show);
+      html_display_set(sub, show);
     }
     if (node.hash) {
       let self_href = "#" + node.hash;

@@ -1,3 +1,4 @@
+import { functions_parallel_marks_gate_run } from "./functions_parallel_marks_gate_run.mjs";
 import { functions_duplicate_keys_gate_run } from "./functions_duplicate_keys_gate_run.mjs";
 import { examples_data_gate_run } from "./examples_data_gate_run.mjs";
 import { markers_gate_run } from "./markers_gate_run.mjs";
@@ -102,6 +103,7 @@ export function qa_gates() {
     app_g_day_guide_pick_check,
     app_g_map_pad_check,
     app_g_day_blocked_check,
+    functions_parallel_marks_gate_run,
   ];
   return gates;
 }
