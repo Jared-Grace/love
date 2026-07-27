@@ -36,6 +36,7 @@ export function examples_groups() {
         "example_array_text_add",
         "example_prose_address",
         "example_type_find_address",
+        "example_call_name_includes_address",
         "example_wrap_for_of",
         "example_unwrap_for_of",
         "example_nested_record_add",
