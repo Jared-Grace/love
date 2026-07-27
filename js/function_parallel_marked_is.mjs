@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_block_body_get } from "./js_block_body_get.mjs";
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
+import { js_statement_call_any_get } from "./js_statement_call_any_get.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
+import { equal } from "./equal.mjs";
 export async function function_parallel_marked_is(f_name) {
   "Whether the named function carries the alike-on-purpose mark as a call in its body, which is the only way the mark is ever written.";
   "Asking after the names a body reads instead would say yes to the handful of functions that read or place the mark, since they spell it too. Those carry no claim about being alike, and counting them would make the check report its own machinery.";
