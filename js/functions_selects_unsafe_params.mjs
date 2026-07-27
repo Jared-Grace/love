@@ -34,7 +34,16 @@ export async function functions_selects_unsafe_params() {
       let shaped = equal(second_name, "selects");
       if (shaped) {
         let plain = await function_params_plain(name);
-        let names = list_map_property(params, "name");
+        ("A parameter gathering the rest of the arguments is not a name and has");
+        ("none to read, so it is passed over rather than asked for one.");
+        let names = [];
+        for (let param of params) {
+          let named_is = js_identifier_is(param);
+          if (named_is) {
+            let param_name_found = property_get(param, "name");
+            list_add(names, param_name_found);
+          }
+        }
         let unsafe = [];
         for (let param_name of names) {
           let declared = list_includes(plain, param_name);
