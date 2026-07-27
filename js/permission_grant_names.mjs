@@ -273,6 +273,7 @@ export function permission_grant_names() {
   let spelled270 = fn_name("function_local_to_param");
   let spelled271 = fn_name("function_generify");
   let spelled272 = fn_name("examples_data_gate_run");
+  let spelled273 = fn_name("functions_absorbable");
   let names = [
     spelled,
     spelled2,
@@ -546,6 +547,7 @@ export function permission_grant_names() {
     spelled270,
     spelled271,
     spelled272,
+    spelled273,
   ];
   return names;
 }
