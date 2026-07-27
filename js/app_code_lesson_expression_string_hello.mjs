@@ -9,7 +9,8 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span } from "./html_span.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_color_blue_light } from "./app_shared_color_blue_light.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
@@ -100,7 +101,7 @@ export function app_code_lesson_expression_string_hello() {
     html_style_code_dark_nowrap(shape);
     html_span_text(shape, quote);
     let dots = html_span_text(shape, "...");
-    html_style_opacity(dots, "0.5");
+    html_font_color_set(dots, app_shared_color_blue_light());
     html_span_text(shape, quote);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is an example string: ");
