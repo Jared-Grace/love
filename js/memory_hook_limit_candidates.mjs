@@ -38,6 +38,11 @@ export async function memory_hook_limit_candidates() {
     "first",
     "never",
     "premature",
+    "don't",
+    "CAN be",
+    "except",
+    "verify",
+    "VERIFY",
   ];
   let entries = [];
   for (let line of lines) {
