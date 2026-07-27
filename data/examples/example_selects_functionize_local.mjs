@@ -39,7 +39,6 @@ export const example = {
   let joined = names_joined(names);
   return joined;
 }
-
 function names_joined(names) {
   let sorted = list_sort_text(names);
   let joined = list_join(sorted);
