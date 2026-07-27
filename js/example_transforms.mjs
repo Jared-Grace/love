@@ -1,3 +1,5 @@
+import { js_object_property_text_add } from "./js_object_property_text_add.mjs";
+import { js_object_property_text_remove } from "./js_object_property_text_remove.mjs";
 import { js_object_shorthand_add } from "./js_object_shorthand_add.mjs";
 import { js_array_text_add } from "./js_array_text_add.mjs";
 import { js_call_argument_named_identifier_set } from "./js_call_argument_named_identifier_set.mjs";
@@ -29,6 +31,8 @@ export function example_transforms() {
     js_block_call_add,
     js_object_shorthand_add,
     js_array_text_add,
+    js_object_property_text_add,
+    js_object_property_text_remove,
   };
   return transforms;
 }
