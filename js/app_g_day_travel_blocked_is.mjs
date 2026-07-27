@@ -13,9 +13,7 @@ export function app_g_day_travel_blocked_is(clicked) {
   if (null_is(guide_coords)) {
     return true;
   }
-  let same_x = equal(property_get(clicked, "x"), property_get(guide_coords, "x"));
-  let same_y = equal(property_get(clicked, "y"), property_get(guide_coords, "y"));
-  if (and(same_x, same_y)) {
+  if (g_coordinates_same_is(clicked, guide_coords)) {
     return false;
   }
   return true;
