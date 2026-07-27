@@ -119,7 +119,11 @@ export function app_code_lesson_expression_string_hello() {
     html_font_color_set(value_term, color3);
     html_span_text(concept, " is what's between the quotes");
     let example = html_div(define);
-    html_span_text(example, "For example, the value of ");
+    html_span_text(example, "For example, the ");
+    let value_word = html_span_text(example, "value");
+    let color4 = app_code_string_value_color_on_light();
+    html_font_color_set(value_word, color4);
+    html_span_text(example, " of ");
     app_code_string_colored(example, word);
     html_span_text(example, " is ");
     let value_out = html_span_text_code_dark(example, word);
