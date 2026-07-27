@@ -160,6 +160,7 @@ node scripts/ai.mjs function_select_apply_args example_transforms js_find_declar
 | `js_object_shorthand_add <name>` / `js_object_shorthand_remove <name>` | add / take out one entry of a register (key and value the same word) — never rewrite the whole set |
 | `js_array_text_add <word>` / `js_array_text_remove <word>` | add / take out one written word in an ordered register — both refuse a word the list doesn't hold rather than doing nothing quietly |
 | `js_array_text_add_after <word> <neighbour>` / `_before` | put a word at a **chosen place** rather than at the end, naming the entry it sits beside — both sides exist because the head of a list has no neighbour above it to name |
+| `js_array_text_move <word> <neighbour>` | move a word **already in** an ordered register to sit after another one — the take-out-and-put-back that used to be two commands and read as two changes. Both words are looked up before anything moves, so a wrong neighbour refuses against the list you meant; it also refuses moving a word after itself |
 | `js_array_identifier_add <name>` | add one **name** to an ordered register of functions — what `qa_gates()` and its kind hold, where a written word would read as live and run nothing |
 | `js_call_callee_set <fn>` | point one call at a different function, keeping its arguments — refuses if the two take different numbers. **Not** a rename: the old function stays and its other callers keep it |
 | `js_object_text_add <key> <sentence>` | add a `key: "sentence"` entry — the shape a note or a label takes. **The sentence must contain no comma or full stop**, or the `_args` splitter tears it into extra arguments |
@@ -187,7 +188,7 @@ node scripts/ai.mjs function_auto_multiple examples_groups,examples_notes
 
 **Run `ao` after a command edit or the imports are missing.** A command adds the entry; only `ao` adds the `import` the entry now needs. Skipping it fails at run time, not at edit time.
 
-**Known holes:** move an entry that is already in a register (removing and re-adding at a place is two commands and reads as two changes) · rename a local within one node rather than the whole fn · address more than one match at a time (every selector answers exactly one node, and says so when it can't) · reach a record by *position* rather than by a word in it.
+**Known holes:** rename a local within one node rather than the whole fn · address more than one match at a time (every selector answers exactly one node, and says so when it can't) · reach a record by *position* rather than by a word in it.
 
 **Two things deliberately not built, so nobody builds them by mistake.** **Adding or removing an argument at one call site** — every call here targets a repo function, and `function_param_new` / `function_params_delete` change the definition *and* every caller together; a single-site arity change writes a call that disagrees with its callee. Use those, then `js_call_argument_named_set` to set the one site's value. **Wrapping in `try`** — the generated `catch` would have to be empty, which is the shape that swallows a total failure and reads as success; this repo writes a named `*_try` wrapper instead.
 
