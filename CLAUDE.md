@@ -95,6 +95,22 @@ node scripts/ai.mjs function_select_apply_args my_fn js_statement_find_call_name
 ```
 It holds **no selection between commands**, which is the point: the older `function_node_select` / `function_current_selects_apply` path persists the selection in shared state, so under parallel Claudes the second command can act on a peer's selection with no way to tell. Prefer this one. It **dispatches functions named in its arguments**, so it used to be un-grantable — a grant would have covered every function, not one. It is now fenced instead: `function_callee_seam_assert` refuses, **on Claude's seam only**, any selector or transform that can reach a command-running function (`functions_command_seams`), following imports but skipping the install plumbing every function sits on (`functions_import_ignored`). With the fence in place `function_select_apply_args`, `function_select_multiple_apply_args` and `function_transform_single` are allow-listed. Ask `function_command_seams_reached <fn>` yourself — an empty list is the clean answer.
 
+**Authoring a whole new function without touching an editor.** This is the point of the vocabulary, and it works today — `js_find_statement_after` and `js_find_body_block` were both written this way, with no `Write` and no `Edit`:
+
+```
+node scripts/ai.mjs function_new_js find_statement_after                       # the file
+node scripts/ai.mjs function_param_new js_find_statement_after name ""          # a parameter
+node scripts/ai.mjs function_select_apply_code js_find_statement_after js_find_body_block "" js_block_body_add_code "let body = js_flo_body(ast);"
+node scripts/ai.mjs function_select_apply_code js_find_statement_after js_find_body_block "" js_block_body_add_code "return list_get(body, after);"
+node scripts/ai.mjs function_auto js_find_statement_after                       # imports, atomize, asserts
+```
+
+**Use `function_select_apply_code` whenever the last argument is code, never `function_select_apply_args`.** The `_args` form splits its argument list on **commas and dots**, which a list needs and code cannot survive — `f(a, b)` has a comma and `fn.name` has a dot, so nearly every real line was unpassable. The `_code` form hands that last argument over whole and lets the shell's quoting do the separating. `ao` then adds the imports and atomizes nested calls, so write the natural line and let it normalize.
+
+**Address the body with `js_find_body_block`, not `js_type_find BlockStatement`.** The latter works only while the function has exactly one block, so it starts failing the moment the body contains an `if`, a loop, or an inner function — which is to say, as soon as the function is worth writing.
+
+**Never point `js_statement_replace_code` at a large data literal.** It replaces the *whole* statement, so aiming it at a `let notes = { … }` of forty entries replaces all forty with whatever you wrote. There is no verb yet for adding one entry to an object literal or one item to an array — that is still an `Edit`, and it is the most-wanted missing atom.
+
 **The atom vocabulary — every address × every verb.** These two lists are the whole seam, and they *multiply*: adding one member to either list adds a row or a column, not a cell. That is the reason to write the next atom rather than the next convenience combination. Anything not on these lists is still a text `Edit`; **the gaps are the work**, so check here before reaching for `Edit`.
 
 | Address (selector) | names |
@@ -109,6 +125,8 @@ It holds **no selection between commands**, which is the point: the older `funct
 | `js_find_string_starting_with <prefix>` | the line a bare-string comment sits on — prose is real nodes here, so it works as a bookmark that says what it means |
 | `js_find_statement_last` | the last line — takes no argument, and is the one end of a block no neighbour can name |
 | `js_find_statement_index <n>` | the *n*-th line, counting from 0 — the address of last resort, and the most fragile (every insert above moves it) |
+| `js_find_statement_after <name>` | the line *after* the one binding `<name>` — the only relative address, so it reaches lines that are themselves unnameable |
+| `js_find_body_block` | the function's own body block — use this to append lines, not `js_type_find BlockStatement` |
 
 | Verb (transform) | does |
 |---|---|
