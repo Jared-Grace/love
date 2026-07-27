@@ -25,6 +25,8 @@ export function example_transforms() {
     js_call_argument_named_identifier_set,
     js_block_return_identifier_add,
     js_block_call_add,
+    js_object_shorthand_add,
+    js_array_text_add,
   };
   return transforms;
 }
