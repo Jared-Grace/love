@@ -1,6 +1,14 @@
+import { js_prose_literal_nodes } from "./js_prose_literal_nodes.mjs";
+import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { js_literal_value_get } from "./js_literal_value_get.mjs";
+import { text_is } from "./text_is.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_single_message } from "./list_single_message.mjs";
 export function js_string_literal_single_find(ast) {
   "The one string a function actually uses as a value, which is how a selector says where.";
   "Comments are left out, because in this repo a comment is a string too. A function of four explanations and one message holds five strings and means one, so counting them all would refuse every function that says anything about itself - which is all of them.";
+  "One value, not one place. The same string written three times is still one decision written three times, and the transform this hands to takes every one of them - so demanding a single node would refuse exactly the functions most worth making general.";
   "Naming what was looked for is the whole of the complaint's usefulness: a function holding two strings and a function holding none fail here the same way, and told only that a list was the wrong length a reader cannot tell which happened, nor in whose code.";
   let prose = js_prose_literal_nodes(ast);
   let literals = js_list_type_nodes(ast, "Literal");
