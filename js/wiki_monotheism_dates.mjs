@@ -1,7 +1,7 @@
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_range } from "./list_range.mjs";
+import { list_slice_include } from "./list_slice_include.mjs";
 import { list_find_indices } from "./list_find_indices.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { file_read } from "./file_read.mjs";
@@ -14,7 +14,7 @@ export async function wiki_monotheism_dates() {
   let list = list_find_indices(split, predicate);
   function lambda(right) {
     let left = subtract(right, 2);
-    let sliced = list_range(split, left, right);
+    let sliced = list_slice_include(split, left, right);
     let joined = list_join_space(sliced);
     return joined;
   }
