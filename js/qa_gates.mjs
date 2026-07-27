@@ -1,3 +1,4 @@
+import { functions_selects_unsafe_gate_run } from "./functions_selects_unsafe_gate_run.mjs";
 import { examples_comments_none_gate_run } from "./examples_comments_none_gate_run.mjs";
 import { examples_registers_gate_run } from "./examples_registers_gate_run.mjs";
 import { qa_report_gate_run } from "./qa_report_gate_run.mjs";
@@ -110,6 +111,7 @@ export function qa_gates() {
     functions_parallel_marks_gate_run,
     qa_report_gate_run,
     examples_registers_gate_run,
+    functions_selects_unsafe_gate_run,
   ];
   return gates;
 }
