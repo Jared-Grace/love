@@ -472,6 +472,24 @@ ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)=")
 DANGEROUS_ASSIGN_NAMES = {
     "PATH", "CDPATH", "IFS", "GLOBIGNORE", "ENV", "BASH_ENV",
     "SHELLOPTS", "BASHOPTS", "PS4", "PROMPT_COMMAND",
+    # An interpreter's own options variable is the same hole as LD_PRELOAD,
+    # one level up: it names code to load BEFORE the script runs. NODE_OPTIONS
+    # is the sharp one here, because `node scripts/ai.mjs <fn>` is the most
+    # granted verb in the repo - so `NODE_OPTIONS="--require /tmp/evil.js"
+    # node scripts/ai.mjs <any granted fn>` was auto-approved arbitrary code
+    # execution, with the trust coming from the granted function that never
+    # got to run first. Found 2026-07-27 while working out why a CPU-profiling
+    # command prompted; it did not, and that was the bug.
+    #
+    # Named explicitly rather than by a "NODE_" prefix on purpose: NODE_ENV=
+    # production is an everyday, harmless assignment, and a prefix that
+    # prompted on it would push people to write commands the guard can't read
+    # at all. The other interpreters are listed for the same reason they would
+    # be if they were the main one - being second-choice is not a safety
+    # property.
+    "NODE_OPTIONS", "NODE_REPL_EXTERNAL_MODULE",
+    "PYTHONPATH", "PYTHONSTARTUP", "PYTHONHOME",
+    "PERL5OPT", "PERL5LIB", "RUBYOPT", "RUBYLIB",
 }
 DANGEROUS_ASSIGN_PREFIXES = ("LD_", "DYLD_", "BASH_FUNC_")
 
