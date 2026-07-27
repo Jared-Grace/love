@@ -1,3 +1,5 @@
+import { html_display_none } from "./html_display_none.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
 import { app_code_hash_write } from "./app_code_hash_write.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
