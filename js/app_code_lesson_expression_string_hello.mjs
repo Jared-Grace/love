@@ -103,7 +103,7 @@ export function app_code_lesson_expression_string_hello() {
     html_style_code_dark_nowrap(shape);
     html_span_text(shape, quote);
     let dots = html_span_text(shape, "...");
-    let color = app_code_string_value_color();
+    let color = app_code_placeholder_color();
     html_font_color_set(dots, color);
     html_span_text(shape, quote);
     let example_line = html_div(intro);
