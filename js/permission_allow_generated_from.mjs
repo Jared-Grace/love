@@ -1,3 +1,4 @@
+import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
 import { permission_rules_other } from "./permission_rules_other.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { permission_grant_rule } from "./permission_grant_rule.mjs";

@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function permission_grant_rule(unaliased, script) {
   "the allow rule that auto-approves running one dispatcher function, with any arguments, on Claude's seam";
   "the full function name, never an alias key — a rule is matched as literal text, so an alias grants whatever it points at later";
