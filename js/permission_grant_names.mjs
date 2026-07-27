@@ -258,6 +258,9 @@ export function permission_grant_names() {
   let spelled255 = fn_name("qa_trees_reap");
   let spelled256 = fn_name("qa_tree_owners_folder");
   let spelled257 = fn_name("qa_tree_stale_minutes");
+  let spelled258 = fn_name("qa_gate_failed_complaints");
+  let spelled259 = fn_name("g_verify_reviewed_set");
+  let spelled260 = fn_name("g_day_sky_phase_check");
   let names = [
     spelled,
     spelled2,
@@ -516,6 +519,9 @@ export function permission_grant_names() {
     spelled255,
     spelled256,
     spelled257,
+    spelled258,
+    spelled259,
+    spelled260,
   ];
   return names;
 }
