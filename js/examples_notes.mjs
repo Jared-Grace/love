@@ -32,6 +32,8 @@ export function examples_notes() {
       "address a line by the name it binds, and change it — the third thing that can happen to a line",
     example_declaration_delete:
       "the same address, the deleting verb — a function that fit the transform shape before the shape had a name",
+    example_call_argument_named_set:
+      "reach inside a call and change one argument, addressed by the name the callee knows it by",
     example_single_rejects_two:
       "refuse a 2-item list — a simple invariant guard",
     example_slot_set_rejects_statement: "the slot setter guarding its input",
