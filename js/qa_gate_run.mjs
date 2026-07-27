@@ -1,11 +1,9 @@
+import { qa_gate_failed_sections } from "./qa_gate_failed_sections.mjs";
 import { invoke_multiple_unordered_async } from "./invoke_multiple_unordered_async.mjs";
-import { qa_gate_failed_complaints } from "./qa_gate_failed_complaints.mjs";
-import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
 import { list_size } from "./list_size.mjs";
 import { functions_names } from "./functions_names.mjs";
 import { list_get } from "./list_get.mjs";
 import { qa_gate_blame_print } from "./qa_gate_blame_print.mjs";
-import { less_than } from "./less_than.mjs";
 import { qa_tree_ensure } from "./qa_tree_ensure.mjs";
 import { qa_snapshot_gate_told } from "./qa_snapshot_gate_told.mjs";
 import { property_get } from "./property_get.mjs";
