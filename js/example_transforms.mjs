@@ -1,3 +1,4 @@
+import { js_call_argument_named_set } from "./js_call_argument_named_set.mjs";
 import { js_selects_move_after } from "./js_selects_move_after.mjs";
 import { js_statement_return_argument_set } from "./js_statement_return_argument_set.mjs";
 import { js_selects_functionize } from "./js_selects_functionize.mjs";
@@ -39,6 +40,7 @@ export function example_transforms() {
     js_selects_functionize,
     js_statement_return_argument_set,
     js_selects_move_after,
+    js_call_argument_named_set,
   };
   return transforms;
 }

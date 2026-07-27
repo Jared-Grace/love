@@ -1,7 +1,10 @@
 import { js_selects_call_add_before } from "../../js/js_selects_call_add_before.mjs";
+import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
 export const example = {
   fn: js_selects_call_add_before.name,
-  args: ["wait", "date_now_milliseconds"],
+  select: js_statement_find_call_named.name,
+  select_args: ["wait"],
+  args: ["date_now_milliseconds"],
   kind: "transform",
   title: "Add a call on the line before a selected statement",
   note: [
