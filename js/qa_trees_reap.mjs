@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { claude_sessions_recent } from "./claude_sessions_recent.mjs";
 import { folder_delete } from "./folder_delete.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
@@ -39,7 +40,7 @@ export async function qa_trees_reap() {
   }
   let report = {
     reaped,
-    kept: owners.length - reaped.length,
+    kept: subtract(owners.length, reaped.length),
   };
   return report;
 }

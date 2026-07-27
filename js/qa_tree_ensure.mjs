@@ -1,3 +1,4 @@
+import { qa_trees_reap } from "./qa_trees_reap.mjs";
 import { qa_tree_repos_folder } from "./qa_tree_repos_folder.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { qa_snapshot_siblings_link } from "./qa_snapshot_siblings_link.mjs";
@@ -13,6 +14,7 @@ export async function qa_tree_ensure() {
   "Being frozen is the whole point. Several of us edit this one folder, so questions put to the living folder are put to a folder that changes while they are being answered: a complaint may be nothing but somebody saving a file, and a clean answer may be about a file that was broken a moment after it was read. Neither belongs to any one state of the code, so neither can be checked by asking again";
   "The copying is not itself instant, so a file caught half-written is still possible - but the opening shrinks from the length of the whole asking to the length of one copy, and unlike before, asking again settles it";
   let repos = qa_tree_repos_folder();
+  let report = await qa_trees_reap();
   await folder_exists_ensure(repos);
   await qa_snapshot_siblings_link(repos);
   let here = folder_current_absolute();
