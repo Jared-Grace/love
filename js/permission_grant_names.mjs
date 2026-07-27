@@ -294,6 +294,8 @@ export function permission_grant_names() {
   let spelled291 = fn_name("html_loading_spinner_keyframes_css");
   let spelled292 = fn_name("qa_report_gate_run");
   let spelled293 = fn_name("commits_ai_js_file_shapes");
+  let spelled294 = fn_name("permission_prompt_run_rows");
+  let spelled295 = fn_name("functions_permission_seams");
   let names = [
     spelled,
     spelled2,
@@ -588,6 +590,8 @@ export function permission_grant_names() {
     spelled291,
     spelled292,
     spelled293,
+    spelled294,
+    spelled295,
   ];
   return names;
 }
