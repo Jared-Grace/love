@@ -1,3 +1,5 @@
+import { html_display_none } from "./html_display_none.mjs";
+import { html_style_white_space } from "./html_style_white_space.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
@@ -354,7 +356,7 @@ export function app_g_verify_view(
         ignore_clear;
       }
       if (reviewed_badge) {
-        html_style_set(reviewed_badge, "display", "none");
+        html_display_none(reviewed_badge);
       }
     } catch (failed) {
       html_clear(suggest_bar);
@@ -410,7 +412,7 @@ export function app_g_verify_view(
           let box = app_shared_container_base(container);
           let t = property_get(h, "text");
           let txt = html_p_text(box, t);
-          html_style_set(txt, "white-space", "pre-wrap");
+          html_style_white_space(txt, "pre-wrap");
           app_shared_text_deemphasized(txt);
           html_style_font_size(txt, "0.9em");
           function load_this() {
