@@ -11,7 +11,7 @@ export async function app_g_hour_choices() {
   let panel = html_div(body);
   html_style_assign(panel, {
     position: "fixed",
-    top: "0.5rem",
+    top: "3rem",
     left: "50%",
     transform: "translateX(-50%)",
     "z-index": "2000",
