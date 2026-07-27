@@ -43,7 +43,6 @@ export function examples_groups() {
         "example_unwrap_for_of",
         "example_nested_record_add",
         "example_nested_record_remove",
-        "example_expand_call_inline",
       ],
     },
     {
@@ -68,6 +67,7 @@ export function examples_groups() {
         "example_fold_wrap_index",
         "example_fold_all_two",
         "example_fold_auto_discover",
+        "example_expand_call_inline",
       ],
     },
     {
