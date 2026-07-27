@@ -13,11 +13,11 @@ export async function examples_data_stale() {
   async function checked_get(path) {
     let actual = await file_read_try(path);
     let fresh = equal(actual, expected);
-    let checked = {
+    let one = {
       path,
       fresh,
     };
-    return checked;
+    return one;
   }
   let checked = await list_map_async(paths, checked_get);
   let stale = list_filter_property_not(checked, "fresh", true);
