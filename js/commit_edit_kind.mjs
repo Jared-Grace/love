@@ -118,8 +118,8 @@ function commit_edit_callee_swap_is(code) {
   if (not(callable)) {
     return false;
   }
-  let at_out = text_index_of_from(taken_out, bracket);
-  let at_in = text_index_of_from(put_in, bracket);
+  let at_out = text_index_of_from(taken_out, bracket, 0);
+  let at_in = text_index_of_from(put_in, bracket, 0);
   let tail_out = text_slice_from(taken_out, at_out);
   let tail_in = text_slice_from(put_in, at_in);
   let same_arguments = equal(tail_out, tail_in);
