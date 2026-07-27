@@ -10,7 +10,8 @@ import { html_span } from "./html_span.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_style_code_dark_nowrap } from "./html_style_code_dark_nowrap.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
-import { app_shared_color_blue_light } from "./app_shared_color_blue_light.mjs";
+import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
+import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { fruits_of_the_spirit } from "./fruits_of_the_spirit.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { html_div } from "./html_div.mjs";
@@ -83,7 +84,6 @@ export function app_code_lesson_expression_string_hello() {
     "intro: name the string, show that a quote marks both the start and the end, show the shape with a deemphasized ... placeholder (the quotes are real code, the ... is a stand-in for whatever text you want), then a concrete example - a fruit of the Spirit; then show the value drops the quotes. string is bolded once at its definition";
     let list3 = fruits_of_the_spirit();
     let word = list_random_item(list3);
-    let code = string_code(word);
     let intro = app_code_container_light_blue(root);
     let name_line = html_div(intro);
     html_span_text(name_line, "In JavaScript, text is called a ");
@@ -101,7 +101,8 @@ export function app_code_lesson_expression_string_hello() {
     html_style_code_dark_nowrap(shape);
     html_span_text(shape, quote);
     let dots = html_span_text(shape, "...");
-    html_font_color_set(dots, app_code_string_value_color());
+    let color = app_code_string_value_color();
+    html_font_color_set(dots, color);
     html_span_text(shape, quote);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is an example string: ");
@@ -112,12 +113,13 @@ export function app_code_lesson_expression_string_hello() {
     let value_term = html_span_text(concept, "value of a string");
     html_bold(value_term);
     html_span_text(concept, " is what's between the quotes");
-    let example2 = html_div(define);
-    html_span_text(example2, "For example, the value of ");
-    app_code_string_colored(example2, word);
-    html_span_text(example2, " is ");
-    let value_out = html_span_text_code_dark(example2, word);
-    html_font_color_set(value_out, app_code_string_value_color());
+    let example = html_div(define);
+    html_span_text(example, "For example, the value of ");
+    app_code_string_colored(example, word);
+    html_span_text(example, " is ");
+    let value_out = html_span_text_code_dark(example, word);
+    let color2 = app_code_string_value_color();
+    html_font_color_set(value_out, color2);
     html_div_cycle_code(define, [
       "A string's value does not include its quotes",
     ]);
