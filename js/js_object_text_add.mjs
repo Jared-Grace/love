@@ -14,9 +14,7 @@ export function js_object_text_add(ast, selects, key_name, text) {
   ("and only the saying was still a hand edit.");
   ("A name and a sentence, and neither is a line to be worked out — so this stays");
   ("as safe to approve once as the rest of the family.");
-  let node = list_single(selects);
-  let record = js_node_value_get(node);
-  let properties = js_object_expression_properties(record);
+  let properties = js_selects_object_properties(ast, selects);
   let key = js_identifier_expression(key_name);
   let value = js_string(text);
   let property = js_property_key_value(key, value);
