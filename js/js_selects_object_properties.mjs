@@ -1,4 +1,3 @@
-import { arguments_assert } from "./arguments_assert.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_node_value_get } from "./js_node_value_get.mjs";
 import { js_object_expression_properties } from "./js_object_expression_properties.mjs";
