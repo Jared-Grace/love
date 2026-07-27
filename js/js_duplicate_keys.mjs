@@ -7,13 +7,13 @@ import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 export function js_duplicate_keys(ast) {
-  ("Every name a set of settings in this file gives twice. Saying a name twice is");
-  ("not an error to the language — the later one silently wins and the earlier one");
-  ("is thrown away — so a register holding two entries under one key loses one of");
-  ("them with nothing anywhere reporting it.");
-  ("It is always a mistake rather than a style: nobody means to write an entry");
-  ("that has no effect, and the one discarded is the one written first, which is");
-  ("usually the one somebody thought about.");
+  "Every name a set of settings in this file gives twice. Saying a name twice is";
+  "not an error to the language — the later one silently wins and the earlier one";
+  "is thrown away — so a register holding two entries under one key loses one of";
+  "them with nothing anywhere reporting it.";
+  "It is always a mistake rather than a style: nobody means to write an entry";
+  "that has no effect, and the one discarded is the one written first, which is";
+  "usually the one somebody thought about.";
   let duplicates = [];
   let vs = js_list_type(ast, "ObjectExpression");
   for (let v of vs) {
