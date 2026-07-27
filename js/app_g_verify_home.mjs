@@ -245,13 +245,13 @@ export async function app_g_verify_home(context) {
       chapter_advance_armed = true;
       refresh();
     }
-    function open_passage(passage) {
+    async function open_passage(passage) {
       selected_key = g_sermon_passage_verses_key(passage);
       sessionStorage.setItem(storage_key, selected_key);
       highlight_selected();
       let english = property_get(passage, "english");
       let lines = property_get(passage, "lines");
-      app_g_verify_view(
+      await app_g_verify_view(
         view,
         english,
         lines,
