@@ -116,7 +116,13 @@ node scripts/ai.mjs function_auto js_nameonly_probe                             
 
 **Address the body with `js_find_body_block`, not `js_type_find BlockStatement`.** The latter works only while the function has exactly one block, so it starts failing the moment the body contains an `if`, a loop, or an inner function — which is to say, as soon as the function is worth writing.
 
-**Never point `js_statement_replace_code` at a large data literal.** It replaces the *whole* statement, so aiming it at a `let notes = { … }` of forty entries replaces all forty with whatever you wrote. There is no verb yet for adding one entry to an object literal or one item to an array — that is still an `Edit`, and it is the most-wanted missing atom.
+**Adding a unit to a register is `js_object_shorthand_add <name>`, never `js_statement_replace_code`.** Every register here — what an example may name, what a gate must run — is a set of settings whose key and value are the same word, and `js_array_text_add <word>` is its ordered twin. Use them:
+
+```
+node scripts/ai.mjs function_select_apply_args example_transforms js_find_declaration_named transforms js_object_shorthand_add js_selects_unwrap
+```
+
+**`js_statement_replace_code` replaces the *whole* statement**, so aiming it at a `let notes = { … }` of forty entries replaces all forty with whatever you typed. That silently cost forty-five of them once. Adding one entry is the only shape that cannot do this.
 
 **The atom vocabulary — every address × every verb.** These two lists are the whole seam, and they *multiply*: adding one member to either list adds a row or a column, not a cell. That is the reason to write the next atom rather than the next convenience combination. Anything not on these lists is still a text `Edit`; **the gaps are the work**, so check here before reaching for `Edit`.
 
@@ -148,6 +154,8 @@ node scripts/ai.mjs function_auto js_nameonly_probe                             
 | `js_selects_unwrap` | take the lines back out of a wrapper — the inverse of both wraps |
 | `js_call_argument_named_identifier_set <param> <local>` | point one argument of a call at a local, both named — **prefer this**, it needs no code and so stays grantable |
 | `js_block_return_identifier_add <local>` | hand back a local at the end of a selected block |
+| `js_object_shorthand_add <name>` | add one entry to a register (key and value the same word) — never rewrite the whole set |
+| `js_array_text_add <word>` | add one written word to an ordered register |
 | `js_call_argument_named_set <param> <code>` | the same, when the value has to be worked out rather than named — needs the prompting `_code` command |
 | `js_statement_return_argument_set <code>` | set what a selected return hands back |
 | `js_selects_move_after` | move the first selected line to sit after the second — **guarded**, refuses a move that would cross a line it reads or that reads it (needs `function_select_multiple_apply_args`) |
@@ -155,7 +163,7 @@ node scripts/ai.mjs function_auto js_nameonly_probe                             
 
 **A function joins that second list by taking `(ast, selects, …)` — the shape is a shape, not a naming convention.** `js_statement_delete` and `js_statement_duplicate` predate the seam and were already usable through it, unnoticed, because their second parameter was always a list of nodes. Before writing an atom, check whether one already fits: `s js_,<verb>`.
 
-**Known holes:** rename a local within a fn (`function_identifier_replace` does the whole fn, not one node) · select a node *relative* to another (the line after this one) · address more than one match at a time (every selector here answers exactly one node, and says so when it can't).
+**Known holes:** **a nested address** — every selector answers at the top level of a function, so a list inside an object inside a list (`examples_groups`) still can't be reached, and that is the biggest one left · remove one entry from a register (adding has a verb, removing does not) · rename a local within one node rather than the whole fn · address more than one match at a time (every selector here answers exactly one node, and says so when it can't).
 
 **Two things deliberately not built, so nobody builds them by mistake.** **Adding or removing an argument at one call site** — every call here targets a repo function, and `function_param_new` / `function_params_delete` change the definition *and* every caller together; a single-site arity change writes a call that disagrees with its callee. Use those, then `js_call_argument_named_set` to set the one site's value. **Wrapping in `try`** — the generated `catch` would have to be empty, which is the shape that swallows a total failure and reads as success; this repo writes a named `*_try` wrapper instead.
 
