@@ -290,15 +290,22 @@ export function app_g_verify_view(
   html_style_font_size(suggest_area, "1em");
   html_style_line_height(suggest_area, "1.5");
   html_style_margin_top(suggest_area, small_gap);
-  ("keep an in-progress suggestion per verse, so navigating away and back does not reset the textarea to the current lines");
+  ("keep an in-progress suggestion per verse across navigation, but ONLY while the underlying lines are unchanged; if the lines were updated the saved draft is stale, so drop it and show the fresh lines");
   let draft_key = "g_verify_draft_" + chapter_code + "_" + verse;
+  let base_key = "g_verify_draft_base_" + chapter_code + "_" + verse;
   let saved_draft = sessionStorage.getItem(draft_key);
-  if (not_equal(saved_draft, null)) {
+  let saved_base = sessionStorage.getItem(base_key);
+  let draft_fresh = not_equal(saved_draft, null) && equal(saved_base, value4);
+  if (draft_fresh) {
     html_value_set(suggest_area, saved_draft);
+  } else {
+    sessionStorage.removeItem(draft_key);
+    sessionStorage.removeItem(base_key);
   }
   function draft_save() {
     let current = html_value_get(suggest_area);
     sessionStorage.setItem(draft_key, current);
+    sessionStorage.setItem(base_key, value4);
   }
   html_on(suggest_area, "input", draft_save);
   let reviewed_badge = null;
@@ -316,6 +323,7 @@ export function app_g_verify_view(
       let sent = html_p_text(suggest_bar, "Suggestion sent — I'll review it ✓");
       app_shared_text_deemphasized(sent);
       sessionStorage.removeItem(draft_key);
+      sessionStorage.removeItem(base_key);
       ("a fresh suggestion supersedes any prior reviewed-badge, so clear the marker and hide the badge until this new one is reviewed");
       try {
         await app_shared_api({
