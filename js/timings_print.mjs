@@ -1,19 +1,8 @@
-import { list_copy } from "./list_copy.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { list_reverse } from "./list_reverse.mjs";
-import { property_get } from "./property_get.mjs";
 import { log } from "./log.mjs";
+import { timings_ranked } from "./timings_ranked.mjs";
 export function timings_print(timings) {
-  "Slowest first, because the only question anyone asks of these numbers is which";
-  "gate is eating the wait. A gate that quietly grows from seconds to minutes is";
-  "invisible in a pass-or-fail list, and the whole suite stops finishing before";
-  "anybody notices which part changed.";
-  let sorted = list_copy(timings);
-  function lambda(timing) {
-    let milliseconds = property_get(timing, "milliseconds");
-    return milliseconds;
-  }
-  list_sort_number_mapper(sorted, lambda);
-  list_reverse(sorted);
+  "Says how long each thing took, slowest first.";
+  "The ordering lives in the ranking function rather than here, because a caller that wants the same order in what it RETURNS was left re-deriving it from the printed lines - and an order derived twice is one that can come out two ways.";
+  let sorted = timings_ranked(timings);
   log(timings_print.name, sorted);
 }
