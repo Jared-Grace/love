@@ -116,6 +116,8 @@ export function examples_notes() {
       "put a called function's body where the call was — the only verb that reads a second function to do its work",
     example_call_callee_set:
       "point one call at a different function — the commonest hand edit a verb could have made, chosen by reading the history rather than guessing",
+    example_array_text_remove:
+      "take a word back out of an ordered register — the undoing that moving an entry needs since adding can only append",
   };
   return notes;
 }
