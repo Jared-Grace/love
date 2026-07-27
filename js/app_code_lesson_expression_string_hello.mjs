@@ -84,6 +84,7 @@ export function app_code_lesson_expression_string_hello() {
     "intro: name the string, show that a quote marks both the start and the end, show the shape with a deemphasized ... placeholder (the quotes are real code, the ... is a stand-in for whatever text you want), then a concrete example - a fruit of the Spirit; then show the value drops the quotes. string is bolded once at its definition";
     let list3 = fruits_of_the_spirit();
     let word = list_random_item(list3);
+    let code = string_code(word);
     let intro = app_code_container_light_blue(root);
     let name_line = html_div(intro);
     html_span_text(name_line, "In JavaScript, text is called a ");
@@ -106,7 +107,7 @@ export function app_code_lesson_expression_string_hello() {
     html_span_text(shape, quote);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is an example string: ");
-    app_code_string_colored(example_line, word);
+    html_span_text_code_dark(example_line, code);
     let define = app_code_container_light_blue(root);
     let concept = html_div(define);
     html_span_text(concept, "The ");
