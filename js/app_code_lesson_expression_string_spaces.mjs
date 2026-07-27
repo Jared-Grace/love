@@ -12,7 +12,7 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_string_colored } from "./app_code_string_colored.mjs";
 import { app_code_string_shape } from "./app_code_string_shape.mjs";
 import { app_code_string_value_color } from "./app_code_string_value_color.mjs";
-import { app_code_string_phrases } from "./app_code_string_phrases.mjs";
+import { app_code_verse_word_pairs } from "./app_code_verse_word_pairs.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -30,8 +30,8 @@ export function app_code_lesson_expression_string_spaces() {
     return r;
   }
   function refill() {
-    "four questions, each a different two-word phrase";
-    let list2 = app_code_string_phrases();
+    "four questions, each a different two-word pair from the verse";
+    let list2 = app_code_verse_word_pairs();
     let picked = list_shuffle_take(list2, 4);
     let list = list_map(picked, make);
     return list;
@@ -78,12 +78,11 @@ export function app_code_lesson_expression_string_spaces() {
   }
   function above(root) {
     "recall that a string is text in quotes (not re-bolded here - it was defined in the first string lesson), then the new idea: it can hold more than one word. The first example shows the SPACE as plain syntax; the definition then colours the value and notes the space is part of it";
-    let list3 = app_code_string_phrases();
+    let list3 = app_code_verse_word_pairs();
     let phrase = list_random_item(list3);
     let code = string_code(phrase);
     let intro = app_code_container_light_blue(root);
     html_div_cycle_code(intro, ["A string is text in quotes"]);
-    html_div_cycle_code(intro, ["It can hold more than one word"]);
     let example_line = html_div(intro);
     html_span_text(example_line, "Here is a string with a space: ");
     html_span_text_code_dark(example_line, code);
