@@ -20,7 +20,7 @@ export async function permission_rule_grant_checked_context(
   "grant one dispatcher function an allow rule, but only when nothing disqualifies it — the whole loop in one command: already granted, safe to grant, write it, ask the guard what it now says";
   "the point is to stop paying for the same prompt twice. the checking is what makes that safe to do without asking, so a refusal is a result, not a failure";
   "the shared answers arrive already worked out, so granting a whole ranking of names costs one pass over the repo rather than one pass for each name in it";
-  let rule = permission_grant_rule(unaliased);
+  let rule = permission_grant_rule(unaliased, "scripts/ai.mjs");
   ("read fresh for every name rather than carried in the shared answers, because each grant written changes it and a stale copy would grant the same name twice");
   let granted_names = await permission_run_names();
   let already = list_includes(granted_names, unaliased);

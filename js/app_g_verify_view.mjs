@@ -289,6 +289,7 @@ export async function app_g_verify_view(
   html_width_full(suggest_area);
   html_style_set(suggest_area, "min-height", "6em");
   html_style_set(suggest_area, "box-sizing", "border-box");
+  html_style_set(suggest_area, "overflow-y", "hidden");
   html_font_set(suggest_area, serif);
   html_style_font_size(suggest_area, "1em");
   html_style_line_height(suggest_area, "1.5");
@@ -312,8 +313,11 @@ export async function app_g_verify_view(
   }
   ("grow and shrink the textarea to fit its content, so a long suggestion is fully visible without inner scrolling");
   function autosize() {
+    ("under box-sizing:border-box the CSS height INCLUDES the border, but scrollHeight does NOT — so height=scrollHeight lands one border-width short and a thin scrollbar shows; add the border (offsetHeight-clientHeight, measured while overflow-y is hidden so no scrollbar contaminates it) so the box fits its content exactly");
     html_style_set(suggest_area, "height", "auto");
-    let h = suggest_area.scrollHeight;
+    let content = suggest_area.scrollHeight;
+    let chrome = subtract(suggest_area.offsetHeight, suggest_area.clientHeight);
+    let h = content + chrome;
     html_style_set(suggest_area, "height", h + "px");
   }
   function on_suggest_input() {
@@ -323,7 +327,8 @@ export async function app_g_verify_view(
   html_on(suggest_area, "input", on_suggest_input);
   ("size to fit the content NOW, then AGAIN after layout settles and after the serif font loads — the first synchronous call can measure scrollHeight before the textarea has its final width/font, undersizing it to the 6em floor (~4 lines) so a 5th line hides below the fold; the re-runs are idempotent");
   autosize();
-  (await html_request_animation_frame()).then(autosize);
+  await html_request_animation_frame();
+  autosize();
   document.fonts.ready.then(autosize);
   let reviewed_badge = null;
   let suggest_bar = html_div(container);
